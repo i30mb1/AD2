@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -45,10 +45,11 @@
         "The status resistance stacks multiplicatively with other sources of status resistance."
       ],
       "mana": "25",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Guardian Sprint",
       "cooldown": "29\/25\/21\/17 (TagTalent 26\/22\/18\/14)",
       "description": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar gains movement speed bonus while in the river.",
-      "spellName": "Guardian Sprint",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "River Move Speed Bonus: 25%",
@@ -59,8 +60,7 @@
         "River Status Resistance Bonus: 40%",
         "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -82,10 +82,11 @@
         "Since the Corrosive Haze debuff is applied before the damage, the ability's damage benefits from the armor reduction applied."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Slithereen Crush",
       "cooldown": "8 (TagTalent 4)",
       "description": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed.",
-      "spellName": "Slithereen Crush",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.35+0.6",
         "Effect Radius: 350 (TagTalent 425)",
@@ -102,8 +103,7 @@
         "Causes Slithereen Crush to apply Corrosive Haze for 5 seconds to units affected. Increases radius by 75.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -127,18 +127,18 @@
         "Deals 100\/200\/300\/400 (TagTalent 220\/320\/420\/520) damage to non-hero units. Treats creep-heroes as creeps."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Bash of the Deep",
       "cooldown": null,
       "description": "After 3 attacks, your next attack will bash the target. Deals double damage against creeps.",
-      "spellName": "Bash of the Deep",
+      "hot_key": "E",
       "params": [
         "Required Hits: 4",
         "Damage: 50\/100\/150\/200 (TagTalent 110\/160\/210\/260)",
         "Creep Damage Percentage: 200%",
         "Stun Duration: 1\/1.1\/1.2\/1.3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -151,18 +151,18 @@
         "Provides shared vision and True Sight over the target."
       ],
       "mana": "25",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Corrosive Haze",
       "cooldown": "5",
       "description": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility.",
-      "spellName": "Corrosive Haze",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.67",
         "Cast Range: 700\/800\/900",
         "Armor Reduction: 10\/15\/20 (TagTalent 14\/19\/24)",
         "Duration: 18"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     }
   ],

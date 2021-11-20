@@ -8,7 +8,7 @@
         "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 2.6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
         "Heals for 2.6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -54,10 +54,11 @@
         "Does not target invisible, invulnerable and hidden units, or units inside the Fog of War within the radius."
       ],
       "mana": "12\/16\/20\/24",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Viscous Nasal Goo",
       "cooldown": "1.75",
       "description": "Covers a target in snot, causing it to have reduced armor and movement speed. Multiple casts stack and refresh the duration.",
-      "spellName": "Viscous Nasal Goo",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0 (TagAghanim 0+0)",
         "Cast Range: 600 (TagAghanim 0)",
@@ -73,8 +74,7 @@
         "Slow and armor reduction persist if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact, not blocked when upgraded."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -98,10 +98,11 @@
         "For how much damage Quill Spray deals with a certain amount of stack on each level (before reductions), please refer to the chart below."
       ],
       "mana": "35",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Quill Spray",
       "cooldown": "3",
       "description": "Sprays enemy units with quills dealing damage in an area of effect around Bristleback. Deals bonus damage for every time a unit was hit by Quill Spray in the last 14 seconds.",
-      "spellName": "Quill Spray",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 700",
@@ -111,8 +112,7 @@
         "Stack Duration: 14",
         "Grants a new ability: Hairball."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -139,10 +139,11 @@
         "Passive Quill Spray procs do not cost mana, have no cooldown, are independent from the active ability's cooldown, and do not trigger Warpath."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Bristleback",
       "cooldown": null,
       "description": "Bristleback takes less damage if hit on the sides or rear. If Bristleback takes 210 damage from the rear, he releases a Quill Spray of the current level.",
-      "spellName": "Bristleback",
+      "hot_key": "E",
       "params": [
         "Rear Angle: 70°",
         "Side Angle: 110°",
@@ -151,8 +152,7 @@
         "Damage Threshold: 210",
         "Illusions gain the damage reduction, but not the passive Quill Spray procs."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "K",
+      "legacy_key": "K",
       "story": null
     },
     {
@@ -175,10 +175,11 @@
         "Since Quill Spray travels faster than Viscous Nasal Goo, the quills always hit enemies before the goo does, so the quills do not benefit from the armor reduction."
       ],
       "mana": "100",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Hairball",
       "cooldown": "20",
       "description": "Coughs a quill-packed hairball towards the target location. Erupts at the location, hitting enemies in a 700 radius with Goo and 2 Quills.",
-      "spellName": "Hairball",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+0.64",
         "Cast Range: 1500",
@@ -190,8 +191,7 @@
         "Viscous Nasal Goo is blocked on impact by Spell Block. Quill Spray is not blocked.",
         "Viscous Nasal Goo can be disjointed."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -209,10 +209,11 @@
         "Only the first cast's buff is visible in the HUD. This buff has a number on it, showing the current amount of stacks."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Warpath",
       "cooldown": null,
       "description": "Bristleback works himself up into a fury every time he casts a spell, increasing his movement speed and damage.",
-      "spellName": "Warpath",
+      "hot_key": "R",
       "params": [
         "Max Stacks: 5\/7\/9",
         "Attack Damage Bonus per Stack: 25\/30\/35 (TagTalent 49\/54\/59)",
@@ -221,8 +222,7 @@
         "Prevents gaining new stacks. Already existing stacks still provide bonus movement speed and attack damage.",
         "Whenever Bristleback gains a stack, all his illusions gain one as well. Illusions do not benefit from the raw damage bonuses."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

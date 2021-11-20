@@ -8,7 +8,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -46,10 +46,11 @@
         "The complete area is shaped like a cone."
       ],
       "mana": "80\/95\/110\/125",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Crypt Swarm",
       "cooldown": "8\/7\/6\/5 (TagTalent 6\/5\/4\/3)",
       "description": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
-      "spellName": "Crypt Swarm",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cast Range: 600",
@@ -58,8 +59,7 @@
         "End Radius: 300",
         "Damage: 75\/150\/225\/300"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -73,10 +73,11 @@
         "Applies a debuff on enemies within the area upon projectile impact, entering or leaving the area afterwards has no effect."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Silence",
       "cooldown": "15\/14\/13\/12",
       "description": "Fires a projectile that prevents enemy units in a target area from casting spells.",
-      "spellName": "Silence",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.9",
         "Cast Range: 900",
@@ -84,8 +85,7 @@
         "Duration: 3\/4\/5\/6",
         "Silence persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -114,10 +114,11 @@
         "Spirit Siphon's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain."
       ],
       "mana": "80",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Spirit Siphon",
       "cooldown": "0",
       "description": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
-      "spellName": "Spirit Siphon",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range: 500",
@@ -132,8 +133,7 @@
         "Fear Duration: 2",
         "Increases Spirit Siphon charges by 1 and causes enemies to be feared for 2 seconds if they are siphoned for 4 seconds consecutively."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -172,10 +172,11 @@
         "These spirits can chase their targets for up to 20 seconds before giving up and returning to Death Prophet."
       ],
       "mana": "250\/350\/450",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Exorcism",
       "cooldown": "150",
       "description": "Unleashes evil spirits to drain the life of nearby enemy units and structures. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Lasts 35 seconds.",
-      "spellName": "Exorcism",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.77",
         "Spirits Acquisition Radius: 700",
@@ -194,8 +195,7 @@
         "Whenever an enemy is affected by your spells or when you attack an enemy, a ghost will fly out, slow and hit the enemy for bonus its usual damage then return to you with life.",
         "The slow pierces spell immunity as well."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "X",
+      "legacy_key": "X",
       "story": null
     }
   ],

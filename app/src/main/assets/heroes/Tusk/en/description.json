@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -58,10 +58,11 @@
         "Can deal up to 240\/300\/360\/420 damage (before reductions) to a single unit within the area for the entire duration."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Ice Shards",
       "cooldown": "23\/20\/17\/14 (TagTalent 17\/14\/11\/8)",
       "description": "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in contact with. When the ball reaches its target destination the shards are released, creating a barrier that lasts for 4\/5\/6\/7 seconds.",
-      "spellName": "Ice Shards",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range: 1800",
@@ -77,8 +78,7 @@
         "Enemies trapped within an ice shard suffer from 40% slow and take 60 damage per second. Increases Ice Shards depth by 300 units.",
         "Pathing block affects spell immune units. Does not attempt to damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -115,10 +115,11 @@
         "A hidden debuff provides shared vision over the target until the Snowball stops. Does not provide True Sight."
       ],
       "mana": "75",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Snowball",
       "cooldown": "21\/19\/17\/15 (TagTalent 13\/11\/9\/7)",
       "description": "Tusk begins rolling into a snowball. Allies within a 350 radius can also be added to the snowball by right-clicking on them, even while the snowball is moving. Once launched, any enemies caught in the snowball's path will be stunned and take damage. Each allied Hero in the snowball will add to its damage.",
-      "spellName": "Snowball",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0.5",
         "Cast Range: 1150",
@@ -133,8 +134,7 @@
         "Stun Duration: 0.5\/0.75\/1\/1.25",
         "Cannot target spell immune enemies. Does not attempt to damage or stun spell immune enemies. Can pull spell immune allies inside."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -146,15 +146,15 @@
         "Replaces Snowball until the sub-ability is used, or Snowball reaches its target or expires."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Launch Snowball",
       "cooldown": null,
       "description": "Launch the snowball toward the target.",
-      "spellName": "Launch Snowball",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -174,10 +174,11 @@
         "The movement speed slow from multiple attacks and\/or attack sources fully stacks, with each attack placing a separate debuff."
       ],
       "mana": "70",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Tag Team",
       "cooldown": "24\/21\/18\/15",
       "description": "Temporarily applies a negative debuff aura around you, causing enemies that are attacked under it to take bonus physical damage and reduced movement speed. Lasts 5 seconds.",
-      "spellName": "Tag Team",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 350",
@@ -188,8 +189,7 @@
         "Aura Linger Duration: 0.5",
         "Slow persists if debuff was placed before spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -215,10 +215,11 @@
         "Destroys trees within a 100 radius around the affected unit during the knockback."
       ],
       "mana": "100",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Walrus Kick",
       "cooldown": "8",
       "description": "Kicks the closest enemy unit in a targeted direction, stunning and damaging them.",
-      "spellName": "Walrus Kick",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+1.3",
         "Cast Range: Global",
@@ -229,8 +230,7 @@
         "Slow Duration: 5",
         "Stun Duration: 1"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -261,10 +261,11 @@
         "The passive procs use pseudo-random distribution."
       ],
       "mana": "50\/75\/100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Walrus PUNCH!",
       "cooldown": "36\/24\/12",
       "description": "Tusk connects with his mighty Walrus Punch, a critical strike so powerful it launches its victim into the air. The victim is slowed upon landing.",
-      "spellName": "Walrus PUNCH!",
+      "hot_key": "R",
       "params": [
         "Self Attack Animation Speed Bonus: 50%",
         "Critical Damage: 350%\/375%\/400% (TagTalent 430%\/455%\/480%)",
@@ -276,8 +277,7 @@
         "The passive proc chance from the talent is not disabled.",
         "The passive proc chance from the talent does not work for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

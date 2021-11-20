@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -46,10 +46,11 @@
         "The stun duration increasing talent only increases the success stun duration. The fail stun duration is not increased."
       ],
       "mana": "70\/80\/90\/100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Shackleshot",
       "cooldown": "16\/14\/12\/10 (TagTalent 14\/12\/10\/8)",
       "description": "Shackles the target to an enemy unit or tree in a line directly behind it. If no unit or tree is present, the stun duration is reduced to 0.75.",
-      "spellName": "Shackleshot",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.15+0.45",
         "Cast Range: 800",
@@ -60,8 +61,7 @@
         "Fail Stun Duration: 0.75",
         "Blocked fully only when primary target. Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -83,10 +83,11 @@
         "To reach 1 damage, the arrow needs to hit 23\/25\/27\/28 (TagTalent 25\/27\/28\/29) units."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Powershot",
       "cooldown": "12\/11\/10\/9",
       "description": "Windranger charges her bow for up to 1 second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced by 20%.",
-      "spellName": "Powershot",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 2600",
@@ -96,8 +97,7 @@
         "Max Damage: 150\/250\/350\/450 (TagTalent 250\/350\/450\/550)",
         "Damage Reduction per Unit Hit: 20%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -122,10 +122,11 @@
         "Acquiring Aghanim's Scepter instantly grants 1 extra charge. This only happens once, so re-acquiring it does not grant another charge."
       ],
       "mana": "50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Windrun",
       "cooldown": "15\/14\/13\/12 (TagTalent 0.25)",
       "description": "Increases movement speed and adds evasion from all physical attacks, while slowing movement of nearby enemies.",
-      "spellName": "Windrun",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Slow Radius: 325",
@@ -144,8 +145,7 @@
         "The passive evasion is disabled by Break.",
         "The passive evasion works for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -164,10 +164,11 @@
         "Does not push enemies that are affected by sources of forced movement that disable enemies in some way."
       ],
       "mana": "150",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Gale Force",
       "cooldown": "40",
       "description": "Summons a strong wind that pushes all enemies within 1000 radius by 250 units per second in the target direction for 3 seconds. Vector Targeted. Global Range. Mana Cost: 150 Cooldown: 40s",
-      "spellName": "Gale Force",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.47",
         "Cast Range: Global",
@@ -176,8 +177,7 @@
         "Aura Linger Duration: 0.5",
         "Duration: 3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -208,10 +208,11 @@
         "This effect can be triggered multiple times per cast, possible if the target reincarnates, buys back, or against a resummoned Tempest Double."
       ],
       "mana": "75\/100\/125",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Focus Fire",
       "cooldown": "70\/50\/30",
       "description": "Windranger channels the wind to gain 475 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage. Extra damage from secondary item effects is not reduced. Lasts 20 seconds.",
-      "spellName": "Focus Fire",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Attack Speed Bonus: 475",
@@ -219,8 +220,7 @@
         "Duration: 20",
         "Cooldown Skip on Target Death: 20"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

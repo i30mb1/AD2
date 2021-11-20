@@ -7,7 +7,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The evasion talent stacks multiplicatively with other sources of evasion."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,17 +43,17 @@
         "During Rage, Lifestealer cannot be affected by Ghost Form. The buff gets removed immediately."
       ],
       "mana": "75\/100\/125\/150",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Rage",
       "cooldown": "18",
       "description": "Launch into a maddened rage, becoming Spell Immune, and gaining increased movement speed.",
-      "spellName": "Rage",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Move Speed Bonus: 15%\/16%\/17%\/18% (TagTalent 25%\/26%\/27%\/28%)",
         "Duration: 3\/4\/5\/6 (TagTalent 4.5\/5.5\/6.5\/7.5)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -73,16 +73,16 @@
         "Does not work against Roshan."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Feast",
       "cooldown": null,
       "description": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health.",
-      "spellName": "Feast",
+      "hot_key": "W",
       "params": [
         "Enemy Max Health as Lifesteal: 1.6%\/2.2%\/2.8%\/3.4% (TagTalent 2.8%\/3.4%\/4%\/4.6%)",
         "Enemy Max Health as Damage: 0.6%\/0.8%\/1%\/1.2%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -95,10 +95,11 @@
         "The debuff from successive attacks does not stack, only the duration is refreshed."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Ghoul Frenzy",
       "cooldown": null,
       "description": "Passively causes Lifestealer's attacks to significantly slow enemy movement speed for 1.5 seconds. Grants you Attack Speed.",
-      "spellName": "Ghoul Frenzy",
+      "hot_key": "E",
       "params": [
         "Attack Speed Bonus: 20\/30\/40\/50",
         "Move Speed Slow: 10%\/15%\/20%\/25% (TagTalent 20%\/25%\/30%\/35%)",
@@ -107,8 +108,7 @@
         "Slow on attack is disabled. Attack speed is not disabled.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -132,10 +132,11 @@
         "The bonus damage is not applied when attacking Roshan."
       ],
       "mana": "75",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Open Wounds",
       "cooldown": "15",
       "description": "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration. Deals 2% of the target's max health per attack on the target from real heroes.",
-      "spellName": "Open Wounds",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.4",
         "Cast Range: 800",
@@ -145,8 +146,7 @@
         "Slow Duration: 8",
         "Slow persists and heal works if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -187,10 +187,11 @@
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
       ],
       "mana": "100\/125\/150",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Infest",
       "cooldown": "100\/75\/50 (TagTalent 20)",
       "description": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack. Does not work on enemy heroes.",
-      "spellName": "Infest",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: 150 (TagAghanim 500)",
@@ -202,8 +203,7 @@
         "Allows Infesting enemy heroes for 5 seconds, disarming them and attacking their insides once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 20 seconds.",
         "Grants a new ability: Open Wounds."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -222,18 +222,18 @@
         "If the infested target gets taken over, Consume's Hotkey may vary based on what unit got taken over."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Consume",
       "cooldown": null,
       "description": "Lifestealer eats the host body from the inside out, exploding from within.",
-      "spellName": "Consume",
+      "hot_key": null,
       "params": [
         "Cast Animation: 0+0",
         "Damage Radius: 700",
         "Damage: 150\/275\/400",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

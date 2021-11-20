@@ -7,7 +7,7 @@
         "Armor Corruption Strike from talents is not disabled by Break. The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes.",
         "The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -51,10 +51,11 @@
         "While active, increases Visage's total movement speed to 327.75\/342\/356.25\/370.5 and the Familiars' movement speed to 494.5\/516\/537.5\/559 (TagTalent 540.5\/564\/587.5\/611)."
       ],
       "mana": "90",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Grave Chill",
       "cooldown": "16\/14\/12\/10 (TagTalent 13\/11\/9\/7)",
       "description": "Visage drains the movement and attack speed of the targeted unit, gaining it for itself and nearby familiars.",
-      "spellName": "Grave Chill",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.57",
         "Cast Range: 625",
@@ -65,8 +66,7 @@
         "Applies self-buff while spell immune. Cannot target spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "When blocked, Visage is not boosted either."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -94,10 +94,11 @@
         "Heroes and illusions have a higher priority than other units. Treats creep-heroes as creeps."
       ],
       "mana": "125",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Soul Assumption",
       "cooldown": "4",
       "description": "Visage gathers charges of soul essence each time nearby heroes take more than 100 damage. When the essence is released, it deals base damage as well as damage for each gathered soul charge.",
-      "spellName": "Soul Assumption",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.57",
         "Cast Range: 1000",
@@ -111,8 +112,7 @@
         "Secondary Target Range Buffer: 300",
         "Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -152,10 +152,11 @@
         "Upon landing, trees within 350 radius are destroyed."
       ],
       "mana": "125",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Gravekeeper's Cloak",
       "cooldown": "60",
       "description": "Visage generates a layered barrier that protects him from damage. If he receives damage from a player, one layer is removed, and takes time to recover.",
-      "spellName": "Gravekeeper's Cloak",
+      "hot_key": "E",
       "params": [
         "Aura Radius: 1200",
         "Max Layers: 4 (TagTalent 9)",
@@ -168,8 +169,7 @@
         "Grants Visage the ability to cast Stone Form. Restores up to 35% of your health. Cooldown: 60. Manacost: 125.",
         "Does not reduce damage or lose charges during Break. Lost charges still recharge normally. Damage reduction on Familiars is only disabled when applying Break on Visage, not on the Familiar itself."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -191,15 +191,15 @@
         "Visage is unable to ⇧ Shift-queue this ability."
       ],
       "mana": "0",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Stone Form",
       "cooldown": "0",
       "description": "After a short delay, the nearest Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area. The Familiar becomes invulnerable, and will regain its health very rapidly. After 6 seconds, the Familiar will automatically leave Stone Form.",
-      "spellName": "Stone Form",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -223,10 +223,11 @@
         "Only increases base attack damage and damage granted by primary attributes of affected units. It does not increase bonus attack damage."
       ],
       "mana": "100",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Silent as the Grave",
       "cooldown": "45",
       "description": "Turns Visage and familiars invisible, granting Visage movement speed and upgrading its movement type to flying. When Visage or its familiars leave invisibility they deal more damage for 4 seconds. Lasts 35 seconds. Invisibility ends when attacking or casting.",
-      "spellName": "Silent as the Grave",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0",
         "Fade Time: 0",
@@ -235,8 +236,7 @@
         "Damage Bonus Duration: 4",
         "Invisibility Duration: 35"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -253,18 +253,18 @@
         "They are considered as creep-heroes and ancient creeps, making them interact differently with several abilities."
       ],
       "mana": "150",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Summon Familiars",
       "cooldown": "130\/120\/110",
       "description": "Conjures two blind Familiars to fight for Visage. Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing. While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health. Familiars grant high bounty when killed.",
-      "spellName": "Summon Familiars",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Number of Familiars: 2 (TagTalent 3)",
         "Familiar Duration: Permanent",
         "Grants a new ability: Silent as the Grave."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -284,10 +284,11 @@
         "Upon landing, trees within 350 radius are destroyed."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Stone Form",
       "cooldown": null,
       "description": "After a short delay, the Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area. The Familiar becomes invulnerable, and will regain its health very rapidly. After 6 seconds, the Familiar will automatically leave Stone Form.",
-      "spellName": "Stone Form",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Effect Radius: 350",
@@ -298,8 +299,7 @@
         "Stone Form Duration: 6",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

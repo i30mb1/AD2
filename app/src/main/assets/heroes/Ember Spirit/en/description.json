@@ -5,7 +5,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -47,10 +47,11 @@
         "Can deal up to 75\/140\/225\/330 (TagTalent 125\/210\/315\/440) damage to each unit."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Searing Chains",
       "cooldown": "13\/12\/11\/10",
       "description": "Ember Spirit unleashes fiery bolas that wrap around nearby enemies, anchoring them in place and dealing damage each second.",
-      "spellName": "Searing Chains",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0.5",
         "Search Radius: 400",
@@ -59,8 +60,7 @@
         "Duration: 1.5\/2\/2.5\/3 (TagTalent 2.5\/3\/3.5\/4)",
         "Root effect persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -89,10 +89,11 @@
         "Casting Activate Fire Remnant cancels Sleight of Fist. However, other sources of Forced Movement do not."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Sleight of Fist",
       "cooldown": "18\/14\/10\/6 (TagTalent 0)",
       "description": "Ember Spirit dashes around with blazing speed, attacking all enemies in the targeted area of effect, then returning to his start location. Deals bonus damage to heroes, and less damage to creeps.",
-      "spellName": "Sleight of Fist",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.7",
         "Cast Range: 700",
@@ -103,8 +104,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 18\/14\/10\/6"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -126,10 +126,11 @@
         "However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Flame Guard",
       "cooldown": "35",
       "description": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, leaving him unharmed. Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active. If the shield is broken, the damage is also lost.",
-      "spellName": "Flame Guard",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0.6",
         "Damage Radius: 400",
@@ -137,8 +138,7 @@
         "Magical Damage Absorbed: 110\/240\/370\/500 (TagTalent 390\/520\/650\/780)",
         "Duration: 11\/14\/17\/20"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -164,18 +164,18 @@
         "Though at high traveling speeds, some trees may be skipped and not destroyed."
       ],
       "mana": "150",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Activate Fire Remnant",
       "cooldown": "0",
       "description": "Select the Fire Remnant to arrive at.",
-      "spellName": "Activate Fire Remnant",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+0.5",
         "Cast Range: Global",
         "Remnant Damage Radius: 450",
         "Remnant Damage: 100\/200\/300"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -206,10 +206,11 @@
         "If Ember Spirit dies, he leaves behind a Fire Remnant at his death location."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Fire Remnant",
       "cooldown": null,
       "description": "Ember Spirit generates Fire Remnant charges every 38 seconds, with a max of 3 charges. Releasing a charge sends a Fire Remnant that runs to the target location at 2.5x Ember Spirit's speed. Using Activate Fire Remnant, Ember Spirit can dash out to his Remnants, dealing damage along the way and exploding them upon arrival. The targeted Remnant will be arrived at last.",
-      "spellName": "Fire Remnant",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0.53",
         "Cast Range: 1400 (TagAghanim 3000)",
@@ -224,8 +225,7 @@
         "Increases cast range, initial remnant speed, and maximum charges.",
         "Fire Remnants deal 45 damage per second in a 600 AoE around them. If an enemy hero dies within 400 range of Ember Spirit, a Fire Remnant charge will be replenished."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

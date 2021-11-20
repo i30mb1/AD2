@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,10 +43,11 @@
         "The hidden buff is required for the lightning to jump."
       ],
       "mana": "80",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Arc Lightning",
       "cooldown": "1.6",
       "description": "Hurls a bolt of lightning that leaps through nearby enemy units.",
-      "spellName": "Arc Lightning",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.63",
         "Cast Range: 850",
@@ -56,8 +57,7 @@
         "Damage: 75\/100\/125\/150 (TagTalent 175\/200\/225\/250)",
         "Blocked fully only when primary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -81,10 +81,11 @@
         "Does not upgrade the Lightning Bolts of Nimbus."
       ],
       "mana": "120\/125\/130\/135",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Lightning Bolt",
       "cooldown": "6",
       "description": "Calls down a bolt of lightning to strike an enemy unit, causing damage and a mini-stun. When cast, Lightning Bolt briefly provides unobstructed vision and True Sight around the target in a 750 radius. Can be cast on the ground, affecting the closest enemy hero in 325 range.",
-      "spellName": "Lightning Bolt",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.43",
         "Cast Range: 700\/750\/800\/850",
@@ -97,8 +98,7 @@
         "Spell immune units are still revealed by the True Sight.",
         "Mini-stun and damage are blocked when hit, no matter if directly targeted or not. Vision is only blocked when directly targeted. Despite removing unit-targeting, the talent does not affect the Spell Block interaction."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -127,10 +127,11 @@
         "Zeus is not disabled during the jump\/leap and can still turn, attack, and cast abilities and items during it. While in the air, other units can pass below him."
       ],
       "mana": "75",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Static Field",
       "cooldown": "11",
       "description": "Zeus shocks any enemy hit by his abilities, causing damage proportional to their current health.",
-      "spellName": "Static Field",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Current Health as Damage: 4%\/6%\/8%\/10% (TagTalent 5.2%\/7.2%\/9.2%\/11.2%)",
@@ -143,8 +144,7 @@
         "Vision Duration: 3",
         "Static Field can be cast to perform a Heavenly Jump, shocking the closest visible enemy (TagTalentprioritizing heroes) within 2000 range, dealing Static Field damage to them and reducing their movement speed by 100% for 2.5 seconds. If Zeus was moving forward, he will jump towards that direction. Zeus gets 900 unobstructed vision around him for 3 seconds Cooldown: 11. Manacost: 75."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -172,10 +172,11 @@
         "The visual effects on the ground which mark the Nimbus' radius are visible to everyone."
       ],
       "mana": "325",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Nimbus",
       "cooldown": "45",
       "description": "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemies.",
-      "spellName": "Nimbus",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.64",
         "Cast Range: Global",
@@ -188,8 +189,7 @@
         "Spell immune units are still revealed by the True Sight.",
         "Lightning Bolts from the Nimbus are not blocked."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -213,10 +213,11 @@
         "Shifts the lighting of the whole map for a split second, which is also visible to everyone."
       ],
       "mana": "300\/400\/500",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Thundergod's Wrath",
       "cooldown": "130\/125\/120",
       "description": "Strikes all enemy heroes with a bolt of lightning, no matter where they may be. Thundergod's Wrath also provides True Sight around each hero struck. If an enemy hero is invisible, it takes no damage, but the True Sight is still created at that hero's location.",
-      "spellName": "Thundergod's Wrath",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0.43",
         "Effect Radius: Global",
@@ -228,8 +229,7 @@
         "Grants a new ability: Nimbus.",
         "Provides vision and True Sight over spell immune enemies. Does not attempt to damage spell immune enemies. Spell immune units are still revealed by the True Sight."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

@@ -4,7 +4,7 @@
       "notes": [
         "The strength talent effectively grants Shadow Demon 200 health and 1 health regeneration."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -52,10 +52,11 @@
         "The Disruption Charges talent instantly grants 1 extra charge."
       ],
       "mana": "120",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Disruption",
       "cooldown": "29\/26\/23\/20 (TagTalent 0)",
       "description": "Banishes the targeted unit from the battlefield for a short duration. Upon returning, two illusions of the banished unit are created under Shadow Demon's control.",
-      "spellName": "Disruption",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.6",
         "Cast Range: 650",
@@ -67,8 +68,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 29\/26\/23\/20"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -100,10 +100,11 @@
         ""
       ],
       "mana": "80\/100\/120\/140",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Soul Catcher",
       "cooldown": "26\/24\/22\/20 (TagTalent 20\/18\/16\/14)",
       "description": "Captures the soul of enemy units in an area, causing them to lose a percentage of their current health. Shadow Demon temporarily gains Spell Amplification for each hero's soul captured. When the debuff is removed, the units gain half of the lost health back. Units under the effect of Disruption can still be affected by Soul Catcher.",
-      "spellName": "Soul Catcher",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 700",
@@ -113,8 +114,7 @@
         "Duration: 10",
         "Debuff persists if it was placed before spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -145,10 +145,11 @@
         "The current number of stacks is also shown on the debuff icon, which is visible to everyone."
       ],
       "mana": "45",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Shadow Poison",
       "cooldown": "2.5 (TagTalent 1.25)",
       "description": "Deals damage in a line, and afflicts enemy units with a poison effect. The poison deals 1\/2\/4\/8\/16 times the stack damage based on the number of stacks on the target, up to 5 stacks. Additional stacks cause 50 damage each. This deferred damage is dealt when Shadow Poison's duration is expired, or the Release sub-ability is used.",
-      "spellName": "Shadow Poison",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.25+0",
         "Cast Range: 1500",
@@ -161,8 +162,7 @@
         "Stack Duration: 10",
         "Attempts to deal damage if enemy turns spell immune before the poison is released."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -174,15 +174,15 @@
         "Shadow Poison Release is unlocked upon learning Shadow Poison and stays always active."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Shadow Poison Release",
       "cooldown": null,
       "description": "Releases the poison to do damage on all affected enemies. Units under the effect of Disruption can still be affected by Shadow Poison.",
-      "spellName": "Shadow Poison Release",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.3+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -210,10 +210,11 @@
         "↓↓ Double-tapping automatically targets self."
       ],
       "mana": "150\/175\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Demonic Purge",
       "cooldown": "60 (TagTalent 30) (TagTalent 0)",
       "description": "Purges the target enemy unit, removing positive buffs, and slowing the target for the duration. The unit slowly regains its movement speed until the end of the duration, upon which damage is dealt. Units under the effect of Disruption can still be affected by Demonic Purge.",
-      "spellName": "Demonic Purge",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.6",
         "Cast Range: 800",
@@ -229,8 +230,7 @@
         "Cooldown is removed, replaced with 3 charges that replenish every 60 seconds. Also causes Demonic Purge to break its target's passive abilities while active.",
         "Allows Demonic Purge to be cast on allies, continuously dispelling them and healing for its damage values. Does not slow allies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     }
   ],

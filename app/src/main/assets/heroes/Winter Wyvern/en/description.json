@@ -5,7 +5,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -56,10 +56,11 @@
         "If toggled On, Arctic Burn continues working even when silenced, disabled, or hidden."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Arctic Burn",
       "cooldown": "38\/32\/26\/20 (TagTalent 0)",
       "description": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a burning freeze that strips them of 6%\/7%\/8%\/9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.",
-      "spellName": "Arctic Burn",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Attack Range Bonus: 350\/400\/450\/500",
@@ -75,8 +76,7 @@
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
         "Stops proccing on-cast effects when upgraded."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -97,10 +97,11 @@
         "The stun does not replace the slow. The slow is still applied, effectively slowing hit units for 2.5 seconds."
       ],
       "mana": "105\/120\/135\/150",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Splinter Blast",
       "cooldown": "7",
       "description": "Launches a ball of brittle ice towards an enemy. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a 500 radius. Enemies struck by these splinters are slowed by 30%.",
-      "spellName": "Splinter Blast",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+1.17",
         "Cast Range: 1200",
@@ -113,8 +114,7 @@
         "Blocked fully only when primary target. Blocked upon impact.",
         "Initial projectile cannot be disjointed. Secondary projectiles can be disjointed with any disjoint, except invisibility."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -135,10 +135,11 @@
         "However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility."
       ],
       "mana": "50\/60\/70\/80",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Cold Embrace",
       "cooldown": "24\/21\/18\/15 (TagTalent 20\/17\/14\/11)",
       "description": "Encases an ally in an icy cocoon, freezing them solid while healing a base amount as well as a percentage of their maximum health each second. The cocoon blocks all physical damage.",
-      "spellName": "Cold Embrace",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0.63",
         "Cast Range: 1000",
@@ -148,8 +149,7 @@
         "Splinter Blast Radius: 1200",
         "When Cold Embrace ends, a Splinter Blast goes off that location, hitting enemies within 1200 range. Reduces cooldown by 4 seconds."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -179,10 +179,11 @@
         "When the primary target dies, the taunt effect ends immediately."
       ],
       "mana": "250",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Winter's Curse",
       "cooldown": "90\/85\/80",
       "description": "Winter Wyvern freezes an enemy in place while striking those nearby with a maddening curse which causes them to attack their frozen ally with increased attack speed. The frozen ally and those cursed to attack their ally are immune to all damage from their enemies with the exception of Winter Wyvern or her controlled units.",
-      "spellName": "Winter's Curse",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+1.37",
         "Cast Range: 700",
@@ -194,8 +195,7 @@
         "Can target spell immune enemies. Cannot taunt spell immune enemies. Taunt persists if debuff was placed before spell immunity.",
         "Blocked fully only when primary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

@@ -6,7 +6,7 @@
         "The armor talent does not benefit illusions.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -56,10 +56,11 @@
         "Since the instant attack damage comes from a regular attack, it counts as attack damage and is affected by damage block."
       ],
       "mana": "120\/110\/100\/90",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Blade Fury",
       "cooldown": "42\/34\/26\/18",
       "description": "Causes a bladestorm of destructive force around Juggernaut, rendering him immune to magic and dealing damage to nearby enemy units.",
-      "spellName": "Blade Fury",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 260 (TagTalent 335)",
@@ -70,8 +71,7 @@
         "Instant Attack Interval: 1",
         "Increases movement speed during Blade Fury by 100 and attacks a random nearby unit once per second dealing 75% damage."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -89,10 +89,11 @@
         "Does not affect wards, buildings, invulnerable or hidden units."
       ],
       "mana": "140",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Healing Ward",
       "cooldown": "60 (TagTalent 40)",
       "description": "Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healing Ward moves at 325 movement speed after being summoned. Lasts 25 seconds.",
-      "spellName": "Healing Ward",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.47",
         "Cast Range: 350",
@@ -101,8 +102,7 @@
         "Aura Linger Duration: 2.5",
         "Duration: 25"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -120,17 +120,17 @@
         "Blade Dance uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Blade Dance",
       "cooldown": null,
       "description": "Gives Juggernaut a chance to deal critical damage on each attack.",
-      "spellName": "Blade Dance",
+      "hot_key": "E",
       "params": [
         "Proc Chance: 20%\/25%\/30%\/35%",
         "Critical Damage: 180%",
         "Red critical numbers are before illusion and armor reduction."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -149,18 +149,18 @@
         "Swiftslash is distinguished by blue particles, as opposed to the orange particles of Omnislash."
       ],
       "mana": "125",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Swiftslash",
       "cooldown": "20",
       "description": "Performs a quick Omnislash.",
-      "spellName": "Swiftslash",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 550",
         "Duration: 0.8",
         "Only the very first slash of the cast is blocked."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -193,10 +193,11 @@
         "Centers the player's camera perspective on Juggernaut on cast, following his position during Omnislash."
       ],
       "mana": "200\/275\/350",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Omnislash",
       "cooldown": "140",
       "description": "Juggernaut leaps towards the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate. Juggernaut is invulnerable for the duration.",
-      "spellName": "Omnislash",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 350",
@@ -208,8 +209,7 @@
         "Grants a new ability: Swiftslash.",
         "Only the very first slash of the cast is blocked."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     }
   ],

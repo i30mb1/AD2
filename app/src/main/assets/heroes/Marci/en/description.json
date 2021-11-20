@@ -4,7 +4,7 @@
       "notes": [
         "The armor talent does not benefit illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,10 +48,11 @@
         "Cannot be cast on Courier, wards, buildings, and invulnerable units."
       ],
       "mana": "90",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Dispose",
       "cooldown": "16\/14\/12\/10",
       "description": "Marci grabs an allied or enemy target and throws it effortlessly behind her, damaging and stunning the unit if it's an enemy. Any enemy units in the landing area will also be damaged and stunned.",
-      "spellName": "Dispose",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+1.04",
         "Cast Range: 175",
@@ -62,8 +63,7 @@
         "Stun Duration: 0.9\/1.3\/2.7\/2.1 (TagTalent 1.4\/1.8\/3.2\/2.6)",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -92,10 +92,11 @@
         "Cannot be cast on Courier, wards, buildings, and invulnerable units."
       ],
       "mana": "70\/80\/90\/100",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Rebound",
       "cooldown": "17\/15\/13\/11",
       "description": "Vector targeted. Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and slowing enemies in the area. If the unit she runs to is an ally, it receives 35% bonus movement speed for 5s.",
-      "spellName": "Rebound",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range: 800 (TagTalent 1000)",
@@ -113,8 +114,7 @@
         "When disjointed, Marci stops at the target's last location before the disjoint.",
         "Cannot be cast while rooted. Getting rooted after cast does not cancel the cast."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -138,10 +138,11 @@
         "Sidekick first applies the buff, and then the spell immunity buff."
       ],
       "mana": "45\/40\/35\/30",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Sidekick",
       "cooldown": "36\/28\/20\/12",
       "description": "Marci's loyalty helps ensure survival, imbuing a chosen allied hero and herself with lifesteal and attack damage.",
-      "spellName": "Sidekick",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0.54",
         "Cast Range: 700",
@@ -151,8 +152,7 @@
         "Buff Duration: 6",
         "Spell Immunity Duration: 1.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -180,10 +180,11 @@
         "This repeats indefinitely while Unleash is active, there is no limit to how many Flurry buffs can be gained."
       ],
       "mana": "100\/125\/150",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Unleash",
       "cooldown": "110\/90\/70",
       "description": "Marci taps a hidden power, gaining Fury charges that allow her to deliver a rapid sequence of strikes. The last strike in every Fury combo creates a damaging pulse around the target that slows movement and attack speed for 2s. In between Fury combos, Marci is unable to attack for 1.75s. Marci receives a basic dispel when Unleash is cast and gains 15% movement speed.",
-      "spellName": "Unleash",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.34",
         "Self Move Speed Bonus: 15%",
@@ -200,8 +201,7 @@
         "Pulse Silence Duration: 1.5",
         "Can be cast while spell immune. Attacks against spell immune units fully count. Pulse does not affect spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     }
   ],

@@ -8,7 +8,7 @@
         "The strength talent effectively grants Ogre Magi 500 health and 2.5 health regeneration.",
         "Bash from talents pierces spell immunity and is not disabled by Break."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -49,10 +49,11 @@
         ""
       ],
       "mana": "70\/80\/90\/100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Fireblast",
       "cooldown": "11\/10\/9\/8 (TagTalent 10\/9\/8\/7)",
       "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
-      "spellName": "Fireblast",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.45+0.53",
         "Cast Range: 475",
@@ -62,8 +63,7 @@
         "Grants a new ability: Unrefined Fireblast",
         "When blocked, ends Multicast, no matter if the initial cast or a multicast instance was blocked."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -100,10 +100,11 @@
         ""
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Ignite",
       "cooldown": "15",
       "description": "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly.",
-      "spellName": "Ignite",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.35+0.6",
         "Cast Range: 700\/800\/900\/1000",
@@ -117,8 +118,7 @@
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact, for any target. Does not end Multicast."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -139,10 +139,11 @@
         "Interrupts Ogre Magi's current order and makes him forget queued commands. This cannot occur while channeling an ability, though."
       ],
       "mana": "50\/55\/60\/65",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Bloodlust",
       "cooldown": "20\/18\/16\/14",
       "description": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attack speed if cast on Ogre himself. Can be cast on towers.",
-      "spellName": "Bloodlust",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.45+0.67",
         "Cast Range: 600",
@@ -152,8 +153,7 @@
         "Self Attack Speed Bonus: 30\/50\/70\/90 (TagTalent 55\/75\/95\/115)",
         "Duration: 30"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -176,10 +176,11 @@
         ""
       ],
       "mana": "35% of current mana",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Unrefined Fireblast",
       "cooldown": "6",
       "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 35% of the hero's current mana.",
-      "spellName": "Unrefined Fireblast",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.45+0.53",
         "Cast Range: 475",
@@ -188,8 +189,7 @@
         "Stun Duration: 1.5",
         "When blocked, ends Multicast, no matter if the initial cast or a multicast instance was blocked."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -216,10 +216,11 @@
         "Recasting Fire Shield on the same target refreshes the duration and resets the number of attacks."
       ],
       "mana": "50",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Fire Shield",
       "cooldown": "16",
       "description": "Creates a shield around the target ally, absorbing 85% of the damage of next 3 attacks. Launches fireballs at the attacker, dealing 125 damage. Lasts 25 seconds.",
-      "spellName": "Fire Shield",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0.2+0.6",
         "Cast Range: 600",
@@ -231,8 +232,7 @@
         "Can be cast on spell immune allies. Releases fireballs on spell immune enemies, but does not damage them.",
         "The fireballs are disjointable."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -258,10 +258,11 @@
         "This means each ability is cast 1.75\/2.05\/2.2 times on average."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Multicast",
       "cooldown": null,
       "description": "Enables Ogre Magi to cast his abilities and items multiple times with each use.",
-      "spellName": "Multicast",
+      "hot_key": "R",
       "params": [
         "Ignite Multicast Range: 1600",
         "Bloodlust Multicast Radius: 700",
@@ -272,8 +273,7 @@
         "4x Multicast Chance: 0%\/0%\/15%",
         "Grants a new ability: Fire Shield"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     }
   ],

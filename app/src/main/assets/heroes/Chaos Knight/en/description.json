@@ -4,7 +4,7 @@
       "notes": [
         "The strength talent effectively grants Chaos Knight 240 health, 1.2 health regeneration, and 12 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -60,10 +60,11 @@
         "Dispelling the stun or dying does not remove the illusion."
       ],
       "mana": "110\/120\/130\/140",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Chaos Bolt",
       "cooldown": "13\/12\/11\/10 (TagTalent 10\/9\/8\/7)",
       "description": "Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage.",
-      "spellName": "Chaos Bolt",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.4",
         "Cast Range: 500 (TagTalent 800)",
@@ -78,8 +79,7 @@
         "Chaos Bolt creates 1 Phantasm illusion attacking the target for 6 seconds. Increases cast range by 300.",
         "Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -104,10 +104,11 @@
         "Does not interrupt the target's channeling abilities."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Reality Rift",
       "cooldown": "18\/14\/10\/6",
       "description": "Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds.",
-      "spellName": "Reality Rift",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 550\/600\/650\/750",
@@ -117,8 +118,7 @@
         "Duration: 6",
         "Cannot target or apply its debuff to spell immune units. Can target and apply its debuff to spell immune units."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -138,10 +138,11 @@
         "Chaos Strike uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Chaos Strike",
       "cooldown": null,
       "description": "Chaos Knight's attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage.",
-      "spellName": "Chaos Strike",
+      "hot_key": "E",
       "params": [
         "Proc Chance: 33.33% (TagTalent 43.33%)",
         "Min Critical Damage: 120%",
@@ -149,8 +150,7 @@
         "Lifesteal: 24%\/36%\/48%\/60% (TagTalent 44%\/56%\/68%\/80%)",
         "Red critical numbers are before illusion and armor reduction. The lifesteal works for illusions as well."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -178,10 +178,11 @@
         "Affects all allied heroes, including clones. Does not affect invulnerable or hidden allies."
       ],
       "mana": "75\/125\/175",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Phantasm",
       "cooldown": "75",
       "description": "Summons several phantasmal copies of the Chaos Knight from alternate dimensions. The phantasms are strong illusions that deal 100% damage, but take 325% damage.",
-      "spellName": "Phantasm",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0",
         "Split Time: 0.5",
@@ -192,8 +193,7 @@
         "Number of Illusions From Each Ally: 1",
         "Creates an illusion of allied heroes. Creates an additional illusion for Chaos Knight as well."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

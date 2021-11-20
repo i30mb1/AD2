@@ -6,7 +6,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -42,10 +42,11 @@
         "Leveling up the abilty while already effected enemies does not update slow value."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Thunder Clap",
       "cooldown": "13",
       "description": "Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy units.",
-      "spellName": "Thunder Clap",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.4",
         "Radius: 400 (TagTalent 600)",
@@ -55,8 +56,7 @@
         "Slow Duration: 4",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -81,10 +81,11 @@
         "The damage interval does not update once ignited. The amount of intervals is hardcoded, so it continues to deal damage until the debuff expires."
       ],
       "mana": "50\/60\/70\/80",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Cinder Brew",
       "cooldown": "20\/17\/14\/11",
       "description": "Drenches an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage. Duration is increased by 3 seconds when ignited.",
-      "spellName": "Cinder Brew",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.4",
         "Cast Range: 850",
@@ -95,8 +96,7 @@
         "Ignite Duration Increase: 3",
         "Slow persists if the debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -121,10 +121,11 @@
         "The average movement speed bonus over these 5 seconds is 16%."
       ],
       "mana": "35\/40\/45\/50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Drunken Brawler",
       "cooldown": "29\/25\/21\/17",
       "description": "Brewmaster passively gains a chance to evade physical attacks and deal critical damage when attacking. When activated, Brewmaster goes into a drunken brawler state, granting him increased chance to evade or deal critical damage. Brewmaster moves with a varying amount of movement speed, alternating between 20% slower and 40% faster. Lasts 5 seconds.",
-      "spellName": "Drunken Brawler",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Passive Evasion: 15%\/20%\/25%\/30%",
@@ -135,8 +136,7 @@
         "Move Speed Bonus: 40%",
         "Duration: 5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -177,10 +177,11 @@
         "Since the ability itself is not granted, they cannot use the active component to enhance the values."
       ],
       "mana": "125\/150\/175",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Primal Split",
       "cooldown": "140\/130\/120 (TagTalent 0)",
       "description": "Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival, each with their own abilities. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.",
-      "spellName": "Primal Split",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.55+0",
         "Split Time: 0.6",
@@ -190,8 +191,7 @@
         "Primal Split has 2 charges and can be canceled at any time. Charge replenish time is equal to the normal cooldown.",
         "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in 500 AoE. Applies a 20%\/30%\/40% slow and Disarm for 2.5 seconds. Void Brewling inherits Brewmaster's Attack Modifiers"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -206,16 +206,16 @@
         "Casting the sub-ability immediately ends Primal Split. Brewmaster appears at the location of the brewling which used the sub-ability."
       ],
       "mana": "0",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Primal Split Cancel",
       "cooldown": "0",
       "description": "Cancel the Primal Split",
-      "spellName": "Primal Split Cancel",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -229,10 +229,11 @@
         "The boulder first applies the debuff, then the damage."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Hurl Boulder",
       "cooldown": null,
       "description": "Throws a boulder at a unit, doing damage and stunning it.",
-      "spellName": "Hurl Boulder",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.25+0.8",
         "Cast Range: 800",
@@ -241,8 +242,7 @@
         "Blocked upon impact.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -253,15 +253,15 @@
       ],
       "notes": [],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Spell Immunity",
       "cooldown": null,
       "description": "Immune to spells.",
-      "spellName": "Spell Immunity",
+      "hot_key": null,
       "params": [
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -274,16 +274,16 @@
         "The damage is directly added to Earth's attack damage. But since it is conditional, it is not visible in the HUD."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Demolish",
       "cooldown": null,
       "description": "Deals bonus damage to buildings.",
-      "spellName": "Demolish",
+      "hot_key": null,
       "params": [
         "Building Attack Damage Bonus: 90\/180\/270",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -301,10 +301,11 @@
         "Affects invulnerable, but not hidden units."
       ],
       "mana": "75",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Dispel Magic",
       "cooldown": "4",
       "description": "Damages summoned units in an area and purges most buffs or debuffs.",
-      "spellName": "Dispel Magic",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.93",
         "Cast Range: 500",
@@ -313,8 +314,7 @@
         "Affects spell immune allies. Does not affect spell immune enemies.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -330,10 +330,11 @@
         "Can be cast on Roshan, but has no effect, since Roshan is immune to forced movement. He only gets interrupted."
       ],
       "mana": "150",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Cyclone",
       "cooldown": "8",
       "description": "Encloses a unit in a tornado, removing it from the battlefield.",
-      "spellName": "Cyclone",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.67",
         "Cast Range: 600",
@@ -341,8 +342,7 @@
         "Creep Duration: 20",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -364,10 +364,11 @@
         "Allows Storm to pass through other units, including wards, but not through buildings."
       ],
       "mana": "75",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Wind Walk",
       "cooldown": "5",
       "description": "Provides temporary invisibility, bonus movement speed and attack damage when invisible.",
-      "spellName": "Wind Walk",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Fade Time: 0.6",
@@ -376,8 +377,7 @@
         "Duration: 20",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -392,10 +392,11 @@
         "Can deal up to 412.5\/925\/1537.5 damage to a single unit (before reductions) if it stays within range for its whole duration."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Permanent Immolation",
       "cooldown": null,
       "description": "Burns nearby enemy units.",
-      "spellName": "Permanent Immolation",
+      "hot_key": null,
       "params": [
         "Radius: 220",
         "Damage per Second: 25\/50\/75",
@@ -403,8 +404,7 @@
         "Attempts to damage if debuff was placed before spell immunity.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -418,10 +418,11 @@
         "Despite the description stating it damages, it does not cause any damage to enemy heroes or creeps."
       ],
       "mana": "0",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Astral Pulse",
       "cooldown": "12",
       "description": "Damages, Disarms and Slows enemies within a 500 radius",
-      "spellName": "Astral Pulse",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.15+0.95",
         "Radius: 500",
@@ -429,8 +430,7 @@
         "Duration: 2.5",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

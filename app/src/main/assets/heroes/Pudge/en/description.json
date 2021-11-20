@@ -6,7 +6,7 @@
         "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 2% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
         "Heals for 2% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -57,10 +57,11 @@
         "Runes can be hooked as well. Doing so refunds the mana spent on the hook."
       ],
       "mana": "110",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Meat Hook",
       "cooldown": "18\/16\/14\/12 (TagTalent 14\/12\/10\/8)",
       "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge, killing it if it's a non-ancient creep and dealing damage if it is an enemy otherwise.",
-      "spellName": "Meat Hook",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.59",
         "Cast Range: 1300",
@@ -69,8 +70,7 @@
         "Damage: 150\/220\/290\/360 (TagTalent 270\/340\/410\/480)",
         "Can hit and drag spell immune allies. Can damage and drag spell immune enemies and instantly kill creeps. Cannot disable spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -97,10 +97,11 @@
         "Immediately updates the damage when the item is acquired while toggled On, but not the radius."
       ],
       "mana": "0",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Rot",
       "cooldown": "0",
       "description": "A toxic cloud that deals intense damage and slows movement--harming not only enemy units but Pudge himself.",
-      "spellName": "Rot",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 250 (TagAghanim 475)",
@@ -111,8 +112,7 @@
         "Increases Rot radius by 225 and damage by 100. Reduces health regen on affected enemies by 25%.",
         "Slow persists and attempts to damage if debuff was placed before spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -134,18 +134,18 @@
         "Upon leveling Flesh Heap, all stacks adapt to its new values."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Flesh Heap",
       "cooldown": null,
       "description": "Gives Pudge increased magic resistance, as well as bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity. Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
-      "spellName": "Flesh Heap",
+      "hot_key": "E",
       "params": [
         "Enemy Death Radius: 450",
         "Kill Radius: 1600",
         "Magic Resistance Bonus: 12%\/14%\/16%\/18%",
         "Strength Bonus per Death: 1.5\/2\/2.5\/3 (TagTalent 3\/3.5\/4\/4.5)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -160,15 +160,15 @@
         "If Pudge dies, the ally is automatically ejected."
       ],
       "mana": "0",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Eject",
       "cooldown": "0",
       "description": "Ejects the swallowed allied hero inside of you.",
-      "spellName": "Eject",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -201,10 +201,11 @@
         "Pudge receives the hidden modifier upon cast, which creates the visual effect above him, visible to allies only."
       ],
       "mana": "100\/130\/170",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Dismember",
       "cooldown": "30\/25\/20 (TagTalent 20\/15\/10)",
       "description": "Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge gets healed for the same amount he damages. Lasts longer on creeps.",
-      "spellName": "Dismember",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 160",
@@ -220,8 +221,7 @@
         "Ally Order Lock Duration: 3",
         "Allows targeting an ally to swallow them and heal them for 5% of their max health per second. Adds 300 Cast Range and reduces cooldown by 10 seconds."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

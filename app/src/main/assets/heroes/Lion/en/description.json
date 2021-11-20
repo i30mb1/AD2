@@ -6,7 +6,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -49,10 +49,11 @@
         "When Earth Spike hits invisible units, the visual effects below the hit unit are still visible."
       ],
       "mana": "85\/110\/135\/160",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Earth Spike",
       "cooldown": "12 (TagTalent 10)",
       "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
-      "spellName": "Earth Spike",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 575 (TagTalent 1375)",
@@ -63,8 +64,7 @@
         "Attempts to damage if already hit enemies turn spell immune before landing.",
         "Blocked upon impact by everyone within range of the spikes."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -85,10 +85,11 @@
         "Affects every valid target within the area. Does not affect invulnerable or hidden units but fully affects invisible units."
       ],
       "mana": "125\/150\/175\/200",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Hex",
       "cooldown": "30\/24\/18\/12",
       "description": "Transforms an enemy unit into a harmless beast, with all special abilities disabled.",
-      "spellName": "Hex",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.53",
         "Cast Range: 500",
@@ -98,8 +99,7 @@
         "Effects persist if debuff was placed before spell immunity.",
         "Blocked as a single-target ability, not blocked when turned into an area-targeted ability."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -133,10 +133,11 @@
         "All links break as soon as the primary target cannot be affected anymore."
       ],
       "mana": "10",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Mana Drain",
       "cooldown": "15\/12\/9\/6",
       "description": "Absorbs the magical energies of a target enemy unit by taking mana from it every second.",
-      "spellName": "Mana Drain",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 850",
@@ -150,8 +151,7 @@
         "Effect does not persist and immediately ends if debuff was placed before spell immunity. Effect persists on secondary targets if debuff was placed before spell immunity. Can be cast on spell immune allies.",
         "Blocked normally upon cast. Blocked fully only when primary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -175,10 +175,11 @@
         "Can hit invisible units and units inside the Fog of War."
       ],
       "mana": "200\/420\/650",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Finger of Death",
       "cooldown": "160\/100\/40 (TagTalent 100\/60\/20)",
       "description": "Rips at an enemy unit, trying to turn it inside-out. Deals massive damage and grows stronger with each life it consumes.",
-      "spellName": "Finger of Death",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 900",
@@ -192,8 +193,7 @@
         "Cannot be cast on spell immune enemies, but pierces spell immunity when turning spell immune after cast. Fully pierces spell immunity when reflected.",
         "Blocked fully only when primary target. Blocked upon cast. Particles still visually appear."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

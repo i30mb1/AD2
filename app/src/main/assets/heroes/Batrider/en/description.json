@@ -7,7 +7,7 @@
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Batrider's magic resistance to 40%.",
         "Increases Batrider's magic resistance to 40%."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -54,10 +54,11 @@
         "Sticky Napalm deals its damage in a separate damage instance, right after the triggering damage."
       ],
       "mana": "20",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Sticky Napalm",
       "cooldown": "3",
       "description": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area. Additional casts of Sticky Napalm continue to increase damage, up to 10 stacks.",
-      "spellName": "Sticky Napalm",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 550\/600\/650\/700",
@@ -70,8 +71,7 @@
         "Stack Duration: 7",
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -98,10 +98,11 @@
         "Sticky Napalm notes fully apply. If it is not leveled, no stacks are applied."
       ],
       "mana": "110\/120\/130\/140",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Flamebreak",
       "cooldown": "18\/17\/16\/15 (TagTalent 0)",
       "description": "Hurls an explosive cocktail that explodes when it reaches the target location, knocking back, and dealing damage over time to enemies in the area.",
-      "spellName": "Flamebreak",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.4",
         "Cast Range: 1300",
@@ -116,8 +117,7 @@
         "Causes Flamebreak to have two charges and apply a Sticky Napalm charge on impact.",
         "Damages if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -143,10 +143,11 @@
         "Does not affect Roshan."
       ],
       "mana": "125",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Firefly",
       "cooldown": "52\/46\/40\/34",
       "description": "Batrider takes to the skies, laying down a trail of flames from the air. The fire damages any enemies it touches, and destroys trees below Batrider. Batrider has bonus day\/night vision while Firefly is active.",
-      "spellName": "Firefly",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Damage Radius: 200",
@@ -156,8 +157,7 @@
         "Duration: 15 (TagTalent 21.5)",
         "Illusions created during Firefly do not fly."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -188,10 +188,11 @@
         "The secondary lasso is independent from the primary. When the primary lasso is broken, its target can act freely while the secondary target remains being dragged by it."
       ],
       "mana": "225",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Flaming Lasso",
       "cooldown": "120\/115\/110 (TagTalent 85\/80\/75)",
       "description": "Lassoes an enemy and drags them in Batrider's wake. Dragged units cannot move, attack, or use abilities. Teleporting or blinking will break the lasso.",
-      "spellName": "Flaming Lasso",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.4",
         "Cast Range: 175",
@@ -203,8 +204,7 @@
         "Flaming Lasso grabs both its target, as well as the target's nearest allied hero within range. The secondary target is tethered to the first.",
         "Blocked fully only when primary target. When blocked, Batrider is not disarmed either."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

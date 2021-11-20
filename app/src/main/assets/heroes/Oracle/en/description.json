@@ -4,7 +4,7 @@
       "notes": [
         "The intelligence talent effectively grants Oracle 144 mana, 0.6 mana regeneration, and 12 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -58,10 +58,11 @@
         "Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon hit."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Fortune's End",
       "cooldown": "15\/12\/9\/6",
       "description": "Gathers Oracle's power into a bolt of scouring energy that, when released, damages, roots, and purges enemies of buffs in an area around the target. If target is an ally it will only purge debuffs. Can be channeled for up to 2.5 seconds. The root duration is equal to the time spent channeling.",
-      "spellName": "Fortune's End",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 850",
@@ -73,8 +74,7 @@
         "Can target spell immune allies. Cannot target spell immune enemies. Applies area effect when connecting with spell immune enemy. Does not root, dispel, or attempt to damage spell immune enemies. Root persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target. Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -97,10 +97,11 @@
         "Fortune\u2019s End does not dispel the positive modifier on allies\/self anymore."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Fate's Edict",
       "cooldown": "16\/13\/10\/7",
       "description": "Oracle enraptures a target, disarming them and granting them 100% magic damage resistance. Can be cast on allies and enemies.",
-      "spellName": "Fate's Edict",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+1.1",
         "Cast Range: 500\/600\/700\/800",
@@ -110,8 +111,7 @@
         "Fate's Edict no longer causes allies to be disarmed or enemies immune to magic damage.",
         "Fate's Edict's modifier is always dispelled by spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -133,10 +133,11 @@
         "With the enemy damage increasing talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage (before reductions)."
       ],
       "mana": "80\/85\/90\/95",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Purifying Flames",
       "cooldown": "2.5 (TagTalent 1.25)",
       "description": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate health over time. The amount of health regenerated over its duration exceeds the amount of initial damage. Can be cast on enemies and allies.",
-      "spellName": "Purifying Flames",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.15+1.14",
         "Cast Range: 850",
@@ -146,8 +147,7 @@
         "Duration: 9",
         "Heal persists if buff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -186,10 +186,11 @@
         "Attacking, casting abilities or using items breaks the invisibility and resets the fade delay."
       ],
       "mana": "100\/150\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "False Promise",
       "cooldown": "120\/90\/60 (TagTalent 100\/70\/40)",
       "description": "Temporarily alters an ally's destiny, delaying any healing or damage taken until False Promise ends. Any healing that is delayed by False Promise is doubled. Removes most negative status effects and disables on initial cast.",
-      "spellName": "False Promise",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.97",
         "Cast Range: 700\/850\/1000",
@@ -199,8 +200,7 @@
         "Fade Delay: 0.15",
         "Causes False Promise to have a 0.15-second fade delay invisibility."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

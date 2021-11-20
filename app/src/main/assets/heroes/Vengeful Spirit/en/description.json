@@ -6,7 +6,7 @@
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Vengeful Spirit's magic resistance to 34%.",
         "Increases Vengeful Spirit's magic resistance to 34%."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -42,10 +42,11 @@
         "Magic Missile first applies the debuff, then the damage."
       ],
       "mana": "100\/110\/120\/130",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Magic Missile",
       "cooldown": "12\/11\/10\/9 (TagTalent 9.25\/8.25\/7.25\/6.25)",
       "description": "Fires a magic missile at an enemy unit, stunning and dealing damage.",
-      "spellName": "Magic Missile",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 575\/600\/625\/650",
@@ -54,8 +55,7 @@
         "Cannot target or affect spell immune units. Can target and affect spell immune units.",
         "Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -84,10 +84,11 @@
         "With Aghanim's Shard, Wave of Terror effectively removes 20% main armor + 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) bonus armor in total."
       ],
       "mana": "25\/30\/35\/40",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Wave of Terror",
       "cooldown": "16\/14\/12\/10",
       "description": "Vengeful Spirit lets loose a wicked cry, weakening the armor of enemies and giving vision of the path ahead.",
-      "spellName": "Wave of Terror",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 1400",
@@ -100,8 +101,7 @@
         "Main Armor Steal: 20%",
         "Wave of Terror steals 20% of enemy hero base damage and base armor, granting it to Vengeful Spirit for the debuff duration."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -132,10 +132,11 @@
         "However, these effects require the illusion to be alive. If it dies, she no longer gains experience, and stops moving along with it."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Vengeance Aura",
       "cooldown": null,
       "description": "Vengeful Spirit's presence increases the damage of nearby friendly heroes.",
-      "spellName": "Vengeance Aura",
+      "hot_key": "E",
       "params": [
         "Radius: 1200",
         "Attack Damage Bonus: 11%\/18%\/25%\/32% (TagTalent 27%\/34%\/41%\/48%)",
@@ -148,8 +149,7 @@
         "Aura is disabled by break. Still spawns a Vengeance illusion on death.",
         "Illusions bestow the aura. Illusions do not spawn a Vengeance illusion on their death."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -170,10 +170,11 @@
         "The reduction affects all damage the allies take that is not flagged as HP removal."
       ],
       "mana": "100\/150\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Nether Swap",
       "cooldown": "50\/40\/30 (TagTalent 35\/25\/15)",
       "description": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target. Enemy Swapped units take 50 damage Allied swapped units receive less damage for a short duration",
-      "spellName": "Nether Swap",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0",
         "Cast Range: 800\/950\/1100",
@@ -181,8 +182,7 @@
         "Ally\/Self Incoming Damage Reduction: 30%\/40%\/50%",
         "Damage Reduction Duration: 3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

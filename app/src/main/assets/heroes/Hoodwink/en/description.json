@@ -5,7 +5,7 @@
         "Armor Corruption from talents is not disabled by Break. The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes.",
         "The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -66,10 +66,11 @@
         "The projectile provides 200 radius flying vision around itself as it travels. This vision does not last."
       ],
       "mana": "75\/85\/95\/105",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Acorn Shot",
       "cooldown": "16\/14\/12\/10 (TagTalent 0)",
       "description": "Fires Hoodwink's attack with an acorn at the target unit. The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage. If point targeted, a tree is created at the target position and the acorn will bounce to nearby targets. The ability may be placed on auto-cast to force this behavior.",
-      "spellName": "Acorn Shot",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+1.37",
         "Bounce Distance: 525",
@@ -86,8 +87,7 @@
         "Blocked fully only when primary target. Not blocked when ground-targeted or as secondary target.",
         "When directly targeted, disjointing makes it place a tree instead, and continue bouncing from there. As a secondary target, disjointing stops the bouncing as well."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -113,10 +113,11 @@
         "Affects units inside the Fog of War, but not invisible units."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Bushwhack",
       "cooldown": "14 (TagTalent 10)",
       "description": "Tosses a net trap that stuns enemy heroes if they are near a tree in the area. Affected enemies take damage and are pulled towards the tree nearest to them, and have their vision reduced to 0 for the duration of the stun.",
-      "spellName": "Bushwhack",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+1.07",
         "Cast Range: 1000",
@@ -124,8 +125,7 @@
         "Total Damage: 75\/150\/225\/300",
         "Stun Duration: 1.5\/1.8\/2.1\/2.4"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -149,10 +149,11 @@
         "This also means that when given move orders (M), the invisibility is not broken while turning, but breaks when the actual moving starts."
       ],
       "mana": "35",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Scurry",
       "cooldown": "0",
       "description": "Hoodwink passively has a chance to evade physical attacks while near trees. When activated, Hoodwink gains bonus movement speed, phased collision, and tree-walking for a brief time.",
-      "spellName": "Scurry",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Passive Tree Search Radius: 275",
@@ -165,8 +166,7 @@
         "The passive evasion as well as the invisibility from the talent are disabled by Break.",
         "Passive evasion, as well as the invisibility from the talent work for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -203,10 +203,11 @@
         "Although using Bushwhack's modifier, the area stun is completely independent from the ability."
       ],
       "mana": "50",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Decoy",
       "cooldown": "25",
       "description": "Hoodwink sends a decoy illusion to the target location. When the illusion is attacked or hit by a targeted ability, it is destroyed and it throws a lesser bushwhack towards the enemy.",
-      "spellName": "Decoy",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: Global",
@@ -219,8 +220,7 @@
         "Stun Duration: 2",
         "Tree Duration: 20"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -253,10 +253,11 @@
         "Since it uses incoming amplification, it does affect the damage of abilities that ignore outgoing amplification (e.g. Damage Return and Moon Glaives)."
       ],
       "mana": "125",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Hunter's Boomerang",
       "cooldown": "18",
       "description": "Tosses a boomerang at the target enemy in an arc. Upon contact, it returns to Hoodwink. The boomerang will deal damage as it passes through or hits enemies, and apply a Hunter's Mark that causes affected enemies to be slowed and be more vulnerable to spell damage and have reduced status resistance.",
-      "spellName": "Hunter's Boomerang",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0.2+1.07",
         "Cast Range: 1000",
@@ -270,8 +271,7 @@
         "Blocked fully only when primary target. Blocked upon impact. When blocked, the boomerang does not return.",
         "When disjointed, the boomerang returns once reaching the target's last location before disjointing it."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -309,10 +309,11 @@
         "This means the backswing can range from 4.5 to 9.5 seconds."
       ],
       "mana": "125\/175\/225",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Sharpshooter",
       "cooldown": "45",
       "description": "Hoodwink charges up and fires a deadly bolt from her crossbow, dealing heavy damage, break and slow to an enemy Hero. The damage and debuff duration scale up to max after 3 seconds, and the bolt is fired automatically after 5 seconds. Hoodwink is knocked backwards for a distance of 350 from the force of the shot.",
-      "spellName": "Sharpshooter",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+9.5",
         "Cast Range: 3000",
@@ -331,8 +332,7 @@
         "Grants a new ability: Decoy.",
         "Does not collide with spell immune units. Fully pierces spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -345,15 +345,15 @@
         "Interrupts Hoodwink's channeling abilities upon cast."
       ],
       "mana": "0",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "End Sharpshooter",
       "cooldown": "0",
       "description": "Release the charged shot, regain ability to move and attack.",
-      "spellName": "End Sharpshooter",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

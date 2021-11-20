@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -40,10 +40,11 @@
         "The visual effects and the sound during the 0.8-second effect delay are only visible and audible to allies."
       ],
       "mana": "85\/105\/125\/145",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Nether Blast",
       "cooldown": "5 (TagTalent 4)",
       "description": "An exploding pulse deals damage to enemies and structures in the area. Deals half damage to structures.",
-      "spellName": "Nether Blast",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: 500",
@@ -52,8 +53,7 @@
         "Damage: 100\/175\/250\/325 (TagTalent 260\/335\/410\/485)",
         "Building Damage Percentage: 50%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -74,10 +74,11 @@
         "Cannot be cast on any other ward."
       ],
       "mana": "60",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Decrepify",
       "cooldown": "15\/12\/9\/6",
       "description": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Afflicted units take extra magic damage.",
-      "spellName": "Decrepify",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.4",
         "Cast Range: 400\/500\/600\/700",
@@ -87,8 +88,7 @@
         "Duration: 3.5 (TagTalent 5)",
         "All effects persist if buff\/debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -116,10 +116,11 @@
         "Fully affects invulnerable and invisible units and units in the Fog of War."
       ],
       "mana": "80",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Nether Ward",
       "cooldown": "35",
       "description": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero. Nether Ward heals 25% of its total health every time it triggers.",
-      "spellName": "Nether Ward",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.2+0.4",
         "Cast Range: 150",
@@ -131,8 +132,7 @@
         "Ward Duration: 18\/22\/26\/30",
         "Aura Linger Duration: 0.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -171,10 +171,11 @@
         "If the primary target's link breaks while channeling Life Drain, the secondary links continue channeling normally."
       ],
       "mana": "125\/175\/225",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Life Drain",
       "cooldown": "7 (TagTalent 0)",
       "description": "When cast on an enemy, Pugna drains health from the target enemy unit to heal himself and grant vision over the target. If Pugna has full HP, and the enemy target is a Hero, Life Drain will restore mana instead. When cast on an ally, Pugna will drain his own health into his ally.",
-      "spellName": "Life Drain",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: 700",
@@ -188,8 +189,7 @@
         "For every 1.5 seconds of channel, another secondary Life Drain is created targeting another random enemy hero.",
         "Can be cast on spell immune allies Cannot be cast on spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

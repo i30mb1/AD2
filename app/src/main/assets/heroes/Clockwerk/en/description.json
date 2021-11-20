@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,10 +48,11 @@
         "The buff from multiple casts of Battery Assault do not stack but gets refreshed instead."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Battery Assault",
       "cooldown": "24\/22\/20\/18",
       "description": "Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun.",
-      "spellName": "Battery Assault",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Search Radius: 275",
@@ -60,8 +61,7 @@
         "Stun Duration: 0.1",
         "Assault Duration: 10.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -98,10 +98,11 @@
         "The aura's buff lingers for 0.5 seconds."
       ],
       "mana": "80",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Power Cogs",
       "cooldown": "15",
       "description": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down. Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one.",
-      "spellName": "Power Cogs",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cogs Spawn Radius: 215",
@@ -117,8 +118,7 @@
         "Spell Immunity Linger Duration: 0.5",
         "Burns mana and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -139,10 +139,11 @@
         "The rocket can be seen on the minimap. It appears green to allies and red to enemies (enemies require vision over it to see it)."
       ],
       "mana": "35\/40\/45\/50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Rocket Flare",
       "cooldown": "20\/18\/16\/14 (TagTalent 18\/16\/14\/12)",
       "description": "Fires a global range flare that explodes over a given area, damaging enemies and providing vision for 6 seconds.",
-      "spellName": "Rocket Flare",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: Global",
@@ -152,8 +153,7 @@
         "True Sight Duration: 10",
         "True Sight Linger Duration: 0.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -171,10 +171,11 @@
         "Recasting Overclocking refreshes the debuff's duration, but does not reset cooldowns again."
       ],
       "mana": "150",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Overclocking",
       "cooldown": "60",
       "description": "Resets Clockwerk's ability cooldowns and grants him bonus movement and attack speed for a duration. Clockwerk becomes stunned after the duration runs out.",
-      "spellName": "Overclocking",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Move Speed Bonus: 30%",
@@ -182,8 +183,7 @@
         "Duration: 8",
         "Stun Duration: 4"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -204,18 +204,18 @@
         "The flight speed equals Clockwerk's movement speed."
       ],
       "mana": "75",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Jetpack",
       "cooldown": "16",
       "description": "Rises up, granting Clockwerk flying vision, flying movement, and a 20% bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Lasts up to 6 seconds or until he casts Hookshot.",
-      "spellName": "Jetpack",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0.53",
         "Turn Rate in Degrees per Second: 75°",
         "Move Speed Bonus: 20%",
         "Duration: 6"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -244,10 +244,11 @@
         "Fully ignores Couriers."
       ],
       "mana": "150",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Hookshot",
       "cooldown": "60\/45\/30",
       "description": "Fires a grappling device rapidly at the target location. If the hook hits a unit, Clockwerk launches himself into the target, stunning and dealing damage. Any enemies Clockwerk collides with along the way are damaged and stunned.",
-      "spellName": "Hookshot",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 2000\/2500\/3000",
@@ -259,8 +260,7 @@
         "Grants a new ability: Overclocking.",
         "Grants a new ability: Jetpack."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

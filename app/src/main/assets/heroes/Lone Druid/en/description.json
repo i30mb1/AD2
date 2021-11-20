@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -59,10 +59,11 @@
         "Has a cast backswing of 0.57 while in True Form."
       ],
       "mana": "75",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Summon Spirit Bear",
       "cooldown": "120",
       "description": "Summons a powerful Spirit Bear companion that can equip items. If the bear moves 1100 distance away from the Lone Druid, it cannot attack. Lone Druid suffers 20% of his max health as backlash damage if the Spirit Bear dies. Spirit Bear does not benefit from attributes. Spirit Bear has the Return, Demolish, and Entangling Roots abilities.",
-      "spellName": "Summon Spirit Bear",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.5+0.63",
         "Max Health as Backlash Damage: 20%",
@@ -74,8 +75,7 @@
         "Spell immunity does not block the pure backlash damage.",
         "Root does not prevent the Spirit Bear from being teleported back to Lone Druid."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -91,17 +91,17 @@
         "Spirit Link only affects the hero and the hero's Spirit Bear. Does not affect any other player-controlled units."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Spirit Link",
       "cooldown": null,
       "description": "Links Lone Druid and the Spirit Bear, increasing the attack speed of both and causing damage dealt by the Spirit Bear to heal Lone Druid.",
-      "spellName": "Spirit Link",
+      "hot_key": "W",
       "params": [
         "Attack Speed Bonus: 16\/34\/52\/70",
         "Shared Lifesteal: 20%\/35%\/50%\/65%",
         "Lifesteal is disabled if Lone Druid is affected by Break. Attack speed is not disabled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -123,10 +123,11 @@
         "The ally bonus attack speed and movement speed also affects the caster of Savage Roar."
       ],
       "mana": "50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Savage Roar",
       "cooldown": "38\/32\/26\/20 (TagTalent 28\/22\/16\/10)",
       "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
-      "spellName": "Savage Roar",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0.57",
         "Enemy Radius: 375",
@@ -139,8 +140,7 @@
         "Savage Roar now empowers allies in 700 AoE with +20% Movement Speed and +60 Attack Speed for 5 seconds. Applies a basic dispel. Replicates between Lone Druid and Spirit Bear regardless of castability on the other.",
         "Does not affect spell immune enemies. Debuff persists if debuff was placed before spell immunity and when not dispelled. Fully affects spell immune allies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -155,17 +155,17 @@
         "Increases Lone Druid's total magic resistance to 49.75%."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Demolish",
       "cooldown": null,
       "description": "Increases the power of the Spirit Bear, causing it to deal more damage to buildings and have additional spell resistance.",
-      "spellName": "Demolish",
+      "hot_key": null,
       "params": [
         "Magic Resistance Bonus: 33%",
         "Building Attack Damage Bonus: 15%\/30%\/45%\/60%",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -179,18 +179,18 @@
         "Same notes as for Spirit Bear's Demolish apply."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Entangling Claws",
       "cooldown": null,
       "description": "Attacks have a chance to cause roots to burst from the ground, immobilizing the attacked enemy unit, and dealing damage per second.",
-      "spellName": "Entangling Claws",
+      "hot_key": null,
       "params": [
         "Proc Chance: 30%",
         "Damage per Second: 60",
         "Hero Duration: 0.75\/1.5\/2.25\/3",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -214,10 +214,11 @@
         "Changes Lone Druid's model and alters his voice."
       ],
       "mana": "200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "True Form",
       "cooldown": "100 (TagTalent 50)",
       "description": "Lone Druid learns to morph himself into a raging bear, losing his ranged advantage, but gaining increased resistance, and improved versions of Entangling Roots and Demolish.",
-      "spellName": "True Form",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Transformation Time: 1.933",
@@ -228,8 +229,7 @@
         "Duration: 40",
         "Illusions get their own True Form buff lasting its regular duration."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -245,18 +245,18 @@
         "If Lone Druid dies and Return is cast, the Spirit Bear teleports back to Lone Druid's death location."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Return",
       "cooldown": null,
       "description": "Channels for 3 seconds and then teleports the Spirit Bear back to the Lone Druid.",
-      "spellName": "Return",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Channel Time: 3",
         "Prevents casting Return. If already channeling, root does not interrupt it.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -272,17 +272,17 @@
         "Increases the Spirit Bear's total attack damage against buildings, including its bonus attack damage."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Demolish",
       "cooldown": null,
       "description": "Increases the power of the Spirit Bear, causing it to deal more damage to buildings and have additional spell resistance.",
-      "spellName": "Demolish",
+      "hot_key": null,
       "params": [
         "Magic Resistance Bonus: 33%",
         "Building Attack Damage Bonus: 10%\/20%\/30%\/40%",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -296,10 +296,11 @@
         "Spirit Bear acquires this ability as soon as Lone Druid learns it."
       ],
       "mana": "50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Savage Roar",
       "cooldown": "38\/32\/26\/20 (TagTalent 28\/22\/16\/10)",
       "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
-      "spellName": "Savage Roar",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0.64",
         "Enemy Radius: 375",
@@ -313,8 +314,7 @@
         "Does not affect spell immune enemies. Debuff persists if debuff was placed before spell immunity and when not dispelled. Fully affects spell immune allies.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -334,18 +334,18 @@
         "Entangling Claws uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Entangling Claws",
       "cooldown": null,
       "description": "Attacks have a chance to cause roots to burst from the ground, immobilizing the attacked enemy unit, and dealing damage per second.",
-      "spellName": "Entangling Claws",
+      "hot_key": null,
       "params": [
         "Proc Chance: 20%",
         "Damage per Second: 60",
         "Hero Duration: 0.75\/1.5\/2.25\/3",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

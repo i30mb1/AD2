@@ -6,7 +6,7 @@
         "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 2.4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
         "Heals for 2.4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -52,10 +52,11 @@
         "If Plague Ward is not learned, no wards are spawned."
       ],
       "mana": "125",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Venomous Gale",
       "cooldown": "21\/20\/19\/18 (TagTalent 15\/14\/13\/12)",
       "description": "Launches a ball of venom in a line, poisoning enemy units so that they take both initial damage and damage over time, as well as suffering slowed movement. Venomous Gale deals damage every 3 seconds over its duration.",
-      "spellName": "Venomous Gale",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0.57",
         "Cast Range: 800 (TagTalent 1200)",
@@ -70,8 +71,7 @@
         "Causes Venomous Gale to summon two Plague Wards when it impacts an enemy hero. Increases travel range by 400.",
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -93,10 +93,11 @@
         "The wards' Poison Sting can deal up to 18\/63\/132\/225 damage."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Poison Sting",
       "cooldown": null,
       "description": "Adds poison damage to Venomancer's normal attacks and slowing movement speed.",
-      "spellName": "Poison Sting",
+      "hot_key": "W",
       "params": [
         "Damage per Second: 6\/14\/22\/30",
         "Plague Wards Damage Percentage: 50%",
@@ -104,8 +105,7 @@
         "Duration: 6\/9\/12\/15",
         "When Venomancer is affected by Break, his Plague Wards cannot apply Poison Sting either."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -126,17 +126,17 @@
         "The wards gain their spell immunity through a buff, so it is possible for enemies to \u203C Ping it to display its remaining duration."
       ],
       "mana": "20\/22\/24\/26",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Plague Ward",
       "cooldown": "5 (TagTalent 3.5)",
       "description": "Summons a plague ward to attack enemy units and structures. The ward is immune to magic. Wards gain the Poison Sting level from Venomancer, dealing 50% of the full damage.",
-      "spellName": "Plague Ward",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0.63",
         "Cast Range: 850",
         "Ward Duration: 40"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -158,10 +158,11 @@
         "The debuff from successive casts does not stack, only the duration is refreshed."
       ],
       "mana": "200\/300\/400",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Poison Nova",
       "cooldown": "140\/120\/100 (TagTalent 100\/80\/60)",
       "description": "A spreading ring of poison that does damage over time to enemy units around Venomancer. Poison Nova cannot deal lethal damage; targets will be left with at least 1 health.",
-      "spellName": "Poison Nova",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0.87",
         "Radius: 630 (TagTalent 1270)",
@@ -172,8 +173,7 @@
         "Increases damage and decreases cooldown.",
         "Places debuff on spell immune enemies. Does not deal damage to spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     }
   ],

@@ -8,7 +8,7 @@
         "The critical strike increases attack damage by an average of 24%.",
         "The proc chances of multiple critical sources stack. If two sources of critical strike proc at the same time, the higher crit multiplier has priority."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -58,10 +58,11 @@
         "All bounces together can deal up to 200\/320\/440\/560 damage (before reductions)."
       ],
       "mana": "120",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Spirit Lance",
       "cooldown": "7 (TagTalent 5)",
       "description": "Sends a magical spirit lance to a target enemy unit that damages and slows, while summoning an illusory phantom to attack the unit.",
-      "spellName": "Spirit Lance",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.73",
         "Cast Range: 525\/600\/675\/750",
@@ -78,8 +79,7 @@
         "Blocked upon impact as primary or secondary target. When blocked, it stops bouncing.",
         "Can be disjointed by primary and secondary targets. Once disjointed, it stops bouncing."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -105,10 +105,11 @@
         "Doppelganger cannot be interrupted by anything except death. This means when getting teleported (e.g. with Glimpse), Phantom Lancer still appears at the targeted area."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Doppelganger",
       "cooldown": "25\/20\/15\/10 (TagTalent 21\/16\/11\/6)",
       "description": "Phantom Lancer briefly vanishes from the battlefield. After 1 second, Phantom Lancer and any of his nearby illusions reappear at a random position within the targeted location, along with two additional doppelgangers. Extends duration of all illusions. The two added doppelgangers have different properties: one takes normal damage and deals none, while the other takes 500% bonus damage and deals 80% less damage.",
-      "spellName": "Doppelganger",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range: 575",
@@ -123,8 +124,7 @@
         "Gathered Illusion Duration Extension: 2",
         "Doppelganger Illusion Duration: 8"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -152,10 +152,11 @@
         "Effectively grants Phantom Lancer 1.67\/3.33\/5\/6.67 armor, 10\/20\/30\/40 attack speed, and 10\/20\/30\/40 main attack damage."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Phantom Rush",
       "cooldown": null,
       "description": "When targeting an enemy for an attack, Phantom Lancer quickly charges into range, gaining a temporary agility boost. Phantom Lancer's illusions also have this ability.",
-      "spellName": "Phantom Rush",
+      "hot_key": "E",
       "params": [
         "Min Proc Distance: 200",
         "Max Proc Distance: 600\/675\/750\/825 (TagTalent 900\/975\/1050\/1125)",
@@ -164,8 +165,7 @@
         "Max Rush Duration: 5",
         "Agility Duration: 2"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -191,10 +191,11 @@
         "The illusions spawn in a random location within the spawn radius."
       ],
       "mana": "75",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Juxtapose",
       "cooldown": "40",
       "description": "Phantom Lancer has a chance to fracture his presence, creating an illusion of himself. Illusions also have a chance to fracture further. Illusions created from Phantom Lancer last for 8 seconds, while illusions created from other illusions last 4 seconds.",
-      "spellName": "Juxtapose",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0.54",
         "Hero Proc Chance: 40%\/45%\/50%",
@@ -208,8 +209,7 @@
         "Active Illusion Duration: 18",
         "Adds Juxtapose active ability. Destroys Phantom Lancer's other juxtapose illusions and quickly creates the max illusions it allows with a bonus 10 seconds of duration. Increases Max Illusions by 2."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "X",
+      "legacy_key": "X",
       "story": null
     }
   ],

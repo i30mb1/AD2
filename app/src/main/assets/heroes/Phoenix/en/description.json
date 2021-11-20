@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -53,10 +53,11 @@
         "Can deal up to 40\/120\/200\/280 damage to a single unit (before reductions)."
       ],
       "mana": "0",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Icarus Dive",
       "cooldown": "36\/34\/32\/30",
       "description": "Phoenix dives forward in an arc with a fixed distance in the targeted direction, dealing damage over time and slowing the movement speed of any units it comes into contact with, and then orbiting back to its original position. If Phoenix casts Supernova, the dive ends.",
-      "spellName": "Icarus Dive",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: Global",
@@ -71,8 +72,7 @@
         "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
         "Getting rooted during the dive does not cancel the dive."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -85,15 +85,15 @@
         "Interrupts Phoenix's channeling abilities upon cast."
       ],
       "mana": "0",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Stop Icarus Dive",
       "cooldown": "0",
       "description": "Immediately cancels the dive.",
-      "spellName": "Stop Icarus Dive",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -115,10 +115,11 @@
         "Can in total deal up to 240\/560\/880\/1200 (TagTalent 640\/960\/1280\/1600) damage to a single unit (before reductions)."
       ],
       "mana": "120",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Fire Spirits",
       "cooldown": "51\/44\/37\/30",
       "description": "Summons 4 Fire Spirits that circle around Phoenix. Each spirit can be launched independently at a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced.",
-      "spellName": "Fire Spirits",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Current Health as Cost: 20%",
@@ -130,8 +131,7 @@
         "Spirits Duration: 20",
         "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -147,17 +147,17 @@
         "Fire Spirits provide 200 radius ground vision for 1 second at the targeted area upon impact."
       ],
       "mana": "0",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Launch Fire Spirit",
       "cooldown": "0",
       "description": "Each fire spirit can be launched independently at a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced.",
-      "spellName": "Launch Fire Spirit",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 1400",
         "Max Charges: 4"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -196,10 +196,11 @@
         "On the same intervals, Sun Ray first applies the damage, then the debuff."
       ],
       "mana": "100\/110\/120\/130",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Sun Ray",
       "cooldown": "30",
       "description": "Phoenix expels a beam of light at the cost of its own health. The beam damages enemies and heals allies for a base amount plus a percentage of their health. The percentage increases as the beam continues to fire.",
-      "spellName": "Sun Ray",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.01+0.5",
         "Cast Range: 1200",
@@ -217,8 +218,7 @@
         "Allows Sun Ray to be cast during Supernova. Slows enemies by 12%.",
         "Heals spell immune allies. Does not damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -231,15 +231,15 @@
         "Interrupts Phoenix's channeling abilities upon cast."
       ],
       "mana": "0",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Stop Sun Ray",
       "cooldown": "0",
       "description": "Immediately stops the Sun Ray.",
-      "spellName": "Stop Sun Ray",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -256,17 +256,17 @@
         "Can move Phoenix through cliffs, and destroys trees in its path."
       ],
       "mana": "0",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Toggle Movement",
       "cooldown": "0",
       "description": "Toggles slow forward movement during Sun Ray firing.",
-      "spellName": "Toggle Movement",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Set Move Speed: 250",
         "Getting rooted while already moving stops the movement. The movement continues as soon as the root expires."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -307,10 +307,11 @@
         "If Supernova ends during Sun Ray, the ability continues normally, and its sub-abilities become usable again."
       ],
       "mana": "150\/200\/250",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Supernova",
       "cooldown": "120",
       "description": "The Phoenix willingly ends its current life for the chance to be reborn. Transforms into a burning sun that scorches enemies in a huge area. The sun can be destroyed by attacks from enemy Heroes. After seconds the sun explodes, stunning all nearby enemies while restoring Phoenix to full health and mana with refreshed abilities.",
-      "spellName": "Supernova",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.01+0.5",
         "Radius: 1200",
@@ -322,8 +323,7 @@
         "Cast Range: 500",
         "Increases number of attacks to destroy Supernova and allows Phoenix to cast Supernova on an allied hero, bringing both into the sun to be reborn together."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     }
   ],

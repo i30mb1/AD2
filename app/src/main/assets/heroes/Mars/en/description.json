@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -66,10 +66,11 @@
         "Multiple overlapping fire trails do not stack, instead they refresh the same debuff on enemies."
       ],
       "mana": "110\/120\/130\/140",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Spear of Mars",
       "cooldown": "14\/13\/12\/11",
       "description": "Mars throws his legendary Spear with deadly precision, damaging each enemy unit it strikes. The first enemy hero it hits is skewered on the spear, pushing it back. If a skewered hero hits a tree, building, or cliff, they will be impaled to it and stunned.",
-      "spellName": "Spear of Mars",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.25+1.03",
         "Cast Range: Global",
@@ -87,8 +88,7 @@
         "Fire Trail Debuff Duration: 2",
         "Spear of Mars impales up to two units and leaves a fire trail behind for 10 seconds. Deals 35 damage per second and slows by 20%. Debuff lingers for 2 seconds."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -114,10 +114,11 @@
         "The slow and knockback are applied at the same time, so the slow effectively lasts for 1.7 (TagTalent 3.2) seconds."
       ],
       "mana": "90",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "God's Rebuke",
       "cooldown": "16\/14\/12\/10 (TagTalent 12\/10\/8\/6)",
       "description": "Mars smashes enemies in front of him with his shield, knocking them back and damaging them with a critical hit based on his attack. Bonus damage is added when hitting heroes. Has True Strike.",
-      "spellName": "God's Rebuke",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+1.07",
         "Cast Range: 500",
@@ -131,8 +132,7 @@
         "Slow Duration: 2 (TagTalent 3.5)",
         "The instant attack fully pierces spell immunity. Does not knock spell immune enemies back."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -175,10 +175,11 @@
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
       ],
       "mana": "0",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Bulwark",
       "cooldown": "0.2",
       "description": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides. Can be toggled, removing Mars's ability to attack, and locking the direction he is facing. When active, reduces movement speed and re-directs 70% of the attack projectiles aimed at Mars's allies towards Mars instead.",
-      "spellName": "Bulwark",
+      "hot_key": "E",
       "params": [
         "Front Angle: 140°",
         "Side Angle: 240°",
@@ -198,8 +199,7 @@
         "The attacks of the soldiers pierces spell immunity.",
         "Break does not disable the projectile redirect or the soldiers when toggled on, but does disable the damage reduction."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -240,10 +240,11 @@
         "Can regenerate up to 990\/1170\/1350 health over its full duration with the aura linger duration."
       ],
       "mana": "150\/175\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Arena Of Blood",
       "cooldown": "90",
       "description": "After a short formation time, Mars summons an arena lined with the undead warriors of the Ash Legion, who block enemy attacks and movement. Enemy heroes near the inside edge of the arena will be attacked by spears, dealing damage and knocking them back.",
-      "spellName": "Arena Of Blood",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.97",
         "Cast Range: 400",
@@ -260,8 +261,7 @@
         "Ally Health Regen Bonus: 180",
         "Does not affect spell immune enemies. Affects spell immune allies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     }
   ],

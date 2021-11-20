@@ -9,7 +9,7 @@
         "The evasion talent stacks multiplicatively with other sources of evasion.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,10 +48,11 @@
         "Fully affects invisible units and units inside the Fog of War."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Earthbind",
       "cooldown": "20\/16\/12\/8 (TagTalent 17\/13\/9\/5)",
       "description": "Tosses a net at the target point, rooting down all enemy units in an area around it.",
-      "spellName": "Earthbind",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 500\/750\/1000\/1250",
@@ -59,8 +60,7 @@
         "Duration: 2",
         "Root effect persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -87,18 +87,18 @@
         ""
       ],
       "mana": "80",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Poof",
       "cooldown": "12\/10\/8\/6",
       "description": "Drawing mystical energies from the earth, a Meepo can teleport to another Meepo or itself after channeling for 1.5 seconds, dealing damage in both the departure and arrival locations.",
-      "spellName": "Poof",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 1.5+0",
         "Cast Range: Global",
         "Damage Radius: 400",
         "Damage: 45\/60\/75\/90 (TagTalent 85\/100\/115\/130)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -119,17 +119,17 @@
         "Treats creep-heroes as creeps."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Ransack",
       "cooldown": null,
       "description": "Steals health from the enemy with each strike and heals all other Meepos for that amount.",
-      "spellName": "Ransack",
+      "hot_key": "E",
       "params": [
         "Hero Health Steal: 6\/10\/14\/18 (TagTalent 14\/18\/22\/26)",
         "Creep Health Steal: 4\/6\/8\/10 (TagTalent 12\/14\/16\/18)",
         "Illusions neither can steal health, nor get healed by Meepo or a clone attacking."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -147,10 +147,11 @@
         "Restores health in the form of health regeneration, increasing it by 10% of maximum health per second."
       ],
       "mana": "150",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Dig",
       "cooldown": "40",
       "description": "Channels for 0.75 seconds and digs into the ground for 4 seconds, dispelling Meepo and causing him to be come invulnerable and untargetable for 4. Restores 40% of his max health over that duration. Can't be cast while rooted.",
-      "spellName": "Dig",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Channel Time: 0.75",
@@ -158,8 +159,7 @@
         "Duration: 4",
         "Root prevents casting Dig. Does not stop the channeling if it already started."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -194,10 +194,11 @@
         "The projectile first applies the damage, then the debuff."
       ],
       "mana": "100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Divided We Stand",
       "cooldown": "18\/16\/14",
       "description": "Meepo summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. However, the clones cannot wield any items but the boots that Meepo himself wears. If any of the clones die, they all die.",
-      "spellName": "Divided We Stand",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0",
         "Number of Meepo Clones: 1\/2\/3 (TagTalent 2\/3\/4)",
@@ -213,8 +214,7 @@
         "Blocked fully only when primary target. Blocked upon impact.",
         "Meepo immediately stops traveling along with the projectile when disjointed."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

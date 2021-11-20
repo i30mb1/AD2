@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -51,10 +51,11 @@
         "Does not work against Roshan."
       ],
       "mana": "25",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Bloodrage",
       "cooldown": "14\/12\/10\/8",
       "description": "Drives you into a bloodthirsty rage during which causes you to attack faster and deal more spell damage at the cost of a percentage of your health per second. Provides half attack speed to allied heroes.",
-      "spellName": "Bloodrage",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0.4",
         "Cast Range: 800",
@@ -66,8 +67,7 @@
         "Enemy Max Health as Damage\/Lifesteal: 2%",
         "Bloodrage attacks now deal 2% of the target's max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -87,10 +87,11 @@
         "Grants 600 radius ground vision at the center of the affected area for 6 seconds after cast."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Blood Rite",
       "cooldown": "15\/14\/13\/12 (TagTalent 11\/10\/9\/8)",
       "description": "Bloodseeker baptizes an area in sacred blood. After 2.9 seconds the ritual completes, causing any enemies caught in the area to take damage and become silenced.",
-      "spellName": "Blood Rite",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.63",
         "Cast Range: 1500",
@@ -100,8 +101,7 @@
         "Silence Duration: 3\/4\/5\/6",
         "Silence persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -134,10 +134,11 @@
         "Denying allied non-hero units heals for 5.5%\/7%\/8.5%\/10% of their max health. Denying allied heroes still heal for the full value."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Thirst",
       "cooldown": null,
       "description": "Bloodseeker is invigorated by the wounds of his enemies, restoring some life when he kills a unit. Restores for half values when denying, or if an ally kills a nearby enemy hero. Also gains bonus movement speed when an enemy hero's health falls below 80%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below 25%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker.",
-      "spellName": "Thirst",
+      "hot_key": "E",
       "params": [
         "Detection Radius: Global",
         "Enemy Hero Death Heal Radius: 300",
@@ -151,8 +152,7 @@
         "Disables the detection, movement speed bonus, and the movement speed limit removal, but not the heal on kill or nearby death.",
         "Heal and speed limit removal work for illusions, movement speed bonus and detection do not."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -191,10 +191,11 @@
         "Acquiring Aghanim's Scepter instantly grants 1 extra charge. This only happens once, so re-acquiring it does not grant another charge."
       ],
       "mana": "100\/150\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Rupture",
       "cooldown": "70 (TagTalent 0.25)",
       "description": "Causes an enemy unit's skin to rupture, dealing initial damage based on its current health. If the unit moves, it takes damage based on the distance moved. The damage is dealt through spell immunity.",
-      "spellName": "Rupture",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0.53",
         "Cast Range: 800 (TagTalent 1275)",
@@ -205,8 +206,7 @@
         "Charge Replenish Time: 40",
         "Grants Bloodseeker two charges of Rupture and reduces Rupture's Cooldown to 40s"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

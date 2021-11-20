@@ -5,7 +5,7 @@
         "The attack range talent also affects the cast range of Liquid Fire and Liquid Frost.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,10 +48,11 @@
         "Can deal up to 110\/220\/330\/440 (TagTalent 220\/440\/660\/880) damage to a single unit (before reductions)."
       ],
       "mana": "140\/150\/160\/170",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Dual Breath",
       "cooldown": "10",
       "description": "An icy blast followed by a wave of fire launches out in a path in front of Jakiro. The ice slows enemies, while the fire delivers damage over time.",
-      "spellName": "Dual Breath",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.35+1.4",
         "Cast Range: 750 (TagTalent 1500)",
@@ -64,8 +65,7 @@
         "Duration: 5",
         "Slow persists and attempts to deal damage if debuffs were placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -87,10 +87,11 @@
         "Ice Path first applies the debuff, then the damage."
       ],
       "mana": "100",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Ice Path",
       "cooldown": "12\/11\/10\/9 (TagTalent 9.5\/8.5\/7.5\/6.5)",
       "description": "Creates a path of ice that stuns and damages enemies that touch it.",
-      "spellName": "Ice Path",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.65+0.8",
         "Cast Range: 1200",
@@ -100,8 +101,7 @@
         "Damage: 50",
         "Path Duration: 1\/1.5\/2\/2.5 (TagTalent 1.5\/2\/2.5\/3)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -126,10 +126,11 @@
         "If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used."
       ],
       "mana": "0",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Liquid Fire",
       "cooldown": "20\/15\/10\/4",
       "description": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks.",
-      "spellName": "Liquid Fire",
+      "hot_key": "E",
       "params": [
         "Cast Range: 600 (TagTalent 925)",
         "Radius: 300",
@@ -141,8 +142,7 @@
         "When disjointed, the area effect is instantly applied at the target's current location.",
         "Illusions always have the fiery particles when Liquid Fire is leveled at least once before the illusions got created."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "Q",
+      "legacy_key": "Q",
       "story": null
     },
     {
@@ -169,10 +169,11 @@
         "If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used."
       ],
       "mana": "0",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Liquid Frost",
       "cooldown": "12",
       "description": "Stuns enemies for 0.4 seconds and applies a frost debuff that slows enemy movement speed by 20% and take 20 plus 2.5% of their max health per second as damage for 4 seconds.",
-      "spellName": "Liquid Frost",
+      "hot_key": "D",
       "params": [
         "Cast Range: 600 (TagTalent 925)",
         "Radius: 300",
@@ -185,8 +186,7 @@
         "When disjointed, the area effect is instantly applied at the target's current location.",
         "Illusions always have the icy particles when Liquid Frost is unlocked before the illusions got created."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -212,10 +212,11 @@
         "Aghanim's Scepter changes Macropyre's sound effect. This changed sound effect is audible through the Fog of War."
       ],
       "mana": "220\/330\/440",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Macropyre",
       "cooldown": "80\/70\/60",
       "description": "Jakiro exhales a wide line of lasting flames, which deals damage per second to any enemy units caught in the fire.",
-      "spellName": "Macropyre",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.55+1.07",
         "Cast Range: 1400 (TagAghanim 1800)",
@@ -227,8 +228,7 @@
         "Increases Macropyre distance by +400 range, duration by +20 seconds and causes it to become Pure damage and pierce Spell Immunity.",
         "Debuff is always placed on spell immune enemies, but the damage does not tick. The damage ticks normally when upgraded."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

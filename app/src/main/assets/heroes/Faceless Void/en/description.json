@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -45,10 +45,11 @@
         "Dispelling this debuff does not remove the Time Lock stun, but it prevents the Time Lock instant attack from occurring."
       ],
       "mana": "40",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Time Walk",
       "cooldown": "24\/18\/12\/6 (TagTalent 22.5\/16.5\/10.5\/4.5)",
       "description": "Rushes to a target location while backtracking any damage taken in the last 2 seconds.",
-      "spellName": "Time Walk",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: Global",
@@ -59,8 +60,7 @@
         "Increases Time Walk cast range by 400. Grants a new sub-ability: Reverse Time Walk.",
         "Does not apply Time Lock on spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -92,10 +92,11 @@
         "Multiple instances of Time Dilation do not stack, but refresh the duration."
       ],
       "mana": "60\/70\/80\/90",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Time Dilation",
       "cooldown": "28\/24\/20\/16",
       "description": "Faceless Void traps all nearby enemies in a time dilation field for 8\/9\/10\/11 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended. Deals damage per second for each cooldown.",
-      "spellName": "Time Dilation",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0.4",
         "Radius: 775",
@@ -105,8 +106,7 @@
         "Duration: 8\/9\/10\/11",
         "Effects persist if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -131,10 +131,11 @@
         "Time Lock uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Time Lock",
       "cooldown": null,
       "description": "Adds the chance for an attack to lock an enemy unit in time while attacking it a second time.",
-      "spellName": "Time Lock",
+      "hot_key": "E",
       "params": [
         "Proc Chance: 12%\/16%\/20%\/24%",
         "Damage: 15\/20\/25\/30 (TagTalent 85\/90\/95\/100)",
@@ -142,8 +143,7 @@
         "Hero Duration: 0.65",
         "Non-Hero Duration: 2"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -161,16 +161,16 @@
         "If Time Walk was cast multiple times within 1.5 seconds, casting this moves Faceless Void back to where he was on the first cast."
       ],
       "mana": "0",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Reverse Time Walk",
       "cooldown": "0.5",
       "description": "Replaces Time Walk with Reverse Time Walk for 1.5 seconds after landing. If used in this time period, you will reverse your time walk back to your previous cast location. Does not affect health or proc scepter hits.",
-      "spellName": "Reverse Time Walk",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Reversal Time Window: 1.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -197,10 +197,11 @@
         "Despite its visual effects, the effective area is a cylinder not a sphere."
       ],
       "mana": "150\/225\/300",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Chronosphere",
       "cooldown": "160\/150\/140",
       "description": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it. Only Faceless Void and any units he controls are unaffected. Invisible enemies in the sphere will be revealed.",
-      "spellName": "Chronosphere",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.35+0.35",
         "Cast Range: 500",
@@ -210,8 +211,7 @@
         "Attack Speed Bonus: 120",
         "Faceless Void's immunity to Chronospheres is not disabled by Break."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -234,15 +234,15 @@
         "Backtrack uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Backtrack",
       "cooldown": null,
       "description": "There is no description for this ability.",
-      "spellName": "Backtrack",
+      "hot_key": null,
       "params": [
         "Proc Chance: 20%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

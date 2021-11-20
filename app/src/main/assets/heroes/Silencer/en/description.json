@@ -5,7 +5,7 @@
         "The attack range talent also affects the cast range of Glaives of Wisdom.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -49,10 +49,11 @@
         "The sound effect played on every damage instance is only audible to the affected unit's player."
       ],
       "mana": "125\/130\/135\/140",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Arcane Curse",
       "cooldown": "20\/18\/16\/14",
       "description": "Curses the target area, causing enemy heroes to take damage and slowing their movement speed. Silenced enemies take 1.7x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The cooldown is paused as long as the target is silenced.",
-      "spellName": "Arcane Curse",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.37",
         "Cast Range: 1000",
@@ -64,8 +65,7 @@
         "Penalty Duration: 3",
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -120,10 +120,11 @@
         "The bounced glaives still apply the intelligence-based damage separately, and temporarily steal intelligence of its target as well, if it is a hero."
       ],
       "mana": "15",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Glaives of Wisdom",
       "cooldown": "0",
       "description": "Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily steals his target's intelligence with each hit.",
-      "spellName": "Glaives of Wisdom",
+      "hot_key": "W",
       "params": [
         "Cast Range: 600 (TagTalent 700)",
         "Permanent Intelligence Steal Radius: 925",
@@ -138,8 +139,7 @@
         "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces.",
         "Illusions cannot steal intelligence. Although the status buff is copied by illusions, the stolen intelligence is not copied."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -166,10 +166,11 @@
         "Can target invisible units and units inside the Fog of War."
       ],
       "mana": "100\/105\/110\/115",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Last Word",
       "cooldown": "22\/18\/14\/10",
       "description": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
-      "spellName": "Last Word",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0.47",
         "Cast Range: 900",
@@ -182,8 +183,7 @@
         "Does not attempt to damage or silence if initial debuff was placed before spell immunity and when not dispelled. Silence persists if silence debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon cast. Not blocked when upgraded."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -198,17 +198,17 @@
         "This means it heavily tones down other game sounds for enemies, making it basically the only sound they can hear during the silence."
       ],
       "mana": "300\/450\/600",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Global Silence",
       "cooldown": "130\/115\/100",
       "description": "Silencer stops all sound, preventing enemy heroes and units on the map from casting spells.",
-      "spellName": "Global Silence",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.37",
         "Radius: Global",
         "Duration: 4.5\/5.25\/6"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     }
   ],

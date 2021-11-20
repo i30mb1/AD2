@@ -6,7 +6,7 @@
         "Armor Corruption Strike from talents is not disabled by Break. The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes.",
         "The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -61,10 +61,11 @@
         "Since the additional projectiles use the ability's cast range, cast range increasing effects increase their range as well."
       ],
       "mana": "30",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Stifling Dagger",
       "cooldown": "6 (TagTalent 4)",
       "description": "Throws a dagger slowing the enemy unit's movement speed, dealing 65+25%\/40%\/55%\/70% of Phantom Assassin's attack damage as physical damage and applying attack effects from items and abilities.",
-      "spellName": "Stifling Dagger",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.47",
         "Cast Range: 550\/750\/950\/1150",
@@ -77,8 +78,7 @@
         "Can be cast on spell immune units. The attack pierces spell immunity, the slow does not. Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact, as primary and secondary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -95,18 +95,18 @@
         "Cannot be cast on Couriers."
       ],
       "mana": "35\/40\/45\/50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Phantom Strike",
       "cooldown": "11\/9\/7\/5",
       "description": "Teleports to a unit, friendly or enemy, and grants bonus attack speed while attacking if it's an enemy unit.",
-      "spellName": "Phantom Strike",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.25+0.8",
         "Cast Range: 1000 (TagTalent 1250)",
         "Attack Speed Bonus: 75\/100\/125\/150",
         "Duration: 2 (TagTalent 3)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -131,10 +131,11 @@
         "The cooldown resetting is bound to Blur as well. If not learnt, kills do not reset her cooldowns."
       ],
       "mana": "50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Blur",
       "cooldown": "60\/55\/50\/45 (TagTalent 10)",
       "description": "Phantom Assassin focuses inward, increasing her ability to evade enemy attacks. Can be activated to blur her body, causing her to be impossible to see until near enemy heroes.",
-      "spellName": "Blur",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0.57 (TagAghanim 0+0)",
         "Passive Evasion: 20%\/30%\/40%\/50% (TagTalent 55%\/65%\/75%\/85%)",
@@ -145,8 +146,7 @@
         "Causes Blur to have instant cast time and applies a dispel. Anytime you get a hero kill, your abilities are refreshed. Reduces Blur cooldown and increases Fade Time to 0.75.",
         "The passive evasion is disabled by Break."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -168,18 +168,18 @@
         "Fan of Knives first applies the debuff, then the damage."
       ],
       "mana": "50",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Fan of Knives",
       "cooldown": "15",
       "description": "Phantom Assassin releases sharp blades around her in a 550 AoE, dealing 16% of a victim's max health on impact and applying break for 3 seconds.",
-      "spellName": "Fan of Knives",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.15+0.9",
         "Radius: 550",
         "Max Health as Damage: 16%",
         "Debuff Duration: 3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -198,18 +198,18 @@
         "Coup de Grace does not work against allied units, buildings or wards."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Coup de Grace",
       "cooldown": null,
       "description": "Phantom Assassin refines her combat abilities, gaining a chance of delivering a devastating critical strike to enemy units. Stifling Dagger shares the same critical strike chance.",
-      "spellName": "Coup de Grace",
+      "hot_key": "R",
       "params": [
         "Proc Chance: 15% (TagTalent 22%)",
         "Critical Damage: 200%\/325%\/450%",
         "Grants a new ability: Fan of Knives.",
         "Red critical numbers are before illusion and armor reduction."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     }
   ],

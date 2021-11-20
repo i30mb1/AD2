@@ -7,7 +7,7 @@
         "The agility talent effectively grants Morphling 2.5 armor, 15 attack speed, and 15 main attack damage.",
         "The strength talent effectively grants Morphling 400 health and 2 health regeneration."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -49,10 +49,11 @@
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
       ],
       "mana": "130",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Waveform",
       "cooldown": "20\/17\/14\/11 (TagTalent 0)",
       "description": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path. Morphling is invulnerable during Waveform.",
-      "spellName": "Waveform",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.25+0",
         "Cast Range: 700\/800\/900\/1000 (TagTalent 950\/1050\/1150\/1250)",
@@ -63,8 +64,7 @@
         "Charge Replenish Time: 20\/17\/14\/11",
         "The instant attacks added by the talent pierce spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -92,10 +92,11 @@
         "Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well."
       ],
       "mana": "50\/60\/70\/80",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Adaptive Strike (Agility)",
       "cooldown": "10",
       "description": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier. If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used. Also puts Adaptive Strike (Strength) on a 3 second cooldown.",
-      "spellName": "Adaptive Strike (Agility)",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.25+0.67",
         "Cast Range: 600\/700\/800\/900",
@@ -108,8 +109,7 @@
         "Causes Adaptive Strike to have +1 Multishot. Multishot prioritizes heroes.",
         "Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -137,10 +137,11 @@
         "Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well."
       ],
       "mana": "50\/60\/70\/80",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Adaptive Strike (Strength)",
       "cooldown": "10",
       "description": "Launches a surge of water toward an enemy unit, stunning and knocking back the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun\/knockback is dealt. Also puts Adaptive Strike (Agility) on a 3 second cooldown.",
-      "spellName": "Adaptive Strike (Strength)",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.25+0.67",
         "Cast Range: 600\/700\/800\/900",
@@ -154,8 +155,7 @@
         "Causes Adaptive Strike to have +1 Multishot and increases the stun duration by 1 second. Multishot prioritizes heroes.",
         "Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -188,10 +188,11 @@
         "The passive strength bonus effectively grants Morphling 60\/100\/140\/180 health and 0.3\/0.5\/0.7\/0.9 health regen."
       ],
       "mana": "0",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Attribute Shift (Agility Gain)",
       "cooldown": "0",
       "description": "Morphling shifts its form, pulling points from Strength and pouring them into Agility. The process is reversible. Additional points in Attribute Shift increase the rate of stat change. Passively grants bonus Agility.",
-      "spellName": "Attribute Shift (Agility Gain)",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Shift Interval: 0.333\/0.166\/0.083\/0.0416",
@@ -200,8 +201,7 @@
         "Bonus Agility: 3\/5\/7\/9",
         "Illusions spawn with Morphling's current stats, not his original stats."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -214,10 +214,11 @@
         "Same notes as for Attribute Shift (Agility Gain) apply."
       ],
       "mana": "0",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Attribute Shift (Strength Gain)",
       "cooldown": "0",
       "description": "Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible. Additional points in Attribute Shift increase the rate of stat change. Passively grants bonus Strength.",
-      "spellName": "Attribute Shift (Strength Gain)",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0",
         "Shift Interval: 0.333\/0.166\/0.083\/0.0416",
@@ -226,8 +227,7 @@
         "Bonus Strength: 3\/5\/7\/9",
         "Illusions spawn with Morphling's current stats, not his original stats."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -265,10 +265,11 @@
         "Also reduces Morph's cooldown, although this is not included in the upgrade's description."
       ],
       "mana": "50",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Morph",
       "cooldown": "140\/100\/60",
       "description": "Morphling changes his form to match the targeted enemy, gaining their basic abilities with reduced mana cost. Can be toggled for the duration of the ability.",
-      "spellName": "Morph",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.25+0.1",
         "Cast Range: 700\/850\/1000",
@@ -277,8 +278,7 @@
         "Cast Range Bonus: 300",
         "Allows targeting allied heroes. While Morphed, you gain Cast Range increase."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -298,16 +298,16 @@
         "This also means if the target learned or acquired new abilities (e.g. Invoker invoked new abilities), Morphling copies the new abilities."
       ],
       "mana": "0",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Morph Replicate",
       "cooldown": "1",
       "description": "Toggles Morphling's form between his own and the replicated enemy.",
-      "spellName": "Morph Replicate",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "?",
+      "legacy_key": "?",
       "story": null
     }
   ],

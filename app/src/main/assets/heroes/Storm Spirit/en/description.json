@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -45,10 +45,11 @@
         "The damage increasing talent does not update already placed Static Remnants."
       ],
       "mana": "70\/80\/90\/100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Static Remnant",
       "cooldown": "3.5 (TagTalent 2.25)",
       "description": "Creates an explosively charged image of Storm Spirit that lasts 12 seconds and will detonate and deal damage if an enemy unit comes near it.",
-      "spellName": "Static Remnant",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+1.1",
         "Trigger Radius: 235",
@@ -58,8 +59,7 @@
         "Remnant Duration: 12",
         "Procs on spell immune enemies. Does not attempt to damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -79,10 +79,11 @@
         "Multiple casts on the same target refresh the pull duration, and reset the pull distance, but do not update the pull location."
       ],
       "mana": "60\/70\/80\/90",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Electric Vortex",
       "cooldown": "22\/20\/18\/16",
       "description": "A vortex that pulls an enemy unit to Storm Spirit's location.",
-      "spellName": "Electric Vortex",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.77",
         "Cast Range: 300 (TagAghanim 0)",
@@ -93,8 +94,7 @@
         "Cannot be cast on spell immune enemies. Effect persists if debuff was placed before spell immunity and when not dispelled.",
         "Not blocked when upgraded."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -137,10 +137,11 @@
         "Recasting Overload refreshes the buff's duration and resets the charges. The number of charges is visible on the buff's icon."
       ],
       "mana": "150",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Overload",
       "cooldown": "30",
       "description": "Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies.",
-      "spellName": "Overload",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Damage Radius: 300",
@@ -160,8 +161,7 @@
         "Prevents gaining a new charge. An already existing charge still fully works.",
         "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -192,10 +192,11 @@
         "These remnants do not cost mana, are independent from the active ability's cooldown and it does not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning."
       ],
       "mana": "25 + 7.5% of max mana",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Ball Lightning",
       "cooldown": "0",
       "description": "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 25+7.5% of his total mana pool, and the cost per 100 units traveled is 0.65%+ of his total mana pool. Damage is expressed in damage per 100 units traveled.",
-      "spellName": "Ball Lightning",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: Global",
@@ -206,8 +207,7 @@
         "Max Mana as Cost per 100 Distance: 0.65%",
         "Auto Static Remnant Drop Distance: 550"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     }
   ],

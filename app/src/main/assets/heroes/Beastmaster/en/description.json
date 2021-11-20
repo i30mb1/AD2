@@ -6,7 +6,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -55,10 +55,11 @@
         "Does not affect Couriers."
       ],
       "mana": "65",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Wild Axes",
       "cooldown": "8 (TagTalent 0)",
       "description": "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can hit an enemy once, and amplifies subsequent damage from Beastmaster and his units.",
-      "spellName": "Wild Axes",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.47",
         "Cast Range: 1500",
@@ -70,8 +71,7 @@
         "Stack Duration: 12",
         "Causes Wild Axes to have no cooldown, and can be used again once they come back."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -85,17 +85,17 @@
         "The boar spawns at a random location within a 100 radius around Beastmaster."
       ],
       "mana": "60\/65\/70\/75",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Call of the Wild Boar",
       "cooldown": "42\/38\/34\/30",
       "description": "Beastmaster calls forth a Boar to aid in the battlefield.",
-      "spellName": "Call of the Wild Boar",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.67",
         "Number of Boars: 1",
         "Boar Duration: 60"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -121,10 +121,11 @@
         "Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target."
       ],
       "mana": "30",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Call of the Wild Hawk",
       "cooldown": "60\/50\/40\/30 (TagTalent 53\/43\/33\/23)",
       "description": "Beastmaster sends an invisible Hawk to scout an area.",
-      "spellName": "Call of the Wild Hawk",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0.67",
         "Cast Range: Global",
@@ -132,8 +133,7 @@
         "Hawk Duration: 60",
         "Reduces Hawk cooldown by 7. Hawks gain Dive Bomb."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -147,17 +147,17 @@
         "The aura's buff lingers for 0.5 seconds."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Inner Beast",
       "cooldown": null,
       "description": "Untaps the inner fury of nearby allies, passively increasing their attack speed.",
-      "spellName": "Inner Beast",
+      "hot_key": "D",
       "params": [
         "Radius: 1200",
         "Attack Speed Bonus: 15\/25\/35\/45 (TagTalent 45\/55\/65\/75)",
         "Aura Linger Duration: 0.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -185,10 +185,11 @@
         "The movement speed bonus only affects Beastmaster and his units. Other nearby allies are not buffed."
       ],
       "mana": "150\/175\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Primal Roar",
       "cooldown": "100\/80\/60 (TagTalent 70\/50\/30)",
       "description": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 40% movement speed for 3\/3.5\/4 seconds.",
-      "spellName": "Primal Roar",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.63",
         "Cast Range: 600",
@@ -206,8 +207,7 @@
         "Fully pierces spell immunity on the primary target. Does not affect secondary spell immune enemies. Slow and knockback persist if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -223,18 +223,18 @@
         "The aura is bestowed even while Beastmaster is dead."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Health Aura",
       "cooldown": null,
       "description": "There is no description for this ability.",
-      "spellName": "Health Aura",
+      "hot_key": null,
       "params": [
         "Radius: Global",
         "Health Bonus: 250",
         "Aura Linger Duration: 0.5",
         "Illusions bestow and benefit from the aura. Multiple instances of the aura do not stack."
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -250,10 +250,11 @@
         "Successive attacks do not stack the slow, they refresh the duration."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Poison",
       "cooldown": null,
       "description": "Inflicts a poison that slows attack and movement speeds.",
-      "spellName": "Poison",
+      "hot_key": null,
       "params": [
         "Move Speed Slow: 10%\/20%\/30%\/40%",
         "Attack Speed Slow: 10\/20\/30\/40",
@@ -261,8 +262,7 @@
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -284,10 +284,11 @@
         "Can be cast on Couriers."
       ],
       "mana": "0",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Dive Bomb",
       "cooldown": "0",
       "description": "Reveals itself for 1, and then flies towards the target enemy, dealing 250 damage and stunning them for 2 second, killing the hawk.",
-      "spellName": "Dive Bomb",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 1+0",
         "Cast Range: 1200",
@@ -297,8 +298,7 @@
         "Pierces spell immunity on couriers only.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

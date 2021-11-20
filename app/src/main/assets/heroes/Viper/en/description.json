@@ -8,7 +8,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -58,10 +58,11 @@
         "With the maximum stacks, Poison Attack reduces all affected buildings' total magic resistance to -32%\/-48%\/-64%\/-80%, dealing up to 16.9\/37.89\/62.98\/92.16 damage per second to buildings."
       ],
       "mana": "18\/20\/22\/24",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Poison Attack",
       "cooldown": "0",
       "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance deduction while dealing damage over time. Stacks up to 5 times.",
-      "spellName": "Poison Attack",
+      "hot_key": "Q",
       "params": [
         "Cast Range: 600\/640\/680\/720",
         "Max Stacks: 5 (TagTalent 8)",
@@ -74,8 +75,7 @@
         "Causes Poison Attack to lower armor by 1 per stack and allows it to affect buildings for 40%. Increases max stacks by 3.",
         "Debuff persists if it was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -99,10 +99,11 @@
         "However, if an enemy receives the debuff after leveling it up or learning the talent, that enemy receives the new damage values."
       ],
       "mana": "85",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Nethertoxin",
       "cooldown": "14 (TagTalent 3)",
       "description": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage over time based on how long they remain in it. Disables passives of affected units.",
-      "spellName": "Nethertoxin",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cast Range: 900",
@@ -114,8 +115,7 @@
         "Aura Linger Duration: 0.5",
         "Duration: 8"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -137,10 +137,11 @@
         "Does not affect buildings, wards, invulnerable or allied units."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Corrosive Skin",
       "cooldown": null,
       "description": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages it in a 1400 radius. The acid exudate also increases Viper's resistance to magic.",
-      "spellName": "Corrosive Skin",
+      "hot_key": "E",
       "params": [
         "Max Proc Distance: 1400",
         "Magic Resistance Bonus: 10%\/15%\/20%\/25% (TagTalent 20%\/30%\/40%\/50%)",
@@ -150,8 +151,7 @@
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
         "Everything but the magic resistance bonus works for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -171,10 +171,11 @@
         "The particle effects on Viper's wings during the cast time are visible to everyone, showing that the ability is being cast."
       ],
       "mana": "100\/150\/200 (TagTalent 125)",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Viper Strike",
       "cooldown": "50\/40\/30 (TagTalent 10)",
       "description": "Viper slows the targeted enemy unit's movement and attack speed while also dealing poison damage over time. The slowing effect reduces over the duration of the poison.",
-      "spellName": "Viper Strike",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.53",
         "Cast Range: 500 (TagAghanim 900)",
@@ -185,8 +186,7 @@
         "Decreases mana cost and cooldown, and increases cast range.",
         "Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     }
   ],

@@ -6,7 +6,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,10 +43,11 @@
         "The complete area is shaped like a cone."
       ],
       "mana": "100\/115\/130\/145",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Dragon Slave",
       "cooldown": "9 (TagTalent 5.5)",
       "description": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path.",
-      "spellName": "Dragon Slave",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.45+0.38",
         "Cast Range: 800",
@@ -55,8 +56,7 @@
         "End Radius: 200",
         "Damage: 85\/160\/235\/310"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -73,10 +73,11 @@
         "Lina has two different animations for this spell, leading to two possible cast backswing durations."
       ],
       "mana": "100\/105\/110\/115",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Light Strike Array",
       "cooldown": "13\/11\/9\/7",
       "description": "Summons a column of flames that damages and stuns enemies.",
-      "spellName": "Light Strike Array",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.45+0.67\/0.43",
         "Cast Range: 625",
@@ -85,8 +86,7 @@
         "Damage: 80\/130\/180\/230 (TagTalent 210\/260\/310\/360)",
         "Stun Duration: 1.6\/1.9\/2.2\/2.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -103,10 +103,11 @@
         ""
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Fiery Soul",
       "cooldown": null,
       "description": "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts 12 seconds.",
-      "spellName": "Fiery Soul",
+      "hot_key": "E",
       "params": [
         "Max Stacks: 3",
         "Move Speed Bonus per Stack: 4%\/5%\/6%\/7% (TagTalent 6%\/7%\/8%\/9%)",
@@ -114,8 +115,7 @@
         "Stack Duration: 12",
         "Prevents gaining new stacks. Already existing stacks still provide bonus attack and movement speed."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -135,10 +135,11 @@
         "Places a hidden modifier on Lina upon cast, which applies the damage on all enemies within range of the lightning upon being placed."
       ],
       "mana": "250\/400\/550 (TagTalent 150\/300\/450)",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Laguna Blade",
       "cooldown": "70\/60\/50 (TagTalent 45\/35\/25)",
       "description": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage.",
-      "spellName": "Laguna Blade",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.45+0.7",
         "Cast Range: 600 (TagTalent 850)",
@@ -151,8 +152,7 @@
         "Cannot be cast on spell immune enemies, but pierces spell immunity when turning spell immune after cast. Fully pierces spell immunity when reflected. Can be cast on spell immune enemies.",
         "Blocked upon cast. Particles still visually appear. Fully ignores Spell Block."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     }
   ],

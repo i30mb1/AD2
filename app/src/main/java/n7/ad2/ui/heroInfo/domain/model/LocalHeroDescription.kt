@@ -25,26 +25,26 @@ data class Ability(
     val description: String? = null,
     @Json(name = "effects")
     val effects: List<String> = listOf(),
-    @Json(name = "hotKey")
-    val hotKey: String? = null,
-    @Json(name = "itemBehaviour")
+    @Json(name = "hot_key")
+    val hotKey: String = "",
+    @Json(name = "item_behaviour")
     val itemBehaviour: List<String> = listOf(),
-    @Json(name = "legacyKey")
-    val legacyKey: String? = null,
+    @Json(name = "legacy_key")
+    val legacyKey: String = "",
     @Json(name = "mana")
     val mana: String? = null,
     @Json(name = "notes")
     val notes: List<String>? = null,
     @Json(name = "params")
     val params: List<String>? = null,
-    @Json(name = "audioUrl")
-    val audioUrl: String? = null,
-    @Json(name = "spellName")
+    @Json(name = "audio_url")
+    val audioUrl: String = "",
+    @Json(name = "name")
     val spellName: String = "",
     @Json(name = "story")
     val story: String? = null,
     @Json(name = "talents")
-    val talents: List<Talent>? = null
+    val talents: List<Talent>? = null,
 )
 
 @JsonClass(generateAdapter = true)

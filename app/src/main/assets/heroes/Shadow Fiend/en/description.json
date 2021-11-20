@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -46,10 +46,11 @@
         "Although only the Demon Eater cosmetic item makes use of it, the counter is always placed."
       ],
       "mana": "75\/80\/85\/90",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Shadowraze (Near)",
       "cooldown": "10",
       "description": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
-      "spellName": "Shadowraze (Near)",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.55+0",
         "Distance: 200",
@@ -59,8 +60,7 @@
         "Stack Duration: 8",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "Z",
+      "legacy_key": "Z",
       "story": null
     },
     {
@@ -77,10 +77,11 @@
         "Other notes from Shadowraze (Near) fully apply."
       ],
       "mana": "75\/80\/85\/90",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Shadowraze (Medium)",
       "cooldown": "10",
       "description": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
-      "spellName": "Shadowraze (Medium)",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.55+0",
         "Distance: 450",
@@ -90,8 +91,7 @@
         "Stack Duration: 8",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "X",
+      "legacy_key": "X",
       "story": null
     },
     {
@@ -108,10 +108,11 @@
         "Other notes from Shadowraze (Near) fully apply."
       ],
       "mana": "75\/80\/85\/90",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Shadowraze (Far)",
       "cooldown": "10",
       "description": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
-      "spellName": "Shadowraze (Far)",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.55+0",
         "Distance: 700",
@@ -121,8 +122,7 @@
         "Stack Duration: 8",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -153,10 +153,11 @@
         "Casting Necromastery ensures a critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority."
       ],
       "mana": "0",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Necromastery",
       "cooldown": "3",
       "description": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases half of them from bondage.",
-      "spellName": "Necromastery",
+      "hot_key": "D",
       "params": [
         "Max Souls: 11\/14\/17\/20 (TagAghanim 25)",
         "Soul Gain Kill: 1 (TagTalent 2)",
@@ -170,8 +171,7 @@
         "Prevents gaining new stacks. Already existing stacks still provide their bonuses. The active continues working normally.",
         "Illusions start with 0 souls. Illusions can gather souls for themselves, but cannot make use of the raw bonus damage."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "N",
+      "legacy_key": "N",
       "story": null
     },
     {
@@ -186,17 +186,17 @@
         "With the level 15 talent, the aura affects buildings."
       ],
       "mana": null,
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Presence of the Dark Lord",
       "cooldown": null,
       "description": "Shadow Fiend's presence reduces the armor of nearby enemies.",
-      "spellName": "Presence of the Dark Lord",
+      "hot_key": "F",
       "params": [
         "Radius: 1200",
         "Armor Reduction: 4\/5\/6\/7 (TagTalent 8\/9\/10\/11)",
         "Aura Linger Duration: 0.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "P",
+      "legacy_key": "P",
       "story": null
     },
     {
@@ -241,10 +241,11 @@
         "Only heals from damage dealt to heroes, including illusions."
       ],
       "mana": "150\/175\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Requiem of Souls",
       "cooldown": "120\/110\/100 (TagTalent 70\/60\/50)",
       "description": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed reduced for 0.8 seconds for each line hit up to a maximum of 2.4. Lines of energy are created for every soul captured through Necromastery. Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
-      "spellName": "Requiem of Souls",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 1.67+0.77",
         "Damage Lines Travel Distance: 1000",
@@ -260,8 +261,7 @@
         "Increases Necromastery Max Souls and causes Requiem of Souls to return back to Shadow Fiend. The wave back to Shadow Fiend deals less damage, but heals Shadow Fiend for all the damage it dealt.",
         "The passive cast upon death is not disabled by Break."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

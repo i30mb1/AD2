@@ -7,7 +7,7 @@
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The strength talent effectively grants Dragon Knight 400 health, 2 health regeneration, and 20 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -47,10 +47,11 @@
         "Has a cast backswing of 0.53 seconds while in Elder Dragon Form."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Breathe Fire",
       "cooldown": "14\/13\/12\/11",
       "description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.",
-      "spellName": "Breathe Fire",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.47",
         "Cast Range: 600",
@@ -62,8 +63,7 @@
         "Reduction Duration: 11",
         "Attack damage reduction persists if debuff was placed before spell immunity and when not dispelled. Can directly target spell immune units, launching the fire in their direction."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -83,10 +83,11 @@
         "Can hit invisible units and units inside the Fog of War."
       ],
       "mana": "70\/80\/90\/100",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Dragon Tail",
       "cooldown": "16\/14\/12\/10",
       "description": "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing minor damage. When in Elder Dragon Form, the cast range increases to 400.",
-      "spellName": "Dragon Tail",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.5",
         "Cast Range: 150",
@@ -94,8 +95,7 @@
         "Stun Duration: 2.25\/2.5\/2.75\/3 (TagTalent 2.75\/3\/3.25\/3.5)",
         "The projectile used during Elder Dragon Form can be disjointed."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -108,17 +108,17 @@
         "Can regenerate up to 180\/360\/540\/720 (TagTalent 900\/1080\/1260\/1440) health in one minute."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Dragon Blood",
       "cooldown": null,
       "description": "The life blood of the Dragon improves health regeneration and strengthens armor.",
-      "spellName": "Dragon Blood",
+      "hot_key": "E",
       "params": [
         "Health Regen Bonus: 3\/6\/9\/12 (TagTalent 15\/18\/21\/24)",
         "Armor Bonus: 3\/6\/9\/12 (TagTalent 15\/18\/21\/24)",
         "Illusions benefit from the health regeneration, but not from the armor."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -137,10 +137,11 @@
         "While in Elder Dragon Form, Fireball has a cast range of 1400."
       ],
       "mana": "100",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Fireball",
       "cooldown": "20",
       "description": "Ignites a 450 AoE area for 10 seconds, dealing 65 damage per second that lingers for 2 seconds to enemies in it. Has reduced cast range when melee.",
-      "spellName": "Fireball",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.53",
         "Cast Range: 600",
@@ -150,8 +151,7 @@
         "Aura Linger Duration: 2",
         "Continues to deal damage while lingering out if spell immunity was acquired after receiving the debuff."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -195,10 +195,11 @@
         "The black dragon form is 30% larger than the other forms."
       ],
       "mana": "50",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Elder Dragon Form",
       "cooldown": "115\/110\/105 (TagTalent \/100)",
       "description": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers. LEVEL 1 Green Dragon - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures. LEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for 0%\/75%\/75%\/100%, with Corrosive Breath added to the targets. LEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 40% and attack speed by 40 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the targets.",
-      "spellName": "Elder Dragon Form",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0.5",
         "Attack Range Bonus: 350 (TagTalent 500)",
@@ -221,8 +222,7 @@
         "Poison and frost breath do not pierce spell immunity. Splash pierces spell immunity. Corrosive Breath attempts to damage spell immune enemies when placed before spell immunity and when not dispelled.",
         "Illusions get their own Elder Dragon Form buff lasting its regular duration."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

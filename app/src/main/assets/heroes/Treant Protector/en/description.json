@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -54,10 +54,11 @@
         "When buffed by a tree, can deal up to 213.75\/315\/431.25\/562.5 (TagTalent 427.5\/551.25\/690\/843.75) damage to a single non-hero unit."
       ],
       "mana": "75\/80\/85\/90",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Nature's Grasp",
       "cooldown": "20\/19\/18\/17 (TagTalent 15\/14\/13\/12)",
       "description": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through. Vines deal 50% more damage if they touch a tree. Does half damage to creeps.",
-      "spellName": "Nature's Grasp",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.7",
         "Cast Range: 1500",
@@ -70,8 +71,7 @@
         "Vines Duration: 9\/10\/11\/12",
         "Aura Linger Duration: 0.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -91,10 +91,11 @@
         "If the target turns invisible while Leech Seed is still active, the pulses continue coming from its current actual position, making it possible to track the target."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Leech Seed",
       "cooldown": "18\/16\/14\/12",
       "description": "Treant plants a life-sapping seed in an enemy unit, draining its health, while simultaneously slowing it. The seed heals friendly units around it.",
-      "spellName": "Leech Seed",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.5+0.4",
         "Cast Range: 400",
@@ -105,8 +106,7 @@
         "Duration: 5",
         "Can heal spell immune allies. Slow persists, attempts to damage and continues to pulse, if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -124,10 +124,11 @@
         "↓↓ Double-tapping centering the radius around Treant Protector."
       ],
       "mana": "50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Living Armor",
       "cooldown": "26\/22\/18\/14",
       "description": "Infuses the target hero or structure with a protective coating which heals the target and provides bonus armor.",
-      "spellName": "Living Armor",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0.66",
         "Cast Range: Global",
@@ -136,8 +137,7 @@
         "Duration: 12",
         "Radius: 450"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -163,10 +163,11 @@
         "However, Overgrowth no longer root enemies around the enchanted trees anymore."
       ],
       "mana": "100",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Eyes In The Forest",
       "cooldown": "",
       "description": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. If Overgrowth is cast, units within a 800 radius of an enchanted tree will be entangled and damaged.",
-      "spellName": "Eyes In The Forest",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.83",
         "Cast Range: 160",
@@ -175,8 +176,7 @@
         "Number of Charges: 3",
         "Charge Replenish Time: 40"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -205,10 +205,11 @@
         "While attacking within the tree search radius, it causes the invisibility to be re-applied on him 0.75 seconds later."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Nature's Guise",
       "cooldown": null,
       "description": "Provides Treant with Tree Walking whenever he hasn't taken damage for 3 seconds. While active, Treant gains movement speed bonus and amplified healing and regeneration on himself.",
-      "spellName": "Nature's Guise",
+      "hot_key": null,
       "params": [
         "Tree Search Radius: 150",
         "Move Speed Bonus: 15% (TagTalent 30%)",
@@ -222,8 +223,7 @@
         "Causes you to become invisible with Nature's Guise and root enemies upon attacking. Roots them for 2 second and deals a total of 200 damage. Lasts an extra second when attacking near a tree. Increases movement speed bonus by 15%.",
         "Invisibility component fully works for illusions. Root on attack does not work for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -243,10 +243,11 @@
         "With Aghanim's Scepter, Overgrowth also affects enemies within 800 range of a tree enchanted by Eyes In The Forest."
       ],
       "mana": "200\/250\/300",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Overgrowth",
       "cooldown": "100",
       "description": "Summons an overgrowth of vines and branches around Treant that prevent afflicted enemies from moving, blinking, going invisible, or attacking.",
-      "spellName": "Overgrowth",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+1.17",
         "Radius: 800",
@@ -254,8 +255,7 @@
         "Duration: 3\/4\/5",
         "Grants a new ability: Eyes In The Forest. If Overgrowth is cast, units within a radius of an enchanted tree will be entangled and damaged. Passively causes all trees to respawn much faster."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

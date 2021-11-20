@@ -4,7 +4,7 @@
       "notes": [
         "The armor talent does not benefit illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -45,10 +45,11 @@
         "Destroys trees within 125 radius at the targeted point upon cast."
       ],
       "mana": "60\/90\/120\/150",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Vacuum",
       "cooldown": "60\/50\/40\/30",
       "description": "Dark Seer creates a vacuum over the target area that sucks in enemy units, disrupting them and dealing damage.",
-      "spellName": "Vacuum",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.4",
         "Cast Range: 450\/500\/550\/600",
@@ -57,8 +58,7 @@
         "Pull Duration: 0.3\/0.4\/0.5\/0.6",
         "Attempts to deal damage if enemy turns spell immune before the pull ends."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -83,10 +83,11 @@
         "With Aghanim's Scepter, Ion Shell also increases maximum health of targeted allies by 275, keeping the current health percentage the same."
       ],
       "mana": "110\/120\/130\/140",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Ion Shell",
       "cooldown": "9 (TagTalent 0)",
       "description": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it.",
-      "spellName": "Ion Shell",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.7",
         "Cast Range: 600",
@@ -99,8 +100,7 @@
         "Causes Ion Shell to have 2 charges, increases duration by 20 and provides +275 Health.",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Shell persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -116,10 +116,11 @@
         "↓↓ Double-tapping centers the radius around Dark Seer."
       ],
       "mana": "50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Surge",
       "cooldown": "19\/16\/13\/10",
       "description": "Charges a target friendly unit with power, giving it a brief burst of movement speed and removes unit collisions. Allows the unit to reach maximum movement speed and cannot be slowed.",
-      "spellName": "Surge",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0.57",
         "Cast Range: 600",
@@ -127,8 +128,7 @@
         "Duration: 3\/4\/5\/6",
         "Radius: 350"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -162,10 +162,11 @@
         "The punch particle and sound effects upgrade when the distance counter is at 300, and upgrade again when at 900."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Normal Punch",
       "cooldown": null,
       "description": "Grants Normal Punch. Passive cooldown attack. Causes Dark Seer's next attack on a hero to have True Strike, knock an illusion out of the victim and stun them for up to 2.25 seconds, 350 distance and 300 magic damage based on how far Dark Seer has moved in the past 3 seconds. Max power is reached after 900 distance moved. Illusions lasts for 8 seconds. Cooldown: 14",
-      "spellName": "Normal Punch",
+      "hot_key": null,
       "params": [
         "Recent Movement Time Window: 3",
         "Distance Required for Max Values: 900",
@@ -181,8 +182,7 @@
         "Illusion Spawn Delay: 0.7",
         "Illusion Duration: 8"
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -210,10 +210,11 @@
         "The parallel wall talent places a second wall 600 range behind the cast location of first wall, parallel to it."
       ],
       "mana": "125\/250\/375",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Wall of Replica",
       "cooldown": "100 (TagTalent 60)",
       "description": "Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
-      "spellName": "Wall of Replica",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.73",
         "Cast Range: 1300",
@@ -229,8 +230,7 @@
         "Grants a new ability: Normal Punch.",
         "Creates illusions of spell immune enemies, but does not slow them."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

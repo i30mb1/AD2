@@ -5,7 +5,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -50,10 +50,11 @@
         "The damage increasing talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies."
       ],
       "mana": "50",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Shrapnel",
       "cooldown": "0",
       "description": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 35 seconds.",
-      "spellName": "Shrapnel",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 1800",
@@ -67,8 +68,7 @@
         "Charge Replenish Time: 35",
         "Slow persists and attempts to damage if debuff was placed before spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -96,10 +96,11 @@
         "Headshot uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Headshot",
       "cooldown": null,
       "description": "Sniper increases his accuracy, giving him a chance to deal extra damage and briefly knocks back his enemies.",
-      "spellName": "Headshot",
+      "hot_key": "W",
       "params": [
         "Proc Chance: 40%",
         "Damage: 20\/50\/80\/110",
@@ -109,8 +110,7 @@
         "Slow Duration: 0.5",
         "Knockback Duration: 0.1"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -124,10 +124,11 @@
         "Passively increases Sniper's total attack range to 650\/750\/850\/950 (TagTalent 750\/850\/950\/1050)."
       ],
       "mana": "25",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Take Aim",
       "cooldown": "20\/18\/16\/14",
       "description": "Extends the attack range of Sniper's rifle. Can be activated to provide 100% Headshot chance for 3 seconds. Slows you by 45%\/40%\/35%\/30% for the duration.",
-      "spellName": "Take Aim",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Passive Attack Range Bonus: 100\/200\/300\/400",
@@ -136,8 +137,7 @@
         "Active Duration: 3 (TagTalent 4)",
         "Break disables the passive range bonus."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -161,10 +161,11 @@
         "Does not affect Roshan."
       ],
       "mana": "50",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Concussive Grenade",
       "cooldown": "16",
       "description": "Grants Concussive Grenade. Deals 125 damage, knocking enemies back 475 distance, slowing them by 50% and disarming them for 3 seconds. Radius: 375. Knocks you back 475 units on cast.",
-      "spellName": "Concussive Grenade",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+0.8",
         "Cast Range: 600",
@@ -176,8 +177,7 @@
         "Move Speed Slow: 50%",
         "Debuff Duration: 3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -203,10 +203,11 @@
         "The initial weapon loading sound during the cast time is audible to Sniper only."
       ],
       "mana": "175\/225\/275",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Assassinate",
       "cooldown": "20\/15\/10",
       "description": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.",
-      "spellName": "Assassinate",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 2+1.37 (TagAghanim 0.5+3.04)",
         "Cast Range: 3000",
@@ -218,8 +219,7 @@
         "Blocked upon impact, therefore, vision and True Sight are still granted.",
         "Cannot be disjointed with invisibility without true sight immunity, due to the debuff being placed on cast begin."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

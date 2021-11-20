@@ -5,7 +5,7 @@
         "The strength talent effectively grants Tiny 200 health, 1 health regeneration, and 10 main attack damage.",
         "The status resistance talent stacks multiplicatively with other sources of status resistance."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -46,10 +46,11 @@
         "On each instance, Avalanche first applies the damage, then the debuff."
       ],
       "mana": "120",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Avalanche",
       "cooldown": "26\/22\/18\/14 (TagTalent 18\/14\/10\/6)",
       "description": "Bombards an area with rocks, continuously doing small intervals of damage and stun to enemy units. Avalanche does 2.5x damage to units being tossed.",
-      "spellName": "Avalanche",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0.53",
         "Cast Range: 600",
@@ -60,8 +61,7 @@
         "Stun Duration: 0.2",
         "Avalanche Duration: 1.4"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -92,10 +92,11 @@
         "Only runes can no longer be directly targeted when this talent is learned."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Toss",
       "cooldown": "17\/15\/13\/11 (TagTalent 0)",
       "description": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land. If the tossed unit is an enemy, it will take an extra 30% damage.",
-      "spellName": "Toss",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.53",
         "Cast Range: 900\/1000\/1100\/1200",
@@ -110,8 +111,7 @@
         "Charge Replenish Time: 17\/15\/13\/11",
         "Cannot toss spell immune enemies. Can toss spell immune allies. Can toss towards spell immune units. Does not attempt to damage spell immune enemies within the area."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -142,10 +142,11 @@
         "With the area damage length and width, the area damage can reach up to 600 range away from Tiny."
       ],
       "mana": "40",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Tree Grab",
       "cooldown": "19\/16\/13\/10",
       "description": "Grabs a tree to whack enemies on the head for a limited number of attacks. Grants bonus attack range. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, to deal your attack to a unit at a distance.",
-      "spellName": "Tree Grab",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.2+1.24",
         "Cast Range: 165",
@@ -160,8 +161,7 @@
         "Causes Tree Grab to have no charge limit.",
         "Illusions do not spawn with trees when created while having a tree equipped."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -194,10 +194,11 @@
         "This means all abilities that use different values for melee and ranged heroes (e.g. Skull Basher) to now treat the caster as a melee hero."
       ],
       "mana": "0",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Tree Throw",
       "cooldown": "0",
       "description": "Throws the tree at the target unit, proccing your attack on it and splashing damage around the target.",
-      "spellName": "Tree Throw",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.2+1.13",
         "Cast Range: 1200",
@@ -208,8 +209,7 @@
         "Cannot directly target spell immune enemies. Fully hits spell immune enemies otherwise.",
         "Can be disjointed when directly targeted. When disjointed, the instant attack and splash damage are not applied"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -230,10 +230,11 @@
         "Tree Throw instant attack notes fully apply."
       ],
       "mana": "200",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Tree Volley",
       "cooldown": "15",
       "description": "Tiny throws random trees within range towards the targeted aoe. Deals Tiny's attack damage plus a bonus to enemies in that area with each tree thrown.",
-      "spellName": "Tree Volley",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+2.4",
         "Cast Range: 1200",
@@ -243,8 +244,7 @@
         "Tree Throw Interval: 0.4",
         "Instant Attack Damage: 100% (TagTalent 120%)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -259,17 +259,17 @@
         "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Grow",
       "cooldown": null,
       "description": "Tiny gains craggy mass, increasing his attack damage, and armor, while slowing his attack speed.",
-      "spellName": "Grow",
+      "hot_key": "R",
       "params": [
         "Attack Damage Bonus: 30\/70\/110",
         "Attack Speed Loss: 20\/30\/40",
         "Armor Bonus: 12\/18\/24"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

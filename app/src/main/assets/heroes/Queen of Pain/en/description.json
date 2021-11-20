@@ -6,7 +6,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -61,10 +61,11 @@
         "Also targets units inside the Fog of War and invisible units. However, invisible targets instantly disjoint it."
       ],
       "mana": "110\/120\/130\/140",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Shadow Strike",
       "cooldown": "16\/12\/8\/4",
       "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 15 seconds. An instance of damage is dealt every 3 seconds. Queen of Pain relishes in the pain inflicted, healing every time the enemy takes damage. Creeps heal for half the damage only.",
-      "spellName": "Shadow Strike",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.67",
         "Cast Range: 450\/500\/550\/600",
@@ -78,8 +79,7 @@
         "Slow persists and attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact, only when primary target. Not blocked for secondary targets."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -98,10 +98,11 @@
         "The silence however cannot be applied twice for double the duration."
       ],
       "mana": "60",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Blink",
       "cooldown": "12\/10\/8\/6 (TagTalent 10\/8\/6\/4)",
       "description": "Short distance teleportation that allows Queen of Pain to move in and out of combat.",
-      "spellName": "Blink",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.33+0.07",
         "Cast Range: Global",
@@ -111,8 +112,7 @@
         "Silence Duration: 1.75",
         "Releases a sonic boom when Queen of Pain blinks, at both her starting and ending locations. Deals 175 damage in a 300 AoE and silences for 1.75 seconds."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -129,17 +129,17 @@
         "Does not affect invulnerable or hidden units."
       ],
       "mana": "85\/100\/115\/130",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Scream of Pain",
       "cooldown": "7",
       "description": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies.",
-      "spellName": "Scream of Pain",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0.63",
         "Search Radius: 550",
         "Damage: 75\/150\/225\/300 (TagTalent 195\/270\/345\/420)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -162,10 +162,11 @@
         "Fully affects Couriers."
       ],
       "mana": "250\/400\/550",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Sonic Wave",
       "cooldown": "125 (TagTalent 40)",
       "description": "Creates a gigantic wave of sound in front of Queen of Pain, dealing heavy damage to all enemy units in its wake and pushing them back.",
-      "spellName": "Sonic Wave",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.452+0.9",
         "Cast Range: 700",
@@ -177,8 +178,7 @@
         "Knockback Duration: 1.4",
         "Increases damage and decreases cooldown."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -200,15 +200,15 @@
         "The cooldown is affected by Cooldown Reduction sources (e.g. Octarine Core), but not cooldown resets."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Spell Block",
       "cooldown": null,
       "description": "There is no description for this ability.",
-      "spellName": "Spell Block",
+      "hot_key": null,
       "params": [
         "Illusions have the status buff, but it does nothing for them."
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

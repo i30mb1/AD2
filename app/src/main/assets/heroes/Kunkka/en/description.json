@@ -6,7 +6,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The strength talent effectively grants Kunkka 320 health, 1.6 health regeneration, and 16 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -51,10 +51,11 @@
         "Provides 350 radius ground vision over the targeted area upon cast for 3.13 seconds."
       ],
       "mana": "90\/100\/110\/120",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Torrent",
       "cooldown": "16\/14\/12\/10",
       "description": "Summons a rising torrent that, after a short delay, hurls enemy units into the sky, stunning, dealing damage and slowing movement speed.",
-      "spellName": "Torrent",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0",
         "Cast Range: 1300",
@@ -68,8 +69,7 @@
         "Grants a new ability: Torrent Storm.",
         "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -92,10 +92,11 @@
         "Shows a visual effect on the sword whenever it is ready, visible to allies and enemies."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Tidebringer",
       "cooldown": null,
       "description": "Kunkka's legendary sword grants increased damage and cleaves a large area of effect in front of him for a single strike.",
-      "spellName": "Tidebringer",
+      "hot_key": "W",
       "params": [
         "Cast Range: 150",
         "Starting Radius: 150",
@@ -105,8 +106,7 @@
         "Attack Damage Bonus: 30\/60\/90\/120",
         "Tidebringer is always toggled on for illusions. Illusions cannot make use of the attack damage bonus and cannot cleave."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -134,10 +134,11 @@
         "Provides 300 radius ground vision around the X mark for 5.94 seconds."
       ],
       "mana": "50",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "X Marks the Spot",
       "cooldown": "24\/20\/16\/12",
       "description": "Targets a friendly or enemy Hero, marks their position with an X, and returns them to it after several seconds. Kunkka can trigger the return at any time during the duration. Lasts twice as long on allied heroes.",
-      "spellName": "X Marks the Spot",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0",
         "Cast Range: 400\/600\/800\/1000",
@@ -147,8 +148,7 @@
         "Blocked upon cast. Not blocked upon returning.",
         "Root does not prevent the the target from being returned."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "X",
+      "legacy_key": "X",
       "story": null
     },
     {
@@ -162,17 +162,17 @@
         "Despite being a sub-ability, Return does proc all on-cast effects like a regular ability."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Return",
       "cooldown": null,
       "description": "Returns the marked hero to the X.",
-      "spellName": "Return",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0",
         "Can return spell immune allies. Cannot return spell immune enemies, but the modifier still lasts.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "X",
+      "legacy_key": "X",
       "story": null
     },
     {
@@ -195,10 +195,11 @@
         "When Kunkka dies, the torrents still occur at his location."
       ],
       "mana": "250",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Torrent Storm",
       "cooldown": "70",
       "description": "Releases a visible Torrent in a random area around you once every 0.25 for 5 seconds. Spawns in within 1100 range of you.",
-      "spellName": "Torrent Storm",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.4+0.53",
         "Min Spawn Radius: 300",
@@ -207,8 +208,7 @@
         "Storm Duration: 5",
         "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -228,10 +228,11 @@
         "The wave first applies the debuff, then the damage."
       ],
       "mana": "75",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Tidal Wave",
       "cooldown": "12",
       "description": "Releases a Tidal Wave that spawns behind Kunkka. Deals 250 damage and drags enemies along it for 600 distance. Enemies cannot attack while being dragged.",
-      "spellName": "Tidal Wave",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0.2+1",
         "Cast Range: 1400",
@@ -241,8 +242,7 @@
         "Knockback Distance: 600",
         "Knockback Duration: 1.25"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -273,10 +273,11 @@
         "Ghostship's spawn location is set upon cast and does not adapt to the caster's current position as they spawn."
       ],
       "mana": "125\/175\/225",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Ghostship",
       "cooldown": "80\/70\/60",
       "description": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
-      "spellName": "Ghostship",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 1000",
@@ -294,8 +295,7 @@
         "Fully affects spell immune allies. Does not affect spell immune enemies.",
         "Illusions do not get the Rum buff nor its visual effect."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

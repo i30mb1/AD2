@@ -4,7 +4,7 @@
       "notes": [
         "The strength talent effectively grants Anti-Mage 180 health and 0.9 health regeneration."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -47,10 +47,11 @@
         "Does not stack with Diffusal Blade's Manabreak."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Mana Break",
       "cooldown": null,
       "description": "Burns an opponent's mana on each attack. Mana Break deals 50% of the mana burned as damage to the target. Mana Break has 50% effect if caused by illusions.",
-      "spellName": "Mana Break",
+      "hot_key": "Q",
       "params": [
         "Mana Burned per Hit: 28\/40\/52\/64",
         "Max Mana Burned per Hit: 1%\/1.8%\/2.6%\/3.4% (TagTalent 1.6%\/2.4%\/3.2%\/4%)",
@@ -58,8 +59,7 @@
         "Illusion Percentage: 50%",
         "Values are halved for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -74,18 +74,18 @@
         "When targeting beyond the max blink distance, Anti-Mage blinks for the max distance towards the targeted point."
       ],
       "mana": "60",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Blink",
       "cooldown": "15\/12\/9\/6 (TagTalent 14\/11\/8\/5)",
       "description": "Short distance teleportation that allows Anti-Mage to move in and out of combat.",
-      "spellName": "Blink",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.53",
         "Cast Range: Global",
         "Max Blink Distance: 925\/1000\/1075\/1150 (TagTalent 1175\/1250\/1325\/1400)",
         "Grants a new ability: Blink Fragment."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -107,10 +107,11 @@
         "The reduction affects only spell damage enemies deal that is not flagged as HP removal. Attack damage is not reduced."
       ],
       "mana": "45\/50\/55\/60",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Counterspell",
       "cooldown": "15\/11\/7\/3",
       "description": "Passively grants you magic resistance. Can be activated to create an anti-magic shell around you that sends any targeted spells back towards enemies instead of affecting you.",
-      "spellName": "Counterspell",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Magic Resistance Bonus: 15%\/25%\/35%\/45% (TagTalent 35%\/45%\/55%\/65%)",
@@ -124,8 +125,7 @@
         "The passive magic resistance bonus and the Spell Weakness aura are disabled.",
         "Illusions do not get the passive magic resistance bonus. Illusions provide the Spell Weakness aura."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -147,10 +147,11 @@
         "Counterspell is cast simultaneously by the illusion whenever Anti-Mage casts it."
       ],
       "mana": "50",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Blink Fragment",
       "cooldown": "0",
       "description": "Blinks an illusion at the target enemy or location and attack them for 7 seconds. Counterspell is replicated on the Blink Fragment illusion. Has 3 Charges",
-      "spellName": "Blink Fragment",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.84",
         "Cast Range: 925\/1000\/1075\/1150 (TagTalent 1175\/1250\/1325\/1400)",
@@ -161,8 +162,7 @@
         "Charge Replenish Time: 25",
         "Cannot be cast on spell immune units."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -181,10 +181,11 @@
         "Plays a sound effect during the cast time, which is audible to everyone."
       ],
       "mana": "100\/200\/300",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Mana Void",
       "cooldown": "70 (TagTalent 20)",
       "description": "For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies. The main target is also mini-stunned.",
-      "spellName": "Mana Void",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.63",
         "Cast Range: 600",
@@ -193,8 +194,7 @@
         "Stun Duration: 0.3 (TagTalent 1)",
         "Blocked fully only when primary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     }
   ],

@@ -6,7 +6,7 @@
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Clinkz's magic resistance to 34%.",
         "Increases Clinkz's magic resistance to 34%."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -53,10 +53,11 @@
         "The arrows provide 200 radius flying vision around them as they travel."
       ],
       "mana": "40\/55\/70\/85",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Burning Barrage",
       "cooldown": "30\/26\/22\/18",
       "description": "Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers.",
-      "spellName": "Burning Barrage",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: 750\/800\/850\/900 (TagTalent 875\/925\/975\/1025)",
@@ -66,8 +67,7 @@
         "Number of Arrows: 3\/4\/5\/6 (TagTalent 6\/7\/8\/9)",
         "Attack Damage as Damage: 65%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -94,17 +94,17 @@
         "Since Searing Arrows affects buildings, the secondary arrows can target buildings as well."
       ],
       "mana": "10",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Searing Arrows",
       "cooldown": "0",
       "description": "Imbues Clinkz's arrows with fire for extra damage.",
-      "spellName": "Searing Arrows",
+      "hot_key": "W",
       "params": [
         "Cast Range: 600 (TagTalent 725)",
         "Damage: 24\/36\/48\/60 (TagTalent 54\/66\/78\/90)",
         "Arrows per Cast: 1 (TagTalent 2)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -124,10 +124,11 @@
         "The archers are the same as the ones summoned by Burning Army and its notes fully apply. See below for their stats."
       ],
       "mana": "75",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Skeleton Walk",
       "cooldown": "20\/19\/18\/17 (TagTalent 15\/14\/13\/12)",
       "description": "Clinkz moves invisibly through units until the moment he attacks or uses items.",
-      "spellName": "Skeleton Walk",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Fade Time: 0.6",
@@ -137,8 +138,7 @@
         "Archers Duration: 30",
         "Causes Skeleton Walk to create two Burning Army Skeletons."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -167,10 +167,11 @@
         "The Skeleton Archers' attack damage is not reduced by Damage Block."
       ],
       "mana": "150",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Burning Army",
       "cooldown": "80",
       "description": "Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons deal a percentage of Clinkz' damage, use his current Searing Arrows ability and attack only heroes. Attack range is equal to Clinkz's attack range.",
-      "spellName": "Burning Army",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0.67",
         "Cast Range: 1200",
@@ -183,8 +184,7 @@
         "Archers Attack Damage: 30%",
         "Duration: 30"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -205,10 +205,11 @@
         "Cannot be cast on ancient creeps and creep-heroes."
       ],
       "mana": "100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Death Pact",
       "cooldown": "80\/70\/60",
       "description": "Clinkz consumes the target enemy unit or friendly unit, gaining max health and damage based on its current health. Does not take Clinkz out of Skeleton Walk.",
-      "spellName": "Death Pact",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.47",
         "Cast Range: 900",
@@ -217,8 +218,7 @@
         "Duration: 65",
         "Grants a new ability: Burning Army."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     }
   ],

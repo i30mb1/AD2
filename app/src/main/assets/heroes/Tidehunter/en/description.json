@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -44,10 +44,11 @@
         "The second sound is used by the wave."
       ],
       "mana": "100\/105\/110\/115",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Gush",
       "cooldown": "12 (TagTalent 7)",
       "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor. Lasts 4 seconds.",
-      "spellName": "Gush",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.6",
         "Cast Range: 700 (TagAghanim 2200)",
@@ -61,8 +62,7 @@
         "Slow and armor reduction persist if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact. Not blocked when upgraded."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -83,10 +83,11 @@
         "The damage threshold counter for proccing the dispel resets when Tidehunter does not take player based damage for 7 seconds."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Kraken Shell",
       "cooldown": null,
       "description": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. The hide also removes negative status effects if the damage taken crosses a threshold. Does not stack with items that provide Damage Block.",
-      "spellName": "Kraken Shell",
+      "hot_key": "W",
       "params": [
         "Damage Block Proc Chance: 100%",
         "Damage Block: 18\/30\/42\/54 (TagTalent 48\/60\/72\/84)",
@@ -94,8 +95,7 @@
         "Threshold Reset Timer: 7",
         "Damage Block works for illusions. The dispel effect does not work."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -120,10 +120,11 @@
         "The passive procs use pseudo-random distribution."
       ],
       "mana": "40\/50\/60\/70",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Anchor Smash",
       "cooldown": "7\/6\/5\/4 (TagTalent 6\/5\/4\/3)",
       "description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
-      "spellName": "Anchor Smash",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0.3",
         "Radius: 375",
@@ -135,8 +136,7 @@
         "The passive proc chance from the talent is not disabled.",
         "The passive proc chance from the talent works for illusions, however, they cannot make use of the attack damage bonus on procs."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -157,10 +157,11 @@
         "It can be avoided by teleporting towards Tidehunter over the ring shortly after cast."
       ],
       "mana": "150\/225\/325",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Ravage",
       "cooldown": "150",
       "description": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
-      "spellName": "Ravage",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.57",
         "Max Effect Radius: 1250",
@@ -169,8 +170,7 @@
         "Stun Duration: 2.4\/2.6\/2.8 (TagTalent 3.4\/3.6\/3.8)",
         "Attempts to damage if already hit enemies turn spell immune before landing."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     }
   ],

@@ -5,7 +5,7 @@
         "This attack damage talent is added as base attack damage. It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
         "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -42,10 +42,11 @@
         "Despite the visual effects, the damage is applied instantly to all enemy units within range of the target."
       ],
       "mana": "80\/95\/110\/125",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Purification",
       "cooldown": "18\/16\/14\/12 (TagTalent 16\/14\/12\/10)",
       "description": "Instantly heals a friendly unit and damages all nearby enemy units.",
-      "spellName": "Purification",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+1.4",
         "Cast Range: 550",
@@ -53,8 +54,7 @@
         "Damage\/Heal: 90\/160\/230\/300 (TagTalent 250\/320\/390\/460)",
         "Can be cast on spell immune allies. Does not affect spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -72,10 +72,11 @@
         "The status resistance stacks multiplicatively with other sources of status resistance."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Heavenly Grace",
       "cooldown": "26\/22\/18\/14 (TagTalent 24\/20\/16\/12)",
       "description": "Creates a divine barrier around an ally which grants them increased Status Resistance, Strength and Health Regeneration.",
-      "spellName": "Heavenly Grace",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.25+1.27",
         "Cast Range: 500",
@@ -84,8 +85,7 @@
         "Health Regen Bonus: 8\/12\/16\/20 (TagTalent 18\/22\/26\/30)",
         "Duration: 10"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -98,18 +98,18 @@
         "The aura's debuff lingers for 1 second."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Degen Aura",
       "cooldown": null,
       "description": "Greatly degenerates the movement capabilities of enemy units that stray too near.",
-      "spellName": "Degen Aura",
+      "hot_key": "E",
       "params": [
         "Radius: 375",
         "Move Speed Slow: 14%\/22%\/30%\/38% (TagTalent 29%\/37%\/45%\/53%)",
         "Aura Linger Duration: 1",
         "Slow persists if debuff was placed before spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -136,18 +136,18 @@
         "The ability can also be targeted on creep-heroes, but performs a regular attack instead, without wasting mana and cooldown."
       ],
       "mana": "40",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Hammer of Purity",
       "cooldown": "10",
       "description": "Causes Omniknight's next attack to deal bonus pure damage based on 60 plus 115% of his base damage and reduces all outgoing damage from the target by 60% for the next 4 seconds. Cooldown: 10",
-      "spellName": "Hammer of Purity",
+      "hot_key": "D",
       "params": [
         "Base Damage: 60",
         "Main Attack Damage as Damage: 115%",
         "Outgoing Damage Reduction: 60%",
         "Duration: 4"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -162,10 +162,11 @@
         "Can regenerate up to 320\/360\/400 health over its full duration."
       ],
       "mana": "150\/200\/250",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Guardian Angel",
       "cooldown": "160\/140\/120 (TagTalent 100\/80\/60)",
       "description": "Omniknight calls upon a Guardian Angel that grants allies immunity from physical damage.",
-      "spellName": "Guardian Angel",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0.9",
         "Radius: 1200 (TagAghanim Global)",
@@ -174,8 +175,7 @@
         "Increases duration, provides HP regen, radius becomes global and affects buildings.",
         "Grants a new ability: Hammer of Purity"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     }
   ],

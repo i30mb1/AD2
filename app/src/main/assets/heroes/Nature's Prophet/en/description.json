@@ -6,7 +6,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The armor talent does not benefit illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -58,10 +58,11 @@
         "If there are Greater Treants alive from a previous cast, they get instantly killed when new ones are summoned."
       ],
       "mana": "70\/90\/110\/130",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Sprout",
       "cooldown": "11\/10\/9\/8",
       "description": "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a 250 radius.",
-      "spellName": "Sprout",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.35+0.44",
         "Cast Range: 625\/700\/775\/850",
@@ -75,8 +76,7 @@
         "Cannot directly target spell immune enemies, targets ground instead. Can target spell immune allies.",
         "Blocked fully only when directly targeted. Does not block when ground targeted."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -94,16 +94,16 @@
         "The level 25 talent removes Teleportation's cooldown completely."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Teleportation",
       "cooldown": "65\/50\/35\/20 (TagTalent 0)",
       "description": "Teleports to any point on the map.",
-      "spellName": "Teleportation",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 3+0",
         "Cast Range: Global"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -124,10 +124,11 @@
         "This also causes the attack damage of Greater Treants to start scaling with the ability's level."
       ],
       "mana": "130\/140\/150\/160",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Nature's Call",
       "cooldown": "37",
       "description": "Converts an area of trees into Treants under the command of Nature's Prophet.",
-      "spellName": "Nature's Call",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.5+1.23",
         "Cast Range: 750",
@@ -135,8 +136,7 @@
         "Number of Treants: 2\/3\/4\/5 (TagTalent 7\/8\/9\/10)",
         "Treant Duration: 60"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -163,10 +163,11 @@
         "For the root duration increase per bounce from the 1st to the 18th target, please refer to the chart below."
       ],
       "mana": "175\/225\/275",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Wrath of Nature",
       "cooldown": "85 (TagTalent 60)",
       "description": "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage. Enemies that die under this spell grant you bonus damage for 50 seconds.",
-      "spellName": "Wrath of Nature",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.97",
         "Cast Range: Global",
@@ -181,8 +182,7 @@
         "Lowers cooldown from 85 to 60. Entangles all enemies it hits. Duration scales from 2 up to 3.8 seconds at max bounce.",
         "Blocked fully only when directly targeted. Does not block when ground targeted."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -51,10 +51,11 @@
         "The Jinada damage is applied as spell damage in a separate damage instance, it is affected by spell damage amplification and works with spell lifesteal."
       ],
       "mana": "50\/60\/70\/80",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Shuriken Toss",
       "cooldown": "5 (TagTalent 0)",
       "description": "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target. The shuriken will bounce to any Tracked units who are within a 1200 radius of each other.",
-      "spellName": "Shuriken Toss",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.43",
         "Cast Range: 375\/425\/475\/525 (TagAghanim 700)",
@@ -68,8 +69,7 @@
         "Blocked upon impact as primary or secondary target. When blocked, it continues to bounce.",
         "Can be disjointed by primary and secondary targets. Once disjointed, it stops bouncing."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -93,18 +93,18 @@
         "Does not work against allies."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Jinada",
       "cooldown": null,
       "description": "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unreliable gold.",
-      "spellName": "Jinada",
+      "hot_key": "W",
       "params": [
         "Attack Damage Bonus: 60\/100\/140\/180 (TagTalent 100\/140\/180\/220)",
         "Gold Stolen: 12\/20\/28\/36 (TagTalent 62\/70\/78\/86)",
         "Despite being an active ability, Jinada is disabled by Break. Does not stop Shuriken Toss from triggering Jinada",
         "Jinada is always toggled on for illusions, but they cannot trigger it. Illusions permanently emit Jinada's weapon particles."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "J",
+      "legacy_key": "J",
       "story": null
     },
     {
@@ -127,10 +127,11 @@
         "The reduction is independent from the fade time, and is granted immediately."
       ],
       "mana": "65",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Shadow Walk",
       "cooldown": "15 (TagTalent 10)",
       "description": "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability. If he breaks the invisibility with an attack, that attack will slow the target's movement speed.",
-      "spellName": "Shadow Walk",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Fade Time: 1\/0.75\/0.5\/0.25",
@@ -141,8 +142,7 @@
         "Stun Duration: 1",
         "Shadow Walk grants you 35% damage reduction while invisible. Attacking out of invisibility stuns the target for 1 second. Lowers cooldown by 5 seconds."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -168,10 +168,11 @@
         "Alt+ Left Click the debuff announces the tracked hero's current gold in the chat."
       ],
       "mana": "60",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Track",
       "cooldown": "4",
       "description": "Tracks an enemy hero, granting True Sight of the target, and information on how much gold it is carrying. Bounty Hunter moves fast when near the tracked unit and deals critical strikes when attacking it. If the target dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold. Casting Track does not take you out of invisibility.",
-      "spellName": "Track",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.43",
         "Cast Range: 1000",
@@ -186,8 +187,7 @@
         "Ally Move Speed Bonus: 8%\/10%\/12%",
         "Vision Radius: 600"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

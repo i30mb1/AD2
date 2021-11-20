@@ -8,7 +8,7 @@
         "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
         "Heals for 6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -50,16 +50,16 @@
         "Checks Outworld Destroyer's mana pool upon projectile hit, so increasing or decreasing his mana pool while the projectile flies does affect its damage."
       ],
       "mana": "20% of current mana",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Arcane Orb",
       "cooldown": "6\/4\/2\/0",
       "description": "Adds extra pure damage to Outworld Destroyer's attacks, based on his remaining mana pool.",
-      "spellName": "Arcane Orb",
+      "hot_key": "Q",
       "params": [
         "Cast Range: 450",
         "Current Mana as Damage: 16% (TagTalent 18%)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -87,10 +87,11 @@
         "Instead, it slows their movement speed by 40%, turns them invulnerable and unselectable, and silences, mutes and disarms them."
       ],
       "mana": "150",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Astral Imprisonment",
       "cooldown": "24\/20\/16\/12 (TagTalent 0)",
       "description": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target and steals a percentage of their max mana.",
-      "spellName": "Astral Imprisonment",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.4",
         "Cast Range: 650",
@@ -105,8 +106,7 @@
         "Grants charges to Astral Imprisonment, increases damage by 140 and applies the damage in an area.",
         "Grants an additional +5% Mana Capacity steal to Astral Imprisonment. Also allows allies to move at 60% movement speed during Astral Imprisonment (TagTalentthey are visible, but untargettable and can't perform any other actions)."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -122,16 +122,16 @@
         "On average, restores 9%\/12%\/15%\/18% of caster's maximum mana per cast."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Essence Flux",
       "cooldown": null,
       "description": "Passively grants you a chance to restore a percentage of your max mana each time you cast an ability.",
-      "spellName": "Essence Flux",
+      "hot_key": "E",
       "params": [
         "Proc Chance: 30%",
         "Max Mana Restored: 30%\/40%\/50%\/60%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -147,10 +147,11 @@
         "Affects units under the effect of Astral Imprisonment as well, but not other invulnerable or hidden units."
       ],
       "mana": "200\/325\/450",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Sanity's Eclipse",
       "cooldown": "160\/145\/130",
       "description": "Unleashes a psychic blast that deals to enemies based on the difference between your mana and the target's mana. Sanity's Eclipse can hit units trapped by Astral Imprisonment.",
-      "spellName": "Sanity's Eclipse",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.25+0.4",
         "Cast Range: 700",
@@ -158,8 +159,7 @@
         "Base Damage: 200\/300\/400",
         "Mana Difference Damage Multiplier: 0.4 (TagTalent 0.55)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     }
   ],

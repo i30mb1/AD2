@@ -4,7 +4,7 @@
       "notes": [
         "The Zombie attack damage talent is added to the base damage, and not as bonus damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -60,10 +60,11 @@
         "However, debuffed enemies keep their current health percentage. Their health also only updates upon gaining or losing maximum health again."
       ],
       "mana": "85\/90\/95\/100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Decay",
       "cooldown": "10\/8\/6\/4 (TagTalent 8.5\/6.5\/4.5\/2.5)",
       "description": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the enemy's strength for himself.",
-      "spellName": "Decay",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.45+0",
         "Cast Range: 650",
@@ -76,8 +77,7 @@
         "Strength loss persists if debuff was placed before spell immunity.",
         "Illusions of Undying or affected enemies do not reflect the gained or lost strength. They keep the original strength values of the heroes."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -103,10 +103,11 @@
         "Soul Rip can damage or heal a unit for up to 152\/234\/330\/440 (TagTalent 248\/342\/450\/572) health (before reductions)."
       ],
       "mana": "85\/100\/115\/130",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Soul Rip",
       "cooldown": "24\/18\/12\/6",
       "description": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. Soul Rip can also be used to heal Tombstone.",
-      "spellName": "Soul Rip",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.35+0",
         "Cast Range: 750",
@@ -117,8 +118,7 @@
         "Can be cast on and counts nearby spell immune allies. Cannot be cast on and does not count nearby spell immune enemies.",
         "Units counted towards damage still lose health."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -145,10 +145,11 @@
         "It also triggers with Reincarnation sources."
       ],
       "mana": "120\/130\/140\/150",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Tombstone",
       "cooldown": "85\/80\/75\/70 (TagTalent 70\/65\/60\/55)",
       "description": "Summons a tombstone at the target point. Zombies will frequently spawn next to every enemy unit in the area around the Tombstone, and attack them. Zombies have the Deathlust ability, which causes their attacks to slow the target, and if the target reaches below a certain amount of health, increases the attack and movement speed of the zombie.",
-      "spellName": "Tombstone",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.45+0",
         "Cast Range: 600",
@@ -161,8 +162,7 @@
         "Tombstone Duration: 30",
         "Already spawned zombies do not die when their target turns spell immune."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -188,10 +188,11 @@
         "Tombstone and Undying Zombie notes fully apply. If Tombstone is not learned, no zombies are spawn."
       ],
       "mana": "100\/125\/150",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Flesh Golem",
       "cooldown": "125 (TagTalent 95)",
       "description": "Undying transforms into a horrifying flesh golem. Gains a percentage increase to strength and imbues attacks with a slow and damage amplification.",
-      "spellName": "Flesh Golem",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Strength Bonus: 40%\/50%\/60%",
@@ -204,8 +205,7 @@
         "Reduces Flesh Golem Cooldown by -30s and causes Undying to spawn one zombie on each attack while transformed.",
         "Illusions get a new Flesh Golem buff, lasting for the full duration, regardless of how much is left on Undying himself. Illusions' attacks do not apply the debuff."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -225,15 +225,15 @@
         "The cooldown is not affected by any cooldown reduction and cooldown resets sources."
       ],
       "mana": "0",
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Reincarnation",
       "cooldown": "300",
       "description": "There is no description for this ability.",
-      "spellName": "Reincarnation",
+      "hot_key": null,
       "params": [
         "Effect Delay: 5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -252,10 +252,11 @@
         "Does not trigger against Familiars."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Deathlust",
       "cooldown": null,
       "description": "Slows enemy units on attack. If the attacked unit's health goes below the threshold, the zombie receives enhanced movement and attack speed.",
-      "spellName": "Deathlust",
+      "hot_key": null,
       "params": [
         "Enemy Health Threshold: 40%",
         "Threshold Move Speed Bonus: 35%\/40%\/45%\/50%",
@@ -264,8 +265,7 @@
         "Slow Duration: 2.5",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -279,15 +279,15 @@
         "The status buff uses the other spell immunity icon."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Spell Immunity",
       "cooldown": null,
       "description": "This creature does not feel the effects of most magical spells.",
-      "spellName": "Spell Immunity",
+      "hot_key": null,
       "params": [
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

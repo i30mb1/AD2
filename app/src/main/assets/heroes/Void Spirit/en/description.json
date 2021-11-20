@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -53,10 +53,11 @@
         "Destroys trees within a 200 radius around the target at the end of the hypnosis."
       ],
       "mana": "75\/80\/85\/90",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Aether Remnant",
       "cooldown": "17\/15\/13\/11",
       "description": "Vector targeted. Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
-      "spellName": "Aether Remnant",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0.53",
         "Cast Range: 850",
@@ -71,8 +72,7 @@
         "True Sight Radius: 475",
         "Debuff persist if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -101,10 +101,11 @@
         "Dissimilate first applies the damage, then the stun."
       ],
       "mana": "100\/110\/120\/130",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Dissimilate",
       "cooldown": "20\/17\/14\/11",
       "description": "Void Spirit temporarily fades into the aether, creating a number of portals through which he can reassemble himself. Upon exiting a portal, he damages all enemies in the area.",
-      "spellName": "Dissimilate",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0",
         "Portals Radius: 275",
@@ -118,8 +119,7 @@
         "Adds a partial outer ring to Dissimilate. Increases damage by 175.",
         "Debuff persist if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -154,10 +154,11 @@
         "Goes on a 0.25-second cooldown when cast to prevent accidental double-casts."
       ],
       "mana": "115\/120\/125\/130",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Resonant Pulse",
       "cooldown": "18 (TagTalent 0.25)",
       "description": "Void Spirit wraps himself in a protective shield that absorbs physical damage and emits a single damaging pulse around him. The shield gains increased damage absorption for each enemy hero the pulse hits.",
-      "spellName": "Resonant Pulse",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 500",
@@ -170,8 +171,7 @@
         "Charge Replenish Time: 18",
         "Causes Resonant Pulse to silence and gain two charges."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -193,10 +193,11 @@
         "Multiple instances of the debuff fully stack and work independently from each other."
       ],
       "mana": "100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Astral Step",
       "cooldown": "0",
       "description": "Void Spirit tears a rift through the astral plane to appear at the target location, attacking all enemies along the path. This attack inflicts a void mark that slows for 2 seconds and then detonates.",
-      "spellName": "Astral Step",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: Global",
@@ -210,8 +211,7 @@
         "Charge Replenish Time: 28\/23\/18 (TagTalent 24\/19\/14)",
         "Critical Damage: 160%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

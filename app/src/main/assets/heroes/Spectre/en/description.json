@@ -5,7 +5,7 @@
         "The \/ \/ all stats talent effectively grants Spectre 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 main attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -57,10 +57,11 @@
         "Dispelling the path creating debuff on enemy heroes stops them from creating or extending the path, but does not remove already created paths."
       ],
       "mana": "130\/140\/150\/160",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Spectral Dagger",
       "cooldown": "22\/20\/18\/16 (TagTalent 18\/16\/14\/12)",
       "description": "Spectre flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of any enemies along the trail. Units hit by the dagger also trail a Shadow Path. While treading the path, Spectre phases through otherwise impassable terrain.",
-      "spellName": "Spectral Dagger",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.37",
         "Cast Range: 1800",
@@ -74,8 +75,7 @@
         "Can target spell immune enemies, placing the trail and slow debuff on them. The slow debuff is inactive while spell immune.",
         "Procs only when secondary target while a hero was directly targeted. However, Spectral Dagger instantly reattempts to apply the debuff, thus wasting Linken's cooldown. No interaction with the primary target or when hit while the ground was targeted."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -98,16 +98,16 @@
         "Only checks for allies of the target, meaning nearby neutral creeps do not prevent it from dealing damage to units of the enemy team, and vice versa."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Desolate",
       "cooldown": null,
       "description": "Deals bonus damage whenever Spectre attacks an enemy that does not have any allied units within a 425 radius around them.",
-      "spellName": "Desolate",
+      "hot_key": "W",
       "params": [
         "Radius: 425",
         "Damage: 18\/32\/46\/60 (TagTalent 30\/44\/58\/72)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "L",
+      "legacy_key": "L",
       "story": null
     },
     {
@@ -149,10 +149,11 @@
         "Passive Spectral Dagger procs do not cost mana and are independent from the active ability's cooldown."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Dispersion",
       "cooldown": null,
       "description": "Damage done to Spectre is reflected on her enemies, leaving her unharmed. The effect lessens with distance.",
-      "spellName": "Dispersion",
+      "hot_key": "E",
       "params": [
         "Min Radius: 300",
         "Max Radius: 700",
@@ -163,8 +164,7 @@
         "All aspects ignore spell immunity, including the passive Spectral Dagger, which are launched on spell immune units as well.",
         "All aspects are disabled, including the passive Spectral Daggers."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "I",
+      "legacy_key": "I",
       "story": null
     },
     {
@@ -181,16 +181,16 @@
         "After swapping positions, the Haunt illusion still walks towards its target and attacks it."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Reality",
       "cooldown": null,
       "description": "Spectre exchanges places with a chosen Haunt.",
-      "spellName": "Reality",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0.7",
         "Cast Range: Global"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -209,10 +209,11 @@
         "Cannot be cast on creep-heroes."
       ],
       "mana": "180",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Shadow Step",
       "cooldown": "40",
       "description": "Allows Spectre to perform a single target unit Haunt. Casts Spectral Dagger on the target.",
-      "spellName": "Shadow Step",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: Global",
@@ -220,8 +221,7 @@
         "Illusion Damage Taken: 200%",
         "Haunt Duration: 5\/6\/7"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -239,10 +239,11 @@
         "The illusions disappear once their target dies."
       ],
       "mana": "150\/200\/250",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Haunt",
       "cooldown": "180\/160\/140",
       "description": "Creates a spectral nemesis to attack each enemy hero. At any moment during the duration, Spectre can use Reality to exchange places of a given haunt. Haunt illusions are uncontrollable, take extra damage, and deal less damage than Spectre herself. They ignore terrain.",
-      "spellName": "Haunt",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Radius: Global",
@@ -251,8 +252,7 @@
         "Haunt Duration: 5\/6\/7",
         "Grants a new ability: Shadow Step."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

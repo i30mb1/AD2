@@ -7,7 +7,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -51,16 +51,16 @@
         "The damage is capped at 1750 distance, which equates to 140\/210\/280\/350 (TagTalent 253.75\/323.75\/393.75\/463.75) damage."
       ],
       "mana": "55",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Impetus",
       "cooldown": "6\/4\/2\/0",
       "description": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is. The farther the target, the greater the damage dealt.",
-      "spellName": "Impetus",
+      "hot_key": "Q",
       "params": [
         "Cast Range: 575",
         "Distance as Damage: 8%\/12%\/16%\/20% (TagTalent 14.5%\/18.5%\/22.5%\/26.5%)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -83,10 +83,11 @@
         "When an enchanted creep's duration ends, it dies instantly. The death is not credited to anyone so that no one gets experience from it."
       ],
       "mana": "40\/50\/60\/70",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Enchant",
       "cooldown": "28\/24\/20\/16",
       "description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing its attack damage and max health.",
-      "spellName": "Enchant",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.67",
         "Cast Range: 500\/550\/600\/650",
@@ -99,8 +100,7 @@
         "Enchant Duration: 30\/60\/90\/120",
         "Slow persists if debuff was placed before spell immunity and when not dispelled. Cannot convert spell immune units."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -126,10 +126,11 @@
         "With Aghanim's Shard, the passive wisps can heal up to 12\/24\/36\/48 (TagTalent 72\/84\/96\/108) health per second or 720\/1440\/2160\/2880 (TagTalent 4320\/5040\/5760\/6480) per minute."
       ],
       "mana": "170\/160\/150\/140",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Nature's Attendants",
       "cooldown": "35",
       "description": "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts seconds.",
-      "spellName": "Nature's Attendants",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0.93",
         "Search Radius: 275",
@@ -140,8 +141,7 @@
         "Adds 3 permanent Nature's Attendants that follow Enchantress around.",
         "The Aghanim's Shard upgrade fully works for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -170,10 +170,11 @@
         "The Impetus applied by Sproink do not cost any mana."
       ],
       "mana": "50",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Sproink",
       "cooldown": "5",
       "description": "Leaps backward and dodges incoming projectiles, and launches an Impetus attack on the furthest 3 enemy units within Enchantress' attack range + 200.",
-      "spellName": "Sproink",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Leap Distance: 500",
@@ -181,8 +182,7 @@
         "Impetus Attacks Range Buffer: 200",
         "Number of Impetus Attacks: 3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -203,17 +203,17 @@
         "Does not work against buildings, allies, or invulnerable units. Works against vulnerable wards."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Untouchable",
       "cooldown": null,
       "description": "Enchantress beguiles her enemies, slowing their attacks when she is attacked.",
-      "spellName": "Untouchable",
+      "hot_key": "R",
       "params": [
         "Attack Speed Slow: 120\/160\/200 (TagTalent 185\/225\/265)",
         "Grants a new ability: Sproink.",
         "Although the debuff is still placed on each attack, it does not slow during Break."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "N",
+      "legacy_key": "N",
       "story": null
     }
   ],

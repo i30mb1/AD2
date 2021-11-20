@@ -6,7 +6,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -52,10 +52,11 @@
         "With Aghanim's Shard, Mist Coil first applies its damage, then the Curse of Avernus stack based on its current level."
       ],
       "mana": "50",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Mist Coil",
       "cooldown": "5.5 (TagTalent 4.5)",
       "description": "Abaddon releases a coil of deathly mist that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health.",
-      "spellName": "Mist Coil",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.25+0.4",
         "Cast Range: 575",
@@ -69,8 +70,7 @@
         "Blocked upon impact, as primary and secondary target, therefore, Abaddon still loses health.",
         "Can be disjointed by enemies and allies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -95,10 +95,11 @@
         "With Aghanim's Shard, Aphotic Shield first applies its damage, then the Curse of Avernus stack based on its current level."
       ],
       "mana": "100\/110\/120\/130",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Aphotic Shield",
       "cooldown": "12\/10\/8\/6 (TagTalent 11\/9\/7\/5)",
       "description": "Summons dark energies around an ally unit, creating a shield that absorbs a set amount of damage before expiring. When the shield is destroyed it will burst and deal damage equal to the amount it could absorb to an area around it. Removes certain types of negative buffs and stuns on cast.",
-      "spellName": "Aphotic Shield",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.33",
         "Cast Range: 550",
@@ -109,8 +110,7 @@
         "Causes Aphotic Shield to apply a Curse of Avernus stack on enemies. Lowers Cooldown for Aphotic Shield by 1.",
         "Shield persists if it was placed before spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -130,10 +130,11 @@
         "The debuffs can be placed on buildings, but cannot be placed on wards or allied units."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Curse of Avernus",
       "cooldown": null,
       "description": "Abaddon strikes an enemy, slowing the target's movement speed. If the target gets hit 4 times, they become affected by a chilling curse causing them to be silenced and slowed, and all attacks against them gain an attack speed boost.",
-      "spellName": "Curse of Avernus",
+      "hot_key": "E",
       "params": [
         "Required Hits: 4 (TagTalent 3)",
         "Initial Move Speed Slow: 10%\/15%\/20%\/25% (TagTalent 20%\/25%\/30%\/35%)",
@@ -145,8 +146,7 @@
         "Increases base slow by 10%.",
         "Disables placing the initial debuff, or increasing its counter. If already cursed, prevents allies from gaining the speed buff upon attacking the cursed enemy."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -184,10 +184,11 @@
         "The aura does not affect invulnerable or hidden units."
       ],
       "mana": "0",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Borrowed Time",
       "cooldown": "60\/50\/40 (TagTalent 52\/42\/32)",
       "description": "When activated, all damage dealt to you will heal instead of harm. Most negative buffs will also be removed. If the ability is not on cooldown, it will automatically activate if your health falls below 400.",
-      "spellName": "Borrowed Time",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Passive Health Threshold: 400",
@@ -198,8 +199,7 @@
         "Increases duration. While Borrowed Time is active, anytime an ally takes more than 525 damage while within 1600 range of Abaddon, an individual Mist Coil will automatically fire towards that ally.",
         "The passive activating when below 400 health is disabled. The ability to fire Mist Coils at allies is not disabled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     }
   ],

@@ -7,7 +7,7 @@
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "Cleave from talents is not disabled by Break."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -49,10 +49,11 @@
         "Does not affect Couriers."
       ],
       "mana": "130\/140\/150\/160",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Acid Spray",
       "cooldown": "22",
       "description": "Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take damage per second and have their armor reduced.",
-      "spellName": "Acid Spray",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.7",
         "Cast Range: 900",
@@ -62,8 +63,7 @@
         "Aura Linger Duration: 0.5",
         "Duration: 16"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -90,10 +90,11 @@
         "The radius increasing talent immediately updates all of Alchemist's currently brewing concoction and all of his currently flying concoction projectiles."
       ],
       "mana": "100",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Unstable Concoction",
       "cooldown": "13",
       "description": "Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal damage in an area around the explosion. The longer the concoction brews, the more damage it deals and the longer the stun. After 5 seconds, the brew reaches its maximum damage and stun time. However, after 5.5 seconds, the concoction will explode on Alchemist himself if not thrown.",
-      "spellName": "Unstable Concoction",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Concoction Radius: 250 (TagTalent 375)",
@@ -106,8 +107,7 @@
         "Does not affect self when blowing up while spell immune, but still applies the area effect.",
         "Blocked by enemies but not blocked by self when blowing up on self."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -127,10 +127,11 @@
         "When connecting with an invulnerable or hidden target, it still applies its area effect, hitting nearby units."
       ],
       "mana": "0",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Unstable Concoction Throw",
       "cooldown": "0",
       "description": "Throw it before it blows up!",
-      "spellName": "Unstable Concoction Throw",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cast Range: 775",
@@ -139,8 +140,7 @@
         "Blocked upon impact by everyone within the radius.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -160,10 +160,11 @@
         "The Bounty Rune multiplier only affects the amount of gold Alchemist gains (regardless of whether he collects the rune himself). Allies still gain the default value."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Greevil's Greed",
       "cooldown": null,
       "description": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 36 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold.",
-      "spellName": "Greevil's Greed",
+      "hot_key": "E",
       "params": [
         "Base Gold Bonus: 3",
         "Extra Gold Bonus per Stack: 3",
@@ -171,8 +172,7 @@
         "Stack Duration: 36",
         "Bounty Rune Multiplier: 1.5\/2\/2.5\/3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -190,10 +190,11 @@
         "Can regenerate up to 400 health over its full duration."
       ],
       "mana": "125",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Berserk Potion",
       "cooldown": "35",
       "description": "Alchemist throws a potion at an ally, applying a basic dispel and giving them 50 Attack Speed, 30 Movement Speed and 40 HP regen. Lasts 10 seconds.",
-      "spellName": "Berserk Potion",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.63",
         "Cast Range: 800",
@@ -203,8 +204,7 @@
         "Buff Duration: 10",
         "Projectile Speed: 900"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -221,10 +221,11 @@
         "Recasting Chemical Rage before the previous cast finishes refreshes the duration and updates all values to the current level."
       ],
       "mana": "50\/75\/100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Chemical Rage",
       "cooldown": "55",
       "description": "Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and health regeneration.",
-      "spellName": "Chemical Rage",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Transformation Time: 0.35",
@@ -236,8 +237,7 @@
         "Grants a new ability: Berserk Potion.",
         "Illusions created during Chemical Rage get a new Chemical Rage buff which lasts its full duration, regardless of how much was left on Alchemist himself."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -263,18 +263,18 @@
         "Since up to 4 allies and Alchemist himself can be infused, Alchemist can gain up to 100 attack damage and 25% spell damage amplification."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Aghanim's Scepter Synth",
       "cooldown": null,
       "description": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. When you have a Scepter of your own, you will gain bonus damage and spell amplification for each gifted Scepter.",
-      "spellName": "Aghanim's Scepter Synth",
+      "hot_key": null,
       "params": [
         "Cast Range: 600",
         "Attack Damage Bonus per Infused Scepter: 20",
         "Spell Damage Amplification Bonus per Infused Scepter: 5%",
         "Illusions copy the Aghanim's Scepter buff. Illusions of Alchemist do not copy the damage buff."
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

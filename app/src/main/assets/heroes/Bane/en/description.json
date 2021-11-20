@@ -6,7 +6,7 @@
         "Increases Bane's magic resistance to 34%.",
         "The armor talent does not benefit illusions."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,10 +43,11 @@
         "Multiple casts on the same target do not stack the debuff, but only refreshes the duration."
       ],
       "mana": "40\/50\/60\/70",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Enfeeble",
       "cooldown": "28\/21\/14\/7",
       "description": "Lowers the enemy's total attack damage, cast speed, and regeneration.",
-      "spellName": "Enfeeble",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.57",
         "Cast Range: 800\/900\/1000\/1100",
@@ -55,8 +56,7 @@
         "Cast Time Increase: 30%",
         "Duration: 8\/9\/10\/11"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -76,10 +76,11 @@
         "From secondary targets, it can only heal for 18.75\/37.5\/56.25\/75 (TagTalent 56.25\/75\/93.75\/112.5) health."
       ],
       "mana": "100\/120\/140\/160",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Brain Sap",
       "cooldown": "17\/15\/13\/11 (TagTalent 14\/12\/10\/8)",
       "description": "Feasts on the vital energies of an enemy unit, healing Bane and dealing damage.",
-      "spellName": "Brain Sap",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cast Range: 625",
@@ -89,8 +90,7 @@
         "Secondary Damage as Heal: 25%",
         "Causes Brain Sap to become a 550 AoE spell. Secondary targets only heal for 25%."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -125,10 +125,11 @@
         "Nightmare's invulnerability status effect uses the default invulnerability icon, instead of its own ability icon."
       ],
       "mana": "165",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Nightmare",
       "cooldown": "24\/21\/18\/15 (TagTalent 21\/18\/15\/12)",
       "description": "Puts the target enemy or friendly Hero to sleep. Sleeping units are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack nightmared targets freely. Enemy Units take Pure Damage Per Second while in Nightmare.",
-      "spellName": "Nightmare",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0.57",
         "Cast Range: 425\/500\/575\/650",
@@ -138,8 +139,7 @@
         "Sleep and invulnerability debuffs persist if placed before spell immunity and when not dispelled.",
         "Blocked when primary target. Blocked upon attacking a unit affected by an enemy Nightmare."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -156,16 +156,16 @@
         "Bane is unable to ⇧ Shift-queue this ability."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Nightmare End",
       "cooldown": null,
       "description": "Ends all ongoing Nightmares.",
-      "spellName": "Nightmare End",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -193,10 +193,11 @@
         "Since the illusions are actually casting Fiend's Grip as well, this upgrade does not work for heroes who do not have Fiend's Grip by default (e.g. when acquired via Spell Steal or with Spell Reflection)."
       ],
       "mana": "200\/300\/400",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Fiend's Grip",
       "cooldown": "120\/110\/100 (TagTalent 75\/65\/55)",
       "description": "Grips an enemy unit, disabling it and causing heavy damage over time, while stealing mana every 0.5 second based on the unit's maximum mana.",
-      "spellName": "Fiend's Grip",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: 625",
@@ -208,8 +209,7 @@
         "Illusion Duration: 20",
         "Reduces Fiend's Grip cooldown by 45 seconds. Fiend's Grip now creates two uncontrollable illusions that are also channeling Fiend's Grip on the target. Illusions takes 700% incoming damage and immediately dies if they are interrupted. Damage does not stack."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

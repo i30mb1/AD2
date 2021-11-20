@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -53,10 +53,11 @@
         "The model size reduction of multiple instances stacks additively."
       ],
       "mana": "110\/130\/150\/170 (TagTalent 101.2\/119.6\/138\/156.4)",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Laser",
       "cooldown": "20\/18\/16\/14",
       "description": "Fires an intense energy beam, dealing damage to the target and all enemy units around it. The main target is blinded, causing them to miss all physical attacks.",
-      "spellName": "Laser",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+1",
         "Cast Range: 650 (TagAghanim 850)",
@@ -72,8 +73,7 @@
         "Blind effect persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -93,10 +93,11 @@
         "The Heat-Seeking Missile ministun talent first apply the damage, then the debuff."
       ],
       "mana": "95\/105\/115\/125 (TagTalent 87.4\/96.6\/105.8\/115)",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Heat-Seeking Missile",
       "cooldown": "18",
       "description": "Launches rockets at the nearest visible heroes within 2500 range.",
-      "spellName": "Heat-Seeking Missile",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+1.2",
         "Search Radius: 2500",
@@ -105,8 +106,7 @@
         "Stun Duration: 0.25",
         "Does not target spell immune units."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -124,10 +124,11 @@
         "The status resistance stacks multiplicatively with other sources of status resistance."
       ],
       "mana": "70\/80\/90\/100 (TagTalent 64.4\/73.6\/82.8\/92)",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Defense Matrix",
       "cooldown": "12",
       "description": "Targets an allied unit, applying a barrier to them that blocks some damage and provides Status Resistance.",
-      "spellName": "Defense Matrix",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.2+0.6",
         "Cast Range: 600",
@@ -136,8 +137,7 @@
         "Duration: 15",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -161,10 +161,11 @@
         "The sound effect upon cast is not audible by enemies. However, the robot marching sounds are."
       ],
       "mana": "190 (TagTalent 174.8)",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "March of the Machines",
       "cooldown": "35",
       "description": "Enlists an army of robotic minions to destroy enemy units in an area around Tinker.",
-      "spellName": "March of the Machines",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.53+0.63",
         "Cast Range: 300",
@@ -175,8 +176,7 @@
         "Spawn Duration: 6",
         "Robots do not collide with spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -202,10 +202,11 @@
         "Since buildings are not directly targeted, the destruction of the building or loss of Outposts does not cancel the teleport."
       ],
       "mana": "75 (TagTalent 69)",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Keen Conveyance",
       "cooldown": "80",
       "description": "After channeling for 4.5\/4\/3.5s teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
-      "spellName": "Keen Conveyance",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: Global",
@@ -216,8 +217,7 @@
         "Channel Time to Outpost: 5 (TagTalent 4.5)",
         "Prevents casting, and cancels the teleport if already channeling."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -242,17 +242,17 @@
         "The Rearm modifier is only for informational purposes."
       ],
       "mana": "150\/225\/300 (TagTalent 138\/207\/276)",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Rearm",
       "cooldown": "0",
       "description": "Resets the cooldown on most of Tinker's items and abilities.",
-      "spellName": "Rearm",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Channel Time: 3.5\/2\/1.25",
         "Grants a new ability: March of the Machines."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

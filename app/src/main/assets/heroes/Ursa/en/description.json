@@ -5,7 +5,7 @@
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The agility talent effectively grants Ursa 1.67 armor, 10 attack speed, and 10 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -53,10 +53,11 @@
         "In Ability Draft, Enrage must be drafted as well for it to get applied."
       ],
       "mana": "85",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Earthshock",
       "cooldown": "14\/12\/10\/8",
       "description": "Ursa leaps forward 250 units and slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for 4 seconds.",
-      "spellName": "Earthshock",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 385 (TagTalent 885)",
@@ -70,8 +71,7 @@
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "The leap instantly ends when getting rooted. When cast while already rooted, results in an instant Earthshock at the current location."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -86,18 +86,18 @@
         "Successive casts do not stack, but refresh the whole amount of charges instead."
       ],
       "mana": "30\/40\/50\/60",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Overpower",
       "cooldown": "12\/11\/10\/9",
       "description": "Using his skill in combat, Ursa gains increased attack speed for a number of subsequent attacks.",
-      "spellName": "Overpower",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0",
         "Attack Speed Bonus: 400",
         "Number of Attacks: 3\/4\/5\/6 (TagTalent 6\/7\/8\/9)",
         "Duration: 20"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -120,18 +120,18 @@
         "The stack duration increasing talent does not increase the debuff duration against Roshan."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Fury Swipes",
       "cooldown": null,
       "description": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage. If the same target is not attacked after 10 seconds, the bonus damage is lost.",
-      "spellName": "Fury Swipes",
+      "hot_key": "E",
       "params": [
         "Attack Damage Bonus per Stack: 10\/19\/28\/37 (TagTalent 22\/31\/40\/49)",
         "Debuff Duration: 8\/12\/16\/20 (TagTalent 28\/32\/36\/40)",
         "Debuff Duration on Roshan: 10",
         "Prevents gaining new stacks. Already existing stacks still provide bonus attack damage."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -154,10 +154,11 @@
         "Does not extend the duration of an existing Enrage buff."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Enrage",
       "cooldown": null,
       "description": "Ursa goes into a frenzy, providing damage reduction and status resistance. Removes any existing debuffs.",
-      "spellName": "Enrage",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Incoming Damage Reduction: 80%",
@@ -165,8 +166,7 @@
         "Duration: 4\/4.5\/5",
         "Reduces cooldown and allows Ursa to use Enrage while disabled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

@@ -5,7 +5,7 @@
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The strength talent effectively grants Timbersaw 320 health, 1.6 health regeneration, and 16 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -49,10 +49,11 @@
         "The attribute reduction fully affects illusions, Meepo clones and the Tempest Double."
       ],
       "mana": "80",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Whirling Death",
       "cooldown": "6",
       "description": "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area. If an enemy hero is affected, it loses some of its primary attribute for a short duration. Whirling Death will deal bonus damage per tree destroyed.",
-      "spellName": "Whirling Death",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 325",
@@ -62,8 +63,7 @@
         "Attribute Reduction Duration: 13\/14\/15\/16",
         "Attribute reduction persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -85,10 +85,11 @@
         "The chain's tip briefly provides 100 radius ground vision around itself while traveling, and 400 radius ground vision once reaching maximum distance or connecting with a tree."
       ],
       "mana": "60\/70\/80\/90",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Timber Chain",
       "cooldown": "4",
       "description": "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it. Any enemy in the path takes damage.",
-      "spellName": "Timber Chain",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 800\/950\/1100\/1250 (TagTalent 1925\/2075\/2225\/2375)",
@@ -98,8 +99,7 @@
         "Damage: 70\/120\/170\/220",
         "Getting rooted after cast does not stop the chain from latching and pulling Timbersaw."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -121,10 +121,11 @@
         "The dome has 4 fragments, each appearing for every 4 stacks (1 \u2013 4, 5 \u2013 8, 9 \u2013 12, 13 \u2013 16). The dome opens again upon dropping below the given amount of stacks."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Reactive Armor",
       "cooldown": null,
       "description": "Each time Timbersaw is attacked, he gains increased health regen and armor.",
-      "spellName": "Reactive Armor",
+      "hot_key": "E",
       "params": [
         "Max Stacks: 6\/12\/18\/24 (TagTalent 12\/18\/24\/30)",
         "Armor Bonus per Stack: 0.9\/1\/1.1\/1.2",
@@ -133,8 +134,7 @@
         "Prevents gaining new stacks. Already existing stacks still provide bonus health regeneration and armor. If Break is applied by an attack, Reactive Armor first triggers on that attack before getting disabled.",
         "Illusions gain stack and benefit from the regen, but not from the armor."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -153,10 +153,11 @@
         "Chakram notes fully apply."
       ],
       "mana": "80\/140\/200",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Second Chakram",
       "cooldown": "8",
       "description": "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it. Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and you lose the ability to attack.",
-      "spellName": "Second Chakram",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.15+0",
         "Cast Range: 1200",
@@ -169,8 +170,7 @@
         "Passing Slow Duration: 0.5",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -183,16 +183,16 @@
         "Does not interrupt Timbersaw's channeling abilities upon cast."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Return Chakram (Aghanim's Scepter)",
       "cooldown": null,
       "description": "Returns the Chakram to Timbersaw.",
-      "spellName": "Return Chakram (Aghanim's Scepter)",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -215,10 +215,11 @@
         "Provides 175 radius non-lingering ground vision 400 range in front of Timbersaw for the duration."
       ],
       "mana": "100",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Flamethrower",
       "cooldown": "18",
       "description": "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 30%. Affects buildings for 40% damage. Lasts 7 seconds. Debuff lingers for 2 seconds.",
-      "spellName": "Flamethrower",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0",
         "Flame Starting Width: 0",
@@ -231,8 +232,7 @@
         "Debuff Duration: 2",
         "Flamethrower Duration: 7"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -262,10 +262,11 @@
         "Does not provide vision while the Chakram is traveling."
       ],
       "mana": "80\/140\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Chakram",
       "cooldown": "8",
       "description": "Fires your main saw blade at the target location where it will spin in place, dealing damage in an area around it. Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and you lose the ability to attack.",
-      "spellName": "Chakram",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.15+0",
         "Cast Range: 1200",
@@ -280,8 +281,7 @@
         "Grants a new ability: Flamethrower.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -294,16 +294,16 @@
         "Does not interrupt Timbersaw's channeling abilities upon cast."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Return Chakram",
       "cooldown": null,
       "description": "Returns the Chakram to Timbersaw.",
-      "spellName": "Return Chakram",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     }
   ],

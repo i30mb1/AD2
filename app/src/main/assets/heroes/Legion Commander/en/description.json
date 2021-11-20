@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,10 +48,11 @@
         "The movement speed bonus gets updated on each cast based on how many targets were hit."
       ],
       "mana": "100\/110\/120\/130",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Overwhelming Odds",
       "cooldown": "15",
       "description": "Turns the enemies' numbers against them, dealing damage and granting you bonus movement speed per unit or per hero. Deals bonus damage to illusions and summoned units as a percent of their current health.",
-      "spellName": "Overwhelming Odds",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 1000",
@@ -65,8 +66,7 @@
         "Buff Duration: 7",
         "Counts spell immune enemies towards the unit count. Does not attempt to damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -89,10 +89,11 @@
         "The Press The Attack passive cast by winning a Duel still only affects self."
       ],
       "mana": "110",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Press the Attack",
       "cooldown": "16\/15\/14\/13 (TagTalent 14\/13\/12\/11)",
       "description": "Removes debuffs and disables from the target friendly unit, and grants bonus attack speed and health regen for a short time.",
-      "spellName": "Press the Attack",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.93",
         "Cast Range: 700",
@@ -104,8 +105,7 @@
         "Press The Attack targets now gain Spell Immunity for 1.75 seconds. Reduces cooldown by 2 seconds.",
         "Cannot be cast on spell immune units. Fully affects spell immune units within the area."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -130,16 +130,16 @@
         "Moment of Courage uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Moment of Courage",
       "cooldown": null,
       "description": "When attacked, Legion Commander has a chance to immediately counterattack with bonus lifesteal.",
-      "spellName": "Moment of Courage",
+      "hot_key": "E",
       "params": [
         "Proc Chance: 25% (TagTalent 33%)",
         "Lifesteal: 55%\/65%\/75%\/85%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -174,10 +174,11 @@
         "The reduction affects all damage that is not flagged as HP removal the dueling heroes take from any source except each other."
       ],
       "mana": "75",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Duel",
       "cooldown": "50 (TagTalent 30)",
       "description": "Legion Commander and the target enemy hero are forced to attack each other for a short duration. Neither hero can use items nor abilities. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
-      "spellName": "Duel",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 150 (TagTalent 350)",
@@ -186,8 +187,7 @@
         "Incoming Damage Reduction: 50%",
         "Increases Duel duration, and makes Legion Commander and her opponent only take 50% damage from other sources. Reduces cooldown by 20 seconds."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

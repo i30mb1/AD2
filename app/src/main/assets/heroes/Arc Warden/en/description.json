@@ -7,7 +7,7 @@
         "The armor talent does not benefit illusions.",
         "The lifesteal talent stacks additively with other sources of lifesteal."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -49,10 +49,11 @@
         "Multiple casts on the same target fully stack, with all instances working independently from each other."
       ],
       "mana": "75",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Flux",
       "cooldown": "16",
       "description": "Infuses a lone enemy unit with swirling, volatile energy, slowing its movement speed and dealing damage over time. The effect is muted if another enemy unit is near the target.",
-      "spellName": "Flux",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.77",
         "Cast Range: 500\/600\/700\/800 (TagTalent 675\/775\/875\/975)",
@@ -62,8 +63,7 @@
         "Duration: 6",
         "Slow persists and attempts to deal damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -98,10 +98,11 @@
         "Increases all buildings' total magic resistance to 40% (or 64% by stacking two instances)."
       ],
       "mana": "50\/70\/90\/110",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Magnetic Field",
       "cooldown": "20",
       "description": "Generates a circular distortion field of magnetic energy that protects allied heroes and buildings within it by evading attacks coming from outside the field.",
-      "spellName": "Magnetic Field",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 900",
@@ -117,8 +118,7 @@
         "Magnetic Field pushes enemies out of the area when cast, and provides allies in it with +40% Magic Resistance. Slows enemies inside by 30%.",
         "Fully affects spell immune allies and self. Knockback and slow do not affect spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -145,10 +145,11 @@
         "This effect only occurs once per Spark Wraith. Secondary Spark Wraiths cannot spawn new wraiths."
       ],
       "mana": "80",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Spark Wraith",
       "cooldown": "4",
       "description": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.",
-      "spellName": "Spark Wraith",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+0.77",
         "Cast Range: 2000",
@@ -162,8 +163,7 @@
         "Causes Spark Wraiths to spawn a new Spark Wraith after impacting an enemy, which then starts its 2 activation period.",
         "Attempts to deal damage if target turns spell immune before impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -194,10 +194,11 @@
         "Experience the Double would have gained, by killing an enemy hero or using Hand of Midas, is always given to the main Arc Warden instead."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Tempest Double",
       "cooldown": null,
       "description": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns. The Tempest Double gives bounty gold to enemies when killed.",
-      "spellName": "Tempest Double",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.15+0.5",
         "Number of Doubles: 1",
@@ -205,8 +206,7 @@
         "Bounty: 180\/240\/300",
         "Root does not prevent the Tempest Double from being teleported back to Arc Warden."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

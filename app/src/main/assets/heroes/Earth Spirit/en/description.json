@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -62,10 +62,11 @@
         "With Aghanim's Scepter, when Earth Spirit is enchanted by Enchant Remnant, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Boulder Smash",
       "cooldown": "22\/18\/14\/10",
       "description": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest Stone Remnant in a 200 radius. The travelling unit or Remnant damages all enemy units it hits. If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units.",
-      "spellName": "Boulder Smash",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.01+0",
         "Unit Cast Range: 150",
@@ -80,8 +81,7 @@
         "Cannot target spell immune units. Does not attempt to damage or slow spell immune enemies. Can target spell immune units under the effect of Enchant Remnant.",
         "Blocked fully only when primary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -107,10 +107,11 @@
         "Non-disabling forced movement does not cancel Rolling Boulder when applied while he is stationary, but does once the rolling begins."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Rolling Boulder",
       "cooldown": "16\/12\/8\/4",
       "description": "Earth Spirit gathers himself into a boulder and, after a 0.6s delay, rolls toward the target location, damaging and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer.",
-      "spellName": "Rolling Boulder",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.01+0",
         "Cast Range: 3000",
@@ -124,8 +125,7 @@
         "Collides with, and attempts to damage spell immune enemies.",
         "Getting rooted while already rolling does not cancel the rolling."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -152,10 +152,11 @@
         "Can move allies and Stone Remnants over impassable terrain."
       ],
       "mana": "100",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Geomagnetic Grip",
       "cooldown": "13",
       "description": "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced and take damage.",
-      "spellName": "Geomagnetic Grip",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.01+0",
         "Cast Range: 1100",
@@ -167,8 +168,7 @@
         "Cannot target spell immune units. Does not attempt to damage or silence spell immune enemies. Silence persists if debuff was placed before spell immunity and when not dispelled. Can target spell immune units under the effect of Enchant Remnant.",
         "Not blocked when cast on an enemy hero affected by Enchant Remnant."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -195,10 +195,11 @@
         "Alt creates a range indicator around all Stone Remnants, showing their vision range."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Stone Remnant",
       "cooldown": null,
       "description": "Call a Stone Remnant to the target location. Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities. Calling a Stone Remnant consumes a charge, which recharge over time.",
-      "spellName": "Stone Remnant",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 1100",
@@ -209,8 +210,7 @@
         "Grants a new ability: Enchant Remnant.",
         "Causes Stone Remnant to provide 375 ground vision. Increases charge count by 4."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -241,10 +241,11 @@
         "The area damage at the end hits all enemies, not just heroes."
       ],
       "mana": "150",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Enchant Remnant",
       "cooldown": "45\/5",
       "description": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After 3 seconds the remnant shatters, releasing the hero and damaging nearby enemies. Can be used on Stone Remnants. Has a 5 second cooldown when used that way.",
-      "spellName": "Enchant Remnant",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0.2+0.57",
         "Cast Range: 125",
@@ -253,8 +254,7 @@
         "Duration: 3",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Does not attempt to damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -276,10 +276,11 @@
         "Refreshing the duration with a Stone Remnant also resets the timer."
       ],
       "mana": "100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Magnetize",
       "cooldown": "100\/90\/80",
       "description": "Magnetizes units in a small nearby area, causing them to take damage for a short duration. Magnetized heroes cause nearby Stone Remnants to explode, destroying the remnant and refreshing Magnetize's duration on all nearby enemies. This process can repeat multiple times. If an enemy hero is affected by Geomagnetic Grip or Boulder Smash, all magnetized heroes share the effects.",
-      "spellName": "Magnetize",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.01+0",
         "Radius: 350",
@@ -289,8 +290,7 @@
         "Duration: 6 (TagTalent 8)",
         "Places debuff on and attempts to damage spell immune enemies. Can spread to and refresh debuff on spell immune enemies. Does not silence or slow spell immune enemies when another magnetized enemy is hit by Boulder Smash or Geomagnetic Grip."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

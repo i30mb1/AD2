@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,10 +48,11 @@
         "When ground-targeted, the attacks originate from the targeted point even if the beam found and hit a nearby enemy hero."
       ],
       "mana": "90\/100\/110\/120 (TagTalent 40\/50\/60\/70)",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Lucent Beam",
       "cooldown": "9\/8\/7\/6 (TagTalent 5.5\/4.5\/3.5\/2.5)",
       "description": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
-      "spellName": "Lucent Beam",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.47",
         "Cast Range: 800",
@@ -63,8 +64,7 @@
         "Allows Lucent beam to be ground targeted with a 325 target search radius. Also releases an attack on a random target within 500 range of the Lucent Beam and reduces mana cost by 50.",
         "Blocked even when ground-targeted."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -91,18 +91,18 @@
         "Upon learning, Luna's glaive permanently emits blue particles, visible to everyone."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Moon Glaives",
       "cooldown": null,
       "description": "Empowers Luna's glaives, causing her attacks to bounce between enemy units. Deals less damage with each bounce.",
-      "spellName": "Moon Glaives",
+      "hot_key": "W",
       "params": [
         "Search Radius: 500",
         "Number of Bounces: 3\/4\/5\/6",
         "Damage Reduction per Bounce: 56%\/50%\/44%\/38% (TagTalent 48%\/42%\/36%\/30%)",
         "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -119,18 +119,18 @@
         "Despite the tooltip, the aura affects non-hero units as well."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Lunar Blessing",
       "cooldown": null,
       "description": "Increases the attack damage for Luna and nearby allied heroes. Luna is also blessed with increased vision range at night.",
-      "spellName": "Lunar Blessing",
+      "hot_key": "E",
       "params": [
         "Radius: 1200 (TagTalent Global)",
         "Self Night Vision Bonus: 250\/500\/750\/1000",
         "Attack Damage Bonus: 5\/15\/25\/35 (TagTalent 40\/50\/60\/70)",
         "Aura Linger Duration: 0.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "L",
+      "legacy_key": "L",
       "story": null
     },
     {
@@ -168,10 +168,11 @@
         "Eclipse still ends prematurely when Luna dies."
       ],
       "mana": "150\/200\/250",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Eclipse",
       "cooldown": "140\/130\/120 (TagTalent 120\/110\/100)",
       "description": "Showers random nearby enemies with strikes from Luna's current level of Lucent Beam. These beams do not stun their targets, and there is a maximum number of times that a single target can be struck. Also turns day into night for 10 seconds.",
-      "spellName": "Eclipse",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.37",
         "Search Radius: 675",
@@ -183,8 +184,7 @@
         "Cast Range: 2500",
         "Allows Luna to cast Eclipse on an allied unit or herself and have its effects follow them, or cast it on an area. Also increases total beams and duration, removes the limit on beams per unit, and makes the beams appear twice as fast."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     }
   ],

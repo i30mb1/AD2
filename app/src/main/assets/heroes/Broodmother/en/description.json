@@ -6,7 +6,7 @@
         "The agility talent effectively grants Broodmother 1.67 armor, 10 attack speed, and 10 main attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,18 +43,18 @@
         "Can lifesteal off of wards that do not require a fixed amount of attacks to be destroyed."
       ],
       "mana": "50\/60\/70\/80",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Insatiable Hunger",
       "cooldown": "40\/35\/30\/25",
       "description": "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack.",
-      "spellName": "Insatiable Hunger",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.5",
         "Attack Damage Bonus: 35\/45\/55\/65 (TagTalent 85\/95\/105\/115)",
         "Lifesteal: 40%\/60%\/80%\/100% (TagTalent 90%\/110%\/130%\/150%)",
         "Duration: 8\/10\/12\/14"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -77,10 +77,11 @@
         "The webs do not block neutral creep camps."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Spin Web",
       "cooldown": "0",
       "description": "Spins a large web that grants Broodmother a passive movement speed increase, and boosts regeneration while in its vicinity, as well as giving free movement. Spin Web charges restore every 30 seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears. The movement bonus is proportional to the unit's HP",
-      "spellName": "Spin Web",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.4",
         "Cast Range: 1000",
@@ -93,8 +94,7 @@
         "Number of Charges: 4\/6\/8\/10",
         "Charge Replenish Time: 30 (TagTalent 20)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -115,10 +115,11 @@
         "With Aghanim's Shard, Silken Bola turns into an area-targeted ability, so that it cannot directly target units anymore."
       ],
       "mana": "70\/75\/80\/85",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Silken Bola",
       "cooldown": "24\/20\/16\/12",
       "description": "Slows the target enemy, causes them to miss and deals impact damage. Units that attack the target deal bonus magic damage.",
-      "spellName": "Silken Bola",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0.67",
         "Cast Range: 750",
@@ -132,8 +133,7 @@
         "Blocked upon impact, not blocked when upgraded.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -164,10 +164,11 @@
         "The lines have no form of vision, and are not visible through the Fog of War for anyone."
       ],
       "mana": "100",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Spinner's Snare",
       "cooldown": "0",
       "description": "Broodmother creates a 900 width invisible web line. Enemy Heroes that cross the web line will make it visible and become rooted, visible in fog and receive 100dps for 4 seconds, after which the line is destroyed. Broodmother's team is notified in the Minimap whenever someone trips in a Web line. Multiple Heroes can trip on the same line until it's destroyed. Can only have 5 Snares Active. Formation Delay: 2, Cast Range: 600, Slow Duration: 0.25, Slow: 100%, Root Duration: 4, DPS: 100",
-      "spellName": "Spinner's Snare",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.56",
         "Cast Range: 600",
@@ -182,8 +183,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 20"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -206,10 +206,11 @@
         "Both building damage increasing and health increasing talents do not upgrade any of Broodmother's currently living Spiderlings or Spiderites."
       ],
       "mana": "120",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Spawn Spiderlings",
       "cooldown": "9\/8\/7",
       "description": "Broodmother injects her young into an enemy unit, dealing damage. The spiderlings will hatch if the target is killed while under this influence.",
-      "spellName": "Spawn Spiderlings",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cast Range: 900",
@@ -222,8 +223,7 @@
         "Debuff persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -237,16 +237,16 @@
         "The webs do not leave corpses."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Destroy Spin Web",
       "cooldown": null,
       "description": "Destroys the selected Spin Web.",
-      "spellName": "Destroy Spin Web",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -265,10 +265,11 @@
         "Spiderites do not have this ability."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Poison Sting",
       "cooldown": null,
       "description": "Poisons and slows enemies with each attack.",
-      "spellName": "Poison Sting",
+      "hot_key": null,
       "params": [
         "Damage per Second: 8",
         "Move Speed Slow: 8%",
@@ -276,8 +277,7 @@
         "Non-Hero Duration: 6",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -296,10 +296,11 @@
         "Spiderites do not possess this ability."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Spawn Spiderite",
       "cooldown": null,
       "description": "Applies debuff on attack. If debuffed unit dies, a spiderite will spawn.",
-      "spellName": "Spawn Spiderite",
+      "hot_key": null,
       "params": [
         "Number of Spiderites: 1",
         "Debuff Duration: 2",
@@ -307,8 +308,7 @@
         "Debuff persists if debuff was placed before spell immunity and when not dispelled.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

@@ -7,7 +7,7 @@
         "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -60,10 +60,11 @@
         "Proximity Mines do not block neutral creep camps."
       ],
       "mana": "110\/130\/150\/170",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Proximity Mines",
       "cooldown": "0",
       "description": "Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active 400 AoE of the mine. Mines detonate if an enemy is standing within the active AoE for 1.6 seconds. The explosion deals full damage in the blast radius, and deals 30% damage to buildings.",
-      "spellName": "Proximity Mines",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0.47",
         "Cast Range: 100 (TagAghanim 400)",
@@ -77,8 +78,7 @@
         "Charge Replenish Time: 23 (TagTalent 20)",
         "Increases cast range."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -103,10 +103,11 @@
         "Stasis Traps do not block neutral creep camps."
       ],
       "mana": "80\/110\/140\/160",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Stasis Trap",
       "cooldown": "20\/16\/13\/10",
       "description": "Plant an invisible trap that roots nearby enemy units instantly when triggered.",
-      "spellName": "Stasis Trap",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 1+0",
         "Cast Range: 150 (TagAghanim 450)",
@@ -116,8 +117,7 @@
         "Root Duration: 2\/3\/4\/5",
         "Increases cast range."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -142,10 +142,11 @@
         "Can be cast while rooted, and getting rooted during the leap does not interrupt it."
       ],
       "mana": "100\/125\/150\/175",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Blast Off!",
       "cooldown": "35 (TagTalent 13)",
       "description": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies damage equal to 50% of their max health.",
-      "spellName": "Blast Off!",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 1+0.9",
         "Cast Range: 1000 (TagTalent 1300)",
@@ -157,8 +158,7 @@
         "Stun Duration: 1.75",
         "Increases Blast Off! cast range by 300, and applies a 1.75 second stun to affected enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -174,17 +174,17 @@
         "If there are no Remote Mines within the search radius, nothing happens, wasting the cooldown."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Focused Detonate",
       "cooldown": null,
       "description": "Detonate all remote mines in the target area.",
-      "spellName": "Focused Detonate",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0.53",
         "Cast Range: Global",
         "Search Radius: 700"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -209,10 +209,11 @@
         "The aura's buff lingers for 0.5 seconds."
       ],
       "mana": null,
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Minefield Sign",
       "cooldown": null,
       "description": "Plant a warning sign to remind enemies to step lightly. Only one sign can exist at a time. Lasts 180 seconds.",
-      "spellName": "Minefield Sign",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0.53",
         "Cast Range: 10",
@@ -223,8 +224,7 @@
         "Aura Linger Duration: 0.5",
         "Allows Minefield Sign to hide any Proximity Mines, Stasis Traps, and Remote Mines in an area around the sign from True Sight."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -248,10 +248,11 @@
         "Remote Mines do not block neutral creep camps."
       ],
       "mana": "120\/180\/240",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Remote Mines",
       "cooldown": "8",
       "description": "Plant an invisible explosive that will only detonate after a brief delay when triggered. Does not damage buildings.",
-      "spellName": "Remote Mines",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.75+0.46",
         "Cast Range: 500 (TagAghanim 800)",
@@ -263,8 +264,7 @@
         "Mine Duration: 600",
         "Increases damage and cast range."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -278,15 +278,15 @@
         "Detonates all selected remote mines with a 0.03 seconds delay from each other."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Pinpoint Detonate",
       "cooldown": null,
       "description": "Detonate all selected remote mines.",
-      "spellName": "Pinpoint Detonate",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

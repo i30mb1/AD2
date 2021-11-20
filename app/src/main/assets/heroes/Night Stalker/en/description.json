@@ -4,7 +4,7 @@
       "notes": [
         "The strength talent effectively grants Night Stalker 400 health, 2 health regeneration, and 20 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,10 +43,11 @@
         "Does not target invisible units, or units inside the Fog of War within the radius."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Void",
       "cooldown": "11\/10\/9\/8",
       "description": "Creates a damaging void that slows an enemy unit and deals damage. Void also mini-stuns, interrupting channeling abilities. The slowing effect lasts longer at night.",
-      "spellName": "Void",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.33",
         "Cast Range: 525 (TagAghanim 0)",
@@ -62,8 +63,7 @@
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "Not blocked when upgraded."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -79,10 +79,11 @@
         "Has a cast backswing of 0.67 during Hunter in the Night."
       ],
       "mana": "50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Crippling Fear",
       "cooldown": "30\/25\/20\/15 (TagTalent 26\/21\/16\/11)",
       "description": "Night Stalker horrifies all nearby enemies, causing them to become silenced while near him. The effect lasts longer at night.",
-      "spellName": "Crippling Fear",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.43",
         "Radius: 375",
@@ -91,8 +92,7 @@
         "Aura Linger Duration: 0.5",
         "Debuff persists if it was placed before spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -111,10 +111,11 @@
         "Despite the visual effect, the health and mana restore are applied instantly on cast."
       ],
       "mana": "0",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Hunter in the Night",
       "cooldown": "20",
       "description": "Night Stalker is in his element at night, attacking and moving with great swiftness.",
-      "spellName": "Hunter in the Night",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+1.07",
         "Passive Move Speed Bonus: 22%\/28%\/34%\/40% (TagTalent 32%\/38%\/44%\/50%)",
@@ -124,8 +125,7 @@
         "Active Max Mana as Mana Restore: 35%",
         "Night Stalker can cast Hunter in the Night. Consumes a creep, instantly killing it and restoring 35% of Night Stalker's maximum HP and and 35% of maximum mana. Cannot target ancients during the daytime. Cooldown: 20"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -141,17 +141,17 @@
         "The damage increasing talent immediately updates the currently running instance."
       ],
       "mana": "125\/175\/225",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Dark Ascension",
       "cooldown": "150\/140\/130 (TagTalent 100\/90\/80)",
       "description": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. Night Stalker gains flight and bonus damage during this time. Has unobstructed vision.",
-      "spellName": "Dark Ascension",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Attack Damage Bonus: 50\/100\/150 (TagTalent 90\/140\/190)",
         "Duration: 30 (TagTalent 40)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

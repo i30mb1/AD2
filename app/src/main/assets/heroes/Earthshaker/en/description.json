@@ -5,7 +5,7 @@
         "This attack damage talent is added as base attack damage. It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
         "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -58,10 +58,11 @@
         "The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds."
       ],
       "mana": "125\/140\/155\/170",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Fissure",
       "cooldown": "21\/19\/17\/15 (TagTalent 19\/17\/15\/13)",
       "description": "Slams the ground with a mighty totem, creating an impassable ridge of stone while stunning and damaging enemy units along its line.",
-      "spellName": "Fissure",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.69+0",
         "Cast Range: 1400 (TagTalent 1720)",
@@ -77,8 +78,7 @@
         "Reduces Fissure cooldown by 2 seconds and allows Earthshaker to walk on it. When he casts an ability, an aftershock is released along its path.",
         "Pushes aside and blocks path for all spell immune units. Does not stun or attempt to damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -114,10 +114,11 @@
         "Despite the visual effect, cleave damage is applied instantly in the whole area."
       ],
       "mana": "35\/40\/45\/50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Enchant Totem",
       "cooldown": "5 (TagTalent 3.5)",
       "description": "Empowers Earthshaker's totem, causing it to deal extra damage and have 75 bonus attack range on the next attack.",
-      "spellName": "Enchant Totem",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.6+0.5 (TagAghanim 0+0)",
         "Attack Range Bonus: 75",
@@ -132,8 +133,7 @@
         "Enchant Totem becomes a 950 range ground target ability, causing Earthshaker to jump in the air and land at the target spot, casting Enchant Totem there. Self-casting the ability will behave in the original form, without jumping. Grants Enchant Totem a 40% cleave hit.",
         "Can only be self-cast while rooted."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -150,17 +150,17 @@
         "The stun does not stack with the stun of Fissure. It follows the regular rule of stuns\u2014the longer stun overrides the shorter one."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Aftershock",
       "cooldown": null,
       "description": "Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when Earthshaker casts his abilities.",
-      "spellName": "Aftershock",
+      "hot_key": "E",
       "params": [
         "Radius: 300 (TagTalent 500)",
         "Damage: 75\/100\/125\/150 (TagTalent 125\/150\/175\/200)",
         "Stun Duration: 0.6\/0.9\/1.2\/1.5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -192,10 +192,11 @@
         "The kill effect modifier is placed on enemies killed by Echo Slam while having Planetfall equipped, and is responsible for the custom death effect."
       ],
       "mana": "145\/205\/265",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Echo Slam",
       "cooldown": "150\/130\/110",
       "description": "Shockwaves travel through the ground, damaging enemy units. Each enemy hit causes an echo to damage nearby units. Real heroes cause two echoes.",
-      "spellName": "Echo Slam",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+1.33",
         "Initial Search Radius: 600",
@@ -204,8 +205,7 @@
         "Echo Damage: 70\/90\/110 (TagTalent 110\/130\/150)",
         "Spell immune enemies send echo waves towards nearby spell immune enemies. Echoes do not attempt to damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     }
   ],

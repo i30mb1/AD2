@@ -1,7 +1,7 @@
 {
   "abilities": [
     {
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,10 +43,11 @@
         "Can deal a total of 131.25\/262.5\/393.75\/525 (TagTalent 481.25\/612.5\/743.75\/875) damage to a single target (before reductions) with the second meteor hit."
       ],
       "mana": "80\/105\/130\/155",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Starstorm",
       "cooldown": "12",
       "description": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a 425 radius will be struck a second time for 75% of the damage.",
-      "spellName": "Starstorm",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0",
         "Main Radius: 650",
@@ -55,8 +56,7 @@
         "Secondary Damage Percentage: 75%",
         "Attempts to damage if enemy turns spell immune before the meteors hitting. Does not re-select a new target for the second meteor if the closest enemy turns spell immune after cast."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -93,10 +93,11 @@
         "Aghanim's Scepter does not upgrade the extra arrows from the talent."
       ],
       "mana": "100",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Sacred Arrow",
       "cooldown": "19\/18\/17\/16 (TagTalent 17\/16\/15\/14)",
       "description": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it strikes. The stun duration ranges from 0.01 to 3.2\/3.8\/4.4\/5 seconds, with bonus damage up to 180 added, based on the distance the arrow travels to its target. Instantly kills the first non-ancient creep it hits.",
-      "spellName": "Sacred Arrow",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.5+0",
         "Cast Range: 3000",
@@ -114,8 +115,7 @@
         "Causes Sacred Arrow to release a Starstorm on enemies within 500 AoE along the travel path of the primary arrow, releasing a second starfall that deals 50% damage to the impacted unit.",
         "Can collide with spell immune enemies. Does not stun or attempt to damage spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -138,10 +138,11 @@
         "With Aghanim's Shard, Leap has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority."
       ],
       "mana": "40",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Leap",
       "cooldown": "0",
       "description": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts 3 seconds.",
-      "spellName": "Leap",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Leap Distance: 575 (TagTalent 675)",
@@ -154,8 +155,7 @@
         "Grants +1 Leap Charge. Leap buff grants Mirana 1.5x Critical Strike attacks for its duration.",
         "Getting rooted during the leap does not cancel the leap."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -175,10 +175,11 @@
         "The talent does not upgrade the current instance of Moonlight Shadow."
       ],
       "mana": "125",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Moonlight Shadow",
       "cooldown": "140\/120\/100 (TagTalent 120\/100\/80)",
       "description": "Turns Mirana and all allied heroes invisible and grants bonus movement speed. If a hero is revealed, invisibility will restore after the fade delay as long as Moonlight Shadow's duration has not expired.",
-      "spellName": "Moonlight Shadow",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0",
         "Radius: Global",
@@ -188,8 +189,7 @@
         "Evasion: 20%",
         "Illusions are not made invisible."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -211,18 +211,18 @@
         "Fully stacks with other sources of Mana Break."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Mana Break",
       "cooldown": null,
       "description": "There is no description for this ability.",
-      "spellName": "Mana Break",
+      "hot_key": null,
       "params": [
         "Mana Burned per Hit: 20",
         "Illusion Mana Burned per Hit: 10",
         "Burned Mana as Damage: 80%",
         "The amount of mana burned is reduced for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

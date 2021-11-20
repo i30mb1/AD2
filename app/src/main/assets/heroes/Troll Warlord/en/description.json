@@ -6,7 +6,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The evasion talent stacks multiplicatively with other sources of evasion."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -54,10 +54,11 @@
         "When toggled Off, all changes are reverted and he becomes a ranged unit again."
       ],
       "mana": "0",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Berserker's Rage",
       "cooldown": "0",
       "description": "While active, Troll Warlord swaps from using ranged to melee attacks. Melee attacks have a chance to ensnare, preventing the target from moving or using mobility spells. Berserker's Rage also grants additional movement speed, armor, and decreases base attack time. Whirling Axes has different functionality while Berserker's Rage is active.",
-      "spellName": "Berserker's Rage",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Armor Bonus: 4\/5\/6\/7 (TagTalent 11\/12\/13\/14)",
@@ -69,8 +70,7 @@
         "The rooting is disabled, all other components are not.",
         "Melee illusions cannot root."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -91,10 +91,11 @@
         "While Battle Trance is active, Whirling Axes (Ranged) has an instant cast time and does not require Troll Warlord to face the targeted direction."
       ],
       "mana": "60 (TagTalent 30)",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Whirling Axes (Ranged)",
       "cooldown": "9 (TagTalent 4)",
       "description": "Troll hurls a fistful of five axes in a cone shape over 950 range, slowing and damaging enemy units.",
-      "spellName": "Whirling Axes (Ranged)",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: 950",
@@ -107,8 +108,7 @@
         "Causes Ranged Axes to dispel enemies. Reduces cooldown and manacost.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -134,10 +134,11 @@
         "With Aghanim's Scepter, applies a basic dispel on Troll Warlord upon cast."
       ],
       "mana": "50 (TagTalent 25)",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Whirling Axes (Melee)",
       "cooldown": "9 (TagTalent 4)",
       "description": "Troll hurls two axes around him in a close range area of effect, damaging enemy units and causing them to miss some attacks.",
-      "spellName": "Whirling Axes (Melee)",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Spin Radius: 350",
@@ -149,8 +150,7 @@
         "Causes Melee Axes to dispel Troll Warlord. Reduces cooldown and manacost.",
         "Blind effect persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -173,17 +173,17 @@
         "Fervor works against any unit, including allies, wards and buildings."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Fervor",
       "cooldown": null,
       "description": "With each continuous blow on the same target, Troll gains increased attack speed. If Troll changes targets, the stacks drop to zero.",
-      "spellName": "Fervor",
+      "hot_key": "D",
       "params": [
         "Max Stacks: 12",
         "Attack Speed Bonus per Stack: 15\/20\/25\/30 (TagTalent 20\/25\/30\/35)",
         "Does not prevent gaining new stacks. Nullifies the bonus attack speed of all stacks."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -207,10 +207,11 @@
         "Increases self attack speed bonus to 210\/240\/270 while Troll Warlord is in ranged form and Battle Trance is active."
       ],
       "mana": "75",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Rampage",
       "cooldown": "80",
       "description": "Global active. Grants all allied heroes 70 Attack Speed or 25% Status Resistance for 5 seconds based on whichever stance Troll is currently in. Ranged provides attack speed and melee provides status resistance.",
-      "spellName": "Rampage",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0",
         "Radius: Global",
@@ -218,8 +219,7 @@
         "Status Resistance Bonus (TagTalentMelee): 25%",
         "Duration: 5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -253,10 +253,11 @@
         "Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent."
       ],
       "mana": "150",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Battle Trance",
       "cooldown": "90\/80\/70",
       "description": "Troll unleashes a powerful battle trance, that forces you to continuously attack the closest enemy unit within 900 range, prioritizing heroes. Damage does not kill you during this mode. Grants you bonus lifesteal, attack speed and movement speed. Applies a Basic Dispel.",
-      "spellName": "Battle Trance",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0.5",
         "Enemy Search Radius: 900",
@@ -266,8 +267,7 @@
         "Duration: 6.5 (TagTalent 8.5)",
         "Grants a new ability: Rampage."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

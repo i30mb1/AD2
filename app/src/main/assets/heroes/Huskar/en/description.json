@@ -4,7 +4,7 @@
       "notes": [
         "The lifesteal talent stacks additively with other sources of lifesteal."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -59,10 +59,11 @@
         ""
       ],
       "mana": "75\/100\/125\/150",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Inner Fire",
       "cooldown": "14\/13\/12\/11 (TagTalent 11\/10\/9\/8)",
       "description": "In a fiery rage, knocks all nearby enemies away from you to a fixed distance, dealing damage and disarming them.",
-      "spellName": "Inner Fire",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.64 (TagTalent 0+0)",
         "Radius: 500",
@@ -76,8 +77,7 @@
         "Causes Inner Fire to apply a 40% movement speed slow and heal Huskar for 50% of the damage dealt to heroes. Lowers cooldown by 3 seconds. Can be cast while disabled.",
         "Disarm persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -104,10 +104,11 @@
         "Cannot be cast on buildings, wards and allied units."
       ],
       "mana": null,
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Burning Spear",
       "cooldown": null,
       "description": "Huskar sets his spears aflame, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Each attack drains some of Huskar's health.",
-      "spellName": "Burning Spear",
+      "hot_key": "W",
       "params": [
         "Cast Range: 450",
         "Current Health as Cost: 3%",
@@ -115,8 +116,7 @@
         "Duration: 8",
         "Does not pierce spell immunity. Attempts to damage if debuff was placed before spell immunity. Pierces spell immunity when the required talent is chosen."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -134,17 +134,17 @@
         "The health percentage is checked periodically and the effects adapted instantly."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Berserker's Blood",
       "cooldown": null,
       "description": "Huskar's injuries feed his power, giving increased attack speed and health regen based on missing health. Health regen is a percentage of your strength.",
-      "spellName": "Berserker's Blood",
+      "hot_key": "E",
       "params": [
         "Max Attack Speed Bonus: 160\/210\/260\/310",
         "Strength as Max Health Regen Bonus: 20%\/40%\/60%\/80% (TagTalent 50%\/70%\/90%\/110%)",
         "Max Bonus Health Threshold: 10%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -174,10 +174,11 @@
         "Does not silence the target, so active attack modifiers with Autocast on are still applied."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Life Break",
       "cooldown": null,
       "description": "Huskar draws upon his health to break an enemy's life, leaping at a target within attack range to shatter a percentage of that hero's current health, and slowing them. While leaping, Huskar is spell immune.",
-      "spellName": "Life Break",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 550 (TagAghanim 850)",
@@ -189,8 +190,7 @@
         "Forces the enemy target to attack you and increases cast range.",
         "Blocked upon impact. When blocked, Huskar takes no damage either."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

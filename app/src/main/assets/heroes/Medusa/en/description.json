@@ -7,7 +7,7 @@
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The intelligence talent effectively grants Medusa 900 mana and 3.75 mana regeneration."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -58,10 +58,11 @@
         "Secondary arrows are not released upon attacking allies."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Split Shot",
       "cooldown": null,
       "description": "Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage. The extra targets will not receive other attack effects (such as critical strike).",
-      "spellName": "Split Shot",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Secondary Arrows Range Bonus: 150",
@@ -70,8 +71,7 @@
         "Does not disable the outgoing damage reduction. Does disable the split shot.",
         "Illusions created while Split Shot is toggled on have permanently Split Shot active."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -106,10 +106,11 @@
         "Works for the Mystic Snake from Cold Blooded as well."
       ],
       "mana": "140\/150\/160\/170",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Mystic Snake",
       "cooldown": "10 (TagTalent 8.5)",
       "description": "A mystic snake made of energy jumps from target to target dealing damage. After it reaches its last target, it returns to Medusa to replenish her with mana. The snake deals more damage per jump and returns 11%\/14%\/17%\/20% mana based on the targets' total mana.",
-      "spellName": "Mystic Snake",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.67",
         "Cast Range: 700",
@@ -128,8 +129,7 @@
         "If the current target turns spell immune, it does not count towards the number of bounces.",
         "Blocked fully when primary or secondary target. Blocked upon impact. When blocked, stops bouncing and returns to Medusa to restore her mana."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -148,10 +148,11 @@
         "Increases Medusa's effective health by 233.33% when toggled On, assuming she has enough mana."
       ],
       "mana": "0",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Mana Shield",
       "cooldown": "0",
       "description": "Creates a shield that absorbs 70% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity.",
-      "spellName": "Mana Shield",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Passive Mana Bonus: 100\/150\/200\/250",
@@ -159,8 +160,7 @@
         "Damage Absorbed per Mana: 1.3\/1.7\/2.1\/2.5",
         "While spell immune, Mana Shield does not react on magical damage."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -181,17 +181,17 @@
         "Has no range limit. The snake can be sent out globally if targeted by abilities with Global cast range."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Cold Blooded",
       "cooldown": null,
       "description": "When Medusa is targeted with a spell, a single-target Mystic Snake is sent back towards the enemy. Cooldown: 12.",
-      "spellName": "Cold Blooded",
+      "hot_key": null,
       "params": [
         "Number of Bounces: 1",
         "Sends out snakes even when the target is spell immune. If the target is spell immune on impact, it does not count towards the number of bounces.",
         "Blocked fully when primary or secondary target. Blocked upon impact. When blocked, stops bouncing and returns to Medusa to restore her mana."
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     },
     {
@@ -219,10 +219,11 @@
         "Stone Gaze ends when Medusa dies, but already petrified enemies stay petrified for the duration."
       ],
       "mana": "100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Stone Gaze",
       "cooldown": "90",
       "description": "Any enemy units looking at Medusa will have their movement and attack speed slowed. If 2 seconds of total time is accumulated looking at Medusa while Stone Gaze is active, that unit will turn to stone. Petrified units are stunned, and take bonus physical damage.",
-      "spellName": "Stone Gaze",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0.5",
         "Radius: 1200",
@@ -235,8 +236,7 @@
         "Gaze Duration: 5\/5.5\/6 (TagTalent 7\/7.5\/8)",
         "Petrify Duration: 3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     }
   ],

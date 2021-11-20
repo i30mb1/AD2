@@ -5,7 +5,7 @@
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The agility talent effectively grants Nyx Assassin 13.33 armor, 80 attack speed, and 80 main attack damage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,10 +48,11 @@
         "The cooldown is also reduced to 7 seconds."
       ],
       "mana": "105\/120\/135\/150",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Impale",
       "cooldown": "14 (TagTalent 7)",
       "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
-      "spellName": "Impale",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 700 (TagAghanim 1225)",
@@ -61,8 +62,7 @@
         "Stun Duration: 1.4\/1.8\/2.2\/2.6 (TagTalent 1.65\/2.05\/2.45\/2.85)",
         "Attempts to damage if already hit enemies turn spell immune before landing."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -81,18 +81,18 @@
         "While Burrowed, Mana Burn's cast range increases to 1050."
       ],
       "mana": "100",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Mana Burn",
       "cooldown": "28\/20\/12\/4",
       "description": "Destroys the target hero's mana equal to a multiplier of its Intelligence, and deals damage equal to the mana burned.",
-      "spellName": "Mana Burn",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0",
         "Cast Range: 600 (TagAghanim 1050)",
         "Intelligence as Mana Burned: 350%\/400%\/450%\/500%",
         "Mana Burned as Damage: 100%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -127,10 +127,11 @@
         "However, the buff does not affect enemy units which have been hit by the stun upon cast. They can normally damage Nyx."
       ],
       "mana": "40",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Spiked Carapace",
       "cooldown": "25\/20\/15\/10",
       "description": "When activated while above ground, Spiked Carapace reflects and negates damage dealt to Nyx Assassin (max once from each source), as well as stunning the source of the damage. Activating Spiked Carapace will not break Vendetta invisibility. While Burrowed, Spiked Carapace instantly stuns nearby enemies when cast.",
-      "spellName": "Spiked Carapace",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Damage Reflected: 100%",
@@ -138,8 +139,7 @@
         "Stun Duration: 0.6\/1.2\/1.8\/2.4 (TagTalent 1.2\/1.8\/2.4\/3)",
         "Stun Radius: 300"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -161,10 +161,11 @@
         "Losing Aghanim's Scepter instantly unburrows Nyx."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Burrow",
       "cooldown": null,
       "description": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. Nyx gains damage reduction from all damage sources.",
-      "spellName": "Burrow",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 1.5+0.1",
         "Fade Time: 0",
@@ -175,8 +176,7 @@
         "Mana Burn Cast Range Increase: 450",
         "Spiked Carapace Stun Radius: 300"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -191,15 +191,15 @@
         "Uses a different sound when unburrowing inside the river."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Unburrow",
       "cooldown": null,
       "description": "Emerge from the burrow.",
-      "spellName": "Unburrow",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -225,10 +225,11 @@
         "With Aghanim's Shard, the debuff reduces most heroes' total magic resistance to 10%."
       ],
       "mana": "180\/240\/300",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Vendetta",
       "cooldown": "90\/75\/60",
       "description": "Allows Nyx Assassin to become invisible and gain a speed bonus. If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack.",
-      "spellName": "Vendetta",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Fade Time: 0",
@@ -241,8 +242,7 @@
         "Grants a new ability: Burrow.",
         "Causes Nyx's Vendetta attack to reduce enemy magic resistance by 20% for 4 seconds. Also increases Vendetta movement speed by 25%."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     }
   ],

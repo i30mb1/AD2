@@ -2,6 +2,10 @@
 
 package n7.ad2.parseinfo
 
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flatMapMerge
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
@@ -14,6 +18,15 @@ import java.io.File
 import java.net.URL
 import javax.imageio.ImageIO
 
+fun main() = runBlocking {
+    val heroParser = HeroParser()
+    heroParser.loadAll()
+//    heroParser.createFileWithHeroesAndFolders()
+//    heroParser.loadHeroesOnEnglish()
+//    heroParser.loadHeroesOnRussian()
+//    heroParser.loadResponsesOnEnglish()
+//    heroParser.loadResponsesOnRussian()
+}
 
 class HeroParser {
 
@@ -39,7 +52,16 @@ class HeroParser {
         )
     }
 
-    fun loadHeroesOnEnglish() {
+    suspend fun loadAll() {
+        getHeroesList(LocaleHeroes.EN).asFlow().flatMapMerge<NameAndLocale, Unit>(1000) { nameAndLocale ->
+            flow { loadHero(nameAndLocale) }
+        }.collect()
+        getHeroesList(LocaleHeroes.RU).asFlow().flatMapMerge<NameAndLocale, Unit>(1000) { nameAndLocale ->
+            flow { loadHero(nameAndLocale) }
+        }.collect()
+    }
+
+    suspend fun loadHeroesOnEnglish() {
         getHeroesList(LocaleHeroes.EN).forEach(::loadHero)
     }
 
@@ -88,7 +110,7 @@ class HeroParser {
                         response = JSONObject()
                         val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
                         val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
-                        response["audioUrl"] = audioUrl.attr("href").toString()
+                        response["audio_url"] = audioUrl.attr("href").toString()
                         response["title"] = node.let { innerNode ->
                             innerNode.getElementsByTag("span").forEach { span -> span.remove() }
                             innerNode.text()
@@ -194,8 +216,8 @@ class HeroParser {
     private fun loadHero(nameAndLocale: NameAndLocale) {
         val (name, locale) = nameAndLocale
         val root = connectTo(locale.mainUrl.format(name))
-        loadHeroImageFull(root, name)
-        loadHeroImageMinimap(root, name)
+//        loadHeroImageFull(root, name)
+//        loadHeroImageMinimap(root, name)
         loadHeroInformation(root, name, locale.folder)
     }
 
@@ -263,7 +285,7 @@ class HeroParser {
             }
         }
         val abilityTalent = JSONObject().apply {
-            put("spellName", "Talent")
+            put("name", "Talent")
             if (notes.size > 0) put("notes", notes)
             put("talents", talents)
         }
@@ -302,20 +324,20 @@ class HeroParser {
         JSONArray().apply {
             spells.forEach {
                 JSONObject().apply {
-                    val spellName = it.getElementsByTag("div")[3].childNode(0).toString().trim()
-                    put("spellName", spellName)
+                    val name = it.getElementsByTag("div")[3].childNode(0).toString().trim()
+                    put("name", name)
 
-                    loadSpellImage(it, spellName)
+                    loadSpellImage(it, name)
 
                     var audioUrl = it.getElementsByTag("source").attr("src")
                     if (audioUrl.isNullOrEmpty()) audioUrl = null
                     put("audioUrl", audioUrl)
 
                     val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()?.takeIf { it.length == 1 }
-                    put("hotKey", hotKey)
+                    put("hot_key", hotKey)
 
                     val legacyKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()?.takeIf { it.length == 1 }
-                    put("legacyKey", legacyKey)
+                    put("legacy_key", legacyKey)
 
                     val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")
                     JSONArray().apply {
@@ -368,7 +390,7 @@ class HeroParser {
                             ifContainAdd(alt, "Breakable_partial_symbol.png", it)
                         }
 
-                        put("itemBehaviour", this)
+                        put("item_behaviour", this)
                     }
 
                     val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding: 2px 10px 5px;text-align:center").getOrNull(0)
@@ -393,9 +415,9 @@ class HeroParser {
         }
     }
 
-    private fun loadSpellImage(element: Element, spellName: String) {
+    private fun loadSpellImage(element: Element, name: String) {
         val url = element.getElementsByAttributeValue("class", "image")[0].attr("href")
-        saveImageInDirectory(url, SPELL_FOLDER, "$spellName.png")
+        saveImageInDirectory(url, SPELL_FOLDER, "$name.png")
     }
 
     private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
@@ -442,12 +464,4 @@ class HeroParser {
 
 }
 
-fun main() = runBlocking {
-    val heroParser = HeroParser()
-//    heroParser.createFileWithHeroesAndFolders()
-    heroParser.loadHeroesOnEnglish()
-//    heroParser.loadHeroesOnRussian()
-//    heroParser.loadResponsesOnEnglish()
-//    heroParser.loadResponsesOnRussian()
-}
 

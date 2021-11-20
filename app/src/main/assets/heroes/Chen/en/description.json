@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -43,10 +43,11 @@
         "With the level 10 talent, Penitence first applies the debuff, then the damage."
       ],
       "mana": "70\/75\/80\/85",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Penitence",
       "cooldown": "14\/13\/12\/11",
       "description": "Forces an enemy unit to move slower and for allies to attack it more quickly.",
-      "spellName": "Penitence",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.77",
         "Cast Range: 800",
@@ -58,8 +59,7 @@
         "Slow and damage amplification persist if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon cast."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -100,10 +100,11 @@
         ""
       ],
       "mana": "90\/110\/130\/150",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Holy Persuasion",
       "cooldown": "15 (TagTalent 0)",
       "description": "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage. Can be cast on converted creeps to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage dispels the buff.",
-      "spellName": "Holy Persuasion",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.77",
         "Cast Range: 600",
@@ -120,8 +121,7 @@
         "Can persuade spell immune units.",
         "Can be cast on and teleported rooted creeps."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -137,10 +137,11 @@
         "Does not affect invulnerable units."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Divine Favor",
       "cooldown": null,
       "description": "Passively provides an aura that grants increased health regeneration and armor.",
-      "spellName": "Divine Favor",
+      "hot_key": "E",
       "params": [
         "Radius: 1200",
         "Health Regen Bonus: 1.5\/3\/4.5\/6",
@@ -148,8 +149,7 @@
         "Aura Linger Duration: 0.5",
         "Illusions provide the aura and benefit from the health regeneration, but not from the armor."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -167,10 +167,11 @@
         "With Aghanim's Shard, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
       ],
       "mana": "200\/300\/400",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Hand of God",
       "cooldown": "160\/140\/120 (TagTalent 120\/100\/80)",
       "description": "Heals all allied heroes on the map as well as all units under Chen's control.",
-      "spellName": "Hand of God",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.93",
         "Radius: Global",
@@ -178,8 +179,7 @@
         "Max Ancient Creeps Count: 1\/2\/3",
         "Hand of God Applies a Strong Dispel to all allies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

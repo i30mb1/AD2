@@ -4,7 +4,7 @@
       "notes": [
         "Talents are fully copied by the Wukong's Command clones, but none of the current talents have an effect, as they cannot use active abilities and their attack speed is fixed."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -53,10 +53,11 @@
         "The sound during the cast animation is audible to everyone."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Boundless Strike",
       "cooldown": "28\/26\/24\/22 (TagTalent 21\/19\/17\/15)",
       "description": "Monkey King enlarges his staff and slams it against the ground, stunning enemies in a line and damaging them with a critical hit based on his attack. Has True Strike.",
-      "spellName": "Boundless Strike",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.5",
         "Cast Range: 1100",
@@ -65,8 +66,7 @@
         "Critical Damage: 135%\/165%\/195%\/225%",
         "Stun Duration: 1\/1.2\/1.4\/1.6 (TagTalent 1.3\/1.5\/1.7\/1.9)"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -104,10 +104,11 @@
         "Monkey King only gets stunned if the tree he leaps towards, or he perches on, gets destroyed. Getting unperched in other ways (e.g. Forced Movement) does not result in a stun."
       ],
       "mana": "0",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Tree Dance",
       "cooldown": "1.45\/1.3\/1.15\/1",
       "description": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage from player controlled units or Roshan while on the ground puts Tree Dance on cooldown.",
-      "spellName": "Tree Dance",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range from Ground: 900 (TagTalent 1350)",
@@ -119,8 +120,7 @@
         "The stun upon falling off of a tree pierces spell immunity.",
         "Getting rooted while already leaping does not cancel the leap."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -147,10 +147,11 @@
         "The visual effects at the target area during the channeling are visible to allies only, but the channeling sound is audible to enemies, even through the Fog of War."
       ],
       "mana": "100",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Primal Spring",
       "cooldown": "20\/18\/16\/14 (TagTalent 0)",
       "description": "Monkey King springs out from his tree perch, damaging and slowing enemies in the area where he lands. Damage and slow amounts are in proportion to channel duration.",
-      "spellName": "Primal Spring",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: Global",
@@ -162,8 +163,7 @@
         "Slow Duration: 4",
         "Getting rooted while already channeling or leaping does not cancel the spell."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -178,16 +178,16 @@
         "Monkey King is unable to ⇧ Shift-queue this ability."
       ],
       "mana": "0",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Spring Early",
       "cooldown": "0",
       "description": "There is no description for this ability.",
-      "spellName": "Spring Early",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -211,10 +211,11 @@
         "Can lifesteal off of wards that do not require a fixed amount of attacks to be destroyed."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Jingu Mastery",
       "cooldown": null,
       "description": "Monkey King's attacks awaken the Jingu Bang's power. Upon the fourth hit on the same enemy hero, Monkey King earns four charged attacks that have bonus damage and lifesteal.",
-      "spellName": "Jingu Mastery",
+      "hot_key": "D",
       "params": [
         "Required Hits: 4",
         "Charges: 4 (TagTalent 6)",
@@ -224,8 +225,7 @@
         "Buff Duration: 35",
         "Disables both the adding of the counter and the buff on Monkey King."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -254,10 +254,11 @@
         "Instead, it now raises his minimum movement speed based on the disguise."
       ],
       "mana": "0",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Mischief",
       "cooldown": "15 (TagTalent 8)",
       "description": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants damage immunity for 0.2 seconds upon transforming.",
-      "spellName": "Mischief",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0.53",
         "Set Move Speed: 200",
@@ -268,8 +269,7 @@
         "Damage Immunity Duration: 0.2 (TagTalent 0.5)",
         "Reduces cooldown to 8 seconds. Invulnerability Duration to 0.5s and disjoints projectiles. Mischief no longer slows Monkey King."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -283,16 +283,16 @@
         "Interrupts Monkey King's channeling abilities, move order and attack order upon cast."
       ],
       "mana": "0",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Revert Form",
       "cooldown": "1",
       "description": "Reverts Monkey King's shape to his original form.",
-      "spellName": "Revert Form",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0+0.53",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -333,10 +333,11 @@
         "When Monkey King dies, the soldiers immediately disappear."
       ],
       "mana": "100",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Wukong's Command",
       "cooldown": "120\/100\/80",
       "description": "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King is granted bonus armor for the spell's duration.",
-      "spellName": "Wukong's Command",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 1.2+0.37",
         "Cast Range: 550",
@@ -354,8 +355,7 @@
         "Passive Spawn Interval: 4",
         "Spawns a monkey soldier near you at regular intervals. Soldiers do not spawn while invisible or on trees. Soldiers only attack buildings when Monkey King himself is nearby."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     }
   ],

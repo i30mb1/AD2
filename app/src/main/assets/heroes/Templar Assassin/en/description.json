@@ -4,7 +4,7 @@
       "notes": [
         "The evasion talent stacks multiplicatively with other sources of evasion."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -48,18 +48,18 @@
         "Damage below 5 (after reductions) is completely ignored. It is neither blocked, nor consumes any block instances."
       ],
       "mana": "100",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Refraction",
       "cooldown": "17",
       "description": "Templar Assassin becomes highly elusive, avoiding damage and gaining a bonus to her damage. The damage and avoidance effects are separate, and have a limited number of instances.",
-      "spellName": "Refraction",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Number of Instances: 3\/4\/5\/6 (TagTalent 11\/12\/13\/14)",
         "Attack Damage Bonus: 25\/50\/75\/100",
         "Duration: 17"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -88,10 +88,11 @@
         "The Meld dispel talent applies a basic dispel on Templar Assassin upon cast."
       ],
       "mana": "35\/40\/45\/50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Meld",
       "cooldown": "11\/9\/7\/5",
       "description": "Templar Assassin conceals herself, becoming invisible as long as she remains still. If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for 12 seconds.",
-      "spellName": "Meld",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.53",
         "Fade Time: 0",
@@ -102,8 +103,7 @@
         "Bash Duration: 1",
         "The attack projectile out of Meld can be disjointed."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -134,10 +134,11 @@
         "Despite the visual effects, Psi Blades do not spill damage when attacking buildings."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Psi Blades",
       "cooldown": null,
       "description": "Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units directly behind it, while gaining bonus attack range. For each unit it damages, the spill damage is reduced by a percentage.",
-      "spellName": "Psi Blades",
+      "hot_key": "E",
       "params": [
         "Attack Range Bonus: 80\/130\/180\/230 (TagTalent 200\/250\/300\/350)",
         "Spill Area Width: 90",
@@ -145,8 +146,7 @@
         "Attack Damage Spilled: 100%",
         "Damage Loss per Target: 5%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "B",
+      "legacy_key": "B",
       "story": null
     },
     {
@@ -178,10 +178,11 @@
         "When refreshed, the slow and damage values get updated based on how long that trap was charged."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Trap",
       "cooldown": null,
       "description": "Springs the nearest trap, slowing nearby enemies.",
-      "spellName": "Trap",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         "Trap Search Radius: Global",
@@ -196,8 +197,7 @@
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -214,10 +214,11 @@
         "Casting this while traps are not present does nothing, wasting mana and cooldown."
       ],
       "mana": "50",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Psionic Projection",
       "cooldown": "10",
       "description": "Allows Templar Assassin to teleport from a nearby Psionic Trap to another after a brief channel. Does not break meld. Detonates both Psionic Traps on arrival.",
-      "spellName": "Psionic Projection",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: Global",
@@ -233,8 +234,7 @@
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
         "Can be cast while rooted or leashed, but immediately gets stopped without getting wasted and without error messages. Getting rooted or leashed while already channeling does not cancel it, but prevents the teleport from happening if the channeling finishes while rooted or leashed."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -248,10 +248,11 @@
         "Psionic Traps do not block neutral creep camps."
       ],
       "mana": "15",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Psionic Trap",
       "cooldown": "11\/8\/5",
       "description": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they exert a slowing influence of 30% in the area. Traps charge up to slow 60% after 4 seconds. Deals bonus damage when fully charged.",
-      "spellName": "Psionic Trap",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 1800",
@@ -261,8 +262,7 @@
         "Grants a new ability: Psionic Projection.",
         "Causes Psionic Trap to silence enemies for up to 3.5 seconds based on how long the trap has been charged. Increases max trap count by 4."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -276,10 +276,11 @@
         "Same notes as for Trap on Templar Assassin apply."
       ],
       "mana": null,
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Trap",
       "cooldown": null,
       "description": "Springs the trap, slowing nearby enemies.",
-      "spellName": "Trap",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Slow Radius: 400",
@@ -293,8 +294,7 @@
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     }
   ],

@@ -5,7 +5,7 @@
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Axe's magic resistance to 34%.",
         "Increases Axe's magic resistance to 34%."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -45,10 +45,11 @@
         "With Aghanim's Scepter, Battle Hunger of its current level is applied to all enemies within 300 (TagTalent 400) radius."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Berserker's Call",
       "cooldown": "17\/15\/13\/11 (TagTalent 14\/12\/10\/8)",
       "description": "Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration.",
-      "spellName": "Berserker's Call",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.5",
         "Radius: 300 (TagTalent 400)",
@@ -56,8 +57,7 @@
         "Duration: 2\/2.4\/2.8\/3.2",
         "Berserker's Call applies Battle Hunger to affected units. Reduces Berserker's Call cooldown by 3."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -84,10 +84,11 @@
         "However, the damage upgrading talent immediately upgrades all current active Battle Hunger debuffs."
       ],
       "mana": "50\/60\/70\/80",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Battle Hunger",
       "cooldown": "20\/15\/10\/5",
       "description": "Enrages an enemy unit, causing it to be slowed and take damage over time until it kills another unit or the duration ends. Axe gains movement speed for each unit affected with Battle Hunger, half speed from creeps.",
-      "spellName": "Battle Hunger",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 700\/775\/850\/925",
@@ -101,8 +102,7 @@
         "Battle Hunger also reduces enemy armor by 7 and grants Axe 7 armor per affected targeted.",
         "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -127,10 +127,11 @@
         "Reduces hit enemies' total attack damage, including raw attack damage bonuses."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Counter Helix",
       "cooldown": null,
       "description": "When attacked, Axe has a chance to perform a helix counter attack, dealing pure damage to all nearby enemies.",
-      "spellName": "Counter Helix",
+      "hot_key": "E",
       "params": [
         "Radius: 275",
         "Proc Chance: 17%\/18%\/19%\/20% (TagTalent 27%\/28%\/29%\/30%)",
@@ -142,8 +143,7 @@
         "If Break is applied by an attack, Counter Helix may trigger first on that attack before getting disabled.",
         "Axe illusions have a fully functional Counter Helix."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "X",
+      "legacy_key": "X",
       "story": null
     },
     {
@@ -165,10 +165,11 @@
         "The jungle weapon gesture modifier is responsible for the sound and animation used by Fists of Axe Unleashed."
       ],
       "mana": "60\/120\/180",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Culling Blade",
       "cooldown": "75\/65\/55",
       "description": "Axe spots a weakness and strikes, instantly killing an enemy unit with low health, or dealing moderate damage otherwise. When an enemy hero is killed with Culling Blade, its cooldown is reset, and Axe and nearby allied units gain bonus movement speed.",
-      "spellName": "Culling Blade",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 150",
@@ -179,8 +180,7 @@
         "Kill Attack Speed Bonus: 30",
         "Kill Bonus Buff Duration: 6"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     }
   ],

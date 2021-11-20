@@ -69,7 +69,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     }
                 }
                 is HeroInfo.Spell -> {
-
+                    val selectedSpell = info.abilities.find { ability -> ability.spellName == heroInfo.name }!!
+                    add(VOHeroInfo.HeaderSound(selectedSpell.spellName, selectedSpell.hotKey, selectedSpell.legacyKey, selectedSpell.audioUrl, false))
                 }
             }
         })

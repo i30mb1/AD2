@@ -5,7 +5,7 @@
         "The intelligence talent effectively grants Skywrath Mage 120 mana, 0.5 mana regeneration, and 10 main attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -59,10 +59,11 @@
         "The level 15 talent adds a third target to this, following the same rules."
       ],
       "mana": "90",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Arcane Bolt",
       "cooldown": "5\/4\/3\/2",
       "description": "Skywrath Mage launches a slow-moving bolt of arcane magic, dealing damage to an enemy unit based on Skywrath Mage's intelligence.",
-      "spellName": "Arcane Bolt",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.1+0.9",
         "Cast Range: 875",
@@ -74,8 +75,7 @@
         "Does not pierce spell immunity. Fully pierces spell immunity.",
         "Blocked upon impact, as primary and secondary target."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -103,10 +103,11 @@
         "If no other valid targets are found within the search radius, the second Concussive Shot is not released."
       ],
       "mana": "80\/85\/90\/95",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Concussive Shot",
       "cooldown": "15\/14\/13\/12",
       "description": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range. Upon impact, it deals damage and slows in an area of effect.",
-      "spellName": "Concussive Shot",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+1.03",
         "Search Radius: 1600 (TagTalent Global)",
@@ -120,8 +121,7 @@
         "Can target spell immune enemies, but does not slow or damage them. The area effects are still applied. Cannot target secondary spell immune units.",
         "Disjointing the projectile causes it to completely fizzle."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -140,10 +140,11 @@
         "If no other valid targets are found within the search radius, the second Ancient Seal is not applied."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Ancient Seal",
       "cooldown": "14 (TagTalent 6)",
       "description": "Skywrath Mage seals the targeted unit with an ancient rune, silencing it and causing it to take additional damage from spells.",
-      "spellName": "Ancient Seal",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0.97",
         "Cast Range: 700\/750\/800\/850",
@@ -154,8 +155,7 @@
         "Anytime Skywrath Mage casts Ancient Seal, a different random target within 700 range will be affected by the same ability. Heroes will take priority.",
         "Blocked only for the primary target. Secondary target still gets hit."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -185,10 +185,11 @@
         "If no other valid targets are found within the search radius, the second Mystic Flare is not released."
       ],
       "mana": "300\/550\/800",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Mystic Flare",
       "cooldown": "60\/40\/20",
       "description": "Skywrath Mage uses his ultimate magical ability to conjure a precise and violent mystical field that lays waste to his adversaries. Deals massive damage distributed evenly among any Heroes in the area over seconds.",
-      "spellName": "Mystic Flare",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range: 1200",
@@ -199,8 +200,7 @@
         "Secondary Target Search Radius: 700",
         "When Skywrath Mage casts Mystic Flare, another Mystic Flare will be created on the position of a different random target enemy within 700 range. Heroes will take priority."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -218,17 +218,17 @@
         "Each stack effectively grants 60 mana, 0.25 mana regeneration, and 5 main attack damage."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Hero Shard Upgrade",
       "cooldown": null,
       "description": "Everytime you cast abilities you gain +5 Intelligence and +1 Armor for 35 seconds. Stacks independently.",
-      "spellName": "Hero Shard Upgrade",
+      "hot_key": null,
       "params": [
         "Intelligence Bonus per Stack: 5",
         "Armor Bonus per Stack: 1",
         "Duration: 35"
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],

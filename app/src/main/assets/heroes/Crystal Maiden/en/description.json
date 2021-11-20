@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -41,10 +41,11 @@
         "Plays a sound effect during the cast time which is audible to everyone."
       ],
       "mana": "115\/135\/155\/175",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Crystal Nova",
       "cooldown": "11\/10\/9\/8 (TagTalent 8\/7\/6\/5)",
       "description": "A burst of damaging frost slows enemy movement and attack rate in the targeted area.",
-      "spellName": "Crystal Nova",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.6",
         "Cast Range: 700",
@@ -55,8 +56,7 @@
         "Slow Duration: 4.5",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -75,10 +75,11 @@
         "Treats illusions, creep-heroes, ancient creeps and Roshan as heroes."
       ],
       "mana": "125\/135\/145\/155",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Frostbite",
       "cooldown": "9\/8\/7\/6",
       "description": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. Lasts 10 seconds on creeps level 6 or lower.",
-      "spellName": "Frostbite",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.6",
         "Cast Range: 550",
@@ -88,8 +89,7 @@
         "Creep Duration: 10 (TagTalent 11.25)",
         "Root and disarm persist and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -108,10 +108,11 @@
         "Increases total magic resistance to 38.5% and 29.5% for Crystal Maiden and her allies respectively."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Arcane Aura",
       "cooldown": null,
       "description": "Gives additional mana regeneration to all friendly units on the map. This bonus is increased for Crystal Maiden.",
-      "spellName": "Arcane Aura",
+      "hot_key": "E",
       "params": [
         "Radius: Global",
         "Mana Regen Bonus: 0.5\/1\/1.5\/2",
@@ -119,8 +120,7 @@
         "Aura Linger Duration: 0.5",
         "Magic Resistance Bonus: 6%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -156,10 +156,11 @@
         "It also stops when Crystal Maiden dies, or when she uses the Stop Freezing Field sub-ability."
       ],
       "mana": "200\/400\/600",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Freezing Field",
       "cooldown": "110\/100\/90",
       "description": "Surrounds Crystal Maiden with 100 random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts 10 seconds.",
-      "spellName": "Freezing Field",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Max Channel Time: 10 (TagTalent 0)",
@@ -179,8 +180,7 @@
         "Grants a new ability: Stop Freezing Field. Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move 75% slower during this. Increases total number of explosions by 20%.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -195,16 +195,16 @@
         "Goes into a 1-second cooldown right after Freezing Field is cast, this is to prevent accidental double-casts prematurely ending the ability."
       ],
       "mana": "0",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Stop Freezing Field",
       "cooldown": "1",
       "description": "Immediately stops the Freezing Field",
-      "spellName": "Stop Freezing Field",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     }
   ],

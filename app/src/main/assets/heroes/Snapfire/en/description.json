@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -47,10 +47,11 @@
         "Destroys trees enemies come in contact with during the knockback."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Scatterblast",
       "cooldown": "13\/12\/11\/10",
       "description": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Enemies caught at point-blank range take an extra 50% damage.",
-      "spellName": "Scatterblast",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.83",
         "Cast Range: 800",
@@ -70,8 +71,7 @@
         "Causes Scatterblast to knock units back in the point blank range for 250 units, dealing 125 extra damage and stunning for 1.5 seconds.",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -97,10 +97,11 @@
         "Destroys trees within 150 radius around the target upon landing."
       ],
       "mana": "100",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Firesnap Cookie",
       "cooldown": "21\/19\/17\/15",
       "description": "Snapfire feeds a potent cookie to Mortimer or an ally, causing them to hop a short distance. The hopping unit stuns and damages enemies in the landing zone.",
-      "spellName": "Firesnap Cookie",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.57",
         "Cast Range: 700",
@@ -113,8 +114,7 @@
         "Heal: 200",
         "Can be cast on spell immune allies. Does not affect spell immune enemies."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -146,10 +146,11 @@
         "The secondary attacks have no target priorities. They simply choose random valid targets within range."
       ],
       "mana": "50\/65\/80\/95",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Lil' Shredder",
       "cooldown": "24\/20\/16\/12",
       "description": "Snapfire heats up her mounted turret to rapidly fire 6 fixed-damage attacks. Each attack reduces the enemy's armor. Provides bonus attack range for the duration.",
-      "spellName": "Lil' Shredder",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Attack Range Bonus: 75\/150\/225\/300",
@@ -163,8 +164,7 @@
         "Bonus Attack Targets: 3",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -189,17 +189,17 @@
         "This ability stays inactive until the unit is released, either by timing out, by using the sub-ability, or by the caster dying."
       ],
       "mana": "150",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Gobble Up",
       "cooldown": "40",
       "description": "Mortimer gobbles up a creep or an allied hero, which he can then spit towards enemies. The unit stays in his belly up to 3 seconds.",
-      "spellName": "Gobble Up",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.3+1.27",
         "Cast Range: 150",
         "Max Duration: 3"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacy_key": "F",
       "story": null
     },
     {
@@ -227,10 +227,11 @@
         "Destroys trees within 150 radius around the projectile upon landing."
       ],
       "mana": "0",
-      "hotKey": "F",
+      "item_behaviour": [],
+      "name": "Spit Out",
       "cooldown": "0",
       "description": "Mortimer spits out the unit that's in his mouth, causing impact damage and stun in a large area. The glob leaves a pool of firespit that slows and applies damage over time.",
-      "spellName": "Spit Out",
+      "hot_key": "F",
       "params": [
         "Cast Animation: 0.3+1.04",
         "Cast Range: 3000",
@@ -243,8 +244,7 @@
         "Debuff persists if placed before spell immunity and when not dispelled.",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "G",
+      "legacy_key": "G",
       "story": null
     },
     {
@@ -281,10 +281,11 @@
         "Already placed debuffs are not updated to the current values."
       ],
       "mana": "125\/150\/175",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Mortimer Kisses",
       "cooldown": "120\/110\/100",
       "description": "Snapfire's friend launches a barrage of firespit globs over 5.5 seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of 600. Each glob can be targeted with a right click.",
-      "spellName": "Mortimer Kisses",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.73",
         "Cast Range: 3000",
@@ -302,8 +303,7 @@
         "Grants a new ability: Gobble Up. Mortimer gobbles up a creep or an allied hero, which he can then spit towards enemies.",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

@@ -4,7 +4,7 @@
       "notes": [
         "The strength talent effectively grants Pangolier 360 health and 1.8 health regeneration."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -55,10 +55,11 @@
         "With the cast range, slash range and slash width, it can hit units up to 1975 (TagTalent 2375) range away."
       ],
       "mana": "80\/90\/100\/110",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Swashbuckle",
       "cooldown": "20\/16\/12\/8 (TagTalent 17.5\/13.5\/9.5\/5.5)",
       "description": "Vector Targeted. Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes. Lucky Shot has a chance to activate from this damage.",
-      "spellName": "Swashbuckle",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 850",
@@ -68,8 +69,7 @@
         "Number of Slashes: 4",
         "Slash Interval: 0.1"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -112,10 +112,11 @@
         "All slashes together can deal up to 48\/84\/120\/156 (TagTalent 108\/144\/180\/216) damage per hit enemy (before reductions)."
       ],
       "mana": "75\/85\/95\/105",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Shield Crash",
       "cooldown": "16\/14\/12\/10 (TagTalent 2.5)",
       "description": "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging and slowing all enemies in a radius. For each enemy hero hit, he gains a percentage of incoming damage reduction for a short time. Forward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
-      "spellName": "Shield Crash",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.37",
         "Radius: 500",
@@ -132,8 +133,7 @@
         "Causes Shield Crash to cast a 2-attack Swashbuckle in every 90 degrees around your hero.",
         "When cast while rooted or leashed, it gets cast without moving the caster forwards."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -148,17 +148,17 @@
         "Lucky Shot uses pseudo-random distribution."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Lucky Shot",
       "cooldown": null,
       "description": "Pangolier rolls the dice and lets fate decide the outcome for his enemies. Grants a chance to apply a Disarm and reduce armor.",
-      "spellName": "Lucky Shot",
+      "hot_key": "E",
       "params": [
         "Proc Chance: 17%",
         "Armor Reduction: 4\/5\/6\/7",
         "Duration: 2\/3\/4\/5"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -184,18 +184,18 @@
         "Casting any other ability, or any items during Roll Up cancels it immediately."
       ],
       "mana": "50",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Roll Up",
       "cooldown": "30",
       "description": "Pangolier curls into an immobile protective ball for up to seconds, gaining magic immunity and allowing him to turn. Can be cast during Rolling Thunder to temporarily hit the brakes. Can cast Rolling Thunder and Shield Crash during Roll Up. If enemies attack Pangolier during this, he will roll away from the attacker for up to 0.75 seconds, applying Rolling Thunder damage\/stun if there are enemies in the way. Cooldown: 30",
-      "spellName": "Roll Up",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+1.03",
         "Turn Rate in Degrees per Second: 175°",
         "Roll Duration On Attack: 0.75",
         "Roll Up Duration: 4"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -208,16 +208,16 @@
         "Replaces Roll Up until the sub-ability is used or the duration ends."
       ],
       "mana": null,
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "End Roll Up",
       "cooldown": null,
       "description": "Ends Pangolier's Roll Up early.",
-      "spellName": "End Roll Up",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
         ""
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     },
     {
@@ -251,10 +251,11 @@
         "Rolling Thunder first applies the damage, then the debuffs."
       ],
       "mana": "100\/150\/200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Rolling Thunder",
       "cooldown": "80\/75\/70 (TagTalent 55\/50\/45)",
       "description": "Pangolier curls into a spell-immune ball and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. Colliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.",
-      "spellName": "Rolling Thunder",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 1.2+0",
         "Collision Radius: 150",
@@ -268,8 +269,7 @@
         "Rolling Thunder Duration: 10 (TagTalent 13)",
         "Grants a new ability: Roll Up."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -282,15 +282,15 @@
         "Replaces Rolling Thunder until the sub-ability is used or the duration ends."
       ],
       "mana": null,
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Stop Rolling",
       "cooldown": null,
       "description": "Halt!",
-      "spellName": "Stop Rolling",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0+0"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     }
   ],

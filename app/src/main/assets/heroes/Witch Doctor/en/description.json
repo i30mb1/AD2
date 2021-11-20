@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -54,10 +54,11 @@
         "All instances coming from the same hero use the same bounce counter, instead of each instance having an independent counter."
       ],
       "mana": "80\/100\/120\/140",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "Paralyzing Cask",
       "cooldown": "20\/18\/16\/14",
       "description": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits. Each bounce deals more damage than the previous one.",
-      "spellName": "Paralyzing Cask",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.35+0.37",
         "Cast Range: 700",
@@ -71,8 +72,7 @@
         "Cannot directly target spell immune enemies. Can bounce to spell immune enemies. Does not stun or attempt to damage spell immune enemies.",
         "Blocked fully when primary or secondary target. Blocked upon impact. Does not stop bouncing when blocked."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -93,10 +93,11 @@
         "It does not affect invulnerable or hidden units."
       ],
       "mana": "35\/40\/45\/50",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Voodoo Restoration",
       "cooldown": "0",
       "description": "Witch Doctor focuses his magic to heal nearby allied units, costing Witch Doctor mana every second Voodoo Restoration is active.",
-      "spellName": "Voodoo Restoration",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Heal Radius: 500",
@@ -105,8 +106,7 @@
         "Aura Linger Duration: 0.5",
         "Max Health as Heal per Second: 1.5%"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
+      "legacy_key": "V",
       "story": null
     },
     {
@@ -131,10 +131,11 @@
         "Does not affect invulnerable and hidden units. Affects invisible units."
       ],
       "mana": "105\/110\/115\/120",
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Maledict",
       "cooldown": "30\/26\/22\/18",
       "description": "Curses all enemy Heroes in a small area, causing them to take a set amount of damage each second, as well as bursts of damage every 4 seconds based on how much health they have lost since the curse began.",
-      "spellName": "Maledict",
+      "hot_key": "E",
       "params": [
         "Cast Animation: 0.35+0",
         "Cast Range: 575",
@@ -145,8 +146,7 @@
         "Curse Duration: 12",
         "Cannot place the debuff on spell immune units. If already placed, the debuff stops applying the damage over time if the unit turns spell immune. The burst damage pierces spell immunity."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
+      "legacy_key": "E",
       "story": null
     },
     {
@@ -171,17 +171,17 @@
         "Can deal up to 595\/980\/1365 (TagTalent 1015\/1400\/1785) damage to a single hero (before reductions)."
       ],
       "mana": "150",
-      "hotKey": "D",
+      "item_behaviour": [],
+      "name": "Voodoo Switcheroo",
       "cooldown": "40",
       "description": "Turns Witch Doctor into a Death Ward for 2 seconds. Death Ward has -30 Attack Speed. He is hidden during this time.",
-      "spellName": "Voodoo Switcheroo",
+      "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+0.73",
         "Death Ward Attack Speed Reduction: 30",
         "Duration: 2"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "W",
+      "legacy_key": "W",
       "story": null
     },
     {
@@ -210,10 +210,11 @@
         "Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice."
       ],
       "mana": "200",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Death Ward",
       "cooldown": "80",
       "description": "Summons a deadly ward to attack enemy heroes within its attack range. Lasts a maximum of 8 seconds.",
-      "spellName": "Death Ward",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.35+0",
         "Cast Range: 600",
@@ -223,8 +224,7 @@
         "Grants a new ability: Voodoo Switcheroo.",
         "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "D",
+      "legacy_key": "D",
       "story": null
     }
   ],

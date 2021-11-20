@@ -4,7 +4,7 @@
       "notes": [
         "The strength talent effectively grants Weaver 180 health and 0.9 health regeneration."
       ],
-      "spellName": "Talent",
+      "name": "Talent",
       "talents": [
         {
           "talentLvl": "25",
@@ -60,10 +60,11 @@
         "On each interval, The Swarm first applies the armor reduction, then the damage."
       ],
       "mana": "110",
-      "hotKey": "Q",
+      "item_behaviour": [],
+      "name": "The Swarm",
       "cooldown": "44\/36\/28\/20 (TagTalent 42\/34\/26\/18)",
       "description": "Weaver launches a swarm of 12 young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed.",
-      "spellName": "The Swarm",
+      "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 3000",
@@ -80,8 +81,7 @@
         "Reduces cooldown by 2 seconds. Causes The Swarm to latch onto and reveal invisible units.",
         "Turning spell immune does not remove already attached beetles."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "R",
+      "legacy_key": "R",
       "story": null
     },
     {
@@ -102,10 +102,11 @@
         "Unlike other phased movement sources, Shukuchi turns Weaver phased instantly upon cast, instead of after the fade time."
       ],
       "mana": "60",
-      "hotKey": "W",
+      "item_behaviour": [],
+      "name": "Shukuchi",
       "cooldown": "12\/10\/8\/6 (TagTalent 0)",
       "description": "Weaver shifts out of visibility, gaining max movement speed --doing harm to any enemies it passes through.",
-      "spellName": "Shukuchi",
+      "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Fade Time: 0.25",
@@ -116,8 +117,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 12\/10\/8\/6"
       ],
-      "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacy_key": "C",
       "story": null
     },
     {
@@ -144,10 +144,11 @@
         "These Geminate Attacks on secondary targets are launched simultaneously with the extra attacks on the primary attack target."
       ],
       "mana": null,
-      "hotKey": "E",
+      "item_behaviour": [],
+      "name": "Geminate Attack",
       "cooldown": null,
       "description": "Allows Weaver to dispatch two attacks at once.",
-      "spellName": "Geminate Attack",
+      "hot_key": "E",
       "params": [
         "Effect Delay: 0.25",
         "Number of Extra Attacks: 1 (TagTalent 2)",
@@ -157,8 +158,7 @@
         "Despite being an active ability, Geminate Attack is disabled by Break.",
         "Geminate Attack is always toggled on for illusions, but they cannot trigger it."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "K",
+      "legacy_key": "K",
       "story": null
     },
     {
@@ -185,18 +185,18 @@
         "This means allies cannot be sent back to their death location after respawning, unlike how Weaver can when self-casting."
       ],
       "mana": "150\/75\/0",
-      "hotKey": "R",
+      "item_behaviour": [],
+      "name": "Time Lapse",
       "cooldown": "70\/55\/40 (TagTalent 20)",
       "description": "Weaver warps backward to whatever position it was in five seconds earlier--regaining the HP and mana from that time. No effect on cooldown, gold or experience.",
-      "spellName": "Time Lapse",
+      "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.53",
         "Lapsed Time: 5",
         "Cast Range: 500",
         "Reduces cooldown, and allows Weaver to cast Time Lapse on an ally."
       ],
-      "itemBehaviour": [],
-      "legacyKey": "T",
+      "legacy_key": "T",
       "story": null
     },
     {
@@ -218,18 +218,18 @@
         "Fully stacks with other sources of Mana Break."
       ],
       "mana": null,
-      "hotKey": null,
+      "item_behaviour": [],
+      "name": "Mana Break",
       "cooldown": null,
       "description": "There is no description for this ability.",
-      "spellName": "Mana Break",
+      "hot_key": null,
       "params": [
         "Mana Burned per Hit: 20",
         "Illusion Mana Burned per Hit: 10",
         "Burned Mana as Damage: 80%",
         "The amount of mana burned is reduced for illusions."
       ],
-      "itemBehaviour": [],
-      "legacyKey": null,
+      "legacy_key": null,
       "story": null
     }
   ],
