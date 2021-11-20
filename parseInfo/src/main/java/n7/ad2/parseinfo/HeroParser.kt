@@ -20,9 +20,9 @@ import javax.imageio.ImageIO
 
 fun main() = runBlocking {
     val heroParser = HeroParser()
-    heroParser.loadAll()
+//    heroParser.loadAll()
 //    heroParser.createFileWithHeroesAndFolders()
-//    heroParser.loadHeroesOnEnglish()
+    heroParser.loadHeroesOnEnglish()
 //    heroParser.loadHeroesOnRussian()
 //    heroParser.loadResponsesOnEnglish()
 //    heroParser.loadResponsesOnRussian()
@@ -62,7 +62,7 @@ class HeroParser {
     }
 
     suspend fun loadHeroesOnEnglish() {
-        getHeroesList(LocaleHeroes.EN).forEach(::loadHero)
+        getHeroesList(LocaleHeroes.RU).filter { it.name == "Lifestealer" }.forEach(::loadHero)
     }
 
     fun loadHeroesOnRussian() {
@@ -226,7 +226,17 @@ class HeroParser {
             loadDescription(root)
             loadHistory(root)
             loadAbilities(root)
-            loadTrivia(root)
+            loadSections(root) { sectionAndData: SectionAndData ->
+                when (sectionAndData.name) {
+                    "Trivia", "Факты" -> {
+                        val trivias = sectionAndData.data[1].getElementsByTag("li")
+                        JSONArray().apply {
+                            for (trivia in trivias) add(trivia.text())
+                            put("trivia", this)
+                        }
+                    }
+                }
+            }
             loadTalents(root)
             loadMainAttributes(root)
 
@@ -293,29 +303,22 @@ class HeroParser {
         put("abilities", abilities)
     }
 
-    private fun JSONObject.loadTrivia(root: Document) {
-        val children = root.getElementById("mw-content-text").child(0).children()
-        var nextSectionIsTips = false
-        for (child in children) {
-            if (nextSectionIsTips) {
-                val trivias = child.getElementsByTag("li")
-                JSONArray().apply {
-                    for (trivia in trivias) {
-                        add(trivia.text())
-                    }
-                    nextSectionIsTips = false
+    data class SectionAndData(val name: String, val data: Elements)
 
-                    put("trivia", this)
+    private fun JSONObject.loadSections(root: Document, callback: (SectionAndData) -> Unit) {
+        val sections: Elements = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
+        var lastName = ""
+        var data = Elements()
+        for (section in sections) {
+            if (section.tag().toString() == "h2") {
+                val name = section.child(0).id()
+                if (lastName != name) {
+                    callback(SectionAndData(lastName, data))
+                    data = Elements()
                 }
+                lastName = name
             }
-
-            if (child.tag().toString() == "h2") { // нашли заголовок секции
-                when (child.child(0).id()) {
-                    "Trivia", ".D0.A4.D0.B0.D0.BA.D1.82.D1.8B" -> {
-                        nextSectionIsTips = true
-                    }
-                }
-            }
+            data.add(section)
         }
     }
 
@@ -330,13 +333,13 @@ class HeroParser {
                     loadSpellImage(it, name)
 
                     var audioUrl = it.getElementsByTag("source").attr("src")
-                    if (audioUrl.isNullOrEmpty()) audioUrl = null
+                    if (audioUrl.isNullOrEmpty()) audioUrl = ""
                     put("audioUrl", audioUrl)
 
-                    val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()?.takeIf { it.length == 1 }
+                    val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()?.takeIf { it.length == 1 } ?: ""
                     put("hot_key", hotKey)
 
-                    val legacyKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()?.takeIf { it.length == 1 }
+                    val legacyKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()?.takeIf { it.length == 1 } ?: ""
                     put("legacy_key", legacyKey)
 
                     val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")

@@ -51,9 +51,9 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             ))
             add(VOHeroInfo.Spells(
                 info.abilities.map { ability ->
-                    val name = ability.spellName
-                    val urlSpellImage = HeroRepository.getFullUrlHeroSpell(ability.spellName)
-                    val isSelected = (heroInfo as? HeroInfo.Spell)?.name == ability.spellName
+                    val name = ability.name
+                    val urlSpellImage = HeroRepository.getFullUrlHeroSpell(ability.name)
+                    val isSelected = (heroInfo as? HeroInfo.Spell)?.name == ability.name
                     VOSpell(name, urlSpellImage, isSelected)
                 }
             ))
@@ -69,8 +69,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     }
                 }
                 is HeroInfo.Spell -> {
-                    val selectedSpell = info.abilities.find { ability -> ability.spellName == heroInfo.name }!!
-                    add(VOHeroInfo.HeaderSound(selectedSpell.spellName, selectedSpell.hotKey, selectedSpell.legacyKey, selectedSpell.audioUrl, false))
+                    val selectedSpell = info.abilities.find { ability -> ability.name == heroInfo.name } ?: return@buildList
+                    add(VOHeroInfo.HeaderSound(selectedSpell.name, selectedSpell.hotKey, selectedSpell.legacyKey, selectedSpell.audioUrl, false))
                 }
             }
         })

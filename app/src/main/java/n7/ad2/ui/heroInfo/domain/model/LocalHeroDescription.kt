@@ -40,7 +40,7 @@ data class Ability(
     @Json(name = "audio_url")
     val audioUrl: String = "",
     @Json(name = "name")
-    val spellName: String = "",
+    val name: String = "",
     @Json(name = "story")
     val story: String? = null,
     @Json(name = "talents")
