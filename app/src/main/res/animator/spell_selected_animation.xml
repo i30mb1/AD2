@@ -4,26 +4,26 @@
         <set android:ordering="together">
             <objectAnimator
                 android:duration="@integer/animation_long"
-                android:interpolator="@android:interpolator/bounce"
+                android:interpolator="@android:interpolator/accelerate_decelerate"
                 android:propertyName="scaleX"
-                android:valueTo="0.9" />
+                android:valueTo="0.94" />
             <objectAnimator
                 android:duration="@integer/animation_long"
-                android:interpolator="@android:interpolator/bounce"
+                android:interpolator="@android:interpolator/accelerate_decelerate"
                 android:propertyName="scaleY"
-                android:valueTo="0.9" />
+                android:valueTo="0.94" />
         </set>
     </item>
     <item>
         <set android:ordering="together">
             <objectAnimator
                 android:duration="@integer/animation_long"
-                android:interpolator="@android:interpolator/bounce"
+                android:interpolator="@android:interpolator/accelerate_decelerate"
                 android:propertyName="scaleX"
                 android:valueTo="1" />
             <objectAnimator
                 android:duration="@integer/animation_long"
-                android:interpolator="@android:interpolator/bounce"
+                android:interpolator="@android:interpolator/accelerate_decelerate"
                 android:propertyName="scaleY"
                 android:valueTo="1" />
         </set>
