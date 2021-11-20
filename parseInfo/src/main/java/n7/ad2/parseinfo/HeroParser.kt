@@ -228,20 +228,50 @@ class HeroParser {
             loadAbilities(root)
             loadSections(root) { sectionAndData: SectionAndData ->
                 when (sectionAndData.name) {
-                    "Trivia", "Факты" -> {
-                        val trivias = sectionAndData.data[1].getElementsByTag("li")
-                        JSONArray().apply {
-                            for (trivia in trivias) add(trivia.text())
-                            put("trivia", this)
-                        }
-                    }
+                    "Talents", "Таланты" -> addTalents(sectionAndData)
+                    "Trivia", "Факты" -> addTrivia(sectionAndData)
                 }
             }
-            loadTalents(root)
             loadMainAttributes(root)
 
             File("$assets$HEROES_FOLDER/$name/$folder/description.json").writeText(toJSONString())
         }
+    }
+
+    private fun JSONObject.addTrivia(sectionAndData: SectionAndData) {
+        val trivias = sectionAndData.data[1].getElementsByTag("li")
+        JSONArray().apply {
+            for (trivia in trivias) add(trivia.text())
+            put("trivia", this)
+        }
+    }
+
+    private fun JSONObject.addTalents(sectionAndData: SectionAndData) {
+        val talentBlock = sectionAndData.data[1].getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")[0]
+        val talentLines = talentBlock.getElementsByTag("tr")
+        val talents = JSONArray().apply {
+            var talentLvl = 25
+            for (talentLine in talentLines) {
+                if (talentLine.children().size == 1) continue
+                JSONObject().apply {
+                    put("talent_left", talentLine.child(0).text())
+                    put("talent_lvl", talentLvl.toString())
+                    put("talent_right", talentLine.child(2).text())
+                    add(this)
+                }
+                talentLvl -= 5
+            }
+        }
+
+        val notes = JSONArray().apply {
+            val talentTips = talentBlock.getElementsByTag("li")
+            for (talentTip in talentTips) add(talentTip.text())
+        }
+        val result = JSONObject().apply {
+            put("hero_talents", talents)
+            if (notes.size > 0) put("notes", notes)
+        }
+        put("talents", result)
     }
 
     private fun JSONObject.loadMainAttributes(root: Document) {
@@ -268,44 +298,9 @@ class HeroParser {
         put("mainAttributes", attrs)
     }
 
-    private fun JSONObject.loadTalents(root: Document) {
-        val talentBlock = root.getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")[0]
-        val talentLines = talentBlock.getElementsByTag("tr")
-        val abilities: JSONArray = get("abilities") as JSONArray
-        val talents = JSONArray().apply {
-            var talentLvl = 25
-            for (talentLine in talentLines) {
-                if (talentLine.children().size == 1) continue
-                JSONObject().apply {
-                    put("talentLeft", talentLine.child(0).text())
-                    put("talentLvl", talentLvl.toString())
-                    put("talentRight", talentLine.child(2).text())
-                    add(this)
-                }
-                talentLvl -= 5
-            }
-
-            put("talents", this)
-        }
-
-        val notes = JSONArray().apply {
-            val talentTips = talentBlock.getElementsByTag("li")
-            for (talentTip in talentTips) {
-                add(talentTip.text())
-            }
-        }
-        val abilityTalent = JSONObject().apply {
-            put("name", "Talent")
-            if (notes.size > 0) put("notes", notes)
-            put("talents", talents)
-        }
-        abilities.add(0, abilityTalent)
-        put("abilities", abilities)
-    }
-
     data class SectionAndData(val name: String, val data: Elements)
 
-    private fun JSONObject.loadSections(root: Document, callback: (SectionAndData) -> Unit) {
+    private fun loadSections(root: Document, callback: (SectionAndData) -> Unit) {
         val sections: Elements = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
         var lastName = ""
         var data = Elements()
