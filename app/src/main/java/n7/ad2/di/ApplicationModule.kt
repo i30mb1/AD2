@@ -2,6 +2,7 @@ package n7.ad2.di
 
 import android.app.Application
 import android.content.SharedPreferences
+import android.content.res.AssetManager
 import androidx.preference.PreferenceManager
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -59,5 +60,9 @@ object ApplicationModule {
     @Singleton
     @Provides
     fun provideCalendar(): Calendar = Calendar.getInstance()
+
+    @Singleton
+    @Provides
+    fun provideResource(application: Application): AssetManager = application.assets
 
 }

@@ -1,12 +1,16 @@
 package n7.ad2
 
+import android.content.res.AssetManager
 import android.graphics.Color
 import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.BackgroundColorSpan
 import android.text.style.ClickableSpan
+import android.text.style.DynamicDrawableSpan
 import android.text.style.ForegroundColorSpan
+import android.text.style.ImageSpan
 import android.text.style.StrikethroughSpan
 import android.text.style.StyleSpan
 import android.text.style.UnderlineSpan
@@ -15,6 +19,7 @@ import androidx.annotation.VisibleForTesting
 import androidx.core.text.set
 import androidx.core.text.toSpannable
 import java.util.*
+import javax.inject.Inject
 
 class AD2ClickableSpan(private val value: String) : ClickableSpan() {
     val listener: ((String) -> Unit)? = null
@@ -28,7 +33,9 @@ data class RemainingText(val text: String) : Analyzer
 
 data class AttributeAndValue(val attribute: String, val value: String)
 
-class AD2StringParser {
+class AD2StringParser @Inject constructor(
+    private val assets: AssetManager,
+) {
 
     companion object {
         private const val START_TAG_SPAN_OPEN = "<span "
@@ -97,7 +104,11 @@ class AD2StringParser {
             "background" -> if (!isNightTheme) result[0, result.length] = BackgroundColorSpan(Color.parseColor(value))
             "backgroundNight" -> if (isNightTheme) result[0, result.length] = BackgroundColorSpan(Color.parseColor(value))
             "underline" -> result[0, result.length] = UnderlineSpan()
-            "link" -> result[0, result.length] = AD2ClickableSpan(value)
+            "image" -> {
+                val drawable = Drawable.createFromStream(assets.open("spell/$value"), null)
+                result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
+            }
+            "click" -> result[0, result.length] = AD2ClickableSpan(value)
             "style" -> when (value) {
                 "strike" -> result[0, result.length] = StrikethroughSpan()
                 "bold" -> result[0, result.length] = StyleSpan(Typeface.BOLD)

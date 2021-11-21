@@ -1,12 +1,13 @@
 package n7.ad2
 
 import com.google.common.truth.Truth
+import com.nhaarman.mockitokotlin2.mock
 import org.junit.Before
 import org.junit.Test
 
 class AD2StringParserTest {
 
-    private val converter = AD2StringParser()
+    private val converter = AD2StringParser(mock())
     private val resultAnalyzer = mutableListOf<Analyzer>()
     private val resultText = StringBuilder()
 

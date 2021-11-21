@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AD2Logger
+import n7.ad2.AD2StringParser
 import n7.ad2.R
 import n7.ad2.base.DispatchersProvider
 import n7.ad2.base.adapter.BodyViewHolder
@@ -23,6 +24,7 @@ import javax.inject.Inject
 class GetVOHeroDescriptionUseCase @Inject constructor(
     private val application: Application,
     private val heroRepository: HeroRepository,
+    private val aD2StringParser: AD2StringParser,
     private val moshi: Moshi,
     private val logger: AD2Logger,
     private val dispatchers: DispatchersProvider,
@@ -61,6 +63,9 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 HeroInfo.Main -> {
                     add(VOHeroInfo.Header(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_description))))
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.description.toSpanned())))
+                    add(VOHeroInfo.Body(BodyViewHolder.Data(
+                        aD2StringParser.toSpannable("Этот спелл <span image=\"Starstorm.webp\">Starstorm</span> пиздец 111111111111111111111111111111111111111111111111111111111111111111111111111111")
+                    )))
                     add(VOHeroInfo.Header(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_bio))))
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.history.toSpanned())))
                     info.trivia?.let { list ->
