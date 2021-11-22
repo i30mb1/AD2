@@ -10,10 +10,11 @@
 
     <attr name="textAppearance.B1" format="reference" />
     <attr name="textAppearance.H6.White" format="reference" />
-    <attr name="TextAppearance.H6.White.Bold" format="reference" />
-    <attr name="TextAppearance.Signature" format="reference" />
-    <attr name="TextAppearance.Signature.White" format="reference" />
-    <attr name="TextAppearance.Signature.White.Bold" format="reference" />
+    <attr name="textAppearance.H6.White.Bold" format="reference" />
+    <attr name="textAppearance.Coordinate" format="reference" />
+    <attr name="textAppearance.Signature" format="reference" />
+    <attr name="textAppearance.Signature.White" format="reference" />
+    <attr name="textAppearance.Signature.White.Bold" format="reference" />
 
     <attr name="textStyleHeroAdvantage" format="reference" />
     <attr name="textStyleHeroDisadvantage" format="reference" />

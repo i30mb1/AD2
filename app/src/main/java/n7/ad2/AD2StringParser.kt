@@ -21,9 +21,12 @@ import androidx.core.text.toSpannable
 import java.util.*
 import javax.inject.Inject
 
-class AD2ClickableSpan(private val value: String) : ClickableSpan() {
-    val listener: ((String) -> Unit)? = null
-    override fun onClick(widget: View) = listener?.invoke(value) ?: Unit
+class AD2ClickableSpan(private val data: Data) : ClickableSpan() {
+
+    data class Data(val tag: String, val value: String)
+
+    val listener: ((Data) -> Unit)? = null
+    override fun onClick(widget: View) = listener?.invoke(data) ?: Unit
 }
 
 sealed interface Analyzer
@@ -105,10 +108,10 @@ class AD2StringParser @Inject constructor(
             "backgroundNight" -> if (isNightTheme) result[0, result.length] = BackgroundColorSpan(Color.parseColor(value))
             "underline" -> result[0, result.length] = UnderlineSpan()
             "image" -> {
-                val drawable = Drawable.createFromStream(assets.open("spell/$value"), null)
+                val drawable = Drawable.createFromStream(assets.open(value), null)
                 result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
             }
-            "click" -> result[0, result.length] = AD2ClickableSpan(value)
+            "click" -> result[0, result.length] = AD2ClickableSpan(AD2ClickableSpan.Data(value, bufferText))
             "style" -> when (value) {
                 "strike" -> result[0, result.length] = StrikethroughSpan()
                 "bold" -> result[0, result.length] = StyleSpan(Typeface.BOLD)

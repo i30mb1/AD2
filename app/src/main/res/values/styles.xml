@@ -48,7 +48,7 @@
         <item name="shapeAppearance">@style/MyMediumComponent</item>
     </style>
 
-    <style name="Widget.TextView.Coordinate" parent="Widget.MaterialComponents.TextView">
+    <style name="TextAppearance.Coordinate" parent="Widget.MaterialComponents.TextView">
         <item name="fontFamily">@font/iceland_normal</item>
         <item name="android:textColor">?colorOnPrimary</item>
     </style>

@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="?TextAppearance.Signature.White.Bold"
+        style="?textAppearance.Signature.White.Bold"
         tools:text="@sample/heroes.json/data/nameEng" />
 
 </com.google.android.material.card.MaterialCardView>

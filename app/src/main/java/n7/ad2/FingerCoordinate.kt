@@ -9,8 +9,7 @@ import n7.ad2.databinding.FingerCoordinateBinding
 
 class FingerCoordinate(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
 
-    private val coordinatesXY = ArrayList<String>().apply { repeat(10) { add("") } }
-    private var binding: FingerCoordinateBinding = FingerCoordinateBinding.inflate(LayoutInflater.from(context), this, true)
+    private var binding = FingerCoordinateBinding.inflate(LayoutInflater.from(context), this)
     private val builder = StringBuilder(14)
 
     init {
@@ -23,7 +22,7 @@ class FingerCoordinate(context: Context, attrs: AttributeSet) : LinearLayout(con
         var pointerID = event.getPointerId(index)
         when (action) {
             MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> setCoordinateForPoint(pointerID, event.getX(index), event.getY(index))
-            MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> coordinatesXY[pointerID] = ""
+            MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> updateCoordinate(pointerID, "")
             MotionEvent.ACTION_MOVE -> {
                 val pointerCount = event.pointerCount
                 index = 0
@@ -34,7 +33,6 @@ class FingerCoordinate(context: Context, attrs: AttributeSet) : LinearLayout(con
                 }
             }
         }
-        binding.coordinates = coordinatesXY
     }
 
     private fun setCoordinateForPoint(pointerID: Int, y: Float, x: Float) {
@@ -45,7 +43,23 @@ class FingerCoordinate(context: Context, attrs: AttributeSet) : LinearLayout(con
             .append(y.toInt())
             .append("]")
 
-        coordinatesXY[pointerID] = builder.toString()
+        updateCoordinate(pointerID, builder.toString())
+    }
+
+    private fun updateCoordinate(pointerID: Int, text: String) {
+        val tv = when (pointerID) {
+            0 -> binding.tv1
+            1 -> binding.tv2
+            2 -> binding.tv3
+            3 -> binding.tv4
+            4 -> binding.tv5
+            5 -> binding.tv6
+            6 -> binding.tv7
+            7 -> binding.tv8
+            8 -> binding.tv9
+            else -> binding.tv10
+        }
+        tv.text = text
     }
 
 }

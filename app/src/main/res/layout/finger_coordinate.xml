@@ -1,90 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
 
-    <data>
-
-        <import type="java.util.ArrayList" />
-
-        <variable
-            name="coordinates"
-            type="ArrayList&lt;String&gt;" />
-    </data>
-
-    <merge
-        android:layout_width="match_parent"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv1"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:orientation="vertical"
-        tools:parentTag="android.widget.LinearLayout">
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(0)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv2"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(1)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv3"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(2)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv4"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(3)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv5"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(4)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv6"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(5)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv7"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(6)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv8"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(7)}"
-            tools:text="[x100][y200]" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv9"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(8)}"
-            tools:text="[x100][y200]" />
-
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.Coordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{coordinates.get(9)}"
-            tools:text="[x100][y200]" />
-    </merge>
-</layout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv10"
+        style="?textAppearance.Coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[x100][y200]" />
+</merge>

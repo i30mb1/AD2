@@ -35,7 +35,7 @@
             android:background="@color/transparent"
             android:gravity="center"
             android:maxEms="1"
-            android:textAppearance="?TextAppearance.H6.White.Bold"
+            android:textAppearance="?textAppearance.H6.White.Bold"
             tools:text="T" />
 
         <TextView
@@ -45,7 +45,7 @@
             android:background="@color/transparent"
             android:gravity="center"
             android:maxEms="1"
-            android:textAppearance="?TextAppearance.H6.White.Bold"
+            android:textAppearance="?textAppearance.H6.White.Bold"
             tools:text="T" />
     </LinearLayout>
 
