@@ -42,11 +42,11 @@ class DraggableDrawer(
     var isOpen: Boolean = false
     @Inject lateinit var logger: AD2Logger
     private lateinit var draggableView: FragmentContainerView
+    private var touchSlop = 0
     private var initialMotionX = 0F
     private var isCollapsed: Boolean = false
     private var isDraggableViewInitiated = false
     private var isIntercept = false
-    private var forceToIntercept = false
     private var offsetX = 0
     private var offsetY = 0
     private var currentOffsetX = 0
@@ -62,16 +62,14 @@ class DraggableDrawer(
         override fun clampViewPositionVertical(child: View, top: Int, dy: Int) = 0
         override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(xvel)
         override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
-            if (isIntercept || forceToIntercept) {
-                val percent = (1 - left.toFloat() / collapsedOffsetX)
-                drawerPercent?.invoke(percent)
-                val scale = maxScale - left.toFloat() / collapsedOffsetX * (maxScale - collapsedScale)
-                draggableView.scaleY = scale
-                draggableView.scaleX = scale
-                offsetX = changedView.left
-                offsetY = changedView.top
-                currentOffsetX = offsetX
-            }
+            val percent = 1 - (left.toFloat()) / (collapsedOffsetX)
+            drawerPercent?.invoke(percent)
+            val scale = maxScale - (left.toFloat()) / (collapsedOffsetX) * (maxScale - collapsedScale)
+            draggableView.scaleY = scale
+            draggableView.scaleX = scale
+            offsetX = changedView.left
+            offsetY = changedView.top
+            currentOffsetX = offsetX
         }
     })
 
@@ -110,7 +108,9 @@ class DraggableDrawer(
                 }
                 MotionEvent.ACTION_MOVE -> {
                     val currentSlopX = abs(ev.x - initialMotionX)
-                    if (currentSlopX > dragHelper.touchSlop) isIntercept = true
+                    if (currentSlopX > touchSlop) {
+                        isIntercept = true
+                    }
                 }
                 MotionEvent.ACTION_CANCEL, MotionEvent.ACTION_UP -> {
                     dragHelper.cancel()
@@ -130,7 +130,6 @@ class DraggableDrawer(
     }
 
     fun close() {
-        forceToIntercept = true
         val startSettling = dragHelper.smoothSlideViewTo(draggableView, collapsedOffsetX, 0)
         if (startSettling) SettleRunnable().run()
         isOpen = false
@@ -141,7 +140,7 @@ class DraggableDrawer(
     }
 
     private fun onReleased(xVel: Float) {
-        if (!isIntercept) return
+//        if (!isIntercept) return
         val finalX = when {
             xVel < NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER -> 0
             xVel > POSITIVE_VELOCITY_FOR_STICK_TO_BORDER -> collapsedOffsetX
@@ -160,6 +159,7 @@ class DraggableDrawer(
             draggableView.scaleY = collapsedScale
             draggableView.scaleX = collapsedScale
         }
+        touchSlop = dragHelper.touchSlop
         draggableView.elevation = defaultElevation
         isDraggableViewInitiated = true
     }
@@ -169,7 +169,6 @@ class DraggableDrawer(
             if (dragHelper.continueSettling(true)) {
                 ViewCompat.postOnAnimation(draggableView, this)
             } else {
-                forceToIntercept = false
                 onAnimationEnd?.invoke()
             }
         }
