@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end|center_vertical"
-        android:translationX="100dp"
+        tools:translationX="100dp"
         tools:scaleX="0.5"
         tools:scaleY="0.5"
         android:background="?android:colorBackground" />
