@@ -113,7 +113,9 @@
 
     <style name="Theme.AppSplash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/gray_500</item>
+<!--        <item name="android:windowSplashScreenIconBackgroundColor"></item>-->
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <!--        <item name="android:windowSplashScreenBrandingImage">@drawable/ic_splash_logo</item>-->
         <item name="postSplashScreenTheme">@style/AD2Theme</item>
     </style>
 
