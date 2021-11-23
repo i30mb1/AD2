@@ -23,7 +23,7 @@ class GetVOHeroesListInteractor @Inject constructor(
 
     operator fun invoke(): Flow<List<VOHero>> {
         return heroRepository.getAllHeroes()
-            .onStart { logger.log("items loaded") }
+            .onStart { logger.log("heroes loaded") }
             .flatMapLatest { list ->
                 val result = mutableListOf<VOHero>()
                 flow {

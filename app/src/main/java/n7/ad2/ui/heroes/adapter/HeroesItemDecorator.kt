@@ -4,6 +4,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.ui.heroes.domain.vo.VOHeroBody
 import n7.ad2.utils.extension.toPx
 
 class HeroesItemDecorator : RecyclerView.ItemDecoration() {
@@ -22,10 +23,11 @@ class HeroesItemDecorator : RecyclerView.ItemDecoration() {
         val position = parent.getChildAdapterPosition(view)
         val layoutManager: GridLayoutManager = parent.layoutManager as GridLayoutManager
         val spanCount: Int = layoutManager.spanCount
-        val column: Int = position % spanCount
-        val childCount = parent.adapter?.itemCount ?: return
-        val itemsInEnd = childCount % spanCount
-        val type = parent.adapter?.getItemViewType(position) ?: return
+        val childCount = (parent.adapter as HeroesListAdapter).currentList.count()
+        val itemsInEnd = when {
+            position < childCount - spanCount -> 0
+            else -> (parent.adapter as HeroesListAdapter).currentList.reversed().takeWhile { it is VOHeroBody }.count() % spanCount
+        }
 
         with(outRect) {
             bottom = if (position in (childCount - itemsInEnd..childCount)) offsetBottom + (navigationBarsInsets * percent).toInt() else offset
