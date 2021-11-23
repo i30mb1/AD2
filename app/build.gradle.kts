@@ -13,6 +13,8 @@ android {
         versionCode = Apps.versionCode
         versionName = Apps.versionName
 
+        resourceConfigurations.addAll(listOf("ru", "en"))
+
         javaCompileOptions {
             annotationProcessorOptions {
                 argument("room.incremental", "true")
