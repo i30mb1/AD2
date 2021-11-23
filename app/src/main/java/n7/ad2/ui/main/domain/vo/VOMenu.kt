@@ -1,4 +1,4 @@
-package n7.ad2.ui.vo
+package n7.ad2.ui.main.domain.vo
 
 import n7.ad2.data.source.remote.model.VOMenuType
 

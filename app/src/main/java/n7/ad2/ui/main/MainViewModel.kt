@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.launch
 import n7.ad2.AD2Logger
 import n7.ad2.ui.main.domain.usecase.GetMenuItemsUseCase
-import n7.ad2.ui.vo.VOMenu
+import n7.ad2.ui.main.domain.vo.VOMenu
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(

@@ -30,8 +30,9 @@ import n7.ad2.tournaments.TournamentsFragment
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.items.ItemsFragment
+import n7.ad2.ui.main.adapter.MainMenuListAdapter
+import n7.ad2.ui.main.domain.vo.VOMenu
 import n7.ad2.ui.streams.StreamsFragment
-import n7.ad2.ui.vo.VOMenu
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 import javax.inject.Inject
@@ -49,6 +50,13 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
     private val binding: FragmentMainBinding get() = _binding!!
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
     private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
+    private val onMenuItemClick: (menuItem: VOMenu) -> Unit = { menuItem: VOMenu ->
+        if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {
+            Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
+        } else {
+            viewModel.updateMenu(menuItem)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -107,10 +115,6 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
     }
 
     private fun setFragment(menuItem: VOMenu) {
-        if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {
-            Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
-            return
-        }
         val currentTag = childFragmentManager.fragments.lastOrNull()?.tag
         if (currentTag == menuItem.title) return
         val fragment = when (menuItem.type) {
@@ -125,12 +129,11 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
         childFragmentManager.commit {
             replace(binding.container.id, fragment, menuItem.title)
         }
-        viewModel.updateMenu(menuItem)
     }
 
     private fun setupMenuAdapter() {
         val linearLayoutManager = LinearLayoutManager(requireContext())
-        val mainMenuAdapter = MainMenuAdapter(layoutInflater, viewModel::updateMenu)
+        val mainMenuAdapter = MainMenuListAdapter(layoutInflater, onMenuItemClick)
         binding.rvMenu.apply {
             layoutManager = linearLayoutManager
             adapter = mainMenuAdapter

@@ -9,7 +9,7 @@ import n7.ad2.R
 import n7.ad2.data.source.local.AppPreference
 import n7.ad2.data.source.remote.model.VOMenuType
 import n7.ad2.data.source.remote.retrofit.SettingsApi
-import n7.ad2.ui.vo.VOMenu
+import n7.ad2.ui.main.domain.vo.VOMenu
 import javax.inject.Inject
 
 class GetMenuItemsUseCase @Inject constructor(
