@@ -33,7 +33,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/backgrounds/scenic"
-                loadImageUrl="@{news.imageHref}"
                 tools:targetApi="m" />
 
             <TextView
@@ -42,9 +41,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:drawable/screen_background_dark_transparent"
                 android:gravity="center"
-                android:onClick="@{(view)-> news.startNewsFull(view)}"
                 android:padding="20dp"
-                android:text="@{news.title}"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:transitionName="tv"

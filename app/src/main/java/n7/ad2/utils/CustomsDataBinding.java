@@ -1,12 +1,7 @@
 package n7.ad2.utils;
 
 import android.content.res.TypedArray;
-import androidx.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
-import androidx.transition.Slide;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.transition.TransitionManager;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -17,7 +12,10 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import androidx.databinding.BindingAdapter;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.Slide;
+import androidx.transition.TransitionManager;
 
 import n7.ad2.R;
 
@@ -25,11 +23,7 @@ public class CustomsDataBinding {
 
     @BindingAdapter({"srcPath", "srcHolder", "srcError"})
     public static void loadUrl(ImageView view, String srcPath, Drawable srcHolder, Drawable srcError) {
-        Picasso.get()
-                .load(srcPath)
-                .error(srcError)
-                .placeholder(srcHolder)
-                .into(view);
+
     }
 
     @BindingAdapter("scrollTo")

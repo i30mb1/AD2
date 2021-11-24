@@ -1,4 +1,4 @@
-package n7.ad2.feature_streams
+package n7.ad2.streams
 
 import android.net.Uri
 import android.os.Bundle

@@ -2,26 +2,25 @@ package n7.ad2.games;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ObservableBoolean;
-import androidx.databinding.ObservableInt;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
-import androidx.transition.ChangeBounds;
-import androidx.transition.TransitionManager;
-import androidx.transition.TransitionSet;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.LinearInterpolator;
 
-import com.squareup.picasso.Picasso;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
+import androidx.databinding.ObservableInt;
+import androidx.transition.ChangeBounds;
+import androidx.transition.TransitionManager;
+import androidx.transition.TransitionSet;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -224,7 +223,6 @@ public class Game3p1 extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Picasso.get().load(path).resize(300, 200).into(binding.ivActivityGame3p1Item);
             }
         });
     }

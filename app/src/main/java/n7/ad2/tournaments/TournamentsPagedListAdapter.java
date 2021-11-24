@@ -27,8 +27,6 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
 
-import com.squareup.picasso.Picasso;
-
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
@@ -102,8 +100,6 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
             hideButtonScheduler();
             tv_item_list_games_team1_name.setText(game.team1Name);
             tv_item_list_games_team2_name.setText(game.team2Name);
-            Picasso.get().load(game.team1Logo).placeholder(R.drawable.game_unknown_team1).into(iv_item_list_games_team1_logo);
-            Picasso.get().load(game.team2Logo).placeholder(R.drawable.game_unknown_team2).into(iv_item_list_games_team2_logo);
             if (!game.teamScore.equals("")) tv_item_list_games_middle.setText(game.teamScore);
             if (game.teamTime != 0) {
                 tv_item_list_games_middle.setText(new SimpleDateFormat("HH:mm dd.MM.yyyy", Locale.US).format(game.teamTime));

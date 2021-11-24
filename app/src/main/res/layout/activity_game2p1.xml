@@ -35,7 +35,6 @@
             tools:targetApi="lollipop" />
 
         <TextView
-            android:text="@{String.valueOf(activity.clicks)}"
             android:id="@+id/tv_activity_game2p1_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +60,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_activity_game2p1_title" />
 
         <TextView
-            android:text="@{String.valueOf(activity.secondRemains)}"
             android:id="@+id/tv_activity_game2p1_timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,7 +100,6 @@
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="@{activity::moveCreep}"
             android:id="@+id/iv_activity_game2p1_creep1"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -120,7 +117,6 @@
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="@{activity::moveCreep}"
             android:id="@+id/iv_activity_game2p1_creep2"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -139,7 +135,6 @@
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="@{activity::moveCreep}"
             android:id="@+id/iv_activity_game2p1_creep3"
             android:layout_width="60dp"
             android:layout_height="60dp"

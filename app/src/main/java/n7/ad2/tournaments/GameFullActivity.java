@@ -1,17 +1,16 @@
 package n7.ad2.tournaments;
 
-import androidx.lifecycle.Observer;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ObservableBoolean;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
+import androidx.lifecycle.Observer;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,7 +19,6 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-import jp.wasabeef.picasso.transformations.GrayscaleTransformation;
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityGameFullBinding;
 import n7.ad2.tournaments.db.GamesDao;
@@ -91,9 +89,9 @@ public class GameFullActivity extends BaseActivity {
                                     appExecutors.mainThread().execute(new Runnable() {
                                         @Override
                                         public void run() {
-                                            Picasso.get().load("file:///android_asset/heroes/" + hero.toLowerCase().trim().replace(" ", "_") + "/full.webp")
-                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
-                                                    .into(iv);
+//                                            Picasso.get().load("file:///android_asset/heroes/" + hero.toLowerCase().trim().replace(" ", "_") + "/full.webp")
+//                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
+//                                                    .into(iv);
                                         }
                                     });
                                 }
@@ -117,9 +115,9 @@ public class GameFullActivity extends BaseActivity {
                                     appExecutors.mainThread().execute(new Runnable() {
                                         @Override
                                         public void run() {
-                                            Picasso.get().load("file:///android_asset/heroes/" + hero.toLowerCase().replace(" ", "_") + "/full.webp")
-                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
-                                                    .into(iv);
+//                                            Picasso.get().load("file:///android_asset/heroes/" + hero.toLowerCase().replace(" ", "_") + "/full.webp")
+//                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
+//                                                    .into(iv);
                                         }
                                     });
                                 }
@@ -135,9 +133,9 @@ public class GameFullActivity extends BaseActivity {
                                 appExecutors.mainThread().execute(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Picasso.get().load("file:///android_asset/heroes/" + hero + "/full.webp").transform(new GrayscaleTransformation())
-                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
-                                                .into(iv);
+//                                        Picasso.get().load("file:///android_asset/heroes/" + hero + "/full.webp").transform(new GrayscaleTransformation())
+//                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
+//                                                .into(iv);
                                     }
                                 });
                                 if (count < 3)
@@ -155,9 +153,9 @@ public class GameFullActivity extends BaseActivity {
                                 appExecutors.mainThread().execute(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Picasso.get().load("file:///android_asset/heroes/" + hero + "/full.webp").transform(new GrayscaleTransformation())
-                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
-                                                .into(iv);
+//                                        Picasso.get().load("file:///android_asset/heroes/" + hero + "/full.webp").transform(new GrayscaleTransformation())
+//                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
+//                                                .into(iv);
                                     }
                                 });
                                 if (count < 9) {
@@ -192,8 +190,8 @@ public class GameFullActivity extends BaseActivity {
             @Override
             public void onChanged(@Nullable TournamentGame games) {
                 if (games != null) {
-                    Picasso.get().load(games.team1Logo).placeholder(R.drawable.game_unknown_team1).into(binding.ivActivityGameFullTeam1);
-                    Picasso.get().load(games.team2Logo).placeholder(R.drawable.game_unknown_team2).into(binding.ivActivityGameFullTeam2);
+//                    Picasso.get().load(games.team1Logo).placeholder(R.drawable.game_unknown_team1).into(binding.ivActivityGameFullTeam1);
+//                    Picasso.get().load(games.team2Logo).placeholder(R.drawable.game_unknown_team2).into(binding.ivActivityGameFullTeam2);
                     binding.tvActivityGameFullTeam1.setText(games.team1Name);
                     binding.tvActivityGameFullTeam2.setText(games.team2Name);
                     binding.tvActivityGameFullScore.setText(games.teamScore);

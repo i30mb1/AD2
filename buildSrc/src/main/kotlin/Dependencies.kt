@@ -30,7 +30,6 @@ object Lib {
     const val recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
     const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
     const val ticker = "com.robinhood.ticker:ticker:1.2.2"
-    const val debugDB = "com.amitshekhar.android:debug-db:1.0.1" // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val retrofitInterceptor = "com.squareup.okhttp3:logging-interceptor:4.3.1"
@@ -39,9 +38,6 @@ object Lib {
     const val material = "com.google.android.material:material:1.2.0"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
     const val coil = "io.coil-kt:coil:0.13.0"
-    const val picasso = "com.squareup.picasso:picasso:2.71828"
-    const val picassoTrans = "jp.wasabeef:picasso-transformations:2.2.1"
-    const val picassoTrans2 = "jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1"
     const val jsoup = "org.jsoup:jsoup:1.11.2" // Jsoup для разбора html
     const val firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
     const val playCore = "com.google.android.play:core:1.8.0" // auto update + rateMe

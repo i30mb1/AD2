@@ -16,8 +16,6 @@ All you want to know about dota in one app
 * [InstantApp](https://developer.android.com/topic/google-play-instant) - Native Android apps, without the installation
 * [Firebase](https://firebase.google.com/) - Firebase is a comprehensive mobile development platform. They give you the tools to develop high-quality apps, grow your user base, and earn more money.
 * [Jsoup](https://jsoup.org/) - library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
-* [Picasso](https://square.github.io/picasso/) - allows for hassle-free image loading in your application
-* [Picasso-transformations](https://github.com/wasabeef/picasso-transformations)  - transformation library providing a variety of image transformations for Picasso
 * [Gson](https://github.com/google/gson) - A Java serialization/deserialization library to convert Java Objects into JSON and back
 * [Sliding-root-nav](https://github.com/yarolegovich/SlidingRootNav) - drawerLayout-like ViewGroup, where a "drawer" is hidden under the content view, which can be shifted to make the drawer visible.
 * [Ticker](https://github.com/robinhood/ticker) - An Android text view with scrolling text change animation

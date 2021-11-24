@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="n7.ad2.feature_streams"
+    package="n7.ad2.streams"
     android:targetSandboxVersion="2"
     tools:ignore="UnusedAttribute">
 
@@ -20,7 +20,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         tools:ignore="AllowBackup,MissingApplicationIcon">
         <activity
-            android:name=".StreamsActivity"
+            android:name="n7.ad2.streams.StreamsActivity"
             android:exported="true">
 
             <intent-filter

@@ -2,22 +2,11 @@ package n7.ad2.games;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ObservableBoolean;
-import androidx.databinding.ObservableField;
-import androidx.databinding.ObservableInt;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
-import androidx.transition.ChangeBounds;
-import androidx.transition.Fade;
-import androidx.transition.TransitionManager;
-import androidx.transition.TransitionSet;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +20,17 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
+import androidx.databinding.ObservableField;
+import androidx.databinding.ObservableInt;
+import androidx.transition.ChangeBounds;
+import androidx.transition.Fade;
+import androidx.transition.TransitionManager;
+import androidx.transition.TransitionSet;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -274,7 +273,6 @@ public class Game1p2 extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Picasso.get().load(format).error(R.drawable.spell_placeholder).placeholder(R.drawable.spell_placeholder).into(view);
             }
         });
     }
