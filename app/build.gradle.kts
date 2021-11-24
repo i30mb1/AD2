@@ -47,7 +47,7 @@ android {
         }
     }
 
-    setDynamicFeatures(mutableSetOf(":feature_streams"))
+//    setDynamicFeatures(mutableSetOf(":feature_streams"))
 
     testOptions {
         unitTests.apply {
@@ -69,7 +69,7 @@ dependencies {
     implementation(Lib.firebaseAnal)
     implementation(Lib.instantApps)
 
-    lintChecks(project(":rules"))
+    lintChecks(project(Module.Core.rules))
 
     addBaseDependencies()
     addTestDependencies()

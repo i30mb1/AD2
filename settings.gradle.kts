@@ -1,12 +1,6 @@
-include(":rules")
 include(":app")
-include(":parseInfo")
-include(":feature_streams")
-
-dependencyResolutionManagement {
-    repositories {
-        jcenter()
-        google()
-        maven("https://maven.google.com")
-    }
-}
+include(":feature:streams")
+include(":core:rules")
+include(":core:parser")
+include(":core:android")
+rootProject.name = "AD2"

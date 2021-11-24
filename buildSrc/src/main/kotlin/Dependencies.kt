@@ -25,6 +25,7 @@ object Versions {
 }
 
 object Lib {
+    const val appCompat = "androidx.appcompat:appcompat:1.4.0"
     const val dataStorePref = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
     const val recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
     const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
