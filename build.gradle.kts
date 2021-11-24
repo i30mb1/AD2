@@ -1,7 +1,6 @@
 import com.android.build.gradle.internal.plugins.AppPlugin
 import com.android.build.gradle.internal.plugins.DynamicFeaturePlugin
 import com.android.build.gradle.internal.plugins.LibraryPlugin
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 subprojects {
     plugins.matching { it is AppPlugin || it is DynamicFeaturePlugin || it is LibraryPlugin }.whenPluginAdded {
@@ -11,18 +10,6 @@ subprojects {
             defaultConfig {
                 minSdk = Apps.minSdkVersion
                 targetSdk = Apps.targetSdkVersion
-            }
-
-            compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_1_8
-                targetCompatibility = JavaVersion.VERSION_1_8
-            }
-
-            tasks.withType<KotlinCompile> {
-                kotlinOptions {
-                    jvmTarget = JavaVersion.VERSION_1_8.toString()
-//                    allWarningsAsErrors = true
-                }
             }
         }
     }
