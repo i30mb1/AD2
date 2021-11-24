@@ -20,4 +20,6 @@ fun PluginDependenciesSpec.googleServices(): PluginDependencySpec = id("com.goog
 
 fun PluginDependenciesSpec.javaLibrary(): PluginDependencySpec = id("java-library")
 
+fun PluginDependenciesSpec.androidLibrary(): PluginDependencySpec = id("com.android.library")
+
 fun PluginDependenciesSpec.kotlin(): PluginDependencySpec = id("kotlin")
