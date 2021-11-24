@@ -66,6 +66,8 @@ dependencies {
     implementation(Lib.instantApps)
 
     lintChecks(project(Module.Core.rules))
+    implementation(project(Module.Core.android))
+    implementation(project(Module.Feature.streams))
 
     addBaseDependencies()
     addTestDependencies()

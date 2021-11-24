@@ -1,18 +1,18 @@
-package n7.ad2.streams
+package n7.ad2.streams.api
 
-import android.net.Uri
+import ad2.n7.android.findDependencies
 import android.os.Bundle
-import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 
-class StreamsActivity : AppCompatActivity() {
+class StreamsFragment : Fragment() {
+
+    companion object {
+        fun getInstance() = StreamsFragment()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_streams)
-
-        val action: String? = intent?.action
-        val data: Uri? = intent?.data
+        val findDependencies: StreamsDependencies = findDependencies()
 
 //        if (isInstantApp(this)) {
 //        if (true) {
@@ -22,9 +22,6 @@ class StreamsActivity : AppCompatActivity() {
 //                InstantApps.showInstallPrompt(this@StreamsActivity, this, 7, null)
 //            }
 //        }
-
-        Log.d("N7", action.toString())
-        Log.d("N7", data.toString())
 
     }
 }
