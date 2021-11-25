@@ -1,8 +1,8 @@
 package n7.ad2.streams.api
 
 import ad2.n7.android.findDependencies
+import android.app.Fragment
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 
 class StreamsFragment : Fragment() {
 
@@ -13,7 +13,7 @@ class StreamsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val findDependencies: StreamsDependencies = findDependencies()
-        findDependencies.naruto
+        findDependencies
 //        if (isInstantApp(this)) {
 //        if (true) {
 //            Intent(Intent.ACTION_MAIN).apply {

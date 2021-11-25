@@ -2,7 +2,6 @@ package n7.ad2.ui
 
 import ad2.n7.android.DependenciesMap
 import ad2.n7.android.HasDependencies
-import ad2.n7.android.Naruto
 import android.app.Application
 import android.os.Handler
 import android.os.Looper
