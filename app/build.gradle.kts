@@ -30,10 +30,10 @@ android {
 
     signingConfigs {
         create("releaseConfig") {
-            storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))
-            storePassword = gradleLocalProperties(rootDir).getProperty("storePassword")
-            keyAlias = gradleLocalProperties(rootDir).getProperty("keyAlias")
-            keyPassword = gradleLocalProperties(rootDir).getProperty("keyPassword")
+//            storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))
+//            storePassword = gradleLocalProperties(rootDir).getProperty("storePassword")
+//            keyAlias = gradleLocalProperties(rootDir).getProperty("keyAlias")
+//            keyPassword = gradleLocalProperties(rootDir).getProperty("keyPassword")
         }
     }
 
