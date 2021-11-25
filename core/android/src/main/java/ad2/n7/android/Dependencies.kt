@@ -11,7 +11,7 @@ interface Dependencies
 typealias DependenciesMap = Map<Class<out Dependencies>, @JvmSuppressWildcards Dependencies>
 
 interface HasDependencies {
-    val dependenciesMap: DependenciesMap
+    var dependenciesMap: DependenciesMap
 }
 
 inline fun <reified D : Dependencies> Fragment.findDependencies(): D {

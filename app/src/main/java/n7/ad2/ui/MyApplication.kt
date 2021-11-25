@@ -12,7 +12,9 @@ import n7.ad2.BuildConfig
 import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
+import n7.ad2.di.DaggerMainActivityComponent
 import n7.ad2.streams.api.StreamsDependencies
+import javax.inject.Inject
 
 const val ANDROID_ID = Settings.Secure.ANDROID_ID
 
@@ -25,12 +27,7 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
 //        Settings.Secure.ANDROID_ID
 //    )
 
-    override val dependenciesMap: DependenciesMap
-        get() = mapOf(
-            StreamsDependencies::class.java to object : StreamsDependencies {
-                override val naruto = Naruto()
-            }
-        )
+    @Inject override lateinit var dependenciesMap: DependenciesMap
 
     override val component: ApplicationComponent by lazy {
         DaggerApplicationComponent.factory().create(this)
@@ -38,6 +35,7 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
 
     override fun onCreate() {
         enableStrictMode()
+        DaggerMainActivityComponent.factory().create().inject(this)
         super.onCreate()
     }
 

@@ -13,7 +13,7 @@ class StreamsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val findDependencies: StreamsDependencies = findDependencies()
-
+        findDependencies.naruto
 //        if (isInstantApp(this)) {
 //        if (true) {
 //            Intent(Intent.ACTION_MAIN).apply {

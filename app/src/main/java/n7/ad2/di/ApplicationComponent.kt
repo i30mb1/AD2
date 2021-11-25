@@ -4,9 +4,11 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.news.NewsViewModel
+import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.TournamentsViewModel
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MainActivity2
+import n7.ad2.ui.MyApplication
 import n7.ad2.ui.heroGuide.HeroGuideViewModel
 import n7.ad2.ui.heroGuide.HeroGuideWorker
 import n7.ad2.ui.heroInfo.HeroInfoFragment
@@ -26,6 +28,20 @@ import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.ui.streams.StreamsViewModel
 import n7.ad2.workers.DatabaseWorker
 import javax.inject.Singleton
+
+@dagger.Component(
+    modules = [
+        StreamsModule::class,
+    ]
+)
+interface MainActivityComponent : StreamsDependencies {
+    fun inject(application: MyApplication)
+
+    @Component.Factory
+    interface Factory {
+        fun create(): MainActivityComponent
+    }
+}
 
 @Singleton
 @Component(
