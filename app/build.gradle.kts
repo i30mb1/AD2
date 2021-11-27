@@ -64,11 +64,13 @@ dependencies {
     implementation(Lib.jsoup)
     implementation(Lib.firebaseAnal)
     implementation(Lib.instantApps)
+    addBaseDependencies()
+    addTestDependencies()
+
+    kapt(Lib.daggerAnnotation)
 
     lintChecks(project(Module.Core.rules))
     implementation(project(Module.Core.android))
+    implementation(project(Module.Core.dagger))
     implementation(project(Module.Feature.streams))
-
-    addBaseDependencies()
-    addTestDependencies()
 }

@@ -16,7 +16,7 @@ object Versions {
     const val moshi = "1.12.0"
     const val room = "2.3.0"
     const val kotlin = "1.5.30"
-    const val dagger = "2.38.1"
+    const val dagger = "2.40.2"
     const val lifecycle = "2.4.0-alpha01"
     const val retrofit = "2.7.1"
     const val coroutines = "1.5.2"
@@ -172,9 +172,6 @@ fun DependencyHandler.addBaseDependencies() {
 
     implementation(Lib.workManager)
     implementation(Lib.workManagerKotlin)
-
-    implementation(Lib.dagger)
-    kapt(Lib.daggerAnnotation)
 
     implementation(Lib.preference)
     implementation(Lib.preferenceKtx)

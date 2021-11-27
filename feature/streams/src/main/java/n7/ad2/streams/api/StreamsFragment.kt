@@ -1,8 +1,8 @@
 package n7.ad2.streams.api
 
 import ad2.n7.android.findDependencies
-import android.app.Fragment
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 
 class StreamsFragment : Fragment() {
 

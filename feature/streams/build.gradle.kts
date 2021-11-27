@@ -1,11 +1,11 @@
 plugins {
     androidLibrary()
-    kotlinKapt()
+//    kotlinKapt()
     kotlinAndroid()
 }
 
 dependencies {
     implementation(project(Module.Core.android))
-    implementation(Lib.dagger)
-    kapt(Lib.daggerAnnotation)
+//    implementation(Lib.dagger)
+//    kapt(Lib.daggerAnnotation)
 }
