@@ -1,9 +1,9 @@
-package n7.ad2.ui.streams
+package n7.ad2.streams.internal.adapter
 
+import ad2.n7.android.extension.toPx
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.utils.extension.toPx
 
 class StreamsItemDecorator : RecyclerView.ItemDecoration() {
 
@@ -17,7 +17,6 @@ class StreamsItemDecorator : RecyclerView.ItemDecoration() {
 
         val position = parent.getChildAdapterPosition(view)
         val childCount = parent.adapter?.itemCount ?: return
-        val type = parent.adapter?.getItemViewType(position) ?: return
 
         with(outRect) {
             top = offsetHorizontal

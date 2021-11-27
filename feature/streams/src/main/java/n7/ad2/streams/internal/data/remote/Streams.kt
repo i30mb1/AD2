@@ -1,4 +1,4 @@
-package n7.ad2.data.source.remote.model
+package n7.ad2.streams.internal.data.remote
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

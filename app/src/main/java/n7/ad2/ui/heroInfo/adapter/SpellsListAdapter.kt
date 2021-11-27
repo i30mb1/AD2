@@ -7,16 +7,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
-import n7.ad2.utils.ImageLoader
 
 class SpellsListAdapter(
     private val layoutInflater: LayoutInflater,
-    private val imageLoader: ImageLoader,
     private val onSpellClickListener: (spell: VOSpell) -> Unit,
 ) : ListAdapter<VOSpell, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
-        R.layout.item_spell -> SpellViewHolder.from(layoutInflater, parent, imageLoader, onSpellClickListener)
+        R.layout.item_spell -> SpellViewHolder.from(layoutInflater, parent, onSpellClickListener)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }
 

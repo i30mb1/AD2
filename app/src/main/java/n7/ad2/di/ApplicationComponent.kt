@@ -24,14 +24,15 @@ import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.ui.main.MainFragment
 import n7.ad2.ui.main.MainViewModel
 import n7.ad2.ui.streams.StreamViewModel
-import n7.ad2.ui.streams.StreamsFragment
-import n7.ad2.ui.streams.StreamsViewModel
 import n7.ad2.workers.DatabaseWorker
 import javax.inject.Singleton
 
+@Singleton
 @dagger.Component(
     modules = [
         StreamsModule::class,
+        MoshiModule::class,
+        RetrofitModule::class,
     ]
 )
 interface MainActivityComponent : StreamsDependencies {
@@ -48,6 +49,7 @@ interface MainActivityComponent : StreamsDependencies {
     modules = [
         ApplicationModule::class,
         CoroutineModule::class,
+        MoshiModule::class,
         RetrofitModule::class,
     ]
 )
@@ -65,7 +67,6 @@ interface ApplicationComponent {
     fun inject(mainActivity2: MainActivity2)
     fun inject(mainFragment: MainFragment)
     fun inject(draggableDrawer: DraggableDrawer)
-    fun inject(streamsFragment: StreamsFragment)
     fun inject(heroInfoFragment: HeroInfoFragment)
     fun inject(heroGuideWorker: HeroGuideWorker)
     fun inject(heroGuideWorker: ItemInfoFragment)
@@ -79,7 +80,6 @@ interface ApplicationComponent {
     val heroInfoFactory: HeroInfoViewModel.Factory
     val heroGuideViewModel: HeroGuideViewModel
     val newsViewModel: NewsViewModel
-    val streamsViewModel: StreamsViewModel
     val streamViewModel: StreamViewModel
 
 }

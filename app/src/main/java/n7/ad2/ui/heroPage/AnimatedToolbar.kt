@@ -1,5 +1,6 @@
 package n7.ad2.ui.heroPage
 
+import ad2.n7.android.extension.load
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
@@ -9,7 +10,6 @@ import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
-import coil.load
 import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.R

@@ -10,11 +10,9 @@ import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.ui.items.domain.vo.VOItemHeader
-import n7.ad2.utils.ImageLoader
 
 class ItemsListAdapter(
     private val layoutInflater: LayoutInflater,
-    private val imageLoader: ImageLoader,
     onItemClick: (hero: VOItemBody) -> Unit,
 ) : ListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
@@ -24,7 +22,7 @@ class ItemsListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
-        R.layout.item_item_body -> ItemBodyViewHolder.from(layoutInflater, parent, imageLoader, itemClickListener)
+        R.layout.item_item_body -> ItemBodyViewHolder.from(layoutInflater, parent, itemClickListener)
         else -> super.createViewHolder(parent, viewType)
     }
 

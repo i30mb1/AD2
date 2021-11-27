@@ -10,17 +10,12 @@ import androidx.core.view.isVisible
 import androidx.core.widget.TextViewCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import n7.ad2.ui.heroResponse.ResponsesImagesAdapter
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseImage
 
 @BindingAdapter("loadImageUrl", "onError", "placeHolder", requireAll = false)
 fun ImageView.loadImageUrl(url: String?, error: Drawable?, placeHolder: Drawable?) {
-    this.load(url) {
-        crossfade(true)
-        error(error)
-        placeholder(placeHolder)
-    }
+
 }
 
 @BindingAdapter("icons")

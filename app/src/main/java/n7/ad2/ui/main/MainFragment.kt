@@ -26,13 +26,13 @@ import n7.ad2.databinding.FragmentMainBinding
 import n7.ad2.di.injector
 import n7.ad2.games.GameFragment
 import n7.ad2.news.NewsFragment
+import n7.ad2.streams.api.StreamsFragment
 import n7.ad2.tournaments.TournamentsFragment
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.main.adapter.MainMenuListAdapter
 import n7.ad2.ui.main.domain.vo.VOMenu
-import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 import javax.inject.Inject

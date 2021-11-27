@@ -20,17 +20,13 @@ import n7.ad2.ui.items.adapter.ItemsItemDecorator
 import n7.ad2.ui.items.adapter.ItemsListAdapter
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.ui.main.DraggableDrawer
-import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.viewModel
-import javax.inject.Inject
 
 class ItemsFragment : Fragment(R.layout.fragment_items) {
 
     companion object {
         fun getInstance() = ItemsFragment()
     }
-
-    @Inject lateinit var imageLoader: ImageLoader
 
     private var _binding: FragmentItemsBinding? = null
     private val binding: FragmentItemsBinding get() = _binding!!
@@ -63,7 +59,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         val spanSizeItem = 1
         val spanSizeItemHeader = 4
 
-        val itemsAdapter = ItemsListAdapter(layoutInflater, imageLoader, onItemClick)
+        val itemsAdapter = ItemsListAdapter(layoutInflater, onItemClick)
         val gridLayoutManager = GridLayoutManager(context, spanSizeItemHeader)
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int) = when (itemsAdapter.getItemViewType(position)) {

@@ -10,7 +10,7 @@
         android:layout_width="160dp"
         android:layout_height="90dp"
         android:contentDescription="@string/desc_stream_image"
-        tools:srcCompat="@drawable/streams_placeholder" />
+        tools:srcCompat="@drawable/stream_placeholder" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -38,7 +38,7 @@
         android:textStyle="italic"
         tools:text="@tools:sample/lorem" />
 
-    <com.robinhood.ticker.TickerView
+    <TextView
         android:id="@+id/tv_item_list_stream_viewers"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -53,6 +53,6 @@
         android:layout_height="13dp"
         android:background="@android:drawable/screen_background_dark_transparent"
         android:contentDescription="@string/desc_active_users_icon"
-        app:srcCompat="@drawable/streams_viewers" />
+        app:srcCompat="@drawable/ic_stream_viewers" />
 
 </com.google.android.material.card.MaterialCardView>

@@ -1,5 +1,6 @@
 package n7.ad2.ui.heroGuide
 
+import ad2.n7.android.extension.load
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -12,7 +13,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.transition.TransitionManager
-import coil.load
 import com.google.android.material.textview.MaterialTextView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -89,7 +89,7 @@ class HeroFlow(
 
     private fun inflateItemHeroItemFlow(item: VOHeroFlowHeroItem): View {
         val view = inflater.inflate(R.layout.flow_hero_item, this, false)
-        view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem) { error(R.drawable.item_placeholder) }
+        view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem)
         if (item.itemTiming != null) {
             view.findViewById<TextView>(R.id.tv_time).text = item.itemTiming
         } else {
@@ -102,16 +102,14 @@ class HeroFlow(
 
     private fun inflateItemStartingHeroItemFlow(item: VOHeroFlowStartingHeroItem): View {
         val view = inflater.inflate(R.layout.flow_starting_hero_item, this, false)
-        view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem) { error(R.drawable.item_placeholder) }
+        view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem)
         view.id = generateViewId()
         return view
     }
 
     private fun inflateItemSpellFlow(item: VOHeroFlowSpell): View {
         val view = inflater.inflate(R.layout.flow_spell, this, false)
-        view.findViewById<ImageView>(R.id.iv_skill).load(item.urlImageSkill) {
-            error(R.drawable.spell_placeholder)
-        }
+        view.findViewById<ImageView>(R.id.iv_skill).load(item.urlImageSkill)
         view.findViewById<TextView>(R.id.tv_lvl).text = item.skillOrder
         view.id = generateViewId()
         return view
@@ -119,9 +117,7 @@ class HeroFlow(
 
     private fun inflateItemHeroFlow(item: VOHeroFlowItem, @StyleRes style: Int): View {
         val view = inflater.inflate(R.layout.flow_hero, this, false)
-        view.findViewById<ImageView>(R.id.iv).load(item.urlHeroImage) {
-            error(R.drawable.hero_placeholder)
-        }
+        view.findViewById<ImageView>(R.id.iv).load(item.urlHeroImage)
         view.findViewById<MaterialTextView>(R.id.tv_winrate).apply {
             setTextAppearance(style)
             text = item.heroWinrate

@@ -213,7 +213,6 @@
     <string name="desc_arrow_right" translatable="false">arrow show to right</string>
     <string name="desc_update_guide" translatable="false">update guide</string>
     <string name="desc_news_image" translatable="false">news image</string>
-    <string name="desc_stream_image" translatable="false">stream image</string>
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
@@ -238,7 +237,6 @@
     <string name="popup_saved">saved in memory</string>
 
     <string name="item_disabled">This item currently disabled!</string>
-    <string name="desc_active_users_icon" translatable="false">active users icon</string>
     <string name="desc_background" translatable="false">background</string>
 
 </resources>

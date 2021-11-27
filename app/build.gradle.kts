@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
-
 plugins {
     androidApp()
     kotlinAndroid()
@@ -59,7 +57,6 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(Lib.ticker)
-    implementation(Lib.paging3)
     implementation(Lib.viewPager2)
     implementation(Lib.jsoup)
     implementation(Lib.firebaseAnal)

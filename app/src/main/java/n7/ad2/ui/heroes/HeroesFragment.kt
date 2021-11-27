@@ -22,10 +22,8 @@ import n7.ad2.ui.heroes.adapter.HeroesItemDecorator
 import n7.ad2.ui.heroes.adapter.HeroesListAdapter
 import n7.ad2.ui.heroes.domain.vo.VOHeroBody
 import n7.ad2.ui.main.DraggableDrawer
-import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
-import javax.inject.Inject
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
@@ -33,11 +31,9 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         fun getInstance(): HeroesFragment = HeroesFragment()
     }
 
-    @Inject lateinit var imageLoader: ImageLoader
-
     private var _binding: FragmentHeroesBinding? = null
     private val binding: FragmentHeroesBinding get() = _binding!!
-    private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, imageLoader, onHeroClick) }
+    private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, onHeroClick) }
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private val heroesItemDecorator = HeroesItemDecorator()
     private val onHeroClick: (hero: VOHeroBody) -> Unit = { hero -> startHeroFragment(hero) }

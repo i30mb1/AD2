@@ -12,7 +12,6 @@ import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
 import n7.ad2.di.DaggerMainActivityComponent
-import n7.ad2.streams.api.StreamsDependencies
 import javax.inject.Inject
 
 const val ANDROID_ID = Settings.Secure.ANDROID_ID

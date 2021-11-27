@@ -1,14 +1,11 @@
-package n7.ad2.ui.streams.usecase
+package n7.ad2.streams.internal.domain
 
-import n7.ad2.data.source.remote.model.Stream
-import n7.ad2.ui.streams.domain.vo.VOSimpleStream
-import n7.ad2.ui.streams.domain.vo.VOStream
-import n7.ad2.utils.extension.toPx
+import ad2.n7.android.extension.toPx
+import n7.ad2.streams.internal.data.remote.Stream
+import n7.ad2.streams.internal.domain.vo.VOStream
 import javax.inject.Inject
 
-class ConvertStreamToVOStreamUseCase @Inject constructor(
-
-) {
+class ConvertStreamToVOStreamUseCase @Inject constructor() {
 
     private val width = 160.toPx
     private val height = 90.toPx
@@ -17,7 +14,7 @@ class ConvertStreamToVOStreamUseCase @Inject constructor(
         val title = stream.title
         val streamerName = stream.userLogin
         val streamImage = stream.thumbnailUrl.replace("{width}", "$width").replace("{height}", "$height")
-        return VOSimpleStream(
+        return VOStream.Simple(
             title,
             streamerName,
             streamImage

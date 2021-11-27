@@ -5,7 +5,6 @@ import dagger.Module
 import dagger.Provides
 import n7.ad2.BuildConfig
 import n7.ad2.data.source.remote.retrofit.SettingsApi
-import n7.ad2.data.source.remote.retrofit.TwitchApi
 import n7.ad2.data.source.remote.retrofit.TwitchGQLApi
 import n7.ad2.data.source.remote.retrofit.TwitchHLSApi
 import okhttp3.OkHttpClient
@@ -44,10 +43,6 @@ object RetrofitModule {
         }
         .addInterceptor(httpLoggingInterceptor)
         .build()
-
-    @Provides
-    @Singleton
-    fun provideTwitchApi(client: OkHttpClient, moshi: Moshi): TwitchApi = TwitchApi.get(client, moshi)
 
     @Provides
     @Singleton

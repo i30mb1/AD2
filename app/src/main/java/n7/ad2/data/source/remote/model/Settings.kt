@@ -5,17 +5,19 @@ import com.squareup.moshi.JsonClass
 
 enum class VOMenuType { HEROES, ITEMS, NEWS, TOURNAMENTS, STREAMS, GAMES, UNKNOWN }
 
+private val defaultMenu = listOf(
+    Menu(VOMenuType.HEROES),
+    Menu(VOMenuType.ITEMS),
+    Menu(VOMenuType.NEWS),
+    Menu(VOMenuType.TOURNAMENTS),
+    Menu(VOMenuType.STREAMS),
+    Menu(VOMenuType.GAMES),
+)
+
 @JsonClass(generateAdapter = true)
 data class Settings(
     @Json(name = "menu")
-    val menu: List<Menu> = listOf(
-        Menu(VOMenuType.HEROES),
-        Menu(VOMenuType.ITEMS),
-        Menu(VOMenuType.NEWS),
-        Menu(VOMenuType.TOURNAMENTS),
-        Menu(VOMenuType.STREAMS),
-        Menu(VOMenuType.GAMES),
-    ),
+    val menu: List<Menu> = defaultMenu,
     @Json(name = "version")
     val version: Int = 0,
 )

@@ -9,11 +9,9 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import n7.ad2.data.source.local.db.AppDatabase
-import n7.ad2.data.source.remote.adapter.StringVOMenuTypeAdapter
 import n7.ad2.workers.DatabaseWorker
 import java.util.Calendar
 import javax.inject.Singleton
@@ -46,12 +44,6 @@ object ApplicationModule {
     @Singleton
     @Provides
     fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
-
-    @Singleton
-    @Provides
-    fun moshi(): Moshi = Moshi.Builder()
-        .add(StringVOMenuTypeAdapter())
-        .build()
 
     @Singleton
     @Provides

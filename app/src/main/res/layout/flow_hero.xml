@@ -9,7 +9,7 @@
         android:layout_width="70dp"
         android:layout_height="40dp"
         android:contentDescription="@string/desc_dota_hero"
-        tools:src="@drawable/hero_placeholder" />
+        tools:src="@drawable/stream_placeholder" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_winrate"

@@ -29,14 +29,12 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroPage.AudioExoPlayer
-import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.extension.toPx
 
 class HeroInfoAdapter(
     private val layoutInflater: LayoutInflater,
     private val infoPopupWindow: InfoPopupWindow,
-    private val imageLoader: ImageLoader,
     private val onPlayIconClickListener: (model: VOHeroInfo.HeaderSound) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
     private val onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
@@ -61,10 +59,10 @@ class HeroInfoAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_header_sound -> HeaderSoundViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
-        R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader, onHeroInfoCLickListener)
+        R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, onHeroInfoCLickListener)
         R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
-        R.layout.item_hero_spells -> HeroSpellsViewHolder.from(layoutInflater, parent, imageLoader, onSpellClickListener)
+        R.layout.item_hero_spells -> HeroSpellsViewHolder.from(layoutInflater, parent, onSpellClickListener)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }
 

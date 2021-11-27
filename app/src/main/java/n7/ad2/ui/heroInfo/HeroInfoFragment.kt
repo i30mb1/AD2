@@ -19,7 +19,6 @@ import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroPage.HeroPageFragment
-import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel2
 import javax.inject.Inject
@@ -33,7 +32,6 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         }
     }
 
-    @Inject lateinit var imageLoader: ImageLoader
     @Inject lateinit var heroInfoFactory: HeroInfoViewModel.Factory
 
     private var _binding: FragmentHeroInfoBinding? = null
@@ -70,7 +68,6 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         val heroInfoAdapter = HeroInfoAdapter(
             layoutInflater,
             infoPopupWindow,
-            imageLoader,
             onPlayClickListener,
             onKeyClickListener,
             onHeroInfoCLickListener,

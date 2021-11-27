@@ -1,4 +1,4 @@
-package n7.ad2.ui.streams
+package n7.ad2.streams.internal
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,22 +8,28 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.map
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import n7.ad2.data.source.remote.StreamPagingSource
-import n7.ad2.data.source.remote.model.Stream
-import n7.ad2.ui.streams.domain.vo.VOStream
-import n7.ad2.ui.streams.usecase.ConvertStreamToVOStreamUseCase
+import n7.ad2.streams.internal.data.remote.Stream
+import n7.ad2.streams.internal.data.remote.StreamPagingSource
+import n7.ad2.streams.internal.domain.ConvertStreamToVOStreamUseCase
+import n7.ad2.streams.internal.domain.vo.VOStream
 import java.util.concurrent.Executors
-import javax.inject.Inject
 
-class StreamsViewModel @Inject constructor(
+class StreamsViewModel @AssistedInject constructor(
     private val streamPagingSource: StreamPagingSource,
     private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase,
 ) : ViewModel() {
+
+    @AssistedFactory
+    interface Factory {
+        fun create(): StreamsViewModel
+    }
 
     private val _error = MutableLiveData<Throwable?>(null)
     val error: LiveData<Throwable?> = _error

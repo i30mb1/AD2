@@ -11,11 +11,9 @@ import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import n7.ad2.ui.heroes.domain.vo.VOHeroBody
 import n7.ad2.ui.heroes.domain.vo.VOHeroHeader
-import n7.ad2.utils.ImageLoader
 
 class HeroesListAdapter(
     private val layoutInflater: LayoutInflater,
-    private val imageLoader: ImageLoader,
     onHeroClick: (hero: VOHeroBody) -> Unit,
 ) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
 
@@ -31,7 +29,7 @@ class HeroesListAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
-        R.layout.item_hero_body -> HeroBodyViewHolder.from(layoutInflater, parent, imageLoader, listener)
+        R.layout.item_hero_body -> HeroBodyViewHolder.from(layoutInflater, parent, listener)
         R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not get type for $viewType")
     }

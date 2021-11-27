@@ -22,6 +22,7 @@ class MainViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             val items = getMenuItemsUseCase().single()
+
             menu.value = items
         }
     }

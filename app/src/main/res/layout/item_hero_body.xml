@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:contentDescription="@string/desc_dota_hero"
-        tools:src="@drawable/hero_placeholder" />
+        tools:src="@drawable/stream_placeholder" />
 
     <TextView
         android:id="@+id/tv_title"

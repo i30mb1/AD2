@@ -7,6 +7,7 @@ import n7.ad2.ui.MyApplication
 interface DaggerComponentProvider {
 
     val component: ApplicationComponent
+
 }
 
 val Activity.injector get() = (application as MyApplication).component

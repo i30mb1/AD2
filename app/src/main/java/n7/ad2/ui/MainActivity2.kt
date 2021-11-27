@@ -6,7 +6,6 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.commit
 import n7.ad2.databinding.ActivityMain2Binding
-import n7.ad2.streams.api.StreamsFragment
 import n7.ad2.ui.main.MainFragment
 import n7.ad2.ui.main.TouchEvent
 import n7.ad2.utils.BaseActivity

@@ -11,7 +11,7 @@
         android:layout_height="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hero_placeholder"
+        app:srcCompat="@drawable/stream_placeholder"
         android:contentDescription="@string/setting_tell_friend_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
