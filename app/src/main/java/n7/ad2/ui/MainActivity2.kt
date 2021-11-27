@@ -7,6 +7,7 @@ import androidx.core.view.WindowCompat
 import androidx.fragment.app.commit
 import n7.ad2.databinding.ActivityMain2Binding
 import n7.ad2.streams.api.StreamsFragment
+import n7.ad2.ui.main.MainFragment
 import n7.ad2.ui.main.TouchEvent
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe
@@ -14,7 +15,7 @@ import n7.ad2.utils.lazyUnsafe
 class MainActivity2 : BaseActivity(), TouchEvent {
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
-    var shouldKeepOnScreen = false
+    var shouldKeepOnScreen = true
     private val mainNavigator: MainNavigator by lazyUnsafe { MainNavigator(supportFragmentManager, binding.container.id) }
     private lateinit var binding: ActivityMain2Binding
 
@@ -26,7 +27,7 @@ class MainActivity2 : BaseActivity(), TouchEvent {
         setupInsets()
         if (savedInstanceState == null) {
             supportFragmentManager.commit(true) {
-                val mainFragment = StreamsFragment.getInstance()
+                val mainFragment = MainFragment.getInstance()
                 add(binding.container.id, mainFragment)
             }
         }
