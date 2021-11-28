@@ -1,10 +1,9 @@
-package n7.ad2.data.source.local.db
+package n7.ad2.database_guides
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
-import n7.ad2.base.BaseDao
-import n7.ad2.data.source.local.model.LocalGuide
+import n7.ad2.database_guides.model.LocalGuide
 
 @Dao
 interface GuideDao : BaseDao<LocalGuide> {

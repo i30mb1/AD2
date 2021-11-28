@@ -3,7 +3,7 @@ package n7.ad2.ui.heroGuide.domain.usecase
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.data.source.local.model.LocalHeroWithGuides
+import n7.ad2.database_heroes.api.model.LocalHeroWithGuides
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import javax.inject.Inject
 

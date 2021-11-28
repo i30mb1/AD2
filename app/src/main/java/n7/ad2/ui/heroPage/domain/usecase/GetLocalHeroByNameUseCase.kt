@@ -3,7 +3,7 @@ package n7.ad2.ui.heroPage.domain.usecase
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.data.source.local.HeroRepository
-import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.database_heroes.api.model.LocalHero
 import javax.inject.Inject
 
 class GetLocalHeroByNameUseCase @Inject constructor(

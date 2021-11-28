@@ -1,7 +1,6 @@
-package n7.ad2.data.source.local.model
+package n7.ad2.database_guides.model
 
 import androidx.room.ColumnInfo
-import androidx.room.ColumnInfo.TEXT
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 

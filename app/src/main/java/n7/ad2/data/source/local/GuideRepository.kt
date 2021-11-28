@@ -1,7 +1,7 @@
 package n7.ad2.data.source.local
 
 import n7.ad2.data.source.local.db.AppDatabase
-import n7.ad2.data.source.local.model.LocalGuide
+import n7.ad2.database_guides.model.LocalGuide
 import javax.inject.Inject
 
 class GuideRepository @Inject constructor(

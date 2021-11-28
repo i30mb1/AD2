@@ -72,6 +72,8 @@ dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.coroutines))
+    implementation(project(Module.Core.database_heroes))
+    implementation(project(Module.Core.database_guides))
 
     implementation(project(Module.Feature.streams))
 }

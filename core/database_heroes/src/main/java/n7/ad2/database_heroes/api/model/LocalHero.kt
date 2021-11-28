@@ -1,11 +1,9 @@
-package n7.ad2.data.source.local.model
+package n7.ad2.database_heroes.api.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Fts4
 import androidx.room.PrimaryKey
 
-@Fts4
 @Entity(tableName = "LocalHeroes")
 data class LocalHero(
         @PrimaryKey(autoGenerate = true)

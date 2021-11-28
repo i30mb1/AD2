@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.data.source.local.HeroRepository
-import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.database_heroes.api.model.LocalHero
 import n7.ad2.logger.AD2Logger
 import n7.ad2.ui.splash.domain.model.AssetsHeroList
 import javax.inject.Inject

@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
-import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.database_heroes.api.model.LocalHero
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 import n7.ad2.ui.heroResponse.domain.interactor.GetHeroResponsesInteractor
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse

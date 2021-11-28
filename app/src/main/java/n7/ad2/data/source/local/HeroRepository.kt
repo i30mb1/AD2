@@ -7,8 +7,8 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import kotlinx.coroutines.flow.Flow
 import n7.ad2.data.source.local.db.AppDatabase
-import n7.ad2.data.source.local.model.LocalHero
-import n7.ad2.data.source.local.model.LocalHeroWithGuides
+import n7.ad2.database_heroes.api.model.LocalHero
+import n7.ad2.database_heroes.api.model.LocalHeroWithGuides
 import javax.inject.Inject
 
 class HeroRepository @Inject constructor(
