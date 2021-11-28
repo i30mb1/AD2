@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class Streams(
+internal data class Streams(
     @Json(name = "data")
     val list: List<Stream> = listOf(),
     @Json(name = "pagination")
@@ -12,7 +12,7 @@ data class Streams(
 )
 
 @JsonClass(generateAdapter = true)
-data class Stream(
+internal data class Stream(
     @Json(name = "game_id")
     val gameId: String = "",
     @Json(name = "game_name")
@@ -44,7 +44,7 @@ data class Stream(
 )
 
 @JsonClass(generateAdapter = true)
-data class Pagination(
+internal data class Pagination(
     @Json(name = "cursor")
     val cursor: String = "",
 )

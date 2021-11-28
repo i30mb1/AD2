@@ -1,9 +1,8 @@
 package n7.ad2.streams.internal.di
 
 import dagger.Component
-import n7.ad2.streams.api.RetrofitModule
 import n7.ad2.streams.api.StreamsDependencies
-import n7.ad2.streams.api.StreamsFragment
+import n7.ad2.streams.internal.StreamsFragment
 import n7.ad2.streams.internal.StreamsViewModel
 
 @Component(
@@ -14,7 +13,7 @@ import n7.ad2.streams.internal.StreamsViewModel
         RetrofitModule::class
     ],
 )
-interface StreamsComponent {
+internal interface StreamsComponent {
 
     @Component.Factory
     interface Factory {

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.streams.R
 import n7.ad2.streams.internal.domain.vo.VOStream
 
-class StreamsPagedListAdapter(
+internal class StreamsPagedListAdapter(
     private val layoutInflater: LayoutInflater,
     private val onStreamClick: (voStream: VOStream) -> Unit,
 ) : PagingDataAdapter<VOStream, RecyclerView.ViewHolder>(DiffCallback()) {

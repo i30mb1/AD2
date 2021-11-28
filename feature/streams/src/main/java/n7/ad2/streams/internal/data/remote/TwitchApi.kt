@@ -9,7 +9,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface TwitchApi {
+internal interface TwitchApi {
 
     @GET("streams?game_id=29595")
     suspend fun getStreams(

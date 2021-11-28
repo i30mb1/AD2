@@ -1,4 +1,4 @@
-package n7.ad2.streams.api
+package n7.ad2.streams.internal
 
 import ad2.n7.android.DrawerPercentListener
 import ad2.n7.android.extension.viewModel
@@ -20,14 +20,13 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import n7.ad2.streams.R
 import n7.ad2.streams.databinding.FragmentStreamsBinding
-import n7.ad2.streams.internal.StreamsViewModel
 import n7.ad2.streams.internal.adapter.StreamsItemDecorator
 import n7.ad2.streams.internal.adapter.StreamsPagedListAdapter
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.domain.vo.VOStream
 import javax.inject.Inject
 
-class StreamsFragment : Fragment(R.layout.fragment_streams) {
+internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
 
     companion object {
         fun getInstance() = StreamsFragment()

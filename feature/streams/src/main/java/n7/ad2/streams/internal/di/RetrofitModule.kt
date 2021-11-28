@@ -1,4 +1,4 @@
-package n7.ad2.streams.api
+package n7.ad2.streams.internal.di
 
 import com.squareup.moshi.Moshi
 import dagger.Module
@@ -7,7 +7,7 @@ import n7.ad2.streams.internal.data.remote.TwitchApi
 import okhttp3.OkHttpClient
 
 @Module
-class RetrofitModule {
+internal class RetrofitModule {
 
     @Provides
     fun provideTwitchApi(client: OkHttpClient, moshi: Moshi): TwitchApi = TwitchApi.get(client, moshi)

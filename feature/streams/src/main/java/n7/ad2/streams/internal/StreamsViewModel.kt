@@ -21,7 +21,7 @@ import n7.ad2.streams.internal.domain.ConvertStreamToVOStreamUseCase
 import n7.ad2.streams.internal.domain.vo.VOStream
 import java.util.concurrent.Executors
 
-class StreamsViewModel @AssistedInject constructor(
+internal class StreamsViewModel @AssistedInject constructor(
     private val streamPagingSource: StreamPagingSource,
     private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase,
 ) : ViewModel() {

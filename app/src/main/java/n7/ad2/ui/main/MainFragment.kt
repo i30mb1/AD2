@@ -27,7 +27,7 @@ import n7.ad2.databinding.FragmentMainBinding
 import n7.ad2.di.injector
 import n7.ad2.games.GameFragment
 import n7.ad2.news.NewsFragment
-import n7.ad2.streams.api.StreamsFragment
+import n7.ad2.streams.api.StreamsProvider
 import n7.ad2.tournaments.TournamentsFragment
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroes.HeroesFragment
@@ -123,7 +123,7 @@ class MainFragment : Fragment(R.layout.fragment_main), DrawerPercentListener {
             VOMenuType.ITEMS -> ItemsFragment.getInstance()
             VOMenuType.NEWS -> NewsFragment.getInstance()
             VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
-            VOMenuType.STREAMS -> StreamsFragment.getInstance()
+            VOMenuType.STREAMS -> StreamsProvider.getStreamsFragment()
             VOMenuType.GAMES -> GameFragment.getInstance()
             VOMenuType.UNKNOWN -> return
         }

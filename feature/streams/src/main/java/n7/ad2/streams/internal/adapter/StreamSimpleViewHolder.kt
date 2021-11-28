@@ -1,5 +1,6 @@
 package n7.ad2.streams.internal.adapter
 
+import ad2.n7.android.extension.clear
 import ad2.n7.android.extension.load
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +9,7 @@ import n7.ad2.streams.R
 import n7.ad2.streams.databinding.ItemListStreamBinding
 import n7.ad2.streams.internal.domain.vo.VOStream
 
-class StreamSimpleViewHolder(
+internal class StreamSimpleViewHolder(
     private val binding: ItemListStreamBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -23,7 +24,7 @@ class StreamSimpleViewHolder(
 
     fun unbind() {
         binding.root.setOnClickListener(null)
-//        binding.ivStreamImage.clear()
+        binding.ivStreamImage.clear()
     }
 
     companion object {

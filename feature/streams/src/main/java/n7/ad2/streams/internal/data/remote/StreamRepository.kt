@@ -4,7 +4,7 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import javax.inject.Inject
 
-class StreamRepository @Inject constructor(
+internal class StreamRepository @Inject constructor(
     private val twitchApi: TwitchApi,
 ) {
 
@@ -14,7 +14,7 @@ class StreamRepository @Inject constructor(
 
 }
 
-class StreamPagingSource @Inject constructor(
+internal class StreamPagingSource @Inject constructor(
     private val streamRepository: StreamRepository,
 ) : PagingSource<String, Stream>() {
 
