@@ -1,12 +1,13 @@
 plugins {
     androidLibrary()
-    kotlinKapt()
     kotlinAndroid()
+    kotlinKapt()
 }
 
 dependencies {
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
+    implementation(project(Module.Core.coroutines))
 
     api(Lib.retrofit)
     api(Lib.retrofitMoshiConverter)

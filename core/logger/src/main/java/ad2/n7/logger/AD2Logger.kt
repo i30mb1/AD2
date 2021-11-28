@@ -1,6 +1,6 @@
-package n7.ad2
+package ad2.n7.logger
 
-import kotlinx.coroutines.CoroutineDispatcher
+import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -15,7 +15,7 @@ class AD2Log(val message: String)
 @Singleton
 class AD2Logger @Inject constructor(
     private val coroutineScope: CoroutineScope,
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
 ) {
 
     private val dataFlow = MutableSharedFlow<AD2Log>(
@@ -24,7 +24,7 @@ class AD2Logger @Inject constructor(
         onBufferOverflow = BufferOverflow.DROP_OLDEST,
     )
 
-    fun log(text: String) = coroutineScope.launch(ioDispatcher) {
+    fun log(text: String) = coroutineScope.launch(dispatchers.IO) {
         dataFlow.emit(AD2Log(text))
     }
 

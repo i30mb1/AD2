@@ -1,24 +1,24 @@
 package n7.ad2.ui.splash.domain.usecase
 
-import kotlinx.coroutines.CoroutineDispatcher
+import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class GetRandomEmoteUseCase @Inject constructor(
-        private val ioDispatcher: CoroutineDispatcher
+    private val dispatchers: DispatchersProvider,
 ) {
 
-    suspend operator fun invoke(): String = withContext(ioDispatcher) {
+    suspend operator fun invoke(): String = withContext(dispatchers.Default) {
         val emotes = arrayOf(
-                "('.')",
-                "(=_=)",
-                "('x')",
-                "(=^・^=)",
-                "(＠_＠;)",
-                "=^_^=",
-                ">^_^<",
-                "(=^・・^=)",
-                "(／ロ°)／",
+            "('.')",
+            "(=_=)",
+            "('x')",
+            "(=^・^=)",
+            "(＠_＠;)",
+            "=^_^=",
+            ">^_^<",
+            "(=^・・^=)",
+            "(／ロ°)／",
                 "＼(°ロ＼)",
                 "(>_<)",
                 "(>.<)",

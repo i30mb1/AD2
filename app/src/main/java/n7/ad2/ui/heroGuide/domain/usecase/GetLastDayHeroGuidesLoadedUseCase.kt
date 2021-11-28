@@ -1,16 +1,17 @@
 package n7.ad2.ui.heroGuide.domain.usecase
 
+import ad2.n7.coroutines.DispatchersProvider
 import android.content.SharedPreferences
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class GetLastDayHeroGuidesLoadedUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
     private val preferences: SharedPreferences,
 ) {
 
-    suspend operator fun invoke(key: String): Int = withContext(ioDispatcher) {
+    suspend operator fun invoke(key: String): Int = withContext(dispatchers.Default) {
         preferences.getInt(key, 0)
     }
+
 }

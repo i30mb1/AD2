@@ -1,7 +1,7 @@
 package n7.ad2.ui.heroGuide.domain.usecase
 
+import ad2.n7.coroutines.DispatchersProvider
 import android.app.Application
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.R
 import n7.ad2.ui.heroGuide.domain.adapter.toVOEasyToWinHeroes
@@ -16,13 +16,13 @@ import n7.ad2.ui.heroGuide.domain.vo.VOGuideTitle
 import javax.inject.Inject
 
 class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
     private val application: Application,
 ) {
 
     @OptIn(ExperimentalStdlibApi::class)
     @Suppress("BlockingMethodInNonBlockingContext")
-    suspend operator fun invoke(list: List<LocalGuideJson>): List<VOGuideItem> = withContext(ioDispatcher) {
+    suspend operator fun invoke(list: List<LocalGuideJson>): List<VOGuideItem> = withContext(dispatchers.IO) {
         val item = list.getOrNull(list.lastIndex) ?: return@withContext emptyList()
         buildList {
             add(VOGuideInfoLine(application.getString(R.string.hero_popularity, item.heroWinrate)))

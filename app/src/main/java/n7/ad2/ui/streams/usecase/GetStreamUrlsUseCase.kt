@@ -1,6 +1,6 @@
 package n7.ad2.ui.streams.usecase
 
-import kotlinx.coroutines.CoroutineDispatcher
+import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.data.source.remote.model.StreamGQLRequest
@@ -13,7 +13,7 @@ import java.util.regex.Pattern
 import javax.inject.Inject
 
 class GetStreamUrlsUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
     private val twitchGQLApi: TwitchGQLApi,
     private val twitchHLSApi: TwitchHLSApi,
 ) {
@@ -28,7 +28,7 @@ class GetStreamUrlsUseCase @Inject constructor(
         val streamURL = "http://usher.twitch.tv/api/channel/hls/$streamerName.m3u8?player=twitchweb&token=$token&sig=$signature&allow_audio_only=true&allow_source=true&type=any&p=$p"
         val result = parseM3(streamerName, p, token, signature, streamURL)
         emit(streamURL)
-    }.flowOn(ioDispatcher)
+    }.flowOn(dispatchers.Default)
 
     private suspend fun parseM3(streamerName: String, p: Int, token: String, signature: String, streamURL: String): List<StreamsQuality> {
         val response = twitchHLSApi.getUrls(streamerName = streamerName, p = p, sig = signature, token = token)

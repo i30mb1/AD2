@@ -1,14 +1,14 @@
 package n7.ad2.ui.main.domain.usecase
 
+import ad2.n7.coroutines.DispatchersProvider
+import ad2.n7.logger.AD2Logger
 import android.app.Application
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
-import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.data.source.local.AppPreference
 import n7.ad2.data.source.remote.model.Settings
@@ -22,7 +22,7 @@ class GetMenuItemsUseCase @Inject constructor(
     private val appPreference: AppPreference,
     private val settingsApi: SettingsApi,
     private val logger: AD2Logger,
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
 ) {
 
     operator fun invoke(): Flow<List<VOMenu>> = flow {
@@ -48,6 +48,6 @@ class GetMenuItemsUseCase @Inject constructor(
                 }
             }
         }
-        .flowOn(ioDispatcher)
+        .flowOn(dispatchers.Default)
 
 }

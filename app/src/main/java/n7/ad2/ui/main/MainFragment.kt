@@ -1,6 +1,7 @@
 package n7.ad2.ui.main
 
 import ad2.n7.android.DrawerPercentListener
+import ad2.n7.logger.AD2Logger
 import android.os.Bundle
 import android.view.View
 import androidx.activity.addCallback
@@ -19,7 +20,6 @@ import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.data.source.local.AppPreference
 import n7.ad2.data.source.remote.model.VOMenuType

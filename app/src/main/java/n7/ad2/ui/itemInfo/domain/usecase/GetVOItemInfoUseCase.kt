@@ -1,19 +1,19 @@
 package n7.ad2.ui.itemInfo.domain.usecase
 
+import ad2.n7.coroutines.DispatchersProvider
 import android.app.Application
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.ui.itemInfo.domain.model.LocalItemInfo
 import n7.ad2.ui.itemInfo.domain.vo.ItemInfo
 import javax.inject.Inject
 
 class GetVOItemInfoUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
     private val application: Application,
 ) {
 
     @OptIn(ExperimentalStdlibApi::class)
-    suspend operator fun invoke(localItemDescription: LocalItemInfo): List<ItemInfo> = withContext(ioDispatcher) {
+    suspend operator fun invoke(localItemDescription: LocalItemInfo): List<ItemInfo> = withContext(dispatchers.IO) {
         buildList {
 //            add(VOItemInfoLine(application.getString(R.string.cost, localItemDescription.cost)))
 //            add(VOItemInfoLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))

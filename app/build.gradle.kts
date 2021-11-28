@@ -67,7 +67,11 @@ dependencies {
     kapt(Lib.daggerAnnotation)
 
     lintChecks(project(Module.Core.rules))
+
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
+    implementation(project(Module.Core.logger))
+    implementation(project(Module.Core.coroutines))
+
     implementation(project(Module.Feature.streams))
 }

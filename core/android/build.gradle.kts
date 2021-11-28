@@ -12,10 +12,6 @@ dependencies {
     api(Lib.paging3)
     api(Lib.material)
     api(Lib.constraintLayout)
-    api(Lib.coroutinesLifecycle)
-    api(Lib.coroutinesLivedata)
-    api(Lib.coroutinesViewmodel)
-    api(Lib.coroutines)
 
     implementation(Lib.coil)
 }

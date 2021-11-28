@@ -1,5 +1,6 @@
 package n7.ad2.ui
 
+import ad2.n7.logger.AD2Logger
 import android.app.DownloadManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -39,7 +40,6 @@ import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.databinding.DialogRateBinding

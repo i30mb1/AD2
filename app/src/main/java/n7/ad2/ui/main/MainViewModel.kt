@@ -1,12 +1,12 @@
 package n7.ad2.ui.main
 
+import ad2.n7.logger.AD2Logger
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.launch
-import n7.ad2.AD2Logger
 import n7.ad2.ui.main.domain.usecase.GetMenuItemsUseCase
 import n7.ad2.ui.main.domain.vo.VOMenu
 import javax.inject.Inject

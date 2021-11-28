@@ -1,6 +1,6 @@
 package n7.ad2.ui.heroGuide.domain.usecase
 
-import kotlinx.coroutines.CoroutineDispatcher
+import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.withContext
 import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
 import n7.ad2.ui.heroGuide.domain.model.HeroItem
@@ -17,7 +17,7 @@ private inline class HeroNameFormatted(val heroName: String)
 
 @OptIn(ExperimentalStdlibApi::class)
 class GetLocalGuideJsonUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
 ) {
 
     companion object {
@@ -27,7 +27,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
     }
 
     @Suppress("BlockingMethodInNonBlockingContext")
-    suspend operator fun invoke(heroName: String): List<LocalGuideJson> = withContext(ioDispatcher) {
+    suspend operator fun invoke(heroName: String): List<LocalGuideJson> = withContext(dispatchers.Default) {
 
         val heroNameFormatted = getHeroNameFormatted(heroName)
 

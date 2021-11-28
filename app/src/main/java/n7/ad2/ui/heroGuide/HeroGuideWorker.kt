@@ -2,6 +2,7 @@
 
 package n7.ad2.ui.heroGuide
 
+import ad2.n7.logger.AD2Logger
 import android.annotation.SuppressLint
 import android.content.Context
 import androidx.core.app.NotificationCompat
@@ -13,7 +14,6 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import kotlinx.coroutines.coroutineScope
-import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.createNotificationChannel
 import n7.ad2.isChannelNotCreated

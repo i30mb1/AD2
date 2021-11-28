@@ -4,4 +4,5 @@ include(":core:rules")
 include(":core:parser")
 include(":core:android")
 include(":core:dagger")
-
+include(":core:logger")
+include(":core:coroutines")

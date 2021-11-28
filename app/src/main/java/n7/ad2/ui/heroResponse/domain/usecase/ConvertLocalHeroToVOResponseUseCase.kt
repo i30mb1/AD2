@@ -1,6 +1,6 @@
 package n7.ad2.ui.heroResponse.domain.usecase
 
-import kotlinx.coroutines.CoroutineDispatcher
+import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.withContext
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroResponse.domain.model.LocalHeroResponsesItem
@@ -12,14 +12,14 @@ import java.io.File
 import javax.inject.Inject
 
 class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatchers: DispatchersProvider,
 ) {
 
     suspend operator fun invoke(
         localHero: LocalHero,
         localHeroResponses: List<LocalHeroResponsesItem>,
         savedHeroResponses: List<File>,
-    ): List<VOResponse> = withContext(ioDispatcher) {
+    ): List<VOResponse> = withContext(dispatchers.IO) {
         val result = mutableListOf<VOResponse>()
         val savedResponses = savedHeroResponses as? MutableList ?: mutableListOf()
         var fileToRemoveFromSavedResponses: File? = null

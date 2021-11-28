@@ -1,5 +1,6 @@
 package n7.ad2.di
 
+import ad2.n7.coroutines.CoroutineModule
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
@@ -31,6 +32,7 @@ import javax.inject.Singleton
 @dagger.Component(
     modules = [
         StreamsModule::class,
+        CoroutineModule::class,
         MoshiModule::class,
         RetrofitModule::class,
     ]
