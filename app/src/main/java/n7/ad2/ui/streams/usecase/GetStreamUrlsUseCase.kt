@@ -1,8 +1,8 @@
 package n7.ad2.ui.streams.usecase
 
-import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.data.source.remote.model.StreamGQLRequest
 import n7.ad2.data.source.remote.model.StreamsQuality
 import n7.ad2.data.source.remote.model.Variables

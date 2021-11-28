@@ -1,13 +1,13 @@
 package n7.ad2.ui
 
-import ad2.n7.android.DependenciesMap
-import ad2.n7.android.HasDependencies
 import android.app.Application
 import android.os.Handler
 import android.os.Looper
 import android.os.StrictMode
 import android.provider.Settings
 import n7.ad2.BuildConfig
+import n7.ad2.android.DependenciesMap
+import n7.ad2.android.HasDependencies
 import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider

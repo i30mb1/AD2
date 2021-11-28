@@ -1,12 +1,12 @@
-package ad2.n7.logger
+package n7.ad2.logger
 
-import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
+import n7.ad2.coroutines.DispatchersProvider
 import javax.inject.Inject
 import javax.inject.Singleton
 

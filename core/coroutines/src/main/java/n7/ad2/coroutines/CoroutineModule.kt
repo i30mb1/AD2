@@ -1,4 +1,4 @@
-package ad2.n7.coroutines
+package n7.ad2.coroutines
 
 import dagger.Module
 import dagger.Provides

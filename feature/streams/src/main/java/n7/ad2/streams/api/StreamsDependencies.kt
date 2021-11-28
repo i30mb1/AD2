@@ -1,7 +1,7 @@
 package n7.ad2.streams.api
 
-import ad2.n7.android.Dependencies
 import com.squareup.moshi.Moshi
+import n7.ad2.android.Dependencies
 import okhttp3.OkHttpClient
 
 interface StreamsDependencies : Dependencies {

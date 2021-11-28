@@ -1,9 +1,9 @@
 package n7.ad2.di
 
-import ad2.n7.coroutines.CoroutineModule
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
+import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.news.NewsViewModel
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.TournamentsViewModel

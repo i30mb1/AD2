@@ -2,7 +2,6 @@
 
 package n7.ad2.ui.heroGuide
 
-import ad2.n7.logger.AD2Logger
 import android.annotation.SuppressLint
 import android.content.Context
 import androidx.core.app.NotificationCompat
@@ -17,6 +16,7 @@ import kotlinx.coroutines.coroutineScope
 import n7.ad2.R
 import n7.ad2.createNotificationChannel
 import n7.ad2.isChannelNotCreated
+import n7.ad2.logger.AD2Logger
 import n7.ad2.ui.MyApplication
 import n7.ad2.ui.heroGuide.domain.usecase.ConvertLocalGuideJsonToLocalGuide
 import n7.ad2.ui.heroGuide.domain.usecase.GetLocalGuideJsonUseCase

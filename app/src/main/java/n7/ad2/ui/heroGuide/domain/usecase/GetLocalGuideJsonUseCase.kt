@@ -1,7 +1,7 @@
 package n7.ad2.ui.heroGuide.domain.usecase
 
-import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.withContext
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
 import n7.ad2.ui.heroGuide.domain.model.HeroItem
 import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate

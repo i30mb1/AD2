@@ -1,6 +1,6 @@
 @file:Suppress("StaticFieldLeak", "UNCHECKED_CAST")
 
-package ad2.n7.android
+package n7.ad2.android
 
 import android.app.Activity
 import android.app.Application

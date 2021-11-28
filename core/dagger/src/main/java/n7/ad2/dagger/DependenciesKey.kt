@@ -1,6 +1,6 @@
-package ad2.n7.dagger
+package n7.ad2.dagger
 
-import ad2.n7.android.Dependencies
+import n7.ad2.android.Dependencies
 import kotlin.reflect.KClass
 
 @dagger.MapKey

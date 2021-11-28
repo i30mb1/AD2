@@ -1,6 +1,6 @@
 package n7.ad2.streams.internal.domain
 
-import ad2.n7.android.extension.toPx
+import n7.ad2.android.extension.toPx
 import n7.ad2.streams.internal.data.remote.Stream
 import n7.ad2.streams.internal.domain.vo.VOStream
 import javax.inject.Inject

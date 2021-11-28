@@ -1,12 +1,12 @@
 package n7.ad2.ui.heroes.adapter
 
-import ad2.n7.android.extension.clear
-import ad2.n7.android.extension.load
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
+import n7.ad2.android.extension.clear
+import n7.ad2.android.extension.load
 import n7.ad2.databinding.ItemHeroBodyBinding
 import n7.ad2.ui.heroes.domain.vo.VOHeroBody
 

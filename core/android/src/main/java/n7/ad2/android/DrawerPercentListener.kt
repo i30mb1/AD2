@@ -1,4 +1,4 @@
-package ad2.n7.android
+package n7.ad2.android
 
 interface DrawerPercentListener {
 

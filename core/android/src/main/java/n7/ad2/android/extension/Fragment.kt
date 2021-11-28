@@ -1,4 +1,4 @@
-package ad2.n7.android.extension
+package n7.ad2.android.extension
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

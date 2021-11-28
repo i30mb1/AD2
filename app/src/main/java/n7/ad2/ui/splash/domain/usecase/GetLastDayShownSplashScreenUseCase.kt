@@ -1,8 +1,8 @@
 package n7.ad2.ui.splash.domain.usecase
 
-import ad2.n7.coroutines.DispatchersProvider
 import android.content.SharedPreferences
 import kotlinx.coroutines.withContext
+import n7.ad2.coroutines.DispatchersProvider
 import javax.inject.Inject
 
 class GetLastDayShownSplashScreenUseCase @Inject constructor(

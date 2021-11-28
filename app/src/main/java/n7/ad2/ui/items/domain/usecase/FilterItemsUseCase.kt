@@ -1,7 +1,7 @@
 package n7.ad2.ui.items.domain.usecase
 
-import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.withContext
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import javax.inject.Inject

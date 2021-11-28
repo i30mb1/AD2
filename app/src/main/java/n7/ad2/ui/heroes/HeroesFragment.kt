@@ -1,6 +1,5 @@
 package n7.ad2.ui.heroes
 
-import ad2.n7.android.DrawerPercentListener
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -16,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
+import n7.ad2.android.DrawerPercentListener
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity2

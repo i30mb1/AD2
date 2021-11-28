@@ -1,6 +1,6 @@
 @file:Suppress("PropertyName")
 
-package ad2.n7.coroutines
+package n7.ad2.coroutines
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

@@ -1,4 +1,4 @@
-package ad2.n7.logger
+package n7.ad2.logger
 
 class LoggerDependencies {
 }

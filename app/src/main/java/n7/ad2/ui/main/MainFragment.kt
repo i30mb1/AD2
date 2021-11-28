@@ -1,7 +1,5 @@
 package n7.ad2.ui.main
 
-import ad2.n7.android.DrawerPercentListener
-import ad2.n7.logger.AD2Logger
 import android.os.Bundle
 import android.view.View
 import androidx.activity.addCallback
@@ -21,11 +19,13 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.R
+import n7.ad2.android.DrawerPercentListener
 import n7.ad2.data.source.local.AppPreference
 import n7.ad2.data.source.remote.model.VOMenuType
 import n7.ad2.databinding.FragmentMainBinding
 import n7.ad2.di.injector
 import n7.ad2.games.GameFragment
+import n7.ad2.logger.AD2Logger
 import n7.ad2.news.NewsFragment
 import n7.ad2.streams.api.StreamsProvider
 import n7.ad2.tournaments.TournamentsFragment

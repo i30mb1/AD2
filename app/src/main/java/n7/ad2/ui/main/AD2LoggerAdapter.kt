@@ -1,10 +1,10 @@
 package n7.ad2.ui.main
 
-import ad2.n7.logger.AD2Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.databinding.ItemLogBinding
+import n7.ad2.logger.AD2Log
 import n7.ad2.ui.main.AD2LoggerAdapter.TextViewHolder
 import java.util.ArrayList
 

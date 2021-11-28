@@ -1,6 +1,5 @@
 package n7.ad2.ui.heroGuide
 
-import ad2.n7.android.extension.load
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -26,6 +25,7 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.R
+import n7.ad2.android.extension.load
 import n7.ad2.utils.extension.toPx
 import kotlinx.coroutines.flow.Flow as CoroutineFlow
 

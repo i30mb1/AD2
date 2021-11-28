@@ -1,4 +1,4 @@
-package ad2.n7.android.extension
+package n7.ad2.android.extension
 
 import android.widget.ImageView
 import coil.clear

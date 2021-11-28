@@ -1,10 +1,10 @@
 package n7.ad2.ui.heroInfo.adapter
 
-import ad2.n7.android.extension.load
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
+import n7.ad2.android.extension.load
 import n7.ad2.databinding.ItemHeroAttributesBinding
 import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo

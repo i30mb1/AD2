@@ -1,7 +1,7 @@
 package n7.ad2.ui.heroGuide.domain.usecase
 
-import ad2.n7.coroutines.DispatchersProvider
 import kotlinx.coroutines.withContext
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.data.source.local.GuideRepository
 import n7.ad2.data.source.local.model.LocalGuide
 import javax.inject.Inject

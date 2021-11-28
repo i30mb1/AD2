@@ -1,6 +1,6 @@
 package n7.ad2.ui.heroGuide.domain.interactor
 
-import ad2.n7.logger.AD2Logger
+import n7.ad2.logger.AD2Logger
 import n7.ad2.ui.heroGuide.domain.usecase.GetLastDayHeroGuidesLoadedUseCase
 import n7.ad2.ui.heroGuide.domain.usecase.SaveLastDayHeroGuidesLoadedUseCase
 import n7.ad2.ui.splash.domain.usecase.GetCurrentDateInYearUseCase

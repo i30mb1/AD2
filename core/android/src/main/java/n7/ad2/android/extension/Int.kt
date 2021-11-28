@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package ad2.n7.android.extension
+package n7.ad2.android.extension
 
 import android.content.res.Resources
 

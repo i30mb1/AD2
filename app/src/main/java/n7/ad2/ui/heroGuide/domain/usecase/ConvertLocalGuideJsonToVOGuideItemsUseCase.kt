@@ -1,9 +1,9 @@
 package n7.ad2.ui.heroGuide.domain.usecase
 
-import ad2.n7.coroutines.DispatchersProvider
 import android.app.Application
 import kotlinx.coroutines.withContext
 import n7.ad2.R
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ui.heroGuide.domain.adapter.toVOEasyToWinHeroes
 import n7.ad2.ui.heroGuide.domain.adapter.toVOGuideHeroItems
 import n7.ad2.ui.heroGuide.domain.adapter.toVOGuideSpellBuild

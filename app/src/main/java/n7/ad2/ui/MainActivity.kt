@@ -1,6 +1,5 @@
 package n7.ad2.ui
 
-import ad2.n7.logger.AD2Logger
 import android.app.DownloadManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -46,6 +45,7 @@ import n7.ad2.databinding.DialogRateBinding
 import n7.ad2.databinding.DialogUpdateBinding
 import n7.ad2.databinding.DrawerBinding
 import n7.ad2.di.injector
+import n7.ad2.logger.AD2Logger
 import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.main.AD2LoggerAdapter
 import n7.ad2.ui.main.MainViewModel

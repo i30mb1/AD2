@@ -1,10 +1,10 @@
 package n7.ad2.streams.internal.adapter
 
-import ad2.n7.android.extension.clear
-import ad2.n7.android.extension.load
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.android.extension.clear
+import n7.ad2.android.extension.load
 import n7.ad2.streams.R
 import n7.ad2.streams.databinding.ItemListStreamBinding
 import n7.ad2.streams.internal.domain.vo.VOStream
