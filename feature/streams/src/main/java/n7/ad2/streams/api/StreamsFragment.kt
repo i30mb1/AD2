@@ -1,11 +1,14 @@
 package n7.ad2.streams.api
 
+import ad2.n7.android.DrawerPercentListener
 import ad2.n7.android.extension.viewModel
 import ad2.n7.android.findDependencies
 import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.Lifecycle
@@ -35,6 +38,7 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
     private var _binding: FragmentStreamsBinding? = null
     private val binding: FragmentStreamsBinding get() = _binding!!
     private val viewModel: StreamsViewModel by viewModel { streamsFactory.create() }
+    private val streamsItemDecorator = StreamsItemDecorator()
     private val onStreamClick: (vOSimpleStream: VOStream) -> Unit = { voSimpleStream ->
         childFragmentManager.commit {
 //            addToBackStack(null)
@@ -54,6 +58,7 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentStreamsBinding.bind(view)
         setupAdapter()
+        setupInsets()
         viewModel.error.observe(viewLifecycleOwner) { throwable ->
             if (throwable == null) return@observe
             Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_LONG).show()
@@ -65,12 +70,26 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
         _binding = null
     }
 
+    private fun setupInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.rv) { _, insets ->
+            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+            streamsItemDecorator.statusBarsInsets = statusBarsInsets.top
+            streamsItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
+            insets
+        }
+        (parentFragment as DrawerPercentListener).setDrawerPercentListener { percent ->
+            streamsItemDecorator.percent = percent
+            binding.rv.invalidateItemDecorations()
+        }
+    }
+
     private fun setupAdapter() {
         val streamsPagedListAdapter = StreamsPagedListAdapter(layoutInflater, onStreamClick)
         binding.rv.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = streamsPagedListAdapter
-            addItemDecoration(StreamsItemDecorator())
+            addItemDecoration(streamsItemDecorator)
             setHasFixedSize(true)
         }
 

@@ -1,5 +1,6 @@
 package n7.ad2.ui.main
 
+import ad2.n7.android.DrawerPercentListener
 import android.os.Bundle
 import android.view.View
 import androidx.activity.addCallback
@@ -37,7 +38,7 @@ import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 import javax.inject.Inject
 
-class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener {
+class MainFragment : Fragment(R.layout.fragment_main), DrawerPercentListener {
 
     companion object {
         fun getInstance() = MainFragment()

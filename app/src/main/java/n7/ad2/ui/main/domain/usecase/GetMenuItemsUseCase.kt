@@ -32,7 +32,7 @@ class GetMenuItemsUseCase @Inject constructor(
             appPreference.saveSettings(settings)
         }
         .catch { error ->
-            logger.log(error.message ?: error.localizedMessage)
+            logger.log("Could not load settings (${error.message})")
             emit(Settings())
         }
         .map { settings ->

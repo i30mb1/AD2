@@ -35,10 +35,6 @@ class DraggableDrawer(
         private const val NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER = -1000
     }
 
-    interface Listener {
-        fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?)
-    }
-
     var isOpen: Boolean = false
     @Inject lateinit var logger: AD2Logger
     private lateinit var draggableView: FragmentContainerView

@@ -1,5 +1,6 @@
 package n7.ad2.ui.heroes
 
+import ad2.n7.android.DrawerPercentListener
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -21,7 +22,6 @@ import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroes.adapter.HeroesItemDecorator
 import n7.ad2.ui.heroes.adapter.HeroesListAdapter
 import n7.ad2.ui.heroes.domain.vo.VOHeroBody
-import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 
@@ -104,7 +104,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
                 heroesItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
                 insets
             }
-            (parentFragment as DraggableDrawer.Listener).setDrawerPercentListener { percent ->
+            (parentFragment as DrawerPercentListener).setDrawerPercentListener { percent ->
                 heroesItemDecorator.percent = percent
                 invalidateItemDecorations()
             }

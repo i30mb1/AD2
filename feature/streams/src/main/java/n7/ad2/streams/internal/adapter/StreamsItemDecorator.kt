@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 class StreamsItemDecorator : RecyclerView.ItemDecoration() {
 
-    private val topOffset = 16.toPx
-    private val botOffset = 16.toPx
-    private val offsetHorizontal = 8.toPx
+    var statusBarsInsets = 0
+    var navigationBarsInsets = 0
+    var percent = 0f
+
+    private val offsetHorizontal = 4.toPx
     private val offsetVertical = 8.toPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
@@ -19,11 +21,10 @@ class StreamsItemDecorator : RecyclerView.ItemDecoration() {
         val childCount = parent.adapter?.itemCount ?: return
 
         with(outRect) {
-            top = offsetHorizontal
             left = offsetVertical
             right = offsetVertical
-            if (position == 0) top = topOffset
-            if (position == childCount - 1) bottom = botOffset
+            top = if (position == 0) offsetHorizontal + (statusBarsInsets * percent).toInt() else offsetHorizontal
+            bottom = if (position == childCount - 1) offsetHorizontal + (navigationBarsInsets * percent).toInt() else offsetHorizontal
         }
 
     }

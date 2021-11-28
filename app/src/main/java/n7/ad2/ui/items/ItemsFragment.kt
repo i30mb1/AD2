@@ -1,5 +1,6 @@
 package n7.ad2.ui.items
 
+import ad2.n7.android.DrawerPercentListener
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -19,7 +20,6 @@ import n7.ad2.ui.itemInfo.ItemInfoActivity
 import n7.ad2.ui.items.adapter.ItemsItemDecorator
 import n7.ad2.ui.items.adapter.ItemsListAdapter
 import n7.ad2.ui.items.domain.vo.VOItemBody
-import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.utils.viewModel
 
 class ItemsFragment : Fragment(R.layout.fragment_items) {
@@ -74,7 +74,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
             itemsItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
             insets
         }
-        (parentFragment as DraggableDrawer.Listener).setDrawerPercentListener { percent ->
+        (parentFragment as DrawerPercentListener).setDrawerPercentListener { percent ->
             itemsItemDecorator.percent = percent
             binding.rv.invalidateItemDecorations()
         }
