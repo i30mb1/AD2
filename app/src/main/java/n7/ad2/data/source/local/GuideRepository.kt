@@ -1,7 +1,7 @@
 package n7.ad2.data.source.local
 
-import n7.ad2.data.source.local.db.AppDatabase
-import n7.ad2.database_guides.model.LocalGuide
+import n7.ad2.database_guides.api.AppDatabase
+import n7.ad2.database_guides.internal.model.LocalGuide
 import javax.inject.Inject
 
 class GuideRepository @Inject constructor(
@@ -9,11 +9,11 @@ class GuideRepository @Inject constructor(
 ) {
 
     suspend fun insertGuide(localGuide: LocalGuide): Long {
-        return appDatabase.guideDao.insert(localGuide)
+        return appDatabase.guidesDao.insert(localGuide)
     }
 
     suspend fun insertGuideAndDeleteOldGuides(localGuide: List<LocalGuide>) {
-        return appDatabase.guideDao.insertGuideAndDeleteOldGuides(localGuide)
+        return appDatabase.guidesDao.insertGuideAndDeleteOldGuides(localGuide)
     }
 
 }

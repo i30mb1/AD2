@@ -33,7 +33,9 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
 
     override fun onCreate() {
         enableStrictMode()
-        DaggerMainActivityComponent.factory().create().inject(this)
+        DaggerMainActivityComponent.factory()
+            .create(this)
+            .inject(this)
         super.onCreate()
     }
 

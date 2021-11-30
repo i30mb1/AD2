@@ -1,0 +1,490 @@
+[
+  {
+    "name": "Abaddon",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Alchemist",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Axe",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Beastmaster",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Brewmaster",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Bristleback",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Centaur Warrunner",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Chaos Knight",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Clockwerk",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Dawnbreaker",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Doom",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Dragon Knight",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Earth Spirit",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Earthshaker",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Elder Titan",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Huskar",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Io",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Kunkka",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Legion Commander",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Lifestealer",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Lycan",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Magnus",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Marci",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Mars",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Night Stalker",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Omniknight",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Phoenix",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Pudge",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Sand King",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Slardar",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Snapfire",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Spirit Breaker",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Sven",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Tidehunter",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Timbersaw",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Tiny",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Treant Protector",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Tusk",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Underlord",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Undying",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Wraith King",
+    "main_attribute": "Strength"
+  },
+  {
+    "name": "Anti-Mage",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Arc Warden",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Bloodseeker",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Bounty Hunter",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Broodmother",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Clinkz",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Drow Ranger",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Ember Spirit",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Faceless Void",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Gyrocopter",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Hoodwink",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Juggernaut",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Lone Druid",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Luna",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Medusa",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Meepo",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Mirana",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Monkey King",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Morphling",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Naga Siren",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Nyx Assassin",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Pangolier",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Phantom Assassin",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Phantom Lancer",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Razor",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Riki",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Shadow Fiend",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Slark",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Sniper",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Spectre",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Templar Assassin",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Terrorblade",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Troll Warlord",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Ursa",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Vengeful Spirit",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Venomancer",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Viper",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Weaver",
+    "main_attribute": "Agility"
+  },
+  {
+    "name": "Ancient Apparition",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Bane",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Batrider",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Chen",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Crystal Maiden",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Dark Seer",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Dark Willow",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Dazzle",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Death Prophet",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Disruptor",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Enchantress",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Enigma",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Grimstroke",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Invoker",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Jakiro",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Keeper of the Light",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Leshrac",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Lich",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Lina",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Lion",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Nature's Prophet",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Necrophos",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Ogre Magi",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Oracle",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Outworld Destroyer",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Puck",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Pugna",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Queen of Pain",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Rubick",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Shadow Demon",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Shadow Shaman",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Silencer",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Skywrath Mage",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Storm Spirit",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Techies",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Tinker",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Visage",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Void Spirit",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Warlock",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Windranger",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Winter Wyvern",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Witch Doctor",
+    "main_attribute": "Intelligence"
+  },
+  {
+    "name": "Zeus",
+    "main_attribute": "Intelligence"
+  }
+]

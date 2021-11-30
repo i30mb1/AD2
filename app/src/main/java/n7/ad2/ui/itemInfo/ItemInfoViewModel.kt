@@ -11,14 +11,11 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
-import n7.ad2.ui.itemInfo.domain.interactor.GetVOItemInfoInteractor
 import n7.ad2.ui.itemInfo.domain.vo.ItemInfo
-import n7.ad2.utils.onFailure
-import n7.ad2.utils.onSuccess
 
 class ItemInfoViewModel @AssistedInject constructor(
     application: Application,
-    private val getVOItemInfoInteractor: GetVOItemInfoInteractor,
+//    private val getVOItemInfoInteractor: GetVOItemInfoInteractor,
     @Assisted private val itemName: String,
 ) : ViewModel() {
 
@@ -37,14 +34,14 @@ class ItemInfoViewModel @AssistedInject constructor(
     }
 
     private fun loadItemInfo(itemName: String, locale: Locale) = viewModelScope.launch {
-        getVOItemInfoInteractor(itemName, locale)
-            .onSuccess {
-                _voItemInfo.value = it
-            }
-            .onFailure {
-                _error.value = it
-                _error.value = null
-            }
+//        getVOItemInfoInteractor(itemName, locale)
+//            .onSuccess {
+//                _voItemInfo.value = it
+//            }
+//            .onFailure {
+//                _error.value = it
+//                _error.value = null
+//            }
     }
 
 }

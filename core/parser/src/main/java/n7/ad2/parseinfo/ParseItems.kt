@@ -6,6 +6,7 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
+import java.io.File
 
 private const val assetsPathToItem = "items/"
 
@@ -309,7 +310,8 @@ private fun loadItemsJsonFile(locale: LOCALE = LOCALE.EN) {
     val root = locale.urlAllItems.connect()
     val items: List<JSONObject> = getItems(root).map { it.toJsonObject() }
 
-    saveFileWithDataInAssets("items.json", items.toString())
+    val file = File(assetsDatabase + "items.json")
+    file.writeText(items.toString())
 }
 
 private fun getItems(root: Document): List<HeroItem> {

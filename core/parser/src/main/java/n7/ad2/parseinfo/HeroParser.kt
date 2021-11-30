@@ -21,8 +21,8 @@ import javax.imageio.ImageIO
 fun main() = runBlocking {
     val heroParser = HeroParser()
 //    heroParser.loadAll()
-//    heroParser.createFileWithHeroesAndFolders()
-    heroParser.loadHeroesOnEnglish()
+    heroParser.createFileWithHeroesAndFolders()
+//    heroParser.loadHeroesOnEnglish()
 //    heroParser.loadHeroesOnRussian()
 //    heroParser.loadResponsesOnEnglish()
 //    heroParser.loadResponsesOnRussian()
@@ -176,32 +176,30 @@ class HeroParser {
     }
 
     fun createFileWithHeroesAndFolders() {
-        val path = assets + FILE_NAME
+        val path = assetsDatabase + FILE_NAME
         val root = connectTo(LocaleHeroes.EN.heroesUrl)
         var mainAttribute = "Strength"
 
-        JSONObject().apply {
-            JSONArray().apply {
-                val heroesEng = getHeroesElements(root)
-                heroesEng.forEachIndexed { index, _ ->
-                    val heroObject = JSONObject().apply {
-                        val heroName = getHeroName(heroesEng[index])
-                        put("name", heroName)
-                        if (heroName == "Anti-Mage") mainAttribute = "Agility"
-                        if (heroName == "Ancient Apparition") mainAttribute = "Intelligence"
-                        put("mainAttribute", mainAttribute)
-                        val url = getHeroHref(heroesEng[index])
-                        put("url", url)
-                        val directory = "$HEROES_FOLDER/$heroName"
-                        File("$assets$directory/en").mkdirs()
-                        File("$assets$directory/ru").mkdirs()
-                    }
-                    add(heroObject)
+        val result = JSONArray().apply {
+            val heroesEng = getHeroesElements(root)
+            heroesEng.forEachIndexed { index, _ ->
+                val heroObject = JSONObject().apply {
+                    val heroName = getHeroName(heroesEng[index])
+                    put("name", heroName)
+                    if (heroName == "Anti-Mage") mainAttribute = "Agility"
+                    if (heroName == "Ancient Apparition") mainAttribute = "Intelligence"
+                    put("main_attribute", mainAttribute)
+                    val url = getHeroHref(heroesEng[index])
+//                    put("url", url)
+                    val directory = "$HEROES_FOLDER/$heroName"
+                    File("$assets$directory/en").mkdirs()
+                    File("$assets$directory/ru").mkdirs()
                 }
-                put("heroes", this)
+                add(heroObject)
             }
-            File(path).writeText(toJSONString())
         }
+        File(path).writeText(result.toJSONString())
+
         println("heroes loaded $path")
     }
 

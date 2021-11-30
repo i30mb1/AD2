@@ -12,7 +12,7 @@ object Apps {
 object Versions {
     const val gradlePlugin = "7.0.0"
     const val lint = "30.0.3" // gradlePlugin + 23
-    const val workManager = "2.7.0-alpha05"
+    const val workManager = "2.7.1"
     const val moshi = "1.12.0"
     const val room = "2.3.0"
     const val kotlin = "1.5.30"
@@ -42,7 +42,7 @@ object Lib {
     const val firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
     const val playCore = "com.google.android.play:core:1.8.0" // auto update + rateMe
     const val playCoreKtx = "com.google.android.play:core-ktx:1.8.1"
-    const val coreKtx = "androidx.core:core-ktx:1.6.0-alpha02" // Write more concise, idiomatic Kotlin code.
+    const val coreKtx = "androidx.core:core-ktx:1.7.0" // Write more concise, idiomatic Kotlin code.
     const val jsonSimple = "com.googlecode.json-simple:json-simple:1.1.1"
     const val springAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
     const val springAnimationKtx = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"

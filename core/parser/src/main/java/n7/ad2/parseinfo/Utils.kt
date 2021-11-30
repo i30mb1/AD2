@@ -5,6 +5,7 @@ import java.net.URL
 import javax.imageio.ImageIO
 
 internal val assets = System.getProperty("user.dir") + "\\app\\src\\main\\assets\\"
+internal val assetsDatabase = System.getProperty("user.dir") + "\\core\\database\\src\\main\\assets\\"
 internal const val HERO_FULL_PHOTO_TYPE = "png"
 
 internal fun String.removeBrackets(): String {
@@ -33,7 +34,7 @@ internal fun deleteFolderInAssets(path: String) {
 }
 
 internal fun saveFileWithDataInAssets(path: String, text: String) {
-    val file = File(assets + path)
+    val file = File(assetsDatabase + path)
     file.writeText(text)
     println("file (${file.length()} bytes) saved in '$path'")
 }

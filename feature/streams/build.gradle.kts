@@ -8,6 +8,9 @@ dependencies {
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.coroutines))
+    implementation(project(Module.Core.database))
+    implementation(project(Module.Core.repositories))
+    implementation(project(Module.Core.logger))
 
     api(Lib.retrofit)
     api(Lib.retrofitMoshiConverter)

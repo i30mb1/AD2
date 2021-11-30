@@ -20,7 +20,7 @@ class GetVOItemInfoInteractor @Inject constructor(
     suspend operator fun invoke(itemName: String, locale: Locale): ResultState<List<ItemInfo>> = try {
         val localItem = getLocalItemByNameUseCase(itemName)
         val json = getItemInfoFromAssetsUseCase(localItem, locale)
-        val localItemDescription = getLocalItemInfoFromJsonUseCase(json)
+        val localItemDescription = getLocalItemInfoFromJsonUseCase("json")
         val result = getVOItemInfoUseCase(localItemDescription)
         ResultState.success(result)
     } catch (e: Exception) {

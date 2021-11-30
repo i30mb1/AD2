@@ -6,21 +6,15 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import n7.ad2.ui.heroes.domain.usecase.FilterHeroesUseCase
-import n7.ad2.ui.heroes.domain.usecase.GetVOHeroesListInteractor
-import n7.ad2.ui.heroes.domain.usecase.UpdateViewedByUserFieldUseCase
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import javax.inject.Inject
 
 class HeroesViewModel @Inject constructor(
     application: Application,
-    getVOHeroesListInteractor: GetVOHeroesListInteractor,
-    private val filterHeroesUseCase: FilterHeroesUseCase,
-    private val updateViewedByUserFieldUseCase: UpdateViewedByUserFieldUseCase,
+//    getVOHeroesListInteractor: GetVOHeroesListInteractor,
+//    private val filterHeroesUseCase: FilterHeroesUseCase,
+//    private val updateViewedByUserFieldUseCase: UpdateViewedByUserFieldUseCase,
 ) : AndroidViewModel(application) {
 
     private val allHeroes: MutableStateFlow<List<VOHero>> = MutableStateFlow(emptyList())
@@ -28,19 +22,19 @@ class HeroesViewModel @Inject constructor(
     val filteredHeroes: StateFlow<List<VOHero>> = _filteredHeroes.asStateFlow()
 
     init {
-        getVOHeroesListInteractor()
-            .onEach(_filteredHeroes::emit)
-            .onEach(allHeroes::emit)
-            .launchIn(viewModelScope)
+//        getVOHeroesListInteractor()
+//            .onEach(_filteredHeroes::emit)
+//            .onEach(allHeroes::emit)
+//            .launchIn(viewModelScope)
     }
 
     fun filterHeroes(filter: String) {
-        allHeroes.map { list -> filterHeroesUseCase(list, filter) }
-            .onEach { _filteredHeroes.emit(it) }
+//        allHeroes.map { list -> filterHeroesUseCase(list, filter) }
+//            .onEach { _filteredHeroes.emit(it) }
     }
 
     fun updateViewedByUserFieldForHero(name: String) = viewModelScope.launch {
-        updateViewedByUserFieldUseCase(name)
+//        updateViewedByUserFieldUseCase(name)
     }
 
 }

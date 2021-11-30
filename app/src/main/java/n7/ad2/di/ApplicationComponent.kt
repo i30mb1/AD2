@@ -4,6 +4,8 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.coroutines.CoroutineModule
+import n7.ad2.database_guides.api.DatabaseModule
+import n7.ad2.database_guides.internal.worker.DatabaseWorker
 import n7.ad2.news.NewsViewModel
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.TournamentsViewModel
@@ -25,7 +27,6 @@ import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.ui.main.MainFragment
 import n7.ad2.ui.main.MainViewModel
 import n7.ad2.ui.streams.StreamViewModel
-import n7.ad2.workers.DatabaseWorker
 import javax.inject.Singleton
 
 @Singleton
@@ -35,6 +36,7 @@ import javax.inject.Singleton
         CoroutineModule::class,
         MoshiModule::class,
         RetrofitModule::class,
+        DatabaseModule::class,
     ]
 )
 interface MainActivityComponent : StreamsDependencies {
@@ -42,7 +44,7 @@ interface MainActivityComponent : StreamsDependencies {
 
     @Component.Factory
     interface Factory {
-        fun create(): MainActivityComponent
+        fun create(@BindsInstance applicationContext: Application): MainActivityComponent
     }
 }
 

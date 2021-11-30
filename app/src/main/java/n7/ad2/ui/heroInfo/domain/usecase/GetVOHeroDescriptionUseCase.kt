@@ -11,7 +11,6 @@ import n7.ad2.R
 import n7.ad2.base.adapter.BodyViewHolder
 import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.data.source.local.HeroRepository
 import n7.ad2.data.source.local.Locale
 import n7.ad2.logger.AD2Logger
 import n7.ad2.ui.heroInfo.HeroStatistics
@@ -23,7 +22,7 @@ import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
     private val application: Application,
-    private val heroRepository: HeroRepository,
+//    private val heroRepository: HeroRepository,
     private val aD2StringParser: AD2StringParser,
     private val moshi: Moshi,
     private val logger: AD2Logger,
@@ -37,13 +36,13 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
     @OptIn(ExperimentalStdlibApi::class)
     suspend operator fun invoke(heroName: String, locale: Locale, heroInfo: HeroInfo? = null): Flow<List<VOHeroInfo>> = flow {
-        val localHero = heroRepository.getHero(heroName)
-        val json = heroRepository.getHeroDescription(localHero.name, locale)
-        val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json)!!
+//        val localHero = heroRepository.getHero(heroName)
+//        val json = heroRepository.getHeroDescription(localHero.name, locale)
+        val info = moshi.adapter(LocalHeroDescription::class.java).fromJson("json")!!
 
         emit(buildList {
             add(VOHeroInfo.Attributes(
-                HeroRepository.getFullUrlHeroImage(localHero.name),
+                n7.ad2.repositories.HeroRepository.getFullUrlHeroImage("localHero.name"),
                 HeroStatistics.Statistics(
                     info.mainAttributes.attrStrength,
                     info.mainAttributes.attrAgility,
@@ -54,7 +53,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             add(VOHeroInfo.Spells(
                 info.abilities.map { ability ->
                     val name = ability.name
-                    val urlSpellImage = HeroRepository.getFullUrlHeroSpell(ability.name)
+                    val urlSpellImage = n7.ad2.repositories.HeroRepository.getFullUrlHeroSpell(ability.name)
                     val isSelected = (heroInfo as? HeroInfo.Spell)?.name == ability.name
                     VOSpell(name, urlSpellImage, isSelected)
                 }

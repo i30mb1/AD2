@@ -1,7 +1,7 @@
 package n7.ad2.ui.heroResponse.domain.interactor
 
 import n7.ad2.data.source.local.Locale
-import n7.ad2.database_heroes.api.model.LocalHero
+import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.ui.heroResponse.domain.usecase.ConvertLocalHeroToVOResponseUseCase
 import n7.ad2.ui.heroResponse.domain.usecase.GetJsonHeroResponseUseCase
 import n7.ad2.ui.heroResponse.domain.usecase.GetLocalHeroResponsesFromJsonUseCase

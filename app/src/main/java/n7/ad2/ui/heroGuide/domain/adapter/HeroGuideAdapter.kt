@@ -1,7 +1,5 @@
 package n7.ad2.ui.heroGuide.domain.adapter
 
-import n7.ad2.data.source.local.ItemRepository
-import n7.ad2.data.source.local.HeroRepository
 import n7.ad2.ui.heroGuide.VOHeroFlowHeroItem
 import n7.ad2.ui.heroGuide.VOHeroFlowItem
 import n7.ad2.ui.heroGuide.VOHeroFlowSpell
@@ -21,16 +19,16 @@ fun List<HeroWithWinrate>.toVOEasyToWinHeroes(): VOGuideEasyToWinHeroes = VOGuid
 
 private fun HeroWithWinrate.toVOHeroFlowItem(): VOHeroFlowItem = VOHeroFlowItem(
     heroName,
-    HeroRepository.getFullUrlHeroImage(heroName),
+    n7.ad2.repositories.HeroRepository.getFullUrlHeroImage(heroName),
     "${heroWinrate}%"
 )
 
 fun List<Spell>.toVOGuideSpellBuild(): VOGuideSpellBuild = VOGuideSpellBuild(
-    map { VOHeroFlowSpell(it.spellName, HeroRepository.getFullUrlHeroSpell(it.spellName), it.spellOrder) }
+    map { VOHeroFlowSpell(it.spellName, n7.ad2.repositories.HeroRepository.getFullUrlHeroSpell(it.spellName), it.spellOrder) }
 )
 
 fun List<HeroItem>.toVOGuideStartingHeroItems(): VOGuideStartingHeroItems = VOGuideStartingHeroItems(
-    map { VOHeroFlowStartingHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName)) }
+    map { VOHeroFlowStartingHeroItem(it.itemName, n7.ad2.repositories.ItemRepository.getFullUrlItemImage(it.itemName)) }
 )
 
 fun List<HeroItem>.toVOGuideHeroItems(): VOGuideHeroItems {
@@ -38,7 +36,7 @@ fun List<HeroItem>.toVOGuideHeroItems(): VOGuideHeroItems {
     val result = map {
         val itemTime = if (lastItemTime == it.itemTime) null else it.itemTime
         lastItemTime = it.itemTime
-        VOHeroFlowHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName), itemTime)
+        VOHeroFlowHeroItem(it.itemName, n7.ad2.repositories.ItemRepository.getFullUrlItemImage(it.itemName), itemTime)
     }
     return VOGuideHeroItems(result)
 }

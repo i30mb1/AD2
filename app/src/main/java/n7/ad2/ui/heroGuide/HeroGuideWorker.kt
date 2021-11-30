@@ -16,13 +16,6 @@ import kotlinx.coroutines.coroutineScope
 import n7.ad2.R
 import n7.ad2.createNotificationChannel
 import n7.ad2.isChannelNotCreated
-import n7.ad2.logger.AD2Logger
-import n7.ad2.ui.MyApplication
-import n7.ad2.ui.heroGuide.domain.usecase.ConvertLocalGuideJsonToLocalGuide
-import n7.ad2.ui.heroGuide.domain.usecase.GetLocalGuideJsonUseCase
-import n7.ad2.ui.heroGuide.domain.usecase.SaveLocalGuideUseCase
-import java.util.*
-import javax.inject.Inject
 
 
 class HeroGuideWorker(
@@ -49,35 +42,35 @@ class HeroGuideWorker(
     private val channelName = "Guide"
     private val notificationTitle = applicationContext.getString(R.string.notification_title_guide)
 
-    @Inject
-    lateinit var saveLocalGuideUseCase: SaveLocalGuideUseCase
-
-    @Inject
-    lateinit var convertLocalGuideJsonToLocalGuide: ConvertLocalGuideJsonToLocalGuide
-
-    @Inject
-    lateinit var getLocalGuideJson: GetLocalGuideJsonUseCase
-
-    @Inject
-    lateinit var aD2Logger: AD2Logger
+//    @Inject
+//    lateinit var saveLocalGuideUseCase: SaveLocalGuideUseCase
+//
+//    @Inject
+//    lateinit var convertLocalGuideJsonToLocalGuide: ConvertLocalGuideJsonToLocalGuide
+//
+//    @Inject
+//    lateinit var getLocalGuideJson: GetLocalGuideJsonUseCase
+//
+//    @Inject
+//    lateinit var aD2Logger: AD2Logger
 
     override suspend fun doWork(): Result = coroutineScope {
-        (context as MyApplication).component.inject(this@HeroGuideWorker)
+//        (context as MyApplication).component.inject(this@HeroGuideWorker)
 
 //        startForegroundIfNotificationEnabled()
 
         val heroName = inputData.getString(HERO_NAME)!!
 
         try {
-            val localGuideJson = getLocalGuideJson(heroName)
-            val localGuide = convertLocalGuideJsonToLocalGuide(localGuideJson, heroName)
-            saveLocalGuideUseCase(localGuide)
-
-            aD2Logger.log("guide loaded for $heroName")
+//            val localGuideJson = getLocalGuideJson(heroName)
+//            val localGuide = convertLocalGuideJsonToLocalGuide(localGuideJson, heroName)
+//            saveLocalGuideUseCase(localGuide)
+//
+//            aD2Logger.log("guide loaded for $heroName")
             Result.success()
         } catch (e: Exception) {
             val data = workDataOf(RESULT to e.toString())
-            aD2Logger.log("guide load fails for $heroName")
+//            aD2Logger.log("guide load fails for $heroName")
             Result.failure(data)
         }
     }

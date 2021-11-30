@@ -13,8 +13,12 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import n7.ad2.database_guides.internal.domain.usecase.PopulateItemsDatabaseUseCase
+import n7.ad2.repositories.ItemRepository
 import n7.ad2.streams.internal.data.remote.Stream
 import n7.ad2.streams.internal.data.remote.StreamPagingSource
 import n7.ad2.streams.internal.domain.ConvertStreamToVOStreamUseCase
@@ -24,11 +28,20 @@ import java.util.concurrent.Executors
 internal class StreamsViewModel @AssistedInject constructor(
     private val streamPagingSource: StreamPagingSource,
     private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase,
+    private val itemRepository: ItemRepository,
+    private val populateItemsDatabaseUseCase: PopulateItemsDatabaseUseCase,
 ) : ViewModel() {
 
     @AssistedFactory
     interface Factory {
         fun create(): StreamsViewModel
+    }
+
+    init {
+        viewModelScope.launch {
+            populateItemsDatabaseUseCase()
+            itemRepository.getAllItems().collect()
+        }
     }
 
     private val _error = MutableLiveData<Throwable?>(null)
