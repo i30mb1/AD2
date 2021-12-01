@@ -12,6 +12,7 @@ object Module {
 
     object Feature {
         const val streams = ":feature:streams"
+        const val drawer = ":feature:drawer"
     }
 
 }
