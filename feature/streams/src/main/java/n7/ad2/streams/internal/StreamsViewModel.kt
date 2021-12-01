@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import n7.ad2.database_guides.internal.domain.usecase.PopulateItemsDatabaseUseCase
+import n7.ad2.logger.AD2Logger
 import n7.ad2.repositories.ItemRepository
 import n7.ad2.streams.internal.data.remote.Stream
 import n7.ad2.streams.internal.data.remote.StreamPagingSource
@@ -28,8 +28,8 @@ import java.util.concurrent.Executors
 internal class StreamsViewModel @AssistedInject constructor(
     private val streamPagingSource: StreamPagingSource,
     private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase,
+    private val logger: AD2Logger,
     private val itemRepository: ItemRepository,
-    private val populateItemsDatabaseUseCase: PopulateItemsDatabaseUseCase,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -39,8 +39,9 @@ internal class StreamsViewModel @AssistedInject constructor(
 
     init {
         viewModelScope.launch {
-            populateItemsDatabaseUseCase()
-            itemRepository.getAllItems().collect()
+            itemRepository.getAllItems().collect {
+                logger.log("11111111items loaded1111111")
+            }
         }
     }
 

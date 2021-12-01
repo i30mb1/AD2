@@ -4,13 +4,13 @@ package n7.ad2.repositories
 
 import android.app.Application
 import kotlinx.coroutines.flow.Flow
-import n7.ad2.database_guides.api.AppDatabase
+import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.internal.model.LocalItem
 import javax.inject.Inject
 
 class ItemRepository @Inject constructor(
     private val application: Application,
-    private val appDatabase: AppDatabase,
+    private val itemsDao: ItemsDao,
 ) {
 
     companion object {
@@ -19,11 +19,11 @@ class ItemRepository @Inject constructor(
     }
 
     fun getAllItems(): Flow<List<LocalItem>> {
-        return appDatabase.itemsDao.getAllItems()
+        return itemsDao.getAllItems()
     }
 
     suspend fun insertItems(list: List<LocalItem>) {
-        appDatabase.itemsDao.insert(list)
+//        appDatabase.itemsDao.insert(list)
     }
 
     fun getItemDescription(itemName: String, locale: Locale): String {
@@ -34,7 +34,7 @@ class ItemRepository @Inject constructor(
     }
 
     suspend fun updateItemViewedByUserField(name: String) {
-        appDatabase.itemsDao.updateItemViewedByUserField(name)
+//        appDatabase.itemsDao.updateItemViewedByUserField(name)
     }
 
 }

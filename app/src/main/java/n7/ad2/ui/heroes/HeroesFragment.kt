@@ -12,10 +12,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
 import n7.ad2.android.DrawerPercentListener
+import n7.ad2.database_guides.internal.worker.DatabaseWorker
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity2
@@ -40,6 +43,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val request = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
+        WorkManager.getInstance(requireContext()).enqueue(request)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

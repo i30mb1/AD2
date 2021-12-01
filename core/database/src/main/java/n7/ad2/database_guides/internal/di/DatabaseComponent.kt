@@ -1,15 +1,21 @@
 package n7.ad2.database_guides.internal.di
 
 import dagger.Component
+import n7.ad2.database_guides.api.DaoModule
 import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.database_guides.internal.worker.DatabaseWorker
 
 @Component(
     dependencies = [
-        DatabaseDependencies::class
-    ]
+        DatabaseDependencies::class,
+    ],
+    modules = [
+//        DatabaseModule::class,
+        DaoModule::class,
+        NarutoModule::class
+    ],
 )
-internal interface DatabaseComponent {
+interface DatabaseComponent {
 
     @Component.Factory
     interface Factory {

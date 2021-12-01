@@ -4,8 +4,8 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.coroutines.CoroutineModule
+import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.database_guides.api.DatabaseModule
-import n7.ad2.database_guides.internal.worker.DatabaseWorker
 import n7.ad2.news.NewsViewModel
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.TournamentsViewModel
@@ -39,7 +39,9 @@ import javax.inject.Singleton
         DatabaseModule::class,
     ]
 )
-interface MainActivityComponent : StreamsDependencies {
+interface MainActivityComponent : StreamsDependencies,
+    DatabaseDependencies {
+
     fun inject(application: MyApplication)
 
     @Component.Factory
@@ -64,7 +66,6 @@ interface ApplicationComponent {
         fun create(@BindsInstance applicationContext: Application): ApplicationComponent
     }
 
-    fun inject(databaseWorker: DatabaseWorker)
     fun inject(mainActivity: MainActivity)
     fun inject(heroesFragment: HeroesFragment)
     fun inject(itemsFragment: ItemsFragment)

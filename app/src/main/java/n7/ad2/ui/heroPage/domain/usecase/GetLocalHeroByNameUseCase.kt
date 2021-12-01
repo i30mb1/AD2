@@ -11,7 +11,8 @@ class GetLocalHeroByNameUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(name: String): LocalHero = withContext(dispatchers.Default) {
-        heroRepository.getHero(name)
+//        "heroRepository.getHero(name)"
+        LocalHero(0, "", "", false)
     }
 
 }

@@ -14,6 +14,7 @@ interface HasDependencies {
     var dependenciesMap: DependenciesMap
 }
 
+
 inline fun <reified D : Dependencies> Fragment.findDependencies(): D {
     return findDependenciesByClass(D::class.java)
 }

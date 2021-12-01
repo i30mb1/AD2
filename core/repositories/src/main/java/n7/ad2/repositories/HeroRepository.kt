@@ -6,14 +6,14 @@ import android.app.Application
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import kotlinx.coroutines.flow.Flow
-import n7.ad2.database_guides.api.AppDatabase
+import kotlinx.coroutines.flow.emptyFlow
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
 import javax.inject.Inject
 
 class HeroRepository @Inject constructor(
     private val application: Application,
-    private val appDatabase: AppDatabase,
+//    private val appDatabase: AppDatabase,
 ) {
 
     companion object {
@@ -30,19 +30,22 @@ class HeroRepository @Inject constructor(
     }
 
     fun getAllHeroes(): Flow<List<LocalHero>> {
-        return appDatabase.heroesDao.getAllHeroes()
+//        return appDatabase.heroesDao.getAllHeroes()
+        return emptyFlow()
     }
 
     fun updateViewedByUserFieldForName(name: String) {
-        appDatabase.heroesDao.updateViewedByUserFieldForName(name)
+//        appDatabase.heroesDao.updateViewedByUserFieldForName(name)
     }
 
     fun getHeroWithGuides(heroName: String): Flow<LocalHeroWithGuides> {
-        return appDatabase.heroesDao.getHeroWithGuides(heroName)
+//        return appDatabase.heroesDao.getHeroWithGuides(heroName)
+        return emptyFlow()
     }
 
     suspend fun getHero(name: String): LocalHero {
-        return appDatabase.heroesDao.getHero(name)
+//        return appDatabase.heroesDao.getHero(name)
+        return LocalHero(0, "", "", false)
     }
 
     fun getHeroDescription(heroName: String, locale: Locale): String {
