@@ -107,7 +107,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
     }
 
     private fun setupInsets() {
-        ViewCompat.setOnApplyWindowInsetsListener(binding.draggableDrawer) { view, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.fingerCoordinator) { view, insets ->
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
             view.updatePadding(top = statusBarsInsets.top)
             insets

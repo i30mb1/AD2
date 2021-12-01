@@ -4,5 +4,6 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.android))
+    api(Lib.splashScreen)
+    api(Lib.material)
 }

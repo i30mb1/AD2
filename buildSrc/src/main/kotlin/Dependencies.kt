@@ -135,7 +135,6 @@ fun DependencyHandler.addTestDependencies() {
 }
 
 fun DependencyHandler.addBaseDependencies() {
-    implementation(Lib.splashScreen)
     api(Lib.springAnimation)
     api(Lib.springAnimationKtx)
     implementation(Lib.exoPlayerCore)

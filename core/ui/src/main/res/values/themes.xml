@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--White тема-->
-    <style name="AD2Theme">
+    <!--Grey тема-->
+    <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/red_500</item>
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorSecondary">@color/red_500</item>
         <item name="android:colorBackground">@color/gray_500</item>
-        <item name="myBackgroundAD2">@drawable/app_background</item>
         <item name="colorSurface">@color/gray_700</item>
         <item name="colorOnSurface">@color/red_500</item>
 
@@ -27,42 +26,95 @@
 
         <item name="android:windowActivityTransitions">true</item>
 
-        <!--        <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>-->
+        <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
 
         <item name="elevationOverlayEnabled">false</item>
         <item name="elevationOverlayColor">@color/red_500</item>
 
-        <item name="textAppearance.B5">@style/TextAppearance.B5</item>
-        <!--        <item name="textAppearance.B1">@style/TextAppearance.B1</item>-->
-        <!--        <item name="textAppearance.H6.White">@style/TextAppearance.H6.White</item>-->
-        <!--        <item name="textAppearance.H6.White.Bold">@style/TextAppearance.H6.White.Bold</item>-->
-        <!--        <item name="textAppearance.Signature">@style/TextAppearance.Signature</item>-->
-        <!--        <item name="textAppearance.Coordinate">@style/TextAppearance.Coordinate</item>-->
-        <!--        <item name="textAppearance.Signature.White">@style/TextAppearance.Signature.White</item>-->
-        <!--        <item name="textAppearance.Signature.White.Bold">-->
-        <!--            @style/TextAppearance.Signature.White.Bold-->
-        <!--        </item>-->
+        <item name="textAppearance.B1">@style/TextAppearance.B1</item>
+        <item name="textAppearance.H5">@style/TextAppearance.H5</item>
+        <item name="textAppearance.H6.White">@style/TextAppearance.H6.White</item>
+        <item name="textAppearance.H6.White.Bold">@style/TextAppearance.H6.White.Bold</item>
+        <item name="textAppearance.Signature">@style/TextAppearance.Signature</item>
+        <item name="textAppearance.Coordinate">@style/TextAppearance.Coordinate</item>
+        <item name="textAppearance.Signature.White">@style/TextAppearance.Signature.White</item>
+        <item name="textAppearance.Signature.White.Bold">
+            @style/TextAppearance.Signature.White.Bold
+        </item>
 
-        <!--        <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>-->
-        <!--        <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>-->
-        <!--        <item name="textAppearanceCaption">@style/TextAppearance.Caption</item>-->
-        <!--        <item name="textAppearanceButton">@style/TextAppearance.Button</item>-->
-        <!--        <item name="textAppearanceOverline">@style/TextAppearance.OverLine</item>-->
-        <!--        <item name="textAppearanceTalent">@style/TextAppearance.Talent</item>-->
-        <!--        <item name="textAppearanceHeroStatistics">@style/TextAppearance.HeroStatistics</item>-->
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.OverLine</item>
+        <item name="textAppearanceTalent">@style/TextAppearance.Talent</item>
+        <item name="textAppearanceHeroStatistics">@style/TextAppearance.HeroStatistics</item>
 
-        <!--        <item name="textStyleHeroAdvantage">@style/Widget.TextView.HeroAdvantage</item>-->
-        <!--        <item name="textStyleHeroDisadvantage">@style/Widget.TextView.HeroDisadvantage</item>-->
-        <!--        <item name="textStyleHeroGuideItemSignature">@style/Widget.TextView.HeroGuideItemSignature-->
-        <!--        </item>-->
-        <!--        <item name="textStyleItemSignature">@style/Widget.TextView.ItemSignature</item>-->
-        <!--        <item name="textStyleSpellSignature">@style/Widget.TextView.SpellSignature</item>-->
-        <!--        <item name="textStyleHeroGuideTabNumber">@style/Widget.TextView.HeroGuideTabNumber</item>-->
+        <item name="textStyleHeroAdvantage">@style/Widget.TextView.HeroAdvantage</item>
+        <item name="textStyleHeroDisadvantage">@style/Widget.TextView.HeroDisadvantage</item>
+        <item name="textStyleHeroGuideItemSignature">@style/Widget.TextView.HeroGuideItemSignature
+        </item>
+        <item name="textStyleItemSignature">@style/Widget.TextView.ItemSignature</item>
+        <item name="textStyleSpellSignature">@style/Widget.TextView.SpellSignature</item>
+        <item name="textStyleHeroGuideTabNumber">@style/Widget.TextView.HeroGuideTabNumber</item>
 
-        <!--        <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>-->
-        <!--        <item name="materialCardViewStyle">@style/Widget.CardView</item>-->
-        <!--        <item name="recyclerViewStyle">@style/Widget.RecyclerView</item>-->
-        <!--        <item name="tabStyle">@style/Widget.TabLayout</item>-->
+        <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
+        <item name="materialCardViewStyle">@style/Widget.CardView</item>
+        <item name="recyclerViewStyle">@style/Widget.RecyclerView</item>
+        <item name="tabStyle">@style/Widget.TabLayout</item>
+    </style>
+
+    <!--Black тема-->
+    <style name="AD2Theme.Black">
+        <item name="android:statusBarColor">@android:color/black</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorSecondary">@color/purple</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="colorSurface">@android:color/black</item>
+        <item name="colorOnSurface">@color/purple</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@color/black_700</item>
+        <!--        <item name="myBackgroundAD2">@drawable/background_hd_black</item>-->
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/gray_800</item>
+    </style>
+
+    <!--White тема-->
+    <style name="AD2Theme.White">
+        <item name="android:statusBarColor">@android:color/white</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorOnSurface">@color/blue</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--        <item name="myBackgroundAD2">@drawable/background_hd_white</item>-->
+        <item name="myTextColorPrimary">@android:color/black</item>
+        <item name="myTextColorSecondary">@android:color/black</item>
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@color/black_800</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/gray_900</item>
+        <!--цвет неактивных элементов-->
+        <item name="android:colorControlNormal">@color/gray_900</item>
+        <!--тёмные иконки для светкой панели уведомления-->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!--        <item name="android:listDivider">@color/gray_100</item>-->
+        <!--        <item name="android:divider">@color/gray_100</item>-->
+        <!--        <item name="android:dividerHeight">1dp</item>-->
+        <!--        <item name="android:showDividers">middle</item>-->
+    </style>
+
+    <style name="Theme.AppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/gray_500</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/AD2Theme</item>
     </style>
 
 </resources>

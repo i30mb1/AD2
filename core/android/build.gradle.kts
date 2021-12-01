@@ -10,8 +10,8 @@ dependencies {
     api(Lib.appCompat)
     api(Lib.recyclerView)
     api(Lib.paging3)
-    api(Lib.material)
     api(Lib.constraintLayout)
+    api(project(Module.Core.ui))
 
     implementation(Lib.coil)
 }

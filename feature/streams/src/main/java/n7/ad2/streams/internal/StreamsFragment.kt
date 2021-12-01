@@ -18,7 +18,6 @@ import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
-import n7.ad2.logger.AD2Logger
 import n7.ad2.streams.R
 import n7.ad2.streams.databinding.FragmentStreamsBinding
 import n7.ad2.streams.internal.adapter.StreamsItemDecorator
@@ -34,7 +33,6 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
     }
 
     @Inject lateinit var streamsFactory: StreamsViewModel.Factory
-    @Inject lateinit var logger: AD2Logger
 
     private var _binding: FragmentStreamsBinding? = null
     private val binding: FragmentStreamsBinding get() = _binding!!
@@ -49,10 +47,7 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-
-        DaggerStreamsComponent.factory()
-            .create(findDependencies())
-            .inject(this)
+        DaggerStreamsComponent.factory().create(findDependencies()).inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,7 +55,6 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
         _binding = FragmentStreamsBinding.bind(view)
         setupAdapter()
         setupInsets()
-        logger.log("streams fragment created")
         viewModel.error.observe(viewLifecycleOwner) { throwable ->
             if (throwable == null) return@observe
             Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_LONG).show()
