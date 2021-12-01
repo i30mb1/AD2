@@ -34,6 +34,7 @@ import javax.inject.Singleton
         CoroutineModule::class,
         MoshiModule::class,
         RetrofitModule::class,
+        NewApplicationModule::class,
         DatabaseModule::class,
     ]
 )

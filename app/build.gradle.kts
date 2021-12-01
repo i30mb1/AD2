@@ -74,6 +74,7 @@ dependencies {
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.repositories))
     implementation(project(Module.Core.database))
+    implementation(project(Module.Core.provider))
 
     implementation(project(Module.Feature.streams))
     implementation(project(Module.Feature.drawer))

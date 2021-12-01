@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
+import n7.ad2.android.SplashScreenApi
 import n7.ad2.android.TouchEvent
 import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.android.extension.viewModel
@@ -31,6 +32,7 @@ import n7.ad2.drawer.internal.data.remote.VOMenuType
 import n7.ad2.drawer.internal.di.DaggerDrawerComponent
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.logger.AD2Logger
+import n7.ad2.provider.Provider
 import javax.inject.Inject
 
 class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
@@ -41,6 +43,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
 
     @Inject lateinit var logger: AD2Logger
     @Inject lateinit var drawerViewModel: DrawerViewModel.Factory
+    @Inject lateinit var provider: Provider
 //    @Inject lateinit var preferences: AppPreference
 
     private var _binding: FragmentDrawerBinding? = null
@@ -119,7 +122,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
 //            VOMenuType.ITEMS -> ItemsFragment.getInstance()
 //            VOMenuType.NEWS -> NewsFragment.getInstance()
 //            VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
-//            VOMenuType.STREAMS -> StreamsProvider.getStreamsFragment()
+            VOMenuType.STREAMS -> provider.streamApi.getFragment()
 //            VOMenuType.GAMES -> GameFragment.getInstance()
 //            VOMenuType.UNKNOWN -> return
             else -> return
@@ -141,7 +144,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
             .onEach { list ->
                 mainMenuAdapter.submitList(list)
                 setFragment(list.first { menu -> menu.isSelected })
-//                (activity as MainActivity2).shouldKeepOnScreen = false
+                (activity as SplashScreenApi).shouldKeepOnScreen = false
             }
             .launchIn(lifecycleScope)
     }

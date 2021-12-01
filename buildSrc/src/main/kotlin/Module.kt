@@ -9,6 +9,7 @@ object Module {
         const val database = ":core:database"
         const val repositories = ":core:repositories"
         const val ui = ":core:ui"
+        const val provider = ":core:provider"
     }
 
     object Feature {

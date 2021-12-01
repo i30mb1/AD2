@@ -11,6 +11,7 @@ dependencies {
     implementation(project(Module.Core.database))
     implementation(project(Module.Core.repositories))
     implementation(project(Module.Core.logger))
+    implementation(project(Module.Core.provider))
 
     api(Lib.retrofit)
     api(Lib.retrofitMoshiConverter)

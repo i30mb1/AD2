@@ -9,7 +9,6 @@ import n7.ad2.repositories.ItemRepository
 import okhttp3.OkHttpClient
 
 interface StreamsDependencies : Dependencies {
-//    val itemsDao: ItemsDao
     val application: Application
     val logger: AD2Logger
     val itemRepository: ItemRepository

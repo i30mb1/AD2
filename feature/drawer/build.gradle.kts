@@ -10,6 +10,7 @@ dependencies {
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.ui))
+    implementation(project(Module.Core.provider))
 
     api(Lib.retrofit)
     api(Lib.retrofitMoshiConverter)
