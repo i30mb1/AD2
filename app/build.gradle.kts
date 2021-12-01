@@ -77,5 +77,6 @@ dependencies {
     implementation(project(Module.Core.provider))
 
     implementation(project(Module.Feature.streams))
+    implementation(project(Module.Feature.heroes))
     implementation(project(Module.Feature.drawer))
 }

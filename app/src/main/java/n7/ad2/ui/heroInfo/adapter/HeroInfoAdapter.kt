@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.base.adapter.BodyViewHolder
-import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.databinding.ItemBodyLineBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
+import n7.ad2.ui.adapter.HeaderViewHolder
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.PopUpClickableSpan
 import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase

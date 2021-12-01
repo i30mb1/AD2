@@ -14,6 +14,7 @@ object Module {
 
     object Feature {
         const val streams = ":feature:streams"
+        const val heroes = ":feature:heroes"
         const val drawer = ":feature:drawer"
     }
 

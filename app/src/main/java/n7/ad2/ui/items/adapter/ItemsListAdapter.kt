@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
-import n7.ad2.base.adapter.HeaderViewHolder
+import n7.ad2.ui.adapter.HeaderViewHolder
 import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.ui.items.domain.vo.VOItemHeader

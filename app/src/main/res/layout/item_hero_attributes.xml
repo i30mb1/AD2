@@ -2,9 +2,9 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
-    android:stateListAnimator="@animator/spell_selected_animation"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:stateListAnimator="@animator/spell_selected_animation">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,15 +13,14 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <n7.ad2.utils.SelectableImageView
+        <n7.ad2.ui.SelectableImageView
             android:id="@+id/iv_hero"
             android:layout_width="150dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/desc_dota_hero"
             android:cropToPadding="true"
             android:scaleType="centerCrop"
             android:transitionName="iv"
-            tools:src="@drawable/stream_placeholder" />
+            tools:src="@drawable/hero_placeholder" />
 
         <n7.ad2.ui.heroInfo.HeroStatistics
             android:id="@+id/hero_statistics"

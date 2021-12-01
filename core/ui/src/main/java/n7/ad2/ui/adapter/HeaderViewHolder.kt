@@ -1,9 +1,9 @@
-package n7.ad2.base.adapter
+package n7.ad2.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.databinding.ItemHeaderBinding
+import n7.ad2.ui.databinding.ItemHeaderBinding
 
 class HeaderViewHolder private constructor(
     private val binding: ItemHeaderBinding,

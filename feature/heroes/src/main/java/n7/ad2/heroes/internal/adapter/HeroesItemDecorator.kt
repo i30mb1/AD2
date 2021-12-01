@@ -1,11 +1,11 @@
-package n7.ad2.ui.heroes.adapter
+package n7.ad2.heroes.internal.adapter
 
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.ui.heroes.domain.vo.VOHeroBody
-import n7.ad2.utils.extension.toPx
+import n7.ad2.android.extension.toPx
+import n7.ad2.heroes.internal.domain.vo.VOHeroBody
 
 class HeroesItemDecorator : RecyclerView.ItemDecoration() {
 

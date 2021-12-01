@@ -6,7 +6,7 @@ plugins {
 
 
 dependencies {
-    implementation(project(Module.Core.database))
+    api(project(Module.Core.database))
     implementation(project(Module.Core.dagger))
 
     kapt(Lib.daggerAnnotation)

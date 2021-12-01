@@ -12,10 +12,6 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
 
-    api(Lib.retrofit)
-    api(Lib.retrofitMoshiConverter)
-    api(Lib.retrofitInterceptor)
-    api(Lib.retrofitScalars)
     api(Lib.moshi)
 
     kapt(Lib.moshiCodegen)

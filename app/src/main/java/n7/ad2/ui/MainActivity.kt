@@ -22,7 +22,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.updatePadding
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.transition.ChangeBounds
@@ -45,7 +44,6 @@ import n7.ad2.databinding.DialogRateBinding
 import n7.ad2.databinding.DialogUpdateBinding
 import n7.ad2.databinding.DrawerBinding
 import n7.ad2.logger.AD2Logger
-import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.setting.SettingActivity
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe
@@ -98,7 +96,6 @@ class MainActivity : BaseActivity() {
         drawer.setActivity(this)
         setupLoggerAdapter()
         setupSecretActivity()
-        setLastFragment()
         setupInsets()
     }
 
@@ -156,12 +153,6 @@ class MainActivity : BaseActivity() {
         }
 
         ViewCompat.setWindowInsetsAnimationCallback(binding.root, callback)
-    }
-
-    private fun setLastFragment() {
-        supportFragmentManager.commit {
-            replace(binding.container.id, HeroesFragment())
-        }
     }
 
     private fun showDialogUpdate() {

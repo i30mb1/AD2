@@ -118,7 +118,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
         val currentTag = childFragmentManager.fragments.lastOrNull()?.tag
         if (currentTag == menuItem.title) return
         val fragment = when (menuItem.type) {
-//            VOMenuType.HEROES -> HeroesFragment.getInstance()
+            VOMenuType.HEROES -> provider.heroesApi.getFragment()
 //            VOMenuType.ITEMS -> ItemsFragment.getInstance()
 //            VOMenuType.NEWS -> NewsFragment.getInstance()
 //            VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()

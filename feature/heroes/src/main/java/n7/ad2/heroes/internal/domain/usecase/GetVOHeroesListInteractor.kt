@@ -1,21 +1,21 @@
-package n7.ad2.ui.heroes.domain.usecase
+package n7.ad2.heroes.internal.domain.usecase
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
-import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
+import n7.ad2.heroes.internal.domain.vo.VOHero
+import n7.ad2.heroes.internal.domain.vo.VOHeroBody
+import n7.ad2.heroes.internal.domain.vo.VOHeroHeader
 import n7.ad2.logger.AD2Logger
 import n7.ad2.repositories.HeroRepository
-import n7.ad2.ui.heroes.domain.vo.VOHero
-import n7.ad2.ui.heroes.domain.vo.VOHeroBody
-import n7.ad2.ui.heroes.domain.vo.VOHeroHeader
+import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
-class GetVOHeroesListInteractor @Inject constructor(
+class GetVOHeroesListUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
     private val heroRepository: HeroRepository,
     private val logger: AD2Logger,
@@ -31,7 +31,7 @@ class GetVOHeroesListInteractor @Inject constructor(
                         .forEach { map: Map.Entry<String, List<LocalHero>> ->
                             result.add(VOHeroHeader(HeaderViewHolder.Data(map.key)))
                             result.addAll(map.value.map { localHero ->
-                                VOHeroBody(localHero.name, n7.ad2.repositories.HeroRepository.getFullUrlHeroImage(localHero.name), localHero.viewedByUser)
+                                VOHeroBody(localHero.name, HeroRepository.getFullUrlHeroImage(localHero.name), localHero.viewedByUser)
                             })
                         }
                     emit(result.toList())

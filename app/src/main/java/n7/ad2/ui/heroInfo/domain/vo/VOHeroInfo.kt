@@ -3,7 +3,7 @@ package n7.ad2.ui.heroInfo.domain.vo
 import android.text.SpannableString
 import androidx.annotation.DrawableRes
 import n7.ad2.base.adapter.BodyViewHolder
-import n7.ad2.base.adapter.HeaderViewHolder
+import n7.ad2.ui.adapter.HeaderViewHolder
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroPage.Playable
 

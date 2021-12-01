@@ -17,14 +17,14 @@ internal class StreamSimpleViewHolder(
         vOSimpleStream: VOStream.Simple,
         onStreamClick: (voStream: VOStream) -> Unit,
     ) = binding.apply {
-        binding.tvTitle.text = vOSimpleStream.title
-        binding.root.setOnClickListener { onStreamClick(vOSimpleStream) }
-        binding.ivStreamImage.load(vOSimpleStream.imageUrl, R.drawable.stream_placeholder)
+        tvTitle.text = vOSimpleStream.title
+        root.setOnClickListener { onStreamClick(vOSimpleStream) }
+        ivStreamImage.load(vOSimpleStream.imageUrl, R.drawable.stream_placeholder)
     }
 
-    fun unbind() {
-        binding.root.setOnClickListener(null)
-        binding.ivStreamImage.clear()
+    fun unbind() = binding.apply {
+        root.setOnClickListener(null)
+        ivStreamImage.clear()
     }
 
     companion object {

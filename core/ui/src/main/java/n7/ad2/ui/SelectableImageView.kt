@@ -1,4 +1,4 @@
-package n7.ad2.utils
+package n7.ad2.ui
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -7,12 +7,11 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
-import n7.ad2.R
-import n7.ad2.utils.extension.themeColor
+import n7.ad2.android.extension.themeColor
 
 class SelectableImageView(
-        context: Context,
-        attributeSet: AttributeSet
+    context: Context,
+    attributeSet: AttributeSet,
 ) : AppCompatImageView(context, attributeSet) {
 
     private val borderWidth = resources.getDimension(R.dimen.line_width)

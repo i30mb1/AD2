@@ -5,9 +5,9 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
-import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.logger.AD2Logger
+import n7.ad2.ui.adapter.HeaderViewHolder
 import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.ui.items.domain.vo.VOItemHeader

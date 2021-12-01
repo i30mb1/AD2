@@ -1,6 +1,6 @@
-package n7.ad2.ui.heroes.domain.vo
+package n7.ad2.heroes.internal.domain.vo
 
-import n7.ad2.base.adapter.HeaderViewHolder
+import n7.ad2.ui.adapter.HeaderViewHolder
 
 sealed class VOHero
 data class VOHeroBody(val name: String, val imageUrl: String, val viewedByUser: Boolean) : VOHero()

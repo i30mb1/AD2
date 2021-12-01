@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AD2StringParser
 import n7.ad2.R
 import n7.ad2.base.adapter.BodyViewHolder
-import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.data.source.local.Locale
 import n7.ad2.logger.AD2Logger
+import n7.ad2.ui.adapter.HeaderViewHolder
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo

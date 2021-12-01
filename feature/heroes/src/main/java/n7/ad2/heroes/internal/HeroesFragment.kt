@@ -1,10 +1,10 @@
-package n7.ad2.ui.heroes
+package n7.ad2.heroes.internal
 
+import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
-import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -12,21 +12,19 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import n7.ad2.R
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.database_guides.internal.worker.DatabaseWorker
-import n7.ad2.databinding.FragmentHeroesBinding
-import n7.ad2.di.injector
-import n7.ad2.ui.MainActivity2
-import n7.ad2.ui.heroes.adapter.HeroesItemDecorator
-import n7.ad2.ui.heroes.adapter.HeroesListAdapter
-import n7.ad2.ui.heroes.domain.vo.VOHeroBody
-import n7.ad2.utils.lazyUnsafe
-import n7.ad2.utils.viewModel
+import n7.ad2.android.extension.lazyUnsafe
+import n7.ad2.android.extension.viewModel
+import n7.ad2.android.findDependencies
+import n7.ad2.heroes.R
+import n7.ad2.heroes.databinding.FragmentHeroesBinding
+import n7.ad2.heroes.internal.adapter.HeroesItemDecorator
+import n7.ad2.heroes.internal.adapter.HeroesListAdapter
+import n7.ad2.heroes.internal.di.DaggerHeroesComponent
+import n7.ad2.heroes.internal.domain.vo.VOHeroBody
+import javax.inject.Inject
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
@@ -34,45 +32,32 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         fun getInstance(): HeroesFragment = HeroesFragment()
     }
 
+    @Inject lateinit var heroesViewModel: HeroesViewModel.Factory
+
     private var _binding: FragmentHeroesBinding? = null
     private val binding: FragmentHeroesBinding get() = _binding!!
     private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, onHeroClick) }
-    private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
+    private val viewModel: HeroesViewModel by viewModel { heroesViewModel.create() }
     private val heroesItemDecorator = HeroesItemDecorator()
     private val onHeroClick: (hero: VOHeroBody) -> Unit = { hero -> startHeroFragment(hero) }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val request = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
-        WorkManager.getInstance(requireContext()).enqueue(request)
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        DaggerHeroesComponent.factory().create(findDependencies()).inject(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         // implement search for last queries https://developer.android.com/guide/topics/search/adding-recent-query-suggestions
-        inflater.inflate(R.menu.menu_search, menu)
-        val searchHero = menu.findItem(R.id.action_search)
-        val searchView = searchHero.actionView as SearchView
-
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean = false
-
-            override fun onQueryTextChange(newText: String): Boolean {
-                viewModel.filterHeroes(newText)
-                return true
-            }
-        })
     }
 
     private fun startHeroFragment(model: VOHeroBody) {
-        (activity as MainActivity2).openHeroPageFragment(model.name)
+//        (activity as MainActivity2).openHeroPageFragment(model.name)
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHeroesBinding.bind(view)
-        requireActivity().setTitle(R.string.heroes)
-        setHasOptionsMenu(true) //вызов метода onCreateOptionsMenu в фрагменте
         setupAdapter()
     }
 

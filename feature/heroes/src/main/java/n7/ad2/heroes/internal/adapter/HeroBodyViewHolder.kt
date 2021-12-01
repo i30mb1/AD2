@@ -1,14 +1,14 @@
-package n7.ad2.ui.heroes.adapter
+package n7.ad2.heroes.internal.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.R
 import n7.ad2.android.extension.clear
 import n7.ad2.android.extension.load
-import n7.ad2.databinding.ItemHeroBodyBinding
-import n7.ad2.ui.heroes.domain.vo.VOHeroBody
+import n7.ad2.heroes.R
+import n7.ad2.heroes.databinding.ItemHeroBodyBinding
+import n7.ad2.heroes.internal.domain.vo.VOHeroBody
 
 class HeroBodyViewHolder private constructor(
     private val binding: ItemHeroBodyBinding,
