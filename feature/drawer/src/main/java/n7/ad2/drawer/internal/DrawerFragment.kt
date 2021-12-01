@@ -9,31 +9,28 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
+import n7.ad2.android.TouchEvent
 import n7.ad2.android.extension.lazyUnsafe
-import n7.ad2.data.source.remote.model.VOMenuType
-import n7.ad2.di.injector
+import n7.ad2.android.extension.viewModel
+import n7.ad2.android.findDependencies
 import n7.ad2.drawer.R
 import n7.ad2.drawer.databinding.FragmentDrawerBinding
-import n7.ad2.drawer.databinding.FragmentMainBinding
-import n7.ad2.games.GameFragment
+import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter
+import n7.ad2.drawer.internal.adapter.MainMenuListAdapter
+import n7.ad2.drawer.internal.data.remote.VOMenuType
+import n7.ad2.drawer.internal.di.DaggerDrawerComponent
+import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.logger.AD2Logger
-import n7.ad2.news.NewsFragment
-import n7.ad2.streams.api.StreamsProvider
-import n7.ad2.tournaments.TournamentsFragment
-import n7.ad2.ui.MainActivity2
-import n7.ad2.ui.heroes.HeroesFragment
-import n7.ad2.ui.items.ItemsFragment
-import n7.ad2.ui.main.adapter.MainMenuListAdapter
-import n7.ad2.ui.main.domain.vo.VOMenu
-import n7.ad2.utils.viewModel
 import javax.inject.Inject
 
 class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
@@ -43,12 +40,13 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
     }
 
     @Inject lateinit var logger: AD2Logger
+    @Inject lateinit var drawerViewModel: DrawerViewModel.Factory
 //    @Inject lateinit var preferences: AppPreference
 
     private var _binding: FragmentDrawerBinding? = null
     private val binding: FragmentDrawerBinding get() = _binding!!
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
-    private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
+    private val viewModel: DrawerViewModel by viewModel { drawerViewModel.create() }
     private val onMenuItemClick: (menuItem: VOMenu) -> Unit = { menuItem: VOMenu ->
         if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {
             Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
@@ -59,12 +57,12 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        injector.inject(this)
+        DaggerDrawerComponent.factory().create(findDependencies()).inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentMainBinding.bind(view)
+        _binding = FragmentDrawerBinding.bind(view)
 
         setupMenuAdapter()
         setupFingerCoordinator()
@@ -106,7 +104,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
     }
 
     private fun setupInsets() {
-        ViewCompat.setOnApplyWindowInsetsListener(binding.fingerCoordinator) { view, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.draggableDrawer) { view, insets ->
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
             view.updatePadding(top = statusBarsInsets.top)
             insets
@@ -117,13 +115,14 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
         val currentTag = childFragmentManager.fragments.lastOrNull()?.tag
         if (currentTag == menuItem.title) return
         val fragment = when (menuItem.type) {
-            VOMenuType.HEROES -> HeroesFragment.getInstance()
-            VOMenuType.ITEMS -> ItemsFragment.getInstance()
-            VOMenuType.NEWS -> NewsFragment.getInstance()
-            VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
-            VOMenuType.STREAMS -> StreamsProvider.getStreamsFragment()
-            VOMenuType.GAMES -> GameFragment.getInstance()
-            VOMenuType.UNKNOWN -> return
+//            VOMenuType.HEROES -> HeroesFragment.getInstance()
+//            VOMenuType.ITEMS -> ItemsFragment.getInstance()
+//            VOMenuType.NEWS -> NewsFragment.getInstance()
+//            VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
+//            VOMenuType.STREAMS -> StreamsProvider.getStreamsFragment()
+//            VOMenuType.GAMES -> GameFragment.getInstance()
+//            VOMenuType.UNKNOWN -> return
+            else -> return
         }
         childFragmentManager.commit {
             replace(binding.container.id, fragment, menuItem.title)
@@ -142,7 +141,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
             .onEach { list ->
                 mainMenuAdapter.submitList(list)
                 setFragment(list.first { menu -> menu.isSelected })
-                (activity as MainActivity2).shouldKeepOnScreen = false
+//                (activity as MainActivity2).shouldKeepOnScreen = false
             }
             .launchIn(lifecycleScope)
     }
@@ -154,8 +153,8 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
     }
 
     private fun setupLoggerAdapter() = lifecycleScope.launch {
-        val shouldDisplayLog = preferences.isShowFingerCoordinate()
-        if (!shouldDisplayLog) return@launch
+//        val shouldDisplayLog = preferences.isShowFingerCoordinate()
+//        if (!shouldDisplayLog) return@launch
         logger.getLogFlow()
             .onEach(loggerAdapter::add)
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="heroes">Герои</string>
+    <string name="tournaments">Турниры</string>
+    <string name="items">Предметы</string>
+    <string name="news">Новости</string>
+    <string name="streams">Стримы</string>
+    <string name="games">Игры</string>
+    <string name="main_press_again_to_exit">нажмите снова для выхода</string>
+    <string name="item_disabled">Этот пункт меню временно отключен!</string>
+</resources>

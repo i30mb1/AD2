@@ -3,7 +3,7 @@ package n7.ad2.data.source.remote.adapter
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonQualifier
 import com.squareup.moshi.ToJson
-import n7.ad2.data.source.remote.model.VOMenuType
+import n7.ad2.drawer.internal.data.remote.VOMenuType
 
 @Retention(AnnotationRetention.RUNTIME)
 @JsonQualifier

@@ -2,14 +2,10 @@
 <resources>
     <string name="hero_response_ringtone_set">Устанавливаем…</string>
     <string name="hero_personal_tip_manta_descr">показывает может ли выбранная способность работать у иллюзий</string>
-    <string name="news">Новости</string>
-    <string name="streams">Стримы</string>
-    <string name="heroes">Герои</string>
-    <string name="games">Игры</string>
+
     <string name="all_new_version">Новая версия</string>
     <string name="all_error_internet">Недоступно без интернета</string>
     <string name="all_check_update">Проверить обновление</string>
-    <string name="main_press_again_to_exit">нажмите снова для выхода</string>
     <string name="setting">Настройки</string>
     <string name="setting_category_about_title">О ПРИЛОЖЕНИИ</string>
     <string name="setting_category_setting_title">НАСТРОЙКИ</string>
@@ -46,14 +42,12 @@
     <string name="tips">Советы</string>
     <string name="abilities">Способность : %s</string>
     <string name="lore">Лор</string>
-    <string name="items">Предметы</string>
     <string name="dialog_response_download">Скачать</string>
     <string name="dialog_response_set_ringtone">Поставить на рингтон</string>
     <string name="open_file">Открыть</string>
     <string name="hero_responses_fragment_download_first">Скачайте звук</string>
     <string name="hero_responses_sound_already_downloaded">Звук уже скачан</string>
     <string name="notification_game_title">Игра началась</string>
-    <string name="tournaments">Турниры</string>
     <string name="item_hero_personal_info_desc">Информация</string>
     <string name="item_hero_personal_trivia_desc">Факты</string>
     <string name="all_open_folder">Открыть</string>
@@ -141,6 +135,5 @@
     <string name="popup_aghanim">улучшается при покупке аганима</string>
     <string name="popup_saved">сохранён в памяти</string>
 
-    <string name="item_disabled">Этот пункт меню временно отключен!</string>
 
 </resources>

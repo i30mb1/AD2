@@ -5,13 +5,14 @@ import android.view.MotionEvent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.commit
+import n7.ad2.android.DrawerNavigator
+import n7.ad2.android.TouchEvent
 import n7.ad2.databinding.ActivityMain2Binding
-import n7.ad2.drawer.internal.MainFragment
-import n7.ad2.ui.main.TouchEvent
+import n7.ad2.drawer.internal.DrawerFragment
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe
 
-class MainActivity2 : BaseActivity(), TouchEvent {
+class MainActivity2 : BaseActivity(), TouchEvent, DrawerNavigator {
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
     var shouldKeepOnScreen = true
@@ -26,10 +27,14 @@ class MainActivity2 : BaseActivity(), TouchEvent {
         setupInsets()
         if (savedInstanceState == null) {
             supportFragmentManager.commit(true) {
-                val mainFragment = n7.ad2.drawer.internal.MainFragment.getInstance()
+                val mainFragment = DrawerFragment.getInstance()
                 add(binding.container.id, mainFragment)
             }
         }
+    }
+
+    override fun openStreamsFragment() {
+
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {

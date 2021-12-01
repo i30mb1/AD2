@@ -4,7 +4,6 @@ import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import n7.ad2.BuildConfig
-import n7.ad2.data.source.remote.retrofit.SettingsApi
 import n7.ad2.data.source.remote.retrofit.TwitchGQLApi
 import n7.ad2.data.source.remote.retrofit.TwitchHLSApi
 import okhttp3.OkHttpClient
@@ -46,7 +45,7 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideSettingsApi(client: OkHttpClient, moshi: Moshi): SettingsApi = SettingsApi.get(client, moshi)
+    fun provideSettingsApi(client: OkHttpClient, moshi: Moshi): n7.ad2.drawer.internal.data.remote.SettingsApi = n7.ad2.drawer.internal.data.remote.SettingsApi.get(client, moshi)
 
     @Provides
     @Singleton

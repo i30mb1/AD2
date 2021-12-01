@@ -1,12 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">AD2</string>
     <string name="toolbar_search_hint">Search by name&#8230;</string>
-    <string name="heroes">Heroes</string>
-    <string name="items">Items</string>
-    <string name="news">News</string>
-    <string name="tournaments">Tournaments</string>
-    <string name="games">Games</string>
-    <string name="streams">Streams</string>
 
     <!--preferenses-->
     <string name="setting">Setting</string>
@@ -65,7 +59,6 @@
     <string name="all_check_update">check update</string>
     <string name="all_error_internet">Can\'t loading without internet connection</string>
     <string name="update_ok">no need to update</string>
-    <string name="main_press_again_to_exit">press again to exit</string>
     <string name="hero_info">info</string>
     <string name="hero_sound">sounds</string>
     <string name="hero_guide">guide</string>
@@ -235,8 +228,5 @@
     <string name="popup_talent">improves upon talent selection</string>
     <string name="popup_aghanim">improves when buying aghanim</string>
     <string name="popup_saved">saved in memory</string>
-
-    <string name="item_disabled">This item currently disabled!</string>
-    <string name="desc_background" translatable="false">background</string>
 
 </resources>

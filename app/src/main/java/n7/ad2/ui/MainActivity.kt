@@ -44,15 +44,11 @@ import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.databinding.DialogRateBinding
 import n7.ad2.databinding.DialogUpdateBinding
 import n7.ad2.databinding.DrawerBinding
-import n7.ad2.di.injector
-import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter
 import n7.ad2.logger.AD2Logger
 import n7.ad2.ui.heroes.HeroesFragment
-import n7.ad2.ui.main.MainViewModel
 import n7.ad2.ui.setting.SettingActivity
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe
-import n7.ad2.utils.viewModel
 import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
@@ -77,7 +73,6 @@ class MainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true
-    private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
     private var shouldDisplayLog = false
     private var appUpdateManager: AppUpdateManager? = null
     var UpdateListener: InstallStateUpdatedListener = object : InstallStateUpdatedListener {
@@ -100,7 +95,6 @@ class MainActivity : BaseActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
-        drawer.setViewModel(viewModel)
         drawer.setActivity(this)
         setupLoggerAdapter()
         setupSecretActivity()
@@ -204,7 +198,6 @@ class MainActivity : BaseActivity() {
 
     private fun setupSecretActivity() {
         constraintSetOrigin.clone(drawer.root as ConstraintLayout)
-        constraintSetHidden.clone(this, R.layout.drawer_hidden)
         currentSet = constraintSetOrigin
     }
 

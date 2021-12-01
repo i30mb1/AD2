@@ -9,6 +9,7 @@ dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.logger))
+    implementation(project(Module.Core.ui))
 
     api(Lib.retrofit)
     api(Lib.retrofitMoshiConverter)

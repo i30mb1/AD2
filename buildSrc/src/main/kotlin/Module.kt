@@ -8,6 +8,7 @@ object Module {
         const val coroutines = ":core:coroutines"
         const val database = ":core:database"
         const val repositories = ":core:repositories"
+        const val ui = ":core:ui"
     }
 
     object Feature {

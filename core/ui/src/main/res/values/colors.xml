@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--серая тема-->
+    <color name="primary_text">#fff</color>
+    <color name="transparent">#25000000</color>
+    <color name="gray_100">#C1C2C3</color>
+    <color name="gray_700">#2F3136</color>
+    <color name="gray_500">#202225</color>
+    <color name="red_500">#f44336</color>
+    <!--чёрная тема-->
+    <color name="black_700">#17161A</color>
+    <color name="purple">#4F009F</color>
+    <color name="gray_800">#757575</color>
+    <!--светлая тема-->
+    <color name="blue">#448aff</color>
+    <color name="black_800">#212121</color>
+    <color name="gray_900">#757575</color>
+
+    <!--<color name="discordTextUser">#C3C4C5</color>-->
+    <!--<color name="discordImportantTextUser">#00B0F4</color>-->
+    <!--<color name="colorImportant">#ffcb05</color>-->
+
+</resources>

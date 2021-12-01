@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="heroes">Heroes</string>
+    <string name="items">Items</string>
+    <string name="news">News</string>
+    <string name="tournaments">Tournaments</string>
+    <string name="games">Games</string>
+    <string name="streams">Streams</string>
+    <string name="main_press_again_to_exit">press again to exit</string>
+    <string name="item_disabled">This item currently disabled!</string>
+
+    <string name="desc_background" translatable="false">background</string>
+</resources>
