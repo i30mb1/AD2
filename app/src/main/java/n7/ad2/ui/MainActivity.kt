@@ -45,9 +45,9 @@ import n7.ad2.databinding.DialogRateBinding
 import n7.ad2.databinding.DialogUpdateBinding
 import n7.ad2.databinding.DrawerBinding
 import n7.ad2.di.injector
+import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter
 import n7.ad2.logger.AD2Logger
 import n7.ad2.ui.heroes.HeroesFragment
-import n7.ad2.ui.main.AD2LoggerAdapter
 import n7.ad2.ui.main.MainViewModel
 import n7.ad2.ui.setting.SettingActivity
 import n7.ad2.utils.BaseActivity
@@ -73,7 +73,7 @@ class MainActivity : BaseActivity() {
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
     private var currentSet: ConstraintSet? = null
-    private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
+    private val loggerAdapter: n7.ad2.drawer.internal.adapter.AD2LoggerAdapter by lazyUnsafe { n7.ad2.drawer.internal.adapter.AD2LoggerAdapter(layoutInflater) }
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true

@@ -1,4 +1,4 @@
-package n7.ad2.ui.main
+package n7.ad2.drawer.internal
 
 import android.os.Bundle
 import android.view.View
@@ -9,21 +9,20 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import n7.ad2.R
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.data.source.local.AppPreference
+import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.data.source.remote.model.VOMenuType
-import n7.ad2.databinding.FragmentMainBinding
 import n7.ad2.di.injector
+import n7.ad2.drawer.R
+import n7.ad2.drawer.databinding.FragmentDrawerBinding
+import n7.ad2.drawer.databinding.FragmentMainBinding
 import n7.ad2.games.GameFragment
 import n7.ad2.logger.AD2Logger
 import n7.ad2.news.NewsFragment
@@ -34,21 +33,20 @@ import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.main.adapter.MainMenuListAdapter
 import n7.ad2.ui.main.domain.vo.VOMenu
-import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 import javax.inject.Inject
 
-class MainFragment : Fragment(R.layout.fragment_main), DrawerPercentListener {
+class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
 
     companion object {
-        fun getInstance() = MainFragment()
+        fun getInstance() = DrawerFragment()
     }
 
     @Inject lateinit var logger: AD2Logger
-    @Inject lateinit var preferences: AppPreference
+//    @Inject lateinit var preferences: AppPreference
 
-    private var _binding: FragmentMainBinding? = null
-    private val binding: FragmentMainBinding get() = _binding!!
+    private var _binding: FragmentDrawerBinding? = null
+    private val binding: FragmentDrawerBinding get() = _binding!!
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
     private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
     private val onMenuItemClick: (menuItem: VOMenu) -> Unit = { menuItem: VOMenu ->

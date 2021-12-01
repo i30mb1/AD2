@@ -6,6 +6,7 @@ import dagger.Component
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.database_guides.api.DatabaseModule
+import n7.ad2.drawer.internal.MainFragment
 import n7.ad2.news.NewsViewModel
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.TournamentsViewModel
@@ -24,7 +25,6 @@ import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.main.DraggableDrawer
-import n7.ad2.ui.main.MainFragment
 import n7.ad2.ui.main.MainViewModel
 import n7.ad2.ui.streams.StreamViewModel
 import javax.inject.Singleton
@@ -70,7 +70,7 @@ interface ApplicationComponent {
     fun inject(heroesFragment: HeroesFragment)
     fun inject(itemsFragment: ItemsFragment)
     fun inject(mainActivity2: MainActivity2)
-    fun inject(mainFragment: MainFragment)
+    fun inject(mainFragment: n7.ad2.drawer.internal.MainFragment)
     fun inject(draggableDrawer: DraggableDrawer)
     fun inject(heroInfoFragment: HeroInfoFragment)
     fun inject(heroGuideWorker: HeroGuideWorker)
