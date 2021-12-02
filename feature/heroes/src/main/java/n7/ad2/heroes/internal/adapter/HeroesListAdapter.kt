@@ -8,23 +8,21 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.heroes.R
 import n7.ad2.heroes.internal.domain.vo.VOHero
-import n7.ad2.heroes.internal.domain.vo.VOHeroBody
-import n7.ad2.heroes.internal.domain.vo.VOHeroHeader
 import n7.ad2.ui.adapter.HeaderViewHolder
 
 class HeroesListAdapter(
     private val layoutInflater: LayoutInflater,
-    onHeroClick: (hero: VOHeroBody) -> Unit,
+    onHeroClick: (hero: VOHero.Body) -> Unit,
 ) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener { view ->
-        val hero = view.getTag(R.id.ViewHolderModel) as VOHeroBody
+        val hero = view.getTag(R.id.ViewHolderModel) as VOHero.Body
         onHeroClick(hero)
     }
 
     override fun getItemViewType(position: Int) = when (getItem(position)) {
-        is VOHeroBody -> R.layout.item_hero_body
-        is VOHeroHeader -> R.layout.item_header
+        is VOHero.Body -> R.layout.item_hero_body
+        is VOHero.Header -> R.layout.item_header
         else -> throw UnsupportedOperationException("could not get type for item ${getItem(position)}")
     }
 
@@ -37,8 +35,8 @@ class HeroesListAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
-            is HeroBodyViewHolder -> if (item != null) holder.bind(item as VOHeroBody) else holder.clear()
-            is HeaderViewHolder -> if (item != null) holder.bind((item as VOHeroHeader).data) else holder.clear()
+            is HeroBodyViewHolder -> if (item != null) holder.bind(item as VOHero.Body) else holder.clear()
+            is HeaderViewHolder -> if (item != null) holder.bind((item as VOHero.Header).data) else holder.clear()
             else -> throw UnsupportedOperationException("could not bind for $holder")
         }
     }

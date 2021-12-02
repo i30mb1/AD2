@@ -23,7 +23,7 @@ import n7.ad2.heroes.databinding.FragmentHeroesBinding
 import n7.ad2.heroes.internal.adapter.HeroesItemDecorator
 import n7.ad2.heroes.internal.adapter.HeroesListAdapter
 import n7.ad2.heroes.internal.di.DaggerHeroesComponent
-import n7.ad2.heroes.internal.domain.vo.VOHeroBody
+import n7.ad2.heroes.internal.domain.vo.VOHero
 import javax.inject.Inject
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
@@ -39,7 +39,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, onHeroClick) }
     private val viewModel: HeroesViewModel by viewModel { heroesViewModel.create() }
     private val heroesItemDecorator = HeroesItemDecorator()
-    private val onHeroClick: (hero: VOHeroBody) -> Unit = { hero -> startHeroFragment(hero) }
+    private val onHeroClick: (hero: VOHero.Body) -> Unit = { hero -> startHeroFragment(hero) }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -50,7 +50,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         // implement search for last queries https://developer.android.com/guide/topics/search/adding-recent-query-suggestions
     }
 
-    private fun startHeroFragment(model: VOHeroBody) {
+    private fun startHeroFragment(model: VOHero.Body) {
 //        (activity as MainActivity2).openHeroPageFragment(model.name)
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
     }

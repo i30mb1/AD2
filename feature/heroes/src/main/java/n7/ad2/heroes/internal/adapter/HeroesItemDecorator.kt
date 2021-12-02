@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.android.extension.dpToPx
-import n7.ad2.heroes.internal.domain.vo.VOHeroBody
+import n7.ad2.heroes.internal.domain.vo.VOHero
 
 class HeroesItemDecorator : RecyclerView.ItemDecoration() {
 
@@ -26,7 +26,10 @@ class HeroesItemDecorator : RecyclerView.ItemDecoration() {
         val childCount = (parent.adapter as HeroesListAdapter).currentList.count()
         val itemsInEnd = when {
             position < childCount - spanCount -> 0
-            else -> (parent.adapter as HeroesListAdapter).currentList.reversed().takeWhile { it is VOHeroBody }.count() % spanCount
+            else -> {
+                val items = (parent.adapter as HeroesListAdapter).currentList.reversed().takeWhile { it is VOHero.Body }.count() % spanCount
+                if (items == 0) spanCount else items
+            }
         }
 
         with(outRect) {

@@ -8,13 +8,13 @@ import n7.ad2.android.extension.clear
 import n7.ad2.android.extension.load
 import n7.ad2.heroes.R
 import n7.ad2.heroes.databinding.ItemHeroBodyBinding
-import n7.ad2.heroes.internal.domain.vo.VOHeroBody
+import n7.ad2.heroes.internal.domain.vo.VOHero
 
 class HeroBodyViewHolder private constructor(
     private val binding: ItemHeroBodyBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(hero: VOHeroBody) = binding.apply {
+    fun bind(hero: VOHero.Body) = binding.apply {
         ivImage.load(hero.imageUrl, R.drawable.stream_placeholder)
         tvTitle.text = hero.name
         ivImage.isSelected = hero.viewedByUser

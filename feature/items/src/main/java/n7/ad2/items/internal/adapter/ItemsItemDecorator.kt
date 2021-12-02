@@ -26,7 +26,10 @@ class ItemsItemDecorator : RecyclerView.ItemDecoration() {
         val childCount = (parent.adapter as ItemsListAdapter).currentList.count()
         val itemsInEnd = when {
             position < childCount - spanCount -> 0
-            else -> (parent.adapter as ItemsListAdapter).currentList.reversed().takeWhile { it is VOItem.Body }.count() % spanCount
+            else -> {
+                val items = (parent.adapter as ItemsListAdapter).currentList.reversed().takeWhile { it is VOItem.Body }.count() % spanCount
+                if (items == 0) spanCount else items
+            }
         }
 
         with(outRect) {

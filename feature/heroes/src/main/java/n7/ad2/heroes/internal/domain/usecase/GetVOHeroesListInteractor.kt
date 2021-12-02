@@ -8,8 +8,6 @@ import kotlinx.coroutines.flow.onStart
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.heroes.internal.domain.vo.VOHero
-import n7.ad2.heroes.internal.domain.vo.VOHeroBody
-import n7.ad2.heroes.internal.domain.vo.VOHeroHeader
 import n7.ad2.logger.AD2Logger
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
@@ -29,9 +27,9 @@ class GetVOHeroesListUseCase @Inject constructor(
                 flow {
                     list.groupBy { localHero: LocalHero -> localHero.mainAttr }
                         .forEach { map: Map.Entry<String, List<LocalHero>> ->
-                            result.add(VOHeroHeader(HeaderViewHolder.Data(map.key)))
+                            result.add(VOHero.Header(HeaderViewHolder.Data(map.key)))
                             result.addAll(map.value.map { localHero ->
-                                VOHeroBody(localHero.name, HeroRepository.getFullUrlHeroImage(localHero.name), localHero.viewedByUser)
+                                VOHero.Body(localHero.name, HeroRepository.getFullUrlHeroImage(localHero.name), localHero.viewedByUser)
                             })
                         }
                     emit(result.toList())
