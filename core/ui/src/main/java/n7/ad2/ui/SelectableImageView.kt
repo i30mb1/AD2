@@ -7,7 +7,6 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
-import n7.ad2.android.extension.themeColor
 
 class SelectableImageView(
     context: Context,

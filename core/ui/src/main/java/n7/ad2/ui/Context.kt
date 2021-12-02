@@ -1,4 +1,4 @@
-package n7.ad2.android.extension
+package n7.ad2.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
