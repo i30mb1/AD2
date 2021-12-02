@@ -40,7 +40,7 @@ class PopulateItemsDatabaseUseCase @Inject constructor(
         }
 
         itemsDao.insert(result)
-        logger.log("Items loaded in DB")
+        logger.log("db filled with items")
         emit(true)
     }.flowOn(dispatcher.IO)
 
