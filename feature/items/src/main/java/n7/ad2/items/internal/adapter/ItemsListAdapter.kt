@@ -1,22 +1,20 @@
-package n7.ad2.ui.items.adapter
+package n7.ad2.items.internal.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.R
+import n7.ad2.items.R
+import n7.ad2.items.internal.domain.vo.VOItem
 import n7.ad2.ui.adapter.HeaderViewHolder
-import n7.ad2.ui.items.domain.vo.VOItem
-import n7.ad2.ui.items.domain.vo.VOItemBody
-import n7.ad2.ui.items.domain.vo.VOItemHeader
 
 class ItemsListAdapter(
     private val layoutInflater: LayoutInflater,
-    onItemClick: (hero: VOItemBody) -> Unit,
+    onItemClick: (hero: VOItem.Body) -> Unit,
 ) : ListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
-    private val itemClickListener = { model: VOItemBody ->
+    private val itemClickListener = { model: VOItem.Body ->
         onItemClick(model)
     }
 
@@ -29,8 +27,8 @@ class ItemsListAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
-            is ItemBodyViewHolder -> if (item != null) holder.bind(item as VOItemBody) else holder.clear()
-            is HeaderViewHolder -> if (item != null) holder.bind((item as VOItemHeader).data) else holder.clear()
+            is ItemBodyViewHolder -> if (item != null) holder.bind(item as VOItem.Body) else holder.clear()
+            is HeaderViewHolder -> if (item != null) holder.bind((item as VOItem.Header).data) else holder.clear()
         }
     }
 
@@ -44,8 +42,8 @@ class ItemsListAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
-            is VOItemBody -> R.layout.item_item_body
-            is VOItemHeader -> R.layout.item_header
+            is VOItem.Body -> R.layout.item_item_body
+            is VOItem.Header -> R.layout.item_header
             else -> super.getItemViewType(position)
         }
     }

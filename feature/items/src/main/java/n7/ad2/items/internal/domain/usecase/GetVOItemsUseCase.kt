@@ -1,4 +1,4 @@
-package n7.ad2.ui.items.domain.usecase
+package n7.ad2.items.internal.domain.usecase
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flatMapLatest
@@ -6,17 +6,16 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.items.internal.domain.vo.VOItem
 import n7.ad2.logger.AD2Logger
+import n7.ad2.repositories.ItemRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
-import n7.ad2.ui.items.domain.vo.VOItem
-import n7.ad2.ui.items.domain.vo.VOItemBody
-import n7.ad2.ui.items.domain.vo.VOItemHeader
 import javax.inject.Inject
 
 class GetVOItemsUseCase @Inject constructor(
-    private val dispatchers: DispatchersProvider,
-    private val itemRepository: n7.ad2.repositories.ItemRepository,
     private val logger: AD2Logger,
+    private val itemRepository: ItemRepository,
+    private val dispatchers: DispatchersProvider,
 ) {
 
     operator fun invoke(): Flow<List<VOItem>> {
@@ -27,9 +26,9 @@ class GetVOItemsUseCase @Inject constructor(
                 flow {
                     list.groupBy { localItem -> localItem.type }
                         .forEach { map: Map.Entry<String, List<n7.ad2.database_guides.internal.model.LocalItem>> ->
-                            result.add(VOItemHeader(HeaderViewHolder.Data(map.key)))
+                            result.add(VOItem.Header(HeaderViewHolder.Data(map.key)))
                             result.addAll(map.value.map { localItem ->
-                                VOItemBody(localItem.name, n7.ad2.repositories.ItemRepository.getFullUrlItemImage(localItem.name), localItem.viewedByUser)
+                                VOItem.Body(localItem.name, ItemRepository.getFullUrlItemImage(localItem.name), localItem.viewedByUser)
                             })
                         }
                     emit(result.toList())

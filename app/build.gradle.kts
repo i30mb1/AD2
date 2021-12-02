@@ -78,5 +78,6 @@ dependencies {
 
     implementation(project(Module.Feature.streams))
     implementation(project(Module.Feature.heroes))
+    implementation(project(Module.Feature.items))
     implementation(project(Module.Feature.drawer))
 }

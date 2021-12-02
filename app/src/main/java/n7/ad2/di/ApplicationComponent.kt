@@ -8,6 +8,7 @@ import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.drawer.api.DrawerDependencies
 import n7.ad2.heroes.api.HeroesDependencies
+import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.news.NewsViewModel
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.TournamentsViewModel
@@ -21,8 +22,6 @@ import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.ui.heroResponse.ResponsesViewModel
 import n7.ad2.ui.itemInfo.ItemInfoFragment
 import n7.ad2.ui.itemInfo.ItemInfoViewModel
-import n7.ad2.ui.items.ItemsFragment
-import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.streams.StreamViewModel
 import javax.inject.Singleton
 
@@ -40,6 +39,7 @@ import javax.inject.Singleton
 interface MainActivityComponent : StreamsDependencies,
     DrawerDependencies,
     HeroesDependencies,
+    ItemsDependencies,
     DatabaseDependencies {
 
     fun inject(application: MyApplication)
@@ -67,14 +67,12 @@ interface ApplicationComponent {
     }
 
     fun inject(mainActivity: MainActivity)
-    fun inject(itemsFragment: ItemsFragment)
     fun inject(mainActivity2: MainActivity2)
     fun inject(heroInfoFragment: HeroInfoFragment)
     fun inject(heroGuideWorker: HeroGuideWorker)
     fun inject(heroGuideWorker: ItemInfoFragment)
 
     val tournamentsViewModel: TournamentsViewModel
-    val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel
     val itemInfoFactory: ItemInfoViewModel.Factory
     val heroInfoFactory: HeroInfoViewModel.Factory

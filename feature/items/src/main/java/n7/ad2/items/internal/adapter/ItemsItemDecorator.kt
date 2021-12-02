@@ -1,10 +1,11 @@
-package n7.ad2.ui.items.adapter
+package n7.ad2.items.internal.adapter
 
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.utils.extension.toPx
+import n7.ad2.android.extension.dpToPx
+import n7.ad2.items.internal.domain.vo.VOItem
 
 class ItemsItemDecorator : RecyclerView.ItemDecoration() {
 
@@ -12,9 +13,9 @@ class ItemsItemDecorator : RecyclerView.ItemDecoration() {
     var navigationBarsInsets = 0
     var percent = 0f
 
-    private val offset = 3.toPx
-    private val offsetBottom = 6.toPx
-    private val offsetTop = 6.toPx
+    private val offset = 3.dpToPx
+    private val offsetBottom = 6.dpToPx
+    private val offsetTop = 6.dpToPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
@@ -22,13 +23,14 @@ class ItemsItemDecorator : RecyclerView.ItemDecoration() {
         val position = parent.getChildAdapterPosition(view)
         val layoutManager: GridLayoutManager = parent.layoutManager as GridLayoutManager
         val spanCount: Int = layoutManager.spanCount
-        val column: Int = position % spanCount
-        val childCount = parent.adapter?.itemCount ?: return
-        val itemsInEnd = childCount % spanCount
-        val type = parent.adapter?.getItemViewType(position) ?: return
+        val childCount = (parent.adapter as ItemsListAdapter).currentList.count()
+        val itemsInEnd = when {
+            position < childCount - spanCount -> 0
+            else -> (parent.adapter as ItemsListAdapter).currentList.reversed().takeWhile { it is VOItem.Body }.count() % spanCount
+        }
 
         with(outRect) {
-            bottom = if (position in (childCount - 4..childCount)) offsetBottom + (navigationBarsInsets * percent).toInt() else offset
+            bottom = if (position in (childCount - itemsInEnd..childCount)) offsetBottom + (navigationBarsInsets * percent).toInt() else offset
             top = if (position == 0) offsetTop + (statusBarsInsets * percent).toInt() else offset
             left = offset
             right = offset

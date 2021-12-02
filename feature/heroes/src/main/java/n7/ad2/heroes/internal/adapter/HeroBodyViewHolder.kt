@@ -17,7 +17,7 @@ class HeroBodyViewHolder private constructor(
     fun bind(hero: VOHeroBody) = binding.apply {
         ivImage.load(hero.imageUrl, R.drawable.stream_placeholder)
         tvTitle.text = hero.name
-        binding.ivImage.isSelected = hero.viewedByUser
+        ivImage.isSelected = hero.viewedByUser
         root.setTag(R.id.ViewHolderBinding, binding)
         root.setTag(R.id.ViewHolderModel, hero)
     }

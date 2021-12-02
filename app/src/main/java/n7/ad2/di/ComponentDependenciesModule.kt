@@ -5,6 +5,7 @@ import n7.ad2.dagger.DependenciesKey
 import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.drawer.api.DrawerDependencies
 import n7.ad2.heroes.api.HeroesDependencies
+import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 
 @dagger.Module
@@ -29,5 +30,10 @@ interface ComponentDependenciesModule {
     @dagger.multibindings.IntoMap
     @DependenciesKey(HeroesDependencies::class)
     fun provideHeroesDependencies(impl: MainActivityComponent): Dependencies
+
+    @dagger.Binds
+    @dagger.multibindings.IntoMap
+    @DependenciesKey(ItemsDependencies::class)
+    fun provideItemsDependencies(impl: MainActivityComponent): Dependencies
 
 }

@@ -191,7 +191,6 @@
 
     <string name="desc_cooldown" translatable="false">cooldown</string>
     <string name="desc_mana" translatable="false">mana</string>
-    <string name="desc_dota_item" translatable="false">dota item</string>
     <string name="desc_application_logo" translatable="false">application logo</string>
     <string name="desc_hero_spell" translatable="false">hero spell</string>
     <string name="desc_strength" translatable="false">strength</string>
