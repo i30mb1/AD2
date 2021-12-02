@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
+import kotlin.math.roundToInt
 
 class SelectableImageView(
     context: Context,
@@ -28,7 +29,7 @@ class SelectableImageView(
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
-        rect.set(0, 0, borderWidth.toInt(), height)
+        rect.set(0, 0, borderWidth.roundToInt(), height)
 
         canvasHeight = height.toFloat()
         canvasWidth = width.toFloat()
