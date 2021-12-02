@@ -10,7 +10,7 @@ import n7.ad2.heroes.R
 import n7.ad2.heroes.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
 
-class HeroesListAdapter(
+internal class HeroesListAdapter(
     private val layoutInflater: LayoutInflater,
     onHeroClick: (hero: VOHero.Body) -> Unit,
 ) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {

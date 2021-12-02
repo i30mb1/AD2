@@ -5,7 +5,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.repositories.ItemRepository
 import javax.inject.Inject
 
-class UpdateItemViewedByUserFieldUseCase @Inject constructor(
+internal class UpdateItemViewedByUserFieldUseCase @Inject constructor(
     private val itemRepository: ItemRepository,
     private val dispatchers: DispatchersProvider,
 ) {

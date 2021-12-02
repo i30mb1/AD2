@@ -9,7 +9,7 @@ import n7.ad2.heroes.internal.HeroesViewModel
         HeroesDependencies::class,
     ],
 )
-interface HeroesComponent {
+internal interface HeroesComponent {
 
     @dagger.Component.Factory
     interface Factory {

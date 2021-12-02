@@ -5,7 +5,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.repositories.HeroRepository
 import javax.inject.Inject
 
-class UpdateViewedByUserFieldUseCase @Inject constructor(
+internal class UpdateViewedByUserFieldUseCase @Inject constructor(
     private val heroRepository: HeroRepository,
     private val dispatchers: DispatchersProvider,
 ) {

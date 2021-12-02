@@ -13,7 +13,7 @@ import n7.ad2.repositories.HeroRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
-class GetVOHeroesListUseCase @Inject constructor(
+internal class GetVOHeroesListUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
     private val heroRepository: HeroRepository,
     private val logger: AD2Logger,

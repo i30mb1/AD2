@@ -9,7 +9,7 @@ import n7.ad2.items.internal.ItemsViewModel
         ItemsDependencies::class
     ]
 )
-interface ItemsComponent {
+internal interface ItemsComponent {
 
     @dagger.Component.Factory
     interface Factory {

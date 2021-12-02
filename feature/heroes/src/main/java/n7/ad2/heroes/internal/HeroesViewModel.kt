@@ -1,6 +1,5 @@
 package n7.ad2.heroes.internal
 
-import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
@@ -17,8 +16,7 @@ import n7.ad2.heroes.internal.domain.usecase.GetVOHeroesListUseCase
 import n7.ad2.heroes.internal.domain.usecase.UpdateViewedByUserFieldUseCase
 import n7.ad2.heroes.internal.domain.vo.VOHero
 
-class HeroesViewModel @AssistedInject constructor(
-    private val application: Application,
+internal class HeroesViewModel @AssistedInject constructor(
     getVOHeroesListUseCase: GetVOHeroesListUseCase,
     private val filterHeroesUseCase: FilterHeroesUseCase,
     private val updateViewedByUserFieldUseCase: UpdateViewedByUserFieldUseCase,

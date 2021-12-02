@@ -26,7 +26,7 @@ import n7.ad2.heroes.internal.di.DaggerHeroesComponent
 import n7.ad2.heroes.internal.domain.vo.VOHero
 import javax.inject.Inject
 
-class HeroesFragment : Fragment(R.layout.fragment_heroes) {
+internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     companion object {
         fun getInstance(): HeroesFragment = HeroesFragment()

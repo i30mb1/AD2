@@ -12,7 +12,7 @@ import n7.ad2.repositories.ItemRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
-class GetVOItemsUseCase @Inject constructor(
+internal class GetVOItemsUseCase @Inject constructor(
     private val logger: AD2Logger,
     private val itemRepository: ItemRepository,
     private val dispatchers: DispatchersProvider,

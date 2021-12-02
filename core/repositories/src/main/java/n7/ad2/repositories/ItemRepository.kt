@@ -23,7 +23,7 @@ class ItemRepository @Inject constructor(
     }
 
     suspend fun insertItems(list: List<LocalItem>) {
-//        appDatabase.itemsDao.insert(list)
+        itemsDao.insert(list)
     }
 
     fun getItemDescription(itemName: String, locale: Locale): String {
@@ -34,7 +34,7 @@ class ItemRepository @Inject constructor(
     }
 
     suspend fun updateItemViewedByUserField(name: String) {
-//        appDatabase.itemsDao.updateItemViewedByUserField(name)
+        itemsDao.updateItemViewedByUserField(name)
     }
 
 }

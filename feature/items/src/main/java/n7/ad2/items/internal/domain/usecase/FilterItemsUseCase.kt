@@ -5,7 +5,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.items.internal.domain.vo.VOItem
 import javax.inject.Inject
 
-class FilterItemsUseCase @Inject constructor(
+internal class FilterItemsUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 

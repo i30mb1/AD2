@@ -9,7 +9,7 @@ import n7.ad2.items.R
 import n7.ad2.items.databinding.ItemItemBodyBinding
 import n7.ad2.items.internal.domain.vo.VOItem
 
-class ItemBodyViewHolder private constructor(
+internal class ItemBodyViewHolder private constructor(
     private val binding: ItemItemBodyBinding,
     private val itemClickListener: (model: VOItem.Body) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {

@@ -10,7 +10,7 @@ import n7.ad2.heroes.R
 import n7.ad2.heroes.databinding.ItemHeroBodyBinding
 import n7.ad2.heroes.internal.domain.vo.VOHero
 
-class HeroBodyViewHolder private constructor(
+internal class HeroBodyViewHolder private constructor(
     private val binding: ItemHeroBodyBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 

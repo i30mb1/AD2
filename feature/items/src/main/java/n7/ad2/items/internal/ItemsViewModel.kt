@@ -16,7 +16,7 @@ import n7.ad2.items.internal.domain.usecase.GetVOItemsUseCase
 import n7.ad2.items.internal.domain.usecase.UpdateItemViewedByUserFieldUseCase
 import n7.ad2.items.internal.domain.vo.VOItem
 
-class ItemsViewModel @AssistedInject constructor(
+internal class ItemsViewModel @AssistedInject constructor(
     getVOItemsUseCase: GetVOItemsUseCase,
     private val filterItemsUseCase: FilterItemsUseCase,
     private val updateItemViewedByUserFieldUseCase: UpdateItemViewedByUserFieldUseCase,

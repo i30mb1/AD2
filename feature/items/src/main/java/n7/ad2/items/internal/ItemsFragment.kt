@@ -22,7 +22,7 @@ import n7.ad2.items.internal.di.DaggerItemsComponent
 import n7.ad2.items.internal.domain.vo.VOItem
 import javax.inject.Inject
 
-class ItemsFragment : Fragment(R.layout.fragment_items) {
+internal class ItemsFragment : Fragment(R.layout.fragment_items) {
 
     companion object {
         fun getInstance(): ItemsFragment = ItemsFragment()

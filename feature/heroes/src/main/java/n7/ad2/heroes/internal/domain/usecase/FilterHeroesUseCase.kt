@@ -5,7 +5,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.internal.domain.vo.VOHero
 import javax.inject.Inject
 
-class FilterHeroesUseCase @Inject constructor(
+internal class FilterHeroesUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 
