@@ -3,7 +3,7 @@ package n7.ad2.streams.internal.adapter
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.android.extension.toPx
+import n7.ad2.android.extension.dpToPx
 
 internal class StreamsItemDecorator : RecyclerView.ItemDecoration() {
 
@@ -11,8 +11,8 @@ internal class StreamsItemDecorator : RecyclerView.ItemDecoration() {
     var navigationBarsInsets = 0
     var percent = 0f
 
-    private val offsetHorizontal = 4.toPx
-    private val offsetVertical = 8.toPx
+    private val offsetHorizontal = 4.dpToPx
+    private val offsetVertical = 8.dpToPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)

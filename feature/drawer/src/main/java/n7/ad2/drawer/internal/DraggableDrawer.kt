@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.customview.widget.ViewDragHelper
 import androidx.fragment.app.FragmentContainerView
-import n7.ad2.android.extension.toPx
+import n7.ad2.android.extension.dpToPx
 import n7.ad2.drawer.R
 import kotlin.math.abs
 
@@ -24,7 +24,7 @@ class DraggableDrawer(
 ) : FrameLayout(context, attributeSet) {
 
     companion object {
-        private val collapsedOffsetX = 130.toPx
+        private val collapsedOffsetX = 130.dpToPx
         private const val collapsedScale = 0.6f
         private const val maxScale = 1.0f
         private const val defaultElevation = 10f

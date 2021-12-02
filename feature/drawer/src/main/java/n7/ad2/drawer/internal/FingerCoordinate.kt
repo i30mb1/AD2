@@ -15,8 +15,8 @@ import android.view.View
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.withTranslation
 import com.google.android.material.color.MaterialColors
-import n7.ad2.android.extension.toPx
-import n7.ad2.android.extension.toPxF
+import n7.ad2.android.extension.dpToPx
+import n7.ad2.android.extension.spToPx
 import n7.ad2.drawer.R
 
 class FingerCoordinate(
@@ -25,7 +25,7 @@ class FingerCoordinate(
 ) : View(context, attrs) {
 
     companion object {
-        private val OFFSET_START = 3.toPx
+        private val OFFSET_START = 3.dpToPx
     }
 
     private val coordinateArray = arrayOfNulls<String>(10)
@@ -33,7 +33,7 @@ class FingerCoordinate(
     private val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
         typeface = ResourcesCompat.getFont(context, R.font.iceland_normal)
         color = MaterialColors.getColor(this@FingerCoordinate, android.R.attr.textColorPrimary)
-        textSize = 14.toPxF
+        textSize = 14f.spToPx
     }
     private var textLayout: Layout? = null
     private var editable: Editable = SpannableStringBuilder()

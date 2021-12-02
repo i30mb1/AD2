@@ -4,7 +4,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.android.extension.toPx
+import n7.ad2.android.extension.dpToPx
 import n7.ad2.heroes.internal.domain.vo.VOHeroBody
 
 class HeroesItemDecorator : RecyclerView.ItemDecoration() {
@@ -13,9 +13,9 @@ class HeroesItemDecorator : RecyclerView.ItemDecoration() {
     var navigationBarsInsets = 0
     var percent = 0f
 
-    private val offset = 3.toPx
-    private val offsetBottom = 6.toPx
-    private val offsetTop = 6.toPx
+    private val offset = 3.dpToPx
+    private val offsetBottom = 6.dpToPx
+    private val offsetTop = 6.dpToPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
