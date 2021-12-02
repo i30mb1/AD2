@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
+import com.google.android.material.color.MaterialColors
 import kotlin.math.roundToInt
 
 class SelectableImageView(
@@ -20,7 +21,7 @@ class SelectableImageView(
     private val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL_AND_STROKE
         strokeWidth = 1f
-        color = context.themeColor(R.attr.colorAccent)
+        color = MaterialColors.getColor(this@SelectableImageView, R.attr.colorPrimary)
     }
     private var canvasHeight = 0f
     private var canvasWidth = 0f
