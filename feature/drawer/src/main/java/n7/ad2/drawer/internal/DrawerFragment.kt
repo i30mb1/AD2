@@ -120,12 +120,11 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
         val fragment = when (menuItem.type) {
             VOMenuType.HEROES -> provider.heroesApi.getFragment()
             VOMenuType.ITEMS -> provider.itemsApi.getFragment()
-//            VOMenuType.NEWS -> NewsFragment.getInstance()
-//            VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
+            VOMenuType.NEWS -> provider.newsApi.getFragment()
+            VOMenuType.TOURNAMENTS -> provider.tournamentsApi.getFragment()
             VOMenuType.STREAMS -> provider.streamApi.getFragment()
             VOMenuType.GAMES -> provider.gamesApi.getFragment()
             VOMenuType.UNKNOWN -> return
-            else -> return
         }
         childFragmentManager.commit {
             replace(binding.container.id, fragment, menuItem.title)

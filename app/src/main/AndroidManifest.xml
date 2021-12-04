@@ -97,7 +97,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".tournaments.GameFullActivity"
+            android:name=".tournaments.internal.GameFullActivity"
             android:exported="false"
             android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" />

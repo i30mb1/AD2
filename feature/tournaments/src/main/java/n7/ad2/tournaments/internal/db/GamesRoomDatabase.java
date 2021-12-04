@@ -1,9 +1,10 @@
-package n7.ad2.tournaments.db;
+package n7.ad2.tournaments.internal.db;
+
+import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import android.content.Context;
 
 @Database(entities = {TournamentGame.class}, version = 2, exportSchema = false)
 public abstract class GamesRoomDatabase extends RoomDatabase {

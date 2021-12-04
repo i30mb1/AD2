@@ -8,6 +8,7 @@ import n7.ad2.games.api.GamesDependencies
 import n7.ad2.heroes.api.HeroesDependencies
 import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.streams.api.StreamsDependencies
+import n7.ad2.tournaments.api.TournamentsDependencies
 
 @dagger.Module
 interface ComponentDependenciesModule {
@@ -41,5 +42,10 @@ interface ComponentDependenciesModule {
     @dagger.multibindings.IntoMap
     @DependenciesKey(GamesDependencies::class)
     fun provideGamesDependencies(impl: MainActivityComponent): Dependencies
+
+    @dagger.Binds
+    @dagger.multibindings.IntoMap
+    @DependenciesKey(TournamentsDependencies::class)
+    fun provideTournamentsDependencies(impl: MainActivityComponent): Dependencies
 
 }

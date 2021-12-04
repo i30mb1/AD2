@@ -1,8 +1,8 @@
-package n7.ad2.tournaments.db;
+package n7.ad2.tournaments.internal.db;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.annotation.NonNull;
 
 @Entity
 public class TournamentGame {

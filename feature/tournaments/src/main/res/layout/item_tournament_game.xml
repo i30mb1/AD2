@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_item_list_tournament_game_team1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:transitionName="iv1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/game_unknown_team1"
+            tools:targetApi="lollipop" />
+
+        <ImageView
+            android:id="@+id/iv_item_list_tournament_game_team2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:transitionName="iv2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/game_unknown_team2"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:id="@+id/tv_item_list_tournament_game_team1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:text="@{game.team1Name}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:transitionName="tv1"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_list_tournament_game_team1"
+            app:layout_constraintTop_toTopOf="@+id/iv_item_list_tournament_game_team1"
+            tools:targetApi="lollipop"
+            tools:text="@tools:sample/first_names" />
+
+        <TextView
+            android:id="@+id/tv_item_list_tournament_game_team2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:maxLines="1"
+            android:text="@{game.team2Name}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:transitionName="tv2"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_item_list_tournament_game_team2"
+            app:layout_constraintEnd_toStartOf="@+id/iv_item_list_tournament_game_team2"
+            tools:targetApi="lollipop"
+            tools:text="@tools:sample/first_names" />
+
+        <TextView
+            android:id="@+id/tv_item_list_tournament_game_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            android:elevation="2dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="@{game.teamScore}"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:transitionName="tv3"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_item_list_tournament_game_team1"
+            app:layout_constraintEnd_toStartOf="@+id/iv_item_list_tournament_game_team2"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_list_tournament_game_team1"
+            app:layout_constraintTop_toTopOf="@+id/iv_item_list_tournament_game_team1"
+            tools:targetApi="lollipop"
+            tools:text="@tools:sample/date/hhmmss" />
+
+        <View
+            android:id="@+id/red_line_item_list_tournament_game"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="?colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/b_item_list_tournament_game"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0"
+            android:drawablePadding="10dp"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

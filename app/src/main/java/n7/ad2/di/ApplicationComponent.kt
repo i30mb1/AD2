@@ -13,6 +13,7 @@ import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.news.NewsViewModel
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.TournamentsViewModel
+import n7.ad2.tournaments.api.TournamentsDependencies
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.MyApplication
@@ -41,6 +42,7 @@ interface MainActivityComponent : StreamsDependencies,
     DrawerDependencies,
     HeroesDependencies,
     GamesDependencies,
+    TournamentsDependencies,
     ItemsDependencies,
     DatabaseDependencies {
 

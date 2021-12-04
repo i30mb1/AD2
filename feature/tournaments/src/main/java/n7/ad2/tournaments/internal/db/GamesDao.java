@@ -1,4 +1,4 @@
-package n7.ad2.tournaments.db;
+package n7.ad2.tournaments.internal.db;
 
 import androidx.lifecycle.LiveData;
 import androidx.paging.DataSource;

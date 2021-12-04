@@ -9,7 +9,7 @@
 
         <variable
             name="activity"
-            type="n7.ad2.tournaments.GameFullActivity" />
+            type="n7.ad2.tournaments.internal.GameFullActivity" />
 
     </data>
 

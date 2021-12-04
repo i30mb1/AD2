@@ -80,5 +80,6 @@ dependencies {
     implementation(project(Module.Feature.heroes))
     implementation(project(Module.Feature.items))
     implementation(project(Module.Feature.games))
+    implementation(project(Module.Feature.tournaments))
     implementation(project(Module.Feature.drawer))
 }
