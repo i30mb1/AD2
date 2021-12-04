@@ -9,13 +9,13 @@
 
         <variable
             name="activity"
-            type="n7.ad2.games.Game1p1" />
+            type="n7.ad2.games.internal.games.Game1p1" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".games.Game1p1">
+        tools:context=".games.internal.games.Game1p1">
 
         <TextView
             android:id="@+id/textView"

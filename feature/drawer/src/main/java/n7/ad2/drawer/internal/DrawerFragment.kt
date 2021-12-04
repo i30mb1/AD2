@@ -123,8 +123,8 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
 //            VOMenuType.NEWS -> NewsFragment.getInstance()
 //            VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
             VOMenuType.STREAMS -> provider.streamApi.getFragment()
-//            VOMenuType.GAMES -> GameFragment.getInstance()
-//            VOMenuType.UNKNOWN -> return
+            VOMenuType.GAMES -> provider.gamesApi.getFragment()
+            VOMenuType.UNKNOWN -> return
             else -> return
         }
         childFragmentManager.commit {

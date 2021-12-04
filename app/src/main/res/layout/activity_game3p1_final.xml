@@ -8,13 +8,13 @@
         <import type="android.view.View" />
         <variable
             name="activity"
-            type="n7.ad2.games.Game3p1" />
+            type="n7.ad2.games.internal.games.Game3p1" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".games.Game3p1">
+        tools:context=".games.internal.games.Game3p1">
 
         <ImageView
             android:id="@+id/iv_activity_game3p1_item"

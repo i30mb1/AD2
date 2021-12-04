@@ -28,11 +28,11 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
         fun getInstance(): ItemsFragment = ItemsFragment()
     }
 
-    @Inject lateinit var itemsViewModel: ItemsViewModel.Factory
+    @Inject lateinit var itemsViewModelFactory: ItemsViewModel.Factory
 
     private var _binding: FragmentItemsBinding? = null
     private val binding: FragmentItemsBinding get() = _binding!!
-    private val viewModel: ItemsViewModel by viewModel { itemsViewModel.create() }
+    private val viewModel: ItemsViewModel by viewModel { itemsViewModelFactory.create() }
     private val itemsItemDecorator = ItemsItemDecorator()
     private val onItemClick: (hero: VOItem.Body) -> Unit = { model ->
         startItemInfoFragment(model)

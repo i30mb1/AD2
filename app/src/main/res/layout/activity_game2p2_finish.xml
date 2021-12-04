@@ -7,14 +7,14 @@
 
         <variable
             name="activity"
-            type="n7.ad2.games.Game2p2" />
+            type="n7.ad2.games.internal.games.Game2p2" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".games.Game2p1">
+        tools:context=".games.internal.games.Game2p1">
 
 
         <TextView

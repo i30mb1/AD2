@@ -102,11 +102,11 @@
             android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".games.Game2p1"
+            android:name=".games.internal.games.Game2p1"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".games.Game1p1"
+            android:name=".games.internal.games.Game1p1"
             android:exported="false"
             android:screenOrientation="portrait" />
 
@@ -118,11 +118,11 @@
             android:value="ca-app-pub-5742225922710304~2823923052" />
 
         <activity
-            android:name=".games.Game1p2"
+            android:name=".games.internal.games.Game1p2"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".games.Game2p2"
+            android:name=".games.internal.games.Game2p2"
             android:exported="false"
             android:screenOrientation="portrait" />
     </application>

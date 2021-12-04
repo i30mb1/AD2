@@ -33,6 +33,7 @@
 
         <item name="textAppearance.B1">@style/TextAppearance.B1</item>
         <item name="textAppearance.H5">@style/TextAppearance.H5</item>
+        <item name="textAppearance.H5.Bold">@style/TextAppearance.H5.Bold</item>
         <item name="textAppearance.H6.White">@style/TextAppearance.H6.White</item>
         <item name="textAppearance.H6.White.Bold">@style/TextAppearance.H6.White.Bold</item>
         <item name="textAppearance.Signature">@style/TextAppearance.Signature</item>

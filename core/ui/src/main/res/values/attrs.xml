@@ -10,6 +10,7 @@
 
     <attr name="textAppearance.B1" format="reference" />
     <attr name="textAppearance.H5" format="reference" />
+    <attr name="textAppearance.H5.Bold" format="reference" />
     <attr name="textAppearance.H6.White" format="reference" />
     <attr name="textAppearance.H6.White.Bold" format="reference" />
     <attr name="textAppearance.Coordinate" format="reference" />
