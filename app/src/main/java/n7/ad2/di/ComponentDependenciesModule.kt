@@ -1,5 +1,6 @@
 package n7.ad2.di
 
+import ad2.n7.news.api.NewsDependencies
 import n7.ad2.android.Dependencies
 import n7.ad2.dagger.DependenciesKey
 import n7.ad2.database_guides.api.DatabaseDependencies
@@ -47,5 +48,10 @@ interface ComponentDependenciesModule {
     @dagger.multibindings.IntoMap
     @DependenciesKey(TournamentsDependencies::class)
     fun provideTournamentsDependencies(impl: MainActivityComponent): Dependencies
+
+    @dagger.Binds
+    @dagger.multibindings.IntoMap
+    @DependenciesKey(NewsDependencies::class)
+    fun provideNewsDependencies(impl: MainActivityComponent): Dependencies
 
 }

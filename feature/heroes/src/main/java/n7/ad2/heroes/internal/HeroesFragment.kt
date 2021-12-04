@@ -32,12 +32,12 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         fun getInstance(): HeroesFragment = HeroesFragment()
     }
 
-    @Inject lateinit var heroesViewModel: HeroesViewModel.Factory
+    @Inject lateinit var heroesViewModelFactory: HeroesViewModel.Factory
 
     private var _binding: FragmentHeroesBinding? = null
     private val binding: FragmentHeroesBinding get() = _binding!!
     private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, onHeroClick) }
-    private val viewModel: HeroesViewModel by viewModel { heroesViewModel.create() }
+    private val viewModel: HeroesViewModel by viewModel { heroesViewModelFactory.create() }
     private val heroesItemDecorator = HeroesItemDecorator()
     private val onHeroClick: (hero: VOHero.Body) -> Unit = { hero -> startHeroFragment(hero) }
 

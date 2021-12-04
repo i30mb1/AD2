@@ -4,8 +4,8 @@ import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import n7.ad2.BuildConfig
-import n7.ad2.data.source.remote.retrofit.TwitchGQLApi
-import n7.ad2.data.source.remote.retrofit.TwitchHLSApi
+import n7.ad2.streams.internal.data.remote.retrofit.TwitchGQLApi
+import n7.ad2.streams.internal.data.remote.retrofit.TwitchHLSApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit

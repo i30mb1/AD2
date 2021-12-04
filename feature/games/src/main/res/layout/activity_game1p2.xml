@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".games.internal.games.Game1p1">
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_state_player2"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:rotation="180"-->
+    <!--            android:text="@{activity.endTextPlayer1}"-->
+    <!--            android:textSize="36sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toTopOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            tools:text="YOU LOSE" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_state_player1"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="@{activity.endTextPlayer2}"-->
+    <!--            android:textSize="36sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="parent"-->
+    <!--            tools:text="YOU LOSE" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_activity_game1_timer"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:rotation="90"-->
+    <!--            android:text="@{@string/activity_game1P1_second_remaining(activity.secondRemaining)}"-->
+    <!--            android:textSize="36sp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            tools:text="30" />-->
+
+    <!--        <TextView-->
+    <!--            android:rotation="180"-->
+    <!--            android:id="@+id/tv_activity_game1_score_2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:text="@{String.valueOf(activity.scorePlayer2)}"-->
+    <!--            android:textColor="?android:textColorPrimary"-->
+    <!--            android:textSize="36sp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@+id/iv_activity_game1P1_spell_2"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/iv_activity_game1P1_spell_2"-->
+    <!--            tools:text="0" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_activity_game1_score"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:text="@{String.valueOf(activity.scorePlayer1)}"-->
+    <!--            android:textColor="?android:textColorPrimary"-->
+    <!--            android:textSize="36sp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@+id/iv_activity_game1P1_spell"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/iv_activity_game1P1_spell"-->
+    <!--            tools:text="0" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iv_activity_game1P1_spell_2"-->
+    <!--            android:layout_width="100dp"-->
+    <!--            android:layout_height="100dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--            android:onClick="@{(view)->activity.expandAnimation(view)}"-->
+    <!--            android:rotation="180"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.465"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout2_2"-->
+    <!--            app:srcCompat="@drawable/spell_placeholder" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iv_activity_game1P1_spell"-->
+    <!--            android:layout_width="100dp"-->
+    <!--            android:layout_height="100dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--            android:onClick="@{(view)->activity.expandAnimation(view)}"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/linearLayout2_1"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:srcCompat="@drawable/spell_placeholder" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/linearLayout2_2"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:animateLayoutChanges="true"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:rotation="180"-->
+    <!--            app:layout_constraintEnd_toEndOf="@+id/iv_activity_game1P1_spell_2"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout1_2">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_1_2"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:layout_editor_absoluteX="159dp"-->
+    <!--                tools:layout_editor_absoluteY="365dp"-->
+    <!--                tools:targetApi="lollipop" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_2_2"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:visibility="@{activity.currentSpellLVL_2>0?View.VISIBLE:View.GONE}"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:layout_editor_absoluteX="139dp"-->
+    <!--                tools:layout_editor_absoluteY="365dp"-->
+    <!--                tools:targetApi="lollipop" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_3_2"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:visibility="@{activity.currentSpellLVL_2>1?View.VISIBLE:View.GONE}"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:targetApi="lollipop" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_4_2"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:visibility="@{activity.currentSpellLVL_2>2?View.VISIBLE:View.GONE}"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:targetApi="lollipop" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/linearLayout1_2"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:animateLayoutChanges="true"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:rotation="180"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_activity_game1P1_1_2"-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer2 ? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer2(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot4_2}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+
+    <!--            <TextView-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:id="@+id/tv_activity_game1P1_2_2"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer2? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer2(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot1_2}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+
+    <!--            <TextView-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:id="@+id/tv_activity_game1P1_3_2"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer2? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer2(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot2_2}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_activity_game1P1_4_2"-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer2? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer2(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot3_2}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/linearLayout1_1"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:animateLayoutChanges="true"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--            <TextView-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:id="@+id/tv_activity_game1P1_1"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer1 ? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer1(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot4_2}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+
+    <!--            <TextView-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:id="@+id/tv_activity_game1P1_2"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer1? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer1(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot1}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+
+    <!--            <TextView-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:id="@+id/tv_activity_game1P1_3"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer1? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer1(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot2}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+
+    <!--            <TextView-->
+    <!--                android:foreground="?android:attr/selectableItemBackground"-->
+    <!--                android:id="@+id/tv_activity_game1P1_4"-->
+    <!--                android:layout_width="75dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_margin="4dp"-->
+    <!--                android:background="?colorPrimaryDark"-->
+    <!--                android:clickable="@{activity.lockPlayer1? false : true}"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:onClick="@{(view)->activity.checkPlayer1(view)}"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                tools:targetApi="m"-->
+    <!--                tools:text="@{activity.slot3}"-->
+    <!--                tools:ignore="UnusedAttribute" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/linearLayout2_1"-->
+    <!--            android:layout_width="222dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:animateLayoutChanges="true"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/linearLayout1_1"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_1"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:layout_editor_absoluteX="159dp"-->
+    <!--                tools:layout_editor_absoluteY="365dp"-->
+    <!--                tools:targetApi="lollipop" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_2"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:visibility="@{activity.currentSpellLVL>0?View.VISIBLE:View.GONE}"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:layout_editor_absoluteX="139dp"-->
+    <!--                tools:layout_editor_absoluteY="365dp"-->
+    <!--                tools:targetApi="lollipop" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_3"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:visibility="@{activity.currentSpellLVL>1?View.VISIBLE:View.GONE}"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:targetApi="lollipop" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_activity_game1P1_4"-->
+    <!--                android:layout_width="15dp"-->
+    <!--                android:layout_height="15dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:contentDescription="@string/setting_tell_friend_title"-->
+    <!--                android:elevation="2dp"-->
+    <!--                android:visibility="@{activity.currentSpellLVL>2?View.VISIBLE:View.GONE}"-->
+    <!--                app:srcCompat="@color/red_500"-->
+    <!--                tools:targetApi="lollipop" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <ProgressBar-->
+    <!--            android:id="@+id/pb_activity_game1"-->
+    <!--            style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="4dp"-->
+    <!--            android:indeterminate="true"-->
+    <!--            android:scaleY="5"-->
+    <!--            android:visibility="@{activity.isLoadingPlayer1 ? View.VISIBLE : View.GONE}"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--        <ProgressBar-->
+    <!--            android:id="@+id/pb_activity_game2"-->
+    <!--            style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="4dp"-->
+    <!--            android:indeterminate="true"-->
+    <!--            android:scaleY="5"-->
+    <!--            android:visibility="@{activity.isLoadingPlayer2 ? View.VISIBLE : View.GONE}"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <androidx.constraintlayout.widget.Guideline-->
+    <!--            android:id="@+id/guideline"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintGuide_percent="0.5" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

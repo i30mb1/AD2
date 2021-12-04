@@ -93,7 +93,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".news.NewsActivity"
+            android:name="ad2.n7.news.internal.NewsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

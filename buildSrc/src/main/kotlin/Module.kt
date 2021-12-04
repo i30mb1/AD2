@@ -19,6 +19,7 @@ object Module {
         const val drawer = ":feature:drawer"
         const val games = ":feature:games"
         const val tournaments = ":feature:tournaments"
+        const val news = ":feature:news"
     }
 
 }

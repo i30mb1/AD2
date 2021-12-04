@@ -1,5 +1,6 @@
 package n7.ad2.provider
 
+import ad2.n7.news.api.NewsProvider
 import n7.ad2.games.api.GamesProvider
 import n7.ad2.heroes.api.HeroesProvider
 import n7.ad2.items.api.ItemsProvider

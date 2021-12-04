@@ -2,6 +2,7 @@ package n7.ad2.streams.internal.data.remote
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import n7.ad2.streams.internal.data.remote.retrofit.TwitchApi
 import javax.inject.Inject
 
 internal class StreamRepository @Inject constructor(

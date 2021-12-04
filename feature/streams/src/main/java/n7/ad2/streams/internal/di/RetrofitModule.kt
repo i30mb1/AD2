@@ -3,7 +3,7 @@ package n7.ad2.streams.internal.di
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
-import n7.ad2.streams.internal.data.remote.TwitchApi
+import n7.ad2.streams.internal.data.remote.retrofit.TwitchApi
 import okhttp3.OkHttpClient
 
 @Module
