@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.heroGuide.domain.vo.VOGuideStartingHeroItems" />
-
-    </data>
-
-    <n7.ad2.ui.heroGuide.HeroFlow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?colorSurface"
-        app:startingHeroItems="@{item.list}"
-        tools:layout_height="300dp" />
-</layout>
+<n7.ad2.ui.heroGuide.HeroFlow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?colorSurface"
+    tools:layout_height="300dp" />

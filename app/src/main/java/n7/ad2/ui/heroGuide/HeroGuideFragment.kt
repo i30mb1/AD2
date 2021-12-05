@@ -31,10 +31,7 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentHeroGuideBinding.bind(view).also {
-            it.lifecycleOwner = viewLifecycleOwner
-            it.vieModel = viewModel
-        }
+        binding = FragmentHeroGuideBinding.bind(view)
         // region Click
         val heroName = requireArguments().getString(HERO_NAME)!!
         // endregion

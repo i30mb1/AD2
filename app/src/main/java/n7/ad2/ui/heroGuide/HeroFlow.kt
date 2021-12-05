@@ -25,8 +25,8 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.R
+import n7.ad2.android.extension.dpToPx
 import n7.ad2.android.extension.load
-import n7.ad2.utils.extension.toPx
 import kotlinx.coroutines.flow.Flow as CoroutineFlow
 
 data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String, val heroWinrate: String)
@@ -41,10 +41,10 @@ class HeroFlow(
 
     private val inflater = LayoutInflater.from(context)
     private val flow: Flow = Flow(context).apply {
-        setPadding(2.toPx)
+        setPadding(2.dpToPx)
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
-        setHorizontalGap(2.toPx)
-        setVerticalGap(2.toPx)
+        setHorizontalGap(2.dpToPx)
+        setVerticalGap(2.dpToPx)
         setHorizontalStyle(Flow.CHAIN_PACKED)
         setVerticalStyle(Flow.CHAIN_PACKED)
         setHorizontalAlign(Flow.HORIZONTAL_ALIGN_START)

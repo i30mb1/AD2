@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.itemInfo.domain.vo.VOItemInfoRecipe" />
-    </data>
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transparent"
@@ -18,7 +9,6 @@
 
         <ImageView
             android:id="@+id/iv"
-            loadImageUrl="@{item.urlItemImage}"
             android:layout_width="88dp"
             android:layout_height="64dp"
             android:layout_margin="8dp"
@@ -29,7 +19,6 @@
             tools:src="@drawable/item_placeholder" />
 
         <ImageView
-            isVisible="@{item.recipes.size() > 0}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/desc_arrow_left"
@@ -46,5 +35,3 @@
             tools:spanCount="4" />
 
     </LinearLayout>
-
-</layout>

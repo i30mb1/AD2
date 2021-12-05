@@ -21,11 +21,6 @@ android {
         }
     }
 
-    buildFeatures {
-        dataBinding = true
-        viewBinding = true
-    }
-
     signingConfigs {
         create("releaseConfig") {
 //            storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))

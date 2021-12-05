@@ -8,26 +8,19 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.preference.PreferenceManager
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
-import androidx.appcompat.app.AlertDialog
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.updatePadding
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.FragmentActivity
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
-import com.google.android.material.math.MathUtils.lerp
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
@@ -36,20 +29,13 @@ import com.google.android.play.core.install.InstallStateUpdatedListener
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
+import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.databinding.ActivityMainBinding
-import n7.ad2.databinding.DialogRateBinding
-import n7.ad2.databinding.DialogUpdateBinding
-import n7.ad2.databinding.DrawerBinding
 import n7.ad2.logger.AD2Logger
-import n7.ad2.ui.setting.SettingActivity
-import n7.ad2.utils.BaseActivity
-import n7.ad2.utils.lazyUnsafe
 import javax.inject.Inject
 
-class MainActivity : BaseActivity() {
+class MainActivity : FragmentActivity() {
 
     companion object {
         const val GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app-release.apk?raw=true"
@@ -69,7 +55,6 @@ class MainActivity : BaseActivity() {
     private var currentSet: ConstraintSet? = null
     private val loggerAdapter: n7.ad2.drawer.internal.adapter.AD2LoggerAdapter by lazyUnsafe { n7.ad2.drawer.internal.adapter.AD2LoggerAdapter(layoutInflater) }
     private lateinit var binding: ActivityMainBinding
-    private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true
     private var shouldDisplayLog = false
     private var appUpdateManager: AppUpdateManager? = null
@@ -83,19 +68,12 @@ class MainActivity : BaseActivity() {
     }
     private var modeSecretActivity = false
 
-    fun startActivityOptions() {
-        startActivity(Intent(this, SettingActivity::class.java))
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         (applicationContext as MyApplication).component.inject(this)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
-        drawer.setActivity(this)
-        setupLoggerAdapter()
-        setupSecretActivity()
         setupInsets()
     }
 
@@ -106,7 +84,7 @@ class MainActivity : BaseActivity() {
 //            controller.hide(WindowInsetsCompat.Type.systemBars())
             controller.isAppearanceLightStatusBars = false
         }
-        ViewCompat.setOnApplyWindowInsetsListener(drawer.root) { view, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
             val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
             view.updatePadding(bottom = navigationBarsInsets.bottom)
@@ -119,77 +97,6 @@ class MainActivity : BaseActivity() {
 
             WindowInsetsCompat.CONSUMED
         }
-        val callback = object : WindowInsetsAnimationCompat.Callback(DISPATCH_MODE_STOP) {
-
-            private var startBottom: Float = 0F
-            private var endBottom: Float = 0F
-
-            override fun onPrepare(animation: WindowInsetsAnimationCompat) {
-                super.onPrepare(animation)
-                startBottom = drawer.root.paddingBottom.toFloat()
-            }
-
-            override fun onStart(animation: WindowInsetsAnimationCompat, bounds: WindowInsetsAnimationCompat.BoundsCompat): WindowInsetsAnimationCompat.BoundsCompat {
-                endBottom = drawer.root.paddingBottom.toFloat()
-                drawer.root.translationY = startBottom - endBottom
-                return super.onStart(animation, bounds)
-            }
-
-            override fun onProgress(insets: WindowInsetsCompat, runningAnimations: MutableList<WindowInsetsAnimationCompat>): WindowInsetsCompat {
-                val offset = lerp(
-                    startBottom - endBottom,
-                    0F,
-                    runningAnimations.first().interpolatedFraction
-                )
-                drawer.root.translationY = offset
-                return insets
-            }
-
-
-            override fun onEnd(animation: WindowInsetsAnimationCompat) {
-                super.onEnd(animation)
-            }
-
-        }
-
-        ViewCompat.setWindowInsetsAnimationCallback(binding.root, callback)
-    }
-
-    private fun showDialogUpdate() {
-        val builder = AlertDialog.Builder(this)
-        val binding: DialogUpdateBinding = DataBindingUtil.inflate(layoutInflater, R.layout.dialog_update, null, false)
-        builder.setView(binding.root)
-        val dialog = builder.create()
-        dialog.window!!.attributes.windowAnimations = R.style.MyMaterialAlertDialogTheme
-        dialog.show()
-        binding.bDialogUpdate.setOnClickListener {
-            dialog.dismiss()
-            loadNewVersion()
-        }
-    }
-
-    private fun setupToolbar() {
-        setSupportActionBar(binding.toolbar)
-    }
-
-    private fun setupLoggerAdapter() {
-        shouldDisplayLog = preferences.getBoolean(getString(R.string.setting_log_key), true)
-        if (shouldDisplayLog) {
-
-            logger.getLogFlow()
-                .onEach(loggerAdapter::add)
-                .launchIn(lifecycleScope)
-
-            drawer.rvDrawer.adapter = loggerAdapter
-            drawer.rvDrawer.layoutManager = object : LinearLayoutManager(this, VERTICAL, false) {
-                override fun canScrollVertically(): Boolean = false
-            }
-        }
-    }
-
-    private fun setupSecretActivity() {
-        constraintSetOrigin.clone(drawer.root as ConstraintLayout)
-        currentSet = constraintSetOrigin
     }
 
     fun toggleSecretActivity(view: View?): Boolean {
@@ -198,10 +105,10 @@ class MainActivity : BaseActivity() {
             .setDuration(500)
             .addTransition(ChangeBounds().setInterpolator(LinearInterpolator()))
         //после этого метода все изменения внутри ViewGroup будут анимированы
-        TransitionManager.beginDelayedTransition((drawer.root as ViewGroup), transitionSet)
+//        TransitionManager.beginDelayedTransition((drawer.root as ViewGroup), transitionSet)
         //        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), new AutoTransition());
         //применяет все изменения находящиеся в currentSet с анимациями из transitionSet
-        currentSet?.applyTo(drawer.root as ConstraintLayout)
+//        currentSet?.applyTo(drawer.root as ConstraintLayout)
         TransitionManager.beginDelayedTransition((binding.root as ViewGroup))
         if (currentSet === constraintSetOrigin) {
             modeSecretActivity = false
@@ -286,24 +193,6 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private fun showDialogRate() {
-        val showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SHOW, true)
-        if (showDialogRate) {
-            val builder = AlertDialog.Builder(this)
-            val binding: DialogRateBinding = DataBindingUtil.inflate(layoutInflater, R.layout.dialog_rate, null, false)
-            binding.activity = this
-            builder.setView(binding.root)
-            val dialog = builder.create()
-            dialog.window!!.attributes.windowAnimations = R.style.MyMaterialAlertDialogTheme
-            dialog.show()
-            binding.bDialogRateYes.setOnClickListener {
-                dialog.dismiss()
-                openAppStore()
-            }
-            binding.bDialogRateNo.setOnClickListener { dialog.dismiss() }
-            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(DIALOG_RATE_SHOW, false).apply()
-        }
-    }
 
     fun openAppStore() {
         try {
@@ -314,7 +203,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun hideKeyboard() {
-        val insetsController = ViewCompat.getWindowInsetsController(drawer.root)
+        val insetsController = ViewCompat.getWindowInsetsController(binding.root)
         insetsController?.hide(WindowInsetsCompat.Type.ime())
     }
 

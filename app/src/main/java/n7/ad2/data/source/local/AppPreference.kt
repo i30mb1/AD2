@@ -13,9 +13,9 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStoreFile
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.first
+import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.drawer.internal.data.remote.Settings
 import n7.ad2.drawer.internal.data.remote.SettingsJsonAdapter
-import n7.ad2.utils.lazyUnsafe
 import javax.inject.Inject
 import javax.inject.Singleton
 

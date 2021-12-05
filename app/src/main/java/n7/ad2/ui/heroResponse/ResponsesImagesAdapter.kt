@@ -28,8 +28,7 @@ class ResponsesImagesAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(model: VOResponseImage) {
-            binding.model = model
-            binding.executePendingBindings()
+
         }
 
         companion object {
@@ -38,7 +37,7 @@ class ResponsesImagesAdapter(
                 infoPopupWindow: InfoPopupWindow,
             ): ImageViewHolder {
                 val binding = ItemResponseImageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                binding.infoPopupWindow = infoPopupWindow
+//                binding.infoPopupWindow = infoPopupWindow
                 return ImageViewHolder(binding)
             }
         }

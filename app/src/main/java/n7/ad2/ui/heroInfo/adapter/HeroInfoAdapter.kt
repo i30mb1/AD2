@@ -8,16 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.text.getSpans
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.BR
 import n7.ad2.R
+import n7.ad2.android.extension.dpToPx
 import n7.ad2.base.adapter.BodyViewHolder
-import n7.ad2.databinding.ItemBodyLineBinding
-import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.ui.adapter.HeaderViewHolder
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.PopUpClickableSpan
@@ -30,7 +26,6 @@ import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.utils.StickyHeaderDecorator
-import n7.ad2.utils.extension.toPx
 
 class HeroInfoAdapter(
     private val layoutInflater: LayoutInflater,
@@ -92,30 +87,30 @@ class HeroInfoAdapter(
     })
 
     class ViewHolder private constructor(
-        private val binding: ViewDataBinding,
+//        private val binding: ViewDataBinding,
         private val popupListener: (View, String) -> Unit,
-    ) : RecyclerView.ViewHolder(binding.root) {
+    ) : RecyclerView.ViewHolder(TODO()) {
 
         private var lineHeight = 0
 
         fun bind(item: VOHeroInfo) {
-            binding.setVariable(BR.item, item)
-            bindSetting(binding)
-            binding.executePendingBindings()
+//            binding.setVariable(BR.item, item)
+//            bindSetting(binding)
+//            binding.executePendingBindings()
         }
 
-        private fun bindSetting(binding: ViewDataBinding) {
-            when (binding) {
-                is ItemBodyWithImageBinding -> setActionsForSpans(binding.tvBody, binding.item!!.body)
-                is ItemBodyLineBinding -> setActionsForSpans(binding.tvBody, binding.item!!.title)
-            }
+        private fun bindSetting() {
+//            when (binding) {
+//                is ItemBodyWithImageBinding -> setActionsForSpans(binding.tvBody, binding.item!!.body)
+//                is ItemBodyLineBinding -> setActionsForSpans(binding.tvBody, binding.item!!.title)
+//            }
         }
 
         private fun setActionsForSpans(
             tv: TextView,
             spannableString: SpannableString,
         ) {
-            if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx
+            if (lineHeight == 0) lineHeight = tv.lineHeight - 2.dpToPx
             spannableString.getSpans<ImageSpan>().forEach { it.drawable.setBounds(0, 0, lineHeight, lineHeight) }
             spannableString.getSpans<PopUpClickableSpan>().forEach { it.popupListener = popupListener }
             tv.movementMethod = LinkMovementMethod.getInstance()
@@ -130,11 +125,11 @@ class HeroInfoAdapter(
                 descriptionsListener: (List<VOHeroInfo>) -> Unit,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding: ViewDataBinding = when (viewType) {
-                    R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
-                    else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
-                }
-                return ViewHolder(binding, popupListener)
+//                val binding: ViewDataBinding = when (viewType) {
+//                    R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
+//                    else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
+//                }
+                return TODO()
             }
         }
     }

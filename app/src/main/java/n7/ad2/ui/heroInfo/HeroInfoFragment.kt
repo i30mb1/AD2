@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
+import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.adapter.HeroInfoAdapter
@@ -19,7 +20,6 @@ import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroPage.HeroPageFragment
-import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel2
 import javax.inject.Inject
 

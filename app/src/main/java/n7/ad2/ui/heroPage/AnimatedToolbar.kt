@@ -12,14 +12,14 @@ import androidx.transition.TransitionManager
 import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.R
+import n7.ad2.android.extension.dpToPx
 import n7.ad2.android.extension.load
 import n7.ad2.data.source.local.Locale
-import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
 
     private var onChangeResponseLocaleListener: ((locale: Locale) -> Unit)? = null
-    private val params = LayoutParams(30.toPx, 30.toPx).apply {
+    private val params = LayoutParams(30.dpToPx, 30.dpToPx).apply {
         gravity = Gravity.CENTER
     }
     private val ivHero: ImageView = ImageView(context).apply {
@@ -28,7 +28,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         addView(this)
     }
     private val tvLocale: TickerView = TickerView(context, null, R.style.TextAppearance_B1).apply {
-        layoutParams = params.apply { width = 60.toPx }
+        layoutParams = params.apply { width = 60.dpToPx }
         setCharacterList(TickerUtils.getDefaultListForUSCurrency())
         animationDuration = resources.getInteger(R.integer.animation_long).toLong()
         visibility = GONE

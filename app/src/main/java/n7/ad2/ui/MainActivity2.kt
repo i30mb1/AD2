@@ -4,15 +4,15 @@ import android.os.Bundle
 import android.view.MotionEvent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import n7.ad2.android.SplashScreenApi
 import n7.ad2.android.TouchEvent
+import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.databinding.ActivityMain2Binding
 import n7.ad2.drawer.internal.DrawerFragment
-import n7.ad2.utils.BaseActivity
-import n7.ad2.utils.lazyUnsafe
 
-class MainActivity2 : BaseActivity(), TouchEvent, SplashScreenApi {
+class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreenApi {
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
     override var shouldKeepOnScreen = true

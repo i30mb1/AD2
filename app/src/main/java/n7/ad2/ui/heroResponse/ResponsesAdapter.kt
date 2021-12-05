@@ -2,8 +2,6 @@ package n7.ad2.ui.heroResponse
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.math.MathUtils.clamp
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ListAdapter
@@ -64,8 +62,8 @@ class ResponsesAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponseTitle) {
-            binding.item = item
-            binding.executePendingBindings()
+//            binding.item = item
+//            binding.executePendingBindings()
         }
 
         fun clear() = Unit
@@ -86,18 +84,16 @@ class ResponsesAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(isSaved: Boolean) {
-            binding.ivIsSaved.isVisible = isSaved
-            binding.executePendingBindings()
+//            binding.ivIsSaved.isVisible = isSaved
+//            binding.executePendingBindings()
         }
 
         fun bind(item: VOResponseBody) {
-            (binding.rv.layoutManager as GridLayoutManager).spanCount = clamp(item.icons.size, MIN_ICONS_IN_ROW, MAX_ICONS_IN_ROW)
-            binding.root.setOnLongClickListener {
-                showDialogResponse(item)
-                true
-            }
-            binding.item = item
-            binding.executePendingBindings()
+//            (binding.rv.layoutManager as GridLayoutManager).spanCount = clamp(item.icons.size, MIN_ICONS_IN_ROW, MAX_ICONS_IN_ROW)
+//            binding.root.setOnLongClickListener {
+//                showDialogResponse(item)
+//                true
+//            }
         }
 
         fun clear() = Unit
@@ -118,21 +114,21 @@ class ResponsesAdapter(
             ): ResponseBodyViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false).also {
-                    it.infoPopupWindow = infoPopupWindow
-                    it.audioExoPlayer = audioExoPlayer
+//                    it.infoPopupWindow = infoPopupWindow
+//                    it.audioExoPlayer = audioExoPlayer
                 }
                 val responsesImagesAdapter = ResponsesImagesAdapter(infoPopupWindow)
                 val gridLayoutManager = GridLayoutManager(parent.context, MAX_ICONS_IN_ROW).apply {
                     recycleChildrenOnDetach = true
                     initialPrefetchItemCount = 12
                 }
-                binding.rv.apply {
-                    setRecycledViewPool(viewPool)
-                    setHasFixedSize(true)
-                    layoutManager = gridLayoutManager
-                    adapter = responsesImagesAdapter
+//                binding.rv.apply {
+//                    setRecycledViewPool(viewPool)
+//                    setHasFixedSize(true)
+//                    layoutManager = gridLayoutManager
+//                    adapter = responsesImagesAdapter
 //                    setItemViewCacheSize(MAX_VIEWS_RESPONSE_IMAGE)
-                }
+//                }
                 return ResponseBodyViewHolder(binding, showDialogResponse)
             }
         }

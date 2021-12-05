@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.itemInfo.domain.vo.VOItemInfoTitle" />
-
-        <variable
-            name="popupListener"
-            type="kotlin.jvm.functions.Function2" />
-
-        <variable
-            name="audioExoPlayer"
-            type="n7.ad2.ui.heroPage.AudioExoPlayer" />
-    </data>
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="UseCompoundDrawables">
@@ -29,8 +12,6 @@
 
         <ImageView
             android:id="@+id/play"
-            isSelected="@{item.isPlaying}"
-            isVisible="@{item.audioUrl!=null}"
             android:layout_width="@dimen/title_min_height"
             android:layout_height="@dimen/title_min_height"
             android:background="?colorPrimary"
@@ -38,4 +19,3 @@
             android:onClick="@{()-> audioExoPlayer.play(item)}"
             android:src="@drawable/selector_play" />
     </LinearLayout>
-</layout>

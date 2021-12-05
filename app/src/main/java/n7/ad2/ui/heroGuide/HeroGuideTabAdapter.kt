@@ -2,12 +2,9 @@ package n7.ad2.ui.heroGuide
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideTab
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideTabNumber
@@ -24,19 +21,19 @@ class HeroGuideTabAdapter
     }
 
     class HeroGuideTabHolder private constructor(
-        private val binding: ViewDataBinding,
-    ) : RecyclerView.ViewHolder(binding.root) {
+//        private val binding: ViewDataBinding,
+    ) : RecyclerView.ViewHolder(TODO()) {
 
         fun bind(item: VOGuideTab) {
-            binding.setVariable(BR.item, item)
-            binding.executePendingBindings()
+//            binding.setVariable(BR.item, item)
+//            binding.executePendingBindings()
         }
 
         companion object {
             fun from(parent: ViewGroup, layoutId: Int): HeroGuideTabHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding: ViewDataBinding = DataBindingUtil.inflate(layoutInflater, layoutId, parent, false)
-                return HeroGuideTabHolder(binding)
+//                val binding: ViewDataBinding = DataBindingUtil.inflate(layoutInflater, layoutId, parent, false)
+                return TODO()
             }
         }
 

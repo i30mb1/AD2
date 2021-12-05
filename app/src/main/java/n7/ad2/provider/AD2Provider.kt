@@ -1,6 +1,7 @@
 package n7.ad2.provider
 
 import ad2.n7.news.api.NewsProvider
+import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.games.api.GamesProvider
 import n7.ad2.heroes.api.HeroesProvider
 import n7.ad2.items.api.ItemsProvider
@@ -11,7 +12,6 @@ import n7.ad2.provider.api.NewsApi
 import n7.ad2.provider.api.StreamsApi
 import n7.ad2.streams.api.StreamsProvider
 import n7.ad2.tournaments.api.TournamentsProvider
-import n7.ad2.utils.lazyUnsafe
 
 object AD2Provider : Provider {
 

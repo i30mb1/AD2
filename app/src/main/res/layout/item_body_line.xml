@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOBodyLine" />
-    </data>
-
-    <FrameLayout
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transparent">
@@ -20,9 +11,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="4dp"
-            asyncText="@{item.title}"
             android:textAppearance="?textAppearanceSubtitle1"
             android:textSize="12sp"
             tools:text="@tools:sample/lorem" />
     </FrameLayout>
-</layout>

@@ -5,7 +5,6 @@ import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.ui.heroGuide.HeroGuideWorker
-import n7.ad2.utils.ResultState
 import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
@@ -14,7 +13,7 @@ class LoadNewHeroGuideUseCase @Inject constructor(
     private val workManager: WorkManager,
 ) {
 
-    suspend operator fun invoke(heroName: String): ResultState<Unit> = suspendCancellableCoroutine { continuation ->
+    suspend operator fun invoke(heroName: String): Unit = suspendCancellableCoroutine { continuation ->
         val request = HeroGuideWorker.getRequest(heroName)
         workManager.enqueue(request)
 
@@ -24,7 +23,7 @@ class LoadNewHeroGuideUseCase @Inject constructor(
                 when (info.state) {
                     WorkInfo.State.SUCCEEDED -> {
                         work.removeObserver(this)
-                        continuation.resume(ResultState.success(Unit))
+                        continuation.resume(Unit)
                     }
                     WorkInfo.State.FAILED -> {
                         work.removeObserver(this)

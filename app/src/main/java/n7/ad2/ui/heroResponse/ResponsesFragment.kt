@@ -35,9 +35,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     @InternalCoroutinesApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentHeroResponsesBinding.bind(view).also {
-            it.lifecycleOwner = viewLifecycleOwner
-        }
+        binding = FragmentHeroResponsesBinding.bind(view)
 
         downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, requireActivity().application, lifecycle)
         downloadResponseManager.setDownloadListener {

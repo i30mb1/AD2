@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.text.getSpans
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.android.extension.dpToPx
+import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.databinding.ItemBodyBinding
-import n7.ad2.utils.extension.toPx
-import n7.ad2.utils.lazyUnsafe
 
 class BodyViewHolder private constructor(
     private val binding: ItemBodyBinding,
@@ -17,7 +17,7 @@ class BodyViewHolder private constructor(
     @JvmInline
     value class Data(val text: Spanned)
 
-    private val lineHeight by lazyUnsafe { binding.tvText.lineHeight - 2.toPx }
+    private val lineHeight by lazyUnsafe { binding.tvText.lineHeight - 2.dpToPx }
 
     fun bind(item: Data) = binding.apply {
         item.text.getSpans<ImageSpan>().forEach { it.drawable?.setBounds(0, 0, lineHeight, lineHeight) }

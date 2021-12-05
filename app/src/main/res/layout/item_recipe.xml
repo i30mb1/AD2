@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="recipe"
-            type="n7.ad2.ui.itemInfo.domain.vo.VORecipe" />
-    </data>
-
-    <ImageView
-        loadImageUrl="@{recipe.urlItemImage}"
-        onError="@{@drawable/item_placeholder}"
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="44dp"
         android:layout_height="32dp"
-        android:contentDescription="@{recipe.name}"
         tools:src="@drawable/item_placeholder" />
-</layout>

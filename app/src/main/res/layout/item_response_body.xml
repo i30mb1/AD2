@@ -1,99 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?colorSurface"
+    android:foreground="@drawable/background_ripple">
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    <!--        <ProgressBar-->
+    <!--            style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+    <!--            isVisible="@{item.maxProgress > 0}"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:max="@{item.maxProgress}"-->
+    <!--            android:progress="@{item.currentProgress}"-->
+    <!--            android:scaleY="10"-->
+    <!--            android:visibility="visible"-->
+    <!--            tools:progress="30" />-->
 
-    <data>
-
-        <variable
-            name="downloadResponseManager"
-            type="n7.ad2.ui.heroResponse.DownloadResponseManager" />
-
-        <variable
-            name="audioExoPlayer"
-            type="n7.ad2.ui.heroPage.AudioExoPlayer" />
-
-        <variable
-            name="infoPopupWindow"
-            type="n7.ad2.ui.heroInfo.InfoPopupWindow" />
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.heroResponse.domain.vo.VOResponseBody" />
-    </data>
-
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="@drawable/background_ripple"
-        android:background="?colorSurface"
-        android:onClick="@{()-> audioExoPlayer.play(item)}">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp">
 
-        <ProgressBar
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            isVisible="@{item.maxProgress > 0}"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:max="@{item.maxProgress}"
-            android:progress="@{item.currentProgress}"
-            android:scaleY="10"
-            android:visibility="visible"
-            tools:progress="30" />
+        <!--            <androidx.recyclerview.widget.RecyclerView-->
+        <!--                android:id="@+id/rv"-->
+        <!--                icons="@{item.icons}"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                tools:itemCount="5"-->
+        <!--                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+        <!--                tools:listitem="@layout/item_response_image"-->
+        <!--                tools:spanCount="3" />-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="4dp">
+        <!--            <ImageView-->
+        <!--                android:id="@+id/iv_is_saved"-->
+        <!--                isVisible="@{item.savedInMemory}"-->
+        <!--                withSpace="@{false}"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:layout_weight="0"-->
+        <!--                android:contentDescription="@string/desc_saved"-->
+        <!--                android:onClick="@{(view)-> infoPopupWindow.show(view, @string/popup_saved)}"-->
+        <!--                app:srcCompat="@drawable/ic_response_save"-->
+        <!--                tools:visibility="visible" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv"
-                icons="@{item.icons}"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:itemCount="5"
-                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                tools:listitem="@layout/item_response_image"
-                tools:spanCount="3" />
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/ll_container"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical" />-->
 
-            <ImageView
-                android:id="@+id/iv_is_saved"
-                isVisible="@{item.savedInMemory}"
-                withSpace="@{false}"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_weight="0"
-                android:contentDescription="@string/desc_saved"
-                android:onClick="@{(view)-> infoPopupWindow.show(view, @string/popup_saved)}"
-                app:srcCompat="@drawable/ic_response_save"
-                tools:visibility="visible" />
+        <!--            <TextView-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:paddingStart="4dp"-->
+        <!--                android:paddingEnd="4dp"-->
+        <!--                android:text="@{item.title}"-->
+        <!--                android:textAppearance="?textAppearance.B1"-->
+        <!--                android:textColor="?android:textColorSecondary"-->
+        <!--                tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />-->
 
-            <LinearLayout
-                android:id="@+id/ll_container"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp"
-                android:text="@{item.title}"
-                android:textAppearance="?textAppearance.B1"
-                android:textColor="?android:textColorSecondary"
-                tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
-
-            <ProgressBar
-                isVisible="@{item.isPlaying()}"
-                withSpace="@{true}"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_weight="0" />
-        </LinearLayout>
+        <!--            <ProgressBar-->
+        <!--                isVisible="@{item.isPlaying()}"-->
+        <!--                withSpace="@{true}"-->
+        <!--                android:layout_width="20dp"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:layout_weight="0" />-->
+    </LinearLayout>
 
     </FrameLayout>
-</layout>

@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage" />
-
-        <variable
-            name="popupListener"
-            type="kotlin.jvm.functions.Function2" />
-    </data>
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -25,7 +12,6 @@
 
         <TextView
             android:id="@+id/tv_body"
-            asyncText="@{item.body}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -35,8 +21,5 @@
         <ImageView
             android:layout_width="@dimen/icon_in_description"
             android:layout_height="@dimen/icon_in_description"
-            android:contentDescription="@string/desc_cooldown"
-            android:onClick="@{(view)-> popupListener.invoke(view, item.tip)}"
-            android:src="@{item.drawable}" />
+            android:contentDescription="@string/desc_cooldown" />
     </LinearLayout>
-</layout>

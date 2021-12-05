@@ -3,14 +3,14 @@ package n7.ad2.ui.heroInfo.adapter
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.utils.extension.toPx
+import n7.ad2.android.extension.dpToPx
 
 class HeroInfoItemDecorator : RecyclerView.ItemDecoration() {
 
-    private val topOffset = 16.toPx
-    private val botOffset = 16.toPx
-    private val offsetHorizontal = 8.toPx
-    private val offsetVertical = 8.toPx
+    private val topOffset = 16.dpToPx
+    private val botOffset = 16.dpToPx
+    private val offsetHorizontal = 8.dpToPx
+    private val offsetVertical = 8.dpToPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)

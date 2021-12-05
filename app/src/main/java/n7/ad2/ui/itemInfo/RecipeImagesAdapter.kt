@@ -22,8 +22,8 @@ class RecipeImagesAdapter : ListAdapter<VORecipe, RecipeImagesAdapter.ViewHolder
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(recipe: VORecipe) {
-            binding.recipe = recipe
-            binding.executePendingBindings()
+//            binding.recipe = recipe
+//            binding.executePendingBindings()
         }
 
         companion object {

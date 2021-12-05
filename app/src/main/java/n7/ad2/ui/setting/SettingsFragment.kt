@@ -121,14 +121,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun createDialogTheme() {
-        val dialogTheme = DialogTheme()
-        dialogTheme.show(childFragmentManager, null)
+//        val dialogTheme = DialogTheme()
+//        dialogTheme.show(childFragmentManager, null)
     }
 
     override fun onDisplayPreferenceDialog(preference: Preference?) {
         when (preference) {
-            is DialogThemePreference -> createDialogTheme()
-            else -> super.onDisplayPreferenceDialog(preference)
+//            is DialogThemePreference -> createDialogTheme()
+//            else -> super.onDisplayPreferenceDialog(preference)
         }
 
     }

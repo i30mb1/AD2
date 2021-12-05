@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--suppress XmlUnusedNamespaceDeclaration -->
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.heroGuide.domain.vo.VOGuideTitle" />
-
-    </data>
-
-    <TextView
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -19,5 +9,3 @@
     <!--        style="?textStyleTitle"-->
     <!--        asyncText="@{item.title}"-->
     <!--        tools:text="@string/easy_to_win_heroes" />-->
-
-</layout>

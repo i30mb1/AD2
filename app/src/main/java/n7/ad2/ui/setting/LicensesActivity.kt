@@ -4,22 +4,21 @@ import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.media.MediaPlayer
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.ActivityLicenseBinding
-import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.extension.showSnackbar
 
-class LicensesActivity : BaseActivity() {
+class LicensesActivity : FragmentActivity() {
 
     lateinit var binding: ActivityLicenseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_license)
+//        binding = ActivityLicenseBinding.inflate(this, R.layout.activity_license)
         binding.iv.setOnLongClickListener {
             MediaPlayer.create(applicationContext, R.raw.does_this_unit_have_a_soul).start()
             binding.root.showSnackbar("?", Snackbar.LENGTH_INDEFINITE, "Yes, it does") {
