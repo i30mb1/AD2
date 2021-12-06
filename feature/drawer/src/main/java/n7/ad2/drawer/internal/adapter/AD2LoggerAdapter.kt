@@ -8,7 +8,7 @@ import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter.TextViewHolder
 import n7.ad2.logger.AD2Log
 import java.util.ArrayList
 
-class AD2LoggerAdapter(
+internal class AD2LoggerAdapter(
     private val layoutInflater: LayoutInflater,
 ) : RecyclerView.Adapter<TextViewHolder>() {
 

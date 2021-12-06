@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 
 
-class MainMenuListAdapter(
+internal class MainMenuListAdapter(
     private val layoutInflater: LayoutInflater,
     itemListener: (menuItem: VOMenu) -> Unit,
 ) : ListAdapter<VOMenu, MenuItemHolder>(DiffCallback()) {

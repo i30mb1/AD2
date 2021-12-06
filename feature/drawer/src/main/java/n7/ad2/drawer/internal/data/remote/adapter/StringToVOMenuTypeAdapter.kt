@@ -9,7 +9,7 @@ import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 @JsonQualifier
 annotation class StringVoMenuType
 
-class StringVOMenuTypeAdapter {
+internal class StringVOMenuTypeAdapter {
 
     @ToJson
     fun toJson(@StringVoMenuType value: VOMenuType): String {

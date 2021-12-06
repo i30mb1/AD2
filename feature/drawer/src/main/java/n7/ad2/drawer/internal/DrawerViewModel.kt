@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import n7.ad2.drawer.internal.domain.usecase.GetMenuItemsUseCase
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 
-class DrawerViewModel @AssistedInject constructor(
+internal class DrawerViewModel @AssistedInject constructor(
     private val getMenuItemsUseCase: GetMenuItemsUseCase,
 ) : ViewModel() {
 

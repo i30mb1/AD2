@@ -18,7 +18,7 @@ import n7.ad2.android.extension.dpToPx
 import n7.ad2.drawer.R
 import kotlin.math.abs
 
-class DraggableDrawer(
+internal class DraggableDrawer(
     context: Context,
     attributeSet: AttributeSet,
 ) : FrameLayout(context, attributeSet) {

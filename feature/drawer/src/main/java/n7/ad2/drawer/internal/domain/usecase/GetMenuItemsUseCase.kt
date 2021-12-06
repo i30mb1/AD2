@@ -19,7 +19,7 @@ import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.logger.AD2Logger
 import javax.inject.Inject
 
-class GetMenuItemsUseCase @Inject constructor(
+internal class GetMenuItemsUseCase @Inject constructor(
     private val application: Application,
     private val appPreference: AppPreference,
     private val settingsApi: SettingsApi,

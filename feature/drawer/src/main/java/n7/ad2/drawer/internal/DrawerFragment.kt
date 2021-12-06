@@ -24,6 +24,7 @@ import n7.ad2.android.TouchEvent
 import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
+import n7.ad2.app_preference.AppPreference
 import n7.ad2.drawer.R
 import n7.ad2.drawer.databinding.FragmentDrawerBinding
 import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter
@@ -35,7 +36,7 @@ import n7.ad2.logger.AD2Logger
 import n7.ad2.provider.Provider
 import javax.inject.Inject
 
-class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
+internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
 
     companion object {
         fun getInstance() = DrawerFragment()
@@ -44,7 +45,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
     @Inject lateinit var logger: AD2Logger
     @Inject lateinit var drawerViewModel: DrawerViewModel.Factory
     @Inject lateinit var provider: Provider
-//    @Inject lateinit var preferences: AppPreference
+    @Inject lateinit var preferences: AppPreference
 
     private var _binding: FragmentDrawerBinding? = null
     private val binding: FragmentDrawerBinding get() = _binding!!
@@ -155,8 +156,8 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
     }
 
     private fun setupLoggerAdapter() = lifecycleScope.launch {
-//        val shouldDisplayLog = preferences.isShowFingerCoordinate()
-//        if (!shouldDisplayLog) return@launch
+        val shouldDisplayLog = preferences.isShowFingerCoordinate()
+        if (!shouldDisplayLog) return@launch
         logger.getLogFlow()
             .onEach(loggerAdapter::add)
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }

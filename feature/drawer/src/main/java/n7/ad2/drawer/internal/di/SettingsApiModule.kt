@@ -6,7 +6,7 @@ import n7.ad2.drawer.internal.data.remote.adapter.StringVOMenuTypeAdapter
 import okhttp3.OkHttpClient
 
 @dagger.Module
-class SettingsApiModule {
+internal class SettingsApiModule {
 
     @dagger.Provides
     fun provideSettingsApi(client: OkHttpClient, moshiBase: Moshi): SettingsApi {

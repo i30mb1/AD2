@@ -19,7 +19,7 @@ import n7.ad2.android.extension.dpToPx
 import n7.ad2.android.extension.spToPx
 import n7.ad2.drawer.R
 
-class FingerCoordinate(
+internal class FingerCoordinate(
     context: Context,
     attrs: AttributeSet,
 ) : View(context, attrs) {

@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
 import retrofit2.http.GET
 
-interface SettingsApi {
+internal interface SettingsApi {
 
     @GET("settings.json?raw=true")
     suspend fun getSettings(): Settings

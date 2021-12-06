@@ -9,7 +9,7 @@ import n7.ad2.drawer.R
 import n7.ad2.drawer.databinding.ItemMenuBinding
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 
-class MenuItemHolder private constructor(
+internal class MenuItemHolder private constructor(
     private val binding: ItemMenuBinding,
     private val itemListener: (menuItem: VOMenu) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {

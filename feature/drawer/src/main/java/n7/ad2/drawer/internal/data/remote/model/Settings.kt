@@ -3,7 +3,7 @@ package n7.ad2.drawer.internal.data.remote.model
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
-enum class VOMenuType { HEROES, ITEMS, NEWS, TOURNAMENTS, STREAMS, GAMES, UNKNOWN }
+internal enum class VOMenuType { HEROES, ITEMS, NEWS, TOURNAMENTS, STREAMS, GAMES, UNKNOWN }
 
 private val defaultMenu = listOf(
     Menu(VOMenuType.HEROES),
@@ -15,7 +15,7 @@ private val defaultMenu = listOf(
 )
 
 @JsonClass(generateAdapter = true)
-data class Settings(
+internal data class Settings(
     @Json(name = "menu")
     val menu: List<Menu> = defaultMenu,
     @Json(name = "version")
@@ -23,7 +23,7 @@ data class Settings(
 )
 
 @JsonClass(generateAdapter = true)
-data class Menu(
+internal data class Menu(
     @Json(name = "type")
     val type: VOMenuType,
     @Json(name = "isEnable")

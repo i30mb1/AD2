@@ -13,7 +13,7 @@ import n7.ad2.drawer.internal.DrawerViewModel
         SettingsApiModule::class
     ]
 )
-interface DrawerComponent {
+internal interface DrawerComponent {
 
     @Component.Factory
     interface Factory {
