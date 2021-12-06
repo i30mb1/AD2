@@ -1,4 +1,4 @@
-package n7.ad2.data.source.remote.adapter
+package n7.ad2.drawer.internal.data.remote.adapter
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonQualifier
