@@ -1,6 +1,6 @@
 @file:Suppress("BlockingMethodInNonBlockingContext")
 
-package n7.ad2.data.source.local
+package n7.ad2.app_preference
 
 import android.app.Application
 import androidx.datastore.core.handlers.ReplaceFileCorruptionHandler
@@ -11,19 +11,13 @@ import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStoreFile
-import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.first
-import n7.ad2.android.extension.lazyUnsafe
-import n7.ad2.drawer.internal.data.remote.model.Settings
-import n7.ad2.drawer.internal.data.remote.model.SettingsJsonAdapter
-import javax.inject.Inject
-import javax.inject.Singleton
+import n7.ad2.app_preference.domain.usecase.GetCurrentDayUseCase
 
 // https://proandroiddev.com/kotlin-property-delegates-for-datastore-preferences-library-5d4e1cdb609b
-@Singleton
-class AppPreference @Inject constructor(
+class AppPreference constructor(
     application: Application,
-    private val moshi: Moshi,
+    getCurrentDayUseCase: GetCurrentDayUseCase,
 ) {
 
     private val dataStore = PreferenceDataStoreFactory.create(
@@ -32,19 +26,26 @@ class AppPreference @Inject constructor(
         application.preferencesDataStoreFile("appPreference")
     }
 
+    private val currentDay = getCurrentDayUseCase()
+
     private val dateKey = intPreferencesKey("date")
     private val showFingerCoordinate = booleanPreferencesKey("fingerCoordinate")
     private val settings = stringPreferencesKey("settings")
+    private val settingsLastDayUpdate = intPreferencesKey("settingsLastDateUpdate")
 
-    private val settingsJsonAdapter by lazyUnsafe { SettingsJsonAdapter(moshi) }
-
-    suspend fun saveSettings(data: Settings) {
-        dataStore.edit { preferences -> preferences[settings] = settingsJsonAdapter.toJson(data) }
+    suspend fun isNeedToUpdateSettings(): Boolean {
+        return dataStore.data.first()[settingsLastDayUpdate] != currentDay
     }
 
-    suspend fun getSettings(): Settings {
-        val data = dataStore.data.first()[settings] ?: ""
-        return settingsJsonAdapter.fromJson(data) ?: Settings()
+    suspend fun saveSettings(data: String) {
+        dataStore.edit { preferences ->
+            preferences[settings] = data
+            preferences[settingsLastDayUpdate] = currentDay
+        }
+    }
+
+    suspend fun getSettings(): String {
+        return dataStore.data.first()[settings] ?: ""
     }
 
     suspend fun saveDate(date: Int) {

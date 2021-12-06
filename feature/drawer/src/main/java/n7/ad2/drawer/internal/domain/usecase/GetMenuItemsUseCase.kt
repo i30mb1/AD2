@@ -1,12 +1,15 @@
 package n7.ad2.drawer.internal.domain.usecase
 
 import android.app.Application
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.adapter
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
+import n7.ad2.app_preference.AppPreference
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.drawer.R
 import n7.ad2.drawer.internal.data.remote.SettingsApi
@@ -18,21 +21,27 @@ import javax.inject.Inject
 
 class GetMenuItemsUseCase @Inject constructor(
     private val application: Application,
-//    private val appPreference: AppPreference,
+    private val appPreference: AppPreference,
     private val settingsApi: SettingsApi,
     private val logger: AD2Logger,
+    private val moshi: Moshi,
     private val dispatchers: DispatchersProvider,
 ) {
+
+    @OptIn(ExperimentalStdlibApi::class)
+    private val settingsAdapter = moshi.adapter<Settings>()
 
     operator fun invoke(): Flow<List<VOMenu>> = flow {
         emit(settingsApi.getSettings())
     }
         .onEach { settings ->
-//            appPreference.saveSettings(settings)
+            if (appPreference.isNeedToUpdateSettings()) {
+                appPreference.saveSettings(settingsAdapter.toJson(settings))
+            }
         }
         .catch { error ->
             logger.log("Could not load settings (${error.message})")
-            emit(Settings())
+            emit(settingsAdapter.fromJson(appPreference.getSettings()) ?: Settings())
         }
         .map { settings ->
             settings.menu.map { menu ->

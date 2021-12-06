@@ -10,6 +10,7 @@ object Module {
         const val repositories = ":core:repositories"
         const val ui = ":core:ui"
         const val provider = ":core:provider"
+        const val appPreference = ":core:app_preference"
     }
 
     object Feature {
