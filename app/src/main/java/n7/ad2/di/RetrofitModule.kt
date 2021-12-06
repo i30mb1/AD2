@@ -45,10 +45,6 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideSettingsApi(client: OkHttpClient, moshi: Moshi): n7.ad2.drawer.internal.data.remote.SettingsApi = n7.ad2.drawer.internal.data.remote.SettingsApi.get(client, moshi)
-
-    @Provides
-    @Singleton
     fun provideTwitchGQL(client: OkHttpClient, moshi: Moshi): TwitchGQLApi = TwitchGQLApi.get(OkHttpClient(), moshi)
 
     @Provides
