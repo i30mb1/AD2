@@ -1,25 +1,25 @@
 package n7.ad2.di
 
 import android.app.Application
-import android.content.SharedPreferences
 import android.content.res.AssetManager
-import androidx.preference.PreferenceManager
 import androidx.work.WorkManager
-import dagger.Module
 import dagger.Provides
+import dagger.Reusable
+import n7.ad2.provider.AD2Provider
+import n7.ad2.provider.Provider
 import java.util.Calendar
 import javax.inject.Singleton
 
-@Module
-object ApplicationModule {
+@dagger.Module
+class ApplicationModule {
+
+    @Reusable
+    @Provides
+    fun provideProvider(): Provider = AD2Provider
 
     @Singleton
     @Provides
     fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
-
-    @Singleton
-    @Provides
-    fun provideSharedPreferences(application: Application): SharedPreferences = PreferenceManager.getDefaultSharedPreferences(application)
 
     @Singleton
     @Provides

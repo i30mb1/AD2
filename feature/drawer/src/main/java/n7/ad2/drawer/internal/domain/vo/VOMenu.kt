@@ -1,6 +1,6 @@
 package n7.ad2.drawer.internal.domain.vo
 
-import n7.ad2.drawer.internal.data.remote.VOMenuType
+import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 
 data class VOMenu(
     val type: VOMenuType,

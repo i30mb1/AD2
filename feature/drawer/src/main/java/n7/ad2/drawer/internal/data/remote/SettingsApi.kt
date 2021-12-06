@@ -1,6 +1,7 @@
 package n7.ad2.drawer.internal.data.remote
 
 import com.squareup.moshi.Moshi
+import n7.ad2.drawer.internal.data.remote.model.Settings
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory

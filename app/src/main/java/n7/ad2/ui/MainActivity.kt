@@ -4,7 +4,6 @@ import android.app.DownloadManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.IntentSender.SendIntentException
-import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -32,8 +31,6 @@ import com.google.android.play.core.install.model.UpdateAvailability
 import n7.ad2.R
 import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.databinding.ActivityMainBinding
-import n7.ad2.logger.AD2Logger
-import javax.inject.Inject
 
 class MainActivity : FragmentActivity() {
 
@@ -43,12 +40,6 @@ class MainActivity : FragmentActivity() {
         const val DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW"
         private const val MY_REQUEST_CODE_UPDATE = 17
     }
-
-    @Inject
-    lateinit var preferences: SharedPreferences
-
-    @Inject
-    lateinit var logger: AD2Logger
 
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()

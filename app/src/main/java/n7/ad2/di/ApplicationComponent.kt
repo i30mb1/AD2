@@ -32,7 +32,7 @@ import javax.inject.Singleton
         CoroutineModule::class,
         MoshiModule::class,
         RetrofitModule::class,
-        NewApplicationModule::class,
+        ApplicationModule::class,
         DatabaseModule::class,
     ]
 )
@@ -56,7 +56,6 @@ interface MainActivityComponent : StreamsDependencies,
 @Singleton
 @Component(
     modules = [
-        ApplicationModule::class,
         CoroutineModule::class,
         MoshiModule::class,
         RetrofitModule::class,

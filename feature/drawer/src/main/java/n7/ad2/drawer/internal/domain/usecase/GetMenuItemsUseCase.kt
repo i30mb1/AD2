@@ -9,9 +9,9 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.drawer.R
-import n7.ad2.drawer.internal.data.remote.Settings
 import n7.ad2.drawer.internal.data.remote.SettingsApi
-import n7.ad2.drawer.internal.data.remote.VOMenuType
+import n7.ad2.drawer.internal.data.remote.model.Settings
+import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.logger.AD2Logger
 import javax.inject.Inject

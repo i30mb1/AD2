@@ -28,7 +28,7 @@ import n7.ad2.drawer.R
 import n7.ad2.drawer.databinding.FragmentDrawerBinding
 import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter
 import n7.ad2.drawer.internal.adapter.MainMenuListAdapter
-import n7.ad2.drawer.internal.data.remote.VOMenuType
+import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.di.DaggerDrawerComponent
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.logger.AD2Logger

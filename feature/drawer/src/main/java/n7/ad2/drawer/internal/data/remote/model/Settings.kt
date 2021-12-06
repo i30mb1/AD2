@@ -1,4 +1,4 @@
-package n7.ad2.drawer.internal.data.remote
+package n7.ad2.drawer.internal.data.remote.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
