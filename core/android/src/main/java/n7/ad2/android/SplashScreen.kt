@@ -1,7 +1,5 @@
 package n7.ad2.android
 
-interface SplashScreenApi {
-
+interface SplashScreen {
     var shouldKeepOnScreen: Boolean
-
 }

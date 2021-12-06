@@ -29,7 +29,6 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
 import n7.ad2.R
-import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.databinding.ActivityMainBinding
 
 class MainActivity : FragmentActivity() {
@@ -44,7 +43,6 @@ class MainActivity : FragmentActivity() {
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
     private var currentSet: ConstraintSet? = null
-    private val loggerAdapter: n7.ad2.drawer.internal.adapter.AD2LoggerAdapter by lazyUnsafe { n7.ad2.drawer.internal.adapter.AD2LoggerAdapter(layoutInflater) }
     private lateinit var binding: ActivityMainBinding
     private var shouldUpdateFromMarket = true
     private var shouldDisplayLog = false

@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.android.SplashScreenApi
+import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.android.extension.viewModel
@@ -143,7 +143,7 @@ class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener
             .onEach { list ->
                 mainMenuAdapter.submitList(list)
                 setFragment(list.first { menu -> menu.isSelected })
-                (activity as SplashScreenApi).shouldKeepOnScreen = false
+                (activity as SplashScreen).shouldKeepOnScreen = false
             }
             .launchIn(lifecycleScope)
     }

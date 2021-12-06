@@ -4,19 +4,19 @@ import android.os.Bundle
 import android.view.MotionEvent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
-import n7.ad2.android.SplashScreenApi
+import n7.ad2.android.MainNavigator
+import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
-import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.databinding.ActivityMain2Binding
-import n7.ad2.drawer.internal.DrawerFragment
+import n7.ad2.provider.AD2Provider
 
-class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreenApi {
+class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigator {
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
     override var shouldKeepOnScreen = true
-    private val mainNavigator: MainNavigator by lazyUnsafe { MainNavigator(supportFragmentManager, binding.container.id) }
     private lateinit var binding: ActivityMain2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +27,7 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreenApi {
         setupInsets()
         if (savedInstanceState == null) {
             supportFragmentManager.commit(true) {
-                val mainFragment = DrawerFragment.getInstance()
-                add(binding.container.id, mainFragment)
+                setMainFragment(AD2Provider.drawerApi.getDrawerFragment())
             }
         }
     }
@@ -38,8 +37,10 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreenApi {
         return super.dispatchTouchEvent(event)
     }
 
-    fun openHeroPageFragment(heroName: String) {
-        mainNavigator.openHeroPageFragment(heroName)
+    override fun setMainFragment(fragment: Fragment) {
+        supportFragmentManager.commit(true) {
+            add(binding.container.id, fragment)
+        }
     }
 
     private fun setupInsets() {

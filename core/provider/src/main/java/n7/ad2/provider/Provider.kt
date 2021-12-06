@@ -1,5 +1,6 @@
 package n7.ad2.provider
 
+import n7.ad2.provider.api.DrawerApi
 import n7.ad2.provider.api.GamesApi
 import n7.ad2.provider.api.HeroesApi
 import n7.ad2.provider.api.ItemsApi
@@ -15,5 +16,6 @@ interface Provider {
     val itemsApi: ItemsApi
     val gamesApi: GamesApi
     val tournamentsApi: TournamentsApi
+    val drawerApi: DrawerApi
 
 }
