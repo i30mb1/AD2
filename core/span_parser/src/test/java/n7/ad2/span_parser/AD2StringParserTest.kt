@@ -1,4 +1,4 @@
-package n7.ad2
+package n7.ad2.span_parser
 
 import com.google.common.truth.Truth
 import com.nhaarman.mockitokotlin2.mock

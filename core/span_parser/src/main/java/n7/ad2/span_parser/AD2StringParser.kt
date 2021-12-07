@@ -1,4 +1,4 @@
-package n7.ad2
+package n7.ad2.span_parser
 
 import android.content.res.AssetManager
 import android.graphics.Color
