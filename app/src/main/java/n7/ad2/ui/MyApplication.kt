@@ -8,8 +8,6 @@ import android.provider.Settings
 import n7.ad2.BuildConfig
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.HasDependencies
-import n7.ad2.di.ApplicationComponent
-import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
 import n7.ad2.di.DaggerMainActivityComponent
 import javax.inject.Inject
@@ -27,9 +25,9 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
 
     @Inject override lateinit var dependenciesMap: DependenciesMap
 
-    override val component: ApplicationComponent by lazy {
-        DaggerApplicationComponent.factory().create(this)
-    }
+//    override val component: ApplicationComponent by lazy {
+//        DaggerApplicationComponent.factory().create(this)
+//    }
 
     override fun onCreate() {
         enableStrictMode()

@@ -12,14 +12,11 @@ import n7.ad2.drawer.api.DrawerDependencies
 import n7.ad2.games.api.GamesDependencies
 import n7.ad2.hero_page.api.HeroPageDependencies
 import n7.ad2.heroes.api.HeroesDependencies
+import n7.ad2.item_page.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
-import n7.ad2.ui.MainActivity
-import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.MyApplication
-import n7.ad2.ui.itemInfo.ItemInfoFragment
-import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import javax.inject.Singleton
 
 @Singleton
@@ -37,6 +34,7 @@ import javax.inject.Singleton
 interface MainActivityComponent : StreamsDependencies,
     DrawerDependencies,
     HeroesDependencies,
+    ItemPageDependencies,
     GamesDependencies,
     TournamentsDependencies,
     NewsDependencies,
@@ -50,26 +48,4 @@ interface MainActivityComponent : StreamsDependencies,
     interface Factory {
         fun create(@BindsInstance applicationContext: Application): MainActivityComponent
     }
-}
-
-@Singleton
-@Component(
-    modules = [
-        CoroutineModule::class,
-        MoshiModule::class,
-        RetrofitModule::class,
-    ]
-)
-interface ApplicationComponent {
-
-    @Component.Factory
-    interface Factory {
-        fun create(@BindsInstance applicationContext: Application): ApplicationComponent
-    }
-
-    fun inject(mainActivity: MainActivity)
-    fun inject(mainActivity2: MainActivity2)
-    fun inject(heroGuideWorker: ItemInfoFragment)
-
-    val itemInfoFactory: ItemInfoViewModel.Factory
 }

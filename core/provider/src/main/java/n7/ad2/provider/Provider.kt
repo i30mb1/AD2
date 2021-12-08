@@ -4,6 +4,7 @@ import n7.ad2.provider.api.DrawerApi
 import n7.ad2.provider.api.GamesApi
 import n7.ad2.provider.api.HeroPageApi
 import n7.ad2.provider.api.HeroesApi
+import n7.ad2.provider.api.ItemPageApi
 import n7.ad2.provider.api.ItemsApi
 import n7.ad2.provider.api.NewsApi
 import n7.ad2.provider.api.StreamsApi
@@ -19,5 +20,6 @@ interface Provider {
     val tournamentsApi: TournamentsApi
     val drawerApi: DrawerApi
     val heroPageApi: HeroPageApi
+    val itemPageApi: ItemPageApi
 
 }

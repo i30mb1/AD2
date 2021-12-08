@@ -59,7 +59,6 @@ class MainActivity : FragmentActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        (applicationContext as MyApplication).component.inject(this)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

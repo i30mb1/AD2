@@ -18,6 +18,7 @@ object Module {
         const val streams = ":feature:streams"
         const val heroes = ":feature:heroes"
         const val heroPage = ":feature:hero_page"
+        const val itemPage = ":feature:item_page"
         const val items = ":feature:items"
         const val drawer = ":feature:drawer"
         const val games = ":feature:games"

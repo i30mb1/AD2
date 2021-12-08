@@ -20,6 +20,5 @@
 
         <ImageView
             android:layout_width="@dimen/icon_in_description"
-            android:layout_height="@dimen/icon_in_description"
-            android:contentDescription="@string/desc_cooldown" />
+            android:layout_height="@dimen/icon_in_description" />
     </LinearLayout>

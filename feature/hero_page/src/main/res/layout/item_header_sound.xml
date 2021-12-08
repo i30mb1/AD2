@@ -25,7 +25,6 @@
             android:id="@+id/iv_play"
             android:layout_width="@dimen/title_min_height"
             android:layout_height="@dimen/title_min_height"
-            android:contentDescription="@string/desc_play"
             android:src="@drawable/selector_play" />
 
         <TextView

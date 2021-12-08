@@ -74,7 +74,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.itemInfo.ItemInfoActivity" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="false"
@@ -84,31 +83,6 @@
             android:exported="false"
             android:label="Open Source Licenses"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.setting.SettingActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".hero_page.HeroPageFragment"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="ad2.n7.news.internal.NewsActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".tournaments.internal.GameFullActivity"
-            android:exported="false"
-            android:parentActivityName=".ui.MainActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".games.internal.games.Game2p1"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".games.internal.games.Game1p1"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
@@ -117,14 +91,6 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5742225922710304~2823923052" />
 
-        <activity
-            android:name=".games.internal.games.Game1p2"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".games.internal.games.Game2p2"
-            android:exported="false"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -6,11 +6,13 @@ import n7.ad2.drawer.api.DrawerProvider
 import n7.ad2.games.api.GamesProvider
 import n7.ad2.hero_page.api.HeroPageProvider
 import n7.ad2.heroes.api.HeroesProvider
+import n7.ad2.item_page.api.ItemPageProvider
 import n7.ad2.items.api.ItemsProvider
 import n7.ad2.provider.api.DrawerApi
 import n7.ad2.provider.api.GamesApi
 import n7.ad2.provider.api.HeroPageApi
 import n7.ad2.provider.api.HeroesApi
+import n7.ad2.provider.api.ItemPageApi
 import n7.ad2.provider.api.ItemsApi
 import n7.ad2.provider.api.NewsApi
 import n7.ad2.provider.api.StreamsApi
@@ -27,5 +29,5 @@ object AD2Provider : Provider {
     override val newsApi: NewsApi by lazyUnsafe { NewsProvider() }
     override val drawerApi: DrawerApi by lazyUnsafe { DrawerProvider() }
     override val heroPageApi: HeroPageApi by lazyUnsafe { HeroPageProvider() }
-
+    override val itemPageApi: ItemPageApi by lazyUnsafe { ItemPageProvider() }
 }

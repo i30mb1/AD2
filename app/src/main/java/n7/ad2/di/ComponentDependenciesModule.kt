@@ -8,6 +8,7 @@ import n7.ad2.drawer.api.DrawerDependencies
 import n7.ad2.games.api.GamesDependencies
 import n7.ad2.hero_page.api.HeroPageDependencies
 import n7.ad2.heroes.api.HeroesDependencies
+import n7.ad2.item_page.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
@@ -59,5 +60,10 @@ interface ComponentDependenciesModule {
     @dagger.multibindings.IntoMap
     @DependenciesKey(NewsDependencies::class)
     fun provideNewsDependencies(impl: MainActivityComponent): Dependencies
+
+    @dagger.Binds
+    @dagger.multibindings.IntoMap
+    @DependenciesKey(ItemPageDependencies::class)
+    fun provideItemPageDependencies(impl: MainActivityComponent): Dependencies
 
 }

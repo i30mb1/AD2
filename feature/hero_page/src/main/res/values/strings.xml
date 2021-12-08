@@ -4,11 +4,15 @@
     <string name="hero_sound">Sounds</string>
     <string name="hero_guide">Guides</string>
 
+    <string name="dialog_response_download">Download</string>
     <string name="hero_fragment_description">Description</string>
     <string name="hero_fragment_bio">Bio</string>
     <string name="hero_fragment_trivia">Trivia</string>
     <string name="hero_fragment_params" translatable="false">Parameters</string>
 
+    <string name="desc_strength" translatable="false">strength</string>
+    <string name="desc_intelligence" translatable="false">intellect</string>
+    <string name="desc_agility" translatable="false">Agility</string>
     <string name="notification_title_guide" translatable="false">loading guide...</string>
     <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
 

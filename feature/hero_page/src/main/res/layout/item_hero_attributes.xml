@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -19,8 +18,7 @@
             android:layout_height="80dp"
             android:cropToPadding="true"
             android:scaleType="centerCrop"
-            android:transitionName="iv"
-            tools:src="@drawable/hero_placeholder" />
+            android:transitionName="iv" />
 
         <n7.ad2.hero_page.internal.info.HeroStatistics
             android:id="@+id/hero_statistics"
