@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">AD2</string>
     <string name="toolbar_search_hint">Search by name&#8230;</string>
 
     <!--preferenses-->
@@ -59,14 +58,9 @@
     <string name="all_check_update">check update</string>
     <string name="all_error_internet">Can\'t loading without internet connection</string>
     <string name="update_ok">no need to update</string>
-    <string name="hero_info">info</string>
-    <string name="hero_sound">sounds</string>
-    <string name="hero_guide">guide</string>
     <string name="hero_response_ringtone_set">Ringtone has been set! Probably!</string>
     <string name="hero_personal_tip_manta_descr">it shows can be this ability used by illusions or not</string>
-    <string name="starting_items">Starting items</string>
-    <string name="easy_to_win_heroes">Best versus heroes</string>
-    <string name="hard_to_win_heroes">Worst versus heroes</string>
+
     <string name="setting_subscription_key" translatable="false">pref_month_key</string>
     <string name="compare_win_rate" translatable="false">Win Rate</string>
     <string name="setting_subscription_summary">Ready to take the next step?</string>
@@ -78,11 +72,8 @@
     <string name="heart" translatable="false">heart</string>
     <string name="hero_fragment_notes">Notes</string>
     <string name="hero_fragment_story">Story</string>
-    <string name="hero_fragment_params">Parameters</string>
     <string name="item_hero_personal_description_talents">Talents</string>
-    <string name="hero_fragment_bio">Bio</string>
-    <string name="hero_fragment_trivia">Trivia</string>
-    <string name="hero_fragment_description">Description</string>
+
     <string name="tips">Tips</string>
     <string name="abilities">Ability : %s</string>
     <string name="lore">Lore</string>
@@ -112,8 +103,7 @@
     <string name="fragment_guide_lane">lane / %s</string>
     <string name="ad2_toolbar" translatable="false">AD2/%s</string>
     <string name="activity_twitch_game" translatable="false">Quality</string>
-    <string name="guide_items">Items and timings</string>
-    <string name="fragment_guide_skill_builds">Skill builds</string>
+
     <string name="games_schedule">REMIND</string>
     <string name="dialog_update_title">New update found!</string>
     <string name="dialog_update_message">Do not miss the opportunity to raise the level! Update the app!</string>
@@ -185,9 +175,6 @@
     <string name="setting_category_setting_key" translatable="false">setting_category_setting_key</string>
     <string name="setting_category_about_key" translatable="false">setting_category_about_key</string>
     <string name="setting_current_day" translatable="false">setting_current_day</string>
-    <string name="title_feature_streams">Streams</string>
-
-    <string name="notification_title_guide" translatable="false">loading guide...</string>
 
     <string name="desc_cooldown" translatable="false">cooldown</string>
     <string name="desc_mana" translatable="false">mana</string>
@@ -198,22 +185,15 @@
     <string name="desc_agility" translatable="false">Agility</string>
     <string name="desc_play" translatable="false">play</string>
     <string name="desc_saved" translatable="false">saved</string>
-    <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
     <string name="desc_hero_item" translatable="false">hero item</string>
     <string name="desc_arrow_left" translatable="false">arrow show to left</string>
     <string name="desc_arrow_right" translatable="false">arrow show to right</string>
     <string name="desc_update_guide" translatable="false">update guide</string>
     <string name="desc_news_image" translatable="false">news image</string>
 
-    <string name="hotkey" translatable="false">Hot Key</string>
-    <string name="legacykey" translatable="false">Legacy Key</string>
-    <string name="hero_popularity" translatable="false">popularity : %s</string>
-    <string name="hero_pickrate" translatable="false">pickrate: %s</string>
 
     <string name="tn_iv_photo" translatable="false">tn_iv_photo_%1$s</string>
 
-    <string name="error" translatable="false"> Oops! error occurred...</string>
-    <string name="locale">ENG</string>
     <string name="ru" translatable="false">RU</string>
     <string name="en" translatable="false">ENG</string>
     <string name="cost">Cost : %s</string>
@@ -221,7 +201,7 @@
     <string name="bought_from">Bought From : %s</string>
     <string name="additional_information">Additional information</string>
     <string name="trivia">Trivia</string>
-    <string name="spell_build">Skill build</string>
+
 
     <string name="popup_talent">improves upon talent selection</string>
     <string name="popup_aghanim">improves when buying aghanim</string>

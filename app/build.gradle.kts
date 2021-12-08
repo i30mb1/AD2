@@ -79,4 +79,5 @@ dependencies {
     implementation(project(Module.Feature.tournaments))
     implementation(project(Module.Feature.news))
     implementation(project(Module.Feature.drawer))
+    implementation(project(Module.Feature.heroPage))
 }

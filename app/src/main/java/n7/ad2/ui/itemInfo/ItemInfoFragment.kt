@@ -5,12 +5,8 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import n7.ad2.R
-import n7.ad2.databinding.FragmentItemInfoBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroInfo.InfoPopupWindow
-import n7.ad2.ui.heroPage.AudioExoPlayer
-import n7.ad2.ui.heroPage.showDialogError
-import n7.ad2.utils.StickyHeaderDecorator
+import n7.ad2.hero_page.databinding.FragmentItemInfoBinding
 import n7.ad2.utils.viewModel2
 import javax.inject.Inject
 
@@ -18,8 +14,9 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     private var _binding: FragmentItemInfoBinding? = null
     private val binding get() = _binding!!
-    private val audioExoPlayer: AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
-    private val infoPopupWindow: InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { InfoPopupWindow(requireContext(), lifecycle) }
+
+    //    private val audioExoPlayer: n7.ad2.hero_page.AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { n7.ad2.hero_page.AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
+    private val infoPopupWindow: n7.ad2.hero_page.internal.info.InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { n7.ad2.hero_page.internal.info.InfoPopupWindow(requireContext(), lifecycle) }
     private val itemName: String by lazy(LazyThreadSafetyMode.NONE) { requireArguments().getString(ITEM_NAME)!! }
 
     @Inject
@@ -40,7 +37,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         injector.inject(this)
         _binding = FragmentItemInfoBinding.bind(view)
 
-        viewModel.error.observe(viewLifecycleOwner) { if (it != null) showDialogError(it) }
+//        viewModel.error.observe(viewLifecycleOwner) { if (it != null) showDialogError(it) }
 
         setupToolbar(itemName)
         setupItemInfoRecyclerView()
@@ -56,12 +53,12 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     }
 
     private fun setupItemInfoRecyclerView() {
-        val itemInfoAdapter = ItemInfoAdapter(audioExoPlayer, infoPopupWindow)
+//        val itemInfoAdapter = ItemInfoAdapter(audioExoPlayer, infoPopupWindow)
         binding.rv.apply {
-            adapter = itemInfoAdapter
-            addItemDecoration(StickyHeaderDecorator(itemInfoAdapter, this))
+//            adapter = itemInfoAdapter
+//            addItemDecoration(n7.ad2.hero_page.internal.StickyHeaderDecorator(itemInfoAdapter, this))
         }
-        viewModel.voItemInfo.observe(viewLifecycleOwner, itemInfoAdapter::submitList)
+//        viewModel.voItemInfo.observe(viewLifecycleOwner, itemInfoAdapter::submitList)
     }
 
 

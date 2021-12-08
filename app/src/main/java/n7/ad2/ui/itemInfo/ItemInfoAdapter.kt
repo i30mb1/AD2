@@ -4,40 +4,36 @@ import android.text.SpannableString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.text.getSpans
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
-import n7.ad2.ui.heroInfo.InfoPopupWindow
-import n7.ad2.ui.heroInfo.PopUpClickableSpan
-import n7.ad2.ui.heroPage.AudioExoPlayer
+import n7.ad2.hero_page.internal.pager.AudioExoPlayer
 import n7.ad2.ui.itemInfo.domain.vo.ItemInfo
 import n7.ad2.ui.itemInfo.domain.vo.VOItemInfoBody
 import n7.ad2.ui.itemInfo.domain.vo.VOItemInfoLine
 import n7.ad2.ui.itemInfo.domain.vo.VOItemInfoLineImage
 import n7.ad2.ui.itemInfo.domain.vo.VOItemInfoRecipe
 import n7.ad2.ui.itemInfo.domain.vo.VOItemInfoTitle
-import n7.ad2.utils.StickyHeaderDecorator
 
 class ItemInfoAdapter(
     private val audioExoPlayer: AudioExoPlayer,
-    private val infoPopupWindow: InfoPopupWindow,
-) : ListAdapter<ItemInfo, ItemInfoAdapter.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
+    private val infoPopupWindow: n7.ad2.hero_page.internal.info.InfoPopupWindow,
+) : ListAdapter<ItemInfo, ItemInfoAdapter.ViewHolder>(DiffCallback()), n7.ad2.hero_page.internal.StickyHeaderDecorator.StickyHeaderInterface {
 
     private val popupListener = { view: View, text: String -> infoPopupWindow.show(view, text) }
 
     override fun getHeaderLayout(): Int = R.layout.item_item_info_title
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
-        is VOItemInfoTitle     -> R.layout.item_item_info_title
-        is VOItemInfoLine      -> R.layout.item_item_info_line
-        is VOItemInfoRecipe    -> R.layout.item_item_info_recipe
-        is VOItemInfoBody      -> R.layout.item_item_info_body
+        is VOItemInfoTitle -> R.layout.item_item_info_title
+        is VOItemInfoLine -> R.layout.item_item_info_line
+        is VOItemInfoRecipe -> R.layout.item_item_info_recipe
+        is VOItemInfoBody -> R.layout.item_item_info_body
         is VOItemInfoLineImage -> R.layout.item_item_info_line_image
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, audioExoPlayer, popupListener)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
@@ -60,15 +56,15 @@ class ItemInfoAdapter(
         }
 
         private fun setPopupListener(spannableString: SpannableString) {
-            spannableString.getSpans<PopUpClickableSpan>().forEach { it.popupListener = popupListener }
+//            spannableString.getSpans<n7.ad2.hero_page.internal.info.PopUpClickableSpan>().forEach { it.popupListener = popupListener }
         }
 
         companion object {
             fun from(
                 parent: ViewGroup,
                 viewType: Int,
-                audioExoPlayer: AudioExoPlayer,
-                popupListener: (View, String) -> Unit,
+//                audioExoPlayer: n7.ad2.hero_page.AudioExoPlayer,
+//                popupListener: (View, String) -> Unit,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
 //                val binding: ViewDataBinding = when (viewType) {

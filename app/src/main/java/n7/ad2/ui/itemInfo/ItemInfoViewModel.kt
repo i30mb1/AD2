@@ -10,7 +10,7 @@ import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.R
-import n7.ad2.data.source.local.Locale
+import n7.ad2.android.Locale
 import n7.ad2.ui.itemInfo.domain.vo.ItemInfo
 
 class ItemInfoViewModel @AssistedInject constructor(

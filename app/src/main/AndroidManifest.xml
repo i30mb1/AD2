@@ -89,7 +89,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.heroPage.HeroPageFragment"
+            android:name=".hero_page.HeroPageFragment"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

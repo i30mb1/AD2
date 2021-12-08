@@ -6,8 +6,6 @@ import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import n7.ad2.CoroutineTestRule
 import n7.ad2.runBlockingTest
-import n7.ad2.ui.heroResponse.domain.model.LocalHeroResponsesItem
-import n7.ad2.ui.heroResponse.domain.model.Response
 import org.junit.Rule
 import org.junit.Test
 
@@ -20,11 +18,11 @@ class GetLocalHeroResponsesFromJsonUseCaseTest {
 
     private val moshi = Moshi.Builder().build()
 
-    val getLocalHeroResponsesFromJsonUseCase = GetLocalHeroResponsesFromJsonUseCase(coroutineTestRule.testDispatcher, moshi)
+    val getLocalHeroResponsesFromJsonUseCase = n7.ad2.hero_page.internal.responses.domain.usecase.GetLocalHeroResponsesFromJsonUseCase(coroutineTestRule.testDispatcher, moshi)
 
     @Test
     fun `fields from json converts properly in LocalHeroResponsesItem`() = coroutineTestRule.runBlockingTest {
-        val actual = LocalHeroResponsesItem("Fight", listOf(Response("https//...", "arrrr")))
+        val actual = n7.ad2.hero_page.internal.responses.domain.model.LocalHeroResponsesItem("Fight", listOf(n7.ad2.hero_page.internal.responses.domain.model.Response("https//...", "arrrr")))
         val json = """[
   {
     "responses": [

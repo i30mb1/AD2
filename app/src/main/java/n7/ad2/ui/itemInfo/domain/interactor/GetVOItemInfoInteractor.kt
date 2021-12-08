@@ -1,6 +1,6 @@
 package n7.ad2.ui.itemInfo.domain.interactor
 
-import n7.ad2.data.source.local.Locale
+import n7.ad2.android.Locale
 import n7.ad2.ui.itemInfo.domain.usecase.GetItemInfoFromAssetsUseCase
 import n7.ad2.ui.itemInfo.domain.usecase.GetLocalItemByNameUseCase
 import n7.ad2.ui.itemInfo.domain.usecase.GetLocalItemInfoFromJsonUseCase

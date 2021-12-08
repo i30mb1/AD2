@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hero_info">Инфа</string>
+    <string name="hero_sound">Реплики</string>
+    <string name="hero_guide">Гайды</string>
+
+    <string name="hero_fragment_description">Описание</string>
+    <string name="hero_fragment_bio">Биография</string>
+    <string name="hero_fragment_trivia">Факты</string>
+
+    <string name="starting_items">Начальные предметы</string>
+    <string name="easy_to_win_heroes">Силён против героев</string>
+    <string name="hard_to_win_heroes">Слаб против героев</string>
+    <string name="guide_items">Предметы и тайминги</string>
+    <string name="fragment_guide_skill_builds">Выбор способностей</string>
+
+    <string name="spell_build">Выбор способностей</string>
+</resources>

@@ -16,13 +16,8 @@
     <string name="setting_high_quality_desc_on">включена</string>
     <string name="setting_tell_friend_title">Рассказать друзьям</string>
     <string name="setting_tell_friend_summary">у тебя же %1$d друга, ведь так?</string>
-    <string name="hero_info">Инфа</string>
     <string name="toolbar_search_hint">Поиск по имени…</string>
-    <string name="hero_sound">Реплики</string>
     <string name="update_ok">обновление не требуется</string>
-    <string name="starting_items">Начальные предметы</string>
-    <string name="easy_to_win_heroes">Силён против героев</string>
-    <string name="hard_to_win_heroes">Слаб против героев</string>
     <string name="setting_subscription_summary">Готовы сделать следующий шаг?</string>
     <string name="all_grand_permission">Требуется разрешение</string>
     <string name="all_enable">ENABLE</string>
@@ -32,13 +27,10 @@
     <string name="setting_log_title">Панель с лог-текстом</string>
     <string name="setting_log_summary">на главном экране</string>
     <string name="log_in">Log In</string>
-    <string name="hero_guide">гайд</string>
     <string name="hero_fragment_notes">Примечания</string>
     <string name="hero_fragment_story">История</string>
     <string name="item_hero_personal_description_talents">Таланты</string>
-    <string name="hero_fragment_bio">Биография</string>
-    <string name="hero_fragment_trivia">Факты</string>
-    <string name="hero_fragment_description">Описание</string>
+
     <string name="tips">Советы</string>
     <string name="abilities">Способность : %s</string>
     <string name="lore">Лор</string>
@@ -63,8 +55,7 @@
     <string name="all_come_back_tomorrow">Вернитесь завтра или купите подписку</string>
     <string name="game_fragment_earn_5_premium">Вы получаете 5 дней подписки</string>
     <string name="fragment_game_G1">сколько стоит это заклинание</string>
-    <string name="guide_items">Предметы и тайминги</string>
-    <string name="fragment_guide_skill_builds">Выбор способностей</string>
+
     <string name="dialog_update_title">Найдено новое обновление!</string>
     <string name="dialog_update_message">Не пропусти возможность поднять уровень приложению!</string>
     <string name="dialog_tip_do_not_show">не показывать снова</string>
@@ -123,13 +114,11 @@
     <string name="main_activity_update_me">Запустить обновление?</string>
     <string name="main_activity_okay">Да</string>
 
-    <string name="locale">RU</string>
     <string name="cost">Стоимость : %s</string>
     <string name="recipe">Рецепт</string>
     <string name="bought_from">Покупается в : %s</string>
     <string name="additional_information">Дополнительная информация</string>
     <string name="trivia">Факты</string>
-    <string name="spell_build">Выбор способностей</string>
 
     <string name="popup_talent">улучшается при выборе таланта</string>
     <string name="popup_aghanim">улучшается при покупке аганима</string>

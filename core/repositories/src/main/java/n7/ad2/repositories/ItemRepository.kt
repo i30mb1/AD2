@@ -4,6 +4,7 @@ package n7.ad2.repositories
 
 import android.app.Application
 import kotlinx.coroutines.flow.Flow
+import n7.ad2.android.Locale
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.internal.model.LocalItem
 import javax.inject.Inject

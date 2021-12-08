@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hero_info">Info</string>
+    <string name="hero_sound">Sounds</string>
+    <string name="hero_guide">Guides</string>
+
+    <string name="hero_fragment_description">Description</string>
+    <string name="hero_fragment_bio">Bio</string>
+    <string name="hero_fragment_trivia">Trivia</string>
+    <string name="hero_fragment_params" translatable="false">Parameters</string>
+
+    <string name="notification_title_guide" translatable="false">loading guide...</string>
+    <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
+
+    <string name="hotkey" translatable="false">Hot Key</string>
+    <string name="legacykey" translatable="false">Legacy Key</string>
+    <string name="hero_popularity" translatable="false">popularity : %s</string>
+    <string name="hero_pickrate" translatable="false">pickrate: %s</string>
+    <string name="starting_items">Starting items</string>
+    <string name="easy_to_win_heroes">Best versus heroes</string>
+    <string name="hard_to_win_heroes">Worst versus heroes</string>
+    <string name="guide_items">Items and timings</string>
+    <string name="spell_build">Skill build</string>
+    <string name="fragment_guide_skill_builds">Skill builds</string>
+</resources>
