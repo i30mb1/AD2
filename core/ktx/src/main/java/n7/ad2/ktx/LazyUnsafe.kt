@@ -1,4 +1,4 @@
-package n7.ad2.android.extension
+package n7.ad2.ktx
 
 inline fun <T> lazyUnsafe(
     crossinline initializer: () -> T,

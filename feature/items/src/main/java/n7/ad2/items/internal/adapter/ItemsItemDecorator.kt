@@ -4,8 +4,8 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.android.extension.dpToPx
 import n7.ad2.items.internal.domain.vo.VOItem
+import n7.ad2.ktx.dpToPx
 
 internal class ItemsItemDecorator : RecyclerView.ItemDecoration() {
 

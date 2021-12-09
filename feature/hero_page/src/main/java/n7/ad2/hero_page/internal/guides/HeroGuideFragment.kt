@@ -9,10 +9,10 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.launch
-import n7.ad2.android.extension.viewModel
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroGuideBinding
 import n7.ad2.hero_page.internal.StickyHeaderDecorator
+import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
 class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {

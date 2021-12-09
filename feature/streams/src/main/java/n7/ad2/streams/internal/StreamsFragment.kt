@@ -16,8 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
+import n7.ad2.ktx.viewModel
 import n7.ad2.streams.R
 import n7.ad2.streams.databinding.FragmentStreamsBinding
 import n7.ad2.streams.internal.adapter.StreamsItemDecorator

@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
 import n7.ad2.items.R
 import n7.ad2.items.databinding.FragmentItemsBinding
@@ -20,6 +19,7 @@ import n7.ad2.items.internal.adapter.ItemsItemDecorator
 import n7.ad2.items.internal.adapter.ItemsListAdapter
 import n7.ad2.items.internal.di.DaggerItemsComponent
 import n7.ad2.items.internal.domain.vo.VOItem
+import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
 internal class ItemsFragment : Fragment(R.layout.fragment_items) {

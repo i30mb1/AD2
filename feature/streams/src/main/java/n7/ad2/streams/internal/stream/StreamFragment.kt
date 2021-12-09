@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.transition.MaterialFadeThrough
 import kotlinx.coroutines.launch
-import n7.ad2.android.extension.lazyUnsafe
+import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.streams.R
 import n7.ad2.streams.databinding.FragmentStreamBinding
 

@@ -1,13 +1,13 @@
 package n7.ad2.provider
 
 import ad2.n7.news.api.NewsProvider
-import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.drawer.api.DrawerProvider
 import n7.ad2.games.api.GamesProvider
 import n7.ad2.hero_page.api.HeroPageProvider
 import n7.ad2.heroes.api.HeroesProvider
 import n7.ad2.item_page.api.ItemPageProvider
 import n7.ad2.items.api.ItemsProvider
+import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.provider.api.DrawerApi
 import n7.ad2.provider.api.GamesApi
 import n7.ad2.provider.api.HeroPageApi

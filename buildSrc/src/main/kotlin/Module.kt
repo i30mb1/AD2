@@ -6,6 +6,7 @@ object Module {
         const val dagger = ":core:dagger"
         const val logger = ":core:logger"
         const val coroutines = ":core:coroutines"
+        const val ktx = ":core:ktx"
         const val database = ":core:database"
         const val repositories = ":core:repositories"
         const val ui = ":core:ui"

@@ -5,7 +5,7 @@ import ad2.n7.news.databinding.FragmentNewsBinding
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import n7.ad2.android.extension.viewModel
+import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
 internal class NewsFragment : Fragment(R.layout.fragment_news) {

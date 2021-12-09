@@ -21,8 +21,6 @@ import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
-import n7.ad2.android.extension.lazyUnsafe
-import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
 import n7.ad2.app_preference.AppPreference
 import n7.ad2.drawer.R
@@ -32,6 +30,8 @@ import n7.ad2.drawer.internal.adapter.MainMenuListAdapter
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.di.DaggerDrawerComponent
 import n7.ad2.drawer.internal.domain.vo.VOMenu
+import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.ktx.viewModel
 import n7.ad2.logger.AD2Logger
 import n7.ad2.provider.Provider
 import javax.inject.Inject

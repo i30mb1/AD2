@@ -10,8 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import n7.ad2.android.extension.lazyUnsafe
-import n7.ad2.android.extension.viewModel
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroInfoBinding
 import n7.ad2.hero_page.internal.info.adapter.HeroInfoAdapter
@@ -20,6 +18,8 @@ import n7.ad2.hero_page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.hero_page.internal.pager.HeroPageFragment
+import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {

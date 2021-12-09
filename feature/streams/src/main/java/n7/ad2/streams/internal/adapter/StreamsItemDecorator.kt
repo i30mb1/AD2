@@ -3,7 +3,7 @@ package n7.ad2.streams.internal.adapter
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.android.extension.dpToPx
+import n7.ad2.ktx.dpToPx
 
 internal class StreamsItemDecorator : RecyclerView.ItemDecoration() {
 

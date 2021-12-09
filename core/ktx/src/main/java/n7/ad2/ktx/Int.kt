@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package n7.ad2.android.extension
+package n7.ad2.ktx
 
 import android.content.res.Resources
 import android.util.TypedValue

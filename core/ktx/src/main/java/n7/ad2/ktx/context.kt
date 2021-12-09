@@ -1,4 +1,4 @@
-package n7.ad2.android.extension
+package n7.ad2.ktx
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

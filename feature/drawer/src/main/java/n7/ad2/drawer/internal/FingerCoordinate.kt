@@ -15,9 +15,9 @@ import android.view.View
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.withTranslation
 import com.google.android.material.color.MaterialColors
-import n7.ad2.android.extension.dpToPx
-import n7.ad2.android.extension.spToPx
 import n7.ad2.drawer.R
+import n7.ad2.ktx.dpToPx
+import n7.ad2.ktx.spToPx
 
 internal class FingerCoordinate(
     context: Context,

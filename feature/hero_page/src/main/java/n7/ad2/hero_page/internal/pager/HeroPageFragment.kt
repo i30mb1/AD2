@@ -12,9 +12,9 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import n7.ad2.android.extension.lazyUnsafe
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroPageBinding
+import n7.ad2.ktx.lazyUnsafe
 
 class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 

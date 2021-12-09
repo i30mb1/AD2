@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import n7.ad2.android.extension.viewModel
 import n7.ad2.item_page.R
 import n7.ad2.item_page.databinding.FragmentItemInfoBinding
+import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {

@@ -7,13 +7,13 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.InternalCoroutinesApi
-import n7.ad2.android.extension.viewModel
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroResponsesBinding
 import n7.ad2.hero_page.internal.StickyHeaderDecorator
 import n7.ad2.hero_page.internal.pager.HeroPageFragment
 import n7.ad2.hero_page.internal.pager.showDialogError
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
+import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {

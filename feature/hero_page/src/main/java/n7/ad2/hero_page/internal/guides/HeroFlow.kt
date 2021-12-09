@@ -24,9 +24,9 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
-import n7.ad2.android.extension.dpToPx
 import n7.ad2.android.extension.load
 import n7.ad2.hero_page.R
+import n7.ad2.ktx.dpToPx
 import kotlinx.coroutines.flow.Flow as CoroutineFlow
 
 data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String, val heroWinrate: String)

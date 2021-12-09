@@ -12,9 +12,9 @@ import androidx.transition.TransitionManager
 import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.android.Locale
-import n7.ad2.android.extension.dpToPx
 import n7.ad2.android.extension.load
 import n7.ad2.hero_page.R
+import n7.ad2.ktx.dpToPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
 

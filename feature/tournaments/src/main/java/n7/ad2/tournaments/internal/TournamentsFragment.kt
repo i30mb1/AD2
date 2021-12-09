@@ -7,8 +7,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
+import n7.ad2.ktx.viewModel
 import n7.ad2.tournaments.R
 import n7.ad2.tournaments.databinding.FragmentTournamentsBinding
 import n7.ad2.tournaments.internal.adapter.TournamentsItemDecorator

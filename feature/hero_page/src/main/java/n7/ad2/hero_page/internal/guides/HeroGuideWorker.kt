@@ -13,9 +13,9 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import kotlinx.coroutines.coroutineScope
-import n7.ad2.android.extension.createNotificationChannel
-import n7.ad2.android.extension.isChannelNotCreated
 import n7.ad2.hero_page.R
+import n7.ad2.ktx.createNotificationChannel
+import n7.ad2.ktx.isChannelNotCreated
 
 
 class HeroGuideWorker(

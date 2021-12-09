@@ -8,7 +8,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
 import n7.ad2.games.R
 import n7.ad2.games.databinding.FragmentGamesBinding
@@ -17,6 +16,7 @@ import n7.ad2.games.internal.adapter.GamesListAdapter
 import n7.ad2.games.internal.data.Players
 import n7.ad2.games.internal.data.VOGame
 import n7.ad2.games.internal.di.DaggerGamesComponent
+import n7.ad2.ktx.viewModel
 import n7.ad2.logger.AD2Logger
 import javax.inject.Inject
 

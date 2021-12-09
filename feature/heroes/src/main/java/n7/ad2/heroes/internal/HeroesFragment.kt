@@ -15,8 +15,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.android.extension.lazyUnsafe
-import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
 import n7.ad2.heroes.R
 import n7.ad2.heroes.databinding.FragmentHeroesBinding
@@ -24,6 +22,8 @@ import n7.ad2.heroes.internal.adapter.HeroesItemDecorator
 import n7.ad2.heroes.internal.adapter.HeroesListAdapter
 import n7.ad2.heroes.internal.di.DaggerHeroesComponent
 import n7.ad2.heroes.internal.domain.vo.VOHero
+import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
 internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
