@@ -19,51 +19,51 @@ interface ComponentDependenciesModule {
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(StreamsDependencies::class)
-    fun provideStreamsDependencies(impl: MainActivityComponent): Dependencies
+    fun provideStreamsDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(DatabaseDependencies::class)
-    fun provideDatabaseDependencies(impl: MainActivityComponent): Dependencies
+    fun provideDatabaseDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(DrawerDependencies::class)
-    fun provideDrawerDependencies(impl: MainActivityComponent): Dependencies
+    fun provideDrawerDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(HeroesDependencies::class)
-    fun provideHeroesDependencies(impl: MainActivityComponent): Dependencies
+    fun provideHeroesDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(ItemsDependencies::class)
-    fun provideItemsDependencies(impl: MainActivityComponent): Dependencies
+    fun provideItemsDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(GamesDependencies::class)
-    fun provideGamesDependencies(impl: MainActivityComponent): Dependencies
+    fun provideGamesDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(TournamentsDependencies::class)
-    fun provideTournamentsDependencies(impl: MainActivityComponent): Dependencies
+    fun provideTournamentsDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(HeroPageDependencies::class)
-    fun provideHeroPageDependencies(impl: MainActivityComponent): Dependencies
+    fun provideHeroPageDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(NewsDependencies::class)
-    fun provideNewsDependencies(impl: MainActivityComponent): Dependencies
+    fun provideNewsDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
     @DependenciesKey(ItemPageDependencies::class)
-    fun provideItemPageDependencies(impl: MainActivityComponent): Dependencies
+    fun provideItemPageDependencies(impl: ApplicationComponent): Dependencies
 
 }

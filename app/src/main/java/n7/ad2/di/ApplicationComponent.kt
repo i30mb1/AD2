@@ -16,6 +16,7 @@ import n7.ad2.item_page.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
+import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.MyApplication
 import javax.inject.Singleton
 
@@ -31,7 +32,7 @@ import javax.inject.Singleton
         DatabaseModule::class,
     ]
 )
-interface MainActivityComponent : StreamsDependencies,
+interface ApplicationComponent : StreamsDependencies,
     DrawerDependencies,
     HeroesDependencies,
     ItemPageDependencies,
@@ -43,9 +44,10 @@ interface MainActivityComponent : StreamsDependencies,
     DatabaseDependencies {
 
     fun inject(application: MyApplication)
+    fun inject(mainActivity: MainActivity2)
 
     @Component.Factory
     interface Factory {
-        fun create(@BindsInstance applicationContext: Application): MainActivityComponent
+        fun create(@BindsInstance applicationContext: Application): ApplicationComponent
     }
 }

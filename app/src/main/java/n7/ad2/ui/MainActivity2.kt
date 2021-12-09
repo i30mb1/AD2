@@ -11,9 +11,13 @@ import n7.ad2.android.MainNavigator
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.databinding.ActivityMain2Binding
-import n7.ad2.provider.AD2Provider
+import n7.ad2.di.injector
+import n7.ad2.provider.Provider
+import javax.inject.Inject
 
 class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigator {
+
+    @Inject lateinit var provider: Provider
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
     override var shouldKeepOnScreen = true
@@ -21,13 +25,14 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigato
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        injector.component.inject(this)
         installSplashScreen().setKeepVisibleCondition(::shouldKeepOnScreen)
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         setupInsets()
         if (savedInstanceState == null) {
             supportFragmentManager.commit(true) {
-                setMainFragment(AD2Provider.drawerApi.getDrawerFragment())
+                setMainFragment(provider.drawerApi.getDrawerFragment())
             }
         }
     }
