@@ -1,9 +1,5 @@
 <resources>
 
-    <style name="Widget.CardView.Header" parent="Widget.MaterialComponents.CardView">
-        <item name="cardBackgroundColor">?colorAccent</item>
-    </style>
-
     <style name="MyWindowAnimationTransition">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
