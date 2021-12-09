@@ -13,6 +13,7 @@ object Module {
         const val provider = ":core:provider"
         const val spanParser = ":core:span_parser"
         const val appPreference = ":core:app_preference"
+        const val mediaPlayer = ":core:media_player"
     }
 
     object Feature {

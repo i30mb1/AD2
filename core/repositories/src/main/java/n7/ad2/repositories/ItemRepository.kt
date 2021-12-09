@@ -27,8 +27,8 @@ class ItemRepository @Inject constructor(
         itemsDao.insert(list)
     }
 
-    fun getItemDescription(itemName: String, locale: Locale): String {
-        return application.assets.open("items/$itemName/${locale.folderName}/$ASSETS_PATH_ITEM_DESC")
+    fun getItem(itemName: String, locale: Locale): String {
+        return application.assets.open("items/$itemName/${locale.folderName}/description.json")
             .bufferedReader().use {
                 it.readText()
             }

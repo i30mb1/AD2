@@ -26,6 +26,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextAppearance.H4" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">?myTextColorPrimary</item>
+    </style>
+
     <style name="TextAppearance.H6.White.Bold" parent="TextAppearance.H6.White">
         <item name="android:textStyle">bold</item>
     </style>

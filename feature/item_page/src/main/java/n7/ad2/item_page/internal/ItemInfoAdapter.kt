@@ -8,18 +8,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.item_page.R
-import n7.ad2.item_page.internal.domain.vo.ItemInfo
-import n7.ad2.item_page.internal.domain.vo.VOItemInfoBody
-import n7.ad2.item_page.internal.domain.vo.VOItemInfoLine
-import n7.ad2.item_page.internal.domain.vo.VOItemInfoLineImage
-import n7.ad2.item_page.internal.domain.vo.VOItemInfoRecipe
+import n7.ad2.item_page.internal.adapter.TextLineViewHolder
+import n7.ad2.item_page.internal.domain.vo.VOItemInfo
+import n7.ad2.media_player.AudioExoPlayer
 
 class ItemInfoAdapter(
-//    private val audioExoPlayer: AudioExoPlayer,
+    private val layoutInflater: LayoutInflater,
+    private val audioExoPlayer: AudioExoPlayer,
 //    private val infoPopupWindow: n7.ad2.hero_page.internal.info.InfoPopupWindow,
-) : ListAdapter<ItemInfo, ItemInfoAdapter.ViewHolder>(DiffCallback())
+) : ListAdapter<VOItemInfo, RecyclerView.ViewHolder>(DiffCallback()) {
 //    StickyHeaderDecorator.StickyHeaderInterface
-{
 
 //    private val popupListener = { view: View, text: String -> infoPopupWindow.show(view, text) }
 //
@@ -27,22 +25,32 @@ class ItemInfoAdapter(
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
 //        is VOItemInfoTitle -> R.layout.item_item_info_title
-        is VOItemInfoLine -> R.layout.item_item_info_line
-        is VOItemInfoRecipe -> R.layout.item_item_info_recipe
-        is VOItemInfoBody -> R.layout.item_item_info_body
-        is VOItemInfoLineImage -> R.layout.item_item_info_line_image
+        is VOItemInfo.TextLine -> R.layout.item_text_line
+//        is VOItemInfoRecipe -> R.layout.item_item_info_recipe
+//        is VOItemInfoBody -> R.layout.item_item_info_body
+//        is VOItemInfoLineImage -> R.layout.item_item_info_line_image
+        else -> TODO()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
+        R.layout.item_text_line -> TextLineViewHolder.from(layoutInflater, parent)
+        else -> throw UnsupportedOperationException("could not get type for $viewType")
+    }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val item = getItem(position)
+        when (holder) {
+            is TextLineViewHolder -> if (item != null) holder.bind(item as VOItemInfo.TextLine)
+            else -> {}
+        }
+    }
 
     class ViewHolder private constructor(
 //        private val binding: ViewDataBinding,
         private val popupListener: (View, String) -> Unit,
     ) : RecyclerView.ViewHolder(TODO()) {
 
-        fun bind(item: ItemInfo) {
+        fun bind(item: VOItemInfo) {
 //            binding.setVariable(BR.item, item)
 //            bindSetting(binding)
 //            binding.executePendingBindings()
@@ -78,8 +86,8 @@ class ItemInfoAdapter(
         }
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<ItemInfo>() {
-        override fun areItemsTheSame(oldItem: ItemInfo, newItem: ItemInfo): Boolean = oldItem::class == newItem::class
-        override fun areContentsTheSame(oldItem: ItemInfo, newItem: ItemInfo): Boolean = oldItem == newItem
+    private class DiffCallback : DiffUtil.ItemCallback<VOItemInfo>() {
+        override fun areItemsTheSame(oldItem: VOItemInfo, newItem: VOItemInfo): Boolean = oldItem::class == newItem::class
+        override fun areContentsTheSame(oldItem: VOItemInfo, newItem: VOItemInfo): Boolean = oldItem == newItem
     }
 }

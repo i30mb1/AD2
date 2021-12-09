@@ -1,21 +1,30 @@
-package n7.ad2.item_page.internal.domain.usecase
+package n7.ad2.item_page.internal.domain.interactor
 
 import android.app.Application
-import kotlinx.coroutines.withContext
+import com.squareup.moshi.Moshi
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
+import n7.ad2.android.Locale
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.model.LocalItemInfo
-import n7.ad2.item_page.internal.domain.vo.ItemInfo
+import n7.ad2.item_page.internal.domain.vo.VOItemInfo
+import n7.ad2.repositories.ItemRepository
 import javax.inject.Inject
 
-class GetVOItemInfoUseCase @Inject constructor(
-    private val dispatchers: DispatchersProvider,
+class GetItemInfoUseCase @Inject constructor(
     private val application: Application,
+    private val itemRepository: ItemRepository,
+    private val moshi: Moshi,
+    private val dispatchers: DispatchersProvider,
 ) {
 
     @OptIn(ExperimentalStdlibApi::class)
-    suspend operator fun invoke(localItemDescription: LocalItemInfo): List<ItemInfo> = withContext(dispatchers.IO) {
-        buildList {
-//            add(VOItemInfoLine(application.getString(R.string.cost, localItemDescription.cost)))
+    operator fun invoke(itemName: String, locale: Locale) = flow {
+        val json = itemRepository.getItem(itemName, locale)
+        val localItemDescription = moshi.adapter(LocalItemInfo::class.java).fromJson(json)!!
+        val result = buildList<VOItemInfo> {
+            add(VOItemInfo.TextLine(application.getString(R.string.cost, localItemDescription.cost)))
 //            add(VOItemInfoLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
 //            add(VOItemInfoRecipe(ItemRepository.getFullUrlItemImage(localItemDescription.name), localItemDescription.consistFrom?.map { itemName -> itemName.toVORecipe() } ?: emptyList()))
 //            add(VOItemInfoBody(SpannableString(localItemDescription.description)))
@@ -55,6 +64,7 @@ class GetVOItemInfoUseCase @Inject constructor(
             }
 
         }
-    }
+        emit(result)
+    }.flowOn(dispatchers.IO)
 
 }

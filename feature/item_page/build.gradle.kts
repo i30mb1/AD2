@@ -15,6 +15,7 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
     implementation(project(Module.Core.spanParser))
+    implementation(project(Module.Core.mediaPlayer))
 
     api(Lib.moshi)
 

@@ -8,14 +8,19 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.receiveAsFlow
 import n7.ad2.android.Locale
 import n7.ad2.item_page.R
-import n7.ad2.item_page.internal.domain.vo.ItemInfo
+import n7.ad2.item_page.internal.domain.interactor.GetItemInfoUseCase
+import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 
 class ItemInfoViewModel @AssistedInject constructor(
     application: Application,
-//    private val getVOItemInfoInteractor: GetVOItemInfoInteractor,
+    private val getItemInfoUseCase: GetItemInfoUseCase,
     @Assisted private val itemName: String,
 ) : ViewModel() {
 
@@ -24,24 +29,18 @@ class ItemInfoViewModel @AssistedInject constructor(
         fun create(itemName: String): ItemInfoViewModel
     }
 
-    private val _error = MutableLiveData<Throwable?>(null)
-    val error: LiveData<Throwable?> = _error
-    private val _voItemInfo = MutableLiveData<List<ItemInfo>>()
-    val voItemInfo: LiveData<List<ItemInfo>> = _voItemInfo
+    private val _error = Channel<Throwable>()
+    val error = _error.receiveAsFlow()
+    private val _voItemInfo = MutableLiveData<List<VOItemInfo>>()
+    val voItemInfo: LiveData<List<VOItemInfo>> = _voItemInfo
 
     init {
         loadItemInfo(itemName, Locale.valueOf(application.getString(R.string.locale)))
     }
 
-    private fun loadItemInfo(itemName: String, locale: Locale) = viewModelScope.launch {
-//        getVOItemInfoInteractor(itemName, locale)
-//            .onSuccess {
-//                _voItemInfo.value = it
-//            }
-//            .onFailure {
-//                _error.value = it
-//                _error.value = null
-//            }
-    }
+    private fun loadItemInfo(itemName: String, locale: Locale) = getItemInfoUseCase(itemName, locale)
+        .catch { error -> _error.send(error) }
+        .onEach { list -> _voItemInfo.value = list }
+        .launchIn(viewModelScope)
 
 }

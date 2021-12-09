@@ -5,7 +5,6 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.hero_page.internal.responses.domain.model.LocalHeroResponsesItem
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
-import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseImage
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseTitle
 import java.io.File
@@ -52,7 +51,7 @@ class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
                     (icons as MutableList).add(0, arcaneItem)
                 }
 
-                result.add(VOResponseBody(audioUrl, localHero.name, response.title, icons, titleForSavedFile, savedInMemory))
+//                result.add(VOResponseBody(audioUrl, localHero.name, response.title, icons, titleForSavedFile, savedInMemory))
             }
         }
 

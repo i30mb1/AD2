@@ -24,8 +24,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
-import n7.ad2.repositories.ResponseRepository
-import java.io.File
 
 sealed class DownloadResult
 data class DownloadSuccess(val downloadId: Long) : DownloadResult()
@@ -62,15 +60,15 @@ class DownloadResponseManager(
 
     fun download(item: VOResponseBody): Long? {
         try {
-            val uri = item.audioUrl!!.toUri()
-            val downloadRequest = DownloadManager.Request(uri)
-                .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
-                .setTitle(item.title)
-                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
-                .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
+//            val uri = item.audioUrl!!.toUri()
+//            val downloadRequest = DownloadManager.Request(uri)
+//                .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
+//                .setTitle(item.title)
+//                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
+//                .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
 //                .setVisibleInDownloadsUi(false)
 
-            downloadId = downloadManager.enqueue(downloadRequest)
+//            downloadId = downloadManager.enqueue(downloadRequest)
             registerObserverFor(downloadId, item)
 
             return downloadId

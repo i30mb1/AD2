@@ -3,7 +3,6 @@ package n7.ad2.hero_page.internal.info.domain.vo
 import android.text.SpannableString
 import androidx.annotation.DrawableRes
 import n7.ad2.hero_page.internal.info.HeroStatistics
-import n7.ad2.hero_page.internal.pager.Playable
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder
 
@@ -12,9 +11,7 @@ sealed class VOHeroInfo {
         val title: String,
         val hotkey: String,
         val legacyKey: String,
-        override val audioUrl: String,
-        override val isPlaying: Boolean = false,
-    ) : VOHeroInfo(), Playable
+    ) : VOHeroInfo()
 
     data class Header(val item: HeaderViewHolder.Data) : VOHeroInfo()
     data class Body(val item: BodyViewHolder.Data) : VOHeroInfo()

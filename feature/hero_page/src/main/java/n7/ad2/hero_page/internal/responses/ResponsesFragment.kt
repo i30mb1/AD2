@@ -10,7 +10,6 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroResponsesBinding
 import n7.ad2.hero_page.internal.StickyHeaderDecorator
-import n7.ad2.hero_page.internal.pager.HeroPageFragment
 import n7.ad2.hero_page.internal.pager.showDialogError
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
 import n7.ad2.ktx.viewModel
@@ -68,9 +67,9 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageFragment).audioExoPlayer, infoPopupWindow) {
-            createDialogResponse(it)
-        }
+//        responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageFragment).audioExoPlayer, infoPopupWindow) {
+//            createDialogResponse(it)
+//        }
         responsesPagedListAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
         binding.rv.apply {
             setHasFixedSize(true)

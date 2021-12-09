@@ -11,19 +11,18 @@ import n7.ad2.hero_page.databinding.ItemResponseBodyBinding
 import n7.ad2.hero_page.databinding.ItemResponseTitleBinding
 import n7.ad2.hero_page.internal.StickyHeaderDecorator
 import n7.ad2.hero_page.internal.info.InfoPopupWindow
-import n7.ad2.hero_page.internal.pager.AudioExoPlayer
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseTitle
 
 class ResponsesAdapter(
-    private val audioExoPlayer: AudioExoPlayer,
+//    private val audioExoPlayer: AudioExoPlayer,
     private val infoPopupWindow: InfoPopupWindow,
     private val showDialogResponse: (VOResponseBody) -> Unit,
 ) : ListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int) = when (viewType) {
-        R.layout.item_response_body -> ResponseBodyViewHolder.from(viewGroup, audioExoPlayer, showDialogResponse, infoPopupWindow)
+//        R.layout.item_response_body -> ResponseBodyViewHolder.from(viewGroup, audioExoPlayer, showDialogResponse, infoPopupWindow)
         R.layout.item_response_title -> ResponseHeaderViewHolder.from(viewGroup)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewGroup")
     }
@@ -108,7 +107,7 @@ class ResponsesAdapter(
 
             fun from(
                 parent: ViewGroup,
-                audioExoPlayer: AudioExoPlayer,
+//                audioExoPlayer: AudioExoPlayer,
                 showDialogResponse: (VOResponseBody) -> Unit,
                 infoPopupWindow: n7.ad2.hero_page.internal.info.InfoPopupWindow,
             ): ResponseBodyViewHolder {
