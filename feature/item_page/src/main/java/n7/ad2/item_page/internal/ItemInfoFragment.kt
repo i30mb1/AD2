@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.item_page.R
 import n7.ad2.item_page.databinding.FragmentItemInfoBinding
 import n7.ad2.ktx.viewModel
@@ -53,7 +54,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 //        val itemInfoAdapter = ItemInfoAdapter(audioExoPlayer, infoPopupWindow)
         binding.rv.apply {
 //            adapter = itemInfoAdapter
-//            addItemDecoration(n7.ad2.hero_page.internal.StickyHeaderDecorator(itemInfoAdapter, this))
+            layoutManager = LinearLayoutManager(requireContext())
         }
 //        viewModel.voItemInfo.observe(viewLifecycleOwner, itemInfoAdapter::submitList)
     }

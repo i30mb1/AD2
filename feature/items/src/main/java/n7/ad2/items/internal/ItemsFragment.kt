@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
+import n7.ad2.android.MainNavigator
 import n7.ad2.android.findDependencies
 import n7.ad2.items.R
 import n7.ad2.items.databinding.FragmentItemsBinding
@@ -20,6 +21,7 @@ import n7.ad2.items.internal.adapter.ItemsListAdapter
 import n7.ad2.items.internal.di.DaggerItemsComponent
 import n7.ad2.items.internal.domain.vo.VOItem
 import n7.ad2.ktx.viewModel
+import n7.ad2.provider.Provider
 import javax.inject.Inject
 
 internal class ItemsFragment : Fragment(R.layout.fragment_items) {
@@ -29,6 +31,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     @Inject lateinit var itemsViewModelFactory: ItemsViewModel.Factory
+    @Inject lateinit var provider: Provider
 
     private var _binding: FragmentItemsBinding? = null
     private val binding: FragmentItemsBinding get() = _binding!!
@@ -50,11 +53,10 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     private fun startItemInfoFragment(model: VOItem.Body) {
-//        val intent = Intent(requireContext(), ItemInfoActivity::class.java)
-//        intent.putExtra(ItemInfoActivity.ITEM_NAME, model.name)
-//        startActivity(intent)
-
-        if (!model.viewedByUser) viewModel.updateViewedByUserFieldForItem(model.name)
+        (activity as? MainNavigator)?.apply {
+            setMainFragment(provider.itemPageApi.getItemPageFragment(model.name))
+            if (!model.viewedByUser) viewModel.updateViewedByUserFieldForItem(model.name)
+        }
     }
 
     private fun setupAdapter() {

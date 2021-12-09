@@ -62,8 +62,6 @@
     </style>
 
     <style name="TextAppearance.Signature" parent="">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingLeft">2dp</item>
         <item name="android:paddingRight">2dp</item>
         <item name="android:textSize">8sp</item>
