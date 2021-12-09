@@ -137,10 +137,6 @@ fun DependencyHandler.addTestDependencies() {
 fun DependencyHandler.addBaseDependencies() {
     api(Lib.springAnimation)
     api(Lib.springAnimationKtx)
-    implementation(Lib.exoPlayerCore)
-    implementation(Lib.exoPlayerUi)
-    implementation(Lib.exoPlayerMediaSession)
-    implementation(Lib.exoPlayerHls)
     api(Lib.dataStorePref)
     api(Lib.retrofit)
     api(Lib.retrofitMoshiConverter)

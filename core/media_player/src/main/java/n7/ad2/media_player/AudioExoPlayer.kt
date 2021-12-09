@@ -1,4 +1,4 @@
-package n7.ad2.hero_page.internal.pager
+package n7.ad2.media_player
 
 import android.content.Context
 import android.net.Uri
@@ -20,7 +20,6 @@ import com.google.android.exoplayer2.upstream.DataSpec
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
 import com.google.android.exoplayer2.util.Util
-import n7.ad2.hero_page.R
 
 interface Playable {
     val isPlaying: Boolean
