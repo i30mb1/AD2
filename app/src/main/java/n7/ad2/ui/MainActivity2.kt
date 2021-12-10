@@ -32,7 +32,7 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigato
         setupInsets()
         if (savedInstanceState == null) {
             supportFragmentManager.commit(true) {
-                setMainFragment(provider.drawerApi.getDrawerFragment())
+                setMainFragment(provider.drawerApi.getDrawerFragment(), false)
             }
         }
     }
@@ -42,8 +42,9 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigato
         return super.dispatchTouchEvent(event)
     }
 
-    override fun setMainFragment(fragment: Fragment) {
+    override fun setMainFragment(fragment: Fragment, addToBackStack: Boolean) {
         supportFragmentManager.commit(true) {
+            if (addToBackStack) addToBackStack(null)
             add(binding.container.id, fragment)
         }
     }
