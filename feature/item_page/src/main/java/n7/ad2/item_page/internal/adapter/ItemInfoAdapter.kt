@@ -1,4 +1,4 @@
-package n7.ad2.item_page.internal
+package n7.ad2.item_page.internal.adapter
 
 import android.text.SpannableString
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.item_page.R
-import n7.ad2.item_page.internal.adapter.TextLineViewHolder
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 import n7.ad2.media_player.AudioExoPlayer
 
@@ -26,7 +25,7 @@ class ItemInfoAdapter(
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
 //        is VOItemInfoTitle -> R.layout.item_item_info_title
         is VOItemInfo.TextLine -> R.layout.item_text_line
-//        is VOItemInfoRecipe -> R.layout.item_item_info_recipe
+        is VOItemInfo.Recipe -> R.layout.item_info_recipe
 //        is VOItemInfoBody -> R.layout.item_item_info_body
 //        is VOItemInfoLineImage -> R.layout.item_item_info_line_image
         else -> TODO()
@@ -34,6 +33,7 @@ class ItemInfoAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_text_line -> TextLineViewHolder.from(layoutInflater, parent)
+        R.layout.item_info_recipe -> InfoRecipeViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not get type for $viewType")
     }
 
@@ -41,6 +41,7 @@ class ItemInfoAdapter(
         val item = getItem(position)
         when (holder) {
             is TextLineViewHolder -> if (item != null) holder.bind(item as VOItemInfo.TextLine)
+            is InfoRecipeViewHolder -> if (item != null) holder.bind(item as VOItemInfo.Recipe)
             else -> {}
         }
     }

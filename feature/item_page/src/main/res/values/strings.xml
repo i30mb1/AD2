@@ -6,5 +6,6 @@
     <string name="desc_arrow_left" translatable="false">arrow show to left</string>
 
     <string name="cost">Cost: %s</string>
+    <string name="bought_from">Bought From: %s</string>
 
 </resources>

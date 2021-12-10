@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
 import n7.ad2.android.Locale
 import n7.ad2.item_page.R
-import n7.ad2.item_page.internal.domain.interactor.GetItemInfoUseCase
+import n7.ad2.item_page.internal.domain.usecase.GetItemInfoUseCase
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 
 class ItemInfoViewModel @AssistedInject constructor(

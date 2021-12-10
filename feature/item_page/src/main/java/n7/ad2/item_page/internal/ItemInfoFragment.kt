@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.android.findDependencies
 import n7.ad2.item_page.R
 import n7.ad2.item_page.databinding.FragmentItemInfoBinding
+import n7.ad2.item_page.internal.adapter.ItemInfoAdapter
 import n7.ad2.item_page.internal.adapter.ItemPageDecorator
 import n7.ad2.item_page.internal.di.DaggerItemPageComponent
 import n7.ad2.ktx.lazyUnsafe

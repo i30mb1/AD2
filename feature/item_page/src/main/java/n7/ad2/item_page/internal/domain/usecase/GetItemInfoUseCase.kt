@@ -1,7 +1,8 @@
-package n7.ad2.item_page.internal.domain.interactor
+package n7.ad2.item_page.internal.domain.usecase
 
 import android.app.Application
 import com.squareup.moshi.Moshi
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.android.Locale
@@ -9,6 +10,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.model.LocalItemInfo
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
+import n7.ad2.item_page.internal.domain.vo.VORecipe
 import n7.ad2.repositories.ItemRepository
 import javax.inject.Inject
 
@@ -20,13 +22,16 @@ class GetItemInfoUseCase @Inject constructor(
 ) {
 
     @OptIn(ExperimentalStdlibApi::class)
-    operator fun invoke(itemName: String, locale: Locale) = flow {
+    operator fun invoke(itemName: String, locale: Locale): Flow<List<VOItemInfo>> = flow {
         val json = itemRepository.getItem(itemName, locale)
         val localItemDescription = moshi.adapter(LocalItemInfo::class.java).fromJson(json)!!
-        val result = buildList<VOItemInfo> {
+        val result = buildList {
             add(VOItemInfo.TextLine(application.getString(R.string.cost, localItemDescription.cost)))
-//            add(VOItemInfoLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
-//            add(VOItemInfoRecipe(ItemRepository.getFullUrlItemImage(localItemDescription.name), localItemDescription.consistFrom?.map { itemName -> itemName.toVORecipe() } ?: emptyList()))
+            add(VOItemInfo.TextLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
+            add(VOItemInfo.Recipe(
+                ItemRepository.getFullUrlItemImage(localItemDescription.name),
+                localItemDescription.consistFrom?.map { itemName -> VORecipe(ItemRepository.getFullUrlItemImage(itemName), itemName) } ?: emptyList()
+            ))
 //            add(VOItemInfoBody(SpannableString(localItemDescription.description)))
 //            if (localItemDescription.bonuses != null) add(VOItemInfoBody(SpannableString(localItemDescription.bonuses.toStringList())))
 
