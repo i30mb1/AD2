@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="cost">Стоимость: %s</string>
     <string name="bought_from">Покупается в: %s</string>
     <string name="abilities">Способность: %s</string>
+    <string name="tips">Советы</string>
+    <string name="lore">Лор</string>
+    <string name="trivia">Факты</string>
+    <string name="additional_information">Дополнительная информация</string>
+
 </resources>

@@ -4,5 +4,9 @@
     <string name="cost">Cost: %s</string>
     <string name="bought_from">Bought From: %s</string>
     <string name="abilities">Ability: %s</string>
+    <string name="tips">Tips</string>
+    <string name="lore">Lore</string>
+    <string name="trivia">Trivia</string>
+    <string name="additional_information">Additional information</string>
 
 </resources>

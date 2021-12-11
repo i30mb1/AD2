@@ -31,8 +31,6 @@
     <string name="hero_fragment_story">История</string>
     <string name="item_hero_personal_description_talents">Таланты</string>
 
-    <string name="tips">Советы</string>
-    <string name="lore">Лор</string>
 
     <string name="dialog_response_set_ringtone">Поставить на рингтон</string>
     <string name="open_file">Открыть</string>
@@ -115,8 +113,6 @@
 
     <string name="recipe">Рецепт</string>
 
-    <string name="additional_information">Дополнительная информация</string>
-    <string name="trivia">Факты</string>
 
     <string name="popup_talent">улучшается при выборе таланта</string>
     <string name="popup_aghanim">улучшается при покупке аганима</string>
