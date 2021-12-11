@@ -32,13 +32,20 @@
         <item name="elevationOverlayColor">@color/red_500</item>
 
         <item name="textAppearance.B1">@style/TextAppearance.B1</item>
+
         <item name="textAppearance.H4">@style/TextAppearance.H4</item>
+
         <item name="textAppearance.H5">@style/TextAppearance.H5</item>
         <item name="textAppearance.H5.Bold">@style/TextAppearance.H5.Bold</item>
+        <item name="textAppearance.H5.White">@style/TextAppearance.H5.White</item>
+        <item name="textAppearance.H5.White.Bold">@style/TextAppearance.H5.White.Bold</item>
+
         <item name="textAppearance.H6.White">@style/TextAppearance.H6.White</item>
         <item name="textAppearance.H6.White.Bold">@style/TextAppearance.H6.White.Bold</item>
-        <item name="textAppearance.Signature">@style/TextAppearance.Signature</item>
+
         <item name="textAppearance.Coordinate">@style/TextAppearance.Coordinate</item>
+
+        <item name="textAppearance.Signature">@style/TextAppearance.Signature</item>
         <item name="textAppearance.Signature.White">@style/TextAppearance.Signature.White</item>
         <item name="textAppearance.Signature.White.Bold">
             @style/TextAppearance.Signature.White.Bold
