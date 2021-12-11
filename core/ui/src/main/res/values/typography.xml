@@ -35,6 +35,7 @@
     </style>
 
     <style name="TextAppearance.B1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">13sp</item>
         <item name="android:textColor">?myTextColorPrimary</item>
     </style>
 

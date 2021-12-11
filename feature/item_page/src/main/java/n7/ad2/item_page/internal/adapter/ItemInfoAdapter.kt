@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 import n7.ad2.media_player.AudioExoPlayer
+import n7.ad2.ui.adapter.BodyViewHolder
 
 class ItemInfoAdapter(
     private val layoutInflater: LayoutInflater,
@@ -26,7 +27,7 @@ class ItemInfoAdapter(
 //        is VOItemInfoTitle -> R.layout.item_item_info_title
         is VOItemInfo.TextLine -> R.layout.item_text_line
         is VOItemInfo.Recipe -> R.layout.item_info_recipe
-//        is VOItemInfoBody -> R.layout.item_item_info_body
+        is VOItemInfo.Body -> R.layout.item_body
 //        is VOItemInfoLineImage -> R.layout.item_item_info_line_image
         else -> TODO()
     }
@@ -34,6 +35,7 @@ class ItemInfoAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_text_line -> TextLineViewHolder.from(layoutInflater, parent)
         R.layout.item_info_recipe -> InfoRecipeViewHolder.from(layoutInflater, parent)
+        R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not get type for $viewType")
     }
 
@@ -42,7 +44,8 @@ class ItemInfoAdapter(
         when (holder) {
             is TextLineViewHolder -> if (item != null) holder.bind(item as VOItemInfo.TextLine)
             is InfoRecipeViewHolder -> if (item != null) holder.bind(item as VOItemInfo.Recipe)
-            else -> {}
+            is BodyViewHolder -> if (item != null) holder.bind((item as VOItemInfo.Body).data)
+            else -> throw UnsupportedOperationException("could not bind for $holder")
         }
     }
 

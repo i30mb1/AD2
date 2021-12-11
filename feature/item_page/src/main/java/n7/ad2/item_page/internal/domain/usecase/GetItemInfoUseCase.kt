@@ -1,6 +1,7 @@
 package n7.ad2.item_page.internal.domain.usecase
 
 import android.app.Application
+import android.text.SpannedString
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -12,6 +13,7 @@ import n7.ad2.item_page.internal.domain.model.LocalItemInfo
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 import n7.ad2.item_page.internal.domain.vo.VORecipe
 import n7.ad2.repositories.ItemRepository
+import n7.ad2.ui.adapter.BodyViewHolder
 import javax.inject.Inject
 
 class GetItemInfoUseCase @Inject constructor(
@@ -32,7 +34,7 @@ class GetItemInfoUseCase @Inject constructor(
                 ItemRepository.getFullUrlItemImage(localItemDescription.name),
                 localItemDescription.consistFrom?.map { itemName -> VORecipe(ItemRepository.getFullUrlItemImage(itemName), itemName) } ?: emptyList()
             ))
-//            add(VOItemInfoBody(SpannableString(localItemDescription.description)))
+            add(VOItemInfo.Body(BodyViewHolder.Data(SpannedString(localItemDescription.description))))
 //            if (localItemDescription.bonuses != null) add(VOItemInfoBody(SpannableString(localItemDescription.bonuses.toStringList())))
 
             localItemDescription.abilities?.let { list ->
