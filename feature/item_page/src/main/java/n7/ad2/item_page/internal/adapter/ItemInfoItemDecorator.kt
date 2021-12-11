@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.ktx.dpToPx
 
-internal class ItemPageDecorator : RecyclerView.ItemDecoration() {
+internal class ItemInfoItemDecorator : RecyclerView.ItemDecoration() {
 
     var statusBarsInsets = 0
     var navigationBarsInsets = 0

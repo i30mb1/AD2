@@ -31,6 +31,7 @@ class InfoRecipeViewHolder private constructor(
             recipeAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
             binding.rv.layoutManager = LinearLayoutManager(layoutInflater.context, LinearLayoutManager.HORIZONTAL, false)
             binding.rv.adapter = recipeAdapter
+            binding.rv.addItemDecoration(RecipeItemDecorator())
             return InfoRecipeViewHolder(binding, recipeAdapter)
         }
     }

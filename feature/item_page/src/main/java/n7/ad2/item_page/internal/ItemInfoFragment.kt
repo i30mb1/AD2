@@ -12,7 +12,7 @@ import n7.ad2.android.findDependencies
 import n7.ad2.item_page.R
 import n7.ad2.item_page.databinding.FragmentItemInfoBinding
 import n7.ad2.item_page.internal.adapter.ItemInfoAdapter
-import n7.ad2.item_page.internal.adapter.ItemPageDecorator
+import n7.ad2.item_page.internal.adapter.ItemInfoItemDecorator
 import n7.ad2.item_page.internal.di.DaggerItemPageComponent
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
@@ -33,7 +33,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     private val binding get() = _binding!!
 
     private val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireContext(), lifecycle) }
-    private val itemPageDecorator = ItemPageDecorator()
+    private val itemPageDecorator = ItemInfoItemDecorator()
     private val onPlayIconClickListener: (model: HeaderComplexViewHolder.Data) -> Unit = { }
     private val onQuickKeyClickListener: (key: String) -> Unit = { }
 

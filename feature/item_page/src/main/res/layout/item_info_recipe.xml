@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_item"
             android:layout_width="88dp"
             android:layout_height="64dp"
