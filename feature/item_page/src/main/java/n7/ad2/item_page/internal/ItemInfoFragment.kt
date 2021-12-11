@@ -17,6 +17,7 @@ import n7.ad2.item_page.internal.di.DaggerItemPageComponent
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.media_player.AudioExoPlayer
+import n7.ad2.ui.adapter.HeaderComplexViewHolder
 import javax.inject.Inject
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
@@ -33,9 +34,11 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     private val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireContext(), lifecycle) }
     private val itemPageDecorator = ItemPageDecorator()
+    private val onPlayIconClickListener: (model: HeaderComplexViewHolder.Data) -> Unit = { }
+    private val onQuickKeyClickListener: (key: String) -> Unit = { }
 
     //    private val infoPopupWindow: InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { n7.ad2.hero_page.internal.info.InfoPopupWindow(requireContext(), lifecycle) }
-    private val itemName: String by lazy(LazyThreadSafetyMode.NONE) { requireArguments().getString(ITEM_NAME)!! }
+    private val itemName: String by lazyUnsafe { requireArguments().getString(ITEM_NAME)!! }
 
     @Inject lateinit var itemInfoFactory: ItemInfoViewModel.Factory
     private val viewModel: ItemInfoViewModel by viewModel {
@@ -77,7 +80,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     }
 
     private fun setupItemInfoRecyclerView() {
-        val itemInfoAdapter = ItemInfoAdapter(layoutInflater, audioExoPlayer)
+        val itemInfoAdapter = ItemInfoAdapter(layoutInflater, audioExoPlayer, onPlayIconClickListener, onQuickKeyClickListener)
         binding.rv.apply {
             adapter = itemInfoAdapter
             layoutManager = LinearLayoutManager(requireContext())

@@ -1,7 +1,7 @@
 package n7.ad2.item_page.internal.domain.usecase
 
 import android.app.Application
-import android.text.SpannedString
+import androidx.core.text.toSpanned
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -12,8 +12,10 @@ import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.model.LocalItemInfo
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 import n7.ad2.item_page.internal.domain.vo.VORecipe
+import n7.ad2.ktx.toStringList
 import n7.ad2.repositories.ItemRepository
 import n7.ad2.ui.adapter.BodyViewHolder
+import n7.ad2.ui.adapter.HeaderComplexViewHolder
 import javax.inject.Inject
 
 class GetItemInfoUseCase @Inject constructor(
@@ -34,12 +36,12 @@ class GetItemInfoUseCase @Inject constructor(
                 ItemRepository.getFullUrlItemImage(localItemDescription.name),
                 localItemDescription.consistFrom?.map { itemName -> VORecipe(ItemRepository.getFullUrlItemImage(itemName), itemName) } ?: emptyList()
             ))
-            add(VOItemInfo.Body(BodyViewHolder.Data(SpannedString(localItemDescription.description))))
-//            if (localItemDescription.bonuses != null) add(VOItemInfoBody(SpannableString(localItemDescription.bonuses.toStringList())))
+            add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.description.toSpanned())))
+            if (localItemDescription.bonuses != null) add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.bonuses.toStringList().toSpanned())))
 
             localItemDescription.abilities?.let { list ->
                 list.forEach { ability ->
-//                    add(VOItemInfoTitle(application.getString(R.string.abilities, ability.abilityName), ability.audioUrl!!))
+                    add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.abilities, ability.abilityName), ability.audioUrl)))
 //                    ability.effects.forEach { add(VOItemInfoLine(it)) }
 //                    add(VOItemInfoBody(SpannableString(ability.description)))
 //                    if (ability.story != null) add(VOItemInfoBody(SpannableString(ability.story)))

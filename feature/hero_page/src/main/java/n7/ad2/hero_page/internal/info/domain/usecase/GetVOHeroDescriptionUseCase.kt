@@ -13,7 +13,7 @@ import n7.ad2.hero_page.internal.info.HeroStatistics
 import n7.ad2.hero_page.internal.info.domain.model.LocalHeroDescription
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
-import n7.ad2.ktx.toTextWithDash
+import n7.ad2.ktx.toStringList
 import n7.ad2.logger.AD2Logger
 import n7.ad2.span_parser.AD2StringParser
 import n7.ad2.ui.adapter.BodyViewHolder
@@ -69,7 +69,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.history.toSpanned())))
                     info.trivia?.let { list ->
                         add(VOHeroInfo.Header(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_trivia))))
-                        add(VOHeroInfo.Body(BodyViewHolder.Data(list.toTextWithDash())))
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(list.toStringList(true).toSpanned())))
                     }
                 }
                 is HeroInfo.Spell -> {

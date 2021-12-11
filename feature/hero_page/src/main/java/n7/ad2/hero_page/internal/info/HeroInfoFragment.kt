@@ -15,10 +15,10 @@ import n7.ad2.hero_page.databinding.FragmentHeroInfoBinding
 import n7.ad2.hero_page.internal.info.adapter.HeroInfoAdapter
 import n7.ad2.hero_page.internal.info.adapter.HeroInfoItemDecorator
 import n7.ad2.hero_page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
-import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
+import n7.ad2.ui.adapter.HeaderComplexViewHolder
 import javax.inject.Inject
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
@@ -39,7 +39,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     }
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
-    private val onPlayClickListener = { model: VOHeroInfo.HeaderSound -> }
+    private val onPlayClickListener = { model: HeaderComplexViewHolder.Data -> }
     private val onKeyClickListener = { key: String -> }
     private val onHeroInfoCLickListener = { heroInfo: GetVOHeroDescriptionUseCase.HeroInfo -> viewModel.load(heroInfo) }
     private val onSpellClickListener = { spell: VOSpell -> viewModel.load(GetVOHeroDescriptionUseCase.HeroInfo.Spell(spell.name)) }

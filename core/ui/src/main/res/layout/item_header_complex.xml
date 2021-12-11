@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="?textAppearance.H5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            tools:text="Duel" />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="@dimen/title_min_height"
+            android:layout_height="@dimen/title_min_height"
+            android:contentDescription="@string/desc_play"
+            android:src="@drawable/selector_play" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

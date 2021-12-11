@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc_hero_item" translatable="false">hero item</string>
+    <string name="desc_play" translatable="false">play</string>
+    <string name="desc_cooldown" translatable="false">cooldown</string>
+    <string name="desc_arrow_left" translatable="false">arrow show to left</string>
+</resources>

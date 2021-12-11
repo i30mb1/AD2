@@ -24,12 +24,13 @@ import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.dpToPx
 import n7.ad2.ui.adapter.BodyViewHolder
+import n7.ad2.ui.adapter.HeaderComplexViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder
 
 class HeroInfoAdapter(
     private val layoutInflater: LayoutInflater,
     private val infoPopupWindow: InfoPopupWindow,
-    private val onPlayIconClickListener: (model: VOHeroInfo.HeaderSound) -> Unit,
+    private val onPlayIconClickListener: (model: HeaderComplexViewHolder.Data) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
     private val onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
     private val onSpellClickListener: (spell: VOSpell) -> Unit,
@@ -52,7 +53,7 @@ class HeroInfoAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
-        R.layout.item_header_sound -> HeaderSoundViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
+        R.layout.item_header_sound -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
         R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, onHeroInfoCLickListener)
         R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
@@ -63,7 +64,7 @@ class HeroInfoAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
-            is HeaderSoundViewHolder -> if (item != null) holder.bind(item as VOHeroInfo.HeaderSound) else holder.clear()
+//            is HeaderComplexViewHolder -> if (item != null) holder.bind(item as VOHeroInfo.HeaderSound) else holder.clear()
             is HeroInfoMainViewHolder -> if (item != null) holder.bind(item as VOHeroInfo.Attributes) else holder.clear()
             is HeaderViewHolder -> if (item != null) holder.bind((item as VOHeroInfo.Header).item) else holder.clear()
             is BodyViewHolder -> if (item != null) holder.bind((item as VOHeroInfo.Body).item) else holder.clear()

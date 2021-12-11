@@ -2,4 +2,5 @@
 <resources>
     <string name="cost">Стоимость: %s</string>
     <string name="bought_from">Покупается в: %s</string>
+    <string name="abilities">Способность: %s</string>
 </resources>
