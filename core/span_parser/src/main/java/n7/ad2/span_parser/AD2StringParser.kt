@@ -20,6 +20,7 @@ import androidx.core.text.set
 import androidx.core.text.toSpannable
 import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayDeque
 
 class AD2ClickableSpan(private val data: Data) : ClickableSpan() {
 
@@ -55,7 +56,7 @@ class AD2StringParser @Inject constructor(
     ): SpannableStringBuilder {
         val iterator = string.iterator()
         val result = SpannableStringBuilder()
-        val attributeAndValue: LinkedList<List<AttributeAndValue>> = LinkedList()
+        val attributeAndValue: ArrayDeque<List<AttributeAndValue>> = ArrayDeque()
         analyzer(iterator) { span: Analyzer ->
             when (span) {
                 is StartSpanTag -> {
