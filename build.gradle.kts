@@ -40,3 +40,9 @@ tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
 }
 
+val filePrefixingTask by tasks.registering(FileLinePrefixTask::class) {
+    group = "n7"
+    inputFile.set(file("input.txt"))
+    outPutFile.set(file("output.txt"))
+    layout.projectDirectory
+}

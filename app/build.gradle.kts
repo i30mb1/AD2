@@ -82,23 +82,3 @@ dependencies {
     implementation(project(Module.Feature.heroPage))
     implementation(project(Module.Feature.itemPage))
 }
-
-tasks.register("Hello") {
-    println("Configuration Time!")
-    doLast {
-        println("Execution Time!")
-    }
-}
-
-val taskHello = project.task("hello")
-taskHello.group = "n7"
-taskHello.doLast { println("HelloWorld!") }
-
-val taskHello43 by tasks.registering
-
-val filePrefixingTask by tasks.registering(FileLinePrefixTask::class) {
-    group = "n7"
-    inputFile.set(file("input.txt"))
-    outPutFile.set(file("output.txt"))
-    layout.projectDirectory
-}
