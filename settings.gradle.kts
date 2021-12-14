@@ -22,3 +22,9 @@ include(":feature:hero_page")
 include(":feature:item_page")
 include(":core:ktx")
 include(":core:media_player")
+
+dependencyResolutionManagement {
+    repositories {
+
+    }
+}
