@@ -90,7 +90,7 @@ object Lib {
     const val daggerAnnotation = "com.google.dagger:dagger-compiler:${Versions.dagger}"
 
     object Test {
-        const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.2"
+        const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0-RC"
         const val testCore = "androidx.test:core:1.4.0" // Core library
         const val testCoreKtx = "androidx.test:core-ktx:1.4.0"
         const val testRunner = "androidx.test:runner:1.4.0" // AndroidJUnitRunner

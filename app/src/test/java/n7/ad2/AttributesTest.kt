@@ -8,6 +8,7 @@ import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertWithMessage
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.runTest
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -17,9 +18,6 @@ import java.io.File
 @SmallTest
 @RunWith(AndroidJUnit4::class)
 class AttributesTest {
-
-    @get:Rule
-    val coroutineTestRule = CoroutineTestRule()
 
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
@@ -51,9 +49,9 @@ class AttributesTest {
     }
 
 
-    private fun `all heroes have english description`(locale: String) = coroutineTestRule.runBlockingTest {
+    private fun `all heroes have english description`(locale: String) = runTest {
         val heroesJson = File("${System.getProperty("user.dir")}\\src\\main\\assets\\heroes.json").readText()
-
+        kotlinx.coroutines.test.runTest { }
         val path = "${System.getProperty("user.dir")}\\src\\main\\assets\\"
 //        heroes.forEach {
 //            val file = File("$path${it.assetsPath}\\$locale\\description.json")

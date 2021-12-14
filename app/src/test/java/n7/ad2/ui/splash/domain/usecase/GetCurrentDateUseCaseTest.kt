@@ -3,9 +3,7 @@ package n7.ad2.ui.splash.domain.usecase
 import androidx.test.filters.FlakyTest
 import androidx.test.filters.SmallTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import n7.ad2.CoroutineTestRule
-import n7.ad2.runBlockingTest
-import org.junit.Rule
+import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import java.util.Calendar
 
@@ -20,9 +18,6 @@ class GetCurrentDateUseCaseTest {
         const val DAY = 1
     }
 
-    @get:Rule
-    val coroutineTestRule = CoroutineTestRule()
-
     private val testDate = Calendar.getInstance().apply {
         set(YEAR, MONTH, DAY)
     }
@@ -30,14 +25,14 @@ class GetCurrentDateUseCaseTest {
 //    val getCurrentDateInYearUseCase = GetCurrentDateInYearUseCase(coroutineTestRule.testDispatcher, testDate)
 
     @Test
-    fun `current day not null`() = coroutineTestRule.runBlockingTest {
+    fun `current day not null`() = runTest {
 //        getCurrentDateInYearUseCase().let {
 //            assertThat(it).isNotNull()
 //        }
     }
 
     @Test
-    fun `current day in diapason 0 to 366`() = coroutineTestRule.runBlockingTest {
+    fun `current day in diapason 0 to 366`() = runTest {
 //        getCurrentDateInYearUseCase(Date(Long.MAX_VALUE)).let {
 //            assertThat(it).isIn(0..366)
 //        }
@@ -48,7 +43,7 @@ class GetCurrentDateUseCaseTest {
     }
 
     @Test
-    fun `current day with expected result`() = coroutineTestRule.runBlockingTest {
+    fun `current day with expected result`() = runTest {
 //        getCurrentDateInYearUseCase().let {
 //            assertThat(it).isEqualTo(DAY)
 //        }
