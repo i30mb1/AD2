@@ -11,16 +11,16 @@ object Module {
         const val repositories = ":core:repositories"
         const val ui = ":core:ui"
         const val provider = ":core:provider"
-        const val spanParser = ":core:span_parser"
-        const val appPreference = ":core:app_preference"
-        const val mediaPlayer = ":core:media_player"
+        const val spanParser = ":core:span-parser"
+        const val appPreference = ":core:app-preference"
+        const val mediaPlayer = ":core:media-player"
     }
 
     object Feature {
         const val streams = ":feature:streams"
         const val heroes = ":feature:heroes"
-        const val heroPage = ":feature:hero_page"
-        const val itemPage = ":feature:item_page"
+        const val heroPage = ":feature:hero-page"
+        const val itemPage = ":feature:item-page"
         const val items = ":feature:items"
         const val drawer = ":feature:drawer"
         const val games = ":feature:games"

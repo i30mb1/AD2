@@ -1,7 +1,6 @@
 package n7.ad2.item_page.internal.domain.usecase
 
 import android.app.Application
-import androidx.core.text.toSpanned
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -12,7 +11,6 @@ import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.model.LocalItemInfo
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 import n7.ad2.item_page.internal.domain.vo.VORecipe
-import n7.ad2.ktx.toStringList
 import n7.ad2.repositories.ItemRepository
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderComplexViewHolder

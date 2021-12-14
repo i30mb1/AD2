@@ -16,12 +16,12 @@ include(":feature:items")
 include(":feature:games")
 include(":feature:tournaments")
 include(":feature:news")
-include(":core:app_preference")
-include(":core:span_parser")
-include(":feature:hero_page")
-include(":feature:item_page")
+include(":core:app-preference")
+include(":core:span-parser")
+include(":feature:hero-page")
+include(":feature:item-page")
 include(":core:ktx")
-include(":core:media_player")
+include(":core:media-player")
 
 dependencyResolutionManagement {
     repositories {
