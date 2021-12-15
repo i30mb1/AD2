@@ -1,27 +1,4 @@
-include(":app")
-include(":feature:streams")
-include(":core:rules")
-include(":core:parser")
-include(":core:android")
-include(":core:dagger")
-include(":core:logger")
-include(":core:coroutines")
-include(":core:database")
-include(":core:repositories")
-include(":feature:drawer")
-include(":core:ui")
-include(":core:provider")
-include(":feature:heroes")
-include(":feature:items")
-include(":feature:games")
-include(":feature:tournaments")
-include(":feature:news")
-include(":core:app-preference")
-include(":core:span-parser")
-include(":feature:hero-page")
-include(":feature:item-page")
-include(":core:ktx")
-include(":core:media-player")
+enableFeaturePreview("VERSION_CATALOGS")
 
 dependencyResolutionManagement {
     repositories {
@@ -30,4 +7,31 @@ dependencyResolutionManagement {
     }
 }
 
-enableFeaturePreview("VERSION_CATALOGS")
+include(":app")
+include(
+    ":core:dagger",
+    ":core:android",
+    ":core:parser",
+    ":core:rules",
+    ":core:logger",
+    ":core:coroutines",
+    ":core:database",
+    ":core:repositories",
+    ":core:ui",
+    ":core:provider",
+    ":core:app-preference",
+    ":core:span-parser",
+    ":core:ktx",
+    ":core:media-player",
+)
+include(
+    ":feature:streams",
+    ":feature:drawer",
+    ":feature:heroes",
+    ":feature:items",
+    ":feature:games",
+    ":feature:tournaments",
+    ":feature:news",
+    ":feature:hero-page",
+    ":feature:item-page",
+)
