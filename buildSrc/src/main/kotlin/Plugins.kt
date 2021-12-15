@@ -4,7 +4,7 @@ import org.gradle.plugin.use.PluginDependencySpec
 
 fun PluginDependenciesSpec.dynamicFeature(): PluginDependencySpec = id("com.android.dynamic-feature")
 
-fun PluginDependenciesSpec.androidApp(): PluginDependencySpec = id("com.android.application")
+fun PluginDependenciesSpec.androidApp(): PluginDependencySpec = id("android-application-convention")
 
 fun PluginDependenciesSpec.safeargs(): PluginDependencySpec = id("androidx.navigation.safeargs.kotlin")
 
@@ -20,6 +20,6 @@ fun PluginDependenciesSpec.googleServices(): PluginDependencySpec = id("com.goog
 
 fun PluginDependenciesSpec.javaLibrary(): PluginDependencySpec = id("java-library")
 
-fun PluginDependenciesSpec.androidLibrary(): PluginDependencySpec = id("com.android.library")
+fun PluginDependenciesSpec.androidLibrary(): PluginDependencySpec = id("android-library-convention")
 
 fun PluginDependenciesSpec.kotlin(): PluginDependencySpec = id("kotlin")
