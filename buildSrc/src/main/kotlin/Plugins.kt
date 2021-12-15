@@ -22,4 +22,4 @@ fun PluginDependenciesSpec.javaLibrary(): PluginDependencySpec = id("java-librar
 
 fun PluginDependenciesSpec.androidLibrary(): PluginDependencySpec = id("android-library-convention")
 
-fun PluginDependenciesSpec.kotlin(): PluginDependencySpec = id("kotlin")
+fun PluginDependenciesSpec.kotlin(): PluginDependencySpec = id("kotlin-jvm-convention")

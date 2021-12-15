@@ -1,6 +1,5 @@
 plugins {
     androidLibrary()
-    kotlinAndroid()
     kotlinKapt()
 }
 
