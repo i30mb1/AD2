@@ -7,6 +7,20 @@ dependencyResolutionManagement {
     }
 }
 
+pluginManagement {
+    repositories {
+        mavenCentral()
+        google()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            val pluginId = requested.id.id
+            if (pluginId.startsWith("org.jetbrains.kotlin")) useVersion("1.5.30")
+            if (pluginId.startsWith("com.android")) useModule("com.android.tools.build:gradle:7.0.4")
+        }
+    }
+}
+
 include(":app")
 include(
     ":core:dagger",

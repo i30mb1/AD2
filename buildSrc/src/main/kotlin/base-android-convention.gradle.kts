@@ -1,4 +1,6 @@
-configure<com.android.build.gradle.BaseExtension> {
+import com.android.build.gradle.BaseExtension
+
+configure<BaseExtension> {
     compileSdkVersion(Apps.compileSdk)
 
     buildFeatures.viewBinding = true
