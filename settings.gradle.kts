@@ -25,6 +25,7 @@ include(":core:media-player")
 
 dependencyResolutionManagement {
     repositories {
-
+        mavenCentral()
+        google()
     }
 }
