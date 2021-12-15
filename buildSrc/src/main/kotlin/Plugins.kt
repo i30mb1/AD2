@@ -6,17 +6,9 @@ fun PluginDependenciesSpec.dynamicFeature(): PluginDependencySpec = id("com.andr
 
 fun PluginDependenciesSpec.androidApp(): PluginDependencySpec = id("android-application-convention")
 
-fun PluginDependenciesSpec.safeargs(): PluginDependencySpec = id("androidx.navigation.safeargs.kotlin")
-
 fun PluginDependenciesSpec.junit5(): PluginDependencySpec = id("de.mannodermaus.android-junit5")
 
-fun PluginDependenciesSpec.kotlinAndroid(): PluginDependencySpec = kotlin("android")
-
-fun PluginDependenciesSpec.kotlinAndroidExt(): PluginDependencySpec = kotlin("android.extensions") // kotlin synthetics
-
 fun PluginDependenciesSpec.kotlinKapt(): PluginDependencySpec = kotlin("kapt")
-
-fun PluginDependenciesSpec.googleServices(): PluginDependencySpec = id("com.google.gms.google-services")
 
 fun PluginDependenciesSpec.javaLibrary(): PluginDependencySpec = id("java-library")
 
