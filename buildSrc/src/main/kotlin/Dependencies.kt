@@ -10,7 +10,7 @@ object Apps {
 }
 
 object Versions {
-    const val gradlePlugin = "7.0.0"
+    const val gradlePlugin = "7.0.4"
     const val lint = "30.0.3" // gradlePlugin + 23
     const val workManager = "2.7.1"
     const val moshi = "1.12.0"

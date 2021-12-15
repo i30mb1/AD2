@@ -29,3 +29,5 @@ dependencyResolutionManagement {
         google()
     }
 }
+
+enableFeaturePreview("VERSION_CATALOGS")
