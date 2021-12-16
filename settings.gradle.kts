@@ -1,13 +1,13 @@
 enableFeaturePreview("VERSION_CATALOGS")
 
-dependencyResolutionManagement {
+dependencyResolutionManagement { // репозитории для все проектов (модулей)
     repositories {
         mavenCentral()
         google()
     }
 }
 
-pluginManagement {
+pluginManagement { // блок выполянется до конфигурации проекта
     repositories {
         mavenCentral()
         google()
