@@ -41,7 +41,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         val heroGuides = getHeroGuides(documentWithHeroGuides)
 
         buildList {
-            for(heroGuide in heroGuides) {
+            for (heroGuide in heroGuides) {
                 add(LocalGuideJson(heroName, heroWinrate, heroPopularity, hardToWinHeroesList, easyToWinHeroesList, heroGuide))
             }
         }

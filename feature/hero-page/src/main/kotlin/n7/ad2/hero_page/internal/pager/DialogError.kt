@@ -39,7 +39,7 @@ class DialogError : DialogFragment() {
         }
 
         val dialogBuilder = MaterialAlertDialogBuilder(requireContext())
-                .setView(dialogView.root)
+            .setView(dialogView.root)
 
         return dialogBuilder.create()
     }

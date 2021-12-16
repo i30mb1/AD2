@@ -19,8 +19,8 @@ import androidx.lifecycle.OnLifecycleEvent
 import n7.ad2.hero_page.databinding.PopupSpellInfoBinding
 
 class InfoPopupWindow(
-        context: Context,
-        private val lifecycle: Lifecycle
+    context: Context,
+    private val lifecycle: Lifecycle,
 ) : LifecycleObserver {
 
     private val halfScreenWidth: Int by lazy { Resources.getSystem().displayMetrics.widthPixels / 2 }

@@ -30,7 +30,7 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
     private var _binding: FragmentHeroPageBinding? = null
     private val binding: FragmentHeroPageBinding get() = _binding!!
 
-//    val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
+    //    val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

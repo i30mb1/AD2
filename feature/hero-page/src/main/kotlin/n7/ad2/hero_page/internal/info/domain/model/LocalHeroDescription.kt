@@ -70,5 +70,5 @@ data class Talent(
     @Json(name = "talentLvl")
     val talentLvl: String = "",
     @Json(name = "talentRight")
-    val talentRight: String = ""
+    val talentRight: String = "",
 )

@@ -8,7 +8,7 @@ data class LocalHeroResponsesItem(
     @Json(name = "category")
     val category: String = "",
     @Json(name = "responses")
-    val responses: List<Response> = listOf()
+    val responses: List<Response> = listOf(),
 )
 
 @JsonClass(generateAdapter = true)
@@ -20,5 +20,5 @@ data class Response(
     @Json(name = "icons")
     val icons: List<String> = emptyList(),
     @Json(name = "isArcane")
-    val isArcane: Boolean = false
+    val isArcane: Boolean = false,
 )
