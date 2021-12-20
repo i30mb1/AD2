@@ -1,12 +1,12 @@
 import com.android.build.gradle.BaseExtension
 
 configure<BaseExtension> {
-    compileSdkVersion(Apps.compileSdk)
+    compileSdkVersion(31)
 
     buildFeatures.viewBinding = true
 
     defaultConfig {
-        minSdk = Apps.minSdkVersion
-        targetSdk = Apps.targetSdkVersion
+        minSdk = 23
+        targetSdk = 31
     }
 }

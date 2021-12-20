@@ -7,9 +7,9 @@ plugins {
 
 android {
     defaultConfig {
-        applicationId = Apps.applicationId
-        versionCode = Apps.versionCode
-        versionName = Apps.versionName
+        applicationId = "n7.ad2"
+        versionCode = 555
+        versionName = "555"
 
         resourceConfigurations.addAll(listOf("ru", "en"))
 
@@ -57,6 +57,15 @@ android {
             isIncludeAndroidResources = true
         }
     }
+
+    lint {
+        isAbortOnError = false
+    }
+
+    applicationVariants.forEach { variant ->
+        if (variant.buildType.getName() == "") ""
+    }
+
 }
 
 dependencies {
@@ -66,8 +75,6 @@ dependencies {
     implementation(Lib.jsoup)
     implementation(Lib.firebaseAnal)
     implementation(Lib.instantApps)
-    addBaseDependencies()
-    addTestDependencies()
 
     kapt(Lib.daggerAnnotation)
 
