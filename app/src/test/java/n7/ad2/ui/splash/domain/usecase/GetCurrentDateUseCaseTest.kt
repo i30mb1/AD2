@@ -5,7 +5,6 @@ import androidx.test.filters.SmallTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
-import java.util.Calendar
 
 @ExperimentalCoroutinesApi
 @SmallTest
@@ -18,9 +17,9 @@ class GetCurrentDateUseCaseTest {
         const val DAY = 1
     }
 
-    private val testDate = Calendar.getInstance().apply {
-        set(YEAR, MONTH, DAY)
-    }
+//    private val testDate = Calendar.getInstance().apply {
+//        set(YEAR, MONTH, DAY)
+//    }
 
 //    val getCurrentDateInYearUseCase = GetCurrentDateInYearUseCase(coroutineTestRule.testDispatcher, testDate)
 
