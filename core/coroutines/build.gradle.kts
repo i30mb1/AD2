@@ -1,6 +1,6 @@
 plugins {
     kotlinLibrary()
-    kotlinKapt()
+    kapt()
 }
 
 dependencies {

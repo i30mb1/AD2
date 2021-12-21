@@ -8,7 +8,7 @@ fun PluginDependenciesSpec.androidApp(): PluginDependencySpec = id("android-appl
 
 fun PluginDependenciesSpec.junit5(): PluginDependencySpec = id("de.mannodermaus.android-junit5")
 
-fun PluginDependenciesSpec.kotlinKapt(): PluginDependencySpec = kotlin("kapt")
+fun PluginDependenciesSpec.kapt(): PluginDependencySpec = kotlin("kapt")
 
 fun PluginDependenciesSpec.javaLibrary(): PluginDependencySpec = id("java-library")
 
