@@ -12,13 +12,6 @@ android {
         versionName = "555"
 
         resourceConfigurations.addAll(listOf("ru", "en"))
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                argument("room.incremental", "true")
-                argument("room.expandProjection", "true")
-            }
-        }
     }
 
     signingConfigs {
