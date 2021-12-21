@@ -17,11 +17,11 @@ object Versions {
     const val room = "2.3.0"
     const val kotlin = "1.5.30"
     const val dagger = "2.40.2"
-    const val lifecycle = "2.4.0-alpha01"
+    const val lifecycle = "2.4.0"
     const val retrofit = "2.7.1"
     const val coroutines = "1.5.2"
     const val dataStore = "1.0.0"
-    const val exoPlayer = "2.15.1"
+    const val exoPlayer = "r2.16.1"
 }
 
 object Lib {
@@ -50,10 +50,7 @@ object Lib {
     const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
     const val splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha02"
 
-    const val exoPlayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoPlayer}"
-    const val exoPlayerHls = "com.google.android.exoplayer:exoplayer-hls:${Versions.exoPlayer}"
-    const val exoPlayerUi = "com.google.android.exoplayer:exoplayer-ui:${Versions.exoPlayer}"
-    const val exoPlayerMediaSession = "com.google.android.exoplayer:extension-mediasession:${Versions.exoPlayer}"
+    const val exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
 
     const val workManager = "androidx.work:work-runtime:2.0.1"
     const val workManagerKotlin = "androidx.work:work-runtime-ktx:${Versions.workManager}"
@@ -72,12 +69,11 @@ object Lib {
     // --- Coroutines ---
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}" // for testing coroutines
-    const val coroutinesLifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}" // lifecycleScope + launchWhenResumed and ets.
-    const val coroutinesLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}" // liveData (LiveData + coroutines)
-    const val coroutinesViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}" // viewModelScope + savedStateHandle
-    const val lifecycleAnnotation =
-        "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}" // that's only needed if you have lifecycle-related annotations in your code, specifically @OnLifecycleEvent
-    const val fragmentKtx = "androidx.fragment:fragment-ktx:1.3.0-alpha06" // easy fragment transaction + by viewModels()
+
+    const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}" // liveData (LiveData + coroutines)
+    const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}" // viewModelScope + savedStateHandle
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}" // flowWithLifecycle
+    const val fragmentKtx = "androidx.fragment:fragment-ktx:1.4.0" // easy fragment transaction + by viewModels()
     const val activityKtx = "androidx.activity:activity-ktx:1.1.0" // on BackPress support for Fragment
 
     // --- Moshi ---

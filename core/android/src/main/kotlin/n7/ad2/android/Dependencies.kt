@@ -5,15 +5,13 @@ package n7.ad2.android
 import android.app.Activity
 import android.app.Application
 import androidx.fragment.app.Fragment
-
-interface Dependencies
+import n7.ad2.dagger.Dependencies
 
 typealias DependenciesMap = Map<Class<out Dependencies>, @JvmSuppressWildcards Dependencies>
 
 interface HasDependencies {
     var dependenciesMap: DependenciesMap
 }
-
 
 inline fun <reified D : Dependencies> Fragment.findDependencies(): D {
     return findDependenciesByClass(D::class.java)

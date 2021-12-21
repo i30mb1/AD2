@@ -1,6 +1,6 @@
 plugins {
     javaLibrary()
-    kotlin()
+    kotlinLibrary()
 }
 
 dependencies {

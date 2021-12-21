@@ -1,7 +1,7 @@
 package n7.ad2.di
 
 import ad2.n7.news.api.NewsDependencies
-import n7.ad2.android.Dependencies
+import n7.ad2.dagger.Dependencies
 import n7.ad2.dagger.DependenciesKey
 import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.drawer.api.DrawerDependencies

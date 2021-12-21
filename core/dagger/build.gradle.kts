@@ -1,9 +1,7 @@
 plugins {
-    androidLibrary()
+    kotlinLibrary()
 }
 
 dependencies {
     api(Lib.dagger)
-
-    api(project(Module.Core.android))
 }

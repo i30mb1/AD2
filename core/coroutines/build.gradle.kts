@@ -1,5 +1,5 @@
 plugins {
-    androidLibrary()
+    kotlinLibrary()
     kotlinKapt()
 }
 
@@ -8,7 +8,4 @@ dependencies {
     kapt(Lib.daggerAnnotation)
 
     api(Lib.coroutines)
-    api(Lib.coroutinesLifecycle)
-    api(Lib.coroutinesLivedata)
-    api(Lib.coroutinesViewmodel)
 }

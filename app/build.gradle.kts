@@ -63,7 +63,11 @@ android {
     }
 
     applicationVariants.forEach { variant ->
-        if (variant.buildType.getName() == "") ""
+        if (variant.buildType.getName() == "") variant
+    }
+
+    variantFilter {
+        if (name == "") ignore = true
     }
 
 }
@@ -75,6 +79,8 @@ dependencies {
     implementation(Lib.jsoup)
     implementation(Lib.firebaseAnal)
     implementation(Lib.instantApps)
+    implementation(Lib.workManagerKotlin)
+    addBaseDependencies()
 
     kapt(Lib.daggerAnnotation)
 

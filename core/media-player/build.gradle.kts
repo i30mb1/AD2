@@ -5,10 +5,8 @@ plugins {
 
 dependencies {
     implementation(Lib.exoPlayerCore)
-    implementation(Lib.exoPlayerUi)
-    implementation(Lib.exoPlayerMediaSession)
-    implementation(Lib.exoPlayerHls)
 
     implementation(project(Module.Core.dagger))
+    implementation(project(Module.Core.android))
     kapt(Lib.daggerAnnotation)
 }
