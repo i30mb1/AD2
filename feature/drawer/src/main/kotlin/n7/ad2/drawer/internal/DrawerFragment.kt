@@ -2,9 +2,12 @@ package n7.ad2.drawer.internal
 
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import androidx.activity.addCallback
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.marginBottom
+import androidx.core.view.updateLayoutParams
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -73,6 +76,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
         setupLoggerAdapter()
         setupInsets()
         setupOnBackPressed()
+        setupSettings()
     }
 
     override fun onDestroyView() {
@@ -82,6 +86,12 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
 
     override fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
         binding.draggableDrawer.setDrawerPercentListener(listener)
+    }
+
+    private fun setupSettings() {
+        binding.ivSettings.setOnClickListener { view ->
+            view.isSelected = !view.isSelected
+        }
     }
 
     private fun setupOnBackPressed() {
@@ -108,9 +118,14 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     }
 
     private fun setupInsets() {
+        val ivSettingsMarginBottom = binding.ivSettings.marginBottom
         ViewCompat.setOnApplyWindowInsetsListener(binding.fingerCoordinator) { view, insets ->
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
             view.updatePadding(top = statusBarsInsets.top)
+            binding.ivSettings.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                bottomMargin = ivSettingsMarginBottom + navigationBarsInsets.bottom
+            }
             insets
         }
     }

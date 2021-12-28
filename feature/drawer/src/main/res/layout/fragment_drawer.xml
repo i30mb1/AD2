@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <n7.ad2.drawer.internal.DraggableDrawer xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggable_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/draggable_drawer"
-    xmlns:tools="http://schemas.android.com/tools"
     app:isCollapsed="true">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/desc_background"
         android:scaleType="centerCrop"
-        android:src="@drawable/background"
-        android:contentDescription="@string/desc_background" />
+        android:src="@drawable/background" />
 
     <n7.ad2.drawer.internal.FingerCoordinate
         android:id="@+id/finger_coordinator"
@@ -24,8 +24,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_log"
         android:layout_width="wrap_content"
-        android:layout_gravity="end|bottom"
         android:layout_height="match_parent"
+        android:layout_gravity="end|bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_log" />
@@ -40,14 +40,24 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_menu" />
 
+    <ImageView
+        android:id="@+id/iv_settings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="12dp"
+        android:contentDescription="@string/desc_settings"
+        android:padding="12dp"
+        android:src="@drawable/ic_setting" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end|center_vertical"
-        tools:translationX="100dp"
+        android:background="?android:colorBackground"
         tools:scaleX="0.5"
         tools:scaleY="0.5"
-        android:background="?android:colorBackground" />
+        tools:translationX="100dp" />
 
 </n7.ad2.drawer.internal.DraggableDrawer>
