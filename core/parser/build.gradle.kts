@@ -1,5 +1,4 @@
 plugins {
-    javaLibrary()
     kotlinLibrary()
 }
 

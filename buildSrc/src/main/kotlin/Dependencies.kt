@@ -1,37 +1,13 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
-object Apps {
-    const val compileSdk = 31
-    const val applicationId = "n7.ad2"
-    const val minSdkVersion = 23
-    const val targetSdkVersion = 31
-    const val versionCode = 555
-    const val versionName = "555"
-}
-
-object Versions {
-    const val gradlePlugin = "7.0.4"
-    const val lint = "30.0.3" // gradlePlugin + 23
-    const val workManager = "2.7.1"
-    const val moshi = "1.12.0"
-    const val room = "2.3.0"
-    const val kotlin = "1.5.30"
-    const val dagger = "2.40.2"
-    const val lifecycle = "2.4.0"
-    const val retrofit = "2.7.1"
-    const val coroutines = "1.5.2"
-    const val dataStore = "1.0.0"
-    const val exoPlayer = "r2.16.1"
-}
-
 object Lib {
     const val appCompat = "androidx.appcompat:appcompat:1.4.0"
-    const val dataStorePref = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
+    const val dataStorePref = "androidx.datastore:datastore-preferences:1.0.0"
     const val recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
-    const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
+    const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:1.5.30"
     const val ticker = "com.robinhood.ticker:ticker:1.2.2"
-    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:2.7.1"
+    const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:2.7.1"
     const val retrofitInterceptor = "com.squareup.okhttp3:logging-interceptor:4.3.1"
     const val retrofitScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
     const val paging3 = "androidx.paging:paging-runtime:3.0.0"
@@ -52,39 +28,43 @@ object Lib {
 
     const val exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
 
+    private const val workManagerVersion = "2.7.1"
     const val workManager = "androidx.work:work-runtime:2.0.1"
-    const val workManagerKotlin = "androidx.work:work-runtime-ktx:${Versions.workManager}"
-    const val workGCM = "androidx.work:work-gcm:${Versions.workManager}"
+    const val workManagerKotlin = "androidx.work:work-runtime-ktx:$workManagerVersion"
+    const val workGCM = "androidx.work:work-gcm:$workManagerVersion"
 
-
-    // --- Preference ---
     const val preference = "androidx.preference:preference:1.1.1"
     const val preferenceKtx = "androidx.preference:preference-ktx:1.1.1"
 
-    // --- Room ---
-    const val room = "androidx.room:room-runtime:${Versions.room}"
-    const val roomAnnotation = "androidx.room:room-compiler:${Versions.room}"
-    const val roomKtx = "androidx.room:room-ktx:${Versions.room}" // kotlin Extensions and Coroutines support for Room
+    private const val roomVersion = "2.3.0"
+    const val room = "androidx.room:room-runtime:$roomVersion"
+    const val roomAnnotation = "androidx.room:room-compiler:$roomVersion"
+    const val roomKtx = "androidx.room:room-ktx:$roomVersion" // kotlin Extensions and Coroutines support for Room
 
-    // --- Coroutines ---
-    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}" // for testing coroutines
+    private const val coroutinesVersion = "1.5.2"
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion" // for testing coroutines
 
-    const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}" // liveData (LiveData + coroutines)
-    const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}" // viewModelScope + savedStateHandle
-    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}" // flowWithLifecycle
+    const val lifecycleVersion = "2.4.0"
+    const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion" // liveData (LiveData + coroutines)
+    const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion" // viewModelScope + savedStateHandle
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion" // flowWithLifecycle
     const val fragmentKtx = "androidx.fragment:fragment-ktx:1.4.0" // easy fragment transaction + by viewModels()
     const val activityKtx = "androidx.activity:activity-ktx:1.1.0" // on BackPress support for Fragment
 
-    // --- Moshi ---
-    const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}" // It makes it easy to parse JSON into Kotlin objects
-    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}" // Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
-    const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}" // Add reflection to moshi (better not to use : 2.5 MB) Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-    const val moshiAdapter = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
+    private const val moshiVersion = "1.12.0"
+    const val moshi = "com.squareup.moshi:moshi:$moshiVersion" // It makes it easy to parse JSON into Kotlin objects
+    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion" // Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
+    const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:$moshiVersion" // Add reflection to moshi (better not to use : 2.5 MB) Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+    const val moshiAdapter = "com.squareup.moshi:moshi-adapters:$moshiVersion"
 
-    // --- Dagger ---
-    const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
-    const val daggerAnnotation = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    private const val daggerVersion = "2.40.2"
+    const val dagger = "com.google.dagger:dagger:$daggerVersion"
+    const val daggerAnnotation = "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    private const val lintVersion = "30.0.3" // gradlePlugin + 23
+    const val lintApi = "com.android.tools.lint:lint-api:$lintVersion"
+    const val lintChecks = "com.android.tools.lint:lint-checks:$lintVersion"
 
     object Test {
         const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0-RC"
@@ -100,8 +80,6 @@ object Lib {
         const val mockitoWeb = "com.squareup.okhttp3:mockwebserver:4.4.0"
         const val mockito = "org.mockito:mockito-core:3.2.4"
         const val mockitokotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0" // A small library that provides helper functions to work with Mockito in Kotlin.
-
-        const val testWorking = "androidx.work:work-testing:${Versions.workManager}"
 
         const val espresso = "androidx.test.espresso:espresso-core:3.2.0"
         const val espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"

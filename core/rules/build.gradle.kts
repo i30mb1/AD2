@@ -1,9 +1,8 @@
 plugins {
-    javaLibrary()
     kotlinLibrary()
 }
 
 dependencies {
-    compileOnly("com.android.tools.lint:lint-api:${Versions.lint}")
-    compileOnly("com.android.tools.lint:lint-checks:${Versions.lint}")
+    compileOnly(Lib.lintApi)
+    compileOnly(Lib.lintChecks)
 }
