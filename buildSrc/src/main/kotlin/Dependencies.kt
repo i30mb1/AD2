@@ -41,7 +41,7 @@ object Lib {
     const val roomAnnotation = "androidx.room:room-compiler:$roomVersion"
     const val roomKtx = "androidx.room:room-ktx:$roomVersion" // kotlin Extensions and Coroutines support for Room
 
-    private const val coroutinesVersion = "1.5.2"
+    private const val coroutinesVersion = "1.6.0"
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
     const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion" // for testing coroutines
 
