@@ -3,6 +3,12 @@ plugins {
     kapt()
 }
 
+android {
+    kotlin {
+        explicitApi()
+    }
+}
+
 dependencies {
     testImplementation(Lib.Test.testTruth2)
     testImplementation(Lib.Test.mockitokotlin)
