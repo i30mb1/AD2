@@ -18,21 +18,21 @@ class LoadNewHeroGuideUseCase @Inject constructor(
         workManager.enqueue(request)
 
         val work = workManager.getWorkInfoByIdLiveData(request.id)
-        work.observeForever(object : Observer<WorkInfo> {
-            override fun onChanged(info: WorkInfo) {
-                when (info.state) {
-                    WorkInfo.State.SUCCEEDED -> {
-                        work.removeObserver(this)
-                        continuation.resume(Unit)
-                    }
-                    WorkInfo.State.FAILED -> {
-                        work.removeObserver(this)
-                        val failureMessage = info.outputData.getString(HeroGuideWorker.RESULT)!!
-                        continuation.resumeWithException(Exception(failureMessage))
-                    }
-                    else -> Unit
+        val observer = object : Observer<WorkInfo> {
+            override fun onChanged(info: WorkInfo) = when (info.state) {
+                WorkInfo.State.SUCCEEDED -> {
+                    work.removeObserver(this)
+                    continuation.resume(Unit)
                 }
-            }
-        })
+                WorkInfo.State.FAILED -> {
+                    work.removeObserver(this)
+                    val failureMessage = info.outputData.getString(HeroGuideWorker.RESULT)!!
+                    continuation.resumeWithException(Exception(failureMessage))
+                }
+                else -> Unit
+                }
+        }
+        work.observeForever(observer)
+        continuation.invokeOnCancellation { work.removeObserver(observer) }
     }
 }
