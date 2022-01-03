@@ -6,8 +6,9 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
-import n7.ad2.android.MainNavigator
+import n7.ad2.android.Navigator
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.databinding.ActivityMain2Binding
@@ -15,7 +16,7 @@ import n7.ad2.di.injector
 import n7.ad2.provider.Provider
 import javax.inject.Inject
 
-class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigator {
+class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
 
     @Inject lateinit var provider: Provider
 
@@ -30,11 +31,7 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigato
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         setupInsets()
-        if (savedInstanceState == null) {
-            supportFragmentManager.commit(true) {
-                setMainFragment(provider.drawerApi.getDrawerFragment(), false)
-            }
-        }
+        if (savedInstanceState == null) setMainFragment(provider.drawerApi.getDrawerFragment())
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
@@ -42,9 +39,9 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, MainNavigato
         return super.dispatchTouchEvent(event)
     }
 
-    override fun setMainFragment(fragment: Fragment, addToBackStack: Boolean) {
+    override fun setMainFragment(fragment: Fragment, body: FragmentTransaction.() -> Unit) {
         supportFragmentManager.commit(true) {
-            if (addToBackStack) addToBackStack(null)
+            body()
             add(binding.container.id, fragment)
         }
     }

@@ -20,6 +20,7 @@ internal class StreamSimpleViewHolder(
         tvTitle.text = vOSimpleStream.title
         root.setOnClickListener { onStreamClick(vOSimpleStream) }
         ivStreamImage.load(vOSimpleStream.imageUrl, R.drawable.stream_placeholder)
+//        ivStreamImage.setImageState()
     }
 
     fun unbind() = binding.apply {

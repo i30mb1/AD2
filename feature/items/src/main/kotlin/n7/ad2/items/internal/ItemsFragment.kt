@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.android.MainNavigator
 import n7.ad2.android.findDependencies
+import n7.ad2.android.getNavigator
 import n7.ad2.items.R
 import n7.ad2.items.databinding.FragmentItemsBinding
 import n7.ad2.items.internal.adapter.ItemsItemDecorator
@@ -53,10 +53,8 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     private fun startItemInfoFragment(model: VOItem.Body) {
-        (activity as? MainNavigator)?.apply {
-            setMainFragment(provider.itemPageApi.getItemPageFragment(model.name))
-            if (!model.viewedByUser) viewModel.updateViewedByUserFieldForItem(model.name)
-        }
+        getNavigator.setMainFragment(provider.itemPageApi.getItemPageFragment(model.name)) { addToBackStack(null) }
+        if (!model.viewedByUser) viewModel.updateViewedByUserFieldForItem(model.name)
     }
 
     private fun setupAdapter() {
