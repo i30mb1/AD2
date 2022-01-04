@@ -12,6 +12,7 @@
         android:layout_weight="1"
         android:fontFamily="@font/roboto_thin"
         android:gravity="end"
+        android:maxLines="1"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:textAllCaps="true"
