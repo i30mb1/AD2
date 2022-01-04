@@ -13,6 +13,7 @@
         android:fontFamily="@font/roboto_thin"
         android:gravity="end"
         android:maxLines="1"
+        android:ellipsize="end"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:textAllCaps="true"
