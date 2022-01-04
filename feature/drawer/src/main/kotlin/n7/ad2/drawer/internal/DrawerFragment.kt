@@ -82,6 +82,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        (activity as TouchEvent).dispatchTouchEvent = null
     }
 
     override fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
