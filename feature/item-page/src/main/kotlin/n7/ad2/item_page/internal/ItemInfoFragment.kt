@@ -2,6 +2,7 @@ package n7.ad2.item_page.internal
 
 import android.os.Bundle
 import android.view.View
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -84,7 +85,8 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     }
 
     private fun setupToolbar(title: String) {
-        binding.toolbar.title = title
+        binding.title.text = title
+        (binding.appBarLayout.layoutParams as CoordinatorLayout.LayoutParams).behavior = ToolbarBehavior(requireContext())
     }
 
     private fun setupItemInfoRecyclerView() {
