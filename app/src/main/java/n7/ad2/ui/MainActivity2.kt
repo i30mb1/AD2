@@ -42,7 +42,7 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
     override fun setMainFragment(fragment: Fragment, body: FragmentTransaction.() -> Unit) {
         supportFragmentManager.commit(true) {
             body()
-            add(binding.container.id, fragment)
+            replace(binding.container.id, fragment)
         }
     }
 

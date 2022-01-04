@@ -17,6 +17,7 @@ class InfoRecipeViewHolder private constructor(
 
     fun bind(item: VOItemInfo.Recipe) {
         binding.ivItem.load(item.urlItemImage, R.drawable.item_placeholder)
+        binding.ivItem.transitionName = item.itemName
         binding.ivSign.isVisible = item.recipes.isNotEmpty()
         recipeAdapter.submitList(item.recipes)
     }

@@ -2,6 +2,7 @@ package n7.ad2.items.internal.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,7 @@ import n7.ad2.ui.adapter.HeaderViewHolder
 
 internal class ItemsListAdapter(
     private val layoutInflater: LayoutInflater,
-    private val itemClickListener: (hero: VOItem.Body) -> Unit,
+    private val itemClickListener: (hero: VOItem.Body, view: ImageView) -> Unit,
 ) : ListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {

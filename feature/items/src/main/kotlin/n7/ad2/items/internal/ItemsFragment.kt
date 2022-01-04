@@ -2,6 +2,7 @@ package n7.ad2.items.internal
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -37,9 +38,6 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
     private val binding: FragmentItemsBinding get() = _binding!!
     private val viewModel: ItemsViewModel by viewModel { itemsViewModelFactory.create() }
     private val itemsItemDecorator = ItemsItemDecorator()
-    private val onItemClick: (hero: VOItem.Body) -> Unit = { model ->
-        startItemInfoFragment(model)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,10 +48,20 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentItemsBinding.bind(view)
         setupAdapter()
+        setupAnimation()
+        postponeEnterTransition()
     }
 
-    private fun startItemInfoFragment(model: VOItem.Body) {
-        getNavigator.setMainFragment(provider.itemPageApi.getItemPageFragment(model.name)) { addToBackStack(null) }
+    private fun setupAnimation() {
+
+    }
+
+    private fun onItemClick(model: VOItem.Body, view: ImageView) {
+        getNavigator.setMainFragment(provider.itemPageApi.getItemPageFragment(model.name)) {
+            setReorderingAllowed(true)
+            addSharedElement(view, view.transitionName)
+            addToBackStack(null)
+        }
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForItem(model.name)
     }
 
@@ -61,7 +69,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
         val spanSizeItem = 1
         val spanSizeItemHeader = 4
 
-        val itemsAdapter = ItemsListAdapter(layoutInflater, onItemClick)
+        val itemsAdapter = ItemsListAdapter(layoutInflater, ::onItemClick)
         val gridLayoutManager = GridLayoutManager(context, spanSizeItemHeader)
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int) = when (itemsAdapter.getItemViewType(position)) {
@@ -89,7 +97,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
         }
 
         viewModel.filteredItems.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
-            .onEach(itemsAdapter::submitList)
+            .onEach { list -> itemsAdapter.submitList(list) { startPostponedEnterTransition() } }
             .launchIn(lifecycleScope)
     }
 

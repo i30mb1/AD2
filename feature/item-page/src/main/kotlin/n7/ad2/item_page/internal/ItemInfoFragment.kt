@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.transition.TransitionInflater
 import n7.ad2.android.findDependencies
 import n7.ad2.item_page.R
 import n7.ad2.item_page.databinding.FragmentItemInfoBinding
@@ -59,11 +60,18 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         setupToolbar(itemName)
         setupItemInfoRecyclerView()
         setupInsets()
+        setupAnimation()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun setupAnimation() {
+        sharedElementEnterTransition = TransitionInflater.from(requireContext()).inflateTransition(android.R.transition.move)
+        sharedElementReturnTransition = TransitionInflater.from(requireContext()).inflateTransition(android.R.transition.move)
+        postponeEnterTransition()
     }
 
     private fun setupInsets() {
@@ -86,7 +94,9 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
             layoutManager = LinearLayoutManager(requireContext())
             addItemDecoration(itemPageDecorator)
         }
-        viewModel.voItemInfo.observe(viewLifecycleOwner, itemInfoAdapter::submitList)
+        viewModel.voItemInfo.observe(viewLifecycleOwner) { list ->
+            itemInfoAdapter.submitList(list) { startPostponedEnterTransition() }
+        }
     }
 
 

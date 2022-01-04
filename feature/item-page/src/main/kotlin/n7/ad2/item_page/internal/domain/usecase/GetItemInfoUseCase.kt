@@ -33,6 +33,7 @@ class GetItemInfoUseCase @Inject constructor(
             add(VOItemInfo.TextLine(application.getString(R.string.cost, localItemDescription.cost)))
             add(VOItemInfo.TextLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
             add(VOItemInfo.Recipe(
+                itemName,
                 ItemRepository.getFullUrlItemImage(localItemDescription.name),
                 localItemDescription.consistFrom?.map { itemName -> VORecipe(ItemRepository.getFullUrlItemImage(itemName), itemName) } ?: emptyList()
             ))
