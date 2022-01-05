@@ -9,7 +9,6 @@ internal class ItemInfoItemDecorator : RecyclerView.ItemDecoration() {
 
     var statusBarsInsets = 0
     var navigationBarsInsets = 0
-    var percent = 0f
 
     private val offsetHorizontal = 4.dpToPx
     private val offsetVertical = 8.dpToPx
@@ -23,8 +22,8 @@ internal class ItemInfoItemDecorator : RecyclerView.ItemDecoration() {
         with(outRect) {
             left = offsetVertical
             right = offsetVertical
-            top = if (position == 0) offsetHorizontal + (statusBarsInsets * percent).toInt() else offsetHorizontal
-            bottom = if (position == childCount - 1) offsetHorizontal + (navigationBarsInsets * percent).toInt() else offsetHorizontal
+            top = if (position == 0) offsetHorizontal + statusBarsInsets else offsetHorizontal
+            bottom = if (position == childCount - 1) offsetHorizontal + navigationBarsInsets else offsetHorizontal
         }
 
     }
