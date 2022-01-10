@@ -38,6 +38,18 @@ class ItemInfoViewModel @AssistedInject constructor(
         loadItemInfo(itemName, Locale.valueOf(application.getString(R.string.locale)))
     }
 
+    fun onStartPlayingItem(soundUrl: String) {
+        _voItemInfo.value = checkNotNull(_voItemInfo.value).map { item ->
+            if (item is VOItemInfo.Title) item.copy(data = item.data.copy(isPlaying = true)) else item
+        }
+    }
+
+    fun onEndPlayingItem() {
+        _voItemInfo.value = checkNotNull(_voItemInfo.value).map { item ->
+            if (item is VOItemInfo.Title) item.copy(data = item.data.copy(isPlaying = false)) else item
+        }
+    }
+
     private fun loadItemInfo(itemName: String, locale: Locale) = getItemInfoUseCase(itemName, locale)
         .catch { error -> _error.send(error) }
         .onEach { list -> _voItemInfo.value = list }

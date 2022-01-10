@@ -19,7 +19,6 @@ import n7.ad2.item_page.internal.di.DaggerItemPageComponent
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.media_player.AudioExoPlayer
-import n7.ad2.ui.adapter.HeaderComplexViewHolder
 import javax.inject.Inject
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
@@ -34,12 +33,11 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     private var _binding: FragmentItemInfoBinding? = null
     private val binding get() = _binding!!
 
-    private val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireContext(), lifecycle) }
+    private val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireActivity().application, viewLifecycleOwner.lifecycle) }
     private val itemPageDecorator = ItemInfoItemDecorator()
-    private val onPlayIconClickListener: (model: HeaderComplexViewHolder.Data) -> Unit = { }
     private val onQuickKeyClickListener: (key: String) -> Unit = { }
 
-    //    private val infoPopupWindow: InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { n7.ad2.hero_page.internal.info.InfoPopupWindow(requireContext(), lifecycle) }
+    //    private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
     private val itemName: String by lazyUnsafe { requireArguments().getString(ITEM_NAME)!! }
 
     @Inject lateinit var itemInfoFactory: ItemInfoViewModel.Factory
@@ -62,11 +60,21 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         setupItemInfoRecyclerView()
         setupInsets()
         setupAnimation()
+        setupListeners()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun setupListeners() {
+        audioExoPlayer.playerStateListener = { state ->
+            when (state) {
+                AudioExoPlayer.PlayerState.Ended -> viewModel.onEndPlayingItem()
+                is AudioExoPlayer.PlayerState.Error -> viewModel.onEndPlayingItem()
+            }
+        }
     }
 
     private fun setupAnimation() {
@@ -91,8 +99,17 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         (binding.appBarLayout.layoutParams as CoordinatorLayout.LayoutParams).behavior = ToolbarBehavior(requireContext())
     }
 
+    private fun onPlayIconClick(soundUrl: String) {
+        viewModel.onStartPlayingItem(soundUrl)
+        audioExoPlayer.play(soundUrl)
+    }
+
+    private fun onStopPlaying() {
+        viewModel.onEndPlayingItem()
+    }
+
     private fun setupItemInfoRecyclerView() {
-        val itemInfoAdapter = ItemInfoAdapter(layoutInflater, audioExoPlayer, onPlayIconClickListener, onQuickKeyClickListener)
+        val itemInfoAdapter = ItemInfoAdapter(layoutInflater, ::onPlayIconClick, onQuickKeyClickListener)
         binding.rv.apply {
             adapter = itemInfoAdapter
             layoutManager = LinearLayoutManager(requireContext())

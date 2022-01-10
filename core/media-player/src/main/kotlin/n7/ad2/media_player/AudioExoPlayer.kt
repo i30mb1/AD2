@@ -1,39 +1,36 @@
 package n7.ad2.media_player
 
-import android.content.Context
+import android.app.Application
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RawRes
+import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.LifecycleOwner
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.PlaybackException
 import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.upstream.AssetDataSource
 import com.google.android.exoplayer2.upstream.DataSpec
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
+import com.google.android.exoplayer2.upstream.DefaultDataSource
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
-import com.google.android.exoplayer2.util.Util
-
-interface Playable {
-    val isPlaying: Boolean
-    val audioUrl: String
-}
 
 class AudioExoPlayer(
-    private val context: Context,
+    private val context: Application,
     private val lifecycle: Lifecycle,
-    private var errorListener: ((exception: Exception) -> Unit)? = null,
-) : Player.Listener, LifecycleObserver {
+) : Player.Listener, DefaultLifecycleObserver {
 
-    private lateinit var exoPlayer: SimpleExoPlayer
-    private var isPlaying = false
+    private lateinit var exoPlayer: ExoPlayer
+    var playerStateListener: (playerState: PlayerState) -> Unit = { }
+
+    sealed class PlayerState {
+        object Ended : PlayerState()
+        data class Error(val error: PlaybackException) : PlayerState()
+    }
 
     init {
         lifecycle.addObserver(this)
@@ -44,14 +41,40 @@ class AudioExoPlayer(
             ExoPlayer.STATE_IDLE -> Unit
             ExoPlayer.STATE_BUFFERING -> Unit
             ExoPlayer.STATE_READY -> Unit
-            ExoPlayer.STATE_ENDED -> isPlaying = false
-            else -> isPlaying = false
+            ExoPlayer.STATE_ENDED -> playerStateListener(PlayerState.Ended)
+            else -> Unit
         }
     }
 
     override fun onPlayerError(error: PlaybackException) {
-        errorListener?.invoke(error)
-        isPlaying = false
+        playerStateListener.invoke(PlayerState.Error(error))
+    }
+
+    override fun onStart(owner: LifecycleOwner) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) initializePlayer()
+    }
+
+    override fun onResume(owner: LifecycleOwner) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) initializePlayer()
+    }
+
+    override fun onPause(owner: LifecycleOwner) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) destroy()
+    }
+
+    override fun onStop(owner: LifecycleOwner) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) destroy()
+    }
+
+    override fun onDestroy(owner: LifecycleOwner) {
+        if (::exoPlayer.isInitialized) exoPlayer.removeListener(this)
+        lifecycle.removeObserver(this)
+    }
+
+    private fun initializePlayer() {
+        exoPlayer = ExoPlayer.Builder(context).build()
+        exoPlayer.addListener(this)
+        initAudioFocus()
     }
 
     fun playFromAssets(url: String) {
@@ -63,18 +86,13 @@ class AudioExoPlayer(
         play(assetDataSource.uri!!)
     }
 
-    fun play(model: Playable) {
-        if (isPlaying != model.isPlaying) stop()
-        isPlaying = model.isPlaying
-        if (isPlaying) stop() else play(model.audioUrl)
-    }
-
     fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
 
-    fun play(url: String) = play(Uri.parse(url))
+    fun play(url: String) {
+        play(Uri.parse(url))
+    }
 
-    fun play(uri: Uri) {
-        isPlaying = true
+    private fun play(uri: Uri) {
         val source = buildMediaSource(uri)
 
         exoPlayer.setMediaSource(source)
@@ -82,41 +100,12 @@ class AudioExoPlayer(
         exoPlayer.playWhenReady = true
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    private fun onStart() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) initializePlayer() else Unit
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-    private fun onResume() = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) initializePlayer() else Unit
-
-    private fun initializePlayer() {
-        exoPlayer = SimpleExoPlayer.Builder(context).build()
-
-        exoPlayer.addListener(this)
-        initAudioFocus()
-    }
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    private fun onPause() = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) destroy() else Unit
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    private fun onStop() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) destroy() else Unit
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    private fun onDestroy() {
-        if (::exoPlayer.isInitialized) exoPlayer.removeListener(this)
-        lifecycle.removeObserver(this)
-    }
 
     private fun stop() {
-        isPlaying = false
         exoPlayer.stop()
     }
 
     private fun destroy() {
-        exoPlayer.playWhenReady // play/pause state using
-        exoPlayer.currentPosition // current playback position
-        exoPlayer.currentWindowIndex // current window index
-
         exoPlayer.stop()
         exoPlayer.release()
     }
@@ -131,8 +120,7 @@ class AudioExoPlayer(
     }
 
     private fun buildMediaSource(uri: Uri): ProgressiveMediaSource {
-        val userAgent = Util.getUserAgent(context, context.getString(R.string.app_name))
-        val dataSourceFactory = DefaultDataSourceFactory(context, userAgent)
+        val dataSourceFactory = DefaultDataSource.Factory(context)
         val mediaItem = MediaItem.fromUri(uri)
         return ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(mediaItem)
     }

@@ -1,29 +1,24 @@
 package n7.ad2.item_page.internal.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
-import n7.ad2.media_player.AudioExoPlayer
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderComplexViewHolder
 import n7.ad2.ui.adapter.ImageLineViewHolder
 
 class ItemInfoAdapter(
     private val layoutInflater: LayoutInflater,
-    private val audioExoPlayer: AudioExoPlayer,
-    private val onPlayIconClickListener: (model: HeaderComplexViewHolder.Data) -> Unit,
-    private val onQuickKeyClickListener: (key: String) -> Unit,
-//    private val infoPopupWindow: n7.ad2.hero_page.internal.info.InfoPopupWindow,
+    private val onPlayIconClick: (soundUrl: String) -> Unit,
+    private val onQuickKeyClick: (key: String) -> Unit,
 ) : ListAdapter<VOItemInfo, RecyclerView.ViewHolder>(DiffCallback()) {
-//    StickyHeaderDecorator.StickyHeaderInterface
 
-//    private val popupListener = { view: View, text: String -> infoPopupWindow.show(view, text) }
-//
-//    override fun getHeaderLayout(): Int = R.layout.item_item_info_title
+    private val popupListener = { view: View, text: String -> }
 
     override fun getItemViewType(position: Int): Int = when (val item = getItem(position)) {
         is VOItemInfo.Title -> R.layout.item_header_complex
@@ -38,7 +33,7 @@ class ItemInfoAdapter(
         R.layout.item_text_line -> TextLineViewHolder.from(layoutInflater, parent)
         R.layout.item_info_recipe -> InfoRecipeViewHolder.from(layoutInflater, parent)
         R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
-        R.layout.item_header_complex -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onQuickKeyClickListener)
+        R.layout.item_header_complex -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClick, onQuickKeyClick)
         R.layout.item_image_line -> ImageLineViewHolder.from(layoutInflater, parent, {})
         else -> error("could not get type for $viewType")
     }

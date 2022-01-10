@@ -8,11 +8,11 @@ import n7.ad2.ui.databinding.ItemHeaderComplexBinding
 
 class HeaderComplexViewHolder private constructor(
     private val binding: ItemHeaderComplexBinding,
-    private val onPlayIconClickListener: (model: Data) -> Unit,
-    private val onQuickKeyClickListener: (key: String) -> Unit,
+    private val onPlayIconClick: (soundUrl: String) -> Unit,
+    private val onKeyIconClick: (key: String) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    data class Data(val title: String, val soundUrl: String? = null)
+    data class Data(val title: String, val isPlaying: Boolean = false, val soundUrl: String? = null)
 
 
     fun bind(item: Data) {
@@ -21,8 +21,9 @@ class HeaderComplexViewHolder private constructor(
         binding.tvTitle.text = item.title
 
         binding.ivPlay.isVisible = item.soundUrl != null
-        if (item.soundUrl != null) binding.ivPlay.setOnClickListener { onPlayIconClickListener(item) }
-//        binding.tvHotKey.setOnClickListener { onKeyClickListener(item.hotkey) }
+        binding.ivPlay.isSelected = item.isPlaying
+        if (item.soundUrl != null) binding.ivPlay.setOnClickListener { onPlayIconClick(item.soundUrl) }
+//        binding.tvHotKey.setOnClickListener { onKeyIconClick(item.hotkey) }
 //        binding.tvLegacyKey.setOnClickListener { onKeyClickListener(item.legacyKey) }
     }
 
@@ -34,11 +35,11 @@ class HeaderComplexViewHolder private constructor(
         fun from(
             layoutInflater: LayoutInflater,
             parent: ViewGroup,
-            playClickListener: (model: Data) -> Unit,
-            keyClickListener: (key: String) -> Unit,
+            onPlayIconClick: (soundUrl: String) -> Unit,
+            onKeyIconClick: (key: String) -> Unit,
         ): HeaderComplexViewHolder {
             val binding = ItemHeaderComplexBinding.inflate(layoutInflater, parent, false)
-            return HeaderComplexViewHolder(binding, playClickListener, keyClickListener)
+            return HeaderComplexViewHolder(binding, onPlayIconClick, onKeyIconClick)
         }
     }
 

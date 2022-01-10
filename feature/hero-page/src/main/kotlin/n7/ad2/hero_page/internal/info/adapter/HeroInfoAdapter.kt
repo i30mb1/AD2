@@ -30,7 +30,7 @@ import n7.ad2.ui.adapter.HeaderViewHolder
 class HeroInfoAdapter(
     private val layoutInflater: LayoutInflater,
     private val infoPopupWindow: InfoPopupWindow,
-    private val onPlayIconClickListener: (model: HeaderComplexViewHolder.Data) -> Unit,
+    private val onPlayIconClickListener: (soundUrl: String) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
     private val onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
     private val onSpellClickListener: (spell: VOSpell) -> Unit,

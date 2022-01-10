@@ -43,7 +43,7 @@ class GetItemInfoUseCase @Inject constructor(
 
             localItemDescription.abilities?.let { list ->
                 list.forEach { ability ->
-                    add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.abilities, ability.abilityName), ability.audioUrl)))
+                    add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.abilities, ability.abilityName), false, ability.audioUrl)))
                     ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
                     add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
