@@ -17,7 +17,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -156,7 +156,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
             adapter = mainMenuAdapter
         }
         viewModel.menu.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
-            .filter { list -> list.isNotEmpty() }
+            .filterNotNull()
             .onEach { list ->
                 mainMenuAdapter.submitList(list)
                 setFragment(list.first { menu -> menu.isSelected })
