@@ -80,7 +80,6 @@ class HeroInfoAdapter(
         }
     }
 
-    @OptIn(ExperimentalStdlibApi::class)
     private fun setDescriptions(voDescriptions: List<VOHeroInfo>) = submitList(buildList {
         addAll(currentList.takeWhile { it !is VOHeroInfo.HeaderSound })
         addAll(voDescriptions)

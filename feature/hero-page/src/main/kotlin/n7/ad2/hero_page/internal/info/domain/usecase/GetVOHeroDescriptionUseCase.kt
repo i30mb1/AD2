@@ -34,7 +34,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         data class Spell(val name: String) : HeroInfo()
     }
 
-    @OptIn(ExperimentalStdlibApi::class)
     suspend operator fun invoke(heroName: String, locale: Locale, heroInfo: HeroInfo? = null): Flow<List<VOHeroInfo>> = flow {
 //        val localHero = heroRepository.getHero(heroName)
 //        val json = heroRepository.getHeroDescription(localHero.name, locale)
