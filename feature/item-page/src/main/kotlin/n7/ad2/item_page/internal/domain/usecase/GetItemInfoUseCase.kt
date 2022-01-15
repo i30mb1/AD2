@@ -26,6 +26,7 @@ class GetItemInfoUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 
+    @OptIn(ExperimentalStdlibApi::class)
     operator fun invoke(itemName: String, locale: Locale): Flow<List<VOItemInfo>> = flow {
         val json = itemRepository.getItem(itemName, locale)
         val localItemDescription = moshi.adapter(LocalItemInfo::class.java).fromJson(json)!!

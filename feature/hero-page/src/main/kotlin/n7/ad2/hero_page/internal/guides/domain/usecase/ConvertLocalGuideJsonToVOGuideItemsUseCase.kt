@@ -20,6 +20,7 @@ class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
     private val application: Application,
 ) {
 
+    @OptIn(ExperimentalStdlibApi::class)
     @Suppress("BlockingMethodInNonBlockingContext")
     suspend operator fun invoke(list: List<LocalGuideJson>): List<VOGuideItem> = withContext(dispatchers.IO) {
         val item = list.getOrNull(list.lastIndex) ?: return@withContext emptyList()

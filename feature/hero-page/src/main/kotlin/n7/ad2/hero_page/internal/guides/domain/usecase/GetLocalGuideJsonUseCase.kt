@@ -15,6 +15,7 @@ import javax.inject.Inject
 
 private inline class HeroNameFormatted(val heroName: String)
 
+@OptIn(ExperimentalStdlibApi::class)
 class GetLocalGuideJsonUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
