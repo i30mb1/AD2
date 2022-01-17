@@ -1,5 +1,6 @@
 package n7.ad2.hero_page.internal.info
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
@@ -10,8 +11,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import n7.ad2.android.findDependencies
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroInfoBinding
+import n7.ad2.hero_page.internal.di.DaggerHeroPageComponent
 import n7.ad2.hero_page.internal.info.adapter.HeroInfoAdapter
 import n7.ad2.hero_page.internal.info.adapter.HeroInfoItemDecorator
 import n7.ad2.hero_page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
@@ -42,8 +45,9 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     private val onHeroInfoCLickListener = { heroInfo: GetVOHeroDescriptionUseCase.HeroInfo -> viewModel.load(heroInfo) }
     private val onSpellClickListener = { spell: VOSpell -> viewModel.load(GetVOHeroDescriptionUseCase.HeroInfo.Spell(spell.name)) }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        DaggerHeroPageComponent.factory().create(findDependencies()).inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

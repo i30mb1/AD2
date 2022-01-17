@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
+import n7.ad2.android.getNavigator
 import n7.ad2.heroes.R
 import n7.ad2.heroes.databinding.FragmentHeroesBinding
 import n7.ad2.heroes.internal.adapter.HeroesItemDecorator
@@ -24,6 +25,7 @@ import n7.ad2.heroes.internal.di.DaggerHeroesComponent
 import n7.ad2.heroes.internal.domain.vo.VOHero
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
+import n7.ad2.provider.Provider
 import javax.inject.Inject
 
 internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
@@ -32,6 +34,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         fun getInstance(): HeroesFragment = HeroesFragment()
     }
 
+    @Inject lateinit var provider: Provider
     @Inject lateinit var heroesViewModelFactory: HeroesViewModel.Factory
 
     private var _binding: FragmentHeroesBinding? = null
@@ -51,7 +54,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     private fun startHeroFragment(model: VOHero.Body) {
-//        (activity as MainActivity2).openHeroPageFragment(model.name)
+        getNavigator.setMainFragment(provider.heroPageApi.getPagerFragment(model.name))
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
     }
 

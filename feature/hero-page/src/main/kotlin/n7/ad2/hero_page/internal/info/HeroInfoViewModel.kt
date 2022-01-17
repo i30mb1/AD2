@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import n7.ad2.android.Locale
 import n7.ad2.hero_page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 
@@ -34,7 +33,7 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     fun load(heroInfo: GetVOHeroDescriptionUseCase.HeroInfo?) {
         viewModelScope.launch {
-            val locale = Locale.valueOf("ru")
+//            val locale = Locale.valueOf("ru")
 //            getVOHeroDescriptionUseCase(heroName, locale, heroInfo)
 //                .onEach { list -> _list.emit(list) }
 //                .launchIn(viewModelScope)

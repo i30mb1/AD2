@@ -1,5 +1,6 @@
 package n7.ad2.hero_page.internal.guides
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
@@ -9,9 +10,11 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.launch
+import n7.ad2.android.findDependencies
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroGuideBinding
 import n7.ad2.hero_page.internal.StickyHeaderDecorator
+import n7.ad2.hero_page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.viewModel
 import javax.inject.Inject
 
@@ -27,6 +30,11 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         fun newInstance(heroName: String): HeroGuideFragment = HeroGuideFragment().apply {
             arguments = bundleOf(HERO_NAME to heroName)
         }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        DaggerHeroPageComponent.factory().create(findDependencies()).inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
