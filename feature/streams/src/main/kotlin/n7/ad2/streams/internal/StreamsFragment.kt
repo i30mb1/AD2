@@ -13,11 +13,11 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.viewModel
+import n7.ad2.logger.AD2Logger
 import n7.ad2.streams.R
 import n7.ad2.streams.databinding.FragmentStreamsBinding
 import n7.ad2.streams.internal.adapter.StreamsItemDecorator
@@ -33,6 +33,7 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
     }
 
     @Inject lateinit var streamsFactory: StreamsViewModel.Factory
+    @Inject lateinit var logger: AD2Logger
 
     private var _binding: FragmentStreamsBinding? = null
     private val binding: FragmentStreamsBinding get() = _binding!!
@@ -90,11 +91,14 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
         }
 
         streamsPagedListAdapter.addLoadStateListener { loadState ->
-            when (loadState.refresh) {
-                is LoadState.NotLoading -> Unit
-                LoadState.Loading -> Unit
-                is LoadState.Error -> Toast.makeText(requireContext(), (loadState.refresh as LoadState.Error).error.toString(), Toast.LENGTH_LONG).show()
+            val error = when {
+                loadState.prepend is LoadState.Error -> loadState.prepend as LoadState.Error
+                loadState.append is LoadState.Error -> loadState.append as LoadState.Error
+                loadState.refresh is LoadState.Error -> loadState.refresh as LoadState.Error
+                else -> null
             }
+            if (error != null) logger.log(error.error.message.toString())
+            binding.error.setError(error?.error?.message)
         }
 
         lifecycleScope.launch {
