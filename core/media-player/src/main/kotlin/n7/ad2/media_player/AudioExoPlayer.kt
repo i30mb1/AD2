@@ -100,7 +100,6 @@ class AudioExoPlayer(
         exoPlayer.playWhenReady = true
     }
 
-
     private fun stop() {
         exoPlayer.stop()
     }

@@ -25,9 +25,10 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
 
-sealed class DownloadResult
-data class DownloadSuccess(val downloadId: Long) : DownloadResult()
-data class DownloadFailed(val error: Throwable) : DownloadResult()
+sealed class DownloadResult {
+    data class Success(val downloadId: Long) : DownloadResult()
+    data class Failed(val error: Throwable) : DownloadResult()
+}
 
 private typealias Result<T> = (T) -> Unit
 
@@ -70,10 +71,9 @@ class DownloadResponseManager(
 
 //            downloadId = downloadManager.enqueue(downloadRequest)
             registerObserverFor(downloadId, item)
-
             return downloadId
         } catch (e: Exception) {
-            downloadListener?.invoke(DownloadFailed(e))
+            downloadListener?.invoke(DownloadResult.Failed(e))
         }
         return null
     }
@@ -130,7 +130,7 @@ class DownloadResponseManager(
                 val errorCode = it.getIntOrNull(it.getColumnIndex(DownloadManager.COLUMN_REASON))
                 when (status) {
                     DownloadManager.STATUS_FAILED -> {
-                        downloadListener?.invoke(DownloadFailed(Throwable("Donwload Error Code = $errorCode")))
+                        downloadListener?.invoke(DownloadResult.Failed(Throwable("Download Error Code = $errorCode")))
                         stopProgress(downloadId)
                     }
                     DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> {
@@ -141,7 +141,7 @@ class DownloadResponseManager(
                     }
                     DownloadManager.STATUS_SUCCESSFUL -> {
                         stopProgress(downloadId)
-                        downloadListener?.invoke(DownloadSuccess(downloadId))
+                        downloadListener?.invoke(DownloadResult.Success(downloadId))
                         contentResolver.unregisterContentObserver(hashMap.get(downloadId).second)
                     }
                 }

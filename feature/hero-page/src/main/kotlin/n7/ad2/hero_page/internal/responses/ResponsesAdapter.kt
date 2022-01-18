@@ -10,14 +10,11 @@ import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.ItemResponseBodyBinding
 import n7.ad2.hero_page.databinding.ItemResponseTitleBinding
 import n7.ad2.hero_page.internal.StickyHeaderDecorator
-import n7.ad2.hero_page.internal.info.InfoPopupWindow
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseTitle
 
 class ResponsesAdapter(
-//    private val audioExoPlayer: AudioExoPlayer,
-    private val infoPopupWindow: InfoPopupWindow,
     private val showDialogResponse: (VOResponseBody) -> Unit,
 ) : ListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
 
