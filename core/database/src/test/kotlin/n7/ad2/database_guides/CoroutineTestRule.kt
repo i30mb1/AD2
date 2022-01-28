@@ -1,4 +1,4 @@
-package n7.ad2
+package n7.ad2.database_guides
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -16,6 +16,7 @@ import org.junit.runner.Description
  * This class is a unit test rule which watches for tests starting and finishing.
  * It contains a reference to a TestCoroutineDispatcher, and as tests are starting and stopping it overrides the default Dispatchers.Main
  * dispatcher and replaces the default with our test dispatcher.
+ * @see: <a href="https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-test/MIGRATION.md">more info here</a>
  */
 @ExperimentalCoroutinesApi
 class CoroutineTestRule(
