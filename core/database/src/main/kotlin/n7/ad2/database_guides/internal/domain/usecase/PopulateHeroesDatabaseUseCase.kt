@@ -22,17 +22,13 @@ class PopulateHeroesDatabaseUseCase @Inject constructor(
     private val dispatcher: DispatchersProvider,
 ) {
 
-    class PopulateHeroesDatabaseException(message: String) : Exception(message)
-
     suspend operator fun invoke(): Flow<Boolean> = flow {
-        val json = application.assets.open("heroes.json").bufferedReader().use {
-            it.readText()
-        }
-        if (json.isEmpty()) throw PopulateHeroesDatabaseException("File with heroes empty or not exist")
+        val json = application.assets.open("heroes.json").bufferedReader().use { it.readText() }
+        if (json.isEmpty()) error("File with heroes empty or not exist")
 
         val typeAssetsHero = Types.newParameterizedType(List::class.java, AssetsHero::class.java)
         val adapter: JsonAdapter<List<AssetsHero>> = moshi.adapter(typeAssetsHero)
-        val listAssetsHero: List<AssetsHero> = adapter.fromJson(json) ?: throw PopulateHeroesDatabaseException("Could not parse assets heroes")
+        val listAssetsHero: List<AssetsHero> = adapter.fromJson(json) ?: error("Could not parse assets heroes")
 
         val result: List<LocalHero> = listAssetsHero.map { assetsItem ->
             LocalHero(name = assetsItem.name, mainAttr = assetsItem.mainAttribute, viewedByUser = false)

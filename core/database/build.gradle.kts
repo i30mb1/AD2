@@ -6,6 +6,7 @@ plugins {
 dependencies {
     api(Lib.room)
     api(Lib.roomKtx)
+
     implementation(Lib.workManagerKotlin)
     implementation(Lib.moshi)
 
@@ -17,4 +18,6 @@ dependencies {
     kapt(Lib.roomAnnotation)
     kapt(Lib.moshiCodegen)
     kapt(Lib.daggerAnnotation)
+
+    addTestDependencies()
 }
