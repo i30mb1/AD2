@@ -28,7 +28,8 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     @Inject lateinit var responsesViewModelFactory: ResponsesViewModel.Factory
-    @Inject lateinit var audioExoPlayer: AudioExoPlayer
+    @Inject lateinit var audioExoPlayerFactory: AudioExoPlayer.Factory
+    private val audioExoPlayer by lazyUnsafe { audioExoPlayerFactory.create(lifecycle) }
 
     private var _binding: FragmentHeroResponsesBinding? = null
     private val binding: FragmentHeroResponsesBinding get() = _binding!!

@@ -18,11 +18,19 @@ import com.google.android.exoplayer2.upstream.AssetDataSource
 import com.google.android.exoplayer2.upstream.DataSpec
 import com.google.android.exoplayer2.upstream.DefaultDataSource
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 
-class AudioExoPlayer(
+class AudioExoPlayer @AssistedInject constructor(
     private val context: Application,
-    private val lifecycle: Lifecycle,
+    @Assisted private val lifecycle: Lifecycle,
 ) : Player.Listener, DefaultLifecycleObserver {
+
+    @AssistedFactory
+    interface Factory {
+        fun create(lifecycle: Lifecycle): AudioExoPlayer
+    }
 
     private lateinit var exoPlayer: ExoPlayer
     var playerStateListener: (playerState: PlayerState) -> Unit = { }
