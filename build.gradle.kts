@@ -9,7 +9,6 @@ tasks.register("clean", Delete::class) {
 val printFromGradleProperties by tasks.registering {
     group = "n7"
     doLast {
-
         println("Hello ${project.property("key")}")
     }
 }
