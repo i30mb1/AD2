@@ -1,0 +1,19 @@
+name: Assemble Apk
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: gradle assemble -q
+        
+      - uses: actions/upload-artifact@v2
+        with:
+          name: app-prod-debug.apk
+          path: app/build/outputs/apk/prod/debug/app-prod-debug.apk
