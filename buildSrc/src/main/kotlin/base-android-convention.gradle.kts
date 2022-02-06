@@ -9,4 +9,8 @@ configure<BaseExtension> {
         minSdk = 23
         targetSdk = 31
     }
+
+    lintOptions {
+        isAbortOnError = false
+    }
 }

@@ -71,10 +71,6 @@ android {
         }
     }
 
-    lint {
-        isAbortOnError = false
-    }
-
 }
 
 dependencies {
