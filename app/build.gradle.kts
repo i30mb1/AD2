@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
-
 plugins {
     application()
     kapt()
@@ -17,10 +15,10 @@ android {
     signingConfigs {
         getByName("debug") { /* automatic signs with debug key*/ }
         create("release") {
-            storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))
-            storePassword = gradleLocalProperties(rootDir).getProperty("storePassword")
-            keyAlias = gradleLocalProperties(rootDir).getProperty("keyAlias")
-            keyPassword = gradleLocalProperties(rootDir).getProperty("keyPassword")
+//            storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))
+//            storePassword = gradleLocalProperties(rootDir).getProperty("storePassword")
+//            keyAlias = gradleLocalProperties(rootDir).getProperty("keyAlias")
+//            keyPassword = gradleLocalProperties(rootDir).getProperty("keyPassword")
         }
     }
 
