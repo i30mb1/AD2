@@ -1,3 +1,5 @@
+import androidx.fragment.app.Fragment
+
 //package n7.ad2.games.internal.games
 //
 //import android.R
@@ -21,7 +23,7 @@
 //import java.util.concurrent.Executor
 //import java.util.concurrent.Executors
 //
-//class Game1p1 : Fragment() {
+class Game1p1 : Fragment() {
 //    var secondRemaining: Int = 30
 //    var isLoading: Boolean = true
 //    var slot1: String = ""
@@ -247,4 +249,4 @@
 //            else -> endText.set("GG&WP!")
 //        }
 //    }
-//}
+}
