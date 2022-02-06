@@ -36,14 +36,14 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             resValue("string", "app_name2", "AD2(debug)")
         }
-        getByName("release") {
-            isMinifyEnabled = true
-            isDebuggable = false
-            isShrinkResources = true
-            signingConfig = signingConfigs.getByName("release")
-            resValue("string", "app_name2", "AD2")
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
-        }
+//        getByName("release") {
+//            isMinifyEnabled = true
+//            isDebuggable = false
+//            isShrinkResources = true
+//            signingConfig = signingConfigs.getByName("release")
+//            resValue("string", "app_name2", "AD2")
+//            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+//        }
     }
 
     flavorDimensions += "environment"
