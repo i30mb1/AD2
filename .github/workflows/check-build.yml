@@ -1,11 +1,13 @@
-name: Assemble Apk
+name: Check Build
 
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  buildAndCopyApk:
+  build:
     runs-on: windows-2022
     steps:
       - name: checkout
@@ -16,10 +18,5 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: gradle
-      - name: Build
-        run: gradle assemble -q
-      - name: Copy Apk
-        uses: actions/upload-artifact@v2
-        with:
-          name: AD2.apk
-          path: app/build/outputs/apk/prod/debug/app-prod-debug.apk
+      - name: Build with Gradle
+        run: gradle build -q
