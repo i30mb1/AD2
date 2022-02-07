@@ -4,7 +4,9 @@ import dagger.Component
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.streams.internal.StreamsFragment
 import n7.ad2.streams.internal.StreamsViewModel
+import javax.inject.Singleton
 
+@Singleton
 @Component(
     dependencies = [
         StreamsDependencies::class

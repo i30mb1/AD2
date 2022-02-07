@@ -1,4 +1,4 @@
-package n7.ad2.di
+package n7.ad2.streams.internal.data.remote.retrofit
 
 import okhttp3.Interceptor
 import okhttp3.Response

@@ -13,6 +13,7 @@ interface StreamsDependencies : Dependencies {
     val logger: AD2Logger
     val itemRepository: ItemRepository
     val client: OkHttpClient
+    val clientBuilder: OkHttpClient.Builder
     val moshi: Moshi
     val dispatchersProvider: DispatchersProvider
 }
