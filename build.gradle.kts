@@ -1,5 +1,6 @@
 plugins {
     id("file-line-prefix-plugin")
+    id("com.osacky.doctor") version "0.7.3"
 }
 
 tasks.register("clean", Delete::class) {
