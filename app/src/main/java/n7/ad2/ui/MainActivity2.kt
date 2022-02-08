@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
+import androidx.fragment.app.strictmode.FragmentStrictMode
+import n7.ad2.BuildConfig
 import n7.ad2.android.Navigator
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
@@ -31,6 +33,7 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         setupInsets()
+        setupFragmentStrictPolicy()
         if (savedInstanceState == null) setMainFragment(provider.drawerApi.getDrawerFragment())
     }
 
@@ -43,6 +46,20 @@ class MainActivity2 : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
         supportFragmentManager.commit(true) {
             body()
             replace(binding.container.id, fragment)
+        }
+    }
+
+    private fun setupFragmentStrictPolicy() {
+        if (BuildConfig.DEBUG) {
+            supportFragmentManager.strictModePolicy = FragmentStrictMode.Policy.Builder()
+                .penaltyDeath()
+                .detectFragmentReuse()
+                .detectFragmentTagUsage()
+                .detectRetainInstanceUsage()
+                .detectSetUserVisibleHint()
+                .detectTargetFragmentUsage()
+                .detectWrongFragmentContainer()
+                .build()
         }
     }
 
