@@ -3,13 +3,6 @@ enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement { // репозитории для все проектов (модулей)
     repositories {
         mavenCentral()
-        google()
-    }
-}
-
-pluginManagement { // блок выполянется до конфигурации проекта
-    repositories {
-        mavenCentral()
         exclusiveContent {
             forRepository { google() }
             filter {
@@ -18,6 +11,12 @@ pluginManagement { // блок выполянется до конфигурац�
                 includeGroupByRegex("com.google.android.+")
             }
         }
+    }
+}
+
+pluginManagement { // блок выполянется до конфигурации проекта
+    repositories {
+        mavenCentral()
     }
     resolutionStrategy {
         eachPlugin { // хитрый способ динамический подключить плагины если они начнут использоваться в проекте
