@@ -1,5 +1,3 @@
-enableFeaturePreview("VERSION_CATALOGS")
-
 dependencyResolutionManagement { // репозитории для все проектов (модулей)
     repositories {
         mavenCentral()
