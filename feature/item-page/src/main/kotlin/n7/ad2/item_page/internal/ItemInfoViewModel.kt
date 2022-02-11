@@ -8,11 +8,11 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.receiveAsFlow
+import n7.ad2.android.ErrorMessage
+import n7.ad2.android.ErrorMessageDelegate
 import n7.ad2.android.Locale
 import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.usecase.GetItemInfoUseCase
@@ -22,15 +22,13 @@ class ItemInfoViewModel @AssistedInject constructor(
     application: Application,
     private val getItemInfoUseCase: GetItemInfoUseCase,
     @Assisted private val itemName: String,
-) : ViewModel() {
+) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
 
     @AssistedFactory
     interface Factory {
         fun create(itemName: String): ItemInfoViewModel
     }
 
-    private val _error = Channel<Throwable>()
-    val error = _error.receiveAsFlow()
     private val _voItemInfo = MutableLiveData<List<VOItemInfo>>()
     val voItemInfo: LiveData<List<VOItemInfo>> = _voItemInfo
 
@@ -51,7 +49,7 @@ class ItemInfoViewModel @AssistedInject constructor(
     }
 
     private fun loadItemInfo(itemName: String, locale: Locale) = getItemInfoUseCase(itemName, locale)
-        .catch { error -> _error.send(error) }
+        .catch { error -> showError(error) }
         .onEach { list -> _voItemInfo.value = list }
         .launchIn(viewModelScope)
 

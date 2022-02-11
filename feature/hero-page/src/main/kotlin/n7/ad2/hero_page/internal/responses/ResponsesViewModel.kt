@@ -10,9 +10,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import n7.ad2.android.ErrorMessage
+import n7.ad2.android.ErrorMessageDelegate
 import n7.ad2.android.Locale
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
@@ -22,15 +22,13 @@ class ResponsesViewModel @AssistedInject constructor(
     @Assisted private val heroName: String,
 //    private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
 //    private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
-) : ViewModel() {
+) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
 
     @AssistedFactory
     interface Factory {
         fun create(heroName: String): ResponsesViewModel
     }
 
-    private val _error = Channel<Throwable>()
-    val error = _error.receiveAsFlow()
     private val heroWithLocale = MutableLiveData<Pair<LocalHero, Locale>>()
     val voResponses: LiveData<List<VOResponse>> = heroWithLocale.switchMap {
         liveData {
