@@ -78,7 +78,6 @@ dependencies {
     implementation(Lib.ticker)
     implementation(Lib.viewPager2)
     implementation(Lib.jsoup)
-    implementation(Lib.firebaseAnal)
     implementation(Lib.instantApps)
     implementation(Lib.workManagerKotlin)
     addBaseDependencies()
