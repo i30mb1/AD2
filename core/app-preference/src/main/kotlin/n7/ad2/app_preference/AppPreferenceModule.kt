@@ -2,12 +2,12 @@ package n7.ad2.app_preference
 
 import android.app.Application
 import n7.ad2.app_preference.domain.usecase.GetCurrentDayUseCase
-import javax.inject.Singleton
+import n7.ad2.dagger.ApplicationScope
 
 @dagger.Module
 class AppPreferenceModule {
 
-    @Singleton
+    @ApplicationScope
     @dagger.Provides
     fun provideAppPreference(
         application: Application,

@@ -6,6 +6,7 @@ import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.app_preference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
+import n7.ad2.dagger.ApplicationScope
 import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.drawer.api.DrawerDependencies
@@ -18,9 +19,8 @@ import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.MyApplication
-import javax.inject.Singleton
 
-@Singleton
+@ApplicationScope
 @dagger.Component(
     modules = [
         ComponentDependenciesModule::class,

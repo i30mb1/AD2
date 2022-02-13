@@ -7,12 +7,12 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.dagger.ApplicationScope
 import javax.inject.Inject
-import javax.inject.Singleton
 
 class AD2Log(val message: String)
 
-@Singleton
+@ApplicationScope
 class AD2Logger @Inject constructor(
     private val coroutineScope: CoroutineScope,
     private val dispatchers: DispatchersProvider,
