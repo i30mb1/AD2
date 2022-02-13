@@ -15,14 +15,6 @@ dependencyResolutionManagement { // репозитории для все про�
 pluginManagement { // блок выполянется до конфигурации проекта
     repositories {
         mavenCentral()
-        exclusiveContent {
-            forRepository { google() }
-            filter {
-                includeGroupByRegex("androidx\\..+")
-                includeGroupByRegex("com.android.*")
-                includeGroupByRegex("com.google.android.+")
-            }
-        }
     }
     resolutionStrategy {
         eachPlugin { // хитрый способ динамический подключить плагины если они начнут использоваться в проекте
