@@ -13,6 +13,7 @@ dependencies {
     api(project(Module.Core.ui))
     api(project(Module.Core.ktx))
     api(project(Module.Core.dagger))
+    api(project(Module.Core.common))
 
     implementation(Lib.coil)
 }

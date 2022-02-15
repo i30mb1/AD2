@@ -6,6 +6,7 @@ plugins {
 dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.logger))
+    implementation(project(Module.Core.common))
 
     api(Lib.retrofit)
     api(Lib.retrofitMoshiConverter)

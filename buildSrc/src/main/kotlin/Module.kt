@@ -15,6 +15,7 @@ object Module {
         const val appPreference = ":core:app-preference"
         const val mediaPlayer = ":core:media-player"
         const val retrofit = ":core:retrofit"
+        const val common = ":core:common"
     }
 
     object Feature {

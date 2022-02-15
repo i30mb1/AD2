@@ -43,6 +43,7 @@ include(
     ":core:ktx",
     ":core:media-player",
     ":core:retrofit",
+    ":core:common",
 )
 include(
     ":feature:streams",

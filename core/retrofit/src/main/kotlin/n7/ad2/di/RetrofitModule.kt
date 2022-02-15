@@ -2,6 +2,7 @@ package n7.ad2.di
 
 import dagger.Module
 import dagger.Provides
+import n7.ad2.AppInformation
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.logger.AD2Logger
 import okhttp3.OkHttpClient
@@ -17,13 +18,16 @@ object RetrofitModule {
 
     @Provides
     @ApplicationScope
-    fun provideBaseOkHttpClientBuilder(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient.Builder {
+    fun provideBaseOkHttpClientBuilder(
+        httpLoggingInterceptor: HttpLoggingInterceptor,
+        appInformation: AppInformation,
+    ): OkHttpClient.Builder {
         val builder = OkHttpClient.Builder()
             .connectTimeout(10, TimeUnit.SECONDS)
             .writeTimeout(10, TimeUnit.SECONDS)
             .readTimeout(10, TimeUnit.SECONDS)
 
-//        if (BuildConfig.DEBUG) builder.addNetworkInterceptor(httpLoggingInterceptor)
+        if (appInformation.isDebug) builder.addNetworkInterceptor(httpLoggingInterceptor)
 
         return builder
     }
