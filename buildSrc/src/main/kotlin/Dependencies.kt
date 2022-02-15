@@ -62,7 +62,7 @@ object Lib {
     const val dagger = "com.google.dagger:dagger:$daggerVersion"
     const val daggerAnnotation = "com.google.dagger:dagger-compiler:$daggerVersion"
 
-    private const val lintVersion = "30.0.3" // gradlePlugin + 23
+    private const val lintVersion = "30.0.4" // gradlePlugin + 23
     const val lintApi = "com.android.tools.lint:lint-api:$lintVersion"
     const val lintChecks = "com.android.tools.lint:lint-checks:$lintVersion"
 

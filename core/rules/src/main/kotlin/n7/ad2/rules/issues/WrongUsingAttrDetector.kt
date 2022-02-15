@@ -14,7 +14,7 @@ import org.w3c.dom.Attr
 @Suppress("UnstableApiUsage")
 class WrongUsingAttrDetector : LayoutDetector() {
 
-    override fun getApplicableAttributes(): Collection<String>? = listOf(
+    override fun getApplicableAttributes(): Collection<String> = listOf(
         "background", "foreground", "src", "textColor", "tint", "color",
         "textColorHighlight", "textColorHint", "textColorLink", "shadowColor", "srcCompat"
     )
@@ -45,5 +45,6 @@ class WrongUsingAttrDetector : LayoutDetector() {
                 androidSpecific = true,
                 implementation = Implementation(WrongUsingAttrDetector::class.java, Scope.RESOURCE_FILE_SCOPE)
             )
+
     }
 }
