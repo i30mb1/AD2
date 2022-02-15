@@ -11,7 +11,7 @@ import okhttp3.OkHttpClient
 import javax.inject.Singleton
 
 @Module
-internal class RetrofitTwitchModule {
+internal class StreamsModule {
 
     @Provides
     @Singleton

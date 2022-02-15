@@ -12,7 +12,7 @@ import javax.inject.Singleton
         StreamsDependencies::class
     ],
     modules = [
-        RetrofitTwitchModule::class
+        StreamsModule::class
     ],
 )
 internal interface StreamsComponent {

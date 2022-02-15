@@ -10,7 +10,7 @@ import n7.ad2.drawer.internal.DrawerViewModel
         DrawerDependencies::class,
     ],
     modules = [
-        SettingsApiModule::class
+        DrawerModule::class
     ]
 )
 internal interface DrawerComponent {
