@@ -94,6 +94,7 @@ dependencies {
     implementation(project(Module.Core.database))
     implementation(project(Module.Core.provider))
     implementation(project(Module.Core.appPreference))
+    implementation(project(Module.Core.retrofit))
 
     implementation(project(Module.Feature.streams))
     implementation(project(Module.Feature.heroes))

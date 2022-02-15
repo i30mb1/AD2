@@ -24,8 +24,10 @@ class AD2Logger @Inject constructor(
         onBufferOverflow = BufferOverflow.DROP_OLDEST,
     )
 
-    fun log(text: String) = coroutineScope.launch(dispatchers.IO) {
-        dataFlow.emit(AD2Log(text))
+    fun log(text: String) {
+        coroutineScope.launch(dispatchers.IO) {
+            dataFlow.emit(AD2Log(text))
+        }
     }
 
     fun getLogFlow(): SharedFlow<AD2Log> = dataFlow.asSharedFlow()

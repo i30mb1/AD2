@@ -113,10 +113,6 @@ fun DependencyHandler.addBaseDependencies() {
     api(Lib.springAnimation)
     api(Lib.springAnimationKtx)
     api(Lib.dataStorePref)
-    api(Lib.retrofit)
-    api(Lib.retrofitMoshiConverter)
-    api(Lib.retrofitInterceptor)
-    api(Lib.retrofitScalars)
     kapt(Lib.moshiCodegen)
     api(Lib.moshi)
 

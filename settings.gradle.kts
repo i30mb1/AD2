@@ -42,6 +42,7 @@ include(
     ":core:span-parser",
     ":core:ktx",
     ":core:media-player",
+    ":core:retrofit",
 )
 include(
     ":feature:streams",

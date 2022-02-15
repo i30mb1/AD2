@@ -14,6 +14,7 @@ object Module {
         const val spanParser = ":core:span-parser"
         const val appPreference = ":core:app-preference"
         const val mediaPlayer = ":core:media-player"
+        const val retrofit = ":core:retrofit"
     }
 
     object Feature {
