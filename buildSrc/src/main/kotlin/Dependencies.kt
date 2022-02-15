@@ -87,6 +87,7 @@ object Lib {
 }
 
 private fun DependencyHandler.api(dependencyNotation: Any) = add("api", dependencyNotation)
+fun DependencyHandler.lintChecks(dependencyNotation: Any) = add("lintChecks", dependencyNotation)
 private fun DependencyHandler.implementation(dependencyNotation: Any) = add("implementation", dependencyNotation)
 private fun DependencyHandler.kapt(dependencyNotation: Any) = add("kapt", dependencyNotation)
 private fun DependencyHandler.androidTestImplementation(dependencyNotation: Any) = add("androidTestImplementation", dependencyNotation)

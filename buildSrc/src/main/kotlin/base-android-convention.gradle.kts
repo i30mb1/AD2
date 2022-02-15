@@ -14,3 +14,7 @@ configure<BaseExtension> {
         isAbortOnError = false
     }
 }
+
+dependencies {
+    lintChecks(project(Module.Core.rules))
+}
