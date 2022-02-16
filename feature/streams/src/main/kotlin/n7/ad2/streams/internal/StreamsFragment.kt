@@ -13,7 +13,8 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.viewModel
@@ -101,11 +102,10 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
             binding.error.setError(error?.error?.message)
         }
 
-        lifecycleScope.launch {
-            viewModel.streams
-                .flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
-                .collect(streamsPagedListAdapter::submitData)
-        }
+        viewModel.streams
+            .flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+            .onEach(streamsPagedListAdapter::submitData)
+            .launchIn(lifecycleScope)
 
     }
 }

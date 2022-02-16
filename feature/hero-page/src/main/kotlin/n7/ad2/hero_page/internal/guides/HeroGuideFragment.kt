@@ -9,7 +9,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.launchIn
 import n7.ad2.android.findDependencies
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroGuideBinding
@@ -54,11 +54,12 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
             layoutManager = linearLayoutManager
             addItemDecoration(StickyHeaderDecorator(heroGuideAdapter, this))
         }
-        lifecycleScope.launch {
-            viewModel.error
-                .flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
-//                .collect(::showDialogError)
-        }
+
+        viewModel.error
+            .flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+//            .onEach(::showDialogError)
+            .launchIn(lifecycleScope)
+
         viewModel.loadHeroWithGuides(heroName).observe(viewLifecycleOwner, heroGuideAdapter::submitList)
     }
 

@@ -102,7 +102,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             }
         }
 
-        viewModel.filteredHeroes.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+        viewModel.filteredHeroes.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
             .onEach(heroAdapter::submitList)
             .launchIn(lifecycleScope)
     }

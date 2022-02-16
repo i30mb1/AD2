@@ -96,7 +96,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
             adapter = itemsAdapter
         }
 
-        viewModel.filteredItems.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+        viewModel.filteredItems.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
             .onEach { list -> itemsAdapter.submitList(list) { startPostponedEnterTransition() } }
             .launchIn(lifecycleScope)
     }

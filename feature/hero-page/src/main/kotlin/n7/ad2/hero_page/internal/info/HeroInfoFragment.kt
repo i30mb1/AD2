@@ -85,7 +85,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             addItemDecoration(HeroInfoItemDecorator())
         }
 
-        viewModel.list.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+        viewModel.list.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
             .onEach { list ->
                 heroInfoAdapter.submitList(list) {
                     binding.rv.invalidateItemDecorations()

@@ -18,18 +18,19 @@ class AD2Logger @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 
-    private val dataFlow = MutableSharedFlow<AD2Log>(
+    private val _dataFlow = MutableSharedFlow<AD2Log>(
         replay = 100,
         extraBufferCapacity = 0,
         onBufferOverflow = BufferOverflow.DROP_OLDEST,
     )
+    private val dataFlow = _dataFlow.asSharedFlow()
 
     fun log(text: String) {
         coroutineScope.launch(dispatchers.IO) {
-            dataFlow.emit(AD2Log(text))
+            _dataFlow.emit(AD2Log(text))
         }
     }
 
-    fun getLogFlow(): SharedFlow<AD2Log> = dataFlow.asSharedFlow()
+    fun getLogFlow(): SharedFlow<AD2Log> = dataFlow
 
 }

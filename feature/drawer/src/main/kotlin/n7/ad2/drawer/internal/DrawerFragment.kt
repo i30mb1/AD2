@@ -157,7 +157,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
             layoutManager = linearLayoutManager
             adapter = mainMenuAdapter
         }
-        viewModel.menu.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+        viewModel.menu.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
             .filter { list -> list.isNotEmpty() }
             .onEach { list ->
                 mainMenuAdapter.submitList(list)
@@ -176,7 +176,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     private fun setupLoggerAdapter() = lifecycleScope.launch {
         val shouldDisplayLog = preferences.isShowFingerCoordinate()
         if (!shouldDisplayLog) return@launch
-        logger.getLogFlow()
+        logger.getLogFlow().flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.CREATED)
             .onEach(loggerAdapter::add)
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }
             .launchIn(lifecycleScope)
