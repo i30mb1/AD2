@@ -16,8 +16,8 @@ object Lib {
     const val coil = "io.coil-kt:coil:0.13.0"
     const val jsoup = "org.jsoup:jsoup:1.11.2" // Jsoup для разбора html
     const val firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
-    const val playCore = "com.google.android.play:core:1.8.0" // auto update + rateMe
-    const val playCoreKtx = "com.google.android.play:core-ktx:1.8.1"
+    const val playCore = "com.google.android.play:core:1.10.3"
+    const val playCoreKtx = "com.google.android.play:core-ktx:1.8.1" // auto update + rateMe
     const val coreKtx = "androidx.core:core-ktx:1.7.0" // Write more concise, idiomatic Kotlin code.
     const val jsonSimple = "com.googlecode.json-simple:json-simple:1.1.1"
     const val springAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
@@ -116,9 +116,6 @@ fun DependencyHandler.addBaseDependencies() {
     api(Lib.dataStorePref)
     kapt(Lib.moshiCodegen)
     api(Lib.moshi)
-
-    implementation(Lib.playCore)
-    implementation(Lib.playCoreKtx)
 
     implementation(Lib.room)
     implementation(Lib.roomKtx)

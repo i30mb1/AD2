@@ -110,7 +110,6 @@ class MainActivity : FragmentActivity() {
 
     fun loadNewVersion() {
         if (shouldUpdateFromMarket) {
-            checkInstallUpdate()
         } else {
             loadNewVersionFromGitHub()
         }
@@ -193,18 +192,6 @@ class MainActivity : FragmentActivity() {
     private fun hideKeyboard() {
         val insetsController = ViewCompat.getWindowInsetsController(binding.root)
         insetsController?.hide(WindowInsetsCompat.Type.ime())
-    }
-
-    private fun checkInstallUpdate() {
-        if (appUpdateManager == null) appUpdateManager = AppUpdateManagerFactory.create(this)
-        appUpdateManager!!.appUpdateInfo.addOnSuccessListener { appUpdateInfo -> // If the update is downloaded but not installed,
-            // notify the user to complete the update.
-            when (appUpdateInfo.installStatus()) {
-                InstallStatus.DOWNLOADED -> popupSnackbarForCompleteUpdate()
-                InstallStatus.UNKNOWN -> loadNewVersionFlexible()
-                else -> loadNewVersionFlexible()
-            }
-        }
     }
 
 }

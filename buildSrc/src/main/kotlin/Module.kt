@@ -16,6 +16,7 @@ object Module {
         const val mediaPlayer = ":core:media-player"
         const val retrofit = ":core:retrofit"
         const val common = ":core:common"
+        const val updateManager = ":core:update-manager"
     }
 
     object Feature {

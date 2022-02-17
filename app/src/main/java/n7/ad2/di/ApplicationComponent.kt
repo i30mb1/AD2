@@ -4,6 +4,7 @@ import ad2.n7.news.api.NewsDependencies
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
+import n7.ad2.UpdateManagerModule
 import n7.ad2.app_preference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
@@ -25,6 +26,7 @@ import n7.ad2.ui.MyApplication
     modules = [
         ComponentDependenciesModule::class,
         CoroutineModule::class,
+        UpdateManagerModule::class,
         MoshiModule::class,
         RetrofitModule::class,
         ApplicationModule::class,

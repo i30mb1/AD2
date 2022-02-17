@@ -44,6 +44,7 @@ include(
     ":core:media-player",
     ":core:retrofit",
     ":core:common",
+    ":core:update-manager",
 )
 include(
     ":feature:streams",
