@@ -32,7 +32,7 @@ android {
             isMinifyEnabled = false
             isDebuggable = true
             applicationIdSuffix = ".debug"
-            versionNameSuffix = "-debug"
+            versionNameSuffix = "/debug"
             signingConfig = signingConfigs.getByName("debug")
             resValue("string", "app_name2", "AD2(debug)")
         }
@@ -51,12 +51,12 @@ android {
         create("dev") {
             dimension = "environment"
             applicationIdSuffix = ".dev"
-            versionNameSuffix = "-dev"
+            versionNameSuffix = "/dev"
         }
         create("prod") {
             dimension = "environment"
             applicationIdSuffix = ".prod"
-            versionNameSuffix = "-prod"
+            versionNameSuffix = "/prod"
         }
     }
     variantFilter {

@@ -9,8 +9,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
 import androidx.fragment.app.strictmode.FragmentStrictMode
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.launch
 import n7.ad2.BuildConfig
 import n7.ad2.android.Navigator
 import n7.ad2.android.SplashScreen
@@ -40,9 +38,6 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
         setupInsets()
         setupFragmentStrictPolicy()
         if (savedInstanceState == null) setMainFragment(provider.drawerApi.getDrawerFragment())
-        lifecycleScope.launch {
-            isNewAppVersionAvailable()
-        }
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {

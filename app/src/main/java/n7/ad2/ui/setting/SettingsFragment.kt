@@ -10,7 +10,6 @@ import android.os.Bundle
 import androidx.core.app.TaskStackBuilder
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.google.android.play.core.review.ReviewManagerFactory
 import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.ui.MainActivity
@@ -29,19 +28,19 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun setupRateMe() {
-        val reviewManager = ReviewManagerFactory.create(requireContext())
-        val requestReviewFlow = reviewManager.requestReviewFlow()
-        requestReviewFlow.addOnCompleteListener { request ->
-            if (request.isSuccessful) {
-                val reviewInfo = request.result
-                val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
-                flow.addOnCompleteListener {
-                    requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_successful"))
-                }
-            } else {
-                requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_fail"))
-            }
-        }
+//        val reviewManager = ReviewManagerFactory.create(requireContext())
+//        val requestReviewFlow = reviewManager.requestReviewFlow()
+//        requestReviewFlow.addOnCompleteListener { request ->
+//            if (request.isSuccessful) {
+//                val reviewInfo = request.result
+//                val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
+//                flow.addOnCompleteListener {
+//                    requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_successful"))
+//                }
+//            } else {
+//                requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_fail"))
+//            }
+//        }
     }
 
     private fun setupTellFriends() {

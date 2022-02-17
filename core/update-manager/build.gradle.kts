@@ -8,6 +8,6 @@ dependencies {
     implementation(project(Module.Core.logger))
     kapt(Lib.daggerAnnotation)
 
-    implementation(Lib.playCore)
-    implementation(Lib.playCoreKtx)
+    api(Lib.playCore)
+    api(Lib.playCoreKtx)
 }
