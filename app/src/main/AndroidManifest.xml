@@ -65,7 +65,7 @@
         <!--        </activity-alias>-->
 
         <activity
-            android:name=".ui.MainActivity2"
+            android:name=".ui.MainActivity"
             android:theme="@style/Theme.AppSplash"
             android:exported="true">
             <intent-filter>
@@ -73,23 +73,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".ui.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.setting.LicensesActivity"
-            android:exported="false"
-            android:label="Open Source Licenses"
-            android:screenOrientation="portrait" />
-
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="c67b89578c61892a0a5462cbb130966d6be800b5" />
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5742225922710304~2823923052" />
 
     </application>
 

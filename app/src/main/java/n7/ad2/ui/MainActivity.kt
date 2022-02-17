@@ -1,197 +1,78 @@
 package n7.ad2.ui
 
-import android.app.DownloadManager
-import android.content.ActivityNotFoundException
-import android.content.Intent
-import android.content.IntentSender.SendIntentException
-import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
-import android.view.View
-import android.view.ViewGroup
-import android.view.animation.LinearInterpolator
-import androidx.constraintlayout.widget.ConstraintSet
-import androidx.core.view.ViewCompat
+import android.view.MotionEvent
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.updatePadding
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.transition.ChangeBounds
-import androidx.transition.TransitionManager
-import androidx.transition.TransitionSet
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.play.core.appupdate.AppUpdateManager
-import com.google.android.play.core.appupdate.AppUpdateManagerFactory
-import com.google.android.play.core.install.InstallState
-import com.google.android.play.core.install.InstallStateUpdatedListener
-import com.google.android.play.core.install.model.AppUpdateType
-import com.google.android.play.core.install.model.InstallStatus
-import com.google.android.play.core.install.model.UpdateAvailability
-import n7.ad2.R
-import n7.ad2.databinding.ActivityMainBinding
+import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.commit
+import androidx.fragment.app.strictmode.FragmentStrictMode
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import n7.ad2.BuildConfig
+import n7.ad2.android.Navigator
+import n7.ad2.android.SplashScreen
+import n7.ad2.android.TouchEvent
+import n7.ad2.databinding.ActivityMain2Binding
+import n7.ad2.di.injector
+import n7.ad2.provider.Provider
+import n7.ad2.updateManager.IsNewAppVersionAvailable
+import javax.inject.Inject
 
-class MainActivity : FragmentActivity() {
+class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
 
-    companion object {
-        const val GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app-release.apk?raw=true"
-        const val LOG_ON_RECEIVE = "log"
-        const val DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW"
-        private const val MY_REQUEST_CODE_UPDATE = 17
-    }
+    @Inject lateinit var provider: Provider
 
-    private val constraintSetHidden = ConstraintSet()
-    private val constraintSetOrigin = ConstraintSet()
-    private var currentSet: ConstraintSet? = null
-    private lateinit var binding: ActivityMainBinding
-    private var shouldUpdateFromMarket = true
-    private var shouldDisplayLog = false
-    private var appUpdateManager: AppUpdateManager? = null
-    var UpdateListener: InstallStateUpdatedListener = object : InstallStateUpdatedListener {
-        override fun onStateUpdate(installState: InstallState) {
-            if (installState.installStatus() == InstallStatus.DOWNLOADED) {
-                popupSnackbarForCompleteUpdate()
-                if (appUpdateManager != null) appUpdateManager!!.unregisterListener(this)
-            }
-        }
-    }
-    private var modeSecretActivity = false
+    @Inject lateinit var isNewAppVersionAvailable: IsNewAppVersionAvailable
 
+    override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
+    override var shouldKeepOnScreen = true
+    private lateinit var binding: ActivityMain2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        injector.component.inject(this)
+        installSplashScreen().setKeepVisibleCondition(::shouldKeepOnScreen)
+        binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         setupInsets()
+        setupFragmentStrictPolicy()
+        if (savedInstanceState == null) setMainFragment(provider.drawerApi.getDrawerFragment())
+        lifecycleScope.launch {
+            isNewAppVersionAvailable()
+        }
+    }
+
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        dispatchTouchEvent?.invoke(event)
+        return super.dispatchTouchEvent(event)
+    }
+
+    override fun setMainFragment(fragment: Fragment, body: FragmentTransaction.() -> Unit) {
+        supportFragmentManager.commit(true) {
+            body()
+            replace(binding.container.id, fragment)
+        }
+    }
+
+    private fun setupFragmentStrictPolicy() {
+        if (BuildConfig.DEBUG) {
+            supportFragmentManager.strictModePolicy = FragmentStrictMode.Policy.Builder()
+                .penaltyDeath()
+                .detectFragmentReuse()
+                .detectFragmentTagUsage()
+                .detectRetainInstanceUsage()
+                .detectSetUserVisibleHint()
+                .detectTargetFragmentUsage()
+                .detectWrongFragmentContainer()
+                .build()
+        }
     }
 
     private fun setupInsets() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        WindowInsetsControllerCompat(window, binding.root).let { controller ->
-//            controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-//            controller.hide(WindowInsetsCompat.Type.systemBars())
-            controller.isAppearanceLightStatusBars = false
-        }
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
-            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            view.updatePadding(bottom = navigationBarsInsets.bottom)
-//            binding.root.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-//                updateMargins(top = statusBarsInsets.top, bottom = navigationBarsInsets.bottom)
-//            }
-
-            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
-            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
-
-            WindowInsetsCompat.CONSUMED
-        }
-    }
-
-    fun toggleSecretActivity(view: View?): Boolean {
-        currentSet = if (currentSet === constraintSetOrigin) constraintSetHidden else constraintSetOrigin
-        val transitionSet = TransitionSet()
-            .setDuration(500)
-            .addTransition(ChangeBounds().setInterpolator(LinearInterpolator()))
-        //после этого метода все изменения внутри ViewGroup будут анимированы
-//        TransitionManager.beginDelayedTransition((drawer.root as ViewGroup), transitionSet)
-        //        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), new AutoTransition());
-        //применяет все изменения находящиеся в currentSet с анимациями из transitionSet
-//        currentSet?.applyTo(drawer.root as ConstraintLayout)
-        TransitionManager.beginDelayedTransition((binding.root as ViewGroup))
-        if (currentSet === constraintSetOrigin) {
-            modeSecretActivity = false
-            binding.root.visibility = View.VISIBLE
-        } else {
-            modeSecretActivity = true
-            binding.root.visibility = View.INVISIBLE
-        }
-        return true
-    }
-
-    fun loadNewVersion() {
-        if (shouldUpdateFromMarket) {
-        } else {
-            loadNewVersionFromGitHub()
-        }
-    }
-
-    private fun loadNewVersionFlexible() {
-        // Creates instance of the manager.
-        if (appUpdateManager == null) appUpdateManager = AppUpdateManagerFactory.create(this)
-        // Returns an intent object that you use to check for an update.
-        val appUpdateInfoTask = appUpdateManager!!.appUpdateInfo
-        // Checks that the platform will allow the specified type of update.
-        appUpdateInfoTask.addOnSuccessListener { appUpdateInfo ->
-            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE // For a flexible update, use AppUpdateType.FLEXIBLE
-                && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)
-            ) {
-                // Request the update.
-                try {
-                    appUpdateManager!!.startUpdateFlowForResult( // Pass the intent that is returned by 'getAppUpdateInfo()'.
-                        appUpdateInfo,  // Or 'AppUpdateType.FLEXIBLE' for flexible updates.
-                        AppUpdateType.FLEXIBLE,  // The current activity making the update request.
-                        this@MainActivity,  // Include a request code to later monitor this update request.
-                        MY_REQUEST_CODE_UPDATE)
-                } catch (e: SendIntentException) {
-                    loadNewVersionFromMarket()
-                }
-            }
-        }
-        appUpdateInfoTask.addOnCompleteListener { }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == MY_REQUEST_CODE_UPDATE) {
-            if (resultCode == RESULT_OK) {
-                if (appUpdateManager != null) appUpdateManager!!.registerListener(UpdateListener)
-            }
-        }
-    }
-
-    /* Displays the snackbar notification and call to action. */
-    private fun popupSnackbarForCompleteUpdate() {
-        val snackbar = Snackbar.make(binding.root, R.string.main_activity_update_me, Snackbar.LENGTH_INDEFINITE)
-        snackbar.setAction(R.string.main_activity_okay) { if (appUpdateManager != null) appUpdateManager!!.completeUpdate() }
-        snackbar.setActionTextColor(resources.getColor(R.color.red_500))
-        snackbar.show()
-    }
-
-    private fun loadNewVersionFromMarket() {
-        try {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")))
-        } catch (a: ActivityNotFoundException) {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$packageName")))
-        }
-    }
-
-    private fun loadNewVersionFromGitHub() {
-        try {
-            val request = DownloadManager.Request(Uri.parse(GITHUB_LAST_APK_URL))
-            request.setDescription(getString(R.string.all_new_version))
-            request.setTitle(getString(R.string.app_name))
-            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-            request.setMimeType("application/vnd.android.package-archive")
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, getString(R.string.app_name))
-            val manager = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-            manager.enqueue(request)
-        } catch (e: SecurityException) {
-            e.printStackTrace()
-        }
-    }
-
-
-    fun openAppStore() {
-        try {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")))
-        } catch (a: ActivityNotFoundException) {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$packageName")))
-        }
-    }
-
-    private fun hideKeyboard() {
-        val insetsController = ViewCompat.getWindowInsetsController(binding.root)
-        insetsController?.hide(WindowInsetsCompat.Type.ime())
     }
 
 }

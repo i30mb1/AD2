@@ -4,7 +4,6 @@ import ad2.n7.news.api.NewsDependencies
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
-import n7.ad2.UpdateManagerModule
 import n7.ad2.app_preference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
@@ -18,8 +17,9 @@ import n7.ad2.item_page.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
-import n7.ad2.ui.MainActivity2
+import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MyApplication
+import n7.ad2.updateManager.UpdateManagerModule
 
 @ApplicationScope
 @dagger.Component(
@@ -46,7 +46,7 @@ interface ApplicationComponent : StreamsDependencies,
     DatabaseDependencies {
 
     fun inject(application: MyApplication)
-    fun inject(mainActivity: MainActivity2)
+    fun inject(mainActivity: MainActivity)
 
     @Component.Factory
     interface Factory {

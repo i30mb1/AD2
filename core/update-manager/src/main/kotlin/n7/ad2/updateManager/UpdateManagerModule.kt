@@ -1,13 +1,13 @@
-package n7.ad2
+package n7.ad2.updateManager
 
 import android.app.Application
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
-import javax.inject.Singleton
+import n7.ad2.dagger.ApplicationScope
 
 @dagger.Module
-abstract class UpdateManagerModule {
+class UpdateManagerModule {
 
-    @Singleton
+    @ApplicationScope
     @dagger.Provides
     fun provideUpdateManager(application: Application) = AppUpdateManagerFactory.create(application)
 
