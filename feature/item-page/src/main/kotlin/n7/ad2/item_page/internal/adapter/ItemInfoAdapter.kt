@@ -50,9 +50,21 @@ class ItemInfoAdapter(
         }
     }
 
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: MutableList<Any>) {
+        when {
+            payloads.isNullOrEmpty() -> super.onBindViewHolder(holder, position, payloads)
+            holder is HeaderComplexViewHolder -> holder.bind((payloads.last() as VOItemInfo.Title).data.isPlaying)
+        }
+
+    }
+
     private class DiffCallback : DiffUtil.ItemCallback<VOItemInfo>() {
         override fun areItemsTheSame(oldItem: VOItemInfo, newItem: VOItemInfo): Boolean = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOItemInfo, newItem: VOItemInfo): Boolean = oldItem == newItem
+        override fun getChangePayload(oldItem: VOItemInfo, newItem: VOItemInfo): Any? {
+            if (oldItem is VOItemInfo.Title && newItem is VOItemInfo.Title && oldItem.data.isPlaying != newItem.data.isPlaying) return newItem
+            return super.getChangePayload(oldItem, newItem)
+        }
     }
 
 }

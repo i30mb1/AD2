@@ -27,6 +27,10 @@ class HeaderComplexViewHolder private constructor(
 //        binding.tvLegacyKey.setOnClickListener { onKeyClickListener(item.legacyKey) }
     }
 
+    fun bind(isPlaying: Boolean) {
+        binding.ivPlay.isSelected = isPlaying
+    }
+
     fun clear() {
 
     }
