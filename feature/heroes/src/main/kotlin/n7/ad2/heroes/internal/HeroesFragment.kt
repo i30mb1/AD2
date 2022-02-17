@@ -54,7 +54,9 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     private fun startHeroFragment(model: VOHero.Body) {
-        getNavigator.setMainFragment(provider.heroPageApi.getPagerFragment(model.name))
+        getNavigator.setMainFragment(provider.heroPageApi.getPagerFragment(model.name)) {
+            addToBackStack(null)
+        }
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
     }
 
