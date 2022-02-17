@@ -9,10 +9,7 @@ internal val assetsDatabase = System.getProperty("user.dir") + "\\core\\database
 internal const val HERO_FULL_PHOTO_TYPE = "png"
 
 internal fun String.removeBrackets(): String {
-    val regex = Regex(" \\(.+?\\)")
-    val matches = regex.containsMatchIn(this)
-    val result = if (matches) this.replace(regex, "") else this
-    return result.trim()
+    return removeSurrounding("(", ")")
 }
 
 internal fun saveImage(url: String, directoryInAssets: String, fileName: String) {
