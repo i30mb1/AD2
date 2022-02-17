@@ -1,4 +1,4 @@
-package n7.ad2.ui.splash.domain.usecase
+package ad2.n7.news.internal
 
 import android.app.Application
 import javax.inject.Inject
