@@ -31,7 +31,7 @@ class LicensesActivity : FragmentActivity() {
 
     private fun startBlinking() {
         lifecycleScope.launch {
-            ValueAnimator.ofObject(ArgbEvaluator(), 0, getColor(R.color.purple), getColor(R.color.red_500), 0).apply {
+            ValueAnimator.ofObject(ArgbEvaluator(), 0, getColor(android.R.color.holo_purple), getColor(android.R.color.holo_red_dark), 0).apply {
                 duration = 2000
                 addUpdateListener { animator -> binding.root.setBackgroundColor(animator.animatedValue as Int) }
                 repeatCount = ValueAnimator.INFINITE

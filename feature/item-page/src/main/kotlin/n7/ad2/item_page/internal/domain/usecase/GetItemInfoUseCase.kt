@@ -49,8 +49,8 @@ class GetItemInfoUseCase @Inject constructor(
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
                     add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true).toSpanned())))
                     add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true).toSpanned())))
-                    if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), R.drawable.mana)))
-                    if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), R.drawable.cooldown)))
+                    if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), n7.ad2.ui.R.drawable.mana)))
+                    if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), n7.ad2.ui.R.drawable.cooldown)))
                 }
             }
 

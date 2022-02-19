@@ -16,7 +16,7 @@ internal class ItemsListAdapter(
 ) : ListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
-        R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
+        n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         R.layout.item_item_body -> ItemBodyViewHolder.from(layoutInflater, parent, itemClickListener)
         else -> super.createViewHolder(parent, viewType)
     }
@@ -40,7 +40,7 @@ internal class ItemsListAdapter(
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
             is VOItem.Body -> R.layout.item_item_body
-            is VOItem.Header -> R.layout.item_header
+            is VOItem.Header -> n7.ad2.ui.R.layout.item_header
             else -> super.getItemViewType(position)
         }
     }

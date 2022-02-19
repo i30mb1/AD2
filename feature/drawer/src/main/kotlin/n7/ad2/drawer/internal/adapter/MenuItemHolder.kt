@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.drawer.R
 import n7.ad2.drawer.databinding.ItemMenuBinding
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 
@@ -14,8 +13,8 @@ internal class MenuItemHolder private constructor(
     private val itemListener: (menuItem: VOMenu) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    private val backgroundRipple = ContextCompat.getDrawable(binding.root.context, R.drawable.background_ripple)
-    private val transparent = ContextCompat.getDrawable(binding.root.context, R.color.transparent)
+    private val backgroundRipple = ContextCompat.getDrawable(binding.root.context, n7.ad2.ui.R.drawable.background_ripple)
+    private val transparent = ContextCompat.getDrawable(binding.root.context, n7.ad2.ui.R.color.transparent)
 
     fun bind(item: VOMenu) {
         binding.vRedLine.isVisible = item.isSelected

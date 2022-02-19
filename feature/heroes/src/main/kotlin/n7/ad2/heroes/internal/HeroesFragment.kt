@@ -78,7 +78,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         val gridLayoutManager = GridLayoutManager(context, 3)
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int) = when (heroAdapter.getItemViewType(position)) {
-                R.layout.item_header -> spanSizeItemHeader
+                n7.ad2.ui.R.layout.item_header -> spanSizeItemHeader
                 else -> spanSizeItem
             }
         }

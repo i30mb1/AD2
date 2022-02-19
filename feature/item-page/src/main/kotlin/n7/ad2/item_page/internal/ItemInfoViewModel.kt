@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.ErrorMessage
 import n7.ad2.android.ErrorMessageDelegate
 import n7.ad2.android.Locale
-import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.usecase.GetItemInfoUseCase
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 
@@ -33,7 +32,7 @@ class ItemInfoViewModel @AssistedInject constructor(
     val voItemInfo: LiveData<List<VOItemInfo>> = _voItemInfo
 
     init {
-        loadItemInfo(itemName, Locale.valueOf(application.getString(R.string.locale)))
+        loadItemInfo(itemName, Locale.valueOf(application.getString(n7.ad2.android.R.string.locale)))
     }
 
     fun onStartPlayingItem(soundUrl: String) {

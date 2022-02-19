@@ -62,9 +62,9 @@ class HeroFlow(
         cancel()
     }
 
-    fun setHeroesHardToWin(list: List<VOHeroFlowItem>) = setHeroes(list, R.style.Widget_TextView_HeroDisadvantage)
+    fun setHeroesHardToWin(list: List<VOHeroFlowItem>) = setHeroes(list, n7.ad2.ui.R.style.Widget_TextView_HeroDisadvantage)
 
-    fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, R.style.Widget_TextView_HeroAdvantage)
+    fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, n7.ad2.ui.R.style.Widget_TextView_HeroAdvantage)
 
     fun setHeroItems(list: List<VOHeroFlowHeroItem>) = setViews(list) { map(::inflateItemHeroItemFlow) }
 

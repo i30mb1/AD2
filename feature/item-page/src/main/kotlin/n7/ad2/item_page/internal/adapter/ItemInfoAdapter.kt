@@ -21,20 +21,20 @@ class ItemInfoAdapter(
     private val popupListener = { view: View, text: String -> }
 
     override fun getItemViewType(position: Int): Int = when (val item = getItem(position)) {
-        is VOItemInfo.Title -> R.layout.item_header_complex
+        is VOItemInfo.Title -> n7.ad2.ui.R.layout.item_header_complex
         is VOItemInfo.TextLine -> R.layout.item_text_line
         is VOItemInfo.Recipe -> R.layout.item_info_recipe
-        is VOItemInfo.Body -> R.layout.item_body
-        is VOItemInfo.ImageLine -> R.layout.item_image_line
+        is VOItemInfo.Body -> n7.ad2.ui.R.layout.item_body
+        is VOItemInfo.ImageLine -> n7.ad2.ui.R.layout.item_image_line
         else -> error("could not getItemViewType for $item")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_text_line -> TextLineViewHolder.from(layoutInflater, parent)
         R.layout.item_info_recipe -> InfoRecipeViewHolder.from(layoutInflater, parent)
-        R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
-        R.layout.item_header_complex -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClick, onQuickKeyClick)
-        R.layout.item_image_line -> ImageLineViewHolder.from(layoutInflater, parent, {})
+        n7.ad2.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
+        n7.ad2.ui.R.layout.item_header_complex -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClick, onQuickKeyClick)
+        n7.ad2.ui.R.layout.item_image_line -> ImageLineViewHolder.from(layoutInflater, parent, {})
         else -> error("could not get type for $viewType")
     }
 

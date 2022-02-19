@@ -18,8 +18,8 @@ internal class HeroBodyViewHolder private constructor(
         ivImage.load(hero.imageUrl, R.drawable.stream_placeholder)
         tvTitle.text = hero.name
         ivImage.isSelected = hero.viewedByUser
-        root.setTag(R.id.ViewHolderBinding, binding)
-        root.setTag(R.id.ViewHolderModel, hero)
+        root.setTag(n7.ad2.ui.R.id.ViewHolderBinding, binding)
+        root.setTag(n7.ad2.ui.R.id.ViewHolderModel, hero)
     }
 
     fun clear() = binding.apply {

@@ -37,13 +37,13 @@ class HeroInfoAdapter(
 ) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
     StickyHeaderDecorator.StickyHeaderInterface {
 
-    override fun getHeaderLayout(): Int = R.layout.item_header
+    override fun getHeaderLayout(): Int = n7.ad2.ui.R.layout.item_header
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
         is VOHeroInfo.HeaderSound -> R.layout.item_header_sound
         is VOHeroInfo.Attributes -> R.layout.item_hero_attributes
-        is VOHeroInfo.Header -> R.layout.item_header
-        is VOHeroInfo.Body -> R.layout.item_body
+        is VOHeroInfo.Header -> n7.ad2.ui.R.layout.item_header
+        is VOHeroInfo.Body -> n7.ad2.ui.R.layout.item_body
         is VOHeroInfo.Spells -> R.layout.item_hero_spells
 
         is VOBodyLine -> R.layout.item_body_line
@@ -55,8 +55,8 @@ class HeroInfoAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_header_sound -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
         R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, onHeroInfoCLickListener)
-        R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
-        R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
+        n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
+        n7.ad2.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
         R.layout.item_hero_spells -> HeroSpellsViewHolder.from(layoutInflater, parent, onSpellClickListener)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }

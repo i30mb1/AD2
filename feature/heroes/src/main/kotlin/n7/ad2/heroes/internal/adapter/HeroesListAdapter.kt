@@ -16,19 +16,19 @@ internal class HeroesListAdapter(
 ) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener { view ->
-        val hero = view.getTag(R.id.ViewHolderModel) as VOHero.Body
+        val hero = view.getTag(n7.ad2.ui.R.id.ViewHolderModel) as VOHero.Body
         onHeroClick(hero)
     }
 
     override fun getItemViewType(position: Int) = when (getItem(position)) {
         is VOHero.Body -> R.layout.item_hero_body
-        is VOHero.Header -> R.layout.item_header
+        is VOHero.Header -> n7.ad2.ui.R.layout.item_header
         else -> throw UnsupportedOperationException("could not get type for item ${getItem(position)}")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_hero_body -> HeroBodyViewHolder.from(layoutInflater, parent, listener)
-        R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
+        n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not get type for $viewType")
     }
 

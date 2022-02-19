@@ -27,13 +27,13 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         contentDescription = context.getString(R.string.desc_hero_mini_avatar)
         addView(this)
     }
-    private val tvLocale: TickerView = TickerView(context, null, R.style.TextAppearance_B1).apply {
+    private val tvLocale: TickerView = TickerView(context, null, n7.ad2.ui.R.style.TextAppearance_B1).apply {
         layoutParams = params.apply { width = 60.dpToPx }
         setCharacterList(TickerUtils.getDefaultListForUSCurrency())
-        animationDuration = resources.getInteger(R.integer.animation_long).toLong()
+        animationDuration = resources.getInteger(n7.ad2.ui.R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
-        text = Locale.valueOf(context.getString(R.string.locale)).name
+        text = Locale.valueOf(context.getString(n7.ad2.android.R.string.locale)).name
         setOnClickListener {
             val locale = if (text == Locale.ENG.name) Locale.RU else Locale.ENG
             text = locale.name
@@ -51,7 +51,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
 //    }
     private var oldPage = -1
     private val transition = Slide().apply {
-        duration = resources.getInteger(R.integer.animation_medium).toLong()
+        duration = resources.getInteger(n7.ad2.ui.R.integer.animation_medium).toLong()
         interpolator = AccelerateDecelerateInterpolator()
     }
     private val listener = object : OrientationEventListener(context) {
