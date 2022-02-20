@@ -13,6 +13,5 @@ dependencies {
 
     api(Lib.moshi)
 
-    kapt(Lib.moshiCodegen)
     kapt(Lib.daggerAnnotation)
 }

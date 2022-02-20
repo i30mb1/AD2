@@ -4,30 +4,28 @@ import android.content.Context
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
-import androidx.dynamicanimation.animation.DynamicAnimation
-import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.google.android.material.snackbar.Snackbar
 
 // create or grubbing existing spring animation
-fun View.spring(property: DynamicAnimation.ViewProperty): SpringAnimation {
-    val key = getKey(property)
-    var springAnimation = getTag(key) as? SpringAnimation?
-    if (springAnimation == null) {
-        springAnimation = SpringAnimation(this, property)
-        setTag(key, springAnimation)
-    }
-    return springAnimation
-}
+//fun View.spring(property: DynamicAnimation.ViewProperty): SpringAnimation {
+//    val key = getKey(property)
+//    var springAnimation = getTag(key) as? SpringAnimation?
+//    if (springAnimation == null) {
+//        springAnimation = SpringAnimation(this, property)
+//        setTag(key, springAnimation)
+//    }
+//    return springAnimation
+//}
 
-fun getKey(property: DynamicAnimation.ViewProperty): Int {
-    return when (property) {
-        SpringAnimation.TRANSLATION_X -> 1
-        else -> 0
-    }
-}
+//fun getKey(property: DynamicAnimation.ViewProperty): Int {
+//    return when (property) {
+//        SpringAnimation.TRANSLATION_X -> 1
+//        else -> 0
+//    }
+//}
 
 /**
  * Transforms static java function Snackbar.make() to an extension function on View.

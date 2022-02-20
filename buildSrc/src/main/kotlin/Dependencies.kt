@@ -109,21 +109,3 @@ fun DependencyHandler.addTestDependencies() {
     testImplementation(Lib.Test.mockitokotlin)
     testImplementation(Lib.Test.coroutinesTest)
 }
-
-fun DependencyHandler.addBaseDependencies() {
-    api(Lib.springAnimation)
-    api(Lib.springAnimationKtx)
-    api(Lib.dataStorePref)
-    kapt(Lib.moshiCodegen)
-    api(Lib.moshi)
-
-    implementation(Lib.room)
-    implementation(Lib.roomKtx)
-    kapt(Lib.roomAnnotation)
-
-    implementation(Lib.workManager)
-    implementation(Lib.workManagerKotlin)
-
-    implementation(Lib.preference)
-    implementation(Lib.preferenceKtx)
-}

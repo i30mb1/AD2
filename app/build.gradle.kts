@@ -81,7 +81,6 @@ dependencies {
     implementation(Lib.jsoup)
     implementation(Lib.instantApps)
     implementation(Lib.workManagerKotlin)
-    addBaseDependencies()
 
     kapt(Lib.daggerAnnotation)
 
