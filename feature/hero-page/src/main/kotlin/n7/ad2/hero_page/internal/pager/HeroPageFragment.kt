@@ -44,6 +44,7 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.vp.adapter = null
         _binding = null
     }
 

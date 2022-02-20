@@ -81,6 +81,8 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rvLog.adapter = null
+        binding.rvMenu.adapter = null
         _binding = null
         (activity as TouchEvent).dispatchTouchEvent = null
     }

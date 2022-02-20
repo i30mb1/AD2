@@ -28,6 +28,7 @@ internal class NewsFragment : Fragment(R.layout.fragment_news) {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rv.adapter = null
         _binding = null
     }
 

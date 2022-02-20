@@ -49,6 +49,7 @@ internal class GamesFragment : Fragment(R.layout.fragment_games) {
 
     override fun onDestroy() {
         super.onDestroy()
+        binding.rv.adapter = null
         _binding = null
     }
 

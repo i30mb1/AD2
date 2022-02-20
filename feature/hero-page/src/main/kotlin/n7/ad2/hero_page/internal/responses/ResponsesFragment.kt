@@ -61,6 +61,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rv.adapter = null
         _binding = null
     }
 

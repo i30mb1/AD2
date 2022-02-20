@@ -68,6 +68,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rv.adapter = null
         _binding = null
     }
 

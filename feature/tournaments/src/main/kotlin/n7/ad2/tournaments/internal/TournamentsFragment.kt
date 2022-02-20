@@ -45,6 +45,7 @@ class TournamentsFragment : Fragment(R.layout.fragment_tournaments) {
 
     override fun onDestroy() {
         super.onDestroy()
+        binding.rv.adapter = null
         _binding = null
     }
 

@@ -65,6 +65,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rv.adapter = null
         _binding = null
     }
 

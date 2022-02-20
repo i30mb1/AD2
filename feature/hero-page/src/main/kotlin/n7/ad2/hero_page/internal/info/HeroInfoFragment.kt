@@ -59,6 +59,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rv.adapter = null
         _binding = null
     }
 
