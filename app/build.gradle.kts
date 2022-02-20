@@ -7,9 +7,10 @@ android {
     defaultConfig {
         applicationId = "n7.ad2"
         versionCode = 555
-        versionName = "555"
+        versionName = "1"
 
         resourceConfigurations.addAll(listOf("ru", "en"))
+//        setProperty("archivesBaseName", "$applicationId-$versionName")
     }
 
     signingConfigs {
