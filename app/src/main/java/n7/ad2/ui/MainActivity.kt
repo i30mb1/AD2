@@ -13,7 +13,7 @@ import n7.ad2.BuildConfig
 import n7.ad2.android.Navigator
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
-import n7.ad2.databinding.ActivityMain2Binding
+import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.di.injector
 import n7.ad2.provider.Provider
 import n7.ad2.updateManager.IsNewAppVersionAvailable
@@ -27,13 +27,13 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
     override var shouldKeepOnScreen = true
-    private lateinit var binding: ActivityMain2Binding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         injector.component.inject(this)
         installSplashScreen().setKeepVisibleCondition(::shouldKeepOnScreen)
-        binding = ActivityMain2Binding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupInsets()
         setupFragmentStrictPolicy()

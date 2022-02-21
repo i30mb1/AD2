@@ -1,0 +1,23 @@
+clean_build_without_cache {
+    tasks = ["clean", ":app:assembleDebug"]
+    gradle-args = ["--no-build-cache"]
+}
+
+configuration {
+    tasks = ["help"]
+}
+
+incremental {
+    tasks = [":app:assembleDebug"]
+    apply-abi-change-to = "app/src/main/java/n7/ad2/ui/MainActivity.kt"
+    apply-non-abi-change-to = "app/src/main/java/n7/ad2/ui/MainActivity.kt"
+    apply-android-resource-change-to="app/src/main/res/values/strings.xml"
+    apply-android-layout-change-to="app/src/main/res/layout/activity_main.xml"
+}
+
+clean {
+    tasks = ["clean"]
+}
+
+# https://dev.to/autonomousapps/benchmarking-builds-with-gradle-profiler-oa8
+# gradle-profiler.bat --benchmark --output-dir profile-out --project-dir C:\Users\*\ --scenario-file profiler.scenarios clean
