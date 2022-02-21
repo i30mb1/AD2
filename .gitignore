@@ -78,3 +78,6 @@ fastlane/readme.md
 *.rar
 
 /.idea/vcs.xml
+/profile-out/*
+/gradle-user-home/
+/profile-out-2/
