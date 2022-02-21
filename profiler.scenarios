@@ -12,7 +12,7 @@ incremental {
     apply-abi-change-to = "app/src/main/java/n7/ad2/ui/MainActivity.kt"
     apply-non-abi-change-to = "app/src/main/java/n7/ad2/ui/MainActivity.kt"
     apply-android-resource-change-to="app/src/main/res/values/strings.xml"
-    apply-android-layout-change-to="app/src/main/res/layout/activity_main.xml"
+    apply-android-layout-change-to="feature/drawer/src/main/res/layout/fragment_drawer.xml"
 }
 
 clean {
