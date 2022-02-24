@@ -10,7 +10,7 @@ import retrofit2.http.GET
 
 internal interface SettingsApi {
 
-    @GET("settings.json?raw=true")
+    @GET("settings.json")
     suspend fun getSettings(): Settings
 
     companion object {
@@ -19,7 +19,7 @@ internal interface SettingsApi {
             moshi: Moshi,
         ): SettingsApi {
             return Retrofit.Builder()
-                .baseUrl("https://github.com/i30mb1/AD2/blob/master/")
+                .baseUrl("https://raw.githubusercontent.com/i30mb1/AD2/master/")
                 .client(client)
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .build()

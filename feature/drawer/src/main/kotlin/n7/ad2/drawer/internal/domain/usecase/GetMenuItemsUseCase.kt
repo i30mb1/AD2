@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
 import n7.ad2.app_preference.AppPreference
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.drawer.R
@@ -32,13 +31,14 @@ internal class GetMenuItemsUseCase @Inject constructor(
     private val settingsAdapter = moshi.adapter<Settings>()
 
     operator fun invoke(): Flow<List<VOMenu>> = flow {
-        emit(settingsApi.getSettings())
-    }
-        .onEach { settings ->
-            if (appPreference.isNeedToUpdateSettings()) {
-                appPreference.saveSettings(settingsAdapter.toJson(settings))
-            }
+        if (appPreference.isNeedToUpdateSettings()) {
+            val newSettings = settingsApi.getSettings()
+            appPreference.saveSettings(settingsAdapter.toJson(newSettings))
+            emit(newSettings)
+        } else {
+            emit(settingsAdapter.fromJson(appPreference.getSettings()) ?: Settings())
         }
+    }
         .catch { error ->
             logger.log("Could not load settings (${error.message})")
             emit(settingsAdapter.fromJson(appPreference.getSettings()) ?: Settings())
@@ -52,7 +52,7 @@ internal class GetMenuItemsUseCase @Inject constructor(
                     VOMenuType.TOURNAMENTS -> VOMenu(menu.type, application.getString(R.string.tournaments), menu.isEnable)
                     VOMenuType.STREAMS -> VOMenu(menu.type, application.getString(R.string.streams), menu.isEnable)
                     VOMenuType.GAMES -> VOMenu(menu.type, application.getString(R.string.games), menu.isEnable)
-                    VOMenuType.UNKNOWN -> VOMenu(menu.type, menu.type.name, menu.isEnable)
+                    VOMenuType.UNKNOWN -> VOMenu(menu.type, menu.type.name, false)
                 }
             }
         }
