@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.hero_page.R
-import n7.ad2.hero_page.internal.StickyHeaderDecorator
 import n7.ad2.hero_page.internal.info.InfoPopupWindow
 import n7.ad2.hero_page.internal.info.PopUpClickableSpan
 import n7.ad2.hero_page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
@@ -23,6 +22,7 @@ import n7.ad2.hero_page.internal.info.domain.vo.VOBodyWithImage
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.dpToPx
+import n7.ad2.ui.StickyHeaderDecorator
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderComplexViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder

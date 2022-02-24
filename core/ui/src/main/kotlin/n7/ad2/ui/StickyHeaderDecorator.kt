@@ -1,4 +1,4 @@
-package n7.ad2.hero_page.internal
+package n7.ad2.ui
 
 import android.graphics.Canvas
 import android.view.MotionEvent
@@ -9,6 +9,7 @@ import androidx.core.view.forEach
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
+import n7.ad2.ktx.lazyUnsafe
 
 // https://youtu.be/xF1x-Pm6IPw
 class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
@@ -35,9 +36,7 @@ class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
 
     private var mStickyHeaderHeight = 0
     private val listener: StickyHeaderInterface = adapter as StickyHeaderInterface
-    private val header: RecyclerView.ViewHolder by lazy(LazyThreadSafetyMode.NONE) {
-        adapter.createViewHolder(recyclerView, listener.getHeaderLayout())
-    }
+    private val header: RecyclerView.ViewHolder by lazyUnsafe { adapter.createViewHolder(recyclerView, listener.getHeaderLayout()) }
 
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDrawOver(c, parent, state)

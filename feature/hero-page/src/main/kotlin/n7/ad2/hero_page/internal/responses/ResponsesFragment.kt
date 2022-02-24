@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.InternalCoroutinesApi
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroResponsesBinding
-import n7.ad2.hero_page.internal.StickyHeaderDecorator
 import n7.ad2.hero_page.internal.info.InfoPopupWindow
 import n7.ad2.hero_page.internal.pager.showDialogError
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.media_player.AudioExoPlayer
+import n7.ad2.ui.StickyHeaderDecorator
 import javax.inject.Inject
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {

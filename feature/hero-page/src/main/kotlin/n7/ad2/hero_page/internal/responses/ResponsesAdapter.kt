@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.ItemResponseBodyBinding
 import n7.ad2.hero_page.databinding.ItemResponseTitleBinding
-import n7.ad2.hero_page.internal.StickyHeaderDecorator
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseTitle
+import n7.ad2.ui.StickyHeaderDecorator
 
 class ResponsesAdapter(
     private val showDialogResponse: (VOResponseBody) -> Unit,

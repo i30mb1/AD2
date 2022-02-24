@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.hero_page.R
-import n7.ad2.hero_page.internal.StickyHeaderDecorator
 import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideEasyToWinHeroes
 import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideHardToWinHeroes
 import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideHeroItems
@@ -14,6 +13,7 @@ import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideItem
 import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideSpellBuild
 import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideStartingHeroItems
 import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideTitle
+import n7.ad2.ui.StickyHeaderDecorator
 
 class HeroGuideAdapter
     : ListAdapter<VOGuideItem, HeroGuideAdapter.HeroGuideHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
