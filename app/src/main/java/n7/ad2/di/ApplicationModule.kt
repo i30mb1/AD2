@@ -1,12 +1,13 @@
 package n7.ad2.di
 
 import android.app.Application
-import android.content.res.AssetManager
 import androidx.work.WorkManager
 import dagger.Binds
 import dagger.Provides
 import n7.ad2.AD2AppInformation
+import n7.ad2.AD2AppResources
 import n7.ad2.AppInformation
+import n7.ad2.AppResources
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.provider.AD2Provider
 import n7.ad2.provider.Provider
@@ -18,6 +19,10 @@ interface ApplicationModule {
     @ApplicationScope
     @Binds
     fun provideAppInfo(aD2AppInformation: AD2AppInformation): AppInformation
+
+    @ApplicationScope
+    @Binds
+    fun provideAppResource(appResources: AD2AppResources): AppResources
 
     companion object {
 
@@ -31,10 +36,6 @@ interface ApplicationModule {
         @ApplicationScope
         @Provides
         fun provideCalendar(): Calendar = Calendar.getInstance()
-
-        @ApplicationScope
-        @Provides
-        fun provideResource(application: Application): AssetManager = application.assets
 
     }
 

@@ -1,6 +1,5 @@
 package n7.ad2.span_parser
 
-import android.content.res.AssetManager
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
@@ -18,9 +17,8 @@ import android.view.View
 import androidx.annotation.VisibleForTesting
 import androidx.core.text.set
 import androidx.core.text.toSpannable
-import java.util.*
+import n7.ad2.AppResources
 import javax.inject.Inject
-import kotlin.collections.ArrayDeque
 
 class AD2ClickableSpan(private val data: Data) : ClickableSpan() {
 
@@ -38,7 +36,7 @@ data class RemainingText(val text: String) : Analyzer
 data class AttributeAndValue(val attribute: String, val value: String)
 
 class AD2StringParser @Inject constructor(
-    private val assets: AssetManager,
+    private val res: AppResources,
 ) {
 
     companion object {
@@ -109,7 +107,7 @@ class AD2StringParser @Inject constructor(
             "backgroundNight" -> if (isNightTheme) result[0, result.length] = BackgroundColorSpan(Color.parseColor(value))
             "underline" -> result[0, result.length] = UnderlineSpan()
             "image" -> {
-                val drawable = Drawable.createFromStream(assets.open(value), null)
+                val drawable = Drawable.createFromStream(res.getAssets(value), null)
                 result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
             }
             "click" -> result[0, result.length] = AD2ClickableSpan(AD2ClickableSpan.Data(value, bufferText))

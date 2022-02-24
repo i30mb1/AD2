@@ -1,7 +1,7 @@
 package n7.ad2.repositories
 
 import android.app.Application
-import n7.ad2.android.Locale
+import n7.ad2.AppLocale
 import java.io.File
 import javax.inject.Inject
 
@@ -13,8 +13,8 @@ class ResponseRepository @Inject constructor(
         val DIRECTORY_RESPONSES: String = android.os.Environment.DIRECTORY_RINGTONES
     }
 
-    fun getHeroResponses(heroName: String, locale: Locale): String {
-        return application.assets.open("heroes/$heroName/${locale.folderName}/responses.json").bufferedReader().use {
+    fun getHeroResponses(heroName: String, appLocale: AppLocale): String {
+        return application.assets.open("heroes/$heroName/${appLocale.folderName}/responses.json").bufferedReader().use {
             it.readText()
         }
     }

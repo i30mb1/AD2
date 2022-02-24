@@ -11,14 +11,14 @@ import androidx.transition.Slide
 import androidx.transition.TransitionManager
 import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
-import n7.ad2.android.Locale
+import n7.ad2.AppLocale
 import n7.ad2.android.extension.load
 import n7.ad2.hero_page.R
 import n7.ad2.ktx.dpToPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
 
-    private var onChangeResponseLocaleListener: ((locale: Locale) -> Unit)? = null
+    private var onChangeResponseLocaleListener: ((appLocale: AppLocale) -> Unit)? = null
     private val params = LayoutParams(30.dpToPx, 30.dpToPx).apply {
         gravity = Gravity.CENTER
     }
@@ -33,9 +33,9 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         animationDuration = resources.getInteger(n7.ad2.ui.R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
-        text = Locale.valueOf(context.getString(n7.ad2.android.R.string.locale)).name
+        text = AppLocale.valueOf(context.getString(n7.ad2.android.R.string.locale)).name
         setOnClickListener {
-            val locale = if (text == Locale.ENG.name) Locale.RU else Locale.ENG
+            val locale = if (text == AppLocale.ENG.name) AppLocale.RU else AppLocale.ENG
             text = locale.name
             onChangeResponseLocaleListener?.invoke(locale)
         }
@@ -70,7 +70,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         onChangeResponseLocaleListener = null
     }
 
-    fun setOnChangeHeroLocaleListener(listener: (locale: Locale) -> Unit) {
+    fun setOnChangeHeroLocaleListener(listener: (appLocale: AppLocale) -> Unit) {
         this.onChangeResponseLocaleListener = listener
     }
 

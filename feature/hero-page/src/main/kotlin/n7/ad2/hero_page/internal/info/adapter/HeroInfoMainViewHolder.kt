@@ -3,6 +3,7 @@ package n7.ad2.hero_page.internal.info.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.android.extension.load
 import n7.ad2.hero_page.databinding.ItemHeroAttributesBinding
 import n7.ad2.hero_page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
@@ -12,7 +13,7 @@ class HeroInfoMainViewHolder private constructor(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: VOHeroInfo.Attributes) {
-//        binding.ivHero.load(item.urlHeroImage, R.drawable.stream_placeholder)
+        binding.ivHero.load(item.urlHeroImage, n7.ad2.ui.R.drawable.widht_placeholder)
         binding.heroStatistics.setHeroStatistics(item.heroStatistics)
         bind(item.isSelected)
     }

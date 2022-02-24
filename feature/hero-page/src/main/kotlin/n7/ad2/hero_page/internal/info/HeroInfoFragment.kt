@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
@@ -36,9 +37,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     private var _binding: FragmentHeroInfoBinding? = null
     private val binding: FragmentHeroInfoBinding get() = _binding!!
-    private val viewModel: HeroInfoViewModel by viewModel {
-        heroInfoFactory.create(heroName)
-    }
+    private val viewModel: HeroInfoViewModel by viewModel { heroInfoFactory.create(heroName) }
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
     private val onKeyClickListener = { key: String -> }
@@ -86,11 +85,22 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             addItemDecoration(HeroInfoItemDecorator())
         }
 
-        viewModel.list.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
-            .onEach { list ->
-                heroInfoAdapter.submitList(list) {
-                    binding.rv.invalidateItemDecorations()
+        viewModel.state.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+            .onEach { state ->
+                when (state) {
+                    is HeroInfoViewModel.State.Data -> {
+                        binding.error.isVisible = false
+                        heroInfoAdapter.submitList(state.list) { binding.rv.invalidateItemDecorations() }
+                    }
+                    is HeroInfoViewModel.State.Error -> {
+                        binding.error.isVisible = true
+                        binding.error.setError(state.error.message)
+                    }
+                    HeroInfoViewModel.State.Loading -> {
+
+                    }
                 }
+
             }
             .launchIn(lifecycleScope)
     }

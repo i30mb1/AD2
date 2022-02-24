@@ -11,9 +11,9 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
+import n7.ad2.AppLocale
 import n7.ad2.android.ErrorMessage
 import n7.ad2.android.ErrorMessageDelegate
-import n7.ad2.android.Locale
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 
@@ -29,7 +29,7 @@ class ResponsesViewModel @AssistedInject constructor(
         fun create(heroName: String): ResponsesViewModel
     }
 
-    private val heroWithLocale = MutableLiveData<Pair<LocalHero, Locale>>()
+    private val heroWithLocale = MutableLiveData<Pair<LocalHero, AppLocale>>()
     val voResponses: LiveData<List<VOResponse>> = heroWithLocale.switchMap {
         liveData {
 //            getHeroResponsesInteractor(it.first, it.second)
@@ -46,7 +46,7 @@ class ResponsesViewModel @AssistedInject constructor(
         heroWithLocale.value = heroWithLocale.value
     }
 
-    fun loadResponses(heroName: String, heroLocale: Locale? = null) {
+    fun loadResponses(heroName: String, heroAppLocale: AppLocale? = null) {
         viewModelScope.launch {
 //            val localHero = getLocalHeroByNameUseCase(heroName)
 //            val locale = heroLocale ?: Locale.valueOf(application.getString(R.string.locale))

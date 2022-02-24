@@ -6,7 +6,7 @@ import android.app.Application
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import kotlinx.coroutines.flow.Flow
-import n7.ad2.android.Locale
+import n7.ad2.AppLocale
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
@@ -46,8 +46,8 @@ class HeroRepository @Inject constructor(
         return heroesDao.getHero(name)
     }
 
-    fun getHeroDescription(heroName: String, locale: Locale): String {
-        return application.assets.open("heroes/$heroName/${locale.folderName}/description.json").bufferedReader().use {
+    fun getHeroDescription(heroName: String, appLocale: AppLocale): String {
+        return application.assets.open("heroes/$heroName/${appLocale.folderName}/description.json").bufferedReader().use {
             it.readText()
         }
     }
