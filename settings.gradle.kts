@@ -1,3 +1,5 @@
+rootProject.name = "AD2"
+
 dependencyResolutionManagement { // репозитории для все проектов (модулей)
     repositories {
         mavenCentral()
