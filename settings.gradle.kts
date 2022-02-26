@@ -17,18 +17,21 @@ dependencyResolutionManagement { // репозитории для все про�
 pluginManagement { // репозитории для Gradle плагинов, блок выполянется до конфигурации проекта
     repositories {
         mavenCentral()
+        google()
     }
     resolutionStrategy {
         eachPlugin { // хитрый способ динамический подключить плагины если они начнут использоваться в проекте
             val pluginId = requested.id.id
             if (requested.id.namespace == "org.jetbrains.kotlin") useVersion("1.5.30")
             if (requested.id.namespace == "com.android") useModule("com.android.tools.build:gradle:7.0.4")
+            if (pluginId == "androidx.benchmark") useModule("androidx.benchmark:benchmark-gradle-plugin:1.0.0")
             if (pluginId == "com.gradle.enterprise") useVersion("3.7.2")
         }
     }
 }
 
 include(":app")
+include(":micro-benchmark")
 include(
     ":core:dagger",
     ":core:android",
