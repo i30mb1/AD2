@@ -6,9 +6,9 @@ dependencyResolutionManagement { // репозитории для все про�
         exclusiveContent {
             forRepository { google() }
             filter {
-                includeGroupByRegex("androidx\\..+")
+                includeGroupByRegex("androidx.*")
                 includeGroupByRegex("com.android.*")
-                includeGroupByRegex("com.google.android.+")
+                includeGroupByRegex("com.google.android.*")
             }
         }
     }
