@@ -28,7 +28,7 @@ class ItemRepository @Inject constructor(
     }
 
     fun getItem(itemName: String, appLocale: AppLocale): String {
-        return application.assets.open("items/$itemName/${appLocale.folderName}/description.json")
+        return application.assets.open("items/$itemName/${appLocale.value}/description.json")
             .bufferedReader().use {
                 it.readText()
             }

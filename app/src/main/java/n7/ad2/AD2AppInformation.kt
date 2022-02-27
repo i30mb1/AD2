@@ -6,5 +6,8 @@ class AD2AppInformation @Inject constructor(
     res: AppResources,
 ) : AppInformation {
     override val isDebug = BuildConfig.DEBUG
-    override val appLocale: AppLocale = AppLocale.valueOf(res.getString(n7.ad2.android.R.string.locale))
+    override val appLocale: AppLocale = when (val value = res.getString(n7.ad2.android.R.string.locale)) {
+        "ru" -> AppLocale.Russian(value)
+        else -> AppLocale.English(value)
+    }
 }

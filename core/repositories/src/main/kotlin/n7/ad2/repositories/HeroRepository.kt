@@ -47,7 +47,7 @@ class HeroRepository @Inject constructor(
     }
 
     fun getHeroDescription(heroName: String, appLocale: AppLocale): String {
-        return application.assets.open("heroes/$heroName/${appLocale.folderName}/description.json").bufferedReader().use {
+        return application.assets.open("heroes/$heroName/${appLocale.value}/description.json").bufferedReader().use {
             it.readText()
         }
     }

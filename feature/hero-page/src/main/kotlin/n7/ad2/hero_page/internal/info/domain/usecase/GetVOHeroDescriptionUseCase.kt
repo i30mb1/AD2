@@ -36,7 +36,11 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     }
 
     @OptIn(ExperimentalStdlibApi::class)
-    suspend operator fun invoke(heroName: String, locale: AppLocale, heroInfo: HeroInfo? = null): Flow<List<VOHeroInfo>> = flow {
+    suspend operator fun invoke(
+        heroName: String,
+        locale: AppLocale,
+        heroInfo: HeroInfo,
+    ): Flow<List<VOHeroInfo>> = flow {
         val localHero = heroRepository.getHero(heroName)
         val json = heroRepository.getHeroDescription(localHero.name, locale)
         val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json)!!

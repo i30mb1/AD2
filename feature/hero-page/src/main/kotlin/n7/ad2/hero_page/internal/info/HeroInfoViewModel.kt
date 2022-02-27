@@ -37,10 +37,10 @@ class HeroInfoViewModel @AssistedInject constructor(
     val state: StateFlow<State> = _state.asStateFlow()
 
     init {
-        load(null)
+        load(GetVOHeroDescriptionUseCase.HeroInfo.Main)
     }
 
-    fun load(heroInfo: GetVOHeroDescriptionUseCase.HeroInfo?) {
+    fun load(heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) {
         viewModelScope.launch {
             getVOHeroDescriptionUseCase(heroName, appInformation.appLocale, heroInfo)
                 .onEach { list -> _state.emit(State.Data(list)) }

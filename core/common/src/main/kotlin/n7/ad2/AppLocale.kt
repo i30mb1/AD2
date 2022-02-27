@@ -1,6 +1,6 @@
 package n7.ad2
 
-enum class AppLocale(val folderName: String) {
-    RU("ru"),
-    ENG("en"),
+sealed class AppLocale(val value: String) {
+    class English(value: String) : AppLocale(value)
+    class Russian(value: String) : AppLocale(value)
 }

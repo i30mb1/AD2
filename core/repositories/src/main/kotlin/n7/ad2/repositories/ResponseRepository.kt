@@ -14,7 +14,7 @@ class ResponseRepository @Inject constructor(
     }
 
     fun getHeroResponses(heroName: String, appLocale: AppLocale): String {
-        return application.assets.open("heroes/$heroName/${appLocale.folderName}/responses.json").bufferedReader().use {
+        return application.assets.open("heroes/$heroName/${appLocale.value}/responses.json").bufferedReader().use {
             it.readText()
         }
     }
