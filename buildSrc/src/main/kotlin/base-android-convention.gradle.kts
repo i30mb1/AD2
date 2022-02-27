@@ -12,6 +12,7 @@ configure<BaseExtension> {
 
     lintOptions {
         isAbortOnError = false
+        disable("UseCompoundDrawables")
     }
 }
 
