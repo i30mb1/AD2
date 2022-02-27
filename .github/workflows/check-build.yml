@@ -1,4 +1,4 @@
-name: Check Build
+name: Check Build And Assemble
 
 on:
   push:
@@ -20,3 +20,8 @@ jobs:
           cache: gradle
       - name: Build with Gradle
         run: gradle build -q
+      - name: Copy APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: AD2.apk
+          path: app/build/outputs/apk/prod/debug/app-prod-debug.apk
