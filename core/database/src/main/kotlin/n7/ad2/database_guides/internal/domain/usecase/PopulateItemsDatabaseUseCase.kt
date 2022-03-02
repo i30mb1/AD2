@@ -1,12 +1,12 @@
 package n7.ad2.database_guides.internal.domain.usecase
 
-import android.app.Application
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import n7.ad2.AppResources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.internal.domain.model.AssetsItem
@@ -15,7 +15,7 @@ import n7.ad2.logger.AD2Logger
 import javax.inject.Inject
 
 class PopulateItemsDatabaseUseCase @Inject constructor(
-    private val application: Application,
+    private val res: AppResources,
     private val itemsDao: ItemsDao,
     private val moshi: Moshi,
     private val logger: AD2Logger,
@@ -25,7 +25,7 @@ class PopulateItemsDatabaseUseCase @Inject constructor(
     class PopulateItemsDatabaseException(message: String) : Exception(message)
 
     suspend operator fun invoke(): Flow<Boolean> = flow {
-        val json = application.assets.open("items.json").bufferedReader().use {
+        val json = res.getAssets("items.json").bufferedReader().use {
             it.readText()
         }
 

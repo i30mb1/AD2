@@ -1,10 +1,8 @@
 package ad2.n7.news.internal
 
-import android.app.Application
 import javax.inject.Inject
 
 class LoadNewsUseCase @Inject constructor(
-    private val application: Application,
 ) {
 
     operator fun invoke() {

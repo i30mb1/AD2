@@ -1,15 +1,15 @@
 package n7.ad2.games.internal
 
-import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import n7.ad2.AppResources
 import n7.ad2.games.R
 import n7.ad2.games.internal.data.VOGame
 
 internal class GamesViewModel @AssistedInject constructor(
-    private val application: Application,
+    private val res: AppResources,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -19,9 +19,9 @@ internal class GamesViewModel @AssistedInject constructor(
 
     val games = liveData {
         emit(listOf(
-            VOGame.SpellCost(application.getString(R.string.spell_cost)),
-            VOGame.Apm(application.getString(R.string.apm)),
-            VOGame.CanYouBuyIt(application.getString(R.string.can_you_buy_it)),
+            VOGame.SpellCost(res.getString(R.string.spell_cost)),
+            VOGame.Apm(res.getString(R.string.apm)),
+            VOGame.CanYouBuyIt(res.getString(R.string.can_you_buy_it)),
         ))
     }
 

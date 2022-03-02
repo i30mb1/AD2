@@ -1,12 +1,10 @@
 package ad2.n7.news.internal
 
-import android.app.Application
 import androidx.lifecycle.ViewModel
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 
 internal class NewsViewModel @AssistedInject constructor(
-    private val application: Application,
 ) : ViewModel() {
 
     @AssistedFactory

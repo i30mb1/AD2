@@ -1,6 +1,5 @@
 package n7.ad2.drawer.internal.domain.usecase
 
-import android.app.Application
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import kotlinx.coroutines.flow.Flow
@@ -8,6 +7,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import n7.ad2.AppResources
 import n7.ad2.app_preference.AppPreference
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.drawer.R
@@ -19,7 +19,7 @@ import n7.ad2.logger.AD2Logger
 import javax.inject.Inject
 
 internal class GetMenuItemsUseCase @Inject constructor(
-    private val application: Application,
+    private val res: AppResources,
     private val appPreference: AppPreference,
     private val settingsApi: SettingsApi,
     private val logger: AD2Logger,
@@ -46,12 +46,12 @@ internal class GetMenuItemsUseCase @Inject constructor(
         .map { settings ->
             settings.menu.map { menu ->
                 when (menu.type) {
-                    VOMenuType.HEROES -> VOMenu(menu.type, application.getString(R.string.heroes), menu.isEnable, true)
-                    VOMenuType.ITEMS -> VOMenu(menu.type, application.getString(R.string.items), menu.isEnable)
-                    VOMenuType.NEWS -> VOMenu(menu.type, application.getString(R.string.news), menu.isEnable)
-                    VOMenuType.TOURNAMENTS -> VOMenu(menu.type, application.getString(R.string.tournaments), menu.isEnable)
-                    VOMenuType.STREAMS -> VOMenu(menu.type, application.getString(R.string.streams), menu.isEnable)
-                    VOMenuType.GAMES -> VOMenu(menu.type, application.getString(R.string.games), menu.isEnable)
+                    VOMenuType.HEROES -> VOMenu(menu.type, res.getString(R.string.heroes), menu.isEnable, true)
+                    VOMenuType.ITEMS -> VOMenu(menu.type, res.getString(R.string.items), menu.isEnable)
+                    VOMenuType.NEWS -> VOMenu(menu.type, res.getString(R.string.news), menu.isEnable)
+                    VOMenuType.TOURNAMENTS -> VOMenu(menu.type, res.getString(R.string.tournaments), menu.isEnable)
+                    VOMenuType.STREAMS -> VOMenu(menu.type, res.getString(R.string.streams), menu.isEnable)
+                    VOMenuType.GAMES -> VOMenu(menu.type, res.getString(R.string.games), menu.isEnable)
                     VOMenuType.UNKNOWN -> VOMenu(menu.type, menu.type.name, false)
                 }
             }

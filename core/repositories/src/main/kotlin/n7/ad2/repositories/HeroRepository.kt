@@ -2,18 +2,18 @@
 
 package n7.ad2.repositories
 
-import android.app.Application
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import kotlinx.coroutines.flow.Flow
 import n7.ad2.AppLocale
+import n7.ad2.AppResources
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
 import javax.inject.Inject
 
 class HeroRepository @Inject constructor(
-    private val application: Application,
+    private val res: AppResources,
     private val heroesDao: HeroesDao,
 ) {
 
@@ -25,7 +25,7 @@ class HeroRepository @Inject constructor(
     }
 
     suspend fun getHeroAnimation(assetsPath: String, name: String): Bitmap {
-        return application.assets.open("$assetsPath/$name/$ASSETS_FILE_ANIMATION").use {
+        return res.getAssets("$assetsPath/$name/$ASSETS_FILE_ANIMATION").use {
             BitmapFactory.decodeStream(it)
         }
     }
@@ -47,7 +47,7 @@ class HeroRepository @Inject constructor(
     }
 
     fun getHeroDescription(heroName: String, appLocale: AppLocale): String {
-        return application.assets.open("heroes/$heroName/${appLocale.value}/description.json").bufferedReader().use {
+        return res.getAssets("heroes/$heroName/${appLocale.value}/description.json").bufferedReader().use {
             it.readText()
         }
     }

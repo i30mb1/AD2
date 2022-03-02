@@ -1,12 +1,12 @@
 package n7.ad2.item_page.internal.domain.usecase
 
-import android.app.Application
 import androidx.core.text.toSpanned
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AppLocale
+import n7.ad2.AppResources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.model.LocalItemInfo
@@ -20,7 +20,7 @@ import n7.ad2.ui.adapter.ImageLineViewHolder
 import javax.inject.Inject
 
 class GetItemInfoUseCase @Inject constructor(
-    private val application: Application,
+    private val res: AppResources,
     private val itemRepository: ItemRepository,
     private val moshi: Moshi,
     private val dispatchers: DispatchersProvider,
@@ -31,8 +31,8 @@ class GetItemInfoUseCase @Inject constructor(
         val json = itemRepository.getItem(itemName, appLocale)
         val localItemDescription = moshi.adapter(LocalItemInfo::class.java).fromJson(json)!!
         val result = buildList {
-            add(VOItemInfo.TextLine(application.getString(R.string.cost, localItemDescription.cost)))
-            add(VOItemInfo.TextLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
+            add(VOItemInfo.TextLine(res.getString(R.string.cost, localItemDescription.cost)))
+            add(VOItemInfo.TextLine(res.getString(R.string.bought_from, localItemDescription.boughtFrom)))
             add(VOItemInfo.Recipe(
                 itemName,
                 ItemRepository.getFullUrlItemImage(localItemDescription.name),
@@ -43,7 +43,7 @@ class GetItemInfoUseCase @Inject constructor(
 
             localItemDescription.abilities?.let { list ->
                 list.forEach { ability ->
-                    add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.abilities, ability.abilityName), false, ability.audioUrl)))
+                    add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.abilities, ability.abilityName), false, ability.audioUrl)))
                     ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
                     add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
@@ -55,22 +55,22 @@ class GetItemInfoUseCase @Inject constructor(
             }
 
             localItemDescription.tips?.let { tips ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.tips))))
+                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.tips))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(tips.toStringList(true).toSpanned())))
             }
 
             localItemDescription.lore?.let { lore ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.lore))))
+                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.lore))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(lore.toStringList(true).toSpanned())))
             }
 
             localItemDescription.trivia?.let { trivia ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.trivia))))
+                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.trivia))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(trivia.toStringList(true).toSpanned())))
             }
 
             localItemDescription.additionalInformation?.let { additionalInfo ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(application.getString(R.string.additional_information))))
+                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.additional_information))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(additionalInfo.toStringList(true).toSpanned())))
             }
 

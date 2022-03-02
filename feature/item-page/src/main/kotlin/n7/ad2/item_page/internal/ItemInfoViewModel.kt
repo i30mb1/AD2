@@ -1,6 +1,5 @@
 package n7.ad2.item_page.internal
 
-import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,6 +10,7 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.android.ErrorMessage
 import n7.ad2.android.ErrorMessageDelegate
@@ -18,7 +18,7 @@ import n7.ad2.item_page.internal.domain.usecase.GetItemInfoUseCase
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 
 class ItemInfoViewModel @AssistedInject constructor(
-    application: Application,
+    appInfo: AppInformation,
     private val getItemInfoUseCase: GetItemInfoUseCase,
     @Assisted private val itemName: String,
 ) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
@@ -32,7 +32,7 @@ class ItemInfoViewModel @AssistedInject constructor(
     val voItemInfo: LiveData<List<VOItemInfo>> = _voItemInfo
 
     init {
-        loadItemInfo(itemName, AppLocale.valueOf(application.getString(n7.ad2.android.R.string.locale)))
+        loadItemInfo(itemName, appInfo.appLocale)
     }
 
     fun onStartPlayingItem(soundUrl: String) {

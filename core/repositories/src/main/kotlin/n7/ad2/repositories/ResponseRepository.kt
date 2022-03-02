@@ -1,12 +1,12 @@
 package n7.ad2.repositories
 
-import android.app.Application
 import n7.ad2.AppLocale
+import n7.ad2.AppResources
 import java.io.File
 import javax.inject.Inject
 
 class ResponseRepository @Inject constructor(
-    private val application: Application,
+    private val res: AppResources,
 ) {
 
     companion object {
@@ -14,13 +14,13 @@ class ResponseRepository @Inject constructor(
     }
 
     fun getHeroResponses(heroName: String, appLocale: AppLocale): String {
-        return application.assets.open("heroes/$heroName/${appLocale.value}/responses.json").bufferedReader().use {
+        return res.getAssets("heroes/$heroName/${appLocale.value}/responses.json").bufferedReader().use {
             it.readText()
         }
     }
 
     fun getSavedHeroResponses(heroName: String): Array<File> {
-        return application.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.listFiles() ?: emptyArray()
+        return res.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.listFiles() ?: emptyArray()
     }
 
 }

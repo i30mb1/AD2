@@ -1,6 +1,5 @@
 package n7.ad2.hero_page.internal.responses
 
-import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -18,7 +17,6 @@ import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 
 class ResponsesViewModel @AssistedInject constructor(
-    private val application: Application,
     @Assisted private val heroName: String,
 //    private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
 //    private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,

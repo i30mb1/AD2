@@ -2,15 +2,15 @@
 
 package n7.ad2.repositories
 
-import android.app.Application
 import kotlinx.coroutines.flow.Flow
 import n7.ad2.AppLocale
+import n7.ad2.AppResources
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.internal.model.LocalItem
 import javax.inject.Inject
 
 class ItemRepository @Inject constructor(
-    private val application: Application,
+    private val res: AppResources,
     private val itemsDao: ItemsDao,
 ) {
 
@@ -28,7 +28,7 @@ class ItemRepository @Inject constructor(
     }
 
     fun getItem(itemName: String, appLocale: AppLocale): String {
-        return application.assets.open("items/$itemName/${appLocale.value}/description.json")
+        return res.getAssets("items/$itemName/${appLocale.value}/description.json")
             .bufferedReader().use {
                 it.readText()
             }

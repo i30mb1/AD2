@@ -33,11 +33,11 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         animationDuration = resources.getInteger(n7.ad2.ui.R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
-        text = AppLocale.valueOf(context.getString(n7.ad2.android.R.string.locale)).name
+//        text = AppLocale.English()
         setOnClickListener {
-            val locale = if (text == AppLocale.ENG.name) AppLocale.RU else AppLocale.ENG
-            text = locale.name
-            onChangeResponseLocaleListener?.invoke(locale)
+//            val locale = if (text == AppLocale.ENG.name) AppLocale.RU else AppLocale.ENG
+//            text = locale.name
+//            onChangeResponseLocaleListener?.invoke(locale)
         }
         addView(this)
     }
