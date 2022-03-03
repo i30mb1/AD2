@@ -6,6 +6,7 @@ import android.view.Gravity
 import android.view.OrientationEventListener
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
@@ -33,12 +34,6 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         animationDuration = resources.getInteger(n7.ad2.ui.R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
-//        text = AppLocale.English()
-        setOnClickListener {
-//            val locale = if (text == AppLocale.ENG.name) AppLocale.RU else AppLocale.ENG
-//            text = locale.name
-//            onChangeResponseLocaleListener?.invoke(locale)
-        }
         addView(this)
     }
 
@@ -59,6 +54,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
             ivHero.rotation = 360 - orientation.toFloat()
         }
     }
+    private var currentLocale: AppLocale? = null
 
     init {
         listener.enable()
@@ -74,8 +70,19 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         this.onChangeResponseLocaleListener = listener
     }
 
-    fun loadHero(heroName: String) {
+    fun loadHero(heroName: String, appLocale: AppLocale) {
         ivHero.load(n7.ad2.repositories.HeroRepository.getFullUrlHeroMinimap(heroName))
+        currentLocale = appLocale
+        setUpViews()
+    }
+
+    private fun setUpViews() {
+        tvLocale.text = currentLocale?.value
+        tvLocale.setOnClickListener { view ->
+            val locale = if (currentLocale is AppLocale.Russian) AppLocale.English else AppLocale.Russian
+            (view as TextView).text = locale.value
+            onChangeResponseLocaleListener?.invoke(locale)
+        }
     }
 
     fun pageSelected(newPage: Int) {

@@ -12,9 +12,13 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
+import n7.ad2.AppInformation
+import n7.ad2.android.findDependencies
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroPageBinding
+import n7.ad2.hero_page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.lazyUnsafe
+import javax.inject.Inject
 
 class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 
@@ -27,11 +31,18 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
         }
     }
 
+    @Inject lateinit var appInformation: AppInformation
+
     private var _binding: FragmentHeroPageBinding? = null
     private val binding: FragmentHeroPageBinding get() = _binding!!
 
     //    val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        DaggerHeroPageComponent.factory().create(findDependencies()).inject(this)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -88,7 +99,7 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
     }
 
     private fun setToolbar() {
-        binding.toolbar.loadHero(heroName)
+        binding.toolbar.loadHero(heroName, appInformation.appLocale)
     }
 
     @RequiresPermission(Manifest.permission.WRITE_SETTINGS)
