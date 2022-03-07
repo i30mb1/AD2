@@ -1,16 +1,19 @@
 package n7.ad2.hero_page.internal.responses.domain.vo
 
 import androidx.lifecycle.MutableLiveData
+import n7.ad2.ui.adapter.HeaderViewHolder
 
-sealed class VOResponse
-data class VOResponseTitle(val title: String) : VOResponse()
-data class VOResponseBody(
-    val heroName: String,
-    val title: String,
-    val icons: List<VOResponseImage>,
-    val titleForFile: String,
-    val isSavedInMemory: Boolean,
-) : VOResponse() {
-    val currentProgress = MutableLiveData(0)
-    val maxProgress = MutableLiveData(0)
+sealed class VOResponse {
+    data class Title(val data: HeaderViewHolder.Data) : VOResponse()
+    data class Body(
+        val heroName: String,
+        val title: String,
+        val icons: List<VOResponseImage>,
+        val titleForFile: String,
+        val isSavedInMemory: Boolean,
+        val audioUrl: String,
+    ) : VOResponse() {
+        val currentProgress = MutableLiveData(0)
+        val maxProgress = MutableLiveData(0)
+    }
 }

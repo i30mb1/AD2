@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?colorSurface"
     android:foreground="@drawable/background_ripple">
 
-    <!--        <ProgressBar-->
-    <!--            style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
-    <!--            isVisible="@{item.maxProgress > 0}"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:max="@{item.maxProgress}"-->
-    <!--            android:progress="@{item.currentProgress}"-->
-    <!--            android:scaleY="10"-->
-    <!--            android:visibility="visible"-->
-    <!--            tools:progress="30" />-->
+    <ProgressBar
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleY="14"
+        android:visibility="visible"
+        tools:progress="30" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,51 +21,40 @@
         android:orientation="horizontal"
         android:padding="4dp">
 
-        <!--            <androidx.recyclerview.widget.RecyclerView-->
-        <!--                android:id="@+id/rv"-->
-        <!--                icons="@{item.icons}"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                tools:itemCount="5"-->
-        <!--                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
-        <!--                tools:listitem="@layout/item_response_image"-->
-        <!--                tools:spanCount="3" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_response_image"
+            tools:spanCount="3" />
 
-        <!--            <ImageView-->
-        <!--                android:id="@+id/iv_is_saved"-->
-        <!--                isVisible="@{item.savedInMemory}"-->
-        <!--                withSpace="@{false}"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="20dp"-->
-        <!--                android:layout_weight="0"-->
-        <!--                android:contentDescription="@string/desc_saved"-->
-        <!--                android:onClick="@{(view)-> infoPopupWindow.show(view, @string/popup_saved)}"-->
-        <!--                app:srcCompat="@drawable/ic_response_save"-->
-        <!--                tools:visibility="visible" />-->
+        <ImageView
+            android:id="@+id/iv_is_saved"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="0"
+            android:contentDescription="@string/desc_is_saved"
+            app:srcCompat="@drawable/ic_response_save"
+            tools:visibility="visible" />
 
-        <!--            <LinearLayout-->
-        <!--                android:id="@+id/ll_container"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:orientation="vertical" />-->
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textAppearance="@style/TextAppearance.H5"
+            tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
 
-        <!--            <TextView-->
-        <!--                android:layout_width="0dp"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_weight="1"-->
-        <!--                android:paddingStart="4dp"-->
-        <!--                android:paddingEnd="4dp"-->
-        <!--                android:text="@{item.title}"-->
-        <!--                android:textAppearance="?textAppearance.B1"-->
-        <!--                android:textColor="?android:textColorSecondary"-->
-        <!--                tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />-->
+        <ProgressBar
+            android:id="@+id/pb_is_playing"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="0" />
 
-        <!--            <ProgressBar-->
-        <!--                isVisible="@{item.isPlaying()}"-->
-        <!--                withSpace="@{true}"-->
-        <!--                android:layout_width="20dp"-->
-        <!--                android:layout_height="20dp"-->
-        <!--                android:layout_weight="0" />-->
     </LinearLayout>
 
-    </FrameLayout>
+</FrameLayout>

@@ -13,6 +13,7 @@
     <string name="desc_strength" translatable="false">strength</string>
     <string name="desc_intelligence" translatable="false">intellect</string>
     <string name="desc_agility" translatable="false">Agility</string>
+    <string name="desc_is_saved" translatable="false">is saved</string>
     <string name="notification_title_guide" translatable="false">loading guide...</string>
     <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
 

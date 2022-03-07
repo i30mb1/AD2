@@ -19,8 +19,8 @@ class ResponseRepository @Inject constructor(
         }
     }
 
-    fun getSavedHeroResponses(heroName: String): Array<File> {
-        return res.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.listFiles() ?: emptyArray()
+    fun getSavedHeroResponses(heroName: String): List<File> {
+        return res.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.listFiles()?.toList() ?: emptyList()
     }
 
 }

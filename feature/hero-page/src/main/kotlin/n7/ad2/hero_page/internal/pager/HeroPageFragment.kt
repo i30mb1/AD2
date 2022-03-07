@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.AppInformation
+import n7.ad2.AppLocale
 import n7.ad2.android.findDependencies
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroPageBinding
@@ -57,6 +58,10 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
         super.onDestroyView()
         binding.vp.adapter = null
         _binding = null
+    }
+
+    fun setOnChangeHeroLocaleListener(listener: (appLocale: AppLocale) -> Unit) {
+        binding.toolbar.setOnChangeHeroLocaleListener(listener)
     }
 
     fun scheduleStartPostponedTransition(sharedElement: View) {

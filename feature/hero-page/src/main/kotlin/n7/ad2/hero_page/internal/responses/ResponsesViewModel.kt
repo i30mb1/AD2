@@ -1,25 +1,25 @@
 package n7.ad2.hero_page.internal.responses
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
-import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import n7.ad2.AppLocale
 import n7.ad2.android.ErrorMessage
 import n7.ad2.android.ErrorMessageDelegate
-import n7.ad2.database_guides.internal.model.LocalHero
+import n7.ad2.hero_page.internal.responses.domain.interactor.GetHeroResponsesInteractor
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 
 class ResponsesViewModel @AssistedInject constructor(
     @Assisted private val heroName: String,
-//    private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
-//    private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
+    private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
 ) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
 
     @AssistedFactory
@@ -27,29 +27,24 @@ class ResponsesViewModel @AssistedInject constructor(
         fun create(heroName: String): ResponsesViewModel
     }
 
-    private val heroWithLocale = MutableLiveData<Pair<LocalHero, AppLocale>>()
-    val voResponses: LiveData<List<VOResponse>> = heroWithLocale.switchMap {
-        liveData {
-//            getHeroResponsesInteractor(it.first, it.second)
-//                .onSuccess {
-//                    emit(it)
-//                }
-//                .onFailure {
-//                    _error.send(it)
-//                }
-        }
+    sealed class State {
+        data class Data(val list: List<VOResponse>) : State()
+        data class Error(val error: Throwable) : State()
+        object Loading : State()
+    }
+
+    private val _state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
+    val state: StateFlow<State> = _state.asStateFlow()
+
+    fun loadResponses(appLocale: AppLocale) {
+        getHeroResponsesInteractor(heroName, appLocale)
+            .onEach { list -> _state.emit(State.Data(list)) }
+            .catch { error -> _state.emit(State.Error(error)) }
+            .launchIn(viewModelScope)
     }
 
     fun refreshResponses() {
-        heroWithLocale.value = heroWithLocale.value
-    }
-
-    fun loadResponses(heroName: String, heroAppLocale: AppLocale? = null) {
-        viewModelScope.launch {
-//            val localHero = getLocalHeroByNameUseCase(heroName)
-//            val locale = heroLocale ?: Locale.valueOf(application.getString(R.string.locale))
-//            heroWithLocale.value = Pair(localHero, locale)
-        }
+        TODO("Not yet implemented")
     }
 
 }

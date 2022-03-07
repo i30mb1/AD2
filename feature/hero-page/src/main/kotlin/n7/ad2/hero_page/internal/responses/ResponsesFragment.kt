@@ -3,15 +3,20 @@ package n7.ad2.hero_page.internal.responses
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.flowWithLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.flow.onEach
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroResponsesBinding
 import n7.ad2.hero_page.internal.info.InfoPopupWindow
+import n7.ad2.hero_page.internal.pager.HeroPageFragment
 import n7.ad2.hero_page.internal.pager.showDialogError
-import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
+import n7.ad2.hero_page.internal.responses.adapter.ResponsesAdapter
+import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.media_player.AudioExoPlayer
@@ -33,30 +38,19 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
     private var _binding: FragmentHeroResponsesBinding? = null
     private val binding: FragmentHeroResponsesBinding get() = _binding!!
+    private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
     private lateinit var responsesPagedListAdapter: ResponsesAdapter
     private val downloadResponseManager by lazyUnsafe { DownloadResponseManager(requireActivity().contentResolver, requireActivity().application, lifecycle) }
-    private val viewModel: ResponsesViewModel by viewModel { responsesViewModelFactory.create("") }
+    private val viewModel: ResponsesViewModel by viewModel { responsesViewModelFactory.create(heroName) }
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
 
-    @InternalCoroutinesApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHeroResponsesBinding.bind(view)
 
-        downloadResponseManager.setDownloadListener { result ->
-            when (result) {
-                is DownloadResult.Success -> viewModel.refreshResponses()
-                is DownloadResult.Failed -> showDialogError(result.error)
-            }
-        }
-
-//        lifecycleScope.launchWhenResumed { viewModel.error.collect(::showDialogError) }
-//        val heroName = requireArguments().getString(HERO_NAME)!!
-//        (requireActivity() as HeroPageFragment).binding.toolbar.setOnChangeHeroLocaleListener {
-//            viewModel.loadResponses(heroName, it)
-//        }
-//        viewModel.loadResponses(heroName)
-//        setupPagedListAdapter()
+        (parentFragment as HeroPageFragment).setOnChangeHeroLocaleListener(viewModel::loadResponses)
+        setupPagedListAdapter()
+        setupState()
     }
 
     override fun onDestroyView() {
@@ -65,12 +59,40 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         _binding = null
     }
 
-    private fun createDialogResponse(item: VOResponseBody) {
+    private fun setupState() {
+        downloadResponseManager.setDownloadListener { result ->
+            when (result) {
+                is DownloadResult.Success -> viewModel.refreshResponses()
+                is DownloadResult.Failed -> showDialogError(result.error)
+            }
+        }
+        viewModel.state.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+            .onEach { state ->
+                when (state) {
+                    is ResponsesViewModel.State.Data -> {
+                        binding.error.isVisible = false
+                        responsesPagedListAdapter.submitList(state.list)
+                    }
+                    is ResponsesViewModel.State.Error -> binding.error.setError(state.error.message)
+                    ResponsesViewModel.State.Loading -> Unit
+                }
+            }
+    }
+
+    private fun playSound(item: VOResponse.Body) {
+        audioExoPlayer.play(item.audioUrl)
+    }
+
+    private fun showPopup() {
+
+    }
+
+    private fun showDialogResponse(item: VOResponse.Body) {
         if (item.isSavedInMemory) return
         childFragmentManager.setFragmentResultListener(DialogResponse.REQUEST_KEY, this) { _: String, bundle: Bundle ->
             when (bundle.getString(DialogResponse.RESULT_KEY)) {
                 DialogResponse.ACTION_DOWNLOAD_RESPONSE -> downloadResponseManager.download(item)
-                else -> throw UnsupportedOperationException("cannot handle unknown result key")
+                else -> error("cannot handle unknown result key")
             }
         }
         val dialogResponse = DialogResponse.newInstance()
@@ -78,9 +100,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesAdapter() {
-            createDialogResponse(it)
-        }
+        responsesPagedListAdapter = ResponsesAdapter(layoutInflater, ::showDialogResponse, ::playSound, ::showPopup)
         responsesPagedListAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
         binding.rv.apply {
             setHasFixedSize(true)
@@ -88,7 +108,5 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             addItemDecoration(StickyHeaderDecorator(responsesPagedListAdapter, this))
             adapter = responsesPagedListAdapter
         }
-
-        viewModel.voResponses.observe(viewLifecycleOwner, responsesPagedListAdapter::submitList)
     }
 }
