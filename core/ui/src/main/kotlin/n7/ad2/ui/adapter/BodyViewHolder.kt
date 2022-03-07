@@ -1,9 +1,13 @@
 package n7.ad2.ui.adapter
 
 import android.text.Spanned
+import android.text.style.ImageSpan
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.text.getSpans
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.ktx.dpToPx
+import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ui.databinding.ItemBodyBinding
 
 class BodyViewHolder private constructor(
@@ -13,10 +17,10 @@ class BodyViewHolder private constructor(
     @JvmInline
     value class Data(val text: Spanned)
 
-//    private val lineHeight by lazyUnsafe { binding.tvText.lineHeight - 2.dpToPx }
+    private val lineHeight by lazyUnsafe { binding.tvText.lineHeight - 2.dpToPx }
 
     fun bind(item: Data) = binding.apply {
-//        item.text.getSpans<ImageSpan>().forEach { it.drawable?.setBounds(0, 0, lineHeight, lineHeight) }
+        item.text.getSpans<ImageSpan>().forEach { it.drawable?.setBounds(0, 0, lineHeight, lineHeight) }
         tvText.text = item.text
     }
 

@@ -68,7 +68,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_description))))
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.description.toSpanned())))
                     add(VOHeroInfo.Body(BodyViewHolder.Data(
-                        aD2StringParser.toSpannable("Этот спелл <span image=\"Starstorm.webp\">Starstorm</span> пиздец 111111111111111111111111111111111111111111111111111111111111111111111111111111")
+                        aD2StringParser.toSpannable("Этот спелл <span image=\"spell/Blink.webp\">Starstorm</span> пиздец 111111111111111111111111111111111111111111111111111111111111111111111111111111")
                     )))
                     add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_bio))))
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.history.toSpanned())))
