@@ -23,7 +23,7 @@ import androidx.core.util.forEach
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import n7.ad2.hero_page.internal.responses.domain.vo.VOResponseBody
+import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 
 sealed class DownloadResult {
     data class Success(val downloadId: Long) : DownloadResult()
@@ -48,7 +48,7 @@ class DownloadResponseManager(
             updateDMStatus(downloadId)
         }
     }
-    private val hashMap = LongSparseArray<Pair<VOResponseBody, ContentObserver>>()
+    private val hashMap = LongSparseArray<Pair<VOResponse.Body, ContentObserver>>()
 
     init {
         application.registerReceiver(downloadEndReceiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
@@ -59,7 +59,7 @@ class DownloadResponseManager(
         downloadListener = listener
     }
 
-    fun download(item: VOResponseBody): Long? {
+    fun download(item: VOResponse.Body): Long? {
         try {
 //            val uri = item.audioUrl!!.toUri()
 //            val downloadRequest = DownloadManager.Request(uri)
@@ -95,7 +95,7 @@ class DownloadResponseManager(
         resolver.update(contentUri, responseDetails, null, null)
     }
 
-    private fun registerObserverFor(downloadId: Long, item: VOResponseBody, handler: Handler = Handler(Looper.getMainLooper())) {
+    private fun registerObserverFor(downloadId: Long, item: VOResponse.Body, handler: Handler = Handler(Looper.getMainLooper())) {
         val observer = object : ContentObserver(handler) {
             override fun onChange(selfChange: Boolean, uri: Uri?) {
                 super.onChange(selfChange, uri)

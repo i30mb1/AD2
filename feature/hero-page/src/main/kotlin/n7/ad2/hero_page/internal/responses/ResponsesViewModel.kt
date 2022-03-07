@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.android.ErrorMessage
 import n7.ad2.android.ErrorMessageDelegate
@@ -19,6 +20,7 @@ import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 
 class ResponsesViewModel @AssistedInject constructor(
     @Assisted private val heroName: String,
+    private val appInformation: AppInformation,
     private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
 ) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
 
@@ -36,6 +38,10 @@ class ResponsesViewModel @AssistedInject constructor(
     private val _state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
     val state: StateFlow<State> = _state.asStateFlow()
 
+    init {
+        loadResponses(appInformation.appLocale)
+    }
+
     fun loadResponses(appLocale: AppLocale) {
         getHeroResponsesInteractor(heroName, appLocale)
             .onEach { list -> _state.emit(State.Data(list)) }
@@ -44,7 +50,7 @@ class ResponsesViewModel @AssistedInject constructor(
     }
 
     fun refreshResponses() {
-        TODO("Not yet implemented")
+
     }
 
 }

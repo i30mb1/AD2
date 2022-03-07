@@ -32,16 +32,10 @@ class ResponsesAdapter(
         }
     }
 
-    override fun onBindViewHolder(
-        holder: RecyclerView.ViewHolder,
-        position: Int,
-        payloads: MutableList<Any>,
-    ) {
-        if (payloads.isNullOrEmpty()) {
-            super.onBindViewHolder(holder, position, payloads)
-        } else {
-            (holder as ResponseBodyViewHolder).bind(payloads.last() as Boolean)
-        }
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: MutableList<Any>) = when {
+        payloads.isNullOrEmpty() -> super.onBindViewHolder(holder, position, payloads)
+        holder is ResponseBodyViewHolder -> holder.bind(payloads.last() as Boolean)
+        else -> error("could not bind viewHolder $holder")
     }
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {

@@ -1,5 +1,6 @@
 package n7.ad2.hero_page.internal.responses
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
@@ -7,11 +8,15 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import n7.ad2.android.findDependencies
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.databinding.FragmentHeroResponsesBinding
+import n7.ad2.hero_page.internal.di.DaggerHeroPageComponent
 import n7.ad2.hero_page.internal.info.InfoPopupWindow
 import n7.ad2.hero_page.internal.pager.HeroPageFragment
 import n7.ad2.hero_page.internal.pager.showDialogError
@@ -43,6 +48,11 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     private val downloadResponseManager by lazyUnsafe { DownloadResponseManager(requireActivity().contentResolver, requireActivity().application, lifecycle) }
     private val viewModel: ResponsesViewModel by viewModel { responsesViewModelFactory.create(heroName) }
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        DaggerHeroPageComponent.factory().create(findDependencies()).inject(this)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -76,7 +86,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
                     is ResponsesViewModel.State.Error -> binding.error.setError(state.error.message)
                     ResponsesViewModel.State.Loading -> Unit
                 }
-            }
+            }.launchIn(lifecycleScope)
     }
 
     private fun playSound(item: VOResponse.Body) {

@@ -14,6 +14,7 @@ class ErrorView(
 ) : LinearLayout(context, attributeSet) {
 
     init {
+        isVisible = false
         orientation = VERTICAL
         gravity = Gravity.CENTER
     }
