@@ -49,11 +49,11 @@ class ResponsesAdapter(
     private class DiffCallback : DiffUtil.ItemCallback<VOResponse>() {
         override fun areItemsTheSame(oldItem: VOResponse, newItem: VOResponse) = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOResponse, newItem: VOResponse) = oldItem == newItem
-        override fun getChangePayload(oldItem: VOResponse, newItem: VOResponse): Any? {
-            if (oldItem is VOResponse.Body && newItem is VOResponse.Body) {
-                if (oldItem.isSavedInMemory != newItem.isSavedInMemory) return newItem.isSavedInMemory
+        override fun getChangePayload(oldItem: VOResponse, newItem: VOResponse): Any? = when {
+            oldItem is VOResponse.Body && newItem is VOResponse.Body -> {
+                if (oldItem.isSavedInMemory != newItem.isSavedInMemory) newItem.isSavedInMemory else null
             }
-            return super.getChangePayload(oldItem, newItem)
+            else -> super.getChangePayload(oldItem, newItem)
         }
     }
 
