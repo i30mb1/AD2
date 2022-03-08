@@ -21,13 +21,13 @@ class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
     ): List<VOResponse> = withContext(dispatchers.IO) {
         val result = mutableListOf<VOResponse>()
         val mutableSaveHeroResponses = savedHeroResponses.toMutableList()
-        val iterator = mutableSaveHeroResponses.iterator()
 
         localHeroResponses.forEach {
             result.add(VOResponse.Title(HeaderViewHolder.Data(it.category)))
             it.responses.forEach { response ->
                 val titleForSavedFile = response.audioUrl.substringBeforeLast(".mp3").substringAfterLast("/") + ".mp3"
 
+                val iterator = mutableSaveHeroResponses.iterator()
                 var savedInMemory = false
                 var audioUrl = response.audioUrl
 
