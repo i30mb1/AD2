@@ -1,6 +1,5 @@
 package n7.ad2.hero_page.internal.responses.domain.vo
 
-import androidx.lifecycle.MutableLiveData
 import n7.ad2.ui.adapter.HeaderViewHolder
 
 sealed class VOResponse {
@@ -13,7 +12,6 @@ sealed class VOResponse {
         val isSavedInMemory: Boolean,
         val audioUrl: String,
     ) : VOResponse() {
-        val currentProgress = MutableLiveData(0)
-        val maxProgress = MutableLiveData(0)
+        var downloadID: Long? = null
     }
 }

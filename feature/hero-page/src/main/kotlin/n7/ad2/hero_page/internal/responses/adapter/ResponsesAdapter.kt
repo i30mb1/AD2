@@ -9,6 +9,7 @@ import n7.ad2.hero_page.R
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 import n7.ad2.ui.StickyHeaderDecorator
 import n7.ad2.ui.adapter.HeaderViewHolder
+import java.lang.ref.WeakReference
 
 class ResponsesAdapter(
     private val layoutInflater: LayoutInflater,
@@ -17,6 +18,8 @@ class ResponsesAdapter(
     private val showPopup: () -> Unit,
 ) : ListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
 
+    private val activeViewHolders = ArrayList<WeakReference<RecyclerView.ViewHolder>>()
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_response_body -> ResponseBodyViewHolder.from(layoutInflater, viewGroup, showDialogResponse, playSound, showPopup)
         n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, viewGroup)
@@ -24,6 +27,7 @@ class ResponsesAdapter(
     }
 
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
+        activeViewHolders.add(WeakReference(viewHolder))
         val item = getItem(position)
         when (viewHolder) {
             is ResponseBodyViewHolder -> if (item != null) viewHolder.bind(item as VOResponse.Body) else viewHolder.clear()
@@ -38,6 +42,14 @@ class ResponsesAdapter(
         else -> error("could not bind viewHolder $holder")
     }
 
+    override fun onViewRecycled(holder: RecyclerView.ViewHolder) {
+        super.onViewRecycled(holder)
+        for (i in 0 until activeViewHolders.size - 1) {
+            val currentViewHolder = activeViewHolders[i].get()
+            if (currentViewHolder == null || currentViewHolder == holder) activeViewHolders.removeAt(i)
+        }
+    }
+
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
         is VOResponse.Title -> n7.ad2.ui.R.layout.item_header
         is VOResponse.Body -> R.layout.item_response_body
@@ -45,6 +57,12 @@ class ResponsesAdapter(
     }
 
     override fun getHeaderLayout() = n7.ad2.ui.R.layout.item_header
+
+    fun onUploadProgress(downloadedBytes: Int, totalBytes: Int, downloadID: Long) {
+        activeViewHolders.forEach {
+            (it.get() as? ResponseBodyViewHolder)?.updateUploadProgress(downloadedBytes, totalBytes, downloadID)
+        }
+    }
 
     private class DiffCallback : DiffUtil.ItemCallback<VOResponse>() {
         override fun areItemsTheSame(oldItem: VOResponse, newItem: VOResponse) = oldItem::class == newItem::class

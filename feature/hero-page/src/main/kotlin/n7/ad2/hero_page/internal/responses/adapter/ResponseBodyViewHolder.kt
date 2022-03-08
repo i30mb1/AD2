@@ -17,17 +17,29 @@ class ResponseBodyViewHolder private constructor(
     private val playSound: (VOResponse.Body) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
 
+    private var lastItem: VOResponse.Body? = null
+
     fun bind(isSaved: Boolean) {
         binding.ivIsSaved.isVisible = isSaved
+        binding.pbProgress.progress = 0
     }
 
     fun bind(item: VOResponse.Body) {
+        lastItem = item
         binding.tvText.text = item.title
+        binding.ivIsSaved.isVisible = item.isSavedInMemory
         (binding.rv.layoutManager as GridLayoutManager).spanCount = clamp(item.icons.size, MIN_ICONS_IN_ROW, MAX_ICONS_IN_ROW)
         binding.root.setOnClickListener { playSound(item) }
         binding.root.setOnLongClickListener {
             showDialogResponse(item)
             true
+        }
+    }
+
+    fun updateUploadProgress(downloadedBytes: Int, totalBytes: Int, downloadID: Long) {
+        if (lastItem?.downloadID == downloadID) {
+            binding.pbProgress.progress = downloadedBytes
+            binding.pbProgress.max = totalBytes
         }
     }
 

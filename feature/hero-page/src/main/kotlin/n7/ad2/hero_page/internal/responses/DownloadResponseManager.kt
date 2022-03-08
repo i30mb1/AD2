@@ -20,13 +20,16 @@ import androidx.core.database.getIntOrNull
 import androidx.core.database.getStringOrNull
 import androidx.core.net.toUri
 import androidx.core.util.forEach
+import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.LifecycleOwner
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
+import n7.ad2.repositories.ResponseRepository
+import java.io.File
 
 sealed class DownloadResult {
-    data class Success(val downloadId: Long) : DownloadResult()
+    data class InProgress(val downloadedBytes: Int, val totalBytes: Int, val downloadID: Long) : DownloadResult()
+    data class Success(val downloadID: Long) : DownloadResult()
     data class Failed(val error: Throwable) : DownloadResult()
 }
 
@@ -37,9 +40,8 @@ class DownloadResponseManager(
     private val contentResolver: ContentResolver,
     private val application: Application,
     private val lifecycle: Lifecycle,
-) : LifecycleObserver {
+) : DefaultLifecycleObserver {
 
-    private var downloadId: Long = 0
     private val downloadManager: DownloadManager = application.getSystemService()!!
     private var downloadListener: ((result: DownloadResult) -> Unit)? = null
     private val downloadEndReceiver = object : BroadcastReceiver() {
@@ -48,7 +50,7 @@ class DownloadResponseManager(
             updateDMStatus(downloadId)
         }
     }
-    private val hashMap = LongSparseArray<Pair<VOResponse.Body, ContentObserver>>()
+    private val hashMap = LongSparseArray<Pair<Long, ContentObserver>>()
 
     init {
         application.registerReceiver(downloadEndReceiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
@@ -61,16 +63,15 @@ class DownloadResponseManager(
 
     fun download(item: VOResponse.Body): Long? {
         try {
-//            val uri = item.audioUrl!!.toUri()
-//            val downloadRequest = DownloadManager.Request(uri)
-//                .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
-//                .setTitle(item.title)
-//                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
-//                .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
-//                .setVisibleInDownloadsUi(false)
+            val uri = item.audioUrl.toUri()
+            val downloadRequest = DownloadManager.Request(uri)
+                .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
+                .setTitle(item.title)
+                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
+                .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
 
-//            downloadId = downloadManager.enqueue(downloadRequest)
-            registerObserverFor(downloadId, item)
+            val downloadId = downloadManager.enqueue(downloadRequest)
+            registerObserverFor(downloadId)
             return downloadId
         } catch (e: Exception) {
             downloadListener?.invoke(DownloadResult.Failed(e))
@@ -80,8 +81,11 @@ class DownloadResponseManager(
 
     private fun reSaveResponseIn() {
         val resolver = application.contentResolver
-        val audioCollection =
-            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) MediaStore.Audio.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY) else MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
+        val audioCollection = if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
+            MediaStore.Audio.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
+        } else {
+            MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
+        }
         val responseDetails = ContentValues().apply {
             put(MediaStore.Audio.Media.DISPLAY_NAME, "response.mp3")
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) put(MediaStore.Audio.Media.IS_PENDING, 1)
@@ -95,14 +99,14 @@ class DownloadResponseManager(
         resolver.update(contentUri, responseDetails, null, null)
     }
 
-    private fun registerObserverFor(downloadId: Long, item: VOResponse.Body, handler: Handler = Handler(Looper.getMainLooper())) {
+    private fun registerObserverFor(downloadId: Long, handler: Handler = Handler(Looper.getMainLooper())) {
         val observer = object : ContentObserver(handler) {
             override fun onChange(selfChange: Boolean, uri: Uri?) {
                 super.onChange(selfChange, uri)
                 updateDMStatus(downloadId)
             }
         }
-        hashMap.put(downloadId, Pair(item, observer))
+        hashMap.put(downloadId, Pair(downloadId, observer))
         contentResolver.registerContentObserver(getUri(downloadId), false, observer)
     }
 
@@ -112,8 +116,7 @@ class DownloadResponseManager(
             if (it.count > 0) {
                 it.moveToFirst()
                 val index = it.getColumnIndex(DownloadManager.COLUMN_LOCAL_URI)
-                return it.getStringOrNull(index)?.toUri()
-                    ?: "content://downloads/all_downloads/$downloadId".toUri()
+                return it.getStringOrNull(index)?.toUri() ?: "content://downloads/all_downloads/$downloadId".toUri()
             }
             return "content://downloads/all_downloads/$downloadId".toUri()
         }
@@ -131,16 +134,13 @@ class DownloadResponseManager(
                 when (status) {
                     DownloadManager.STATUS_FAILED -> {
                         downloadListener?.invoke(DownloadResult.Failed(Throwable("Download Error Code = $errorCode")))
-                        stopProgress(downloadId)
                     }
                     DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> {
-                        hashMap.get(downloadId)?.let { item ->
-                            if (totalBytes != null) item.first.maxProgress.value = totalBytes
-                            if (downloadedBytes != null) item.first.currentProgress.value = downloadedBytes
+                        if (totalBytes != null && downloadedBytes != null) {
+                            downloadListener?.invoke(DownloadResult.InProgress(downloadedBytes, totalBytes, downloadId))
                         }
                     }
                     DownloadManager.STATUS_SUCCESSFUL -> {
-                        stopProgress(downloadId)
                         downloadListener?.invoke(DownloadResult.Success(downloadId))
                         contentResolver.unregisterContentObserver(hashMap.get(downloadId).second)
                     }
@@ -149,17 +149,12 @@ class DownloadResponseManager(
         }
     }
 
-    private fun stopProgress(downloadId: Long) {
-        hashMap.get(downloadId)?.first?.maxProgress?.value = 0
-    }
-
     fun getFileDescription(downloadId: Long) {
         val pdf = downloadManager.openDownloadedFile(downloadId)
         val fd = pdf.fileDescriptor
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    private fun onDestroy() {
+    override fun onDestroy(owner: LifecycleOwner) {
         downloadListener = null
         hashMap.forEach { _, item ->
             contentResolver.unregisterContentObserver(item.second)

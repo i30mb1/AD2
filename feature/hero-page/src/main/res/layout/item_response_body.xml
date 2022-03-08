@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:stateListAnimator="@android:animator/fade_in"
     android:foreground="@drawable/background_ripple">
 
     <ProgressBar
+        android:id="@+id/pb_progress"
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,10 +36,8 @@
             android:id="@+id/iv_is_saved"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_weight="0"
             android:contentDescription="@string/desc_is_saved"
-            app:srcCompat="@drawable/ic_response_save"
-            tools:visibility="visible" />
+            android:src="@drawable/ic_response_save" />
 
         <TextView
             android:id="@+id/tv_text"

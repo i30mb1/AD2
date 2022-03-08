@@ -44,7 +44,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     private var _binding: FragmentHeroResponsesBinding? = null
     private val binding: FragmentHeroResponsesBinding get() = _binding!!
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
-    private lateinit var responsesPagedListAdapter: ResponsesAdapter
+    private lateinit var responseAdapter: ResponsesAdapter
     private val downloadResponseManager by lazyUnsafe { DownloadResponseManager(requireActivity().contentResolver, requireActivity().application, lifecycle) }
     private val viewModel: ResponsesViewModel by viewModel { responsesViewModelFactory.create(heroName) }
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
@@ -74,6 +74,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             when (result) {
                 is DownloadResult.Success -> viewModel.refreshResponses()
                 is DownloadResult.Failed -> showDialogError(result.error)
+                is DownloadResult.InProgress -> responseAdapter.onUploadProgress(result.downloadedBytes, result.totalBytes, result.downloadID)
             }
         }
         viewModel.state.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
@@ -81,12 +82,18 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
                 when (state) {
                     is ResponsesViewModel.State.Data -> {
                         binding.error.isVisible = false
-                        responsesPagedListAdapter.submitList(state.list)
+                        responseAdapter.submitList(state.list)
                     }
                     is ResponsesViewModel.State.Error -> binding.error.setError(state.error.message)
                     ResponsesViewModel.State.Loading -> Unit
                 }
             }.launchIn(lifecycleScope)
+        audioExoPlayer.playerStateListener = { state ->
+            when (state) {
+                AudioExoPlayer.PlayerState.Ended -> Unit
+                is AudioExoPlayer.PlayerState.Error -> showDialogError(state.error)
+            }
+        }
     }
 
     private fun playSound(item: VOResponse.Body) {
@@ -101,7 +108,10 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         if (item.isSavedInMemory) return
         childFragmentManager.setFragmentResultListener(DialogResponse.REQUEST_KEY, this) { _: String, bundle: Bundle ->
             when (bundle.getString(DialogResponse.RESULT_KEY)) {
-                DialogResponse.ACTION_DOWNLOAD_RESPONSE -> downloadResponseManager.download(item)
+                DialogResponse.ACTION_DOWNLOAD_RESPONSE -> {
+                    val downloadID = downloadResponseManager.download(item)
+                    item.downloadID = downloadID
+                }
                 else -> error("cannot handle unknown result key")
             }
         }
@@ -110,14 +120,14 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesAdapter(layoutInflater, ::showDialogResponse, ::playSound, ::showPopup)
-        responsesPagedListAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+        responseAdapter = ResponsesAdapter(layoutInflater, ::showDialogResponse, ::playSound, ::showPopup)
+        responseAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             addItemDecoration(ResponseItemDecorator())
 //            addItemDecoration(StickyHeaderDecorator(responsesPagedListAdapter, this))
-            adapter = responsesPagedListAdapter
+            adapter = responseAdapter
         }
     }
 }

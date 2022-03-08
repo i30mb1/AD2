@@ -50,7 +50,7 @@ class ResponsesViewModel @AssistedInject constructor(
     }
 
     fun refreshResponses() {
-
+        loadResponses(appInformation.appLocale)
     }
 
 }
