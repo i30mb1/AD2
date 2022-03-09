@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.drawer.databinding.ItemLogBinding
 import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter.TextViewHolder
 import n7.ad2.logger.AD2Log
-import java.util.ArrayList
 
 internal class AD2LoggerAdapter(
     private val layoutInflater: LayoutInflater,
@@ -19,6 +18,11 @@ internal class AD2LoggerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextViewHolder = TextViewHolder.from(parent, layoutInflater)
 
     override fun getItemCount(): Int = list.size
+
+    fun clear() {
+        list.clear()
+        notifyDataSetChanged()
+    }
 
     fun add(item: AD2Log) {
         list.add(item)

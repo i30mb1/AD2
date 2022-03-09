@@ -20,6 +20,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.SplashScreen
@@ -179,6 +180,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
         val shouldDisplayLog = preferences.isShowFingerCoordinate()
         if (!shouldDisplayLog) return@launch
         logger.getLogFlow().flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.CREATED)
+            .onStart { loggerAdapter.clear() }
             .onEach(loggerAdapter::add)
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }
             .launchIn(lifecycleScope)
