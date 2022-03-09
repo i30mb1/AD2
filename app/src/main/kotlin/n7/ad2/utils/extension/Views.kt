@@ -53,9 +53,9 @@ fun View.showSnackbar(snackbarText: String, timeLength: Int = Snackbar.LENGTH_SH
  * Triggers a snackbar message when the value contained by snackbarTaskMessageLiveEvent is modified.
  */
 fun View.setupErrorSnackbar(
-        lifecycleOwner: LifecycleOwner,
-        snackbarEvent: LiveData<String>,
-        timeLength: Int = Snackbar.LENGTH_SHORT
+    lifecycleOwner: LifecycleOwner,
+    snackbarEvent: LiveData<String>,
+    timeLength: Int = Snackbar.LENGTH_SHORT,
 ) {
 
     snackbarEvent.observe(lifecycleOwner, Observer { event ->

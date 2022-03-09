@@ -66,7 +66,6 @@ class SettingsFragment : Activity() {
     }
 
 
-
     private fun recreateActivity() {
         TaskStackBuilder.create(this)
             .addNextIntent(Intent(this, MainActivity::class.java))
