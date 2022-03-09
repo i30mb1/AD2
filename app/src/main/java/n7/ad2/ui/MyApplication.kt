@@ -11,7 +11,9 @@ import n7.ad2.android.HasDependencies
 import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
+import n7.ad2.init.CrashHandlerInitializer
 import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.logger.AD2Logger
 import javax.inject.Inject
 
 const val ANDROID_ID = Settings.Secure.ANDROID_ID
@@ -35,6 +37,11 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
         super.onCreate()
     }
 
+    @Inject
+    fun init(logger: AD2Logger) {
+        CrashHandlerInitializer().init(this, logger)
+    }
+
     private fun enableStrictMode() {
         if (BuildConfig.DEBUG) {
             Handler(Looper.getMainLooper()).postAtFrontOfQueue {
@@ -56,4 +63,5 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
             }
         }
     }
+
 }
