@@ -15,7 +15,7 @@ class CrashHandlerInitializer : Initializer {
 
 }
 
-class CrashHandler(
+private class CrashHandler(
     private val defaultEUH: Thread.UncaughtExceptionHandler?,
     private val logger: AD2Logger,
 ) : Thread.UncaughtExceptionHandler {

@@ -12,6 +12,7 @@ import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
 import n7.ad2.init.CrashHandlerInitializer
+import n7.ad2.init.HistoricalProcessExitReasonsInitializer
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.logger.AD2Logger
 import javax.inject.Inject
@@ -40,6 +41,7 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
     @Inject
     fun init(logger: AD2Logger) {
         CrashHandlerInitializer().init(this, logger)
+        HistoricalProcessExitReasonsInitializer().init(this, logger)
     }
 
     private fun enableStrictMode() {
