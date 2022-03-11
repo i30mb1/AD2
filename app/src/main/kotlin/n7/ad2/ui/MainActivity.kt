@@ -3,7 +3,10 @@ package n7.ad2.ui
 import android.os.Bundle
 import android.view.MotionEvent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
@@ -68,6 +71,11 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
 
     private fun setupInsets() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.tvFps) { view, insets ->
+            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            view.updatePadding(top = statusBarsInsets.top)
+            insets
+        }
     }
 
 }
