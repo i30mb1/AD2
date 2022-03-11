@@ -81,6 +81,7 @@ class DownloadResponseManager(
 
     private fun reSaveResponseIn() {
         val resolver = application.contentResolver
+        val date = System.currentTimeMillis()
         val audioCollection = if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
             MediaStore.Audio.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
         } else {
@@ -88,6 +89,9 @@ class DownloadResponseManager(
         }
         val responseDetails = ContentValues().apply {
             put(MediaStore.Audio.Media.DISPLAY_NAME, "response.mp3")
+            put(MediaStore.Audio.Media.MIME_TYPE, "audio/mpeg")
+            put(MediaStore.Audio.Media.DATE_MODIFIED, date)
+            put(MediaStore.Audio.Media.DATE_ADDED, date)
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) put(MediaStore.Audio.Media.IS_PENDING, 1)
         }
         val contentUri = resolver.insert(audioCollection, responseDetails)!!
