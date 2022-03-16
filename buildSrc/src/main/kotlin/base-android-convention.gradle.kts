@@ -1,5 +1,9 @@
 import com.android.build.gradle.BaseExtension
 
+plugins {
+    kotlin("android")
+}
+
 configure<BaseExtension> {
     compileSdkVersion(31)
 
