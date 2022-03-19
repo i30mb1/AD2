@@ -28,7 +28,6 @@ jobs:
       - name: Generate local.properties file
         env:
           IS_CI: ${{ secrets.IS_CI }}
-      - name: do commit
         run: |
            date | %IS_CI% > generated.txt
            git config user.name github-actions
