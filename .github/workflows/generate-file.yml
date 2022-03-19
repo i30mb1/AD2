@@ -25,9 +25,12 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: gradle
+      - name: Generate local.properties file
+        env:
+          IS_CI: ${{ secrets.IS_CI }}
       - name: do commit
         run: |
-           date > generated.txt
+           date | %IS_CI% > generated.txt
            git config user.name github-actions
            git config user.email github-actions@github.com
            git add generated.txt
