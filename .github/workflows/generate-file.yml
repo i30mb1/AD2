@@ -1,4 +1,4 @@
-name: Check Build And Assemble
+name: Generate File
 
 on:
   push:
