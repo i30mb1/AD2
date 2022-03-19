@@ -1,4 +1,2 @@
 date
-isCI
-=
-%IS_CI%
+isCI=%IS_CI%
