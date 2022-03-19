@@ -26,9 +26,9 @@ jobs:
           distribution: 'temurin'
           cache: gradle
       - name: Generate local.properties file
-      - shell: cmd
         env:
           IS_CI: ${{ secrets.IS_CI }}
+        shell: cmd
         run: |
           echo %JAVA_HOME%
           echo isCI=%IS_CI% > generated.txt
