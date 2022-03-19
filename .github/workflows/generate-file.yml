@@ -1,8 +1,6 @@
 name: Generate File
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -12,13 +10,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: Use Cache
-        uses: actions/cache@v2
-        with:
-         path: |
-          ~/.gradle/caches
-          ~/.gradle/wrapper
-         key: ${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/buildSrc/**/*.kt') }}
       - name: set up JDK 11
         uses: actions/setup-java@v3
         with:
@@ -42,5 +33,3 @@ jobs:
           git add generated.txt
           git commit -m "generate file"
           git push
-              
-      

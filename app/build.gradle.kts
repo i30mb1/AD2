@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     application()
     kapt()
@@ -15,12 +17,12 @@ android {
 
     signingConfigs {
         getByName("debug") { /* automatic signs with debug key*/ }
-//        create("release") {
-//            storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))
-//            storePassword = gradleLocalProperties(rootDir).getProperty("storePassword")
-//            keyAlias = gradleLocalProperties(rootDir).getProperty("keyAlias")
-//            keyPassword = gradleLocalProperties(rootDir).getProperty("keyPassword")
-//        }
+        create("release") {
+            storeFile = file(gradleLocalProperties(rootDir).getProperty("SIGNING_FILE"))
+            storePassword = gradleLocalProperties(rootDir).getProperty("STORE_PASSWORD")
+            keyAlias = gradleLocalProperties(rootDir).getProperty("KEY_ALIAS")
+            keyPassword = gradleLocalProperties(rootDir).getProperty("KEY_PASSWORD")
+        }
     }
 
     buildFeatures {
@@ -38,12 +40,12 @@ android {
             resValue("string", "app_name2", "AD2(debug)")
         }
         release {
-//            isMinifyEnabled = true
-//            isDebuggable = false
-//            isShrinkResources = true
-//            signingConfig = signingConfigs.getByName("release")
-//            resValue("string", "app_name2", "AD2")
-//            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            isMinifyEnabled = true
+            isDebuggable = false
+            isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
+            resValue("string", "app_name2", "AD2")
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
 
