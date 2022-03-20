@@ -4,7 +4,6 @@ object Lib {
     const val appCompat = "androidx.appcompat:appcompat:1.4.0"
     const val dataStorePref = "androidx.datastore:datastore-preferences:1.0.0"
     const val recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
-    const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:1.5.30"
     const val ticker = "com.robinhood.ticker:ticker:1.2.2"
     const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
     const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:2.9.0"
@@ -94,7 +93,6 @@ private fun DependencyHandler.androidTestImplementation(dependencyNotation: Any)
 private fun DependencyHandler.testImplementation(dependencyNotation: Any) = add("testImplementation", dependencyNotation)
 
 fun DependencyHandler.addTestDependencies() {
-    testImplementation(Lib.kotlinReflection)
     testImplementation(Lib.Test.testCore)
     testImplementation(Lib.Test.testCoreKtx)
     testImplementation(Lib.Test.testRunner)

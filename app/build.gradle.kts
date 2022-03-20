@@ -19,11 +19,13 @@ android {
 
     signingConfigs {
         getByName("debug") { /* automatic signs with debug key*/ }
-        if (!isCI) create("release") {
-            storeFile = file(gradleLocalProperties(rootDir).getProperty("SIGNING_FILE"))
-            storePassword = gradleLocalProperties(rootDir).getProperty("STORE_PASSWORD")
-            keyAlias = gradleLocalProperties(rootDir).getProperty("KEY_ALIAS")
-            keyPassword = gradleLocalProperties(rootDir).getProperty("KEY_PASSWORD")
+        if (false) {
+            create("release") {
+                storeFile = file(gradleLocalProperties(rootDir).getProperty("SIGNING_FILE"))
+                storePassword = gradleLocalProperties(rootDir).getProperty("STORE_PASSWORD")
+                keyAlias = gradleLocalProperties(rootDir).getProperty("KEY_ALIAS")
+                keyPassword = gradleLocalProperties(rootDir).getProperty("KEY_PASSWORD")
+            }
         }
     }
 
@@ -41,13 +43,15 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             resValue("string", "app_name2", "AD2(debug)")
         }
-        if (!isCI) release {
-            isMinifyEnabled = true
-            isDebuggable = false
-            isShrinkResources = true
-            signingConfig = signingConfigs.getByName("release")
-            resValue("string", "app_name2", "AD2")
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+        if (false) {
+            release {
+                isMinifyEnabled = true
+                isDebuggable = false
+                isShrinkResources = true
+                signingConfig = signingConfigs.getByName("release")
+                resValue("string", "app_name2", "AD2")
+                proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            }
         }
     }
 
