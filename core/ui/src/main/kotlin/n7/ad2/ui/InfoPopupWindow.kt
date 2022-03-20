@@ -1,4 +1,4 @@
-package n7.ad2.hero_page.internal.info
+package n7.ad2.ui
 
 import android.content.Context
 import android.content.res.Resources
@@ -13,15 +13,15 @@ import androidx.core.graphics.component1
 import androidx.core.graphics.component2
 import androidx.core.view.doOnPreDraw
 import androidx.core.view.updateLayoutParams
+import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.OnLifecycleEvent
-import n7.ad2.hero_page.databinding.PopupSpellInfoBinding
+import androidx.lifecycle.LifecycleOwner
+import n7.ad2.ui.databinding.PopupSpellInfoBinding
 
 class InfoPopupWindow(
     context: Context,
     private val lifecycle: Lifecycle,
-) : LifecycleObserver {
+) : DefaultLifecycleObserver {
 
     private val halfScreenWidth: Int by lazy { Resources.getSystem().displayMetrics.widthPixels / 2 }
     private val binding = PopupSpellInfoBinding.inflate(LayoutInflater.from(context))
@@ -42,11 +42,13 @@ class InfoPopupWindow(
         binding.root.doOnPreDraw { updatePointerLocation(anchor) }
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    private fun dismiss() = popup.dismiss()
+    override fun onPause(owner: LifecycleOwner) {
+        popup.dismiss()
+    }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    private fun onDestroy() = lifecycle.removeObserver(this)
+    override fun onDestroy(owner: LifecycleOwner) {
+        lifecycle.removeObserver(this)
+    }
 
     private fun updatePointerLocation(anchor: View) {
         val (x, _) = getLocationOnScreen(anchor)

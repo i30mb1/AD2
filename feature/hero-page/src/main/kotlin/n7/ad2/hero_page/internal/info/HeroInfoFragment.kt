@@ -22,6 +22,7 @@ import n7.ad2.hero_page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
+import n7.ad2.ui.InfoPopupWindow
 import javax.inject.Inject
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
