@@ -15,7 +15,7 @@ import n7.ad2.item_page.internal.domain.vo.VORecipe
 import n7.ad2.ktx.toStringList
 import n7.ad2.repositories.ItemRepository
 import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderComplexViewHolder
+import n7.ad2.ui.adapter.HeaderPlayableViewHolder
 import n7.ad2.ui.adapter.ImageLineViewHolder
 import javax.inject.Inject
 
@@ -43,7 +43,7 @@ class GetItemInfoUseCase @Inject constructor(
 
             localItemDescription.abilities?.let { list ->
                 list.forEach { ability ->
-                    add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.abilities, ability.abilityName), false, ability.audioUrl)))
+                    add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.abilities, ability.abilityName), false, ability.audioUrl)))
                     ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
                     add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
@@ -55,22 +55,22 @@ class GetItemInfoUseCase @Inject constructor(
             }
 
             localItemDescription.tips?.let { tips ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.tips))))
+                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.tips))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(tips.toStringList(true).toSpanned())))
             }
 
             localItemDescription.lore?.let { lore ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.lore))))
+                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.lore))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(lore.toStringList(true).toSpanned())))
             }
 
             localItemDescription.trivia?.let { trivia ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.trivia))))
+                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.trivia))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(trivia.toStringList(true).toSpanned())))
             }
 
             localItemDescription.additionalInformation?.let { additionalInfo ->
-                add(VOItemInfo.Title(HeaderComplexViewHolder.Data(res.getString(R.string.additional_information))))
+                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.additional_information))))
                 add(VOItemInfo.Body(BodyViewHolder.Data(additionalInfo.toStringList(true).toSpanned())))
             }
 

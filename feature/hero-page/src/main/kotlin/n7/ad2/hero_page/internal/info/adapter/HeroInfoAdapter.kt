@@ -24,7 +24,7 @@ import n7.ad2.ktx.dpToPx
 import n7.ad2.ui.InfoPopupWindow
 import n7.ad2.ui.StickyHeaderDecorator
 import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderComplexViewHolder
+import n7.ad2.ui.adapter.HeaderPlayableViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder
 
 class HeroInfoAdapter(
@@ -53,7 +53,7 @@ class HeroInfoAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
-        R.layout.item_header_sound -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
+        R.layout.item_header_sound -> HeaderPlayableViewHolder.from(layoutInflater, parent, onPlayIconClickListener)
         R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, onHeroInfoCLickListener)
         n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         n7.ad2.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)

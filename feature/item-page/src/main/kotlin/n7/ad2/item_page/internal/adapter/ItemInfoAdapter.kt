@@ -9,19 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderComplexViewHolder
+import n7.ad2.ui.adapter.HeaderPlayableViewHolder
 import n7.ad2.ui.adapter.ImageLineViewHolder
 
 class ItemInfoAdapter(
     private val layoutInflater: LayoutInflater,
     private val onPlayIconClick: (soundUrl: String) -> Unit,
-    private val onQuickKeyClick: (key: String) -> Unit,
+    private val showPopup: (view: View, text: String) -> Unit,
 ) : ListAdapter<VOItemInfo, RecyclerView.ViewHolder>(DiffCallback()) {
 
-    private val popupListener = { view: View, text: String -> }
-
     override fun getItemViewType(position: Int): Int = when (val item = getItem(position)) {
-        is VOItemInfo.Title -> n7.ad2.ui.R.layout.item_header_complex
+        is VOItemInfo.Title -> n7.ad2.ui.R.layout.item_header_playable
         is VOItemInfo.TextLine -> R.layout.item_text_line
         is VOItemInfo.Recipe -> R.layout.item_info_recipe
         is VOItemInfo.Body -> n7.ad2.ui.R.layout.item_body
@@ -33,8 +31,8 @@ class ItemInfoAdapter(
         R.layout.item_text_line -> TextLineViewHolder.from(layoutInflater, parent)
         R.layout.item_info_recipe -> InfoRecipeViewHolder.from(layoutInflater, parent)
         n7.ad2.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
-        n7.ad2.ui.R.layout.item_header_complex -> HeaderComplexViewHolder.from(layoutInflater, parent, onPlayIconClick, onQuickKeyClick)
-        n7.ad2.ui.R.layout.item_image_line -> ImageLineViewHolder.from(layoutInflater, parent, {})
+        n7.ad2.ui.R.layout.item_header_playable -> HeaderPlayableViewHolder.from(layoutInflater, parent, onPlayIconClick)
+        n7.ad2.ui.R.layout.item_image_line -> ImageLineViewHolder.from(layoutInflater, parent, showPopup)
         else -> error("could not get type for $viewType")
     }
 
@@ -44,7 +42,7 @@ class ItemInfoAdapter(
             is TextLineViewHolder -> if (item != null) holder.bind(item as VOItemInfo.TextLine)
             is InfoRecipeViewHolder -> if (item != null) holder.bind(item as VOItemInfo.Recipe)
             is BodyViewHolder -> if (item != null) holder.bind((item as VOItemInfo.Body).data)
-            is HeaderComplexViewHolder -> if (item != null) holder.bind((item as VOItemInfo.Title).data)
+            is HeaderPlayableViewHolder -> if (item != null) holder.bind((item as VOItemInfo.Title).data)
             is ImageLineViewHolder -> if (item != null) holder.bind((item as VOItemInfo.ImageLine).data)
             else -> error("could not bind for $holder")
         }
@@ -53,7 +51,7 @@ class ItemInfoAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: MutableList<Any>) {
         when {
             payloads.isNullOrEmpty() -> super.onBindViewHolder(holder, position, payloads)
-            holder is HeaderComplexViewHolder -> holder.bind((payloads.last() as VOItemInfo.Title).data.isPlaying)
+            holder is HeaderPlayableViewHolder -> holder.bind((payloads.last() as VOItemInfo.Title).data.isPlaying)
         }
 
     }
