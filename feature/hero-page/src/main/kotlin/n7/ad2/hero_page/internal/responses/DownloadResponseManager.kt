@@ -26,6 +26,7 @@ import androidx.lifecycle.LifecycleOwner
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 import n7.ad2.repositories.ResponseRepository
 import java.io.File
+import java.net.URL
 
 sealed class DownloadResult {
     data class InProgress(val downloadedBytes: Int, val totalBytes: Int, val downloadID: Long) : DownloadResult()
@@ -68,8 +69,7 @@ class DownloadResponseManager(
                 .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
                 .setTitle(item.title)
                 .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
-                .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
-
+                .setDestinationInExternalPublicDir(ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
             val downloadId = downloadManager.enqueue(downloadRequest)
             registerObserverFor(downloadId)
             return downloadId
@@ -94,13 +94,18 @@ class DownloadResponseManager(
             put(MediaStore.Audio.Media.DATE_ADDED, date)
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) put(MediaStore.Audio.Media.IS_PENDING, 1)
         }
-        val contentUri = resolver.insert(audioCollection, responseDetails)!!
-        resolver.openFileDescriptor(contentUri, "w", null).use {
+        val outputUri = resolver.insert(audioCollection, responseDetails)!!
+        URL("").openStream().use { input ->
+            resolver.openOutputStream(outputUri).use { output ->
+                input.copyTo(output!!)
+            }
+        }
+        resolver.openFileDescriptor(outputUri, "w", null).use {
             // write data
         }
         responseDetails.clear()
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) responseDetails.put(MediaStore.Audio.Media.IS_PENDING, 0)
-        resolver.update(contentUri, responseDetails, null, null)
+        resolver.update(outputUri, responseDetails, null, null)
     }
 
     private fun registerObserverFor(downloadId: Long, handler: Handler = Handler(Looper.getMainLooper())) {
