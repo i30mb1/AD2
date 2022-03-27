@@ -15,6 +15,7 @@ dependencyResolutionManagement { // репозитории для все про�
 }
 
 pluginManagement { // репозитории для Gradle плагинов, блок выполянется до конфигурации проекта
+    includeBuild("build-logic-settings")
     repositories {
         mavenCentral()
         google()

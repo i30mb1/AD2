@@ -2,15 +2,6 @@ plugins {
     `kotlin-dsl`
 }
 
-gradlePlugin {
-    plugins {
-        register("file-line-prefix-plugin-registration") {
-            implementationClass = "FileLinePrefixPlugin"
-            id = "file-line-prefix-plugin"
-        }
-    }
-}
-
 repositories {
     mavenCentral()
     google()

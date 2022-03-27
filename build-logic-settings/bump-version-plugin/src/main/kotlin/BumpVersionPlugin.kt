@@ -2,10 +2,10 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.register
 
-class FileLinePrefixPlugin : Plugin<Project> {
+class BumpVersionPlugin : Plugin<Project> {
 
     override fun apply(target: Project) = with(target) {
-        tasks.register("fileLine7", FileLinePrefixTask::class) {
+        tasks.register("bumpVersion", BumpVersionTask::class) {
             group = "n7"
             inputFile.set(file("input.txt"))
             outPutFile.set(file("output.txt"))

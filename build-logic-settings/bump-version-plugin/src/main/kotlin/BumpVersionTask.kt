@@ -10,7 +10,7 @@ import org.gradle.work.Incremental
 import org.gradle.work.InputChanges
 
 @CacheableTask
-abstract class FileLinePrefixTask : DefaultTask() {
+abstract class BumpVersionTask : DefaultTask() {
 
     @get:InputFile
     @get:Incremental
@@ -22,8 +22,8 @@ abstract class FileLinePrefixTask : DefaultTask() {
 
     @TaskAction
     open fun prefixFileLine(changes: InputChanges) {
-        val output = inputFile.get().asFile.readLines().joinToString("\n") { "prefix: $it" }
-        outPutFile.get().asFile.writeText(output)
+//        val output = inputFile.get().asFile.readLines().joinToString("\n") { "prefix: $it" }
+//        outPutFile.get().asFile.writeText(output)
     }
 
 }
