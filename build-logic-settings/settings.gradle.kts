@@ -4,6 +4,11 @@ include("bump-version-plugin")
 
 dependencyResolutionManagement {
     repositories {
-        mavenCentral()
+        exclusiveContent {
+            forRepository { mavenCentral() }
+            filter {
+                includeGroupByRegex("org\\.jetbrains.*")
+            }
+        }
     }
 }
