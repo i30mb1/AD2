@@ -5,8 +5,6 @@ plugins {
     kapt()
 }
 
-val isCI: Boolean = gradleLocalProperties(rootDir).getProperty("IS_CI").toBoolean()
-
 android {
     defaultConfig {
         applicationId = "n7.ad2"
@@ -19,7 +17,7 @@ android {
 
     signingConfigs {
         getByName("debug") { /* automatic signs with debug key*/ }
-        if (false) {
+        if (!isCI()) {
             create("release") {
                 storeFile = file(gradleLocalProperties(rootDir).getProperty("SIGNING_FILE"))
                 storePassword = gradleLocalProperties(rootDir).getProperty("STORE_PASSWORD")
@@ -43,7 +41,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             resValue("string", "app_name2", "AD2(debug)")
         }
-        if (false) {
+        if (!isCI()) {
             release {
                 isMinifyEnabled = true
                 isDebuggable = false
