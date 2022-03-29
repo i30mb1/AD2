@@ -8,6 +8,7 @@ import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
 import n7.ad2.init.CrashHandlerInitializer
+import n7.ad2.init.DevicePerformanceInitializer
 import n7.ad2.init.HistoricalProcessExitReasonsInitializer
 import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
@@ -34,6 +35,7 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
         CrashHandlerInitializer().init(this, logger, appInformation)
         HistoricalProcessExitReasonsInitializer().init(this, logger, appInformation)
         StrictModeInitializer().init(this, logger, appInformation)
+        DevicePerformanceInitializer().init(this, logger, appInformation)
     }
 
 }

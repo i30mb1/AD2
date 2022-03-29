@@ -84,6 +84,7 @@ dependencies {
     implementation(Lib.jsoup)
     implementation(Lib.instantApps)
     implementation(Lib.workManagerKotlin)
+    implementation(Lib.performance)
 
     kapt(Lib.daggerAnnotation)
 

@@ -24,6 +24,7 @@ object Lib {
     const val instantApps = "com.google.android.gms:play-services-instantapps:17.0.0"
     const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
     const val splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha02"
+    const val performance = "androidx.core:core-performance:1.0.0-alpha02"
 
     const val exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
 
