@@ -9,7 +9,7 @@ dependencyResolutionManagement { // репозитории для все про�
 pluginManagement {
     resolutionStrategy {
         eachPlugin {
-            if (requested.id.namespace == "org.jetbrains.kotlin") useVersion("1.5.30")
+            if (requested.id.namespace == "org.jetbrains.kotlin") useVersion("1.6.10")
         }
     }
 }
