@@ -1,14 +1,8 @@
 pluginManagement {
     repositories {
-        exclusiveContent {
-            forRepository {
-                gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt
-            }
-            filter {
-                includeGroup("org.gradle.kotlin")
-            }
-        }
-
+        gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt
+        google()
+        mavenCentral()
     }
 
     resolutionStrategy {

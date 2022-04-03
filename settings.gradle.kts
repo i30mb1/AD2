@@ -1,7 +1,13 @@
 rootProject.name = "AD2"
 
 pluginManagement {
+    includeBuild("build-dependency")
     includeBuild("build-logic")
+}
+
+plugins {
+    id("convention.dependencies")
+    id("convention.plugins")
 }
 
 include(":app")
