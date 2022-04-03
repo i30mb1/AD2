@@ -11,6 +11,5 @@ plugins {
 
 include("bump-version-plugin")
 include("extensions")
-include("dependency")
 include("kotlin")
 include("android")

@@ -4,10 +4,6 @@ pluginManagement {
     includeBuild("build-logic")
 }
 
-plugins {
-    id("concon")
-}
-
 include(":app")
 include(":micro-benchmark")
 include(
