@@ -1,4 +1,4 @@
-rootProject.name = "build-logic-settings"
+rootProject.name = "build-logic"
 
 pluginManagement {
     includeBuild("../build-dependency")
