@@ -1,17 +1,12 @@
 rootProject.name = "build-logic-settings"
 
-dependencyResolutionManagement { // репозитории для все проектов (модулей)
-    repositories {
-        mavenCentral()
-    }
+pluginManagement {
+    includeBuild("../build-dependency")
 }
 
-pluginManagement {
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.namespace == "org.jetbrains.kotlin") useVersion("1.6.10")
-        }
-    }
+plugins {
+    id("convention.plugins")
+    id("convention.dependencies")
 }
 
 include("bump-version-plugin")
