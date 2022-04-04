@@ -25,6 +25,6 @@ configure<BaseExtension> {
     }
 }
 
-dependencies {
-    lintChecks(project(Module.Core.rules))
-}
+//dependencies {
+//    lintChecks(project(Module.Core.rules))
+//}

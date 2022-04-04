@@ -7,8 +7,11 @@ dependencyResolutionManagement {
     }
 }
 
+includeBuild("build-logic2")
+
 pluginManagement {
     includeBuild("build-logic")
+
     repositories {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
         google()  // com.android.library
