@@ -4,6 +4,8 @@ captures/
 /gradle-user-home/
 **/.idea/*
 /profile-out/
-
 *.jar
+!gradle-profiler/lib/*
+
+
 local.properties
