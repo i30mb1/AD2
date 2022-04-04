@@ -21,3 +21,4 @@ clean {
 
 # https://dev.to/autonomousapps/benchmarking-builds-with-gradle-profiler-oa8
 # gradle-profiler.bat --benchmark --output-dir profile-out --project-dir C:\Users\*\ --scenario-file profiler.scenarios clean
+# gradle-profiler\bin\gradle-profiler.bat --benchmark --output-dir gradle-profiler\last-output --scenario-file gradle-profiler\profiler.scenarios clean
