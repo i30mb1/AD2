@@ -1,5 +1,5 @@
 plugins {
-    id("org.gradle.kotlin.kotlin-dsl")
+    `kotlin-dsl`
 }
 
 dependencies {
