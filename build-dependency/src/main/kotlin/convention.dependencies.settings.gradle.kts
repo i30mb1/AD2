@@ -1,7 +1,7 @@
 dependencyResolutionManagement {
     repositories {
         google()
-        mavenCentral()
+        mavenCentral()  // тут лежит kotlin-stdlib-jdk8
 //        exclusiveContent {
 //            forRepository { google() }
 //            filter {
