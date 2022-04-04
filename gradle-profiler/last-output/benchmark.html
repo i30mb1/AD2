@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Benchmark Results</title>
-    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-beta/chart.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.min.js"></script>
@@ -144,7 +143,6 @@ div.controls .btn {
     display: block;
     margin: 0 1em;
 }
-
     </style>
 </head>
 <body>
@@ -164,23 +162,20 @@ div.controls .btn {
         <div class="form-row mt-2 controls ml-auto mr-auto">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <button :class="{ active: !options.sorted }" @click="options.sorted = false" class="btn btn-secondary">Historical
-                    </button>
-                    <button :class="{ active: options.sorted }" @click="options.sorted = true" class="btn btn-secondary">Sorted</button>
+                    <button class="btn btn-secondary" :class="{ active: !options.sorted }" @click="options.sorted = false">Historical</button>
+                    <button class="btn btn-secondary" :class="{ active: options.sorted }" @click="options.sorted = true">Sorted</button>
                 </div>
             </div>
             <template v-if="benchmarkResult.scenarios.length > 1 || benchmarkResult.scenarios[0].samples.length > 1">
                 <div class="btn-separator"></div>
                 <div class="btn-group">
-                    <button @click="toggleAll(true)" class="btn btn-secondary">Select all</button>
-                    <button @click="toggleAll(false)" class="btn btn-secondary">Clear all</button>
+                    <button class="btn btn-secondary" @click="toggleAll(true)">Select all</button>
+                    <button class="btn btn-secondary" @click="toggleAll(false)">Clear all</button>
                 </div>
                 <div class="btn-separator"></div>
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <button :class="{ active: options.showAll }" @click="options.showAll = true" class="btn btn-secondary">Show all</button>
-                    <button :class="{ active: !options.showAll }" @click="options.showAll = false" class="btn btn-secondary">Show selected
-                        only
-                    </button>
+                    <button class="btn btn-secondary" :class="{ active: options.showAll }" @click="options.showAll = true">Show all</button>
+                    <button class="btn btn-secondary" :class="{ active: !options.showAll }" @click="options.showAll = false">Show selected only</button>
                 </div>
             </template>
         </div>
@@ -188,156 +183,139 @@ div.controls .btn {
             <div class='col' id="data-table">
                 <table class='table table-sm table-hover'>
                     <thead>
-                    <tr>
-                        <th></th>
-                        <th>Scenario</th>
-                        <th class="center dark" v-if="benchmarkResult.scenarios.length > 1">Baseline</th>
-                        <th class="center">Sample</th>
-                        <th :class="{ dark: index %2 === 0 }" class="center" v-for="(operation, index) in operations">{{ operation.title
-                            }}
-                        </th>
-                        <th :colspan="benchmarkResult.scenarios.map(scenario => scenario.iterations.length).max()">Iterations</th>
-                    </tr>
+                        <tr>
+                            <th></th>
+                            <th>Scenario</th>
+                            <th class="center dark" v-if="benchmarkResult.scenarios.length > 1">Baseline</th>
+                            <th class="center">Sample</th>
+                            <th v-for="(operation, index) in operations" class="center" :class="{ dark: index %2 === 0 }">{{ operation.title }}</th>
+                            <th :colspan="benchmarkResult.scenarios.map(scenario => scenario.iterations.length).max()">Iterations</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <template v-for="scenario in benchmarkResult.scenarios">
-                        <template v-for="(sample, index) in scenario.samples.filter(sample => options.showAll || sample.selected)">
-                            <tr :class="{ baseline: baseline === scenario }">
-                                <td :rowspan="rowCount(scenario)" class="details" v-if="index === 0">
-                                    <button
-                                            :title="scenario.showDetails ? 'Hide details' : 'Show details'"
+                        <template v-for="scenario in benchmarkResult.scenarios">
+                            <template v-for="(sample, index) in scenario.samples.filter(sample => options.showAll || sample.selected)">
+                                <tr :class="{ baseline: baseline === scenario }">
+                                    <td class="details" v-if="index === 0" :rowspan="rowCount(scenario)">
+                                        <button
+                                            class="btn btn-light"
                                             @click="scenario.showDetails = !scenario.showDetails"
-                                            class="btn btn-light">
-                                        <span class="fa">{{ scenario.showDetails ? "&#xf068;" : "&#xf067;" }}</span>
-                                    </button>
-                                </td>
-                                <td :rowspan="rowCount(scenario)" class="title" v-if="index === 0">
-                                    <span class="title">{{ scenario.definition.title }}</span>
-                                    <span class="title version"
-                                          v-if="multipleBuildToolsPresent">({{ scenario.definition.buildTool }})</span>
-                                </td>
-                                <template v-if="benchmarkResult.scenarios.length > 1">
-                                    <td class="numeric data dark" title="Confidence of difference to baseline"
-                                        v-if="baseline && baseline !== scenario">{{ uTest(scenario, baseline, sample) | percent }}
+                                            :title="scenario.showDetails ? 'Hide details' : 'Show details'">
+                                            <span class="fa">{{ scenario.showDetails ? "&#xf068;" : "&#xf067;" }}</span>
+                                        </button>
                                     </td>
-                                    <td :rowspan="rowCount(scenario)" @click="baseline = baseline ? null : scenario"
-                                        class="center title dark" v-else-if="index == 0">
-                                        <input :checked="baseline" type="checkbox">
+                                    <td class="title" v-if="index === 0" :rowspan="rowCount(scenario)">
+                                        <span class="title">{{ scenario.definition.title }}</span>
+                                        <span class="title version" v-if="multipleBuildToolsPresent">({{ scenario.definition.buildTool }})</span>
                                     </td>
-                                </template>
-                                <td :style="{ color: sample.color }" @click="select(sample)" class="clickable data">
-                                    <span :class="{ selected: sample.selected }" :style="{ color: sample.color }"
-                                          class="fa selection-icon"></span>
-                                    <span>{{ sample.name }}</span>
-                                </td>
-                                <td :class="{ dark: index %2 === 0 }" class="numeric data" v-for="(operation, index) in operations">
-                                    <div>{{ sample[operation.name] | numeric }} {{ sample.unit }}</div>
-                                    <template
-                                            v-if="baseline && baseline !== scenario && baseline.samples.some(it => it.name === sample.name)">
-                                        <div class="diff">{{ sample[operation.name] - baseline.samples.find(it => it.name ===
-                                            sample.name)[operation.name] | diff }} {{ sample.unit }}
-                                        </div>
-                                        <div class="diff">{{ (sample[operation.name] / baseline.samples.find(it => it.name ===
-                                            sample.name)[operation.name]) - 1 | percentDiff }}
-                                        </div>
+                                    <template v-if="benchmarkResult.scenarios.length > 1">
+                                        <td class="numeric data dark" v-if="baseline && baseline !== scenario" title="Confidence of difference to baseline">{{ uTest(scenario, baseline, sample) | percent }}</td>
+                                        <td class="center title dark" v-else-if="index == 0" :rowspan="rowCount(scenario)" @click="baseline = baseline ? null : scenario">
+                                            <input type="checkbox" :checked="baseline">
+                                        </td>
                                     </template>
-                                </td>
-                                <template v-for="(iteration, index) in scenario.iterations">
-                                    <td :class="iteration.phase" :title="iteration.phase + ' #' + iteration.iteration" class="numeric data">
-                                        <span>{{ iteration.values[sample.name] | numeric }} {{ sample.unit }}</span>
-                                        <template
-                                                v-if="baseline && baseline !== scenario && baseline.samples.some(it => it.name === sample.name) && baseline.iterations[index]">
-                                            <div class="diff">{{ iteration.values[sample.name] -
-                                                baseline.iterations[index].values[sample.name] | diff }} {{ sample.unit }}
-                                            </div>
-                                            <div class="diff">{{ (iteration.values[sample.name] /
-                                                baseline.iterations[index].values[sample.name]) - 1 | percentDiff }}
-                                            </div>
+                                    <td class="clickable data" @click="select(sample)" :style="{ color: sample.color }">
+                                        <span class="fa selection-icon" :class="{ selected: sample.selected }" :style="{ color: sample.color }"></span>
+                                        <span>{{ sample.name }}</span>
+                                    </td>
+                                    <td v-for="(operation, index) in operations" class="numeric data" :class="{ dark: index %2 === 0 }">
+                                        <div>{{ sample[operation.name] | numeric }} {{ sample.unit }}</div>
+                                        <template v-if="baseline && baseline !== scenario && baseline.samples.some(it => it.name === sample.name)">
+                                            <div class="diff">{{ sample[operation.name] - baseline.samples.find(it => it.name === sample.name)[operation.name] | diff }} {{ sample.unit }}</div>
+                                            <div class="diff">{{ (sample[operation.name] / baseline.samples.find(it => it.name === sample.name)[operation.name]) - 1 | percentDiff }}</div>
                                         </template>
                                     </td>
-                                </template>
+                                    <template v-for="(iteration, index) in scenario.iterations">
+                                        <td class="numeric data" :class="iteration.phase" :title="iteration.phase + ' #' + iteration.iteration">
+                                            <span>{{ iteration.values[sample.name] | numeric }} {{ sample.unit }}</span>
+                                            <template v-if="baseline && baseline !== scenario && baseline.samples.some(it => it.name === sample.name) && baseline.iterations[index]">
+                                                <div class="diff">{{ iteration.values[sample.name] - baseline.iterations[index].values[sample.name] | diff }} {{ sample.unit }}</div>
+                                                <div class="diff">{{ (iteration.values[sample.name] / baseline.iterations[index].values[sample.name]) - 1 | percentDiff }}</div>
+                                            </template>
+                                        </td>
+                                    </template>
+                                </tr>
+                            </template>
+                            <tr class="details" v-show="scenario.showDetails">
+                                <td :colspan="scenario.iterations.length + 10">
+                                    <ul>
+                                        <li>
+                                            <span class="description">Scenario name:</span>
+                                            <span class="data">{{ scenario.definition.name }}</span>
+                                        </li>
+                                        <li>
+                                            <span class="description">Build tool:</span>
+                                            <span class="data">{{ scenario.definition.buildTool }}</span>
+                                        </li>
+                                        <template v-if="scenario.definition.action">
+                                            <li>
+                                                <span class="description">Action:</span>
+                                                <span class="data">{{ scenario.definition.action }}</span>
+                                            </li>
+                                            <li>
+                                                <span class="description">Cleanup:</span>
+                                                <span class="data">{{ scenario.definition.cleanup }}</span>
+                                            </li>
+                                            <li>
+                                                <span class="description">Mutators:</span>
+                                                <span class="data" v-if="scenario.definition.mutators.length === 0">none</span>
+                                                <ul v-else>
+                                                    <li v-for="mutator in scenario.definition.mutators">
+                                                        <span class="data">{{ mutator }}</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span class="description">Run using:</span>
+                                                <span class="data">{{ scenario.definition.invoker }}</span>
+                                            </li>
+                                            <li>
+                                                <span class="description">Scan plugin:</span>
+                                                <span class="data">{{ scenario.definition.usesScanPlugin ? "yes" : "no" }}</span>
+                                            </li>
+                                            <li>
+                                                <span class="description">Gradle arguments:</span>
+                                                <ul>
+                                                    <li v-for="arg in scenario.definition.args">
+                                                        <span class="data">{{ arg }}</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span class="description">System properties:</span>
+                                                <ul>
+                                                    <li v-for="(value, key) in scenario.definition.systemProperties">
+                                                        <span class="data">{{ key }} = {{ value }}</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span class="description">JVM arguments:</span>
+                                                <ul>
+                                                    <li v-for="arg in scenario.definition.jvmArgs">
+                                                        <span class="data">{{ arg }}</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span class="description">Gradle home:</span>
+                                                <span class="data">{{ scenario.definition.gradleHome }}</span>
+                                            </li>
+                                            <li>
+                                                <span class="description">Java home:</span>
+                                                <span class="data">{{ scenario.definition.javaHome }}</span>
+                                            </li>
+                                        </template>
+                                        <template v-else>
+                                            <li>
+                                                <span class="description">Tasks:</span>
+                                                <span class="data">{{ scenario.definition.tasks }}</span>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </td>
                             </tr>
                         </template>
-                        <tr class="details" v-show="scenario.showDetails">
-                            <td :colspan="scenario.iterations.length + 10">
-                                <ul>
-                                    <li>
-                                        <span class="description">Scenario name:</span>
-                                        <span class="data">{{ scenario.definition.name }}</span>
-                                    </li>
-                                    <li>
-                                        <span class="description">Build tool:</span>
-                                        <span class="data">{{ scenario.definition.buildTool }}</span>
-                                    </li>
-                                    <template v-if="scenario.definition.action">
-                                        <li>
-                                            <span class="description">Action:</span>
-                                            <span class="data">{{ scenario.definition.action }}</span>
-                                        </li>
-                                        <li>
-                                            <span class="description">Cleanup:</span>
-                                            <span class="data">{{ scenario.definition.cleanup }}</span>
-                                        </li>
-                                        <li>
-                                            <span class="description">Mutators:</span>
-                                            <span class="data" v-if="scenario.definition.mutators.length === 0">none</span>
-                                            <ul v-else>
-                                                <li v-for="mutator in scenario.definition.mutators">
-                                                    <span class="data">{{ mutator }}</span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <span class="description">Run using:</span>
-                                            <span class="data">{{ scenario.definition.invoker }}</span>
-                                        </li>
-                                        <li>
-                                            <span class="description">Scan plugin:</span>
-                                            <span class="data">{{ scenario.definition.usesScanPlugin ? "yes" : "no" }}</span>
-                                        </li>
-                                        <li>
-                                            <span class="description">Gradle arguments:</span>
-                                            <ul>
-                                                <li v-for="arg in scenario.definition.args">
-                                                    <span class="data">{{ arg }}</span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <span class="description">System properties:</span>
-                                            <ul>
-                                                <li v-for="(value, key) in scenario.definition.systemProperties">
-                                                    <span class="data">{{ key }} = {{ value }}</span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <span class="description">JVM arguments:</span>
-                                            <ul>
-                                                <li v-for="arg in scenario.definition.jvmArgs">
-                                                    <span class="data">{{ arg }}</span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <span class="description">Gradle home:</span>
-                                            <span class="data">{{ scenario.definition.gradleHome }}</span>
-                                        </li>
-                                        <li>
-                                            <span class="description">Java home:</span>
-                                            <span class="data">{{ scenario.definition.javaHome }}</span>
-                                        </li>
-                                    </template>
-                                    <template v-else>
-                                        <li>
-                                            <span class="description">Tasks:</span>
-                                            <span class="data">{{ scenario.definition.tasks }}</span>
-                                        </li>
-                                    </template>
-                                </ul>
-                            </td>
-                        </tr>
-                    </template>
                     </tbody>
                 </table>
             </div>
@@ -352,7 +330,7 @@ div.controls .btn {
 <script>
 const benchmarkResult =
 {
-  "date": "2022-04-04T16:27:54.191995500Z",
+  "date": "2022-04-04T17:45:47.357285200Z",
   "environment": {
     "profilerVersion": "0.18.0",
     "operatingSystem": "windows 7 amd64 6.1"
@@ -360,16 +338,16 @@ const benchmarkResult =
   "scenarios": [
     {
       "definition": {
-        "name": "clean",
-        "title": "clean",
-        "displayName": "clean using Gradle 7.4",
+        "name": "configuration",
+        "title": "configuration",
+        "displayName": "configuration using Gradle 7.4",
         "buildTool": "Gradle 7.4",
-        "tasks": "clean",
+        "tasks": "help",
         "version": "7.4",
         "gradleHome": "C:\\Users\\i30mb1\\AndroidProjects\\AD2\\gradle-user-home\\wrapper\\dists\\gradle-7.4-all\\aadb4xli5jkdsnukm30eibyiu\\gradle-7.4",
         "javaHome": "C:\\Program Files\\Android\\Android Studio\\jre",
         "usesScanPlugin": false,
-        "action": "run tasks clean",
+        "action": "run tasks help",
         "cleanup": "do nothing",
         "invoker": "Tooling API",
         "mutators": [],
@@ -404,7 +382,7 @@ const benchmarkResult =
           "-Dfile.encoding\u003dUTF-8"
         ],
         "systemProperties": {},
-        "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2"
+        "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863"
       },
       "samples": [
         {
@@ -413,147 +391,147 @@ const benchmarkResult =
       ],
       "iterations": [
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_WARM_UP_1",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_WARM_UP_1",
           "phase": "WARM_UP",
           "iteration": 1,
           "title": "warm-up build #1",
           "values": {
-            "total execution time": 27065.647883
+            "total execution time": 60463.568581
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_WARM_UP_2",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_WARM_UP_2",
           "phase": "WARM_UP",
           "iteration": 2,
           "title": "warm-up build #2",
           "values": {
-            "total execution time": 6127.519343
+            "total execution time": 5987.958233
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_WARM_UP_3",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_WARM_UP_3",
           "phase": "WARM_UP",
           "iteration": 3,
           "title": "warm-up build #3",
           "values": {
-            "total execution time": 4995.239898
+            "total execution time": 5228.74227
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_WARM_UP_4",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_WARM_UP_4",
           "phase": "WARM_UP",
           "iteration": 4,
           "title": "warm-up build #4",
           "values": {
-            "total execution time": 4606.696117
+            "total execution time": 7860.592441
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_WARM_UP_5",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_WARM_UP_5",
           "phase": "WARM_UP",
           "iteration": 5,
           "title": "warm-up build #5",
           "values": {
-            "total execution time": 4091.43233
+            "total execution time": 3912.383174
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_WARM_UP_6",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_WARM_UP_6",
           "phase": "WARM_UP",
           "iteration": 6,
           "title": "warm-up build #6",
           "values": {
-            "total execution time": 3885.82347
+            "total execution time": 3818.836647
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_1",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_1",
           "phase": "MEASURE",
           "iteration": 1,
           "title": "measured build #1",
           "values": {
-            "total execution time": 3753.14179
+            "total execution time": 3645.221799
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_2",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_2",
           "phase": "MEASURE",
           "iteration": 2,
           "title": "measured build #2",
           "values": {
-            "total execution time": 3658.705137
+            "total execution time": 8886.086757
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_3",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_3",
           "phase": "MEASURE",
           "iteration": 3,
           "title": "measured build #3",
           "values": {
-            "total execution time": 3707.929306
+            "total execution time": 3385.479063
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_4",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_4",
           "phase": "MEASURE",
           "iteration": 4,
           "title": "measured build #4",
           "values": {
-            "total execution time": 3339.924345
+            "total execution time": 3302.86589
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_5",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_5",
           "phase": "MEASURE",
           "iteration": 5,
           "title": "measured build #5",
           "values": {
-            "total execution time": 3445.173563
+            "total execution time": 3288.151376
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_6",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_6",
           "phase": "MEASURE",
           "iteration": 6,
           "title": "measured build #6",
           "values": {
-            "total execution time": 3194.897347
+            "total execution time": 3145.648705
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_7",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_7",
           "phase": "MEASURE",
           "iteration": 7,
           "title": "measured build #7",
           "values": {
-            "total execution time": 3185.445826
+            "total execution time": 3095.024807
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_8",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_8",
           "phase": "MEASURE",
           "iteration": 8,
           "title": "measured build #8",
           "values": {
-            "total execution time": 3076.600579
+            "total execution time": 3008.845998
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_9",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_9",
           "phase": "MEASURE",
           "iteration": 9,
           "title": "measured build #9",
           "values": {
-            "total execution time": 3088.219981
+            "total execution time": 2923.146002
           }
         },
         {
-          "id": "_21b9b4fc_ddf2_4778_b9e0_cccc4676418d_clean_86d3f2c2_MEASURE_10",
+          "id": "_9f3db228_2391_47d3_bff6_b0eafa4cdce5_configuration_ebb80863_MEASURE_10",
           "phase": "MEASURE",
           "iteration": 10,
           "title": "measured build #10",
           "values": {
-            "total execution time": 3079.891479
+            "total execution time": 3200.837705
           }
         }
       ]
@@ -961,7 +939,7 @@ new Vue({
                     itemSort: (a, b) => b.yLabel - a.yLabel,
                     callbacks: {
                         title: (tooltips, data) => `Build #${tooltips[0].label}`,
-                        label: (context) => dataFormat.format(context.dataPoint.y) + " " + context.dataset.sample.unit + " ï¿½ " + context.dataset.label
+                        label: (context) => dataFormat.format(context.dataPoint.y) + " " + context.dataset.sample.unit + " – " + context.dataset.label
                     }
                 },
                 hover: {
@@ -979,7 +957,6 @@ new Vue({
 });
 
 },{"mann-whitney-utest":1}]},{},[2]);
-
 
 
 </script>

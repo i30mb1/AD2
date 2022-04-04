@@ -1,5 +1,5 @@
 
-* Started at 2022-04-04T16:25:47.120727400Z
+* Started at 2022-04-04T17:42:40.318587200Z
 
 * Settings
 Project dir: C:\Users\i30mb1\AndroidProjects\AD2
@@ -8,7 +8,7 @@ Profiler: none
 Benchmark: true
 Versions: []
 Gradle User Home: C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
-Targets: [clean]
+Targets: [configuration]
 
 * Inspecting the build using its default Gradle version
 Watching the file system is not supported.
@@ -31,28 +31,28 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:measure-build-time:jar UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
@@ -81,7 +81,7 @@ For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/comma
 
 For troubleshooting, visit https://help.gradle.org
 
-BUILD SUCCESSFUL in 34s
+BUILD SUCCESSFUL in 47s
 32 actionable tasks: 2 executed, 30 up-to-date
 
 * Stopping daemons
@@ -90,17 +90,17 @@ Stopping Daemon(s)
 1 Daemon stopped
 
 * Scenarios
-Scenario: clean using Gradle 7.4
+Scenario: configuration using Gradle 7.4
   Gradle 7.4 (C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.4-all\aadb4xli5jkdsnukm30eibyiu\gradle-7.4)
   Run using: Tooling API
-  Run: run tasks clean
+  Run: run tasks help
   Cleanup: do nothing
   Gradle args: []
   Build changes: []
   Warm-ups: 6
   Builds: 10
 
-* Running scenario clean using Gradle 7.4 (scenario 1/1)
+* Running scenario configuration using Gradle 7.4 (scenario 1/1)
 
 * Stopping daemons
 Running command C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.4-all\aadb4xli5jkdsnukm30eibyiu\gradle-7.4\bin\gradle.bat --stop --gradle-user-home C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
@@ -138,12 +138,12 @@ JVM args:
   -Duser.language=ru
   -Duser.variant
   -Dfile.encoding=UTF-8
-  -Dorg.gradle.profiler.scenario=clean
+  -Dorg.gradle.profiler.scenario=configuration
 Gradle args:
   --gradle-user-home
   C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
   -I
-  C:\Temp\gradleProfiler7468267644996148739.gradle
+  C:\Temp\gradleProfiler3407350973350317514.gradle
 
 * Running warm-up build #1
 Watching the file system is not supported.
@@ -166,29 +166,32 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
-> Task :build-logic:measure-build-time:compileJava NO-SOURCE
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
 > Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
-> Task :build-logic:measure-build-time:processResources UP-TO-DATE
-> Task :build-logic:measure-build-time:classes UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
-> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+
+> Task :build-logic:measure-build-time:compileKotlin
+'compileJava' task (current target is 11) and 'compileKotlin' task (current target is 1.8) jvm target compatibility should be set to the same Java version.
+
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC
+> Task :build-logic:measure-build-time:jar
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:extensions:jar UP-TO-DATE
-> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
@@ -199,46 +202,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-=============================== Gradle Doctor Prescriptions ============================================
-| This build spent 11 % garbage collecting.                                                            |
-| If this is the first build with this Daemon, it likely means that this build needs more heap space.  |
-| Otherwise, if this is happening after several builds it could indicate a memory leak.                |
-| For a quick fix, restart this Gradle daemon. ./gradlew --stop                                        |
-========================================================================================================
 
-BUILD SUCCESSFUL in 26s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 27065 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 1m
+32 actionable tasks: 4 executed, 28 up-to-date
+Used daemon with pid 8756
+Execution time 60463 ms
 
 * Running warm-up build #2
 Watching the file system is not supported.
@@ -261,30 +245,30 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
-> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
-> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
 > Task :build-logic:kotlin:compileKotlin UP-TO-DATE
@@ -294,40 +278,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
 
-BUILD SUCCESSFUL in 6s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 6127 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 5s
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 5987 ms
 
 * Running warm-up build #3
 Watching the file system is not supported.
@@ -350,11 +321,11 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
 > Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
@@ -362,16 +333,16 @@ Watching the file system is not supported.
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
-> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
@@ -383,40 +354,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
 
-BUILD SUCCESSFUL in 4s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 4995 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 5s
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 5228 ms
 
 * Running warm-up build #4
 Watching the file system is not supported.
@@ -445,23 +403,23 @@ Watching the file system is not supported.
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
 > Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
-> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
@@ -472,40 +430,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
 
-BUILD SUCCESSFUL in 4s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 4606 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 7s
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 7860 ms
 
 * Running warm-up build #5
 Watching the file system is not supported.
@@ -529,24 +474,24 @@ Watching the file system is not supported.
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
-> Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
@@ -561,40 +506,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
 
-BUILD SUCCESSFUL in 4s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 4091 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3912 ms
 
 * Running warm-up build #6
 Watching the file system is not supported.
@@ -618,27 +550,27 @@ Watching the file system is not supported.
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
@@ -650,40 +582,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3885 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3818 ms
 
 * Using args for instrumented builds:
 
@@ -711,26 +630,26 @@ Watching the file system is not supported.
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
-> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
-> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
-> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
@@ -741,40 +660,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3753 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3645 ms
 
 * Running measured build #2
 Watching the file system is not supported.
@@ -797,30 +703,30 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
-> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
 > Task :build-logic:kotlin:compileKotlin UP-TO-DATE
@@ -830,40 +736,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
 
-BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3658 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 8s
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 8886 ms
 
 * Running measured build #3
 Watching the file system is not supported.
@@ -887,29 +780,29 @@ Watching the file system is not supported.
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
-> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:extensions:jar UP-TO-DATE
-> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
 > Task :build-logic:kotlin:compileKotlin UP-TO-DATE
@@ -919,40 +812,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3707 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3385 ms
 
 * Running measured build #4
 Watching the file system is not supported.
@@ -979,16 +859,16 @@ Watching the file system is not supported.
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
 > Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
-> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
 > Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
@@ -1008,40 +888,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3339 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3302 ms
 
 * Running measured build #5
 Watching the file system is not supported.
@@ -1064,30 +931,30 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
-> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
-> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
 > Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:measure-build-time:processResources UP-TO-DATE
-> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
 > Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
-> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
-> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
 > Task :build-logic:kotlin:compileKotlin UP-TO-DATE
@@ -1097,40 +964,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3445 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3288 ms
 
 * Running measured build #6
 Watching the file system is not supported.
@@ -1153,24 +1007,24 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
 > Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
-> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
-> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
-> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
 > Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
@@ -1186,40 +1040,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3194 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3145 ms
 
 * Running measured build #7
 Watching the file system is not supported.
@@ -1242,14 +1083,14 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
@@ -1275,40 +1116,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3185 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3095 ms
 
 * Running measured build #8
 Watching the file system is not supported.
@@ -1331,28 +1159,28 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
-> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
@@ -1364,40 +1192,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
 
-BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3076 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 2s
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3008 ms
 
 * Running measured build #9
 Watching the file system is not supported.
@@ -1420,29 +1235,29 @@ Watching the file system is not supported.
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
-> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
 > Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
-> Task :build-logic:extensions:compileKotlin UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:compileJava NO-SOURCE
 > Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
-> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
 > Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:classes UP-TO-DATE
 > Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
-> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
 > Task :build-logic:extensions:jar UP-TO-DATE
 > Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
 > Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
@@ -1453,40 +1268,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
 
-BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3088 ms
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 2s
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 2923 ms
 
 * Running measured build #10
 Watching the file system is not supported.
@@ -1512,17 +1314,17 @@ Watching the file system is not supported.
 > Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
 > Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
 > Task :build-logic:measure-build-time:compileJava NO-SOURCE
-> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
-> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
 > Task :build-logic:measure-build-time:processResources UP-TO-DATE
 > Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
 > Task :build-logic:bump-version-plugin:classes UP-TO-DATE
-> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:bump-version-plugin:jar UP-TO-DATE
-> Task :build-logic:measure-build-time:jar UP-TO-DATE
 > Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
 > Task :build-logic:extensions:compileKotlin UP-TO-DATE
 > Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
@@ -1542,40 +1344,27 @@ Watching the file system is not supported.
 > Task :build-logic:kotlin:classes UP-TO-DATE
 > Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
 > Task :build-logic:kotlin:jar UP-TO-DATE
-> Task :micro-benchmark:clean UP-TO-DATE
-> Task :clean UP-TO-DATE
-> Task :app:clean UP-TO-DATE
-> Task :core:android:clean UP-TO-DATE
-> Task :core:coroutines:clean UP-TO-DATE
-> Task :core:app-preference:clean UP-TO-DATE
-> Task :core:dagger:clean UP-TO-DATE
-> Task :core:database:clean UP-TO-DATE
-> Task :core:ktx:clean UP-TO-DATE
-> Task :core:media-player:clean UP-TO-DATE
-> Task :core:parser:clean UP-TO-DATE
-> Task :core:common:clean UP-TO-DATE
-> Task :core:provider:clean UP-TO-DATE
-> Task :core:logger:clean UP-TO-DATE
-> Task :core:retrofit:clean UP-TO-DATE
-> Task :core:rules:clean UP-TO-DATE
-> Task :core:repositories:clean UP-TO-DATE
-> Task :core:span-parser:clean UP-TO-DATE
-> Task :core:update-manager:clean UP-TO-DATE
-> Task :feature:drawer:clean UP-TO-DATE
-> Task :feature:hero-page:clean UP-TO-DATE
-> Task :feature:games:clean UP-TO-DATE
-> Task :feature:item-page:clean UP-TO-DATE
-> Task :feature:items:clean UP-TO-DATE
-> Task :feature:news:clean UP-TO-DATE
-> Task :feature:heroes:clean UP-TO-DATE
-> Task :feature:tournaments:clean UP-TO-DATE
-> Task :feature:streams:clean UP-TO-DATE
-> Task :core:ui:clean UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.4.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.4/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
 
 BUILD SUCCESSFUL in 3s
-60 actionable tasks: 60 up-to-date
-Used daemon with pid 8216
-Execution time 3079 ms
+32 actionable tasks: 1 executed, 31 up-to-date
+Used daemon with pid 8756
+Execution time 3200 ms
 
 * Stopping daemons
 Running command C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.4-all\aadb4xli5jkdsnukm30eibyiu\gradle-7.4\bin\gradle.bat --stop --gradle-user-home C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home

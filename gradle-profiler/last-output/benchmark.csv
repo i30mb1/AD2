@@ -1,20 +1,20 @@
-scenario,clean
+scenario,configuration
 version,Gradle 7.4
-tasks,clean
+tasks,help
 value,total execution time
-warm-up build #1,27065
-warm-up build #2,6127
-warm-up build #3,4995
-warm-up build #4,4606
-warm-up build #5,4091
-warm-up build #6,3885
-measured build #1,3753
-measured build #2,3658
-measured build #3,3707
-measured build #4,3339
-measured build #5,3445
-measured build #6,3194
-measured build #7,3185
-measured build #8,3076
-measured build #9,3088
-measured build #10,3079
+warm-up build #1,60463
+warm-up build #2,5987
+warm-up build #3,5228
+warm-up build #4,7860
+warm-up build #5,3912
+warm-up build #6,3818
+measured build #1,3645
+measured build #2,8886
+measured build #3,3385
+measured build #4,3302
+measured build #5,3288
+measured build #6,3145
+measured build #7,3095
+measured build #8,3008
+measured build #9,2923
+measured build #10,3200
