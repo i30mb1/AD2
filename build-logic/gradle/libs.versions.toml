@@ -1,10 +1,10 @@
 [versions]
-room = "2.3.0"
+room = "2.4.2"
 coroutines = "1.6.3"
 moshi = "1.13.0"
-dagger = "2.41"
+dagger = "2.42"
 workManager = "2.7.1"
-lifecycle = "2.4.0"
+lifecycle = "2.5.0"
 androidGradlePlugin = "7.2.0"
 lint = "30.2.0" # androidGradlePlugin + 23
 kotlin = "1.6.10"
@@ -32,8 +32,8 @@ livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref =
 viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" } # viewModelScope + savedStateHandle
 lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" } # flowWithLifecycle
 
-fragmentKtx = "androidx.fragment:fragment-ktx:1.4.0" # easy fragment transaction + by viewModels()
-activityKtx = "androidx.activity:activity-ktx:1.1.0" # onBackPress support for Fragment
+fragmentKtx = "androidx.fragment:fragment-ktx:1.5.0" # easy fragment transaction + by viewModels()
+activityKtx = "androidx.activity:activity-ktx:1.5.0" # onBackPress support for Fragment
 
 lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
@@ -44,30 +44,30 @@ kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ver
 
 exif = "androidx.exifinterface:exifinterface:1.3.3"
 metrics = "androidx.metrics:metrics-performance:1.0.0-alpha01"
-exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
+exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.18.0"
 preference = "androidx.preference:preference:1.1.1"
 preferenceKtx = "androidx.preference:preference-ktx:1.1.1"
-appCompat = "androidx.appcompat:appcompat:1.4.0"
+appCompat = "androidx.appcompat:appcompat:1.4.2"
 dataStorePref = "androidx.datastore:datastore-preferences:1.0.0"
-recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
-ticker = "com.robinhood.ticker:ticker:1.2.2"
+recyclerView = "androidx.recyclerview:recyclerview:1.2.1"
+ticker = "com.robinhood.ticker:ticker:2.0.4"
 retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
 retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:2.9.0"
-retrofitInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.3"
+retrofitInterceptor = "com.squareup.okhttp3:logging-interceptor:4.10.0"
 retrofitScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
-paging3 = "androidx.paging:paging-runtime:3.0.0"
-material = "com.google.android.material:material:1.2.0"
-constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
-coil = "io.coil-kt:coil:0.13.0"
+paging3 = "androidx.paging:paging-runtime:3.1.1"
+material = "com.google.android.material:material:1.6.1"
+constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+coil = "io.coil-kt:coil:2.1.0"
 jsoup = "org.jsoup:jsoup:1.11.2" # Jsoup для разбора html
 firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
 playCore = "com.google.android.play:core:1.10.3"
-playCoreKtx = "com.google.android.play:core-ktx:1.8.0" # auto update + rateMe
-coreKtx = "androidx.core:core-ktx:1.7.0" # Write more concise, idiomatic Kotlin code.
+playCoreKtx = "com.google.android.play:core-ktx:1.8.1" # auto update + rateMe
+coreKtx = "androidx.core:core-ktx:1.8.0" # Write more concise, idiomatic Kotlin code.
 jsonSimple = "com.googlecode.json-simple:json-simple:1.1.1"
 springAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
 springAnimationKtx = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
-instantApps = "com.google.android.gms:play-services-instantapps:17.0.0"
+instantApps = "com.google.android.gms:play-services-instantapps:18.0.1"
 viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
 splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha02"
 performance = "androidx.core:core-performance:1.0.0-alpha02"
@@ -77,7 +77,7 @@ coroutinesDebug = "org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.6.3"
 testCore = "androidx.test:core:1.4.0" # Core library
 testCoreKtx = "androidx.test:core-ktx:1.4.0"
 testRunner = "androidx.test:runner:1.4.0" # AndroidJUnitRunner
-testRules = "androidx.test:rules:1.2.0" # JUnit Rules
+testRules = "androidx.test:rules:1.4.0" # JUnit Rules
 testJunit = "androidx.test.ext:junit:1.1.3" # Assertions and JUnit 4 framework
 testJunitKtx = "androidx.test.ext:junit-ktx:1.1.3" # Assertions
 testTruth2 = "com.google.truth:truth:1.1.3"
@@ -91,7 +91,7 @@ espresso = "androidx.test.espresso:espresso-core:3.4.0"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"
 uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
 benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.1.0-rc01"
-benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0-rc01"
+benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0"
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
