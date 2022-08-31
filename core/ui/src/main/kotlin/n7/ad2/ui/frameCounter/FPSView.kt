@@ -40,6 +40,7 @@ class FPSView(
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         if (w == oldw) return
+        // https://youtu.be/FKe4vqT4zpc?t=1577
         textLayout = DynamicLayout.Builder.obtain(editable, textPaint, w).setAlignment(Layout.Alignment.ALIGN_OPPOSITE).build()
     }
 
