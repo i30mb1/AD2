@@ -1,7 +1,7 @@
 package n7.ad2.span_parser
 
+import ResourcesFake
 import com.google.common.truth.Truth
-import n7.ad2.ResourcesFake
 import org.junit.Before
 import org.junit.Test
 

@@ -16,6 +16,7 @@ dependencies {
 
     testImplementation(libs.testTruth2)
     testImplementation(libs.mockitokotlin)
+    testImplementation(testFixtures(project(Module.Core.common)))
 
     kapt(libs.daggerAnnotation)
 }
