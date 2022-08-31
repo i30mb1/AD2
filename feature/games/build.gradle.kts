@@ -10,5 +10,5 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
 
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 }

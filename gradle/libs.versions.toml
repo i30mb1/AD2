@@ -1,0 +1,86 @@
+[versions]
+room = "2.3.0"
+coroutines = "1.6.0"
+moshi = "1.12.0"
+dagger = "2.40.2"
+workManager = "2.7.1"
+lifecycle = "2.4.0"
+lint = "30.0.4" # gradlePlugin + 23
+
+[libraries]
+room = { module = "androidx.room:room-runtime", version.ref = "room" }
+roomAnnotation = { module = "androidx.room:room-compiler", version.ref = "room" }
+roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" } # why
+
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" } # It makes it easy to parse JSON into Kotlin objects
+moshiCodegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" } # Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
+moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" } # Add reflection to moshi (better not to use : 2.5 MB) Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+moshiAdapter = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
+
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+daggerAnnotation = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+
+workManager = { module = "androidx.work:work-runtime-ktx", version.ref = "workManager" }
+workManagerGCM = { module = "androidx.work:work-gcm", version.ref = "workManager" }
+
+livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" } # liveData (LiveData + coroutines)
+viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" } # viewModelScope + savedStateHandle
+lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" } # flowWithLifecycle
+
+fragmentKtx = "androidx.fragment:fragment-ktx:1.4.0" # easy fragment transaction + by viewModels()
+activityKtx = "androidx.activity:activity-ktx:1.1.0" # onBackPress support for Fragment
+
+lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
+lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
+
+exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
+preference = "androidx.preference:preference:1.1.1"
+preferenceKtx = "androidx.preference:preference-ktx:1.1.1"
+appCompat = "androidx.appcompat:appcompat:1.4.0"
+dataStorePref = "androidx.datastore:datastore-preferences:1.0.0"
+recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
+ticker = "com.robinhood.ticker:ticker:1.2.2"
+retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:2.9.0"
+retrofitInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.3"
+retrofitScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
+paging3 = "androidx.paging:paging-runtime:3.0.0"
+material = "com.google.android.material:material:1.2.0"
+constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
+coil = "io.coil-kt:coil:0.13.0"
+jsoup = "org.jsoup:jsoup:1.11.2" # Jsoup для разбора html
+firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
+playCore = "com.google.android.play:core:1.10.3"
+playCoreKtx = "com.google.android.play:core-ktx:1.8.0" # auto update + rateMe
+coreKtx = "androidx.core:core-ktx:1.7.0" # Write more concise, idiomatic Kotlin code.
+jsonSimple = "com.googlecode.json-simple:json-simple:1.1.1"
+springAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
+springAnimationKtx = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
+instantApps = "com.google.android.gms:play-services-instantapps:17.0.0"
+viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
+splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha02"
+performance = "androidx.core:core-performance:1.0.0-alpha02"
+
+coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0-RC"
+testCore = "androidx.test:core:1.4.0" # Core library
+testCoreKtx = "androidx.test:core-ktx:1.4.0"
+testRunner = "androidx.test:runner:1.4.0" # AndroidJUnitRunner
+testRules = "androidx.test:rules:1.2.0" # JUnit Rules
+testJunit = "androidx.test.ext:junit:1.1.3" # Assertions and JUnit 4 framework
+testJunitKtx = "androidx.test.ext:junit-ktx:1.1.3" # Assertions
+testTruth2 = "com.google.truth:truth:1.1.3"
+testTruth = "androidx.test.ext:truth:1.4.0"
+coreTesting = "androidx.arch.core:core-testing:2.1.0"
+mockitoWeb = "com.squareup.okhttp3:mockwebserver:4.4.0"
+mockito = "org.mockito:mockito-core:3.2.4"
+mockitokotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0" # A small library that provides helper functions to work with Mockito in Kotlin.
+
+espresso = "androidx.test.espresso:espresso-core:3.2.0"
+espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"
+
+[bundles]
+
+[plugins]

@@ -4,9 +4,9 @@ plugins {
 }
 
 dependencies {
-    implementation(Lib.dataStorePref)
+    implementation(libs.dataStorePref)
 
     implementation(project(Module.Core.dagger))
 
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 }

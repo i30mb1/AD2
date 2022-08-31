@@ -3,6 +3,6 @@ plugins {
 }
 
 dependencies {
-    compileOnly(Lib.lintApi)
-    compileOnly(Lib.lintChecks)
+    compileOnly(libs.lintApi)
+    compileOnly(libs.lintChecks)
 }

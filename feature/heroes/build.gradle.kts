@@ -11,7 +11,7 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
 
-    api(Lib.moshi)
+    api(libs.moshi)
 
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 }

@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation(Lib.workManagerKotlin)
+    implementation(libs.workManager)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
@@ -12,5 +12,5 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
 
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 }

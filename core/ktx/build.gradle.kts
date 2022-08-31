@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    api(Lib.fragmentKtx)
-    api(Lib.activityKtx)
-    api(Lib.coreKtx)
+    api(libs.fragmentKtx)
+    api(libs.activityKtx)
+    api(libs.coreKtx)
 }

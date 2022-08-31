@@ -3,9 +3,9 @@ plugins {
 }
 
 dependencies {
-    api(Lib.appCompat)
-    api(Lib.splashScreen)
-    api(Lib.material)
+    api(libs.appCompat)
+    api(libs.splashScreen)
+    api(libs.material)
 
     implementation(project(Module.Core.ktx))
 }

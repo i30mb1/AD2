@@ -4,10 +4,10 @@ plugins {
 }
 
 dependencies {
-    implementation(Lib.workManagerKotlin)
-    implementation(Lib.jsoup)
-    implementation(Lib.ticker)
-    implementation(Lib.exoPlayerCore)
+    implementation(libs.workManager)
+    implementation(libs.jsoup)
+    implementation(libs.ticker)
+    implementation(libs.exoPlayerCore)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
@@ -18,8 +18,8 @@ dependencies {
     implementation(project(Module.Core.spanParser))
     implementation(project(Module.Core.mediaPlayer))
 
-    api(Lib.moshi)
+    api(libs.moshi)
 
-    kapt(Lib.moshiCodegen)
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.moshiCodegen)
+    kapt(libs.daggerAnnotation)
 }

@@ -6,8 +6,8 @@ plugins {
 dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.logger))
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 
-    api(Lib.playCore)
-    api(Lib.playCoreKtx)
+    api(libs.playCore)
+    api(libs.playCoreKtx)
 }

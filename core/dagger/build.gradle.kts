@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    api(Lib.dagger)
+    api(libs.dagger)
 }

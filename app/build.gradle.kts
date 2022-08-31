@@ -79,14 +79,14 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(Lib.ticker)
-    implementation(Lib.viewPager2)
-    implementation(Lib.jsoup)
-    implementation(Lib.instantApps)
-    implementation(Lib.workManagerKotlin)
-    implementation(Lib.performance)
+    implementation(libs.ticker)
+    implementation(libs.viewPager2)
+    implementation(libs.jsoup)
+    implementation(libs.instantApps)
+    implementation(libs.workManager)
+    implementation(libs.performance)
 
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 
     implementation(project(Module.Core.android)) { because("!") }
     implementation(project(Module.Core.dagger))

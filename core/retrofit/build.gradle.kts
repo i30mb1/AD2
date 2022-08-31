@@ -8,10 +8,10 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.common))
 
-    api(Lib.retrofit)
-    api(Lib.retrofitMoshiConverter)
-    api(Lib.retrofitInterceptor)
-    api(Lib.retrofitScalars)
+    api(libs.retrofit)
+    api(libs.retrofitMoshiConverter)
+    api(libs.retrofitInterceptor)
+    api(libs.retrofitScalars)
 
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 }

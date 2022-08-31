@@ -5,7 +5,7 @@ plugins {
 
 dependencies {
     implementation(project(Module.Core.dagger))
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.daggerAnnotation)
 
-    api(Lib.coroutines)
+    api(libs.coroutines)
 }

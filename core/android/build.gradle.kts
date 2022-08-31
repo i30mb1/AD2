@@ -3,17 +3,17 @@ plugins {
 }
 
 dependencies {
-    api(Lib.recyclerView)
-    api(Lib.paging3)
-    api(Lib.constraintLayout)
-    api(Lib.livedata)
-    api(Lib.viewmodel)
-    api(Lib.lifecycleRuntime)
+    api(libs.recyclerView)
+    api(libs.paging3)
+    api(libs.constraintLayout)
+    api(libs.livedata)
+    api(libs.viewmodel)
+    api(libs.lifecycleRuntime)
 
     api(project(Module.Core.ui))
     api(project(Module.Core.ktx))
     api(project(Module.Core.dagger))
     api(project(Module.Core.common))
 
-    implementation(Lib.coil)
+    implementation(libs.coil)
 }

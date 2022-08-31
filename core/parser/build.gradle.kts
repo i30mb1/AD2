@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
-    implementation(Lib.jsonSimple)
-    implementation(Lib.jsoup)
-    implementation(Lib.coroutines)
+    implementation(libs.jsonSimple)
+    implementation(libs.jsoup)
+    implementation(libs.coroutines)
 }
 

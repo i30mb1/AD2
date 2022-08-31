@@ -10,10 +10,11 @@ android {
 }
 
 dependencies {
-    testImplementation(Lib.Test.testTruth2)
-    testImplementation(Lib.Test.mockitokotlin)
-
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.android))
-    kapt(Lib.daggerAnnotation)
+
+    testImplementation(libs.testTruth2)
+    testImplementation(libs.mockitokotlin)
+
+    kapt(libs.daggerAnnotation)
 }

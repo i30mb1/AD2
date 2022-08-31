@@ -12,8 +12,8 @@ dependencies {
     implementation(project(Module.Core.provider))
     implementation(project(Module.Core.retrofit))
 
-    api(Lib.moshi)
+    api(libs.moshi)
 
-    kapt(Lib.moshiCodegen)
-    kapt(Lib.daggerAnnotation)
+    kapt(libs.moshiCodegen)
+    kapt(libs.daggerAnnotation)
 }
