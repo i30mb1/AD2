@@ -6,6 +6,7 @@ plugins {
 
 dependencies {
     implementation(libs.workManager)
+    implementation(libs.composePaging)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
