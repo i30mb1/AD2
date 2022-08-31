@@ -6,7 +6,3 @@ plugins {
 //    id("com.autonomousapps.dependency-analysis") version "1.0.0-rc02"
     // https://arrow-kt.io/docs/meta/analysis/
 }
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
-}
