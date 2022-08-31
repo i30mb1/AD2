@@ -13,7 +13,7 @@ class SpellViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: VOSpell) {
-        binding.iv.load(item.urlSpellImage, n7.ad2.ui.R.drawable.square_placeholder)
+        binding.iv.load(item.urlSpellImage, n7.ad2.ui.R.drawable.square_placeholder, n7.ad2.ui.R.drawable.square_error_placeholder)
         binding.root.setOnClickListener { onSpellClickListener(item) }
         bind(item.isSelected)
     }
