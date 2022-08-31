@@ -7,7 +7,7 @@ workManager = "2.7.1"
 lifecycle = "2.4.0"
 androidGradlePlugin = "7.2.0"
 lint = "30.2.0" # androidGradlePlugin + 23
-kotlinGradlePlugin = "1.6.10"
+kotlin = "1.6.10"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -39,7 +39,9 @@ lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
 
 androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
+
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
 metrics = "androidx.metrics:metrics-performance:1.0.0-alpha01"
 exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
 preference = "androidx.preference:preference:1.1.1"
