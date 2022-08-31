@@ -108,6 +108,30 @@ class DownloadResponseManager(
         resolver.update(outputUri, responseDetails, null, null)
     }
 
+    private fun getResponses() {
+        // https://youtu.be/l4bHzLKxyj4?list=PLNSmyatBJig6FwzDx_Uj79Hn-O5xY9oOL
+        val resolver = application.contentResolver
+
+        val projection = arrayOf(
+            MediaStore.Audio.Media._ID, // получая id сможем построить путь до изображения
+            MediaStore.Audio.Media.DISPLAY_NAME
+        )
+        val selection = MediaStore.Audio.Media.SIZE + "<=?"
+        val selectionArgs = arrayOf("500")
+        val sortOrder = MediaStore.Audio.Media.DISPLAY_NAME
+        val cursor = resolver.query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection, selection, selectionArgs, sortOrder)
+        cursor?.use {
+            val idIndex = it.getColumnIndex(MediaStore.Audio.Media._ID)
+            val nameIndex = it.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME)
+            while (it.moveToNext()) {
+                val id = cursor.getString(idIndex)
+                val name = cursor.getString(nameIndex)
+                val uri = Uri.withAppendedPath(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id)
+                // save somewhere
+            }
+        }
+    }
+
     private fun registerObserverFor(downloadId: Long, handler: Handler = Handler(Looper.getMainLooper())) {
         val observer = object : ContentObserver(handler) {
             override fun onChange(selfChange: Boolean, uri: Uri?) {
