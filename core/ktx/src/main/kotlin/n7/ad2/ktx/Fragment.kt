@@ -1,3 +1,5 @@
+@file:Suppress("UNCHECKED_CAST", "WRONG_NULLABILITY_FOR_JAVA_OVERRIDE")
+
 package n7.ad2.ktx
 
 import android.os.Bundle
