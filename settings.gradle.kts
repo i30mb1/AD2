@@ -5,6 +5,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()  // тут лежит kotlin-stdlib-jdk8
     }
+    versionCatalogs {
+        create("libs") {
+            from(files("build-logic/gradle/libs.versions.toml"))
+        }
+    }
 }
 
 pluginManagement {
