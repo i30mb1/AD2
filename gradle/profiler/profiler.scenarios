@@ -17,4 +17,4 @@ configuration {
 }
 
 # https://dev.to/autonomousapps/benchmarking-builds-with-gradle-profiler-oa8
-# gradle\profiler\bin\gradle-profiler.bat --benchmark --output-dir gradle\profiler\last-output --scenario-file gradle\profiler\profiler.scenarios clean
+# gradle\profiler\bin\gradle-profiler.bat --benchmark --output-dir gradle\profiler\last-output --gradle-user-home gradle/gradle-user-home --scenario-file gradle\profiler\profiler.scenarios configuration
