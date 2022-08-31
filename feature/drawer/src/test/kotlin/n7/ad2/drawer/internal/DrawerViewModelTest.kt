@@ -1,12 +1,12 @@
 package n7.ad2.drawer.internal
 
+import PreferenceFake
+import ResourcesFake
 import com.google.common.truth.Truth
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
-import n7.ad2.PreferenceFake
-import n7.ad2.ResourcesFake
 import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.drawer.internal.data.remote.SettingsApiFake
 import n7.ad2.drawer.internal.domain.usecase.GetMenuItemsUseCase

@@ -19,4 +19,6 @@ dependencies {
     kapt(libs.daggerAnnotation)
 
     testImplementation(libs.bundles.test)
+    testImplementation(testFixtures(project(Module.Core.appPreference)))
+    testImplementation(testFixtures(project(Module.Core.common)))
 }

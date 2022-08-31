@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
-import n7.ad2.Preference
 import n7.ad2.Resources
+import n7.ad2.app_preference.Preference
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.drawer.R
 import n7.ad2.drawer.internal.data.remote.SettingsApi
