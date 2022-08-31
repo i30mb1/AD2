@@ -80,6 +80,7 @@ class HeroInfoAdapter(
             holder is HeroSpellsViewHolder -> holder.bind(payloads.last() as VOHeroInfo.Spells)
             holder is HeroInfoMainViewHolder -> holder.bind((payloads.last() as VOHeroInfo.Attributes).isSelected)
             holder is HeroHeaderPlayableViewHolder -> holder.bind(payloads.last() as VOHeroInfo.HeaderSound)
+            holder is BodyViewHolder -> holder.bind((payloads.last() as VOHeroInfo.Body).item)
         }
     }
 
@@ -143,6 +144,7 @@ class HeroInfoAdapter(
             if (oldItem is VOHeroInfo.Spells && newItem is VOHeroInfo.Spells && oldItem.spells != newItem.spells) return newItem
             if (oldItem is VOHeroInfo.Attributes && newItem is VOHeroInfo.Attributes && oldItem.isSelected != newItem.isSelected) return newItem
             if (oldItem is VOHeroInfo.HeaderSound && newItem is VOHeroInfo.HeaderSound && oldItem != newItem) return newItem
+            if (oldItem is VOHeroInfo.Body && newItem is VOHeroInfo.Body && oldItem != newItem) return newItem
             return super.getChangePayload(oldItem, newItem)
         }
     }
