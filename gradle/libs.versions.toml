@@ -82,5 +82,6 @@ espresso = "androidx.test.espresso:espresso-core:3.2.0"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"
 
 [bundles]
+test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
 
 [plugins]
