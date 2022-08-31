@@ -7,14 +7,14 @@ abstract class MeasureBuildTask : DefaultTask() {
     open fun action() {
         project.exec {
             commandLine(
-                "gradle-profiler/bin/gradle-profiler.bat",
+                "gradle/profiler/bin/gradle-profiler.bat",
             )
             args = listOf(
                 "--benchmark",
                 "--output-dir",
-                "gradle-profiler/last-output",
+                "gradle/profiler/last-output",
                 "--scenario-file",
-                "gradle-profiler/profiler.scenarios",
+                "gradle/profiler/profiler.scenarios",
                 "incremental",
             )
         }

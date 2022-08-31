@@ -1,0 +1,1768 @@
+
+* Started at 2022-08-24T12:11:56.331787900Z
+
+* Settings
+Project dir: C:\Users\i30mb1\AndroidProjects\AD2
+Output dir: C:\Users\i30mb1\AndroidProjects\AD2\gradle-profiler\last-output
+Profiler: none
+Benchmark: true
+Versions: []
+Gradle User Home: C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+Targets: []
+
+* Inspecting the build using its default Gradle version
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+The Kotlin Gradle plugin was loaded multiple times in different subprojects, which is not supported and may break the build. 
+This might happen in subprojects that apply the Kotlin plugins with the Gradle 'plugins { ... }' DSL if they specify explicit versions, even if the versions are equal.
+Please add the Kotlin plugin to the common parent project or the root project, then remove the versions in the subprojects.
+If the parent project does not need the plugin, add 'apply false' to the plugin line.
+See: https://docs.gradle.org/current/userguide/plugins.html#sec:subprojects_plugins_dsl
+The Kotlin plugin was loaded in the following projects: ':app', ':micro-benchmark', ':core:common', ':core:span-parser'
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 35s
+56 actionable tasks: 1 executed, 55 up-to-date
+
+* Stopping daemons
+Running command C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.5.1-all\1ehga6e77gqps5uk2kc5kf1vc\gradle-7.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Scenarios
+Scenario: configuration using Gradle 7.5.1
+  Gradle 7.5.1 (C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.5.1-all\1ehga6e77gqps5uk2kc5kf1vc\gradle-7.5.1)
+  Run using: Tooling API
+  Run: run tasks help
+  Cleanup: do nothing
+  Gradle args: []
+  Build changes: []
+  Warm-ups: 6
+  Builds: 10
+Scenario: configurationOld using Gradle 7.5.1
+  Gradle 7.5.1 (C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.5.1-all\1ehga6e77gqps5uk2kc5kf1vc\gradle-7.5.1)
+  Run using: Tooling API
+  Run: run tasks help
+  Cleanup: do nothing
+  Gradle args: []
+  Build changes: [GitCheckoutMutator(cleanup: master, build: 91defc96b09839f069bd6d6efe6697326a8a12a7)]
+  Warm-ups: 6
+  Builds: 10
+
+* Running scenario configuration using Gradle 7.5.1 (scenario 1/2)
+
+* Stopping daemons
+Running command C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.5.1-all\1ehga6e77gqps5uk2kc5kf1vc\gradle-7.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+No Gradle daemons are running.
+
+* Build details
+Gradle version: Gradle 7.5.1
+Java home: C:\Program Files\Android\Android Studio\jre
+OS: windows 7 amd64 6.1
+JVM args:
+  -XX:+UseParallelGC
+  --add-opens
+  java.base/java.util=ALL-UNNAMED
+  --add-opens
+  java.base/java.lang=ALL-UNNAMED
+  --add-opens
+  java.base/java.lang.invoke=ALL-UNNAMED
+  --add-opens
+  java.base/java.util=ALL-UNNAMED
+  --add-opens
+  java.prefs/java.util.prefs=ALL-UNNAMED
+  --add-opens
+  java.prefs/java.util.prefs=ALL-UNNAMED
+  --add-opens
+  java.base/java.nio.charset=ALL-UNNAMED
+  --add-opens
+  java.base/java.net=ALL-UNNAMED
+  --add-opens
+  java.base/java.util.concurrent.atomic=ALL-UNNAMED
+  -Xmx2g
+  -Dfile.encoding=UTF-8
+  -Duser.country=RU
+  -Duser.language=ru
+  -Duser.variant
+  -Dfile.encoding=UTF-8
+  -Dorg.gradle.profiler.scenario=configuration
+Gradle args:
+  --gradle-user-home
+  C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+  -I
+  C:\Temp\gradleProfiler261889337853643049.gradle
+
+* Running warm-up build #1
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+The Kotlin Gradle plugin was loaded multiple times in different subprojects, which is not supported and may break the build. 
+This might happen in subprojects that apply the Kotlin plugins with the Gradle 'plugins { ... }' DSL if they specify explicit versions, even if the versions are equal.
+Please add the Kotlin plugin to the common parent project or the root project, then remove the versions in the subprojects.
+If the parent project does not need the plugin, add 'apply false' to the plugin line.
+See: https://docs.gradle.org/current/userguide/plugins.html#sec:subprojects_plugins_dsl
+The Kotlin plugin was loaded in the following projects: ':app', ':micro-benchmark', ':core:common', ':core:span-parser'
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 33s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 33163 ms
+
+* Running warm-up build #2
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 6s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 6159 ms
+
+* Running warm-up build #3
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 5s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 5482 ms
+
+* Running warm-up build #4
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 4s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 4514 ms
+
+* Running warm-up build #5
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 4s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 4198 ms
+
+* Running warm-up build #6
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3992 ms
+
+* Using args for instrumented builds:
+
+* Running measured build #1
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3665 ms
+
+* Running measured build #2
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3360 ms
+
+* Running measured build #3
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3218 ms
+
+* Running measured build #4
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3134 ms
+
+* Running measured build #5
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 2s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 2942 ms
+
+* Running measured build #6
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3192 ms
+
+* Running measured build #7
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3144 ms
+
+* Running measured build #8
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3076 ms
+
+* Running measured build #9
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3177 ms
+
+* Running measured build #10
+Configuration on demand is an incubating feature.
+Watching the file system is not supported.
+> Task :settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :settings:compilePluginsBlocks UP-TO-DATE
+> Task :settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :settings:compileKotlin UP-TO-DATE
+> Task :settings:compileJava NO-SOURCE
+> Task :settings:pluginDescriptors UP-TO-DATE
+> Task :settings:processResources UP-TO-DATE
+> Task :settings:classes UP-TO-DATE
+> Task :settings:inspectClassesForKotlinIC UP-TO-DATE
+> Task :settings:jar UP-TO-DATE
+> Task :build-logic:detekt:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:detekt:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:detekt:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:detekt:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:bump-version-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:measure-build-time:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:detekt:compileKotlin UP-TO-DATE
+> Task :build-logic:detekt:compileJava NO-SOURCE
+> Task :build-logic:detekt:pluginDescriptors UP-TO-DATE
+> Task :build-logic:detekt:processResources UP-TO-DATE
+> Task :build-logic:detekt:classes UP-TO-DATE
+> Task :build-logic:detekt:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:detekt:jar UP-TO-DATE
+> Task :build-logic:android:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:android:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:android:pluginDescriptors UP-TO-DATE
+> Task :build-logic:android:processResources UP-TO-DATE
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:extensions:compileJava NO-SOURCE
+> Task :build-logic:extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:extensions:processResources UP-TO-DATE
+> Task :build-logic:extensions:classes UP-TO-DATE
+> Task :build-logic:extensions:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :build-logic:android:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:android:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:android:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:android:compileKotlin UP-TO-DATE
+> Task :build-logic:android:compileJava NO-SOURCE
+> Task :build-logic:android:classes UP-TO-DATE
+> Task :build-logic:android:inspectClassesForKotlinIC UP-TO-DATE
+> Task :build-logic:android:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 7.5.1.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/7.5.1/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 3s
+56 actionable tasks: 1 executed, 55 up-to-date
+Used daemon with pid 1276
+Execution time 3070 ms
+
+* Stopping daemons
+Running command C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.5.1-all\1ehga6e77gqps5uk2kc5kf1vc\gradle-7.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Running scenario configurationOld using Gradle 7.5.1 (scenario 2/2)
+
+* Stopping daemons
+Running command C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.5.1-all\1ehga6e77gqps5uk2kc5kf1vc\gradle-7.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+No Gradle daemons are running.
+
+* Build details
+Gradle version: Gradle 7.5.1
+Java home: C:\Program Files\Android\Android Studio\jre
+OS: windows 7 amd64 6.1
+JVM args:
+  -XX:+UseParallelGC
+  --add-opens
+  java.base/java.util=ALL-UNNAMED
+  --add-opens
+  java.base/java.lang=ALL-UNNAMED
+  --add-opens
+  java.base/java.lang.invoke=ALL-UNNAMED
+  --add-opens
+  java.base/java.util=ALL-UNNAMED
+  --add-opens
+  java.prefs/java.util.prefs=ALL-UNNAMED
+  --add-opens
+  java.prefs/java.util.prefs=ALL-UNNAMED
+  --add-opens
+  java.base/java.nio.charset=ALL-UNNAMED
+  --add-opens
+  java.base/java.net=ALL-UNNAMED
+  --add-opens
+  java.base/java.util.concurrent.atomic=ALL-UNNAMED
+  -Xmx2g
+  -Dfile.encoding=UTF-8
+  -Duser.country=RU
+  -Duser.language=ru
+  -Duser.variant
+  -Dfile.encoding=UTF-8
+  -Dorg.gradle.profiler.scenario=configurationOld
+Gradle args:
+  --gradle-user-home
+  C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+  -I
+  C:\Temp\gradleProfiler4423665183312680093.gradle
+> Resetting Git hard
+Running command git reset --hard HEAD
+error: unable to unlink old 'gradle-profiler/last-output/profile.log': Invalid argument
+fatal: Could not reset index file to revision 'HEAD'.
+
+* Stopping daemons
+Running command C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home\wrapper\dists\gradle-7.5.1-all\1ehga6e77gqps5uk2kc5kf1vc\gradle-7.5.1\bin\gradle.bat --stop --gradle-user-home C:\Users\i30mb1\AndroidProjects\AD2\gradle-user-home
+No Gradle daemons are running.
+java.lang.RuntimeException: Could not run command git reset --hard HEAD
+Output:
+======
+error: unable to unlink old 'gradle-profiler/last-output/profile.log': Invalid argument
+fatal: Could not reset index file to revision 'HEAD'.
+======
+	at org.gradle.profiler.CommandExec$RunHandle.waitForSuccess(CommandExec.java:207)
+	at org.gradle.profiler.CommandExec.run(CommandExec.java:40)
+	at org.gradle.profiler.mutations.AbstractGitMutator.resetGit(AbstractGitMutator.java:17)
+	at org.gradle.profiler.mutations.GitCheckoutMutator.beforeScenario(GitCheckoutMutator.java:27)
+	at org.gradle.profiler.CompositeBuildMutator.beforeScenario(CompositeBuildMutator.java:18)
+	at org.gradle.profiler.GradleScenarioInvoker.run(GradleScenarioInvoker.java:108)
+	at org.gradle.profiler.GradleScenarioInvoker.run(GradleScenarioInvoker.java:22)
+	at org.gradle.profiler.Main.invoke(Main.java:126)
+	at org.gradle.profiler.Main.run(Main.java:86)
+	at org.gradle.profiler.Main.main(Main.java:25)
+
+* Results written to C:\Users\i30mb1\AndroidProjects\AD2\gradle-profiler\last-output
+  C:\Users\i30mb1\AndroidProjects\AD2\gradle-profiler\last-output\benchmark.csv
+  C:\Users\i30mb1\AndroidProjects\AD2\gradle-profiler\last-output\benchmark.html
+

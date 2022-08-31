@@ -330,31 +330,226 @@ div.controls .btn {
 <script>
 const benchmarkResult =
 {
-  "date": "2022-08-14T10:12:42.454487600Z",
+  "date": "2022-08-24T12:14:14.485689900Z",
   "environment": {
     "profilerVersion": "0.18.0",
-    "operatingSystem": "windows server 2022 amd64 10.0"
+    "operatingSystem": "windows 7 amd64 6.1"
   },
   "scenarios": [
     {
       "definition": {
-        "name": "incremental",
-        "title": "incremental",
-        "displayName": "incremental using Gradle 7.4.2",
-        "buildTool": "Gradle 7.4.2",
-        "tasks": ":app:assembleDebug",
-        "version": "7.4.2",
-        "gradleHome": "D:\\a\\AD2\\AD2\\gradle-user-home\\wrapper\\dists\\gradle-7.4.2-all\\9uukhhbclvbegdvsww0j0cr3p\\gradle-7.4.2",
-        "javaHome": "C:\\hostedtoolcache\\windows\\Java_Temurin-Hotspot_jdk\\11.0.16-8\\x64",
+        "name": "configuration",
+        "title": "configuration",
+        "displayName": "configuration using Gradle 7.5.1",
+        "buildTool": "Gradle 7.5.1",
+        "tasks": "help",
+        "version": "7.5.1",
+        "gradleHome": "C:\\Users\\i30mb1\\AndroidProjects\\AD2\\gradle-user-home\\wrapper\\dists\\gradle-7.5.1-all\\1ehga6e77gqps5uk2kc5kf1vc\\gradle-7.5.1",
+        "javaHome": "C:\\Program Files\\Android\\Android Studio\\jre",
         "usesScanPlugin": false,
-        "action": "run tasks :app:assembleDebug",
+        "action": "run tasks help",
+        "cleanup": "do nothing",
+        "invoker": "Tooling API",
+        "mutators": [],
+        "args": [],
+        "jvmArgs": [
+          "-XX:+UseParallelGC",
+          "--add-opens",
+          "java.base/java.util\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.base/java.lang\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.base/java.lang.invoke\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.base/java.util\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.prefs/java.util.prefs\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.prefs/java.util.prefs\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.base/java.nio.charset\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.base/java.net\u003dALL-UNNAMED",
+          "--add-opens",
+          "java.base/java.util.concurrent.atomic\u003dALL-UNNAMED",
+          "-Xmx2g",
+          "-Dfile.encoding\u003dUTF-8",
+          "-Duser.country\u003dRU",
+          "-Duser.language\u003dru",
+          "-Duser.variant",
+          "-Dfile.encoding\u003dUTF-8"
+        ],
+        "systemProperties": {},
+        "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863"
+      },
+      "samples": [
+        {
+          "name": "total execution time"
+        }
+      ],
+      "iterations": [
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_WARM_UP_1",
+          "phase": "WARM_UP",
+          "iteration": 1,
+          "title": "warm-up build #1",
+          "values": {
+            "total execution time": 33163.781752
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_WARM_UP_2",
+          "phase": "WARM_UP",
+          "iteration": 2,
+          "title": "warm-up build #2",
+          "values": {
+            "total execution time": 6159.489904
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_WARM_UP_3",
+          "phase": "WARM_UP",
+          "iteration": 3,
+          "title": "warm-up build #3",
+          "values": {
+            "total execution time": 5482.864979
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_WARM_UP_4",
+          "phase": "WARM_UP",
+          "iteration": 4,
+          "title": "warm-up build #4",
+          "values": {
+            "total execution time": 4514.664041
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_WARM_UP_5",
+          "phase": "WARM_UP",
+          "iteration": 5,
+          "title": "warm-up build #5",
+          "values": {
+            "total execution time": 4198.600462
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_WARM_UP_6",
+          "phase": "WARM_UP",
+          "iteration": 6,
+          "title": "warm-up build #6",
+          "values": {
+            "total execution time": 3992.600481
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_1",
+          "phase": "MEASURE",
+          "iteration": 1,
+          "title": "measured build #1",
+          "values": {
+            "total execution time": 3665.725773
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_2",
+          "phase": "MEASURE",
+          "iteration": 2,
+          "title": "measured build #2",
+          "values": {
+            "total execution time": 3360.50648
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_3",
+          "phase": "MEASURE",
+          "iteration": 3,
+          "title": "measured build #3",
+          "values": {
+            "total execution time": 3218.79263
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_4",
+          "phase": "MEASURE",
+          "iteration": 4,
+          "title": "measured build #4",
+          "values": {
+            "total execution time": 3134.611559
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_5",
+          "phase": "MEASURE",
+          "iteration": 5,
+          "title": "measured build #5",
+          "values": {
+            "total execution time": 2942.978786
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_6",
+          "phase": "MEASURE",
+          "iteration": 6,
+          "title": "measured build #6",
+          "values": {
+            "total execution time": 3192.567088
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_7",
+          "phase": "MEASURE",
+          "iteration": 7,
+          "title": "measured build #7",
+          "values": {
+            "total execution time": 3144.402718
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_8",
+          "phase": "MEASURE",
+          "iteration": 8,
+          "title": "measured build #8",
+          "values": {
+            "total execution time": 3076.886944
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_9",
+          "phase": "MEASURE",
+          "iteration": 9,
+          "title": "measured build #9",
+          "values": {
+            "total execution time": 3177.488585
+          }
+        },
+        {
+          "id": "_460e9a66_54e7_4695_a885_91cc86b21b1b_configuration_ebb80863_MEASURE_10",
+          "phase": "MEASURE",
+          "iteration": 10,
+          "title": "measured build #10",
+          "values": {
+            "total execution time": 3070.366083
+          }
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "configurationOld",
+        "title": "configurationOld",
+        "displayName": "configurationOld using Gradle 7.5.1",
+        "buildTool": "Gradle 7.5.1",
+        "tasks": "help",
+        "version": "7.5.1",
+        "gradleHome": "C:\\Users\\i30mb1\\AndroidProjects\\AD2\\gradle-user-home\\wrapper\\dists\\gradle-7.5.1-all\\1ehga6e77gqps5uk2kc5kf1vc\\gradle-7.5.1",
+        "javaHome": "C:\\Program Files\\Android\\Android Studio\\jre",
+        "usesScanPlugin": false,
+        "action": "run tasks help",
         "cleanup": "do nothing",
         "invoker": "Tooling API",
         "mutators": [
-          "ApplyAbiChangeToSourceFileMutator(D:\\a\\AD2\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\ui\\MainActivity.kt)",
-          "ApplyNonAbiChangeToSourceFileMutator(D:\\a\\AD2\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\ui\\MainActivity.kt)",
-          "ApplyChangeToAndroidResourceFileMutator(D:\\a\\AD2\\AD2\\app\\src\\main\\res\\values\\strings.xml)",
-          "ApplyChangeToAndroidLayoutFileMutator(D:\\a\\AD2\\AD2\\feature\\drawer\\src\\main\\res\\layout\\fragment_drawer.xml)"
+          "GitCheckoutMutator(cleanup: master, build: 91defc96b09839f069bd6d6efe6697326a8a12a7)"
         ],
         "args": [],
         "jvmArgs": [
@@ -379,165 +574,19 @@ const benchmarkResult =
           "java.base/java.util.concurrent.atomic\u003dALL-UNNAMED",
           "-Xmx2g",
           "-Dfile.encoding\u003dUTF-8",
-          "-Duser.country\u003dUS",
-          "-Duser.language\u003den",
+          "-Duser.country\u003dRU",
+          "-Duser.language\u003dru",
           "-Duser.variant",
           "-Dfile.encoding\u003dUTF-8"
         ],
-        "systemProperties": {},
-        "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd"
+        "systemProperties": {}
       },
       "samples": [
         {
           "name": "total execution time"
         }
       ],
-      "iterations": [
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_WARM_UP_1",
-          "phase": "WARM_UP",
-          "iteration": 1,
-          "title": "warm-up build #1",
-          "values": {
-            "total execution time": 368794.9135
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_WARM_UP_2",
-          "phase": "WARM_UP",
-          "iteration": 2,
-          "title": "warm-up build #2",
-          "values": {
-            "total execution time": 24171.3949
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_WARM_UP_3",
-          "phase": "WARM_UP",
-          "iteration": 3,
-          "title": "warm-up build #3",
-          "values": {
-            "total execution time": 18351.3866
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_WARM_UP_4",
-          "phase": "WARM_UP",
-          "iteration": 4,
-          "title": "warm-up build #4",
-          "values": {
-            "total execution time": 16820.4367
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_WARM_UP_5",
-          "phase": "WARM_UP",
-          "iteration": 5,
-          "title": "warm-up build #5",
-          "values": {
-            "total execution time": 15960.8428
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_WARM_UP_6",
-          "phase": "WARM_UP",
-          "iteration": 6,
-          "title": "warm-up build #6",
-          "values": {
-            "total execution time": 16996.954
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_1",
-          "phase": "MEASURE",
-          "iteration": 1,
-          "title": "measured build #1",
-          "values": {
-            "total execution time": 15535.142
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_2",
-          "phase": "MEASURE",
-          "iteration": 2,
-          "title": "measured build #2",
-          "values": {
-            "total execution time": 18799.4841
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_3",
-          "phase": "MEASURE",
-          "iteration": 3,
-          "title": "measured build #3",
-          "values": {
-            "total execution time": 15237.9426
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_4",
-          "phase": "MEASURE",
-          "iteration": 4,
-          "title": "measured build #4",
-          "values": {
-            "total execution time": 16205.8491
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_5",
-          "phase": "MEASURE",
-          "iteration": 5,
-          "title": "measured build #5",
-          "values": {
-            "total execution time": 14724.5228
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_6",
-          "phase": "MEASURE",
-          "iteration": 6,
-          "title": "measured build #6",
-          "values": {
-            "total execution time": 16531.0058
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_7",
-          "phase": "MEASURE",
-          "iteration": 7,
-          "title": "measured build #7",
-          "values": {
-            "total execution time": 14237.6903
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_8",
-          "phase": "MEASURE",
-          "iteration": 8,
-          "title": "measured build #8",
-          "values": {
-            "total execution time": 13638.8671
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_9",
-          "phase": "MEASURE",
-          "iteration": 9,
-          "title": "measured build #9",
-          "values": {
-            "total execution time": 15042.2337
-          }
-        },
-        {
-          "id": "_2c8e9247_7b25_4f13_b987_4dfcd01601d1_incremental_2eb050dd_MEASURE_10",
-          "phase": "MEASURE",
-          "iteration": 10,
-          "title": "measured build #10",
-          "values": {
-            "total execution time": 13351.9761
-          }
-        }
-      ]
+      "iterations": []
     }
   ]
 }

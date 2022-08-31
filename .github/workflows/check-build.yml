@@ -78,7 +78,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add gradle-profiler/measure.txt
-          git add gradle-profiler
+          git add gradle/profiler
           git commit -m "update gradle-profiler files"
           git push
