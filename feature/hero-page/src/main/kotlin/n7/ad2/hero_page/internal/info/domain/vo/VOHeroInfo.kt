@@ -21,8 +21,10 @@ sealed class VOHeroInfo {
     data class Spells(val spells: List<VOSpell>) : VOHeroInfo()
 }
 
-data class VOSpell(val name: String, val urlSpellImage: String, val isSelected: Boolean)
-
+sealed class VOSpell {
+    data class Simple(val name: String, val urlSpellImage: String, val isSelected: Boolean) : VOSpell()
+    data class Talent(val name: String, val isSelected: Boolean) : VOSpell()
+}
 
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VOHeroInfo()
 data class VOBodySimple(val body: String) : VOHeroInfo()

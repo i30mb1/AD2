@@ -7,13 +7,13 @@ import n7.ad2.android.extension.load
 import n7.ad2.hero_page.databinding.ItemSpellBinding
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 
-class SpellViewHolder(
+class TalentViewHolder(
     private val binding: ItemSpellBinding,
-    private val onSpellClickListener: (spell: VOSpell.Simple) -> Unit,
+    private val onSpellClickListener: (spell: VOSpell.Talent) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(item: VOSpell.Simple) {
-        binding.iv.load(item.urlSpellImage, n7.ad2.ui.R.drawable.square_placeholder, n7.ad2.ui.R.drawable.square_error_placeholder)
+    fun bind(item: VOSpell.Talent) {
+        binding.iv.load(n7.ad2.ui.R.drawable.talent, n7.ad2.ui.R.drawable.square_placeholder, n7.ad2.ui.R.drawable.square_error_placeholder)
         binding.root.setOnClickListener { onSpellClickListener(item) }
         bind(item.isSelected)
     }
@@ -27,10 +27,10 @@ class SpellViewHolder(
         fun from(
             layoutInflater: LayoutInflater,
             parent: ViewGroup,
-            onSpellClickListener: (spell: VOSpell.Simple) -> Unit,
-        ): SpellViewHolder {
+            onSpellClickListener: (spell: VOSpell.Talent) -> Unit,
+        ): TalentViewHolder {
             val binding = ItemSpellBinding.inflate(layoutInflater, parent, false)
-            return SpellViewHolder(binding, onSpellClickListener)
+            return TalentViewHolder(binding, onSpellClickListener)
         }
     }
 

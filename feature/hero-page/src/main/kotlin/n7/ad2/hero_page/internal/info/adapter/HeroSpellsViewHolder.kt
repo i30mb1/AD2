@@ -9,7 +9,7 @@ import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 
 class HeroSpellsViewHolder private constructor(
-    private val binding: ItemHeroSpellsBinding,
+    binding: ItemHeroSpellsBinding,
     private val spellsListAdapter: SpellsListAdapter,
 ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -23,11 +23,12 @@ class HeroSpellsViewHolder private constructor(
         fun from(
             layoutInflater: LayoutInflater,
             parent: ViewGroup,
-            onSpellClickListener: (spell: VOSpell) -> Unit,
+            onSpellClickListener: (spell: VOSpell.Simple) -> Unit,
+            onTalentClickListener: (spell: VOSpell.Talent) -> Unit,
         ): HeroSpellsViewHolder {
             val binding = ItemHeroSpellsBinding.inflate(layoutInflater, parent, false)
             val linearLayoutManager = LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)
-            val spellsListAdapter = SpellsListAdapter(layoutInflater, onSpellClickListener)
+            val spellsListAdapter = SpellsListAdapter(layoutInflater, onSpellClickListener, onTalentClickListener)
             spellsListAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
             binding.rv.adapter = spellsListAdapter
             binding.rv.layoutManager = linearLayoutManager

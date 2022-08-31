@@ -12,6 +12,14 @@ fun ImageView.load(url: String, placeHolder: Int? = null, errorPlaceHolder: Int?
     }
 }
 
+fun ImageView.load(url: Int, placeHolder: Int? = null, errorPlaceHolder: Int? = null) {
+    load(url) {
+        crossfade(1000)
+        if (placeHolder != null) placeholder(placeHolder)
+        if (errorPlaceHolder != null) error(errorPlaceHolder)
+    }
+}
+
 fun ImageView.clear() {
     clear()
 }

@@ -33,7 +33,8 @@ class HeroInfoAdapter(
     private val onPlayIconClickListener: (soundUrl: String) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
     private val onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
-    private val onSpellClickListener: (spell: VOSpell) -> Unit,
+    private val onSpellClickListener: (spell: VOSpell.Simple) -> Unit,
+    private val onTalentClickListener: (spell: VOSpell.Talent) -> Unit,
 ) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
     StickyHeaderDecorator.StickyHeaderInterface {
 
@@ -57,7 +58,7 @@ class HeroInfoAdapter(
         R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, onHeroInfoCLickListener)
         n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         n7.ad2.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
-        R.layout.item_hero_spells -> HeroSpellsViewHolder.from(layoutInflater, parent, onSpellClickListener)
+        R.layout.item_hero_spells -> HeroSpellsViewHolder.from(layoutInflater, parent, onSpellClickListener, onTalentClickListener)
         else -> error("could not find ViewHolder for $viewType")
     }
 

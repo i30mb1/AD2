@@ -46,7 +46,8 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
     private val onKeyClickListener = { key: String -> }
     private val onHeroInfoCLickListener = { heroInfo: GetVOHeroDescriptionUseCase.HeroInfo -> viewModel.load(heroInfo) }
-    private val onSpellClickListener = { spell: VOSpell -> viewModel.load(GetVOHeroDescriptionUseCase.HeroInfo.Spell(spell.name)) }
+    private val onSpellClickListener = { spell: VOSpell.Simple -> viewModel.load(GetVOHeroDescriptionUseCase.HeroInfo.Spell(spell.name)) }
+    private val onTalentClickListener = { spell: VOSpell.Talent -> viewModel.load(GetVOHeroDescriptionUseCase.HeroInfo.Spell(spell.name)) }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -87,7 +88,8 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             ::doOnPlayIconClicked,
             onKeyClickListener,
             onHeroInfoCLickListener,
-            onSpellClickListener
+            onSpellClickListener,
+            onTalentClickListener,
         )
         val linearLayoutManager = LinearLayoutManager(requireContext())
 

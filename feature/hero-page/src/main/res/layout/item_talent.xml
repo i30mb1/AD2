@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stateListAnimator="@animator/spell_selected_animation">
+
+    <n7.ad2.ui.SelectableImageView
+        android:id="@+id/iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+</com.google.android.material.card.MaterialCardView>
