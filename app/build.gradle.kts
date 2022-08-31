@@ -18,10 +18,13 @@ android {
     signingConfigs {
         getByName("debug") { /* automatic signs with debug key*/ }
         create("release") {
-            storeFile = file(gradleLocalProperties(rootDir).getProperty("SIGNING_FILE"))
-            storePassword = gradleLocalProperties(rootDir).getProperty("STORE_PASSWORD")
-            keyAlias = gradleLocalProperties(rootDir).getProperty("KEY_ALIAS")
-            keyPassword = gradleLocalProperties(rootDir).getProperty("KEY_PASSWORD")
+           val properties = gradleLocalProperties(rootDir)
+            if (properties.containsKey("SIGNING_FILE")) {
+                storeFile = file(properties.getProperty("SIGNING_FILE"))
+                storePassword = properties.getProperty("STORE_PASSWORD")
+                keyAlias = properties.getProperty("KEY_ALIAS")
+                keyPassword = properties.getProperty("KEY_PASSWORD")
+            }
         }
     }
 
