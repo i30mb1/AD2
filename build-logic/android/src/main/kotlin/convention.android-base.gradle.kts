@@ -1,5 +1,4 @@
 import com.android.build.gradle.BaseExtension
-import gradle.kotlin.dsl.accessors._6076749d6351b9fdce8c5a61387fb22f.lintChecks
 
 plugins {
     kotlin("android")
@@ -28,5 +27,5 @@ configure<BaseExtension> {
 }
 
 dependencies {
-    lintChecks(project(Module.Core.rules))
+//    lintChecks(project(Module.Core.rules))
 }
