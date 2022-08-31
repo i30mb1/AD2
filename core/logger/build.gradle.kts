@@ -1,5 +1,6 @@
 plugins {
     id("convention.kotlin-jvm")
+    id("java-test-fixtures")
 }
 
 dependencies {
@@ -9,4 +10,6 @@ dependencies {
 
     testImplementation(libs.bundles.test)
     testImplementation(libs.coroutinesDebug)
+
+    testFixturesImplementation(libs.coroutines)
 }

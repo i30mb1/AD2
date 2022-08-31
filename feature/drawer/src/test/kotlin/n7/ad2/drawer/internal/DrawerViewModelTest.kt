@@ -1,5 +1,6 @@
 package n7.ad2.drawer.internal
 
+import LoggerFake
 import PreferenceFake
 import ResourcesFake
 import com.google.common.truth.Truth
@@ -11,7 +12,6 @@ import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.drawer.internal.data.remote.SettingsApiFake
 import n7.ad2.drawer.internal.domain.usecase.GetMenuItemsUseCase
 import n7.ad2.drawer.internal.domain.vo.VOMenu
-import n7.ad2.logger.LoggerFake
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
