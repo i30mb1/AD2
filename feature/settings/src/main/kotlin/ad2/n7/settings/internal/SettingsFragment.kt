@@ -1,16 +1,11 @@
 package ad2.n7.settings.internal
 
-import android.app.Activity
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
-import androidx.core.app.TaskStackBuilder
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import fake.`package`.name.`for`.sync.R
 
-class SettingsFragment : Fragment(R.layout.fragment_settings) {
+class SettingsFragment : Fragment() {
 
     companion object {
         fun getInstance(): SettingsFragment = SettingsFragment()
