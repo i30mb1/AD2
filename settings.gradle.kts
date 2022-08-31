@@ -18,11 +18,8 @@ pluginManagement {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
         google()  // com.android.library
     }
-
-    resolutionStrategy {
-        plugins {
-            kotlin("kapt") version "1.6.10"
-        }
+    plugins {
+        kotlin("kapt") version "1.6.10"
     }
 }
 
