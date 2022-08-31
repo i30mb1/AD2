@@ -1,10 +1,12 @@
 plugins {
     id("convention.android-library")
+    id("convention.compose")
     kotlin("kapt")
 }
 
 dependencies {
     implementation(libs.workManager)
+    implementation(libs.bundles.compose)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
