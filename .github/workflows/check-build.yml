@@ -73,7 +73,7 @@ jobs:
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
       - name: MeasureBuild
-        run: gradle measureBuild --no-daemon
+        run: gradle measureBuild --no-daemon -q
       - name: Copy Measurment
         shell: cmd
         run: |
