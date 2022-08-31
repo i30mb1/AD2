@@ -1,24 +1,19 @@
-clean_build_without_cache {
-    tasks = ["clean", ":app:assembleDebug"]
-    gradle-args = ["--no-build-cache"]
+build_pure {
+    tasks       = ["clean", ":app:assembleDebug"]
+    gradle-args = ["--no-build-cache", "-Dorg.gradle.caching=false"]
+}
+
+incremental {
+    tasks = [":app:assembleDebug"]
+    apply-abi-change-to              = "app/src/main/kotlin/n7/ad2/ui/MainActivity.kt"
+    apply-non-abi-change-to          = "app/src/main/kotlin/n7/ad2/ui/MainActivity.kt"
+    apply-android-resource-change-to = "app/src/main/res/values/strings.xml"
+    apply-android-layout-change-to   = "feature/drawer/src/main/res/layout/fragment_drawer.xml"
 }
 
 configuration {
     tasks = ["help"]
 }
 
-incremental {
-    tasks = [":app:assembleDebug"]
-    apply-abi-change-to = "app/src/main/java/n7/ad2/ui/MainActivity.kt"
-    apply-non-abi-change-to = "app/src/main/java/n7/ad2/ui/MainActivity.kt"
-    apply-android-resource-change-to="app/src/main/res/values/strings.xml"
-    apply-android-layout-change-to="feature/drawer/src/main/res/layout/fragment_drawer.xml"
-}
-
-clean {
-    tasks = ["clean"]
-}
-
 # https://dev.to/autonomousapps/benchmarking-builds-with-gradle-profiler-oa8
-# gradle-profiler.bat --benchmark --output-dir profile-out --project-dir C:\Users\*\ --scenario-file profiler.scenarios clean
 # gradle-profiler\bin\gradle-profiler.bat --benchmark --output-dir gradle-profiler\last-output --scenario-file gradle-profiler\profiler.scenarios clean
