@@ -49,22 +49,22 @@ android {
         }
     }
 
-    flavorDimensions += "environment"
-    productFlavors {
-        create("dev") {
-            dimension = "environment"
-            applicationIdSuffix = ".dev"
-            versionNameSuffix = "/dev"
-        }
-        create("prod") {
-            dimension = "environment"
-            applicationIdSuffix = ".prod"
-            versionNameSuffix = "/prod"
-        }
-    }
-    variantFilter {
-        if (name == "devDebug" || name == "devRelease") ignore = true
-    }
+//    flavorDimensions += "environment"
+//    productFlavors {
+//        create("dev") {
+//            dimension = "environment"
+//            applicationIdSuffix = ".dev"
+//            versionNameSuffix = "/dev"
+//        }
+//        create("prod") {
+//            dimension = "environment"
+//            applicationIdSuffix = ".prod"
+//            versionNameSuffix = "/prod"
+//        }
+//    }
+//    variantFilter {
+//        if (name == "devDebug" || name == "devRelease") ignore = true
+//    }
 
 //    setDynamicFeatures(mutableSetOf(":feature_streams"))
 
