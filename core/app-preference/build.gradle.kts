@@ -1,6 +1,5 @@
 plugins {
     id("convention.android-library")
-    id("java-test-fixtures")
     kotlin("kapt")
 }
 
