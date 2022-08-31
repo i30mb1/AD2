@@ -1,22 +1,19 @@
-rootProject.name = "build-logic"
-
 dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()  // тут лежит kotlin-stdlib-jdk8
+    }
+    versionCatalogs {
+        create("libs") {
+            from(files("build-logic/gradle/libs.versions.toml"))
+        }
     }
 }
 
 pluginManagement {
     repositories {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
-        google()
+        google()  // com.android.library
     }
-}
 
-include("bump-version-plugin")
-include("measure-build-time")
-include("extensions")
-include("kotlin")
-include("android")
-include("detekt")
+}
