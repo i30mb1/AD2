@@ -1,14 +1,8 @@
 rootProject.name = "AD2"
 
-dependencyResolutionManagement {
-    repositories {
-        google()
-        mavenCentral()  // тут лежит kotlin-stdlib-jdk8
-    }
-}
-
 pluginManagement {
     includeBuild("build-logic")
+    includeBuild("build-logic/dependencies")
     repositories {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
         google()  // com.android.library
@@ -27,6 +21,10 @@ pluginManagement {
         }
     }
 
+}
+
+plugins {
+    id("convention.dependency")
 }
 
 include(":app")
