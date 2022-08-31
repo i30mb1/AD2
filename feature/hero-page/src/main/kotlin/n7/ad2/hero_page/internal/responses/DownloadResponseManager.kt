@@ -66,10 +66,11 @@ class DownloadResponseManager(
         try {
             val uri = item.audioUrl.toUri()
             val downloadRequest = DownloadManager.Request(uri)
-                .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
+                .setAllowedOverMetered(true)
                 .setTitle(item.title)
-                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
-                .setDestinationInExternalPublicDir(ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
+                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
+                .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
+            downloadRequest.allowScanningByMediaScanner()
             val downloadId = downloadManager.enqueue(downloadRequest)
             registerObserverFor(downloadId)
             return downloadId
@@ -118,7 +119,12 @@ class DownloadResponseManager(
         )
         val selection = MediaStore.Audio.Media.SIZE + "<=?"
         val selectionArgs = arrayOf("500")
-        val sortOrder = MediaStore.Audio.Media.DISPLAY_NAME
+        val sortOrder = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//            MediaStore.Audio.Media.DISPLAY_NAME
+            "${MediaStore.MediaColumns.GENERATION_ADDED} DESC"
+        } else {
+            "${MediaStore.MediaColumns.DATE_ADDED} DESC"
+        }
         val cursor = resolver.query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection, selection, selectionArgs, sortOrder)
         cursor?.use {
             val idIndex = it.getColumnIndex(MediaStore.Audio.Media._ID)
