@@ -17,7 +17,7 @@ pluginManagement {
         google()  // com.android.library
     }
     plugins {
-        kotlin("kapt") version "1.6.10"
+        kotlin("kapt") version "1.7.10"
     }
 }
 

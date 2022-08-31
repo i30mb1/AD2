@@ -1,14 +1,14 @@
 [versions]
-room = "2.4.2"
-coroutines = "1.6.3"
+room = "2.4.3"
+coroutines = "1.6.4"
 moshi = "1.13.0"
-dagger = "2.42"
+dagger = "2.43.2"
 workManager = "2.7.1"
-lifecycle = "2.5.0"
+lifecycle = "2.5.1"
 androidGradlePlugin = "7.2.2"
-lint = "30.2.0" # androidGradlePlugin + 23
-kotlin = "1.6.10"
-compose = "1.1.1"
+lint = "30.2.2" # androidGradlePlugin + 23
+kotlin = "1.7.10"
+compose = "1.2.1"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -33,8 +33,8 @@ livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref =
 viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" } # viewModelScope + savedStateHandle
 lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" } # flowWithLifecycle
 
-fragmentKtx = "androidx.fragment:fragment-ktx:1.5.0" # easy fragment transaction + by viewModels()
-activityKtx = "androidx.activity:activity-ktx:1.5.0" # onBackPress support for Fragment
+fragmentKtx = "androidx.fragment:fragment-ktx:1.5.2" # easy fragment transaction + by viewModels()
+activityKtx = "androidx.activity:activity-ktx:1.5.1" # onBackPress support for Fragment
 
 lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
@@ -43,22 +43,22 @@ androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref =
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
-composeActivity = "androidx.activity:activity-compose:1.4.0"
-composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+composeActivity = "androidx.activity:activity-compose:1.5.1"
+composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
 composeFoundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 composeMaterial = { module = "androidx.compose.material:material", version.ref = "compose" }
 composeAnimation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 composeTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 composeUITest = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
-composeThemeAdapter = { module = "com.google.android.material:compose-theme-adapter", version.ref = "compose" }
+composeThemeAdapter = "com.google.android.material:compose-theme-adapter:1.1.17"
 composePaging = "androidx.paging:paging-compose:1.0.0-alpha16"
 
 exif = "androidx.exifinterface:exifinterface:1.3.3"
 metrics = "androidx.metrics:metrics-performance:1.0.0-alpha01"
-exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.18.0"
+exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.18.1"
 preference = "androidx.preference:preference:1.1.1"
 preferenceKtx = "androidx.preference:preference-ktx:1.1.1"
-appCompat = "androidx.appcompat:appcompat:1.4.2"
+appCompat = "androidx.appcompat:appcompat:1.5.0"
 dataStorePref = "androidx.datastore:datastore-preferences:1.0.0"
 recyclerView = "androidx.recyclerview:recyclerview:1.2.1"
 ticker = "com.robinhood.ticker:ticker:2.0.4"
@@ -69,8 +69,8 @@ retrofitScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
 paging3 = "androidx.paging:paging-runtime:3.1.1"
 material = "com.google.android.material:material:1.6.1"
 constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
-coil = "io.coil-kt:coil:2.1.0"
-jsoup = "org.jsoup:jsoup:1.11.2" # Jsoup для разбора html
+coil = "io.coil-kt:coil:2.2.0"
+jsoup = "org.jsoup:jsoup:1.15.3" # Jsoup для разбора html
 firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
 playCore = "com.google.android.play:core:1.10.3"
 playCoreKtx = "com.google.android.play:core-ktx:1.8.1" # auto update + rateMe
@@ -80,11 +80,11 @@ springAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
 springAnimationKtx = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
 instantApps = "com.google.android.gms:play-services-instantapps:18.0.1"
 viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
-splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha02"
+splashScreen = "androidx.core:core-splashscreen:1.0.0"
 performance = "androidx.core:core-performance:1.0.0-alpha02"
 
 coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
-coroutinesDebug = "org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.6.3"
+coroutinesDebug = "org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.6.4"
 testCore = "androidx.test:core:1.4.0" # Core library
 testCoreKtx = "androidx.test:core-ktx:1.4.0"
 testRunner = "androidx.test:runner:1.4.0" # AndroidJUnitRunner
