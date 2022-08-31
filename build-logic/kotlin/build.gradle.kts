@@ -5,5 +5,6 @@ plugins {
 dependencies {
     implementation(libs.androidGradlePlugin)
     implementation(libs.kotlinGradlePlugin)
+    implementation("org.jacoco:org.jacoco.core:0.8.8")
     implementation(project(":extensions"))
 }
