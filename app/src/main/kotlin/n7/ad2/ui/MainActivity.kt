@@ -35,7 +35,7 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         injector.component.inject(this)
-        installSplashScreen().setKeepVisibleCondition(::shouldKeepOnScreen)
+        installSplashScreen().setKeepOnScreenCondition(::shouldKeepOnScreen)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupInsets()
