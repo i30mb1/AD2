@@ -5,12 +5,10 @@ import android.animation.ValueAnimator
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.launch
 import n7.ad2.R
+import n7.ad2.android.extension.showSnackbar
 import n7.ad2.databinding.ActivityLicenseBinding
-import n7.ad2.utils.extension.showSnackbar
 
 class LicensesActivity : FragmentActivity() {
 
@@ -30,15 +28,13 @@ class LicensesActivity : FragmentActivity() {
     }
 
     private fun startBlinking() {
-        lifecycleScope.launch {
-            ValueAnimator.ofObject(ArgbEvaluator(), 0, getColor(android.R.color.holo_purple), getColor(android.R.color.holo_red_dark), 0).apply {
-                duration = 2000
-                addUpdateListener { animator -> binding.root.setBackgroundColor(animator.animatedValue as Int) }
-                repeatCount = ValueAnimator.INFINITE
-                repeatMode = ValueAnimator.REVERSE
-                start()
-            }
-
+        ValueAnimator.ofObject(ArgbEvaluator(), 0, getColor(android.R.color.holo_purple), getColor(android.R.color.holo_red_dark), 0).apply {
+            duration = 2000
+            addUpdateListener { animator -> binding.root.setBackgroundColor(animator.animatedValue as Int) }
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+            start()
         }
     }
+
 }
