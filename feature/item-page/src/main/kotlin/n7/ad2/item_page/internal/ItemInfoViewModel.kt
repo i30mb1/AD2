@@ -12,8 +12,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
+import n7.ad2.android.AD2ErrorMessage
 import n7.ad2.android.ErrorMessage
-import n7.ad2.android.ErrorMessageDelegate
 import n7.ad2.item_page.internal.domain.usecase.GetItemInfoUseCase
 import n7.ad2.item_page.internal.domain.vo.VOItemInfo
 
@@ -21,7 +21,7 @@ class ItemInfoViewModel @AssistedInject constructor(
     appInfo: AppInformation,
     private val getItemInfoUseCase: GetItemInfoUseCase,
     @Assisted private val itemName: String,
-) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
+) : ViewModel(), ErrorMessage by AD2ErrorMessage() {
 
     @AssistedFactory
     interface Factory {

@@ -6,14 +6,14 @@ import androidx.lifecycle.asLiveData
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.catch
+import n7.ad2.android.AD2ErrorMessage
 import n7.ad2.android.ErrorMessage
-import n7.ad2.android.ErrorMessageDelegate
 import n7.ad2.hero_page.internal.guides.domain.interactor.GetVOHeroGuideItemsUseCase
 import n7.ad2.hero_page.internal.guides.domain.vo.VOGuideItem
 
 class HeroGuideViewModel @AssistedInject constructor(
     private val getVOHeroGuideItemsUseCase: GetVOHeroGuideItemsUseCase,
-) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
+) : ViewModel(), ErrorMessage by AD2ErrorMessage() {
 
     @AssistedFactory
     interface Factory {

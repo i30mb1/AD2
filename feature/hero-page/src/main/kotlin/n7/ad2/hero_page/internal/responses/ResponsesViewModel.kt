@@ -13,8 +13,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
+import n7.ad2.android.AD2ErrorMessage
 import n7.ad2.android.ErrorMessage
-import n7.ad2.android.ErrorMessageDelegate
 import n7.ad2.hero_page.internal.responses.domain.interactor.GetHeroResponsesInteractor
 import n7.ad2.hero_page.internal.responses.domain.vo.VOResponse
 
@@ -22,7 +22,7 @@ class ResponsesViewModel @AssistedInject constructor(
     @Assisted private val heroName: String,
     private val appInformation: AppInformation,
     private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
-) : ViewModel(), ErrorMessage by ErrorMessageDelegate() {
+) : ViewModel(), ErrorMessage by AD2ErrorMessage() {
 
     @AssistedFactory
     interface Factory {

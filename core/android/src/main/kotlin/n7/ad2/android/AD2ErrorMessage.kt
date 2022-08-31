@@ -9,7 +9,7 @@ interface ErrorMessage {
     suspend fun showError(throwable: Throwable)
 }
 
-class ErrorMessageDelegate : ErrorMessage {
+class AD2ErrorMessage : ErrorMessage {
     private val _error = Channel<String>(Channel.BUFFERED)
     override val error = _error.receiveAsFlow()
     override suspend fun showError(throwable: Throwable) = _error.send(throwable.message ?: throwable.toString())
