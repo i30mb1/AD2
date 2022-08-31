@@ -330,7 +330,7 @@ div.controls .btn {
 <script>
 const benchmarkResult =
 {
-  "date": "2022-05-15T19:25:45.968272800Z",
+  "date": "2022-05-30T10:36:58.900243900Z",
   "environment": {
     "profilerVersion": "0.18.0",
     "operatingSystem": "windows server 2022 amd64 10.0"
@@ -358,6 +358,7 @@ const benchmarkResult =
         ],
         "args": [],
         "jvmArgs": [
+          "-XX:+UseParallelGC",
           "--add-opens",
           "java.base/java.util\u003dALL-UNNAMED",
           "--add-opens",
@@ -384,7 +385,7 @@ const benchmarkResult =
           "-Dfile.encoding\u003dUTF-8"
         ],
         "systemProperties": {},
-        "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd"
+        "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd"
       },
       "samples": [
         {
@@ -393,147 +394,147 @@ const benchmarkResult =
       ],
       "iterations": [
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_WARM_UP_1",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_WARM_UP_1",
           "phase": "WARM_UP",
           "iteration": 1,
           "title": "warm-up build #1",
           "values": {
-            "total execution time": 371510.9752
+            "total execution time": 426826.0277
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_WARM_UP_2",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_WARM_UP_2",
           "phase": "WARM_UP",
           "iteration": 2,
           "title": "warm-up build #2",
           "values": {
-            "total execution time": 26707.7308
+            "total execution time": 31659.2598
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_WARM_UP_3",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_WARM_UP_3",
           "phase": "WARM_UP",
           "iteration": 3,
           "title": "warm-up build #3",
           "values": {
-            "total execution time": 22035.021
+            "total execution time": 29505.4311
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_WARM_UP_4",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_WARM_UP_4",
           "phase": "WARM_UP",
           "iteration": 4,
           "title": "warm-up build #4",
           "values": {
-            "total execution time": 21974.6368
+            "total execution time": 25772.3545
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_WARM_UP_5",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_WARM_UP_5",
           "phase": "WARM_UP",
           "iteration": 5,
           "title": "warm-up build #5",
           "values": {
-            "total execution time": 19256.8305
+            "total execution time": 22598.0147
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_WARM_UP_6",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_WARM_UP_6",
           "phase": "WARM_UP",
           "iteration": 6,
           "title": "warm-up build #6",
           "values": {
-            "total execution time": 20814.8617
+            "total execution time": 24030.6604
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_1",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_1",
           "phase": "MEASURE",
           "iteration": 1,
           "title": "measured build #1",
           "values": {
-            "total execution time": 17849.9088
+            "total execution time": 23233.8985
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_2",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_2",
           "phase": "MEASURE",
           "iteration": 2,
           "title": "measured build #2",
           "values": {
-            "total execution time": 17967.2705
+            "total execution time": 25054.9656
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_3",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_3",
           "phase": "MEASURE",
           "iteration": 3,
           "title": "measured build #3",
           "values": {
-            "total execution time": 17441.915
+            "total execution time": 22325.130501
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_4",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_4",
           "phase": "MEASURE",
           "iteration": 4,
           "title": "measured build #4",
           "values": {
-            "total execution time": 17801.5042
+            "total execution time": 21787.1905
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_5",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_5",
           "phase": "MEASURE",
           "iteration": 5,
           "title": "measured build #5",
           "values": {
-            "total execution time": 19698.3111
+            "total execution time": 21973.702799
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_6",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_6",
           "phase": "MEASURE",
           "iteration": 6,
           "title": "measured build #6",
           "values": {
-            "total execution time": 17178.7647
+            "total execution time": 19788.924201
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_7",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_7",
           "phase": "MEASURE",
           "iteration": 7,
           "title": "measured build #7",
           "values": {
-            "total execution time": 16824.8254
+            "total execution time": 18637.711001
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_8",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_8",
           "phase": "MEASURE",
           "iteration": 8,
           "title": "measured build #8",
           "values": {
-            "total execution time": 15401.2829
+            "total execution time": 19824.1104
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_9",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_9",
           "phase": "MEASURE",
           "iteration": 9,
           "title": "measured build #9",
           "values": {
-            "total execution time": 15138.0195
+            "total execution time": 18764.355
           }
         },
         {
-          "id": "_ddc84430_91c6_45c6_8f34_d5e6010aa541_incremental_2eb050dd_MEASURE_10",
+          "id": "_5cd08947_da6b_41c2_b04d_c226c94dacf3_incremental_2eb050dd_MEASURE_10",
           "phase": "MEASURE",
           "iteration": 10,
           "title": "measured build #10",
           "values": {
-            "total execution time": 15672.0984
+            "total execution time": 18204.9123
           }
         }
       ]
