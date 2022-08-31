@@ -39,7 +39,7 @@ jobs:
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
       - name: Build with Gradle
-        run: gradle build -q
+        run: gradle build -q --no-daemon
       - name: Copy APK
         uses: actions/upload-artifact@v2
         with:
@@ -70,7 +70,7 @@ jobs:
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
       - name: MeasureBuild
-        run: gradle measureBuild
+        run: gradle measureBuild --no-daemon
       - name: Copy Measurment
         shell: cmd
         run: |
@@ -80,3 +80,5 @@ jobs:
           git add gradle-profiler
           git commit -m "update gradle-profiler files"
           git push
+      - name: Stop Gradle Deamon
+        run: gradle --stop
