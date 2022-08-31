@@ -91,7 +91,7 @@ internal class AD2SpanParser @Inject constructor(
             "underline" -> result[0, result.length] = UnderlineSpan()
             "image" -> {
                 val drawable = Drawable.createFromStream(res.getAssets(value), null)
-                result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
+                if (drawable != null) result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
             }
             "click" -> result[0, result.length] = AD2ClickableSpan(AD2ClickableSpan.Data(value, bufferText))
             "style" -> when (value) {
