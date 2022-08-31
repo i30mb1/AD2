@@ -94,7 +94,7 @@ class DownloadResponseManager(
             put(MediaStore.Audio.Media.DATE_ADDED, date)
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) put(MediaStore.Audio.Media.IS_PENDING, 1)
         }
-        val outputUri = resolver.insert(audioCollection, responseDetails)!!
+        val outputUri = resolver.insert(audioCollection, responseDetails) ?: error("something wrong with contentProvider")
         URL("").openStream().use { input ->
             resolver.openOutputStream(outputUri).use { output ->
                 input.copyTo(output!!)
