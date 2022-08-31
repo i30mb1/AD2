@@ -8,11 +8,11 @@ plugins {
 android {
     defaultConfig {
         applicationId = "n7.ad2"
-        versionCode = 555
-        versionName = "1"
+        versionCode = getVersionCode()
+        versionName = getVersionName()
 
         resourceConfigurations.addAll(listOf("ru", "en"))
-//        setProperty("archivesBaseName", "$applicationId-$versionName")
+        setProperty("archivesBaseName", "$applicationId-$versionName")
     }
 
     signingConfigs {

@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: AD2-prod-debug.apk
-          path: app/build/outputs/apk/prod/debug/app-prod-debug.apk
+          path: app/build/outputs/apk/prod/debug/*.apk
   measure:
     runs-on: windows-2022
     steps:
