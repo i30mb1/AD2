@@ -12,6 +12,7 @@ import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.drawer.R
 import n7.ad2.drawer.internal.data.remote.SettingsApi
+import n7.ad2.drawer.internal.data.remote.model.Menu
 import n7.ad2.drawer.internal.data.remote.model.Settings
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
@@ -23,9 +24,18 @@ internal class GetMenuItemsUseCase @Inject constructor(
     private val preference: Preference,
     private val settingsApi: SettingsApi,
     private val logger: Logger,
-    private val moshi: Moshi,
+    moshi: Moshi,
     private val dispatchers: DispatchersProvider,
 ) {
+
+    private val defaultMenu = listOf(
+        Menu(VOMenuType.HEROES),
+        Menu(VOMenuType.ITEMS),
+        Menu(VOMenuType.NEWS),
+        Menu(VOMenuType.TOURNAMENTS),
+        Menu(VOMenuType.STREAMS),
+        Menu(VOMenuType.GAMES),
+    )
 
     @OptIn(ExperimentalStdlibApi::class)
     private val settingsAdapter = moshi.adapter<Settings>()
@@ -36,15 +46,15 @@ internal class GetMenuItemsUseCase @Inject constructor(
             preference.saveSettings(settingsAdapter.toJson(newSettings))
             emit(newSettings)
         } else {
-            emit(settingsAdapter.fromJson(preference.getSettings()) ?: Settings())
+            emit(settingsAdapter.fromJson(preference.getSettings()) ?: error("could not convert settings from Json"))
         }
     }
         .catch { error ->
-            logger.log("Could not load settings (${error.message})")
-            emit(settingsAdapter.fromJson(preference.getSettings()) ?: Settings())
+            logger.log("could not load settings (${error.message})")
+            emit(Settings(defaultMenu))
         }
         .map { settings ->
-            settings.menu.map { menu ->
+            settings.menu?.mapNotNull { menu ->
                 when (menu.type) {
                     VOMenuType.HEROES -> VOMenu(menu.type, res.getString(R.string.heroes), menu.isEnable, true)
                     VOMenuType.ITEMS -> VOMenu(menu.type, res.getString(R.string.items), menu.isEnable)
@@ -53,8 +63,9 @@ internal class GetMenuItemsUseCase @Inject constructor(
                     VOMenuType.STREAMS -> VOMenu(menu.type, res.getString(R.string.streams), menu.isEnable)
                     VOMenuType.GAMES -> VOMenu(menu.type, res.getString(R.string.games), menu.isEnable)
                     VOMenuType.UNKNOWN -> VOMenu(menu.type, menu.type.name, false)
+                    else -> null
                 }
-            }
+            } ?: error("sorry we fucked up...")
         }
         .flowOn(dispatchers.Default)
 

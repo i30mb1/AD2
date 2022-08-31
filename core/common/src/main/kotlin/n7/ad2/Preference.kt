@@ -12,7 +12,7 @@ interface Preference {
 }
 
 class PreferenceFake : Preference {
-    override suspend fun isNeedToUpdateSettings(): Boolean = false
+    override suspend fun isNeedToUpdateSettings(): Boolean = true
     override suspend fun saveSettings(data: String) = Unit
     override suspend fun getSettings(): String = ""
     override suspend fun saveDate(date: Int) = Unit

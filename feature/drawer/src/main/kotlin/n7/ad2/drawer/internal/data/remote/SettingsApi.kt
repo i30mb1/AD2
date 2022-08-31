@@ -2,7 +2,9 @@ package n7.ad2.drawer.internal.data.remote
 
 import com.squareup.moshi.Moshi
 import dagger.Lazy
+import n7.ad2.drawer.internal.data.remote.model.Menu
 import n7.ad2.drawer.internal.data.remote.model.Settings
+import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -31,5 +33,17 @@ internal interface SettingsApi {
 }
 
 internal class SettingsApiFake : SettingsApi {
-    override suspend fun getSettings(): Settings = Settings()
+    var isError = false
+    override suspend fun getSettings(): Settings {
+        return if (isError) {
+            error("oops!")
+        } else {
+            Settings(
+                menu = listOf(
+                    Menu(VOMenuType.HEROES, true),
+                    Menu(VOMenuType.NEWS, false),
+                )
+            )
+        }
+    }
 }
