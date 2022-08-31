@@ -1,5 +1,4 @@
 import com.android.build.gradle.BaseExtension
-import com.android.build.gradle.internal.dsl.BuildType
 import org.gradle.configurationcache.extensions.capitalized
 
 plugins {
@@ -15,13 +14,10 @@ tasks.withType<Test>().configureEach {
         isEnabled = true
 //        includes = emptyList()
 //        excludes = emptyList()
-//        isIncludeNoLocationClasses = true
     }
 }
 
 project.afterEvaluate {
-    val projectName = project.name
-    println("NAME ----> $projectName")
     if (isAndroidModule(project)) setupAndroidReporting()
     else setupKotlinReporting()
 }
@@ -33,17 +29,9 @@ fun isAndroidModule(project: Project): Boolean {
 }
 
 fun setupAndroidReporting() {
-
-//    afterEvaluate {
-//        android {
-//
-//        }
-//    }
     configure<BaseExtension> {
         val productFlavors = productFlavors.map { flavor -> flavor.name }.toMutableList()
-        val buildType = buildTypes.filter { type: BuildType -> true }.map { type -> type.name }
-        println("buildType -----> $buildType")
-        println("productFlavors -----> $productFlavors")
+        val buildType = buildTypes.map { type -> type.name }
         if (productFlavors.isEmpty()) productFlavors.add("")
         productFlavors.forEach { productFlavorsName ->
             buildType.forEach { buildTypeName ->
@@ -51,22 +39,17 @@ fun setupAndroidReporting() {
                     false -> "$productFlavorsName${buildTypeName.capitalized()}"
                     true -> buildTypeName
                 }
-                val path = "$productFlavorsName/$buildTypeName"
                 val jacocoTaskName = "jacoco${name.capitalized()}Report"
                 val testTaskName = "test${name.capitalized()}UnitTest"
-                println("testTaskName ------> $testTaskName")
                 tasks.register<JacocoReport>(jacocoTaskName) {
                     dependsOn(testTaskName)
                     group = "verification"
                     val dirs = listOf("src/main/kotlin")
-                    val kotlinTree = fileTree("$buildDir/tmp/kotlin-classes/$name") {
-                        include()
-                    }
+                    val kotlinTree = fileTree("$buildDir/tmp/kotlin-classes/$name")
                     classDirectories.setFrom(kotlinTree)
                     executionData.setFrom("$buildDir/jacoco/$testTaskName.exec")
                     sourceDirectories.setFrom(dirs)
                     additionalSourceDirs.setFrom(dirs)
-
                     reports {
                         html.required.set(true)
                         html.outputLocation.set(file("${buildDir}/reports/jacoco"))
@@ -84,28 +67,18 @@ fun setupKotlinReporting() {
             html.required.set(true)
             html.outputLocation.set(file("${buildDir}/reports/jacoco"))
         }
-        sourceDirectories.setFrom(sourceDirectoriesTree)
-        classDirectories.setFrom(classDirectoriesTree)
-        executionData.setFrom(executionDataTree)
+        sourceDirectories.setFrom(fileTree(project.buildDir) {
+            exclude("src/main/kotlin/**/*")
+        })
+        classDirectories.setFrom(fileTree(project.buildDir) {
+//            exclude(listOf("**/*"))
+        })
+        executionData.setFrom(fileTree(project.buildDir) {
+            include("jacoco/test.exec")
+        })
 
     }
     tasks.withType<JacocoCoverageVerification>().configureEach {
 //        sourceDirectories.setFrom()
     }
-}
-
-val fileFilter = listOf<String>(
-//    "**/*"
-)
-
-val executionDataTree = fileTree(project.buildDir) {
-    include("jacoco/test.exec")
-}
-
-val classDirectoriesTree = fileTree(project.buildDir) {
-    exclude(fileFilter)
-}
-
-val sourceDirectoriesTree = fileTree(project.buildDir) {
-    exclude("src/main/kotlin/**/*")
 }
