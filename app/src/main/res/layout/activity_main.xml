@@ -8,12 +8,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <n7.ad2.utils.FPSView
+    <n7.ad2.ui.frameCounter.FPSView
         android:id="@+id/tv_fps"
         style="@style/TextAppearance.H5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:layout_marginEnd="8dp" />
+
+    <n7.ad2.ui.frameCounter.JunkView
+        style="@style/TextAppearance.H5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp" />
 
 </FrameLayout>

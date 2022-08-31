@@ -36,6 +36,7 @@ activityKtx = "androidx.activity:activity-ktx:1.1.0" # onBackPress support for F
 lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
 
+metrics = "androidx.metrics:metrics-performance:1.0.0-alpha01"
 exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
 preference = "androidx.preference:preference:1.1.1"
 preferenceKtx = "androidx.preference:preference-ktx:1.1.1"

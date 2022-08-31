@@ -3,6 +3,8 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.metrics)
+
     api(libs.appCompat)
     api(libs.splashScreen)
     api(libs.material)
