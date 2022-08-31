@@ -2,6 +2,7 @@ package n7.ad2.init
 
 import android.app.ActivityManager
 import android.app.Application
+import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -25,6 +26,8 @@ class HistoricalProcessExitReasonsInitializer : Initializer {
             for (exitInfo in exitInfoList) {
                 val description = exitInfo.description
                 val reason = exitInfo.reason
+                val stackTrace: String? = exitInfo.traceInputStream?.bufferedReader().use { bufferedReader -> bufferedReader?.readText() }
+                if (reason == ApplicationExitInfo.REASON_ANR) stackTrace?.length
                 if (description != null) logger.log("$reason: $description")
             }
         }
