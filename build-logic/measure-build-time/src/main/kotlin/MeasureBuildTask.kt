@@ -5,6 +5,19 @@ abstract class MeasureBuildTask : DefaultTask() {
 
     @TaskAction
     open fun action() {
+        project.exec {
+            commandLine(
+                "gradle-profiler/bin/gradle-profiler.bat",
+            )
+            args = listOf(
+                "--benchmark",
+                "--output-dir",
+                "gradle-profiler/last-output",
+                "--scenario-file",
+                "gradle-profiler/profiler.scenarios",
+                "configuration",
+            )
+        }
         val output = project.file("gradle-profiler/last-output/benchmark.csv").readLines()
             .filter { it.startsWith("measured") }
             .map { it.substringAfter(",") }
@@ -12,6 +25,26 @@ abstract class MeasureBuildTask : DefaultTask() {
         val input = project.file("gradle-profiler/measure.txt")
         if (!input.exists()) input.createNewFile()
         input.appendText("Execution time $average ms\n")
+//        project.exec {
+//            commandLine("git")
+//            args = listOf("config", "user.name", "github-actions")
+//        }
+//        project.exec {
+//            commandLine("git")
+//            args = listOf("config", "user.email", "github-actions@github.com")
+//        }
+//        project.exec {
+//            commandLine("git")
+//            args = listOf("add", "gradle-profiler")
+//        }
+//        project.exec {
+//            commandLine("git")
+//            args = listOf("commit", "-m", "update measure.txt")
+//        }
+//        project.exec {
+//            commandLine("git")
+//            args = listOf("push")
+//        }
     }
 
 }
