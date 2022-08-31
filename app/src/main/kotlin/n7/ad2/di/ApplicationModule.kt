@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.work.WorkManager
 import dagger.Binds
 import dagger.Provides
+import dagger.Reusable
 import dagger.multibindings.ElementsIntoSet
 import n7.ad2.AD2AppInformation
 import n7.ad2.AD2Provider
@@ -25,11 +26,11 @@ import java.util.Calendar
 @dagger.Module
 interface ApplicationModule {
 
-    @ApplicationScope
+    @Reusable
     @Binds
     fun provideAppInfo(aD2AppInformation: AD2AppInformation): AppInformation
 
-    @ApplicationScope
+    @Reusable
     @Binds
     fun provideAppResource(appResources: AD2Resources): Resources
 
@@ -42,11 +43,9 @@ interface ApplicationModule {
         @Provides
         fun provideProvider(): Provider = AD2Provider
 
-        @ApplicationScope
         @Provides
         fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
 
-        @ApplicationScope
         @Provides
         fun provideCalendar(): Calendar = Calendar.getInstance()
 

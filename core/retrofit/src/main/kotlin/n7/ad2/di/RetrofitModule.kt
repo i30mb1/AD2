@@ -2,8 +2,8 @@ package n7.ad2.di
 
 import dagger.Module
 import dagger.Provides
+import dagger.Reusable
 import n7.ad2.AppInformation
-import n7.ad2.dagger.ApplicationScope
 import n7.ad2.logger.Logger
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -18,7 +18,7 @@ object RetrofitModule {
 
     @InternalApi
     @Provides
-    @ApplicationScope
+    @Reusable
     fun provideHttpLogger(logger: Logger): HttpLoggingInterceptor {
         val result = HttpLoggingInterceptor(logger::log)
         result.level = HttpLoggingInterceptor.Level.BASIC
@@ -26,7 +26,7 @@ object RetrofitModule {
     }
 
     @Provides
-    @ApplicationScope
+    @Reusable
     fun provideBaseOkHttpClientBuilder(
         @InternalApi httpLoggingInterceptor: HttpLoggingInterceptor,
         appInformation: AppInformation,
@@ -44,7 +44,7 @@ object RetrofitModule {
     }
 
     @Provides
-    @ApplicationScope
+    @Reusable
     fun provideBaseOkHttpClient(baseOkHttpClientBuilder: OkHttpClient.Builder): OkHttpClient {
         return baseOkHttpClientBuilder.build()
     }
