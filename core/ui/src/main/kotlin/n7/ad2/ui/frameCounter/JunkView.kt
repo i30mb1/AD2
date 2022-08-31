@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.os.Build
 import android.text.DynamicLayout
 import android.text.Editable
 import android.text.Layout
@@ -44,11 +43,7 @@ class JunkView(
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         if (w == oldw) return
-        textLayout = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            DynamicLayout.Builder.obtain(editable, textPaint, w).setAlignment(Layout.Alignment.ALIGN_OPPOSITE).build()
-        } else {
-            DynamicLayout(editable, textPaint, w, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, true)
-        }
+        textLayout = DynamicLayout.Builder.obtain(editable, textPaint, w).setAlignment(Layout.Alignment.ALIGN_OPPOSITE).build()
     }
 
     override fun onDraw(canvas: Canvas) {
