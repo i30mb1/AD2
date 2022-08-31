@@ -11,7 +11,6 @@ android {
 }
 
 dependencies {
-    implementation(project(Module.Feature.heroPage))
     androidTestImplementation(libs.testRunner)
     androidTestImplementation(libs.testJunit)
     androidTestImplementation(libs.benchmarkJunit)
