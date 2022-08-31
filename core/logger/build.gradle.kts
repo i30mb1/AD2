@@ -8,4 +8,5 @@ dependencies {
     implementation(project(Module.Core.common))
 
     testImplementation(libs.bundles.test)
+    testImplementation(libs.coroutinesDebug)
 }
