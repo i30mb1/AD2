@@ -10,7 +10,6 @@ dependencyResolutionManagement {
 pluginManagement {
     repositories {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
-        google()
     }
 }
 
