@@ -3,6 +3,7 @@ package n7.ad2.android
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.ImageDecoder
 import android.graphics.Matrix
 import android.net.Uri
 import androidx.exifinterface.media.ExifInterface
@@ -28,7 +29,14 @@ class ImagesCompressor {
         File(context.getExternalFilesDir(null), "Jpeg.jpeg").writeBytes(resultJpeg)
         File(context.getExternalFilesDir(null), "original.jpeg").writeBytes(resultOrig)
         File(context.getExternalFilesDir(null), "Webp.webp").writeBytes(resultWebpLossy)
+
         return resultWebpLossy
+    }
+
+    private fun getBitmap(context: Context, uri: Uri) {
+        val source = ImageDecoder.createSource(context.contentResolver, uri)
+        val bitmap: Bitmap = ImageDecoder.decodeBitmap(source)
+        // or MediaStore.Images.Media.getBitmap()
     }
 
     private fun compress(bitmap: Bitmap, format: Bitmap.CompressFormat): ByteArray {
