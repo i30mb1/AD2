@@ -5,7 +5,9 @@ moshi = "1.13.0"
 dagger = "2.41"
 workManager = "2.7.1"
 lifecycle = "2.4.0"
-lint = "30.0.4" # gradlePlugin + 23
+androidGradlePlugin = "7.2.0"
+lint = "30.2.0" # androidGradlePlugin + 23
+kotlinGradlePlugin = "1.6.10"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -36,6 +38,8 @@ activityKtx = "androidx.activity:activity-ktx:1.1.0" # onBackPress support for F
 lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
 
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 metrics = "androidx.metrics:metrics-performance:1.0.0-alpha01"
 exoPlayerCore = "com.google.android.exoplayer:exoplayer:2.16.1"
 preference = "androidx.preference:preference:1.1.1"
