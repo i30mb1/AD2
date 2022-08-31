@@ -80,5 +80,3 @@ jobs:
           git add gradle-profiler
           git commit -m "update gradle-profiler files"
           git push
-      - name: Stop Gradle Deamon
-        run: gradle --stop
