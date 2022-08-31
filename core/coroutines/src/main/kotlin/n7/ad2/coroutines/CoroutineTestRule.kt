@@ -1,4 +1,4 @@
-package n7.ad2.database_guides
+package n7.ad2.coroutines
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -7,7 +7,6 @@ import kotlinx.coroutines.test.TestDispatcher
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
-import n7.ad2.coroutines.DispatchersProvider
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
 
@@ -28,11 +27,11 @@ class CoroutineTestRule(
         override val IO: CoroutineDispatcher = testDispatcher
     }
 
-    override fun starting(description: Description?) {
+    override fun starting(description: Description) {
         Dispatchers.setMain(testDispatcher)
     }
 
-    override fun finished(description: Description?) {
+    override fun finished(description: Description) {
         Dispatchers.resetMain()
     }
 

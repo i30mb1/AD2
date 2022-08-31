@@ -4,8 +4,9 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.dagger))
-    kapt(libs.daggerAnnotation)
-
     api(libs.coroutines)
+    implementation(project(Module.Core.dagger))
+    implementation(libs.bundles.test)
+
+    kapt(libs.daggerAnnotation)
 }
