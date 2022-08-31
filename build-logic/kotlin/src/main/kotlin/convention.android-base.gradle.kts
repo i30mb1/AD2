@@ -1,4 +1,5 @@
 import com.android.build.gradle.BaseExtension
+import gradle.kotlin.dsl.accessors._44fb0a05fcd9e15986a76c748cb18b72.lintChecks
 
 configure<BaseExtension> {
     compileSdkVersion(31)
@@ -21,6 +22,6 @@ configure<BaseExtension> {
     }
 }
 
-//dependencies {
-//    lintChecks(project(Module.Core.rules))
-//}
+dependencies {
+    lintChecks(project(Module.Core.rules))
+}
