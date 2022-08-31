@@ -6,10 +6,10 @@ import dagger.Binds
 import dagger.Provides
 import n7.ad2.AD2AppInformation
 import n7.ad2.AD2AppResources
+import n7.ad2.AD2Provider
 import n7.ad2.AppInformation
 import n7.ad2.AppResources
 import n7.ad2.dagger.ApplicationScope
-import n7.ad2.provider.AD2Provider
 import n7.ad2.provider.Provider
 import java.util.Calendar
 
