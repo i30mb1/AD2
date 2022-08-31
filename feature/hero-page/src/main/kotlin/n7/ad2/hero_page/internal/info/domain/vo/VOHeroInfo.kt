@@ -9,8 +9,10 @@ import n7.ad2.ui.adapter.HeaderViewHolder
 sealed class VOHeroInfo {
     data class HeaderSound(
         val title: String,
-        val hotkey: String,
-        val legacyKey: String,
+        val hotkey: String?,
+        val legacyKey: String?,
+        val isPlaying: Boolean,
+        val soundUrl: String?,
     ) : VOHeroInfo()
 
     data class Header(val item: HeaderViewHolder.Data) : VOHeroInfo()

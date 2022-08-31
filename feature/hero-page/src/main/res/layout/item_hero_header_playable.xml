@@ -24,14 +24,14 @@
 
         <ImageView
             android:id="@+id/iv_play"
-            android:layout_width="@dimen/title_min_height"
-            android:layout_height="@dimen/title_min_height"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/selector_play" />
 
         <TextView
             android:id="@+id/tv_hot_key"
-            android:layout_width="@dimen/title_min_height"
-            android:layout_height="@dimen/title_min_height"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
             android:background="@color/transparent"
             android:gravity="center"
             android:maxEms="1"
@@ -40,13 +40,14 @@
 
         <TextView
             android:id="@+id/tv_legacy_key"
-            android:layout_width="@dimen/title_min_height"
-            android:layout_height="@dimen/title_min_height"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
             android:background="@color/transparent"
             android:gravity="center"
             android:maxEms="1"
             android:textAppearance="?textAppearance.H6.White.Bold"
             tools:text="T" />
+
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
