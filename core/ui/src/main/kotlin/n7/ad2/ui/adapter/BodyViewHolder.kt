@@ -15,7 +15,18 @@ class BodyViewHolder private constructor(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     @JvmInline
-    value class Data(val text: Spanned)
+    value class Data(val text: Spanned) {
+        init {
+            require(text.isNotEmpty()) { "should not be empty" }
+        }
+
+        companion object {
+            operator fun invoke(text: Spanned?): Data {
+                requireNotNull(text)
+                return Data(text)
+            }
+        }
+    }
 
     private val lineHeight by lazyUnsafe { binding.tvText.lineHeight - 2.dpToPx }
 
