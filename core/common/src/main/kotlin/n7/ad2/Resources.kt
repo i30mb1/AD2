@@ -9,6 +9,7 @@ interface Resources {
     fun getString(resourceID: Int, formatArgs: Any): String
     fun getAssets(path: String): InputStream
     fun getExternalFilesDir(path: String): File?
+    fun getFilesDir(): File?
 }
 
 class ResourcesFake : Resources {
@@ -16,4 +17,5 @@ class ResourcesFake : Resources {
     override fun getString(resourceID: Int, formatArgs: Any): String = ""
     override fun getAssets(path: String): InputStream = ByteArrayInputStream(ByteArray(1))
     override fun getExternalFilesDir(path: String): File? = null
+    override fun getFilesDir(): File? = null
 }
