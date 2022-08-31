@@ -2,9 +2,6 @@ rootProject.name = "build-logic"
 
 pluginManagement {
     includeBuild("dependencies")
-    repositories {
-        gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
-    }
 }
 
 plugins {
