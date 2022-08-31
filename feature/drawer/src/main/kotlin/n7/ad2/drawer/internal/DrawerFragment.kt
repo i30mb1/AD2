@@ -71,6 +71,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentDrawerBinding.bind(view)
+        lifecycle.addObserver(binding.fingerCoordinator)
 
         setupMenuAdapter()
         setupFingerCoordinator()
@@ -82,6 +83,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
 
     override fun onDestroyView() {
         super.onDestroyView()
+        lifecycle.removeObserver(binding.fingerCoordinator)
         binding.rvLog.adapter = null
         binding.rvMenu.adapter = null
         _binding = null

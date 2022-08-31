@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package n7.ad2.drawer.internal
 
 import android.content.Context
@@ -14,6 +16,8 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.withTranslation
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.color.MaterialColors
 import n7.ad2.drawer.R
 import n7.ad2.ktx.dpToPx
@@ -22,7 +26,7 @@ import n7.ad2.ktx.spToPx
 internal class FingerCoordinate(
     context: Context,
     attrs: AttributeSet,
-) : View(context, attrs) {
+) : View(context, attrs), DefaultLifecycleObserver {
 
     companion object {
         private val OFFSET_START = 3.dpToPx
@@ -37,6 +41,11 @@ internal class FingerCoordinate(
     }
     private var textLayout: Layout? = null
     private var editable: Editable = SpannableStringBuilder()
+
+    override fun onCreate(owner: LifecycleOwner) {
+//        https://betterprogramming.pub/empowered-lifecycle-aware-viewmodel-for-android-f495de9a8170
+        super.onCreate(owner)
+    }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         if (w == oldw) return
