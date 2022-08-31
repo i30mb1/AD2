@@ -1,6 +1,7 @@
 package n7.ad2.streams.internal.data.remote.retrofit
 
 import com.squareup.moshi.Moshi
+import dagger.Lazy
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -30,10 +31,10 @@ interface TwitchHLSApi {
 
     companion object {
 
-        fun get(client: OkHttpClient, moshi: Moshi): TwitchHLSApi {
+        fun get(client: Lazy<OkHttpClient>, moshi: Moshi): TwitchHLSApi {
             return Retrofit.Builder()
                 .baseUrl("http://usher.twitch.tv/api/channel/hls/")
-                .client(client)
+                .callFactory { request -> client.get().newCall(request) }
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build()
                 .create()

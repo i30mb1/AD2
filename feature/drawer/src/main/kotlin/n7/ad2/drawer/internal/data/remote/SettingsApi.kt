@@ -1,6 +1,7 @@
 package n7.ad2.drawer.internal.data.remote
 
 import com.squareup.moshi.Moshi
+import dagger.Lazy
 import n7.ad2.drawer.internal.data.remote.model.Settings
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -15,12 +16,12 @@ internal interface SettingsApi {
 
     companion object {
         fun get(
-            client: OkHttpClient,
+            client: Lazy<OkHttpClient>,
             moshi: Moshi,
         ): SettingsApi {
             return Retrofit.Builder()
                 .baseUrl("https://raw.githubusercontent.com/i30mb1/AD2/master/")
-                .client(client)
+                .callFactory { request -> client.get().newCall(request) }
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .build()
                 .create()

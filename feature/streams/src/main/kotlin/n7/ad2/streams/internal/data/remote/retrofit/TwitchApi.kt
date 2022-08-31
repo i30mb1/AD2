@@ -1,6 +1,7 @@
 package n7.ad2.streams.internal.data.remote.retrofit
 
 import com.squareup.moshi.Moshi
+import dagger.Lazy
 import n7.ad2.streams.internal.data.remote.Streams
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -27,12 +28,12 @@ internal interface TwitchApi {
     companion object {
 
         fun get(
-            client: OkHttpClient,
+            client: Lazy<OkHttpClient>,
             moshi: Moshi,
         ): TwitchApi {
             return Retrofit.Builder()
                 .baseUrl("https://api.twitch.tv/helix/")
-                .client(client)
+                .callFactory { request -> client.get().newCall(request) }
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .build()
                 .create()

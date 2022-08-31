@@ -1,6 +1,7 @@
 package n7.ad2.streams.internal.data.remote.retrofit
 
 import com.squareup.moshi.Moshi
+import dagger.Lazy
 import n7.ad2.streams.internal.data.remote.model.StreamGQLData
 import n7.ad2.streams.internal.data.remote.model.StreamGQLRequest
 import okhttp3.OkHttpClient
@@ -22,12 +23,12 @@ interface TwitchGQLApi {
     companion object {
 
         fun get(
-            client: OkHttpClient,
+            client: Lazy<OkHttpClient>,
             moshi: Moshi,
         ): TwitchGQLApi {
             return Retrofit.Builder()
                 .baseUrl("https://gql.twitch.tv/")
-                .client(client)
+                .callFactory { request -> client.get().newCall(request) }
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .build()
                 .create()

@@ -31,6 +31,8 @@ object RetrofitModule {
         @InternalApi httpLoggingInterceptor: HttpLoggingInterceptor,
         appInformation: AppInformation,
     ): OkHttpClient.Builder {
+//        https://www.droidcon.com/2019/08/07/dagger-party-tricks/
+        require(Thread.currentThread().name != "main") { "init should not be on main thread" }
         val builder = OkHttpClient.Builder()
             .connectTimeout(10, TimeUnit.SECONDS)
             .writeTimeout(10, TimeUnit.SECONDS)
@@ -43,6 +45,8 @@ object RetrofitModule {
 
     @Provides
     @ApplicationScope
-    fun provideBaseOkHttpClient(baseOkHttpClientBuilder: OkHttpClient.Builder): OkHttpClient = baseOkHttpClientBuilder.build()
+    fun provideBaseOkHttpClient(baseOkHttpClientBuilder: OkHttpClient.Builder): OkHttpClient {
+        return baseOkHttpClientBuilder.build()
+    }
 
 }

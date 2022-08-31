@@ -53,9 +53,6 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     private val binding: FragmentDrawerBinding get() = _binding!!
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
     private val viewModel: DrawerViewModel by viewModel { drawerViewModel.create() }
-    private val logLayoutManager = object : LinearLayoutManager(requireContext()) {
-        override fun canScrollVertically(): Boolean = false
-    }.apply { stackFromEnd = true }
     private val onMenuItemClick: (menuItem: VOMenu) -> Unit = { menuItem: VOMenu ->
         if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {
             Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
@@ -182,6 +179,10 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     private fun setupLoggerAdapter() = lifecycleScope.launch {
         val shouldDisplayLog = viewModel.isLogWidgetEnabled()
         if (!shouldDisplayLog) return@launch
+        val logLayoutManager = object : LinearLayoutManager(requireContext()) {
+            override fun canScrollVertically(): Boolean = false
+        }
+        logLayoutManager.stackFromEnd = true
         binding.rvLog.layoutManager = logLayoutManager
         binding.rvLog.adapter = loggerAdapter
         logger.getLogFlow()
