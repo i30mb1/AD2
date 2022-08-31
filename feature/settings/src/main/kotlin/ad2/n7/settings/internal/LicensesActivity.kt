@@ -1,14 +1,13 @@
-package n7.ad2.ui.setting
+package ad2.n7.settings.internal
 
+import android.R
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.snackbar.Snackbar
-import n7.ad2.R
 import n7.ad2.android.extension.showSnackbar
-import n7.ad2.databinding.ActivityLicenseBinding
 
 class LicensesActivity : FragmentActivity() {
 
@@ -28,7 +27,7 @@ class LicensesActivity : FragmentActivity() {
     }
 
     private fun startBlinking() {
-        ValueAnimator.ofObject(ArgbEvaluator(), 0, getColor(android.R.color.holo_purple), getColor(android.R.color.holo_red_dark), 0).apply {
+        ValueAnimator.ofObject(ArgbEvaluator(), 0, getColor(R.color.holo_purple), getColor(R.color.holo_red_dark), 0).apply {
             duration = 2000
             addUpdateListener { animator -> binding.root.setBackgroundColor(animator.animatedValue as Int) }
             repeatCount = ValueAnimator.INFINITE

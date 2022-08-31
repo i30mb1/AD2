@@ -52,6 +52,7 @@ include(
     ":feature:games",
     ":feature:tournaments",
     ":feature:news",
+    ":feature:settings",
     ":feature:hero-page",
     ":feature:item-page",
 )

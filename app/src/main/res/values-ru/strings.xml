@@ -2,36 +2,20 @@
 <resources>
     <string name="hero_response_ringtone_set">Устанавливаем…</string>
     <string name="hero_personal_tip_manta_descr">показывает может ли выбранная способность работать у иллюзий</string>
-
     <string name="all_new_version">Новая версия</string>
     <string name="all_error_internet">Недоступно без интернета</string>
     <string name="all_check_update">Проверить обновление</string>
     <string name="setting">Настройки</string>
-    <string name="setting_category_about_title">О ПРИЛОЖЕНИИ</string>
-    <string name="setting_category_setting_title">НАСТРОЙКИ</string>
-    <string name="setting_theme_title">Поменять тему</string>
-    <string name="setting_contact_title">Связаться с создателем</string>
-    <string name="setting_contact_summary">проблемы? баги? сотрудничество?</string>
-    <string name="setting_high_quality_desc_off">выключена</string>
-    <string name="setting_high_quality_desc_on">включена</string>
-    <string name="setting_tell_friend_title">Рассказать друзьям</string>
-    <string name="setting_tell_friend_summary">у тебя же %1$d друга, ведь так?</string>
     <string name="toolbar_search_hint">Поиск по имени…</string>
     <string name="update_ok">обновление не требуется</string>
     <string name="setting_subscription_summary">Готовы сделать следующий шаг?</string>
     <string name="all_grand_permission">Требуется разрешение</string>
     <string name="all_enable">ENABLE</string>
     <string name="setting_subscription_title">Подписка</string>
-    <string name="setting_account_title">Отображать ваш ранг</string>
-    <string name="setting_account_summary">Показывайте его друзьям</string>
-    <string name="setting_log_title">Панель с лог-текстом</string>
-    <string name="setting_log_summary">на главном экране</string>
     <string name="log_in">Log In</string>
     <string name="hero_fragment_notes">Примечания</string>
     <string name="hero_fragment_story">История</string>
     <string name="item_hero_personal_description_talents">Таланты</string>
-
-
     <string name="dialog_response_set_ringtone">Поставить на рингтон</string>
     <string name="open_file">Открыть</string>
     <string name="hero_responses_fragment_download_first">Скачайте звук</string>
@@ -52,7 +36,6 @@
     <string name="all_come_back_tomorrow">Вернитесь завтра или купите подписку</string>
     <string name="game_fragment_earn_5_premium">Вы получаете 5 дней подписки</string>
     <string name="fragment_game_G1">сколько стоит это заклинание</string>
-
     <string name="dialog_update_title">Найдено новое обновление!</string>
     <string name="dialog_update_message">Не пропусти возможность поднять уровень приложению!</string>
     <string name="dialog_tip_do_not_show">не показывать снова</string>
@@ -110,13 +93,8 @@
     <string name="EASTER_EGG_OK">Я ПРИНИМАЮ 1 ДЕНЬ ПОДПИСКИ</string>
     <string name="main_activity_update_me">Запустить обновление?</string>
     <string name="main_activity_okay">Да</string>
-
     <string name="recipe">Рецепт</string>
-
-
     <string name="popup_talent">улучшается при выборе таланта</string>
     <string name="popup_aghanim">улучшается при покупке аганима</string>
     <string name="popup_saved">сохранён в памяти</string>
-
-
 </resources>

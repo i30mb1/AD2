@@ -7,11 +7,12 @@ import n7.ad2.provider.api.HeroesApi
 import n7.ad2.provider.api.ItemPageApi
 import n7.ad2.provider.api.ItemsApi
 import n7.ad2.provider.api.NewsApi
+import n7.ad2.provider.api.SettingsApi
 import n7.ad2.provider.api.StreamsApi
 import n7.ad2.provider.api.TournamentsApi
 
 interface Provider {
-
+    val settingsApi: SettingsApi
     val streamApi: StreamsApi
     val heroesApi: HeroesApi
     val newsApi: NewsApi

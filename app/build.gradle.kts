@@ -107,4 +107,5 @@ dependencies {
     implementation(project(Module.Feature.drawer))
     implementation(project(Module.Feature.heroPage))
     implementation(project(Module.Feature.itemPage))
+    implementation(project(Module.Feature.settings))
 }

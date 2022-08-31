@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_category_setting_title">APP SETTING</string>
+    <string name="setting_account_title">Display your account</string>
+    <string name="setting_log_title">Panel with log-text</string>
+    <string name="setting_log_summary">on main screen</string>
+    <string name="setting_account_summary">Show your friends</string>
+    <string name="setting_about_title" translatable="false">About Dota 2</string>
+    <string name="setting_private_policy_title" translatable="false">Private Policy</string>
+    <string name="setting_about_summary" translatable="false">v%1$s</string>
+    <string name="setting_contact_title">Contact us</string>
+    <string name="setting_contact_summary">Bugs? Errors? Contribution?</string>
+    <string name="setting_theme_title">Change theme</string>
+    <string name="setting_category_about_title">ABOUT APP</string>
+    <string name="setting_tell_friend_title">Tell a friend</string>
+    <string name="setting_tell_friend_summary">Have you %1$d friends? Do not you?</string>
+    <string name="license_text1" translatable="false">This Freeware License is a binding legal agreement between the individual who downloads the software (You) and the Licensor.</string>
+    <string name="license_text10" translatable="false">6. Your license to use the software shall be revocable by the Licensor upon written notice to you. This license shall automatically terminate upon your violation of the terms hereof or upon your use of the software beyond the scope of the license provided herein.</string>
+    <string name="license_text11" translatable="false">7. Use within the scope of this license is free of charge and no royalty or licensing fees shall be payable by you. Use beyond the scope of this license shall constitute copyright infringement. This license shall be effective and bind you upon your downloading of the software.</string>
+    <string name="license_text12" translatable="false">8. You accept the software on an AS IS and with all faults basis. No representations and warranties are made to you regarding any aspect of the software.</string>
+    <string name="license_text13" translatable="false">9. THE LICENSOR HEREBY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, RELATIVE TO THE SOFTWARE, INCLUDING BUT NOT LIMITED TO ANY WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTIBILITY. LICENSOR SHALL NOT BE LIABLE OR RESPONSIBLE FOR ANY DAMAGES, INJURIES OR LIABILITIES CAUSED DIRECTLY OR INDIRECTLY FROM THE USE OF THE SOFTWARE, INCLUDING BUT NOT LIMITED TO INCIDENTAL, CONSEQUENTIAL OR SPECIAL DAMAGES.</string>
+    <string name="license_text14" translatable="false">10. This Freeware License shall be interpreted under the laws of Italy. You agree that all controversies pertaining to the software and/or this Freeware Agreement shall be brought in the courts of Rome. You hereby submit to the jurisdictions of such court.</string>
+    <string name="license_text15" translatable="false">11. Licensor\'s failure to enforce any rights here under or its copyright in the software shall not be construed as amending this agreement or waiving any of Licensor\'s rights hereunder or under any provision of state of national law.</string>
+    <string name="license_text16" translatable="false">12. Consent to Use of Data: You agree that Application Provider may collect and use technical data and related information, including but not limited to technical information about Your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates,product support and other services to You (if any) related to the Licensed Application. Application Provider may use this information, as long as it is in a form that does not personally identify You, to improve its products or to provide services or technologies to You.</string>
+    <string name="license_text2" translatable="false">THIS SOFTWARE IS COPYRIGHTED AND THE OWNER OF THE COPYRIGHT CLAIMS ALL EXCLUSIVE RIGHTS TO SUCH SOFTWARE, EXCEPT AS LICENSED TO USERS HEREUNDER AND SUBJECT TO STRICT COMPLIANCE WITH THE TERMS OF THIS LICENSE</string>
+    <string name="license_text3" translatable="false">Even though a license fee is not paid for use of such Freeware, it does not mean that there are not conditions for using such Freeware. As a condition for granting you a license to use Freeware programs that are available through this site, you agree to all of the following terms and conditions. You are deemed to have read, understand, and have accepted all such terms and conditions upon executing a download of any Freeware program.\nIf you fail to abide by any of the terms and conditions set forth herein, your license to use such Freeware shall be immediately and automatically revoked, without any notice or other action by the Copyright Owner.</string>
+    <string name="license_text4" translatable="false">TERMS AND CONDITIONS</string>
+    <string name="license_text5" translatable="false">1. You are granted a non-exclusive license to use the Downloaded Software subject to your compliance with all of the terms and conditions of this Freeware License</string>
+    <string name="license_text6" translatable="false">2. You may only use the software on a device that you own, lease or control.</string>
+    <string name="license_text7" translatable="false">3. You are only granted a license for the machine-readable, object code portion of the software. You will not modify, enhance, reverse engineer or otherwise alter the software from its current state.</string>
+    <string name="license_text8" translatable="false">4. You may not distribute, copy, publish, assign, sell, bargain, convey, transfer, pledge, lease or grant any further rights to use the software.</string>
+    <string name="license_text9" translatable="false">5. You will not have any proprietary rights in and to the software. You acknowledge and agree that the Licensor retains all copyrights and other proprietary rights in and to the software.</string>
+    <string name="license_title" translatable="false">AD2 Freeware license terms and conditions</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_account_title">Отображать ваш ранг</string>
+    <string name="setting_account_summary">Показывайте его друзьям</string>
+    <string name="setting_log_title">Панель с лог-текстом</string>
+    <string name="setting_log_summary">на главном экране</string>
+    <string name="setting_category_about_title">О ПРИЛОЖЕНИИ</string>
+    <string name="setting_category_setting_title">НАСТРОЙКИ</string>
+    <string name="setting_theme_title">Поменять тему</string>
+    <string name="setting_contact_title">Связаться с создателем</string>
+    <string name="setting_contact_summary">проблемы? баги? сотрудничество?</string>
+    <string name="setting_high_quality_desc_off">выключена</string>
+    <string name="setting_high_quality_desc_on">включена</string>
+    <string name="setting_tell_friend_title">Рассказать друзьям</string>
+    <string name="setting_tell_friend_summary">у тебя же %1$d друга, ведь так?</string>
+</resources>
