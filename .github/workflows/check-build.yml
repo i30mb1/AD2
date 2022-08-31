@@ -48,6 +48,7 @@ jobs:
           name: AD2-prod-debug.apk
           path: app/build/outputs/apk/prod/debug/*.apk
   measure:
+    if: false
     runs-on: windows-2022
     steps:
       - name: checkout
