@@ -5,11 +5,13 @@ import androidx.work.WorkManager
 import dagger.Binds
 import dagger.Provides
 import n7.ad2.AD2AppInformation
-import n7.ad2.AD2AppResources
 import n7.ad2.AD2Provider
+import n7.ad2.AD2Resources
 import n7.ad2.AppInformation
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import n7.ad2.dagger.ApplicationScope
+import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
 import java.util.Calendar
 
@@ -22,7 +24,11 @@ interface ApplicationModule {
 
     @ApplicationScope
     @Binds
-    fun provideAppResource(appResources: AD2AppResources): AppResources
+    fun provideAppResource(appResources: AD2Resources): Resources
+
+    @ApplicationScope
+    @Binds
+    fun provideLogger(logger: AD2Logger): Logger
 
     companion object {
 

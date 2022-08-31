@@ -1,12 +1,12 @@
 package n7.ad2.games.api
 
 import android.app.Application
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import n7.ad2.dagger.Dependencies
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 
 interface GamesDependencies : Dependencies {
     val application: Application
-    val res: AppResources
-    val logger: AD2Logger
+    val res: Resources
+    val logger: Logger
 }

@@ -7,13 +7,13 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.launch
-import n7.ad2.app_preference.AppPreference
+import n7.ad2.Preference
 import n7.ad2.drawer.internal.domain.usecase.GetMenuItemsUseCase
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 
 internal class DrawerViewModel @AssistedInject constructor(
     private val getMenuItemsUseCase: GetMenuItemsUseCase,
-    private val preferences: AppPreference,
+    private val preferences: Preference,
 ) : ViewModel() {
 
     @AssistedFactory

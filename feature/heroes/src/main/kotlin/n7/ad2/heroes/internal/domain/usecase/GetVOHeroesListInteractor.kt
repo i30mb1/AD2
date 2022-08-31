@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.onStart
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.heroes.internal.domain.vo.VOHero
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
@@ -16,7 +16,7 @@ import javax.inject.Inject
 internal class GetVOHeroesListUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
     private val heroRepository: HeroRepository,
-    private val logger: AD2Logger,
+    private val logger: Logger,
 ) {
 
     operator fun invoke(): Flow<List<VOHero>> {

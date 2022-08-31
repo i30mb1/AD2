@@ -1,7 +1,7 @@
 package n7.ad2.hero_page.internal.guides.domain.usecase
 
 import kotlinx.coroutines.withContext
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.internal.guides.domain.adapter.toVOEasyToWinHeroes
@@ -17,7 +17,7 @@ import javax.inject.Inject
 
 class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
-    private val res: AppResources,
+    private val res: Resources,
 ) {
 
     @OptIn(ExperimentalStdlibApi::class)

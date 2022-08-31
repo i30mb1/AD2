@@ -5,11 +5,11 @@ import android.os.Handler
 import android.os.Looper
 import android.os.StrictMode
 import n7.ad2.AppInformation
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 
 class StrictModeInitializer : Initializer {
 
-    override fun init(app: Application, logger: AD2Logger, appInformation: AppInformation) {
+    override fun init(app: Application, logger: Logger, appInformation: AppInformation) {
         if (appInformation.isDebug) {
             Handler(Looper.getMainLooper()).postAtFrontOfQueue {
                 StrictMode.setThreadPolicy(

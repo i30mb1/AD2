@@ -17,4 +17,6 @@ dependencies {
 
     kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)
+
+    testImplementation(libs.bundles.test)
 }

@@ -17,7 +17,7 @@ import android.view.View
 import androidx.annotation.VisibleForTesting
 import androidx.core.text.set
 import androidx.core.text.toSpannable
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import javax.inject.Inject
 
 class AD2ClickableSpan(private val data: Data) : ClickableSpan() {
@@ -36,7 +36,7 @@ data class RemainingText(val text: String) : Analyzer
 data class AttributeAndValue(val attribute: String, val value: String)
 
 class AD2StringParser @Inject constructor(
-    private val res: AppResources,
+    private val res: Resources,
 ) {
 
     companion object {

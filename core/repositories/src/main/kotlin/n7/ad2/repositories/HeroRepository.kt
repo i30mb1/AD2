@@ -6,14 +6,14 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import kotlinx.coroutines.flow.Flow
 import n7.ad2.AppLocale
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
 import javax.inject.Inject
 
 class HeroRepository @Inject constructor(
-    private val res: AppResources,
+    private val res: Resources,
     private val heroesDao: HeroesDao,
 ) {
 

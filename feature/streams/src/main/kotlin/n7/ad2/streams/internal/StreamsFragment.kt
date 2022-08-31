@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.viewModel
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import n7.ad2.streams.R
 import n7.ad2.streams.databinding.FragmentStreamsBinding
 import n7.ad2.streams.internal.adapter.StreamsItemDecorator
@@ -34,7 +34,7 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
     }
 
     @Inject lateinit var streamsFactory: StreamsViewModel.Factory
-    @Inject lateinit var logger: AD2Logger
+    @Inject lateinit var logger: Logger
 
     private var _binding: FragmentStreamsBinding? = null
     private val binding: FragmentStreamsBinding get() = _binding!!

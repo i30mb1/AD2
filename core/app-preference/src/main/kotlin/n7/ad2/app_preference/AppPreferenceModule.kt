@@ -1,6 +1,7 @@
 package n7.ad2.app_preference
 
 import android.app.Application
+import n7.ad2.Preference
 import n7.ad2.app_preference.domain.usecase.GetCurrentDayUseCase
 import n7.ad2.dagger.ApplicationScope
 
@@ -12,6 +13,6 @@ class AppPreferenceModule {
     fun provideAppPreference(
         application: Application,
         getCurrentDayUseCase: GetCurrentDayUseCase,
-    ): AppPreference = AppPreference(application, getCurrentDayUseCase)
+    ): Preference = AD2Preference(application, getCurrentDayUseCase)
 
 }

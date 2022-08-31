@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 import n7.ad2.AppInformation
 import n7.ad2.dagger.ApplicationScope
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
@@ -19,7 +19,7 @@ object RetrofitModule {
     @InternalApi
     @Provides
     @ApplicationScope
-    fun provideHttpLogger(logger: AD2Logger): HttpLoggingInterceptor {
+    fun provideHttpLogger(logger: Logger): HttpLoggingInterceptor {
         val result = HttpLoggingInterceptor(logger::log)
         result.level = HttpLoggingInterceptor.Level.BASIC
         return result

@@ -6,6 +6,7 @@ plugins {
 dependencies {
     implementation(libs.dataStorePref)
 
+    implementation(project(Module.Core.common))
     implementation(project(Module.Core.dagger))
 
     kapt(libs.daggerAnnotation)

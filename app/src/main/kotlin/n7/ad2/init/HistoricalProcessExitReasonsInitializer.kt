@@ -7,11 +7,11 @@ import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresApi
 import n7.ad2.AppInformation
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 
 class HistoricalProcessExitReasonsInitializer : Initializer {
 
-    override fun init(app: Application, logger: AD2Logger, appInformation: AppInformation) {
+    override fun init(app: Application, logger: Logger, appInformation: AppInformation) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             HistoricalProcessExitReasons().init(app, logger)
         }
@@ -20,7 +20,7 @@ class HistoricalProcessExitReasonsInitializer : Initializer {
     private class HistoricalProcessExitReasons {
 
         @RequiresApi(Build.VERSION_CODES.R)
-        fun init(application: Application, logger: AD2Logger) {
+        fun init(application: Application, logger: Logger) {
             val activityManager = application.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
             val exitInfoList = activityManager.getHistoricalProcessExitReasons(null, 0, 1)
             for (exitInfo in exitInfoList) {

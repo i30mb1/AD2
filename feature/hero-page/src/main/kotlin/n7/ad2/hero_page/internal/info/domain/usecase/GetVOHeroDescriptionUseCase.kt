@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AppLocale
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.internal.info.HeroStatistics
@@ -14,7 +14,7 @@ import n7.ad2.hero_page.internal.info.domain.model.LocalHeroDescription
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.toStringList
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.span_parser.AD2StringParser
 import n7.ad2.ui.adapter.BodyViewHolder
@@ -22,11 +22,11 @@ import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
-    private val res: AppResources,
+    private val res: Resources,
     private val heroRepository: HeroRepository,
     private val aD2StringParser: AD2StringParser,
     private val moshi: Moshi,
-    private val logger: AD2Logger,
+    private val logger: Logger,
     private val dispatchers: DispatchersProvider,
 ) {
 

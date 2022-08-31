@@ -35,7 +35,7 @@ import n7.ad2.drawer.internal.di.DaggerDrawerComponent
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
 import javax.inject.Inject
 
@@ -45,7 +45,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
         fun getInstance() = DrawerFragment()
     }
 
-    @Inject lateinit var logger: AD2Logger
+    @Inject lateinit var logger: Logger
     @Inject lateinit var drawerViewModel: DrawerViewModel.Factory
     @Inject lateinit var provider: Provider
 

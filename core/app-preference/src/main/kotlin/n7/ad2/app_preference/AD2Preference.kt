@@ -12,13 +12,14 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStoreFile
 import kotlinx.coroutines.flow.first
+import n7.ad2.Preference
 import n7.ad2.app_preference.domain.usecase.GetCurrentDayUseCase
 
 // https://proandroiddev.com/kotlin-property-delegates-for-datastore-preferences-library-5d4e1cdb609b
-class AppPreference constructor(
+class AD2Preference constructor(
     application: Application,
     getCurrentDayUseCase: GetCurrentDayUseCase,
-) {
+) : Preference {
 
     private val dataStore = PreferenceDataStoreFactory.create(
         corruptionHandler = ReplaceFileCorruptionHandler { emptyPreferences() },
@@ -34,38 +35,38 @@ class AppPreference constructor(
     private val settings = stringPreferencesKey("settings")
     private val settingsLastDayUpdate = intPreferencesKey("settingsLastDateUpdate")
 
-    suspend fun isNeedToUpdateSettings(): Boolean {
+    override suspend fun isNeedToUpdateSettings(): Boolean {
         return dataStore.data.first()[settingsLastDayUpdate] != currentDay
     }
 
-    suspend fun saveSettings(data: String) {
+    override suspend fun saveSettings(data: String) {
         dataStore.edit { preferences ->
             preferences[settings] = data
             preferences[settingsLastDayUpdate] = currentDay
         }
     }
 
-    suspend fun getSettings(): String {
+    override suspend fun getSettings(): String {
         return dataStore.data.first()[settings] ?: ""
     }
 
-    suspend fun saveDate(date: Int) {
+    override suspend fun saveDate(date: Int) {
         dataStore.edit { preferences -> preferences[dateKey] = date }
     }
 
-    suspend fun getDate(): Int {
+    override suspend fun getDate(): Int {
         return dataStore.data.first()[dateKey] ?: 0
     }
 
-    suspend fun setFingerCoordinateEnabled(isEnabled: Boolean) {
+    override suspend fun setFingerCoordinateEnabled(isEnabled: Boolean) {
         dataStore.edit { preferences -> preferences[fingerCoordinateEnabled] = isEnabled }
     }
 
-    suspend fun isFingerCoordinateEnabled(): Boolean {
+    override suspend fun isFingerCoordinateEnabled(): Boolean {
         return dataStore.data.first()[fingerCoordinateEnabled] ?: true
     }
 
-    suspend fun isLogWidgetEnabled(): Boolean {
+    override suspend fun isLogWidgetEnabled(): Boolean {
         return dataStore.data.first()[logWidgetEnabled] ?: true
     }
 

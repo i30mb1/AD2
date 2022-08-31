@@ -6,11 +6,11 @@ import android.os.Build
 import android.provider.Settings
 import androidx.core.content.getSystemService
 import n7.ad2.AppInformation
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 
 class SystemInfoInitializer : Initializer {
 
-    override fun init(app: Application, logger: AD2Logger, appInformation: AppInformation) {
+    override fun init(app: Application, logger: Logger, appInformation: AppInformation) {
         val androidID = Settings.Secure.getString(app.contentResolver, Settings.Secure.ANDROID_ID)
         val androidVersion = Build.VERSION.SDK_INT
         val cpuCount = Runtime.getRuntime().availableProcessors()

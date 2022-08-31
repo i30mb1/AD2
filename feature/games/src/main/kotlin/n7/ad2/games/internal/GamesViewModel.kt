@@ -4,12 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import n7.ad2.games.R
 import n7.ad2.games.internal.data.VOGame
 
 internal class GamesViewModel @AssistedInject constructor(
-    private val res: AppResources,
+    private val res: Resources,
 ) : ViewModel() {
 
     @AssistedFactory

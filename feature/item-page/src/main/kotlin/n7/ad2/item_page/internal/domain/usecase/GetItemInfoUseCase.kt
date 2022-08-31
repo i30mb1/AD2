@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AppLocale
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.item_page.R
 import n7.ad2.item_page.internal.domain.model.LocalItemInfo
@@ -20,7 +20,7 @@ import n7.ad2.ui.adapter.ImageLineViewHolder
 import javax.inject.Inject
 
 class GetItemInfoUseCase @Inject constructor(
-    private val res: AppResources,
+    private val res: Resources,
     private val itemRepository: ItemRepository,
     private val moshi: Moshi,
     private val dispatchers: DispatchersProvider,

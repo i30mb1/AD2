@@ -7,22 +7,22 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
-import n7.ad2.AppResources
-import n7.ad2.app_preference.AppPreference
+import n7.ad2.Preference
+import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.drawer.R
 import n7.ad2.drawer.internal.data.remote.SettingsApi
 import n7.ad2.drawer.internal.data.remote.model.Settings
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import javax.inject.Inject
 
 internal class GetMenuItemsUseCase @Inject constructor(
-    private val res: AppResources,
-    private val appPreference: AppPreference,
+    private val res: Resources,
+    private val preference: Preference,
     private val settingsApi: SettingsApi,
-    private val logger: AD2Logger,
+    private val logger: Logger,
     private val moshi: Moshi,
     private val dispatchers: DispatchersProvider,
 ) {
@@ -31,17 +31,17 @@ internal class GetMenuItemsUseCase @Inject constructor(
     private val settingsAdapter = moshi.adapter<Settings>()
 
     operator fun invoke(): Flow<List<VOMenu>> = flow {
-        if (appPreference.isNeedToUpdateSettings()) {
+        if (preference.isNeedToUpdateSettings()) {
             val newSettings = settingsApi.getSettings()
-            appPreference.saveSettings(settingsAdapter.toJson(newSettings))
+            preference.saveSettings(settingsAdapter.toJson(newSettings))
             emit(newSettings)
         } else {
-            emit(settingsAdapter.fromJson(appPreference.getSettings()) ?: Settings())
+            emit(settingsAdapter.fromJson(preference.getSettings()) ?: Settings())
         }
     }
         .catch { error ->
             logger.log("Could not load settings (${error.message})")
-            emit(settingsAdapter.fromJson(appPreference.getSettings()) ?: Settings())
+            emit(settingsAdapter.fromJson(preference.getSettings()) ?: Settings())
         }
         .map { settings ->
             settings.menu.map { menu ->

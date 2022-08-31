@@ -13,7 +13,7 @@ import n7.ad2.init.HistoricalProcessExitReasonsInitializer
 import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
 import n7.ad2.ktx.lazyUnsafe
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import javax.inject.Inject
 
 // https://medium.com/bumble-tech/how-we-achieved-a-6x-reduction-of-anrs-part-2-fixing-anrs-24fedf9a973f
@@ -30,7 +30,7 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
     }
 
     @Inject
-    fun init(logger: AD2Logger, appInformation: AppInformation) {
+    fun init(logger: Logger, appInformation: AppInformation) {
         SystemInfoInitializer().init(this, logger, appInformation)
         CrashHandlerInitializer().init(this, logger, appInformation)
         HistoricalProcessExitReasonsInitializer().init(this, logger, appInformation)

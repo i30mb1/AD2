@@ -13,11 +13,10 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import n7.ad2.repositories.ItemRepository
 import n7.ad2.streams.internal.data.remote.Stream
 import n7.ad2.streams.internal.data.remote.StreamPagingSource
@@ -28,7 +27,7 @@ import java.util.concurrent.Executors
 internal class StreamsViewModel @AssistedInject constructor(
     private val streamPagingSource: StreamPagingSource,
     private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase,
-    private val logger: AD2Logger,
+    private val logger: Logger,
     private val itemRepository: ItemRepository,
 ) : ViewModel() {
 

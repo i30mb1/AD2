@@ -29,3 +29,7 @@ internal interface SettingsApi {
     }
 
 }
+
+internal class SettingsApiFake : SettingsApi {
+    override suspend fun getSettings(): Settings = Settings()
+}

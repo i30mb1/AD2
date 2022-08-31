@@ -17,7 +17,7 @@ import n7.ad2.games.internal.data.Players
 import n7.ad2.games.internal.data.VOGame
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.ktx.viewModel
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import javax.inject.Inject
 
 internal class GamesFragment : Fragment(R.layout.fragment_games) {
@@ -27,7 +27,7 @@ internal class GamesFragment : Fragment(R.layout.fragment_games) {
     }
 
     @Inject lateinit var gamesViewModelFactory: GamesViewModel.Factory
-    @Inject lateinit var logger: AD2Logger
+    @Inject lateinit var logger: Logger
 
     private var _binding: FragmentGamesBinding? = null
     private val binding: FragmentGamesBinding get() = _binding!!

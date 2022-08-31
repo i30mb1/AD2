@@ -1,12 +1,12 @@
 package n7.ad2.repositories
 
 import n7.ad2.AppLocale
-import n7.ad2.AppResources
+import n7.ad2.Resources
 import java.io.File
 import javax.inject.Inject
 
 class ResponseRepository @Inject constructor(
-    private val res: AppResources,
+    private val res: Resources,
 ) {
 
     companion object {

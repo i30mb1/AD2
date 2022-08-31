@@ -7,13 +7,13 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.items.internal.domain.vo.VOItem
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.Logger
 import n7.ad2.repositories.ItemRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
 internal class GetVOItemsUseCase @Inject constructor(
-    private val logger: AD2Logger,
+    private val logger: Logger,
     private val itemRepository: ItemRepository,
     private val dispatchers: DispatchersProvider,
 ) {
