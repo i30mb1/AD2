@@ -8,7 +8,8 @@
     <string name="hero_fragment_description">Description</string>
     <string name="hero_fragment_bio">Bio</string>
     <string name="hero_fragment_trivia">Trivia</string>
-    <string name="hero_fragment_params" translatable="false">Parameters</string>
+    <string name="hero_fragment_notes">Notes</string>
+    <string name="hero_fragment_params">Parameters</string>
 
     <string name="desc_strength" translatable="false">strength</string>
     <string name="desc_intelligence" translatable="false">intellect</string>

@@ -12,6 +12,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.internal.info.HeroStatistics
+import n7.ad2.hero_page.internal.info.domain.model.Ability
 import n7.ad2.hero_page.internal.info.domain.model.LocalHeroDescription
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
@@ -44,7 +45,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     ): Flow<List<VOHeroInfo>> = flow {
         val localHero = heroRepository.getHero(heroName)
         val json = heroRepository.getHeroDescription(localHero.name, locale)
-        val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json)!!
+        val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json) ?: error("could not parse hero description")
 
         emit(buildList {
             add(getAttributes(localHero, info, heroInfo))
@@ -61,8 +62,18 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     }
                 }
                 is HeroInfo.Spell -> {
-                    val selectedSpell = info.abilities.find { ability -> ability.name == heroInfo.name } ?: return@buildList
+                    val selectedSpell: Ability = info.abilities.find { ability -> ability.name == heroInfo.name } ?: error("could not find ability")
                     add(VOHeroInfo.HeaderSound(selectedSpell.name, selectedSpell.hotKey, selectedSpell.legacyKey, false, selectedSpell.audioUrl))
+                    if (selectedSpell.description != null) add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.description.toSpanned())))
+                    if (selectedSpell.story != null) add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.story.toSpanned())))
+                    if (selectedSpell.notes != null) {
+                        add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_notes))))
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.notes.toStringList(true).toSpanned())))
+                    }
+                    if (selectedSpell.params != null) {
+                        add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_params))))
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.params.toStringList(true).toSpanned())))
+                    }
                 }
             }
         })
