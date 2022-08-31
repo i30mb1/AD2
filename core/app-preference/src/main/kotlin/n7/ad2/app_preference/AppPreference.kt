@@ -29,7 +29,8 @@ class AppPreference constructor(
     private val currentDay = getCurrentDayUseCase()
 
     private val dateKey = intPreferencesKey("date")
-    private val showFingerCoordinate = booleanPreferencesKey("fingerCoordinate")
+    private val fingerCoordinateEnabled = booleanPreferencesKey("fingerCoordinateEnabled")
+    private val logWidgetEnabled = booleanPreferencesKey("logWidgetEnabled")
     private val settings = stringPreferencesKey("settings")
     private val settingsLastDayUpdate = intPreferencesKey("settingsLastDateUpdate")
 
@@ -56,12 +57,16 @@ class AppPreference constructor(
         return dataStore.data.first()[dateKey] ?: 0
     }
 
-    suspend fun setShowFingerCoordinate(show: Boolean) {
-        dataStore.edit { preferences -> preferences[showFingerCoordinate] = show }
+    suspend fun setFingerCoordinateEnabled(isEnabled: Boolean) {
+        dataStore.edit { preferences -> preferences[fingerCoordinateEnabled] = isEnabled }
     }
 
-    suspend fun isShowFingerCoordinate(): Boolean {
-        return dataStore.data.first()[showFingerCoordinate] ?: true
+    suspend fun isFingerCoordinateEnabled(): Boolean {
+        return dataStore.data.first()[fingerCoordinateEnabled] ?: true
+    }
+
+    suspend fun isLogWidgetEnabled(): Boolean {
+        return dataStore.data.first()[logWidgetEnabled] ?: true
     }
 
 }

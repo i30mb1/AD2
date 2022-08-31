@@ -26,7 +26,6 @@ import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.android.findDependencies
-import n7.ad2.app_preference.AppPreference
 import n7.ad2.drawer.R
 import n7.ad2.drawer.databinding.FragmentDrawerBinding
 import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter
@@ -49,12 +48,14 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     @Inject lateinit var logger: AD2Logger
     @Inject lateinit var drawerViewModel: DrawerViewModel.Factory
     @Inject lateinit var provider: Provider
-    @Inject lateinit var preferences: AppPreference
 
     private var _binding: FragmentDrawerBinding? = null
     private val binding: FragmentDrawerBinding get() = _binding!!
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
     private val viewModel: DrawerViewModel by viewModel { drawerViewModel.create() }
+    private val logLayoutManager = object : LinearLayoutManager(requireContext()) {
+        override fun canScrollVertically(): Boolean = false
+    }.apply { stackFromEnd = true }
     private val onMenuItemClick: (menuItem: VOMenu) -> Unit = { menuItem: VOMenu ->
         if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {
             Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
@@ -179,20 +180,16 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     }
 
     private fun setupLoggerAdapter() = lifecycleScope.launch {
-        val shouldDisplayLog = preferences.isShowFingerCoordinate()
+        val shouldDisplayLog = viewModel.isLogWidgetEnabled()
         if (!shouldDisplayLog) return@launch
-        logger.getLogFlow().flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.CREATED)
+        binding.rvLog.layoutManager = logLayoutManager
+        binding.rvLog.adapter = loggerAdapter
+        logger.getLogFlow()
+            .flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.CREATED)
             .onStart { loggerAdapter.clear() }
             .onEach(loggerAdapter::add)
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }
             .launchIn(lifecycleScope)
-
-        val layoutManager = object : LinearLayoutManager(requireContext()) {
-            override fun canScrollVertically(): Boolean = false
-        }
-        layoutManager.stackFromEnd = true
-        binding.rvLog.layoutManager = layoutManager
-        binding.rvLog.adapter = loggerAdapter
     }
 
 }
