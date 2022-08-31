@@ -1,18 +1,15 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.gradle.BaseExtension
-
-//private val catalogs = extensions.getByType<VersionCatalogsExtension>()
-//private val composeVersion = catalogs.named("libs").findVersion("compose").get().requiredVersion
-//private val composeBundle = catalogs.named("libs").findBundle("compose").get()
+import gradle.kotlin.dsl.accessors._44fb0a05fcd9e15986a76c748cb18b72.implementation
 
 configure<BaseExtension> {
     buildFeatures.compose = true
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.1"
+        kotlinCompilerExtensionVersion = libs.versions.compose.get()
     }
 }
 
 dependencies {
-//    implementation(composeBundle)
+    implementation(libs.bundles.compose)
 }

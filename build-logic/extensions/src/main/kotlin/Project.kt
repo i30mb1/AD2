@@ -1,4 +1,6 @@
+import org.gradle.accessors.dm.LibrariesForLibs
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.the
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStreamReader
@@ -15,3 +17,9 @@ fun Project.isCI(): Boolean {
 
     return properties.getProperty("IS_CI").toBoolean()
 }
+
+/**
+ * workaround to make version catalog accessible in convention plugins
+ * https://github.com/gradle/gradle/issues/15383
+ */
+val Project.libs get() = the<LibrariesForLibs>()
