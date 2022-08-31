@@ -78,8 +78,7 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
     private fun setupInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-            view.updatePadding(top = statusBarsInsets.top, bottom = navigationBarsInsets.bottom)
+            view.updatePadding(top = statusBarsInsets.top)
             insets
         }
     }
