@@ -31,6 +31,8 @@ class AD2Logger @Inject constructor(
         }
     }
 
+    fun getSubscriptionCount() = _dataFlow.subscriptionCount
+
     fun getLogFlow(): SharedFlow<AD2Log> = dataFlow
 
 }

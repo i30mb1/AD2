@@ -18,10 +18,10 @@ import org.junit.runner.Description
  */
 @ExperimentalCoroutinesApi
 class CoroutineTestRule(
-    val testDispatcher: TestDispatcher = UnconfinedTestDispatcher(),
+    private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher(),
 ) : TestWatcher() {
 
-    val testDispatchers = object : DispatchersProvider() {
+    val dispatchers = object : DispatchersProvider() {
         override val Main: CoroutineDispatcher = testDispatcher
         override val Default: CoroutineDispatcher = testDispatcher
         override val IO: CoroutineDispatcher = testDispatcher
