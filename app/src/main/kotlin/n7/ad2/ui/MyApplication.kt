@@ -7,11 +7,7 @@ import n7.ad2.android.HasDependencies
 import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
-import n7.ad2.init.CrashHandlerInitializer
-import n7.ad2.init.DevicePerformanceInitializer
-import n7.ad2.init.HistoricalProcessExitReasonsInitializer
-import n7.ad2.init.StrictModeInitializer
-import n7.ad2.init.SystemInfoInitializer
+import n7.ad2.init.Initializer
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.logger.Logger
 import javax.inject.Inject
@@ -30,12 +26,8 @@ class MyApplication : Application(), DaggerComponentProvider, HasDependencies {
     }
 
     @Inject
-    fun init(logger: Logger, appInformation: AppInformation) {
-        SystemInfoInitializer().init(this, logger, appInformation)
-        CrashHandlerInitializer().init(this, logger, appInformation)
-        HistoricalProcessExitReasonsInitializer().init(this, logger, appInformation)
-        StrictModeInitializer().init(this, logger, appInformation)
-        DevicePerformanceInitializer().init(this, logger, appInformation)
+    fun init(initializers: Set<@JvmSuppressWildcards Initializer>, logger: Logger, appInformation: AppInformation) {
+        initializers.forEach { initializer -> initializer.init(this, logger, appInformation) }
     }
 
 }

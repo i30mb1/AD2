@@ -4,12 +4,19 @@ import android.app.Application
 import androidx.work.WorkManager
 import dagger.Binds
 import dagger.Provides
+import dagger.multibindings.ElementsIntoSet
 import n7.ad2.AD2AppInformation
 import n7.ad2.AD2Provider
 import n7.ad2.AD2Resources
 import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.dagger.ApplicationScope
+import n7.ad2.init.CrashHandlerInitializer
+import n7.ad2.init.DevicePerformanceInitializer
+import n7.ad2.init.HistoricalProcessExitReasonsInitializer
+import n7.ad2.init.Initializer
+import n7.ad2.init.StrictModeInitializer
+import n7.ad2.init.SystemInfoInitializer
 import n7.ad2.logger.AD2Logger
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
@@ -42,6 +49,18 @@ interface ApplicationModule {
         @ApplicationScope
         @Provides
         fun provideCalendar(): Calendar = Calendar.getInstance()
+
+        @ElementsIntoSet
+        @Provides
+        fun provideInitializers(): Set<Initializer> {
+            return setOf(
+                SystemInfoInitializer(),
+                CrashHandlerInitializer(),
+                HistoricalProcessExitReasonsInitializer(),
+                StrictModeInitializer(),
+                DevicePerformanceInitializer(),
+            )
+        }
 
     }
 
