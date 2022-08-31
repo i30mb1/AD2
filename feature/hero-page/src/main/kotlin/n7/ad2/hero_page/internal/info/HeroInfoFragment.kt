@@ -4,6 +4,8 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
@@ -39,6 +41,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     private var _binding: FragmentHeroInfoBinding? = null
     private val binding: FragmentHeroInfoBinding get() = _binding!!
     private val viewModel: HeroInfoViewModel by viewModel { heroInfoFactory.create(heroName) }
+    private val heroInfoItemDecorator = HeroInfoItemDecorator()
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
     private val onKeyClickListener = { key: String -> }
@@ -55,12 +58,22 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         _binding = FragmentHeroInfoBinding.bind(view)
 
         setupSpellInfoRecyclerView()
+        setupInsets()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         binding.rv.adapter = null
         _binding = null
+    }
+
+    private fun setupInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+            heroInfoItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
+            binding.rv.invalidateItemDecorations()
+            insets
+        }
     }
 
     private fun doOnPlayIconClicked(soundUrl: String) {
@@ -83,7 +96,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             layoutManager = linearLayoutManager
             setHasFixedSize(true)
 //            addItemDecoration(StickyHeaderDecorator(heroInfoAdapter, this))
-            addItemDecoration(HeroInfoItemDecorator())
+            addItemDecoration(heroInfoItemDecorator)
         }
 
         viewModel.state.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)

@@ -7,9 +7,10 @@ import n7.ad2.ktx.dpToPx
 
 class HeroInfoItemDecorator : RecyclerView.ItemDecoration() {
 
-    private val topOffset = 16.dpToPx
-    private val botOffset = 16.dpToPx
-    private val offsetHorizontal = 8.dpToPx
+    var navigationBarsInsets = 0
+    private val topOffset = 6.dpToPx
+    private val botOffset = 0.dpToPx
+    private val offsetHorizontal = 4.dpToPx
     private val offsetVertical = 8.dpToPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
@@ -17,14 +18,18 @@ class HeroInfoItemDecorator : RecyclerView.ItemDecoration() {
 
         val position = parent.getChildAdapterPosition(view)
         val childCount = parent.adapter?.itemCount ?: return
-        val type = parent.adapter?.getItemViewType(position) ?: return
 
         with(outRect) {
-            top = offsetHorizontal
+            top = when (position) {
+                0 -> topOffset
+                else -> offsetHorizontal
+            }
             left = offsetVertical
             right = offsetVertical
-            if (position == 0) top = topOffset
-            if (position == childCount - 1) bottom = botOffset
+            bottom = when (position) {
+                childCount - 1 -> botOffset + navigationBarsInsets
+                else -> offsetHorizontal
+            }
         }
 
     }
