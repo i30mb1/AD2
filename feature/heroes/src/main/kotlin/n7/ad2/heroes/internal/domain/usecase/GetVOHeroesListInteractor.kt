@@ -24,9 +24,9 @@ internal class GetVOHeroesListUseCase @Inject constructor(
             .mapLatest { list ->
                 val result = mutableListOf<VOHero>()
                 list.groupBy { localHero: LocalHero -> localHero.mainAttr }
-                    .forEach { map: Map.Entry<String, List<LocalHero>> ->
-                        result.add(VOHero.Header(HeaderViewHolder.Data(map.key)))
-                        result.addAll(map.value.map { localHero ->
+                    .forEach { (mainAttr, hero): Map.Entry<String, List<LocalHero>> ->
+                        result.add(VOHero.Header(HeaderViewHolder.Data(mainAttr)))
+                        result.addAll(hero.map { localHero ->
                             VOHero.Body(localHero.name, HeroRepository.getFullUrlHeroImage(localHero.name), localHero.viewedByUser)
                         })
                     }
