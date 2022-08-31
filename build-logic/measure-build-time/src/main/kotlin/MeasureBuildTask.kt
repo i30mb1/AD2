@@ -15,7 +15,7 @@ abstract class MeasureBuildTask : DefaultTask() {
                 "gradle-profiler/last-output",
                 "--scenario-file",
                 "gradle-profiler/profiler.scenarios",
-                "configuration",
+                "incremental",
             )
         }
         val output = project.file("gradle-profiler/last-output/benchmark.csv").readLines()

@@ -40,8 +40,8 @@ jobs:
           echo SIGNING_FILE=key.jks >> local.properties
             - name: Build with Gradle
               run: gradle build -q
-      - name: Measure incremental
-        run: gradle incremental
+      - name: MeasureBuild
+        run: gradle measureBuild
       - name: Copy Measurment
         shell: cmd
         run: |
