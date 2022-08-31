@@ -39,6 +39,10 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             resValue("string", "app_name2", "AD2(debug)")
         }
+        create("benchmark") {
+            signingConfig = signingConfigs.getByName("debug")
+            isDebuggable = false
+        }
         release {
             isMinifyEnabled = true
             isDebuggable = false
