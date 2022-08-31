@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.exif)
     api(libs.recyclerView)
     api(libs.paging3)
     api(libs.constraintLayout)
