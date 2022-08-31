@@ -10,6 +10,7 @@ import n7.ad2.dagger.Dependencies
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
 import n7.ad2.repositories.HeroRepository
+import n7.ad2.span_parser.SpanParser
 
 interface HeroPageDependencies : Dependencies {
     val application: Application
@@ -21,4 +22,5 @@ interface HeroPageDependencies : Dependencies {
     val dispatchersProvider: DispatchersProvider
     val appInformation: AppInformation
     val resources: Resources
+    val spanParser: SpanParser
 }

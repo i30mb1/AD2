@@ -16,7 +16,7 @@ import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.toStringList
 import n7.ad2.logger.Logger
 import n7.ad2.repositories.HeroRepository
-import n7.ad2.span_parser.AD2StringParser
+import n7.ad2.span_parser.SpanParser
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
@@ -24,7 +24,7 @@ import javax.inject.Inject
 class GetVOHeroDescriptionUseCase @Inject constructor(
     private val res: Resources,
     private val heroRepository: HeroRepository,
-    private val aD2StringParser: AD2StringParser,
+    private val spanParser: SpanParser,
     private val moshi: Moshi,
     private val logger: Logger,
     private val dispatchers: DispatchersProvider,
@@ -35,7 +35,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         data class Spell(val name: String) : HeroInfo()
     }
 
-    @OptIn(ExperimentalStdlibApi::class)
     suspend operator fun invoke(
         heroName: String,
         locale: AppLocale,
@@ -53,7 +52,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     info.mainAttributes.attrAgility,
                     info.mainAttributes.attrIntelligence
                 ),
-                heroInfo == HeroInfo.Main
+                heroInfo == HeroInfo.Main,
             ))
             add(VOHeroInfo.Spells(
                 info.abilities.map { ability ->
@@ -67,9 +66,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 HeroInfo.Main -> {
                     add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_description))))
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.description.toSpanned())))
-                    add(VOHeroInfo.Body(BodyViewHolder.Data(
-                        aD2StringParser.toSpannable("Этот спелл <span image=\"spell/Blink.webp\">Starstorm</span> пиздец 111111111111111111111111111111111111111111111111111111111111111111111111111111")
-                    )))
                     add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_bio))))
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.history.toSpanned())))
                     info.trivia?.let { list ->

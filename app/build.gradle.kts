@@ -97,6 +97,7 @@ dependencies {
     implementation(project(Module.Core.appPreference))
     implementation(project(Module.Core.retrofit))
     implementation(project(Module.Core.updateManager))
+    implementation(project(Module.Core.spanParser))
 
     implementation(project(Module.Feature.streams))
     implementation(project(Module.Feature.heroes))

@@ -15,6 +15,7 @@ import n7.ad2.hero_page.api.HeroPageDependencies
 import n7.ad2.heroes.api.HeroesDependencies
 import n7.ad2.item_page.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
+import n7.ad2.span_parser.di.SpanParserModule
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
 import n7.ad2.ui.MainActivity
@@ -32,6 +33,7 @@ import n7.ad2.updateManager.UpdateManagerModule
         ApplicationModule::class,
         AppPreferenceModule::class,
         DatabaseModule::class,
+        SpanParserModule::class,
     ]
 )
 interface ApplicationComponent : StreamsDependencies,

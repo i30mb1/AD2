@@ -6,38 +6,23 @@ import android.graphics.drawable.Drawable
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.BackgroundColorSpan
-import android.text.style.ClickableSpan
 import android.text.style.DynamicDrawableSpan
 import android.text.style.ForegroundColorSpan
 import android.text.style.ImageSpan
 import android.text.style.StrikethroughSpan
 import android.text.style.StyleSpan
 import android.text.style.UnderlineSpan
-import android.view.View
 import androidx.annotation.VisibleForTesting
 import androidx.core.text.set
 import androidx.core.text.toSpannable
 import n7.ad2.Resources
 import javax.inject.Inject
 
-class AD2ClickableSpan(private val data: Data) : ClickableSpan() {
+internal data class AttributeAndValue(val attribute: String, val value: String)
 
-    data class Data(val tag: String, val value: String)
-
-    val listener: ((Data) -> Unit)? = null
-    override fun onClick(widget: View) = listener?.invoke(data) ?: Unit
-}
-
-sealed interface Analyzer
-data class StartSpanTag(val text: String, val attributes: List<AttributeAndValue>) : Analyzer
-data class EndSpanTag(val text: String) : Analyzer
-data class RemainingText(val text: String) : Analyzer
-
-data class AttributeAndValue(val attribute: String, val value: String)
-
-class AD2StringParser @Inject constructor(
+internal class AD2SpanParser @Inject constructor(
     private val res: Resources,
-) {
+) : SpanParser {
 
     companion object {
         private const val START_TAG_SPAN_OPEN = "<span "
@@ -48,10 +33,7 @@ class AD2StringParser @Inject constructor(
         private const val SKIP_ATTRS_SIGN = '"'
     }
 
-    fun toSpannable(
-        string: String,
-        isNightTheme: Boolean = false,
-    ): SpannableStringBuilder {
+    override fun toSpannable(string: String, isNightTheme: Boolean): Spannable {
         val iterator = string.iterator()
         val result = SpannableStringBuilder()
         val attributeAndValue: ArrayDeque<List<AttributeAndValue>> = ArrayDeque()
@@ -101,10 +83,11 @@ class AD2StringParser @Inject constructor(
         val result = bufferText.toSpannable()
         val uniqueAttributeAndValueList = attributeAndValueList.distinctBy { it.attribute }
         for ((attribute, value) in uniqueAttributeAndValueList) when (attribute) {
-            "color" -> if (!isNightTheme) result[0, result.length] = ForegroundColorSpan(Color.parseColor(value))
-            "colorNight" -> if (isNightTheme) result[0, result.length] = ForegroundColorSpan(Color.parseColor(value))
-            "background" -> if (!isNightTheme) result[0, result.length] = BackgroundColorSpan(Color.parseColor(value))
-            "backgroundNight" -> if (isNightTheme) result[0, result.length] = BackgroundColorSpan(Color.parseColor(value))
+            "color" -> if (!isNightTheme) result[0, result.length] = setForegroundColorSpan(value, result)
+            "colorNight" -> if (isNightTheme) result[0, result.length] = setForegroundColorSpan(value, result)
+            "background" -> if (!isNightTheme) result[0, result.length] = setBackgroundColorSpan(value, result)
+            "backgroundNight" -> if (isNightTheme) result[0, result.length] = setBackgroundColorSpan(value, result)
+            "linearGradient" -> result[0, result.length] = setLinearGradient(value, result)
             "underline" -> result[0, result.length] = UnderlineSpan()
             "image" -> {
                 val drawable = Drawable.createFromStream(res.getAssets(value), null)
@@ -120,13 +103,38 @@ class AD2StringParser @Inject constructor(
         return result
     }
 
+    private fun parseColor(color: String): Int? {
+        return try {
+            Color.parseColor(color)
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    private fun setBackgroundColorSpan(value: String, result: Spannable) {
+        val color = parseColor(value) ?: return
+        result[0, result.length] = BackgroundColorSpan(color)
+    }
+
+    private fun setForegroundColorSpan(value: String, result: Spannable) {
+        val color = parseColor(value) ?: return
+        result[0, result.length] = ForegroundColorSpan(color)
+    }
+
+    private fun setLinearGradient(value: String, result: Spannable) {
+        val (from, to) = value.split("to")
+        val colorFrom = parseColor(from) ?: return
+        val colorTo = parseColor(to) ?: return
+        result[0, result.length] = LinearGradientSpan(result, colorFrom, colorTo)
+    }
+
     private fun getAttributesWithValueInSpan(iterator: CharIterator): List<AttributeAndValue> {
         val bufferText = StringBuilder()
         while (iterator.hasNext()) {
             val char = iterator.nextChar()
             if (char == START_TAG_SPAN_CLOSE) {
                 return bufferText.split(ATTRIBUTE_AND_VALUE_DELIMITER).mapNotNull {
-                    val attributeAndValue = it.split(ATTRIBUTE_DELIMITER)
+                    val attributeAndValue = it.split(ATTRIBUTE_DELIMITER, limit = 2)
 
                     if (attributeAndValue.size == 2) {
                         val attribute = attributeAndValue[0]

@@ -1,13 +1,13 @@
 package n7.ad2.span_parser
 
 import com.google.common.truth.Truth
-import com.nhaarman.mockitokotlin2.mock
+import n7.ad2.ResourcesFake
 import org.junit.Before
 import org.junit.Test
 
-class AD2StringParserTest {
+class AD2SpanParserTest {
 
-    private val converter = AD2StringParser(mock())
+    private val converter = AD2SpanParser(ResourcesFake())
     private val resultAnalyzer = mutableListOf<Analyzer>()
     private val resultText = StringBuilder()
 
@@ -43,6 +43,20 @@ class AD2StringParserTest {
         Truth.assertThat(resultText.toString()).isEqualTo("если сдашься, тебе конец")
         Truth.assertThat(resultAnalyzer).containsExactly(
             RemainingText("если сдашься, тебе конец")
+        )
+    }
+
+    @Test
+    fun `simple text with link`() {
+        val raw = """
+            не жми на <span link="kufar.by/promo?site=kufar">эту</span> ссылку
+        """.trimIndent()
+        fillFields(raw)
+        Truth.assertThat(resultText.toString()).isEqualTo("не жми на эту ссылку")
+        Truth.assertThat(resultAnalyzer).containsExactly(
+            StartSpanTag("не жми на ", listOf(AttributeAndValue("link", "kufar.by/promo?site=kufar"))),
+            EndSpanTag("эту"),
+            RemainingText(" ссылку")
         )
     }
 
