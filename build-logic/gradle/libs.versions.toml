@@ -72,6 +72,7 @@ splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha02"
 performance = "androidx.core:core-performance:1.0.0-alpha02"
 
 coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+coroutinesDebug = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-debug", version.ref = "coroutines" }
 testCore = "androidx.test:core:1.4.0" # Core library
 testCoreKtx = "androidx.test:core-ktx:1.4.0"
 testRunner = "androidx.test:runner:1.4.0" # AndroidJUnitRunner
@@ -92,6 +93,6 @@ benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.1.0-rc01"
 benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0-rc01"
 
 [bundles]
-test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
+test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth", "coroutinesDebug"]
 
 [plugins]
