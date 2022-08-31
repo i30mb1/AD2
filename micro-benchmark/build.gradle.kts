@@ -1,6 +1,6 @@
 plugins {
     id("convention.android-library")
-//    benchmark()
+    id("androidx.benchmark")
 }
 
 android {
