@@ -13,7 +13,7 @@ val detektAll = tasks.register<Detekt>("detektAll") {
     setSource(files(projectDir))
 
     // todo вот бы файл использовать который лежал бы прям в этой папке...
-    config.setFrom(files("$projectDir\\build-logic\\detekt\\detekt-config.yml", PathValidation.EXISTS))
+    // config.setFrom(files("$projectDir\\build-logic\\detekt\\detekt-config.yml"))
     buildUponDefaultConfig = false
 
     include("**/*.kt")
