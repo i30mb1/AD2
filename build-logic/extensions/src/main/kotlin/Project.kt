@@ -13,9 +13,11 @@ fun Project.isCI(): Boolean {
         InputStreamReader(FileInputStream(localProperties), Charsets.UTF_8).use { reader ->
             properties.load(reader)
         }
-    } else error("File local.properties not found")
-
-    return properties.getProperty("IS_CI").toBoolean()
+    } else {
+        logger.error("File $rootDir\\local.properties not found!")
+        return false
+    }
+    return properties.getProperty("IS_CI", "false").toBoolean()
 }
 
 /**
