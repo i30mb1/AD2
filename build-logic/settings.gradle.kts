@@ -1,11 +1,16 @@
 rootProject.name = "build-logic"
 
-pluginManagement {
-    includeBuild("dependencies")
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()  // тут лежит kotlin-stdlib-jdk8
+    }
 }
 
-plugins {
-    id("convention.dependency")
+pluginManagement {
+    repositories {
+        gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
+    }
 }
 
 include("bump-version-plugin")

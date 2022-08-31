@@ -41,7 +41,6 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
         setupInsets()
         setupFragmentStrictPolicy()
         if (savedInstanceState == null) setMainFragment(provider.drawerApi.getDrawerFragment())
-        supportFragmentManager.addOnBackStackChangedListener { }
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
