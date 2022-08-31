@@ -39,10 +39,9 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     private var _binding: FragmentHeroesBinding? = null
     private val binding: FragmentHeroesBinding get() = _binding!!
-    private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, onHeroClick) }
+    private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, ::startHeroFragment) }
     private val viewModel: HeroesViewModel by viewModel { heroesViewModelFactory.create() }
     private val heroesItemDecorator = HeroesItemDecorator()
-    private val onHeroClick: (hero: VOHero.Body) -> Unit = { hero -> startHeroFragment(hero) }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
