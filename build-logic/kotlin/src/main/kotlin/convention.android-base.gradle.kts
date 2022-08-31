@@ -13,6 +13,7 @@ configure<BaseExtension> {
     defaultConfig {
         minSdk = 23
         targetSdk = 31
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     compileOptions {

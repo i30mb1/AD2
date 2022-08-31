@@ -109,4 +109,9 @@ dependencies {
     implementation(project(Module.Feature.heroPage))
     implementation(project(Module.Feature.itemPage))
     implementation(project(Module.Feature.settings))
+
+    androidTestImplementation(libs.espresso)
+    androidTestImplementation(libs.testRunner)
+    androidTestImplementation(libs.testRules)
+    androidTestImplementation(libs.testJunitKtx)
 }
