@@ -38,8 +38,8 @@ jobs:
           echo KEY_PASSWORD=%KEY_PASSWORD% >> local.properties
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
-            - name: Build with Gradle
-              run: gradle build -q
+      - name: Build with Gradle
+        run: gradle build -q
       - name: MeasureBuild
         run: gradle measureBuild
       - name: Copy Measurment
