@@ -40,14 +40,13 @@ android {
             applicationIdSuffix = ".debug"
             versionNameSuffix = "/debug"
             signingConfig = signingConfigs.getByName("debug")
-            resValue("string", "app_name2", "AD2(debug)")
+            resValue("string", "app_name", "AD2-D")
         }
         release {
             isMinifyEnabled = true
             isDebuggable = false
             isShrinkResources = true
             signingConfig = signingConfigs.getByName("debug")
-            resValue("string", "app_name2", "AD2")
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
