@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - run: git config --global user.email "fate.i30mb1@gmail.com"
+      - run: git config --global user.name "i30mb1"
       - name: check Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1
       - name: Use Cache
