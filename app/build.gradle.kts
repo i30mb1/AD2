@@ -1,8 +1,8 @@
 import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 
 plugins {
-    application()
-    kapt()
+    id("convention.android-application")
+    kotlin("kapt")
 }
 
 android {

@@ -1,6 +1,6 @@
 plugins {
-    kotlinLibrary()
-    kapt()
+    id("convention.kotlin-jvm")
+    kotlin("kapt")
 }
 
 dependencies {

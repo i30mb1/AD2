@@ -1,5 +1,5 @@
 plugins {
-    androidLibrary()
+    id("convention.android-library")
 //    benchmark()
 }
 

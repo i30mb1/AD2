@@ -1,3 +1,3 @@
 plugins {
-    kotlinLibrary()
+    id("convention.kotlin-jvm")
 }

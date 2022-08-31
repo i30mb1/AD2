@@ -1,5 +1,5 @@
 plugins {
-    androidLibrary() // возможно стоит заменить на kotlinLibrary() и использовать зависимости compileOnly("com.google.android:android:4.1.1.4")
+    id("convention.android-library") // возможно стоит заменить на kotlinLibrary() и использовать зависимости compileOnly("com.google.android:android:4.1.1.4")
 }
 
 dependencies {

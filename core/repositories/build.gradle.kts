@@ -1,6 +1,6 @@
 plugins {
-    androidLibrary()
-    kapt()
+    id("convention.android-library")
+    kotlin("kapt")
 }
 
 

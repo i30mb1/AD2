@@ -1,5 +1,5 @@
 plugins {
-    kotlinLibrary()
+    id("convention.kotlin-jvm")
 }
 
 dependencies {
