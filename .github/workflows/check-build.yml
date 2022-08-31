@@ -38,11 +38,10 @@ jobs:
           echo KEY_PASSWORD=%KEY_PASSWORD% >> local.properties
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
-          echo ff >> gradle-profiler/measure.txt
-      #      - name: Build with Gradle
-      #        run: gradle build -q
-      - name: Measure clean_build_without_cache
-        run: gradle measureBuild
+            - name: Build with Gradle
+              run: gradle build -q
+      - name: Measure incremental
+        run: gradle incremental
       - name: Copy Measurment
         shell: cmd
         run: |
