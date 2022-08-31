@@ -1,5 +1,6 @@
 package n7.ad2.coroutines
 
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestDispatcher
@@ -19,6 +20,12 @@ import org.junit.runner.Description
 class CoroutineTestRule(
     private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher(),
 ) : TestWatcher() {
+
+    val dispatchers = object : DispatchersProvider() {
+        override val Main: CoroutineDispatcher = UnconfinedTestDispatcher(testDispatcher.scheduler)
+        override val Default: CoroutineDispatcher = UnconfinedTestDispatcher(testDispatcher.scheduler)
+        override val IO: CoroutineDispatcher = UnconfinedTestDispatcher(testDispatcher.scheduler)
+    }
 
     override fun starting(description: Description) {
         Dispatchers.setMain(testDispatcher)
