@@ -8,18 +8,27 @@ import n7.ad2.logger.AD2Logger
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
+import javax.inject.Qualifier
+
+@Qualifier
+private annotation class InternalApi
 
 @Module
 object RetrofitModule {
 
+    @InternalApi
     @Provides
     @ApplicationScope
-    fun provideHttpLogger(logger: AD2Logger) = HttpLoggingInterceptor(logger::log).apply { level = HttpLoggingInterceptor.Level.BASIC }
+    fun provideHttpLogger(logger: AD2Logger): HttpLoggingInterceptor {
+        val result = HttpLoggingInterceptor(logger::log)
+        result.level = HttpLoggingInterceptor.Level.BASIC
+        return result
+    }
 
     @Provides
     @ApplicationScope
     fun provideBaseOkHttpClientBuilder(
-        httpLoggingInterceptor: HttpLoggingInterceptor,
+        @InternalApi httpLoggingInterceptor: HttpLoggingInterceptor,
         appInformation: AppInformation,
     ): OkHttpClient.Builder {
         val builder = OkHttpClient.Builder()
