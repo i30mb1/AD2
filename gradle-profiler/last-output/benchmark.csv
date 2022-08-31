@@ -2,19 +2,19 @@ scenario,incremental
 version,Gradle 7.4
 tasks,:app:assembleDebug
 value,total execution time
-warm-up build #1,327046
-warm-up build #2,27229
-warm-up build #3,22019
-warm-up build #4,18173
-warm-up build #5,18216
-warm-up build #6,18729
-measured build #1,19495
-measured build #2,18670
-measured build #3,18273
-measured build #4,16929
-measured build #5,17074
-measured build #6,16487
-measured build #7,15137
-measured build #8,15724
-measured build #9,14563
-measured build #10,13734
+warm-up build #1,298416
+warm-up build #2,24416
+warm-up build #3,18972
+warm-up build #4,19325
+warm-up build #5,17049
+warm-up build #6,15571
+measured build #1,15197
+measured build #2,15368
+measured build #3,14942
+measured build #4,15308
+measured build #5,14069
+measured build #6,14378
+measured build #7,14220
+measured build #8,14235
+measured build #9,13679
+measured build #10,13834
