@@ -48,6 +48,8 @@ jobs:
   measure:
     runs-on: windows-2022
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - name: MeasureBuild
         run: gradle measureBuild
       - name: Copy Measurment
