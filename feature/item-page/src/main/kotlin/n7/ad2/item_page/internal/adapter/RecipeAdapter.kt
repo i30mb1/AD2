@@ -18,7 +18,7 @@ class RecipeAdapter(
     override fun getItemViewType(position: Int): Int = R.layout.item_recipe
 
     private class DiffCallback : DiffUtil.ItemCallback<VORecipe>() {
-        override fun areItemsTheSame(oldItem: VORecipe, newItem: VORecipe): Boolean = oldItem.name == oldItem.name
+        override fun areItemsTheSame(oldItem: VORecipe, newItem: VORecipe): Boolean = oldItem.name == newItem.name
         override fun areContentsTheSame(oldItem: VORecipe, newItem: VORecipe): Boolean = true
     }
 
