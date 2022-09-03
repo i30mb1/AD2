@@ -9,7 +9,9 @@ import dagger.multibindings.ElementsIntoSet
 import n7.ad2.AD2AppInformation
 import n7.ad2.AD2Provider
 import n7.ad2.AD2Resources
+import n7.ad2.AD2Settings
 import n7.ad2.AppInformation
+import n7.ad2.AppSettings
 import n7.ad2.Resources
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.init.CrashHandlerInitializer
@@ -28,11 +30,15 @@ interface ApplicationModule {
 
     @Reusable
     @Binds
-    fun provideAppInfo(aD2AppInformation: AD2AppInformation): AppInformation
+    fun provideAppInfo(appInformation: AD2AppInformation): AppInformation
 
     @Reusable
     @Binds
     fun provideAppResource(appResources: AD2Resources): Resources
+
+    @Reusable
+    @Binds
+    fun provideAppSettings(appSettings: AD2Settings): AppSettings
 
     @ApplicationScope
     @Binds
