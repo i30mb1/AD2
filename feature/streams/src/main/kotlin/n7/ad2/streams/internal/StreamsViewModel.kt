@@ -15,9 +15,6 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.launch
-import n7.ad2.logger.Logger
-import n7.ad2.repositories.ItemRepository
 import n7.ad2.streams.internal.data.remote.Stream
 import n7.ad2.streams.internal.data.remote.StreamPagingSource
 import n7.ad2.streams.internal.domain.ConvertStreamToVOStreamUseCase
@@ -27,21 +24,11 @@ import java.util.concurrent.Executors
 internal class StreamsViewModel @AssistedInject constructor(
     private val streamPagingSource: StreamPagingSource,
     private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase,
-    private val logger: Logger,
-    private val itemRepository: ItemRepository,
 ) : ViewModel() {
 
     @AssistedFactory
     interface Factory {
         fun create(): StreamsViewModel
-    }
-
-    init {
-        viewModelScope.launch {
-            itemRepository.getAllItems().collect {
-                logger.log("11111111items loaded1111111")
-            }
-        }
     }
 
     private val _error = MutableLiveData<Throwable?>(null)
