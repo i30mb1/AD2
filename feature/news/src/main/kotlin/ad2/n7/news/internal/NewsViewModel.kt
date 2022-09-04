@@ -7,7 +7,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 internal class NewsViewModel @AssistedInject constructor(
     private val getNewsUseCase: GetNewsUseCase,
@@ -35,9 +37,11 @@ internal class NewsViewModel @AssistedInject constructor(
         setupLiveDataNews()
     }
 
-    private fun setupLiveDataNews() = viewModelScope.launch {
-        val list = getNewsUseCase()
-        state.emit(State.Data(list))
+    private fun setupLiveDataNews() {
+        getNewsUseCase()
+            .onEach { list -> state.emit(State.Data(list)) }
+            .catch { error -> }
+            .launchIn(viewModelScope)
 //        newsDao = NewsRoomDatabase.getDatabase(application).steamNewsDao()
 //        val dataSource = newsDao.dataSourceNews
 //        val config = PagedList.Config.Builder()

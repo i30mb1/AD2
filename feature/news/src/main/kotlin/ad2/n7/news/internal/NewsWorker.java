@@ -21,19 +21,6 @@
 //        super(context, workerParams);
 //    }
 //
-//    private void initBaseUrl() {
-////        String language = getApplicationContext().getString(R.string.locale);
-////        switch (language) {
-////            default:
-////            case "eng":
-////                base_url = "https://www.dotabuff.com/blog?page=";
-////                break;
-////            case "ru":
-////                base_url = "https://ru.dotabuff.com/blog?page=";
-////                break;
-////        }
-//    }
-//
 //    @NonNull
 //    @Override
 //    public Result doWork() {
