@@ -25,6 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AD2Theme"
         android:usesCleartextTraffic="true"
+        android:localeConfig="@xml/locales_config"
         tools:ignore="DataExtractionRules,GoogleAppIndexingWarning">
 
         <!--        <activity-alias-->
