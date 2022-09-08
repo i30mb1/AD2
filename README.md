@@ -9,22 +9,15 @@ All you want to know about dota in one app
 <img src="readme-files/app.gif" width="200" align="right" hspace="20">
 
 * Tech-stack
-    * [100% Kotlin](https://kotlinlang.org/) + [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html)
-    * [Retrofit](https://square.github.io/retrofit/)
-    * [Jetpack](https://developer.android.com/jetpack)
-        * [Room](https://developer.android.com/topic/libraries/architecture/room)
-        * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
-        * [Lifecycle](https://developer.android.com/topic/libraries/architecture/lifecycle)
-        * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
-        * [Data Binding](https://developer.android.com/topic/libraries/data-binding)
-        * [WorkManager](https://developer.android.com/reference/androidx/work/WorkManager)
-        * [Paging](https://developer.android.com/topic/libraries/architecture/paging/)
-    * [InstantApp](https://developer.android.com/topic/google-play-instant)
-    * [Firebase](https://firebase.google.com/)
-    * [Jsoup](https://jsoup.org/)
-* CI
-    * [GitHub Actions](https://github.com/features/actions)
-    * Automatic PR verification including tests, linters and 3rd online tools
+  * [100% Kotlin](https://kotlinlang.org/) + [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html)
+  * [Retrofit](https://square.github.io/retrofit/)
+  * [Dagger2](https://dagger.dev/)
+  * [Compose](https://developer.android.com/jetpack/compose)
+  * [Room](https://developer.android.com/topic/libraries/architecture/room)
+  * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+  * [Data Binding](https://developer.android.com/topic/libraries/data-binding)
+  * [InstantApp](https://developer.android.com/topic/google-play-instant)
+  * [GitHub Actions](https://github.com/features/actions)
 * Testing
     * [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing) ([JUnit 4](https://junit.org/junit4/)
     * [UT Tests](https://en.wikipedia.org/wiki/Graphical_user_interface_testing) ([Espresso](https://developer.android.com/training/testing/espresso))
