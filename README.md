@@ -44,8 +44,7 @@ This diagram presents dependencies between project modules (Gradle sub-projects)
 
 We have three kinds of modules in the application:
 
-- `app` module - this is the main module. It contains code that wires multiple modules together (dependency injection setup) and fundamental
-  application configuration.
+- `app` module that contains code that wires multiple modules together.
 - `core/*` modules that some of the features could depend on.
 - `feature/*` modules that containing all code related to a given feature.
 
