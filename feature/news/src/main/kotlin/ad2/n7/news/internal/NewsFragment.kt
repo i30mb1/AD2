@@ -1,6 +1,7 @@
 package ad2.n7.news.internal
 
 import ad2.n7.news.internal.di.DaggerNewsComponent
+import ad2.n7.news.internal.domain.model.NewsVO
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,6 +27,7 @@ import kotlinx.coroutines.launch
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView
+import n7.ad2.ui.compose.AppTheme
 import javax.inject.Inject
 
 internal class NewsFragment : Fragment() {
@@ -72,9 +74,7 @@ internal fun NewsData(
 ) {
     val scope = rememberCoroutineScope()
     val state = rememberLazyListState()
-    val showScrollToTopButton by remember {
-        derivedStateOf { state.firstVisibleItemIndex > 0 } // recomposition only triggered when the state of calculation changed
-    }
+    val showScrollToTopButton by remember { derivedStateOf { state.firstVisibleItemIndex > 0 } /* recomposition only triggered when the state of calculation changed*/ }
     LazyColumn(
         state = state,
         verticalArrangement = Arrangement.spacedBy(4.dp),
@@ -83,15 +83,20 @@ internal fun NewsData(
             end = 12.dp,
         )
     ) {
-        items(data.list) { item ->
-            Text(
-                text = item.title,
-            )
-        }
+        items(data.list) { item -> NewsItem(item) }
         item {
             Button(
                 onClick = { scope.launch { state.animateScrollToItem(0) } }
             ) { }
         }
     }
+}
+
+@Composable
+internal fun NewsItem(item: NewsVO) {
+    Text(
+        text = item.title,
+        style = AppTheme.style.H5,
+        color = AppTheme.color.textColor,
+    )
 }
