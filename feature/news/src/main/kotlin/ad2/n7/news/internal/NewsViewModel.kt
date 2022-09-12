@@ -4,15 +4,18 @@ import ad2.n7.news.internal.domain.model.NewsVO
 import ad2.n7.news.internal.domain.usecase.GetNewsUseCase
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingSource
+import androidx.paging.PagingState
+import androidx.paging.cachedIn
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import javax.inject.Inject
 
 internal class NewsViewModel @AssistedInject constructor(
-    private val getNewsUseCase: GetNewsUseCase,
+    private val newsSource: NewsSource,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -27,6 +30,9 @@ internal class NewsViewModel @AssistedInject constructor(
     }
 
     val state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
+    val news = Pager(PagingConfig(pageSize = 10), 1) { newsSource }
+        .flow
+        .cachedIn(viewModelScope)
 
 //    private lateinit var newsDao: NewsDao
 //    var news: LiveData<PagedList<NewsModel>>? = null
@@ -38,10 +44,7 @@ internal class NewsViewModel @AssistedInject constructor(
     }
 
     private fun setupLiveDataNews() {
-        getNewsUseCase()
-            .onEach { list -> state.emit(State.Data(list)) }
-            .catch { error -> }
-            .launchIn(viewModelScope)
+
 //        newsDao = NewsRoomDatabase.getDatabase(application).steamNewsDao()
 //        val dataSource = newsDao.dataSourceNews
 //        val config = PagedList.Config.Builder()
@@ -68,6 +71,28 @@ internal class NewsViewModel @AssistedInject constructor(
 //                }
 //            }
 //        }).build()
+    }
+
+}
+
+class NewsSource @Inject constructor(
+    private val getNewsUseCase: GetNewsUseCase,
+) : PagingSource<Int, NewsVO>() {
+
+    override fun getRefreshKey(state: PagingState<Int, NewsVO>): Int? {
+        return state.anchorPosition
+    }
+
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, NewsVO> = try {
+        val page = params.key ?: 1
+        val news = getNewsUseCase()
+        LoadResult.Page(
+            news,
+            if (page == 1) null else page - 1,
+            if (news.isEmpty()) null else page + 1,
+        )
+    } catch (error: Exception) {
+        LoadResult.Error(error)
     }
 
 }
