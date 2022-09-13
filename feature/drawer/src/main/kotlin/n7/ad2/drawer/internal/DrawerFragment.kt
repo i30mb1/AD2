@@ -38,6 +38,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
 import javax.inject.Inject
+import kotlin.time.Duration.Companion.seconds
 
 internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
 
@@ -101,7 +102,6 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     }
 
     private fun setupOnBackPressed() {
-        val millisForExit = 2000L
         var doubleBackToExitPressedOnce = false
         activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner) {
             val popBack = activity?.supportFragmentManager?.popBackStackImmediate() ?: return@addCallback
@@ -117,7 +117,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
             doubleBackToExitPressedOnce = true
             Snackbar.make(binding.root, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show()
             lifecycleScope.launch {
-                delay(millisForExit)
+                delay(2.seconds)
                 doubleBackToExitPressedOnce = false
             }
         }
