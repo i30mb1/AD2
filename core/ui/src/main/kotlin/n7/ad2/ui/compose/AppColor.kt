@@ -8,6 +8,7 @@ data class AppColor(
     val background: Color,
     val surface: Color,
     val textColor: Color,
+    val error: Color,
 )
 
 val appColorLight = AppColor(
@@ -15,6 +16,7 @@ val appColorLight = AppColor(
     background = Color(0xFF202225),
     surface = Color(0xFF2F3136),
     textColor = Color(0xFFFFFFFF),
+    error = Color(0xFFFF0000),
 )
 
 val appColorDark = AppColor(
@@ -22,7 +24,7 @@ val appColorDark = AppColor(
     background = Color(0xFFFFFFFF),
     surface = Color(0xFFFFFFFF),
     textColor = Color(0xF0000000),
+    error = Color(0xF0FF0000),
 )
 
-
-val LocalColor = staticCompositionLocalOf<AppColor> { error("No colors provided") }
+val LocalAppColor = staticCompositionLocalOf<AppColor> { error("No colors provided") }

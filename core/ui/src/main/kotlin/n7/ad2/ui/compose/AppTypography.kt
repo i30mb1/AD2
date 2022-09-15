@@ -4,14 +4,14 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
 
-data class AppStyle(
+data class AppTypography(
     val H5: TextStyle,
 )
 
-val appStyle = AppStyle(
+val appTypography = AppTypography(
     H5 = TextStyle(
         fontSize = 14.sp,
     ),
 )
 
-val LocalAppStyle = staticCompositionLocalOf<AppStyle> { error("No colors provided") }
+val LocalAppTypography = staticCompositionLocalOf<AppTypography> { error("No colors provided") }

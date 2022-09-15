@@ -22,6 +22,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -99,7 +100,7 @@ internal fun NewsScreen(
                 end = 4.dp,
             )
         ) {
-            items(news) { item -> NewsItem(item = item) }
+            items(news) { item -> NewsItem(item) }
         }
         if (showScrollToTopButton) {
             Button(
@@ -125,12 +126,13 @@ internal fun NewsScreen(
 
 @Composable
 internal fun NewsItem(item: NewsVO?) {
-    Box(
+    Surface(
         modifier = Modifier
             .clip(shape = RoundedCornerShape(6.dp))
             .heightIn(min = 32.dp)
             .fillMaxWidth()
             .background(AppTheme.color.surface),
+        elevation = 8.dp,
     ) {
         Text(
             modifier = Modifier
