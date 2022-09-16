@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.gradle.BaseExtension
-import gradle.kotlin.dsl.accessors._6076749d6351b9fdce8c5a61387fb22f.implementation
+import gradle.kotlin.dsl.accessors._4b7ad2363fc1fce7c774e054dc9a9300.implementation
 
 configure<BaseExtension> {
     buildFeatures.compose = true
