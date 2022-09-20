@@ -107,6 +107,6 @@ benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0"
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
-compose = ["composeActivity", "composeViewModel", "composeToolingPreview", "composeAnimation", "composeMaterial", "composeFoundation"]
+compose = ["composeToolingPreview", "composeAnimation", "composeMaterial", "composeFoundation"]
 
 [plugins]
