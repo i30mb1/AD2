@@ -14,4 +14,4 @@ val appTypography = AppTypography(
     ),
 )
 
-val LocalAppTypography = staticCompositionLocalOf<AppTypography> { error("No colors provided") }
+val LocalAppTypography = staticCompositionLocalOf { appTypography }

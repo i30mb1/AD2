@@ -27,4 +27,4 @@ val appColorDark = AppColor(
     error = Color(0xF0FF0000),
 )
 
-val LocalAppColor = staticCompositionLocalOf<AppColor> { error("No colors provided") }
+val LocalAppColor = staticCompositionLocalOf { appColorLight }

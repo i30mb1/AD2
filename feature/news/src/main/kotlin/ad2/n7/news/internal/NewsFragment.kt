@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -35,6 +34,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.tooling.preview.Devices
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.paging.compose.LazyPagingItems
@@ -124,15 +125,16 @@ internal fun NewsScreen(
     })
 }
 
+@Preview(name = "simple", device = Devices.AUTOMOTIVE_1024p)
 @Composable
-internal fun NewsItem(item: NewsVO?) {
+internal fun NewsItem(item: NewsVO? = null) {
     Surface(
         modifier = Modifier
-            .clip(shape = RoundedCornerShape(6.dp))
             .heightIn(min = 32.dp)
             .fillMaxWidth()
-            .background(AppTheme.color.surface),
-        elevation = 8.dp,
+            .clip(RoundedCornerShape(6.dp)),
+        color = AppTheme.color.surface,
+//        elevation = 8.dp,
     ) {
         Text(
             modifier = Modifier
