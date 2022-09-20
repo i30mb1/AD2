@@ -50,7 +50,6 @@ composeFoundation = { module = "androidx.compose.foundation:foundation", version
 composeMaterial = { module = "androidx.compose.material:material", version.ref = "compose" }
 composeAnimation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 composeTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
-composeToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 composeUITest = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 composePaging = "androidx.paging:paging-compose:1.0.0-alpha16"
 
@@ -107,6 +106,6 @@ benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0"
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
-compose = ["composeToolingPreview", "composeAnimation", "composeMaterial", "composeFoundation"]
+compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling"]
 
 [plugins]
