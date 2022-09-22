@@ -13,10 +13,10 @@ class GetNewsUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 
-    operator suspend fun invoke(): List<NewsVO> = withContext(dispatchers.IO) {
+    suspend operator fun invoke(page: Int): List<NewsVO> = withContext(dispatchers.IO) {
         val baseUrl = when (appInformation.appLocale) {
-            AppLocale.English -> "https://www.dotabuff.com/blog?page="
-            AppLocale.Russian -> "https://ru.dotabuff.com/blog?page="
+            AppLocale.English -> "https://www.dotabuff.com/blog?page=$page"
+            AppLocale.Russian -> "https://ru.dotabuff.com/blog?page=$page"
         }
         val doc = Jsoup.connect(baseUrl).get()
         val body = doc.getElementsByClass("related-posts")
@@ -25,7 +25,9 @@ class GetNewsUseCase @Inject constructor(
             news.forEach { element ->
                 val href = element.attr("href")
                 val title = element.getElementsByClass("headline").getOrNull(0)?.text()
-                if (title != null) add(NewsVO(title))
+                val style = element.childNode(0).attr("style")
+                val imageUrl = style.substringAfter("url(").substringBefore(")")
+                if (title != null) add(NewsVO(title, imageUrl))
             }
         }
     }

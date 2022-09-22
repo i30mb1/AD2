@@ -70,6 +70,7 @@ paging3 = "androidx.paging:paging-runtime:3.1.1"
 material = "com.google.android.material:material:1.6.1"
 constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
 coil = "io.coil-kt:coil:2.2.1"
+coilCompose = "io.coil-kt:coil-compose:2.2.1"
 jsoup = "org.jsoup:jsoup:1.11.2" # Jsoup для разбора html
 firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
 playCore = "com.google.android.play:core:1.10.3"
@@ -106,6 +107,6 @@ benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0"
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
-compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling"]
+compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "coilCompose"]
 
 [plugins]

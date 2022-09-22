@@ -85,7 +85,7 @@ class NewsSource @Inject constructor(
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, NewsVO> = try {
         val page = params.key ?: 1
-        val news = getNewsUseCase()
+        val news = getNewsUseCase(page)
         LoadResult.Page(
             news,
             if (page == 1) null else page - 1,
