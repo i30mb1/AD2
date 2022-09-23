@@ -34,11 +34,6 @@ internal class NewsViewModel @AssistedInject constructor(
         .flow
         .cachedIn(viewModelScope)
 
-//    private lateinit var newsDao: NewsDao
-//    var news: LiveData<PagedList<NewsModel>>? = null
-//        private set
-//    private var pageNews = 1
-
     init {
         setupLiveDataNews()
     }

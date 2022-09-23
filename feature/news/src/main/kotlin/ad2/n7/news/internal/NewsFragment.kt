@@ -59,7 +59,7 @@ import javax.inject.Inject
 internal class NewsFragment : Fragment() {
 
     companion object {
-        fun getInstance(): NewsFragment = NewsFragment()
+        fun getInstance() = NewsFragment()
     }
 
     @Inject lateinit var newsViewModelFactory: NewsViewModel.Factory
