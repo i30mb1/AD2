@@ -138,7 +138,7 @@ internal fun NewsItem(item: NewsVO? = null) {
         color = AppTheme.color.surface,
         elevation = 4.dp,
     ) {
-        AsyncImage(model = item?.imageUrl, contentDescription = item?.title, contentScale = ContentScale.Crop)
+        AsyncImage(model = item?.image?.origin, contentDescription = item?.title, contentScale = ContentScale.Crop)
         Text(
             modifier = Modifier
                 .background(Color(0x4D000000))

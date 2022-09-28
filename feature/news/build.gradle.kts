@@ -8,6 +8,7 @@ dependencies {
     implementation(libs.workManager)
     implementation(libs.composePaging)
     implementation(libs.jsoup)
+    implementation(libs.roomPaging)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
@@ -15,6 +16,7 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
     implementation(project(Module.Core.database))
+    implementation(project(Module.Core.appPreference))
 
     kapt(libs.daggerAnnotation)
 }

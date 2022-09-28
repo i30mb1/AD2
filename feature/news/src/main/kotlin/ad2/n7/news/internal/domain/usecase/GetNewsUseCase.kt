@@ -1,19 +1,24 @@
 package ad2.n7.news.internal.domain.usecase
 
-import ad2.n7.news.internal.domain.model.NewsVO
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.database_guides.internal.model.NewsLocal
+import n7.ad2.logger.Logger
 import org.jsoup.Jsoup
 import javax.inject.Inject
 
 class GetNewsUseCase @Inject constructor(
+    private val logger: Logger,
     private val appInformation: AppInformation,
     private val dispatchers: DispatchersProvider,
 ) {
 
-    suspend operator fun invoke(page: Int): List<NewsVO> = withContext(dispatchers.IO) {
+    suspend operator fun invoke(page: Int): Flow<List<NewsLocal>> = flow {
         val baseUrl = when (appInformation.appLocale) {
             AppLocale.English -> "https://www.dotabuff.com/blog?page=$page"
             AppLocale.Russian -> "https://ru.dotabuff.com/blog?page=$page"
@@ -21,16 +26,22 @@ class GetNewsUseCase @Inject constructor(
         val doc = Jsoup.connect(baseUrl).get()
         val body = doc.getElementsByClass("related-posts")
         val news = body[0].getElementsByTag("a")
-        buildList {
+        val result = buildList {
             news.forEach { element ->
                 val href = element.attr("href")
                 val title = element.getElementsByClass("headline").getOrNull(0)?.text()
                 val style = element.childNode(0).attr("style")
                 val imageUrl = style.substringAfter("url(").substringBefore(")")
-                if (title != null) add(NewsVO(title, imageUrl))
+                if (title != null) add(NewsLocal(title = title, urlImage = imageUrl, loadedFromPage = page))
             }
         }
+        emit(result)
     }
+        .catch {
+            logger.log("could not loading news page $page")
+            emit(emptyList())
+        }
+        .flowOn(dispatchers.IO)
 
 
 }

@@ -1,6 +1,8 @@
 package n7.ad2.app_preference
 
 interface Preference {
+    suspend fun isNeedToUpdateNews(): Boolean
+    suspend fun saveUpdateNewsDate()
     suspend fun isNeedToUpdateSettings(): Boolean
     suspend fun saveSettings(data: String)
     suspend fun getSettings(): String

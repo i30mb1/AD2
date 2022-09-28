@@ -33,6 +33,17 @@ class AD2Preference constructor(
     private val logWidgetEnabled = booleanPreferencesKey("logWidgetEnabled")
     private val settings = stringPreferencesKey("settings")
     private val settingsLastDayUpdate = intPreferencesKey("settingsLastDateUpdate")
+    private val newsLastDateUpdate = intPreferencesKey("newsLastDateUpdate")
+
+    override suspend fun isNeedToUpdateNews(): Boolean {
+        return dataStore.data.first()[newsLastDateUpdate] != currentDay
+    }
+
+    override suspend fun saveUpdateNewsDate() {
+        dataStore.edit { preference ->
+            preference[newsLastDateUpdate] = currentDay
+        }
+    }
 
     override suspend fun isNeedToUpdateSettings(): Boolean {
         return dataStore.data.first()[settingsLastDayUpdate] != currentDay
