@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  IS_CI: ${{ secrets.IS_CI }}
+  KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+  KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+  STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+
 jobs:
   build:
     runs-on: windows-2022
@@ -30,11 +36,6 @@ jobs:
 #             ~/.gradle/wrapper
 #           key: ${{ runner.os }}-${{ hashFiles('**/*.gradle*','**/gradle-wrapper.properties','**/libs.versions.toml') }}
       - name: Generate local.properties file
-        env:
-          IS_CI: ${{ secrets.IS_CI }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
         shell: cmd
         run: |
           echo isCI=%IS_CI% > local.properties
@@ -62,11 +63,6 @@ jobs:
           distribution: 'temurin'
           cache: gradle
       - name: Generate local.properties file
-        env:
-          IS_CI: ${{ secrets.IS_CI }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
         shell: cmd
         run: |
           echo isCI=%IS_CI% > local.properties
