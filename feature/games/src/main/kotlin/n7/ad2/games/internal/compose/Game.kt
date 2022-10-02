@@ -23,7 +23,7 @@ import n7.ad2.ui.compose.AppTheme
 internal fun Game(
     modifier: Modifier = Modifier,
     gameButtonData: GameVO = GameVO.SpellCost("HOW MANY COST THIS SPELL"),
-    onButtonClicked: (players: Players) -> Unit = { },
+    onGameClicked: (players: Players) -> Unit = { },
 ) {
     Column(
         modifier = modifier
@@ -44,14 +44,14 @@ internal fun Game(
             horizontalArrangement = Arrangement.SpaceAround,
         ) {
             Button(
-                onClick = { onButtonClicked(Players.One) },
+                onClick = { onGameClicked(Players.One) },
             ) {
                 Text(
                     text = stringResource(id = R.string.one_player)
                 )
             }
             Button(
-                onClick = { onButtonClicked(Players.Two) },
+                onClick = { onGameClicked(Players.Two) },
             ) {
                 Text(
                     text = stringResource(id = R.string.two_players)

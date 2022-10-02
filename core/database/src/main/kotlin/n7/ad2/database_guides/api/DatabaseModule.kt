@@ -14,15 +14,10 @@ import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.api.dao.NewsDao
 import n7.ad2.database_guides.internal.worker.DatabaseWorker
-import javax.inject.Qualifier
-
-@Qualifier
-private annotation class InternalApi
 
 @Module
 class DatabaseModule {
 
-    @InternalApi
     @ApplicationScope
     @Provides
     fun provideDatabase(application: Application): AppDatabase {
@@ -46,15 +41,15 @@ class DatabaseModule {
     }
 
     @Provides
-    fun provideItemsDao(@InternalApi database: AppDatabase): ItemsDao = database.itemsDao
+    fun provideItemsDao(database: AppDatabase): ItemsDao = database.itemsDao
 
     @Provides
-    fun provideHeroesDao(@InternalApi database: AppDatabase): GuidesDao = database.guidesDao
+    fun provideHeroesDao(database: AppDatabase): GuidesDao = database.guidesDao
 
     @Provides
-    fun provideGuidesDao(@InternalApi database: AppDatabase): HeroesDao = database.heroesDao
+    fun provideGuidesDao(database: AppDatabase): HeroesDao = database.heroesDao
 
     @Provides
-    fun provideNewsDao(@InternalApi database: AppDatabase): NewsDao = database.newsDao
+    fun provideNewsDao(database: AppDatabase): NewsDao = database.newsDao
 
 }

@@ -9,6 +9,7 @@ dependencies {
 
     implementation(libs.workManager)
     implementation(libs.moshi)
+    implementation(libs.roomPaging)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.coroutines))

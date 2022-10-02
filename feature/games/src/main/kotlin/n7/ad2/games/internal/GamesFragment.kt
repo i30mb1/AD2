@@ -1,5 +1,6 @@
 package n7.ad2.games.internal
 
+import GameGuessTheSkillManaPoint
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
+import n7.ad2.android.getNavigator
 import n7.ad2.games.internal.compose.GamesScreen
+import n7.ad2.games.internal.data.Players
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.ktx.viewModel
 import n7.ad2.logger.Logger
@@ -32,7 +35,13 @@ internal class GamesFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView { GamesScreen(viewModel, parentFragment as DrawerPercentListener) }
+        return ComposeView { GamesScreen(viewModel, parentFragment as DrawerPercentListener, ::onGameClicked) }
+    }
+
+    private fun onGameClicked(players: Players) {
+        getNavigator.setMainFragment(GameGuessTheSkillManaPoint.getInstance()) {
+            addToBackStack(null)
+        }
     }
 
 }

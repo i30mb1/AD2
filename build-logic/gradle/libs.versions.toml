@@ -1,5 +1,5 @@
 [versions]
-room = "2.4.3"
+room = "2.5.0-alpha03"
 coroutines = "1.6.4"
 moshi = "1.14.0"
 dagger = "2.43.2"
