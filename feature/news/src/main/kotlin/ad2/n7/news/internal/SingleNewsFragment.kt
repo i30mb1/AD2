@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.fragment.app.Fragment
 import n7.ad2.android.findDependencies
@@ -40,11 +42,13 @@ internal class SingleNewsFragment : Fragment() {
 
 @Composable
 internal fun SingleNewsScreen(viewModel: SingleNewsViewModel) {
-    AndroidView(factory = { context ->
-        WebView(context).apply {
-            settings.textZoom = 85
-            settings.defaultFontSize = 10
-            loadUrl("https://www.dotabuff.com/blog/2022-10-04-top-tier-supports-in-the-current-meta")
-        }
-    })
+    AndroidView(
+        modifier = Modifier.systemBarsPadding(),
+        factory = { context ->
+            WebView(context).apply {
+                settings.textZoom = 85
+                settings.defaultFontSize = 10
+                loadUrl("https://www.dotabuff.com/blog/2022-10-04-top-tier-supports-in-the-current-meta")
+            }
+        })
 }
