@@ -2,9 +2,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.Spring.StiffnessLow
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.forEachGesture
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -12,14 +19,22 @@ import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.PointerEvent
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.input.pointer.positionChange
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
+import kotlinx.coroutines.launch
 import n7.ad2.ui.ComposeView
 import n7.ad2.ui.compose.AppTheme
+import kotlin.math.roundToInt
 
 //package n7.ad2.games.internal.games
 //
@@ -65,16 +80,42 @@ class GameGuessTheSkillManaPoint : Fragment() {
                 .padding(20.dp),
             contentAlignment = Alignment.TopCenter
         ) {
-            Circle(modifier = Modifier
-                .background(AppTheme.color.surface, CircleShape))
+            Circle(modifier = Modifier)
         }
     }
 
     @Composable
     fun Circle(modifier: Modifier) {
+        val offsetY = remember { Animatable(0f) }
+        val scope = rememberCoroutineScope()
         Box(
             modifier = modifier
-                .size(50.dp),
+                .offset { IntOffset(0, offsetY.value.roundToInt()) }
+                .size(50.dp)
+                .background(AppTheme.color.error, CircleShape)
+                .pointerInput(Unit) {
+                    forEachGesture {
+                        awaitPointerEventScope {
+                            awaitFirstDown()
+                            do {
+                                val event: PointerEvent = awaitPointerEvent()
+                                event.changes.forEach { change ->
+                                    scope.launch { offsetY.snapTo(offsetY.value + change.positionChange().y) }
+                                }
+                            } while (event.changes.any { it.pressed })
+                            // touch released
+                            scope.launch {
+                                offsetY.animateTo(
+                                    0f,
+                                    spring(
+                                        dampingRatio = Spring.DampingRatioLowBouncy,
+                                        stiffness = StiffnessLow
+                                    )
+                                )
+                            }
+                        }
+                    }
+                },
             contentAlignment = Alignment.Center
         ) {
             Icon(Icons.Default.Star, contentDescription = null, tint = Color.White)
