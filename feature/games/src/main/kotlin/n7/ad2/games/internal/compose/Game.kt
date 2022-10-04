@@ -5,14 +5,17 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import n7.ad2.games.R
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.data.Players
@@ -28,7 +31,8 @@ internal fun Game(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(AppTheme.color.surface)
+            .clip(RoundedCornerShape(8.dp))
+            .background(AppTheme.color.surface),
     ) {
         Text(
             text = gameButtonData.title,

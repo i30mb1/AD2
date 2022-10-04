@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -79,7 +80,12 @@ private fun GamesList(
     onGameClicked: (players: Players) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = modifier.padding(horizontal = 12.dp, vertical = 4.dp)) {
+    Column(
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = modifier
+            .padding(horizontal = 12.dp, vertical = 4.dp)
+            .systemBarsPadding(),
+    ) {
         games?.forEach { gameData ->
             Game(gameButtonData = gameData, onGameClicked = onGameClicked)
         }
