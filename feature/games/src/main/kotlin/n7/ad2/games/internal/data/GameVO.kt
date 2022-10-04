@@ -5,8 +5,8 @@ internal sealed class Players {
     object Two : Players()
 }
 
-internal sealed class GameVO(val title: String) {
-    class SpellCost(name: String) : GameVO(name)
-    class Apm(name: String) : GameVO(name)
-    class CanYouBuyIt(name: String) : GameVO(name)
-}
+ sealed class GameVO(val title: String) {
+     class SpellCost(name: String) : GameVO(name)
+     class Apm(name: String) : GameVO(name)
+     class CanYouBuyIt(name: String) : GameVO(name)
+ }

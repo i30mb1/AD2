@@ -11,6 +11,8 @@ import androidx.compose.ui.layout.Placeable
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
+import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 
@@ -18,7 +20,7 @@ import androidx.compose.ui.unit.dp
 @Preview(device = Devices.PIXEL)
 @Composable
 fun TextMessage(
-    message: String = "Hellooooooooooooooo",
+    @PreviewParameter(MessageProvider::class) message: String,
     time: String = "11:22",
     modifier: Modifier = Modifier,
 ) {
@@ -129,4 +131,11 @@ class TextMessageDimens {
         internal set
     var parentWidth: Int = 0
         internal set
+}
+
+class MessageProvider : PreviewParameterProvider<String> {
+    override val values: Sequence<String> = sequenceOf(
+        "Hello",
+        "Hellooooooooooooooooooooo",
+    )
 }

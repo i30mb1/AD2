@@ -10,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.forEachGesture
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
@@ -17,6 +18,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
@@ -80,9 +83,24 @@ class GameGuessTheSkillManaPoint : Fragment() {
                 .fillMaxSize()
                 .systemBarsPadding()
                 .padding(20.dp),
-            contentAlignment = Alignment.TopCenter
         ) {
-            Circle(modifier = Modifier)
+            Circle(modifier = Modifier.align(Alignment.TopCenter))
+            Row(modifier = Modifier.align(Alignment.BottomCenter)) {
+                repeat(4) {
+                    Surface(
+                        modifier = Modifier
+                            .size(75.dp)
+                            .padding(10.dp)
+                            .background(AppTheme.color.surface)
+                    ) {
+                        Box {
+                            Text(text = "1", modifier = Modifier.align(Alignment.Center))
+                        }
+
+                    }
+                }
+
+            }
         }
     }
 

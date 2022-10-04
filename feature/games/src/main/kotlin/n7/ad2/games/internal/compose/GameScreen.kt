@@ -87,7 +87,7 @@ private fun GamesList(
             .systemBarsPadding(),
     ) {
         games?.forEach { gameData ->
-            Game(gameButtonData = gameData, onGameClicked = onGameClicked)
+//            Game(gameButtonData = gameData, onGameClicked = onGameClicked)
         }
     }
 }

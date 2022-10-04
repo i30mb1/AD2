@@ -15,6 +15,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
+import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import n7.ad2.games.R
 import n7.ad2.games.internal.data.GameVO
@@ -24,8 +26,8 @@ import n7.ad2.ui.compose.AppTheme
 @Preview
 @Composable
 internal fun Game(
+    @PreviewParameter(PreviewGameProvider::class) gameButtonData: GameVO,
     modifier: Modifier = Modifier,
-    gameButtonData: GameVO = GameVO.SpellCost("HOW MANY COST THIS SPELL"),
     onGameClicked: (players: Players) -> Unit = { },
 ) {
     Column(
@@ -63,4 +65,11 @@ internal fun Game(
             }
         }
     }
+}
+
+internal class PreviewGameProvider : PreviewParameterProvider<GameVO> {
+    override val values: Sequence<GameVO> = sequenceOf(
+        GameVO.SpellCost("HOW MANY COST THIS SPELL"),
+        GameVO.SpellCost("HOW MANY COST THIS SPELL 2"),
+    )
 }
