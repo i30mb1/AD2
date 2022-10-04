@@ -20,7 +20,7 @@ fun AppTheme(
     isDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {
-    val appColor = if (isDarkTheme) appColorDark else appColorLight
+    val appColor = if (true) appColorDark else appColorLight
     val appTypography = appTypography
     CompositionLocalProvider(
         LocalAppTypography provides appTypography,
