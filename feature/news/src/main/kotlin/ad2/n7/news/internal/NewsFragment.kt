@@ -147,7 +147,7 @@ internal fun NewsItem(item: NewsVO? = null) {
             textAlign = TextAlign.Center,
             text = item?.title ?: "Loading...",
             style = AppTheme.style.H5,
-            color = AppTheme.color.textColor,
+            color = Color.White,
         )
     }
 }
