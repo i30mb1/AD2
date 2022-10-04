@@ -44,7 +44,7 @@ internal fun SingleNewsScreen(viewModel: SingleNewsViewModel) {
         WebView(context).apply {
             settings.textZoom = 85
             settings.defaultFontSize = 10
-            loadUrl("vk.com")
+            loadUrl("https://www.dotabuff.com/blog/2022-10-04-top-tier-supports-in-the-current-meta")
         }
     })
 }

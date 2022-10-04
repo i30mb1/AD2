@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalPagingApi::class)
+@file:OptIn(ExperimentalPagingApi::class, ExperimentalPagingApi::class)
 
 package ad2.n7.news.internal
 
@@ -10,6 +10,7 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
+import androidx.paging.PagingData
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
@@ -17,6 +18,7 @@ import androidx.paging.map
 import androidx.room.withTransaction
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.single
@@ -27,7 +29,7 @@ import javax.inject.Inject
 
 internal class NewsViewModel @AssistedInject constructor(
     private val newsSource: NewsSource,
-    private val newsRemoteMediator: NewsRemoteMediator,
+    newsRemoteMediator: NewsRemoteMediator,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -42,47 +44,13 @@ internal class NewsViewModel @AssistedInject constructor(
     }
 
     val state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
-    val news = Pager(PagingConfig(pageSize = 10), 1, newsRemoteMediator) { newsSource }
+    val news: Flow<PagingData<NewsVO>> = Pager(PagingConfig(pageSize = 10), 1, newsRemoteMediator) { newsSource }
         .flow
         .map { pagingData ->
             pagingData.map { newsLocal ->
-                NewsVO(newsLocal.title, Image(newsLocal.urlImage))
+                NewsVO(newsLocal.id, newsLocal.title, Image(newsLocal.urlImage))
             }
         }
-
-    init {
-        setupLiveDataNews()
-    }
-
-    private fun setupLiveDataNews() {
-
-//        newsDao = NewsRoomDatabase.getDatabase(application).steamNewsDao()
-//        val dataSource = newsDao.dataSourceNews
-//        val config = PagedList.Config.Builder()
-//            .setPageSize(12)
-//            .setInitialLoadSizeHint(12)
-//            .setPrefetchDistance(3)
-//            .setEnablePlaceholders(true)
-//            .build()
-//        news = LivePagedListBuilder(dataSource, config).setBoundaryCallback(object : BoundaryCallback<NewsModel>() {
-//            override fun onItemAtEndLoaded(itemAtEnd: NewsModel) {
-//                super.onItemAtEndLoaded(itemAtEnd)
-//                pageNews++
-//                val data = Data.Builder().putInt(NewsWorker.PAGE, pageNews).build()
-//                val worker = OneTimeWorkRequest.Builder(NewsWorker::class.java).setInputData(data).build()
-//                WorkManager.getInstance(application).enqueue(worker)
-//                WorkManager.getInstance(application).getWorkInfoByIdLiveData(worker.id).observeForever { workInfo ->
-//                    if (workInfo != null) {
-//                        if (workInfo.state.isFinished) {
-////                            isLoading.set(false)
-//                        } else {
-////                            isLoading.set(true)
-//                        }
-//                    }
-//                }
-//            }
-//        }).build()
-    }
 
 }
 

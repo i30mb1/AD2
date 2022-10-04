@@ -14,4 +14,7 @@ interface NewsDao : BaseDao<NewsLocal> {
     @Query("DELETE FROM NewsTable")
     suspend fun clearAll()
 
+    @Query("SELECT * FROM NewsTable WHERE rowId =:id")
+    suspend fun getSingleNews(id: Int): NewsLocal
+
 }

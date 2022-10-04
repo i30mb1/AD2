@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package ad2.n7.news.internal
 
 import ad2.n7.news.internal.di.DaggerNewsComponent
@@ -21,6 +23,7 @@ import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -50,6 +53,7 @@ import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
+import n7.ad2.android.getNavigator
 import n7.ad2.ktx.viewModel
 import n7.ad2.logger.Logger
 import n7.ad2.ui.ComposeView
@@ -77,7 +81,13 @@ internal class NewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        return ComposeView { NewsScreen(viewModel, parentFragment as DrawerPercentListener) }
+        return ComposeView { NewsScreen(viewModel, parentFragment as DrawerPercentListener, ::onNewsClicked) }
+    }
+
+    private fun onNewsClicked(newsID: Int) {
+        getNavigator.setMainFragment(SingleNewsFragment.getInstance()) {
+            addToBackStack(null)
+        }
     }
 
 }
@@ -86,6 +96,7 @@ internal class NewsFragment : Fragment() {
 internal fun NewsScreen(
     viewModel: NewsViewModel,
     drawerPercentListener: DrawerPercentListener,
+    onNewsClicked: (newsID: Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val scope = rememberCoroutineScope()
@@ -102,7 +113,7 @@ internal fun NewsScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(top = 4.dp + insetsTop * drawerPercent, start = 4.dp, end = 4.dp),
         ) {
-            items(news) { item -> NewsItem(item) }
+            items(news) { item -> if (item != null) NewsItem(item, onNewsClicked) }
         }
         if (showScrollToTopButton) Box(
             modifier = modifier
@@ -129,7 +140,7 @@ internal fun NewsScreen(
 }
 
 @Composable
-internal fun NewsItem(item: NewsVO? = null) {
+internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit) {
     Surface(
         modifier = Modifier
             .height(170.dp)
@@ -137,15 +148,16 @@ internal fun NewsItem(item: NewsVO? = null) {
             .clip(RoundedCornerShape(6.dp)),
         color = AppTheme.color.surface,
         elevation = 4.dp,
+        onClick = { onNewsClicked(item.id) }
     ) {
-        AsyncImage(model = item?.image?.origin, contentDescription = item?.title, contentScale = ContentScale.Crop)
+        AsyncImage(model = item.image.origin, contentDescription = item.title, contentScale = ContentScale.Crop)
         Text(
             modifier = Modifier
                 .background(Color(0x4D000000))
                 .fillMaxHeight()
                 .padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 32.dp),
             textAlign = TextAlign.Center,
-            text = item?.title ?: "Loading...",
+            text = item.title ?: "Loading...",
             style = AppTheme.style.H5,
             color = Color.White,
         )
