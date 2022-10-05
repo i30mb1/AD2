@@ -7,9 +7,12 @@ import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.Spring.StiffnessLow
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.forEachGesture
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
@@ -23,10 +26,15 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.movableContentOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEvent
 import androidx.compose.ui.input.pointer.pointerInput
@@ -84,8 +92,16 @@ class GameGuessTheSkillManaPoint : Fragment() {
                 .systemBarsPadding()
                 .padding(20.dp),
         ) {
-            Circle(modifier = Modifier.align(Alignment.TopCenter))
-            Row(modifier = Modifier.align(Alignment.BottomCenter)) {
+            var counter by remember { mutableStateOf(0) }
+            Circle(modifier = Modifier.align(Alignment.TopCenter)) { counter++ }
+            Blocks(counter)
+        }
+    }
+
+    @Composable
+    private fun BoxScope.Blocks(counter: Int) {
+        val movableBlock = remember {
+            movableContentOf {
                 repeat(4) {
                     Surface(
                         modifier = Modifier
@@ -96,23 +112,28 @@ class GameGuessTheSkillManaPoint : Fragment() {
                         Box {
                             Text(text = "1", modifier = Modifier.align(Alignment.Center))
                         }
-
                     }
                 }
-
             }
+        }
+        when (counter % 3) {
+            0 -> Row(Modifier.Companion.align(Alignment.BottomCenter)) { movableBlock() }
+            1 -> Column(Modifier.Companion.align(Alignment.BottomCenter)) { movableBlock() }
+            2 -> Box(Modifier.Companion.align(Alignment.BottomCenter)) { movableBlock() }
         }
     }
 
     @Composable
-    fun Circle(modifier: Modifier) {
+    fun Circle(modifier: Modifier, onCircleClicked: () -> Unit) {
         val offsetY = remember { Animatable(0f) }
         val scope = rememberCoroutineScope()
         Box(
             modifier = modifier
                 .offset { IntOffset(0, offsetY.value.roundToInt()) }
                 .size(50.dp)
-                .background(AppTheme.color.error, CircleShape)
+                .clip(CircleShape)
+                .background(AppTheme.color.error)
+                .clickable { onCircleClicked() }
                 .pointerInput(Unit) {
                     forEachGesture {
                         awaitPointerEventScope {
