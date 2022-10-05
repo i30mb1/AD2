@@ -10,14 +10,12 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.with
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -25,13 +23,13 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.data.Players
+import n7.ad2.ui.compose.view.LoadingScreen
 
 @Composable
 internal fun GamesScreen(
@@ -66,12 +64,7 @@ internal fun GamesScreen(
 
 @Composable
 private fun Loading() {
-    Box {
-        Text(
-            text = "Loading...",
-            modifier = Modifier.align(Alignment.Center),
-        )
-    }
+    LoadingScreen()
 }
 
 @Composable
@@ -87,7 +80,7 @@ private fun GamesList(
             .systemBarsPadding(),
     ) {
         games?.forEach { gameData ->
-//            Game(gameButtonData = gameData, onGameClicked = onGameClicked)
+            Game(gameButtonData = gameData, onGameClicked = onGameClicked)
         }
     }
 }
