@@ -1,9 +1,33 @@
 package ad2.n7.settings.internal
 
+import ad2.n7.settings.R
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Icon
+import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
+import com.google.android.play.core.review.ReviewManagerFactory
+import n7.ad2.ui.ComposeView
+import n7.ad2.ui.compose.AppTheme
 
 class SettingsFragment : Fragment() {
 
@@ -11,30 +35,72 @@ class SettingsFragment : Fragment() {
         fun getInstance(): SettingsFragment = SettingsFragment()
     }
 
-    private fun setupRateMe() {
-//        val reviewManager = ReviewManagerFactory.create(requireContext())
-//        val requestReviewFlow = reviewManager.requestReviewFlow()
-//        requestReviewFlow.addOnCompleteListener { request ->
-//            if (request.isSuccessful) {
-//                val reviewInfo = request.result
-//                val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
-//                flow.addOnCompleteListener {
-//                    requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_successful"))
-//                }
-//            } else {
-//                requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_fail"))
-//            }
-//        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return ComposeView {
+            SettingsScreen(
+                ::onReviewAppButtonClicked,
+                ::onTellFriendsButtonClicked,
+            )
+        }
     }
 
-    private fun setupTellFriends() {
-//        Intent(Intent.ACTION_SEND).apply {
-//            type = "text/plain"
-//            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.setting_tell_friend_message))
-//            putExtra(Intent.EXTRA_TEXT, getString(R.string.setting_tell_friend_message))
-//            intent = Intent.createChooser(this, getString(R.string.setting_tell_friend_title))
-//            startActivity(this)
-//        }
+    private fun onReviewAppButtonClicked() {
+        val reviewManager = ReviewManagerFactory.create(requireContext())
+        reviewManager.requestReviewFlow().addOnCompleteListener { request ->
+            if (request.isSuccessful) {
+                val reviewInfo = request.result ?: return@addOnCompleteListener
+                val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
+                flow.addOnCompleteListener {
+
+                }
+            }
+        }
+    }
+
+    @Preview
+    @Composable
+    fun SettingsScreen(
+        onAppReviewButtonClicked: () -> Unit = {},
+        onTellFriendsButtonClicked: () -> Unit = {},
+    ) {
+        Column {
+            SimpleItem(stringResource(R.string.setting_review_app), onAppReviewButtonClicked)
+            SimpleItem(stringResource(R.string.setting_tell_friend_about_this_app), onTellFriendsButtonClicked)
+        }
+    }
+
+    @Composable
+    fun SimpleItem(
+        name: String,
+        onSimpleItemClicked: () -> Unit,
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(AppTheme.color.surface)
+                .clickable { onSimpleItemClicked() }
+                .padding(12.dp, 8.dp),
+        ) {
+            Text(
+                text = name,
+                modifier = Modifier
+                    .align(Alignment.CenterVertically)
+                    .weight(1f),
+                color = AppTheme.color.textColor
+            )
+            Icon(
+                Icons.Default.Star, null
+            )
+        }
+    }
+
+    private fun onTellFriendsButtonClicked() {
+        Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.setting_tell_friends_subject))
+            putExtra(Intent.EXTRA_TEXT, getString(R.string.setting_tell_friends_text))
+            startActivity(Intent.createChooser(this, getString(R.string.setting_tell_friend_title)))
+        }
     }
 
     private fun setupContact() {
@@ -50,24 +116,5 @@ class SettingsFragment : Fragment() {
             startActivity(intent)
         }
     }
-
-
-//    fun applyTheme(theme: Theme) {
-//        Theme.values()
-//            .forEach {
-//                val newState = if (it.key == theme.key) PackageManager.COMPONENT_ENABLED_STATE_ENABLED else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-//                packageManager.setComponentEnabledSetting(ComponentName(this, it.componentClass), newState, PackageManager.DONT_KILL_APP)
-//            }
-//        recreateActivity()
-//    }
-
-
-    private fun recreateActivity() {
-//        TaskStackBuilder.create(this)
-//            .addNextIntent(Intent(this, MainActivity::class.java))
-//            .addNextIntent(intent)
-//            .startActivities()
-    }
-
 
 }

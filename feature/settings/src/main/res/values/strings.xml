@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="setting_category_setting_title">APP SETTING</string>
+    <string name="setting_tell_friends_subject">Check this out</string>
+    <string name="setting_tell_friends_text">Virus free, 100%</string>
     <string name="setting_account_title">Display your account</string>
     <string name="setting_log_title">Panel with log-text</string>
-    <string name="setting_log_summary">on main screen</string>
-    <string name="setting_account_summary">Show your friends</string>
+    <string name="setting_review_app">Rate the app</string>
+    <string name="setting_tell_friend_about_this_app">Tell a friend about the app</string>
     <string name="setting_about_title" translatable="false">About Dota 2</string>
     <string name="setting_private_policy_title" translatable="false">Private Policy</string>
     <string name="setting_about_summary" translatable="false">v%1$s</string>
