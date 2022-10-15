@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
+import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.AppLocale
 import n7.ad2.android.extension.load
@@ -29,7 +30,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
     }
     private val tvLocale: TickerView = TickerView(context, null, n7.ad2.ui.R.style.TextAppearance_B1).apply {
         layoutParams = params.apply { width = 60.dpToPx }
-//        setCharacterList(TickerUtils.getDefaultListForUSCurrency())
+        setCharacterLists(TickerUtils.provideAlphabeticalList())
         animationDuration = resources.getInteger(n7.ad2.ui.R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
