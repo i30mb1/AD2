@@ -5,8 +5,8 @@ plugins {
 
 dependencies {
     implementation(libs.jsoup)
-    implementation(libs.exoPlayerCore)
 
+    implementation(project(Module.Core.mediaPlayer))
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.coroutines))

@@ -4,6 +4,10 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.exoPlayerUI)
+    implementation(libs.exoPlayerHLS)
+    implementation(libs.exoPlayerSession)
+
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.coroutines))
@@ -11,6 +15,7 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
     implementation(project(Module.Core.retrofit))
+    implementation(project(Module.Core.mediaPlayer))
 
     api(libs.moshi)
 

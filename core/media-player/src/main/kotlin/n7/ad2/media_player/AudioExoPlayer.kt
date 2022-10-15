@@ -2,26 +2,27 @@ package n7.ad2.media_player
 
 import android.app.Application
 import android.net.Uri
-import android.os.Build
 import androidx.annotation.RawRes
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
-import com.google.android.exoplayer2.C
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.PlaybackException
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.audio.AudioAttributes
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.upstream.AssetDataSource
-import com.google.android.exoplayer2.upstream.DataSpec
-import com.google.android.exoplayer2.upstream.DefaultDataSource
-import com.google.android.exoplayer2.upstream.RawResourceDataSource
+import androidx.media3.common.AudioAttributes
+import androidx.media3.common.C
+import androidx.media3.common.MediaItem
+import androidx.media3.common.PlaybackException
+import androidx.media3.common.Player
+import androidx.media3.common.util.UnstableApi
+import androidx.media3.datasource.AssetDataSource
+import androidx.media3.datasource.DataSpec
+import androidx.media3.datasource.DefaultDataSource
+import androidx.media3.datasource.RawResourceDataSource
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.source.ProgressiveMediaSource
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 
+@UnstableApi
 class AudioExoPlayer @AssistedInject constructor(
     private val context: Application,
     @Assisted private val lifecycle: Lifecycle,
@@ -59,19 +60,11 @@ class AudioExoPlayer @AssistedInject constructor(
     }
 
     override fun onStart(owner: LifecycleOwner) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) initializePlayer()
-    }
-
-    override fun onResume(owner: LifecycleOwner) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) initializePlayer()
-    }
-
-    override fun onPause(owner: LifecycleOwner) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) destroy()
+        initializePlayer()
     }
 
     override fun onStop(owner: LifecycleOwner) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) destroy()
+        destroy()
     }
 
     override fun onDestroy(owner: LifecycleOwner) {
@@ -82,7 +75,12 @@ class AudioExoPlayer @AssistedInject constructor(
     private fun initializePlayer() {
         exoPlayer = ExoPlayer.Builder(context).build()
         exoPlayer.addListener(this)
-        initAudioFocus()
+        exoPlayer.setHandleAudioBecomingNoisy(true)
+        val audioAttributes = AudioAttributes.Builder()
+            .setUsage(C.USAGE_MEDIA)
+            .setContentType(C.AUDIO_CONTENT_TYPE_SPEECH)
+            .build()
+        exoPlayer.setAudioAttributes(audioAttributes, true)
     }
 
     fun playFromAssets(url: String) {
@@ -94,7 +92,9 @@ class AudioExoPlayer @AssistedInject constructor(
         play(assetDataSource.uri!!)
     }
 
-    fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
+    fun play(@RawRes id: Int) {
+        play(RawResourceDataSource.buildRawResourceUri(id))
+    }
 
     fun play(url: String) {
         play(Uri.parse(url))
@@ -115,15 +115,6 @@ class AudioExoPlayer @AssistedInject constructor(
     private fun destroy() {
         exoPlayer.stop()
         exoPlayer.release()
-    }
-
-    private fun initAudioFocus() {
-        val audioAttributes = AudioAttributes.Builder()
-            .setUsage(C.USAGE_MEDIA)
-            .setContentType(C.CONTENT_TYPE_SPEECH)
-            .build()
-
-        exoPlayer.setAudioAttributes(audioAttributes, true)
     }
 
     private fun buildMediaSource(uri: Uri): ProgressiveMediaSource {

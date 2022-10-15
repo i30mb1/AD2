@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.exoPlayerCore)
+    api(libs.exoPlayer)
 
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.android))

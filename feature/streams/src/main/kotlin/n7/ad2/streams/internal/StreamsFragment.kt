@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -17,6 +16,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
+import n7.ad2.android.getNavigator
 import n7.ad2.ktx.viewModel
 import n7.ad2.logger.Logger
 import n7.ad2.streams.R
@@ -25,6 +25,7 @@ import n7.ad2.streams.internal.adapter.StreamsItemDecorator
 import n7.ad2.streams.internal.adapter.StreamsPagedListAdapter
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.domain.vo.VOStream
+import n7.ad2.streams.internal.stream.StreamFragment
 import javax.inject.Inject
 
 internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
@@ -40,10 +41,12 @@ internal class StreamsFragment : Fragment(R.layout.fragment_streams) {
     private val binding: FragmentStreamsBinding get() = _binding!!
     private val viewModel: StreamsViewModel by viewModel { streamsFactory.create() }
     private val streamsItemDecorator = StreamsItemDecorator()
-    private val onStreamClick: (vOSimpleStream: VOStream) -> Unit = { voSimpleStream ->
-        childFragmentManager.commit {
-//            addToBackStack(null)
-//            replace(R.id.container, StreamFragment.newInstance(voSimpleStream.streamerName))
+    private val onStreamClick: (stream: VOStream) -> Unit = { stream: VOStream ->
+        if (stream is VOStream.Simple) {
+            val streamFragment = StreamFragment.newInstance(stream.streamerName)
+            getNavigator.setMainFragment(streamFragment) {
+                addToBackStack(null)
+            }
         }
     }
 
