@@ -6,12 +6,16 @@ import androidx.compose.ui.unit.sp
 
 data class AppTypography(
     val H5: TextStyle,
+    val body: TextStyle,
 )
 
 val appTypography = AppTypography(
     H5 = TextStyle(
         fontSize = 14.sp,
     ),
+    body = TextStyle(
+        fontSize = 12.sp,
+    )
 )
 
 val LocalAppTypography = staticCompositionLocalOf { appTypography }

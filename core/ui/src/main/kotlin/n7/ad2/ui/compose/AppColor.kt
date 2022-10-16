@@ -8,6 +8,7 @@ data class AppColor(
     val background: Color,
     val surface: Color,
     val textColor: Color,
+    val textSecondaryColor: Color,
     val error: Color,
 )
 
@@ -16,6 +17,7 @@ val appColorLight = AppColor(
     background = Color(0xFF202225),
     surface = Color(0xFF2F3136),
     textColor = Color(0xFFFFFFFF),
+    textSecondaryColor = Color(0xFFC1C2C3),
     error = Color(0xFFFF0000),
 )
 
@@ -24,6 +26,7 @@ val appColorDark = AppColor(
     background = Color(0xFF202225),
     surface = Color(0xFF2F3136),
     textColor = Color(0xFFFFFFFF),
+    textSecondaryColor = Color(0xFFC1C2C3),
     error = Color(0xF0FF0000),
 )
 

@@ -1,5 +1,6 @@
 plugins {
     id("convention.android-library")
+    id("convention.compose")
     kotlin("kapt")
 }
 
@@ -7,6 +8,7 @@ dependencies {
     implementation(libs.exoPlayerUI)
     implementation(libs.exoPlayerHLS)
     implementation(libs.exoPlayerSession)
+    implementation(libs.composePaging)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))

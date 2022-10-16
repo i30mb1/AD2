@@ -113,7 +113,7 @@ internal fun NewsScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(top = 4.dp + insetsTop * drawerPercent, start = 4.dp, end = 4.dp),
         ) {
-            items(news) { item -> if (item != null) NewsItem(item, onNewsClicked) }
+            items(news) { item: NewsVO? -> if (item != null) NewsItem(item, onNewsClicked) }
         }
         if (showScrollToTopButton) Box(
             modifier = modifier
@@ -157,7 +157,7 @@ internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit) {
                 .fillMaxHeight()
                 .padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 32.dp),
             textAlign = TextAlign.Center,
-            text = item.title ?: "Loading...",
+            text = item.title,
             style = AppTheme.style.H5,
             color = Color.White,
         )
