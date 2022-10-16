@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.Spring.StiffnessLow
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -35,6 +36,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEvent
 import androidx.compose.ui.input.pointer.pointerInput
@@ -98,16 +100,25 @@ class GameGuessTheSkillManaPoint : Fragment() {
         }
     }
 
+    data class Block(val isSmall: Boolean)
+
     @Composable
-    private fun BoxScope.Blocks(counter: Int) {
+    private fun BoxScope.Blocks(
+        counter: Int,
+        onBlockClicked: () -> Unit = {},
+    ) {
         val movableBlock = remember {
             movableContentOf {
                 repeat(4) {
+                    var isSmall by remember { mutableStateOf(false) }
+                    val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
                     Surface(
                         modifier = Modifier
                             .size(75.dp)
                             .padding(10.dp)
+                            .scale(scale)
                             .background(AppTheme.color.surface)
+                            .clickable { isSmall = !isSmall }
                     ) {
                         Box {
                             Text(text = "1", modifier = Modifier.align(Alignment.Center))

@@ -52,7 +52,7 @@ class StreamFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.load(streamerName)
-//        setupOnBackPressed()
+        setupOnBackPressed()
     }
 
     private fun setupOnBackPressed() {

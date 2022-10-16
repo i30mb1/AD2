@@ -15,9 +15,10 @@ import n7.ad2.streams.internal.data.remote.Stream
 import n7.ad2.streams.internal.data.remote.StreamPagingSource
 import n7.ad2.streams.internal.domain.ConvertStreamToVOStreamUseCase
 import n7.ad2.streams.internal.domain.vo.VOStream
+import javax.inject.Provider
 
 internal class StreamsViewModel @AssistedInject constructor(
-    private val streamPagingSource: StreamPagingSource,
+    private val streamPagingSource: Provider<StreamPagingSource>,
     private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase,
 ) : ViewModel() {
 
@@ -28,7 +29,7 @@ internal class StreamsViewModel @AssistedInject constructor(
 
     val streams: Flow<PagingData<VOStream>> = Pager(
         config = PagingConfig(pageSize = 33, enablePlaceholders = false),
-        pagingSourceFactory = { streamPagingSource }
+        pagingSourceFactory = { streamPagingSource.get() }
     )
         .flow
         .map { data: PagingData<Stream> -> data.map(convertStreamToVOStreamUseCase::invoke) }

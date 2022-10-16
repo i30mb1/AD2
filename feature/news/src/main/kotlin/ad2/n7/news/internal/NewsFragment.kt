@@ -8,6 +8,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -115,22 +118,31 @@ internal fun NewsScreen(
         ) {
             items(news) { item: NewsVO? -> if (item != null) NewsItem(item, onNewsClicked) }
         }
-        if (showScrollToTopButton) Box(
+
+        AnimatedVisibility(
+            visible = showScrollToTopButton,
+            enter = slideInHorizontally(initialOffsetX = { it }),
+            exit = slideOutHorizontally(targetOffsetX = { it }),
             modifier = modifier
-                .clickable { scope.launch { state.animateScrollToItem(0) } }
                 .padding(bottom = 60.dp)
-                .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
-                .background(color = AppTheme.color.primary)
-                .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
                 .align(Alignment.BottomEnd),
         ) {
-            Icon(
-                modifier = modifier
-                    .rotate(180f)
-                    .align(Alignment.Center),
-                imageVector = Icons.Default.ArrowDropDown,
-                contentDescription = "scroll to top",
-            )
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
+                    .background(color = AppTheme.color.primary)
+                    .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
+                    .clickable { scope.launch { state.animateScrollToItem(0) } }
+            ) {
+                Icon(
+                    modifier = modifier
+                        .rotate(180f)
+                        .align(Alignment.Center),
+                    imageVector = Icons.Default.ArrowDropDown,
+                    contentDescription = "scroll to top",
+                )
+            }
+
         }
     }
     DisposableEffect(key1 = Unit) {
