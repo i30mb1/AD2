@@ -1,5 +1,6 @@
 package n7.ad2.streams.internal
 
+import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -52,11 +53,12 @@ internal fun StreamsScreen(
     drawerPercentListener: DrawerPercentListener,
     onStreamClicked: (stream: VOStream) -> Unit,
 ) {
-
-    when (val value = streams.loadState.refresh) {
-        is LoadState.Loading -> LoadingScreen()
-        is LoadState.Error -> ErrorScreen(value.error) { streams.refresh() }
-        else -> StreamsList(streams, onStreamClicked, drawerPercentListener)
+    Crossfade(targetState = streams.loadState.refresh) { state ->
+        when (state) {
+            is LoadState.Loading -> LoadingScreen()
+            is LoadState.Error -> ErrorScreen(state.error) { streams.refresh() }
+            else -> StreamsList(streams, onStreamClicked, drawerPercentListener)
+        }
     }
 }
 
