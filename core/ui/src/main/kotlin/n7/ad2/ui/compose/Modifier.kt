@@ -12,7 +12,7 @@ import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 
-fun Modifier.bounceClick() = composed {
+inline fun Modifier.bounceClick() = composed {
     var isPressed by remember { mutableStateOf(false) }
     val scale by animateFloatAsState(if (isPressed) 0.98f else 1f)
     graphicsLayer {
