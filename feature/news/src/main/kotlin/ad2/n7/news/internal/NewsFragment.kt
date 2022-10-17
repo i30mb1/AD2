@@ -18,8 +18,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
@@ -61,6 +60,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.logger.Logger
 import n7.ad2.ui.ComposeView
 import n7.ad2.ui.compose.AppTheme
+import n7.ad2.ui.compose.bounceClick
 import javax.inject.Inject
 
 internal class NewsFragment : Fragment() {
@@ -127,13 +127,11 @@ internal fun NewsScreen(
                 .padding(bottom = 60.dp)
                 .align(Alignment.BottomEnd),
         ) {
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
-                    .background(color = AppTheme.color.primary)
-                    .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
-                    .clickable { scope.launch { state.animateScrollToItem(0) } }
-            ) {
+            Box(modifier = Modifier
+                .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
+                .background(color = AppTheme.color.primary)
+                .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
+                .clickable { scope.launch { state.animateScrollToItem(0) } }) {
                 Icon(
                     modifier = modifier
                         .rotate(180f)
@@ -156,17 +154,17 @@ internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit) {
     Surface(
         modifier = Modifier
             .height(170.dp)
-            .fillMaxWidth()
+            .bounceClick()
             .clip(RoundedCornerShape(6.dp)),
         color = AppTheme.color.surface,
         elevation = 4.dp,
-        onClick = { onNewsClicked(item.id) }
+        onClick = { onNewsClicked(item.id) },
     ) {
         AsyncImage(model = item.image.origin, contentDescription = item.title, contentScale = ContentScale.Crop)
         Text(
             modifier = Modifier
                 .background(Color(0x4D000000))
-                .fillMaxHeight()
+                .fillMaxSize()
                 .padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 32.dp),
             textAlign = TextAlign.Center,
             text = item.title,
