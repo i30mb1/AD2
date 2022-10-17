@@ -3,10 +3,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.Spring.StiffnessLow
+import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitFirstDown
@@ -136,10 +141,17 @@ class GameGuessTheSkillManaPoint : Fragment() {
 
     @Composable
     fun Circle(modifier: Modifier, onCircleClicked: () -> Unit) {
+        val infiniteTransition = rememberInfiniteTransition()
+        val scale by infiniteTransition.animateFloat(
+            initialValue = 1f,
+            targetValue = 1.2f,
+            animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse)
+        )
         val offsetY = remember { Animatable(0f) }
         val scope = rememberCoroutineScope()
         Box(
             modifier = modifier
+                .scale(scale)
                 .offset { IntOffset(0, offsetY.value.roundToInt()) }
                 .size(50.dp)
                 .clip(CircleShape)
