@@ -3,11 +3,7 @@
 package ad2.n7.news.internal
 
 import ad2.n7.news.internal.domain.model.NewsVO
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.slideInHorizontally
-import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -21,23 +17,17 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Icon
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
@@ -46,11 +36,10 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.items
 import coil.compose.AsyncImage
-import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.bounceClick
-
+import n7.ad2.ui.compose.view.ScrollToTopButton
 
 @Composable
 internal fun NewsScreen(
@@ -59,7 +48,6 @@ internal fun NewsScreen(
     onNewsClicked: (newsID: Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val scope = rememberCoroutineScope()
     val state = rememberLazyListState()
 
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
@@ -76,29 +64,7 @@ internal fun NewsScreen(
             items(news) { item: NewsVO? -> if (item != null) NewsItem(item, onNewsClicked) }
         }
 
-        AnimatedVisibility(
-            visible = showScrollToTopButton,
-            enter = slideInHorizontally(initialOffsetX = { it }),
-            exit = slideOutHorizontally(targetOffsetX = { it }),
-            modifier = modifier
-                .padding(bottom = 60.dp)
-                .align(Alignment.BottomEnd),
-        ) {
-            Box(modifier = Modifier
-                .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
-                .background(color = AppTheme.color.primary)
-                .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
-                .clickable { scope.launch { state.animateScrollToItem(0) } }) {
-                Icon(
-                    modifier = modifier
-                        .rotate(180f)
-                        .align(Alignment.Center),
-                    imageVector = Icons.Default.ArrowDropDown,
-                    contentDescription = "scroll to top",
-                )
-            }
-
-        }
+        ScrollToTopButton(showScrollToTopButton, state)
     }
     DisposableEffect(key1 = Unit) {
         drawerPercentListener.setDrawerPercentListener { percent -> drawerPercent = percent }
