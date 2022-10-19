@@ -1,24 +1,24 @@
 package n7.ad2.hero_page.internal.info.domain.usecase
 
 import androidx.core.text.toSpanned
-import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.flow.single
 import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.hero_page.R
 import n7.ad2.hero_page.internal.info.HeroStatistics
-import n7.ad2.hero_page.internal.info.domain.model.Ability
-import n7.ad2.hero_page.internal.info.domain.model.LocalHeroDescription
 import n7.ad2.hero_page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero_page.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.toStringList
 import n7.ad2.logger.Logger
 import n7.ad2.repositories.HeroRepository
+import n7.ad2.repositories.model.Ability
+import n7.ad2.repositories.model.LocalHeroDescription
 import n7.ad2.span_parser.SpanParser
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder
@@ -28,7 +28,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     private val res: Resources,
     private val heroRepository: HeroRepository,
     private val spanParser: SpanParser,
-    private val moshi: Moshi,
     private val logger: Logger,
     private val dispatchers: DispatchersProvider,
 ) {
@@ -44,8 +43,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         heroInfo: HeroInfo,
     ): Flow<List<VOHeroInfo>> = flow {
         val localHero = heroRepository.getHero(heroName)
-        val json = heroRepository.getHeroDescription(localHero.name, locale)
-        val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json) ?: error("could not parse hero description")
+        val info = heroRepository.getHeroDescription(localHero.name, locale).single()
 
         emit(buildList {
             add(getAttributes(localHero, info, heroInfo))
@@ -64,15 +62,15 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 is HeroInfo.Spell -> {
                     val selectedSpell: Ability = info.abilities.find { ability -> ability.name == heroInfo.name } ?: error("could not find ability")
                     add(VOHeroInfo.HeaderSound(selectedSpell.name, selectedSpell.hotKey, selectedSpell.legacyKey, false, selectedSpell.audioUrl))
-                    if (selectedSpell.description != null) add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.description.toSpanned())))
-                    if (selectedSpell.story != null) add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.story.toSpanned())))
-                    if (selectedSpell.notes != null) {
+                    selectedSpell.description?.let { add(VOHeroInfo.Body(BodyViewHolder.Data(it.toSpanned()))) }
+                    selectedSpell.story?.let { add(VOHeroInfo.Body(BodyViewHolder.Data(it.toSpanned()))) }
+                    selectedSpell.notes?.let {
                         add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_notes))))
-                        add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.notes.toStringList(true).toSpanned())))
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(it.toStringList(true).toSpanned())))
                     }
-                    if (selectedSpell.params != null) {
+                    selectedSpell.params?.let {
                         add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_params))))
-                        add(VOHeroInfo.Body(BodyViewHolder.Data(selectedSpell.params.toStringList(true).toSpanned())))
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(it.toStringList(true).toSpanned())))
                     }
                 }
             }

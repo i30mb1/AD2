@@ -9,5 +9,8 @@ dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.android))
 
+    implementation(libs.moshi)
+
+    kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)
 }

@@ -4,17 +4,21 @@ package n7.ad2.repositories
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
+import n7.ad2.repositories.model.LocalHeroDescription
 import javax.inject.Inject
 
 class HeroRepository @Inject constructor(
     private val res: Resources,
     private val heroesDao: HeroesDao,
+    private val moshi: Moshi,
 ) {
 
     companion object {
@@ -47,9 +51,13 @@ class HeroRepository @Inject constructor(
         return heroesDao.getHero(name)
     }
 
-    fun getHeroDescription(heroName: String, appLocale: AppLocale): String {
-        return res.getAssets("heroes/$heroName/${appLocale.value}/description.json").bufferedReader().use {
-            it.readText()
+    fun getHeroDescription(heroName: String, appLocale: AppLocale): Flow<LocalHeroDescription> {
+        return flow {
+            val json = res.getAssets("heroes/$heroName/${appLocale.value}/description.json")
+                .bufferedReader()
+                .use { it.readText() }
+            val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json) ?: error("could not parse hero description")
+            emit(info)
         }
     }
 

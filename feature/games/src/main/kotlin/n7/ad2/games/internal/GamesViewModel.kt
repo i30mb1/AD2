@@ -20,10 +20,9 @@ internal class GamesViewModel @AssistedInject constructor(
         fun create(): GamesViewModel
     }
 
-
     val state: LiveData<State> = liveData {
         emit(State.Loading)
-        delay(4.seconds)
+        delay(2.seconds)
         val games = listOf(
             GameVO.SpellCost(res.getString(R.string.spell_cost)),
             GameVO.Apm(res.getString(R.string.apm)),
