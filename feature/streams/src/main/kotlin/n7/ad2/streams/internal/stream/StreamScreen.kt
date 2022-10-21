@@ -37,6 +37,7 @@ import n7.ad2.streams.R
 @Composable
 fun StreamScreen(
     uri: String = "",
+    hasPip: Boolean = true,
     onPipClicked: () -> Unit = { },
     onPipLayoutChanged: (Rect) -> Unit = { },
 ) {
@@ -48,14 +49,14 @@ fun StreamScreen(
     ) {
         if (uri.isNotBlank()) VideoPlayer(uri, onPipLayoutChanged)
 
-        Icon(
+        if (hasPip) Icon(
             painterResource(id = R.drawable.pip),
             null,
             Modifier
                 .size(50.dp)
                 .clickable { onPipClicked() }
                 .align(Alignment.CenterHorizontally),
-            tint = Color.White,
+            Color.White,
         )
     }
 }

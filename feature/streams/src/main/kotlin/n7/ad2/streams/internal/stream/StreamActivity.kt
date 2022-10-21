@@ -3,6 +3,7 @@ package n7.ad2.streams.internal.stream
 import android.app.PictureInPictureParams
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.graphics.Rect
 import android.os.Build
@@ -43,7 +44,8 @@ class StreamActivity : FragmentActivity() {
         setContent {
             AppTheme {
                 val url = viewModel.url.collectAsState()
-                StreamScreen(url.value, ::onPipClicked, ::onPipLayoutChanged)
+                val hasPip = packageManager.hasSystemFeature(PackageManager.FEATURE_PICTURE_IN_PICTURE)
+                StreamScreen(url.value, hasPip, ::onPipClicked, ::onPipLayoutChanged)
             }
         }
     }
