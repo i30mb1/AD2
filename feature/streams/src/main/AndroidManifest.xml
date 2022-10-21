@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="n7.ad2.streams" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="n7.ad2.streams">
+
+    <application>
+        <activity
+            android:name=".internal.stream.StreamActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+            android:supportsPictureInPicture="true" />
+    </application>
+
+</manifest>

@@ -4,7 +4,7 @@ import dagger.Component
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.streams.internal.StreamsFragment
 import n7.ad2.streams.internal.StreamsViewModel
-import n7.ad2.streams.internal.stream.StreamFragment
+import n7.ad2.streams.internal.stream.StreamActivity
 
 @Component(
     dependencies = [
@@ -22,7 +22,7 @@ internal interface StreamsComponent {
     }
 
     fun inject(streamsFragment: StreamsFragment)
-    fun inject(StreamFragment: StreamFragment)
+    fun inject(streamActivity: StreamActivity)
 
     val streamsViewModelFactory: StreamsViewModel.Factory
 
