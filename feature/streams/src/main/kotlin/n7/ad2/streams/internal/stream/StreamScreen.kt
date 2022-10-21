@@ -6,8 +6,12 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.FrameLayout
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.Icon
@@ -36,8 +40,8 @@ import n7.ad2.streams.R
 @UnstableApi
 @Composable
 fun StreamScreen(
-    uri: String = "",
-    hasPip: Boolean = true,
+    uri: String = "i30mb1",
+    isPipIconVisible: Boolean = true,
     onPipClicked: () -> Unit = { },
     onPipLayoutChanged: (Rect) -> Unit = { },
 ) {
@@ -47,17 +51,21 @@ fun StreamScreen(
             .systemBarsPadding()
             .background(Color.Black)
     ) {
-        if (uri.isNotBlank()) VideoPlayer(uri, onPipLayoutChanged)
-
-        if (hasPip) Icon(
-            painterResource(id = R.drawable.pip),
-            null,
-            Modifier
-                .size(50.dp)
-                .clickable { onPipClicked() }
-                .align(Alignment.CenterHorizontally),
-            Color.White,
-        )
+        if (uri.isNotBlank()) {
+            Box {
+                VideoPlayer(uri, onPipLayoutChanged)
+                if (isPipIconVisible) Icon(
+                    painterResource(id = R.drawable.pip),
+                    null,
+                    Modifier
+                        .padding(12.dp)
+                        .size(24.dp)
+                        .clickable { onPipClicked() }
+                        .align(Alignment.TopEnd),
+                    Color.White,
+                )
+            }
+        }
     }
 }
 
@@ -73,6 +81,9 @@ fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
     }
 
     AndroidView(
+        modifier = Modifier
+            .heightIn(min = 200.dp)
+            .fillMaxWidth(),
         factory = {
             PlayerView(context).apply {
                 hideController()

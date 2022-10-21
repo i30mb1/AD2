@@ -1,5 +1,6 @@
 package n7.ad2.streams.internal.stream
 
+import android.app.AppOpsManager
 import android.app.PictureInPictureParams
 import android.content.Context
 import android.content.Intent
@@ -11,6 +12,11 @@ import android.os.Bundle
 import android.util.Rational
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.core.content.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.media3.common.util.UnstableApi
 import n7.ad2.android.findDependencies
@@ -36,6 +42,7 @@ class StreamActivity : FragmentActivity() {
     @Inject lateinit var streamFactory: StreamViewModel.Factory
     private val streamerName by lazyUnsafe { intent.extras?.getString(STREAMER_NAME)!! }
     private val viewModel: StreamViewModel by viewModel { streamFactory.create() }
+    private var isPipVisible by mutableStateOf(true)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         DaggerStreamsComponent.factory().create(findDependencies()).inject(this)
@@ -44,7 +51,17 @@ class StreamActivity : FragmentActivity() {
         setContent {
             AppTheme {
                 val url = viewModel.url.collectAsState()
-                val hasPip = packageManager.hasSystemFeature(PackageManager.FEATURE_PICTURE_IN_PICTURE)
+                val opsManager = remember { getSystemService<AppOpsManager>() }
+                val hasPipFeature = remember {
+                    val hasFeature = packageManager.hasSystemFeature(PackageManager.FEATURE_PICTURE_IN_PICTURE)
+                    val isAllowed = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                        opsManager?.unsafeCheckOpNoThrow(AppOpsManager.OPSTR_PICTURE_IN_PICTURE, android.os.Process.myUid(), packageName) == AppOpsManager.MODE_ALLOWED
+                    } else {
+                        opsManager?.checkOpNoThrow(AppOpsManager.OPSTR_PICTURE_IN_PICTURE, android.os.Process.myUid(), packageName) == AppOpsManager.MODE_ALLOWED
+                    }
+                    hasFeature && isAllowed
+                }
+                val hasPip = hasPipFeature && isPipVisible
                 StreamScreen(url.value, hasPip, ::onPipClicked, ::onPipLayoutChanged)
             }
         }
@@ -75,7 +92,7 @@ class StreamActivity : FragmentActivity() {
 
     override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
-
+        isPipVisible = !isInPictureInPictureMode
     }
 
 }
