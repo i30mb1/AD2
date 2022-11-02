@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -48,7 +47,6 @@ fun StreamScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .systemBarsPadding()
             .background(Color.Black)
     ) {
         if (uri.isNotBlank()) {

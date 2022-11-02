@@ -17,6 +17,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.core.content.getSystemService
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.media3.common.util.UnstableApi
 import n7.ad2.android.findDependencies
@@ -46,6 +47,7 @@ class StreamActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         DaggerStreamsComponent.factory().create(findDependencies()).inject(this)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
         viewModel.load(streamerName)
         setContent {
@@ -77,13 +79,14 @@ class StreamActivity : FragmentActivity() {
         setPictureInPictureParams(
             PictureInPictureParams.Builder()
                 .setSourceRectHint(rect)
+                .setAspectRatio(Rational(rect.right, rect.bottom))
                 .build()
         )
     }
 
     private fun onPipClicked() {
         val builder = PictureInPictureParams.Builder()
-            .setAspectRatio(Rational(16, 9))
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             builder.setSeamlessResizeEnabled(true).setAutoEnterEnabled(true)
         }

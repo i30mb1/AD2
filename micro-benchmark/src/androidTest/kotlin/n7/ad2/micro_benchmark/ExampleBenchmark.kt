@@ -1,9 +1,15 @@
 package n7.ad2.micro_benchmark
 
-import android.util.Log
 import androidx.benchmark.junit4.BenchmarkRule
 import androidx.benchmark.junit4.measureRepeated
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,9 +27,48 @@ class ExampleBenchmark {
     val benchmarkRule = BenchmarkRule()
 
     @Test
-    fun log() {
+    fun testSimple() {
+        val scope = CoroutineScope(Job())
+        val state = MutableStateFlow<List<Int>>(emptyList())
         benchmarkRule.measureRepeated {
-            Log.d("LogBenchmark", "the cost of writing this log method will be measured")
+            scope.launch {
+                massiveRun {
+                    val oldList = state.value
+                    val newList = oldList.toMutableList()
+                    newList.add(it)
+                    state.value = newList
+                }
+            }
         }
     }
+
+    @Test
+    fun testMutex() {
+        val scope = CoroutineScope(Job())
+        val state = MutableStateFlow<List<Int>>(emptyList())
+        benchmarkRule.measureRepeated {
+            scope.launch {
+                val mutex = Mutex()
+                massiveRun {
+                    mutex.withLock {
+                        val oldList = state.value
+                        val newList = oldList.toMutableList()
+                        newList.add(it)
+                        state.value = newList
+                    }
+                }
+            }
+        }
+    }
+
+    private suspend fun massiveRun(action: suspend (int: Int) -> Unit) {
+        coroutineScope {
+            repeat(1) { int ->
+                launch {
+                    repeat(1) { action(int) }
+                }
+            }
+        }
+    }
+
 }

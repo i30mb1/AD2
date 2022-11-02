@@ -2,8 +2,6 @@ package n7.ad2.di
 
 import ad2.n7.news.api.NewsDependencies
 import android.app.Application
-import dagger.BindsInstance
-import dagger.Component
 import n7.ad2.app_preference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
@@ -50,8 +48,8 @@ interface ApplicationComponent : StreamsDependencies,
     fun inject(application: MyApplication)
     fun inject(mainActivity: MainActivity)
 
-    @Component.Factory
+    @dagger.Component.Factory
     interface Factory {
-        fun create(@BindsInstance applicationContext: Application): ApplicationComponent
+        fun create(@dagger.BindsInstance applicationContext: Application): ApplicationComponent
     }
 }

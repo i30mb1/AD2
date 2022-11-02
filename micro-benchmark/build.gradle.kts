@@ -14,4 +14,5 @@ dependencies {
     androidTestImplementation(libs.testRunner)
     androidTestImplementation(libs.testJunit)
     androidTestImplementation(libs.benchmarkJunit)
+    androidTestImplementation(libs.coroutines)
 }
