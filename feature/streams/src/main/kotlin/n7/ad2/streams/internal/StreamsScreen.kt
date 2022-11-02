@@ -1,5 +1,6 @@
 package n7.ad2.streams.internal
 
+import androidx.activity.compose.ReportDrawnWhen
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -69,6 +70,7 @@ internal fun StreamsList(
     drawerPercentListener: DrawerPercentListener,
     modifier: Modifier = Modifier,
 ) {
+    var contentComposed by remember { mutableStateOf(false) }
     var drawerPercent: Float by remember { mutableStateOf(0f) }
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     LazyColumn(
@@ -77,6 +79,7 @@ internal fun StreamsList(
         contentPadding = PaddingValues(top = 4.dp + insetsTop * drawerPercent, start = 4.dp, end = 4.dp),
     ) {
         items(streams) { stream: VOStream? ->
+            contentComposed = true
             when (stream) {
                 is VOStream.Simple -> SimpleStream(stream, onStreamClicked)
                 else -> Unit
@@ -90,6 +93,7 @@ internal fun StreamsList(
             }
         }
     }
+    ReportDrawnWhen { contentComposed }
     DisposableEffect(key1 = Unit) {
         drawerPercentListener.setDrawerPercentListener { percent -> drawerPercent = percent }
         onDispose { drawerPercentListener.setDrawerPercentListener(null) }
