@@ -51,7 +51,7 @@ androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref =
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
-composeActivity = "androidx.activity:activity-compose:1.5.1"
+composeActivity = "androidx.activity:activity-compose:1.7.0-alpha01"
 composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
 composeFoundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 composeLivedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
