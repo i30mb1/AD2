@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.gradle.BaseExtension
-import gradle.kotlin.dsl.accessors._b1effa30538e327683e310196e1367f5.implementation
+import gradle.kotlin.dsl.accessors._1e0677a73c0dbf1b55cb84eefa6b070b.implementation
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 configure<BaseExtension> {

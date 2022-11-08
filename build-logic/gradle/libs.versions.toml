@@ -110,7 +110,7 @@ mockitokotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0" # A small lib
 espresso = "androidx.test.espresso:espresso-core:3.4.0"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"
 uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
-benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.1.0-rc01"
+benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.2.0-alpha06"
 benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0"
 
 [bundles]

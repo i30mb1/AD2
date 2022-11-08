@@ -15,6 +15,7 @@ pluginManagement {
     repositories {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
         google()  // com.android.library
+        maven { setUrl("https://jitpack.io") } // detekt
     }
     plugins {
         kotlin("kapt") version "1.7.10"

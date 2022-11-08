@@ -11,6 +11,7 @@ plugins {
 include(
     ":app",
     ":micro-benchmark",
+    ":macro-benchmark",
 )
 include(
     ":core:dagger",
