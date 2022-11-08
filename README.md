@@ -41,6 +41,40 @@ We have three kinds of modules in the application:
 - `core/*` modules that some of the features could depend on.
 - `feature/*` modules that containing all code related to a given feature.
 
+## Directory structure
+    ├── app                # Mobile app
+    ├── build-logic        # Kotlin DSL scripts for project
+    ├── features
+    │   ├── drawer         # Main screen with draggable view where place all other features
+    │   ├── games          # Mini games that relate to dota2
+    │   ├── hero-page      # Page with information of selected hero
+    │   ├── heroes         # List with all available hero
+    │   ├── item-page      # Page with information of selected item
+    │   ├── items          # List with all available items
+    │   ├── news           # Latest news about dota2
+    │   ├── settings       # Application settings for user
+    │   ├── streams        # List with live streams from Twitch.tv
+    │   └── tournaments    # List with future dota2 tournaments 
+    ├── core
+    │   ├── common         # Shared Kotlin code
+    │   ├── android        # Shared Android code
+    │   ├── database       # Application database
+    │   ├── app-preference # Application Preferences
+    │   ├── coroutines     # Coroutines
+    │   ├── dagger         # Dagger
+    │   ├── media-player   # MediaPlayer
+    │   ├── retrofit       # Retrofit
+    │   ├── media-player   # MediaPlayer 
+    │   ├── update-manager # Google In-app-update
+    │   ├── ktx            # Extensions for android modules
+    │   ├── logger         # Custom logger for app
+    │   ├── provider       # Module that allows feature modules communicate with other feature modules without direct dependency
+    │   ├── repositories   # All repositories
+    │   ├── rules          # Custom lint rules for project
+    │   ├── span-parser    # Custom html->Spannable library to simpilify using spans in prepared text
+    │   ├── ui             # Common UI elements for all features
+    │   └── parser         # Hero/Items/Response parser that creates .json files for the app
+
 ### Data flow
 
 ![app_data_flow](readme-files/data_flow.png)
