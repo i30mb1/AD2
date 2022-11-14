@@ -8,11 +8,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -21,8 +24,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.net.toUri
@@ -35,17 +38,18 @@ import androidx.media3.exoplayer.hls.HlsMediaSource
 import androidx.media3.ui.PlayerView
 import n7.ad2.streams.R
 
-@Preview
 @UnstableApi
 @Composable
 fun StreamScreen(
-    uri: String = "i30mb1",
-    isPipIconVisible: Boolean = true,
-    onPipClicked: () -> Unit = { },
-    onPipLayoutChanged: (Rect) -> Unit = { },
+    uri: String,
+    isPipIconVisible: Boolean,
+    onPipClicked: () -> Unit,
+    onPipLayoutChanged: (Rect) -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
+            .statusBarsPadding()
             .fillMaxSize()
             .background(Color.Black)
     ) {
@@ -71,6 +75,7 @@ fun StreamScreen(
 @Composable
 fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
     val context = LocalContext.current
+    val statusBarInsets = WindowInsets.statusBars.getTop(LocalDensity.current)
     val exoPlayer = remember {
         ExoPlayer.Builder(context).build().apply {
             videoScalingMode = C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING
@@ -89,7 +94,7 @@ fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
                 player = exoPlayer
                 layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT)
                 addOnLayoutChangeListener { _, left, top, right, bottom, _, _, _, _ ->
-                    onPipLayoutChanged(Rect(left, top, right, bottom))
+                    onPipLayoutChanged(Rect(left, top + statusBarInsets, right, bottom))
                 }
             }
         },

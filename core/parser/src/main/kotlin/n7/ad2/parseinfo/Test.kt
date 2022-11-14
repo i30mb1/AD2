@@ -6,7 +6,7 @@ import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
@@ -16,7 +16,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
-import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 
 
@@ -43,4 +42,36 @@ val scope = CoroutineScope(Job())
 
 sealed class State(open val adID: String) {
     data class Loading(override val adID: String) : State(adID)
+}
+
+private var i = 0
+suspend fun main() {
+    coroutineScope {
+        repeat(100_000) {
+            increase()
+        }
+    }
+    println(i)
+//    delay(10.seconds)
+}
+
+fun increase() = scope.launch {
+    synchronized(this) {
+        i++
+    }
+}
+
+fun onError(throwable: Throwable) = scope.launch {
+    println(throwable.stackTraceToString())
+}
+
+inline fun CoroutineScope.launchSave(
+    context: CoroutineContext = EmptyCoroutineContext,
+    crossinline onError: (Throwable) -> Unit,
+    crossinline block: suspend () -> Unit,
+): Job {
+    val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
+        onError(Exception(throwable))
+    }
+    return launch(exceptionHandler + context) { block() }
 }
