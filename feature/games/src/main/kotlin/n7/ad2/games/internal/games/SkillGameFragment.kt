@@ -87,7 +87,17 @@ class SkillGameFragment : Fragment() {
             when (val data = state.value) {
                 is SkillGameViewModel.State.Data -> GuessTheSkillManaPointScreen(data.data, viewModel::loadQuestion)
                 SkillGameViewModel.State.Error -> ErrorScreen()
-                SkillGameViewModel.State.Loading -> LoadingScreen()
+                is SkillGameViewModel.State.Loading -> {
+                    Box {
+                        LoadingScreen()
+                        if (data.attempts > 0) Text(
+                            text = "${data.attempts}",
+                            color = AppTheme.color.textColor,
+                            modifier = Modifier.align(Alignment.Center)
+                        )
+                    }
+
+                }
             }
         }
     }
