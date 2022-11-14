@@ -38,7 +38,7 @@ class GetRandomSkillUseCase @Inject constructor(
                     }
                 }
                 Data(
-                    HeroRepository.getFullUrlHeroImage(localHero.name),
+                    HeroRepository.getFullUrlHeroSpell(spell.name),
                     localHero.name,
                     spellMana,
                     suggestsList.toList()

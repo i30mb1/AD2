@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.retryWhen
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.update
 import kotlin.time.Duration.Companion.seconds
 
 class SkillGameViewModel @AssistedInject constructor(
@@ -44,15 +45,16 @@ class SkillGameViewModel @AssistedInject constructor(
                 getRandomSkillUseCase()
                     .onStart {
                         internalState.value = State.Loading()
-                        delay(1.seconds)
+                        delay(0.2.seconds)
                     }
                     .onEach { data ->
                         internalState.value = State.Data(data)
                         actions.value = Action.NoAction
+                        attempts.value = 0
                     }
             }
-            .retryWhen { _, attempt ->
-                attempts.value = attempt
+            .retryWhen { _, _ ->
+                attempts.update { value -> value + 1 }
                 true
             }
             .catch { internalState.value = State.Error }

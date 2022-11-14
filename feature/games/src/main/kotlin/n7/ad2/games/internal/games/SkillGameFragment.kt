@@ -28,12 +28,9 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Icon
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
@@ -47,13 +44,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEvent
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChange
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
+import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
 import n7.ad2.android.findDependencies
 import n7.ad2.games.internal.di.DaggerGamesComponent
@@ -111,58 +108,21 @@ class SkillGameFragment : Fragment() {
                 .padding(20.dp),
         ) {
             var counter by remember { mutableStateOf(0) }
-            Circle(modifier = Modifier.align(Alignment.TopCenter)) { counter++ }
-            Blocks(counter, data.suggestsList, onBlockClicked)
+            SpellImage(modifier = Modifier.align(Alignment.Center), data) { counter++ }
+            Blocks(counter, data.suggestsList, onBlockClicked, Modifier.align(Alignment.BottomCenter))
         }
     }
 
     @Composable
-    private fun BoxScope.Blocks(
-        counter: Int,
-        suggestsList: List<String>,
-        onBlockClicked: () -> Unit,
+    private fun BoxScope.SpellImage(
+        modifier: Modifier = Modifier,
+        data: GetRandomSkillUseCase.Data,
+        onCircleClicked: () -> Unit,
     ) {
-        val movableBlock = remember {
-            movableContentOf {
-                for (suggest in suggestsList) {
-                    Block(suggest, onBlockClicked)
-                }
-            }
-        }
-        when (counter % 3) {
-            0 -> Row(Modifier.Companion.align(Alignment.BottomCenter)) { movableBlock() }
-            1 -> Column(Modifier.Companion.align(Alignment.BottomCenter)) { movableBlock() }
-            2 -> Box(Modifier.Companion.align(Alignment.BottomCenter)) { movableBlock() }
-        }
-    }
-
-    @Composable
-    private fun BoxScope.Block(suggest: String, onBlockClicked: () -> Unit) {
-        var isSmall by remember { mutableStateOf(false) }
-        val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
-        Surface(
-            modifier = Modifier
-                .size(75.dp)
-                .padding(10.dp)
-                .scale(scale)
-                .background(AppTheme.color.surface)
-                .clickable {
-                    isSmall = !isSmall
-                    onBlockClicked()
-                }
-        ) {
-            Box {
-                Text(text = suggest, modifier = Modifier.align(Alignment.Center))
-            }
-        }
-    }
-
-    @Composable
-    fun Circle(modifier: Modifier, onCircleClicked: () -> Unit) {
         val infiniteTransition = rememberInfiniteTransition()
         val scale by infiniteTransition.animateFloat(
             initialValue = 1f,
-            targetValue = 1.2f,
+            targetValue = 1.1f,
             animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse)
         )
         val offsetY = remember { Animatable(0f) }
@@ -171,10 +131,9 @@ class SkillGameFragment : Fragment() {
             modifier = modifier
                 .scale(scale)
                 .offset { IntOffset(0, offsetY.value.roundToInt()) }
-                .size(50.dp)
-                .clip(CircleShape)
-                .background(AppTheme.color.error)
+                .clip(RoundedCornerShape(8.dp))
                 .clickable { onCircleClicked() }
+                .size(120.dp)
                 .pointerInput(Unit) {
                     forEachGesture {
                         awaitPointerEventScope {
@@ -198,9 +157,54 @@ class SkillGameFragment : Fragment() {
                         }
                     }
                 },
-            contentAlignment = Alignment.Center
         ) {
-            Icon(Icons.Default.Star, contentDescription = null, tint = Color.White)
+            AsyncImage(
+                model = data.iconUrl,
+                contentDescription = data.name,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+    }
+
+    @Composable
+    private fun BoxScope.Blocks(
+        counter: Int,
+        suggestsList: List<String>,
+        onBlockClicked: () -> Unit,
+        modifier: Modifier = Modifier,
+    ) {
+        val movableBlock = remember {
+            movableContentOf {
+                for (suggest in suggestsList) {
+                    Block(suggest, onBlockClicked)
+                }
+            }
+        }
+        when (counter % 3) {
+            0 -> Row(modifier) { movableBlock() }
+            1 -> Column(modifier) { movableBlock() }
+            2 -> Box(modifier) { movableBlock() }
+        }
+    }
+
+    @Composable
+    private fun BoxScope.Block(suggest: String, onBlockClicked: () -> Unit) {
+        var isSmall by remember { mutableStateOf(false) }
+        val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
+        Surface(
+            modifier = Modifier
+                .size(75.dp)
+                .padding(10.dp)
+                .scale(scale)
+                .background(AppTheme.color.surface)
+                .clickable {
+                    isSmall = !isSmall
+                    onBlockClicked()
+                }
+        ) {
+            Box {
+                Text(text = suggest, modifier = Modifier.align(Alignment.Center))
+            }
         }
     }
 
