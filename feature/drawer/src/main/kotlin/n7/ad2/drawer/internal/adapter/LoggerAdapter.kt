@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.drawer.databinding.ItemLogBinding
-import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter.TextViewHolder
-import n7.ad2.logger.AD2Log
+import n7.ad2.drawer.internal.adapter.LoggerAdapter.TextViewHolder
+import n7.ad2.logger.AppLog
 
-internal class AD2LoggerAdapter(
+internal class LoggerAdapter(
     private val layoutInflater: LayoutInflater,
 ) : RecyclerView.Adapter<TextViewHolder>() {
 
-    private val list: ArrayList<AD2Log> = ArrayList()
+    private val list: ArrayList<AppLog> = ArrayList()
 
     override fun onBindViewHolder(holder: TextViewHolder, position: Int) = holder.bind(list[position])
 
@@ -24,7 +24,7 @@ internal class AD2LoggerAdapter(
         notifyDataSetChanged()
     }
 
-    fun add(item: AD2Log) {
+    fun add(item: AppLog) {
         list.add(item)
         notifyItemInserted(list.lastIndex)
     }
@@ -33,7 +33,7 @@ internal class AD2LoggerAdapter(
         private val binding: ItemLogBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: AD2Log) {
+        fun bind(item: AppLog) {
             binding.tvText.text = item.message
         }
 

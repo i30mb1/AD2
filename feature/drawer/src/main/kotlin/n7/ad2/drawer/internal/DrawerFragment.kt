@@ -28,7 +28,7 @@ import n7.ad2.android.TouchEvent
 import n7.ad2.android.findDependencies
 import n7.ad2.drawer.R
 import n7.ad2.drawer.databinding.FragmentDrawerBinding
-import n7.ad2.drawer.internal.adapter.AD2LoggerAdapter
+import n7.ad2.drawer.internal.adapter.LoggerAdapter
 import n7.ad2.drawer.internal.adapter.MainMenuListAdapter
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.di.DaggerDrawerComponent
@@ -52,7 +52,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
 
     private var _binding: FragmentDrawerBinding? = null
     private val binding: FragmentDrawerBinding get() = _binding!!
-    private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
+    private val loggerAdapter: LoggerAdapter by lazyUnsafe { LoggerAdapter(layoutInflater) }
     private val viewModel: DrawerViewModel by viewModel { drawerViewModel.create() }
     private val onMenuItemClick: (menuItem: VOMenu) -> Unit = { menuItem: VOMenu ->
         if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {

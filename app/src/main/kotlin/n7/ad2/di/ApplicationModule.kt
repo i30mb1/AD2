@@ -20,7 +20,7 @@ import n7.ad2.init.HistoricalProcessExitReasonsInitializer
 import n7.ad2.init.Initializer
 import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
-import n7.ad2.logger.AD2Logger
+import n7.ad2.logger.AppLogger
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
 import java.util.Calendar
@@ -42,7 +42,7 @@ interface ApplicationModule {
 
     @ApplicationScope
     @Binds
-    fun provideLogger(logger: AD2Logger): Logger
+    fun provideLogger(logger: AppLogger): Logger
 
     companion object {
 

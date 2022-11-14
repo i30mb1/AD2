@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 interface Logger {
     fun log(text: String)
     fun getSubscriptionCount(): Int
-    fun getLogFlow(): Flow<AD2Log>
+    fun getLogFlow(): Flow<AppLog>
 }

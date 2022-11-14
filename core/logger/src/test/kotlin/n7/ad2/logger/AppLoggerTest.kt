@@ -11,11 +11,11 @@ import n7.ad2.coroutines.CoroutineTestRule
 import org.junit.Rule
 import org.junit.Test
 
-internal class AD2LoggerTest {
+internal class AppLoggerTest {
 
     @get:Rule val coroutineRule = CoroutineTestRule()
     @get:Rule val timeout = CoroutinesTimeout.seconds(5)
-    private val logger = AD2Logger()
+    private val logger = AppLogger()
 
     @Test
     fun `when send log and logger have zero subscribers should return log`() = runTest {
@@ -29,7 +29,7 @@ internal class AD2LoggerTest {
 
     @Test
     fun `when send log receive it`() = runTest {
-        val values = mutableListOf<AD2Log>()
+        val values = mutableListOf<AppLog>()
         val flow = launch(UnconfinedTestDispatcher()) {
             logger.getLogFlow().toList(values)
         }
