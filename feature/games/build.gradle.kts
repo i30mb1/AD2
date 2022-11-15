@@ -5,6 +5,8 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.palette)
+
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.coroutines))

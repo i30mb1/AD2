@@ -29,10 +29,8 @@ class HeroRepository @Inject constructor(
         fun getFullUrlHeroSpell(spellName: String) = "file:///android_asset/spell/$spellName.webp"
     }
 
-    suspend fun getHeroAnimation(assetsPath: String, name: String): Bitmap {
-        return res.getAssets("$assetsPath/$name/$ASSETS_FILE_ANIMATION").use {
-            BitmapFactory.decodeStream(it)
-        }
+    suspend fun getSpellBitmap(spellName: String): Bitmap {
+        return res.getAssets("spell/$spellName.webp").use { BitmapFactory.decodeStream(it) }
     }
 
     fun getAllHeroes(): Flow<List<LocalHero>> {

@@ -1,6 +1,9 @@
 package n7.ad2.games.internal.games.skillmp
 
+import android.graphics.Bitmap
+import android.graphics.Color
 import androidx.compose.runtime.Immutable
+import androidx.palette.graphics.Palette
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
@@ -20,7 +23,13 @@ class GetRandomSkillUseCase @Inject constructor(
 ) {
 
     @Immutable
-    data class Data(val iconUrl: String, val name: String, val manacost: String, val suggestsList: List<String>)
+    data class Data(
+        val skillImage: Bitmap,
+        val name: String,
+        val manacost: String,
+        val suggestsList: List<String>,
+        val backgroundColor: Int,
+    )
 
     operator fun invoke(): Flow<Data> {
         return heroRepository.getAllHeroes()
@@ -37,11 +46,15 @@ class GetRandomSkillUseCase @Inject constructor(
                         if (wrongSpellCost > 0) add(wrongSpellCost.toString())
                     }
                 }
+                val skillImage = heroRepository.getSpellBitmap(spell.name)
+                val palette = Palette.from(skillImage).generate()
+                val backgroundColor = palette.vibrantSwatch?.rgb ?: Color.TRANSPARENT
                 Data(
-                    HeroRepository.getFullUrlHeroSpell(spell.name),
+                    skillImage,
                     localHero.name,
                     spellMana,
-                    suggestsList.toList()
+                    suggestsList.toList(),
+                    backgroundColor,
                 )
             }
             .flowOn(dispatchers.IO)
