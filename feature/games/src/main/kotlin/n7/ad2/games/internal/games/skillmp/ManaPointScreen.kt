@@ -23,7 +23,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Surface
+import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -40,16 +40,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEvent
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChange
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import androidx.core.math.MathUtils
 import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.view.ErrorScreen
 import n7.ad2.ui.compose.view.LoadingScreen
 import kotlin.math.roundToInt
-import kotlin.time.Duration.Companion.seconds
-import kotlin.time.DurationUnit
 
 
 @Composable
@@ -60,7 +60,7 @@ internal fun ManaPointScreen(
     var color by remember { mutableStateOf(Color.Transparent) }
     val animateColor = animateColorAsState(
         targetValue = color,
-        animationSpec = tween(2.seconds.toInt(DurationUnit.MILLISECONDS))
+        animationSpec = tween(2_000)
     )
     val data: GetRandomSkillUseCase.Data? = (state as? SkillGameViewModel.State.Data)?.data
     if (data != null) color = Color(data.backgroundColor).copy(alpha = 0.2f)
@@ -109,11 +109,12 @@ private fun SpellImage(
         animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse)
     )
     val offsetY = remember { Animatable(0f) }
+    val offsetX = remember { Animatable(0f) }
     val scope = rememberCoroutineScope()
     Box(
         modifier = modifier
             .scale(scale)
-            .offset { IntOffset(0, offsetY.value.roundToInt()) }
+            .offset { IntOffset(offsetX.value.roundToInt(), offsetY.value.roundToInt()) }
             .clip(RoundedCornerShape(8.dp))
             .clickable { onSpellClick() }
             .size(120.dp)
@@ -124,12 +125,18 @@ private fun SpellImage(
                         do {
                             val event: PointerEvent = awaitPointerEvent()
                             event.changes.forEach { change ->
-                                scope.launch { offsetY.snapTo(offsetY.value + change.positionChange().y) }
+                                scope.launch {
+                                    val targetY = MathUtils.clamp(offsetY.value + change.positionChange().y, -100f, 100f)
+                                    val targetX = MathUtils.clamp(offsetX.value + change.positionChange().x, -100f, 100f)
+                                    offsetY.snapTo(targetY)
+                                    offsetX.snapTo(targetX)
+                                }
                             }
                         } while (event.changes.any { it.pressed })
                         // touch released
                         scope.launch {
                             offsetY.animateTo(0f, spring(dampingRatio = Spring.DampingRatioLowBouncy, stiffness = Spring.StiffnessLow))
+                            offsetX.animateTo(0f, spring(dampingRatio = Spring.DampingRatioLowBouncy, stiffness = Spring.StiffnessLow))
                         }
                     }
                 }
@@ -157,22 +164,28 @@ private fun VariantBlocks(
 }
 
 @Composable
-private fun VariantBlock(suggest: String, onVariantClick: () -> Unit) {
+private fun VariantBlock(text: String, onVariantClick: () -> Unit) {
     var isSmall by remember { mutableStateOf(false) }
     val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
-    Surface(
+    Button(
         modifier = Modifier
             .size(75.dp)
             .padding(10.dp)
             .scale(scale)
-            .background(AppTheme.color.surface)
-            .clickable {
-                isSmall = !isSmall
-                onVariantClick()
-            }
+            .clip(AppTheme.shape.small),
+        onClick = {
+            isSmall = !isSmall
+            onVariantClick()
+        },
     ) {
         Box {
-            Text(text = suggest, modifier = Modifier.align(Alignment.Center))
+            Text(
+                text = text,
+                maxLines = 1,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .align(Alignment.Center),
+            )
         }
     }
 }

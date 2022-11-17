@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="one_player">1 PLAYER</string>
-    <string name="two_players">2 PLAYERS</string>
-    <string name="spell_cost">SPELL COST</string>
-    <string name="apm">APM</string>
-    <string name="can_you_buy_it">CAN YOU BUY IT</string>
+    <string name="one_player">1 player</string>
+    <string name="two_players">2 players</string>
+    <string name="spell_cost" translatable="false">Spell Cost</string>
+    <string name="apm" translatable="false">APM</string>
+    <string name="can_you_buy_it" translatable="false">Buy it?</string>
 </resources>

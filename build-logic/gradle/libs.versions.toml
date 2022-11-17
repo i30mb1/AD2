@@ -53,6 +53,7 @@ kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ver
 
 composeActivity = "androidx.activity:activity-compose:1.7.0-alpha01"
 composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+composeCoil = "io.coil-kt:coil-compose:2.2.1"
 composeFoundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 composeLivedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
 composeMaterial = { module = "androidx.compose.material:material", version.ref = "compose" }
@@ -78,7 +79,6 @@ paging3 = "androidx.paging:paging-runtime:3.1.1"
 material = "com.google.android.material:material:1.6.1"
 constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
 coil = "io.coil-kt:coil:2.2.1"
-coilCompose = "io.coil-kt:coil-compose:2.2.1"
 jsoup = "org.jsoup:jsoup:1.11.2" # Jsoup для разбора html
 firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
 playCoreKtx = "com.google.android.play:app-update-ktx:2.0.0" # auto update + rateMe
@@ -116,6 +116,6 @@ benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.0"
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
-compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "coilCompose", "composeLivedata", "composeActivity"]
+compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "composeCoil", "composeLivedata", "composeActivity"]
 
 [plugins]

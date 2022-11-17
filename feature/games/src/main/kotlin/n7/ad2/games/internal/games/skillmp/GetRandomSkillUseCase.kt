@@ -1,8 +1,6 @@
 package n7.ad2.games.internal.games.skillmp
 
-import android.graphics.Bitmap
 import android.graphics.Color
-import androidx.compose.runtime.Immutable
 import androidx.palette.graphics.Palette
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
@@ -22,13 +20,17 @@ class GetRandomSkillUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 
-    @Immutable
     data class Data(
-        val skillImage: Bitmap,
+        val skillImage: String,
         val name: String,
         val manacost: String,
-        val suggestsList: List<String>,
         val backgroundColor: Int,
+        val suggestsSpellList: List<Spell>,
+    )
+
+    data class Spell(
+        val cost: String,
+        val isRightAnswer: Boolean,
     )
 
     operator fun invoke(): Flow<Data> {
@@ -39,22 +41,27 @@ class GetRandomSkillUseCase @Inject constructor(
                 val info = heroRepository.getHeroDescription(localHero.name, AppLocale.English).single()
                 val spell: Ability = info.abilities.first { it.mana != null && it.mana != "" }
                 val spellMana: String = spell.mana ?: error("spell ${spell.name} mana is ${spell.mana}")
-                val suggestsList = buildSet {
-                    add(spellMana)
-                    while (size < 4) {
+                val spellCosts = buildSet {
+                    while (size < 3) {
                         val wrongSpellCost = spellMana.toInt() + Random.nextInt(-4..4) * 10
                         if (wrongSpellCost > 0) add(wrongSpellCost.toString())
                     }
                 }
+                val spells = buildList {
+                    add(Spell(spellMana, true))
+                    addAll(spellCosts.map { Spell(it, false) })
+                    shuffle()
+                }
                 val skillImage = heroRepository.getSpellBitmap(spell.name)
+                val skillImageUrl = HeroRepository.getFullUrlHeroSpell(spell.name)
                 val palette = Palette.from(skillImage).generate()
                 val backgroundColor = palette.vibrantSwatch?.rgb ?: Color.TRANSPARENT
                 Data(
-                    skillImage,
+                    skillImageUrl,
                     localHero.name,
                     spellMana,
-                    suggestsList.toList(),
                     backgroundColor,
+                    spells,
                 )
             }
             .flowOn(dispatchers.IO)

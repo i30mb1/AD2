@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="one_player">1 ИГРОК</string>
-    <string name="two_players">2 ИГРОКА</string>
-    <string name="spell_cost">СТОИМОСТЬ ЗАКЛИНАНИЯ</string>
-    <string name="apm">АПМ</string>
-    <string name="can_you_buy_it">МОЖЕШЬ ЛИ КУПИТЬ</string>
+    <string name="one_player">1 игрок</string>
+    <string name="two_players">2 игрока</string>
 </resources>

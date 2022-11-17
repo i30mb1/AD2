@@ -6,7 +6,7 @@ internal sealed class Players {
 }
 
  sealed class GameVO(val title: String) {
-     class SpellCost(name: String) : GameVO(name)
+     class SpellCost(name: String, val backgroundImage: Int) : GameVO(name)
      class Apm(name: String) : GameVO(name)
      class CanYouBuyIt(name: String) : GameVO(name)
  }

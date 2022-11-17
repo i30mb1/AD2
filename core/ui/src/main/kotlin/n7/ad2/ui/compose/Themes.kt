@@ -3,6 +3,7 @@ package n7.ad2.ui.compose
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Shapes
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -13,6 +14,9 @@ object AppTheme {
 
     val color: AppColor
         @Composable get() = LocalAppColor.current
+
+    val shape: AppShape
+        @Composable get() = LocalAppShape.current
 }
 
 @Composable
@@ -22,6 +26,7 @@ fun AppTheme(
 ) {
     val appColor = if (true) appColorDark else appColorLight
     val appTypography = appTypography
+    val appShape = appShape
     CompositionLocalProvider(
         LocalAppTypography provides appTypography,
         LocalAppColor provides appColor,
@@ -45,6 +50,11 @@ fun AppTheme(
             typography = Typography(
 
             ),
+            shapes = Shapes(
+                small = appShape.small,
+                medium = appShape.medium,
+                large = appShape.large,
+            )
         ) {
             content()
         }

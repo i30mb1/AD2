@@ -10,7 +10,7 @@ import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getNavigator
 import n7.ad2.games.internal.compose.GamesScreen
-import n7.ad2.games.internal.data.Players
+import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.SkillGameFragment
 import n7.ad2.ktx.viewModel
@@ -38,8 +38,13 @@ internal class GamesFragment : Fragment() {
         return ComposeView { GamesScreen(viewModel, parentFragment as DrawerPercentListener, ::onGameClicked) }
     }
 
-    private fun onGameClicked(players: Players) {
-        getNavigator.setMainFragment(SkillGameFragment.getInstance()) {
+    private fun onGameClicked(game: GameVO) {
+        val fragment = when (game) {
+            is GameVO.Apm -> TODO()
+            is GameVO.CanYouBuyIt -> TODO()
+            is GameVO.SpellCost -> SkillGameFragment.getInstance()
+        }
+        getNavigator.setMainFragment(fragment) {
             addToBackStack(null)
         }
     }

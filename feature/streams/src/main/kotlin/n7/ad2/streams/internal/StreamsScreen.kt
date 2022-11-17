@@ -81,7 +81,7 @@ internal fun StreamsList(
         items(streams) { stream: VOStream? ->
             contentComposed = true
             when (stream) {
-                is VOStream.Simple -> SimpleStream(stream, onStreamClicked)
+                is VOStream.Simple -> SimpleStream(stream, onStreamClicked = onStreamClicked)
                 else -> Unit
             }
         }
@@ -104,14 +104,16 @@ internal fun StreamsList(
 @Composable
 internal fun SimpleStream(
     @PreviewParameter(PreviewStreamProvider::class) stream: VOStream.Simple,
-    onStreamClicked: (stream: VOStream) -> Unit = { },
     modifier: Modifier = Modifier,
+    onStreamClicked: (stream: VOStream) -> Unit = { },
 ) {
-    Surface(modifier = modifier
-        .fillMaxWidth()
-        .clip(RoundedCornerShape(4.dp))
-        .clickable { onStreamClicked(stream) }
-        .background(AppTheme.color.surface)) {
+    Surface(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(4.dp))
+            .clickable { onStreamClicked(stream) }
+            .background(AppTheme.color.surface)
+    ) {
         Row {
             Box {
                 AsyncImage(
@@ -121,12 +123,18 @@ internal fun SimpleStream(
                     contentScale = ContentScale.Crop,
                     placeholder = painterResource(id = R.drawable.stream_placeholder),
                 )
-                Image(modifier = Modifier
-                    .padding(2.dp)
-                    .size(12.dp), painter = painterResource(id = R.drawable.ic_stream_viewers), contentDescription = null)
+                Image(
+                    modifier = Modifier
+                        .padding(2.dp)
+                        .size(12.dp),
+                    painter = painterResource(id = R.drawable.ic_stream_viewers),
+                    contentDescription = null,
+                )
             }
 
-            Column(modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)) {
+            Column(
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+            ) {
                 Text(
                     style = AppTheme.style.H5,
                     color = AppTheme.color.textColor,

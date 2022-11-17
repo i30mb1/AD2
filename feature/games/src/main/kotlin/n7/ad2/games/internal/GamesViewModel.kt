@@ -21,7 +21,7 @@ internal class GamesViewModel @AssistedInject constructor(
     val state: LiveData<State> = liveData {
         emit(State.Loading)
         val games = listOf(
-            GameVO.SpellCost(res.getString(R.string.spell_cost)),
+            GameVO.SpellCost(res.getString(R.string.spell_cost), R.drawable.background_guess_skill),
             GameVO.Apm(res.getString(R.string.apm)),
             GameVO.CanYouBuyIt(res.getString(R.string.can_you_buy_it)),
         )
