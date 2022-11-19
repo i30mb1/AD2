@@ -10,23 +10,19 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.retryWhen
 import kotlinx.coroutines.flow.shareIn
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import java.util.concurrent.atomic.AtomicReference
 import kotlin.time.Duration.Companion.seconds
 
-class SkillGameViewModel @AssistedInject constructor(
-    private val getRandomSkillUseCase: GetRandomSkillUseCase,
+internal class SkillGameViewModel @AssistedInject constructor(
+    private val getSkillsUseCase: GetSkillsUseCase,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -34,51 +30,42 @@ class SkillGameViewModel @AssistedInject constructor(
         fun create(): SkillGameViewModel
     }
 
-    private val attempts = MutableStateFlow(0L)
-    private val gameData = MutableStateFlow<GetRandomSkillUseCase.Data?>(null)
-    val state: StateFlow<State> = combine(attempts, gameData) { attempts: Long, data: GetRandomSkillUseCase.Data? ->
-        State.init()
-    }
-        .stateIn(viewModelScope, SharingStarted.Eagerly, State.init())
-    private val actions = MutableSharedFlow<Action>()
-        .shareIn(viewModelScope, SharingStarted.Eagerly, 0)
+    val state: MutableStateFlow<State> = MutableStateFlow(State.init())
+    private val _actions = MutableSharedFlow<Action>()
+    private val actions = _actions.shareIn(viewModelScope, SharingStarted.Eagerly, 0)
 
     init {
         actions
-            .flatMapLatest { action ->
-                when (action) {
-                    Action.LoadQuestion -> getRandomSkill()
-                    Action.ShowAnswer -> showAnswer()
-                }
+            .onEach { action ->
+                reduce(state.value, action)
             }
             .retryWhen { _, _ ->
-                attempts.update { value -> value + 1 }
+                state.update { it.copy(loadingAttempts = it.loadingAttempts + 1) }
                 true
             }
-            .catch { lastState.value = State.Error }
+            .catch { state.update { it.copy(isLoading = false, isError = true) } }
             .launchIn(viewModelScope)
     }
 
-    private fun showAnswer() = flow {
-        val data = lastState.value as State.Data
-        emit(data)
+    fun onAction(action: Action) = viewModelScope.launch {
+        _actions.emit(action)
     }
-        .catch { lastState.value = State.Error }
 
-    private fun getRandomSkill() = getRandomSkillUseCase()
+    private fun reduce(oldState: State, action: Action) {
+        when (action) {
+            Action.LoadQuestion -> loadQuestion()
+            Action.ShowAnswer -> TODO()
+        }
+    }
+
+    private fun loadQuestion() = getSkillsUseCase()
         .onStart {
-            lastState.value = State.Loading()
+            state.update { it.copy(isLoading = true) }
             delay(0.2.seconds)
         }
         .onEach { data ->
-            lastState.value = State.Data(data)
-            actions.value = Action.NoAction
-            attempts.value = 0
+            state.update { state -> state.setSkills(data) }
         }
-
-    fun onAction(action: Action) {
-
-    }
 
     sealed class Action {
         object LoadQuestion : Action()
@@ -86,32 +73,51 @@ class SkillGameViewModel @AssistedInject constructor(
     }
 
     @Immutable
-    data class State(
+    internal data class State(
         val isLoading: Boolean,
         val loadingAttempts: Long,
+        val isError: Boolean,
         val backgroundColor: Int,
         val skillImage: String?,
         val spellList: SpellList,
     ) {
+
         companion object {
             fun init() = State(
-                true,
-                0,
-                Color.TRANSPARENT,
-                null,
-                SpellList(emptyList()),
+                isLoading = true,
+                loadingAttempts = 0,
+                isError = false,
+                backgroundColor = Color.TRANSPARENT,
+                skillImage = null,
+                spellList = SpellList(emptyList()),
             )
         }
+
+    }
+
+    private fun State.setSkills(data: GetSkillsUseCase.Data): State {
+        return copy(
+            isLoading = false,
+            loadingAttempts = 0,
+            backgroundColor = data.backgroundColor,
+            skillImage = data.skillImage,
+            spellList = SpellList(
+                list = data.suggestsSpellList.map { spell ->
+                    Spell(spell.cost, spell.isRightAnswer)
+                }
+            ),
+        )
     }
 
     @Immutable
-    data class SpellList(
+    internal data class SpellList(
         val list: List<Spell>,
     )
 
     @Immutable
-    data class Spell(
+    internal data class Spell(
         val cost: String,
+        val isRightAnswer: Boolean,
     )
 
     class OneShotValue<T : Any>(value: T) {

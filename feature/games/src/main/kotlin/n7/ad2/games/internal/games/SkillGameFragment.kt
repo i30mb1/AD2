@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.fragment.app.Fragment
+import n7.ad2.android.extension.viewModel
 import n7.ad2.android.findDependencies
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.skillmp.ManaPointScreen
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
-import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView
 import javax.inject.Inject
 
