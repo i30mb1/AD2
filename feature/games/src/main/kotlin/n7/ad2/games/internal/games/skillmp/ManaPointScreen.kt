@@ -58,12 +58,8 @@ internal fun ManaPointScreen(
     onVariantClick: () -> Unit,
 ) {
     var color by remember { mutableStateOf(Color.Transparent) }
-    val animateColor = animateColorAsState(
-        targetValue = color,
-        animationSpec = tween(2_000)
-    )
-    val data: GetRandomSkillUseCase.Data? = (state as? SkillGameViewModel.State.Data)?.data
-    if (data != null) color = Color(data.backgroundColor).copy(alpha = 0.2f)
+    color = Color(state.backgroundColor).copy(alpha = 0.2f)
+    val animateColor = animateColorAsState(targetValue = color, animationSpec = tween(2_000))
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -72,26 +68,27 @@ internal fun ManaPointScreen(
             .padding(20.dp),
     ) {
         var counter by remember { mutableStateOf(0) }
-        when (state) {
-            is SkillGameViewModel.State.Data -> {
-                SpellImage(modifier = Modifier.align(Alignment.Center), state.data) { counter++ }
-                VariantBlocks(counter, state.data.suggestsList, onVariantClick, Modifier.align(Alignment.BottomCenter))
-            }
-            SkillGameViewModel.State.Error -> {
-                ErrorScreen()
-            }
-            is SkillGameViewModel.State.Loading -> {
+        when {
+            state.isLoading -> {
                 Box {
                     LoadingScreen()
-                    if (state.attempts > 0) {
+                    if (state.loadingAttempts > 0) {
                         Text(
-                            text = "${state.attempts}",
+                            text = "${state.loadingAttempts}",
                             color = AppTheme.color.textColor,
                             modifier = Modifier.align(Alignment.Center)
                         )
                     }
                 }
             }
+            state.isError -> {
+                ErrorScreen()
+            }
+            else -> {
+                SpellImage(modifier = Modifier.align(Alignment.Center), state.spellImage) { counter++ }
+                VariantBlocks(counter, state.spellList, onVariantClick, Modifier.align(Alignment.BottomCenter))
+            }
+
         }
     }
 }
@@ -99,7 +96,7 @@ internal fun ManaPointScreen(
 @Composable
 private fun SpellImage(
     modifier: Modifier = Modifier,
-    data: GetRandomSkillUseCase.Data,
+    spellImage: String?,
     onSpellClick: () -> Unit,
 ) {
     val infiniteTransition = rememberInfiniteTransition()
@@ -142,19 +139,19 @@ private fun SpellImage(
                 }
             },
     ) {
-        AsyncImage(model = data.skillImage, contentDescription = data.name, modifier = Modifier.fillMaxSize())
+        AsyncImage(model = spellImage, contentDescription = null, modifier = Modifier.fillMaxSize())
     }
 }
 
 @Composable
 private fun VariantBlocks(
     counter: Int,
-    suggestsList: List<String>,
+    suggestsList: SkillGameViewModel.SpellList,
     onVariantClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val movableBlock = remember {
-        movableContentOf { for (suggest in suggestsList) VariantBlock(suggest, onVariantClick) }
+        movableContentOf { for (suggest in suggestsList.list) VariantBlock(suggest.cost, onVariantClick) }
     }
     when (counter % 3) {
         0 -> Row(modifier) { movableBlock() }

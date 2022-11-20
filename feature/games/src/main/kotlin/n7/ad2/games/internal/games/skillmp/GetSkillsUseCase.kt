@@ -15,7 +15,7 @@ import javax.inject.Inject
 import kotlin.random.Random
 import kotlin.random.nextInt
 
-class GetRandomSkillUseCase @Inject constructor(
+internal class GetSkillsUseCase @Inject constructor(
     private val heroRepository: HeroRepository,
     private val dispatchers: DispatchersProvider,
 ) {

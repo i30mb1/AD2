@@ -66,6 +66,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         .onEach { data ->
             state.update { state -> state.setSkills(data) }
         }
+        .launchIn(viewModelScope)
 
     sealed class Action {
         object LoadQuestion : Action()
@@ -78,7 +79,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val loadingAttempts: Long,
         val isError: Boolean,
         val backgroundColor: Int,
-        val skillImage: String?,
+        val spellImage: String?,
         val spellList: SpellList,
     ) {
 
@@ -88,7 +89,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 loadingAttempts = 0,
                 isError = false,
                 backgroundColor = Color.TRANSPARENT,
-                skillImage = null,
+                spellImage = null,
                 spellList = SpellList(emptyList()),
             )
         }
@@ -100,7 +101,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
             isLoading = false,
             loadingAttempts = 0,
             backgroundColor = data.backgroundColor,
-            skillImage = data.skillImage,
+            spellImage = data.skillImage,
             spellList = SpellList(
                 list = data.suggestsSpellList.map { spell ->
                     Spell(spell.cost, spell.isRightAnswer)
