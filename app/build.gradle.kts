@@ -122,5 +122,3 @@ dependencies {
     androidTestImplementation(libs.testRules)
     androidTestImplementation(libs.testJunitKtx)
 }
-
-configurations.onEach { println(it.name) }
