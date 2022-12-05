@@ -28,13 +28,6 @@ jobs:
           cache: gradle
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
-#       - name: Setup Gradle
-#         uses: actions/cache@v3
-#         with:
-#           path: |
-#             ~/.gradle/caches
-#             ~/.gradle/wrapper
-#           key: ${{ runner.os }}-${{ hashFiles('**/*.gradle*','**/gradle-wrapper.properties','**/libs.versions.toml') }}
       - name: Generate local.properties file
         shell: cmd
         run: |
@@ -44,7 +37,7 @@ jobs:
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
       - name: Build with Gradle
-        run: gradle build --no-daemon -q
+        run: gradle build --no-daemon -q --no-configuration-cache -Dorg.gradle.jvmargs=-Xmx3g
       - name: Copy APK
         uses: actions/upload-artifact@v3
         with:
