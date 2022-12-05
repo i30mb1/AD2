@@ -119,3 +119,4 @@ test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx",
 compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "composeCoil", "composeLivedata", "composeActivity"]
 
 [plugins]
+androidTest = { id = "com.android.test", version.ref = "androidGradlePlugin" }

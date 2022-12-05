@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.test")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.androidTest)
+    id("org.jetbrains.kotlin.android") version "1.7.20"
 }
 
 android {
