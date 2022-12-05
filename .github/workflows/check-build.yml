@@ -37,7 +37,7 @@ jobs:
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
       - name: Build with Gradle
-        run: gradle build --no-daemon -q --no-configuration-cache -Dorg.gradle.jvmargs=-Xmx3g
+        run: gradle build -Dorg.gradle.jvmargs="-Xmx3g" --no-daemon --no-configuration-cache -q
       - name: Copy APK
         uses: actions/upload-artifact@v3
         with:
