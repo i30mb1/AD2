@@ -16,14 +16,17 @@ import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.forEachGesture
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -40,6 +43,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEvent
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChange
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
@@ -55,7 +59,7 @@ import kotlin.math.roundToInt
 @Composable
 internal fun ManaPointScreen(
     state: SkillGameViewModel.State,
-    onVariantClick: () -> Unit,
+    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
 ) {
     var color by remember { mutableStateOf(Color.Transparent) }
     color = Color(state.backgroundColor).copy(alpha = 0.2f)
@@ -85,8 +89,19 @@ internal fun ManaPointScreen(
                 ErrorScreen()
             }
             else -> {
-                SpellImage(modifier = Modifier.align(Alignment.Center), state.spellImage) { counter++ }
-                VariantBlocks(counter, state.spellList, onVariantClick, Modifier.align(Alignment.BottomCenter))
+                SpellImage(
+                    modifier = Modifier.align(Alignment.Center),
+                    state.spellImage,
+                    state.spellLVL,
+                ) { counter++ }
+                VariantBlocks(
+                    counter,
+                    state.spellList,
+                    state.showRightAnswer,
+                    state.selectedSpell,
+                    onVariantClick,
+                    Modifier.align(Alignment.BottomCenter)
+                )
             }
 
         }
@@ -96,7 +111,8 @@ internal fun ManaPointScreen(
 @Composable
 private fun SpellImage(
     modifier: Modifier = Modifier,
-    spellImage: String?,
+    spellImage: String,
+    spellLVL: Int,
     onSpellClick: () -> Unit,
 ) {
     val infiniteTransition = rememberInfiniteTransition()
@@ -105,16 +121,35 @@ private fun SpellImage(
         targetValue = 1.1f,
         animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse)
     )
+    Column(
+        modifier = modifier
+            .scale(scale)
+            .size(120.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        SpellImage(spellImage, onSpellClick)
+        SpellLVL(spellLVL)
+    }
+}
+
+@Composable
+private fun ColumnScope.SpellImage(
+    spellImage: String?,
+    onSpellClick: () -> Unit,
+) {
     val offsetY = remember { Animatable(0f) }
     val offsetX = remember { Animatable(0f) }
     val scope = rememberCoroutineScope()
-    Box(
-        modifier = modifier
-            .scale(scale)
+    AsyncImage(
+        model = spellImage,
+        contentDescription = null,
+        contentScale = ContentScale.Crop,
+        modifier = Modifier
+            .fillMaxSize()
             .offset { IntOffset(offsetX.value.roundToInt(), offsetY.value.roundToInt()) }
             .clip(RoundedCornerShape(8.dp))
+            .weight(1f)
             .clickable { onSpellClick() }
-            .size(120.dp)
             .pointerInput(Unit) {
                 forEachGesture {
                     awaitPointerEventScope {
@@ -138,21 +173,45 @@ private fun SpellImage(
                     }
                 }
             },
+    )
+}
+
+@Composable
+private fun SpellLVL(spellLVL: Int) {
+    Row(
+        modifier = Modifier.padding(top = 4.dp)
     ) {
-        AsyncImage(model = spellImage, contentDescription = null, modifier = Modifier.fillMaxSize())
+        repeat(spellLVL) {
+            Box(
+                modifier = Modifier
+                    .padding(2.dp, 0.dp)
+                    .size(20.dp, 10.dp)
+                    .background(Color.Black)
+                    .padding(0.5.dp)
+                    .background(Color.Yellow)
+            ) {
+
+            }
+        }
     }
 }
 
 @Composable
 private fun VariantBlocks(
     counter: Int,
-    suggestsList: SkillGameViewModel.SpellList,
-    onVariantClick: () -> Unit,
+    spellList: SkillGameViewModel.SpellList,
+    showRightAnswer: Boolean,
+    selectedSpell: SkillGameViewModel.Spell?,
+    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val movableBlock = remember {
-        movableContentOf { for (suggest in suggestsList.list) VariantBlock(suggest.cost, onVariantClick) }
-    }
+    val movableBlock =
+        movableContentOf {
+            for (spell in spellList.list) {
+                VariantBlock(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
+            }
+        }
+
     when (counter % 3) {
         0 -> Row(modifier) { movableBlock() }
         1 -> Column(modifier) { movableBlock() }
@@ -161,23 +220,28 @@ private fun VariantBlocks(
 }
 
 @Composable
-private fun VariantBlock(text: String, onVariantClick: () -> Unit) {
-    var isSmall by remember { mutableStateOf(false) }
+private fun VariantBlock(
+    spell: SkillGameViewModel.Spell,
+    showRightAnswer: Boolean,
+    isSelected: Boolean,
+    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
+) {
+    val isSmall by remember { mutableStateOf(isSelected) }
+//    isSmall = showRightAnswer && spell.isRightAnswer
+    val backgroundColor = if (showRightAnswer) AppTheme.color.primary else AppTheme.color.surface
     val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
     Button(
         modifier = Modifier
-            .size(75.dp)
-            .padding(10.dp)
+            .sizeIn(45.dp, 45.dp)
+            .padding(4.dp, 2.dp)
             .scale(scale)
             .clip(AppTheme.shape.small),
-        onClick = {
-            isSmall = !isSmall
-            onVariantClick()
-        },
+        colors = ButtonDefaults.buttonColors(backgroundColor = backgroundColor),
+        onClick = { onVariantClick(spell) },
     ) {
         Box {
             Text(
-                text = text,
+                text = spell.cost,
                 maxLines = 1,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier

@@ -39,11 +39,11 @@ internal class SkillGameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loadQuestion()
+        viewModel.onAction(SkillGameViewModel.Action.LoadQuestion)
     }
 
-    private fun loadQuestion() {
-        viewModel.onAction(SkillGameViewModel.Action.LoadQuestion)
+    private fun loadQuestion(spell: SkillGameViewModel.Spell) {
+        viewModel.onAction(SkillGameViewModel.Action.ShowAnswer(spell))
     }
 
 }

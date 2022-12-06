@@ -37,7 +37,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
     init {
         actions
             .onEach { action ->
-                reduce(state.value, action)
+                reduce(action)
             }
             .retryWhen { _, _ ->
                 state.update { it.copy(loadingAttempts = it.loadingAttempts + 1) }
@@ -51,11 +51,15 @@ internal class SkillGameViewModel @AssistedInject constructor(
         _actions.emit(action)
     }
 
-    private fun reduce(oldState: State, action: Action) {
+    private fun reduce(action: Action) {
         when (action) {
             Action.LoadQuestion -> loadQuestion()
-            Action.ShowAnswer -> TODO()
+            is Action.ShowAnswer -> showRightAnswer(action.spellSelected)
         }
+    }
+
+    private fun showRightAnswer(selectedSpell: Spell) {
+        state.update { it.copy(showRightAnswer = true, selectedSpell = selectedSpell) }
     }
 
     private fun loadQuestion() = getSkillsUseCase()
@@ -66,11 +70,15 @@ internal class SkillGameViewModel @AssistedInject constructor(
         .onEach { data ->
             state.update { state -> state.setSkills(data) }
         }
+        .retryWhen { _, _ ->
+            state.update { it.copy(loadingAttempts = it.loadingAttempts + 1) }
+            true
+        }
         .launchIn(viewModelScope)
 
     sealed class Action {
         object LoadQuestion : Action()
-        object ShowAnswer : Action()
+        data class ShowAnswer(val spellSelected: Spell) : Action()
     }
 
     @Immutable
@@ -79,8 +87,11 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val loadingAttempts: Long,
         val isError: Boolean,
         val backgroundColor: Int,
-        val spellImage: String?,
+        val spellImage: String,
         val spellList: SpellList,
+        val spellLVL: Int,
+        val showRightAnswer: Boolean,
+        val selectedSpell: Spell?,
     ) {
 
         companion object {
@@ -89,8 +100,11 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 loadingAttempts = 0,
                 isError = false,
                 backgroundColor = Color.TRANSPARENT,
-                spellImage = null,
+                spellImage = "null",
                 spellList = SpellList(emptyList()),
+                spellLVL = 0,
+                showRightAnswer = false,
+                selectedSpell = null,
             )
         }
 
@@ -107,6 +121,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
                     Spell(spell.cost, spell.isRightAnswer)
                 }
             ),
+            spellLVL = data.spellLVL,
         )
     }
 

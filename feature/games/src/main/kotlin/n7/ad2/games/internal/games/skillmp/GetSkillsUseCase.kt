@@ -23,9 +23,10 @@ internal class GetSkillsUseCase @Inject constructor(
     data class Data(
         val skillImage: String,
         val name: String,
-        val manacost: String,
+        val manaCost: String,
         val backgroundColor: Int,
         val suggestsSpellList: List<Spell>,
+        val spellLVL: Int,
     )
 
     data class Spell(
@@ -40,18 +41,20 @@ internal class GetSkillsUseCase @Inject constructor(
                 val localHero = heroRepository.getHero(hero.name)
                 val info = heroRepository.getHeroDescription(localHero.name, AppLocale.English).single()
                 val spell: Ability = info.abilities.first { it.mana != null && it.mana != "" }
-                val spellMana: String = spell.mana ?: error("spell ${spell.name} mana is ${spell.mana}")
+                val spellManaList = spell.mana?.split("/") ?: error("spell ${spell.name} mana is ${spell.mana}")
+                val spellMana = spellManaList.random()
+                val spellLVL = spellManaList.indexOf(spellMana) + 1
                 val spellCosts = buildSet {
-                    while (size < 3) {
-                        val wrongSpellCost = spellMana.toInt() + Random.nextInt(-4..4) * 10
-                        if (wrongSpellCost > 0) add(wrongSpellCost.toString())
+                    add(spellMana)
+                    while (size < 4) {
+                        val randomTail = Random.nextInt(-3..3) * 10
+                        val wrongSpellCost = spellMana.toInt() + randomTail
+                        if (wrongSpellCost <= 0 || wrongSpellCost == spellMana.toInt()) continue
+                        add(wrongSpellCost.toString())
                     }
                 }
-                val spells = buildList {
-                    add(Spell(spellMana, true))
-                    addAll(spellCosts.map { Spell(it, false) })
-                    shuffle()
-                }
+                    .map { mana -> Spell(mana, spellMana == mana) }
+                    .shuffled()
                 val skillImage = heroRepository.getSpellBitmap(spell.name)
                 val skillImageUrl = HeroRepository.getFullUrlHeroSpell(spell.name)
                 val palette = Palette.from(skillImage).generate()
@@ -61,7 +64,8 @@ internal class GetSkillsUseCase @Inject constructor(
                     localHero.name,
                     spellMana,
                     backgroundColor,
-                    spells,
+                    spellCosts,
+                    spellLVL,
                 )
             }
             .flowOn(dispatchers.IO)
