@@ -11,12 +11,18 @@ kotlin = "1.7.20"
 compose = "1.3.0"
 composeCompiler = "1.3.2"
 media3 = "1.0.0-beta02"
+detekt = "1.22.0"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
 roomAnnotation = { module = "androidx.room:room-compiler", version.ref = "room" }
 roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
 roomPaging = "androidx.room:room-paging:2.5.0-alpha03"
+
+detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+detektApi = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "detekt" }
+detektCli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "detekt" }
+detektTest = { module = "io.gitlab.arturbosch.detekt:detekt-test", version.ref = "detekt" }
 
 exoPlayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
 exoPlayerHLS = { module = "androidx.media3:media3-exoplayer-hls", version.ref = "media3" }

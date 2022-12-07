@@ -10,6 +10,7 @@ val detektAll = tasks.register<Detekt>("detektAll") {
     parallel = true
 
     allRules = false
+    ignoreFailures = true
     setSource(files(projectDir))
 
     val path = "$projectDir\\core\\detekt\\src\\main\\resources\\config.yml"
