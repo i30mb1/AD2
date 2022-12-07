@@ -1,5 +1,5 @@
 plugins {
-    `kotlin-dsl`
+    id("convention.kotlin-jvm")
 }
 
 dependencies {

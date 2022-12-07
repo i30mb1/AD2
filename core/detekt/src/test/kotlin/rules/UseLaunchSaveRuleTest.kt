@@ -5,6 +5,7 @@ import io.github.detekt.test.utils.createEnvironment
 import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.test.compileAndLintWithContext
 import org.junit.jupiter.api.Test
+import rule.UseLaunchSaveRule
 
 class UseLaunchSaveRuleTest {
 

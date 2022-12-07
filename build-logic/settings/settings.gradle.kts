@@ -10,5 +10,3 @@ pluginManagement {
         gradlePluginPortal() // kotlin-dsl
     }
 }
-
-include(":detekt")

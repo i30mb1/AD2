@@ -1,7 +1,7 @@
 import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.api.RuleSet
 import io.gitlab.arturbosch.detekt.api.RuleSetProvider
-import rules.UseLaunchSaveRule
+import rule.UseLaunchSaveRule
 
 class MyRuleSetProvider : RuleSetProvider {
     override val ruleSetId: String = "MyRuleSet"

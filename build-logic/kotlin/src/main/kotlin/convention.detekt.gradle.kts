@@ -22,6 +22,7 @@ val detektAll = tasks.register<Detekt>("detektAll") {
     exclude("**/resources/**")
     exclude("**/build/**")
     exclude("**/test/**")
+    exclude("**/androidTest/**")
     reports {
         xml.required.set(false)
         sarif.required.set(false)
