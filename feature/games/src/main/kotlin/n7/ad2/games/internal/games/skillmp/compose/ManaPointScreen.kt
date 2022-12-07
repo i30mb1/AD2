@@ -5,7 +5,6 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.spring
@@ -14,23 +13,19 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.forEachGesture
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.movableContentOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -44,12 +39,13 @@ import androidx.compose.ui.input.pointer.PointerEvent
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChange
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.core.math.MathUtils
 import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
+import n7.ad2.games.internal.games.skillmp.compose.Counter
+import n7.ad2.games.internal.games.skillmp.compose.VariantBlocks
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.view.ErrorScreen
 import n7.ad2.ui.compose.view.LoadingScreen
@@ -64,7 +60,7 @@ internal fun ManaPointScreen(
     var color by remember { mutableStateOf(Color.Transparent) }
     color = Color(state.backgroundColor).copy(alpha = 0.2f)
     val animateColor = animateColorAsState(targetValue = color, animationSpec = tween(2_000))
-    Box(
+    Column(
         modifier = Modifier
             .fillMaxSize()
             .background(color = animateColor.value)
@@ -89,8 +85,10 @@ internal fun ManaPointScreen(
                 ErrorScreen()
             }
             else -> {
-                SpellImage(
-                    modifier = Modifier.align(Alignment.Center),
+                Counter(state.count)
+                SpellContainer(
+                    modifier = Modifier
+                        .weight(1f),
                     state.spellImage,
                     state.spellLVL,
                 ) { counter++ }
@@ -100,7 +98,6 @@ internal fun ManaPointScreen(
                     state.showRightAnswer,
                     state.selectedSpell,
                     onVariantClick,
-                    Modifier.align(Alignment.BottomCenter)
                 )
             }
 
@@ -109,7 +106,7 @@ internal fun ManaPointScreen(
 }
 
 @Composable
-private fun SpellImage(
+private fun SpellContainer(
     modifier: Modifier = Modifier,
     spellImage: String,
     spellLVL: Int,
@@ -123,17 +120,18 @@ private fun SpellImage(
     )
     Column(
         modifier = modifier
-            .scale(scale)
-            .size(120.dp),
+            .fillMaxSize()
+            .scale(scale),
         horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
     ) {
-        SpellImage(spellImage, onSpellClick)
+        SpellContainer(spellImage, onSpellClick)
         SpellLVL(spellLVL)
     }
 }
 
 @Composable
-private fun ColumnScope.SpellImage(
+private fun SpellContainer(
     spellImage: String?,
     onSpellClick: () -> Unit,
 ) {
@@ -145,10 +143,9 @@ private fun ColumnScope.SpellImage(
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier
-            .fillMaxSize()
+            .size(120.dp)
             .offset { IntOffset(offsetX.value.roundToInt(), offsetY.value.roundToInt()) }
             .clip(RoundedCornerShape(8.dp))
-            .weight(1f)
             .clickable { onSpellClick() }
             .pointerInput(Unit) {
                 forEachGesture {
@@ -192,61 +189,6 @@ private fun SpellLVL(spellLVL: Int) {
             ) {
 
             }
-        }
-    }
-}
-
-@Composable
-private fun VariantBlocks(
-    counter: Int,
-    spellList: SkillGameViewModel.SpellList,
-    showRightAnswer: Boolean,
-    selectedSpell: SkillGameViewModel.Spell?,
-    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val movableBlock =
-        movableContentOf {
-            for (spell in spellList.list) {
-                VariantBlock(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
-            }
-        }
-
-    when (counter % 3) {
-        0 -> Row(modifier) { movableBlock() }
-        1 -> Column(modifier) { movableBlock() }
-        2 -> Box(modifier) { movableBlock() }
-    }
-}
-
-@Composable
-private fun VariantBlock(
-    spell: SkillGameViewModel.Spell,
-    showRightAnswer: Boolean,
-    isSelected: Boolean,
-    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
-) {
-    val isSmall by remember { mutableStateOf(isSelected) }
-//    isSmall = showRightAnswer && spell.isRightAnswer
-    val backgroundColor = if (showRightAnswer) AppTheme.color.primary else AppTheme.color.surface
-    val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
-    Button(
-        modifier = Modifier
-            .sizeIn(45.dp, 45.dp)
-            .padding(4.dp, 2.dp)
-            .scale(scale)
-            .clip(AppTheme.shape.small),
-        colors = ButtonDefaults.buttonColors(backgroundColor = backgroundColor),
-        onClick = { onVariantClick(spell) },
-    ) {
-        Box {
-            Text(
-                text = spell.cost,
-                maxLines = 1,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier
-                    .align(Alignment.Center),
-            )
         }
     }
 }

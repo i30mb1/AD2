@@ -59,7 +59,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
     }
 
     private fun showRightAnswer(selectedSpell: Spell) {
-        state.update { it.copy(showRightAnswer = true, selectedSpell = selectedSpell) }
+        state.update { it.copy(showRightAnswer = true, selectedSpell = selectedSpell, count = it.count + 1) }
     }
 
     private fun loadQuestion() = getSkillsUseCase()
@@ -92,6 +92,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val spellLVL: Int,
         val showRightAnswer: Boolean,
         val selectedSpell: Spell?,
+        val count: Int,
     ) {
 
         companion object {
@@ -105,6 +106,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 spellLVL = 0,
                 showRightAnswer = false,
                 selectedSpell = null,
+                count = 0,
             )
         }
 
