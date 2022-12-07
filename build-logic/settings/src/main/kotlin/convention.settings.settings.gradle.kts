@@ -21,7 +21,7 @@ pluginManagement {
         kotlin("kapt") version "1.7.10"
     }
 }
-includeBuild("build-logic")
+
 //rootDir.listFiles()
 //    ?.filter { File(it, "build.gradle.kts").exists() }
 //    ?.forEach { include(it.name) }
