@@ -5,6 +5,7 @@ import n7.ad2.logger.Logger
 
 class LoggerFake : Logger {
     override fun log(text: String) = Unit
+    override fun logEvent(event: String, params: Map<String, Any>) = Unit
     override fun getSubscriptionCount(): Int = 0
     override fun getLogFlow(): Flow<AppLog> = emptyFlow()
 }
