@@ -8,6 +8,7 @@ dependencies {
     implementation(libs.detektPlugin)
     implementation(libs.detektApi)
     implementation(libs.detektCli)
+
     implementation(project(":extensions"))
 
     testImplementation(libs.detektTest)
