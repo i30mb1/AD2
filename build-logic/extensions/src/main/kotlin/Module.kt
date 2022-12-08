@@ -17,6 +17,7 @@ object Module {
         const val retrofit = ":core:retrofit"
         const val common = ":core:common"
         const val updateManager = ":core:update-manager"
+        const val yandexMetrics = ":core:yandex-metrics"
     }
 
     object Feature {

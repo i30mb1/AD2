@@ -19,6 +19,7 @@ import n7.ad2.tournaments.api.TournamentsDependencies
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MyApplication
 import n7.ad2.updateManager.UpdateManagerModule
+import yandexMetrics.di.MetricsModule
 
 @ApplicationScope
 @dagger.Component(
@@ -32,6 +33,7 @@ import n7.ad2.updateManager.UpdateManagerModule
         AppPreferenceModule::class,
         DatabaseModule::class,
         SpanParserModule::class,
+        MetricsModule::class,
     ]
 )
 interface ApplicationComponent : StreamsDependencies,

@@ -31,6 +31,7 @@ include(
     ":core:retrofit",
     ":core:common",
     ":core:update-manager",
+    ":core:yandex-metrics",
 )
 include(
     ":feature:streams",

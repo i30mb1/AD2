@@ -10,4 +10,5 @@ class AD2AppInformation @Inject constructor(
         "ru" -> AppLocale.Russian
         else -> AppLocale.English
     }
+    override val appVersion = BuildConfig.VERSION_NAME
 }

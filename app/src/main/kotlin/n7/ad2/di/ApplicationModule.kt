@@ -20,9 +20,11 @@ import n7.ad2.init.HistoricalProcessExitReasonsInitializer
 import n7.ad2.init.Initializer
 import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
+import n7.ad2.init.YandexMetricsInitializer
 import n7.ad2.logger.AppLogger
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
+import yandexMetrics.YandexMetricsInit
 import java.util.Calendar
 
 @dagger.Module
@@ -58,13 +60,14 @@ interface ApplicationModule {
 
         @ElementsIntoSet
         @Provides
-        fun provideInitializers(): Set<Initializer> {
+        fun provideInitializers(yandexMetricsInit: YandexMetricsInit): Set<Initializer> {
             return setOf(
                 SystemInfoInitializer(),
                 CrashHandlerInitializer(),
                 HistoricalProcessExitReasonsInitializer(),
                 StrictModeInitializer(),
                 DevicePerformanceInitializer(),
+                YandexMetricsInitializer(yandexMetricsInit),
             )
         }
 
