@@ -1,6 +1,6 @@
 dependencyResolutionManagement {
     repositories {
-        gradlePluginPortal()// kotlin-stdlib-jdk8
+        gradlePluginPortal() // kotlin-stdlib-jdk8
     }
 }
 

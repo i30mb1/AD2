@@ -11,6 +11,8 @@ dependencyResolutionManagement {
 pluginManagement {
     repositories {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
+        mavenCentral()
+        google()
     }
 }
 
@@ -19,4 +21,5 @@ include("measure-build-time")
 include("extensions")
 include("kotlin")
 include("android")
+include("detekt")
 includeBuild("settings")

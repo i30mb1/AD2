@@ -5,7 +5,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            from(files("build-logic/gradle/libs.versions.toml"))
+            from(files("Z:/AndroidProjects/AD2/build-logic/gradle/libs.versions.toml"))
         }
     }
 }
@@ -14,13 +14,14 @@ pluginManagement {
     includeBuild("build-logic")
     repositories {
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
-        google()  // com.android.library
+        google()  // com.android.library, com.android.tools.build:gradle
         maven { setUrl("https://jitpack.io") } // detekt
     }
     plugins {
-        kotlin("kapt") version "1.7.10"
+        kotlin("kapt") version "1.7.20"
     }
 }
+includeBuild("build-logic")
 
 //rootDir.listFiles()
 //    ?.filter { File(it, "build.gradle.kts").exists() }

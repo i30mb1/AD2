@@ -13,8 +13,7 @@ val detektAll = tasks.register<Detekt>("detektAll") {
     ignoreFailures = true
     setSource(files(projectDir))
 
-    val path = "$projectDir\\core\\detekt\\src\\main\\resources\\config.yml"
-    config.setFrom(files(path))
+    config.setFrom(getResource("config.yml"))
     buildUponDefaultConfig = false
 
     include("**/*.kt")
@@ -32,5 +31,5 @@ val detektAll = tasks.register<Detekt>("detektAll") {
 }
 
 dependencies {
-    detekt(project(":core:detekt"))
+    detekt("build-logic:detekt")
 }

@@ -17,7 +17,6 @@ include(
     ":core:dagger",
     ":core:android",
     ":core:parser",
-    ":core:detekt",
 //    ":core:rules",
     ":core:logger",
     ":core:coroutines",
