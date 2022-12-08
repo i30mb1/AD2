@@ -24,6 +24,25 @@ import androidx.compose.ui.unit.dp
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.ui.compose.AppTheme
 
+@Preview
+@Composable
+private fun VariantBlocksPreview() {
+    VariantBlocks(
+        counter = 0,
+        spellList = SkillGameViewModel.SpellList(
+            listOf(
+                SkillGameViewModel.Spell("10", false),
+                SkillGameViewModel.Spell("20", false),
+                SkillGameViewModel.Spell("30", true),
+                SkillGameViewModel.Spell("40", false),
+            )
+        ),
+        showRightAnswer = false,
+        selectedSpell = null,
+        onVariantClick = {},
+    )
+}
+
 @Composable
 internal fun VariantBlocks(
     counter: Int,

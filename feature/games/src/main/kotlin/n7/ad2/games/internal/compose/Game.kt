@@ -22,13 +22,12 @@ import androidx.compose.ui.unit.dp
 import n7.ad2.games.R
 import n7.ad2.ui.compose.AppTheme
 
-@Preview
 @Composable
 internal fun Game(
-    @PreviewParameter(PreviewGameTitleProvider::class) title: String,
-    @PreviewParameter(PreviewGameBackgroundProvider::class) background: Int,
+    title: String,
+    background: Int,
+    onGameClick: () -> Unit,
     modifier: Modifier = Modifier,
-    onGameClick: () -> Unit = { },
 ) {
     Box(
         modifier = modifier
@@ -55,13 +54,21 @@ internal fun Game(
     }
 }
 
-internal class PreviewGameTitleProvider : PreviewParameterProvider<String> {
+@Preview
+@Composable
+private fun GamePreview(
+    @PreviewParameter(PreviewGameTitleProvider::class) title: String,
+) {
+    Game(title = title, background = 0, onGameClick = { })
+}
+
+private class PreviewGameTitleProvider : PreviewParameterProvider<String> {
     override val values: Sequence<String> = sequenceOf(
         "Spell Cost",
     )
 }
 
-internal class PreviewGameBackgroundProvider : PreviewParameterProvider<Int> {
+private class PreviewGameBackgroundProvider : PreviewParameterProvider<Int> {
     override val values: Sequence<Int> = sequenceOf(
         R.drawable.background_guess_skill
     )

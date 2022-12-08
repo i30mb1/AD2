@@ -10,8 +10,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.fragment.app.Fragment
 import n7.ad2.android.findDependencies
 import n7.ad2.games.internal.di.DaggerGamesComponent
-import n7.ad2.games.internal.games.skillmp.ManaPointScreen
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
+import n7.ad2.games.internal.games.skillmp.compose.ManaPointScreen
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView
 import javax.inject.Inject
@@ -42,8 +42,8 @@ internal class SkillGameFragment : Fragment() {
         viewModel.onAction(SkillGameViewModel.Action.LoadQuestion)
     }
 
-    private fun loadQuestion(spell: SkillGameViewModel.Spell) {
-        viewModel.onAction(SkillGameViewModel.Action.ShowAnswer(spell))
+    private fun loadQuestion(selectedSpell: SkillGameViewModel.Spell) {
+        viewModel.onAction(SkillGameViewModel.Action.ShowAnswer(selectedSpell))
     }
 
 }

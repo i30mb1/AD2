@@ -36,9 +36,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
 
     init {
         actions
-            .onEach { action ->
-                reduce(action)
-            }
+            .onEach { action -> reduce(action) }
             .retryWhen { _, _ ->
                 state.update { it.copy(loadingAttempts = it.loadingAttempts + 1) }
                 true
@@ -51,20 +49,39 @@ internal class SkillGameViewModel @AssistedInject constructor(
         _actions.emit(action)
     }
 
-    private fun reduce(action: Action) {
+    private suspend fun reduce(action: Action) {
         when (action) {
             Action.LoadQuestion -> loadQuestion()
-            is Action.ShowAnswer -> showRightAnswer(action.spellSelected)
+            Action.EndGame -> showEndGame()
+            is Action.ShowAnswer -> showAnswer(action.selectedSpell)
         }
     }
 
-    private fun showRightAnswer(selectedSpell: Spell) {
-        state.update { it.copy(showRightAnswer = true, selectedSpell = selectedSpell, count = it.count + 1) }
+    private fun showEndGame() {
+        state.update { state ->
+            state.copy(isEndGame = true)
+        }
+    }
+
+    private suspend fun showAnswer(selectedSpell: Spell) {
+        if (state.value.showRightAnswer) return
+        state.update { state ->
+            if (selectedSpell.isRightAnswer) {
+                val userScore = state.userScore + 1
+                state.copy(showRightAnswer = true, selectedSpell = selectedSpell, userScore = userScore)
+            } else {
+                val wrongAttempts = state.wrongAttempts - 1
+                state.copy(showRightAnswer = true, wrongAttempts = wrongAttempts)
+            }
+        }
+        delay(1.seconds)
+        if (state.value.wrongAttempts == 0) onAction(Action.EndGame)
+        else onAction(Action.LoadQuestion)
     }
 
     private fun loadQuestion() = getSkillsUseCase()
         .onStart {
-            state.update { it.copy(isLoading = true) }
+            state.update { it.copy(isLoading = true, showRightAnswer = false) }
             delay(0.2.seconds)
         }
         .onEach { data ->
@@ -78,7 +95,8 @@ internal class SkillGameViewModel @AssistedInject constructor(
 
     sealed class Action {
         object LoadQuestion : Action()
-        data class ShowAnswer(val spellSelected: Spell) : Action()
+        data class ShowAnswer(val selectedSpell: Spell) : Action()
+        object EndGame : Action()
     }
 
     @Immutable
@@ -92,7 +110,9 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val spellLVL: Int,
         val showRightAnswer: Boolean,
         val selectedSpell: Spell?,
-        val count: Int,
+        val userScore: Int,
+        val wrongAttempts: Int,
+        val isEndGame: Boolean,
     ) {
 
         companion object {
@@ -106,7 +126,9 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 spellLVL = 0,
                 showRightAnswer = false,
                 selectedSpell = null,
-                count = 0,
+                userScore = 0,
+                1,
+                false,
             )
         }
 

@@ -20,7 +20,7 @@ internal fun Counter(
 ) {
     Text(
         text = count.toString(),
-        style = AppTheme.style.H5.copy(fontSize = 30.sp),
+        style = AppTheme.style.H5.copy(fontSize = 40.sp),
         color = AppTheme.color.textColor,
         modifier = modifier,
     )
