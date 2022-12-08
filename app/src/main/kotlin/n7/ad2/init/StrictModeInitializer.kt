@@ -10,7 +10,7 @@ import n7.ad2.logger.Logger
 class StrictModeInitializer : Initializer {
 
     override fun init(app: Application, logger: Logger, appInformation: AppInformation) {
-        if (appInformation.isDebug) {
+        if (false) {
             Handler(Looper.getMainLooper()).postAtFrontOfQueue {
                 StrictMode.setThreadPolicy(
                     StrictMode.ThreadPolicy.Builder()
