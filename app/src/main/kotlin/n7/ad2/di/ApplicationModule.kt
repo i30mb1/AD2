@@ -52,6 +52,7 @@ interface ApplicationModule {
         @Provides
         fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
 
+        @ApplicationScope
         @Provides
         fun provideCalendar(): Calendar = Calendar.getInstance()
 
