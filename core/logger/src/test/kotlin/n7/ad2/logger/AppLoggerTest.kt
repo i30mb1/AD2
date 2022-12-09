@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
+import n7.ad2.AppMetrics
 import n7.ad2.coroutines.CoroutineTestRule
 import org.junit.Rule
 import org.junit.Test
@@ -15,7 +16,7 @@ internal class AppLoggerTest {
 
     @get:Rule val coroutineRule = CoroutineTestRule()
     @get:Rule val timeout = CoroutinesTimeout.seconds(5)
-    private val logger = AppLogger()
+    private val logger = AppLogger(AppMetricsFake())
 
     @Test
     fun `when send log and logger have zero subscribers should return log`() = runTest {
@@ -38,4 +39,8 @@ internal class AppLoggerTest {
         flow.cancel()
     }
 
+}
+
+private class AppMetricsFake : AppMetrics {
+    override fun logEvent(event: String, params: Map<String, Any>) = Unit
 }
