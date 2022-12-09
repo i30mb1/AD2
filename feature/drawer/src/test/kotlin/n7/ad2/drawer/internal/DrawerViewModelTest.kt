@@ -15,7 +15,7 @@ import n7.ad2.drawer.internal.domain.vo.VOMenu
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-
+// классы testFixture из android-library модулей не работают!
 // https://issuetracker.google.com/issues/219687418
 internal class DrawerViewModelTest {
 
