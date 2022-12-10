@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.test")
-    id("org.jetbrains.kotlin.android")
+    id("com.android.test") version "7.3.1"
+    id("convention.android-base")
 }
 
 android {
