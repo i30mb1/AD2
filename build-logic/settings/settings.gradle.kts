@@ -1,3 +1,5 @@
+rootProject.name = "settings"
+
 dependencyResolutionManagement {
     repositories {
         gradlePluginPortal() // kotlin-stdlib-jdk8
