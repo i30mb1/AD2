@@ -17,8 +17,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -38,7 +38,7 @@ internal fun GamesScreen(
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     var drawerPercent by remember { mutableStateOf(0f) }
 
-    val state = viewModel.state.observeAsState().value ?: return
+    val state = viewModel.state.collectAsState().value
     AnimatedContent(
         targetState = state,
         modifier = Modifier.padding(top = insetsTop * drawerPercent),
@@ -78,12 +78,7 @@ private fun GamesList(
             .padding(horizontal = 12.dp, vertical = 4.dp)
     ) {
         games?.forEach { gameData ->
-            when (gameData) {
-                is GameVO.Apm -> Unit
-                is GameVO.CanYouBuyIt -> Unit
-                is GameVO.SpellCost -> Game(gameData.title, gameData.backgroundImage, onGameClick = { onGameClicked(gameData) })
-            }
-
+            Game(gameData.title, gameData.backgroundImage, onGameClick = { onGameClicked(gameData) })
         }
     }
 }

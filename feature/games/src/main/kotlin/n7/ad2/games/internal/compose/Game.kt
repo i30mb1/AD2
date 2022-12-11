@@ -38,7 +38,7 @@ internal fun Game(
             .clickable { onGameClick() },
     ) {
         Image(
-            painter = painterResource(id = R.drawable.background_guess_skill),
+            painter = painterResource(id = background),
             contentDescription = title,
             contentScale = ContentScale.Crop,
             alpha = 0.1f,

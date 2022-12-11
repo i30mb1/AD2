@@ -2,7 +2,6 @@ package n7.ad2.games.internal.games.skillmp.compose
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
@@ -11,9 +10,9 @@ import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.movableContentOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -24,11 +23,25 @@ import androidx.compose.ui.unit.dp
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.ui.compose.AppTheme
 
+@Composable
+internal fun VariantBlocks(
+    spellList: SkillGameViewModel.SpellList,
+    showRightAnswer: Boolean,
+    selectedSpell: SkillGameViewModel.Spell?,
+    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(modifier) {
+        for (spell in spellList.list) {
+            Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
+        }
+    }
+}
+
 @Preview
 @Composable
 private fun VariantBlocksPreview() {
     VariantBlocks(
-        counter = 0,
         spellList = SkillGameViewModel.SpellList(
             listOf(
                 SkillGameViewModel.Spell("10", false),
@@ -43,39 +56,6 @@ private fun VariantBlocksPreview() {
     )
 }
 
-@Composable
-internal fun VariantBlocks(
-    counter: Int,
-    spellList: SkillGameViewModel.SpellList,
-    showRightAnswer: Boolean,
-    selectedSpell: SkillGameViewModel.Spell?,
-    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val movableBlock =
-        movableContentOf {
-            for (spell in spellList.list) {
-                Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
-            }
-        }
-
-    when (counter % 3) {
-        0 -> Row(modifier) { movableBlock() }
-        1 -> Column(modifier) { movableBlock() }
-        2 -> Box(modifier) { movableBlock() }
-    }
-}
-
-@Preview
-@Composable
-private fun BlockPreview() {
-    Block(
-        spell = SkillGameViewModel.Spell("10", false),
-        showRightAnswer = false,
-        isSelected = false,
-        onVariantClick = {}
-    )
-}
 
 @Composable
 private fun Block(
@@ -85,8 +65,8 @@ private fun Block(
     onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val isSmall by remember { mutableStateOf(isSelected) }
-//    isSmall = showRightAnswer && spell.isRightAnswer
+    var isSmall by remember { mutableStateOf(false) }
+    isSmall = isSelected
     val backgroundColor = if (showRightAnswer && spell.isRightAnswer) AppTheme.color.primary else AppTheme.color.surface
     val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
 
@@ -110,4 +90,15 @@ private fun Block(
             )
         }
     }
+}
+
+@Preview
+@Composable
+private fun BlockPreview() {
+    Block(
+        spell = SkillGameViewModel.Spell("10", false),
+        showRightAnswer = false,
+        isSelected = false,
+        onVariantClick = {}
+    )
 }

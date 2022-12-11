@@ -1,4 +1,4 @@
-package n7.ad2.games.internal.games.killCreep
+package n7.ad2.games.internal.games.killCreep.compose
 
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -13,28 +13,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import n7.ad2.ktx.dpToPx
 import kotlin.math.sin
-
-@Preview
-@Composable
-private fun KillCreepScreenPreview() {
-    Space()
-}
-
-private class Star(
-    var x: Float,
-    var y: Float,
-    var alpha: Float,
-) {
-    private val initialAlpha = alpha
-    fun update(value: Float) {
-        val x = (value - initialAlpha).toDouble()
-        val newAlpha = 0.5f + (0.5f * sin(x).toFloat())
-        alpha = newAlpha
-    }
-}
 
 @Composable
 fun Space() {
@@ -72,5 +52,18 @@ fun Space() {
             }
 
         }
+    }
+}
+
+private class Star(
+    var x: Float,
+    var y: Float,
+    var alpha: Float,
+) {
+    private val initialAlpha = alpha
+    fun update(value: Float) {
+        val x = (value - initialAlpha).toDouble()
+        val newAlpha = 0.5f + (0.5f * sin(x).toFloat())
+        alpha = newAlpha
     }
 }

@@ -12,7 +12,8 @@ import n7.ad2.android.getNavigator
 import n7.ad2.games.internal.compose.GamesScreen
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
-import n7.ad2.games.internal.games.SkillGameFragment
+import n7.ad2.games.internal.games.killCreep.KillCreepFragment
+import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.ktx.viewModel
 import n7.ad2.logger.Logger
 import n7.ad2.ui.ComposeView
@@ -40,9 +41,9 @@ internal class GamesFragment : Fragment() {
 
     private fun onGameClicked(game: GameVO) {
         val fragment = when (game) {
-            is GameVO.Apm -> TODO()
+            is GameVO.Apm -> KillCreepFragment.getInstance()
             is GameVO.CanYouBuyIt -> TODO()
-            is GameVO.SpellCost -> SkillGameFragment.getInstance()
+            is GameVO.GuessSkillMana -> SkillGameFragment.getInstance()
         }
         getNavigator.setMainFragment(fragment) {
             addToBackStack(null)

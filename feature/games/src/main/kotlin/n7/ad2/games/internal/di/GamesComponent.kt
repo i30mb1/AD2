@@ -3,7 +3,8 @@ package n7.ad2.games.internal.di
 import n7.ad2.games.api.GamesDependencies
 import n7.ad2.games.internal.GamesFragment
 import n7.ad2.games.internal.GamesViewModel
-import n7.ad2.games.internal.games.SkillGameFragment
+import n7.ad2.games.internal.games.killCreep.KillCreepFragment
+import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 
 @dagger.Component(
     dependencies = [
@@ -18,6 +19,7 @@ internal interface GamesComponent {
     }
 
     fun inject(gamesFragment: GamesFragment)
+    fun inject(killCreepFragment: KillCreepFragment)
     fun inject(gameGuessTheSkillManaPoint: SkillGameFragment)
 
     val gamesViewModelFactory: GamesViewModel.Factory

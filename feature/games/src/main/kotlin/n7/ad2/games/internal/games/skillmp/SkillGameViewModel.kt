@@ -71,7 +71,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 state.copy(showRightAnswer = true, selectedSpell = selectedSpell, userScore = userScore)
             } else {
                 val wrongAttempts = state.wrongAttempts - 1
-                state.copy(showRightAnswer = true, wrongAttempts = wrongAttempts)
+                state.copy(showRightAnswer = true, selectedSpell = selectedSpell, wrongAttempts = wrongAttempts)
             }
         }
         delay(1.seconds)

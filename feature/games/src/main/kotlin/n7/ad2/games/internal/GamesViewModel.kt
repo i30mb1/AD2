@@ -1,12 +1,14 @@
 package n7.ad2.games.internal
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
+import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.stateIn
 import n7.ad2.Resources
-import n7.ad2.games.R
 import n7.ad2.games.internal.data.GameVO
 
 internal class GamesViewModel @AssistedInject constructor(
@@ -18,17 +20,15 @@ internal class GamesViewModel @AssistedInject constructor(
         fun create(): GamesViewModel
     }
 
-    val state: LiveData<State> = liveData {
-        emit(State.Loading)
+    val state: StateFlow<State> = flow {
         val games = listOf(
-            GameVO.SpellCost(res.getString(R.string.spell_cost), R.drawable.background_guess_skill),
-            GameVO.Apm(res.getString(R.string.apm)),
-            GameVO.CanYouBuyIt(res.getString(R.string.can_you_buy_it)),
+            GameVO.GuessSkillMana(res),
+            GameVO.Apm(res),
+            GameVO.CanYouBuyIt(res),
         )
-
-        val data = State.Data(games)
-        emit(data)
+        emit(State.Data(games))
     }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, State.Loading)
 
     sealed class State {
         data class Data(val games: List<GameVO>) : State()
