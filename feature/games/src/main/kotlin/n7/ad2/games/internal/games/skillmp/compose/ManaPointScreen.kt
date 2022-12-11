@@ -50,7 +50,6 @@ internal fun ManaPointScreen(
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        var counter by remember { mutableStateOf(0) }
         when {
             state.isLoading -> {
                 Box {
@@ -73,9 +72,8 @@ internal fun ManaPointScreen(
                         .weight(1f),
                     state.spellImage,
                     state.spellLVL,
-                ) { counter++ }
+                ) { }
                 VariantBlocks(
-                    counter,
                     state.spellList,
                     state.showRightAnswer,
                     state.selectedSpell,
