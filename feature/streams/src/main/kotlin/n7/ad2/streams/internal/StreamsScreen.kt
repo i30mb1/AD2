@@ -100,12 +100,11 @@ internal fun StreamsList(
     }
 }
 
-@Preview
 @Composable
 internal fun SimpleStream(
-    @PreviewParameter(PreviewStreamProvider::class) stream: VOStream.Simple,
+    stream: VOStream.Simple,
+    onStreamClicked: (stream: VOStream) -> Unit,
     modifier: Modifier = Modifier,
-    onStreamClicked: (stream: VOStream) -> Unit = { },
 ) {
     Surface(
         modifier = modifier
@@ -131,7 +130,6 @@ internal fun SimpleStream(
                     contentDescription = null,
                 )
             }
-
             Column(
                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
             ) {
@@ -152,9 +150,16 @@ internal fun SimpleStream(
                     text = stream.title,
                 )
             }
-
         }
     }
+}
+
+@Preview
+@Composable
+internal fun SimpleStreamPreview(
+    @PreviewParameter(PreviewStreamProvider::class) stream: VOStream.Simple,
+) {
+    SimpleStream(stream, {})
 }
 
 internal class PreviewStreamProvider : PreviewParameterProvider<VOStream> {

@@ -24,6 +24,7 @@ import n7.ad2.android.findDependencies
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
+import n7.ad2.streams.internal.stream.compose.StreamScreen
 import n7.ad2.ui.compose.AppTheme
 import javax.inject.Inject
 
@@ -73,6 +74,10 @@ class StreamActivity : FragmentActivity() {
         super.onNewIntent(intent)
         val streamerName = intent?.extras?.getString(STREAMER_NAME) ?: return
         viewModel.load(streamerName)
+    }
+
+    private fun onSettingsClicked() {
+
     }
 
     private fun onPipLayoutChanged(rect: Rect) {

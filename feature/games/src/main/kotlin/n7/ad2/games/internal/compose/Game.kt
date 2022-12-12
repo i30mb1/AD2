@@ -41,7 +41,7 @@ internal fun Game(
             painter = painterResource(id = background),
             contentDescription = title,
             contentScale = ContentScale.Crop,
-            alpha = 0.1f,
+            alpha = 0.2f,
             modifier = Modifier.fillMaxSize()
         )
         Text(
