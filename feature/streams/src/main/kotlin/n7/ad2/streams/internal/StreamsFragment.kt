@@ -43,6 +43,11 @@ internal class StreamsFragment : Fragment() {
         }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.keepScreenOn = true
+    }
+
     private fun onStreamClicked(stream: VOStream) {
         if (stream is VOStream.Simple) {
             val streamFragment = StreamActivity.newInstance(requireContext(), stream.streamerName)
