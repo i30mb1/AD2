@@ -15,4 +15,6 @@ data class NewsLocal(
     val urlImage: String,
     @ColumnInfo(name = "loadedFromPage")
     val loadedFromPage: Int,
+    @ColumnInfo(name = "href")
+    val href: String,
 )

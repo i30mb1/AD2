@@ -17,6 +17,7 @@ internal class NewsSource @Inject constructor(
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, NewsLocal> = try {
         val page = params.key ?: 1
+        error("")
         val news = getNewsUseCase(page).single()
         LoadResult.Page(
             news,
