@@ -1,7 +1,9 @@
 @file:OptIn(ExperimentalMaterialApi::class)
 
-package ad2.n7.news.internal
+package ad2.n7.news.internal.list
 
+import ad2.n7.news.internal.NewsViewModel
+import ad2.n7.news.internal.domain.model.Image
 import ad2.n7.news.internal.domain.model.NewsVO
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -30,7 +32,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
@@ -72,8 +76,17 @@ internal fun NewsScreen(
     }
 }
 
+@Preview
 @Composable
-internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit) {
+private fun NewsItemPreview() {
+    NewsItem(item = NewsVO(0, "Title", Image("")), onNewsClicked = {})
+}
+
+@Composable
+internal fun NewsItem(
+    item: NewsVO,
+    onNewsClicked: (newsID: Int) -> Unit,
+) {
     Surface(
         modifier = Modifier
             .height(170.dp)
@@ -83,7 +96,12 @@ internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit) {
         elevation = 4.dp,
         onClick = { onNewsClicked(item.id) },
     ) {
-        AsyncImage(model = item.image.origin, contentDescription = item.title, contentScale = ContentScale.Crop)
+        AsyncImage(
+            model = item.image.origin,
+            contentDescription = item.title,
+            contentScale = ContentScale.Crop,
+            placeholder = painterResource(id = n7.ad2.ui.R.drawable.widht_placeholder),
+        )
         Text(
             modifier = Modifier
                 .background(Color(0x4D000000))

@@ -1,13 +1,12 @@
-@file:OptIn(ExperimentalMaterialApi::class)
+package ad2.n7.news.internal.list
 
-package ad2.n7.news.internal
-
+import ad2.n7.news.internal.NewsViewModel
+import ad2.n7.news.internal.SingleNewsFragment
 import ad2.n7.news.internal.di.DaggerNewsComponent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.fragment.app.Fragment
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies

@@ -1,10 +1,10 @@
 package ad2.n7.news.internal.di
 
 import ad2.n7.news.api.NewsDependencies
-import ad2.n7.news.internal.NewsFragment
 import ad2.n7.news.internal.NewsViewModel
 import ad2.n7.news.internal.NewsWorker
 import ad2.n7.news.internal.SingleNewsFragment
+import ad2.n7.news.internal.list.NewsFragment
 
 @dagger.Component(
     dependencies = [
