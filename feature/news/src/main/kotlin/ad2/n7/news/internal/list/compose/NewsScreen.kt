@@ -1,10 +1,10 @@
 @file:OptIn(ExperimentalMaterialApi::class)
 
-package ad2.n7.news.internal.list
+package ad2.n7.news.internal.list.compose
 
-import ad2.n7.news.internal.NewsViewModel
 import ad2.n7.news.internal.domain.model.Image
 import ad2.n7.news.internal.domain.model.NewsVO
+import ad2.n7.news.internal.list.NewsViewModel
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -28,6 +28,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -67,8 +68,7 @@ internal fun NewsScreen(
         ) {
             items(news) { item: NewsVO? -> if (item != null) NewsItem(item, onNewsClicked) }
         }
-
-        ScrollToTopButton(showScrollToTopButton, state)
+        ScrollToTopButton(showScrollToTopButton, state, Modifier.align(Alignment.BottomEnd))
     }
     DisposableEffect(key1 = Unit) {
         drawerPercentListener.setDrawerPercentListener { percent -> drawerPercent = percent }

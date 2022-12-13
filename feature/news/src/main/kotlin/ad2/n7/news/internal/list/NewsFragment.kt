@@ -1,8 +1,8 @@
 package ad2.n7.news.internal.list
 
-import ad2.n7.news.internal.NewsViewModel
-import ad2.n7.news.internal.SingleNewsFragment
+import ad2.n7.news.internal.article.ArticleFragment
 import ad2.n7.news.internal.di.DaggerNewsComponent
+import ad2.n7.news.internal.list.compose.NewsScreen
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,7 +41,7 @@ internal class NewsFragment : Fragment() {
     }
 
     private fun onNewsClicked(newsID: Int) {
-        getNavigator.setMainFragment(SingleNewsFragment.getInstance()) {
+        getNavigator.setMainFragment(ArticleFragment.getInstance()) {
             addToBackStack(null)
         }
     }

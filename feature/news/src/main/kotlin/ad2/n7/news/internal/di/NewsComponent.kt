@@ -1,10 +1,10 @@
 package ad2.n7.news.internal.di
 
 import ad2.n7.news.api.NewsDependencies
-import ad2.n7.news.internal.NewsViewModel
 import ad2.n7.news.internal.NewsWorker
-import ad2.n7.news.internal.SingleNewsFragment
+import ad2.n7.news.internal.article.ArticleFragment
 import ad2.n7.news.internal.list.NewsFragment
+import ad2.n7.news.internal.list.NewsViewModel
 
 @dagger.Component(
     dependencies = [
@@ -19,7 +19,7 @@ internal interface NewsComponent {
     }
 
     fun inject(newsFragment: NewsFragment)
-    fun inject(singleNewsFragment: SingleNewsFragment)
+    fun inject(singleNewsFragment: ArticleFragment)
     fun inject(newsWorker: NewsWorker)
 
     val newsViewModelFactory: NewsViewModel.Factory

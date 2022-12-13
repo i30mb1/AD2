@@ -6,9 +6,9 @@ import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
@@ -19,12 +19,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
-inline fun BoxScope.ScrollToTopButton(
+inline fun ScrollToTopButton(
     isVisible: Boolean,
     state: LazyListState,
     modifier: Modifier = Modifier,
@@ -35,8 +36,7 @@ inline fun BoxScope.ScrollToTopButton(
         enter = slideInHorizontally(initialOffsetX = { it }),
         exit = slideOutHorizontally(targetOffsetX = { it }),
         modifier = modifier
-            .padding(bottom = 60.dp)
-            .align(Alignment.BottomEnd),
+            .padding(bottom = 60.dp),
     ) {
         Box(modifier = Modifier
             .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
@@ -52,4 +52,13 @@ inline fun BoxScope.ScrollToTopButton(
             )
         }
     }
+}
+
+@Preview
+@Composable
+private fun ScrollToTopButtonPreview() {
+    ScrollToTopButton(
+        true,
+        rememberLazyListState(),
+    )
 }
