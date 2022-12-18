@@ -32,16 +32,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.net.toUri
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.util.UnstableApi
@@ -136,6 +140,7 @@ private fun BottomSheetContent(
 internal fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
     val context = LocalContext.current
     val statusBarInsets = WindowInsets.statusBars.getTop(LocalDensity.current)
+    val lifecycleOwner = rememberUpdatedState(LocalLifecycleOwner.current)
     val exoPlayer = remember {
         ExoPlayer.Builder(context).build().apply {
             videoScalingMode = C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING
@@ -164,8 +169,21 @@ internal fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
             exoPlayer.setMediaSource(mediaSource)
             exoPlayer.prepare()
         })
+
     DisposableEffect(Unit) {
-        onDispose { exoPlayer.release() }
+        val observer = LifecycleEventObserver { _, event ->
+            when (event) {
+                Lifecycle.Event.ON_PAUSE -> exoPlayer.pause()
+                Lifecycle.Event.ON_RESUME -> exoPlayer.play()
+                else -> Unit
+            }
+        }
+        val lifecycle = lifecycleOwner.value.lifecycle
+        lifecycle.addObserver(observer)
+        onDispose {
+            exoPlayer.release()
+            lifecycle.removeObserver(observer)
+        }
     }
 }
 
