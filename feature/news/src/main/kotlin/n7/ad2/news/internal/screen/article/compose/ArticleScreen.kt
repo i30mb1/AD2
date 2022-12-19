@@ -5,6 +5,7 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.rememberScrollState
@@ -33,18 +34,19 @@ internal fun ArticleScreen(viewModel: ArticleViewModel) {
 private fun Browser(body: String) {
     val isDark = isSystemInDarkTheme()
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
+    val insetsBottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     val textColor = AppTheme.color.textColor.toArgb().toHexString()
     AndroidView(
         modifier = Modifier
             .fillMaxWidth()
             .verticalScroll(rememberScrollState())
-            .padding(top = insetsTop),
+            .padding(top = insetsTop, bottom = insetsBottom),
         factory = { context ->
             WebView(context).apply {
                 setBackgroundColor(android.graphics.Color.TRANSPARENT)
                 isVerticalScrollBarEnabled = false
-                settings.textZoom = 85
-                settings.defaultFontSize = 20
+                settings.textZoom = 100
+                settings.defaultFontSize = 14
                 if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) && isDark) {
                     WebSettingsCompat.setForceDark(this.settings, WebSettingsCompat.FORCE_DARK_ON)
                 }
