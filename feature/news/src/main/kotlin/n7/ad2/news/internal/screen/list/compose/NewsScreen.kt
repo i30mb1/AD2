@@ -1,6 +1,4 @@
-@file:OptIn(ExperimentalMaterialApi::class)
-
-package n7.ad2.news.internal.list.compose
+package n7.ad2.news.internal.screen.list.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -10,7 +8,6 @@ import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.derivedStateOf
@@ -26,7 +23,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.items
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.news.internal.domain.model.NewsVO
-import n7.ad2.news.internal.list.NewsViewModel
+import n7.ad2.news.internal.screen.list.NewsViewModel
 import n7.ad2.ui.compose.view.ScrollToTopButton
 
 @Composable

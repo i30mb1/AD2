@@ -1,4 +1,4 @@
-package n7.ad2.news.internal.list
+package n7.ad2.news.internal.screen.list
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

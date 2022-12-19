@@ -17,7 +17,7 @@ import n7.ad2.news.internal.di.DaggerNewsComponent
 import n7.ad2.news.internal.domain.usecase.GetNewsUseCase
 import javax.inject.Inject
 
-class NewsWorker(
+internal class NewsWorker(
     private val context: Context,
     workerParameters: WorkerParameters,
 ) : CoroutineWorker(context, workerParameters) {

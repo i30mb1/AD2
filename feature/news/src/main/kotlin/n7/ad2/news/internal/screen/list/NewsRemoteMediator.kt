@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalPagingApi::class)
 
-package n7.ad2.news.internal.list
+package n7.ad2.news.internal.screen.list
 
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType

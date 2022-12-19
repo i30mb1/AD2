@@ -2,9 +2,9 @@ package n7.ad2.news.internal.di
 
 import n7.ad2.news.api.NewsDependencies
 import n7.ad2.news.internal.NewsWorker
-import n7.ad2.news.internal.article.ArticleFragment
-import n7.ad2.news.internal.list.NewsFragment
-import n7.ad2.news.internal.list.NewsViewModel
+import n7.ad2.news.internal.screen.article.ArticleFragment
+import n7.ad2.news.internal.screen.list.NewsFragment
+import n7.ad2.news.internal.screen.list.NewsViewModel
 
 @dagger.Component(
     dependencies = [

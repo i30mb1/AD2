@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterialApi::class)
 
-package n7.ad2.news.internal.list.compose
+package n7.ad2.news.internal.screen.list.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize

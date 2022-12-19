@@ -12,7 +12,7 @@ import n7.ad2.logger.Logger
 import org.jsoup.Jsoup
 import javax.inject.Inject
 
-class GetNewsUseCase @Inject constructor(
+internal class GetNewsUseCase @Inject constructor(
     private val logger: Logger,
     private val appInformation: AppInformation,
     private val dispatchers: DispatchersProvider,

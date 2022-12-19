@@ -1,4 +1,4 @@
-package n7.ad2.news.internal.article
+package n7.ad2.news.internal.screen.article
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
-import n7.ad2.news.internal.article.compose.ArticleScreen
 import n7.ad2.news.internal.di.DaggerNewsComponent
+import n7.ad2.news.internal.screen.article.compose.ArticleScreen
 import n7.ad2.ui.ComposeView
 import javax.inject.Inject
 
