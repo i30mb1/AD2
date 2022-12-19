@@ -13,10 +13,12 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map
+import n7.ad2.database_guides.api.AppDatabase
 import n7.ad2.news.internal.domain.model.Image
 import n7.ad2.news.internal.domain.model.NewsVO
 
 internal class NewsViewModel @AssistedInject constructor(
+    private val database: AppDatabase,
     private val newsSource: NewsSource,
     newsRemoteMediator: NewsRemoteMediator,
 ) : ViewModel() {
@@ -29,7 +31,7 @@ internal class NewsViewModel @AssistedInject constructor(
     val state: MutableStateFlow<State> = MutableStateFlow(State.init())
     val news: Flow<PagingData<NewsVO>> = Pager(
         PagingConfig(pageSize = 10),
-        1,
+        null,
         newsRemoteMediator,
     ) { newsSource }.flow.map { pagingData ->
         pagingData.map { newsLocal ->

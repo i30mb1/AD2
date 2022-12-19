@@ -9,7 +9,10 @@ import n7.ad2.database_guides.internal.model.NewsLocal
 interface NewsDao : BaseDao<NewsLocal> {
 
     @Query("SELECT * FROM NewsTable")
-    fun getNews(): PagingSource<Int, NewsLocal>
+    fun getPagingSourceNews(): PagingSource<Int, NewsLocal>
+
+    @Query("SELECT * FROM NewsTable WHERE loadedFromPage =:fromPage")
+    suspend fun getNews(fromPage: Int): List<NewsLocal>
 
     @Query("DELETE FROM NewsTable")
     suspend fun clearAll()

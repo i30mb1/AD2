@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace = applicationID
     defaultConfig {
         applicationId = applicationID
         versionCode = getVersionCode()
@@ -18,7 +19,7 @@ android {
     signingConfigs {
         getByName("debug") { /* automatic signs with debug key*/ }
         create("release") {
-           val properties = gradleLocalProperties(rootDir)
+            val properties = gradleLocalProperties(rootDir)
             if (properties.containsKey("SIGNING_FILE")) {
                 storeFile = file(properties.getProperty("SIGNING_FILE"))
                 storePassword = properties.getProperty("STORE_PASSWORD")

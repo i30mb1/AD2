@@ -33,10 +33,10 @@ class GetNewsUseCase @Inject constructor(
                 val style = element.childNode(0).attr("style")
                 val imageUrl = style.substringAfter("url(").substringBefore(")")
                 if (title != null) add(NewsLocal(
-                    title = "/$href",
+                    title = title,
                     urlImage = imageUrl,
                     loadedFromPage = page,
-                    href = href,
+                    href = "$baseUrl/$href",
                 ))
             }
         }
