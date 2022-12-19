@@ -33,7 +33,7 @@ internal class NewsViewModel @AssistedInject constructor(
         PagingConfig(pageSize = 10),
         null,
         newsRemoteMediator,
-    ) { newsSource }.flow.map { pagingData ->
+    ) { database.newsDao.getPagingSourceNews() }.flow.map { pagingData ->
         pagingData.map { newsLocal ->
             NewsVO(newsLocal.id, newsLocal.title, Image(newsLocal.urlImage))
         }

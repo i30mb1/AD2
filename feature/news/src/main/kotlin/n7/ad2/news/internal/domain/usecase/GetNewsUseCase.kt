@@ -20,10 +20,10 @@ class GetNewsUseCase @Inject constructor(
 
     suspend operator fun invoke(page: Int): Flow<List<NewsLocal>> = flow {
         val baseUrl = when (appInformation.appLocale) {
-            AppLocale.English -> "https://www.dotabuff.com/blog"
-            AppLocale.Russian -> "https://ru.dotabuff.com/blog"
+            AppLocale.English -> "https://www.dotabuff.com"
+            AppLocale.Russian -> "https://ru.dotabuff.com"
         }
-        val doc = Jsoup.connect("$baseUrl?page=$page").get()
+        val doc = Jsoup.connect("$baseUrl/blog?page=$page").get()
         val body = doc.getElementsByClass("related-posts")
         val news = body[0].getElementsByTag("a")
         val result = buildList {
@@ -36,7 +36,7 @@ class GetNewsUseCase @Inject constructor(
                     title = title,
                     urlImage = imageUrl,
                     loadedFromPage = page,
-                    href = "$baseUrl/$href",
+                    href = "$baseUrl$href",
                 ))
             }
         }
