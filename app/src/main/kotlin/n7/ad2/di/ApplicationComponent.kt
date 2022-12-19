@@ -1,6 +1,5 @@
 package n7.ad2.di
 
-import ad2.n7.news.api.NewsDependencies
 import android.app.Application
 import n7.ad2.app_preference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
@@ -13,6 +12,7 @@ import n7.ad2.hero_page.api.HeroPageDependencies
 import n7.ad2.heroes.api.HeroesDependencies
 import n7.ad2.item_page.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
+import n7.ad2.news.api.NewsDependencies
 import n7.ad2.span_parser.di.SpanParserModule
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies

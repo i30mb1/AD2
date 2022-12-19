@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">AD2</string>
-
     <string name="error" translatable="false"> Oops! error occurred...</string>
-
     <string name="locale">ENG</string>
-
 </resources>

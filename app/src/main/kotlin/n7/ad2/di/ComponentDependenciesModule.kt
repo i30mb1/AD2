@@ -1,6 +1,5 @@
 package n7.ad2.di
 
-import ad2.n7.news.api.NewsDependencies
 import n7.ad2.dagger.Dependencies
 import n7.ad2.dagger.DependenciesKey
 import n7.ad2.database_guides.api.DatabaseDependencies
@@ -10,6 +9,7 @@ import n7.ad2.hero_page.api.HeroPageDependencies
 import n7.ad2.heroes.api.HeroesDependencies
 import n7.ad2.item_page.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
+import n7.ad2.news.api.NewsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
 

@@ -7,7 +7,7 @@ plugins {
 
 android {
     defaultConfig {
-        applicationId = "n7.ad2"
+        applicationId = applicationID
         versionCode = getVersionCode()
         versionName = getVersionName()
 

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="n7.ad2.micro_benchmark">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:debuggable="false"

@@ -6,6 +6,8 @@ import java.io.FileInputStream
 import java.io.InputStreamReader
 import java.util.Properties
 
+const val applicationID = "n7.ad2"
+
 fun Project.getVersionCode(): Int {
     val properties = getProperties("version.properties")
     val major = properties.getProperty("MAJOR", "1").toInt() * 1000

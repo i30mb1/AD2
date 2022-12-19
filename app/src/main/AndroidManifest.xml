@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="n7.ad2"
     android:installLocation="auto"
     android:targetSandboxVersion="2"
     tools:ignore="UnusedAttribute">
