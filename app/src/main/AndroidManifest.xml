@@ -66,12 +66,21 @@
         <!-- </activity-alias> -->
         <activity
             android:name=".ui.MainActivity"
+            android:autoVerify="true"
             android:exported="true"
             android:theme="@style/Theme.AppSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="app" />
+                <data android:host="n7.ad2" />
             </intent-filter>
         </activity>
     </application>

@@ -18,6 +18,7 @@ import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.di.injector
+import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
 import n7.ad2.updateManager.IsNewAppVersionAvailable
 import javax.inject.Inject
@@ -25,7 +26,7 @@ import javax.inject.Inject
 class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
 
     @Inject lateinit var provider: Provider
-
+    @Inject lateinit var logger: Logger
     @Inject lateinit var isNewAppVersionAvailable: IsNewAppVersionAvailable
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
@@ -35,6 +36,7 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         injector.component.inject(this)
+        checkAppLink()
         installSplashScreen().setKeepOnScreenCondition(::shouldKeepOnScreen)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -53,6 +55,13 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
             body()
             replace(binding.container.id, fragment)
         }
+    }
+
+    private fun checkAppLink() {
+        val action = intent?.action
+        val data = intent?.data
+        logger.log("action=$action")
+        logger.log("data=$data")
     }
 
     private fun setupFragmentStrictPolicy() {
