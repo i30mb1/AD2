@@ -15,9 +15,9 @@ include(
 )
 include(
     ":core:dagger",
-    ":core:android",
+    ":core:common-android",
     ":core:parser",
-//    ":core:rules",
+    ":core:rules",
     ":core:logger",
     ":core:coroutines",
     ":core:database",
@@ -29,7 +29,7 @@ include(
     ":core:ktx",
     ":core:media-player",
     ":core:retrofit",
-    ":core:common",
+    ":core:common-jvm",
     ":core:update-manager",
     ":core:yandex-metrics",
 )

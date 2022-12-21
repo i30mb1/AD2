@@ -1,8 +1,9 @@
 object Module {
 
     object Core {
-        const val android = ":core:android"
-//        const val rules = ":core:rules"
+        const val android = ":core:common-android"
+
+        //        const val rules = ":core:rules"
         const val dagger = ":core:dagger"
         const val logger = ":core:logger"
         const val coroutines = ":core:coroutines"
@@ -15,7 +16,7 @@ object Module {
         const val appPreference = ":core:app-preference"
         const val mediaPlayer = ":core:media-player"
         const val retrofit = ":core:retrofit"
-        const val common = ":core:common"
+        const val common = ":core:common-jvm"
         const val updateManager = ":core:update-manager"
         const val yandexMetrics = ":core:yandex-metrics"
     }
