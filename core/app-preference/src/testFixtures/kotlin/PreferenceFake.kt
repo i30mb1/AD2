@@ -1,4 +1,4 @@
-import n7.ad2.app_preference.Preference
+import n7.ad2.apppreference.Preference
 
 class PreferenceFake : Preference {
     override suspend fun isNeedToUpdateSettings(): Boolean = true

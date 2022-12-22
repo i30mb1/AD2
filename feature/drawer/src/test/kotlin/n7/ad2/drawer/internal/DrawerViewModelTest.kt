@@ -7,7 +7,7 @@ import com.squareup.moshi.Moshi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
-import n7.ad2.app_preference.Preference
+import n7.ad2.apppreference.Preference
 import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.drawer.internal.data.remote.SettingsApiFake
 import n7.ad2.drawer.internal.domain.usecase.GetMenuItemsUseCase

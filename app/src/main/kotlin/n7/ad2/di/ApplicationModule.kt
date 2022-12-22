@@ -24,7 +24,7 @@ import n7.ad2.init.YandexMetricsInitializer
 import n7.ad2.logger.AppLogger
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
-import yandexMetrics.YandexMetricsInit
+import yandexmetrics.YandexMetricsInit
 import java.util.Calendar
 
 @dagger.Module

@@ -1,25 +1,25 @@
 package n7.ad2.di
 
 import android.app.Application
-import n7.ad2.app_preference.AppPreferenceModule
+import n7.ad2.apppreference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.database_guides.api.DatabaseDependencies
 import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.drawer.api.DrawerDependencies
 import n7.ad2.games.api.GamesDependencies
-import n7.ad2.hero_page.api.HeroPageDependencies
 import n7.ad2.heroes.api.HeroesDependencies
-import n7.ad2.item_page.api.ItemPageDependencies
+import n7.ad2.heropage.api.HeroPageDependencies
+import n7.ad2.itempage.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.news.api.NewsDependencies
-import n7.ad2.span_parser.di.SpanParserModule
+import n7.ad2.spanparser.di.SpanParserModule
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MyApplication
-import n7.ad2.updateManager.UpdateManagerModule
-import yandexMetrics.di.MetricsModule
+import n7.ad2.updatemanager.UpdateManagerModule
+import yandexmetrics.di.MetricsModule
 
 @ApplicationScope
 @dagger.Component(

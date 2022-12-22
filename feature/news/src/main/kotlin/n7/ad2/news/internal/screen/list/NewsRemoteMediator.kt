@@ -8,7 +8,7 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import kotlinx.coroutines.flow.single
-import n7.ad2.app_preference.Preference
+import n7.ad2.apppreference.Preference
 import n7.ad2.database_guides.api.AppDatabase
 import n7.ad2.database_guides.internal.model.NewsLocal
 import n7.ad2.logger.Logger

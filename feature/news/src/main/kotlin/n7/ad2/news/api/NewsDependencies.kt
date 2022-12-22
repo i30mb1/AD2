@@ -2,7 +2,7 @@ package n7.ad2.news.api
 
 import android.app.Application
 import n7.ad2.AppInformation
-import n7.ad2.app_preference.Preference
+import n7.ad2.apppreference.Preference
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
 import n7.ad2.database_guides.api.AppDatabase

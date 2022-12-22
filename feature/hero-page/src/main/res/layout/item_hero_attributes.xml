@@ -19,7 +19,7 @@
             android:scaleType="centerCrop"
             android:transitionName="iv" />
 
-        <n7.ad2.hero_page.internal.info.HeroStatistics
+        <n7.ad2.heropage.internal.info.HeroStatistics
             android:id="@+id/hero_statistics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

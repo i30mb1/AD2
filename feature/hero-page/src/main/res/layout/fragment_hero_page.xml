@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <n7.ad2.hero_page.internal.pager.AnimatedToolbar
+    <n7.ad2.heropage.internal.pager.AnimatedToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
