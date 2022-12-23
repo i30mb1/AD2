@@ -1,902 +1,902 @@
 [
   {
     "name": "Observer Ward",
-    "section": "Basics"
+    "section": "Consumables"
   },
   {
     "name": "Clarity",
-    "section": "Basics"
-  },
-  {
-    "name": "Smoke of Deceit",
-    "section": "Basics"
-  },
-  {
-    "name": "Enchanted Mango",
-    "section": "Basics"
-  },
-  {
-    "name": "Faerie Fire",
-    "section": "Basics"
+    "section": "Consumables"
   },
   {
     "name": "Sentry Ward",
-    "section": "Basics"
+    "section": "Consumables"
+  },
+  {
+    "name": "Smoke of Deceit",
+    "section": "Consumables"
+  },
+  {
+    "name": "Enchanted Mango",
+    "section": "Consumables"
+  },
+  {
+    "name": "Faerie Fire",
+    "section": "Consumables"
   },
   {
     "name": "Tome of Knowledge",
-    "section": "Basics"
+    "section": "Consumables"
   },
   {
     "name": "Dust of Appearance",
-    "section": "Basics"
+    "section": "Consumables"
   },
   {
     "name": "Tango",
-    "section": "Basics"
-  },
-  {
-    "name": "Town Portal Scroll",
-    "section": "Basics"
+    "section": "Consumables"
   },
   {
     "name": "Healing Salve",
-    "section": "Basics"
+    "section": "Consumables"
+  },
+  {
+    "name": "Town Portal Scroll",
+    "section": "Consumables"
   },
   {
     "name": "Bottle",
-    "section": "Basics"
+    "section": "Consumables"
   },
   {
     "name": "Aghanim's Shard",
-    "section": "Basics"
+    "section": "Consumables"
   },
   {
     "name": "Iron Branch",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Gauntlets of Strength",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Mantle of Intelligence",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Slippers of Agility",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Circlet",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Band of Elvenskin",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Belt of Strength",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Crown",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Robe of the Magi",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Blade of Alacrity",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Ogre Axe",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Staff of Wizardry",
-    "section": "Basics"
+    "section": "Attributes"
   },
   {
     "name": "Quelling Blade",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Ring of Protection",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Infused Raindrops",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Orb of Venom",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Blight Stone",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Blades of Attack",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Gloves of Haste",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Chainmail",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Quarterstaff",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Helm of Iron Will",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Blitz Knuckles",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Broadsword",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Javelin",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Claymore",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Mithril Hammer",
-    "section": "Basics"
+    "section": "Equipment"
   },
   {
     "name": "Ring of Regen",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Sage's Mask",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Magic Stick",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Fluffy Hat",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Wind Lace",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Boots of Speed",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Cloak",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Voodoo Mask",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Gem of True Sight",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Morbid Mask",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Shadow Amulet",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Ghost Scepter",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Blink Dagger",
-    "section": "Basics"
-  },
-  {
-    "name": "Ring of Health",
-    "section": "Basics"
-  },
-  {
-    "name": "Void Stone",
-    "section": "Basics"
+    "section": "Miscellaneous"
   },
   {
     "name": "Energy Booster",
-    "section": "Basics"
+    "section": "Secret"
+  },
+  {
+    "name": "Ring of Health",
+    "section": "Secret"
+  },
+  {
+    "name": "Void Stone",
+    "section": "Secret"
   },
   {
     "name": "Vitality Booster",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Point Booster",
-    "section": "Basics"
-  },
-  {
-    "name": "Platemail",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Talisman of Evasion",
-    "section": "Basics"
+    "section": "Secret"
+  },
+  {
+    "name": "Platemail",
+    "section": "Secret"
   },
   {
     "name": "Hyperstone",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Ultimate Orb",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Demon Edge",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Eaglesong",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Mystic Staff",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Reaver",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Sacred Relic",
-    "section": "Basics"
+    "section": "Secret"
   },
   {
     "name": "Magic Wand",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Bracer",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Null Talisman",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Wraith Band",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Soul Ring",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Orb of Corrosion",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Falcon Blade",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Power Treads",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Oblivion Staff",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Phase Boots",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Perseverance",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Mask of Madness",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Hand of Midas",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Helm of the Dominator",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Boots of Travel",
-    "section": "Upgrades"
+    "section": "Accessories"
   },
   {
     "name": "Moon Shard",
-    "section": "Upgrades"
+    "section": "Accessories"
+  },
+  {
+    "name": "Helm of the Overlord",
+    "section": "Accessories"
   },
   {
     "name": "Buckler",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Headdress",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Ring of Basilius",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Urn of Shadows",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Tranquil Boots",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Medallion of Courage",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Arcane Boots",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Drum of Endurance",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Mekansm",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Holy Locket",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Vladmir's Offering",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Spirit Vessel",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Pipe of Insight",
-    "section": "Upgrades"
+    "section": "Support"
+  },
+  {
+    "name": "Wraith Pact",
+    "section": "Support"
+  },
+  {
+    "name": "Boots of Bearing",
+    "section": "Support"
   },
   {
     "name": "Guardian Greaves",
-    "section": "Upgrades"
+    "section": "Support"
   },
   {
     "name": "Veil of Discord",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Glimmer Cape",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Necronomicon",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Force Staff",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Aether Lens",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Witch Blade",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Eul's Scepter of Divinity",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Dagon",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Rod of Atos",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Orchid Malevolence",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Solar Crest",
-    "section": "Upgrades"
+    "section": "Magical"
+  },
+  {
+    "name": "Dagon",
+    "section": "Magical"
+  },
+  {
+    "name": "Eul's Scepter of Divinity",
+    "section": "Magical"
+  },
+  {
+    "name": "Rod of Atos",
+    "section": "Magical"
+  },
+  {
+    "name": "Orchid Malevolence",
+    "section": "Magical"
   },
   {
     "name": "Aghanim's Scepter",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Refresher Orb",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Octarine Core",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Scythe of Vyse",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Aghanim's Blessing",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Gleipnir",
-    "section": "Upgrades"
+    "section": "Magical"
+  },
+  {
+    "name": "Revenant's Brooch",
+    "section": "Magical"
   },
   {
     "name": "Wind Waker",
-    "section": "Upgrades"
+    "section": "Magical"
   },
   {
     "name": "Hood of Defiance",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Vanguard",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Blade Mail",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Aeon Disk",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Soul Booster",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Eternal Shroud",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Crimson Guard",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Lotus Orb",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Black King Bar",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Hurricane Pike",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Linken's Sphere",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Manta Style",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Heart of Tarrasque",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Shiva's Guard",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Assault Cuirass",
-    "section": "Upgrades"
+    "section": "Armor"
   },
   {
     "name": "Bloodstone",
-    "section": "Upgrades"
+    "section": "Armor"
+  },
+  {
+    "name": "Hurricane Pike",
+    "section": "Armor"
+  },
+  {
+    "name": "Linken's Sphere",
+    "section": "Armor"
+  },
+  {
+    "name": "Manta Style",
+    "section": "Armor"
+  },
+  {
+    "name": "Shiva's Guard",
+    "section": "Armor"
+  },
+  {
+    "name": "Heart of Tarrasque",
+    "section": "Armor"
+  },
+  {
+    "name": "Assault Cuirass",
+    "section": "Armor"
   },
   {
     "name": "Crystalys",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Meteor Hammer",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Armlet of Mordiggian",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Skull Basher",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Shadow Blade",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Desolator",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Battle Fury",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Ethereal Blade",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Nullifier",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Monkey King Bar",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Butterfly",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
-    "name": "Daedalus",
-    "section": "Upgrades"
+    "name": "Monkey King Bar",
+    "section": "Weapons"
   },
   {
     "name": "Radiance",
-    "section": "Upgrades"
+    "section": "Weapons"
+  },
+  {
+    "name": "Daedalus",
+    "section": "Weapons"
   },
   {
     "name": "Silver Edge",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Divine Rapier",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Bloodthorn",
-    "section": "Upgrades"
+    "section": "Weapons"
   },
   {
     "name": "Abyssal Blade",
-    "section": "Upgrades"
+    "section": "Weapons"
+  },
+  {
+    "name": "Bloodthorn",
+    "section": "Weapons"
   },
   {
     "name": "Dragon Lance",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Kaya",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Sange",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Yasha",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Echo Sabre",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Maelstrom",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Diffusal Blade",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Mage Slayer",
-    "section": "Upgrades"
+    "section": "Artifacts"
+  },
+  {
+    "name": "Diffusal Blade",
+    "section": "Artifacts"
+  },
+  {
+    "name": "Echo Sabre",
+    "section": "Artifacts"
+  },
+  {
+    "name": "Maelstrom",
+    "section": "Artifacts"
   },
   {
     "name": "Heaven's Halberd",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Kaya and Sange",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Sange and Yasha",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Yasha and Kaya",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Satanic",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Eye of Skadi",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Mjollnir",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Arcane Blink",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Overwhelming Blink",
-    "section": "Upgrades"
+    "section": "Artifacts"
   },
   {
     "name": "Swift Blink",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Aegis of the Immortal",
-    "section": "Roshan Drop"
-  },
-  {
-    "name": "Cheese",
-    "section": "Roshan Drop"
-  },
-  {
-    "name": "Refresher Shard",
-    "section": "Roshan Drop"
+    "section": "Artifacts"
   },
   {
     "name": "Arcane Ring",
-    "section": "Neutral Items"
+    "section": "Tier 1"
   },
   {
     "name": "Broom Handle",
-    "section": "Neutral Items"
-  },
-  {
-    "name": "Chipped Vest",
-    "section": "Neutral Items"
-  },
-  {
-    "name": "Faded Broach",
-    "section": "Neutral Items"
+    "section": "Tier 1"
   },
   {
     "name": "Fairy's Trinket",
-    "section": "Neutral Items"
+    "section": "Tier 1"
   },
   {
-    "name": "Ironwood Tree",
-    "section": "Neutral Items"
+    "name": "Lance of Pursuit",
+    "section": "Tier 1"
   },
   {
-    "name": "Keen Optic",
-    "section": "Neutral Items"
+    "name": "Occult Bracelet",
+    "section": "Tier 1"
   },
   {
-    "name": "Ocean Heart",
-    "section": "Neutral Items"
+    "name": "Pig Pole",
+    "section": "Tier 1"
   },
   {
     "name": "Possessed Mask",
-    "section": "Neutral Items"
+    "section": "Tier 1"
   },
   {
-    "name": "Royal Jelly",
-    "section": "Neutral Items"
+    "name": "Seeds of Serenity",
+    "section": "Tier 1"
   },
   {
     "name": "Trusty Shovel",
-    "section": "Neutral Items"
+    "section": "Tier 1"
+  },
+  {
+    "name": "Tumbler's Toy",
+    "section": "Tier 1"
+  },
+  {
+    "name": "Brigand's Blade",
+    "section": "Tier 2"
   },
   {
     "name": "Bullwhip",
-    "section": "Neutral Items"
+    "section": "Tier 2"
+  },
+  {
+    "name": "Dagger of Ristul",
+    "section": "Tier 2"
   },
   {
     "name": "Dragon Scale",
-    "section": "Neutral Items"
+    "section": "Tier 2"
   },
   {
-    "name": "Essence Ring",
-    "section": "Neutral Items"
+    "name": "Eye of the Vizier",
+    "section": "Tier 2"
   },
   {
     "name": "Grove Bow",
-    "section": "Neutral Items"
-  },
-  {
-    "name": "Imp Claw",
-    "section": "Neutral Items"
+    "section": "Tier 2"
   },
   {
     "name": "Nether Shawl",
-    "section": "Neutral Items"
+    "section": "Tier 2"
   },
   {
     "name": "Philosopher's Stone",
-    "section": "Neutral Items"
+    "section": "Tier 2"
   },
   {
     "name": "Pupil's Gift",
-    "section": "Neutral Items"
-  },
-  {
-    "name": "Quicksilver Amulet",
-    "section": "Neutral Items"
+    "section": "Tier 2"
   },
   {
     "name": "Ring of Aquila",
-    "section": "Neutral Items"
+    "section": "Tier 2"
+  },
+  {
+    "name": "Specialist's Array",
+    "section": "Tier 2"
   },
   {
     "name": "Vambrace",
-    "section": "Neutral Items"
+    "section": "Tier 2"
+  },
+  {
+    "name": "Blast Rig",
+    "section": "Tier 3"
   },
   {
     "name": "Ceremonial Robe",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
     "name": "Cloak of Flames",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
     "name": "Elven Tunic",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
     "name": "Enchanted Quiver",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
     "name": "Mind Breaker",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
-    "name": "Orb of Destruction",
-    "section": "Neutral Items"
+    "name": "Ogre Seal Totem",
+    "section": "Tier 3"
   },
   {
     "name": "Paladin Sword",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
     "name": "Psychic Headband",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
     "name": "Quickening Charm",
-    "section": "Neutral Items"
-  },
-  {
-    "name": "Spider Legs",
-    "section": "Neutral Items"
+    "section": "Tier 3"
   },
   {
     "name": "Titan Sliver",
-    "section": "Neutral Items"
+    "section": "Tier 3"
+  },
+  {
+    "name": "Ascetic's Cap",
+    "section": "Tier 4"
   },
   {
     "name": "Flicker",
-    "section": "Neutral Items"
+    "section": "Tier 4"
   },
   {
-    "name": "Illusionist's Cape",
-    "section": "Neutral Items"
-  },
-  {
-    "name": "Minotaur Horn",
-    "section": "Neutral Items"
+    "name": "Havoc Hammer",
+    "section": "Tier 4"
   },
   {
     "name": "Ninja Gear",
-    "section": "Neutral Items"
+    "section": "Tier 4"
   },
   {
     "name": "Penta-Edged Sword",
-    "section": "Neutral Items"
+    "section": "Tier 4"
   },
   {
     "name": "Spell Prism",
-    "section": "Neutral Items"
+    "section": "Tier 4"
   },
   {
     "name": "Stormcrafter",
-    "section": "Neutral Items"
+    "section": "Tier 4"
   },
   {
     "name": "Telescope",
-    "section": "Neutral Items"
-  },
-  {
-    "name": "The Leveller",
-    "section": "Neutral Items"
+    "section": "Tier 4"
   },
   {
     "name": "Timeless Relic",
-    "section": "Neutral Items"
+    "section": "Tier 4"
   },
   {
     "name": "Trickster Cloak",
-    "section": "Neutral Items"
+    "section": "Tier 4"
+  },
+  {
+    "name": "Witchbane",
+    "section": "Tier 4"
   },
   {
     "name": "Apex",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
-    "name": "Ballista",
-    "section": "Neutral Items"
+    "name": "Arcanist's Armor",
+    "section": "Tier 5"
   },
   {
     "name": "Book of Shadows",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Book of the Dead",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Ex Machina",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Fallen Sky",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Force Boots",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Giant's Ring",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Mirror Shield",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Pirate Hat",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Seer Stone",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   },
   {
     "name": "Stygian Desolator",
-    "section": "Neutral Items"
+    "section": "Tier 5"
   }
 ]

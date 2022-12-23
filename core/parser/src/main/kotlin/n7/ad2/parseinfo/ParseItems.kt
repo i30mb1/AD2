@@ -14,7 +14,6 @@ private val getItemsUseCase = GetItemsUseCase()
 fun main() {
     val itemsEnglish = getItemsUseCase(LOCALE.EN)
     writeItemsInFile(itemsEnglish)
-
 //    loadItemsOneByOne(LOCALE.EN, false)
 //    loadItemsOneByOne(LOCALE.RU, false)
 }

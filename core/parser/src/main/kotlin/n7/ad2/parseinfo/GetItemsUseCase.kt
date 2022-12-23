@@ -12,10 +12,10 @@ class GetItemsUseCase {
         val result = mutableListOf<HeroItem>()
         var findItemSection = false
         var itemSection = ""
-        val elements = root.getElementById("mw-content-text")?.allElements ?: throw Exception("could find elements")
+        val elements = root.getElementById("mw-content-text").getElementsByClass("mw-parser-output")[0].allElements ?: error("could find elements")
         for (element in elements) {
-            if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Items") findItemSection = true
-            if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Event_Items") findItemSection = false
+            if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Basics_Items") findItemSection = true
+            if (element.tag().toString() == "h3" && element.children().size > 0 && element.child(0).id().toString() == "Retired") findItemSection = false
             if (element.tag().toString() == "h3") itemSection = element.text()
             if (findItemSection) {
                 if (element.tag().toString() == "div") {
@@ -31,6 +31,7 @@ class GetItemsUseCase {
                 }
             }
         }
+        if (result.isEmpty()) error("item list is null")
         return result
     }
 
