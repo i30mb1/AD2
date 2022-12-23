@@ -23,16 +23,9 @@ pluginManagement {
 }
 includeBuild("build-logic")
 
-//rootDir.listFiles()
-//    ?.filter { File(it, "build.gradle.kts").exists() }
-//    ?.forEach { include(it.name) }
-//
-//rootDir.listFiles()
-//    ?.filter { it.name in listOf("core", "feature") }
-//    ?.flatMap { folder ->
-//        folder.listFiles().mapNotNull { subFolder ->
-//            if (File("${folder.name}/${subFolder.name}","build.gradle.kts").exists())
-//            ":${folder.name}:${subFolder.name}" else null
-//        }
-//    }
-//    ?.forEach { include(it) }
+val folders = listOf("core", "feature")
+for (folder in folders) {
+    File(folder).listFiles()?.forEach { project ->
+        include(":${folder}:${project.name}")
+    }
+}
