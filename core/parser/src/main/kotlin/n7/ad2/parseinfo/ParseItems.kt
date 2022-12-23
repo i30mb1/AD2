@@ -9,34 +9,29 @@ import org.jsoup.nodes.TextNode
 import java.io.File
 
 private const val assetsPathToItem = "items/"
-
-private class HeroItem(val name: String, val href: String, val section: String)
-
-private fun HeroItem.toJsonObject() = JSONObject(mapOf("name" to name, "section" to section))
-
-fun String.connect(): Document {
-    return Jsoup.connect(this).get()
-}
+private val getItemsUseCase = GetItemsUseCase()
 
 fun main() {
-    loadItemsJsonFile()
+    val itemsEnglish = getItemsUseCase(LOCALE.EN)
+    writeItemsInFile(itemsEnglish)
 
-    loadItemsOneByOne(LOCALE.EN, false)
-    loadItemsOneByOne(LOCALE.RU, false)
+//    loadItemsOneByOne(LOCALE.EN, false)
+//    loadItemsOneByOne(LOCALE.RU, false)
 }
 
-enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: String) {
-    RU("https://dota2-ru.gamepedia.com/%D0%9F%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B", "https://dota2-ru.gamepedia.com", "ru"),
-    EN("https://dota2.gamepedia.com/Items", "https://dota2.gamepedia.com", "en")
+private fun writeItemsInFile(items: List<HeroItem>) {
+    val itemsJson = items.map { hero -> JSONObject(mapOf("name" to hero.name, "section" to hero.section)) }
+        .toString()
+    File(assetsDatabase + "items.json").writeText(itemsJson)
 }
 
 private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
     JSONObject().apply {
-        val list = getItems(LOCALE.EN.urlAllItems.connect())
+        val list = getItemsUseCase(locale)
 
         for (item in list) {
             val root = try {
-                (locale.baseUrl + item.href).connect()
+                Jsoup.connect((locale.baseUrl + item.href)).get()
             } catch (e: Exception) {
                 println("could parse ${locale.baseUrl + item.href}")
                 continue
@@ -306,39 +301,5 @@ private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: Strin
     }
 }
 
-private fun loadItemsJsonFile(locale: LOCALE = LOCALE.EN) {
-    val root = locale.urlAllItems.connect()
-    val items: List<JSONObject> = getItems(root).map { it.toJsonObject() }
 
-    val file = File(assetsDatabase + "items.json")
-    file.writeText(items.toString())
-}
-
-private fun getItems(root: Document): List<HeroItem> {
-    val ignoreList = listOf("Helm of the Dominator 1", "Helm of the Dominator 2")
-    val result = mutableListOf<HeroItem>()
-    var findItemSection = false
-    var itemSection = ""
-
-    val elements = root.getElementById("mw-content-text")?.allElements ?: throw Exception("could find elements")
-    for (element in elements) {
-        if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Items") findItemSection = true
-        if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Event_Items") findItemSection = false
-        if (element.tag().toString() == "h3") itemSection = element.text()
-        if (findItemSection) {
-            if (element.tag().toString() == "div") {
-                for (item in element.children()) {
-                    if (item.children().size < 2) continue
-                    val itemHref = item.child(1).attr("href") ?: throw Exception("could not find item href")
-                    val itemName = item.child(1).attr("title") ?: throw Exception("could not find item name")
-
-                    val heroItem = HeroItem(itemName, itemHref, itemSection)
-                    if (!ignoreList.contains(heroItem.name)) result.add(heroItem)
-                }
-
-            }
-        }
-    }
-    return result
-}
 
