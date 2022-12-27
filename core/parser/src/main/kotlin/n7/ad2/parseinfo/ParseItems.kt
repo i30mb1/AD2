@@ -208,11 +208,13 @@ private fun JSONObject.loadAbilities(root: Document) {
                 put("description", description)
 
                 val params = it.getElementsByAttributeValue("style", "display:inline-block; vertical-align:top; padding:3px 5px; border:1px solid rgba(0, 0, 0, 0);")[0].children()
-                params.filter { it.attr("style").isEmpty() }.also {
-                    JSONArray().apply {
-                        it.forEach { add(it.text()) }
-                        put("params", this)
+                params.filter { it.attr("style").isEmpty() }.also { param ->
+                    val array = JSONArray()
+                    param.forEach {
+                        array.add(it.text())
                     }
+
+                    if (array.isNotEmpty()) put("params", array)
                 }
 
                 var cooldown = it.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; max-width:100%; width:240px;").getOrNull(0)
