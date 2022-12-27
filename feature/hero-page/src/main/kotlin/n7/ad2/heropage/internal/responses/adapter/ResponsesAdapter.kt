@@ -37,7 +37,7 @@ class ResponsesAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: MutableList<Any>) = when {
-        payloads.isNullOrEmpty() -> super.onBindViewHolder(holder, position, payloads)
+        payloads.isEmpty() -> super.onBindViewHolder(holder, position, payloads)
         holder is ResponseBodyViewHolder -> holder.bind(payloads.last() as Boolean)
         else -> error("could not bind viewHolder $holder")
     }

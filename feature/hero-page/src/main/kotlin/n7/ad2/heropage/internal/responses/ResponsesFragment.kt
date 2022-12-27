@@ -19,13 +19,13 @@ import n7.ad2.heropage.databinding.FragmentHeroResponsesBinding
 import n7.ad2.heropage.internal.di.DaggerHeroPageComponent
 import n7.ad2.heropage.internal.pager.HeroPageFragment
 import n7.ad2.heropage.internal.pager.showDialogError
-import n7.ad2.heropage.internal.responses.adapter.ResponseItemDecorator
 import n7.ad2.heropage.internal.responses.adapter.ResponsesAdapter
 import n7.ad2.heropage.internal.responses.domain.vo.VOResponse
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.mediaplayer.AudioExoPlayer
 import n7.ad2.ui.InfoPopupWindow
+import n7.ad2.ui.StickyHeaderDecorator
 import javax.inject.Inject
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
@@ -125,8 +125,8 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            addItemDecoration(ResponseItemDecorator())
-//            addItemDecoration(StickyHeaderDecorator(responsesPagedListAdapter, this))
+//            addItemDecoration(ResponseItemDecorator())
+            addItemDecoration(StickyHeaderDecorator(responseAdapter, this))
             adapter = responseAdapter
         }
     }
