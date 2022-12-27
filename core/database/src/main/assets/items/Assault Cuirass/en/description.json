@@ -1,0 +1,49 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Allies Attack Speed Bonus: 30",
+        "Allies Armor Bonus: 5",
+        "Enemy Armor Reduction: 5",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Multiple instances of Assault Aura do not stack. Fully stacks with other sources of Buckler-based items' armor aura.",
+        "Fully stacks with other sources of Buckler-based items' armor aura.",
+        "A unit can be affected by the positive and the negative aura from different sources at the same time.",
+        "Both the aura's buff and debuff linger for 0.5 seconds.",
+        "The status debuff icon on enemies only shows up when the affected unit has vision over the source. However, the armor reduction in the HUD is always visible.",
+        "However, the armor reduction in the HUD is always visible.",
+        "Both the positive and the negative aura affect buildings.",
+        "Affects invulnerable allies and enemies, but not hidden ones."
+      ],
+      "mana": null,
+      "abilityName": "Assault Aura",
+      "cooldown": null,
+      "description": "Grants 30 attack speed and 5 armor to nearby allied units and structures, and decreases nearby enemy unit and structure armor by 5.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "With the Assault Aura, the item grants a total of 15 armor and 60 attack speed to the wielder."
+  ],
+  "cost": "5125",
+  "lore": null,
+  "consistFrom": [
+    "Platemail",
+    "Hyperstone",
+    "Buckler",
+    "Recipe"
+  ],
+  "name": "Assault Cuirass",
+  "description": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "The Assault Aura is a great tool for pushing enemy towers, as it provides reliable attack speed and armor. In addition to that, it also reduces the nearby structure and enemies' armor which can help the nearby ally heroes take them down."
+  ]
+}

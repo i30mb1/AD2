@@ -1,0 +1,34 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Bullwhip_Whip_1.mp3\/revision\/latest?cb=20210120232121",
+      "effects": [
+        "Cast Range: 850",
+        "Effect Delay: 0.3",
+        "Move Speed Change: 18%",
+        "Duration: 4"
+      ],
+      "notes": [
+        "↓↓ Double-tapping automatically target self.",
+        "Uses the same modifier on enemies as it does on allies. The modifier does not stack. The modifier updates its source on refresh, either slowing or increasing movement speed based on the last caster's faction. The modifier has a 0.3-second delay upon cast.",
+        "The modifier updates its source on refresh, either slowing or increasing movement speed based on the last caster's faction.",
+        "The modifier has a 0.3-second delay upon cast."
+      ],
+      "mana": "0",
+      "abilityName": "Whip",
+      "cooldown": "11",
+      "description": "Grants 18% movement speed when cast on allies, and slows by 18% when cast on enemies. Lasts 4 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Bullwhip",
+  "description": "Once the favored lash of an infamous broker of pit fighters and other live trade.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

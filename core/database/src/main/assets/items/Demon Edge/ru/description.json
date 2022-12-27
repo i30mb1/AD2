@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "2200",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Demon Edge",
+  "description": "Один из древнейших клинков, скованных демоном-кузнецом Абзидианом, убил своего создателя, когда тот проверял остроту лезвия.",
+  "trivia": null,
+  "upgradeIn": [
+    "Divine Rapier",
+    "Monkey King Bar",
+    "Daedalus"
+  ],
+  "tips": null
+}

@@ -1,0 +1,52 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Move Speed Slow (TagAghanimAgainst Melee): 20%",
+        "Move Speed Slow (TagAghanimAgainst Ranged): 40%",
+        "Attack Speed Slow (TagAghanimAgainst Melee): 30",
+        "Attack Speed Slow (TagAghanimAgainst Ranged): 60",
+        "Health Restoration Reduction: 40%",
+        "Duration: 3"
+      ],
+      "notes": [
+        "Successive attacks with Eye of Skadi do not stack, but refresh the duration instead.",
+        "Applies heal reduction, health regen reduction, lifesteal reduction, and spell lifesteal reduction on the target.",
+        "Does not work against wards and buildings, but works against Courier and allied units.",
+        "Visually alters the wielder's attack projectile. All attack projectile has the following visual priorities: Corruption or Greater Corruption ➤ Cold Attack ➤ Marksmanship procs.",
+        "Corruption or Greater Corruption ➤ Cold Attack ➤ Marksmanship procs."
+      ],
+      "mana": null,
+      "abilityName": "Cold Attack",
+      "cooldown": null,
+      "description": "Attacks lower enemy movement and attack speed and reduces heals, health regeneration and lifesteal by 40% for 3 seconds. Slows enemy ranged units by 40% movement speed and 60 attack speed. Slows enemy melee units by 20% movement speed and 30 attack speed.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "440 health and 2.2 health regeneration.",
+    "264 mana and 1.1 mana regeneration.",
+    "22 attack speed and 3.67 main armor.",
+    "22 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": "5300",
+  "lore": null,
+  "consistFrom": [
+    "Ultimate Orb",
+    "Ultimate Orb",
+    "Point Booster"
+  ],
+  "name": "Eye of Skadi",
+  "description": "Extremely rare artifact, guarded by the azure dragons.",
+  "trivia": [
+    "Skaði (Skadi) is the Goddess of Winter in Norse mythology.",
+    "Skaði (Skadi) means \"damage\" or \"harm\" in Old Norse and Icelandic, pronounced \"Skathi\".",
+    "Þjazi (Thiazi), Skadi's father in Norse mythology, had his eyes placed in the night sky as stars."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

@@ -1,0 +1,77 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Silver_Edge_Shadow_Walk_1.mp3\/revision\/latest?cb=20191227195534",
+      "effects": [
+        "Fade Time: 0.3",
+        "Damage: 175",
+        "Critical Damage: 160%",
+        "Move Speed Bonus: 25%",
+        "Invisibility Duration: 14",
+        "Break Duration: 4"
+      ],
+      "notes": [
+        "The attack out of Silver Edge's Shadow Walk cannot miss.",
+        "Does not interrupt the caster's channeling abilities upon cast.",
+        "The bonus damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the caster's attack damage. The attack damage bonus values are not considered by critical strike. However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the caster's attack damage.",
+        "The attack damage bonus values are not considered by critical strike.",
+        "However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "During the fade time, the unit can still cast abilities, use items and perform attacks. Unlike Shadow Blade, Silver Edge does not apply the damage if an attack hits during the fade time.",
+        "Unlike Shadow Blade, Silver Edge does not apply the damage if an attack hits during the fade time.",
+        "While invisible, the unit can turn and pick up or drop items without breaking the invisibility. The unit is also phased, meaning other units can walk through it without getting blocked.",
+        "The bonus damage is not applied when attacking wards and buildings out of invisibility.",
+        "Applies a break on the target when attacking from invisibility, disabling passive abilities.",
+        "Places the debuff before the attack damage is applied, but still relies on the attack (or projectile) to hit.",
+        "The invisibility is lost upon reaching the cast point of abilities, or upon finishing an attack (for ranged heroes upon projectile launch). This means when the attack misses, the invisibility is still lost.",
+        "This means when the attack misses, the invisibility is still lost.",
+        "Shares cooldown with other Shadow Blade-based items."
+      ],
+      "mana": "75",
+      "abilityName": "Shadow Walk",
+      "cooldown": "20",
+      "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell. While invisible, you move 25% faster and can move through units. Attacking to end the invisibility will deal 175 bonus physical damage and a guaranteed 160% critical strike to the target, and disable their passive abilities for 4 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Proc Chance: 30%",
+        "Critical Damage: 160%"
+      ],
+      "notes": [
+        "Increases attack damage by an average of 18%.",
+        "The proc chances of multiple critical strike sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "Critical Strike uses pseudo-random distribution.",
+        "Does not work against wards, buildings, and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Critical Strike",
+      "cooldown": null,
+      "description": "Grants each attack a 30% chance to deal 160% damage.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5450",
+  "lore": null,
+  "consistFrom": [
+    "Shadow Blade",
+    "Crystalys",
+    "Recipe"
+  ],
+  "name": "Silver Edge",
+  "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Be aware that the Break mechanic has no effect on your opponents' items. If they have a Daedalus or Butterfly, for example, they will still receive the full benefits of these items.",
+    "Consider purchasing this item if the enemy has troubling passives such as Blur, Berserker's Blood, Fury Swipes, Bristleback, Untouchable and Dispersion.",
+    "Remember that abilities using stacks (such as Reactive Armor, Necromastery and Fury Swipes) are only prevented from gaining or placing new stacks. If the target already has existing stacks (on themselves or on their target), their passive can still function until the stacks expire (such as Reactive Armor's regeneration\/armor and Fury Swipes' additional damage)."
+  ]
+}

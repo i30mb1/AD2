@@ -1,0 +1,35 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Seer_Stone_Reveal.mp3\/revision\/latest?cb=20210120232105",
+      "effects": [
+        "Cast Range: Global",
+        "Radius: 800",
+        "Duration: 6"
+      ],
+      "notes": [
+        "Provides vision and True Sight within the area.",
+        "The visual effect created at the target area is visible to both teams.",
+        "The sound is audible to both teams through the Fog of War."
+      ],
+      "mana": "0",
+      "abilityName": "Reveal",
+      "cooldown": "60",
+      "description": "Reveal a target 800 area of the map for 6 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Increases most heroes' day\/night vision to a total of 2150\/1150 range."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Seer Stone",
+  "description": "The curious creation of a wizard who professed to hail from another time.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

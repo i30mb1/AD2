@@ -1,0 +1,76 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Veil_of_Discord_Magic_Weakness.mp3\/revision\/latest?cb=20191227195544",
+      "effects": [
+        "Cast Range: 1200",
+        "Radius: 600",
+        "Incoming Spell Damage Amp: 18%",
+        "Duration: 16"
+      ],
+      "notes": [
+        "Upon cast, places a debuff on enemy units within 600 radius. Leaving or entering the area afterwards has no effect.",
+        "Applies generic incoming damage amplification on the targets. Stacks additively with other sources of generic incoming damage manipulation. The amplification affects only spell damage the target takes that is not flagged as HP removal. Attack damage is not amplified. Despite using incoming amplification, it does not affect the damage of abilities that ignore outgoing amplification either (e.g. Damage Return, cleave and Moon Glaives).",
+        "The amplification affects only spell damage the target takes that is not flagged as HP removal. Attack damage is not amplified.",
+        "Despite using incoming amplification, it does not affect the damage of abilities that ignore outgoing amplification either (e.g. Damage Return, cleave and Moon Glaives).",
+        "Multiple casts on the same targets do not stack but refresh the duration instead.",
+        "Affects invulnerable, invisible units and units in the Fog of War, but not hidden units."
+      ],
+      "mana": "50",
+      "abilityName": "Magic Weakness",
+      "cooldown": "22",
+      "description": "Cast a 600 radius blast that causes enemies to take 18% increased damage from spells.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Mana Regeneration Bonus: 1.75",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Multiple instances of Basilius Aura do not stack. Fully stacks with other sources of Ring of Basilius-based items' mana regeneration aura.",
+        "Fully stacks with other sources of Ring of Basilius-based items' mana regeneration aura.",
+        "Can regenerate up to 105 mana in one minute.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "Does not affect invulnerable units."
+      ],
+      "mana": null,
+      "abilityName": "Basilius Aura",
+      "cooldown": null,
+      "description": "Grants 1.75 mana regeneration to allies.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "100 health and 0.5 health regeneration.",
+    "60 mana and 0.25 mana regeneration.",
+    "5 attack speed and 0.83 main armor.",
+    "5 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": "1525",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Basilius",
+    "Crown",
+    "Recipe"
+  ],
+  "name": "Veil of Discord",
+  "description": "The headwear of corrupt magi.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Consider how much spell damage your team produces when deciding whether or not to buy Veil of Discord.",
+    "Veil of Discord can be a good purchase if your team overall outputs a good amount of spell damage, even if your own hero doesn't. Due to changes to Spell immunity and improved range of Magic Weakness, it can be a reliable item by all means.",
+    "It compliments nicely for armor reducing debuffs for casters that deal physical damage with their spells. Also benefits as pure and magical damage.",
+    "Knowing the potentials about magic resistance and armor of the enemy is the main allure of this item. Early game, before anyone can buy a magic resistance artifact or armor, reach their defensive talents or stack enough strength or agility to resist the spell effects lategame; is when Veil of Discord is most destructive.",
+    "Thinking standard 25-30% magic resistance of heroes and no other sources to amplify it further; Magic Weakness treats target as 10-15% magic resistance lost. All inflicted targets incur magical damage at 85-90% efficiency along the duration depends on their stats.",
+    "For physical damage spells, it is roughly equivalent to reducing armor by 3.5 points."
+  ]
+}

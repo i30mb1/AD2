@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "1300",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Talisman of Evasion",
+  "description": "Ожерелье, позволяющее предвидеть вражеские удары.",
+  "trivia": null,
+  "upgradeIn": [
+    "Radiance",
+    "Butterfly",
+    "Heaven's Halberd"
+  ],
+  "tips": null
+}

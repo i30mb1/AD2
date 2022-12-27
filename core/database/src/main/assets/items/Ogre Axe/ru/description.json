@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ogre Axe",
+  "description": "Сила приходит, если просто подержать его в руках.",
+  "trivia": null,
+  "upgradeIn": [
+    "Echo Sabre",
+    "Aghanim's Scepter",
+    "Black King Bar",
+    "Sange"
+  ],
+  "tips": null
+}

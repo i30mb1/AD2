@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "250",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Wind Lace",
+  "description": "Да преисполнится скоростью тот, чьи подошвы ощутили касание ветра.",
+  "trivia": null,
+  "upgradeIn": [
+    "Eul's Scepter of Divinity",
+    "Drum of Endurance",
+    "Solar Crest",
+    "Tranquil Boots"
+  ],
+  "tips": null
+}

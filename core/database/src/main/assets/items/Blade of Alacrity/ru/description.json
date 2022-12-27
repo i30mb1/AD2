@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Blade of Alacrity",
+  "description": "Длинный клинок, насыщенный магией времени.",
+  "trivia": null,
+  "upgradeIn": [
+    "Aghanim's Scepter",
+    "Yasha",
+    "Diffusal Blade"
+  ],
+  "tips": null
+}

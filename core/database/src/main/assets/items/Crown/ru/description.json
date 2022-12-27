@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Crown",
+  "description": "Величественная корона, созданная для того, чтобы порядочный, но бесталанный наследник мог отбиваться от захватчиков и править твёрдой рукой.",
+  "trivia": null,
+  "upgradeIn": [
+    "Dagon",
+    "Meteor Hammer",
+    "Helm of the Dominator",
+    "Solar Crest",
+    "Veil of Discord",
+    "Rod of Atos"
+  ],
+  "tips": null
+}

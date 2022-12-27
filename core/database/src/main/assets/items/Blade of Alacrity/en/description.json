@@ -1,0 +1,21 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "10 attack speed and 1.67 main armor.",
+    "10 main attack damage to heroes."
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Blade of Alacrity",
+  "description": "A long blade imbued with time magic.",
+  "trivia": null,
+  "upgradeIn": [
+    "Aghanim's Scepter",
+    "Yasha",
+    "Diffusal Blade",
+    "Dragon Lance"
+  ],
+  "tips": null
+}

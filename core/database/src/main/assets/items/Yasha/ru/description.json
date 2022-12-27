@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": [
+    "Blade of Alacrity",
+    "Band of Elvenskin",
+    "Recipe"
+  ],
+  "name": "Yasha",
+  "description": "Считается самым стремительным оружием на свете.",
+  "trivia": null,
+  "upgradeIn": [
+    "Manta Style",
+    "Sange and Yasha",
+    "Yasha and Kaya"
+  ],
+  "tips": null
+}

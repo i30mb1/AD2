@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "825",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ring of Health",
+  "description": "Блестящее кольцо, найденное под трупом толстого полурослика.",
+  "trivia": null,
+  "upgradeIn": [
+    "Perseverance",
+    "Vanguard",
+    "Hood of Defiance"
+  ],
+  "tips": null
+}

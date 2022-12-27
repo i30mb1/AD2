@@ -1,0 +1,32 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Ascetic%27s_Cap_Endurance.mp3\/revision\/latest?cb=20210829215119",
+      "effects": [
+        "Status Resistance: 40%",
+        "Duration: 3"
+      ],
+      "notes": [
+        "Stacks multiplicatively with other sources of status resistance.",
+        "Only reacts on modifiers placed by enemy player units. Modifiers placed by neutral creeps or by allies do not trigger it.",
+        "Reacts on any modifier, not only debuffs, including modifiers that are fully unaffected by status resistance.",
+        "Endurance takes place before the triggering debuff is placed, meaning the triggering debuff is affected by the status resistance."
+      ],
+      "mana": null,
+      "abilityName": "Endurance",
+      "cooldown": null,
+      "description": "Whenever a debuff would be applied to the owner, grant 40% Status resistance for 3 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ascetic's Cap",
+  "description": "An austere hat thought to be of Turstarkuri origin.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

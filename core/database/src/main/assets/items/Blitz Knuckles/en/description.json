@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Blitz Knuckles",
+  "description": "An underground arcanist's update of a back-alley classic.",
+  "trivia": null,
+  "upgradeIn": [
+    "Witch Blade",
+    "Orchid Malevolence",
+    "Monkey King Bar",
+    "Shadow Blade"
+  ],
+  "tips": [
+    "Blitz Knuckles boost overall damage output from attacks and speed up the acquisition of items that give cores a mid-game power spike."
+  ]
+}

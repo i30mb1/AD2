@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "175",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ring of Regen",
+  "description": "This ring is considered a good luck charm among the Gnomes.",
+  "trivia": null,
+  "upgradeIn": [
+    "Headdress",
+    "Hood of Defiance",
+    "Tranquil Boots"
+  ],
+  "tips": null
+}

@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Снижение брони: 2",
+        "Длительность: 8"
+      ],
+      "notes": [
+        "Успешные атаки с Blight Stone не складываются, но обновляют длительность.",
+        "Атаки сначала применяют негативный эффект, а затем наносят урон.",
+        "Действует на варды и постройки. Не действует на союзных существ.",
+        "Не складывается с эффектом Corruption Desolator, Greater Corruption Stygian Desolator и Impending Corruption Orb of Destruction."
+      ],
+      "mana": null,
+      "abilityName": "Lesser Corruption",
+      "cooldown": null,
+      "description": "Атаки уменьшают броню цели на 2. Эффект длится 8 сек.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "300",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Blight Stone",
+  "description": "Лишающий стойкости камень, обнаруженный на полях Вечной бойни.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orb of Corrosion",
+    "Medallion of Courage",
+    "Desolator"
+  ],
+  "tips": null
+}

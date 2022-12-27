@@ -1,0 +1,53 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cast Range: 500"
+      ],
+      "notes": [
+        "Applies a basic dispel on the target upon cast. Follows the default dispel rules, dispelling debuffs off of allies, and buffs off of enemies.",
+        "Follows the default dispel rules, dispelling debuffs off of allies, and buffs off of enemies.",
+        "Cannot be cast on invulnerable units."
+      ],
+      "mana": "75",
+      "abilityName": "Cleanse",
+      "cooldown": "20",
+      "description": "Purge Target Enemy or Ally.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Max Mana as Attack Damage Bonus: 4%"
+      ],
+      "notes": [
+        "The bonus damage is considered as a conditional attack damage bonus and is magical damage. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage. It is not considered by lifesteal, crit or cleave. It can be reduced only by flat reductions (e.g. magical damage barrier). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage.",
+        "It is not considered by lifesteal, crit or cleave.",
+        "It can be reduced only by flat reductions (e.g. magical damage barrier).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Checks the target's mana upon landing the attack. For ranged heroes, this is on projectile impact."
+      ],
+      "mana": null,
+      "abilityName": "Subjugate",
+      "cooldown": null,
+      "description": "Your attacks deal bonus damage equal to 4% of your target Max Mana.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Witchbane",
+  "description": "With ready access to test subjects, untold cruelties have been dreamed up and loosed upon the world from within the walls of the Tyler Estate.",
+  "trivia": [
+    "This item's internal name is \"Heavy Blade\"."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

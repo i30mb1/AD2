@@ -1,0 +1,57 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Trusty_Shovel_Dig.mp3\/revision\/latest?cb=20191227195721",
+      "effects": [
+        "Cast Animation: 0.1+0",
+        "Channel Time: 1"
+      ],
+      "notes": [
+        "The channeling must succeed to get a Bounty Rune."
+      ],
+      "mana": "0",
+      "abilityName": "Dig",
+      "cooldown": "40",
+      "description": "Channel for 1 second. Always finds a Bounty Rune!",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c4\/Items_rune_bounty.mp3\/revision\/latest?cb=20201219110206",
+      "effects": [
+        "Initial Spawn Team Gold: 40",
+        "Following Spawn Base Team Gold: 36",
+        "Following Spawn Extra Team Gold per Interval: 9",
+        "Extra Team Gold Interval: 300"
+      ],
+      "notes": [
+        "Since Pirate Hat can only be obtained past the 60th minute mark, the Bounty Runes will be worth at least 144 per hero. When bottling a Bounty Rune, it grants gold based on the time at which it is activated, not bottled.",
+        "When bottling a Bounty Rune, it grants gold based on the time at which it is activated, not bottled.",
+        "Using a stored Bounty Rune with Bottle only grant 2 charges.",
+        "Grants reliable gold to each player of the team that picks it up.",
+        "An over-head text shows how much gold was given exactly. This number is not visible to enemies.",
+        "When gaining gold from a Bounty Rune, a small golden particle effect briefly bursts from the player, visible to everyone.",
+        "In Turbo Mode, the gold given by Bounty Runes is doubled, despite the notification message showing standard values."
+      ],
+      "mana": null,
+      "abilityName": "Bounty",
+      "cooldown": null,
+      "description": "Grants bonus Gold.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Pirate Hat",
+  "description": "A salty skulltopper cursed with endless good fortune.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

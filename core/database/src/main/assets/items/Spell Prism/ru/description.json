@@ -1,0 +1,28 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Уменьшение перезарядки: 12%"
+      ],
+      "notes": [
+        "Сочетается с другими источниками процентного уменьшения перезарядки по закону убывающей полезности."
+      ],
+      "mana": null,
+      "abilityName": "Cooldown Reduction",
+      "cooldown": null,
+      "description": "Уменьшает перезарядку всех предметов и способностей на 12%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Spell Prism",
+  "description": "Даже мельчайшие изъяны в волшебной призме могут стать смертельными для её владельца.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

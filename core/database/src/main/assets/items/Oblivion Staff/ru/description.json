@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "1500",
+  "lore": null,
+  "consistFrom": [
+    "Quarterstaff",
+    "Robe of the Magi",
+    "Sage's Mask"
+  ],
+  "name": "Oblivion Staff",
+  "description": "С первого взгляда \u2014 обычный посох, однако Oblivion Staff обладает скрытым могуществом, которым его наделил колдун Элдрич.",
+  "trivia": null,
+  "upgradeIn": [
+    "Echo Sabre",
+    "Mage Slayer"
+  ],
+  "tips": null
+}

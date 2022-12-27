@@ -1,0 +1,33 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Вампиризм: 15%"
+      ],
+      "notes": [
+        "Складывается с другими источниками вампиризма.",
+        "Не даёт вампиризм при атаке вардов, построек и союзных существ."
+      ],
+      "mana": null,
+      "abilityName": "Lifesteal",
+      "cooldown": null,
+      "description": "Каждая атака восстанавливает владельцу здоровье в размере 15% от нанесённого урона.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "900",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Morbid Mask",
+  "description": "Маска, поглощающая энергию тех, кто попался ей на глаза.",
+  "trivia": null,
+  "upgradeIn": [
+    "Satanic",
+    "Mask of Madness",
+    "Vladmir's Offering"
+  ],
+  "tips": null
+}

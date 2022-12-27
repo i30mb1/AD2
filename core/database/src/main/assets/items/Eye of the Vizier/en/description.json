@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Fully stacks with other mana increasing or reducing effects. Only reduces maximum mana, and does not affect the wielder's current mana percentage.",
+    "Only reduces maximum mana, and does not affect the wielder's current mana percentage."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Eye of the Vizier",
+  "description": "The ring of a cunning court mage who imprisoned a cadre of enemies to serve as his personal mana reserve.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

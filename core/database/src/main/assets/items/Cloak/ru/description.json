@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "500",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Cloak",
+  "description": "Мантия, сотканная из магического материала, который развеивает любое заклинание.",
+  "trivia": null,
+  "upgradeIn": [
+    "Hood of Defiance",
+    "Mage Slayer",
+    "Glimmer Cape"
+  ],
+  "tips": null
+}

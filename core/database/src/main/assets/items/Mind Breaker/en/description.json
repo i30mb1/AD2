@@ -1,0 +1,33 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Duration: 1.75"
+      ],
+      "notes": [
+        "Can only trigger when an attack lands on an enemy. This means it cannot trigger on missed attacks.",
+        "Only triggers against enemy heroes (including illusions and clones, excluding creep-heroes).",
+        "Does not trigger if the attacking unit is a clone or illusion."
+      ],
+      "mana": null,
+      "abilityName": "Silence Strike",
+      "cooldown": null,
+      "description": "The next attack silences the hit enemy for 1.75 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The attack damage bonus is magical. It neither works with lifesteal, nor with crit or cleave."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Mind Breaker",
+  "description": "A bewitching blade of indeterminate form capable of piercing the psyche of even the most willful foe.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

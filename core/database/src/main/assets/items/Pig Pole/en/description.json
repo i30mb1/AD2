@@ -1,0 +1,41 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Pig_Pole_Pig%2C_Out%21.mp3\/revision\/latest?cb=20211002125012",
+      "effects": [
+        "Move Speed Bonus: 10%",
+        "Duration: 4"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Applies a hex on the target, silencing, muting and disarming it.",
+        "Pig, Out! transforms the user into a pig. However, the model is affected by the user's cosmetic items that change Hex models.",
+        "However, the model is affected by the user's cosmetic items that change Hex models."
+      ],
+      "mana": "50",
+      "abilityName": "Pig, Out!",
+      "cooldown": "25",
+      "description": "Turns your hero into a critter for 4 seconds and gives them +10% Movement Speed.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 health and 0.6 health regeneration.",
+    "72 mana and 0.3 mana regeneration.",
+    "6 attack speed and 1 main armor.",
+    "6 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Pig Pole",
+  "description": "A makeshift charm misplaced by a peace-loving, addlebrained enchanter.",
+  "trivia": [
+    "This item's internal name is \"Unstable Wand\"."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

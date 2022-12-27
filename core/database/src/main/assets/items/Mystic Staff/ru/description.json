@@ -1,0 +1,17 @@
+{
+  "abilities": [],
+  "cost": "2800",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Mystic Staff",
+  "description": "Загадочный посох, сделанный исключительно из дорогих кристаллов.",
+  "trivia": null,
+  "upgradeIn": [
+    "Scythe of Vyse",
+    "Wind Waker",
+    "Shiva's Guard",
+    "Revenant's Brooch",
+    "Arcane Blink"
+  ],
+  "tips": null
+}

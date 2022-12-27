@@ -1,0 +1,34 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 350",
+        "Health Regen Bonus: 8",
+        "Duration: 14",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "The health regeneration bonus is provided by an aura, and lingers for 0.5 seconds.",
+        "Can regenerate up to 116 health within the area for the entire duration.",
+        "Using Verdurous Dale every time it is off cooldown is equivalent to having 2.9 health regeneration bonus per second."
+      ],
+      "mana": "0",
+      "abilityName": "Verdurous Dale",
+      "cooldown": "40",
+      "description": "Target the ground with a 350 radius. Provides +8 health regeneration to all allied units while they're in the area of effect.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Seeds of Serenity",
+  "description": "An evergreen sprout treasured by the woodkin and highly coveted by interlopers and their like.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

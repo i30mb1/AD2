@@ -1,0 +1,28 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "320 health and 1.6 health regeneration.",
+    "16 main attack damage to heroes."
+  ],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": [
+    "Ogre Axe",
+    "Belt of Strength",
+    "Recipe"
+  ],
+  "name": "Sange",
+  "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
+  "trivia": [
+    "This item is named after Sange, a weapon from the Phantasy Star Online series.",
+    "Sange is a Japanese word for scattering flowers as an offering to Buddha and a metaphor for falling in battle.",
+    "Riki's cosmetic item, Sange the Backseeker, is based on Sange."
+  ],
+  "upgradeIn": [
+    "Heaven's Halberd",
+    "Sange and Yasha",
+    "Kaya and Sange"
+  ],
+  "tips": null
+}

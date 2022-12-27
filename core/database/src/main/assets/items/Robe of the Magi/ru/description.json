@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Robe of the Magi",
+  "description": "Эта роба пятнает душу владельца, но в обмен дарует мудрость.",
+  "trivia": null,
+  "upgradeIn": [
+    "Power Treads",
+    "Oblivion Staff",
+    "Witch Blade",
+    "Kaya",
+    "Diffusal Blade",
+    "Drum of Endurance"
+  ],
+  "tips": null
+}

@@ -1,0 +1,17 @@
+{
+  "abilities": [],
+  "cost": "500",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Boots of Speed",
+  "description": "Удобная обувь, ускоряющая передвижение.",
+  "trivia": null,
+  "upgradeIn": [
+    "Boots of Travel",
+    "Phase Boots",
+    "Power Treads",
+    "Arcane Boots",
+    "Tranquil Boots"
+  ],
+  "tips": null
+}

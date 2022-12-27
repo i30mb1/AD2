@@ -1,0 +1,28 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cooldown Reduction: 10%"
+      ],
+      "notes": [
+        "Stacks multiplicatively with other sources of percentage-based cooldown reductions."
+      ],
+      "mana": null,
+      "abilityName": "Cooldown Reduction",
+      "cooldown": null,
+      "description": "Reduces the cooldown time of all spells and items by 10%",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Quickening Charm",
+  "description": "An evergreen amulet of druidic origins.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

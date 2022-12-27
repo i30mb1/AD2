@@ -1,0 +1,75 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Desolator_Corruption.mp3\/revision\/latest?cb=20191227195408",
+      "effects": [
+        "Armor Reduction: 6",
+        "Duration: 7"
+      ],
+      "notes": [
+        "Successive attacks with Desolator do not stack the debuff, but refresh the duration instead.",
+        "The attacks first apply the debuff, then their own damage.",
+        "Works against wards, buildings, and allied units.",
+        "Replaces the projectile particle of ranged heroes with a red projectile.",
+        "Does not stack with the armor reduction of Lesser Corruption. If both debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "If both debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "Visually alters the wielder's attack projectile. All attack projectile has the following visual priorities: Corruption or Greater Corruption ➤ Cold Attack ➤ Marksmanship procs.",
+        "Corruption or Greater Corruption ➤ Cold Attack ➤ Marksmanship procs."
+      ],
+      "mana": null,
+      "abilityName": "Corruption",
+      "cooldown": null,
+      "description": "Your attacks reduce the target's armor by 6 for 7 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Max Charges: 20",
+        "Charges per Kill: 2",
+        "Attack Damage Bonus per Charge: 1"
+      ],
+      "notes": [
+        "Gains 2 charges whenever an enemy hero affected by the Corruption debuff dies in any way. Does not gain charges from creep-heroes, illusions, or the Tempest Double.",
+        "Does not gain charges from creep-heroes, illusions, or the Tempest Double.",
+        "When having multiple Desolators in the active inventory, only the one acquired first gains charges.",
+        "If multiple players have Desolator and attack the same target, whoever refreshed the debuff as last gets the charges.",
+        "The item does not need to be in the inventory to gain charges, it gains them no matter where it is.",
+        "The number of charges is bound to the item, not the player. Selling and re-buying the item does not carry over the charges.",
+        "The number of current charges is visible on the item icon."
+      ],
+      "mana": null,
+      "abilityName": "Soul Stealer",
+      "cooldown": null,
+      "description": "Desolator gains +2 damage every time an enemy hero dies while affected by Corruption, to a maximum of 20.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Grants a total of 70 flat bonus attack damage at max charges.",
+    "Fully stacks with the following: Armor Corruption from talents. Orb of Corrosion and Stygian Desolator.",
+    "Armor Corruption from talents.",
+    "Orb of Corrosion and Stygian Desolator."
+  ],
+  "cost": "3500",
+  "lore": null,
+  "consistFrom": [
+    "Mithril Hammer",
+    "Mithril Hammer",
+    "Blight Stone"
+  ],
+  "name": "Desolator",
+  "description": "A wicked weapon, used in torturing political criminals.",
+  "trivia": [
+    "This item was named \"Stygian Desolator\" in DotA, a reference to an item from Anarchy Online. This name is now used by an upgraded version of the Desolator, which drops as a neutral item."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Corruption works against buildings, making it a great pushing tool. Split-pushing heroes can benefit a lot from it, allowing them to take towers down much quicker.",
+    "The debuff lasts quite long, so sometimes it is better to get the debuff on multiple enemies, instead of focusing only one target in team fights."
+  ]
+}

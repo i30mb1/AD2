@@ -1,0 +1,62 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Town Portal Scroll Cooldown: 40\/30",
+        "Channel Time Reduction: 0\/1"
+      ],
+      "notes": [
+        "By default, Town Portal Scroll can only target buildings. Level 1 Boots of Travel, allows targeting allied non-hero units, Level 2 additionally allows targeting allied heroes. Treats the Spirit Bear as a hero. Treats other creep-heroes as creeps. Town Portal Scroll notes fully apply.",
+        "Level 1 Boots of Travel, allows targeting allied non-hero units, Level 2 additionally allows targeting allied heroes.",
+        "Treats the Spirit Bear as a hero. Treats other creep-heroes as creeps.",
+        "Town Portal Scroll notes fully apply.",
+        "Upon initially equipping this instance of the item, it automatically sells all Town Portal Scrolls in the dedicated slot. After that, it grants a free Town Portal Scroll to the hero, and further prevents gaining Town Portal Scrolls when dying. Also works for hero clones. This free Town Portal Scroll has no value, meaning that it does not grant gold when sold, and it doesn't affect Net Worth. Despite that, the tooltip shows its regular sell value, and it can even be sold at \"full price\" within the time limit. Re-equipping the item (e.g. moving it from the backpack, or taking it after dropping it) does not repeat these effects. Equipping the Boots of Travel created by disassembling Boots of Travel 2 also does not repeat the effects. However, creating a new instance of the item (e.g. reassembling it after disassembling it, or upgrading from Boots of Travel to Boots of Travel 2) does repeat the effects. If the entire stack of scrolls can be sold at full price, all scrolls that have value will be sold at full price. Only bought scrolls and the scroll granted during game start have value. Scrolls granted by dying and the free scroll granted upon initially equipping the item will not grant gold. Despite that, the game still registers whether they can still be sold at full price. When a scroll is used normally, these valueless scrolls are always consumed first. Selling Town Portal Scrolls owned by someone else will grant the owner the gold instead.",
+        "After that, it grants a free Town Portal Scroll to the hero, and further prevents gaining Town Portal Scrolls when dying. Also works for hero clones. This free Town Portal Scroll has no value, meaning that it does not grant gold when sold, and it doesn't affect Net Worth. Despite that, the tooltip shows its regular sell value, and it can even be sold at \"full price\" within the time limit.",
+        "This free Town Portal Scroll has no value, meaning that it does not grant gold when sold, and it doesn't affect Net Worth. Despite that, the tooltip shows its regular sell value, and it can even be sold at \"full price\" within the time limit.",
+        "Re-equipping the item (e.g. moving it from the backpack, or taking it after dropping it) does not repeat these effects. Equipping the Boots of Travel created by disassembling Boots of Travel 2 also does not repeat the effects. However, creating a new instance of the item (e.g. reassembling it after disassembling it, or upgrading from Boots of Travel to Boots of Travel 2) does repeat the effects.",
+        "Equipping the Boots of Travel created by disassembling Boots of Travel 2 also does not repeat the effects.",
+        "However, creating a new instance of the item (e.g. reassembling it after disassembling it, or upgrading from Boots of Travel to Boots of Travel 2) does repeat the effects.",
+        "If the entire stack of scrolls can be sold at full price, all scrolls that have value will be sold at full price.",
+        "Only bought scrolls and the scroll granted during game start have value.",
+        "Scrolls granted by dying and the free scroll granted upon initially equipping the item will not grant gold. Despite that, the game still registers whether they can still be sold at full price. When a scroll is used normally, these valueless scrolls are always consumed first.",
+        "Despite that, the game still registers whether they can still be sold at full price.",
+        "When a scroll is used normally, these valueless scrolls are always consumed first.",
+        "Selling Town Portal Scrolls owned by someone else will grant the owner the gold instead."
+      ],
+      "mana": null,
+      "abilityName": "Upgrade: Town Portal Scroll",
+      "cooldown": null,
+      "description": "Upgrades your Town Portal Scroll, allowing it to target units, reduces cooldown and does not consume a charge on usage.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Upgrading the item improves the passive Teleport Upgrade. Can be upgraded only once.",
+    "The total gold cost for each level is 2500\/4500 .",
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
+    "Stacks with all other movement speed bonuses.",
+    "Alt shows your allied heroes' teleport status and cooldowns under their portraits below the top bar of the HUD. The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey. The teleport status display has the following priorities: Boots of Travel 2 ➤ Boots of Travel ➤ Town Portal Scroll. The teleport status does not show other teleport abilities (e.g. Teleportation).",
+    "The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey.",
+    "The teleport status display has the following priorities: Boots of Travel 2 ➤ Boots of Travel ➤ Town Portal Scroll.",
+    "The teleport status does not show other teleport abilities (e.g. Teleportation)."
+  ],
+  "cost": "2500",
+  "lore": null,
+  "consistFrom": [
+    "Boots of Speed",
+    "Recipe"
+  ],
+  "name": "Boots of Travel",
+  "description": "",
+  "trivia": null,
+  "upgradeIn": [
+    "Boots of Travel 2"
+  ],
+  "tips": [
+    "Boots of Travels is useful on all heroes during the late game, where it is needed to make desperate pushes or defenses, especially if one or both teams are dead or away from their bases.",
+    "Consider using Glyph of Fortification to prevent creeps from dying so Boots of Travel can complete channeling of Teleport."
+  ]
+}

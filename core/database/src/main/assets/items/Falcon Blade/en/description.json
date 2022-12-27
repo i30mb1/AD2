@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "cost": "1125",
+  "lore": null,
+  "consistFrom": [
+    "Fluffy Hat",
+    "Sage's Mask",
+    "Blades of Attack",
+    "Recipe"
+  ],
+  "name": "Falcon Blade",
+  "description": "An enchanted blade that long ago raised a hopeless urchin from pauper to king.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "It is one of the easiest pieces of equipment to build, but offering good attribute bonuses compared to its price.",
+    "Most heroes with an intention to stay long in the laning stage could consider this item, as it provides good attack damage and mana regeneration.",
+    "Should be sold in late game, if you are out of inventory slots for a more powerful equipment."
+  ]
+}

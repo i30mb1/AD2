@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Arcane_Boots_Replenish_Mana.mp3\/revision\/latest?cb=20191227195348",
+      "effects": [
+        "Радиус: 1200",
+        "Восстановление маны: 175"
+      ],
+      "notes": [
+        "Прерывает произносимые способности во время использования.",
+        "Действует на любое союзное существо, включая иллюзии, неуязвимых и исчезнувших существ, не действует на варды и постройки.",
+        "Клоны Meepo не могут использовать предмет."
+      ],
+      "mana": "0",
+      "abilityName": "Replenish Mana",
+      "cooldown": "55",
+      "description": "Восстанавливает ману всем союзникам в радиусе 175 вокруг героя.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1300",
+  "lore": null,
+  "consistFrom": [
+    "Boots of Speed",
+    "Energy Booster"
+  ],
+  "name": "Arcane Boots",
+  "description": "В этих ботинках маг становится более ценным в бою.",
+  "trivia": null,
+  "upgradeIn": [
+    "Guardian Greaves"
+  ],
+  "tips": null
+}

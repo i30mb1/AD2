@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Staff of Wizardry",
+  "description": "Магический посох, которым когда-то владели древние маги.",
+  "trivia": null,
+  "upgradeIn": [
+    "Eul's Scepter of Divinity",
+    "Force Staff",
+    "Dagon",
+    "Aghanim's Scepter",
+    "Kaya",
+    "Rod of Atos"
+  ],
+  "tips": null
+}

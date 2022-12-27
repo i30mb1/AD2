@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cast Range Increase: 225"
+      ],
+      "notes": [
+        "Stacks with other cast range increasing items or with ability specific talents. Does not stack with the cast range bonus of Octarine Core or other Aether Lenses.",
+        "Does not stack with the cast range bonus of Octarine Core or other Aether Lenses.",
+        "Only affects ability cast range.",
+        "Does not increase the ability's radius or area of effect. Does not increase the cast range of active attack modifiers.",
+        "Does not increase the cast range of active attack modifiers."
+      ],
+      "mana": null,
+      "abilityName": "Aethereal Focus",
+      "cooldown": null,
+      "description": "Increases targeted spell and item cast range by 225.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "2275",
+  "lore": null,
+  "consistFrom": [
+    "Energy Booster",
+    "Void Stone",
+    "Recipe"
+  ],
+  "name": "Aether Lens",
+  "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
+  "trivia": null,
+  "upgradeIn": [
+    "Octarine Core"
+  ],
+  "tips": null
+}

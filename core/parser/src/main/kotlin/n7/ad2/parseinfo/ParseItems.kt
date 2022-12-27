@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package n7.ad2.parseinfo
 
 import org.json.simple.JSONArray
@@ -8,18 +10,19 @@ import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
 import java.io.File
 
-private const val assetsPathToItem = "items/"
 private val getItemsUseCase = GetItemsUseCase()
 
 fun main() {
-    val itemsEnglish = getItemsUseCase(LOCALE.EN)
-    writeItemsInFile(itemsEnglish)
-//    loadItemsOneByOne(LOCALE.EN, false)
-//    loadItemsOneByOne(LOCALE.RU, false)
+//    val itemsEnglish = getItemsUseCase(LOCALE.EN)
+//    writeItemsInFile(itemsEnglish)
+    loadItemsOneByOne(LOCALE.EN, true)
+    loadItemsOneByOne(LOCALE.RU, false)
 }
 
 private fun writeItemsInFile(items: List<HeroItem>) {
-    val itemsJson = items.map { hero -> JSONObject(mapOf("name" to hero.name, "section" to hero.section)) }
+    val itemsJson = items.map { hero ->
+        JSONObject(mapOf("name" to hero.name, "section" to hero.section))
+    }
         .toString()
     File(assetsDatabase + "items.json").writeText(itemsJson)
 }
@@ -27,15 +30,16 @@ private fun writeItemsInFile(items: List<HeroItem>) {
 private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
     JSONObject().apply {
         val list = getItemsUseCase(locale)
+//        .filter { it.name == "Swift Blink" }
 
         for (item in list) {
+            val url = locale.baseUrl + item.href
             val root = try {
-                Jsoup.connect((locale.baseUrl + item.href)).get()
+                Jsoup.connect(url).get()
             } catch (e: Exception) {
-                println("could parse ${locale.baseUrl + item.href}")
+                println("could parse $url error: $e")
                 continue
             }
-            val folderForItemsDescription = assetsPathToItem + item.name + "/" + locale.directory
 
             JSONObject().apply {
                 loadName(root)
@@ -45,42 +49,42 @@ private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
                 loadTips(root)
                 loadFacts(root)
                 loadLore(root)
-                loadCostAndBoughtFrom(root)
+                loadCostAndBoughtFrom(root, item)
                 loadRecipe(root)
                 loadBonuses(root)
 
-                if (loadImages) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsPathToItem + item.name + "/", "full")
-
-                createFolderInAssets(folderForItemsDescription)
-                saveFileWithDataInAssets("$folderForItemsDescription/description.json", toJSONString())
+                if (loadImages) {
+                    val url = root.getElementById("itemmainimage").child(0).attr("href")
+                    saveImage(url, "$assetsDatabaseItems/${item.name}", "full")
+                }
+                saveFile("$assetsDatabaseItems/${item.name}/${locale.directory}", "description.json", toJSONString())
             }
         }
     }
-
 }
 
 private fun JSONObject.loadBonuses(root: Document) {
-    val table = root.getElementsByAttributeValue("style", "text-align:left;")[0].child(0).children()
-    var array: JSONArray? = null
-    for (row in table) {
-        val haveBonuses = row.child(0).text().startsWith("Bonus") || row.child(0).text().startsWith("Бонус")
-        if (haveBonuses) {
-            array = JSONArray()
-            val bonuses = row.child(1).text().split(Regex("(?=\\+)")).drop(1).map { it.trim() }
-            bonuses.forEach { array.add(it) }
-        }
-        put("bonuses", array)
-    }
+//    val table = root.getElementsByAttributeValue("style", "text-align:left;")[0].child(0).children()
+//    var array: JSONArray? = null
+//    for (row in table) {
+//        val haveBonuses = row.child(0).text().startsWith("Bonus") || row.child(0).text().startsWith("Бонус")
+//        if (haveBonuses) {
+//            array = JSONArray()
+//            val bonuses = row.child(2).text().split(Regex("(?=\\+)")).drop(1).map { it.trim() }
+//            bonuses.forEach { array.add(it) }
+//        }
+//        put("bonuses", array)
+//    }
 }
 
 private fun JSONObject.loadRecipe(root: Document) {
-    val table = root.getElementsByAttributeValue("style", "text-align:left;")[0].child(0).children()
-    val children = table.last().getElementsByAttributeValue("width", "40")
+    val table = root.getElementsByAttributeValue("style", "text-align:center;").firstOrNull() ?: return
+    val children = table.getElementsByAttributeValue("width", "40")
     val upgradeInList = JSONArray()
     val containsFromList = JSONArray()
     var findMatchWithItemName = false
     for (child in children) {
-        val recipeName = child.attr("alt").removeBrackets()
+        val recipeName = child.attr("alt").substringBefore("(").trim()
         if (this["name"] == recipeName) {
             findMatchWithItemName = true
             continue
@@ -96,13 +100,19 @@ private fun JSONObject.loadRecipe(root: Document) {
     put("consistFrom", if (containsFromList.size > 0) containsFromList else null)
 }
 
-private fun JSONObject.loadCostAndBoughtFrom(root: Document) {
-    val table = root.getElementsByClass("infobox")[0]
-    var cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.removeBrackets()
-    if (cost == ")") cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().get(2) as? TextNode)?.text()?.removeBrackets()?.split(" ")?.get(0)
+private fun JSONObject.loadCostAndBoughtFrom(root: Document, item: HeroItem) {
+    val cost = try {
+        val table = root.getElementsByClass("infobox")[0]
+        val style = "width:200px; background-color:#DAA520; color:#fff; text-shadow:1px 1px 2px #000;"
+        val elements = table.getElementsByAttributeValue("style", style)
+        (elements[0].childNodes()[0].childNodes()[0] as TextNode).text().trim()
+    } catch (e: Exception) {
+        println("Could load cost for ${item.name}")
+        null
+    }
     put("cost", cost)
-    val place = (table.getElementsByAttributeValue("style", "width:50%;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
-    put("boughtFrom", place)
+//    val place = (table.getElementsByAttributeValue("style", "width:50%;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
+//    put("boughtFrom", place)
 }
 
 private fun JSONObject.loadFacts(root: Document) {
@@ -177,7 +187,7 @@ private fun JSONObject.loadLore(root: Document) {
 }
 
 private fun JSONObject.loadAbilities(root: Document) {
-    val abilities = root.getElementsByAttributeValue("style", "display: flex; flex-wrap: wrap; align-items: flex-start;")
+    val abilities = root.getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")
     JSONArray().apply {
         abilities.forEach {
             JSONObject().apply {
@@ -188,7 +198,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                 if (audioUrl.isNullOrEmpty()) audioUrl = null
                 put("audioUrl", audioUrl)
 
-                val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")
+                val effects = it.getElementsByAttributeValue("style", "font-size:98%;")
                 JSONArray().apply {
                     effects.mapNotNull { if (it.text() != "") add(it.text().replace("(", "(TagAghanim")) }
                     put("effects", this)
@@ -197,7 +207,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                 val description = it.getElementsByTag("div")[12].text()
                 put("description", description)
 
-                val params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
+                val params = it.getElementsByAttributeValue("style", "display:inline-block; vertical-align:top; padding:3px 5px; border:1px solid rgba(0, 0, 0, 0);")[0].children()
                 params.filter { it.attr("style").isEmpty() }.also {
                     JSONArray().apply {
                         it.forEach { add(it.text()) }
@@ -205,7 +215,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                     }
                 }
 
-                var cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:370px; vertical-align:top;").getOrNull(0)
+                var cooldown = it.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; max-width:100%; width:240px;").getOrNull(0)
                 if (cooldown == null) cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
                 if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                     put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
@@ -213,8 +223,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                     put("cooldown", cooldown?.text()?.replace("(", "(TagTalent"))
                 }
 
-                val mana = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").getOrNull(0)
-//                if (mana == null) mana =
+                val mana = it.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; width:240px;").getOrNull(0)
                 if (mana?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                     put("mana", mana?.text()?.replace("(", "(TagAghanim"))
                 } else {
@@ -240,13 +249,12 @@ private fun JSONObject.loadAbilities(root: Document) {
                 val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding-top: 2px; border-top: 1px solid #C1C1C1;").getOrNull(0)
                 put("story", story?.text())
 
-                val notesBlock = it.getElementsByAttributeValue("style", "flex: 1 1 450px; word-wrap: break-word;").getOrNull(0)
+                val notesBlock = it.getElementsByAttributeValue("style", "flex:1 1 450px; word-wrap:break-word;").getOrNull(0)
                 val notes = notesBlock?.getElementsByTag("li")
                 JSONArray().apply {
                     notes?.forEach {
                         add(it.text().replace("( ", "(TagTalent "))
                     }
-
                     put("notes", this)
                 }
 
@@ -287,7 +295,8 @@ private fun JSONObject.loadDescription(root: Document) {
 }
 
 private fun JSONObject.loadName(root: Document) {
-    put("name", root.getElementsByClass("firstHeading").text())
+    val name = root.getElementById("firstHeading").text()
+    put("name", name)
 }
 
 private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {

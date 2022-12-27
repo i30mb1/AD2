@@ -1,0 +1,52 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Вампиризм: 25%"
+      ],
+      "notes": [
+        "Складывается с другими источниками вампиризма.",
+        "Вампиризм не работает на вардах, постройках или дружественных существах."
+      ],
+      "mana": null,
+      "abilityName": "Lifesteal",
+      "cooldown": null,
+      "description": "Каждая атака восстанавливает владельцу здоровье в размере 25% от нанесённого урона.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Satanic.mp3\/revision\/latest?cb=20141214203513",
+      "effects": [
+        "Бонус к вампиризму: 150%",
+        "Длительность: 6"
+      ],
+      "notes": [
+        "При применении прерывает произносимые заклинания владельца.",
+        "При активации применяет на использовавшего базовое развеивание.",
+        "Увеличивает пассивный вампиризм, даваемый каждым Satanic, на 150%, в итоге давая 175% вампиризма."
+      ],
+      "mana": null,
+      "abilityName": "Unholy Rage",
+      "cooldown": null,
+      "description": "Увеличивает эффект вампиризма до 175% на 6 сек.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5050",
+  "lore": null,
+  "consistFrom": [
+    "Morbid Mask",
+    "Claymore",
+    "Reaver"
+  ],
+  "name": "Satanic",
+  "description": "Почти безграничная сила в обмен на вашу душу.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

@@ -1,0 +1,17 @@
+{
+  "abilities": [],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Belt of Strength",
+  "description": "Ценный аксессуар, повышающий живучесть.",
+  "trivia": null,
+  "upgradeIn": [
+    "Power Treads",
+    "Skull Basher",
+    "Dragon Lance",
+    "Sange",
+    "Drum of Endurance"
+  ],
+  "tips": null
+}

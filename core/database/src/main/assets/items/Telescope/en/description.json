@@ -1,0 +1,44 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Scan Cooldown Reduction: 50%",
+        "Attack Range Bonus (TagAghanimRanged): 100",
+        "Cast Range Bonus: 100",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "The attack range bonus works for ranged units only.",
+        "Affects the cast range of active attack modifiers as well.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "Only affects player-controlled units. Non-player-controlled units (i.e. lane creeps) are not affected.",
+        "Does not affect invulnerable units.",
+        "The Scan's cooldown reduction is granted by the aura, not the item itself. This means using Scan while no one is affected by the aura (i.e. item owner is invulnerable and has no allies nearby), the cooldown is not reduced. Causes the Scan's cooldown to skip the first 105 seconds upon cast. The Scan's cooldown gets reduced even when the player who activated it is not affected by the aura, as long as another ally is affected.",
+        "This means using Scan while no one is affected by the aura (i.e. item owner is invulnerable and has no allies nearby), the cooldown is not reduced.",
+        "Causes the Scan's cooldown to skip the first 105 seconds upon cast.",
+        "The Scan's cooldown gets reduced even when the player who activated it is not affected by the aura, as long as another ally is affected.",
+        "Multiple instances of Prescient Aura do not stack. This means a second Telescope does not reduce the cooldown any further.",
+        "This means a second Telescope does not reduce the cooldown any further."
+      ],
+      "mana": null,
+      "abilityName": "Prescient Aura",
+      "cooldown": null,
+      "description": "Lowers Scan cooldown by 50%. Increases attack and cast range of allies in a 1200 unit radius.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Telescope",
+  "description": "A handy tool that manages to make close what once was far.",
+  "trivia": [
+    "This item's internal name is \"Spy Gadget\"."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

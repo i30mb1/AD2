@@ -1,0 +1,27 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Null Talisman automatically upgrade on the 25th minute mark.",
+    "The item's attributes grants the following bonuses: 40\/80 health and 0.2\/0.4 health regeneration. 60\/120 mana and 1\/2 mana regeneration. 2\/4 attack speed bonus and 0.33\/0.67 main armor. 5\/10 main attack damage to heroes and 2\/4 main attack damage to \/ heroes respectively.",
+    "40\/80 health and 0.2\/0.4 health regeneration.",
+    "60\/120 mana and 1\/2 mana regeneration.",
+    "2\/4 attack speed bonus and 0.33\/0.67 main armor.",
+    "5\/10 main attack damage to heroes and 2\/4 main attack damage to \/ heroes respectively."
+  ],
+  "cost": "505",
+  "lore": null,
+  "consistFrom": [
+    "Circlet",
+    "Mantle of Intelligence",
+    "Recipe"
+  ],
+  "name": "Null Talisman",
+  "description": "A small gemstone attached to several chains.",
+  "trivia": [
+    "Null Talisman was one of the best stat efficient items in the game, purchased by most heroes, before the introduction of Bracer and Wraith Band in version 6.00."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "For intelligence heroes, a Bracer grants just as much attack damage as a Null Talisman."
+  ]
+}

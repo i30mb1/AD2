@@ -1,0 +1,14 @@
+{
+  "abilities": [],
+  "cost": "140",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Gauntlets of Strength",
+  "description": "Укреплённые кожаные перчатки, которые дают грубую силу.",
+  "trivia": null,
+  "upgradeIn": [
+    "Bracer",
+    "Soul Ring"
+  ],
+  "tips": null
+}

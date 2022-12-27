@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": [
+    "Staff of Wizardry",
+    "Robe of the Magi",
+    "Recipe"
+  ],
+  "name": "Kaya",
+  "description": "Посох прославленной волшебницы, пропавший много тысячелетий назад.",
+  "trivia": null,
+  "upgradeIn": [
+    "Yasha and Kaya",
+    "Ethereal Blade",
+    "Kaya and Sange"
+  ],
+  "tips": null
+}

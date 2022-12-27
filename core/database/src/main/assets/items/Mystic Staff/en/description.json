@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "300 mana and 1.25 mana regeneration.",
+    "25 main attack damage to heroes."
+  ],
+  "cost": "2800",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Mystic Staff",
+  "description": "Enigmatic staff made of only the most expensive crystals.",
+  "trivia": null,
+  "upgradeIn": [
+    "Scythe of Vyse",
+    "Wind Waker",
+    "Shiva's Guard",
+    "Revenant's Brooch",
+    "Arcane Blink"
+  ],
+  "tips": null
+}

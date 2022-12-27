@@ -1,0 +1,56 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Skull_Basher_Bash.mp3\/revision\/latest?cb=20191227195535",
+      "effects": [
+        "Proc Chance (TagAghanimMelee): 25%",
+        "Proc Chance (TagAghanimRanged): 10%",
+        "Damage: 100",
+        "Stun Duration: 1.5"
+      ],
+      "notes": [
+        "Does not stack with the bash of Skull Bashers and other Abyssal Blade. Does not stack with Bash of the Deep, Greater Bash and Time Lock either. If any of these are present, Bash cannot proc.",
+        "Does not stack with Bash of the Deep, Greater Bash and Time Lock either. If any of these are present, Bash cannot proc.",
+        "For multiple items with the bash ability, only the one that has been continuously the longest in the inventory works.",
+        "The proccing attack first applies the debuff, then the damage.",
+        "The bonus damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the wielder's attack damage. The attack damage bonus values are not considered by critical strike and cleave. However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the wielder's attack damage.",
+        "The attack damage bonus values are not considered by critical strike and cleave.",
+        "However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g. damage block).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Adds an average of 25 and 10 damage to every attack for melee and ranged heroes respectively.",
+        "Does not work against wards and buildings, but works against allied units. Clones cannot use Bash.",
+        "Clones cannot use Bash.",
+        "Bash uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "abilityName": "Bash",
+      "cooldown": null,
+      "description": "Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus physical damage. Bash chance for ranged heroes is 10%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "200 health and 1 health regeneration.",
+    "10 main attack damage to heroes."
+  ],
+  "cost": "2875",
+  "lore": null,
+  "consistFrom": [
+    "Mithril Hammer",
+    "Belt of Strength",
+    "Recipe"
+  ],
+  "name": "Skull Basher",
+  "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
+  "trivia": [
+    "In the original DotA, this item was called \"Cranium Basher\", a reference to a unique item in Diablo 2."
+  ],
+  "upgradeIn": [
+    "Abyssal Blade"
+  ],
+  "tips": []
+}

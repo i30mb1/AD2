@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Penta-Edged_Sword_Maim.mp3\/revision\/latest?cb=20210120232110",
+      "effects": [
+        "Proc Chance: 25%",
+        "Move Speed Slow: 20%",
+        "Attack Speed Slow: 60",
+        "Slow Duration: 3"
+      ],
+      "notes": [
+        "Successive procs on the same target do not stack, but refresh the duration instead.",
+        "The proccing attack first applies the debuff, then its own damage.",
+        "Does not work against wards and buildings. Works against allied units.",
+        "Maim uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "abilityName": "Maim",
+      "cooldown": null,
+      "description": "Each attack has a 25% chance to reduce enemy hero movement speed by 20% and attack speed by 60 for 3 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The attack range bonus works for melee heroes only.",
+    "Stacks with all other attack range bonuses.",
+    "Affects the cast range of active attack modifiers as well."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Penta-Edged Sword",
+  "description": "The final, twisted work of a severely pious blacksmith, completed immediately before the taking of his own life.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

@@ -1,0 +1,63 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Force_Boots_Force.mp3\/revision\/latest?cb=20191227195705",
+      "effects": [
+        "Cast Range: 750",
+        "Push Distance: 750",
+        "Push Duration: 0.5"
+      ],
+      "notes": [
+        "Applies a basic dispel when targeting self or allies. Does not dispel enemies. ↓↓ Double-tapping automatically target self.",
+        "↓↓ Double-tapping automatically target self.",
+        "Pushes the target at a speed of 1500.",
+        "The target is not disabled during the push, so they still can cast abilities, attack, and turn during the push. Does interrupt channeling abilities of the target. However, it interrupts the caster's channeling abilities upon cast, since it is a unit-targeted ability.",
+        "Does interrupt channeling abilities of the target.",
+        "However, it interrupts the caster's channeling abilities upon cast, since it is a unit-targeted ability.",
+        "Does not push the target if they are affected by Black Hole, Chronosphere, Duel, or Flaming Lasso.",
+        "Cannot push units through Kinetic Field or Arena Of Blood.",
+        "If the target is affected by Soulbind, it cannot push them further than its max stretch distance allows.",
+        "If the target is leashed by Pounce, the leash gets instantly broken upon cast. However, if the target gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
+        "However, if the target gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
+        "Cannot be cast on wards or buildings. Can be cast on Homing Missiles.",
+        "Can move the target over impassable terrain. Trees within 100 radius around them get destroyed during the push.",
+        "Can be cast on Roshan but without any effect, since Roshan is immune to forced movement.",
+        "Does not share cooldown with the following items: Force Staff-based items and Psychic Headband.",
+        "Force Staff-based items and Psychic Headband."
+      ],
+      "mana": "75",
+      "abilityName": "Force",
+      "cooldown": "8",
+      "description": "Dispels the user and pushes them 750 units in the direction they are facing.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [],
+      "notes": [
+        "Unlocks the maximum movement speed for the wielder, removing the 550 movement speed cap."
+      ],
+      "mana": null,
+      "abilityName": "Speed Unlock",
+      "cooldown": null,
+      "description": "Completely removes the speed limit for the wearer.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Force Boots",
+  "description": "Elusive marvels never successfully studied for proper classification in the archives.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

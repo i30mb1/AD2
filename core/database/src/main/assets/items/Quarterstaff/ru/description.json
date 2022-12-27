@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "875",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Quarterstaff",
+  "description": "Обычный посох, позволяющий наносить быстрые удары.",
+  "trivia": null,
+  "upgradeIn": [
+    "Oblivion Staff",
+    "Butterfly",
+    "Mask of Madness"
+  ],
+  "tips": null
+}

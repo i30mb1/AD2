@@ -1,0 +1,96 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cast Range: 350"
+      ],
+      "notes": [
+        "Can target any tree.",
+        "Does not share cooldown with Chop Tree."
+      ],
+      "mana": "0",
+      "abilityName": "Chop Tree",
+      "cooldown": "4",
+      "description": "Destroy a target tree.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Attack Damage Bonus (TagAghanimMelee): 15",
+        "Attack Damage Bonus (TagAghanimRanged): 6"
+      ],
+      "notes": [
+        "Stacks with the Quell of Quelling Blade, but not with additional Battle Furies.",
+        "The attack damage bonus adapts immediately depending on the wielder's range type (TagTalent melee or ranged).",
+        "Quell is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage. The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities (e.g. Psi Blades and Moon Glaives) It can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage.",
+        "The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities (e.g. Psi Blades and Moon Glaives)",
+        "It can be reduced only by flat reductions (e.g. damage block).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Does not work against wards, buildings, illusions, Spirit Bear, Courier and allied units. Works against Roshan."
+      ],
+      "mana": null,
+      "abilityName": "Quell",
+      "cooldown": null,
+      "description": "Increases attack damage against non-hero units by 15 for melee heroes, and 6 for ranged.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Battle_Fury_Cleave.mp3\/revision\/latest?cb=20191227195351",
+      "effects": [
+        "Starting Radius: 150",
+        "Distance: 650",
+        "End Radius: 360",
+        "Cleave Damage (TagAghanimHeroes): 70%",
+        "Cleave Damage (TagAghanimCreeps): 40%"
+      ],
+      "notes": [
+        "Grants cleave if the affected hero's range type is melee.",
+        "Cleave damage has the following properties: It counts as spell damage. However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal. No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. It is reduced by damage block.",
+        "It counts as spell damage. However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal. No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
+        "No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal.",
+        "No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
+        "Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. It is reduced by damage block.",
+        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit. Multiple sources of cleave fully stack and work independently. Does not cleave upon attacking wards, buildings or allied units. Couriers, wards and buildings are unaffected by cleave. Despite the visual effect, the cleave damage is applied instantly in the whole area.",
+        "Multiple sources of cleave fully stack and work independently.",
+        "Does not cleave upon attacking wards, buildings or allied units. Couriers, wards and buildings are unaffected by cleave.",
+        "Despite the visual effect, the cleave damage is applied instantly in the whole area."
+      ],
+      "mana": null,
+      "abilityName": "Cleave",
+      "cooldown": null,
+      "description": "Deals 70% of attack damage as physical damage in a cone up to 650 around the target. Deals 40% against creeps. (Melee Only)",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "4100",
+  "lore": null,
+  "consistFrom": [
+    "Broadsword",
+    "Claymore",
+    "Perseverance",
+    "Quelling Blade"
+  ],
+  "name": "Battle Fury",
+  "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
+  "trivia": [
+    "Faceless Void's cosmetic item, Battlefury, is based on Battle Fury."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The Battle Fury is great tool for farming but a poor choice for mid game skirmishes owing to its lack of primary attributes. Avoid it if the enemy team plays aggressively and your presence is required in team fights early. In such cases, it is better to opt for a Maelstrom instead, which provides both early farming and fighting capability, and can later be upgraded into Gleipnir or Mjollnir.",
+    "Effective against illusions, summoned units, jungle stacks, ancient stacks and mega creeps. A Battle Fury allows a melee hero to farm faster than a Hand of Midas. You can get this item after Boots of Speed, start with a Ring of Health if you are laning or get damage. If you are jungling, then get a mobility item like Blink Dagger to reach camps faster.",
+    "A Battle Fury allows a melee hero to farm faster than a Hand of Midas. You can get this item after Boots of Speed, start with a Ring of Health if you are laning or get damage. If you are jungling, then get a mobility item like Blink Dagger to reach camps faster.",
+    "The cleave benefits from critical hits, including those from items and ignores evasion.",
+    "Having Battle Fury can help greatly against an enemy Nature's Prophet, since some carries have little means to escape his Sprout without it (the most obvious being Juggernaut and Troll Warlord)",
+    "Melee heroes with high attack speed can push far more effectively with Battle Fury, even in late game. Critical hits help too."
+  ]
+}

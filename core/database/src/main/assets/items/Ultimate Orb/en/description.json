@@ -1,0 +1,23 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "200 health and 1 health regeneration.",
+    "120 mana and 0.5 mana regeneration.",
+    "10 attack speed and 1.67 main armor.",
+    "10 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ultimate Orb",
+  "description": "A mystical orb containing the essence of life.",
+  "trivia": null,
+  "upgradeIn": [
+    "Scythe of Vyse",
+    "Linken's Sphere",
+    "Eye of Skadi",
+    "Manta Style"
+  ],
+  "tips": null
+}

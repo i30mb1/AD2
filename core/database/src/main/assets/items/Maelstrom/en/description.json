@@ -1,0 +1,57 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Maelstrom_Chain_Lightning_1.mp3\/revision\/latest?cb=20191227195450",
+      "effects": [
+        "Proc Chance: 30%",
+        "Bounce Distance: 650",
+        "Number of Bounces: 4",
+        "Bounce Interval: 0.25",
+        "Damage: 140"
+      ],
+      "notes": [
+        "When obtaining multiple items with the Chain Lightning ability, only the one that has been continuously the longest in the inventory works.",
+        "The lightning bounces in 0.25-second intervals, so hitting 4 targets takes 0.75 seconds. All bounces together can deal up to 560 damage (before reductions). Against a lone target, Chain Lightning adds an average of 42 magical damage to every attack.",
+        "All bounces together can deal up to 560 damage (before reductions).",
+        "Against a lone target, Chain Lightning adds an average of 42 magical damage to every attack.",
+        "Chain Lightning can proc while a previous Chain Lightning is still bouncing. Can never hit the same unit more than once per proc. Attacks which proc Chain Lightning cannot miss. Can proc on invisible units or units in Fog of War, but it does not bounce toward those units. Does not proc if the attacker is dead. However, it can proc if the target is dead. Chain Lightning uses pseudo-random distribution.",
+        "Can never hit the same unit more than once per proc.",
+        "Attacks which proc Chain Lightning cannot miss.",
+        "Can proc on invisible units or units in Fog of War, but it does not bounce toward those units.",
+        "Does not proc if the attacker is dead. However, it can proc if the target is dead.",
+        "Chain Lightning uses pseudo-random distribution.",
+        "The hidden modifier is a hidden buff required for the lightning to bounce.",
+        "Chain Lightning uses a custom cooldown system. It is neither displayed on the item icon when procced, nor is affected by cooldown manipulation."
+      ],
+      "mana": null,
+      "abilityName": "Chain Lightning",
+      "cooldown": null,
+      "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 140 magical damage to each. Lightning proc pierces evasion.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Chain Lightning proc does not stack with other Maelstrom-based items."
+  ],
+  "cost": "2700",
+  "lore": null,
+  "consistFrom": [
+    "Mithril Hammer",
+    "Javelin"
+  ],
+  "name": "Maelstrom",
+  "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
+  "trivia": null,
+  "upgradeIn": [
+    "Gleipnir",
+    "Mjollnir"
+  ],
+  "tips": [
+    "Maelstrom is a very good item for speeding up farming. If the extra experience is not needed, it is a good alternative to Hand of Midas.",
+    "It is also great to deal with illusions or mass-summons like Broodmother's spiders, Nature's Prophet's treants, etc. Especially useful for ranged heroes that lack area damage, since they cannot make use of cleave.",
+    "The Chain Lightning deals magical damage which ignores armor and Damage Block, making it good against heroes that get a Vanguard, or Tidehunter with his Kraken Shell, and against heroes with high armor like Dragon Knight or Terrorblade.",
+    "Maelstrom is a useful pickup against mega creeps in order to help clear waves."
+  ]
+}

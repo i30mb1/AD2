@@ -1,0 +1,13 @@
+{
+  "abilities": [],
+  "cost": "140",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Slippers of Agility",
+  "description": "Лёгкие ботинки, сделанные из кожи паука, обостряют ваше чутьё.",
+  "trivia": null,
+  "upgradeIn": [
+    "Wraith Band"
+  ],
+  "tips": null
+}

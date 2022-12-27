@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "5000",
+  "lore": null,
+  "consistFrom": [
+    "Vitality Booster",
+    "Reaver",
+    "Recipe"
+  ],
+  "name": "Heart of Tarrasque",
+  "description": "Сохранившееся сердце вымершего монстра, с которым его владелец становится мужественнее.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

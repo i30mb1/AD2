@@ -1,0 +1,32 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Уменьшение перезарядки: 25%"
+      ],
+      "notes": [
+        "Уменьшение перезарядки от нескольких Octarine Core не сочетается.",
+        "Сочетается по закону убывающей полезности с другими источниками уменьшения перезарядки."
+      ],
+      "mana": null,
+      "abilityName": "Cooldown Reduction",
+      "cooldown": null,
+      "description": "Уменьшает время перезарядки всех способностей и предметов на 25%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5275",
+  "lore": null,
+  "consistFrom": [
+    "Aether Lens",
+    "Soul Booster"
+  ],
+  "name": "Octarine Core",
+  "description": "Самая основа колдовства скрыта в цветах, узреть которые способны лишь самые одарённые.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

@@ -1,0 +1,49 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Infused_Raindrop_Magical_Damage_Block.mp3\/revision\/latest?cb=20191227195443",
+      "effects": [
+        "Min Damage Threshold: 75",
+        "Magical Damage Blocked: 120",
+        "Number of Charges: 6"
+      ],
+      "notes": [
+        "Infused Raindrops has the highest priority in the group of damage negating abilities, blocking damage before any of them do. When combined with other damage-negating effects (e.g. Aphotic Shield or Refraction), Infused Raindrops negate the damage while the others do not. Has a higher priority than damage return effects (e.g. Dispersion and Blade Mail), meaning it first blocks damage before it. Has a lower priority than Mana Shield, meaning Mana Shield first reduces damage before Infused Raindrop blocks it.",
+        "When combined with other damage-negating effects (e.g. Aphotic Shield or Refraction), Infused Raindrops negate the damage while the others do not.",
+        "Has a higher priority than damage return effects (e.g. Dispersion and Blade Mail), meaning it first blocks damage before it.",
+        "Has a lower priority than Mana Shield, meaning Mana Shield first reduces damage before Infused Raindrop blocks it.",
+        "Only triggers on magical damage equal or greater than 75 (before reductions) coming from abilities and attacks, excluding self-inflicted damage and damage dealt by allies. Upon triggering, blocks up to 120 magical damage.",
+        "Upon triggering, blocks up to 120 magical damage.",
+        "Ignores every form of incoming damage amplification, but does not ignore outgoing damage amplification.",
+        "Does not stack with other magical damage barriers. If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance. However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance.",
+        "However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "Neither consumes charges nor blocks any damage while on cooldown."
+      ],
+      "mana": null,
+      "abilityName": "Magical Damage Block",
+      "cooldown": null,
+      "description": "Consumes a charge to block 120 magic damage from damage instances over 75 damage. Comes with 6 charges. When the charges are gone, the item disappears.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "When having multiple Infused Raindrops, all of them lose charges simultaneously, but only one of them blocks the damage."
+  ],
+  "cost": "225",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Infused Raindrops",
+  "description": "Elemental protection from magical assaults.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Works well against heroes who harass early lanes with magical damage, especially against those with stronger nukes and a high mana cost, like Queen of Pain, Leshrac, Lich, Visage and Lina.",
+    "It is also good against lower nukes, like Storm Spirit's abilities, Arc Lightning and Arcane Bolt, although these abilities are in return able to burn through raindrops faster than the heavy nukes. This also applies to Maelstrom's and its upgrade's Chain Lightning.",
+    "Since it ignores damage instances below 75, it is not effective against most damage over time abilities, like the ones from Viper, Warlock, Jakiro and Huskar. Infused Raindrops is also not very effective against damage over time which deals just high enough damage to proc it, as one such spell can proc Raindrop multiple times throughout its duration, wasting charges on rather low damage ticks, as compared to burst damage. Abilities like Venomous Gale and Shadow Strike are long lasting damage over time abilities which can easily use up 2 charges per cast, with just minimal damage getting blocked. Shorter effects like Frostbite, or enough stacks of Burning Spear are also able to waste charges, as they deal the minimum required damage to proc it, allowing enemies to throw higher damage nukes while the item is on cooldown.",
+    "Infused Raindrops is also not very effective against damage over time which deals just high enough damage to proc it, as one such spell can proc Raindrop multiple times throughout its duration, wasting charges on rather low damage ticks, as compared to burst damage. Abilities like Venomous Gale and Shadow Strike are long lasting damage over time abilities which can easily use up 2 charges per cast, with just minimal damage getting blocked.",
+    "Shorter effects like Frostbite, or enough stacks of Burning Spear are also able to waste charges, as they deal the minimum required damage to proc it, allowing enemies to throw higher damage nukes while the item is on cooldown."
+  ]
+}

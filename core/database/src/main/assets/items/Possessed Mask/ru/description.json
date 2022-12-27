@@ -1,0 +1,29 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Вампиризм: 7"
+      ],
+      "notes": [
+        "Лечение считается вампиризмом, так что оно подвергается манипуляцией вампиризмом, но не манипуляцией восстановлением.",
+        "Не восстанавливает здоровье от вардов, построек и союзных существ."
+      ],
+      "mana": null,
+      "abilityName": "Lifesteal",
+      "cooldown": null,
+      "description": "Каждая атака восстанавливает владельцу 7 здоровья.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Possessed Mask",
+  "description": "Даже когда от этой жуткой маски тщательно и аккуратно избавляются, она рано или поздно оказывается на чьём-нибудь лице.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

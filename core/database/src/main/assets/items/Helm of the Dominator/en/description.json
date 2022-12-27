@@ -1,0 +1,70 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Helm_of_the_Dominator_Dominate.mp3\/revision\/latest?cb=20191227195434",
+      "effects": [
+        "Cast Range: 700",
+        "Max Units: 1",
+        "Min Base Health: 1000",
+        "Set Move Speed: 380",
+        "Set Gold Bounty: 100",
+        "Base Attack Damage Bonus: 25",
+        "Health Regen Bonus: 12",
+        "Mana Regen Bonus: 4",
+        "Armor Bonus: 4"
+      ],
+      "notes": [
+        "Cannot dominate ancient creeps, creep-heroes, Siege Creeps, Necronomicon Archers, Necronomicon Warriors, and Roshan.",
+        "Applies a basic dispel on the creep upon cast.",
+        "Dominating a creep while already having one dominated causes the instantly kills the previously dominated creep.",
+        "The number of max allowed units is bound to the player. Buying a new Helm of the Dominator does not allow dominating an additional unit. When owning both, Helm of the Dominator and Helm of the Overlord, Helm of the Overlord takes priority, still allowing a maximum of 1 unit. This also goes for the Tempest Double's copied Helm of the Dominator. When the Dominated creep changes faction (i.e. when affected by Holy Persuasion or Enchant), it no longer counts towards the max limit. When the item gets upgraded, sold, or destroyed, the dominated creep dies. The death is not credited to anyone so that no one gets experience from it.",
+        "When owning both, Helm of the Dominator and Helm of the Overlord, Helm of the Overlord takes priority, still allowing a maximum of 1 unit.",
+        "This also goes for the Tempest Double's copied Helm of the Dominator.",
+        "When the Dominated creep changes faction (i.e. when affected by Holy Persuasion or Enchant), it no longer counts towards the max limit.",
+        "When the item gets upgraded, sold, or destroyed, the dominated creep dies.",
+        "The death is not credited to anyone so that no one gets experience from it.",
+        "Sets the creep's movement speed to 380, regardless of its default movement speed.",
+        "Sets the creep's gold bounty to 100 , regardless of its default bounty. The creep's default gold bounty is not granted upon killing it, only the set value is. Its experience bounty is unchanged.",
+        "The creep's default gold bounty is not granted upon killing it, only the set value is. Its experience bounty is unchanged.",
+        "When the creep's max health is below the min health threshold, its current and max health are increased by the difference. This counts as setting health.",
+        "Attack damage bonus is added directly to the creep's base attack damage. Does not grant flat bonus attack damage.",
+        "Does not grant flat bonus attack damage.",
+        "Does not restore the creep's mana.",
+        "Does not share cooldowns with Helm of the Overlord."
+      ],
+      "mana": "0",
+      "abilityName": "Dominate",
+      "cooldown": "45",
+      "description": "Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1000. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. Dominated units with a max health of greater than 1000 retain their original max health. Dominated unit's bounty is set to 100 gold.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 health and 0.6 health regeneration.",
+    "72 mana and 0.3 mana regeneration.",
+    "6 attack speed and 1 main armor.",
+    "6 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": "2400",
+  "lore": null,
+  "consistFrom": [
+    "Helm of Iron Will",
+    "Crown",
+    "Recipe"
+  ],
+  "name": "Helm of the Dominator",
+  "description": "The powerful headpiece of a dead necromancer.",
+  "trivia": null,
+  "upgradeIn": [
+    "Helm of the Overlord"
+  ],
+  "tips": [
+    "Dominated creeps can be used to remotely stack an ancient camp. Some creeps have abilities that are very useful, such as Dark Troll Summoner and Ogre Frostmage.",
+    "You can dominate the Alpha Wolf for the helpful damage aura and have it follow your carry.",
+    "A dominated creep can be used as a scout that can be placed inside Roshan's pit. Just be sure not to place it too close to Roshan, so he does not attack it.",
+    "Dominate always sets the creep's base movement speed to 380. The only units which have more than 425 movement speed are Lycan Wolves at level 3 or higher. This means dominating one of them actually reduces their base speed down to 380. Besides these, all other dominatable creeps have lower movement speed than 380."
+  ]
+}

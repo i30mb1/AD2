@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "505",
+  "lore": null,
+  "consistFrom": [
+    "Circlet",
+    "Gauntlets of Strength",
+    "Recipe"
+  ],
+  "name": "Bracer",
+  "description": "Наручи \u2014 типичный выбор для укрепления защиты и продления жизни в бою.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

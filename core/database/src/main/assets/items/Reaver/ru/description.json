@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "2800",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Reaver",
+  "description": "Массивный топор, способный сокрушать даже горы.",
+  "trivia": null,
+  "upgradeIn": [
+    "Heart of Tarrasque",
+    "Satanic",
+    "Overwhelming Blink"
+  ],
+  "tips": null
+}

@@ -1,0 +1,27 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Ui_hud_equip_shard.mp3\/revision\/latest?cb=20201219110042",
+      "effects": [],
+      "notes": [
+        "Если герою доступно улучшение, примечания предмета и улучшаемой способности укажут что именно улучшается.",
+        "Направленные на цель заклинания улучшенные с Aghanim's Shard и отражённые отражением заклинаний зависят от того владеет ли отражающий герой Aghanim's Shard, а не от изначального заклинателя отражаемого заклинания."
+      ],
+      "mana": null,
+      "abilityName": "Ability Upgrade",
+      "cooldown": null,
+      "description": "Улучшает существующую способность героя или даёт ему новую.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Aghanim's Shard",
+  "description": "Лишь один чародей знает, откуда берутся осколки этих невозможных кристаллов, и потому они не менее желанные, чем его прославленный скипетр.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

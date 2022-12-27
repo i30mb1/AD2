@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Stacks multiplicatively with other sources of evasion. Increases most heroes against physical attacks by 19.05%.",
+    "Increases most heroes against physical attacks by 19.05%.",
+    "The evasion uses pseudo-random distribution."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Elven Tunic",
+  "description": "Even simple items of elven make it seem imbued with inexplicable efficacy.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

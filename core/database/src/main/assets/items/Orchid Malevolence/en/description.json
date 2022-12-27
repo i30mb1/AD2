@@ -1,0 +1,49 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Orchid_Malevolence_Soul_Burn.mp3\/revision\/latest?cb=20191227195517",
+      "effects": [
+        "Cast Range: 900",
+        "Damage Amplification: 30%",
+        "Duration: 5"
+      ],
+      "notes": [
+        "Does not directly amplify damage as it is dealt, but rather saves all damage values and deals 30% of it 5 seconds after cast. This means that the damage can be avoided by becoming spell immune, invulnerable, or hidden at the end of the duration.",
+        "This means that the damage can be avoided by becoming spell immune, invulnerable, or hidden at the end of the duration.",
+        "The damage is applied as soon as the debuff expires. However, dispelling the debuff skips the damage entirely. Recasting Soul Burn on the same target refreshes the duration. Doing this delays the damage further, and gives more time to deal damage to the target. The damage is credited to the last caster of Soul Burn on the target.",
+        "Recasting Soul Burn on the same target refreshes the duration.",
+        "Doing this delays the damage further, and gives more time to deal damage to the target.",
+        "The damage is credited to the last caster of Soul Burn on the target.",
+        "Only considers the 3 damage types (after all reductions), but not HP Removal effects (e.g. Sunder, Soul Ring etc.).",
+        "Shares cooldown with Soul Rend."
+      ],
+      "mana": "100",
+      "abilityName": "Soul Burn",
+      "cooldown": "18",
+      "description": "Silences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "3475",
+  "lore": null,
+  "consistFrom": [
+    "Blitz Knuckles",
+    "Claymore",
+    "Void Stone",
+    "Recipe"
+  ],
+  "name": "Orchid Malevolence",
+  "description": "A garnet rod constructed from the essence of a fire demon.",
+  "trivia": [
+    "The item's name is likely a reference to the weapon of the same name that can be acquired in the 2002 video game Otogi: Myth of Demons."
+  ],
+  "upgradeIn": [
+    "Bloodthorn"
+  ],
+  "tips": [
+    "Orchid is great against Intelligence heroes as they are dependent on their abilities to deal damage, but it is also effective against heroes with escape abilities like Anti-Mage or Weaver and strong initiation like Faceless Void or Enigma.",
+    "Get the item quickly before the enemy team gets items able to dispel the silence."
+  ]
+}

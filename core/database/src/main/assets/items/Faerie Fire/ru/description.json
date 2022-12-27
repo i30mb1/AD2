@@ -1,0 +1,28 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Faerie_Fire.mp3\/revision\/latest?cb=20151217172643",
+      "effects": [
+        "Восстанавливает здоровья: 85"
+      ],
+      "notes": [
+        "Прерывает произносимые заклинания при применении."
+      ],
+      "mana": null,
+      "abilityName": "Imbue",
+      "cooldown": null,
+      "description": "Мгновенно восстанавливает 85 здоровья.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "70",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Faerie Fire",
+  "description": "Призрачное пламя с незатухающих останков Древа доброты горит в любом мире.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

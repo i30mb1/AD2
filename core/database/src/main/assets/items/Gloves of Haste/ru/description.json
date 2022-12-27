@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Gloves of Haste",
+  "description": "Пара магических перчаток, в которых оружие кажется лёгким как пёрышко.",
+  "trivia": null,
+  "upgradeIn": [
+    "Power Treads",
+    "Hand of Midas",
+    "Armlet of Mordiggian"
+  ],
+  "tips": null
+}

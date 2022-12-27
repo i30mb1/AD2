@@ -1,0 +1,106 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Magic_Stick_Energy_Charge.mp3\/revision\/latest?cb=20191227195452",
+      "effects": [
+        "Cast Range: 500",
+        "Radius: 1200",
+        "Passive Charge Gain Interval: 10",
+        "Charges per Cast Spell: 1",
+        "Max Charges: 20",
+        "Health and Mana Restored per Charge: 15"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast. ↓↓ Double-tapping automatically target self.",
+        "↓↓ Double-tapping automatically target self.",
+        "Can only target heroes, including illusions and creep-heroes. Does not have to face the target to use ability.",
+        "Does not have to face the target to use ability.",
+        "Gains 1 charge whenever a visible enemy unit, including neutral creeps, uses an ability within 1200 radius. Passively gains a charge every 10 seconds, starting 10 seconds after entering the inventory. Works even while dead. The passive charge gain interval is unaffected by cooldown manipulation. Holy Locket must be in the owner's inventory to gain any charges. Does not gain charges while in the backpack, on the ground, in the stash, or on Courier.",
+        "Passively gains a charge every 10 seconds, starting 10 seconds after entering the inventory. Works even while dead.",
+        "The passive charge gain interval is unaffected by cooldown manipulation.",
+        "Holy Locket must be in the owner's inventory to gain any charges. Does not gain charges while in the backpack, on the ground, in the stash, or on Courier.",
+        "Does not gain charges from toggle abilities, active attack modifiers and the abilities listed here. Does not gain charges from passively triggered abilities (e.g. Quill Spray, Borrowed Time) as well. Does not gain charges when an enemy casts an ability while breaking out from invisibility (e.g. Moonlight Shadow). Can gain charges from Return and Walrus PUNCH!.",
+        "Does not gain charges from passively triggered abilities (e.g. Quill Spray, Borrowed Time) as well.",
+        "Does not gain charges when an enemy casts an ability while breaking out from invisibility (e.g. Moonlight Shadow).",
+        "Can gain charges from Return and Walrus PUNCH!.",
+        "With maximum charges and Holy Blessing, it can restore up to 390 health and 300 mana.",
+        "When having multiple Magic Stick-based items in the inventory, only the oldest one will gain charges from cast abilities. If it is full, the second oldest one starts gaining charges. All current charges are carried over when upgrading Magic Stick-based items. Shares cooldown with Magic Stick and Magic Wand.",
+        "All current charges are carried over when upgrading Magic Stick-based items.",
+        "Shares cooldown with Magic Stick and Magic Wand."
+      ],
+      "mana": "0",
+      "abilityName": "Energy Charge",
+      "cooldown": "13",
+      "description": "Target an allied unit to instantly restore 15 health and mana per charge stored. Max 20 charges. Automatically gains a charge every 10 seconds and whenever a visible enemy within 1200 range uses an ability.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Outgoing Heal Amplification: 30%"
+      ],
+      "notes": [
+        "Grants heal amplification, and neither grants health regen amplification, lifesteal amplification, nor spell lifesteal amplification.",
+        "Holy Blessing amplifies outgoing healing, not incoming healing. This means any healing provided by the owner gets amplified, regardless of who the target is. Vice versa, other sources of healing applied to the owner are not amplified.",
+        "This means any healing provided by the owner gets amplified, regardless of who the target is.",
+        "Vice versa, other sources of healing applied to the owner are not amplified.",
+        "Multiple instances of Holy Blessing do not stack.",
+        "Stacks multiplicatively with other sources of heal amplification."
+      ],
+      "mana": null,
+      "abilityName": "Holy Blessing",
+      "cooldown": null,
+      "description": "Amplifies heals you provide by 30%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Health Regen Bonus: 3",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Multiple instances of Regeneration Aura from the same source do not stack. Fully stacks with other sources of health regeneration auras, including Headdress-based items.",
+        "Fully stacks with other sources of health regeneration auras, including Headdress-based items.",
+        "Can regenerate up to 180 health in one minute.",
+        "Does not affect wards, buildings and invulnerable units.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Regeneration Aura",
+      "cooldown": null,
+      "description": "Grants 3 health regeneration to allies.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "60 health and 0.3 health regeneration.",
+    "36 mana and 0.15 mana regeneration.",
+    "3 attack speed and 0.5 main armor.",
+    "3 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": "2400",
+  "lore": null,
+  "consistFrom": [
+    "Headdress",
+    "Fluffy Hat",
+    "Energy Booster",
+    "Magic Wand",
+    "Recipe"
+  ],
+  "name": "Holy Locket",
+  "description": "A prized relic long thought lost forever in a failed crusade.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Holy Locket synergizes great with Mekansm, Guardian Greaves, Urn of Shadows and Spirit Vessel. Since it amplifies outgoing healing, all affected allies get healed for more."
+  ]
+}

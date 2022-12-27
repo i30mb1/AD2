@@ -1,0 +1,61 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cast Range: 350"
+      ],
+      "notes": [
+        "Can target any tree.",
+        "Does not share cooldown with Chop Tree."
+      ],
+      "mana": "0",
+      "abilityName": "Chop Tree",
+      "cooldown": "4",
+      "description": "Destroy a target tree.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Attack Damage Bonus (TagAghanimMelee): 8",
+        "Attack Damage Bonus (TagAghanimRanged): 4"
+      ],
+      "notes": [
+        "Stacks with Quell, but not with multiple Quelling Blades.",
+        "The attack damage bonus adapts immediately depending on the wielder's attack range type (TagTalent melee or ranged).",
+        "Quell is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage. The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities (e.g. Psi Blades and Moon Glaives) It can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage.",
+        "The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities (e.g. Psi Blades and Moon Glaives)",
+        "It can be reduced only by flat reductions (e.g. damage block).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Does not work against wards, buildings, illusions, Spirit Bear, Courier and allied units. Works against Roshan.",
+        "Works against Roshan."
+      ],
+      "mana": null,
+      "abilityName": "Quell",
+      "cooldown": null,
+      "description": "Increases attack damage against non-hero units by 8 for melee heroes, and 4 for ranged.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "100",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Quelling Blade",
+  "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
+  "trivia": null,
+  "upgradeIn": [
+    "Battle Fury"
+  ],
+  "tips": [
+    "As its active can chop down trees. It is a perfect escape plan from Sprout.",
+    "It also can help escape in the woods by carving the player's own paths and juke.",
+    "This item is an absolute must-have vs heroes who rely on trees in their gameplay.",
+    "Support can also use it to provide better vision for their wards."
+  ]
+}

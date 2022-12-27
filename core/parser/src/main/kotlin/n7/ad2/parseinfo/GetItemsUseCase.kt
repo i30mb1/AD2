@@ -14,9 +14,19 @@ class GetItemsUseCase {
         var itemSection = ""
         val elements = root.getElementById("mw-content-text").getElementsByClass("mw-parser-output")[0].allElements ?: error("could find elements")
         for (element in elements) {
-            if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Basics_Items") findItemSection = true
-            if (element.tag().toString() == "h3" && element.children().size > 0 && element.child(0).id().toString() == "Retired") findItemSection = false
-            if (element.tag().toString() == "h3") itemSection = element.text()
+            if (element.tag().toString() == "h2" && !findItemSection) {
+                val spans = element.getElementsByAttribute("id").map { it.text() }
+                val tryingToFind = listOf("Основные предметы", "Basics Items")
+                if (spans.any { tryingToFind.contains(it) }) findItemSection = true
+            }
+            if (element.tag().toString() == "h3") {
+                val spans = element.getElementsByAttribute("id").map { it.text() }
+                val tryingToFind = listOf("Retired", "Убранные")
+                if (spans.any { tryingToFind.contains(it) }) findItemSection = false
+            }
+            if (element.tag().toString() == "h3") {
+                itemSection = element.text()
+            }
             if (findItemSection) {
                 if (element.tag().toString() == "div") {
                     for (item in element.children()) {

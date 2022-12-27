@@ -1,0 +1,14 @@
+{
+  "abilities": [],
+  "cost": "2800",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Eaglesong",
+  "description": "Этот загадочный рог удерживает в себе клич орла: кто услышит его, получит безграничную ловкость.",
+  "trivia": null,
+  "upgradeIn": [
+    "Butterfly",
+    "Swift Blink"
+  ],
+  "tips": null
+}

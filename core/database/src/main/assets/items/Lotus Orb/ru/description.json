@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Lotus_Orb.mp3\/revision\/latest?cb=20150428165330",
+      "effects": [
+        "Дальность применения: 900",
+        "Длительность: 6"
+      ],
+      "notes": [
+        "Двойное нажатие на предмет мгновенно использует его на себя. Несколько использований не складываются, но обновляют длительность.",
+        "Можно использовать на крипов-героев, но от них заклинания не отражаются.",
+        "Применяет базовое развеивание на цель при использовании.",
+        "Когда заклинание блокируется с помощью Linken's Sphere, оно все равно отражается.",
+        "Не отражает заклинания, использованные союзниками.",
+        "Не отражает Ion Shell, Morph, Spell Steal, Soulbind, Urn of Shadows, Spirit Vessel, Medallion of Courage, Solar Crest и Infest.",
+        "Не отражает способности, отраженные Counterspell Anti-Mage или другим Echo Shell.",
+        "Список отражаемых заклинаний перечислен в статье Отражение заклинаний."
+      ],
+      "mana": "175",
+      "abilityName": "Echo Shell",
+      "cooldown": "15",
+      "description": "Создаёт вокруг цели щит, отражающий большинство направленных заклинаний обратно во врага. Действует 6 сек. Не блокирует эффекты вражеских заклинаний.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "3850",
+  "lore": null,
+  "consistFrom": [
+    "Perseverance",
+    "Platemail",
+    "Energy Booster"
+  ],
+  "name": "Lotus Orb",
+  "description": "Бриллиант в центре всё еще несет блеклое отражение своего создателя.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

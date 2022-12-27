@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Refresher_Orb_Reset_Cooldowns.mp3\/revision\/latest?cb=20191227195520",
+      "effects": [],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "This ability's cooldown does not count down if the item is in the backpack.",
+        "Does not reset the cooldown of the following items: Refresher Shard, Ex Machina, and other Refresher Orbs. Does not share cooldowns with the aforementioned items either, except for Refresher Shard.",
+        "Does not share cooldowns with the aforementioned items either, except for Refresher Shard.",
+        "Only refreshes items in the owner's inventory and backpack. Items in the stash, in other units' inventories, or dropped items are unaffected. Only refreshes items owned by the owner. Allied items in the inventory are not refreshed. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
+        "Only refreshes items owned by the owner. Allied items in the inventory are not refreshed.",
+        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
+        "Refreshes all abilities owned by the caster. This includes hidden (e.g. sub-abilities) or inactive abilities (i.e. Invoked abilities). Replenishes all charges of charge-based abilities as well. However, inactive abilities acquired during Morph are not refreshed. Abilities acquired via Spell Steal are only refreshed when Rubick owns them upon refreshing. Does not skip the fade delay for Cloak and Dagger.",
+        "Replenishes all charges of charge-based abilities as well.",
+        "However, inactive abilities acquired during Morph are not refreshed.",
+        "Abilities acquired via Spell Steal are only refreshed when Rubick owns them upon refreshing.",
+        "Does not skip the fade delay for Cloak and Dagger.",
+        "This ability is not refreshed by Good Juju."
+      ],
+      "mana": "350",
+      "abilityName": "Reset Cooldowns",
+      "cooldown": "180",
+      "description": "Resets the cooldowns of all your items and abilities. Shares a cooldown with Refresher Shard. This item's cooldown only progresses in your hero's main inventory.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5000",
+  "lore": null,
+  "consistFrom": [
+    "Perseverance",
+    "Perseverance",
+    "Recipe"
+  ],
+  "name": "Refresher Orb",
+  "description": "A powerful artifact created for wizards.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Using Refresher Orb allows some skills to have two instances running simultaneously; for example, Eye of the Storm, Chaotic Offering. Note though that some spells are specifically coded to not be able to run multiple instances at the same time (e.g. Exorcism). Before building Refresher Orb, be sure that the ability you aim to use it with supports multiple instances at the same time or is worth having its duration doubled.",
+    "Note though that some spells are specifically coded to not be able to run multiple instances at the same time (e.g. Exorcism). Before building Refresher Orb, be sure that the ability you aim to use it with supports multiple instances at the same time or is worth having its duration doubled.",
+    "If the game goes on for a very long time and you end up with gold to spare, consider picking up a Refresher Orb to refresh items such as Satanic and Black King Bar. Put Refresher Orb in your stash when it is on cooldown to make room for an item with better passive bonuses."
+  ]
+}

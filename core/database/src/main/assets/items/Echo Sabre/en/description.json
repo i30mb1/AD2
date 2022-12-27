@@ -1,0 +1,60 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Self Attack Speed Bonus: 490",
+        "Number of Attacks: 1",
+        "Enemy Move Speed Slow: 100%",
+        "Enemy Slow Duration: 0.8"
+      ],
+      "notes": [
+        "Only works exclusively for melee heroes.",
+        "Upon proccing, grants the wielder 490 attack speed until the next attack. This means it does not provide guaranteed full attack speed and can be countered by strong attack speed slows. The attack speed buff has no set duration. It lasts until the user makes a second attack. The attack speed is granted as soon as the first attack point and lasts until the attack point of the second attack is reached.",
+        "This means it does not provide guaranteed full attack speed and can be countered by strong attack speed slows.",
+        "The attack speed buff has no set duration. It lasts until the user makes a second attack.",
+        "The attack speed is granted as soon as the first attack point and lasts until the attack point of the second attack is reached.",
+        "Since Echo Strike grants an attack speed bonus, it is possible to cancel the second attack and use the attack speed for another attack.",
+        "The second attack is not an instant attack. It uses regular attack animation times and attack cooldowns.",
+        "The movement speed slow is applied on the proccing attack and on the attack after the proccing attack. This means it is possible to slow two enemies with one proc, by switching attack targets after the proccing attack.",
+        "This means it is possible to slow two enemies with one proc, by switching attack targets after the proccing attack.",
+        "The attacks first apply the debuff, then their own damage.",
+        "Echo Strike triggers on instant attacks as well, applying the slow but not the self attack speed bonus.",
+        "The attack speed bonus works for hero clones, but clones cannot apply the slow.",
+        "The slow of multiple instances does not stack, but refreshes the duration instead.",
+        "Procs on anything, including buildings, wards and allies. The slow fully applies to allies, but not to buildings and wards."
+      ],
+      "mana": null,
+      "abilityName": "Echo Strike",
+      "cooldown": null,
+      "description": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.8 seconds on each strike.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "260 health and 1.3 health regeneration.",
+    "120 mana and 0.5 mana regeneration.",
+    "13 and 10 main attack damage to \/ heroes respectively."
+  ],
+  "cost": "2500",
+  "lore": [],
+  "consistFrom": [
+    "Ogre Axe",
+    "Oblivion Staff"
+  ],
+  "name": "Echo Sabre",
+  "description": "A deceptively swift blade imbued with resonant magic.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Echo Sabre's passive ability, Echo Strike, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The best items in combination to increase your damage are those which grant critical hit and armor reduction. A Skull Basher is also good to get a chance to bash from the two quick attacks. You can combine the echo sabre with a Daedalus and Satanic's active to instantly restore your HP.",
+    "You can combine the echo sabre with a Daedalus and Satanic's active to instantly restore your HP.",
+    "Echo Sabre's ability is effectively a passive 1-hit-only Overpower. This makes it a great item on heroes whose passive abilities rely on attack speed to be effective, similar to how Ursa's Fury Swipes relies on the attack speed of Overpower.",
+    "The attack speed from the passive proc lasts until a second attack is done. This makes it possible to \"store\" the massive attack speed bonus for a planned strike on an enemy. One just has to attack a creep to proc the passive ability and immediately cancel the second attack. The stored attack speed can come very handy when ganking enemies which have strong attack speed slows like Enchantress with her Untouchable or Phoenix's Fire Spirits."
+  ]
+}

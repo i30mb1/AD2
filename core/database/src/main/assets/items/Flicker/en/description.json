@@ -1,0 +1,37 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Flicker_Flicker.mp3\/revision\/latest?cb=20191227195703",
+      "effects": [
+        "Min Blink Distance: 200",
+        "Max Blink Distance: 600",
+        "Damage Cooldown: 3"
+      ],
+      "notes": [
+        "Applies a basic dispel and disjoints projectiles upon cast.",
+        "The dispel is applied after the teleport.",
+        "If the user took damage in the last 3 seconds, Flicker blinks in place instead of a random forward direction. This means it effectively only applies the disjoint and dispel if used after having taken damage. Only reacts on damage greater than 0 from any player (including allies, excluding self) or Roshan.",
+        "This means it effectively only applies the disjoint and dispel if used after having taken damage.",
+        "Only reacts on damage greater than 0 from any player (including allies, excluding self) or Roshan."
+      ],
+      "mana": "0",
+      "abilityName": "Flicker",
+      "cooldown": "5",
+      "description": "Dispells debuffs and blinks you in a random forward direction for a random distance between 200 and 600. If cast within 3 seconds of receiving player damage, it will blink in place.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Flicker",
+  "description": "The technically-true-to-his-word 'teleportation device' crafted by a notorious fae trickster.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

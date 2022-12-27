@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "1350",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Claymore",
+  "description": "Меч, способный пробить броню, \u2014 обычный выбор начинающих рыцарей.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orchid Malevolence",
+    "Battle Fury",
+    "Satanic"
+  ],
+  "tips": null
+}

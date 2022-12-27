@@ -1,0 +1,80 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Drum_of_Endurance_Endurance.mp3\/revision\/latest?cb=20191227195410",
+      "effects": [
+        "Radius: 1200",
+        "Move Speed Bonus: 13%",
+        "Attack Speed Bonus: 45",
+        "Duration: 6",
+        "Number of Charges: 8"
+      ],
+      "notes": [
+        "Does not interrupt the caster's channeling abilities upon cast.",
+        "Drum of Endurance does not replenish its charges, meaning the number of times this ability can be used is limited. The number of charges is bound to the item, not the player, meaning each bought drums come with their own charges. Does not carry over the current number of charges when upgrading into Boots of Bearing, the boots always start with full charges.",
+        "The number of charges is bound to the item, not the player, meaning each bought drums come with their own charges.",
+        "Does not carry over the current number of charges when upgrading into Boots of Bearing, the boots always start with full charges.",
+        "Casting Endurance while having no charges puts the item on cooldown without any other effect.",
+        "Multiple casts of Endurance do not stack the buff, but refresh the duration instead.",
+        "Both Drum of Endurance's and Boots of Bearing's buffs do not stack, a unit that is already affected by one cannot be affected by the other. This means if a unit already has the buff from Drum of Endurance, casting Boots of Bearing does not replace the buff, nor does it refresh it, and vice versa.",
+        "This means if a unit already has the buff from Drum of Endurance, casting Boots of Bearing does not replace the buff, nor does it refresh it, and vice versa.",
+        "Only affects player-controlled units, including invulnerable units, excluding wards.",
+        "Does not share cooldowns with Boots of Bearing."
+      ],
+      "mana": "0",
+      "abilityName": "Endurance",
+      "cooldown": "30",
+      "description": "Consumes a charge and gives +45 attack speed and +13% movement speed to nearby allies for 6 seconds. Comes with 8 charges.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Move Speed Bonus: 20",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Multiple instances of Swiftness Aura do not stack. This includes the aura of Boots of Bearing. Stacks with all other movement speed bonuses.",
+        "Stacks with all other movement speed bonuses.",
+        "Does not affect invulnerable units.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Swiftness Aura",
+      "cooldown": null,
+      "description": "Grants 20 movement speed to allies.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "140 health and 0.7 health regeneration.",
+    "84 mana and 0.35 mana regeneration.",
+    "7 main attack damage to \/ heroes."
+  ],
+  "cost": "1650",
+  "lore": null,
+  "consistFrom": [
+    "Robe of the Magi",
+    "Belt of Strength",
+    "Wind Lace",
+    "Recipe"
+  ],
+  "name": "Drum of Endurance",
+  "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
+  "trivia": [
+    "In the original DotA, this item was called Ancient Janggo of Endurance."
+  ],
+  "upgradeIn": [
+    "Boots of Bearing"
+  ],
+  "tips": [
+    "Use the active while attacking buildings with your team to destroy them faster.",
+    "Works on controlled units like from Necronomicon or Helm of the Dominator."
+  ]
+}

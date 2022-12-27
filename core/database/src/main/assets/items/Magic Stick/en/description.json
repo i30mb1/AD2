@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Magic_Stick_Energy_Charge.mp3\/revision\/latest?cb=20191227195452",
+      "effects": [
+        "Radius: 1200",
+        "Charges per Cast Spell: 1",
+        "Max Charges: 10",
+        "Health and Mana Restored per Charge: 15"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Gains 1 charge whenever a visible enemy unit, including neutral creeps, uses an ability within 1200 radius.",
+        "Does not gain charges from toggle abilities, active attack modifiers and the abilities listed here. Does not gain charges from passively triggered abilities (e.g. Quill Spray, Borrowed Time or from talents) either. Does not gain charges when an enemy casts an ability while breaking out from invisibility (e.g. Moonlight Shadow). Can gain charges from Return and Walrus PUNCH!.",
+        "Does not gain charges from passively triggered abilities (e.g. Quill Spray, Borrowed Time or from talents) either.",
+        "Does not gain charges when an enemy casts an ability while breaking out from invisibility (e.g. Moonlight Shadow).",
+        "Can gain charges from Return and Walrus PUNCH!.",
+        "With maximum charges, it can restore up to 150 health and mana.",
+        "When having multiple Magic Stick-based items in the inventory, only the oldest one will gain charges from cast abilities. If it is full, the second oldest one starts gaining charges. All current charges are carried over when upgrading Magic Stick-based items. Shares cooldown with Magic Wand and Holy Locket.",
+        "All current charges are carried over when upgrading Magic Stick-based items.",
+        "Shares cooldown with Magic Wand and Holy Locket."
+      ],
+      "mana": null,
+      "abilityName": "Energy Charge",
+      "cooldown": null,
+      "description": "Instantly restores 15 health and mana per charge stored. Max 10 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "200",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Magic Stick",
+  "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
+  "trivia": null,
+  "upgradeIn": [
+    "Magic Wand"
+  ],
+  "tips": [
+    "Magic Sticks allows the user to get a quick burst of healing, or to use one last ability in a fight. Even during the midgame, when the boost is less noticeable, a Magic Stick can still save lives or ensure kills.",
+    "The Magic Stick makes an excellent item against heroes that spam abilities while in the lane, as the charges can help to mitigate taken damage, or to cast more of own abilities. It is very versatile, and most of the time a good item to have."
+  ]
+}

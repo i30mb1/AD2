@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Clarity_Replenish.mp3\/revision\/latest?cb=20191227195405",
+      "effects": [
+        "Cast Range: 250",
+        "Mana Regen Bonus: 6",
+        "Duration: 25"
+      ],
+      "notes": [
+        "↓↓ Double-tapping automatically targets self.",
+        "Can only target heroes, illusions and creep-heroes. Can be cast on untargetable units (e.g. when affected by Shadow Realm) indirectly through their hero portrait. Does not have to face the target to cast Replenish.",
+        "Can be cast on untargetable units (e.g. when affected by Shadow Realm) indirectly through their hero portrait.",
+        "Does not have to face the target to cast Replenish.",
+        "Successive casts on the same target do not stack but refresh the duration.",
+        "Can regenerate up to 150 mana over its full duration.",
+        "Player-based damage, regardless of factions, and Roshan-based damage greater than 0 (after reductions) dispels the effect. Does not get dispelled by self-damage sources and damage flagged as HP Removal.",
+        "Does not get dispelled by self-damage sources and damage flagged as HP Removal."
+      ],
+      "mana": null,
+      "abilityName": "Replenish",
+      "cooldown": null,
+      "description": "Grants 6 mana regeneration to the target for 25 seconds. If the unit is attacked by an enemy hero or Roshan, the effect is lost.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Can be cast on allies with Ctrl."
+  ],
+  "cost": "50",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Clarity",
+  "description": "Clear water that enhances the ability to meditate.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Clarity's effect is dispelled upon taking player damage, so do not use it in the middle of combat. In some situations however, it may be worth it to use it in combat. Even one second of regeneration can be enough to squeeze out one more ability, which can prevent deaths or result in kills.",
+    "In some situations however, it may be worth it to use it in combat. Even one second of regeneration can be enough to squeeze out one more ability, which can prevent deaths or result in kills.",
+    "Although it regenerates quite a lot of mana, it takes long to do so. It is best used while doing other out-of-combat things, so you do not stand and wait for it to finish regenerating. This makes them perfect for roaming heroes, who can use a Clarity while moving between the lanes, allowing them to roam for longer and not have to retreat to the fountain to refill their mana. They are also great for jungling heroes who can use them while killing neutral creeps.",
+    "This makes them perfect for roaming heroes, who can use a Clarity while moving between the lanes, allowing them to roam for longer and not have to retreat to the fountain to refill their mana.",
+    "They are also great for jungling heroes who can use them while killing neutral creeps.",
+    "Due to its low cost, don't hesitate to buy and use a Clarity on an ally in lane, especially if it will give them enough mana to get off another escape or nuke ability.",
+    "You could also buy it for speeding up regenerating mana in your fountain."
+  ]
+}

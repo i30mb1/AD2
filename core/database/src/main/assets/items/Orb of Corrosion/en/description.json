@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Armor Reduction: 3",
+        "Move Speed Slow (TagAghanimMelee): 13%",
+        "Move Speed Slow (TagAghanimRanged): 4%",
+        "Damage per Second: 3",
+        "Duration: 3"
+      ],
+      "notes": [
+        "The attacks first apply the debuff, then their own attack damage.",
+        "If both melee and ranged hero with Orb of Corrosion attack the same target, the values of the first applied debuff are used and refreshed.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 3 instances. The damage dealt is direct HP Removal, so it does not trigger any on-damage effects, but it is lethal. Can deal up to 9 damage (before reductions).",
+        "The damage dealt is direct HP Removal, so it does not trigger any on-damage effects, but it is lethal.",
+        "Can deal up to 9 damage (before reductions).",
+        "Works against buildings and allied units. Does not work against wards.",
+        "Armor Reduction has the following properties: Debuff from armor reduction of the same source does not stack but refreshes its duration. Stacks additively with other armor-reducing sources (e.g. from abilities and from Armor Corruption talents). Corrosion, Corruption and Greater Corruption stack additively. However, if their debuffs are present, Lesser Corruption does not reduce armor.",
+        "Debuff from armor reduction of the same source does not stack but refreshes its duration.",
+        "Stacks additively with other armor-reducing sources (e.g. from abilities and from Armor Corruption talents).",
+        "Corrosion, Corruption and Greater Corruption stack additively. However, if their debuffs are present, Lesser Corruption does not reduce armor.",
+        "Corrosion does not stack with the slow and damage over time of Poison Attack. If both debuffs are present, Orb of Venom's debuff does not slow or deal damage.",
+        "If both debuffs are present, Orb of Venom's debuff does not slow or deal damage."
+      ],
+      "mana": null,
+      "abilityName": "Corrosion",
+      "cooldown": null,
+      "description": "Dealing 3 damage per second, reducing armor by 3, and slowing movement speed by 13% if the equipped hero is melee, or by 4% if they are ranged. Lasts 3 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "925",
+  "lore": null,
+  "consistFrom": [
+    "Orb of Venom",
+    "Blight Stone",
+    "Fluffy Hat",
+    "Recipe"
+  ],
+  "name": "Orb of Corrosion",
+  "description": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

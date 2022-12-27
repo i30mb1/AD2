@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Hero Spell Lifesteal: 10%",
+        "Creep Spell Lifesteal: 2%"
+      ],
+      "notes": [
+        "Heals from any spell damage the owner deals against enemy or allied units, except from the abilities listed here.",
+        "Does not heal from damage done against buildings, wards or self.",
+        "Heals from all 3 damage types (after all reductions) and from most instantly killing effects.",
+        "Damage done by summons (including wards) do not spell lifesteal."
+      ],
+      "mana": null,
+      "abilityName": "Spell Lifesteal",
+      "cooldown": null,
+      "description": "10% of spell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type. Lifesteal reduced to 2% against creeps.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Multiple instances of spell lifesteal from the same source do not stack.",
+    "Spell lifesteal from different sources stacks additively."
+  ],
+  "cost": "700",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Voodoo Mask",
+  "description": "A mask tuned to sip the arcane bindings that pass between caster and foe.",
+  "trivia": null,
+  "upgradeIn": [
+    "Bloodstone",
+    "Eternal Shroud"
+  ],
+  "tips": null
+}

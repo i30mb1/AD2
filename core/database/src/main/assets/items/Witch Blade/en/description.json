@@ -1,0 +1,51 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Witch_Blade_Witch_Blade.mp3\/revision\/latest?cb=20210120233457",
+      "effects": [
+        "Intelligence as Damage per Second: 75%",
+        "Move Speed Slow: 25%",
+        "Duration: 4"
+      ],
+      "notes": [
+        "Successive attacks with Witch Blade do not stack but refresh the duration instead.",
+        "The attack first applies the debuff, then its own damage.",
+        "Does not work against buildings, wards, or allied units.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 4 instances.",
+        "Can deal up to 300% of intelligence as damage to the target (before reductions).",
+        "Shares cooldown with Witch Blade. Witch Blade uses a custom cooldown system. It places a debuff on the user that prevents it from proccing again. This debuff's duration is affected by percentage-based cooldown reductions upon initially being placed. It is also not affected by cooldown reset sources or by flat cooldown reduction sources. This means it is possible for it to get de-synchronized with Revenant's Brooch's cooldown.",
+        "Witch Blade uses a custom cooldown system. It places a debuff on the user that prevents it from proccing again.",
+        "This debuff's duration is affected by percentage-based cooldown reductions upon initially being placed.",
+        "It is also not affected by cooldown reset sources or by flat cooldown reduction sources.",
+        "This means it is possible for it to get de-synchronized with Revenant's Brooch's cooldown."
+      ],
+      "mana": null,
+      "abilityName": "Witch Blade",
+      "cooldown": null,
+      "description": "Causes your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 0.75x your intelligence as damage every second. This attack has True Strike.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "144 mana and 0.6 mana regeneration.",
+    "12 main attack damage to heroes."
+  ],
+  "cost": "2600",
+  "lore": null,
+  "consistFrom": [
+    "Blitz Knuckles",
+    "Robe of the Magi",
+    "Chainmail",
+    "Recipe"
+  ],
+  "name": "Witch Blade",
+  "description": "A spiteful blade inadvertently possessed by the soul of its incautious creator.",
+  "trivia": null,
+  "upgradeIn": [
+    "Revenant's Brooch"
+  ],
+  "tips": null
+}

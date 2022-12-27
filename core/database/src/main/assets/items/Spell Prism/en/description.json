@@ -1,0 +1,35 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cooldown Reduction: 12%"
+      ],
+      "notes": [
+        "Stacks multiplicatively with other sources of percentage-based cooldown reductions."
+      ],
+      "mana": null,
+      "abilityName": "Cooldown Reduction",
+      "cooldown": null,
+      "description": "Reduces the cooldown time of all spells and items by 12%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "160 health and 0.8 health regeneration.",
+    "96 mana and 0.4 mana regeneration.",
+    "8 attack speed and 1.33 main armor.",
+    "8 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Spell Prism",
+  "description": "Even the slightest flaw in the components of a spell prism can result in the death of its user.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

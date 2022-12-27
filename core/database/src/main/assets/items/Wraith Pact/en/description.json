@@ -1,0 +1,86 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Wraith_Pact_Wraith%27s_Reprisal.mp3\/revision\/latest?cb=20220618225125",
+      "effects": [
+        "Cast Animation: 0.2+0",
+        "Cast Range: 350",
+        "Radius: 900",
+        "Hero Attacks to Destroy: 4",
+        "Non-Hero Attacks to Destroy: 8",
+        "Outgoing Damage Reduction: 30%",
+        "Damage per Second: 30",
+        "Aura Linger Duration: 0.5",
+        "Duration: 25"
+      ],
+      "notes": [
+        "Casting Wraith's Reprisal destroys currently active totems from a previous cast. However, the previous totem continues to pulse at its death location until it fully disappears, or until its timer runs out.",
+        "However, the previous totem continues to pulse at its death location until it fully disappears, or until its timer runs out.",
+        "Wraith Pact Totem automatically follows the caster upon cast, if no other order is given.",
+        "The outgoing damage reduction is provided by an aura, its debuff lingers for 0.5 seconds. The damage is independent from the aura. Applies unique damage manipulation on enemies within range. Stacks multiplicatively with other sources of damage manipulation. The reduction only affects physical damage from enemy sources that is not flagged as HP removal. Multiple instances of the aura do not stack.",
+        "Applies unique damage manipulation on enemies within range. Stacks multiplicatively with other sources of damage manipulation.",
+        "The reduction only affects physical damage from enemy sources that is not flagged as HP removal.",
+        "Multiple instances of the aura do not stack.",
+        "Deals damage in 1-second intervals, starting 1 second after being created, resulting in up to 25 instances.",
+        "Can deal up to 750 damage to a single unit (before reductions).",
+        "The damage source is the ward itself, meaning certain on-damage effects (e.g. Damage Return) react on the ward rather than on the wielder.",
+        "Does not affect invulnerable or hidden units. Fully affects invisible units and units inside the Fog of War.",
+        "Since the damage is independent from the aura, the damage of multiple Wraith Pact Totems fully stacks."
+      ],
+      "mana": "100",
+      "abilityName": "Wraith's Reprisal",
+      "cooldown": "60",
+      "description": "Summons a movable totem in your location for 25 seconds that reduces all physical damage of enemies within 900 radius by 30% and deals 30 damage per second. Totem can be destroyed in 4 hits. Creeps deal half damage to the totem.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Hero Lifesteal: 24%",
+        "Creep Lifesteal: 12%",
+        "Mana Regeneration Bonus: 2",
+        "Attack Damage Bonus: 18%",
+        "Armor Bonus: 3",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Multiple instances of Vladmir's Aura do not stack. This includes the auras of Vladmir's Offering and Helm of the Overlord. Fully stacks with other sources of Buckler-based items' armor aura and Ring of Basilius-based items' mana regeneration aura.",
+        "Fully stacks with other sources of Buckler-based items' armor aura and Ring of Basilius-based items' mana regeneration aura.",
+        "Stacks additively with other sources of lifesteal.",
+        "Cannot lifesteal off of wards, buildings and allied units.",
+        "Grants flat bonus attack damage based on the affected unit's main attack damage. Does not further increase bonus attack damage.",
+        "Can regenerate up to 120 mana in one minute.",
+        "Affects invulnerable, but not hidden units.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Vladmir's Aura",
+      "cooldown": null,
+      "description": "Grants 24% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 50%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "All of the bonuses from Vladmir's Offering is provided by Vladmir's Aura."
+  ],
+  "cost": "4050",
+  "lore": null,
+  "consistFrom": [
+    "Vladmir's Offering",
+    "Point Booster",
+    "Recipe"
+  ],
+  "name": "Wraith Pact",
+  "description": "A sentient amulet whose animus shakes the courage of even the strongest foes.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Since Vladmir's Aura can't be toggled off, its status buff icon is always visible on creeps. Therefore it is possible to detect invisible enemy heroes holding Wraith Pact by checking enemy creeps' status buff icons.",
+    "The Wraith Pact Totem moves quite slowly, be sure to position it well in teamfights. Also, it automatically follows you around when cast, so if you're a frontliner, be sure that it doesn't stay too close to you or it'll become easy target for right-clicks."
+  ]
+}

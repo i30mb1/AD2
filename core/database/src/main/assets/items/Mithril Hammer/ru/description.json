@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "1600",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Mithril Hammer",
+  "description": "Молот, выкованный из чистейшего мифрила.",
+  "trivia": null,
+  "upgradeIn": [
+    "Black King Bar",
+    "Skull Basher",
+    "Maelstrom",
+    "Desolator"
+  ],
+  "tips": null
+}

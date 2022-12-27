@@ -1,0 +1,28 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "900 health and 4.5 health regeneration.",
+    "45 main attack damage to heroes."
+  ],
+  "cost": "5000",
+  "lore": null,
+  "consistFrom": [
+    "Vitality Booster",
+    "Reaver",
+    "Recipe"
+  ],
+  "name": "Heart of Tarrasque",
+  "description": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude.",
+  "trivia": [
+    "The name \"Tarrasque\" references the Tarrasque, an almost undefeatable monster in Dungeons & Dragons, which in return references the Tarasque, a mythological dragon-hybrid that was tamed by Saint Martha.",
+    "Heart of Tarrasque used to require Ring of Tarrasque to build with the following lore: An ageless ring forged with an otherwise simple blood magic amplified by the presumed source of its key component.."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Heart of Tarrasque is effective against teams with a lot of burst damage.",
+    "Heart of Tarrasque's strength bonus mostly benefits strength heroes. Agility or Intelligence heroes can consider an Eye of Skadi instead for tankiness.",
+    "On a melee hero a Vanguard can be bought early game and then disassembled into a Heart of Tarrasque.",
+    "Later in the game it can replace a magic resistance item."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Bonus Attack Targets: 2"
+      ],
+      "notes": [
+        "Causes its wielder to perform instant attacks on the closest 2 enemies whenever they launch an attack projectile. This means all projectiles are released at the same time together with the main attack. It does not matter whether the primary attack misses. The extra projectiles travel at the same speed as the leading attack's projectile. This means their speed can be further increased by other attack projectile speed bonuses. These instant attacks may not proc any attack modifiers or on-hit effects. They do not have True Strike. They are affected by armor type, and blocked by damage block like regular attacks.",
+        "This means all projectiles are released at the same time together with the main attack. It does not matter whether the primary attack misses.",
+        "The extra projectiles travel at the same speed as the leading attack's projectile.",
+        "This means their speed can be further increased by other attack projectile speed bonuses.",
+        "These instant attacks may not proc any attack modifiers or on-hit effects. They do not have True Strike.",
+        "They are affected by armor type, and blocked by damage block like regular attacks.",
+        "The search radius of Crackshot is equal to the wielder's ]attack range, and can be further increased by other attack range bonuses. Does not target wards, buildings, invisible units, attack immune units, or units inside the Fog of War, but does target Couriers. However, attacking wards or buildings still causes secondary projectiles to hit valid targets within the search radius. Secondary projectiles are not released upon attacking allies.",
+        "Does not target wards, buildings, invisible units, attack immune units, or units inside the Fog of War, but does target Couriers.",
+        "However, attacking wards or buildings still causes secondary projectiles to hit valid targets within the search radius.",
+        "Secondary projectiles are not released upon attacking allies.",
+        "Does not stack with Split Shot."
+      ],
+      "mana": "0",
+      "abilityName": "Crackshot",
+      "cooldown": "12",
+      "description": "Ranged Only. The next attack fires projectiles at 2 additional targets within attack range. Does not trigger attack modifiers.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "100 health and 0.5 health regeneration.",
+    "60 mana and 0.25 mana regeneration.",
+    "5 attack speed and 0.83 main armor.",
+    "5 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Specialist's Array",
+  "description": "An impressive kit of trigger enchantments born in aging assassin's idle mind.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

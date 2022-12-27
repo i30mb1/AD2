@@ -1,0 +1,77 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Bloodthorn_Soul_Rend.mp3\/revision\/latest?cb=20191227195358",
+      "effects": [
+        "Cast Range: 900",
+        "Damage Amplification: 30%",
+        "Accuracy: 100%",
+        "Critical Proc Chance: 100%",
+        "Critical Damage: 130%",
+        "Duration: 5"
+      ],
+      "notes": [
+        "Does not directly amplify damage as it is dealt, but rather saves all damage values and deals 30% of it 5 seconds after cast. This means that the damage can be avoided by becoming spell immune, invulnerable, or hidden at the end of the duration.",
+        "This means that the damage can be avoided by becoming spell immune, invulnerable, or hidden at the end of the duration.",
+        "The damage is applied as soon as the debuff expires. However, dispelling the debuff skips the damage entirely. Recasting Soul Rend on the same target refreshes the duration. Doing this delays the damage further, and gives more time to deal damage to the target. The damage is credited to the last caster of Soul Rend on the target.",
+        "Recasting Soul Rend on the same target refreshes the duration.",
+        "Doing this delays the damage further, and gives more time to deal damage to the target.",
+        "The damage is credited to the last caster of Soul Rend on the target.",
+        "Only considers the 3 damage types (after all reductions), but not HP Removal effects (e.g. Sunder, Soul Ring etc.).",
+        "Attacks against the affected target have absolute accuracy, which prevents its attacks from being missed (i.e. evasion or blind effects).",
+        "The critical strike applies to all attacks against the debuffed enemy, including buildings, wards, and allies of the target. If the attacking unit is ranged, already launched attacks do not crit if the target gets debuffed before projectile impact. Vice versa, already launched attacks do crit if the debuff expires before the projectiles land. If another source of critical strike procs on the same attack, the higher multiplier has priority.",
+        "If the attacking unit is ranged, already launched attacks do not crit if the target gets debuffed before projectile impact.",
+        "Vice versa, already launched attacks do crit if the debuff expires before the projectiles land.",
+        "If another source of critical strike procs on the same attack, the higher multiplier has priority.",
+        "Shares cooldown with Soul Burn."
+      ],
+      "mana": "100",
+      "abilityName": "Soul Rend",
+      "cooldown": "15",
+      "description": "Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magical damage. All attacks on the silenced target will have True Strike and 100% chance to crit for 130% damage.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Spell Damage Reduction: 35%",
+        "Duration: 6"
+      ],
+      "notes": [
+        "Successive attacks on the same target do not stack the debuff, but refresh the duration instead. Uses the same modifier as Mage Slayer, so they do not stack with each other either.",
+        "Uses the same modifier as Mage Slayer, so they do not stack with each other either.",
+        "The attacks first apply the debuff, then their own damage.",
+        "The debuff applies generic outgoing damage reduction on enemies within range. Stacks additively with other sources of generic outgoing damage manipulation.",
+        "Does not work against wards, buildings, and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Mage Slayer",
+      "cooldown": null,
+      "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "240 mana and 1 mana regeneration.",
+    "20 main attack damage to heroes."
+  ],
+  "cost": "6800",
+  "lore": null,
+  "consistFrom": [
+    "Orchid Malevolence",
+    "Mage Slayer",
+    "Recipe"
+  ],
+  "name": "Bloodthorn",
+  "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Bloodthorn's active ability, Soul Rend, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

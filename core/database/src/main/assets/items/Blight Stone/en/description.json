@@ -1,0 +1,42 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Armor Reduction: 2",
+        "Duration: 8"
+      ],
+      "notes": [
+        "The attacks first apply the debuff, then their own attack damage.",
+        "Works against all units, including allied units.",
+        "Armor Reduction has the following properties: Debuff from armor reduction of the same source does not stack but refreshes its duration. Stacks additively with other armor-reducing sources (e.g. from abilities and from Armor Corruption talents). Corrosion, Corruption and Greater Corruption stack additively. However, if their debuffs are present, Lesser Corruption does not reduce armor.",
+        "Debuff from armor reduction of the same source does not stack but refreshes its duration.",
+        "Stacks additively with other armor-reducing sources (e.g. from abilities and from Armor Corruption talents).",
+        "Corrosion, Corruption and Greater Corruption stack additively. However, if their debuffs are present, Lesser Corruption does not reduce armor."
+      ],
+      "mana": null,
+      "abilityName": "Lesser Corruption",
+      "cooldown": null,
+      "description": "Your attacks reduce the target's armor by 2 for 8 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "300",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Blight Stone",
+  "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orb of Corrosion",
+    "Medallion of Courage",
+    "Desolator"
+  ],
+  "tips": [
+    "Blight Stone is ideal for a ranged support or ranged carry to harass lanes during the early game.",
+    "Blight Stone is stronger if you can take advantage of how its armor reduction boosts all physical damage the target receives, such as that of your laning partner, lane creeps, or summoned units. It is less effective in more straightforward 1 vs 1 scenarios.",
+    "Blight Stone is useful for pushing towers early on, especially when used in tandem with the armor aura from Buckler and the assistance of additional allies."
+  ]
+}

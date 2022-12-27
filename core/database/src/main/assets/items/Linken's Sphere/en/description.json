@@ -1,0 +1,84 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Linken%27s_Sphere_Spellblock.mp3\/revision\/latest?cb=20191227195443",
+      "effects": [],
+      "notes": [
+        "Does not block abilities cast by allies.",
+        "Does not block the following abilities: Whip, Ion Shell, Doom (Self Cast), Valor, Shine, Psychic Push, Toss, Snowball, Soul Release and Soul Release.",
+        "Whip, Ion Shell, Doom (Self Cast), Valor, Shine, Psychic Push, Toss, Snowball, Soul Release and Soul Release.",
+        "Spellblock has the following priorities: Echo Shield ➤ Transfer Spellblock ➤ Spellblock Does not trigger when Counterspell is active. Does not stack with Planar Pocket.",
+        "Echo Shield ➤ Transfer Spellblock ➤ Spellblock",
+        "Does not trigger when Counterspell is active.",
+        "Does not stack with Planar Pocket.",
+        "For a list of blocked abilities and their interactions, see here."
+      ],
+      "mana": null,
+      "abilityName": "Spellblock",
+      "cooldown": null,
+      "description": "Blocks most targeted spells once every 14 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Linken%27s_Sphere_Transfer_Spellblock.mp3\/revision\/latest?cb=20191227195444",
+      "effects": [
+        "Cast Range: 700",
+        "Buff Duration: 14"
+      ],
+      "notes": [
+        "Can only be cast on allied heroes, clones and creep-heroes. Can be cast on illusions as well, but does not block abilities for them. Cannot be cast on self.",
+        "Can be cast on illusions as well, but does not block abilities for them.",
+        "Cannot be cast on self.",
+        "Multiple instances of the buff work fully independently from each other. This means it is possible to cast two instances on the same allied hero, and each buff can block an ability. This also means that when an ally places the Transfer Spellblock ability on a hero that has its own Spellblock, each buff can block an ability separately. The Transfer Spellblock buff is used up first in this case.",
+        "This means it is possible to cast two instances on the same allied hero, and each buff can block an ability.",
+        "This also means that when an ally places the Transfer Spellblock ability on a hero that has its own Spellblock, each buff can block an ability separately. The Transfer Spellblock buff is used up first in this case.",
+        "When ally-targeted, Spellblock goes on cooldown upon cast. Therefore, the item does not block abilities on the caster while the buff is active on the ally. It goes into cooldown once again when the Transfer Spellblock buff blocks an ability on the targeted ally. The initial cooldown upon cast as well as the buff's duration is affected by cooldown reductions. However, the cooldown upon triggering on an ally is not. Does not go into cooldown if the buff did not block any abilities and expires. Although affected by cooldown reductions, resetting the item's cooldown does not affect the already placed buff.",
+        "It goes into cooldown once again when the Transfer Spellblock buff blocks an ability on the targeted ally.",
+        "The initial cooldown upon cast as well as the buff's duration is affected by cooldown reductions. However, the cooldown upon triggering on an ally is not.",
+        "Does not go into cooldown if the buff did not block any abilities and expires.",
+        "Although affected by cooldown reductions, resetting the item's cooldown does not affect the already placed buff."
+      ],
+      "mana": "0",
+      "abilityName": "Transfer Spellblock",
+      "cooldown": "14",
+      "description": "Temporarily removes Spellblock from the item's owner and transfers it to an allied unit for 14 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "320 health and 1.6 health regeneration.",
+    "192 mana and 0.8 mana regeneration.",
+    "16 attack speed and 2.67 main armor.",
+    "16 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": "4600",
+  "lore": null,
+  "consistFrom": [
+    "Ultimate Orb",
+    "Perseverance",
+    "Recipe"
+  ],
+  "name": "Linken's Sphere",
+  "description": "This magical sphere once protected one of the most famous heroes in history.",
+  "trivia": [
+    "Linken's Sphere bears a strong resemblance to the item Nayru's Love originally from 'The Legend of Zelda Ocarina of Time', which protects Link from damage at the cost of magic power.",
+    "Linken's Sphere is named after Linken, a character from World of Warcraft, who is in turn named after Link, the protagonist of the Legend of Zelda franchise.",
+    "As Linken's Sphere was originally created, it was named Linken's Mirror or Linken's Mirror Shield. Its ability was Spell Mirror, which was basically a chance-based Echo Shell from Lotus Orb. The item was reworked into the present version in 6.09.",
+    "Talisman of Spell Shield may have inspired the creation of Linken's Sphere."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Although Heroes that solely have single-target abilities (like Bane and Lion) seem like they would be rendered harmless with Linken's Sphere, this actually means they would be able to bypass the Spellblock much more easily than Heroes with only one single-target spell (like Lina or Wraith King), as Linken's Sphere only blocks one spell at a time.",
+    "As such, when facing an enemy with Linken's Sphere, it's best to use a cheap, spammable spell like Stifling Dagger or Fade Bolt to put the item on cooldown so that you or an ally can then use more powerful spells like Reaper's Scythe or Doom.",
+    "It is wise to Transfer Spellblock on your allied initiator or carry to prevent them from being disabled immediately when charging into the enemy team.",
+    "It is good to purchase this item on Heroes that use invisibility or are going to buy items that grant it, as the Spell Block can prevent some spells, such as Corrosive Haze, from revealing the Hero or Duel, from locking down your Hero for a long duration. If the enemy lacks any detection but has strong burst damage, Spellblock may also prevent some disables or ultimates from locking and bursting down your Hero before your fade time, or at least give you a warning that you are about to be targeted.",
+    "This item can be useful on heroes with quick escape options such as Clinkz, Ember Spirit, Storm Spirit or Weaver as Linken's Sphere can easily make you almost immune to enemy ganks by blocking any enemy's spell - protecting you from a potential disable and also giving you an early warning that the enemy is coming, allowing you to make your escape.",
+    "Projectile-based spells are always blocked upon impact. This makes them easier to block for an ally, than spells with instant effect, because Transfer Spellblock can be placed on the targeted ally before the projectile hits.",
+    "Linken's Sphere is a good combination with Black King Bar, because it can force an enemy hero to cast his most powerful single-targeted ability on you. However, spending two inventory slots on defensive items means less room for damage and utility items, so think before you buy."
+  ]
+}

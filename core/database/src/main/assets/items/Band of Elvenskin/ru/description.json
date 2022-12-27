@@ -1,0 +1,14 @@
+{
+  "abilities": [],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Band of Elvenskin",
+  "description": "Эту эластичную ткань часто используют, так как она легка и не сковывает движения.",
+  "trivia": null,
+  "upgradeIn": [
+    "Power Treads",
+    "Yasha"
+  ],
+  "tips": null
+}

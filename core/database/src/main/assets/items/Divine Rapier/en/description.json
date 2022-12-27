@@ -1,0 +1,33 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Divine Rapier drops when its wielder dies, unless they have available Reincarnation sources.",
+    "This item cannot be put into the backpack. Buying, using components in the backpack to combine Divine Rapier while the inventory is full, drops the item on the floor.",
+    "Buying, using components in the backpack to combine Divine Rapier while the inventory is full, drops the item on the floor.",
+    "Unlike other combined items, Divine Rapier cannot be disassembled within seconds after assembling it.",
+    "The Courier can be used to buy a Divine Rapier, but they cannot pick Divine Rapiers up from the ground.",
+    "Divine Rapier doesn't count towards the owner's Net Worth if it's on the ground.",
+    "Divine Rapier changes owner when claimed in its free state, thus counting towards the claimer's Net Worth."
+  ],
+  "cost": "5950",
+  "lore": null,
+  "consistFrom": [
+    "Sacred Relic",
+    "Demon Edge"
+  ],
+  "name": "Divine Rapier",
+  "description": "So powerful, it cannot have a single owner.",
+  "trivia": [
+    "Divine Rapier's item icon used to have a little bit of animations. The light rays coming from the top right would slowly move across the icon, and yellow sparkle effects appeared on the rapier. This animation was removed for unknown reasons."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The components of Divine Rapier can be stored separately by locking one of the components to prevent assembly. This can be used to purchase both parts with the courier without risking the loss of the item before delivery or to save the item until the owner judges the time is right.",
+    "Although it is a very expensive item, it is the most cost-effective damage item. Keep it in mind when your team is losing, Divine Rapier is a great last-stand item under such conditions.",
+    "No matter what, Divine Rapier should always be considered a purely situational item and never a core item since it can result in throwing the game. Avoid purchasing it in games with poor team coordination, as even the strongest carry will need the support of the rest of their team to survive being the highest-priority target.",
+    "Some heroes can utilize Divine Rapier much better than others by dealing splash damage or having better output environment. Even if enemy carry manages to get the Rapier, depending on their hero, they may not be able to use it just as effectively.",
+    "Rapier-holders should consider buying a second Rapier (when possible) to keep in their stash as a backup so that after a possible death they still have another Rapier to use.",
+    "If a Rapier is picked up from the ground by a hero that can't use it effectively, it is possible to transfer it to an ally by having them pick it up after the carrier denies themselves.",
+    "Because Divine Rapier gives 262 more extra damage than Daedalus, and Daedalus' Critical strike gives 37.5% extra DPS, Divine Rapier gives more damage than Daedalus when the hero deals less than 610 damage without crits."
+  ]
+}

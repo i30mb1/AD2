@@ -1,0 +1,270 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Bottle_Regenerate.mp3\/revision\/latest?cb=20191227195401",
+      "effects": [
+        "Cast Range: 350",
+        "Total Health Regenerated: 110",
+        "Total Mana Regenerated: 60",
+        "Duration: 2.7"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Casting Regenerate while having no charges puts the item on cooldown without any other effect.",
+        "Always casts on self in one click. With Ctrl, a target has to be selected. Can only target heroes, clones, illusions and creep-heroes. Can be cast on untargetable units (e.g. when affected by Shadow Realm) indirectly through their hero portrait. The owner of the item does not have to face the target to use Regenerate on them.",
+        "Can only target heroes, clones, illusions and creep-heroes.",
+        "Can be cast on untargetable units (e.g. when affected by Shadow Realm) indirectly through their hero portrait.",
+        "The owner of the item does not have to face the target to use Regenerate on them.",
+        "Successive casts on the same target do not stack but refresh the duration.",
+        "Grants the user 40.74 health and 22.22 mana regeneration over the duration. All charges together can regenerate up to 330 health and 180 mana.",
+        "All charges together can regenerate up to 330 health and 180 mana.",
+        "Player-based damage, regardless of factions, and Roshan-based damage greater than 0 (after reductions) dispels the effect. Does not get dispelled by self-damage sources and damage flagged as HP Removal.",
+        "Does not get dispelled by self-damage sources and damage flagged as HP Removal.",
+        "While being affected by the Rejuvenation Aura buff and not storing a Rune, Regenerate's charges are replenished, the buff gets removed, and a -second timer starts. While this timer runs, the Bottle cannot replenish, effectively working like a fixed cooldown. The item must be in the main inventory space for this. Does not replenish when in the backpack or in the stash. Since the process also removes the fountain's buff, the Bottle replenishes one last time after leaving the fountain area. This means depending on the timing, it is possible to use Regenerate 1 time before it replenishes one last time. Couriers do not replenish charges while being affected by Rejuvenation Aura.",
+        "While this timer runs, the Bottle cannot replenish, effectively working like a fixed cooldown.",
+        "The item must be in the main inventory space for this. Does not replenish when in the backpack or in the stash.",
+        "Since the process also removes the fountain's buff, the Bottle replenishes one last time after leaving the fountain area.",
+        "This means depending on the timing, it is possible to use Regenerate 1 time before it replenishes one last time.",
+        "Couriers do not replenish charges while being affected by Rejuvenation Aura."
+      ],
+      "mana": "1",
+      "abilityName": "Regenerate",
+      "cooldown": "0.5",
+      "description": "Consumes a charge to restore 110 health and 60 mana over 2.7 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost. The Bottle automatically refills at the fountain. Hold Control to use on an allied hero.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Bottle_Store_Rune.mp3\/revision\/latest?cb=20191227195402",
+      "effects": [
+        "Cast Range: 100",
+        "Max Rune Store Duration: 90"
+      ],
+      "notes": [
+        "While having a Bottle, Right Click a Rune stores it in the bottle, instead of activating it. Runes cannot be stored when the bottle is in the backpack. A Bottle storing a rune cannot be moved into the Backpack either. The Bottle does not need to be empty to store runes. A full Bottle can be used to store runes as well. Only heroes and the Spirit Bear can store runes. Illusions and Couriers cannot. Only one rune can be stored in a Bottle at a time. Attempting to store another rune into it just directly uses the new targeted rune. However, it is possible to have multiple Bottles in the inventory and store different runes with each of them.",
+        "Runes cannot be stored when the bottle is in the backpack. A Bottle storing a rune cannot be moved into the Backpack either.",
+        "The Bottle does not need to be empty to store runes. A full Bottle can be used to store runes as well.",
+        "Only heroes and the Spirit Bear can store runes. Illusions and Couriers cannot.",
+        "Only one rune can be stored in a Bottle at a time. Attempting to store another rune into it just directly uses the new targeted rune.",
+        "However, it is possible to have multiple Bottles in the inventory and store different runes with each of them.",
+        "While having a rune stored, the Regenerate ability activates the rune, instead of regenerating the user. Since it is the same active ability, it still interrupts the caster's channeling abilities upon cast, and breaks invisibility.",
+        "Since it is the same active ability, it still interrupts the caster's channeling abilities upon cast, and breaks invisibility.",
+        "If the stored rune is not manually activated within 90 seconds, it gets activated automatically. Unlike a manual cast, this automatic activation does not interrupt the owner in any way, and does not break invisibility. Illusion Rune interrupts the caster's channeling abilities upon passively activated. If the owner is dead while this happens, the stored rune disappears without applying any of its effects.",
+        "Unlike a manual cast, this automatic activation does not interrupt the owner in any way, and does not break invisibility. Illusion Rune interrupts the caster's channeling abilities upon passively activated.",
+        "Illusion Rune interrupts the caster's channeling abilities upon passively activated.",
+        "If the owner is dead while this happens, the stored rune disappears without applying any of its effects.",
+        "Despite the description, the Bottle's charges get replenished when a rune is stored, not activated.",
+        "Despite the description, only Power Runes replenish all charges. Storing a Bounty Rune or a Water Rune refills the Bottle to only 2\/ charges instead, unless it already had more than 2 charges."
+      ],
+      "mana": null,
+      "abilityName": "Store Rune",
+      "cooldown": null,
+      "description": "Runes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 90 seconds. Using a stored rune fully refills the Bottle.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c4\/Items_rune_bounty.mp3\/revision\/latest?cb=20201219110206",
+      "effects": [
+        "Initial Spawn Team Gold: 40",
+        "Following Spawn Base Team Gold: 36",
+        "Following Spawn Extra Team Gold per Interval: 9",
+        "Extra Team Gold Interval: 300"
+      ],
+      "notes": [
+        "The initial runes spawning at the 0:00 minute mark give a fixed amount of 40 gold to each player.",
+        "Following Bounty Runes grant a base amount of 36 , plus 9 extra gold for every 5 minutes past. When bottling a Bounty Rune, it grants gold based on the time at which it is activated, not bottled.",
+        "When bottling a Bounty Rune, it grants gold based on the time at which it is activated, not bottled.",
+        "Bottling a Bounty Rune refills the Bottle to only 2 charges (unless it already had more than 2 charges).",
+        "Grants reliable gold to each player of the team that picks it up.",
+        "An over-head text shows how much gold was given exactly. This number is not visible to enemies.",
+        "When gaining gold from a Bounty Rune, a small golden particle effect briefly bursts from the player, visible to everyone.",
+        "In Turbo Mode, the gold given by Bounty Runes is doubled, despite the notification message showing standard values."
+      ],
+      "mana": null,
+      "abilityName": "Bounty",
+      "cooldown": null,
+      "description": "Grants bonus Gold.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Items_rune_arcane.mp3\/revision\/latest?cb=20201219110203",
+      "effects": [
+        "Cooldown Reduction: 30%",
+        "Mana Loss Reduction: 30%",
+        "Duration: 50"
+      ],
+      "notes": [
+        "Stacks multiplicatively with other sources of percentage-based cooldown reductions.",
+        "Stacks multiplicatively with other sources of mana loss reduction.",
+        "The buff is applied to invulnerable and hidden units.",
+        "The buff of multiple Arcane Runes does not stack, but refreshes the duration instead."
+      ],
+      "mana": null,
+      "abilityName": "Arcane",
+      "cooldown": null,
+      "description": "Reduces cooldowns and mana costs by 30%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Items_rune_dd.mp3\/revision\/latest?cb=20201219110209",
+      "effects": [
+        "Attack Damage Bonus: 100%",
+        "Duration: 45"
+      ],
+      "notes": [
+        "Grants flat bonus attack damage based on the affected unit's main attack damage. Does not further increase bonus attack damage. The hero's current main attack damage is checked periodically, and the bonuses are adapted instantly.",
+        "The hero's current main attack damage is checked periodically, and the bonuses are adapted instantly.",
+        "The buff is applied to invulnerable and hidden units.",
+        "The buff of multiple Double Damage Runes does not stack, but refreshes the duration instead."
+      ],
+      "mana": null,
+      "abilityName": "Double Damage",
+      "cooldown": null,
+      "description": "Increases base damage by 100%.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Items_rune_haste.mp3\/revision\/latest?cb=20201219110212",
+      "effects": [
+        "Haste Speed: 550",
+        "Duration: 22"
+      ],
+      "notes": [
+        "Applies a haste on the target, meaning it cannot be slowed below the set value.",
+        "The buff is applied to invulnerable and hidden units.",
+        "The buff of multiple Haste Runes does not stack, but refreshes the duration instead."
+      ],
+      "mana": null,
+      "abilityName": "Haste",
+      "cooldown": null,
+      "description": "Increases movement speed to maximum.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Items_rune_illusion.mp3\/revision\/latest?cb=20201219110213",
+      "effects": [
+        "Split Time: 0.1",
+        "Number of Illusions: 2",
+        "Illusion Damage Dealt: 35%",
+        "Illusion Damage Taken (TagAghanimMelee): 200%",
+        "Illusion Damage Taken (TagAghanimRanged): 300%",
+        "Illusion Duration: 75"
+      ],
+      "notes": [
+        "The user is invulnerable, hidden and spell immune during the split time.",
+        "Applies a basic dispel on the owner upon cast.",
+        "Resets all current attack and spell targeting orders from other units on the owner.",
+        "After the split time, the caster reappears with their illusions. The reappear locations are based on the caster's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. The distance in between each is 108 range if the hero has a collision size of 24, and 72 if the collision size is 8. Though the formation is always the same, the caster and their illusions take a random position in the formation and have all the same facing angle. The illusions have a EXPR 2 * IllusionLVL bounty.",
+        "The reappear locations are based on the caster's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point.",
+        "The distance in between each is 108 range if the hero has a collision size of 24, and 72 if the collision size is 8.",
+        "Though the formation is always the same, the caster and their illusions take a random position in the formation and have all the same facing angle.",
+        "The illusions have a EXPR 2 * IllusionLVL bounty.",
+        "Orders the user to stop after the split time, canceling all queued orders, and orders given during the split time.",
+        "Activating a new Illusion Rune while already having illusions from a previous Illusion Rune does not replace them."
+      ],
+      "mana": null,
+      "abilityName": "Illusion",
+      "cooldown": null,
+      "description": "Conjures 2 illusions of your hero which deal 35% damage. Melee illusions take 200% damage. Ranged illusions take 300% damage. Illusions last 75 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Items_rune_invis.mp3\/revision\/latest?cb=20201219110216",
+      "effects": [
+        "Fade Time: 2",
+        "Duration: 45"
+      ],
+      "notes": [
+        "During the fade time, the hero can cast spells, use items and perform attacks without breaking the invisibility.",
+        "Invisibility is broken upon reaching the cast point of spells or items, or upon successfully landing an attack.",
+        "The invisible hero can pick up or drop items without breaking the invisibility. However, attacking them breaks it.",
+        "Invisibility from the Invisibility Rune does not turn the hero phased, so it still can block unit pathing.",
+        "The buff is applied to invulnerable and hidden units.",
+        "The buff of multiple Invisibility Runes does not stack, but refreshes the duration instead."
+      ],
+      "mana": null,
+      "abilityName": "Invisibility",
+      "cooldown": null,
+      "description": "Becomes invisible for 45 seconds. This invisibility is broken by attacking or by using an ability or item.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Items_rune_regen.mp3\/revision\/latest?cb=20201219110218",
+      "effects": [
+        "Max Health as Health Regen per Second: 6%",
+        "Max Mana as Mana Regen per Second: 6%",
+        "Duration: 30"
+      ],
+      "notes": [
+        "Can regenerate up to 180% of a unit's max health and max mana over its full duration.",
+        "Can fully regenerate a unit's health and mana within 16.67 seconds.",
+        "The buff disappears once the hero is at full health and mana.",
+        "Damage greater than 0 from any player (including allies and self) or Roshan dispels the effect. Does not get dispelled by damage flagged as HP Removal.",
+        "Does not get dispelled by damage flagged as HP Removal.",
+        "The buff is applied to invulnerable and hidden units.",
+        "The buff of multiple Regeneration Runes does not stack, but refreshes the duration instead."
+      ],
+      "mana": null,
+      "abilityName": "Regeneration",
+      "cooldown": null,
+      "description": "Regenerates health and mana to maximum.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Items_rune_water.mp3\/revision\/latest?cb=20210410131702",
+      "effects": [
+        "Health Restored: 40",
+        "Mana Restored: 80"
+      ],
+      "notes": [
+        "Bottling a Water Rune refills the Bottle to only 2 charges (unless it already had more than 2 charges)."
+      ],
+      "mana": null,
+      "abilityName": "Water",
+      "cooldown": null,
+      "description": "Instantly restores 40 Health and 80 Mana.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Bottle containing a rune cannot be shared, dropped, or moved into the backpack.",
+    "Bottle is a permanent item, using up all charges does not make it disappear.",
+    "The sell value of the item does not depend on the remaining charges, nor on the stored rune.",
+    "The Tempest Double does not copy this item, despite not being a consumable."
+  ],
+  "cost": "675",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Bottle",
+  "description": "",
+  "trivia": [
+    "Prior to the February 01, 2018 Patch, Bottle's passive ability, Store Rune, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Use the Bottle repeatedly at the fountain to regenerate faster.",
+    "The Bottle can be used as a quick healing item that can be easily replenished, or to save up a rune for later use. Though it costs significantly more than other consumables, the Bottle does not have limited uses, as it can be refilled at the fountain at any time.",
+    "Since Rejuvenation Aura's aura lingers for 3 seconds, so for a brief time after leaving the fountain, Bottles can still be refilled.",
+    "Upon activating an Invisibility Rune, Bottle can be used within the 2 seconds fade time of the invisibility without breaking it, allowing the player to heal up while going invisible.",
+    "Although Store Rune does not interrupt channeling abilities upon automatically activating a rune, the Illusion Rune does interrupt them, since one of its effects is to disable the hero while shuffling their position with the created illusions."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Дальность применения: 350"
+      ],
+      "notes": [
+        "Может выбрать целью любые деревья.",
+        "Не делит перезарядку с Battle Fury или Iron Talon."
+      ],
+      "mana": null,
+      "abilityName": "Chop Tree",
+      "cooldown": null,
+      "description": "Уничтожает выбранное дерево.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Доп. урон крипам (TagAghanimближний бой): 8",
+        "Доп. урон крипам (TagAghanimдальний бой): 4"
+      ],
+      "notes": [
+        "Сочетается с Quell Battle Fury, но не с другими Quelling Blade.",
+        "При изменении типа атаки владельца на ближний или дальний, значение доп. урона сразу же изменяется.",
+        "Quell полностью работает с критами, прорубающими ударами и вампиризмом.",
+        "При атаке крипов, Quell также срабатывает на прорубающий урон, Psi Blades и Moon Glaives, нанося доп. урон каждому существу, по которому они попали.",
+        "Не действует на варды, постройки, иллюзии, духа-медведя и союзных существ. Действует на Рошана."
+      ],
+      "mana": null,
+      "abilityName": "Quell",
+      "cooldown": null,
+      "description": "Увеличивает урон от атак по существам, не являющимися героями, на 8 для героев ближнего боя или на 4 \u2014 для дальнего.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "100",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Quelling Blade",
+  "description": "Топор павшего гнома, позволяющий с лёгкостью продираться сквозь лес.",
+  "trivia": null,
+  "upgradeIn": [
+    "Battle Fury"
+  ],
+  "tips": null
+}

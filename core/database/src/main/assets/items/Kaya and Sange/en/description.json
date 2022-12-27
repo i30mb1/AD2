@@ -1,0 +1,23 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "320 health and 1.6 health regeneration.",
+    "192 mana and 0.8 mana regeneration.",
+    "16 main attack damage to \/ heroes."
+  ],
+  "cost": "4100",
+  "lore": null,
+  "consistFrom": [
+    "Sange",
+    "Kaya"
+  ],
+  "name": "Kaya and Sange",
+  "description": "Two of three known items of unimaginable power that many believe were crafted at the same enchanter's forge.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Much like Sange and Yasha, this is a cost-effective item that greatly increases a spellcaster's mid-game presence.",
+    "May be purchased if one wishes to start fighting earlier and establish control."
+  ]
+}

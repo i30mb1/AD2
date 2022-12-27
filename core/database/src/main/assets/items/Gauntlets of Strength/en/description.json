@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "60 health and 0.3 health regeneration.",
+    "3 main attack damage to heroes."
+  ],
+  "cost": "140",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Gauntlets of Strength",
+  "description": "Studded leather gloves that add brute strength.",
+  "trivia": null,
+  "upgradeIn": [
+    "Bracer",
+    "Soul Ring"
+  ],
+  "tips": null
+}

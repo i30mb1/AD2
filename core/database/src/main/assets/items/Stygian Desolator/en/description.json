@@ -1,0 +1,43 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Stygian_Desolator_Greater_Corruption.mp3\/revision\/latest?cb=20191227195720",
+      "effects": [
+        "Armor Reduction: 10",
+        "Duration: 7"
+      ],
+      "notes": [
+        "Successive attacks with Stygian Desolator do not stack the debuff, but refresh the duration instead.",
+        "The attacks first apply the debuff, then their own damage.",
+        "Works against wards, buildings, and allied units.",
+        "Replaces the projectile particle of ranged heroes with a red projectile.",
+        "Does not stack with the armor reduction of Lesser Corruption. If both debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "If both debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "Visually alters the wielder's attack projectile. All attack projectile has the following visual priorities: Corruption or Greater Corruption ➤ Cold Attack ➤ Marksmanship procs.",
+        "Corruption or Greater Corruption ➤ Cold Attack ➤ Marksmanship procs."
+      ],
+      "mana": null,
+      "abilityName": "Greater Corruption",
+      "cooldown": null,
+      "description": "Your attacks reduce the target's armor by 10 for 7 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Fully stack with the following: Armor Corruption from talents. Orb of Corrosion and Desolator.",
+    "Armor Corruption from talents.",
+    "Orb of Corrosion and Desolator."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Stygian Desolator",
+  "description": "The original demonic favorite that served as basis for the beloved mortal design.",
+  "trivia": [
+    "Stygian Desolator was the name of Desolator in the original Defense of the Ancients, it was in turn named after an item in Anarchy Online."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

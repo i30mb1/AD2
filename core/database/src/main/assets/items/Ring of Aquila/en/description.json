@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Mana Regeneration Bonus: 1.25",
+        "Armor Bonus: 2",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Does not interrupt the caster's channeling abilities upon toggling On \/ Off.",
+        "Can regenerate up to 75 mana in one minute.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "Does not affect invulnerable units.",
+        "Treats creep-heroes as heroes."
+      ],
+      "mana": null,
+      "abilityName": "Aquila Aura",
+      "cooldown": null,
+      "description": "Grants 1.25 mana regeneration and 2 armor to nearby allies. Deactivate to stop affecting non-hero units.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "60 health and 0.3 health regeneration.",
+    "36 mana and 0.15 mana regeneration.",
+    "9 attack speed and 1.5 main armor.",
+    "3, 9 and 3 main attack damage to all \/ \/ heroes respectively."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ring of Aquila",
+  "description": "",
+  "trivia": [
+    "Aquila is the Latin and Romance languages word for \"eagle\".",
+    "Priscilla and Aquila were a first century Christian missionary married couple described in the New Testament."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "When the Aquila Aura is On, allied creeps gain armor bonus, which is useful if you want to push the creep advantage in a lane. The aura should be turned Off if you do not want the lane to get pushed.",
+    "In the early game and even into the mid game, the boost of mana regeneration is extremely useful for heroes with low intelligence growth (e.g. Troll Warlord)."
+  ]
+}

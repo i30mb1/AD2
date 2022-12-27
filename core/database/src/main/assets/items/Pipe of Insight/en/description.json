@@ -1,0 +1,79 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Pipe_of_Insight_Barrier.mp3\/revision\/latest?cb=20191227195518",
+      "effects": [
+        "Radius: 1200",
+        "Magical Damage Absorbed: 450",
+        "Duration: 12"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Affects all allied units, including buildings, but excluding wards. Affects invulnerable, but not hidden allies.",
+        "Blocks damage before any reductions, except Mana Shield.",
+        "Only blocks magical damage, coming from abilities and attacks. Does not block any physical or pure damage.",
+        "Recasting Barrier refreshes the buff and resets the barrier's absorb capacity.",
+        "Does not stack with other magical damage barriers. If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance. However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance.",
+        "However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "Does not share cooldown with Hood of Defiance or Eternal Shroud."
+      ],
+      "mana": "100",
+      "abilityName": "Barrier",
+      "cooldown": "60",
+      "description": "Gives a shield that blocks 450 magic damage to all nearby allies. Lasts 12 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Health Regen Bonus: 2.5",
+        "Magic Resistance Bonus: 15%",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "Multiple instances of Insight Aura do not stack. Fully stacks with other sources of Headdress-based items' health regeneration aura.",
+        "Fully stacks with other sources of Headdress-based items' health regeneration aura.",
+        "Stacks multiplicatively with other sources of magic resistance. Insight Aura increases most heroes' total magic resistance to 36.25%.",
+        "Insight Aura increases most heroes' total magic resistance to 36.25%.",
+        "Can regenerate up to 150 health in one minute.",
+        "Does not affect wards, buildings and invulnerable units.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Insight Aura",
+      "cooldown": null,
+      "description": "Gives allied units 2.5 health regeneration and 15% magic resistance.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "With Insight Aura, the item grants a total of 11 health regeneration to the wielder.",
+    "Stacks multiplicatively with other sources of magic resistance. With Insight Aura, the total magic resistance is increased to 55.38% for the wielder of the item.",
+    "With Insight Aura, the total magic resistance is increased to 55.38% for the wielder of the item."
+  ],
+  "cost": "3475",
+  "lore": null,
+  "consistFrom": [
+    "Hood of Defiance",
+    "Headdress",
+    "Recipe"
+  ],
+  "name": "Pipe of Insight",
+  "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
+  "trivia": [
+    "In the transition from DotA to Dota 2, Pipe of Insight name was changed from the Khadgar's Pipe of Insight to simply Pipe of Insight. Khadgar was a wizard in Warcraft II.",
+    "Dazzle's cosmetic item Pipe of Dezun is based on the Pipe of Insight."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The Pipe of Insight is useful for frail heroes who can be easily taken down by damages from spells. With its aura, it can slightly increase the magic resistance of a hero.",
+    "It is an ideal for a support heroes to carry a Pipe of Insight in order to protect the nearby allies against the strongest magic spells.",
+    "It is best combined with Crimson Guard and any abilities that grants damage block."
+  ]
+}

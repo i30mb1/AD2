@@ -1,0 +1,23 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "192 mana and 0.8 mana regeneration.",
+    "16 attack speed and 2.67 main armor.",
+    "16 main attack damage to \/ heroes."
+  ],
+  "cost": "4100",
+  "lore": null,
+  "consistFrom": [
+    "Kaya",
+    "Yasha"
+  ],
+  "name": "Yasha and Kaya",
+  "description": "Yasha and Kaya when paired together share a natural resonance.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Elusive heroes, who use attack speed and deal magic damage benefit from Yasha and Kaya in the mid game.",
+    "Magical nukers who lack mobility can also make use of it."
+  ]
+}

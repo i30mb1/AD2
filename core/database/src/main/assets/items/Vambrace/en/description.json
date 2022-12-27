@@ -1,0 +1,43 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Selected Attribute Bonus: 10",
+        "Other Attributes Bonus: 5",
+        "Strength Magic Resistance Bonus: 10%",
+        "Agility Attack Speed Bonus: 10",
+        "Intelligence Spell Damage Bonus: 6%"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "The Vambrace's initial status is always strength.",
+        "Switch attributes as follows: Strength ➜ Intelligence ➜ Agility ➜ Strength.",
+        "Strength ➜ Intelligence ➜ Agility ➜ Strength.",
+        "Current health and mana percentages stay unchanged upon switching attributes."
+      ],
+      "mana": "0",
+      "abilityName": "Switch Attribute",
+      "cooldown": "0",
+      "description": "There is no description for this ability.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Vambrace (Strength)'s attributes grants the following bonuses:",
+    "200 health and 1 health regeneration.",
+    "60 mana and 0.25 mana regeneration.",
+    "5 attack speed and 0.83 main armor.",
+    "10, 5 and 5 main attack damage to all \/ \/ heroes respectively."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Vambrace",
+  "description": "",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

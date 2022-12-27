@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Max Stacks: 5",
+        "Mana Regen Bonus: 0.5",
+        "Duration: 10"
+      ],
+      "notes": [
+        "Rites of Eloshar can give at most 2.5 mana regeneration bonus. With max stacks and its duration, it can regenerate up to a total of 25 mana.",
+        "With max stacks and its duration, it can regenerate up to a total of 25 mana.",
+        "Each stack places a new hidden modifier buff on its wielder. This means their durations are independent from each other. The number of stacks can be seen on the status buff icon.",
+        "The number of stacks can be seen on the status buff icon."
+      ],
+      "mana": "0",
+      "abilityName": "Rites of Eloshar",
+      "cooldown": "0",
+      "description": "Each time the wearer is attacked they gain a stack of 0.5 mana regen, up to 5 stacks. Stacks last for 10 seconds.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "60 health and 0.3 health regeneration.",
+    "36 mana and 0.15 mana regeneration.",
+    "3 attack speed and 0.5 main armor.",
+    "3 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Occult Bracelet",
+  "description": "A band that bears effigy of the dark goddess Eloshar's unsleeping eye.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

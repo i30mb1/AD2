@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Lifesteal: 7"
+      ],
+      "notes": [
+        "The heal counts as lifesteal, so that it is affected by lifesteal manipulation, but not by heal manipulation.",
+        "Cannot lifesteal off of wards, buildings and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Lifesteal",
+      "cooldown": null,
+      "description": "Heals the attacker for 7 HP on each attack.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item grants the following bonuses: 140 health and 0.7 health regeneration to strength heroes. 7 attack speed and 1.17 main armor to agility heroes. 84 mana and 0.35 mana regeneration to intelligence heroes. 7 main attack damage to \/ \/ all heroes.",
+    "140 health and 0.7 health regeneration to strength heroes.",
+    "7 attack speed and 1.17 main armor to agility heroes.",
+    "84 mana and 0.35 mana regeneration to intelligence heroes.",
+    "7 main attack damage to \/ \/ all heroes."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Possessed Mask",
+  "description": "Even when discarded with specific purpose and great care, this frightening mask always finds its way onto the face of a new owner.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

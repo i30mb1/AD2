@@ -1,0 +1,14 @@
+{
+  "abilities": [],
+  "cost": "4100",
+  "lore": null,
+  "consistFrom": [
+    "Sange",
+    "Kaya"
+  ],
+  "name": "Kaya and Sange",
+  "description": "Это лишь два оружия невиданной мощи из трёх. Многие поговаривают, что все они были созданы в печи одного и того же заклинателя.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

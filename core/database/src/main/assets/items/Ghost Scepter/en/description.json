@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Ghost_Scepter_Ghost_Form.mp3\/revision\/latest?cb=20191227195419",
+      "effects": [
+        "Magic Resistance Reduction: 40%",
+        "Duration: 4"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Turns the caster ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance.",
+        "Reduces most heroes' total magic resistance to -5%. Stacks multiplicatively with other sources of magic resistance.",
+        "Stacks multiplicatively with other sources of magic resistance.",
+        "The magic resistance reduction of multiple ethereal effects does not stack, the one with higher value takes priority.",
+        "Shares cooldown with other Ghost Scepter-based items."
+      ],
+      "mana": "0",
+      "abilityName": "Ghost Form",
+      "cooldown": "22",
+      "description": "You enter ghost form for 4 seconds, becoming immune to physical damage, but are unable to attack and 40% more vulnerable to magic damage.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "100 health and 0.5 health regeneration.",
+    "60 mana and 0.25 mana regeneration.",
+    "5 attack speed and 0.83 main armor.",
+    "5 main attack damage to all \/ \/ heroes."
+  ],
+  "cost": "1500",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ghost Scepter",
+  "description": "Imbues the wielder with a ghostly presence, allowing them to evade physical damage.",
+  "trivia": null,
+  "upgradeIn": [
+    "Ethereal Blade"
+  ],
+  "tips": [
+    "Use Ghost Scepter after baiting an enemy carry to attack you, causing them to waste time switching between targets.",
+    "Try to keep track of the cooldown on enemy nuke abilities. Think twice before using Ghost Scepter if you believe that a powerful magical nuke, such as Finger of Death, has not yet been used."
+  ]
+}

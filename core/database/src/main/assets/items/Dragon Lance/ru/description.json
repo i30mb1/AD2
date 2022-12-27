@@ -1,0 +1,32 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Дополнительная дальность атаки: 150"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "Dragon's Reach",
+      "cooldown": null,
+      "description": "Увеличивает дальность атаки героев дальнего боя на 150.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1900",
+  "lore": null,
+  "consistFrom": [
+    "Blade of Alacrity",
+    "Belt of Strength",
+    "Recipe"
+  ],
+  "name": "Dragon Lance",
+  "description": "Боевой рывок войска виверн не щадит никого.",
+  "trivia": null,
+  "upgradeIn": [
+    "Hurricane Pike"
+  ],
+  "tips": null
+}

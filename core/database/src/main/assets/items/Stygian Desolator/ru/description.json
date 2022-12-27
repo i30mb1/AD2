@@ -1,0 +1,34 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Stygian_Desolator_Greater_Corruption.mp3\/revision\/latest?cb=20191227195720",
+      "effects": [
+        "Снижение брони: 10",
+        "Длительность: 7"
+      ],
+      "notes": [
+        "Успешные атаки с Stygian Desolator не стакают дебафф, но обновляют длительность дебаффа.",
+        "Атаки сначала применяют дебафф, затем наносят урон.",
+        "Работает против вардов, построек и союзных существ.",
+        "Заменяет частицы снарядов героев дальнего боя на красные снаряды.",
+        "Не сочетается с Lesser Corruption. Если присутствуют оба дебаффа, то дебафф от Blight Stone не снижает броню.",
+        "Если присутствуют оба дебаффа, то дебафф от Blight Stone не снижает броню."
+      ],
+      "mana": null,
+      "abilityName": "Greater Corruption",
+      "cooldown": null,
+      "description": "Атаки уменьшают броню цели на 10. Эффект длится 7 сек.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Stygian Desolator",
+  "description": "Сие оружие, столь любимое демонами, стало прародителем творения, столь любимого смертными.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

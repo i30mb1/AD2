@@ -1,0 +1,61 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Swift_Blink_Swift_Blink_1.mp3\/revision\/latest?cb=20210120233514",
+      "effects": [
+        "Cast Range: Global",
+        "Max Blink Distance: 1200",
+        "Penalty Blink Distance: 960",
+        "Agility Bonus: 35",
+        "Move Speed Bonus: 40%",
+        "Duration: 6",
+        "Damage Cooldown: 3"
+      ],
+      "notes": [
+        "Disjoints projectiles upon cast.",
+        "Does not blink for the full distance when targeting closer than the maximum distance.",
+        "When point-targeted beyond the maximum blink distance, it blinks using the 960 range penalty distance, towards the targeted direction instead of maximum distance. ↓↓ Double-tapping automatically casts it on the team's fountain, blinking towards its direction using the penalty distance.",
+        "↓↓ Double-tapping automatically casts it on the team's fountain, blinking towards its direction using the penalty distance.",
+        "The second sound only plays when the blinked distance is greater than 960. It is audible to everyone.",
+        "The buff allows the caster to also phase through other units, including wards, but not through buildings.",
+        "The agility effectively grants the hero 5.83 main armor and 35 attack speed bonus, and also 35 main attack damage bonus if they are an agility hero.",
+        "Player-based damage, regardless of factions, and Roshan-based damage greater than 0 (after reductions) puts the item on a second cooldown. Does not get dispelled by self-damage sources and damage flagged as HP Removal. The damage cooldown always triggers, even if the item is dropped, if the item is in the backpack or before being purchased. The cooldown is unaffected by cooldown reduction. However, it is affected by cooldown resetting.",
+        "Does not get dispelled by self-damage sources and damage flagged as HP Removal.",
+        "The damage cooldown always triggers, even if the item is dropped, if the item is in the backpack or before being purchased.",
+        "The cooldown is unaffected by cooldown reduction. However, it is affected by cooldown resetting.",
+        "Shares cooldown with other Blink Dagger-based items. However, it does not share cooldown with Fallen Sky.",
+        "However, it does not share cooldown with Fallen Sky."
+      ],
+      "mana": "0",
+      "abilityName": "Swift Blink",
+      "cooldown": "15",
+      "description": "Teleport to a target point up to 1200 units away. After teleportation, you gain 40% phased movement speed and +35 Agility for 6 seconds. Swift Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "25 attack speed and 4.17 main armor.",
+    "25 main attack damage to heroes."
+  ],
+  "cost": "6800",
+  "lore": null,
+  "consistFrom": [
+    "Blink Dagger",
+    "Eaglesong",
+    "Recipe"
+  ],
+  "name": "Swift Blink",
+  "description": "A cunning blade able to anticipate and enable its bearer's movements.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Blink requires heroes to face the direction in which they are blinking. This means that heroes facing away from their blink destination will have to turn first, causing a slight delay depending on their turn rate.",
+    "Hood of Defiance's barrier blocks damage over time, meaning that it will prevent items like Radiance from resetting Blink Dagger's cooldown.",
+    "Use Blink to dodge incoming projectile-based spells such as Storm Hammer or Spirit Lance, and from items like Rod of Atos.",
+    "When Blink dagger go into cooldown upon taking damage on an escape, a quick self-cast with Eul's Scepter of Divinity will allow you to wait the short cooldown relatively safely and blink out the moment you land on the ground.",
+    "Blink Dagger can turn into a very strong escape tool if you are affected by False Promise."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "250",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Fluffy Hat",
+  "description": "Fine and functional foppery for the fashion-forward fighter.",
+  "trivia": [
+    "Just like the Orb of Venom, the description for the Fluffy Hat is an alliteration \u2014 a figure of speech where the beginning sounds or letters of multiple words are the same. In this case, most of its words start with the letter F."
+  ],
+  "upgradeIn": [
+    "Force Staff",
+    "Orb of Corrosion",
+    "Falcon Blade",
+    "Holy Locket"
+  ],
+  "tips": null
+}

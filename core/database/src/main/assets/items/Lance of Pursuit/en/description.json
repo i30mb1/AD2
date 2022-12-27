@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Attack Damage Bonus: 15",
+        "Move Speed Slow (TagAghanimMelee): 12%",
+        "Move Speed Slow (TagAghanimRange): 6%",
+        "Debuff Duration: 1"
+      ],
+      "notes": [
+        "The bonus attack damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the wielder's attack damage. The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the wielder's attack damage.",
+        "The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Hound first applies its bonus attack damage, then the debuff.",
+        "The debuff from successive attacks does not stack, only the duration is refreshed."
+      ],
+      "mana": "0",
+      "abilityName": "Hound",
+      "cooldown": "0",
+      "description": "Attacking from behind slows enemies by 12% (6% if Ranged) and deals +15 more Damage. Slows lasts for 1 second.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Lance of Pursuit",
+  "description": "The gleaming weapon of a tarnished knight haunted by his duties to an unworthy king.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

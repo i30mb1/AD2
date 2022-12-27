@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Шанс срабатывания: 60%",
+        "Блокирует урона (TagAghanimближний бой): 64",
+        "Блокирует урона (TagAghanimдальний бой): 32"
+      ],
+      "notes": [
+        "Не действует на варды (например, Тотем смерти и т.п.).",
+        "Не снижает физический урон от заклинаний, за исключением Moon Glaives.",
+        "Сочетается с другими источниками блокировки урона.",
+        "Damage Block использует псевдослучайное распределение."
+      ],
+      "mana": null,
+      "abilityName": "Damage Block",
+      "cooldown": null,
+      "description": "С вероятностью в 60% блокирует 64 урона от атак, если владелец \u2014 герой ближнего боя, или 32 урона, если герой дальнего боя.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1825",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Health",
+    "Vitality Booster"
+  ],
+  "name": "Vanguard",
+  "description": "Мощный щит, защищающий своего хозяина даже от самых яростных атак.",
+  "trivia": null,
+  "upgradeIn": [
+    "Crimson Guard",
+    "Abyssal Blade"
+  ],
+  "tips": null
+}

@@ -1,0 +1,50 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Selected Attribute Bonus: 10"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast. When having multiple Power Treads, each of them can be switched individually. The attribute bonuses fully stack.",
+        "When having multiple Power Treads, each of them can be switched individually. The attribute bonuses fully stack.",
+        "Switch attributes as follows: Strength ➜ Intelligence ➜ Agility ➜ Strength",
+        "Strength ➜ Intelligence ➜ Agility ➜ Strength",
+        "Current health and mana percentages stay unchanged upon switching attributes.",
+        "Meepo Clones cannot cast this ability, but the clones instantly update their Power Threads when the Meepo Prime switches the item's attributes."
+      ],
+      "mana": "0",
+      "abilityName": "Switch Attribute",
+      "cooldown": "0",
+      "description": "Switches between +10 Strength, +10 Agility, or +10 Intelligence.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
+    "Stacks with all other movement speed bonus.",
+    "There are three ways to assemble Power Treads. Based on which item is chosen, the boot's initial \/ \/ attribute status is different. The status can be switched with Switch Attribute freely after purchase. When listed in quickbuy, the item's assembly components are based on the hero's primary attribute. Disassembling Power Treads returns the items which were originally used to build it. It is not based on the currently selected attribute.",
+    "When listed in quickbuy, the item's assembly components are based on the hero's primary attribute.",
+    "Disassembling Power Treads returns the items which were originally used to build it. It is not based on the currently selected attribute."
+  ],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": [
+    "Boots of Speed",
+    "Gloves of Haste",
+    "Belt of Strength"
+  ],
+  "name": "Power Treads",
+  "description": "",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "The regular stats bonuses (health, mana, armor, and regen) are applied to all heroes. Attack damage is based on the hero's primary attribute. For example, agility heroes cannot make use of Strength Treads' extra health and the attack damage bonus at once, since they only have their damage increased when the Power Treads are set to agility.",
+    "Because the Power Treads can be used to switch between the 3 attributes on a whim, some advanced strategies are possible for players who like to micromanage, or wish to maximize their efficiency in a competitive setting. Switching your Power Treads to intelligence before a fight can potentially allow you to cast one more spell. Switching them to strength in a pinch may be used in order to narrowly escape from an attempt on your life.",
+    "Due to how attributes work, if you switch your Power Treads to agility before using a regeneration item, and then back to intelligence or strength when your health\/mana is restored, you end up at a much higher total than if you simply used a Healing Salve with your Power Treads set to strength, or a Clarity with your Power Treads switched to intelligence. This is an important skill to keep in mind when using a Bottle with a mana-hungry mid ganker like Queen of Pain. The difference is not enormous, but definitely noticeable in the early stages of the game.",
+    "Conversely, switching to intelligence before casting a spell and going back to strength or agility right after makes you spend a smaller percentage of your mana pool with that spell, as the percentage is calculated with the same absolute cost, but a higher absolute mana pool. This is very apparent on heroes with low intelligence, such as Sven.",
+    "Switching to Strength Treads provides more health if you switch to them when your health is full as opposed to when it is almost depleted. The same is true for Intelligence Treads and mana."
+  ]
+}

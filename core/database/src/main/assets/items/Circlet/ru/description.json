@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "155",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Circlet",
+  "description": "Элегантная тиара, предназначенная для человеческих принцесс.",
+  "trivia": null,
+  "upgradeIn": [
+    "Bracer",
+    "Wraith Band",
+    "Null Talisman",
+    "Urn of Shadows"
+  ],
+  "tips": null
+}

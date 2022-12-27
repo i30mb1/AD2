@@ -1,0 +1,50 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Proc Chance: 60%",
+        "Blocked Damage (TagAghanimMelee): 64",
+        "Blocked Damage (TagAghanimRanged): 32"
+      ],
+      "notes": [
+        "Does not work against damage from wards sources (e.g. Death Ward etc.).",
+        "Does not reduce physical damage from abilities, except for these spells.",
+        "Stacks with all other sources of damage block.",
+        "Damage Block uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "abilityName": "Damage Block",
+      "cooldown": null,
+      "description": "Grants a 60% chance to block 64 damage from incoming attacks on melee heroes, and 32 damage on ranged.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The proc chances of all sources of Damage Block work independently from each other.",
+    "When multiple sources of Damage Block proc on the same attack, only the one with the highest blocked damage value takes effect."
+  ],
+  "cost": "1825",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Health",
+    "Vitality Booster"
+  ],
+  "name": "Vanguard",
+  "description": "A powerful shield that defends its wielder from even the most vicious of attacks.",
+  "trivia": null,
+  "upgradeIn": [
+    "Crimson Guard",
+    "Abyssal Blade"
+  ],
+  "tips": [
+    "Effective to block the attack damage from summoned units and illusions (except from Phantasm illusions which applies full damage and proc crit).",
+    "It is especially useful with tanky frontline heroes that need to survive much damage, i.e. Bristleback, Spectre, Centaur Warrunner or Axe, with units that overall take amplified damage, like illusions, and against low damage abilities i.e. Focus Fire, or Phantom Lancer's illusions, which hit often but not hard, causing many block procs that block attacks entirely or almost entirely.",
+    "On the other hand, the item less useful for heroes with high armor, i.e. Dragon Knight or Sven.",
+    "It can be purchased over a lifesteal item to jungle with a melee here.",
+    "Because it is less effective in late game, it is often disassembled into a Heart of Tarrasque or Lotus Orb.",
+    "On a melee here with low amount of HP it can be more effective than magic resistance items to tank both spells and physical damages."
+  ]
+}

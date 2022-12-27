@@ -1,0 +1,37 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Model Size Increase: 60%",
+        "Damage Radius: 100",
+        "Strength as Damage per Second: 100%"
+      ],
+      "notes": [
+        "The model size increase has no impact on the collision size.",
+        "Grants the wielder unobstructed movement, allowing them to path through cliffs and trees.",
+        "The area damage is applied in 0.5-second intervals, starting 0.5 seconds after equipping the item."
+      ],
+      "mana": null,
+      "abilityName": "Giant's Foot",
+      "cooldown": null,
+      "description": "Can path over any terrain and deals 100% of your strength per second to units you are standing ontop of.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "700 health and 3.5 health regeneration.",
+    "35 main attack damage to heroes."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Giant's Ring",
+  "description": "Prized procurement of an otherwise unremarkable ruler of Elze who abdicated his position and vanished.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}
