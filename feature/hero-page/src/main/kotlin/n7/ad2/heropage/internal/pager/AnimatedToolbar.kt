@@ -95,7 +95,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
     private fun changeVisibilityForPage(page: Int, visibility: Int) {
         when (page) {
             0 -> ivHero.visibility = visibility
-            1 -> tvLocale.visibility = visibility
+//            1 -> tvLocale.visibility = visibility
 //            2 -> ivRefresh.visibility= visibility
         }
     }
