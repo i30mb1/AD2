@@ -31,7 +31,7 @@
       "abilityName": "Wraith's Reprisal",
       "cooldown": "60",
       "description": "Призывает тотем, который уменьшает весь урон врагов в радиусе 900 на 30% и наносит им 30 урона в секунду. Тотем способен передвигаться и существует 25 сек. Тотем можно уничтожить за 4 атак. Крипы наносят тотему половину обычного урона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -59,7 +59,7 @@
       "abilityName": "Vladmir's Aura",
       "cooldown": null,
       "description": "Увеличивает вампиризм союзников на 18%, их урон на 18%, броню на 3 и восстановление маны на 2.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

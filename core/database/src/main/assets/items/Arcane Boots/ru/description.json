@@ -15,7 +15,7 @@
       "abilityName": "Replenish Mana",
       "cooldown": "55",
       "description": "Восстанавливает ману всем союзникам в радиусе 175 вокруг героя.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

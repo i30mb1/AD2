@@ -26,7 +26,7 @@
       "abilityName": "Solitary Disguise",
       "cooldown": "45",
       "description": "Casts Smoke of Deceit on yourself only.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

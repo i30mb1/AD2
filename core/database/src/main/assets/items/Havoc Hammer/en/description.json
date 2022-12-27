@@ -24,7 +24,7 @@
       "abilityName": "Havoc",
       "cooldown": null,
       "description": "Knocks back enemies in 400 range around you, slowing them by 50% for 3 seconds and dealing 175 + 1x your str as magical damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

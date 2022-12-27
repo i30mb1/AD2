@@ -23,7 +23,7 @@
       "abilityName": "Valor",
       "cooldown": "12",
       "description": "If cast on an ally, grants them the 5 armor, and removing it from the caster. If cast on an enemy, reduces 5 armor on both the enemy and the caster. Cannot target spell immune enemies.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

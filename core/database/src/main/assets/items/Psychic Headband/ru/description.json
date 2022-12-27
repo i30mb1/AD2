@@ -25,7 +25,7 @@
       "abilityName": "Psychic Push",
       "cooldown": "20",
       "description": "Отталкивает выбранного врага от владельца на расстояние в 400.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

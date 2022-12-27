@@ -23,7 +23,7 @@
       "abilityName": "Shadows",
       "cooldown": "8",
       "description": "Target an enemy, ally or self. Causes the target to become untargetable but also silenced, muted and disarmed for 4 seconds. Applies a basic dispel.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

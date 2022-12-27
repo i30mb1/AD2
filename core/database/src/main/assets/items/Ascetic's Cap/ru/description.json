@@ -16,7 +16,7 @@
       "abilityName": "Endurance",
       "cooldown": null,
       "description": "Когда на владельца накладывают отрицательный эффект, он получает +40% к сопротивлению эффектам на 3 секунды.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

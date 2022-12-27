@@ -22,7 +22,7 @@
       "abilityName": "Eternal Chains",
       "cooldown": "18",
       "description": "Roots all enemies in a target 450 radius for 2 seconds and deals 220 damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -53,7 +53,7 @@
       "abilityName": "Chain Lightning",
       "cooldown": null,
       "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

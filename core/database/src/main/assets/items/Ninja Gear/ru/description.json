@@ -25,7 +25,7 @@
       "abilityName": "Solitary Disguise",
       "cooldown": "45",
       "description": "Применяет на владельца эффект предмета Smoke of Deceit.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

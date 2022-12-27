@@ -22,7 +22,7 @@
       "abilityName": "Transmute",
       "cooldown": "90",
       "description": "Kills a non-hero target for 160 gold and 2.1x experience. Cannot be used on Ancient Creeps.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

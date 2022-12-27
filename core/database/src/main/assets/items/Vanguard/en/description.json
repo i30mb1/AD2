@@ -17,7 +17,7 @@
       "abilityName": "Damage Block",
       "cooldown": null,
       "description": "Grants a 60% chance to block 64 damage from incoming attacks on melee heroes, and 32 damage on ranged.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

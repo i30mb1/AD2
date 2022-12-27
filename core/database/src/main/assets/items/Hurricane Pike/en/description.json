@@ -46,7 +46,7 @@
       "abilityName": "Hurricane Thrust",
       "cooldown": "19",
       "description": "Pushes you and target enemy 450 units away from each other, and for 6 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed. Works like Force Staff when used on self or allies.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -62,7 +62,7 @@
       "abilityName": "Dragon's Reach",
       "cooldown": null,
       "description": "Increases attack range of ranged heroes by 150.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

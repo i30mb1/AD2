@@ -14,7 +14,7 @@
       "abilityName": "Cleanse",
       "cooldown": "20",
       "description": "Purge Target Enemy or Ally.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -35,7 +35,7 @@
       "abilityName": "Subjugate",
       "cooldown": null,
       "description": "Your attacks deal bonus damage equal to 4% of your target Max Mana.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

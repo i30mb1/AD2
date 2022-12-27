@@ -22,7 +22,7 @@
       "abilityName": "Barrier",
       "cooldown": "60",
       "description": "Создаёт на владельце и окружающих его союзниках барьер, блокирующий 400 магического урона. Действует 12 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -47,7 +47,7 @@
       "abilityName": "Insight Aura",
       "cooldown": null,
       "description": "Действует на союзников вокруг. Увеличивает их восстановление здоровья на 2,5 и сопротивление магии на 15%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

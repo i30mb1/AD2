@@ -28,7 +28,7 @@
       "abilityName": "Disguise",
       "cooldown": "1",
       "description": "Turns the caster and all allied player-controlled units in a 1200 radius invisible, and grants 15% bonus movement speed for 35 seconds. Attacking, or moving within 1025 range of an enemy hero or tower, will break the invisibility. Disguise grants invisibility that is immune to True Sight.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

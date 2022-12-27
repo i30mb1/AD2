@@ -13,7 +13,7 @@
       "abilityName": "Dig",
       "cooldown": "40",
       "description": "Channel for 1 second. Always finds a Bounty Rune!",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -38,7 +38,7 @@
       "abilityName": "Bounty",
       "cooldown": null,
       "description": "Grants bonus Gold.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

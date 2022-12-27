@@ -21,7 +21,7 @@
       "abilityName": "Reset Cooldowns",
       "cooldown": "180",
       "description": "Сбрасывает время перезарядки всех ваших предметов и способностей.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

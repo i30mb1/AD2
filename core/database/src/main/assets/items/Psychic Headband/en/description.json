@@ -25,7 +25,7 @@
       "abilityName": "Psychic Push",
       "cooldown": "20",
       "description": "Pushes the target enemy unit away from you 400 distance.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

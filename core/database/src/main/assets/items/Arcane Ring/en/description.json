@@ -14,7 +14,7 @@
       "abilityName": "Replenish Mana",
       "cooldown": "45",
       "description": "Restores 75 mana to all nearby allies.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

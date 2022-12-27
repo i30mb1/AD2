@@ -28,7 +28,7 @@
       "abilityName": "Force",
       "cooldown": "8",
       "description": "Развеивает с владельца отрицательные эффекты и толкает его в направлении взгляда на расстоянии 750.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -42,7 +42,7 @@
       "abilityName": "Speed Unlock",
       "cooldown": null,
       "description": "Снимает с владельца ограничение на скорость передвижения.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -20,7 +20,7 @@
       "abilityName": "Transmute",
       "cooldown": "90",
       "description": "Убивает выбранную цель (но не героя), давая за неё 160 золота и в 2,1 раза больше опыта. Не действует на древних крипов.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

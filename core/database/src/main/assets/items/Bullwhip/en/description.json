@@ -18,7 +18,7 @@
       "abilityName": "Whip",
       "cooldown": "11",
       "description": "Grants 18% movement speed when cast on allies, and slows by 18% when cast on enemies. Lasts 4 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

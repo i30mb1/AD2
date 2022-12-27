@@ -22,7 +22,7 @@
       "abilityName": "Assault Aura",
       "cooldown": null,
       "description": "Увеличивает броню союзных построек и существ на 5, а их скорость атаки \u2014 на 30. Снижает броню врагов поблизости на 5.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

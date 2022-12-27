@@ -17,7 +17,7 @@
       "abilityName": "Whirlwind",
       "cooldown": "25",
       "description": "Поднимает владельца в воздух на 0,75 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -42,7 +42,7 @@
       "abilityName": "Bottled Lightning",
       "cooldown": null,
       "description": "Бьёт током случайного врага в радиусе 700, нанося ему 200 урона и на 0,3 сек. замедляя его на 40%. Интервал ударов: 3 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

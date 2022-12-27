@@ -27,7 +27,7 @@
       "abilityName": "Echo Strike",
       "cooldown": null,
       "description": "Позволяет героям ближнего боя совершить двойную атаку, которая на 0,8 сек. уменьшает скорость передвижения жертвы на 100%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

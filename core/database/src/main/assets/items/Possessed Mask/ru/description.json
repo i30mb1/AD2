@@ -13,7 +13,7 @@
       "abilityName": "Lifesteal",
       "cooldown": null,
       "description": "Каждая атака восстанавливает владельцу 7 здоровья.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

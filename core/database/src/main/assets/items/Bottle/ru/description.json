@@ -27,7 +27,7 @@
       "abilityName": "Regenerate",
       "cooldown": "0,5",
       "description": "Тратит один заряд, чтобы постепенно восстановить цели 110 здоровья и 60 маны за 2,7 сек. Восстановление прекращается при получении урона от вражеских героев или Рошана. Заряды можно восполнить возле союзного фонтана. Зажмите Ctrl, чтобы применить на союзника.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -56,7 +56,7 @@
       "abilityName": "Store Rune",
       "cooldown": null,
       "description": "В бутыль можно поместить одну руну, чтобы воспользоваться ей позже. Помещённая в бутыль руна задействуется сама спустя 90 сек. Руны полностью наполняют бутыль.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -82,7 +82,7 @@
       "abilityName": "Богатство",
       "cooldown": null,
       "description": "Дает дополнительные золото.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -102,7 +102,7 @@
       "abilityName": "Волшебство",
       "cooldown": null,
       "description": "Уменьшает время перезарядки способностей на 30% и расход маны на них на 30%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -122,7 +122,7 @@
       "abilityName": "Двойной урон",
       "cooldown": null,
       "description": "Увеличивает базовый урон на 100%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -141,7 +141,7 @@
       "abilityName": "Ускорение",
       "cooldown": null,
       "description": "Увеличивает скорость передвижения до максимума.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -170,7 +170,7 @@
       "abilityName": "Иллюзии",
       "cooldown": null,
       "description": "Создает 2 иллюзии вашего героя, наносящие 35% урона. Иллюзии ближнего боя получают 200% урона, дальнего \u2014 300%. Иллюзии пропадут через 75 секунд.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -192,7 +192,7 @@
       "abilityName": "Невидимость",
       "cooldown": null,
       "description": "Вы станете невидимым на 45 секунд. Руна прекращает свое действие при атаке или при использовании умения или предмета.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -217,7 +217,7 @@
       "abilityName": "Регенерация",
       "cooldown": null,
       "description": "Восстанавливает здоровье и ману до максимума.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -234,7 +234,7 @@
       "abilityName": "Вода",
       "cooldown": null,
       "description": "Мгновенно восстанавливает 40 здоровья и 80 маны.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

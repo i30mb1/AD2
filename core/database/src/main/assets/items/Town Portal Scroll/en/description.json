@@ -43,7 +43,7 @@
       "abilityName": "Teleport",
       "cooldown": "80",
       "description": "After channeling for 3 seconds, teleports you to a target friendly building. Double-click to teleport to your team's base fountain.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

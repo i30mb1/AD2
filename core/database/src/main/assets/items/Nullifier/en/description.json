@@ -18,7 +18,7 @@
       "abilityName": "Nullify",
       "cooldown": "10",
       "description": "Dispels the target and applies a debuff for 5 seconds. Continuously dispels the target.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

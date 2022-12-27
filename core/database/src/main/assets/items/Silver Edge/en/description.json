@@ -32,7 +32,7 @@
       "abilityName": "Shadow Walk",
       "cooldown": "20",
       "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell. While invisible, you move 25% faster and can move through units. Attacking to end the invisibility will deal 175 bonus physical damage and a guaranteed 160% critical strike to the target, and disable their passive abilities for 4 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -53,7 +53,7 @@
       "abilityName": "Critical Strike",
       "cooldown": null,
       "description": "Grants each attack a 30% chance to deal 160% damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

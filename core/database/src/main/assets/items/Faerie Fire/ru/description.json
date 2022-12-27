@@ -12,7 +12,7 @@
       "abilityName": "Imbue",
       "cooldown": null,
       "description": "Мгновенно восстанавливает 85 здоровья.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -30,7 +30,7 @@
       "abilityName": "Endurance",
       "cooldown": "30",
       "description": "Расходует заряд, чтобы увеличить их скорость атаки на 50 и скорость передвижения на 15%. Действует 6 сек. В первые 1,5 сек. союзников нельзя замедлить. Изначально имеет 8 зарядов. Получает 1 заряд каждые 3 минуты.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -51,7 +51,7 @@
       "abilityName": "Swiftness Aura",
       "cooldown": null,
       "description": "Увеличивает союзникам вокруг скорость передвижения на 20.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

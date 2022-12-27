@@ -23,7 +23,7 @@
       "abilityName": "Dig",
       "cooldown": "50",
       "description": "Применяется 1 сек. Может выкопать руну богатства, Healing Salve, Enchanted Mango или враждебного кобольда.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -48,7 +48,7 @@
       "abilityName": "Богатство",
       "cooldown": null,
       "description": "Дает дополнительные золото.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -17,7 +17,7 @@
       "abilityName": "Critical Strike",
       "cooldown": null,
       "description": "Grants each attack a 30% chance to deal 160% damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

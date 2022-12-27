@@ -12,7 +12,7 @@
       "abilityName": "Dragon's Reach",
       "cooldown": null,
       "description": "Increases attack range of ranged heroes by 150.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

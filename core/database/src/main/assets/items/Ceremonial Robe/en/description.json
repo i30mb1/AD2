@@ -22,7 +22,7 @@
       "abilityName": "Ceremonial Aura",
       "cooldown": null,
       "description": "Lowers enemy Status Resistance by 10% and Magic Resistance by 10%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

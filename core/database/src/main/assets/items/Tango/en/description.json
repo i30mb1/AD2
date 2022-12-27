@@ -28,7 +28,7 @@
       "abilityName": "Devour",
       "cooldown": "0",
       "description": "Consumes a target tree to gain 7 health regeneration for 16 seconds. Consuming an Ironwood Tree doubles the heal amount. Comes with 3 charges. Can be used on an allied hero to give them one Tango.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

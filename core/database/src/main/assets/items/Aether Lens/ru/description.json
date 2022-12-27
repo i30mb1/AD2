@@ -15,7 +15,7 @@
       "abilityName": "Aethereal Focus",
       "cooldown": null,
       "description": "Увеличивает дальность применения способностей и предметов.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

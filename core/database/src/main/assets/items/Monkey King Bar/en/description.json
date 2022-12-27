@@ -23,7 +23,7 @@
       "abilityName": "Pierce",
       "cooldown": null,
       "description": "Grants each attack a 80% chance to pierce through evasion and deal 70 bonus magical damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

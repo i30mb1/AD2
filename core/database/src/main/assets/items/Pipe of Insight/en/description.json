@@ -22,7 +22,7 @@
       "abilityName": "Barrier",
       "cooldown": "60",
       "description": "Gives a shield that blocks 450 magic damage to all nearby allies. Lasts 12 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -47,7 +47,7 @@
       "abilityName": "Insight Aura",
       "cooldown": null,
       "description": "Gives allied units 2.5 health regeneration and 15% magic resistance.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

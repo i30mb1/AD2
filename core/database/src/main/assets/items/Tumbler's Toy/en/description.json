@@ -23,7 +23,7 @@
       "abilityName": "Vault",
       "cooldown": "15",
       "description": "Propels your hero forward 300 units. Tumbler's Toy gets disabled for 3 seconds if its owner receives damage from a player source.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -18,7 +18,7 @@
       "abilityName": "Basilius Aura",
       "cooldown": null,
       "description": "Увеличивает восстановление маны союзников на 1.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

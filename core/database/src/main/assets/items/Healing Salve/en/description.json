@@ -25,7 +25,7 @@
       "abilityName": "Salve",
       "cooldown": "0",
       "description": "Grants 30 health regeneration to the target for 13 seconds. If the unit is attacked by an enemy hero or Roshan, the effect is lost. Heals for half the amount when cast on an ally.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

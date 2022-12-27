@@ -13,7 +13,7 @@
       "abilityName": "Chop Tree",
       "cooldown": null,
       "description": "Срубает выбранное дерево.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -34,7 +34,7 @@
       "abilityName": "Quell",
       "cooldown": null,
       "description": "Увеличивает урон от атак по существам, не являющимися героями, на 15 для героев ближнего боя или на 6 \u2014 для дальнего.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -61,7 +61,7 @@
       "abilityName": "Cleave",
       "cooldown": null,
       "description": "Атаки героя прорубают жертву, нанося врагам в радиусе 650 вокруг неё физический урон (только в ближнем бою). \u2022 Урон героям: 70% \u2022 Урон крипам: 40%",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

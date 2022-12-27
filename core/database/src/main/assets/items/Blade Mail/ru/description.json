@@ -17,7 +17,7 @@
       "abilityName": "Damage Return",
       "cooldown": "25",
       "description": "Увеличивает возвращение урона от всех источников на 85%. Длится 5,5 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -43,7 +43,7 @@
       "abilityName": "Damage Return (пассивная)",
       "cooldown": null,
       "description": "Возвращает 20 + 20% урона от каждой атаки атакующим вас существам.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -26,29 +26,30 @@ class GetItemInfoUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 
-    @OptIn(ExperimentalStdlibApi::class)
     operator fun invoke(itemName: String, appLocale: AppLocale): Flow<List<VOItemInfo>> = flow {
         val json = itemRepository.getItem(itemName, appLocale)
         val localItemDescription = moshi.adapter(LocalItemInfo::class.java).fromJson(json)!!
         val result = buildList {
-            add(VOItemInfo.TextLine(res.getString(R.string.cost, localItemDescription.cost)))
-            add(VOItemInfo.TextLine(res.getString(R.string.bought_from, localItemDescription.boughtFrom)))
-            add(VOItemInfo.Recipe(
-                itemName,
-                ItemRepository.getFullUrlItemImage(localItemDescription.name),
-                localItemDescription.consistFrom?.map { itemName -> VORecipe(ItemRepository.getFullUrlItemImage(itemName), itemName) } ?: emptyList()
-            ))
-            add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.description.toSpanned())))
+            if (localItemDescription.cost != null) add(VOItemInfo.TextLine(res.getString(R.string.cost, localItemDescription.cost)))
+            if (localItemDescription.boughtFrom != null) add(VOItemInfo.TextLine(res.getString(R.string.bought_from, localItemDescription.boughtFrom)))
+            if (localItemDescription.name != null) {
+                val voRecipes = localItemDescription.consistFrom?.map { itemName ->
+                    VORecipe(ItemRepository.getFullUrlItemImage(itemName), itemName)
+                } ?: emptyList()
+                add(VOItemInfo.Recipe(itemName, ItemRepository.getFullUrlItemImage(localItemDescription.name), voRecipes))
+            }
+            if (localItemDescription.description != null) add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.description.toSpanned())))
             if (localItemDescription.bonuses != null) add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.bonuses.toStringList().toSpanned())))
 
             localItemDescription.abilities?.let { list ->
-                list.forEach { ability ->
+                for (ability in list) {
+                    if (ability.abilityName == null) continue
                     add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.abilities, ability.abilityName), false, ability.audioUrl)))
-                    ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
-                    add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
+                    if (ability.effects != null) ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
+                    if (ability.description != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
-                    add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true).toSpanned())))
-                    add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true).toSpanned())))
+                    if (ability.params != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true).toSpanned())))
+                    if (ability.notes != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true).toSpanned())))
                     if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), n7.ad2.ui.R.drawable.mana)))
                     if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), n7.ad2.ui.R.drawable.cooldown)))
                 }

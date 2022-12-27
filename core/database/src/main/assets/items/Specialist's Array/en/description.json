@@ -22,7 +22,7 @@
       "abilityName": "Crackshot",
       "cooldown": "12",
       "description": "Ranged Only. The next attack fires projectiles at 2 additional targets within attack range. Does not trigger attack modifiers.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

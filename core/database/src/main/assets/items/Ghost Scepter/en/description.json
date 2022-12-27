@@ -18,7 +18,7 @@
       "abilityName": "Ghost Form",
       "cooldown": "22",
       "description": "You enter ghost form for 4 seconds, becoming immune to physical damage, but are unable to attack and 40% more vulnerable to magic damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

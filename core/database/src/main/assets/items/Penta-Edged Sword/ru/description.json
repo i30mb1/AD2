@@ -18,7 +18,7 @@
       "abilityName": "Maim",
       "cooldown": null,
       "description": "Каждая атака имеет шанс в 25% на 3 сек. замедлить передвижение врага на 20%, а атаку \u2014 на 60.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

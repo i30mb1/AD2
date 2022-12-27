@@ -20,7 +20,7 @@
       "abilityName": "Corruption",
       "cooldown": null,
       "description": "Your attacks reduce the target's armor by 6 for 7 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -44,7 +44,7 @@
       "abilityName": "Soul Stealer",
       "cooldown": null,
       "description": "Desolator gains +2 damage every time an enemy hero dies while affected by Corruption, to a maximum of 20.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

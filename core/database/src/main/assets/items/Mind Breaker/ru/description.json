@@ -14,7 +14,7 @@
       "abilityName": "Silence Strike",
       "cooldown": null,
       "description": "Следующая атака применит на жертву безмолвие на 1,75 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -25,7 +25,7 @@
       "abilityName": "Glimmer",
       "cooldown": "14",
       "description": "After a 0.5 second delay, grants invisibility and 50% magic resistance to you or a target allied unit for 5 seconds. Can be cast while channelling.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

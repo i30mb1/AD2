@@ -17,7 +17,7 @@
       "abilityName": "Afterburn",
       "cooldown": null,
       "description": "Causes attacks to burn the enemy, dealing 18 damage per second for 3 seconds. Affects buildings.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

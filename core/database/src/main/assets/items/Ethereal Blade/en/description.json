@@ -26,7 +26,7 @@
       "abilityName": "Ether Blast",
       "cooldown": "22",
       "description": "Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and 40% more vulnerable to magic damage. Enemy targets are also slowed by 80%, and take 1.5x your target's primary attribute + 50 as magical damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

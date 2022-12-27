@@ -15,7 +15,7 @@
       "abilityName": "Consume",
       "cooldown": null,
       "description": "Поглощает предмет и навсегда увеличивает скорость атаки на 60, а радиус обзора ночью \u2014 на 200. Можно поглотить лишь один Moon Shard.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -32,7 +32,7 @@
       "abilityName": "Shade Sight",
       "cooldown": null,
       "description": "Увеличивает радиус обзора ночью на 400.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

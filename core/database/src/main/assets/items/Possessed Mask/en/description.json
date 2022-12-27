@@ -13,7 +13,7 @@
       "abilityName": "Lifesteal",
       "cooldown": null,
       "description": "Heals the attacker for 7 HP on each attack.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -26,7 +26,7 @@
       "abilityName": "Prescient Aura",
       "cooldown": null,
       "description": "Снижает перезарядку сканирования на 50%. Увеличивает дальность атаки и применения способностей союзников в радиусе 1200.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

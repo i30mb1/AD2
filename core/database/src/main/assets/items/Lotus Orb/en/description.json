@@ -24,7 +24,7 @@
       "abilityName": "Echo Shell",
       "cooldown": "15",
       "description": "Applies a shield to the target unit for 6 seconds which re-casts most targeted spells back to their caster. The shielded unit will still take damage from the spell.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

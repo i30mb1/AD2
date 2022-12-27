@@ -13,7 +13,7 @@
       "abilityName": "Imbue",
       "cooldown": "5",
       "description": "Instantly restores 85 health.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -17,7 +17,7 @@
       "abilityName": "Damage Block",
       "cooldown": null,
       "description": "С вероятностью в 60% блокирует 64 урона от атак, если владелец \u2014 герой ближнего боя, или 32 урона, если герой дальнего боя.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

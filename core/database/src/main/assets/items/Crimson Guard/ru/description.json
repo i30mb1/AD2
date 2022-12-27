@@ -24,7 +24,7 @@
       "abilityName": "Guard",
       "cooldown": null,
       "description": "На 12 сек. даёт героям и постройкам поблизости шанс в 100% заблокировать 75 урона от каждой атаки. Способность действует на одно и то же существо не чаще, чем раз в 34 секунд.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -45,7 +45,7 @@
       "abilityName": "Damage Block",
       "cooldown": null,
       "description": "С вероятностью в 60% блокирует 75 урона, если владелец \u2014 герой ближнего боя, или 50 урона, если герой дальнего боя.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

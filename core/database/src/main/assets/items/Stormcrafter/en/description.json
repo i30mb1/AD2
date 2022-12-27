@@ -17,7 +17,7 @@
       "abilityName": "Whirlwind",
       "cooldown": "25",
       "description": "Cyclones your hero for 0.75 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -42,7 +42,7 @@
       "abilityName": "Bottled Lightning",
       "cooldown": null,
       "description": "Zaps an enemy within 700 range, dealing 200 damage and a 40% slow for 0.3 seconds. Strikes every 3 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

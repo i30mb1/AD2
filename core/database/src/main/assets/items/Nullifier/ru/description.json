@@ -17,7 +17,7 @@
       "abilityName": "Nullify",
       "cooldown": "10",
       "description": "Развеивает положительные эффекты с цели в момент применения и следующие 5 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

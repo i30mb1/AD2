@@ -29,7 +29,7 @@
       "abilityName": "Soul Rend",
       "cooldown": "15",
       "description": "Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magical damage. All attacks on the silenced target will have True Strike and 100% chance to crit for 130% damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -50,7 +50,7 @@
       "abilityName": "Mage Slayer",
       "cooldown": null,
       "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

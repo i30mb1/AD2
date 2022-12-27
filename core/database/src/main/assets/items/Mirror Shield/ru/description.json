@@ -16,7 +16,7 @@
       "abilityName": "Echo Shield",
       "cooldown": null,
       "description": "Блокирует и отражает большинство направленных заклинаний обратно во врага раз в 12 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

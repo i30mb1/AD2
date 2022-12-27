@@ -25,7 +25,7 @@
       "abilityName": "Endurance",
       "cooldown": "30",
       "description": "Consumes a charge and gives +45 attack speed and +13% movement speed to nearby allies for 6 seconds. Comes with 8 charges.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -46,7 +46,7 @@
       "abilityName": "Swiftness Aura",
       "cooldown": null,
       "description": "Grants 20 movement speed to allies.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

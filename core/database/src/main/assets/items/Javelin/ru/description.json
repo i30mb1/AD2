@@ -22,7 +22,7 @@
       "abilityName": "Pierce",
       "cooldown": null,
       "description": "Каждая атака может с вероятностью в 30% пройти сквозь уклонение и нанести 70 магического урона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

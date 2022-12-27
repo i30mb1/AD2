@@ -31,7 +31,7 @@
       "abilityName": "Energy Charge",
       "cooldown": null,
       "description": "Мгновенно восстанавливает выбранному союзному существу 15 здоровья и маны за каждый имеющийся заряд. Может иметь до 20 зарядов. Получает один заряд каждые 10 сек. и каждый раз, когда видимый враг в радиусе 1200 использует способность.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -52,7 +52,7 @@
       "abilityName": "Holy Blessing",
       "cooldown": null,
       "description": "Все лечащие способности владельца восстанавливают на 30% больше здоровья.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -73,7 +73,7 @@
       "abilityName": "Regeneration Aura",
       "cooldown": null,
       "description": "Увеличивает восстановление здоровья на 3 всем союзникам в радиусе 1200.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

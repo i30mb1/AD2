@@ -24,7 +24,7 @@
       "abilityName": "Magical Damage Block",
       "cooldown": null,
       "description": "Consumes a charge to block 120 magic damage from damage instances over 75 damage. Comes with 6 charges. When the charges are gone, the item disappears.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

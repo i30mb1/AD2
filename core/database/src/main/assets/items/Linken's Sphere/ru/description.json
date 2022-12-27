@@ -13,7 +13,7 @@
       "abilityName": "Spellblock",
       "cooldown": null,
       "description": "Блокирует одну направленную способность каждые 14 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -37,7 +37,7 @@
       "abilityName": "Transfer Spellblock",
       "cooldown": null,
       "description": "Временно отключает пассивную способность предмета, передавая её выбранному союзнику на 12 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

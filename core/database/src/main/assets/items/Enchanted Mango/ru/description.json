@@ -16,7 +16,7 @@
       "abilityName": "Eat Mango",
       "cooldown": "0",
       "description": "Мгновенно восстанавливает 100 маны.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

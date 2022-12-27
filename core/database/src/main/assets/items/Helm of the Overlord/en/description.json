@@ -36,7 +36,7 @@
       "abilityName": "Dominate",
       "cooldown": "45",
       "description": "Takes control of one neutral target unit and sets its movement speed to 400 and max health to a minimum of 1800. Also provides the unit with +80 base attack damage, +12 health regen, +4 mana regen and +8 armor. Dominated units with a max health of greater than 1800 retain their original max health. Dominated unit's bounty is set to 250 gold.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -66,7 +66,7 @@
       "abilityName": "Vladmir's Aura",
       "cooldown": null,
       "description": "Grants 20% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 50%",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

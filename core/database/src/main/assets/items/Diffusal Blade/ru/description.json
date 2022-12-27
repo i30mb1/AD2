@@ -18,7 +18,7 @@
       "abilityName": "Inhibit",
       "cooldown": "15",
       "description": "Замедляет противника на 4 секунды.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -46,7 +46,7 @@
       "abilityName": "Manabreak",
       "cooldown": null,
       "description": "Каждая атака сжигает 40 маны врага и наносит ему 1 физического урона за единицу сожжённой маны. Иллюзии героев сжигают по 8 маны за атаку.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

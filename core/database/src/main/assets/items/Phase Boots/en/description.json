@@ -21,7 +21,7 @@
       "abilityName": "Phase",
       "cooldown": "8",
       "description": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

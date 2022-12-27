@@ -13,7 +13,7 @@
       "abilityName": "Lifesteal",
       "cooldown": null,
       "description": "Каждая атака восстанавливает владельцу здоровье в размере 25% от нанесённого урона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -32,7 +32,7 @@
       "abilityName": "Unholy Rage",
       "cooldown": null,
       "description": "Увеличивает эффект вампиризма до 175% на 6 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

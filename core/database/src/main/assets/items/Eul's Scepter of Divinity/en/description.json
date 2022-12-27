@@ -25,7 +25,7 @@
       "abilityName": "Cyclone",
       "cooldown": "23",
       "description": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can only be cast on enemy units or yourself. Enemy units take 50 magical damage upon landing.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

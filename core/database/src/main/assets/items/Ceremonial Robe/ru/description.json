@@ -22,7 +22,7 @@
       "abilityName": "Ceremonial Aura",
       "cooldown": null,
       "description": "Снижает сопротивление эффектам на 10% и сопротивление магии на 10% у врагов в радиусе 1200.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

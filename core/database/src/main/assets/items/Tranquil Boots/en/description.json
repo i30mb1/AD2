@@ -21,7 +21,7 @@
       "abilityName": "Break",
       "cooldown": null,
       "description": "Whenever you attack a hero or are attacked by any unit, the bonus 14 HP regen is lost and the movement speed bonus is reduced to 40 for 13 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

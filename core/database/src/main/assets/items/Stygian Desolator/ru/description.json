@@ -18,7 +18,7 @@
       "abilityName": "Greater Corruption",
       "cooldown": null,
       "description": "Атаки уменьшают броню цели на 10. Эффект длится 7 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -22,7 +22,7 @@
       "abilityName": "Reset Cooldowns",
       "cooldown": "180",
       "description": "Resets the cooldowns of all your items and abilities. Shares a cooldown with Refresher Shard. This item's cooldown only progresses in your hero's main inventory.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -14,7 +14,7 @@
       "abilityName": "Silence Strike",
       "cooldown": null,
       "description": "The next attack silences the hit enemy for 1.75 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

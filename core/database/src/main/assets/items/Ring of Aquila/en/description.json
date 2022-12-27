@@ -19,7 +19,7 @@
       "abilityName": "Aquila Aura",
       "cooldown": null,
       "description": "Grants 1.25 mana regeneration and 2 armor to nearby allies. Deactivate to stop affecting non-hero units.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

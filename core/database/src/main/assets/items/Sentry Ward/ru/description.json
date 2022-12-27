@@ -21,7 +21,7 @@
       "abilityName": "Plant",
       "cooldown": null,
       "description": "Устанавливает невидимый тотем всевидения, раскрывающий невидимость вражеских существ и вардов в радиусе 900, если они в зоне вашей видимости. Действует 7 мин. Не даёт наземный обзор. Можно передать один вард союзному герою, зажав клавишу Ctrl.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -41,7 +41,7 @@
       "abilityName": "True Sight",
       "cooldown": null,
       "description": "Даёт владельцу и его союзникам возможность видеть невидимых существ и варды в радиусе Sentry Ward.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -57,7 +57,7 @@
       "abilityName": "Невидимость",
       "cooldown": null,
       "description": "Этот юнит всегда невидим.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

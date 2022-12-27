@@ -19,7 +19,7 @@
       "abilityName": "Aquila Aura",
       "cooldown": null,
       "description": "Действует на союзников вокруг. Увеличивает их восстановление маны на 1,25 и броню на 2. Если выключить способность, аура будет действовать только на героев.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

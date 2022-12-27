@@ -2,14 +2,18 @@ package n7.ad2.itempage.internal
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.media3.common.util.UnstableApi
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.transition.TransitionInflater
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
 import n7.ad2.itempage.R
 import n7.ad2.itempage.databinding.FragmentItemInfoBinding
@@ -22,6 +26,7 @@ import n7.ad2.mediaplayer.AudioExoPlayer
 import n7.ad2.ui.InfoPopupWindow
 import javax.inject.Inject
 
+@UnstableApi
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     companion object {
@@ -55,12 +60,15 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentItemInfoBinding.bind(view)
 
-//        viewModel.error.observe(viewLifecycleOwner) { if (it != null) showDialogError(it) }
+        viewModel.error
+            .onEach {
+                Toast.makeText(requireContext(), it, Toast.LENGTH_LONG).show()
+            }
+            .launchIn(lifecycleScope)
 
         setupToolbar(itemName)
         setupItemInfoRecyclerView()
         setupInsets()
-        setupAnimation()
         setupListeners()
     }
 
@@ -81,12 +89,6 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
                 is AudioExoPlayer.PlayerState.Error -> viewModel.onEndPlayingItem()
             }
         }
-    }
-
-    private fun setupAnimation() {
-        sharedElementEnterTransition = TransitionInflater.from(requireContext()).inflateTransition(android.R.transition.move)
-        sharedElementReturnTransition = TransitionInflater.from(requireContext()).inflateTransition(android.R.transition.move)
-        postponeEnterTransition()
     }
 
     private fun setupInsets() {
@@ -122,7 +124,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
             addItemDecoration(itemPageDecorator)
         }
         viewModel.voItemInfo.observe(viewLifecycleOwner) { list ->
-            itemInfoAdapter.submitList(list) { startPostponedEnterTransition() }
+            itemInfoAdapter.submitList(list)
         }
     }
 

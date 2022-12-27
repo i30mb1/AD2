@@ -13,7 +13,7 @@
       "abilityName": "Dig",
       "cooldown": "40",
       "description": "Применяется 1 сек. Выкапывает руну богатства!",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -38,7 +38,7 @@
       "abilityName": "Богатство",
       "cooldown": null,
       "description": "Дает дополнительные золото.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

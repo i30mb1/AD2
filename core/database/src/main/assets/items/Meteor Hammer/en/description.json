@@ -33,7 +33,7 @@
       "abilityName": "Meteor Hammer",
       "cooldown": "24",
       "description": "After a successful channel, summons a meteor that strikes a 400 AoE, stunning enemies for 1.25 seconds and dealing impact damage. Continues to deal damage over time to enemy units and buildings for 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

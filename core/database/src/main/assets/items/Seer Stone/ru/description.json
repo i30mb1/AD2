@@ -16,7 +16,7 @@
       "abilityName": "Reveal",
       "cooldown": "60",
       "description": "Даёт обзор на любой области радиусом 800 на 6 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

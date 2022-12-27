@@ -10,7 +10,7 @@
       "abilityName": "Dragon's Reach",
       "cooldown": null,
       "description": "Увеличивает дальность атаки героев дальнего боя на 150.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

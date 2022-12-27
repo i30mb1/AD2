@@ -26,7 +26,7 @@
       "abilityName": "Prescient Aura",
       "cooldown": null,
       "description": "Lowers Scan cooldown by 50%. Increases attack and cast range of allies in a 1200 unit radius.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

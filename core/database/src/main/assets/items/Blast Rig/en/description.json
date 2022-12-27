@@ -18,7 +18,7 @@
       "abilityName": "Hair Trigger",
       "cooldown": null,
       "description": "The next time you get attacked by a hero within 400 range, explode dealing 250 damage to all enemies within a 400 radius and causing them to miss 100% of their attacks for 2 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

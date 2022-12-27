@@ -22,7 +22,7 @@
       "abilityName": "Eternal Chains",
       "cooldown": "18",
       "description": "Накладывает оцепенение на всех врагов в радиусе 450 и наносит им 220 урона. Длительность: 2 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -53,7 +53,7 @@
       "abilityName": "Chain Lightning",
       "cooldown": null,
       "description": "Каждая атака с вероятностью в 30% может создать разряд цепной молнии, которая 4 раз перескочит между случайными врагами в радиусе 650, нанося каждому по 160 магического урона. От атаки с цепной молнией нельзя уклониться.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

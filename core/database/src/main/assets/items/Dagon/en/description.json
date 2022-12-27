@@ -18,7 +18,7 @@
       "abilityName": "Energy Burst",
       "cooldown": "35\/30\/25\/20\/15",
       "description": "Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

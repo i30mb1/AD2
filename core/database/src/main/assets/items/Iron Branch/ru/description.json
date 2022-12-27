@@ -18,7 +18,7 @@
       "abilityName": "Plant Tree",
       "cooldown": null,
       "description": "Сажает в указанное место маленькое счастливое деревце, которое исчезнет через 20 секунд.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

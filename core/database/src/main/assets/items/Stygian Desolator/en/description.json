@@ -20,7 +20,7 @@
       "abilityName": "Greater Corruption",
       "cooldown": null,
       "description": "Your attacks reduce the target's armor by 10 for 7 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

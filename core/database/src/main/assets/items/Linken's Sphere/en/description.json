@@ -17,7 +17,7 @@
       "abilityName": "Spellblock",
       "cooldown": null,
       "description": "Blocks most targeted spells once every 14 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -44,7 +44,7 @@
       "abilityName": "Transfer Spellblock",
       "cooldown": "14",
       "description": "Temporarily removes Spellblock from the item's owner and transfers it to an allied unit for 14 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

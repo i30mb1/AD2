@@ -21,7 +21,7 @@
       "abilityName": "Greater Demonic Summoning",
       "cooldown": "80",
       "description": "Призывает 4 существ от Necronomicon 3-го уровня, которые живут 75 секунд и имеют на 100% больше здоровья и на 75% больше урона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -44,7 +44,7 @@
       "abilityName": "Mana Break",
       "cooldown": null,
       "description": "Каждая атака сжигает ману цели и наносит ей урон, равный доле от сожжённой маны.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -63,7 +63,7 @@
       "abilityName": "Last Will",
       "cooldown": null,
       "description": "Наносит урон убийце воина Некрономикона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -83,7 +83,7 @@
       "abilityName": "True Sight",
       "cooldown": null,
       "description": "Раскрывает невидимых существ.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -106,7 +106,7 @@
       "abilityName": "Purge",
       "cooldown": null,
       "description": "Снимает положительные эффекты с противников и замедляет их передвижение.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

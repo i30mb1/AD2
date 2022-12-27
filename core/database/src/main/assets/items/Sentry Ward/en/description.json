@@ -21,7 +21,7 @@
       "abilityName": "Plant",
       "cooldown": "1",
       "description": "Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a radius. Lasts 7 minutes. Does not grant ground vision. Hold Control to give one Sentry Ward to an allied hero.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -41,7 +41,7 @@
       "abilityName": "True Sight",
       "cooldown": null,
       "description": "Adds the ability to see invisible units and wards to any allied vision within the Sentry Ward's range.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -64,7 +64,7 @@
       "abilityName": "Planted Ward",
       "cooldown": null,
       "description": "This unit is permanently invisible and phased.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

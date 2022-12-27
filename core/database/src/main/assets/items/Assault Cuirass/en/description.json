@@ -23,7 +23,7 @@
       "abilityName": "Assault Aura",
       "cooldown": null,
       "description": "Grants 30 attack speed and 5 armor to nearby allied units and structures, and decreases nearby enemy unit and structure armor by 5.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

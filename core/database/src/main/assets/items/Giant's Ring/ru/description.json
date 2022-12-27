@@ -16,7 +16,7 @@
       "abilityName": "Giant's Foot",
       "cooldown": null,
       "description": "Дарует беспрепятственное передвижение. Враги под владельцем каждую секунду получают урон в размере 100% от его силы.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

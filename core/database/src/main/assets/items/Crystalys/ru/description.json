@@ -17,7 +17,7 @@
       "abilityName": "Critical Strike",
       "cooldown": null,
       "description": "Каждая атака может с вероятностью в 30% нанести 160% урона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

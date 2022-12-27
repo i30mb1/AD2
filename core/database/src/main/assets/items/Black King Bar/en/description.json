@@ -20,7 +20,7 @@
       "abilityName": "Avatar",
       "cooldown": "90",
       "description": "Grants Spell Immunity. Duration decreases with each use.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

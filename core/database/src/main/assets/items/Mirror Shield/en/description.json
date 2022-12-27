@@ -17,7 +17,7 @@
       "abilityName": "Echo Shield",
       "cooldown": null,
       "description": "Block and reflect most targeted spells back to their caster once every 8 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

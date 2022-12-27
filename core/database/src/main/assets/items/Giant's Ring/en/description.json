@@ -16,7 +16,7 @@
       "abilityName": "Giant's Foot",
       "cooldown": null,
       "description": "Can path over any terrain and deals 100% of your strength per second to units you are standing ontop of.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

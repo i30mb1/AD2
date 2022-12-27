@@ -23,7 +23,7 @@
       "abilityName": "Reveal",
       "cooldown": "30",
       "description": "Reveals and slows invisible heroes by 20% in a 1050 radius around the caster for 12 seconds. Invisible units revealed by dust take 25 damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

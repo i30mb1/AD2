@@ -15,7 +15,7 @@
       "abilityName": "Replenish Mana",
       "cooldown": "45",
       "description": "Восстанавливает 75 маны всем окружающим союзникам.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

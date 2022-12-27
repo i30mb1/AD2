@@ -21,7 +21,7 @@
       "abilityName": "Magical Damage Block",
       "cooldown": null,
       "description": "Теряет один заряд и блокирует до 120 магического урона. Срабатывает, только если урон был больше 75. Изначально имеет 6 зарядов и пропадает вместе с последним из них.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

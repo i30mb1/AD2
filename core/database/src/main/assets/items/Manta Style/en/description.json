@@ -27,7 +27,7 @@
       "abilityName": "Mirror Image",
       "cooldown": "30",
       "description": "Creates 2 images of your hero that last 20 seconds. Melee images deal 33% damage, while Ranged images deal 28%. Illusions take 300% damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

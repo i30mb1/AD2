@@ -19,7 +19,7 @@
       "abilityName": "Dark Mercy",
       "cooldown": null,
       "description": "Your attacks deal 10 more damage to enemies for each 10% HP they are missing.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

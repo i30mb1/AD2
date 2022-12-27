@@ -21,7 +21,7 @@
       "abilityName": "Barrier",
       "cooldown": "60",
       "description": "Creates a spell shield that absorbs up to 350 magical damage. Lasts 12 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

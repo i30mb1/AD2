@@ -29,7 +29,7 @@
       "abilityName": "Force",
       "cooldown": "8",
       "description": "Dispels the user and pushes them 750 units in the direction they are facing.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -43,7 +43,7 @@
       "abilityName": "Speed Unlock",
       "cooldown": null,
       "description": "Completely removes the speed limit for the wearer.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -16,7 +16,7 @@
       "abilityName": "Cloak",
       "cooldown": "25",
       "description": "Causes you to become invisible for 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

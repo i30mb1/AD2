@@ -24,7 +24,7 @@
       "abilityName": "Burn",
       "cooldown": null,
       "description": "When active, scorches enemies for 60 magical damage per second, and causes them to miss 15% of their attacks. Illusions deal 35 magical damage per second.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

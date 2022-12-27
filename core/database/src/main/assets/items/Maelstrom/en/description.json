@@ -27,7 +27,7 @@
       "abilityName": "Chain Lightning",
       "cooldown": null,
       "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 140 magical damage to each. Lightning proc pierces evasion.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

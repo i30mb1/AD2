@@ -19,7 +19,7 @@
       "abilityName": "Magic Weakness",
       "cooldown": "22",
       "description": "Ослабляет врагов в области радиусом 600, отчего они получают на 18% больше урона от заклинаний.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -40,7 +40,7 @@
       "abilityName": "Basilius Aura",
       "cooldown": null,
       "description": "Увеличивает восстановление маны союзников на 1,75.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

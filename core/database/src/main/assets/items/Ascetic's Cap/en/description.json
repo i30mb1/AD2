@@ -16,7 +16,7 @@
       "abilityName": "Endurance",
       "cooldown": null,
       "description": "Whenever a debuff would be applied to the owner, grant 40% Status resistance for 3 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

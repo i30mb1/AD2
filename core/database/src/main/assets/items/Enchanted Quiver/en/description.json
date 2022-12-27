@@ -21,7 +21,7 @@
       "abilityName": "Certain Strike",
       "cooldown": null,
       "description": "Empowers your next attack with 225 bonus magical damage and True Strike. Ranged Attackers have +350 bonus range for the attack.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

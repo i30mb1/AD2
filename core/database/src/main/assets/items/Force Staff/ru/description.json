@@ -28,7 +28,7 @@
       "abilityName": "Force",
       "cooldown": "19",
       "description": "Толкает выбранное существо в направлении его взгляда на расстояние в 600.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

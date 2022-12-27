@@ -22,7 +22,7 @@
       "abilityName": "Mend",
       "cooldown": "40",
       "description": "Restores 350 health and 200 mana to nearby allies, and removes most negative effects from the caster.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -50,7 +50,7 @@
       "abilityName": "Guardian Aura",
       "cooldown": null,
       "description": "Provides 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 25%, they receive 16 health regeneration and 10 armor.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

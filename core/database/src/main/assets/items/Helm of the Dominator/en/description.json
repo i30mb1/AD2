@@ -36,7 +36,7 @@
       "abilityName": "Dominate",
       "cooldown": "45",
       "description": "Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1000. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. Dominated units with a max health of greater than 1000 retain their original max health. Dominated unit's bounty is set to 100 gold.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -29,7 +29,7 @@
       "abilityName": "Combo Breaker",
       "cooldown": "105\/125\/145\/165",
       "description": "When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. Cooldown increases every time it triggers.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

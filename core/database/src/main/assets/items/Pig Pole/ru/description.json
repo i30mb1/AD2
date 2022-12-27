@@ -16,7 +16,7 @@
       "abilityName": "Pig, Out!",
       "cooldown": "25",
       "description": "Превращает владельца в зверушку на 4 сек. и увеличивает его скорость передвижения на 10%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

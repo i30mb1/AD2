@@ -16,7 +16,7 @@
       "abilityName": "Pig, Out!",
       "cooldown": "25",
       "description": "Turns your hero into a critter for 4 seconds and gives them +10% Movement Speed.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

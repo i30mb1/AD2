@@ -28,7 +28,7 @@
       "abilityName": "Upgrade: Town Portal Scroll",
       "cooldown": null,
       "description": "Upgrades your Town Portal Scroll, allowing it to target units, reduces cooldown and does not consume a charge on usage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

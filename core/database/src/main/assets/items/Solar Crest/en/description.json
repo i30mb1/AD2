@@ -33,7 +33,7 @@
       "abilityName": "Shine",
       "cooldown": "12",
       "description": "When cast on an ally, grants them 6 armor, 50 attack speed, and 10% movement speed. When cast on an enemy, removes 6 armor, 50 attack speed, and 10% movement speed. Removes the armor from the caster when used. Cannot target spell immune enemies.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

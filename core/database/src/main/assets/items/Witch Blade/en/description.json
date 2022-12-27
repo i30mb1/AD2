@@ -23,7 +23,7 @@
       "abilityName": "Witch Blade",
       "cooldown": null,
       "description": "Causes your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 0.75x your intelligence as damage every second. This attack has True Strike.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

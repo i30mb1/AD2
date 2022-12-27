@@ -18,7 +18,7 @@
       "abilityName": "Buckler Aura",
       "cooldown": null,
       "description": "Увеличивает броню союзных существ, управляемых игроками, на 2.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

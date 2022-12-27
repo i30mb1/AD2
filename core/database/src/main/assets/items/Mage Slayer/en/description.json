@@ -17,7 +17,7 @@
       "abilityName": "Mage Slayer",
       "cooldown": null,
       "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -13,7 +13,7 @@
       "abilityName": "Ability Upgrade",
       "cooldown": null,
       "description": "Upgrades an existing ability or adds a new ability to your hero.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

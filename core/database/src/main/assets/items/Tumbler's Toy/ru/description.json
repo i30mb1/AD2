@@ -23,7 +23,7 @@
       "abilityName": "Vault",
       "cooldown": "15",
       "description": "Толкает владельца вперёд на 300 единиц. Нельзя использовать, если в последние 3 секунды владелец получал урон от игрока.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

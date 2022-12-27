@@ -17,7 +17,7 @@
       "abilityName": "Switch Attribute",
       "cooldown": "0",
       "description": "Switches between +10 Strength, +10 Agility, or +10 Intelligence.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

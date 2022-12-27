@@ -17,7 +17,7 @@
       "abilityName": "Afterburn",
       "cooldown": null,
       "description": "Атаки владельца на 3 сек. поджигают врага, нанося ему 18 урона в секунду. Действует на постройки.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

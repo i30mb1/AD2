@@ -19,7 +19,7 @@
       "abilityName": "Dark Mercy",
       "cooldown": null,
       "description": "Атаки владельца наносят на 10 урона больше за каждые 10% отсутствующего у жертвы здоровья.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

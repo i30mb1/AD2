@@ -17,7 +17,7 @@
       "abilityName": "Damage Return",
       "cooldown": "25",
       "description": "For 5.5 seconds, the damage returned from all sources is increased by 85%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -43,7 +43,7 @@
       "abilityName": "Damage Return (Passive)",
       "cooldown": null,
       "description": "Everytime you are attacked, you return 20 damage plus 20% of the attack damage dealt to you.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

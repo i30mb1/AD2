@@ -15,7 +15,7 @@
       "abilityName": "Reset Cooldowns",
       "cooldown": "25",
       "description": "Reset the cooldowns on all items (except Refresher Orb).",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

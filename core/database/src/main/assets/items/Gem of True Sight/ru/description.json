@@ -19,7 +19,7 @@
       "abilityName": "Reveal",
       "cooldown": "12",
       "description": "Раскрывает невидимость в радиусе 300, показывая даже варды и существ в тумане войны.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -40,7 +40,7 @@
       "abilityName": "True Sight",
       "cooldown": null,
       "description": "Даёт владельцу и его союзникам возможность видеть невидимых существ и варды в радиусе 900.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

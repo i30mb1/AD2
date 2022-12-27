@@ -16,7 +16,7 @@
       "abilityName": "Aethereal Focus",
       "cooldown": null,
       "description": "Increases targeted spell and item cast range by 225.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

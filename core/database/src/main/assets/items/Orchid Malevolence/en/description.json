@@ -21,7 +21,7 @@
       "abilityName": "Soul Burn",
       "cooldown": "18",
       "description": "Silences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

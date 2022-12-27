@@ -16,7 +16,7 @@
       "abilityName": "Berserk",
       "cooldown": "16",
       "description": "Gives 110 attack speed and 30 movement speed, but reduces your armor by 8 and silences you. Lasts 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -34,7 +34,7 @@
       "abilityName": "Lifesteal",
       "cooldown": null,
       "description": "Heals the attacker for 24% of attack damage dealt. Lifesteal from creeps is reduced by 50%",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -39,7 +39,7 @@
       "abilityName": "Soul Release",
       "cooldown": "7",
       "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration and healing by 45%. Deals 35 damage per second. When used on allies, it provides 40 health regeneration per second. Lasts 8 seconds. Gains charges every time an enemy hero dies within 1400 units. Only the closest Spirit Vessel to the dying hero will gain a charge.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

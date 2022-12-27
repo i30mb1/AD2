@@ -28,7 +28,7 @@
       "abilityName": "Echo Strike",
       "cooldown": null,
       "description": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.8 seconds on each strike.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

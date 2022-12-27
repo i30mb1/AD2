@@ -15,7 +15,7 @@
       "abilityName": "Berserk",
       "cooldown": "16",
       "description": "Дает 110 к скорости атаки и 30 к скорости передвижения, но уменьшает броню на 8 и запрещает использовать заклинания. Длится 6 секунд.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -32,7 +32,7 @@
       "abilityName": "Lifesteal",
       "cooldown": null,
       "description": "Каждая атака восстанавливает владельцу здоровье в размере 20% от нанесённого урона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

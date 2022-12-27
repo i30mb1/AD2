@@ -24,7 +24,7 @@
       "abilityName": "Vladmir's Aura",
       "cooldown": null,
       "description": "Увеличивает вампиризм союзников на 15%, их урон на 18%, броню на 3 и восстановление маны на 1,75.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

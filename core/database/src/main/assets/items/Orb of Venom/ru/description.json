@@ -23,7 +23,7 @@
       "abilityName": "Poison Attack",
       "cooldown": null,
       "description": "Отравляет цель атаки на 2 сек., нанося ей 2 магического урона в секунду и замедляя её передвижение. Атака в ближнем бою замедляет цель на 13%, а в дальнем \u2014 на 4%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

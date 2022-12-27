@@ -27,7 +27,7 @@
       "abilityName": "Dig",
       "cooldown": "50",
       "description": "Channel for 1 second. Can find a Bounty Rune, a Flask, an Enchanted Mango, or an enemy Kobold.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -52,7 +52,7 @@
       "abilityName": "Bounty",
       "cooldown": null,
       "description": "Grants bonus Gold.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

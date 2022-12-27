@@ -18,7 +18,7 @@
       "abilityName": "Maim",
       "cooldown": null,
       "description": "Each attack has a 25% chance to reduce enemy hero movement speed by 20% and attack speed by 60 for 3 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

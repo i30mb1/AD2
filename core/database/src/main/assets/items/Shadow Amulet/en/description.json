@@ -23,7 +23,7 @@
       "abilityName": "Fade",
       "cooldown": "7\/0",
       "description": "Grants invisibility to you or a target allied hero as long as the target unit remains still. Has a 1.25 second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

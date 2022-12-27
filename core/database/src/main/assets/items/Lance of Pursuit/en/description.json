@@ -20,7 +20,7 @@
       "abilityName": "Hound",
       "cooldown": "0",
       "description": "Attacking from behind slows enemies by 12% (6% if Ranged) and deals +15 more Damage. Slows lasts for 1 second.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

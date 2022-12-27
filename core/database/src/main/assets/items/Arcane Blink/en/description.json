@@ -33,7 +33,7 @@
       "abilityName": "Arcane Blink",
       "cooldown": "15",
       "description": "Teleport to a target point up to 1200 units away. After teleportation, you gain 25% Mana Cost Reduction, 20% Debuff Amplification and 50% Cast Point reduction for 6 seconds. Arcane Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

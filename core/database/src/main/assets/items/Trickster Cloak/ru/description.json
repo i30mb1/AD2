@@ -16,7 +16,7 @@
       "abilityName": "Cloak",
       "cooldown": "25",
       "description": "Делает владельца невидимым на 6 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

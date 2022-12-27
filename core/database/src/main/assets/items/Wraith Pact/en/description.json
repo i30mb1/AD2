@@ -31,7 +31,7 @@
       "abilityName": "Wraith's Reprisal",
       "cooldown": "60",
       "description": "Summons a movable totem in your location for 25 seconds that reduces all physical damage of enemies within 900 radius by 30% and deals 30 damage per second. Totem can be destroyed in 4 hits. Creeps deal half damage to the totem.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -60,7 +60,7 @@
       "abilityName": "Vladmir's Aura",
       "cooldown": null,
       "description": "Grants 24% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 50%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

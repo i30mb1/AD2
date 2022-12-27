@@ -17,7 +17,7 @@
       "abilityName": "Imbrue",
       "cooldown": "30",
       "description": "Consume 100 health to temporarily gain 40 damage. Lasts 8 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

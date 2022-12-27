@@ -16,7 +16,7 @@
       "abilityName": "Mage Slayer",
       "cooldown": null,
       "description": "Атакуемые вами враги наносят на 35% меньше урона заклинаниями. Действует 6 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

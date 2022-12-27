@@ -16,7 +16,7 @@
       "abilityName": "Reveal",
       "cooldown": "60",
       "description": "Reveal a target 800 area of the map for 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

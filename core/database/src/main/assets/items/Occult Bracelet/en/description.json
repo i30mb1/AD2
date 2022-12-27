@@ -17,7 +17,7 @@
       "abilityName": "Rites of Eloshar",
       "cooldown": "0",
       "description": "Each time the wearer is attacked they gain a stack of 0.5 mana regen, up to 5 stacks. Stacks last for 10 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

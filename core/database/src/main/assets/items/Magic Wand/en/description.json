@@ -24,7 +24,7 @@
       "abilityName": "Energy Charge",
       "cooldown": "13",
       "description": "Instantly restores 15 health and mana per charge stored. Max 20 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

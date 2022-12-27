@@ -21,7 +21,7 @@
       "abilityName": "Shroud",
       "cooldown": "45",
       "description": "Создаёт щит, блокирующий до магического урона. Получаемый магический урон превращается в ману. Действует сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

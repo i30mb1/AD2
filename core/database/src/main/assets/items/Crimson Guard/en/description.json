@@ -26,7 +26,7 @@
       "abilityName": "Guard",
       "cooldown": "35",
       "description": "For 12 seconds, grant nearby allied heroes and buildings a 100% chance to block 75 damage from each incoming attack. Units may only be affected by Guard once every 34 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -47,7 +47,7 @@
       "abilityName": "Damage Block",
       "cooldown": null,
       "description": "Grants a 60% chance to block 75 damage from incoming attacks on melee heroes, and 50 damage on ranged.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

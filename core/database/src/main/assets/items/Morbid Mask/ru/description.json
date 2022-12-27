@@ -13,7 +13,7 @@
       "abilityName": "Lifesteal",
       "cooldown": null,
       "description": "Каждая атака восстанавливает владельцу здоровье в размере 15% от нанесённого урона.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

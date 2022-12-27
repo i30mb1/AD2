@@ -14,7 +14,7 @@
       "abilityName": "Cleanse",
       "cooldown": "20",
       "description": "Применяет развеивание на выбранного врага или союзника.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -35,7 +35,7 @@
       "abilityName": "Subjugate",
       "cooldown": null,
       "description": "Каждая атака владельца наносит жертве урон, равный 4% от её максимальной маны.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -32,7 +32,7 @@
       "abilityName": "Unholy Strength",
       "cooldown": "0",
       "description": "When active, Unholy Strength grants +35 damage, +25 strength and +4 armor, but drains 45 health per second. You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

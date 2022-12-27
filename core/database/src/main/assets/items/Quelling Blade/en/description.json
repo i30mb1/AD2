@@ -13,7 +13,7 @@
       "abilityName": "Chop Tree",
       "cooldown": "4",
       "description": "Destroy a target tree.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -38,7 +38,7 @@
       "abilityName": "Quell",
       "cooldown": null,
       "description": "Increases attack damage against non-hero units by 8 for melee heroes, and 4 for ranged.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

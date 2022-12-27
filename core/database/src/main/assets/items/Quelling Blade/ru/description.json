@@ -13,7 +13,7 @@
       "abilityName": "Chop Tree",
       "cooldown": null,
       "description": "Уничтожает выбранное дерево.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -34,7 +34,7 @@
       "abilityName": "Quell",
       "cooldown": null,
       "description": "Увеличивает урон от атак по существам, не являющимися героями, на 8 для героев ближнего боя или на 4 \u2014 для дальнего.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

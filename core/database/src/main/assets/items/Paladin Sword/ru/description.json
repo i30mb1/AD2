@@ -17,7 +17,7 @@
       "abilityName": "Greater Healing",
       "cooldown": null,
       "description": "Увеличивает на 14% количество здоровья, получаемом при его восстановлении, лечении и вампиризме.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

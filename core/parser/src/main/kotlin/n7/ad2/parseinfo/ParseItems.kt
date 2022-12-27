@@ -30,7 +30,7 @@ private fun writeItemsInFile(items: List<HeroItem>) {
 private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
     JSONObject().apply {
         val list = getItemsUseCase(locale)
-//        .filter { it.name == "Swift Blink" }
+//            .filter { it.name == "Swift Blink" }
 
         for (item in list) {
             val url = locale.baseUrl + item.href
@@ -208,14 +208,15 @@ private fun JSONObject.loadAbilities(root: Document) {
                 put("description", description)
 
                 val params = it.getElementsByAttributeValue("style", "display:inline-block; vertical-align:top; padding:3px 5px; border:1px solid rgba(0, 0, 0, 0);")[0].children()
-                params.filter { it.attr("style").isEmpty() }.also { param ->
-                    val array = JSONArray()
-                    param.forEach {
-                        array.add(it.text())
+                val paramsResult: JSONArray? = params
+                    .filter { it.attr("style").isEmpty() }
+                    .ifEmpty { null }
+                    ?.fold(JSONArray()) { array, value ->
+                        array.add(value.text())
+                        array
                     }
 
-                    if (array.isNotEmpty()) put("params", array)
-                }
+                put("params", paramsResult)
 
                 var cooldown = it.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; max-width:100%; width:240px;").getOrNull(0)
                 if (cooldown == null) cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)

@@ -20,7 +20,7 @@
       "abilityName": "Switch Attribute",
       "cooldown": "0",
       "description": "Для этой способности нет описания.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

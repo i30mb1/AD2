@@ -17,7 +17,7 @@
       "abilityName": "Energy Burst",
       "cooldown": "35\/30\/25\/20\/15",
       "description": "Выпускает мощный всплеск энергии, наносящий магический урон выбранному вражескому существу. Предмет можно улучшить.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -18,7 +18,7 @@
       "abilityName": "Enlighten",
       "cooldown": null,
       "description": "Даёт 700 базового опыта + 135 опыта за каждое предыдущее применение этого предмета в вашей команде, не считая первых двух.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

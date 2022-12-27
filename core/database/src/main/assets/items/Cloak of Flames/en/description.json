@@ -19,7 +19,7 @@
       "abilityName": "Immolate",
       "cooldown": null,
       "description": "Burns enemy units for 45 damage per second. Illusions deal 30 damage per second.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

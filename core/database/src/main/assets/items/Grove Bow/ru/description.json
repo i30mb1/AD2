@@ -16,7 +16,7 @@
       "abilityName": "Magic Amp",
       "cooldown": null,
       "description": "Атаки снижают сопротивление магии жертвы на 15%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

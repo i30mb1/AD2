@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.AppInformation
@@ -48,7 +47,7 @@ class ItemInfoViewModel @AssistedInject constructor(
     }
 
     private fun loadItemInfo(itemName: String, appLocale: AppLocale) = getItemInfoUseCase(itemName, appLocale)
-        .catch { error -> showError(error) }
+//        .catch { error -> showError(error) }
         .onEach { list -> _voItemInfo.value = list }
         .launchIn(viewModelScope)
 

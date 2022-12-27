@@ -19,7 +19,7 @@
       "abilityName": "Inhibit",
       "cooldown": "15",
       "description": "Targets an enemy, slowing it for 3 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -47,7 +47,7 @@
       "abilityName": "Manabreak",
       "cooldown": null,
       "description": "Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. Burns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -19,7 +19,7 @@
       "abilityName": "Улучшение Town Portal Scroll",
       "cooldown": null,
       "description": "Улучшает свиток телепортации: он позволяет телепортироваться к существам, перезаряжается быстрее и не расходует заряды.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

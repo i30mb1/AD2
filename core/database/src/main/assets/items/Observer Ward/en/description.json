@@ -29,7 +29,7 @@
       "abilityName": "Plant",
       "cooldown": "1",
       "description": "Plants an Observer Ward, an invisible watcher that gives ground vision in a 1600 radius to your team. Lasts 6 minutes. Hold Control to give one Observer Ward to an allied hero.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -52,7 +52,7 @@
       "abilityName": "Planted Ward",
       "cooldown": null,
       "description": "This unit is permanently invisible and phased.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

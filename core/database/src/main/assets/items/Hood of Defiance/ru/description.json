@@ -20,7 +20,7 @@
       "abilityName": "Barrier",
       "cooldown": "60",
       "description": "Создаёт щит, блокирующий до 350 магического урона. Действует 12 сек.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

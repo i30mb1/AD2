@@ -20,7 +20,7 @@
       "abilityName": "Eat Mango",
       "cooldown": "0",
       "description": "Instantly restores 100 mana.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

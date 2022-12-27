@@ -16,7 +16,7 @@
       "abilityName": "Spell Lifesteal",
       "cooldown": null,
       "description": "10% of spell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type. Lifesteal reduced to 2% against creeps.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -17,7 +17,7 @@
       "abilityName": "Greater Healing",
       "cooldown": null,
       "description": "Amplifies the wearer's Regeneration, Healing, Lifesteal and Spell Lifesteal by 14%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -27,7 +27,7 @@
       "abilityName": "Bash",
       "cooldown": null,
       "description": "Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus physical damage. Bash chance for ranged heroes is 10%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

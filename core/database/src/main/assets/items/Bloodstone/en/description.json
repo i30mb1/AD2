@@ -22,7 +22,7 @@
       "abilityName": "Bloodpact",
       "cooldown": null,
       "description": "Increases Bloodstone's Spell Lifesteal by 2.5x and also converts the same percentage of damage dealt to mana. Lasts 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -12,7 +12,7 @@
       "abilityName": "Disarm",
       "cooldown": "18",
       "description": "Prevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

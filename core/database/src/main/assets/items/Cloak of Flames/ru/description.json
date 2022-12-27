@@ -18,7 +18,7 @@
       "abilityName": "Immolate",
       "cooldown": null,
       "description": "Каждую секунду наносит противникам магического урона. На иллюзиях наносит магического урона в секунду.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

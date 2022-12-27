@@ -19,7 +19,7 @@
       "abilityName": "Restore",
       "cooldown": "50",
       "description": "Heals 275 health to allied units in a 1200 radius.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -41,7 +41,7 @@
       "abilityName": "Mekansm Aura",
       "cooldown": null,
       "description": "Grants 2.5 health regeneration to allied units in a 1200 radius.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

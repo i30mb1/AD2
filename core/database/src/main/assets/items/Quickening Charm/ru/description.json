@@ -12,7 +12,7 @@
       "abilityName": "Cooldown Reduction",
       "cooldown": null,
       "description": "Уменьшает перезарядку всех предметов и способностей.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -31,7 +31,7 @@
       "abilityName": "Force",
       "cooldown": "19",
       "description": "Pushes any target unit 600 units in the direction it is facing.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

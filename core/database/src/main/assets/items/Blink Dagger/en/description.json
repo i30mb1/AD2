@@ -25,7 +25,7 @@
       "abilityName": "Blink",
       "cooldown": "15",
       "description": "Teleport to a target point up to 1200 units away. Blink Dagger cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

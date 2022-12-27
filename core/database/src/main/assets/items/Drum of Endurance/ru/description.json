@@ -25,7 +25,7 @@
       "abilityName": "Endurance",
       "cooldown": "30",
       "description": "Даёт +45 к скорости атаки и +13% к скорости передвижения союзников на 6 секунд. Изначальное число зарядов: 8.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -46,7 +46,7 @@
       "abilityName": "Swiftness Aura",
       "cooldown": null,
       "description": "Увеличивает союзникам вокруг скорость передвижения на 20.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -19,7 +19,7 @@
       "abilityName": "Reveal",
       "cooldown": "12",
       "description": "Gives True Sight over a 300 radius revealing wards and units even in Fog of War.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -40,7 +40,7 @@
       "abilityName": "True Sight",
       "cooldown": null,
       "description": "Grants the ability to see invisible units and wards to any allied vision within 900 range of its carrier.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -56,7 +56,7 @@
       "abilityName": "Everlasting",
       "cooldown": null,
       "description": "Dropped on death, and cannot be destroyed.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

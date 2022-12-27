@@ -24,7 +24,7 @@
       "abilityName": "Ogre Seal Flop",
       "cooldown": "40",
       "description": "Flop forward like an ogre seal 2 times, dealing 150 damage in a 225 radius by 100% for 1 second on each bounce. 400 bounce distance.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

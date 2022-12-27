@@ -22,7 +22,7 @@
       "abilityName": "Crackshot",
       "cooldown": "12",
       "description": "Только дальний бой. Следующая атака будет совершена по ещё 2 целям в радиусе атаки. На дополнительные цели не могут сработать эффекты атаки.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -29,7 +29,7 @@
       "abilityName": "Mega Shield",
       "cooldown": "20",
       "description": "Force Field Aura Grants 40% Damage Reflection for 5 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -51,7 +51,7 @@
       "abilityName": "Shield",
       "cooldown": null,
       "description": "Grants +5 armor and +20% Magic Resistance to all allies within 1200 radius.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

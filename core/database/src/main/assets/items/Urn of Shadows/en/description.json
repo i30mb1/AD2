@@ -35,7 +35,7 @@
       "abilityName": "Soul Release",
       "cooldown": "7",
       "description": "Provides 30 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies. Lasts 8 seconds. Gains charges every time an enemy hero dies within 1400 units. Only the closest Urn to the dying hero will gain a charge.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

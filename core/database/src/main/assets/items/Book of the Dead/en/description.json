@@ -21,7 +21,7 @@
       "abilityName": "Greater Demonic Summoning",
       "cooldown": "80",
       "description": "Summons 4 level 3 Necronomicon Units that last 75 seconds. Units have 100% more health and 75% more damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -44,7 +44,7 @@
       "abilityName": "Mana Break",
       "cooldown": null,
       "description": "Mana burned per hit, a portion of which is dealt as damage.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -63,7 +63,7 @@
       "abilityName": "Last Will",
       "cooldown": null,
       "description": "Deals damage to the unit that kills the Necronomicon Warrior.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -82,7 +82,7 @@
       "abilityName": "True Sight",
       "cooldown": null,
       "description": "Reveals invisible units.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -105,7 +105,7 @@
       "abilityName": "Purge",
       "cooldown": null,
       "description": "Removes positive buffs from enemies and slow their movement speed.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

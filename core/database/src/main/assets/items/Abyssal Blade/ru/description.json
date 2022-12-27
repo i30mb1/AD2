@@ -16,7 +16,7 @@
       "abilityName": "Overwhelm",
       "cooldown": "35",
       "description": "Оглушает выбранного противника на 2 сек. Проходит сквозь невосприимчивость к заклинаниям.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -49,7 +49,7 @@
       "abilityName": "Bash",
       "cooldown": null,
       "description": "Каждая атака может оглушить цель на 1,5 сек. и нанести 120 физического урона. Вероятность зависит от типа атаки владельца: 25% в ближнем бою, 10% \u2014 в дальнем.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -70,7 +70,7 @@
       "abilityName": "Damage Block",
       "cooldown": null,
       "description": "С вероятностью в 60% блокирует 70 урона от атак, если владелец \u2014 герой ближнего боя, или 35 урона, если герой дальнего боя.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -21,7 +21,7 @@
       "abilityName": "Cold Attack",
       "cooldown": null,
       "description": "Attacks lower enemy movement and attack speed and reduces heals, health regeneration and lifesteal by 40% for 3 seconds. Slows enemy ranged units by 40% movement speed and 60 attack speed. Slows enemy melee units by 20% movement speed and 30 attack speed.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

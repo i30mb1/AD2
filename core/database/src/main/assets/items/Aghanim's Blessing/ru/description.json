@@ -11,7 +11,7 @@
       "abilityName": "Ability Upgrade",
       "cooldown": null,
       "description": "Улучшает ульт, а также некоторые способности всех героев.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

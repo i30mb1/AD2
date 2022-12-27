@@ -18,7 +18,7 @@
       "abilityName": "Plant Tree",
       "cooldown": "0",
       "description": "Targets the ground to plant a happy little tree that lasts for 20 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

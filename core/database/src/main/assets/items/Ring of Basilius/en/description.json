@@ -18,7 +18,7 @@
       "abilityName": "Basilius Aura",
       "cooldown": null,
       "description": "Grants 1 mana regeneration to allies.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

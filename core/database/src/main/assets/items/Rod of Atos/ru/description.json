@@ -17,7 +17,7 @@
       "abilityName": "Cripple",
       "cooldown": "18",
       "description": "На 2 секунды накладывает на врага оцепенение.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

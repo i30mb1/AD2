@@ -11,7 +11,7 @@
       "abilityName": "Ability Upgrade",
       "cooldown": null,
       "description": "Upgrades the ultimate, and some abilities, of all heroes.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

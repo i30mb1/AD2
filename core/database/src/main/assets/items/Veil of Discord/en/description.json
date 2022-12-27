@@ -20,7 +20,7 @@
       "abilityName": "Magic Weakness",
       "cooldown": "22",
       "description": "Cast a 600 radius blast that causes enemies to take 18% increased damage from spells.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -42,7 +42,7 @@
       "abilityName": "Basilius Aura",
       "cooldown": null,
       "description": "Grants 1.75 mana regeneration to allies.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

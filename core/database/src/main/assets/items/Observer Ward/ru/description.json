@@ -28,7 +28,7 @@
       "abilityName": "Plant",
       "cooldown": null,
       "description": "Устанавливает невидимый тотем наблюдения, который даёт наземный обзор в радиусе 1400. Действует 6 мин. Можно передать один вард союзному герою, зажав клавишу Ctrl.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -44,7 +44,7 @@
       "abilityName": "Невидимость",
       "cooldown": null,
       "description": "Этот юнит всегда невидим.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

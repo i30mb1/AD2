@@ -19,7 +19,7 @@
       "abilityName": "Sacrifice",
       "cooldown": "25",
       "description": "Consume 170 health to temporarily gain 150 mana. Lasts 10 seconds. If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

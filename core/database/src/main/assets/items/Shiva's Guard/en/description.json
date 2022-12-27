@@ -20,7 +20,7 @@
       "abilityName": "Arctic Blast",
       "cooldown": "27",
       "description": "Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by 40% for 4 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -44,7 +44,7 @@
       "abilityName": "Freezing Aura",
       "cooldown": null,
       "description": "Reduces the attack speed of all enemies by 45 and all heals, regeneration and lifesteal by 25%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -29,7 +29,7 @@
       "abilityName": "Mega Shield",
       "cooldown": "20",
       "description": "Аура этого предмета даёт 40% к возвращению урона на 5 секунд.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -51,7 +51,7 @@
       "abilityName": "Shield",
       "cooldown": null,
       "description": "Даёт +5 к броне и +20% к сопротивлению магии всем союзникам, кроме владельца, в радиусе 900.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

@@ -31,7 +31,7 @@
       "abilityName": "Regenerate",
       "cooldown": "0.5",
       "description": "Consumes a charge to restore 110 health and 60 mana over 2.7 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost. The Bottle automatically refills at the fountain. Hold Control to use on an allied hero.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -61,7 +61,7 @@
       "abilityName": "Store Rune",
       "cooldown": null,
       "description": "Runes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 90 seconds. Using a stored rune fully refills the Bottle.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -87,7 +87,7 @@
       "abilityName": "Bounty",
       "cooldown": null,
       "description": "Grants bonus Gold.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -108,7 +108,7 @@
       "abilityName": "Arcane",
       "cooldown": null,
       "description": "Reduces cooldowns and mana costs by 30%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -128,7 +128,7 @@
       "abilityName": "Double Damage",
       "cooldown": null,
       "description": "Increases base damage by 100%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -147,7 +147,7 @@
       "abilityName": "Haste",
       "cooldown": null,
       "description": "Increases movement speed to maximum.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -177,7 +177,7 @@
       "abilityName": "Illusion",
       "cooldown": null,
       "description": "Conjures 2 illusions of your hero which deal 35% damage. Melee illusions take 200% damage. Ranged illusions take 300% damage. Illusions last 75 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -199,7 +199,7 @@
       "abilityName": "Invisibility",
       "cooldown": null,
       "description": "Becomes invisible for 45 seconds. This invisibility is broken by attacking or by using an ability or item.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -223,7 +223,7 @@
       "abilityName": "Regeneration",
       "cooldown": null,
       "description": "Regenerates health and mana to maximum.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -240,7 +240,7 @@
       "abilityName": "Water",
       "cooldown": null,
       "description": "Instantly restores 40 Health and 80 Mana.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

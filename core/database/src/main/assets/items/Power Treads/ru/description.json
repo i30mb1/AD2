@@ -17,7 +17,7 @@
       "abilityName": "Switch Attribute",
       "cooldown": "0",
       "description": "Меняет атрибут, который получает бонус: +10 к силе, ловкости или интеллекту.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

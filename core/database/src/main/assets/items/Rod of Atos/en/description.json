@@ -17,7 +17,7 @@
       "abilityName": "Cripple",
       "cooldown": "18",
       "description": "Roots the target for 2 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

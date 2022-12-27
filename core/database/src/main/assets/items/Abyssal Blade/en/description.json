@@ -16,7 +16,7 @@
       "abilityName": "Overwhelm",
       "cooldown": "35",
       "description": "Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -49,7 +49,7 @@
       "abilityName": "Bash",
       "cooldown": null,
       "description": "Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 120 bonus physical damage. Bash chance for ranged heroes is 10%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -70,7 +70,7 @@
       "abilityName": "Damage Block",
       "cooldown": null,
       "description": "Grants a 60% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

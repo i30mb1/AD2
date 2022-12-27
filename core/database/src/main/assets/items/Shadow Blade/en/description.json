@@ -28,7 +28,7 @@
       "abilityName": "Shadow Walk",
       "cooldown": "25",
       "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell. While Shadow Walk is active, you move 20% faster and can move through units. If attacking to end the invisibility, you gain 175 bonus physical damage on that attack.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

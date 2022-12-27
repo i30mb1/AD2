@@ -23,7 +23,7 @@
       "abilityName": "Consume",
       "cooldown": "0",
       "description": "Consume the Moon Shard to permanently gain 60 attack speed and 200 bonus night vision. Max 1 use.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     },
@@ -41,7 +41,7 @@
       "abilityName": "Shade Sight",
       "cooldown": null,
       "description": "Grants 400 bonus night vision.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

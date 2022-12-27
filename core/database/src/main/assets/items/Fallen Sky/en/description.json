@@ -34,7 +34,7 @@
       "abilityName": "Fallen Sky",
       "cooldown": "15",
       "description": "Transforms into a meteor that strikes down at the target area after 1 seconds in a 315 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

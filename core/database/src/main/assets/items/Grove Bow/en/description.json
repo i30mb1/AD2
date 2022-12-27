@@ -16,7 +16,7 @@
       "abilityName": "Magic Amp",
       "cooldown": null,
       "description": "Reduces magic resistance of the attacked enemy by 15%.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

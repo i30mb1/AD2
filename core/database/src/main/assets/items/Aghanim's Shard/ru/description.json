@@ -11,7 +11,7 @@
       "abilityName": "Ability Upgrade",
       "cooldown": null,
       "description": "Улучшает существующую способность героя или даёт ему новую.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }

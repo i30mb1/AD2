@@ -18,7 +18,7 @@
       "abilityName": "Hex",
       "cooldown": "20",
       "description": "Turns a target unit into a harmless critter for 3.5 seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed. Instantly destroys illusions.",
-      "params": [],
+      "params": null,
       "itemBehaviour": [],
       "story": null
     }
