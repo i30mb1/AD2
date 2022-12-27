@@ -32,9 +32,9 @@ internal class GetMenuItemsUseCase @Inject constructor(
         Menu(VOMenuType.HEROES),
         Menu(VOMenuType.ITEMS),
         Menu(VOMenuType.NEWS),
-        Menu(VOMenuType.TOURNAMENTS),
-        Menu(VOMenuType.STREAMS),
-        Menu(VOMenuType.GAMES),
+        Menu(VOMenuType.TOURNAMENTS, false),
+        Menu(VOMenuType.STREAMS, false),
+        Menu(VOMenuType.GAMES, false),
     )
 
     @OptIn(ExperimentalStdlibApi::class)

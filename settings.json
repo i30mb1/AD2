@@ -15,15 +15,15 @@
     },
     {
       "type": "TOURNAMENTS",
-      "isEnable": true
+      "isEnable": false
     },
     {
       "type": "STREAMS",
-      "isEnable": true
+      "isEnable": false
     },
     {
       "type": "GAMES",
-      "isEnable": true
+      "isEnable": false
     }
   ]
 }
