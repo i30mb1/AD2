@@ -16,6 +16,7 @@ import n7.ad2.drawer.internal.data.remote.model.Menu
 import n7.ad2.drawer.internal.data.remote.model.Settings
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
+import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.logger.Logger
 import javax.inject.Inject
 
@@ -38,9 +39,10 @@ internal class GetMenuItemsUseCase @Inject constructor(
     )
 
     @OptIn(ExperimentalStdlibApi::class)
-    private val settingsAdapter = moshi.adapter<Settings>()
+    private val settingsAdapter by lazyUnsafe { moshi.adapter<Settings>() }
 
     operator fun invoke(): Flow<List<VOMenu>> = flow {
+        error("use local settings")
         if (preference.isNeedToUpdateSettings()) {
             val newSettings = settingsApi.getSettings()
             preference.saveSettings(settingsAdapter.toJson(newSettings))
@@ -48,25 +50,22 @@ internal class GetMenuItemsUseCase @Inject constructor(
         } else {
             emit(settingsAdapter.fromJson(preference.getSettings()) ?: error("could not convert settings from Json"))
         }
-    }
-        .catch { error ->
-            logger.log("could not load settings (${error.message})")
-            emit(Settings(defaultMenu))
-        }
-        .map { settings ->
-            settings.menu?.mapNotNull { menu ->
-                when (menu.type) {
-                    VOMenuType.HEROES -> VOMenu(menu.type, res.getString(R.string.heroes), menu.isEnable, true)
-                    VOMenuType.ITEMS -> VOMenu(menu.type, res.getString(R.string.items), menu.isEnable)
-                    VOMenuType.NEWS -> VOMenu(menu.type, res.getString(R.string.news), menu.isEnable)
-                    VOMenuType.TOURNAMENTS -> VOMenu(menu.type, res.getString(R.string.tournaments), menu.isEnable)
-                    VOMenuType.STREAMS -> VOMenu(menu.type, res.getString(R.string.streams), menu.isEnable)
-                    VOMenuType.GAMES -> VOMenu(menu.type, res.getString(R.string.games), menu.isEnable)
-                    VOMenuType.UNKNOWN -> VOMenu(menu.type, menu.type.name, false)
-                    else -> null
-                }
-            } ?: error("sorry we fucked up...")
-        }
-        .flowOn(dispatchers.Default)
+    }.catch { error ->
+        logger.log("could not load settings (${error.message})")
+        emit(Settings(defaultMenu))
+    }.map { settings ->
+        settings.menu?.mapNotNull { menu ->
+            when (menu.type) {
+                VOMenuType.HEROES -> VOMenu(menu.type, res.getString(R.string.heroes), menu.isEnable, true)
+                VOMenuType.ITEMS -> VOMenu(menu.type, res.getString(R.string.items), menu.isEnable)
+                VOMenuType.NEWS -> VOMenu(menu.type, res.getString(R.string.news), menu.isEnable)
+                VOMenuType.TOURNAMENTS -> VOMenu(menu.type, res.getString(R.string.tournaments), menu.isEnable)
+                VOMenuType.STREAMS -> VOMenu(menu.type, res.getString(R.string.streams), menu.isEnable)
+                VOMenuType.GAMES -> VOMenu(menu.type, res.getString(R.string.games), menu.isEnable)
+                VOMenuType.UNKNOWN -> VOMenu(menu.type, menu.type.name, false)
+                else -> null
+            }
+        } ?: error("sorry we fucked up...")
+    }.flowOn(dispatchers.Default)
 
 }
