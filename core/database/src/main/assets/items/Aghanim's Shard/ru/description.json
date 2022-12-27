@@ -16,6 +16,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Если герой ещё не имеет улучшения, Aghanim's Shard мгновенно будет расходован при получении.",
+    "Герой может расходовать Aghanim's Shard лишь единожды."
+  ],
   "cost": "1400",
   "lore": null,
   "consistFrom": null,

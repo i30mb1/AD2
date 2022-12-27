@@ -15,8 +15,8 @@ private val getItemsUseCase = GetItemsUseCase()
 fun main() {
 //    val itemsEnglish = getItemsUseCase(LOCALE.EN)
 //    writeItemsInFile(itemsEnglish)
-    loadItemsOneByOne(LOCALE.EN, true)
-    loadItemsOneByOne(LOCALE.RU, false)
+    loadItemsOneByOne(LOCALE.EN)
+    loadItemsOneByOne(LOCALE.RU)
 }
 
 private fun writeItemsInFile(items: List<HeroItem>) {
@@ -27,10 +27,10 @@ private fun writeItemsInFile(items: List<HeroItem>) {
     File(assetsDatabase + "items.json").writeText(itemsJson)
 }
 
-private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
+private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
         val list = getItemsUseCase(locale)
-//            .filter { it.name == "Swift Blink" }
+//            .filter { it.name == "Gauntlets of Strength" }
 
         for (item in list) {
             val url = locale.baseUrl + item.href
@@ -53,10 +53,8 @@ private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
                 loadRecipe(root)
                 loadBonuses(root)
 
-                if (loadImages) {
-                    val url = root.getElementById("itemmainimage").child(0).attr("href")
-                    saveImage(url, "$assetsDatabaseItems/${item.name}", "full")
-                }
+                val urlImage = root.getElementById("itemmainimage").child(0).attr("href")
+                saveImage(urlImage, "$assetsDatabaseItems/${item.name}", "full")
                 saveFile("$assetsDatabaseItems/${item.name}/${locale.directory}", "description.json", toJSONString())
             }
         }
@@ -284,11 +282,10 @@ private fun JSONObject.loadAdditionalInformation(root: Document) {
             }
         }
         if (child.tag().toString() == "h2") {
-            when (child.child(0).id()) {
-                "Additional_Information", "Дополнительная_информация" -> {
-                    nextSectionIsAdditionalInformation = true
-                }
-            }
+            val spans = child.childNodes().map { (it as Element).text() }
+            val tryingToFind = listOf("Additional Information", "Дополнительная информация")
+            if (spans.any { tryingToFind.contains(it) }) nextSectionIsAdditionalInformation = true
+
         }
     }
 }

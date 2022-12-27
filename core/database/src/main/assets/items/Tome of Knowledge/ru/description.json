@@ -23,6 +23,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Tome of Knowledge не складывается в инвентаре. Каждый Tome of Knowledge занимает отдельную ячейку.",
+    "Tome of Knowledge полностью передаваемый предмет."
+  ],
   "cost": "75",
   "lore": null,
   "consistFrom": null,

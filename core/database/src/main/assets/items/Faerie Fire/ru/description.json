@@ -17,6 +17,9 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "При выборе случайного героя, игрок получает бесплатный Faeire Fire, который нельзя продать."
+  ],
   "cost": "70",
   "lore": null,
   "consistFrom": null,

@@ -26,6 +26,11 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Складывается с другими Dust of Appearance в инвентаре.",
+    "Dust of Appearance полностью передаваемый предмет.",
+    "Стоимость продажи зависит от оставшегося количества Dust of Appearance. Один Dust of Appearance имеет стоимость продажи в 40 золота."
+  ],
   "cost": "80",
   "lore": null,
   "consistFrom": null,

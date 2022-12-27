@@ -18,6 +18,8 @@ internal fun saveImage(url: String, path: String, fileName: String) {
         val directory = File(path)
         directory.mkdirs()
         val file = File(path, "$fileName.png")
+        val fileWebp = File(path, "$fileName.webp")
+        if (file.exists() || fileWebp.exists()) return
         file.createNewFile()
         ImageIO.write(bufferImageIO, "png", file)
         println("image '$path' saved")

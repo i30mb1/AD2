@@ -1,5 +1,10 @@
 {
   "abilities": [],
+  "additionalInformation": [
+    "Приоритет сборки Divine Rapier ниже чем у Radiance и Nullifier. Если в инвентаре есть Demon Edge и рецепт Radiance, то покупка Sacred Relic завершит сборку Radiance. Если в инвентаре есть Helm of Iron Will и Demon Edge, то покупка Sacred Relic завершит сборку Nullifier.",
+    "Если в инвентаре есть Demon Edge и рецепт Radiance, то покупка Sacred Relic завершит сборку Radiance.",
+    "Если в инвентаре есть Helm of Iron Will и Demon Edge, то покупка Sacred Relic завершит сборку Nullifier."
+  ],
   "cost": "3750",
   "lore": null,
   "consistFrom": null,

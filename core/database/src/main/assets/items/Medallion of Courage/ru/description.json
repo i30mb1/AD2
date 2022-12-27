@@ -28,6 +28,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Medallion of Courage не перенимает пассивное снижение брони от Blight Stone.",
+    "Medallion of Courage проходит сквозь пассивную Linken's Sphere Рошана"
+  ],
   "cost": "1025",
   "lore": null,
   "consistFrom": [

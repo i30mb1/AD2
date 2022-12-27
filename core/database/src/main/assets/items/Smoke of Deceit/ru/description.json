@@ -32,6 +32,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Складывается в инвентаре без ограничения. Стоимость продажи варьируется от количества Smoke of Deceit в инвентаре.",
+    "Smoke of Deceit можно передавать."
+  ],
   "cost": "50",
   "lore": null,
   "consistFrom": null,

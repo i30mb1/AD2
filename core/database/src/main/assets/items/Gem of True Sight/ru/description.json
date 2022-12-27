@@ -45,6 +45,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Этот предмет выпадает, когда носитель умирает, если только у него нет воскрешения.",
+    "Gem of True Sight нельзя переложить в ранец."
+  ],
   "cost": "900",
   "lore": null,
   "consistFrom": null,

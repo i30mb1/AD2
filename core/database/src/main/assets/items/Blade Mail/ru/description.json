@@ -48,6 +48,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Несколько Damage Return от Blade Mail не складываются.",
+    "Полностью сочетается с другими источниками урона с меткой «не отражаемый»."
+  ],
   "cost": "2100",
   "lore": null,
   "consistFrom": [

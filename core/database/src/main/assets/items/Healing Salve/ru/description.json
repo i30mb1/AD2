@@ -28,6 +28,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Можно применить на союзников с зажатой Ctrl.",
+    "Выкопанные с Trusty Shovel Healing Salve полностью передаваемые, но их нельзя продать."
+  ],
   "cost": "100",
   "lore": null,
   "consistFrom": null,
