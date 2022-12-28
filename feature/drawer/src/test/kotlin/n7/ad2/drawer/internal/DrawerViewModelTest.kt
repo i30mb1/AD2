@@ -65,6 +65,10 @@ internal class DrawerViewModelTest {
             .containsExactly(
                 VOMenu::class.java,
                 VOMenu::class.java,
+                VOMenu::class.java,
+                VOMenu::class.java,
+                VOMenu::class.java,
+                VOMenu::class.java,
             )
     }
 
