@@ -1,0 +1,277 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Tinker_Laser.mp3\/revision\/latest?cb=20191216025246",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Plays a sound effect audible to everyone during the cast time.",
+        "The area damage only hits visible enemies, and does not hit invisible and enemies inside the Fog of War.",
+        "Treats creep-heroes as creeps.",
+        "The laser first applies the blind debuff, then the health reduction debuff, then the damage.",
+        "Multiple instances of the debuff do not stack.",
+        "Blind uses pseudo-random distribution.",
+        "SCEPTER NOTES Laser now bounces to the furthest enemy within 700 radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes, clones and illusions. Treats creep-heroes as heroes upon the ability upgrade. If the primary target is a non-hero unit, it still bounces to valid targets within the search radius. Does not bounce on invisible or enemies inside in the Fog of War. The bounced laser deals area damage as well.",
+        "Laser has no bounce delay, so all targets are hit at the same time.",
+        "Can only bounce to heroes, clones and illusions. Treats creep-heroes as heroes upon the ability upgrade.",
+        "Treats creep-heroes as heroes upon the ability upgrade.",
+        "If the primary target is a non-hero unit, it still bounces to valid targets within the search radius.",
+        "Does not bounce on invisible or enemies inside in the Fog of War.",
+        "The bounced laser deals area damage as well.",
+        "SCEPTER NOTES Laser also reduces the targets' current and max health by 10%. The lower the target's current health is, the less current health they lose through the reduction, while the maximum health reduction stays constant. Also reduces the target's model size by 10%. This has no impact on collision size. Upon losing the debuff, the target's model size and max health are reverted, while their current health stays the same. Both the health and the model size reduction are applied by the same modifier as the blind debuff, and multiple instances of the debuff now stack.",
+        "The lower the target's current health is, the less current health they lose through the reduction, while the maximum health reduction stays constant.",
+        "Also reduces the target's model size by 10%. This has no impact on collision size.",
+        "Upon losing the debuff, the target's model size and max health are reverted, while their current health stays the same.",
+        "Both the health and the model size reduction are applied by the same modifier as the blind debuff, and multiple instances of the debuff now stack."
+      ],
+      "mana": "20\/18\/16\/14",
+      "item_behaviour": [],
+      "name": "Laser",
+      "cooldown": "95\/110\/125\/140 ( 87.4\/101.2\/115\/128.8)",
+      "description": "Fires an intense energy beam, dealing damage to the target and all enemy units around it. The main target is blinded, causing them to miss all physical attacks.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.4+1",
+        "Cast Range:  650 ( 850)",
+        "Damage Radius: 250",
+        "Damage: 75\/150\/225\/300 ( 155\/230\/305\/380)",
+        "Miss Chance: 100%",
+        "Hero Duration: 3\/3.5\/4\/4.5 ( 5\/5.5\/6\/6.5)",
+        "Creep Duration: 6 ( 8)",
+        "Bounce Search Radius: 700",
+        "Number of Bounces: 1",
+        "Max Health Reduction: 10%",
+        "Current Health Reduction: 10%"
+      ],
+      "legacy_key": "E",
+      "story": "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Tinker_Heat-Seeking_Missile_1.mp3\/revision\/latest?cb=20191216025258",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemy Heroes",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Interrupts Tinker's channeling abilities upon cast.",
+        "The missiles travel at a speed of 700.",
+        "Heat-Seeking Missile first applies the damage, then the bash debuff.",
+        "When all missiles hit, they collectively deal up to 230\/380\/530\/680 (TagTalent 345\/570\/795\/1020) damage (before reductions).",
+        "Does not target invisible, invulnerable, hidden or enemies inside in the Fog of War. Does target clones and illusions.",
+        "Does target clones and illusions.",
+        "When cast while no valid targets are in range, the missiles are released and fall on the ground, indicating the cast failed."
+      ],
+      "mana": "18",
+      "item_behaviour": [],
+      "name": "Heat-Seeking Missile",
+      "cooldown": "95\/105\/115\/125 ( 87.4\/96.6\/105.8\/115)",
+      "description": "Launches rockets at the nearest visible heroes within 2500 range.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0+1.2",
+        "Search Radius: 2500",
+        "Number of Targets: 2 ( 3)",
+        "Damage per Rocket: 115\/190\/265\/340",
+        "<span image=\"images\\Talent\"><\/span> Bash Duration: 0.25"
+      ],
+      "legacy_key": "T",
+      "story": "The last contraption Boush was able to save was a retrofitted rocket launcher with a homing mechanism."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Tinker_Defense_Matrix.mp3\/revision\/latest?cb=20210103154706",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies"
+      ],
+      "notes": [
+        "↓↓ Double-tapping automatically targets self. Fully affects ally Couriers.",
+        "Fully affects ally Couriers.",
+        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger. Except for the following abilities: When combined with the following damage-negating effects (i.e. Aphotic Shield, Ghostship, Shield Crash and Mischief), Defense Matrix negates the damage while the abilities aforementioned do not. Shields the affected target from the 3 damage types, but not heals and HP Removal effects (e.g. Sunder, Soul Ring etc.).",
+        "When combined with the following damage-negating effects (i.e. Aphotic Shield, Ghostship, Shield Crash and Mischief), Defense Matrix negates the damage while the abilities aforementioned do not.",
+        "Shields the affected target from the 3 damage types, but not heals and HP Removal effects (e.g. Sunder, Soul Ring etc.).",
+        "Successive casts do not stack but refresh the duration and reset the shield capacity.",
+        "Stacks multiplicatively with other sources of status resistance.",
+        "TALENT NOTES Stacks multiplicatively with other sources of percentage-based cooldown reductions."
+      ],
+      "mana": "12",
+      "item_behaviour": [],
+      "name": "Defense Matrix",
+      "cooldown": "70\/80\/90\/100 ( 64.4\/73.6\/82.8\/92)",
+      "description": "Targets an allied unit, applying a barrier to them that blocks some damage and provides Status Resistance.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.2+0.6",
+        "Cast Range:  650",
+        "Shield Capacity: 100\/180\/240\/320 ( 225\/305\/365\/445)",
+        "Status Resistance Bonus: 10%\/20%\/30%\/40%",
+        "Duration: 15",
+        "<span image=\"images\\Talent\"><\/span> Cooldown Reduction Bonus: 25%"
+      ],
+      "legacy_key": "C",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Tinker_Warp_Flare_1.mp3\/revision\/latest?cb=20220412213220",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "The projectile travels at a speed of 1900.",
+        "Warp Flare first applies the debuff, the damage, then the teleport.",
+        "Warp Flare teleports the target away from Tinker upon projectile hit. Neither interrupts the affected target's channeling abilities nor changes the target's facing angle.",
+        "Neither interrupts the affected target's channeling abilities nor changes the target's facing angle.",
+        "Stacks additively with other sources of percentage-based cast range reductions, and is calculated after all flat cast range bonuses.",
+        "Percentage-based attack range reduction is calculated after all flat attack range bonuses.",
+        "SOULBIND Fires a projectile at the primary target after the cast animation, then another projectile is fired instantly on the secondary target."
+      ],
+      "mana": "15",
+      "item_behaviour": [],
+      "name": "Warp Flare",
+      "cooldown": "100 ( 92)",
+      "description": "Throws a flare towards an enemy, dealing damage, teleporting them away and reducing their Cast and Attack Range for 3 seconds.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.2+0.5",
+        "Cast Range:  700",
+        "Teleport Distance: 600",
+        "Damage: 50",
+        "Attack Range Reduction: 40%",
+        "Cast Range Reduction: 40%",
+        "Debuff Duration: 3"
+      ],
+      "legacy_key": "D",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Tinker_Keen_Conveyance_1.mp3\/revision\/latest?cb=20210829210017",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self"
+      ],
+      "notes": [
+        "↓↓ Double-tapping the ability while being at least 1500 range away from the team's fountain, automatically targets the fountain.",
+        "When ground-targeted, it automatically searches for the closest valid target for Tinker teleport to. At Level 1, Keen Conveyance can only target buildings. Level 2 can target non-hero units as well, and level 3 can target allied heroes as well. Treats the Spirit Bear as a hero. Treats other creep-heroes as creeps. Cannot directly target buildings. Instead, it uses the minimum teleport distance.",
+        "At Level 1, Keen Conveyance can only target buildings. Level 2 can target non-hero units as well, and level 3 can target allied heroes as well.",
+        "Treats the Spirit Bear as a hero. Treats other creep-heroes as creeps.",
+        "Cannot directly target buildings. Instead, it uses the minimum teleport distance.",
+        "Disjoints projectiles upon teleporting.",
+        "During the channeling, the teleport destination is marked with a visual effect in the same color as the player, and a sound is played. The sound and visual effects are visible and audible to everyone. The visual effect is also visible while teleporting to invisible allies.",
+        "The sound and visual effects are visible and audible to everyone.",
+        "The visual effect is also visible while teleporting to invisible allies.",
+        "Also marks the point on the minimap for allies. The mark is in the player's color and lasts as long as the channeling does.",
+        "Provides 200 range flying vision at the destination point for 4.5 seconds, even if the channeling is canceled. The vision lingers for 1 second.",
+        "The targeted unit's priority is lowered, meaning it is attacked as the last auto-attack target by other units.",
+        "When the targeted unit dies or changes ownership (e.g. Enchant) during the channeling, the teleport gets canceled, wasting the cooldown and mana cost. Since buildings are not directly targeted, the destruction of the building or loss of Outposts does not cancel the teleport.",
+        "Since buildings are not directly targeted, the destruction of the building or loss of Outposts does not cancel the teleport."
+      ],
+      "mana": "80",
+      "item_behaviour": [],
+      "name": "Keen Conveyance",
+      "cooldown": "75 ( 69)",
+      "description": "Teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range: Global",
+        "Min Targeting Distance to Building: 70",
+        "Max Targeting Distance to Building: 800",
+        "Max Targeting Distance to Outposts: 250",
+        "Channel Time: 4.5\/4\/3.5 ( 4\/3.5\/3)",
+        "Channel Time to Outpost: 5 ( 4.5)"
+      ],
+      "legacy_key": "V",
+      "story": "As Boush likes to say, 'There is nothing the arcane can accomplish that the curious mind cannot reproduce given time. And proper funding, of course.'"
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Tinker_Rearm_1.mp3\/revision\/latest?cb=20210829210011",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "notes": [
+        "Rearm's cooldown is not reset when the channeling is interrupted.",
+        "The following items' cooldowns are not reset by Rearm: Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Helm of the Overlord, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, Refresher Shard and Neutral Items. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state. Does not reset charges on charge-based items (e.g. Drum of Endurance). Only resets cooldowns of items owned by Tinker, his inventory, and his backpack. Items in the stash, in other units' inventories (e.g. Courier) or dropped items are unaffected. Allied items in his inventory or backpack do not have their cooldowns reset. When the channeling is interrupted, nothing is rearmed.",
+        "Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Helm of the Overlord, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, Refresher Shard and Neutral Items.",
+        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
+        "Does not reset charges on charge-based items (e.g. Drum of Endurance).",
+        "Only resets cooldowns of items owned by Tinker, his inventory, and his backpack. Items in the stash, in other units' inventories (e.g. Courier) or dropped items are unaffected. Allied items in his inventory or backpack do not have their cooldowns reset.",
+        "Items in the stash, in other units' inventories (e.g. Courier) or dropped items are unaffected.",
+        "Allied items in his inventory or backpack do not have their cooldowns reset.",
+        "When the channeling is interrupted, nothing is rearmed.",
+        "Can rearm Crimson Guard and Mekansm, but does not reset their stack restriction timer. The same rule applies when rearming Guardian Greaves, but Mend still restores mana.",
+        "The same rule applies when rearming Guardian Greaves, but Mend still restores mana.",
+        "Rearm's sound gets shorter with each level to match the decreasing channel time.",
+        "The Rearm modifier is only for informational purposes.",
+        "SPELL STEAL This ability is not acquirable."
+      ],
+      "mana": "8\/7\/6",
+      "item_behaviour": [],
+      "name": "Rearm",
+      "cooldown": "130\/185\/240 ( 119.6\/170.2\/220.8)",
+      "description": "Resets the cooldown on most of Tinker's items and abilities.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0+0",
+        "Channel Time: 3.25\/2.25\/1.25"
+      ],
+      "legacy_key": "R",
+      "story": "A new battery here, another set of rockets there, Boush continually improves on existing technology."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.5,
+    "attrStrength": 19.0,
+    "attrIntelligence": 30.0,
+    "attrIntelligenceInc": 3.3,
+    "attrAgilityInc": 1.2,
+    "attrAgility": 13.0
+  },
+  "description": "Demolishes his enemies with modern technology. Compared to magic, the study of natural law was much more consistent, but no less dangerous. From their subterranean laboratory, Boush and his colleagues opened a portal to a distant world, a Conveyance through which untold horrors began to pass into this realm. Laser cutting his way to freedom, Boush surfaced as the only Tinker to survive the Violet Plateau incident. Equipped with contraptions befitting a maniacal researcher, he launches Heat-Seeking Missiles from his shoulders, firing Warping Flares to dislocate his enemies. Unhindered by the delays of magic, the Tinker Rearms his deadly offensive gadgets and Defensive Matrices on the fly, wasting no time in demolishing anything that stands in his way.  Carry Nuker Pusher ★★☆",
+  "trivia": [
+    "The Tinker's voice actor, Harry \"Hal\" Robins, also voiced Dr. Isaac Kleiner in Half-Life 2 and the scientists of Black Mesa in Half-Life. Many of Tinker's voice lines reference characters and events from the Half-Life universe. In addition, the name \"Violet Plateau\" is quite similar to \"Black Mesa\", and the events described in Tinker's backstory are remarkably similar to the events of Half-Life. Tinker's responses upon killing Broodmother's Spiderlings Link▶️ \"Lamarr, is that you?\" and Link▶️ \"Lamarr?!\" are a reference to Dr. Kleiner's \"debeaked\" pet headcrab, Hedy Lamarr. Many of Tinker's lines while using Rearm come directly from Half-Life 2 including Link▶️ \"The massless field flux should self-limit\" and Link▶️ \"I've clamped the manifold parameters to\u2026 CY base and LG orbifold\u2026 Hilbert inclusive\". Tinker's death line Link▶️ \"It's probably not a problem, probably\" is also a reference to Dr. Kleiner, who says it in the beginning of Half Life's second chapter right before the equipment he and his team are working on suffers a catastrophical malfunction and causes the alien invasion of Black Mesa. Tinker's selecting respones Link▶️ \"With my brains and your brawn, we'll make an excellent team\" is also a quote from Dr. Kleiner.",
+    "Tinker's responses upon killing Broodmother's Spiderlings Link▶️ \"Lamarr, is that you?\" and Link▶️ \"Lamarr?!\" are a reference to Dr. Kleiner's \"debeaked\" pet headcrab, Hedy Lamarr.",
+    "Many of Tinker's lines while using Rearm come directly from Half-Life 2 including Link▶️ \"The massless field flux should self-limit\" and Link▶️ \"I've clamped the manifold parameters to\u2026 CY base and LG orbifold\u2026 Hilbert inclusive\".",
+    "Tinker's death line Link▶️ \"It's probably not a problem, probably\" is also a reference to Dr. Kleiner, who says it in the beginning of Half Life's second chapter right before the equipment he and his team are working on suffers a catastrophical malfunction and causes the alien invasion of Black Mesa.",
+    "Tinker's selecting respones Link▶️ \"With my brains and your brawn, we'll make an excellent team\" is also a quote from Dr. Kleiner.",
+    "The Tinker's alternate\/fun name in DotA was \"X!!\", the name of a professional DotA player.",
+    "Tinker's line Link▶️ \"I tink! Therefore I am!\" is a reference to the philosophical statement \"I think, therefore I am.\" proposed by René Descartes. Its original Latin words are \"Cogito ergo sum.\"",
+    "Tinker's line Link▶️ \"Tinker, failure\u2026Soldier\u2026Fie\u2026\" is a reference to the 1974 spy novel Tinker, Tailor, Soldier, Spy by British author John le Carré about George Smiley (who was played by Gary Oldman in the 2011 film adaptation).",
+    "Tinker's death line Link▶️ \"The machine, stops.\" is a reference to the short story of the same name by E.M. Forster.",
+    "Tinker's line \"Blinded you, with Science!\" is a reference to the song She Blinded Me with Science by Thomas Dolby."
+  ],
+  "history": "Boush the Tinker's diminutive race is known for its intelligence, its cunning, and its prickly relationship with magic. As a matter of pride, they survive by their wits, and use only those powers of nature that may be unlocked through rational methodologies. Even this forbearance has led to a great deal of trouble, as Boush can attest. Once a key investigator of natural law, Boush the Tinker led a vast intellectual investigation into the workings of nature, founding a subterranean laboratory in the rumored, mist-wreathed wastes of the Violet Plateau. While scorning mages for the dangers they visit upon the world, Boush and his Tinker associates haughtily wrenched open a portal to some realm beyond comprehension and ushered in some nightmares of their own. A black mist rose from the cavernous interior of the Violet Plateau, shrouding it in permanent darkness from which sounds of horror perpetually emanate. Boush escaped with only his wits and the contraptions he carried, the sole Tinker to survive the Violet Plateau Incident.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+80 Laser Damage",
+        "talent_left": "+0.25s Heat-Seeking Missile Ministun"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "Defense Matrix Grants +25% Cooldown Reduction",
+        "talent_left": "-0.5s Keen Conveyance Channel Time"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+125 Defense Matrix Damage Absorbed",
+        "talent_left": "+1 Heat-Seeking Missile Count"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+2s Laser Blind Duration",
+        "talent_left": "+8% Manacost\/Manaloss Reduction"
+      }
+    ],
+    "notes": [
+      "The mana cost\/manaloss reduction talent stacks multiplicatively with other sources of mana loss reduction."
+    ]
+  }
+}

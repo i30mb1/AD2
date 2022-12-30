@@ -1,0 +1,252 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Dazzle_Poison_Touch_1.mp3\/revision\/latest?cb=20191216012353",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies ",
+        "Damage: Physical"
+      ],
+      "notes": [
+        "Poison Touch's projectiles travel at a speed of 1300.",
+        "With the starting radius, distance, and end radius, Poison Touch can hit units up to 1000 range away. The complete area is shaped like a cone in front of Dazzle. The area starts in front of Dazzle, and not at the primary target's position.",
+        "The complete area is shaped like a cone in front of Dazzle.",
+        "The area starts in front of Dazzle, and not at the primary target's position.",
+        "Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone. TALENT NOTES With the Poison Touch attack range bonus talent, Dazzle has a total of 925 attack range against affected targets.",
+        "TALENT NOTES With the Poison Touch attack range bonus talent, Dazzle has a total of 925 attack range against affected targets.",
+        "Deals damage in 1-second intervals, starting immediately, resulting in 6\/7\/8\/9 damage instances when not refreshed.",
+        "Can deal up to 96\/196\/320\/468 (TagTalent 366\/511\/680\/873) damage to each target when not refreshed (before reductions).",
+        "The duration, damage and movement speed slow values are updated and refreshed to the current ability level whenever Dazzle successfully lands an attack on the debuffed unit, missed attacks do not refresh it. This has no stack limit. Only Dazzle's attacks can refresh and extend the duration.",
+        "Only Dazzle's attacks can refresh and extend the duration.",
+        "For how much damage movement speed one instance of Poison Touch reduces when refreshed, with the movement speed slow increasing talent, please refer to the chart below.",
+        "Successive casts of Poison Touch fully stack with each instance having its own independent damage intervals, movement speed slow and duration.",
+        "SHARD NOTES Enemies are now hexed upon projectile impact, setting their base movement speed to 100, silencing, muting and disarming them. The hex is only applied once upon projectile impact. It is not applied upon refreshing the debuff with attacks. The main debuff and the hex are applied at the same time, so after the hex the target is still slowed for 3\/4\/5\/6 seconds. Poison Touch first applies its main debuff, then the hex debuff.",
+        "The hex is only applied once upon projectile impact. It is not applied upon refreshing the debuff with attacks.",
+        "The main debuff and the hex are applied at the same time, so after the hex the target is still slowed for 3\/4\/5\/6 seconds.",
+        "Poison Touch first applies its main debuff, then the hex debuff.",
+        "TALENT NOTES The damage per second increasing talent immediately update the current active instances. However, the movement speed slow increasing talent does not update the current active instances.",
+        "However, the movement speed slow increasing talent does not update the current active instances."
+      ],
+      "mana": "27\/23\/19\/15",
+      "item_behaviour": [],
+      "name": "Poison Touch",
+      "cooldown": "125\/130\/135\/140",
+      "description": "Releases a cone of poison that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked by Dazzle, the debuff duration is refreshed and slow is increased.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0.57",
+        "Cast Range:  500\/600\/700\/800",
+        "Starting Radius: 200",
+        "Max Distance:  500",
+        "End Radius: 300",
+        "Number of Targets: 2\/4\/6\/8",
+        "Damage per Second: 16\/28\/40\/52 ( 61\/73\/85\/97)",
+        "Base Move Speed Slow: 16%\/18%\/20%\/22% ( 56%\/58%\/60%\/62%)",
+        "Move Speed Slow Increase per Refresh: 2%\/2.5%\/3%\/3.5%",
+        "Debuff Duration: 5\/6\/7\/8",
+        "Hex Set Move Speed: 100",
+        "Hex Duration: 2",
+        "<span image=\"images\\Talent\"><\/span> Attack Range Bonus: 350"
+      ],
+      "legacy_key": "T",
+      "story": "One of the few Dezun rites used for offensive purposes, the paralytic enchantment often proves useful."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Dazzle_Shallow_Grave.mp3\/revision\/latest?cb=20191216012356",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allied Heroes"
+      ],
+      "notes": [
+        "Prevents the target from dying by setting its minimum health to 1. This means the target cannot die to damage, not even damage flagged as HP removal. Shallow Grave prevents the target from dying to the following sources: Ice Blast's kill threshold and False Promise's delayed damage. Does not protect the targets against the following sources: Culling Blade's kill threshold. Wraith Delay expiring. When Meepo or its Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, while affected by Shallow Grave.",
+        "This means the target cannot die to damage, not even damage flagged as HP removal.",
+        "Shallow Grave prevents the target from dying to the following sources: Ice Blast's kill threshold and False Promise's delayed damage.",
+        "Ice Blast's kill threshold and False Promise's delayed damage.",
+        "Does not protect the targets against the following sources: Culling Blade's kill threshold. Wraith Delay expiring. When Meepo or its Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, while affected by Shallow Grave.",
+        "Culling Blade's kill threshold.",
+        "Wraith Delay expiring.",
+        "When Meepo or its Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, while affected by Shallow Grave.",
+        "Damage taken is not reduced, so any damaging event still registers the full damage.",
+        "Can be cast on illusions and creep-heroes. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
+        "The halo ability effect appears at 190\/240\/300\/350 range above the affected target, indicating its remaining duration, and it hits the ground right when the effect expires.",
+        "Only grants incoming heal amplification. Does not grant health regen amplification, lifesteal amplification or spell lifesteal amplification. Stacks multiplicatively with other sources of heal amplification.",
+        "Stacks multiplicatively with other sources of heal amplification.",
+        "The incoming heal amplification bonus increases by 2%\/4%\/6%\/8% for every 10% of health missing, reaching 18%\/36%\/54%\/72% when below 10% health. The health percentage is checked periodically and the effects are adapted instantly.",
+        "The health percentage is checked periodically and the effects are adapted instantly.",
+        "TALENT NOTES The Heal on Shallow Grave End talent heals the target for 200 health upon losing the buff in any way. Therefore, this healing is not affected by Shallow Grave's own heal amplification.",
+        "Therefore, this healing is not affected by Shallow Grave's own heal amplification."
+      ],
+      "mana": "36\/30\/24\/18",
+      "item_behaviour": [],
+      "name": "Shallow Grave",
+      "cooldown": "120\/130\/140\/150",
+      "description": "An ally blessed with Shallow Grave, no matter how close to death, cannot die while under its protection. Healing on that ally is also amplified for the duration based on the hero's HP.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  700\/800\/900\/1000",
+        "Max Bonus Health Threshold: 10%",
+        "Max Heal Amplification: 18%\/36%\/54%\/72%",
+        "Duration: 3.5\/4\/4.5\/5",
+        "<span image=\"images\\Talent\"><\/span> Heal: 200"
+      ],
+      "legacy_key": "G",
+      "story": "Only a seasoned acolyte of the Shadow can properly perform the rite of preventing death."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Dazzle_Shadow_Wave.mp3\/revision\/latest?cb=20191216012355",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies \/ Enemies",
+        "Damage: Physical"
+      ],
+      "notes": [
+        "Shadow Wave has no bounce delay, so all targets are healed at the same time.",
+        "Shadow Wave has the following priorities: Hurt allied heroes ➤ hurt allied non-hero units (including illusions) ➤ allied heroes ➤ non-hero units. The lower the health of nearby allies, the higher their priority. This means the lowest health units get healed first. If multiple units meet the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly. Fully heal and consider Couriers as valid targets, but do not damage them.",
+        "The lower the health of nearby allies, the higher their priority. This means the lowest health units get healed first.",
+        "If multiple units meet the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
+        "Fully heal and consider Couriers as valid targets, but do not damage them.",
+        "Regardless of the target, Dazzle is always healed without counting towards the number of bounces, effectively healing 4\/5\/6\/7 units. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Can heal and damage up to 240\/425\/660\/945 (TagTalent 420\/650\/930\/1260) health when all bounces hit (before reductions). The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
+        "The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
+        "Shadow Wave first applies the damage, then the heal."
+      ],
+      "mana": "12\/11\/10\/9",
+      "item_behaviour": [],
+      "name": "Shadow Wave",
+      "cooldown": "90",
+      "description": "Sends out a bolt of power that arcs between allies, healing them while damaging any units standing nearby. Dazzle is always healed by Shadow Wave.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.3+0.57",
+        "Cast Range:  800",
+        "Damage Radius: 185",
+        "Bounce Distance: 475",
+        "Number of Bounces: 3\/4\/5\/6",
+        "Heal\/Damage: 60\/85\/110\/135 ( 105\/130\/155\/180)"
+      ],
+      "legacy_key": "D",
+      "story": "While it is a simplistic and routine rite among Shadow Priests, the Shadow Wave is also the most critical for success."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Dazzle_Good_Juju.mp3\/revision\/latest?cb=20220412211207",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Self "
+      ],
+      "notes": [
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
+        "Reduces cooldowns of every non-item ability, including ultimates and passive abilities. Does not reduce the recharge time of currently recharging charge-based abilities.",
+        "Does not reduce the recharge time of currently recharging charge-based abilities.",
+        "SCEPTER NOTES Good Juju turns into a unit-targeted active ability. The passive component is still present. ↓↓ Double-tapping automatically targets self. Treats creep-heroes and illusions as heroes. Only resets items in the owner's inventory and backpack. Items in the stash, in other units' inventories, or dropped items are unaffected. Only resets items owned by the owner. Allied items in the inventory are not refreshed. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state. Does not reset the cooldown of the following items: Refresher Orb, Refresher Shard and Ex Machina. Does not share cooldowns with the aforementioned items either. The passive item cooldown reduction stacks multiplicatively with other sources of percentage-based cooldown reductions.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Treats creep-heroes and illusions as heroes.",
+        "Only resets items in the owner's inventory and backpack. Items in the stash, in other units' inventories, or dropped items are unaffected.",
+        "Only resets items owned by the owner. Allied items in the inventory are not refreshed.",
+        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
+        "Does not reset the cooldown of the following items: Refresher Orb, Refresher Shard and Ex Machina.",
+        "Does not share cooldowns with the aforementioned items either.",
+        "The passive item cooldown reduction stacks multiplicatively with other sources of percentage-based cooldown reductions."
+      ],
+      "mana": "180",
+      "item_behaviour": [],
+      "name": "Good Juju",
+      "cooldown": "250",
+      "description": "Whenever Dazzle Casts a Spell, all other abilities currently on cooldown have their cooldowns reduced.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0.2+0.76",
+        "Cooldown Reduction per Cast: 1\/1.5\/2",
+        "Cast Range: 250",
+        "Item Cooldown Reduction: 50%"
+      ],
+      "legacy_key": "E",
+      "story": "Each invocation of the Nothl Realm helps it further permeate the surroundings of our own."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Dazzle_Bad_Juju_1.mp3\/revision\/latest?cb=20191216012358",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Allies \/ Enemies",
+        "Damage: Physical"
+      ],
+      "notes": [
+        "Bad Juju's passive component only works with Dazzle's abilities. It does not react on items or other abilities. Bad Juju always applies its stack before the triggering ability applies any of its effects. Poison Touch applies a stack on enemies on projectile hit. Shallow Grave applies a stack on the targeted ally upon cast. Shadow Wave applies a stack on all healed allies and on all damaged enemies. Enemies that are within the damage radius of multiple healed allies receive multiple stacks as well. SCEPTER NOTES Good Juju does not apply a stack on the targeted ally.",
+        "Bad Juju always applies its stack before the triggering ability applies any of its effects.",
+        "Poison Touch applies a stack on enemies on projectile hit.",
+        "Shallow Grave applies a stack on the targeted ally upon cast.",
+        "Shadow Wave applies a stack on all healed allies and on all damaged enemies. Enemies that are within the damage radius of multiple healed allies receive multiple stacks as well.",
+        "Enemies that are within the damage radius of multiple healed allies receive multiple stacks as well.",
+        "SCEPTER NOTES Good Juju does not apply a stack on the targeted ally.",
+        "When cast, Bad Juju first applies a stack on all units within a 1200 radius, and then applies the damage\/heal based on the number of stacks. Affects invisible units and units in the Fog of War. Does not affect invulnerable or hidden enemies. The damage dealt is considered as spell damage, it is affected by spell damage amplification and works with spell lifesteal. However, it is still affected by damage block sources and Bulwark, but not Resonant Pulse.",
+        "Affects invisible units and units in the Fog of War. Does not affect invulnerable or hidden enemies.",
+        "The damage dealt is considered as spell damage, it is affected by spell damage amplification and works with spell lifesteal.",
+        "However, it is still affected by damage block sources and Bulwark, but not Resonant Pulse.",
+        "All stacks work fully independently from each other. They do not refresh each other but share a status buff. The current number of stacks is visible on the modifier's icon and the armor bonus\/reduction is in its description.",
+        "The current number of stacks is visible on the modifier's icon and the armor bonus\/reduction is in its description.",
+        "Fully affect Couriers.",
+        "Does not affect Roshan."
+      ],
+      "mana": "15",
+      "item_behaviour": [],
+      "name": "Bad Juju",
+      "cooldown": "50\/75\/100",
+      "description": "Whenever a Unit is affected by Dazzle's spells they temporarily gain\/lose armor. Can be activated to heal\/deal physical damage to units based on the amount of charges they have.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.2+0.76",
+        "Armor Change per Stack: 1\/2\/3 ( 1.5\/2.5\/3.5)",
+        "Stack Duration: 8\/10\/12",
+        "Active Radius: 1200",
+        "Active Damage\/Heal per Stack: 40\/50\/60"
+      ],
+      "legacy_key": "W",
+      "story": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.3,
+    "attrStrength": 18.0,
+    "attrIntelligence": 25.0,
+    "attrIntelligenceInc": 3.7,
+    "attrAgilityInc": 1.7,
+    "attrAgility": 20.0
+  },
+  "description": "Powerful healer who can briefly prevent death. A journey to the Nothl Realm changes all its visitors, not least of which Dazzle, a young acolyte of the Dezun Order. Consecrated as a Shadow Priest, Dazzle sends outs Shadow Waves to mend and maim. Foes are crippled by his paralytic enchantment \u2014 the Poison Touch, while allies are blessed with Shallow Graves, cheating death no matter how severe their injuries. As for himself, with each spell cast, each invocation of his strange Juju magic advances the efficiency of his spell-casting. Enemies within earshot of his incantations feel their bodies weaken, for those who cross Dazzle are invariably afflicted with an eternity of Bad Juju.  Support Nuker Disabler ★☆☆",
+  "trivia": [
+    "Dazzle's weapon is based on the khakkhara, a type of staff carried by Buddhist priests.",
+    "The current version of Dazzle was created in 6.39 (upon release, Weave was a regular ability while Shallow Grave was his ultimate), but there was another version of Dazzle, which was released in 6.00. However, this old version of the Shadow Priest only lasted for 3 version, as he was removed in 6.03. He was considered a \"filler hero\". Upon his release in 6.00, his name was Razzle, the Shadow Priest. His Title, Shadow Priest, and his abilities Lua error in Module:Ability_ID at line 61: Could not find Cargo data for \"Shadow Word\". and Lua error in Module:Ability_ID at line 61: Could not find Cargo data for \"Power Word\". are most likely a reference to the Priest, a playable class from World of Warcraft, a title from Blizzard Entertainment. The Priest class is able to assume a Shadow Form, turning it into a Shadow Priest and has several abilities named Shadow Word and Power Word, from which some have a similar effect to Razzle's spells.",
+    "Upon his release in 6.00, his name was Razzle, the Shadow Priest. His Title, Shadow Priest, and his abilities Lua error in Module:Ability_ID at line 61: Could not find Cargo data for \"Shadow Word\". and Lua error in Module:Ability_ID at line 61: Could not find Cargo data for \"Power Word\". are most likely a reference to the Priest, a playable class from World of Warcraft, a title from Blizzard Entertainment. The Priest class is able to assume a Shadow Form, turning it into a Shadow Priest and has several abilities named Shadow Word and Power Word, from which some have a similar effect to Razzle's spells."
+  ],
+  "history": "Each young acolyte to the Dezun order must complete a series of rites before becoming a Shadow Priest. The final rite, the rite of shades, is a harrowing spiritual journey through the Nothl Realm, an unpredictable domain from which not all visitants return. Of those who do, some return mad. Others return with strange aptitudes. But all who go there are changed by their experiences. Driven by the need for enlightenment, Dazzle was the youngest of his tribe ever to request the sacred ritual. At first the order refused him, saying he was too young. But Dazzle was not to be dissuaded. Sensing something special in the headstrong young acolyte, the elders relented. Dazzle drank down the sacred potion and sat by the fire while the rest of his tribe danced through the night. In this ethereal dimension of the Nothl Realm, the properties of light and dark are inverted. Thus his brilliant healing light, beautiful to our eye, is actually a sinister kind of evil; and the darkest deeds are done in a dazzling glow. The elders' intuition was prophetic: Dazzle returned to his people as a Shadow Priest like none seen before, with the power to heal as well as to destroy. Now he uses his gift to cut down his enemies and mend his friends.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "-40% Poison Touch Slow",
+        "talent_left": "+0.5 Bad Juju Armor Reduction"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+200 Heal On Shallow Grave End",
+        "talent_left": "+45 Poison Touch DPS"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+45 Shadow Wave Heal \/ Damage",
+        "talent_left": "+350 Poison Touch Attack Range"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+50 Damage",
+        "talent_left": "+1.75 Mana Regen"
+      }
+    ],
+    "notes": [
+      "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+      "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+    ]
+  }
+}

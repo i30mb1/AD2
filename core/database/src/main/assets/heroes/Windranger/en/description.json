@@ -1,0 +1,233 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Windranger_Shackleshot_1.mp3\/revision\/latest?cb=20191216030602",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1650 and searches for enemies or trees within 46° at the opposite side of the target from where Shackleshot was cast. This means when Windranger teleports away after cast, it latches on targets based on the cast location, not her new location. The complete search area is shaped like a triangle, with 575 being the triangle's height. Therefore, the triangle has two sides with a length of 624.66, and the third side has a length of 488.15.",
+        "This means when Windranger teleports away after cast, it latches on targets based on the cast location, not her new location.",
+        "The complete search area is shaped like a triangle, with 575 being the triangle's height.",
+        "Therefore, the triangle has two sides with a length of 624.66, and the third side has a length of 488.15.",
+        "Shackleshot always prioritizes units over trees as its secondary target, and picks the furthest suitable unit or tree. If the primary target dies before Shackleshot reaches it, the projectile can still latch to a secondary unit and stun it. It can also latch on invisible units and units in the Fog of War.",
+        "If the primary target dies before Shackleshot reaches it, the projectile can still latch to a secondary unit and stun it.",
+        "It can also latch on invisible units and units in the Fog of War.",
+        "If the target is not shackled, it is stunned for 0.75 seconds using the default stunned debuff. If the target is shackled to a unit, both of them are stunned for 2\/2.6\/3.2\/3.8 (TagTalent 2.8\/3.4\/4\/4.6) seconds using the shackleshot debuff. The stun persists, even when the primary or the secondary unit dies, or if the tree is destroyed earlier. The stun also persists when one of the targets is freed from the stun earlier.",
+        "If the target is shackled to a unit, both of them are stunned for 2\/2.6\/3.2\/3.8 (TagTalent 2.8\/3.4\/4\/4.6) seconds using the shackleshot debuff.",
+        "The stun persists, even when the primary or the secondary unit dies, or if the tree is destroyed earlier.",
+        "The stun also persists when one of the targets is freed from the stun earlier.",
+        "TALENT NOTES The stun duration increasing talent only increases the success stun duration. The fail stun duration is not increased."
+      ],
+      "mana": "16\/14\/12\/10 (TagTalent 14\/12\/10\/8)",
+      "item_behaviour": [],
+      "name": "Shackleshot",
+      "cooldown": "70\/80\/90\/100",
+      "description": "Shackles the target to an enemy unit or tree in a line directly behind it. If no unit or tree is present, the stun duration is reduced to 0.75.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.15+0.45",
+        "Cast Range:  800",
+        "Shackle Search Range: 575",
+        "Shackle Search Angle: 46°",
+        "Max Shackle Targets: 2",
+        "Success Stun Duration: 2\/2.6\/3.2\/3.8 ( 2.8\/3.4\/4\/4.6)",
+        "Fail Stun Duration: 0.75"
+      ],
+      "legacy_key": "E",
+      "story": "Windranger's variety of bow skills includes an arrow with thick ropes attached to encumber any escaping target."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Windranger_Powershot_1.mp3\/revision\/latest?cb=20191216030558",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Powershot travels at a speed of 3000, taking 0.87 seconds to reach the maximum distance. The arrow provides 400 radius flying vision while traveling forwards, and the vision sticks at its final location for 3.34 seconds. With the travel distance and damage radius, the arrow can damage units up to 2725 range away. Powershot destroys trees within 50 radius around it while traveling. Trees destroyed do not reduce the arrow's damage.",
+        "The arrow provides 400 radius flying vision while traveling forwards, and the vision sticks at its final location for 3.34 seconds.",
+        "With the travel distance and damage radius, the arrow can damage units up to 2725 range away.",
+        "Powershot destroys trees within 50 radius around it while traveling. Trees destroyed do not reduce the arrow's damage.",
+        "The maximum damage is done after the fully channeling for 1 second. Each channeled server tick increase its damage by 5\/8.33\/11.67\/15. The sound of a bow getting stretched during channeling time is audible to allies only.",
+        "The sound of a bow getting stretched during channeling time is audible to allies only.",
+        "Every time Powershot hits an enemy, its current damage is reduced by 20% (TagTalent 5%). For how much damage a fully channeled arrow deals, and with the damage reduction per unit hit talent (before reductions), please refer to the chart below. To reach 1 damage, the arrow needs to hit 23\/25\/27\/28 (TagTalent 98\/108\/115\/120) targets.",
+        "For how much damage a fully channeled arrow deals, and with the damage reduction per unit hit talent (before reductions), please refer to the chart below.",
+        "To reach 1 damage, the arrow needs to hit 23\/25\/27\/28 (TagTalent 98\/108\/115\/120) targets."
+      ],
+      "mana": "12\/11\/10\/9",
+      "item_behaviour": [],
+      "name": "Powershot",
+      "cooldown": "90\/100\/110\/120",
+      "description": "Windranger charges her bow for up to 1 second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range:  2600",
+        "Travel Distance:  2600",
+        "Damage Radius: 125",
+        "Max Channel Time: 1",
+        "Max Damage: 150\/250\/350\/450",
+        "Damage Reduction per Unit Hit: 20% ( 5%)"
+      ],
+      "legacy_key": "R",
+      "story": "During her early years of training, Lyralei learned to fire powerful arrows that cleaved even trees to reach their targets on the other side."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Windranger_Windrun.mp3\/revision\/latest?cb=20191216030607",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self \/ Enemies"
+      ],
+      "notes": [
+        "Interrupts Windranger's channeling abilities upon cast.",
+        "Grants 100% evasion for its duration.",
+        "The movement speed slow and blind are provided by an aura on Windranger and its debuff lingers for 2.5 seconds. Stacks additively with other sources of blind. Blind uses pseudo-random distribution.",
+        "Stacks additively with other sources of blind.",
+        "Blind uses pseudo-random distribution.",
+        "SCEPTER NOTES Windrun now grants phased movement for its duration. Its invisibility is also no longer broken upon casting her own abilities or attacking. A visual effect will indicate Windranger's attacks and ability casting, showing the source of the projectile. Acquiring Aghanim's Scepter does not update the current active instance. The invisibility is provided by a second buff, independent of the Windrun buff, so breaking it prevents Windranger from going invisible again. Windranger can pick up or drop items without breaking the invisibility.",
+        "A visual effect will indicate Windranger's attacks and ability casting, showing the source of the projectile.",
+        "Acquiring Aghanim's Scepter does not update the current active instance.",
+        "The invisibility is provided by a second buff, independent of the Windrun buff, so breaking it prevents Windranger from going invisible again.",
+        "Windranger can pick up or drop items without breaking the invisibility.",
+        "TALENT NOTES With the undispellable windrun talent, Windrun can only be dispellable by death."
+      ],
+      "mana": "15\/14\/13\/12 (TagTalent 12\/11\/10\/9)",
+      "item_behaviour": [],
+      "name": "Windrun",
+      "cooldown": "50",
+      "description": "Increases movement speed and adds evasion from all physical attacks, while slowing movement of nearby enemies.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0+0",
+        "Slow Radius: 325 ( 550)",
+        "Evasion: 100%",
+        "Self Move Speed Bonus: 60%",
+        "Enemy Move Speed Slow: 15%\/20%\/25%\/30% ( 35%\/40%\/45%\/50%)",
+        "Aura Linger Duration: 2.5",
+        "Duration: 3\/4\/5\/6",
+        "Invisibility Fade Time: 0.2",
+        "Miss Chance: 40%"
+      ],
+      "legacy_key": "W",
+      "story": "Lyralei enchants gusts of winds to flight incoming attacks."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Windranger_Gale_Force.mp3\/revision\/latest?cb=20210829210057",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Recasting Gale Force while a previous cast is still active immediately ends the previous cast.",
+        "The effect is provided by an aura, its debuff lingers for 0.5 seconds.",
+        "Pushes enemies within the radius at a speed of 240 towards the selected direction. With the duration and aura linger duration, Gale Force can push enemies for a total distance of 840.",
+        "With the duration and aura linger duration, Gale Force can push enemies for a total distance of 840.",
+        "The push does not impede enemies at all, and even allows them to move still.",
+        "Does not push enemies that are affected by sources of forced movement that disable enemies in some way.",
+        "Does not push affected enemies over impassable terrain as well."
+      ],
+      "mana": "30",
+      "item_behaviour": [],
+      "name": "Gale Force",
+      "cooldown": "150",
+      "description": "Summons a strong wind that pushes all enemies in the target area towards the target direction. Vector Targeted.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.2+0.47",
+        "Cast Range:  1500",
+        "Radius: 1000",
+        "Push Speed: 240",
+        "Duration: 3",
+        "Aura Linger Duration: 0.5"
+      ],
+      "legacy_key": "G",
+      "story": "At last Lyralei has learned to call upon the might of her true birthright."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Windranger_Focus_Fire.mp3\/revision\/latest?cb=20191216030555",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Self"
+      ],
+      "notes": [
+        "The cast range of Focus Fire is based on the attack range of the caster. It can only be further increased by attack range bonuses of the same range type as the caster. However, it is not affected by cast range bonuses. However, this does not include the unlimited range while Hurricane Pike is active.",
+        "It can only be further increased by attack range bonuses of the same range type as the caster. However, it is not affected by cast range bonuses.",
+        "However, this does not include the unlimited range while Hurricane Pike is active.",
+        "Upon cast, Focus Fire orders Windranger to attack the target and allows her to move while attacking the target.",
+        "Windranger automatically attacks the Focus Fire target whenever she is in range, unless she is given an order that is not a move or attack order. The automatic attacking can be paused by ordering her to stop (S) or hold position (H) once. When paused, she no longer attacks the target while moving. To resume the automatic attacking, a new attack order (TagTalent Right Click) on target or (A) must be given to her.",
+        "The automatic attacking can be paused by ordering her to stop (S) or hold position (H) once. When paused, she no longer attacks the target while moving.",
+        "To resume the automatic attacking, a new attack order (TagTalent Right Click) on target or (A) must be given to her.",
+        "Reduces Windranger's main and bonus attack damage when attacking the target. EXPR (Atk Main + Atk Bonus) × 70% (TagTalent 86%) Other conditional bonus sources (e.g. Mana Break) added to the primary attack is not reduced.",
+        "EXPR (Atk Main + Atk Bonus) × 70% (TagTalent 86%)",
+        "Other conditional bonus sources (e.g. Mana Break) added to the primary attack is not reduced.",
+        "Windranger can switch attack targets without losing the buff against the Focus Fire target.",
+        "When switching attack targets, the attack speed and damage adapt as soon as the attack begins.",
+        "Casting Focus Fire on multiple targets only grants the attack speed and damage reduction against the most recent target.",
+        "Focus Fire ends prematurely when Windranger dies but persists through the target's death.",
+        "Can be cast on any enemy unit, including buildings and Couriers, excluding wards, invulnerable or hidden units.",
+        "TALENT NOTES The Focus Fire cooldown advance talent cause Focus Fire to skip 20 seconds of its current cooldown if the target dies. The cooldown skip only happens if the dying target is a hero or clones, it does not matter how the target dies or is credited for, the cooldown skip always triggers. This effect can be triggered multiple times per cast, possible if the target reincarnates, buys back, or against a resummoned Tempest Double. Treats illusions and creep-heroes as creeps.",
+        "The cooldown skip only happens if the dying target is a hero or clones, it does not matter how the target dies or is credited for, the cooldown skip always triggers.",
+        "This effect can be triggered multiple times per cast, possible if the target reincarnates, buys back, or against a resummoned Tempest Double.",
+        "Treats illusions and creep-heroes as creeps.",
+        "SOULBIND Does not affect the secondary target at all."
+      ],
+      "mana": "70\/50\/30",
+      "item_behaviour": [],
+      "name": "Focus Fire",
+      "cooldown": "75\/100\/125",
+      "description": "Windranger channels the wind to gain 350\/425\/500 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage. Extra damage from secondary item effects is not reduced.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range:  600",
+        "Attack Speed Bonus: 350\/425\/500",
+        "Attack Damage Reduction: 30% ( 14%)",
+        "Duration: 20",
+        "<span image=\"images\\Talent\"><\/span> Cooldown Skip on Target Death: 20"
+      ],
+      "legacy_key": "F",
+      "story": "Lyralei's ability to bombard opponents with a flurry of arrows is unparalleled - even at the expense of accuracy."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.6,
+    "attrStrength": 18.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 3.6,
+    "attrAgilityInc": 1.4,
+    "attrAgility": 17.0
+  },
+  "description": "Fires swift flurry of arrows at a single target Born in the midst of a ruinous tempest, Lyralei has always been one with the Elemental Wind. Swift of foot, and true of aim, she Windruns across the battlefield, avoiding attacks as she draws a Powershot to pierce foes from a far. Armed with both quiver and rope, the Windranger binds enemies together with a handy Shackleshot. Honing her concentration, Lyralei launches a relentless sequence of arrows, Focus Firing on a single target until it resembles little more than an oversized pincushion.  Carry Support Disabler Escape Nuker ★★☆",
+  "trivia": [
+    "In DotA, Windranger was known as Alleria, the Windrunner. Alleria Windrunner is a character from the Warcraft universe. In the November 21, 2013 update, her name was changed to \"Windranger\", likely to avoid trademark issues with Blizzard.",
+    "Windranger's current name, Lyralei, is a partial anagram of Alleria (one of the A's was replaced with the Y)."
+  ],
+  "history": "The western forests guard their secrets well. One of these is Lyralei, master archer of the wood, and favored godchild of the wind. Known now as Windranger, Lyralei's family was killed in a storm on the night of her birth--their house blown down by the gale, contents scattered to the winds. Only the newborn survived among the debris field of death and destruction. In the quiet after the storm, the wind itself took notice of the lucky infant crying in the grass. The wind pitied the child and so lifted her into the sky and deposited her on a doorstep in a neighboring village. In the years that followed, the wind returned occasionally to the child's life, watching from a distance while she honed her skills. Now, after many years of training, Windranger fires her arrows true to their targets. She moves with blinding speed, as if hastened by a wind ever at her back. With a flurry of arrows, she slaughters her enemies, having become, nearly, a force of nature herself.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "Windrun Undispellable",
+        "talent_left": "Focus Fire Kills Advance Cooldown by 20s."
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+0.8s Shackleshot Duration",
+        "talent_left": "-16% Focus Fire Damage Reduction"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-3s Windrun Cooldown",
+        "talent_left": "-15% Powershot Damage Reduction"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+225 Windrun Radius",
+        "talent_left": "-2s Shackleshot Cooldown"
+      }
+    ]
+  }
+}

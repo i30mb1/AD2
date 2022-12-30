@@ -1,0 +1,333 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Timbersaw_Whirling_Death_1.mp3\/revision\/latest?cb=20191216025155",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Interrupts Timbersaw's channeling abilities upon cast.",
+        "Whirling Death first applies the debuff, then the damage.",
+        "Destroys trees within 325 radius around Timbersaw upon cast.",
+        "Checks for the affected enemy heroes' current primary attribute, then reduces their current total primary attributes, including base and bonus attributes. The attribute reduction does not update if the affected target(s) gain or lose primary attributes after the debuff is placed. Whirling Death cannot reduce any attributes below 0. The actual attribute reduction displayed on the HUD is truncated, since it does not display attributes with decimal points. This affects the following things: Marci at Level 1 has 23 strength with a max health of 660, and is affected by Whirling Death without the attribute reduction increasing talent. Her strength is reduced to 20.7; however, the strength value displayed on the HUD is rounded up to 21 instead. This is not her actual strength value. Marci's actual strength will be 20 after the primary attribute reduction, and her max health is 614, before Whirling Death deals its damage. Successive Whirling Death attribute reductions will use the current strength values, 20.7 in this example, following the same notes as above.",
+        "The attribute reduction does not update if the affected target(s) gain or lose primary attributes after the debuff is placed.",
+        "Whirling Death cannot reduce any attributes below 0. The actual attribute reduction displayed on the HUD is truncated, since it does not display attributes with decimal points. This affects the following things: Marci at Level 1 has 23 strength with a max health of 660, and is affected by Whirling Death without the attribute reduction increasing talent. Her strength is reduced to 20.7; however, the strength value displayed on the HUD is rounded up to 21 instead. This is not her actual strength value. Marci's actual strength will be 20 after the primary attribute reduction, and her max health is 614, before Whirling Death deals its damage. Successive Whirling Death attribute reductions will use the current strength values, 20.7 in this example, following the same notes as above.",
+        "Marci at Level 1 has 23 strength with a max health of 660, and is affected by Whirling Death without the attribute reduction increasing talent.",
+        "Her strength is reduced to 20.7; however, the strength value displayed on the HUD is rounded up to 21 instead. This is not her actual strength value.",
+        "Marci's actual strength will be 20 after the primary attribute reduction, and her max health is 614, before Whirling Death deals its damage.",
+        "Successive Whirling Death attribute reductions will use the current strength values, 20.7 in this example, following the same notes as above.",
+        "Whirling Death first reduces current health by 20 per strength, then the damage. Upon losing the debuff, enemies first only regain 19 health per strength, before gaining their attributes back. Health regain is considered as setting health.",
+        "Upon losing the debuff, enemies first only regain 19 health per strength, before gaining their attributes back.",
+        "Health regain is considered as setting health.",
+        "Has no effect on affected units' current mana percentage if intelligence is reduced.",
+        "Debuffs of successive casts stack additively, with each cast placing a new debuff with its duration independent of each other.",
+        "The attribute reduction fully affects illusions, Meepo Clones and the Tempest Double."
+      ],
+      "mana": "7.5\/7\/6.5\/6",
+      "item_behaviour": [],
+      "name": "Whirling Death",
+      "cooldown": "80",
+      "description": "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area. If an enemy hero is affected, it loses some of its primary attribute for a short duration. Whirling Death will deal bonus damage per tree destroyed.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0+0",
+        "Radius: 325",
+        "Base Damage: 80\/120\/160\/200",
+        "Bonus Damage per Cut Tree: 11\/18\/25\/32",
+        "Primary Attribute Reduction: 10% ( 22%)",
+        "Debuff Duration: 12\/13\/14\/15"
+      ],
+      "legacy_key": "D",
+      "story": "In the case that Rizzrack gets surrounded by the vines and plants of nightmares, he has an immediate chainsaw defense."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Timbersaw_Timber_Chain_1.mp3\/revision\/latest?cb=20191216025152",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self \/ Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "The chain travels at a speed of 2200\/2400\/2600\/2800, and always travels either the full distance or until connecting with a tree.",
+        "With the maximum travel distance and tree search radius, it can connect to trees up to 840\/990\/1140\/1290 (TagTalent 1965\/2115\/2265\/2415) range away.",
+        "The hooked tree is destroyed once the chain stops pulling.",
+        "Fully damages invisible and untargetable units.",
+        "Can pull Timbersaw over impassable terrain and through trees.",
+        "Timbersaw stops being pulled if he is disabled at any point during Timber Chain. If Timbersaw is disabled before the chain starts pulling, the chain still pulls him for a very short distance. This is still enough to cause damage around him to nearby units or to interact with distance-based ability effects (e.g. Rupture).",
+        "If Timbersaw is disabled before the chain starts pulling, the chain still pulls him for a very short distance.",
+        "This is still enough to cause damage around him to nearby units or to interact with distance-based ability effects (e.g. Rupture).",
+        "Timbersaw is disarmed, but he can cast abilities during the pull.",
+        "The chain's tip briefly provides 100 radius ground vision around itself while traveling, and 400 radius ground vision once reaching maximum distance or connecting with a tree."
+      ],
+      "mana": "4",
+      "item_behaviour": [],
+      "name": "Timber Chain",
+      "cooldown": "60\/70\/80\/90",
+      "description": "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it. Any enemy in the path takes damage.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  750\/900\/1050\/1200 ( 1875\/2025\/2175\/2325)",
+        "Max Travel Distance:  750\/900\/1050\/1200 ( 1875\/2025\/2175\/2325)",
+        "Tree Search Radius: 90",
+        "Damage Radius: 225",
+        "Damage: 70\/120\/170\/220"
+      ],
+      "legacy_key": "T",
+      "story": "You never know when you might need to escape from malevolent saplings."
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Self"
+      ],
+      "notes": [
+        "Reactive Armor only triggers when a unit lands an attack, regardless of distance. This means it cannot trigger on missed attacks.",
+        "The Reactive Armor stack is always gained right before the attacker's damage is dealt to its target.",
+        "Does not trigger on instant attacks that cannot proc attack modifiers (e.g. Split Shot before learning the talent and Flak Cannon). Can trigger on attacks from wards, buildings and allies.",
+        "Can trigger on attacks from wards, buildings and allies.",
+        "Each stack has its own duration and is independent from other stacks. The amount of stacks is shown on the status buff icon.",
+        "Treats clones, illusions and creep-heroes as heroes.",
+        "At max stacks, Reactive Armor grants 5\/12\/21\/32 (TagTalent 8\/15.6\/25.2\/36.8) bonus armor and 4\/10\/18\/28 (TagTalent 6.4\/13\/21.6\/32.2) bonus health regeneration on each level. Can regenerate up to 40\/120\/252\/448 (TagTalent 64\/180\/360\/616) health over its full duration. For how much armor and health regeneration bonus a certain amount of Reactive Armor stacks on each level grants, including the max stacks increasing talent, please refer to the chart below.",
+        "Can regenerate up to 40\/120\/252\/448 (TagTalent 64\/180\/360\/616) health over its full duration.",
+        "For how much armor and health regeneration bonus a certain amount of Reactive Armor stacks on each level grants, including the max stacks increasing talent, please refer to the chart below.",
+        "The amount of stacks is also visually indicated by a dome which closes over on Timbersaw. The exhaust on the suit also starts emitting fire once the dome is fully closed. The dome has 4 fragments, each appearing for every 4 stacks (1 \u2013 4, 5 \u2013 8, 9 \u2013 12, 13 \u2013 16). The dome opens again upon dropping below the given amount of stacks.",
+        "The dome has 4 fragments, each appearing for every 4 stacks (1 \u2013 4, 5 \u2013 8, 9 \u2013 12, 13 \u2013 16). The dome opens again upon dropping below the given amount of stacks."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Reactive Armor",
+      "cooldown": null,
+      "description": "Each time Timbersaw is attacked, he gains increased health regen and armor. Heroes grant double the amount.",
+      "hot_key": "E",
+      "params": [
+        "Max Stacks: 10\/20\/30\/40 ( 16\/26\/36\/46)",
+        "Armor Bonus per Stack: 0.5\/0.6\/0.7\/0.8",
+        "Health Regen Bonus per Stack: 0.4\/0.5\/0.6\/0.7",
+        "Stack Gain per Hero Attack: 2",
+        "Stack Gain per Non-Hero Attack: 1",
+        "Stack Duration: 10\/12\/14\/16 ( 16\/18\/20\/22)"
+      ],
+      "legacy_key": "E",
+      "story": "The saw-suit is equipped to react to the slightest touch with fortified defenses."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Timbersaw_Chakram_1.mp3\/revision\/latest?cb=20191216025147",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies \/ Self",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked. If the item is acquired before Chakram was learned, Second Chakram will be at level 1.",
+        "If the item is acquired before Chakram was learned, Second Chakram will be at level 1.",
+        "Second Chakram is fully equivalent to the main Chakram. Both Chakram and the Second Chakram act independently.",
+        "The movement speed slow debuff of Chakram and Second Chakram stack with each other, but do not stack with multiple of themselves.",
+        "Chakram notes fully apply."
+      ],
+      "mana": "8",
+      "item_behaviour": [],
+      "name": "Second Chakram",
+      "cooldown": "75\/125\/175 + 14\/22\/30\/ second",
+      "description": "Launches a second independent Chakram.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.15+0",
+        "Cast Range:  1200",
+        "Effect Radius: 200",
+        "Pass Damage: 110\/155\/200",
+        "Damage per Second: 70\/95\/120",
+        "Move Speed Slow per 5% Max Health Missing: 5% ( 9%)",
+        "Aura Linger Duration: 0.5",
+        "Passing Slow Duration: 0.5"
+      ],
+      "legacy_key": "F",
+      "story": "Cut cut cut cut cut cut cut cut cut cut cut!"
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Timbersaw_Return_Chakram.mp3\/revision\/latest?cb=20191216025151",
+      "effects": [
+        "Ability: No Target"
+      ],
+      "notes": [
+        "Replaces Second Chakram until the Second Chakram has fully returned to Timbersaw.",
+        "Does not interrupt Timbersaw's channeling abilities upon cast.",
+        "Timbersaw is unable to level Second Chakram up while this sub-ability is active."
+      ],
+      "mana": "0",
+      "item_behaviour": [],
+      "name": "Return Second Chakram",
+      "cooldown": "0",
+      "description": "Returns the Chakram to Timbersaw.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0+0"
+      ],
+      "legacy_key": "F",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Timbersaw_Flamethrower_1.mp3\/revision\/latest?cb=20210103154315",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Interrupts Timbersaw's channeling abilities upon cast.",
+        "The complete area is shaped like a cone.",
+        "Applies the fire debuff within the area in 0.1-second intervals, starting immediately upon cast, resulting in 81 instances. The debuff deals 40 damage in 0.5-second intervals, starting immediately upon getting placed, resulting in a minimum of 5 instances. Can apply up to 21 damage instances if an enemy stands within the flames for the entire duration.",
+        "The debuff deals 40 damage in 0.5-second intervals, starting immediately upon getting placed, resulting in a minimum of 5 instances.",
+        "Can apply up to 21 damage instances if an enemy stands within the flames for the entire duration.",
+        "One instance of the debuff can deal up to 200 (TagTalent 80) damage, considering the minimum duration (before reductions). Can deal a total 840 (TagTalent 336) damage if an enemy stands within the flames for the whole duration.",
+        "Can deal a total 840 (TagTalent 336) damage if an enemy stands within the flames for the whole duration.",
+        "Trees within the area of effect are set on fire, and get destroyed 5 seconds afterwards.",
+        "Flamethrower first applies its debuff, then the damage.",
+        "Provides 175 radius non-lingering ground vision 400 range in front of Timbersaw for the duration."
+      ],
+      "mana": "20",
+      "item_behaviour": [],
+      "name": "Flamethrower",
+      "cooldown": "100",
+      "description": "Releases a flame in the direction Timbersaw is facing. Applies a debuff that deals damage per second and slows enemy movement speed. Affects buildings for reduced damage.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0+0",
+        "Flame Starting Width: 0",
+        "Flame Length: 400",
+        "Flame End Width: 275",
+        "Damage per Second: 80",
+        "Building Damage Percentage: 40%",
+        "Move Speed Slow: 30%",
+        "Tree Destruction Delay: 5",
+        "Debuff Duration: 2",
+        "Flamethrower Duration: 8"
+      ],
+      "legacy_key": "R",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Timbersaw_Chakram_1.mp3\/revision\/latest?cb=20191216025147",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies \/ Self",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Chakram travels at a speed of 900. Disarms Timbersaw as soon as the Chakram is launched, until the Chakram fully returns to Timbersaw. While traveling towards the target point, the blade deals pass damage and movement speed slows on enemy units within range once.",
+        "Disarms Timbersaw as soon as the Chakram is launched, until the Chakram fully returns to Timbersaw.",
+        "While traveling towards the target point, the blade deals pass damage and movement speed slows on enemy units within range once.",
+        "Upon reaching the target area, the Chakram deals 25\/37.5\/50 (TagTalent 35\/47.5\/60) damage (before reductions), and drains 7\/11\/15 of Timbersaw's mana in 0.5-second intervals, starting 0.5 seconds after reaching the target area. The Chakram also applies a movement speed slow aura to enemies which lingers for 0.5 seconds.",
+        "The Chakram also applies a movement speed slow aura to enemies which lingers for 0.5 seconds.",
+        "The Chakram stops draining mana and dealing damage over time as soon as it starts to return. While returning, the Chakram deals the pass damage to nearby units again and slows enemy units' movement speed by placing a debuff again. The movement speed slow from the Chakram passing, in both directions, lasts 0.5 seconds. The movement speed slow debuff from passing and from the stationary aura is the same. However, the former is dispellable, the latter is not. A passing Chakram first applies the passing damage, then the debuff. The passing damage may only damage the same unit once when flying toward the targeted point, and once again when returning.",
+        "While returning, the Chakram deals the pass damage to nearby units again and slows enemy units' movement speed by placing a debuff again.",
+        "The movement speed slow from the Chakram passing, in both directions, lasts 0.5 seconds.",
+        "The movement speed slow debuff from passing and from the stationary aura is the same. However, the former is dispellable, the latter is not.",
+        "A passing Chakram first applies the passing damage, then the debuff.",
+        "The passing damage may only damage the same unit once when flying toward the targeted point, and once again when returning.",
+        "The Chakram returns to Timbersaw in the following conditions: Upon using the Return Chakram sub-ability. When it exceeds 2000 range away. The effective area for the link break distance is half of a sphere and not a flat circle. Therefore, the Chakram returns when Timbersaw is moved upward far enough.",
+        "Upon using the Return Chakram sub-ability.",
+        "When it exceeds 2000 range away. The effective area for the link break distance is half of a sphere and not a flat circle. Therefore, the Chakram returns when Timbersaw is moved upward far enough.",
+        "The effective area for the link break distance is half of a sphere and not a flat circle. Therefore, the Chakram returns when Timbersaw is moved upward far enough.",
+        "The Chakram instantly disappears and does not return upon Timbersaw's death, even with Reincarnation.",
+        "The first 5% (TagTalent 9%) movement speed slow is applied at 95% \u2013 100% of the affected target's maximum health. As the affected target's maximum health go lower, the Chakram slows up to 100% movement speed at between 1% \u2013 5% (TagTalent 46% \u2013 50%) max health.",
+        "The movement speed slow debuff of Chakram and Second Chakram stack with each other, but do not stack with multiple of themselves.",
+        "Chakram provides 300 radius flying vision while spinning in place at the target area. Does not provide vision while the Chakram is traveling.",
+        "Does not provide vision while the Chakram is traveling."
+      ],
+      "mana": "8",
+      "item_behaviour": [],
+      "name": "Chakram",
+      "cooldown": "75\/125\/175 + 14\/22\/30\/ second",
+      "description": "Fires your main saw blade at the target location where it will spin in place, dealing damage in an area around it. Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and you lose the ability to attack.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.15+0 ( 0.1+0)",
+        "Cast Range:  1200",
+        "Effect Radius: 200",
+        "Pass Damage: 110\/155\/200",
+        "Damage per Second: 50\/75\/100 ( 70\/95\/120)",
+        "Move Speed Slow per 5% Max Health Missing: 5% ( 9%)",
+        "Aura Linger Duration: 0.5",
+        "Passing Slow Duration: 0.5"
+      ],
+      "legacy_key": "C",
+      "story": "The ultimate in anti-flora weaponry."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Timbersaw_Return_Chakram.mp3\/revision\/latest?cb=20191216025151",
+      "effects": [
+        "Ability: No Target"
+      ],
+      "notes": [
+        "Replaces Chakram until the Chakram has fully returned to Timbersaw.",
+        "Does not interrupt Timbersaw's channeling abilities upon cast.",
+        "Timbersaw is unable to level Chakram up while this sub-ability is active."
+      ],
+      "mana": "0",
+      "item_behaviour": [],
+      "name": "Return Chakram",
+      "cooldown": "0",
+      "description": "Returns the Chakram to Timbersaw.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0+0"
+      ],
+      "legacy_key": "C",
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.5,
+    "attrStrength": 25.0,
+    "attrIntelligence": 23.0,
+    "attrIntelligenceInc": 2.7,
+    "attrAgilityInc": 1.6,
+    "attrAgility": 16.0
+  },
+  "description": "Chops through the forest to face his foes. Timbersaw had a good cause to be paranoid. Augury Bay fell to the walking trees, its inhabitants crushed under branch and bough. But that was the past. His new Saw-suit changed everything. Its long Timber Chain shot out, grasping the nearest trunk and pulling the suit towards it. In an instant, a dozen trees fell in a circle to the oversized saw. \"Whirling Death, I'll call it!\" But that was not all. A press of the button, and the bladed Chakram flew into the forest, cutting down even the sturdiest of hardwoods. Delirious with success, Rizzrack pulled up a Second Chakram and a Flamethrower, spinning and spewing in all directions, cackling until all that remained was a field of naked burned stumps. Now, he was ready to face his fears.  Nuker Durable Escape ★★☆",
+  "trivia": [
+    "In DotA, Rizzrack's hero title was Goblin Shredder. Unlike his Dota 2 counterpart, he cut trees for profit and was not afraid of them. His alternate\/fun name was \"Oroku Saki\", a reference to the real name of the villain in \"Teenage Mutant Ninja Turtles\" Shredder.",
+    "His alternate\/fun name was \"Oroku Saki\", a reference to the real name of the villain in \"Teenage Mutant Ninja Turtles\" Shredder.",
+    "His response upon killing Treant Protector Link▶️ \"If you fall in the woods, and I laugh, will anyone hear me?\" is a reference to the popular philosophical question \"If a tree falls in a forest and no one is around to hear it, does it make a sound?\".",
+    "His response Link▶️ \"I'm not a lumberjack, and no, I'm not okay. I thank you.\" is a reference to \"Monty Python's Flying Circus\" in which they sing a song called \"I'm a lumberjack and I'm okay\".",
+    "His response Link▶️ \"Trees? Why did it have to be trees?\" is a reference to the \"Indiana Jones: Raiders of the Lost Ark\" line \"Snakes. Why did it have to be snakes?\" [1]",
+    "Timbersaw's first and secondary Chakram colors may be a reference to the colors of portals of the games Portal and Portal 2, another series from Valve.",
+    "Timbersaw's ultimate, Chakram, is most likely a reference to the mythological disc-weapon of the Hindu deity Viṣṇu. The weapon's full name is \"Sudarśana Cakra\" (the transliterated \"c\" makes a \"ch\" sound) and it is considered one of the most powerful weapons in Hindu mythology.",
+    "Timbersaw's line when bottling a rune, Link▶️ \"This is my scheming face.\" may be a reference to the character Myron Reducto from \"Harvey Birdman: Attorney at Law\".",
+    "Timbersaw is probably modeled after a type of goblin named kallikantzaroi who, according to folklore, stay underground sawing the world tree, so that it will collapse, along with the Earth. However, when they are about to saw the final part, Christmas dawns and they are able to come to the surface. They forget the tree and come to bring trouble to mortals. This very well explains Timbersaw's hatred towards trees."
+  ],
+  "history": "Rizzrack could still hear the screams in his mind. He worked, frantically turning wrenches, twisting screws, building and carving and forging. Sleep eluded him; he only built. Months had passed since he had shut himself in his uncle's workshop, and his deliverance was nearly complete. He rubbed his back as his eyes drifted shut, and saw a blanket of flowers floating on the placid waves of Augury Bay before exploding into a cloud of pollen that silenced lives as it seized the lungs. He woke with a choking start. For hours the rhythmic sound of a whetstone filled the shop as he sharpened a set of massive blades, his mind filled with images of strangling vines garroting neighbors, enwrapping homes. The flooding of Augury Bay had been nothing compared to the violent horrors the waters left to take root beyond the city walls. But the saw-suit would make him strong and safe he thought, allowing himself this sliver of hope before the full might of his fear crashed into his fading mind. Branches and bark and blood. When the city fell, Rizzrack fled trees that walked, and fought, and killed. Trees had shattered the gates and swarmed into the city. Trees had crushed and thrashed and stomped the last that Augury Bay could muster in defense, and stalked the few fleeing refugees. In addled silence Rizzrack unspooled the thick chain from the suit's arm, his hands quaking as he inspected each link and ran a trembling finger along the claw attached at its end. The saw-suit was ready. With his hand trembling he sparked the bladed machine to life. Terror drove him, terror of what awaited him and of what he would have to face to have any hope of calming his mind. As the saw-suit shuddered to life he knew he must face this fear, and he knew he wouldn't like it one bit.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+12% Whirling Death Attribute Reduction",
+        "talent_left": "+1125 Timber Chain Range"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+16 Strength",
+        "talent_left": "+4% Chakram Slow"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+8% Spell Amplification",
+        "talent_left": "+6 Reactive Armor Stacks and Duration"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+200 Health",
+        "talent_left": "+1.5 Mana Regen"
+      }
+    ],
+    "notes": [
+      "The health talent increases maximum health capacity, and keeps the current health percentage.",
+      "The strength talent effectively grants Timbersaw 320 health, 1.6 health regeneration, and 16 main attack damage bonus."
+    ]
+  }
+}

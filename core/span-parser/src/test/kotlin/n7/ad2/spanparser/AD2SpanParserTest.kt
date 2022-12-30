@@ -75,6 +75,20 @@ class AD2SpanParserTest {
     }
 
     @Test
+    fun `text with image`() {
+        val raw = """
+            adb shell am start -d "app://n7.ad2"<span image="Cringe"></span>
+        """.trimIndent()
+        fillFields(raw)
+        Truth.assertThat(resultText.toString())
+            .isEqualTo("adb shell am start -d \"app://n7.ad2\"")
+        Truth.assertThat(resultAnalyzer).containsExactly(
+            StartSpanTag("adb shell am start -d \"app://n7.ad2\"", listOf(AttributeAndValue("image", "Cringe"))),
+            EndSpanTag("")
+        )
+    }
+
+    @Test
     fun `simple span with empty attribute`() {
         val raw = """
             если сможешь подняться, то сможешь и <span color="">встать</span>

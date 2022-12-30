@@ -1,0 +1,282 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Spectre_Spectral_Dagger_1.mp3\/revision\/latest?cb=20191216024330",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self \/ Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "The Spectral Dagger travels at a speed of 800.",
+        "Can directly target heroes, illusions and creep-heroes. When targeting a hero or an illusion, the dagger homes in on the target until reaching it. When ground-targeted or targeting creep-heroes, the dagger travels 1800 range in a straight line. It does not home in on creep-heroes. Does not affect Couriers.",
+        "When targeting a hero or an illusion, the dagger homes in on the target until reaching it.",
+        "When ground-targeted or targeting creep-heroes, the dagger travels 1800 range in a straight line. It does not home in on creep-heroes.",
+        "Does not affect Couriers.",
+        "Every enemy unit which comes within 125 range of the traveling dagger gets damaged.",
+        "The dagger also applies one instance of Desolate based on its current level if the target is a lone target within 400 radius. Only units damaged by Spectral Dagger are considered valid targets for this Desolate application. Desolate notes fully apply. If it is not learned, or if the caster does not have Desolate, no bonus damage is applied. Spectral Dagger first deals its damage, then applies Desolate, then the debuff.",
+        "Only units damaged by Spectral Dagger are considered valid targets for this Desolate application.",
+        "Desolate notes fully apply. If it is not learned, or if the caster does not have Desolate, no bonus damage is applied.",
+        "Spectral Dagger first deals its damage, then applies Desolate, then the debuff.",
+        "Hit enemy heroes and illusions also receive the Dagger Path Creator debuff, making them trail a shadow path like the dagger itself. This debuff also grants shared vision over the enemy heroes, revealing their silhouette when they become invisible.",
+        "This debuff also grants shared vision over the enemy heroes, revealing their silhouette when they become invisible.",
+        "Spectre and enemies gain the Spectral Dagger Path modifier while on the path, increasing hers while decreasing the enemies' movement speed. Spectre's illusions receive this modifier as well, but it does not increase their movement speed. This modifier lingers for 4 seconds after leaving the path. The modifier only refreshes from the same source. Meaning that Spectre will not be slowed by an enemy Spectral Dagger when she has the buff modifier.",
+        "Spectre's illusions receive this modifier as well, but it does not increase their movement speed.",
+        "This modifier lingers for 4 seconds after leaving the path.",
+        "The modifier only refreshes from the same source. Meaning that Spectre will not be slowed by an enemy Spectral Dagger when she has the buff modifier.",
+        "Spectre also gains a hidden buff, which grants her unobstructed movement. This buff lingers for 1 second after leaving the path. Spectre's illusions do not receive this modifier.",
+        "This buff lingers for 1 second after leaving the path.",
+        "Spectre's illusions do not receive this modifier.",
+        "The shadow path's segments last 12 seconds from the moment on they were created, not as the ability was cast.",
+        "The shadow path grants 200 radius flying vision around itself.",
+        "The movement speed changing modifier on Spectre and enemies on the path is dispellable. However, as long as Spectre stays on the path, it immediately gets re-applied on her again. For enemies, the slow debuff does not get re-applied immediately, but does get applied again if they leave the path and enter it again. Dispelling the path creating debuff on enemy heroes stops them from creating or extending the path, but does not remove already created paths.",
+        "However, as long as Spectre stays on the path, it immediately gets re-applied on her again.",
+        "For enemies, the slow debuff does not get re-applied immediately, but does get applied again if they leave the path and enter it again.",
+        "Dispelling the path creating debuff on enemy heroes stops them from creating or extending the path, but does not remove already created paths.",
+        "Spectral Dagger of different sources are independent of each other.",
+        "SPELL STEAL \/ MORPH NOTES All bonuses are lost upon losing ability despite the path still visible."
+      ],
+      "mana": "22\/20\/18\/16 (TagTalent 18\/16\/14\/12)",
+      "item_behaviour": [],
+      "name": "Spectral Dagger",
+      "cooldown": "130\/140\/150\/160",
+      "description": "Spectre flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of any enemies along the trail. Units hit by the dagger also trail a Shadow Path. While treading the path, Spectre phases through otherwise impassable terrain. Spectral Dagger applies an instance of Desolate to targets with no allied units within 400 radius of them.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0.37",
+        "Cast Range:  1800",
+        "Effect Radius: 125",
+        "Damage: 70\/120\/170\/220 ( 170\/220\/270\/320)",
+        "Move Speed Slow\/Bonus: 10%\/14%\/18%\/22% ( 22%\/26%\/30%\/34%)",
+        "Path Duration: 12",
+        "Path Creator Duration: 7",
+        "Move Speed Slow\/Bonus Linger Duration: 4",
+        "Free Pathing Linger Duration: 1"
+      ],
+      "legacy_key": "D",
+      "story": "Mercurial's dagger eclipses the physical plane in shadow, a state in which mortals cower, but spectres thrive."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Spectre_Desolate.mp3\/revision\/latest?cb=20210103161358",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Desolate's effects are applied upon finishing an attack, regardless of whether the attack actually hits the target or not. This means Desolate applies its effects even when the leading attack misses the target. When used by ranged heroes, Desolate is applied on projectile launch, not when the projectile hit.",
+        "This means Desolate applies its effects even when the leading attack misses the target.",
+        "When used by ranged heroes, Desolate is applied on projectile launch, not when the projectile hit.",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Works against any enemy unit, except for wards and buildings.",
+        "Desolate completely ignores nearby wards, buildings, ally Couriers, invulnerable and hidden units. This means that Desolate still deals its damage when the target only has any of the above as allies nearby.",
+        "This means that Desolate still deals its damage when the target only has any of the above as allies nearby.",
+        "Only checks for allies of the target, meaning nearby neutral creeps do not prevent it from dealing damage to units of the enemy team, and vice versa."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Desolate",
+      "cooldown": null,
+      "description": "Deals bonus damage whenever Spectre attacks an enemy that does not have any allied units within a 400 radius around them.",
+      "hot_key": "W",
+      "params": [
+        "Radius: 400",
+        "Damage: 21\/34\/47\/60 ( 33\/46\/59\/72)"
+      ],
+      "legacy_key": "L",
+      "story": "Often times, warriors find themselves alone with a vision of Mercurial - the fated question is if it is the true Spectre."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Spectre_Spectral_Dagger_1.mp3\/revision\/latest?cb=20191216024330",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Self \/ Enemies",
+        "Damage: Source Type"
+      ],
+      "notes": [
+        "Applies generic incoming damage reduction on Spectre. Stacks additively with other sources of generic incoming damage manipulation. Reflects the 3 damage types, but not HP Removal effects (e.g. Sunder, Soul Ring etc.). Increases Spectre's survivability against any damage by 9%\/14%\/19%\/25% (TagTalent 15%\/20%\/27%\/33%).",
+        "Reflects the 3 damage types, but not HP Removal effects (e.g. Sunder, Soul Ring etc.).",
+        "Increases Spectre's survivability against any damage by 9%\/14%\/19%\/25% (TagTalent 15%\/20%\/27%\/33%).",
+        "Dispersed damage is returned as the same damage type as it was received.",
+        "Reflected physical damage is affected by damage block.",
+        "The damage from Dispersion is flagged as HP Removal, so it does not trigger any on-damage effects.",
+        "Reflects a percentage of the full damage value before Spectre actually takes the damage. This means that it reflects damage before all manipulations, so that it may only be affected by incoming damage manipulation the enemy has. This also means it reflects overkill damage dealt to Spectre. If a damage source exceeded Spectre's current health and killed her, the damage reflected will be the same damage value. If both Spectre and an enemy would die to the damage simultaneously, the enemy is always killed first.",
+        "This means that it reflects damage before all manipulations, so that it may only be affected by incoming damage manipulation the enemy has.",
+        "This also means it reflects overkill damage dealt to Spectre. If a damage source exceeded Spectre's current health and killed her, the damage reflected will be the same damage value.",
+        "If both Spectre and an enemy would die to the damage simultaneously, the enemy is always killed first.",
+        "Reflected damage is not shared between enemies within the radius, all of them take the full amount of damage based on their distance.",
+        "Reflects the full 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) within a 400 radius from Spectre. Then the reflected damage decreases linearly up to a 800 radius from Spectre. This is how much damage Dispersion reflects to enemies at certain distances: 400 Distance: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) of dealt damage. 500 Distance: 6%\/9%\/12%\/15% (TagTalent 9.75%\/12.75%\/15.75%\/18.75%) of dealt damage. 600 Distance: 4%\/6%\/8%\/10% (TagTalent 6.5%\/8.5%\/10.5%\/12.5%) of dealt damage. 700 Distance: 2%\/3%\/4%\/5% (TagTalent 3.25%\/4.25%\/5.25%\/6.25%) of dealt damage.",
+        "This is how much damage Dispersion reflects to enemies at certain distances: 400 Distance: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) of dealt damage. 500 Distance: 6%\/9%\/12%\/15% (TagTalent 9.75%\/12.75%\/15.75%\/18.75%) of dealt damage. 600 Distance: 4%\/6%\/8%\/10% (TagTalent 6.5%\/8.5%\/10.5%\/12.5%) of dealt damage. 700 Distance: 2%\/3%\/4%\/5% (TagTalent 3.25%\/4.25%\/5.25%\/6.25%) of dealt damage.",
+        "400 Distance: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) of dealt damage.",
+        "500 Distance: 6%\/9%\/12%\/15% (TagTalent 9.75%\/12.75%\/15.75%\/18.75%) of dealt damage.",
+        "600 Distance: 4%\/6%\/8%\/10% (TagTalent 6.5%\/8.5%\/10.5%\/12.5%) of dealt damage.",
+        "700 Distance: 2%\/3%\/4%\/5% (TagTalent 3.25%\/4.25%\/5.25%\/6.25%) of dealt damage.",
+        "",
+        "SHARD NOTES A passive Spectral Dagger based on its current level triggers when Dispersion collectively reduces damage. Spectral Dagger notes fully apply. If it is not leveled, no dagger is launched. Only counts player-based and Roshan-based damage, including damage from allies. Neither counts damage flagged as HP removal or no-reflection. Counts damage even while Dispersion is on cooldown, and may instantly release a dagger on the next damage instance once it is off cooldown again. Counts damage Globally, but the Spectral Dagger is only released when a damage source is within 800 range of Spectre. The damage counter has no time limit. It only resets once a passive Spectral Dagger is launched. Any exceeding damage is completely ignored. For example, if an enemy deals an instance of 450 damage, it does not carry over to the damage counter for the next proc.",
+        "Spectral Dagger notes fully apply. If it is not leveled, no dagger is launched.",
+        "Only counts player-based and Roshan-based damage, including damage from allies. Neither counts damage flagged as HP removal or no-reflection. Counts damage even while Dispersion is on cooldown, and may instantly release a dagger on the next damage instance once it is off cooldown again. Counts damage Globally, but the Spectral Dagger is only released when a damage source is within 800 range of Spectre.",
+        "Neither counts damage flagged as HP removal or no-reflection.",
+        "Counts damage even while Dispersion is on cooldown, and may instantly release a dagger on the next damage instance once it is off cooldown again.",
+        "Counts damage Globally, but the Spectral Dagger is only released when a damage source is within 800 range of Spectre.",
+        "The damage counter has no time limit. It only resets once a passive Spectral Dagger is launched.",
+        "Any exceeding damage is completely ignored. For example, if an enemy deals an instance of 450 damage, it does not carry over to the damage counter for the next proc.",
+        "SHARD NOTES The Spectral Dagger is launched towards the location of the last damage source that reached the damage threshold. Does not directly target or home into the unit that procs the passive cast, the dagger always flies in a straight path. The passive cooldown is affected by cooldown reduction and reset sources. The passive Spectral Daggers do not cost mana and are independent from the active ability's cooldown.",
+        "Does not directly target or home into the unit that procs the passive cast, the dagger always flies in a straight path.",
+        "The passive cooldown is affected by cooldown reduction and reset sources.",
+        "The passive Spectral Daggers do not cost mana and are independent from the active ability's cooldown."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Dispersion",
+      "cooldown": null,
+      "description": "Damage done to Spectre is reflected on her enemies, leaving her unharmed. The effect lessens with distance.",
+      "hot_key": "E",
+      "params": [
+        "Min Radius: 400",
+        "Max Radius: 800",
+        "Damage Reflected: 8%\/12%\/16%\/20% ( 13%\/17%\/21%\/25%)",
+        "Spectral Dagger Damage Threshold: 300"
+      ],
+      "legacy_key": "I",
+      "story": "A daunting task lies before enemies of Mercurial - killing a shadow with blade and magic."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Spectre_Reality.mp3\/revision\/latest?cb=20191216024328",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self"
+      ],
+      "notes": [
+        "Reality is unlocked upon learning Haunt and always stays active.",
+        "Does not disjoint projectiles upon cast.",
+        "When ground-targeted, Spectre exchanges places with the closest Haunt-based illusion from the targeted point. Can be cast multiple times until Haunt ends or all Haunt illusions are dead. After swapping positions, the Haunt illusion still walks towards its target and attacks it.",
+        "Can be cast multiple times until Haunt ends or all Haunt illusions are dead.",
+        "After swapping positions, the Haunt illusion still walks towards its target and attacks it.",
+        "Spectre still plays the full ability cast animation when casting this sub-ability when there are no currently active Haunt-based illusions.",
+        "SPELL STEAL Grants Haunt if the sub-ability is the last cast ability, regardless if the illusion is created from a Shadow Step cast."
+      ],
+      "mana": "0",
+      "item_behaviour": [],
+      "name": "Reality",
+      "cooldown": "0",
+      "description": "Spectre exchanges places with a chosen Haunt.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0+0.7",
+        "Cast Range: Global"
+      ],
+      "legacy_key": "R",
+      "story": "The scattered shadows unite into the one true Spectre."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Spectre_Shadow_Step_1.mp3\/revision\/latest?cb=20210103160705",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemy Heroes",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Shadow Step cannot be leveled, and automatically levels up whenever Haunt is leveled. Haunt's illusion notes fully apply.",
+        "Haunt's illusion notes fully apply.",
+        "Instantly applies Spectral Dagger based on its current level on the target, without using a projectile. Spectral Dagger notes fully apply. If it is not leveled, no buffs or debuffs are applied.",
+        "Spectral Dagger notes fully apply. If it is not leveled, no buffs or debuffs are applied.",
+        "Cannot be cast on creep-heroes.",
+        "SPELL STEAL Grants the Reality sub-ability upon acquiring ability."
+      ],
+      "mana": "40",
+      "item_behaviour": [],
+      "name": "Shadow Step",
+      "cooldown": "180",
+      "description": "Allows Spectre to perform a single target unit Haunt. Casts Spectral Dagger on the target.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range: Global",
+        "Illusion Damage Dealt: 40%\/60%\/80% ( 72%\/92%\/112%)",
+        "Illusion Damage Taken: 200%",
+        "Haunt Duration: 5\/6\/7"
+      ],
+      "legacy_key": "E",
+      "story": "With great focus of will, Mercurial can sometimes limit the extent of her division."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Spectre_Haunt_1.mp3\/revision\/latest?cb=20191216024324",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemy Heroes"
+      ],
+      "notes": [
+        "Haunt illusions are selectable, but uncontrollable.",
+        "The illusions have unobstructed pathing.",
+        "The illusions spawn 87 range away from the target if the caster has a collision size of 24, and 58 if the collision size is 8, at a random spot around the target. All Haunt-based illusions have a EXPR 2 * IllusionLVL bounty.",
+        "All Haunt-based illusions have a EXPR 2 * IllusionLVL bounty.",
+        "They do not attack but still follow invisible heroes. They also spawn on and follow invulnerable and hidden heroes. Treats Meepo Clones as heroes, and other clones and illusions as creeps.",
+        "Treats Meepo Clones as heroes, and other clones and illusions as creeps.",
+        "The illusions disappear once their target dies."
+      ],
+      "mana": "180\/160\/140",
+      "item_behaviour": [],
+      "name": "Haunt",
+      "cooldown": "150\/175\/200",
+      "description": "Creates a spectral nemesis to attack each enemy hero. At any moment during the duration, Spectre can use Reality to exchange places of a given haunt. Haunt illusions are uncontrollable, take extra damage, and deal less damage than Spectre herself. They ignore terrain.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Radius: Global",
+        "Illusion Damage Dealt: 40%\/60%\/80% ( 72%\/92%\/112%)",
+        "Illusion Damage Taken: 200%",
+        "Haunt Duration: 5\/6\/7"
+      ],
+      "legacy_key": "T",
+      "story": "At the height of combat, Mercurial's physical manifestation shatters, and the shadowy pieces haunt those who still cling to life."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.5,
+    "attrStrength": 23.0,
+    "attrIntelligence": 16.0,
+    "attrIntelligenceInc": 1.7,
+    "attrAgilityInc": 2.1,
+    "attrAgility": 25.0
+  },
+  "description": "Haunts her enemies and teleports to her target. An eternal being of violent energies, Mercurial, the Spectre is irresistibly drawn to conflict. Throwing out a Spectral Dagger, creating a shadowy trail to her foes in which she may travel unobstructed. Harm done to Mercurial is partially deflected and Dispersed onto nearby foes that prolongs her endurance. Even in the most Desolate wilderness, travelers are Haunted by visions of Spectre, seeming to prey on their solitude. But these are no mere illusions. It is said that for one in every five haunted, the apparition becomes Reality, and alongside these unfortunate victims the Spectre Shadow Steps to, bringing with her the destruction and wrath that she eternally craves.  Carry Durable Escape ★★☆",
+  "trivia": [
+    "The name Mercurial most likely comes from the DeviantART account of Kenneth Tan, the person who made the 6.28-6.32 loadscreen.[1][2] 6.28 is also the version in which Spectre got released in DotA.",
+    "\"Mercurial\" means \"swift, shrewd, and deceitful\", which is attributed to the Roman god of thieves, Mercury, as Spectre is an agile and quick Hero. It can also refer to the planet Mercury, since Spectre is an otherworldly entity. Mercurial can also hint towards the element Mercury, often called \"quicksilver,\" which is another reference to Spectre's speed and mobility. When used as an personal adjective, mercurial can mean a personality quick to change and dangerous to both the person receiving and transmitting. Someone quick to forgive and quick to anger would be mercurial, but not someone who holds grudges or holds none. See Mercutio (obviously named) from Romeo and Juliet.",
+    "Spectre's alternate\/fun name \"Qwerty-\" was given to her for remembering a legendary Dota player Zaven \"Qwerty\" Terminasov, who died on December 5, 2010.",
+    "Spectre's voice responses are overlayed with the same track playing backwards, bearing a huge similarity to the Spirit of Vengeance's voice in Warcraft III: Frozen Throne, which is also the voice of Spectre in DotA.",
+    "Spectre has fewer model animations than any other hero in the game."
+  ],
+  "history": "Just as higher states of energy seek a lower level, the Spectre known as Mercurial is a being of intense and violent energy who finds herself irresistibly drawn to scenes of strife as they unfold in the physical world. While her normal spectral state transcends sensory limitations, each time she takes on a physical manifestation, she is stricken by a loss of self--though not of purpose. In the clash of combat, her identity shatters and reconfigures, and she begins to regain awareness. She grasps that she is Mercurial the Spectre--and that all of her Haunts are but shadows of the one true Spectre. Focus comes in the struggle for survival; her true mind reasserts itself; until in the final moments of victory or defeat, she transcends matter and is restored once more to her eternal form.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+32% Haunt Illusion Damage",
+        "talent_left": "+5% Dispersion"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+350 Health",
+        "talent_left": "+12% Spectral Dagger Slow\/Bonus"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+12 Desolate Damage",
+        "talent_left": "+100 Spectral Dagger Damage"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "-4s Spectral Dagger Cooldown",
+        "talent_left": "+5 All Stats"
+      }
+    ],
+    "notes": [
+      "The \/ \/ all stats talent effectively grants Spectre 100 health, 0.5 health regeneration, 0.83 main armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 main attack damage bonus.",
+      "The health talent increases maximum health capacity, and keeps the current health percentage."
+    ]
+  }
+}

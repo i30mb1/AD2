@@ -24,9 +24,9 @@ class HeroRepository @Inject constructor(
     companion object {
         const val ASSETS_FILE_ANIMATION = "emoticon.webp"
         fun getFullUrlHeroMinimap(heroName: String) = "file:///android_asset/heroes/$heroName/minimap.png"
-        fun getFullUrlHeroImage(heroName: String) = "file:///android_asset/heroes/$heroName/full.webp"
+        fun getFullUrlHeroImage(heroName: String) = "file:///android_asset/heroes/$heroName/full.png"
         fun getFullUrlHeroArcane(heroName: String) = "file:///android_asset/heroes/$heroName/arcane.webp"
-        fun getFullUrlHeroSpell(spellName: String) = "file:///android_asset/spell/$spellName.webp"
+        fun getFullUrlHeroSpell(spellName: String) = "file:///android_asset/images/$spellName.webp"
     }
 
     suspend fun getSpellBitmap(spellName: String): Bitmap {

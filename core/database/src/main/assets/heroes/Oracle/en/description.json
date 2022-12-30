@@ -1,0 +1,255 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Oracle_Fortune%27s_End_1.mp3\/revision\/latest?cb=20191216021406",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1000.",
+        "When targeting allies, the area effect is still applied to surrounding enemies. The ally only gets dispelled. Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast. ↓↓ Double-tapping automatically targets self.",
+        "Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Always dispels Fate's Edict on affected targets.",
+        "Fortune's End first applies the dispel, then the debuff, then the damage.",
+        "Can directly be cast on invulnerable units, fully affecting them, though the damage gets negated by the invulnerability. Does not affect hidden targets. When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but the main target is not affected. Can be cast on and fully affects ally Couriers, but not enemy Couriers. Can neither target, nor affect wards and buildings.",
+        "When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but the main target is not affected.",
+        "Can be cast on and fully affects ally Couriers, but not enemy Couriers.",
+        "Can neither target, nor affect wards and buildings.",
+        "Applies a visual effect on the targeted unit upon cast, indicating that it is directly targeted. This visual effect is visible to everyone. The sound during the channeling is audible to everyone as well.",
+        "The sound during the channeling is audible to everyone as well.",
+        "The channeling is not canceled when the target turns spell immune, invisible, invulnerable, hidden or dies. When the channeling is interrupted through disables, the projectile is released prematurely. The damage and dispel effect are static, only the root duration is based on the time spent channeling.",
+        "When the channeling is interrupted through disables, the projectile is released prematurely.",
+        "The damage and dispel effect are static, only the root duration is based on the time spent channeling.",
+        "The root duration starts at 0.75 (TagTalent 1.25) and increases by 0.08 for each 0.1 seconds channeled, reaching 2.75 (TagTalent 3.25) in 2.5 seconds. TALENT NOTES The instant Fortune's End talent removes the need for channeling and causes the projectile to be released instantly on max power. Selecting the talent while already channeling Fortune's End visually removes the channeling bar, but does not interfere with the cast in any way.",
+        "TALENT NOTES The instant Fortune's End talent removes the need for channeling and causes the projectile to be released instantly on max power.",
+        "Selecting the talent while already channeling Fortune's End visually removes the channeling bar, but does not interfere with the cast in any way.",
+        "Fortune's End roots affected targets, preventing them from moving and casting certain mobility abilities. Provides True Sight over the targets.",
+        "Provides True Sight over the targets."
+      ],
+      "mana": "15\/12\/9\/6",
+      "item_behaviour": [],
+      "name": "Fortune's End",
+      "cooldown": "100",
+      "description": "Gathers Oracle's power into a bolt of scouring energy that, when released, damages, roots, and purges enemies of buffs in an area around the target. If target is an ally it will only purge debuffs. Can be channeled for up to 2.5 seconds. The root duration is equal to the time spent channeling.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range:  850",
+        "Effect Radius: 300",
+        "Max Channel Time: 2.5 ( 0)",
+        "Damage: 100\/160\/220\/280 ( 180\/240\/300\/360)",
+        "Min Root Duration: 0.75 ( 1.25)",
+        "Max Root Duration: 2.75 ( 3.25)"
+      ],
+      "legacy_key": "T",
+      "story": "The astral orb crackles with power while raw energy lances out, temporarily disrupting an enemy's connection to their own body."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Oracle_Fate%27s_Edict.mp3\/revision\/latest?cb=20191216021405",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies"
+      ],
+      "notes": [
+        "Applies a disarm and sets the target's magic resistance to 100%. ↓↓ Double-tapping automatically targets self. Cannot be cast on allies who have ☐ Disabled Help from Oracle.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Oracle.",
+        "Fate's Edict always places a debuff on the target, no matter it is an enemy or an ally. This means if cast on self or an ally, allies can dispel it, while enemies cannot. Vice versa, if cast on enemies, enemies can dispel it, while allies cannot.",
+        "This means if cast on self or an ally, allies can dispel it, while enemies cannot.",
+        "Vice versa, if cast on enemies, enemies can dispel it, while allies cannot.",
+        "Fortune's End can always dispel the modifier, regardless of the target's faction. Since it applies a debuff on allies, any dispel (e.g. False Promise or Echo Shell) will dispel it from allies.",
+        "Since it applies a debuff on allies, any dispel (e.g. False Promise or Echo Shell) will dispel it from allies."
+      ],
+      "mana": "17\/14\/11\/8",
+      "item_behaviour": [],
+      "name": "Fate's Edict",
+      "cooldown": "50",
+      "description": "Oracle enraptures a target, disarming them and granting them 100% magic damage resistance. Can be cast on allies and enemies.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+1.1",
+        "Cast Range:  500\/600\/700\/800",
+        "Magic Resistance: 100%",
+        "Duration: 3.5\/4\/4.5\/5"
+      ],
+      "legacy_key": "F",
+      "story": "An unbreakable prophecy resounds: a chosen ally shall briefly suffer no magics. Other kinds of suffering however..."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Oracle_Purifying_Flames.mp3\/revision\/latest?cb=20191216021409",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "The damage is applied instantly upon cast, followed by the heal over time. The damage is lethal to enemies, but not to allies, so it cannot be used for denying. Cannot be cast on allies who have ☐ Disabled Help from Oracle. ↓↓ Double-tapping automatically targets self.",
+        "The damage is lethal to enemies, but not to allies, so it cannot be used for denying.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Oracle.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Successive casts on the same target fully stack, with each cast having its own intervals and instances.",
+        "Heals in 1-second intervals, starting 1 second after cast, resulting in 9 instances of heal.",
+        "Can heal up to 99\/198\/297\/396 health per cast. Effectively heals up to 9\/18\/27\/36 health when considering the initial damage. TALENT NOTES With the enemy damage increasing talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage (before reductions).",
+        "Effectively heals up to 9\/18\/27\/36 health when considering the initial damage.",
+        "TALENT NOTES With the enemy damage increasing talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage (before reductions)."
+      ],
+      "mana": "2.5 (TagTalent 1.25)",
+      "item_behaviour": [],
+      "name": "Purifying Flames",
+      "cooldown": "75",
+      "description": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate health over time. The amount of health regenerated over its duration exceeds the amount of initial damage. Can be cast on enemies and allies.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.15+1.14",
+        "Cast Range:  850",
+        "Enemy Damage: 90\/180\/270\/360 ( 117\/234\/351\/468)",
+        "Ally Damage: 90\/180\/270\/360",
+        "Heal per Second: 11\/22\/33\/44",
+        "Duration: 9"
+      ],
+      "legacy_key": "E",
+      "story": "Like a hall of mirrors might amplify the light of a single candle, the shattered walls of the universe can transform the light of prophecy into a burning torch."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Oracle_Rain_of_Destiny.mp3\/revision\/latest?cb=20220412212011",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Allies \/ Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Deals damage and heals in 1-second intervals, starting immediately upon cast, resulting in up to 11 instances. Since it starts immediately upon cast, the first heal instance is not affected by the heal amplification.",
+        "Since it starts immediately upon cast, the first heal instance is not affected by the heal amplification.",
+        "Can deal up to 660 damage to a single unit (before reductions) while healing for the same amount of health. With its own amplification, it can effectively heal up to 810 health, considering the first instance not being amplified.",
+        "With its own amplification, it can effectively heal up to 810 health, considering the first instance not being amplified.",
+        "Only applies heal manipulation. Does not grant health regen manipulation, lifesteal manipulation, or spell lifesteal manipulation. Stacks multiplicatively with other sources of heal manipulation.",
+        "Stacks multiplicatively with other sources of heal manipulation.",
+        "The heal manipulation is provided by an aura and lingers for 0.5 seconds. The heal and damage are independent from the aura.",
+        "The damage and heal of multiple instances of Rain of Destiny fully stacks. However, the heal manipulation does not.",
+        "Places the modifier on Couriers, but does not heal or damage them."
+      ],
+      "mana": "40",
+      "item_behaviour": [],
+      "name": "Rain of Destiny",
+      "cooldown": "150",
+      "description": "Brings forth rain to the target area. Enemies standing in the area receive damage and have reduced heal amplification. Allies in the area heal and have increased incoming heal amplification.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.2+1.07",
+        "Cast Range:  650",
+        "Radius: 650",
+        "Damage\/Heal per Second: 60",
+        "Heal Amplification\/Reduction: 25%",
+        "Aura Linger Duration: 0.5",
+        "Duration: 10"
+      ],
+      "legacy_key": "D",
+      "story": "Through mixture of the astral and the atmospheric, Nerif bends a single reality into paradoxical alignment."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Oracle_False_Promise_1.mp3\/revision\/latest?cb=20191216021412",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allied Heroes",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Applies a strong dispel on the target upon cast. Can be cast on illusions and creep-heroes. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
+        "False Promise fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
+        "False Promise has the second highest priority in the group of damage negating abilities. It also negates healing effects. This means when combined with other damage negating effects (e.g. Aphotic Shield), False Promise negates the damage while the others do not. It has a lower priority than Borrowed Time. If combined with Borrowed Time, it first turns damage into heal, and then it is blocked as heal by False Promise.",
+        "This means when combined with other damage negating effects (e.g. Aphotic Shield), False Promise negates the damage while the others do not.",
+        "It has a lower priority than Borrowed Time. If combined with Borrowed Time, it first turns damage into heal, and then it is blocked as heal by False Promise.",
+        "As with all damage manipulating effects, False Promise only negates and delays all 3 damage types. It fully ignores HP Removal sources (except for Heartstopper Aura and Static Field).",
+        "Does not prevent instant killing effects (e.g. Culling Blade or Ice Blast).",
+        "Just like damage, False Promise also prevents the hero's health from increasing, with a few exceptions. Unlike negated damage, the ability negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast). Only actual heals are counted by False Promise. Other means of health increase are not counted, although may still be prevented (e.g. health gained from strength). Does not prevent setting health sources from increasing the hero's health. Does not prevent the following abilities from increasing the hero's health as well: Time Walk, Supernova and Whirling Death, Decay and Unholy Strength.",
+        "Unlike negated damage, the ability negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast).",
+        "Only actual heals are counted by False Promise. Other means of health increase are not counted, although may still be prevented (e.g. health gained from strength).",
+        "Does not prevent setting health sources from increasing the hero's health.",
+        "Does not prevent the following abilities from increasing the hero's health as well: Time Walk, Supernova and Whirling Death, Decay and Unholy Strength.",
+        "At the end of the duration, the target gets healed if the overall heal was higher, or damaged if the damage was higher. All healing received gets summed up into one instance and doubled. Then, the heal sum gets subtracted from each individual damage instance in order. This is repeated until either all damage instances are negated by the heal, or until the summed heal value depletes. If the heal sum depletes, then the remaining damage instances get applied in order. The damage is flagged as HP Removal. Therefore, if the target dies, the kill is credited to whoever's instance that dealt the killing blow, which can be the first, last or any other instance in between. Non-lethal damage instances blocked during False Promise are still not lethal when re-applied at the end of the duration. If all damage instances get negated instead, the remaining heal sum gets applied as a single heal to the target. This heal is always credited to Oracle.",
+        "All healing received gets summed up into one instance and doubled. Then, the heal sum gets subtracted from each individual damage instance in order.",
+        "This is repeated until either all damage instances are negated by the heal, or until the summed heal value depletes.",
+        "If the heal sum depletes, then the remaining damage instances get applied in order. The damage is flagged as HP Removal.",
+        "Therefore, if the target dies, the kill is credited to whoever's instance that dealt the killing blow, which can be the first, last or any other instance in between.",
+        "Non-lethal damage instances blocked during False Promise are still not lethal when re-applied at the end of the duration.",
+        "If all damage instances get negated instead, the remaining heal sum gets applied as a single heal to the target. This heal is always credited to Oracle.",
+        "Despite being HP Removal, Shallow Grave can still save the target from it and Borrowed Time still turns it into heals.",
+        "If the target is invulnerable as False Promise expires, the delayed heal and damage wait for it to become vulnerable again.",
+        "Successive casts on the same target do not stack, but refresh the duration. The blocked heal and damage counters are not reset.",
+        "If the accumulated damage exceeds the accumulated heal, the orb above the target glows red and emits fire, indicating it will receive damage.",
+        "SHARD NOTES False Promise also grants the target invisibility with a -second fade delay. Attacking, casting abilities or using items breaks the invisibility and resets the fade delay. Does not grant phased movement.",
+        "Attacking, casting abilities or using items breaks the invisibility and resets the fade delay.",
+        "Does not grant phased movement.",
+        "TALENT NOTES The False Promise armor talent immediately updates all existing modifiers on already affected allies."
+      ],
+      "mana": "110\/85\/60 (TagTalent 90\/65\/40)",
+      "item_behaviour": [],
+      "name": "False Promise",
+      "cooldown": "100\/150\/200",
+      "description": "Temporarily alters an ally's destiny, delaying any healing or damage taken until False Promise ends. Any healing that is delayed by False Promise is doubled. Removes most negative status effects and disables on initial cast.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0.97",
+        "Cast Range:  700\/850\/1000",
+        "Delayed Heal Amplification: 100%",
+        "Duration: 7\/8.5\/10 ( 8.5\/10\/11.5)",
+        "Fade Delay: 0.15",
+        "<span image=\"images\\Talent\"><\/span> Armor Bonus: 10"
+      ],
+      "legacy_key": "R",
+      "story": "Foes and false prophets oft make lies of men's fates."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.4,
+    "attrStrength": 20.0,
+    "attrIntelligence": 26.0,
+    "attrIntelligenceInc": 3.8,
+    "attrAgilityInc": 1.7,
+    "attrAgility": 15.0
+  },
+  "description": "Alters the fates of heroes with his buffs and nukes. By carefully combining his intricate abilities, Oracle controls the destinies of both friend and foe. Dispelling both boons and curses, Fortune's End comes sooner than expected. Fate's Edict shelters heroes from magic, yet prevents them from raising arms. Purifying Flames stimulate regeneration, but not without the initial pains of cleansing. The Rain of Destiny shrouds threatened allies while causing harm to enemies. Knowledge of his abilities is key to utilize him as an ally at full potential; while he can defy destiny with False Promise and snatch victory from the jaws of defeat, one mistake can potentially seal the fate of his allies.  Support Nuker Disabler Escape ★★★",
+  "trivia": [
+    "Oracle made his first official Dota 2 appearance in the comic The Contract, revealed on the 14th of November 2014 on the official Dota 2 blog. On day 2, his spells and model were revealed.",
+    "Mike Shapiro (Oracle's voice actor) is also well-known for voicing Barney Calhoun and G-Man, two prominent characters in the Half-Life series His lines Link▶️ \"Prepare for unforeseen consequences.\", and Link▶️ \"Is it really that time again?\" are referring to lines spoken by G-man in Half-Life 2: Episode 2, and Half-Life 2 respectively.",
+    "His lines Link▶️ \"Prepare for unforeseen consequences.\", and Link▶️ \"Is it really that time again?\" are referring to lines spoken by G-man in Half-Life 2: Episode 2, and Half-Life 2 respectively.",
+    "The line Link▶️ Link▶️ Link▶️ \"So it goes.\" is a reference to the novel Slaughterhouse-Five, by Kurt Vonnegut. In the novel, it is a phrase used by the aliens, known as Tralfamadorians, who perceive all time simultaneously.[1]",
+    "The line Link▶️ \"First blood! Out of fifty possibilities, that was my preferred.\" is because there actually are 50 possible first bloods (each of 10 heroes can be killed by any of the 5 opposing heroes).",
+    "Oracle's spell Purifying Flames and his phrase Link▶️ \"I must harm to heal.\" are a direct play on the medical principle \"Primum non nocere\", which is latin and translates into \"First, do no harm\".[2]",
+    "The hero kill line Link▶️ \"Ask again later.\" is a reference to an answer of the Magic 8-ball, a toy used for fortune-telling.[3]",
+    "The respawn line Link▶️ \"Like the past, I'm never dead. I'm not even past.\" is a reference to the novel Requiem for a Nun from the author William Faulkner. The original quote goes The past is never dead. It's not even past.[4]",
+    "The very rare death line \"I want to die\" alludes to a passage from Petronius's Satyricon, concerning a seer from Roman Mythology: \"For I, myself, saw the Sibyl at Cumae, hanging in a jar; when the boys asked Sibyl, what do you want? She responded I want to die.\" The passage was made famous as the preamble to T.S. Eliot's poem The Wasteland.",
+    "Oracle's invisibility response \"The future's not ours to see.\" is a reference to the line in the song Que Sera Sera from the film The Man Who Knew Too Much.",
+    "The rare line Link▶️ \"Consequences will never be the same.\" refers to: Jessi Slaughter cyberbullying case."
+  ],
+  "history": "Ascendants to the Great Seat of Cymurri had for ages imported their Oracles exclusively from the Ivory Incubarium, high in the hollow peaks of the Zealot's Range, with a downpayment made at the time of the embryo's conception and the balance surrendered on delivery of a mature, well-trained prophet to the Gate of the Graven King. Raised by same Pallid Sybils who bred and birthed them, all sanctioned Oracles were anchored by their physical form to the world we most of us share; meanwhile, their souls roamed far afield, barely bound by the airiest astral umbilicus. From such cosmic roamings the prophets would return, speaking words of fire with tongues of flesh. Their mystic utterances were analyzed by the Cymurri Advisors, who found in them visions of the future, diplomatic advice, all the supernatural ammunition the line of Graven Kings needed to secure victory in every campaign, whether in the court or on the battlefield. Thus it went for generations, the Graventome's pages filling with the names of triumphant kings and the new domains they had acquired. So it went, that is, until the particular Oracle named Nerif arrived to serve the very last of the stone-helmed kings. From the first, Nerif's prophecies were unusual. They seemed not merely to portend the future, but to shape it. The weird soothsayer croaked out advice no one had requested, and suddenly the Cymurri found themselves immersed in conflicts with newfound enemies. The Advisors, sensing a threat to their power, were quick to pin these unwelcome developments on the latest Oracle. They demanded his removal, petitioning the Sybils to reclaim their defective prophet and replace him with a worthy substitute. But Nerif described an ominous dream of the Incubarium's destruction, and within hours came news of the ancient school's destruction in a catastrophic avalanche. Fearing the same fate as the Pallid Sybils, the Advisors withdrew to their counsel chambers, suddenly anxious to avoid the Oracle's notice. The Graven King, however, was a creature of great practicality. He doubted the commitment of his overprudent Advisors. An Oracle of such rarity, he reasoned, ought be used as a weapon to enlarge his domain. He therefore demoted his timid counselors and stationed Nerif at his side. With only a blunt understanding of Nerif's talent, he boldly stated the outcomes he desired, and coaxed Nerif into uttering his wishes as prophecy. At first, all was well. The Last Graven King boasted that by adopting Fate's pet, he had made a plaything of Fate itself. He should have taken it as a warning then when, on the eve of his invasion of the Unsated Satrap's realm, he attempted to coerce a prediction of certain victory from his Oracle, only to hear Nerif quietly mutter, \"It could go either way.\" No firmer statement could he force from Nerif's lips. Still, the King was confident in his army. The Satrapy was landlocked, poorly armed, and shut off from all possible allies. He took \"It could go either way\" to indicate that with tactical might on his side, there was little risk in his plan. Of course, we now know that he should have taken the sayer's words more literally. Even with careful study of the Annotated Annals of If, what happened on the field before the Unsated Satrap's palace is almost impossible to visualize. It appears that in the midst of the carnage, the battle began to bifurcate. At each pivotal moment, reality calved and broke into bits. Soldiers who staggered and fell in battle also stood sure-footed, forging onward to fight. Their minds also split; the warriors found themselves both dead and alive, existent and non-existent. Victory and defeat were partitioned, so that each separate outcome was experienced in simultaneity by both armies. The universe became a hall of mirrors, with all the mirrors endlessly shattering. The immediate effect on both parties was insanity. Unable to comprehend the state of being both triumphant and defeated, the Graven King's mind dispersed into motes of madness. The naive Satrap fared no better. The opposing paired realities continued to split and split again, echoing into infinite histories, all of them populated by a bewildered populace that soon lost the ability to feed, clothe, defend, or reproduce itself in the traditional manner. Long before the repercussions had played out, however, Cymurri's wary Advisors had seized Nerif, bound and gagged him, and launched him out of their universe at high speed on a dimensional barque, in the hopes of depositing him where he could do them no harm forever. It was, of course, too late for them. And may well be for us.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "Instant Fortune's End",
+        "talent_left": "+1.5s False Promise Duration"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "-20s False Promise Cooldown",
+        "talent_left": "+30% Purifying Flames Enemy Damage"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+80 Fortune's End Damage",
+        "talent_left": "-1.25s Purifying Flames Cooldown"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+0.5s Fortune's End Duration",
+        "talent_left": "+10 Armor False Promise"
+      }
+    ]
+  }
+}

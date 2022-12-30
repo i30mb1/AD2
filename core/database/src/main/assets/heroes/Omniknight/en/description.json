@@ -1,0 +1,210 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Omniknight_Purification.mp3\/revision\/latest?cb=20191216021244",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies \/ Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "The targeting reticule must be centered over an allied unit. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Always heals for the full amount per instance, regardless of how much damage the target actually takes.",
+        "Despite the visual effects, the damage is applied instantly to all enemy units within range of the target.",
+        "Purification first applies its damage, then the heal.",
+        "Fully affects ally Couriers."
+      ],
+      "mana": "18\/16\/14\/12 (TagTalent 16\/14\/12\/10)",
+      "item_behaviour": [],
+      "name": "Purification",
+      "cooldown": "80\/95\/110\/125",
+      "description": "Instantly heals a friendly unit and damages all nearby enemy units.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.2+1.4",
+        "Cast Range:  550",
+        "Damage Radius: 260",
+        "Damage\/Heal: 90\/160\/230\/300 ( 250\/320\/390\/460)"
+      ],
+      "legacy_key": "R",
+      "story": "Priests of the Omniscience are adept at removing impurities from fellow warriors."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Omniknight_Heavenly_Grace.mp3\/revision\/latest?cb=20191216021242",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allied Heroes"
+      ],
+      "notes": [
+        "Can only be cast on allied heroes, including illusions, clones, and creep-heroes. ↓↓ Double-tapping automatically targets self. Cannot be cast on Couriers.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on Couriers.",
+        "Heavenly Grace first applies the buff, and then the strong dispel on the target. When cast on an ally, Omniknight receives both the buff and the dispel.",
+        "When cast on an ally, Omniknight receives both the buff and the dispel.",
+        "Total strength and health regeneration bonus when dispelling a certain amount of debuffs: 1 Debuff: 11\/20\/29\/38 (TagTalent 14\/23\/32\/41) strength and 11\/16\/21\/26 (TagTalent 14\/19\/24\/29) health regeneration. 2 Debuffs: 14\/24\/34\/44 (TagTalent 20\/30\/40\/50) strength and 14\/20\/26\/32 (TagTalent 20\/26\/32\/38) health regeneration. 3 Debuffs: 17\/28\/39\/50 (TagTalent 26\/37\/48\/59) strength and 17\/24\/31\/38 (TagTalent 26\/33\/40\/47) health regeneration. 4 Debuffs: 20\/32\/44\/56 (TagTalent 32\/44\/56\/68) strength and 20\/28\/36\/44 (TagTalent 32\/40\/48\/56) health regeneration. 5 Debuffs: 23\/36\/49\/62 (TagTalent 38\/51\/64\/77) strength and 23\/32\/41\/50 (TagTalent 38\/47\/56\/65) health regeneration.",
+        "1 Debuff: 11\/20\/29\/38 (TagTalent 14\/23\/32\/41) strength and 11\/16\/21\/26 (TagTalent 14\/19\/24\/29) health regeneration.",
+        "2 Debuffs: 14\/24\/34\/44 (TagTalent 20\/30\/40\/50) strength and 14\/20\/26\/32 (TagTalent 20\/26\/32\/38) health regeneration.",
+        "3 Debuffs: 17\/28\/39\/50 (TagTalent 26\/37\/48\/59) strength and 17\/24\/31\/38 (TagTalent 26\/33\/40\/47) health regeneration.",
+        "4 Debuffs: 20\/32\/44\/56 (TagTalent 32\/44\/56\/68) strength and 20\/28\/36\/44 (TagTalent 32\/40\/48\/56) health regeneration.",
+        "5 Debuffs: 23\/36\/49\/62 (TagTalent 38\/51\/64\/77) strength and 23\/32\/41\/50 (TagTalent 38\/47\/56\/65) health regeneration.",
+        "",
+        "Successive casts do not stack but refresh its duration and ability values.",
+        "Heavenly Grace effectively grants the following bonuses per dispelled debuff: 160\/320\/480\/640 + 60\/80\/100\/120 (TagTalent 120\/140\/160\/180) bonus health 8.8\/13.6\/18.4\/23.2 + 3.3\/4.4\/5.5\/6.6 (TagTalent 6.6\/7.7\/8.8\/9.9) bonus health regeneration. 8\/16\/24\/32 + 3\/4\/5\/6 (TagTalent 6\/7\/8\/9) bonus main attack damage to heroes.",
+        "160\/320\/480\/640 + 60\/80\/100\/120 (TagTalent 120\/140\/160\/180) bonus health",
+        "8.8\/13.6\/18.4\/23.2 + 3.3\/4.4\/5.5\/6.6 (TagTalent 6.6\/7.7\/8.8\/9.9) bonus health regeneration.",
+        "8\/16\/24\/32 + 3\/4\/5\/6 (TagTalent 6\/7\/8\/9) bonus main attack damage to heroes.",
+        "Can regenerate up to 88\/136\/184\/232 + 33\/44\/55\/66 (TagTalent 66\/77\/88\/99) per dispelled debuff health over its full duration. With the duration increasing talent, it can regenerate up to 123.2\/190.4\/257.6\/324.8 + 46.2\/61.6\/77\/92.4 (TagTalent 92.4\/107.8\/123.2\/138.6) per dispelled debuff health over its full duration.",
+        "With the duration increasing talent, it can regenerate up to 123.2\/190.4\/257.6\/324.8 + 46.2\/61.6\/77\/92.4 (TagTalent 92.4\/107.8\/123.2\/138.6) per dispelled debuff health over its full duration.",
+        "TALENT NOTES The strength\/health regeneration bonus per debuff increasing talent immediately updates all currently active buffs."
+      ],
+      "mana": "26\/22\/18\/14",
+      "item_behaviour": [],
+      "name": "Heavenly Grace",
+      "cooldown": "95\/105\/115\/125",
+      "description": "Applies a strong dispel on an ally and grants both them and Omniknight bonus Strength and HP Regen based on the amount of Debuffs dispelled.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+1.3",
+        "Cast Range:  700",
+        "Base Strength Bonus: 8\/16\/24\/32",
+        "Base Health Regen Bonus: 8\/12\/16\/20",
+        "Strength\/Health Regen Bonus per Debuff: 3\/4\/5\/6 ( 6\/7\/8\/9)",
+        "Duration: 10 ( 14)"
+      ],
+      "legacy_key": "E",
+      "story": "The All Seeing One casts down his protection over those that Purist calls friends."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Omniknight_Hammer_of_Purity_1.mp3\/revision\/latest?cb=20220412211734",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Although seeming like a melee ability, the cast range can be further increased by other cast range bonuses. However, it is not affected by attack range bonuses.",
+        "The projectile travels at a speed of 1200.",
+        "The damage is based on Omniknight's main attack damage. Other attack damage bonuses are ignored. This means the base attack damage granting talent affects Hammer of Purity's damage as well. Considers the min and max attack damage values of Omniknight, so the damage varies like how regular attacks do.",
+        "This means the base attack damage granting talent affects Hammer of Purity's damage as well.",
+        "Considers the min and max attack damage values of Omniknight, so the damage varies like how regular attacks do.",
+        "Hammer of Purity first applies the debuff, the hammer damage, then the attack damage."
+      ],
+      "mana": "16\/14\/12\/10 (TagTalent 10\/8\/6\/4)",
+      "item_behaviour": [],
+      "name": "Hammer of Purity",
+      "cooldown": "40\/45\/50\/55",
+      "description": "Omniknight fires his hammer to a target to deal pure damage based on a percentage of his base damage and slows the target",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.3+1.4",
+        "Cast Range:  350",
+        "Base Damage: 50\/75\/100\/125",
+        "Main Attack Damage as Damage: 60%\/80%\/100%\/120% ( 135%\/155%\/175%\/195%)",
+        "Move Speed Slow: 14%\/22%\/30%\/38%",
+        "Duration: 5"
+      ],
+      "legacy_key": "D",
+      "story": null
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Enemies"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "The aura's debuff lingers for 1 second."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Degen Aura",
+      "cooldown": null,
+      "description": "Greatly degenerates the movement capabilities of enemy units that stray too near.",
+      "hot_key": "?",
+      "params": [
+        "Radius: 400",
+        "Move Speed Slow: 40%",
+        "Aura Linger Duration: 1"
+      ],
+      "legacy_key": "",
+      "story": "The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Omniknight_Guardian_Angel_1.mp3\/revision\/latest?cb=20191216021248",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Allies"
+      ],
+      "notes": [
+        "Affects all allied units, except for wards, Couriers, invulnerable and hidden units.",
+        "SCEPTER NOTES Guardian Angel now affects buildings and hidden units. Stacks multiplicatively with other sources of status resistance. Acquiring Aghanim's Scepter immediately grants status resistance bonus to the current active instance, affecting all units within 1200 radius.",
+        "Stacks multiplicatively with other sources of status resistance.",
+        "Acquiring Aghanim's Scepter immediately grants status resistance bonus to the current active instance, affecting all units within 1200 radius."
+      ],
+      "mana": "160\/140\/120 (TagTalent 130\/110\/90)",
+      "item_behaviour": [],
+      "name": "Guardian Angel",
+      "cooldown": "150\/200\/250",
+      "description": "Omniknight calls upon a Guardian Angel that grants allies immunity from physical damage.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.4+0.9",
+        "Radius: 1200 ( Global)",
+        "Duration: 5\/6\/7 ( 8\/9\/10)",
+        "Status Resistance Bonus: 40%"
+      ],
+      "legacy_key": "G",
+      "story": "The All Seeing One casts down his protection over those that Purist calls friend."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.1,
+    "attrStrength": 23.0,
+    "attrIntelligence": 16.0,
+    "attrIntelligenceInc": 2.1,
+    "attrAgilityInc": 2.0,
+    "attrAgility": 15.0
+  },
+  "description": "Tanky frontliner who protects and heals his allies. A guardian at the front lines of battle whose mere presence Degenerates those of lesser faith, Omniknight is always eager to join his team in battle. Whether healing an ally with Purifying lights that also harm nearby foes, protecting his allies with the All Seeing One's Heavenly Grace, or battering an enemy with his Mighty Hammer. In decisive moments of battle, he calls forth the Guardian Angel, granting himself and nearby allies total physical immunity, nullifying the enemies' attacks for a short time.  Support Durable Nuker ★☆☆",
+  "trivia": [
+    "Some parts of Omniknight's bio are a reference to the bible story of Daniel in the Lion's Pit. Daniel was thrown into the lion's den for praying to God and challenging Darius' command not to do so, but God prevented the lions from harming Daniel, saving his life. Similarly, Omniknight was to be thrown to the pit of sacrifice for challenging his priests but the Omniscience revealed itself, saving Purist.",
+    "His response \" Link▶️ I have gazed into the omniscience, and it has gazed into me.\" is a reference to German philosopher Nietzsche's quote \"If you gaze long into an abyss, the abyss will gaze back into you\".",
+    "His kill response \" Link▶️ You chose poorly.\" and item purchase response \" Link▶️ I chose wisely.\" are references to Indiana Jones and the Last Crusade.",
+    "Many of Omniknight's responses refer to the Bible or Christianity in general: e.g. confessing sins, having demons as nemeses, chastising Dazzle for using dark powers to heal, disliking Necronomicon (as its powers are demonic), using \"omniscient\" and \"light\" to describe his God, his death animation (with arms forming a cross, as a reference to the Crucifixion of Christ), etc. \" Link▶️ A narrow path.\" refers to Matthew 7:14.",
+    "Omniknight's nickname is \"Chuck Norris\", due to the similarities in appearance and the power of his abilities. As well, when he was first added to Dota 2 there was a bug that caused him to always say the voice line Link▶️ \"Fear nothing!\"",
+    "Omniknight originally held and swung his hammer with one hand. This was changed after community feedback.",
+    "Omniknight's battle begin line Link▶️ \"The Omniscience may spare them, but I will not.\" is a reference to General Patton's quote \"May God have mercy upon my enemies, because I won't.\"",
+    "Heavenly Grace's internal name in the game files is \"Martyr\"."
+  ],
+  "history": "Purist Thunderwrath was a hard-fighting, road-worn, deeply committed knight, sworn to the order in which he had grown up as squire to elder knights of great reputation. He had spent his entire life in the service of the Omniscience, the All Seeing One. Theirs was a holy struggle, and so embedded was he in his duty that he never questioned it so long as he had the strength to fight and the impetuous valor that comes with youth. But over the long years of the crusade, as his elders passed away and were buried in sorry graves at the side of muddy tracks, as his bond-brothers fell in battle to uncouth creatures that refused to bow to the Omniscience, as his own squires were chewed away by ambush and plague and bad water, he began to question the meaning of his vows--the meaning of the whole crusade. After deep meditation, he parted ways with his army and commenced a long trek back to the cave-riddled cliffs of Emauracus, and there he set a challenge to the priests of the Omniscience. No knight had ever questioned them before, and they tried to throw him into the pit of sacrifice, but Purist would not be moved. For as he faced them down, he began to glow with a holy light, and they saw that the Omniscience had chosen to reveal Itself to him. The Elder Hierophant led him on a journey of weeks down into the deepest chamber, the holy of holies, where waited not some abstract concept of wisdom and insight, not some carved relic requiring an injection of imagination to believe in, but the old one itself. It had not merely dwelt in those rocks for billions of aeons; no, It had created them. The Omniscience had formed the immense mineral shell of the planet around itself, as a defense against the numerous terrors of space. Thus the All Seeing One claimed to have created the world, and given the other truths revealed to Purist on that day, the knight had no reason to refute the story. Perhaps the Omniscience is a liar, deep in its prison of stone, and not the world's creator at all, but Omniknight never again questioned his faith. His campaign had meaning at last. And there can be no question that the glorious powers that imbue him, and give his companions such strength in battle, are real beyond any doubt.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+160 Purification Damage\/Heal",
+        "talent_left": "+75% Hammer of Purity Damage"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+3 Heavenly Grace Strength\/HP Regen per Stack",
+        "talent_left": "-6s Hammer of Purity Cooldown"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-2s Purification Cooldown",
+        "talent_left": "-30s Guardian Angel Cooldown"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+4s Heavenly Grace Duration",
+        "talent_left": "+50 Base Damage"
+      }
+    ],
+    "notes": [
+      "This attack damage talent is added as base attack damage. It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
+      "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects."
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Outworld_Destroyer_Arcane_Orb_1.mp3\/revision\/latest?cb=20191216021430",
+      "effects": [
+        "Ability: Active Attack Modifier",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "Arcane Orb's cast range can only be further increased by attack range bonuses of the same range type as the caster. It is not affected by cast range bonuses. Both Autocast and manually casting it uses Outworld Destroyer's current attack range.",
+        "Both Autocast and manually casting it uses Outworld Destroyer's current attack range.",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Arcane Orb first deals its damage, then the attack damage, but still depends on the attack hitting the target.",
+        "Checks Outworld Destroyer's mana pool upon projectile hit, so increasing or decreasing his mana pool while the projectile flies does affect its damage."
+      ],
+      "mana": "6\/4\/2\/0",
+      "item_behaviour": [],
+      "name": "Arcane Orb",
+      "cooldown": "20% of Current Mana",
+      "description": "Adds extra pure damage to Outworld Destroyer's attacks, based on his remaining mana pool.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Range:  450",
+        "Current Mana as Damage: 13%\/14%\/15%\/16% ( 15%\/16%\/17%\/18%)"
+      ],
+      "legacy_key": "R",
+      "story": "Harbinger's outworldly knowledge allows it to tap into the ebb and flow of all spiritual energy, infusing it into his being."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Outworld_Destroyer_Astral_Imprisonment.mp3\/revision\/latest?cb=20191216021424",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration. It also slows the affected target's movement speed by 40.25%. However, this has no effect since the target is fully disabled. Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer. ↓↓ Double-tapping automatically targets self.",
+        "It also slows the affected target's movement speed by 40.25%. However, this has no effect since the target is fully disabled.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Targeted allies are imprisoned without any of the other effects being applied on them.",
+        "If the target is an enemy, they get damaged at the end of the imprisonment duration.",
+        "If the target is an enemy hero, including illusions and clones, they also get a portion of their maximum mana stolen. Does not affect creep-heroes. Only reduces the target's max mana value. Their current mana value stays unchanged. This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged. This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same. Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment. The target also gains a status debuff that shows how much mana they are currently missing.",
+        "Does not affect creep-heroes.",
+        "Only reduces the target's max mana value. Their current mana value stays unchanged.",
+        "This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged.",
+        "This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same.",
+        "Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
+        "The target also gains a status debuff that shows how much mana they are currently missing.",
+        "The red ring expanding at the center of the visual effects indicates a fixed 4-second duration. The red ring is visible to allies only.",
+        "SCEPTER NOTES The area damage is now applied around the affected target, within 400 radius at the end of the imprisonment duration, regardless of the target's faction.",
+        "SHARD NOTES Astral Imprisonment now neither disables the target nor hides their model. Instead, it slows their movement speed by 40.25%, while turning them invulnerable and untargetable, while sliencing, muting and disarming them for its duration.",
+        "Instead, it slows their movement speed by 40.25%, while turning them invulnerable and untargetable, while sliencing, muting and disarming them for its duration."
+      ],
+      "mana": "18\/16\/14\/12 (TagTalent 0)",
+      "item_behaviour": [],
+      "name": "Astral Imprisonment",
+      "cooldown": "12",
+      "description": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target and steals a percentage of their max mana.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+0.4",
+        "Cast Range:  650 ( 750)",
+        "Damage: 120\/200\/280\/360 ( 260\/340\/420\/500)",
+        "Max Mana Steal: 16%\/18%\/20%\/22% ( 21%\/23%\/25%\/27%)",
+        "Imprison Duration: 1.75\/2.5\/3.25\/4",
+        "Mana Steal Duration: 30\/40\/50\/60",
+        "Damage Radius: 400",
+        "Ally Move Speed Slow: 40.25%"
+      ],
+      "legacy_key": "T",
+      "story": "Locked away in the pocket between this world and the Outworld, victims realize their infantile knowledge and mortality."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Outworld_Destroyer_Essence_Flux_2.mp3\/revision\/latest?cb=20191216021427",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Self"
+      ],
+      "notes": [
+        "Restores mana after other abilities are cast. Can restore 7.5%\/10.5%\/13.5%\/16.5% of Outworld Destroyer's max mana per cast on average.",
+        "Can restore 7.5%\/10.5%\/13.5%\/16.5% of Outworld Destroyer's max mana per cast on average.",
+        "Does not proc on any item abilities.",
+        "Essence Flux uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Essence Flux",
+      "cooldown": null,
+      "description": "Passively grants you a chance to restore a percentage of your max mana each time you cast an ability.",
+      "hot_key": "E",
+      "params": [
+        "Proc Chance: 30%",
+        "Max Mana Restored: 25%\/35%\/45%\/55%"
+      ],
+      "legacy_key": "E",
+      "story": "The Outworld is awash in arcane energy, inclined to diffuse through any of Harbinger's rifts."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Outworld_Destroyer_Sanity%27s_Eclipse.mp3\/revision\/latest?cb=20191216021429",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemy Heroes",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "The damage multiplier is based on the max mana pool of Outworld Destroyer and the hit enemies, not the current mana.",
+        "The damage only affects enemy heroes and illusions. All other units are completely unaffected.",
+        "Fully affects units under the effect of Astral Imprisonment as well, regardless of factions, but not other invulnerable or hidden units."
+      ],
+      "mana": "160\/145\/130 (TagTalent 100\/85\/70)",
+      "item_behaviour": [],
+      "name": "Sanity's Eclipse",
+      "cooldown": "200\/325\/450",
+      "description": "Unleashes a psychic blast that deals to enemies based on the difference between your mana and the target's mana. Sanity's Eclipse can hit units trapped by Astral Imprisonment.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.25+0.4",
+        "Cast Range:  700",
+        "Effect Radius: 400\/500\/600",
+        "Base Damage: 200\/300\/400",
+        "Mana Difference Damage Multiplier: 0.4 ( 0.55)"
+      ],
+      "legacy_key": "C",
+      "story": "When an Outworld crystal ruptures, cataclysmic energies are released, and the reverberations of this power are felt interdimensionally."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.9,
+    "attrStrength": 21.0,
+    "attrIntelligence": 30.0,
+    "attrIntelligenceInc": 4.2,
+    "attrAgilityInc": 1.6,
+    "attrAgility": 22.0
+  },
+  "description": "Can imprison a hero, making them invulnerable. Wary of the happenings near the central sun, Harbinger departs from his vigil to take his place on the plains of war. The Outworld Destroyer creates an Essence Flux, balancing the tides of mana between him and his opponents. Stealing from the minds of those in his Astral Imprisonment, Outworld Destroyer turns raw intelligence into destructive power. Weakening enemies with a barrage of Arcane Energy glowing spheres that permeates any shield. Looming above his enemies, he drops the proverbial hammer, extinguishing the unenlightened with the cosmic force of Sanity's Eclipse.  Carry Nuker Disabler ★★☆",
+  "trivia": [
+    "Outworld Destroyer was originally called \"Obsidian Destroyer\" in DotA. Obsidian Destroyer was based on two units in Warcraft III: Frozen Throne; the Obsidian Statue, and its alternate form, the Destroyer. Outworld Destroyer was originally added to Dota 2 with his current name, but was changed to \"Outworld Demolisher\" before the patch left the Test Client. However, due to community outcry, it was changed to \"Outworld Devourer\" as he arrived on the Main Client. This name was used up until 7.28, where it was changed again to the original Dota 2 iteration of \"Outworld Destroyer\". Due to the many name changes Outworld Destroyer went through, he gained many humorous community names such as \"Outworld Developer\" and \"Outhouse Decorator\".",
+    "Outworld Destroyer was originally added to Dota 2 with his current name, but was changed to \"Outworld Demolisher\" before the patch left the Test Client. However, due to community outcry, it was changed to \"Outworld Devourer\" as he arrived on the Main Client. This name was used up until 7.28, where it was changed again to the original Dota 2 iteration of \"Outworld Destroyer\".",
+    "Due to the many name changes Outworld Destroyer went through, he gained many humorous community names such as \"Outworld Developer\" and \"Outhouse Decorator\".",
+    "Outworld Destroyer has lines for carrying two, three or even four Aghanim's Scepter. The reason for this is because in Dota 1 early development Aghanim's Scepter was made using Mystic Staff and Soul Booster giving 500 mana and 30 intelligence, which helped Outworld Destroyer tremendously."
+  ],
+  "history": "One of a lordly and magisterial race, Harbinger prowls the edge of the Void, sole surviving sentry of an outpost on the world at the rim of the abyss. From this jagged crystalline Outworld, forever on guard, he has gazed for eternities into the heavens, alert for any stirring in the bottomless night beyond the stars. Imprinted deep in the shining lattices of his intellect lies a resonant pattern akin to prophecy, a dark music implying that eventually some evil will wake out there, beyond the edges of creation, and turn its attention to our world. With his whole being focused on his vigil, Outworld Destroyer paid little attention to events closer in to the sun. But at last the clamor of the Ancients, and a sense of growing threat from within as well as without, sent him winging sunward to visit the plains of war. Harbinger's place in our own prophecies is unambiguous: he must be considered an omen of worse things to come. But his arrival in itself is bad enough.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+2% Arcane Orb Damage",
+        "talent_left": "-60s Sanity's Eclipse Cooldown"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+20 Strength",
+        "talent_left": "+0.15 Sanity's Eclipse Mana Difference Multiplier"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+100 Astral Imprisonment Cast Range",
+        "talent_left": "+30 Movement Speed"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+200 Health",
+        "talent_left": "+20 Attack Speed"
+      }
+    ],
+    "notes": [
+      "The health talent increases maximum health capacity, and keeps the current health percentage.",
+      "The strength talent effectively grants Outworld Destroyer 400 health and 2 health regeneration bonus."
+    ]
+  }
+}

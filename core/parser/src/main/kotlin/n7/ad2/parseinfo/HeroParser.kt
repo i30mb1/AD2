@@ -2,11 +2,6 @@
 
 package n7.ad2.parseinfo
 
-import kotlinx.coroutines.flow.asFlow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flatMapMerge
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.runBlocking
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.jsoup.Jsoup
@@ -15,449 +10,366 @@ import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
 import org.jsoup.select.Elements
 import java.io.File
-import java.net.URL
-import javax.imageio.ImageIO
 
-fun main() = runBlocking {
-    val heroParser = HeroParser()
-//    heroParser.loadAll()
-    heroParser.createFileWithHeroesAndFolders()
-//    heroParser.loadHeroesOnEnglish()
-//    heroParser.loadHeroesOnRussian()
-//    heroParser.loadResponsesOnEnglish()
-//    heroParser.loadResponsesOnRussian()
+fun main() {
+    val heroes = getHeroes()
+//    createFileWithHeroes(heroes)
+    for (hero in heroes) {
+        loadHero(hero, LocaleHeroes.RU)
+        loadHero(hero, LocaleHeroes.EN)
+    }
 }
 
-class HeroParser {
+private fun loadResponse(hero: Hero, locale: LocaleHeroes) {
+    val root = Jsoup.connect(locale.soundUrl.format(hero.name)).postDataCharset("UTF-8").get()
+    val allResponsesWithCategories = JSONArray()
 
-    companion object {
-        private const val SPELL_FOLDER = "spell"
-        private const val HEROES_FOLDER = "heroes"
-        private const val FILE_NAME = "heroes.json"
-    }
+    JSONArray().apply {
+        var count = 0
+        val children = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
+        var category = JSONObject()
+        var responses = JSONArray()
+        var response: JSONObject
 
-    data class NameAndLocale(val name: String, val locale: LocaleHeroes)
-    enum class LocaleHeroes(val mainUrl: String, val heroesUrl: String, val soundUrl: String, val folder: String) {
-        RU(
-            "https://dota2.fandom.com/ru/wiki/%s",
-            "https://dota2.fandom.com/ru/wiki/Heroes",
-            "https://dota2.fandom.com/ru/wiki/%s/Реплики",
-            "ru",
-        ),
-        EN(
-            "https://dota2.fandom.com/wiki/%s",
-            "https://dota2.fandom.com/wiki/Heroes",
-            "https://dota2.fandom.com/wiki/%s/Responses",
-            "en"
-        )
-    }
+        for (child in children) {
+            if (child.tag().toString() == "h2") {
+                if (category.size != 0) allResponsesWithCategories.add(category)
+                category = JSONObject()
+                responses = JSONArray()
 
-    suspend fun loadAll() {
-        getHeroesList(LocaleHeroes.EN).asFlow().flatMapMerge<NameAndLocale, Unit>(1000) { nameAndLocale ->
-            flow { loadHero(nameAndLocale) }
-        }.collect()
-        getHeroesList(LocaleHeroes.RU).asFlow().flatMapMerge<NameAndLocale, Unit>(1000) { nameAndLocale ->
-            flow { loadHero(nameAndLocale) }
-        }.collect()
-    }
-
-    suspend fun loadHeroesOnEnglish() {
-        getHeroesList(LocaleHeroes.RU).filter { it.name == "Lifestealer" }.forEach(::loadHero)
-    }
-
-    fun loadHeroesOnRussian() {
-        getHeroesList(LocaleHeroes.RU).forEach(::loadHero)
-    }
-
-    fun loadResponsesOnEnglish() {
-        getHeroesList(LocaleHeroes.EN).forEach(::loadResponse)
-    }
-
-    fun loadResponsesOnRussian() {
-        getHeroesList(LocaleHeroes.RU).forEach(::loadResponse)
-    }
-
-    private fun loadResponse(nameAndLocale: NameAndLocale) {
-        val (name, locale) = nameAndLocale
-        val root = connectTo(locale.soundUrl.format(name))
-        val allResponsesWithCategories = JSONArray()
-
-        JSONArray().apply {
-            var count = 0
-            val children = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
-            var category = JSONObject()
-            var responses = JSONArray()
-            var response: JSONObject
-
-            for (child in children) {
-                if (child.tag().toString() == "h2") {
-                    if (category.size != 0) allResponsesWithCategories.add(category)
-                    category = JSONObject()
-                    responses = JSONArray()
-
-                    count++
-                    if (child.children().size > 1) {
-                        category["category"] = child.child(1).text().trim()
-                    } else {
-                        category["category"] = child.child(0).text().trim()
-                    }
+                count++
+                if (child.children().size > 1) {
+                    category["category"] = child.child(1).text().trim()
+                } else {
+                    category["category"] = child.child(0).text().trim()
                 }
-                if (child.tag().toString() == "ul") {
+            }
+            if (child.tag().toString() == "ul") {
 //                        if(child.child(0).children().size == 0) continue // реплики без URL
 //                        if(child.children().size >1) // cекция без реплик
 
-                    child.children().forEach node@{ node ->
-                        response = JSONObject()
-                        val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
-                        val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
-                        response["audio_url"] = audioUrl.attr("href").toString()
-                        response["title"] = node.let { innerNode ->
-                            innerNode.getElementsByTag("span").forEach { span -> span.remove() }
-                            innerNode.text()
-                        }
-                        if (node.getElementsByTag("img").size > 0) {
-                            response["icons"] = JSONArray().apply {
-                                node.let { innerNode ->
-                                    innerNode.getElementsByTag("span").forEach { span -> span.remove() }
-                                    innerNode.getElementsByTag("a").forEach { image ->
-                                        val regex = Regex(" \\(.+?\\)")
-                                        var title = image.attr("title")
-                                        val matches = regex.containsMatchIn(title)
-                                        if (matches) {
-                                            title = "items/" + title.replace(regex, "") + "/full.webp"
-                                            add(title)
-                                        } else {
-                                            title = "heroes/$title/minimap.png"
-                                            add(title)
-                                        }
+                child.children().forEach node@{ node ->
+                    response = JSONObject()
+                    val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
+                    val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
+                    response["audio_url"] = audioUrl.attr("href").toString()
+                    response["title"] = node.let { innerNode ->
+                        innerNode.getElementsByTag("span").forEach { span -> span.remove() }
+                        innerNode.text()
+                    }
+                    if (node.getElementsByTag("img").size > 0) {
+                        response["icons"] = JSONArray().apply {
+                            node.let { innerNode ->
+                                innerNode.getElementsByTag("span").forEach { span -> span.remove() }
+                                innerNode.getElementsByTag("a").forEach { image ->
+                                    val regex = Regex(" \\(.+?\\)")
+                                    var title = image.attr("title")
+                                    val matches = regex.containsMatchIn(title)
+                                    if (matches) {
+                                        title = "items/" + title.replace(regex, "") + "/full.webp"
+                                        add(title)
+                                    } else {
+                                        title = "heroes/$title/minimap.png"
+                                        add(title)
                                     }
                                 }
                             }
                         }
-                        val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title", "-")
-                        if (previousTitle == response["title"]) response["isArcane"] = true
+                    }
+                    val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title", "-")
+                    if (previousTitle == response["title"]) response["isArcane"] = true
+                    responses.add(response)
+
+                    if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
+                        val oldCopy = response
+                        response = JSONObject()
+                        if (oldCopy.containsKey("icons")) response["icons"] = oldCopy["icons"]
+                        response["audioUrl"] = audioUrl2
+                        response["title"] = oldCopy["title"]
+                        response["isArcane"] = true
                         responses.add(response)
-
-                        if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
-                            val oldCopy = response
-                            response = JSONObject()
-                            if (oldCopy.containsKey("icons")) response["icons"] = oldCopy["icons"]
-                            response["audioUrl"] = audioUrl2
-                            response["title"] = oldCopy["title"]
-                            response["isArcane"] = true
-                            responses.add(response)
-                        }
                     }
-                    category["responses"] = responses
                 }
-            }
-            allResponsesWithCategories.add(category)
-        }
-
-        File("$assets/$HEROES_FOLDER/$name/${locale.folder}/responses.json").writeText(allResponsesWithCategories.toString())
-        println("response in ${locale.folder} for hero $name saved (${allResponsesWithCategories.toString().length} bytes)")
-    }
-
-    private fun getHeroesElements(document: Document): Elements {
-        val heroesTable = document.getElementsByAttributeValue("style", "text-align:center")[0]
-        return heroesTable.getElementsByAttributeValue("style", "width:150px; height:84px; display:inline-block; overflow:hidden; margin:1px")
-    }
-
-    private fun getHeroName(element: Element): String {
-        return element.getElementsByTag("a")[0].attr("title")
-    }
-
-    private fun getHeroHref(element: Element): String {
-        return element.getElementsByTag("a")[0].attr("href")
-    }
-
-    private fun connectTo(url: String): Document {
-        return Jsoup.connect(url).postDataCharset("UTF-8").get()
-    }
-
-    fun createFileWithHeroesAndFolders() {
-        val path = assetsDatabase + FILE_NAME
-        val root = connectTo(LocaleHeroes.EN.heroesUrl)
-        var mainAttribute = "Strength"
-
-        val result = JSONArray().apply {
-            val heroesEng = getHeroesElements(root)
-            heroesEng.forEachIndexed { index, _ ->
-                val heroObject = JSONObject().apply {
-                    val heroName = getHeroName(heroesEng[index])
-                    put("name", heroName)
-                    if (heroName == "Anti-Mage") mainAttribute = "Agility"
-                    if (heroName == "Ancient Apparition") mainAttribute = "Intelligence"
-                    put("main_attribute", mainAttribute)
-                    val url = getHeroHref(heroesEng[index])
-//                    put("url", url)
-                    val directory = "$HEROES_FOLDER/$heroName"
-                    File("$assets$directory/en").mkdirs()
-                    File("$assets$directory/ru").mkdirs()
-                }
-                add(heroObject)
+                category["responses"] = responses
             }
         }
-        File(path).writeText(result.toJSONString())
-
-        println("heroes loaded $path")
+        allResponsesWithCategories.add(category)
     }
 
-    private fun getHeroesList(locale: LocaleHeroes): List<NameAndLocale> {
-        val root = connectTo(locale.heroesUrl)
-        return getHeroesElements(root).map { element ->
-            val name = getHeroName(element)
-            NameAndLocale(name, locale)
-        }.toList()
-    }
-
-    private fun loadHero(nameAndLocale: NameAndLocale) {
-        val (name, locale) = nameAndLocale
-        val root = connectTo(locale.mainUrl.format(name))
-//        loadHeroImageFull(root, name)
-//        loadHeroImageMinimap(root, name)
-        loadHeroInformation(root, name, locale.folder)
-    }
-
-    private fun loadHeroInformation(root: Document, name: String, folder: String) {
-        JSONObject().apply {
-            loadDescription(root)
-            loadHistory(root)
-            loadAbilities(root)
-            loadSections(root) { sectionAndData: SectionAndData ->
-                when (sectionAndData.name) {
-                    "Talents", "Таланты" -> addTalents(sectionAndData)
-                    "Trivia", "Факты" -> addTrivia(sectionAndData)
-                }
-            }
-            loadMainAttributes(root)
-
-            File("$assets$HEROES_FOLDER/$name/$folder/description.json").writeText(toJSONString())
-        }
-    }
-
-    private fun JSONObject.addTrivia(sectionAndData: SectionAndData) {
-        val trivias = sectionAndData.data[1].getElementsByTag("li")
-        JSONArray().apply {
-            for (trivia in trivias) add(trivia.text())
-            put("trivia", this)
-        }
-    }
-
-    private fun JSONObject.addTalents(sectionAndData: SectionAndData) {
-        val talentBlock = sectionAndData.data[1].getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")[0]
-        val talentLines = talentBlock.getElementsByTag("tr")
-        val talents = JSONArray().apply {
-            var talentLvl = 25
-            for (talentLine in talentLines) {
-                if (talentLine.children().size == 1) continue
-                JSONObject().apply {
-                    put("talent_left", talentLine.child(0).text())
-                    put("talent_lvl", talentLvl.toString())
-                    put("talent_right", talentLine.child(2).text())
-                    add(this)
-                }
-                talentLvl -= 5
-            }
-        }
-
-        val notes = JSONArray().apply {
-            val talentTips = talentBlock.getElementsByTag("li")
-            for (talentTip in talentTips) add(talentTip.text())
-        }
-        val result = JSONObject().apply {
-            put("hero_talents", talents)
-            if (notes.size > 0) put("notes", notes)
-        }
-        put("talents", result)
-    }
-
-    private fun JSONObject.loadMainAttributes(root: Document) {
-        val mainAttributes = root.getElementsByAttributeValue("style", "width:100%; padding:4px 0; display:grid; grid-template-columns: auto auto auto; color:white; text-align:center;")[0]
-        val mainAttributesElements = mainAttributes.getElementsByTag("div")
-
-        var index = 4
-        if (mainAttributesElements.size > 7) index = 7
-        val attrStrength = (mainAttributesElements[index].childNode(0) as TextNode).text().split(" ").first().toDouble()
-        val attrStrengthInc = (mainAttributesElements[index].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
-        val attrAgility = (mainAttributesElements[index + 1].childNode(0) as TextNode).text().split(" ").first().toDouble()
-        val attrAgilityInc = (mainAttributesElements[index + 1].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
-        val attrIntelligence = (mainAttributesElements[index + 2].childNode(0) as TextNode).text().split(" ").first().toDouble()
-        val attrIntelligenceInc = (mainAttributesElements[index + 2].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
-
-        val attrs = JSONObject().apply {
-            put("attrStrength", attrStrength)
-            put("attrStrengthInc", attrStrengthInc)
-            put("attrAgility", attrAgility)
-            put("attrAgilityInc", attrAgilityInc)
-            put("attrIntelligence", attrIntelligence)
-            put("attrIntelligenceInc", attrIntelligenceInc)
-        }
-        put("mainAttributes", attrs)
-    }
-
-    data class SectionAndData(val name: String, val data: Elements)
-
-    private fun loadSections(root: Document, callback: (SectionAndData) -> Unit) {
-        val sections: Elements = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
-        var lastName = ""
-        var data = Elements()
-        for (section in sections) {
-            if (section.tag().toString() == "h2") {
-                val name = section.child(0).id()
-                if (lastName != name) {
-                    callback(SectionAndData(lastName, data))
-                    data = Elements()
-                }
-                lastName = name
-            }
-            data.add(section)
-        }
-    }
-
-    private fun JSONObject.loadAbilities(root: Document) {
-        val spells = root.getElementsByAttributeValue("style", "display: flex; flex-wrap: wrap; align-items: flex-start;")
-        JSONArray().apply {
-            spells.forEach {
-                JSONObject().apply {
-                    val name = it.getElementsByTag("div")[3].childNode(0).toString().trim()
-                    put("name", name)
-
-                    loadSpellImage(it, name)
-
-                    var audioUrl = it.getElementsByTag("source").attr("src")
-                    if (audioUrl.isNullOrEmpty()) audioUrl = ""
-                    put("audioUrl", audioUrl)
-
-                    val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()?.takeIf { it.length == 1 } ?: ""
-                    put("hot_key", hotKey)
-
-                    val legacyKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()?.takeIf { it.length == 1 } ?: ""
-                    put("legacy_key", legacyKey)
-
-                    val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")
-                    JSONArray().apply {
-                        effects.mapNotNull { if (it.text() != "") add(it.text().replace("(", "(TagAghanim")) }
-                        put("effects", this)
-                    }
-
-                    val description = it.getElementsByTag("div")[12].text()
-                    put("description", description)
-
-                    val params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
-                    params.filter { it.attr("style").isEmpty() && !it.attr("class").equals("ability-lore") }.also {
-                        JSONArray().apply {
-                            it.forEach {
-                                if (it.getElementsByAttribute("href").getOrNull(0)?.attr("href")?.endsWith("/Aghanim%27s_Scepter") == true) {
-                                    add(it.text().replace("(", "(TagAghanim"))
-                                } else {
-                                    add(it.text().replace("(", "(TagTalent"))
-                                }
-                            }
-                            put("params", this)
-                        }
-                    }
-
-                    val cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
-                    if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
-                        put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
-                    } else {
-                        put("cooldown", cooldown?.text()?.replace("(", "(TagTalent"))
-                        // todo add AGHANIM SHARD ебучий
-                    }
-
-                    val mana = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").getOrNull(0)
-                    if (mana?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
-                        put("mana", mana?.text()?.replace("(", "(TagAghanim"))
-                    } else {
-                        put("mana", mana?.text()?.replace("(", "(TagTalent"))
-                    }
-
-                    val itemBehaviour = it.getElementsByAttributeValue("style", "margin-left: 50px;")
-                    JSONArray().apply {
-                        itemBehaviour.forEach {
-                            val alt = it.getElementsByTag("img").attr("src")
-                            ifContainAdd(alt, "Spell_immunity_block_partial_symbol.png", it)
-                            ifContainAdd(alt, "Spell_block_partial_symbol.png", it)
-                            ifContainAdd(alt, "Spell_immunity_block_symbol.png", it)
-                            ifContainAdd(alt, "Disjointable_symbol.png", it)
-                            ifContainAdd(alt, "Aghanim%27s_Scepter_symbol.png", it)
-                            ifContainAdd(alt, "Breakable_symbol.png", it)
-                            ifContainAdd(alt, "Breakable_partial_symbol.png", it)
-                        }
-
-                        put("item_behaviour", this)
-                    }
-
-                    val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding: 2px 10px 5px;text-align:center").getOrNull(0)
-                    put("story", story?.text())
-
-                    val notesBlock = it.getElementsByAttributeValue("style", "flex: 1 1 450px; word-wrap: break-word;").getOrNull(0)
-                    val notes = notesBlock?.getElementsByTag("li")
-                    JSONArray().apply {
-                        notes?.forEach {
-                            add(it.text().replace("( ", "(TagTalent "))
-                        }
-
-                        put("notes", this)
-                    }
-
-
-
-                    add(this)
-                }
-            }
-            put("abilities", this)
-        }
-    }
-
-    private fun loadSpellImage(element: Element, name: String) {
-        val url = element.getElementsByAttributeValue("class", "image")[0].attr("href")
-        saveImageInDirectory(url, SPELL_FOLDER, "$name.png")
-    }
-
-    private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
-        if (alt.contains(spellImmunityBlockPartial)) {
-            add("(${spellImmunityBlockPartial.dropLast(4)})^"
-                    + it.getElementsByAttribute("title")[0].attr("title").dropLast(1) + "\n"
-                    + it.text().replace(". ", "\n"))
-        }
-    }
-
-    private fun JSONObject.loadHistory(root: Document) {
-        val history = root.getElementsByAttributeValue("style", "display: table-cell; font-style: italic;")[0].text()
-        put("history", history)
-    }
-
-    private fun JSONObject.loadDescription(root: Document) {
-        val description = root.getElementsByTag("p")[0].text()
-        put("description", description)
-    }
-
-    private fun loadHeroImageFull(root: Document, name: String) {
-        val url = root.getElementsByTag("img")[2].attr("data-src")
-        saveImageInDirectory(url, "$HEROES_FOLDER/$name", "full.png")
-    }
-
-    private fun loadHeroImageMinimap(root: Document, name: String) {
-        val url = root.getElementsByAttributeValue("alt", "$name minimap icon.png")[0].attr("data-src")
-        saveImageInDirectory(url, "$HEROES_FOLDER/$name", "minimap.png")
-    }
-
-    private fun saveImageInDirectory(url: String, directory: String, name: String) {
-        val path = assets + directory + File.separator + name
-        try {
-            val file = File(path)
-            if (file.exists()) return
-            file.mkdirs()
-            val bufferImageIO = ImageIO.read(URL(url))
-            ImageIO.write(bufferImageIO, "png", file)
-            println("image $path saved")
-        } catch (e: Exception) {
-            println("image $path not saved")
-        }
-    }
-
+    File("$assetsDatabaseHeroes/${hero.name}/${locale.folder}/responses.json").writeText(allResponsesWithCategories.toString())
+    println("response in ${locale.folder} for hero ${hero.name} saved (${allResponsesWithCategories.toString().length} bytes)")
 }
 
+private fun createFileWithHeroes(heroes: List<Hero>) {
+    val result = JSONArray()
+    heroes.forEach { hero ->
+        val heroObject = JSONObject()
+        heroObject["name"] = hero.name
+        heroObject["main_attribute"] = hero.mainAttribute
+        result.add(heroObject)
+    }
+    File("$assetsDatabase/heroes.json").writeText(result.toJSONString())
+}
 
+private fun getHeroes(): List<Hero> {
+    val document = Jsoup.connect(LocaleHeroes.EN.heroesUrl).postDataCharset("UTF-8").get()
+    val heroesTable = document.getElementsByAttributeValue("style", "text-align:center")[0]
+    val elements = heroesTable.getElementsByAttributeValue("style", "width:150px; height:84px; display:inline-block; overflow:hidden; margin:1px")
+    var heroMainAttribute = "Strength"
+    val result = mutableListOf<Hero>()
+    for (element in elements) {
+        val heroName = element.getElementsByTag("a")[0].attr("title")
+        if (heroName == "Anti-Mage") heroMainAttribute = "Agility"
+        if (heroName == "Ancient Apparition") heroMainAttribute = "Intelligence"
+        val href = element.getElementsByTag("a")[0].attr("href")
+        result.add(Hero(heroName, heroMainAttribute, href))
+    }
+    return result
+}
+
+private fun loadHero(hero: Hero, locale: LocaleHeroes) {
+    val root = Jsoup.connect(locale.mainUrl.format(hero.name)).get()
+    loadHeroImage(root, hero)
+    loadHeroMinimap(root, hero)
+    val result = JSONObject()
+    result.loadDescription(root)
+    result.loadHistory(root)
+    result.loadAbilities(root)
+    loadSections(root) { sectionAndData: SectionAndData ->
+        when (sectionAndData.name) {
+            "Talents", "Таланты" -> result.addTalents(sectionAndData)
+            "Trivia", "Факты" -> result.addTrivia(sectionAndData)
+        }
+    }
+    result.loadMainAttributes(root)
+
+    val path = "$assetsDatabase/heroes/${hero.name}/${locale.folder}"
+    saveFile(path, "description.json", result.toJSONString())
+}
+
+private fun loadHeroMinimap(root: Document, hero: Hero) {
+    val heroMinimap = root.getElementsByAttributeValue("alt", "${hero.name} minimap icon.png")[0].attr("data-src")
+    saveImage(heroMinimap, "$assetsDatabaseHeroes/${hero.name}", "minimap")
+}
+
+private fun loadHeroImage(root: Document, hero: Hero) {
+    val heroImage = root.getElementsByTag("img")[2].attr("data-src")
+    saveImage(heroImage, "$assetsDatabaseHeroes/${hero.name}", "full")
+}
+
+private fun JSONObject.addTrivia(sectionAndData: SectionAndData) {
+    val trivias = sectionAndData.data[1].getElementsByTag("li")
+    JSONArray().apply {
+        for (trivia in trivias) add(trivia.text())
+        put("trivia", this)
+    }
+}
+
+private fun JSONObject.addTalents(sectionAndData: SectionAndData) {
+    val talentBlock = sectionAndData.data[1].getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")[0]
+    val talentLines = talentBlock.getElementsByTag("tr")
+    val talents = JSONArray().apply {
+        var talentLvl = 25
+        for (talentLine in talentLines) {
+            if (talentLine.children().size == 1) continue
+            JSONObject().apply {
+                put("talent_left", talentLine.child(0).text())
+                put("talent_lvl", talentLvl.toString())
+                put("talent_right", talentLine.child(2).text())
+                add(this)
+            }
+            talentLvl -= 5
+        }
+    }
+
+    val notes = JSONArray().apply {
+        val talentTips = talentBlock.getElementsByTag("li")
+        for (talentTip in talentTips) add(talentTip.text())
+    }
+    val result = JSONObject().apply {
+        put("hero_talents", talents)
+        if (notes.size > 0) put("notes", notes)
+    }
+    put("talents", result)
+}
+
+private fun JSONObject.loadMainAttributes(root: Document) {
+    val mainAttributes = root.getElementsByAttributeValue("style", "width:100%; padding:4px 0; display:grid; grid-template-columns: auto auto auto; color:white; text-align:center;")[0]
+    val mainAttributesElements = mainAttributes.getElementsByTag("div")
+
+    var index = 4
+    if (mainAttributesElements.size > 7) index = 7
+    val attrStrength = (mainAttributesElements[index].childNode(0) as TextNode).text().split(" ").first().toDouble()
+    val attrStrengthInc = (mainAttributesElements[index].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
+    val attrAgility = (mainAttributesElements[index + 1].childNode(0) as TextNode).text().split(" ").first().toDouble()
+    val attrAgilityInc = (mainAttributesElements[index + 1].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
+    val attrIntelligence = (mainAttributesElements[index + 2].childNode(0) as TextNode).text().split(" ").first().toDouble()
+    val attrIntelligenceInc = (mainAttributesElements[index + 2].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
+
+    val attrs = JSONObject().apply {
+        put("attrStrength", attrStrength)
+        put("attrStrengthInc", attrStrengthInc)
+        put("attrAgility", attrAgility)
+        put("attrAgilityInc", attrAgilityInc)
+        put("attrIntelligence", attrIntelligence)
+        put("attrIntelligenceInc", attrIntelligenceInc)
+    }
+    put("mainAttributes", attrs)
+}
+
+data class SectionAndData(val name: String, val data: Elements)
+
+private fun loadSections(root: Document, callback: (SectionAndData) -> Unit) {
+    val sections: Elements = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
+    var lastName = ""
+    var data = Elements()
+    for (section in sections) {
+        if (section.tag().toString() == "h2") {
+            val name = section.child(0).id()
+            if (lastName != name) {
+                callback(SectionAndData(lastName, data))
+                data = Elements()
+            }
+            lastName = name
+        }
+        data.add(section)
+    }
+}
+
+private fun JSONObject.loadAbilities(root: Document) {
+    val spells = root.getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")
+    val abilitiesArray = JSONArray()
+    for (spell in spells) {
+        val abilityObject = JSONObject()
+        val section = spell.getElementsByTag("div").getOrNull(3) ?: continue
+        val name = section.childNode(0).toString().trim()
+        abilityObject["name"] = name
+
+        loadSpellImage(spell, name)
+
+        val audioUrl = spell.getElementsByTag("source").attr("src")
+        abilityObject["audioUrl"] = audioUrl
+
+        val hotKey = spell.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()?.takeIf { it.length == 1 } ?: ""
+        abilityObject["hot_key"] = hotKey
+
+        val legacyKey = spell.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()?.takeIf { it.length == 1 } ?: ""
+        abilityObject["legacy_key"] = legacyKey
+
+        val effects = spell.getElementsByAttributeValue("style", "display:inline-block; width:32%; vertical-align:top;")
+        val jsonEffects = JSONArray()
+        for (element in effects) {
+            if (element.childNodeSize() < 3) continue
+            val firstPart = (element.childNode(0) as? Element)?.text() ?: (element.childNode(0) as? TextNode)?.text() ?: continue
+            val secondPart = (element.childNode(2) as? Element)?.text() ?: (element.childNode(2) as? TextNode)?.text() ?: continue
+            val effect = "$firstPart: $secondPart"
+            jsonEffects.add(effect)
+        }
+        abilityObject["effects"] = jsonEffects
+
+        val description = spell.getElementsByTag("div")[12].text()
+        abilityObject["description"] = description
+
+        val params = spell.getElementsByAttributeValue("style", "font-size:98%;")
+        val jsonParams = JSONArray()
+        for (param in params) {
+            val result = StringBuilder()
+//            for (element in param.children()) {
+//                val elementText = when (element.tagName()) {
+//                    "span" -> {
+//                        val result = StringBuilder()
+//                        for (child in element.children()) {
+//                            if (child.tagName() == "a") result.append("<spannnn>")
+//                            else result.append(child.text())
+//                        }
+//                        result.toString()
+//                    }
+//                    else -> " " + element.text()
+//                }
+//                result.append(elementText)
+//            }
+            for (childNode in param.childNodes()) {
+                val childResult = when (childNode) {
+                    is TextNode -> childNode.text()
+                    is Element -> {
+                        val containsHrefTalent = childNode.attributes()["href"] == "/wiki/Talents"
+                        if (containsHrefTalent) "<span image=\"images\\Talent\"></span>"
+                        else childNode.text()
+                    }
+                    else -> ""
+                }
+                result.append(childResult)
+            }
+            jsonParams.add(result.toString().trim())
+        }
+        abilityObject["params"] = jsonParams
+
+        val cooldown = spell.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; width:240px;").getOrNull(0)
+        if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
+            abilityObject["cooldown"] = cooldown?.text()
+        } else {
+            abilityObject["cooldown"] = cooldown?.text()
+            // todo add AGHANIM SHARD ебучий
+        }
+
+        val mana = spell.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; max-width:100%; width:240px;").getOrNull(0)
+        if (mana?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
+            abilityObject["mana"] = mana?.text()?.replace("(", "(TagAghanim")
+        } else {
+            abilityObject["mana"] = mana?.text()?.replace("(", "(TagTalent")
+        }
+
+        val itemBehaviour = spell.getElementsByAttributeValue("style", "margin-left: 50px;")
+        JSONArray().apply {
+            itemBehaviour.forEach {
+                val alt = it.getElementsByTag("img").attr("src")
+                ifContainAdd(alt, "Spell_immunity_block_partial_symbol.png", it)
+                ifContainAdd(alt, "Spell_block_partial_symbol.png", it)
+                ifContainAdd(alt, "Spell_immunity_block_symbol.png", it)
+                ifContainAdd(alt, "Disjointable_symbol.png", it)
+                ifContainAdd(alt, "Aghanim%27s_Scepter_symbol.png", it)
+                ifContainAdd(alt, "Breakable_symbol.png", it)
+                ifContainAdd(alt, "Breakable_partial_symbol.png", it)
+            }
+
+            abilityObject["item_behaviour"] = this
+        }
+
+        val story = spell.getElementsByAttributeValue("style", "display:inline-block; width:450px; margin-top:5px; padding:2px 10px 5px; text-align:center;").getOrNull(0)
+        abilityObject["story"] = story?.text()
+
+        val notesBlock = spell.getElementsByAttributeValue("style", "flex:1 1 450px; word-wrap:break-word;").getOrNull(0)
+        val notes = notesBlock?.getElementsByTag("li")
+        JSONArray().apply {
+            notes?.forEach {
+                add(it.text().replace("( ", "(TagTalent "))
+            }
+
+            abilityObject["notes"] = this
+        }
+        abilitiesArray.add(abilityObject)
+    }
+    put("abilities", abilitiesArray)
+}
+
+private fun loadSpellImage(element: Element, name: String) {
+    val url = element.getElementsByAttributeValue("class", "image")[0].attr("href")
+    saveImage(url, assetsDatabaseItemsImages, name)
+}
+
+private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
+    if (alt.contains(spellImmunityBlockPartial)) {
+        add("(${spellImmunityBlockPartial.dropLast(4)})^" + it.getElementsByAttribute("title")[0].attr("title").dropLast(1) + "\n" + it.text().replace(". ", "\n"))
+    }
+}
+
+private fun JSONObject.loadHistory(root: Document) {
+    var history = root.getElementsByAttributeValue("style", "display: table-cell; font-style: italic;").getOrNull(0)?.text()
+    if (history == null) history = root.getElementsByAttributeValue("style", "display:table-cell; font-style: italic;").getOrNull(0)?.text()
+    put("history", history)
+}
+
+private fun JSONObject.loadDescription(root: Document) {
+    val description = root.getElementsByTag("tbody")[4].getElementsByTag("td").text()
+    put("description", description)
+}

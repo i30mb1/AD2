@@ -1,0 +1,328 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Broodmother_Insatiable_Hunger.mp3\/revision\/latest?cb=20191216011847",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "notes": [
+        "Grants regular flat bonus attack damage.",
+        "Stacks additively with other sources of lifesteal. Cannot lifesteal off of buildings or allied units. Can lifesteal off of wards that do not require a fixed amount of attacks to be destroyed.",
+        "Cannot lifesteal off of buildings or allied units.",
+        "Can lifesteal off of wards that do not require a fixed amount of attacks to be destroyed.",
+        "SHARD NOTES Insatiable Hunger now additionally grants a flat 12 attack damage bonus, stacking additively in 1-second intervals, starting 1 second upon cast. With the base attack damage bonus, it can grant up to 143\/177\/211\/245 attack damage bonus at its 9th\/11th\/13th\/15th interval. Acquiring Aghanim's Shard does not update the current active instance.",
+        "With the base attack damage bonus, it can grant up to 143\/177\/211\/245 attack damage bonus at its 9th\/11th\/13th\/15th interval.",
+        "Acquiring Aghanim's Shard does not update the current active instance.",
+        "TALENT NOTES The base attack time talent does not update the current active instance. Reduces Broodmother's base attack time to 1.4 while active.",
+        "Reduces Broodmother's base attack time to 1.4 while active."
+      ],
+      "mana": "40\/35\/30\/25",
+      "item_behaviour": [],
+      "name": "Insatiable Hunger",
+      "cooldown": "50\/60\/70\/80",
+      "description": "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.2+0.5",
+        "Base Attack Damage Bonus: 35\/45\/55\/65",
+        "Lifesteal: 40%\/60%\/80%\/100%",
+        "Duration: 8\/10\/12\/14 ( 10\/12\/14\/16)",
+        "Attack Damage Bonus Increase per Second: 12",
+        "<span image=\"images\\Talent\"><\/span> Base Attack Time: 1.4"
+      ],
+      "legacy_key": "W",
+      "story": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Broodmother_Spin_Web.mp3\/revision\/latest?cb=20191216011845",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Self "
+      ],
+      "notes": [
+        "Has a Global cast range when there is another Spin Web within 900 range of the targeted point.",
+        "Upon learning, Broodmother instantly gains 4 charges. However, leveling it up further does not instantly grant the extra charges.",
+        "However, leveling it up further does not instantly grant the extra charges.",
+        "The buff only affects the caster, and all Spiderlings and Spiderites under the player's control. Other player-controlled units are unaffected. The movement speed bonus gets lower by 0.18%\/0.28%\/0.38%\/0.48% for every 1% of health missing, reaching 9%\/14%\/19%\/24% bonus when at 1% health. The health percentage is checked periodically and the effects are adapted instantly. Does not affect invulnerable or hidden units.",
+        "The movement speed bonus gets lower by 0.18%\/0.28%\/0.38%\/0.48% for every 1% of health missing, reaching 9%\/14%\/19%\/24% bonus when at 1% health.",
+        "The health percentage is checked periodically and the effects are adapted instantly.",
+        "Does not affect invulnerable or hidden units.",
+        "Can regenerate up to 300\/420\/540\/660 health in one minute.",
+        "Spin Webs also increases Broodmother's and her Spiderlings (including Spiderites) turn rate to 0.8 and 0.7 respectively.",
+        "The effects are provided by an aura and its buff lingers for 0.15 seconds. Leveling up the ability instantly updates the values of all current active Spin Webs.",
+        "Leveling up the ability instantly updates the values of all current active Spin Webs.",
+        "Spin Webs are visible on the minimap for Broodmother and her team. They do not provide vision but are selectable through the Fog of War. Broodmother can destroy any of her webs with the Destroy Spin Web sub-ability.",
+        "Broodmother can destroy any of her webs with the Destroy Spin Web sub-ability.",
+        "The webs do not block neutral creep camps.",
+        "SPELL STEAL \/ MORPH NOTES All created Spin Webs immediately disappear upon losing ability."
+      ],
+      "mana": "",
+      "item_behaviour": [],
+      "name": "Spin Web",
+      "cooldown": "30 ( 20)",
+      "description": "Spins a large web that grants Broodmother a passive movement speed increase, and boosts regeneration while in its vicinity, as well as giving free movement. Spin Web charges restore every seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears. The movement bonus is proportional to the unit's HP",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.4+0.4",
+        "Cast Range:  1000",
+        "Web Radius: 900",
+        "Max Amount of Webs: 3\/5\/7\/9 ( 6\/8\/10\/12)",
+        "Health Regen Bonus: 5\/7\/9\/11",
+        "Turn Rate Bonus: 0.2",
+        "Min Move Speed Bonus Health Threshold: 1%",
+        "Min Move Speed Bonus: 9%\/14%\/19%\/24%",
+        "Max Move Speed Bonus: 18%\/28%\/38%\/48%",
+        "Aura Linger Duration: 0.15"
+      ],
+      "legacy_key": "B",
+      "story": "Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of foreboding."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Broodmother_Silken_Bola_1.mp3\/revision\/latest?cb=20201224014000",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies \/ Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1200.",
+        "Silken Bola first applies the debuff, then the damage.",
+        "The bonus damage is considered as a conditional attack damage bonus and is magical damage. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage. However, it is considered by lifesteal, crit or cleave, and it can be reduced only by flat reductions (e.g. magical damage barrier). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage.",
+        "However, it is considered by lifesteal, crit or cleave, and it can be reduced only by flat reductions (e.g. magical damage barrier).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "The bonus damage only triggers for allied hero attacks (including illusions and clones, excluding creep-heroes), and any attacks done by units owned by Broodmother.",
+        "Stacks additively with other sources of blind. Blind uses pseudo-random distribution.",
+        "Blind uses pseudo-random distribution.",
+        "Successive casts do not update the ability values but refresh the duration.",
+        "TALENT NOTES The area of effect talent turns Silken Bola into a 400 radius area-targeted ability, so that it cannot directly target units anymore."
+      ],
+      "mana": "24\/20\/16\/12",
+      "item_behaviour": [],
+      "name": "Silken Bola",
+      "cooldown": "70\/75\/80\/85",
+      "description": "Slows the target enemy, causes them to miss and deals impact damage. Units that attack the target deal bonus magic damage.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.1+0.67",
+        "Cast Range:  750",
+        "Damage: 100\/120\/140\/160",
+        "Attack Damage Bonus Against Target: 6\/7\/8\/9",
+        "Move Speed Slow: 25%\/35%\/45%\/55% ( 60%\/70%\/80%\/90%)",
+        "Miss Chance: 40%\/45%\/50%\/55% ( 75%\/80%\/85%\/90%)",
+        "Duration: 6",
+        "<span image=\"images\\Talent\"><\/span> Radius: 400"
+      ],
+      "legacy_key": "E",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Broodmother_Spinner%27s_Snare_1.mp3\/revision\/latest?cb=20210823213143",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Has a Global cast range when there is a Spin Web within 900 range of the targeted point. The vector direction of Spinner's Snare is not considered, only the initially selected center point matters.",
+        "The vector direction of Spinner's Snare is not considered, only the initially selected center point matters.",
+        "Cannot be cast within the vicinity of another web line. The vector must not overlap with another line to cast.",
+        "The web line forms over a 2-second duration, during which the line is completely inactive.",
+        "The web lines are completely invisible to the enemy and cannot be revealed.",
+        "Once formed, the line can trigger on any enemy hero coming within its area of effect. Only reacts on heroes, including clones, but excluding illusions and creep-heroes.",
+        "Only reacts on heroes, including clones, but excluding illusions and creep-heroes.",
+        "When triggered, the triggering hero receives a single debuff that applies all effects. The modifier exposes the target, provides True Sight over them, and slows their movement speed. After 0.25 seconds, the modifier roots the target, preventing them from moving and casting certain mobility abilities. This means the root effectively lasts 2.75 seconds. The damage over time starts after this delay as well, and ticks in 1-second intervals, resulting in 3 instances. Can deal a total of 300 damage to the target (before reductions).",
+        "The modifier exposes the target, provides True Sight over them, and slows their movement speed.",
+        "After 0.25 seconds, the modifier roots the target, preventing them from moving and casting certain mobility abilities.",
+        "This means the root effectively lasts 2.75 seconds.",
+        "The damage over time starts after this delay as well, and ticks in 1-second intervals, resulting in 3 instances.",
+        "Can deal a total of 300 damage to the target (before reductions).",
+        "Once triggered, the web line becomes visible to enemies, and disappears after 3 seconds. This timer is independent from the debuff on the enemy, so removing the debuff does not cause the line to disappear earlier. During this time, other enemy heroes still may get debuffed by the line.",
+        "This timer is independent from the debuff on the enemy, so removing the debuff does not cause the line to disappear earlier.",
+        "During this time, other enemy heroes still may get debuffed by the line.",
+        "The web lines have no set duration, they last until triggered. Exceeding the max allowed number of lines instantly destroys the oldest line.",
+        "Exceeding the max allowed number of lines instantly destroys the oldest line.",
+        "The lines have no form of vision and are not visible through the Fog of War for anyone."
+      ],
+      "mana": "",
+      "item_behaviour": [],
+      "name": "Spinner's Snare",
+      "cooldown": "20",
+      "description": "Broodmother may create up to 5 invisible web lines touching any existing web. Enemy Heroes that cross the web line will spring the trap, becoming rooted, revealed in fog, and take damage over time. Multiple Heroes can trip on the same line until it's destroyed after being initially triggered. Broodmother's team is alerted via the minimap when an enemy has triggered the snare.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.2+0.56",
+        "Cast Range:  600",
+        "Line Length: 900",
+        "Line Width: 50",
+        "Line Formation Time: 2",
+        "Max Amount of Lines: 5",
+        "Damage per Second: 100",
+        "Move Speed Slow: 100%",
+        "Root Delay: 0.25",
+        "Debuff Duration: 3"
+      ],
+      "legacy_key": "D",
+      "story": "The slightest tremor of her web is all Arachnia needs to find her prey."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Broodmother_Spawn_Spiderlings_1.mp3\/revision\/latest?cb=20191216011849",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1200.",
+        "Spawn Spiderling first applies the debuff, then the damage.",
+        "Spiderlings only spawn when the targeted unit dies while having the debuff on. It does not matter who kills the target, if it dies in any way, the Spiderlings spawn. The amount of spiders spawned is based on the level of the ability as the spawn happens, and not on what level it was upon cast.",
+        "It does not matter who kills the target, if it dies in any way, the Spiderlings spawn.",
+        "The amount of spiders spawned is based on the level of the ability as the spawn happens, and not on what level it was upon cast.",
+        "Multiple instances of Spawn Spiderlings on the same target fully stack, with each cast placing a separate debuff. Has a stack limit of 7. If an enemy has already 7 instances of the debuff, a new cast does not affect them at all.",
+        "Has a stack limit of 7. If an enemy has already 7 instances of the debuff, a new cast does not affect them at all.",
+        "Spiderlings and Spiderites are fully affected by Spin Web.",
+        "TALENT NOTES The damage increasing talent immediately upgrades all of Broodmother's currently flying Spawn Spiderling projectiles. The health increasing talent does not upgrade any of Broodmother's currently living Spiderlings or Spiderites.",
+        "The health increasing talent does not upgrade any of Broodmother's currently living Spiderlings or Spiderites."
+      ],
+      "mana": "9\/8\/7",
+      "item_behaviour": [],
+      "name": "Spawn Spiderlings",
+      "cooldown": "120",
+      "description": "Broodmother injects her young into an enemy unit, dealing damage. The spiderlings will hatch if the target is killed while under this influence.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.2+0.5",
+        "Cast Range:  900",
+        "Damage: 260\/340\/420 ( 340\/420\/500)",
+        "Number of Spiderlings: 4\/5\/6",
+        "Debuff Duration: 20",
+        "Spiderling Duration: 40\/45\/50"
+      ],
+      "legacy_key": "T",
+      "story": "Black Arachnia continues to raise her young, even amidst the field of combat. The brood quickly learns how to support their mother."
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "notes": [
+        "This is cast from the web itself, allowing Broodmother to destroy webs individually instead of having the oldest one destroyed."
+      ],
+      "mana": "0",
+      "item_behaviour": [],
+      "name": "Destroy Spin Web",
+      "cooldown": "0",
+      "description": "Destroys the selected Spin Web.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0+0"
+      ],
+      "legacy_key": "D",
+      "story": null
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies"
+      ],
+      "notes": [
+        "Successive hits with Poison Sting on the same target do not stack, only the debuff gets refreshed.",
+        "The attacks first apply their damage, then the debuff.",
+        "Affects allies and wards, but not buildings.",
+        "Treats creep-heroes as creeps.",
+        "Spiderites do not have this ability."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Poison Sting",
+      "cooldown": null,
+      "description": "Slows enemies with each attack.",
+      "hot_key": "?",
+      "params": [
+        "Move Speed Slow: 6%\/8%\/10%",
+        "Hero Duration: 2",
+        "Non-Hero Duration: 6"
+      ],
+      "legacy_key": "",
+      "story": null
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies"
+      ],
+      "notes": [
+        "Successive hits with Spawn Spiderite on the same target do not stack, only the debuff gets refreshed.",
+        "The attacks first apply their damage, then the debuff.",
+        "The Spiderite only spawns when the attacked unit dies while having the debuff on. It does not matter who kills the target, if it dies in any way, the Spiderite spawns.",
+        "It does not matter who kills the target, if it dies in any way, the Spiderite spawns.",
+        "Does not affect wards and buildings, but affects allies.",
+        "Spiderites are fully affected by Spin Web.",
+        "Spiderites do not have this ability."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Spawn Spiderite",
+      "cooldown": null,
+      "description": "Applies debuff on attack. If debuffed unit dies, a spiderite will spawn.",
+      "hot_key": "?",
+      "params": [
+        "Number of Spiderites: 1",
+        "Debuff Duration: 2",
+        "Spiderite Duration: 60"
+      ],
+      "legacy_key": "",
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.2,
+    "attrStrength": 18.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 2.0,
+    "attrAgilityInc": 3.4,
+    "attrAgility": 19.0
+  },
+  "description": "Hunts with her army of Spiderlings. Inhabiting the lava tubes below the caldera of Mount Pyrotheos, Black Arachnia grew tired of recent adventurers stepping on her many offspring. And so, the Broodmother set out to rid the world of every potential intruder, one hero at a time. Warm bodies make ideal nurseries, a fact not lost on Black Arachnia as she injects her eggs into dying foes to Spawn Spiderlings. Across patches of land she Spin Webs of Silken Fiber, sheltering herself within to recuperate injuries or laying down Snares to catch her prey. Driven by Insatiable Hunger, the Broodmother goes into a feeding frenzy, sucking the vital fluids from wandering heroes with each bite, replenishing herself for the next spawn cycle.  Carry Pusher Escape Nuker ★★☆",
+  "trivia": [
+    "In her DotA biography, Broodmother's spiderlings originated from her relationship with Anub'arak, the Nerubian Assassin ( Nyx Assassin). In Dota 2, no relationship between the two heroes exists.",
+    "Broodmother is sometimes called by her nickname, \"Broodmama\".",
+    "Broodmother's response Link▶️ \"Some pig.\" is a reference to the children's novel Charlotte's Web.",
+    "Broodmother's name, Black Arachnia, resembles the name of the character Blackarachnia from the Transformers franchise."
+  ],
+  "history": "For centuries, Black Arachnia the Broodmother lurked in the dark lava tubes beneath the smoldering caldera of Mount Pyrotheos, raising millions of spiderlings in safety before sending them to find prey in the wide world above. In a later age, the Vizier of Greed, Ptholopthales, erected his lodestone ziggurat on the slopes of the dead volcano, knowing that any looters who sought his magnetic wealth must survive the spider-haunted passages. After millennia of maternal peace, Black Arachnia found herself beset by a steady trickle of furfeet and cutpurses, bold knights and noble youths--all of them delicious, certainly, and yet tending to create a less than nurturing environment for her innocent offspring. Tiring of the intrusions, she paid a visit to Ptholopthales; and when he proved unwilling to discuss a compromise, she wrapped the Vizier in silk and set him aside to be the centerpiece of a special birthday feast. Unfortunately, the absence of the Magnetic Ziggurat's master merely emboldened a new generation of intruders. When one of her newborns was trodden underfoot by a clumsy adventurer, she reached the end of her silken rope. Broodmother headed for the surface, declaring her intent to rid the world of each and every possible invader, down to the last Hero if necessary, until she could ensure her nursery might once more be a safe and wholesome environment for her precious spiderspawn.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "-0.3s BAT during Insatiable Hunger",
+        "talent_left": "+35% Silken Bola Slow\/Miss Chance"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "400 AoE Silken Bola",
+        "talent_left": "+25 Agility"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-10s Spin Web Recharge Time",
+        "talent_left": "+130 Spiderling Health"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+80 Spawn Spiderlings Damage",
+        "talent_left": "+3 Spin Web Simultaneous Webs"
+      }
+    ],
+    "notes": [
+      "The health bonus talent affect both Spiderlings and Spiderites.",
+      "The agility talent effectively grants Broodmother 4.17 main armor, 25 attack speed, and 25 main attack damage bonus."
+    ]
+  }
+}

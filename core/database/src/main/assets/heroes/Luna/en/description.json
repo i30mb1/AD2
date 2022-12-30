@@ -1,0 +1,216 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Luna_Lucent_Beam_1.mp3\/revision\/latest?cb=20191216015815",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Lucent Beam first applies the damage, then the debuff.",
+        "Luna's glaive emits particles during the cast time, visible to everyone.",
+        "Provides 200 radius ground vision around the affected target for 3 seconds.",
+        "SHARD NOTES Lucent Beam now grants a stack of bonus attack damage per hero hit, including Eclipse's beams. The buff durations are independent from each other, successive casts do not refresh the duration of previous stacks. The number of flat bonus attack damage gained can be seen on the status buff icon and can be seen in its description. Treats illusions and creep-heroes as heroes. It is possible to have up to 30\/30\/30\/30 (TagTalent 30\/30\/45\/45) bonus attack damage, when cast on enemies and then every time after the ability's cooldown.",
+        "The buff durations are independent from each other, successive casts do not refresh the duration of previous stacks.",
+        "The number of flat bonus attack damage gained can be seen on the status buff icon and can be seen in its description. Treats illusions and creep-heroes as heroes.",
+        "Treats illusions and creep-heroes as heroes.",
+        "It is possible to have up to 30\/30\/30\/30 (TagTalent 30\/30\/45\/45) bonus attack damage, when cast on enemies and then every time after the ability's cooldown.",
+        "TALENT NOTES The Glaives fired on Lucent Beam talent launches 2 instant attacks on random enemies, closest from the target's location, within 500 search radius of the target upon cast. Despite the description, it neither launches Moon Glaives upon cast, nor relies on Moon Glaves to be leveled for the instant attacks to proc. The instant attacks originate from the targeted point or unit, they can proc any attack modifiers and on-hit effects normally (including Moon Glaives). They do not have True Strike, but ignore disarms. The attacks do not target invisible units, but can target units in Fog of War. This talent upgrade does not upgrade Eclipse's beams.",
+        "Despite the description, it neither launches Moon Glaives upon cast, nor relies on Moon Glaves to be leveled for the instant attacks to proc.",
+        "The instant attacks originate from the targeted point or unit, they can proc any attack modifiers and on-hit effects normally (including Moon Glaives). They do not have True Strike, but ignore disarms.",
+        "The attacks do not target invisible units, but can target units in Fog of War.",
+        "This talent upgrade does not upgrade Eclipse's beams."
+      ],
+      "mana": "9\/8\/7\/6 (TagTalent 7\/6\/5\/4)",
+      "item_behaviour": [],
+      "name": "Lucent Beam",
+      "cooldown": "90\/100\/110\/120",
+      "description": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.4+0.47",
+        "Cast Range:  800",
+        "Damage: 80\/160\/240\/320 ( 180\/260\/340\/420)",
+        "Stun Duration: 0.8 ( 1.2)",
+        "Attack Damage Bonus: 15",
+        "Buff Duration: 12",
+        "<span image=\"images\\Talent\"><\/span> Instant Attack Search Radius: 500",
+        "<span image=\"images\\Talent\"><\/span> Number of Instant Attacks: 2"
+      ],
+      "legacy_key": "C",
+      "story": "Selemene smites those who encroach upon the Nightsilver Woods."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Luna_Moon_Glaives.mp3\/revision\/latest?cb=20191216015815",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies",
+        "Damage: Physical"
+      ],
+      "notes": [
+        "The bouncing glaives travel at the same speed as the leading attack's projectile. This means their speed can be further increased by other attack projectile speed bonuses.",
+        "This means their speed can be further increased by other attack projectile speed bonuses.",
+        "Does not perform instant attacks. The projectiles deal regular spell damage. This means they do not trigger any attack modifier or on-hit effects, and ignore evasion. However, it is still affected by damage block sources and Bulwark, but not Resonant Pulse.",
+        "This means they do not trigger any attack modifier or on-hit effects, and ignore evasion.",
+        "However, it is still affected by damage block sources and Bulwark, but not Resonant Pulse.",
+        "Moon Glavies' damage has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal. No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
+        "No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal.",
+        "No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
+        "The glaives deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. This means it works with critical strike and quell, since these are included in the initial damage calculations. This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit. It also means that other conditional attack damage bonuses (i.e. Javelin damage proc) are not included, since these happen later in the calculations as well.",
+        "This means it works with critical strike and quell, since these are included in the initial damage calculations.",
+        "This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit.",
+        "It also means that other conditional attack damage bonuses (i.e. Javelin damage proc) are not included, since these happen later in the calculations as well.",
+        "Effectively increases Luna's attack damage by 71.88%\/93.75%\/120.26%\/153.89% (TagTalent 93.1%\/122.47%\/158.69%\/205.88%) if all 3\/4\/5\/6 bounces hit.",
+        "Can bounce back to the same units if it already hit all other nearby units. Cannot bounce to invisible units and on units in the Fog of War. Does bounce to, but does not damage ethereal units. Does not bounce to wards, Couriers and allies, but it does bounce off of them when attacking them. Fully works against buildings.",
+        "Cannot bounce to invisible units and on units in the Fog of War.",
+        "Does bounce to, but does not damage ethereal units.",
+        "Does not bounce to wards, Couriers and allies, but it does bounce off of them when attacking them.",
+        "Fully works against buildings.",
+        "Upon learning, Luna's glaive permanently emits blue particles, visible to everyone."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Moon Glaives",
+      "cooldown": null,
+      "description": "Empowers Luna's glaives, causing her attacks to bounce between enemy units. Deals less damage with each bounce.",
+      "hot_key": "W",
+      "params": [
+        "Search Radius: 500",
+        "Number of Bounces: 3\/4\/5\/6",
+        "Damage Reduction per Bounce: 56%\/50%\/44%\/38% ( 48%\/42%\/36%\/30%)"
+      ],
+      "legacy_key": "G",
+      "story": "Carefully sharpened, Luna's boomerang-like weapon cuts a wide swath through enemy numbers."
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Allies"
+      ],
+      "notes": [
+        "Increases Luna's nighttime vision range to 1050\/1300\/1550\/1800.",
+        "Grants regular flat bonus attack damage.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "Affects invulnerable, but not hidden units. Treat creep-heroes and clones as heroes.",
+        "Treat creep-heroes and clones as heroes.",
+        "Upon learning, Luna emits very faint pulsing particles around her."
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Lunar Blessing",
+      "cooldown": null,
+      "description": "Increases the attack damage for Luna and nearby allied heroes. Luna is also blessed with increased vision range at night.",
+      "hot_key": "E",
+      "params": [
+        "Day Radius: 1200",
+        "Night Radius: Global",
+        "Self Base Night Vision Bonus: 250\/500\/750\/1000",
+        "Attack Damage Bonus: 6\/14\/20\/28 ( 41\/49\/55\/63)",
+        "Aura Linger Duration: 0.5"
+      ],
+      "legacy_key": "L",
+      "story": "The Goddess of the Moon smiles upon her kin."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Luna_Eclipse_1.mp3\/revision\/latest?cb=20191216015818",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Eclipse turns the Time of Day into nighttime for 10 seconds. This is independent from Eclipse's duration. Time of Day modifying abilities has the following priorities: Supernova ➤ Eclipse ➤ Dark Ascension. However, it does not interfere with the nighttime caused by Dark Ascension in any way \u2014 they do not cancel or pause each other's nighttime.",
+        "Time of Day modifying abilities has the following priorities: Supernova ➤ Eclipse ➤ Dark Ascension.",
+        "However, it does not interfere with the nighttime caused by Dark Ascension in any way \u2014 they do not cancel or pause each other's nighttime.",
+        "Eclipse's beams deal damage based on the current level of Lucent Beam. If it is not leveled, or if the caster does not have Lucent Beam, Eclipse deals no damage. Eclipse notes fully apply. The maximum possible damage to a single target (before reductions) on each level of Lucent Beam is: Level 1: 400 (TagTalent 900) (TagTalent 480\/960\/1440, 1080\/2160\/3240) Level 2: 800 (TagTalent 1300) (TagTalent 960\/1920\/2880, 1560\/3120\/4680) Level 3: 1200 (TagTalent 1700) (TagTalent 1440\/2880\/4320, 2040\/4080\/6120) Level 4: 1600 (TagTalent 2100) (TagTalent 1920\/3840\/5760, 2520\/5040\/7560)",
+        "If it is not leveled, or if the caster does not have Lucent Beam, Eclipse deals no damage. Eclipse notes fully apply.",
+        "The maximum possible damage to a single target (before reductions) on each level of Lucent Beam is: Level 1: 400 (TagTalent 900) (TagTalent 480\/960\/1440, 1080\/2160\/3240) Level 2: 800 (TagTalent 1300) (TagTalent 960\/1920\/2880, 1560\/3120\/4680) Level 3: 1200 (TagTalent 1700) (TagTalent 1440\/2880\/4320, 2040\/4080\/6120) Level 4: 1600 (TagTalent 2100) (TagTalent 1920\/3840\/5760, 2520\/5040\/7560)",
+        "Level 1: 400 (TagTalent 900) (TagTalent 480\/960\/1440, 1080\/2160\/3240)",
+        "Level 2: 800 (TagTalent 1300) (TagTalent 960\/1920\/2880, 1560\/3120\/4680)",
+        "Level 3: 1200 (TagTalent 1700) (TagTalent 1440\/2880\/4320, 2040\/4080\/6120)",
+        "Level 4: 1600 (TagTalent 2100) (TagTalent 1920\/3840\/5760, 2520\/5040\/7560)",
+        "Does not hit invisible units and units in the Fog of War.",
+        "Successive casts of Eclipse work independently of each other.",
+        "When Luna dies, Eclipse ends prematurely. However, the nighttime it created persists.",
+        "Luna's glaive emits particles during the cast time, visible to everyone.",
+        "SCEPTER NOTES Adds area-targeting functionality to Eclipse. It may be unit-targeted on an ally or ground-targeted. ↓↓ Double-tapping automatically targets self. When targeting an ally, it follows that ally like how a regular cast follows Luna. Can target any allied units, including Couriers, except for wards and buildings. Eclipse ends when the targeted ally dies, instead of Luna. When ground-targeted, it stays stationary at the targeted point. Provides 675 radius ground vision for its duration. Eclipse still ends prematurely when Luna dies.",
+        "↓↓ Double-tapping automatically targets self.",
+        "When targeting an ally, it follows that ally like how a regular cast follows Luna. Can target any allied units, including Couriers, except for wards and buildings. Eclipse ends when the targeted ally dies, instead of Luna.",
+        "Can target any allied units, including Couriers, except for wards and buildings.",
+        "Eclipse ends when the targeted ally dies, instead of Luna.",
+        "When ground-targeted, it stays stationary at the targeted point. Provides 675 radius ground vision for its duration. Eclipse still ends prematurely when Luna dies.",
+        "Provides 675 radius ground vision for its duration.",
+        "Eclipse still ends prematurely when Luna dies.",
+        "SHARD NOTES Each hero hit by Eclipse's beam also grants a stack of bonus attack damage. The buff durations are independent from each other, and the counter modifiers on Luna shows how much regular flat bonus attack damage is granted. It is possible to have up to 75 \u2012 90\/135\/180 (TagTalent or 90\/180\/270) min and max bonus attack damage respectively if all beams hit.",
+        "The buff durations are independent from each other, and the counter modifiers on Luna shows how much regular flat bonus attack damage is granted.",
+        "It is possible to have up to 75 \u2012 90\/135\/180 (TagTalent or 90\/180\/270) min and max bonus attack damage respectively if all beams hit.",
+        "TALENT NOTES The Eclipse mini-stun talent causes the beams to stun enemies for 0.25 seconds. This stun is not based on Lucent Beam's stun, and is applied regardless of the Lucent Beam's ability level. Lucent Beam first apply their damage, then the stun. Learning this talent immediately updates all currently active Eclipse instances.",
+        "This stun is not based on Lucent Beam's stun, and is applied regardless of the Lucent Beam's ability level.",
+        "Lucent Beam first apply their damage, then the stun.",
+        "Learning this talent immediately updates all currently active Eclipse instances.",
+        "SPELL STEAL Lucent Beams applied is based on Luna's current ability level when acquired."
+      ],
+      "mana": "140\/130\/120 (TagTalent 115\/105\/95)",
+      "item_behaviour": [],
+      "name": "Eclipse",
+      "cooldown": "150\/200\/250",
+      "description": "Showers random nearby enemies with strikes from Luna's current level of Lucent Beam. These beams do not stun their targets, and there is a maximum number of times that a single target can be struck. Also turns day into night for 10 seconds.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.5+0.37",
+        "Search Radius: 675",
+        "Number of Beams: 6\/9\/12 ( 6\/12\/18)",
+        "Max Beams per Unit: 5 ( 6\/12\/18)",
+        "Beam Interval: 0.6 ( 0.3)",
+        "Eclipse Duration: 2.4\/4.2\/6 ( 1.8\/3.6\/5.4)",
+        "Night Duration: 10",
+        "<span image=\"images\\Talent\"><\/span> Stun Duration per Beam: 0.25",
+        "Cast Range: 2500"
+      ],
+      "legacy_key": "E",
+      "story": "In times of great need, Selemene herself descends into the world, blocking out the light and hope of the opposed."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.2,
+    "attrStrength": 21.0,
+    "attrIntelligence": 23.0,
+    "attrIntelligenceInc": 1.9,
+    "attrAgilityInc": 3.4,
+    "attrAgility": 24.0
+  },
+  "description": "Tears into her enemies with bouncing attacks. Renouncing her savage past, Luna swore her service to Selemene, and embraced the title of Moon Rider. The goddess bestows a Lunar Blessing on her new champion, boosting her strength and heightening her nocturnal senses. Saddled on top of Nova, her beastly mount, Luna bounds across the Nightsilver Woods to smite trespassers with a searing Lucent Beam. Superior numbers are no advantage against the Moon Rider. Through divine will, the midday sun gives way to night, and every foe is struck by rays of lunar energy as Luna tears through their ranks with flying Moon Glaives. By Selemene's wrath or through her own hand, the Moon Rider levels the battlefield under the brief darkness of the Eclipse.  Carry Nuker Pusher ★☆☆",
+  "trivia": [
+    "In DotA, Luna was a Night Elf. Night elves are a prominent race in the Warcraft universe, so this change was likely made to avoid copyright issues with Blizzard.[1]",
+    "Luna's lore, quotes, accent, and reverence for Selemene derive largely from the Celts. Celtic lore heavily features warrior queens, who were often associated mystically with the moon.",
+    "The name Luna means moon in Latin, Spanish, Italian, Russian, Romanian and Bulgarian.",
+    "Her mount's name is Nova."
+  ],
+  "history": "How had she been reduced to this? She was once the Scourge of the Plains, a merciless leader of men and beasts, and able to sow terror wherever she dared. Now she was far from her homeland, driven half mad from starvation and months of wandering, her army long dead or worse. As she stood at the edge of an ancient forest, a pair of glowing eyes spied on from an elder branch. Something beautiful and deadly sought a meal in the wilting dusk. Without a sound, it turned and left. Fury overtook her. Clutching a rust-eaten dagger, she charged after the beast determined to reclaim even a shred of her past glory, but her quarry would not be caught. Three times she cornered the creature among the rocks and trees, and three times she pounced only to witness its fading shadow darting further into the woods. Yet the full moon shone brightly, and the creature's trail was easy to follow. Arriving in a clearing atop a high hill, the beast's massive feline form sat in the open, attentive and waiting. When the woman brandished her dagger, the creature reared and roared and charged. Death, it seemed, had come for her at long last in this strange place. She stood, calm and ready. A flash of movement, and the beast snatched the dagger from her hand before vanishing into the forest. Stillness. Hooded figures approached. In reverent tones they revealed that Selemene, Goddess of the Moon, had chosen her, had guided her, had tested her. Unwittingly she had endured the sacred rites of the Dark Moon, warriors of the Nightsilver Woods. She was offered a choice: join the Dark Moon and pledge herself to the service of Selemene, or leave and never return. She did not hesitate. Embracing her absolution, she renounced her bloody past, and took up a new mantle as Luna of the Dark Moon, the dreaded Moon Rider, ruthless and ever-loyal guardian of the Nightsilver Woods.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+35 Lunar Blessing Damage",
+        "talent_left": "+0.25s Eclipse Lucent Ministun"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+2 Moon Glaives fired on Lucent Beam",
+        "talent_left": "+100 Lucent Beam Damage"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-2s Lucent Beam Cooldown",
+        "talent_left": "-25s Eclipse Cooldown"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "-8% Moon Glaives Damage Reduction",
+        "talent_left": "+0.4s Lucent Beam Ministun"
+      }
+    ]
+  }
+}

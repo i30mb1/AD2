@@ -1,0 +1,204 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Shadow_Shaman_Ether_Shock.mp3\/revision\/latest?cb=20191216023116",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "With the starting radius, max distance, and end radius, Ether Shock can hit units up to 1000 range away.",
+        "The complete area is shaped like a cone in front of Shadow Shaman. The area starts in front of Shadow Shaman, and not at the primary target's position. Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone.",
+        "The area starts in front of Shadow Shaman, and not at the primary target's position.",
+        "Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone.",
+        "All strikes together can deal up to 140\/600\/1300\/2240 (TagTalent 520\/1740\/3200\/4900) damage (before reductions).",
+        "The purpose of the modifier is unknown."
+      ],
+      "mana": "14\/12\/10\/8",
+      "item_behaviour": [],
+      "name": "Ether Shock",
+      "cooldown": "100\/115\/130\/145",
+      "description": "Creates a cone of ethereal energy that strikes multiple enemy units.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+1.23",
+        "Cast Range:  600",
+        "Starting Radius: 200",
+        "Max Distance: 500",
+        "End Radius: 300",
+        "Number of Targets: 1\/3\/5\/7",
+        "Damage: 140\/200\/260\/320 ( 520\/580\/640\/700)"
+      ],
+      "legacy_key": "R",
+      "story": "Originally used to open shows with the travelling con-man, Rhasta's lightning display shocks adversaries in more ways than one."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Shadow_Shaman_Hex_1.mp3\/revision\/latest?cb=20191216023108",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Instant Kill"
+      ],
+      "notes": [
+        "Applies a hex on the target, setting its base movement speed to 100, silencing, muting, disarming and applying Break to it. However, the target's movement speed can still be affected by movement speed bonuses from items and abilities. Since Hex sets the base movement speed of the target unit and does not actually apply a slow, all speed effects are calculated using the 100 base speed.",
+        "However, the target's movement speed can still be affected by movement speed bonuses from items and abilities.",
+        "Since Hex sets the base movement speed of the target unit and does not actually apply a slow, all speed effects are calculated using the 100 base speed.",
+        "Hex instantly destroys illusions. Treat strong illusions as heroes.",
+        "Treat strong illusions as heroes.",
+        "Shadow Shaman's Hex transforms the target into a chicken. The Lamb to the Slaughter and Golden Lamb to the Slaughter change the model into a lamb.",
+        "The Lamb to the Slaughter and Golden Lamb to the Slaughter change the model into a lamb."
+      ],
+      "mana": "13 (TagTalent 10)",
+      "item_behaviour": [],
+      "name": "Hex",
+      "cooldown": "70\/110\/150\/190",
+      "description": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0+1.13",
+        "Cast Range:  500",
+        "Set Move Speed: 100",
+        "Duration: 1.25\/2\/2.75\/3.5"
+      ],
+      "legacy_key": "D",
+      "story": "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Shadow_Shaman_Shackles.mp3\/revision\/latest?cb=20191216023113",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Stuns the target as long as the channeling time. If the target turns invulnerable or hidden, the channeling stops instantly.",
+        "If the target turns invulnerable or hidden, the channeling stops instantly.",
+        "Provides True Sight over the target as long as the channeling time. It also provides 200 radius caster vision of the Shackled target for 2.75\/3.5\/4.25\/5 seconds, even after it is canceled.",
+        "It also provides 200 radius caster vision of the Shackled target for 2.75\/3.5\/4.25\/5 seconds, even after it is canceled.",
+        "Deals damage in 0.1-second intervals, starting immediately as the channel begins, resulting in 28\/35\/43\/50 (TagTalent 38\/45\/53\/60) damage instances. The damage per interval is based on the total damage divided by the maximum channel time, and then divided by 10. The duration increasing bonus from the talent is ignored. This results in 2.182\/3.714\/4.706\/5.4 (TagTalent 7.818\/8.143\/8.353\/8.5) damage per interval, or 21.82\/37.14\/47.06\/54 (TagTalent 78.18\/81.43\/83.53\/85) damage per second. Therefore, the final damage dealt (before reductions) is 61.09\/130\/202.35\/270 (TagTalent 218.91\/285\/359.18\/425). TALENT NOTES The damage increasing talent immediately updates the currently running instance. With the duration increasing talent, it deals a total of 82.91\/167.14\/249.41\/324 damage. With both talents, it deals a total of 297.09\/366.43\/442.71\/510 damage.",
+        "The damage per interval is based on the total damage divided by the maximum channel time, and then divided by 10. The duration increasing bonus from the talent is ignored.",
+        "This results in 2.182\/3.714\/4.706\/5.4 (TagTalent 7.818\/8.143\/8.353\/8.5) damage per interval, or 21.82\/37.14\/47.06\/54 (TagTalent 78.18\/81.43\/83.53\/85) damage per second.",
+        "Therefore, the final damage dealt (before reductions) is 61.09\/130\/202.35\/270 (TagTalent 218.91\/285\/359.18\/425).",
+        "TALENT NOTES The damage increasing talent immediately updates the currently running instance. With the duration increasing talent, it deals a total of 82.91\/167.14\/249.41\/324 damage. With both talents, it deals a total of 297.09\/366.43\/442.71\/510 damage.",
+        "The damage increasing talent immediately updates the currently running instance.",
+        "With the duration increasing talent, it deals a total of 82.91\/167.14\/249.41\/324 damage.",
+        "With both talents, it deals a total of 297.09\/366.43\/442.71\/510 damage.",
+        "The heal is calculated in the same way as the damage and is applied after each damage instance. Always heals for the full amount per interval, regardless of how much damage the target actually takes.",
+        "Always heals for the full amount per interval, regardless of how much damage the target actually takes.",
+        "SHARD NOTES Shackles now places a total of 4 Serpent Wards based on its current level, 100 range towards the target's north, east, south, and west. The wards summoned has a fixed -second duration, and it is not based on the total channel time. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast. The wards are ordered to attack the target upon creation, but they can be controlled by the player following Mass Serpent Wards' notes. If Mass Serpent Ward is not learned, no wards are summoned. All of Serpent Wards' talents and Aghanim's Scepter upgrade notes are fully applied as well.",
+        "The wards summoned has a fixed -second duration, and it is not based on the total channel time.",
+        "The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
+        "The wards are ordered to attack the target upon creation, but they can be controlled by the player following Mass Serpent Wards' notes.",
+        "If Mass Serpent Ward is not learned, no wards are summoned.",
+        "All of Serpent Wards' talents and Aghanim's Scepter upgrade notes are fully applied as well.",
+        "SPELL STEAL \/ MORPH NOTES Serpent Wards summoned are based on Shadow Shaman's current ability level when acquired."
+      ],
+      "mana": "16\/14\/12\/10",
+      "item_behaviour": [],
+      "name": "Shackles",
+      "cooldown": "140\/150\/160\/170",
+      "description": "Magically binds an enemy unit so that it cannot move or attack, absorbing their life energy over time.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  450 ( 525)",
+        "Max Channel Time: 2.75\/3.5\/4.25\/5 ( 3.75\/4.5\/5.25\/6)",
+        "Total Damage\/Heal: 60\/130\/200\/270 ( 215\/285\/355\/425)",
+        "Number of Serpent Wards: 4",
+        "Wards Duration: 7"
+      ],
+      "legacy_key": "E",
+      "story": "A self-defense incantation, Rhasta developed shackles after his master was slain in the Bleeding Hills."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Shadow_Shaman_Mass_Serpent_Ward.mp3\/revision\/latest?cb=20191216023109",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Physical"
+      ],
+      "notes": [
+        "Places a Serpent Ward on every 36°th of a 150 radius circle, resulting in 10 wards forming a ring. The wards form a perfect barrier, enemies inside cannot move out unless they have phased movement. Destroying one ward is enough to allow units to walk in and out of the ring. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
+        "The wards form a perfect barrier, enemies inside cannot move out unless they have phased movement.",
+        "Destroying one ward is enough to allow units to walk in and out of the ring.",
+        "The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
+        "Serpent Wards automatically attack enemies within their attack range, using ◉ Standard auto-attack rules. It is possible to manually give the wards an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
+        "It is possible to manually give the wards an attack target with A or Right Click an enemy in range.",
+        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target.",
+        "It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
+        "Serpent Wards have a lower target priority than other units and heroes, so they are attacked by towers and creeps last. Roshan always prioritizes wards if there are no other units within his attack range. He also destroys Serpent Wards with 1 attack.",
+        "Roshan always prioritizes wards if there are no other units within his attack range. He also destroys Serpent Wards with 1 attack.",
+        "The wards' attack damage is not reduced by damage block.",
+        "SCEPTER NOTES The wards now perform instant attacks on 1 enemy target within their attack range whenever they launch an attack projectile. An extra projectile is released at the same time together with the primary attack. Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released. The extra projectile travels at the same speed as the primary projectile and can be disjointed like regular attacks. These instant attacks neither proc any attack modifiers nor on-hit effects normally. They do not have True Strike and are affected by evasion. The extra attack does not target wards, invisible units, untargetable units, or units inside the Fog of War, but they do target buildings. The extra attack has no target priorities. It simply chooses a random valid target within its attack range. Acquiring Aghanim's Scepter instantly upgrades all current existing Serpent Wards.",
+        "An extra projectile is released at the same time together with the primary attack.",
+        "Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released.",
+        "The extra projectile travels at the same speed as the primary projectile and can be disjointed like regular attacks.",
+        "These instant attacks neither proc any attack modifiers nor on-hit effects normally.",
+        "They do not have True Strike and are affected by evasion.",
+        "The extra attack does not target wards, invisible units, untargetable units, or units inside the Fog of War, but they do target buildings.",
+        "The extra attack has no target priorities. It simply chooses a random valid target within its attack range.",
+        "Acquiring Aghanim's Scepter instantly upgrades all current existing Serpent Wards."
+      ],
+      "mana": "130\/120\/110",
+      "item_behaviour": [],
+      "name": "Mass Serpent Ward",
+      "cooldown": "200\/350\/550",
+      "description": "Summons 10 Serpent Wards to attack enemy units and structures. The Wards are immune to magic.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0.97",
+        "Cast Range:  550",
+        "Spawn Radius: 150",
+        "Number of Serpent Wards: 10",
+        "Hero\/Tower Attacks to Destroy: 2 ( 3)",
+        "Non-Hero Attacks to Destroy: 4 ( 6)",
+        "Wards Duration: 45",
+        "Split Shot Search Radius: 875 ( 995)",
+        "Bonus Attack Targets: 1"
+      ],
+      "legacy_key": "W",
+      "story": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the Snakes to do his bidding."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.3,
+    "attrStrength": 23.0,
+    "attrIntelligence": 25.0,
+    "attrIntelligenceInc": 3.5,
+    "attrAgilityInc": 1.6,
+    "attrAgility": 16.0
+  },
+  "description": "Summons powerful serpent wards to deal damage. Shadow Shaman quickly clears the way for his team's forces to march on the enemy base. Blasting enemies with Ether Shocks, interrupting attackers with Hexes, transforming his foe into a chicken, while locking down another with magical Shackles \u2014 but not before conjuring up powerful Mass Serpent Wards. Spitting fire in every direction, the Shadow Shaman's charmed snakes make short work of his disabled enemies.  Support Pusher Disabler Nuker Initiator ★☆☆",
+  "trivia": [
+    "The name Rhasta is based on the Rastafarians, a follower of a religious movement in Jamaica known as Rastafari. In DotA, his hero model and dialogue had a strong Jamaican influence and style. But in Dota 2, his theme and style have undertaken a more Native American influence, mostly evident in his attire and accent.",
+    "Rhasta is also a Persian name and word that means \"truth\" or \"path\".",
+    "Rhasta's Immortal Head item, Lash of the Lizard Kin, may be a reference to Pollywog Priest, who is Heroes of Newerth's direct port of Shadow Shaman. The Pollywog Priest is a frog-themed hero who, just like Shadow Shaman with the immortal, uses its tongue for its equivalent ability of Shackles (named Tongue Tied), instead of a magical net.",
+    "Some of Rhasta's voice lines may suggest he is well versed in the art of augury, an ancient form of divining the future. In some cultures, it is believed that reading the entrails of ritual sacrifice victims could predict the future."
+  ],
+  "history": "Born in the Bleeding Hills, Rhasta was just a starving youngling when picked up by a travelling con-man. For two pins of copper, the old con-man would tell your fortune. For three, he'd castrate your pig, for five, he'd circumcise your sons. For a good meal, he'd don his shaman garb, read from his ancient books, and lay a curse upon your enemies. His strange new youngling, part hill troll, part\u2026something else, worked as assistant and lent an air of the exotic to the con-man's trade. Always one step ahead of cheated customers, one town ahead of a pursuing patronage, the two trekked across the blighted lands until one day the con-man realized that the little youngling could actually do what he only pretended at. His ward had a gift\u2014a gift that customers valued. And so the youngling Rhasta was thrust before the crowds, and the trade-name Shadow Shaman was born. The two continued from town to town, conjuring for money as Shadow Shaman's reputation grew. Eventually, the pair's duplicitous past caught up with them, and they were ambushed by a mob of swindled ex-clients. The con-man was slain, and for the first time, Rhasta used his powers for darkness, massacring the attackers. He buried his beloved master, and now uses his powers to destroy any who would seek to do him harm.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+380 Ether Shock Damage",
+        "talent_left": "+25 Wards Attack Damage"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "Hex Breaks",
+        "talent_left": "+1 Serpent Wards Max HP"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+120 Serpent Wards Attack Range",
+        "talent_left": "+1s Shackles Duration"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+155 Shackles Total Damage",
+        "talent_left": "-3s Hex Cooldown"
+      }
+    ]
+  }
+}

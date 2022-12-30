@@ -1,0 +1,269 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Doom_Devour.mp3\/revision\/latest?cb=20191216012532",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemy Units \/ Self",
+        "Damage: Instant Kill"
+      ],
+      "notes": [
+        "Upon leveling Devour for the first time, it has Autocast on by default. Autocast enables acquiring abilities of neutral creeps. It does not cast the ability automatically. The acquired abilities appear in the dedicated Fourth and Fifth ability slot.",
+        "Autocast enables acquiring abilities of neutral creeps. It does not cast the ability automatically.",
+        "The acquired abilities appear in the dedicated Fourth and Fifth ability slot.",
+        "Cannot devour Roshan, Couriers, wards, creep-heroes, and ancient creeps. TALENT NOTES Devour's ancient creeps targeting restriction is removed upon learning the talent.",
+        "TALENT NOTES Devour's ancient creeps targeting restriction is removed upon learning the talent.",
+        "The following creeps cannot be devoured due to the level restriction: Level 4: Can devour all creeps Level 3: Can devour all creeps Level 2, cannot devour: Ancient Black Dragon, Ancient Granite Golem, Ancient Ice Shaman, Ancient Thunderhide, Dark Troll Summoner, Satyr Tormenter, Level 1, additionally: Alpha Wolf, Ancient Frostbitten Golem, Ancient Rock Golem, Ancient Rumblehide, Centaur Conqueror, Hellbear Smasher, Necronomicon Archer, Necronomicon Warrior, Warpine Raider, Wildwing Ripper,",
+        "Level 4: Can devour all creeps",
+        "Level 3: Can devour all creeps",
+        "Level 2, cannot devour: Ancient Black Dragon, Ancient Granite Golem, Ancient Ice Shaman, Ancient Thunderhide, Dark Troll Summoner, Satyr Tormenter,",
+        "Level 1, additionally: Alpha Wolf, Ancient Frostbitten Golem, Ancient Rock Golem, Ancient Rumblehide, Centaur Conqueror, Hellbear Smasher, Necronomicon Archer, Necronomicon Warrior, Warpine Raider, Wildwing Ripper,",
+        "The targeted creep is instantly killed upon cast, granting its bounty and experience like a regular last hit. Then it applies the Devour buff on self, granting its armor and magic resistance bonus, then grants unreliable gold when the buff expires. TALENT NOTES Increases Doom's total magic resistance to 36.25% while the buff is active. Stacks multiplicatively with other sources of magic resistance.",
+        "Then it applies the Devour buff on self, granting its armor and magic resistance bonus, then grants unreliable gold when the buff expires.",
+        "TALENT NOTES Increases Doom's total magic resistance to 36.25% while the buff is active.",
+        "Stacks multiplicatively with other sources of magic resistance.",
+        "Despite the ability description stating that the duration is equal to the ability's cooldown, cooldown reduction sources affect the ability's cooldown but not the duration.",
+        "Successive casts fully stack with each instance having its own independent buff duration."
+      ],
+      "mana": "60",
+      "item_behaviour": [],
+      "name": "Devour",
+      "cooldown": "40\/50\/60\/70",
+      "description": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed and gaining armor temporarily while it digests the creep. If autocast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range:  300",
+        "Max Creep Level: 4\/5\/6\/6",
+        "Gold Bonus: 50\/100\/150\/200",
+        "Armor Bonus: 1\/3\/5\/7",
+        "Digest Duration: 60",
+        "<span image=\"images\\Talent\"><\/span> Magic Resistance Bonus: 15%"
+      ],
+      "legacy_key": "E",
+      "story": "Lucifer's appetite and greed are never sated."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Doom_Scorched_Earth.mp3\/revision\/latest?cb=20191216012530",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Scorched Earth's radius is centered on Doom for its duration. If Doom is hidden, Scorched Earth stops applying its damage and its visual effect disappears, until Doom is no longer hidden.",
+        "If Doom is hidden, Scorched Earth stops applying its damage and its visual effect disappears, until Doom is no longer hidden.",
+        "The movement speed bonus is provided by an aura and lingers for 0.5 seconds. However, the damage applied is independent from the aura.",
+        "However, the damage applied is independent from the aura.",
+        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 10\/12\/14\/16 possible instances. Can deal up to 200\/420\/700\/1040 (TagTalent 400\/660\/980\/1360) damage to a single enemy when within range for the entire duration (before reductions).",
+        "Can deal up to 200\/420\/700\/1040 (TagTalent 400\/660\/980\/1360) damage to a single enemy when within range for the entire duration (before reductions).",
+        "Leveling up the ability does not update the current instance. TALENT NOTES However, the damage increasing talent immediately updates the damage per second of the current instance.",
+        "TALENT NOTES However, the damage increasing talent immediately updates the damage per second of the current instance.",
+        "Both leveling up and the movement speed increasing talent does not update the movement speed bonus of the current instance.",
+        "Successive casts do not stack but refresh the ability values and duration."
+      ],
+      "mana": "35 (TagTalent 23)",
+      "item_behaviour": [],
+      "name": "Scorched Earth",
+      "cooldown": "60\/70\/80\/90",
+      "description": "Carpets the nearby earth in flames which damage enemies, while also granting him increased movement speed.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0+0.5",
+        "Radius: 600",
+        "Damage per Second: 20\/35\/50\/65 ( 40\/55\/70\/85)",
+        "Move Speed Bonus: 9%\/11%\/13%\/15% ( 19%\/21%\/23%\/25%)",
+        "Aura Linger Duration: 0.5",
+        "Duration: 10\/12\/14\/16"
+      ],
+      "legacy_key": "T",
+      "story": "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Doom_Infernal_Blade.mp3\/revision\/latest?cb=20191216012527",
+      "effects": [
+        "Ability: Active Attack Modifier",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "notes": [
+        "Infernal Blade's cast range can only be further increased by attack range bonuses of the same range type as the caster. However, it is not affected by cast range bonuses. Both Autocast and manually casting it uses Doom's current attack range.",
+        "Both Autocast and manually casting it uses Doom's current attack range.",
+        "Only works with regular attacks. Instant attacks cannot trigger Infernal Blade.",
+        "Cannot be cast on Roshan.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances.",
+        "Can deal up to 80\/120\/160\/200 + 4%\/8%\/12%\/16% (TagTalent 12.4%\/16.4%\/20.4%\/24.4%) of the target's max health as damage (before reductions).",
+        "Successive casts on the same target fully stack and its debuff works independently. Both leveling up the ability and the max health as damage increasing talent does not update the damage of the current instances.",
+        "Both leveling up the ability and the max health as damage increasing talent does not update the damage of the current instances.",
+        "Infernal Blade first applies the level damage bonus, the bash, the burn debuff, then the attack damage. Infernal Blade's bash fully stacks with other bash sources.",
+        "Infernal Blade's bash fully stacks with other bash sources.",
+        "SHARD NOTES If the target's level is 3\/6\/9\/12\/15\/18\/21\/24\/25\/26\/27\/28\/29\/30, 150 bonus damage is applied and the stun duration is increased to 1.8. Works against creeps with the right level as well. The following units are always hit by the bonus damage and bash duration: Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Ice Shaman, Ancient Thunderhide, Dark Troll Summoner, Flagbearer Creep, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,",
+        "Works against creeps with the right level as well. The following units are always hit by the bonus damage and bash duration: Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Ice Shaman, Ancient Thunderhide, Dark Troll Summoner, Flagbearer Creep, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,",
+        "Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Ice Shaman, Ancient Thunderhide, Dark Troll Summoner, Flagbearer Creep, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,"
+      ],
+      "mana": "16\/12\/8\/4",
+      "item_behaviour": [],
+      "name": "Infernal Blade",
+      "cooldown": "40",
+      "description": "Doom swings his burning sword, igniting the enemy. Stuns for 0.6 seconds and applies a second burn that deals a base damage plus a percentage of the target's Max HP as damage per second.",
+      "hot_key": "E",
+      "params": [
+        "Cast Range:  200",
+        "Base Damage per second: 20\/30\/40\/50",
+        "Max Health as Damage per Second: 1%\/2%\/3%\/4% ( 3.1%\/4.1%\/5.1%\/6.1%)",
+        "Damage Duration: 4",
+        "Bash Duration: 0.6 ( 1.2)",
+        "Level Multiplier: 3",
+        "Level Multiplier Damage Bonus: 150",
+        "Level Multiplier Bash Duration: 1.8"
+      ],
+      "legacy_key": "V",
+      "story": "Lucifer shares the fire branding bestowed upon him at the time of his exile."
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive"
+      ],
+      "notes": [
+        "Only acquires the first and second ability of the neutral creep. If it has a third ability, it is not acquired. This means when cast on an Ancient Black Dragon, it acquires Fireball and Splash Attack, but not Dragonhide Aura. Devouring a creep with no abilities does not remove the already acquired abilities.",
+        "This means when cast on an Ancient Black Dragon, it acquires Fireball and Splash Attack, but not Dragonhide Aura.",
+        "Devouring a creep with no abilities does not remove the already acquired abilities.",
+        "Does not acquire any of the attack class abilities, or the Inspiration Aura. Can only gain abilities from neutral creeps. Other units' abilities cannot be gained. Abilities are gained instantly upon devouring the creep. The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see here). Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is Devoured with Autocast on.",
+        "Can only gain abilities from neutral creeps. Other units' abilities cannot be gained. Abilities are gained instantly upon devouring the creep.",
+        "The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see here).",
+        "Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is Devoured with Autocast on.",
+        "The abilities use the original cast point of the neutral creeps they come from. However, the cast backswing differs depending on the ability acquired (see chart).",
+        "Uses the player-controlled radius for acquired aura abilities.",
+        "EXPR Cast point: Original Cast Point of Acquired Ability Cast backswing: 1.1 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.1",
+        "Cast point: Original Cast Point of Acquired Ability",
+        "Cast backswing: 1.1 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.1"
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Devoured Ability 1",
+      "cooldown": null,
+      "description": "This slot will be replaced by abilities acquired with Devour.",
+      "hot_key": "D",
+      "params": [
+        "Cast Backswing Difference: 1.1",
+        "Acquired Ability Duration: Permanent"
+      ],
+      "legacy_key": "?",
+      "story": null
+    },
+    {
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive"
+      ],
+      "notes": [
+        "The following abilities will take up this slot when acquired via Devour: Splash Attack, Slam, Packleader's Aura, Raise Dead, Death Throe: Power, Death Throe: Rush, Heal Amplification Aura, Shard Split, Mana Aura, Unholy Aura, Toughness Aura",
+        "Splash Attack, Slam, Packleader's Aura, Raise Dead, Death Throe: Power, Death Throe: Rush, Heal Amplification Aura, Shard Split, Mana Aura, Unholy Aura, Toughness Aura",
+        "Other notes of Devoured Ability 1 fully apply.",
+        "EXPR Cast point: Original Cast Point of Acquired Ability Cast backswing: 1.1 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.1",
+        "Cast point: Original Cast Point of Acquired Ability",
+        "Cast backswing: 1.1 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.1"
+      ],
+      "mana": null,
+      "item_behaviour": [],
+      "name": "Devoured Ability 2",
+      "cooldown": null,
+      "description": "This slot will be replaced by abilities acquired with Devour.",
+      "hot_key": "F",
+      "params": [
+        "Cast Backswing Difference: 1.1",
+        "Acquired Ability Duration: Permanent"
+      ],
+      "legacy_key": "?",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Doom_Doom.mp3\/revision\/latest?cb=20191216012527",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "notes": [
+        "A unit with less than 25% of its max health can be denied when it has the Doom debuff on.",
+        "Applies a basic dispel on the affected target upon cast. Cannot be cast on ancient creeps.",
+        "Cannot be cast on ancient creeps.",
+        "Silences, Mutes and also Breaks the target, preventing it from casting abilities and using item abilities. Doom does not affect the following mechanics: The current state of toggled On abilities. They remain On if Doom is cast on them while toggled on. Item related player actions (e.g. selling, disassembling etc.). Activating runes. Leveling up abilities or learning talents.",
+        "Doom does not affect the following mechanics: The current state of toggled On abilities. They remain On if Doom is cast on them while toggled on. Item related player actions (e.g. selling, disassembling etc.). Activating runes. Leveling up abilities or learning talents.",
+        "The current state of toggled On abilities. They remain On if Doom is cast on them while toggled on.",
+        "Item related player actions (e.g. selling, disassembling etc.).",
+        "Activating runes.",
+        "Leveling up abilities or learning talents.",
+        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 16 instances. Can deal up to 480\/720\/960 damage (before reductions).",
+        "Can deal up to 480\/720\/960 damage (before reductions).",
+        "Leveling up the ability does not update the damage of already debuffs.",
+        "Successive casts on the same unit do not stack but refresh the ability values.",
+        "SCEPTER NOTES Doom now turns into an aura with 325 radius and it does not linger. Enemies within radius of the affected target are also Doomed following the same intervals. ↓↓ Double-tapping automatically target self. Self-casting ability does not disable Doom in any way and he can use his other abilities and items. Doom first applies the damage, then the aura. While active, both acquiring and losing Aghanim's Scepter does not update the current instance.",
+        "↓↓ Double-tapping automatically target self.",
+        "Self-casting ability does not disable Doom in any way and he can use his other abilities and items.",
+        "Doom first applies the damage, then the aura.",
+        "While active, both acquiring and losing Aghanim's Scepter does not update the current instance.",
+        "SOULBIND Can indirectly affect ancient creeps if they are the secondary target, while Doom is cast on the primary target."
+      ],
+      "mana": "145 (TagTalent 110)",
+      "item_behaviour": [],
+      "name": "Doom",
+      "cooldown": "150\/225\/300",
+      "description": "Inflicts a curse that dispels an enemy Hero and prevents them from casting spells or using items, while taking damage over time.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.5+0.4",
+        "Cast Range:  500",
+        "Damage per Second: 30\/45\/60",
+        "Duration: 16",
+        "Radius: 325",
+        "Aura Linger Duration: 0"
+      ],
+      "legacy_key": "D",
+      "story": "When a name is tolled from the bell of Vashundol, doom is sure to follow."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.7,
+    "attrStrength": 24.0,
+    "attrIntelligence": 15.0,
+    "attrIntelligenceInc": 1.7,
+    "attrAgilityInc": 1.5,
+    "attrAgility": 15.0
+  },
+  "description": "Can prevent a single enemy from using abilities and items. Wings branded and visage twisted, the Fallen One bears little resemblance to his former self. Banished from the realm of light, Lucifer now walks the earth, bringing misery to all who stand against him. The towering demon Devours creeps in a single bite, digesting them whole and assimilating their abilities. The fires of Hell smolder at Lucifer's feet, leaving in his wake fields of Scorched Earth. When the bell of Vashundol tolls, an enemy's downfall is sure to follow. Raising his Infernal Blade, Lucifer places upon his adversary an enduring curse, burning away at its health and rendering it utterly powerless as it staggers towards its inevitable Doom.  Carry Disabler Initiator Durable Nuker ★★☆",
+  "trivia": [
+    "In DotA, Doom used to be known as Doombringer, which was first kept as Doom Bringer in the transition to Dota 2. Later with the January 10, 2013 update, his name was changed to avoid copyright conflicts with Blizzard.",
+    "Several of Doom's abilities are inspired by Final Fantasy's Blue Mages. LVL? Death was based on the Level 5 Death ability and the mechanics of a LVL? S-flare. Devour is highly similar to Quina Quen's eat and cook ability from Final Fantasy IX. His ultimate, Doom, also shares the same name of another Blue Mage ability, but the mechanics differ.",
+    "His name, Lucifer, is taken from the Bible's Book of Isaiah and translates to \"Lightbringer\", from Latin lux[1] and fero[2]. It is often used to refer to the Biblical Devil (or Satan), thus fitting Doom's evil and demonic image.",
+    "Doom's ultimate icon depicts a pentacle which, despite its popular connotation as Satanic\/\"evil\" mark, is actually a Pagan symbol of protection. For its common \"evil\" symbolism to apply, the pentagram has to be inverted; this only occasionally occurs in-game, as the \"star\" inside the circle of the ability's particle effect slowly rotates.",
+    "Doom's response upon taking an Invisibility Rune, Link▶️ \"Heheheh, see no evil.\", refers to the Three wise monkeys and their associated phrase: \"See no evil, hear no evil, speak no evil.\" Riki also has this line.",
+    "His ultimate and signature ability, Doom, is derived from the Pit Lord's, a playable hero in Warcraft III: Frozen Throne. The original ability varied in that it was only castable on non-hero units, is non-removable, and would spawn a Doomguard on its death. The Doomguard's model was Lucifer's hero model in DotA."
+  ],
+  "history": "He that burns and is not consumed, devours and is never sated, kills and is beyond all judgment--Lucifer brings doom to all who would stand against him. Bearing away souls on the tip of a fiery sword, he is the Fallen One, a once-favored general from the realm behind the light, cast out for the sin of defiance: he would not kneel. Six times his name was tolled from the great bell of Vashundol. Six and sixty times his wings were branded, until only smoking stumps remained. Without wings, he slipped loose from the tethers that bound him within the light and he fell screaming to earth. A crater in the desert, Paradise lost. Now he attacks without mercy, without motive, the only living being able to move freely between the seven dark dominions. Lashed by inescapable needs, twisted by unimaginable talents, Doom carries his own hell with him wherever he goes. Defiant to the last. Eventually, the world will belong to Doom.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+2.1% Infernal Blade Damage",
+        "talent_left": "Doom Applies Break"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "-12s Scorched Earth Cooldown",
+        "talent_left": "-35s Doom Cooldown"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+10% Scorched Earth Movement Speed",
+        "talent_left": "Devour Can Target Ancients"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "Devour grants 15% Magic Resistance",
+        "talent_left": "+20 Scorched Earth Damage"
+      }
+    ]
+  }
+}
