@@ -18,11 +18,10 @@ import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -39,13 +38,12 @@ internal fun ManaPointScreen(
     state: SkillGameViewModel.State,
     onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
 ) {
-    var color by remember { mutableStateOf(Color.Transparent) }
-    color = Color(state.backgroundColor).copy(alpha = 0.2f)
+    val color by rememberUpdatedState(newValue = Color(state.backgroundColor).copy(alpha = 0.2f))
     val animateColor = animateColorAsState(targetValue = color, animationSpec = tween(2_000))
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = animateColor.value)
+            .drawBehind { drawRect(animateColor.value) }
             .systemBarsPadding()
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
