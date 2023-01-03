@@ -1,117 +1,94 @@
 {
   "abilities": [
     {
+      "notes": [
+        "Interrupts Lifestealer's channeling abilities upon cast",
+        "Upon cast, Rage first applies the spell immunity, then the basic dispel",
+        "During Rage, Lifestealer cannot be affected by  Ghost Form. The buff gets removed immediately"
+      ],
+      "item_behaviour": [],
+      "description": "Launch into a maddened rage, becoming Spell Immune, and gaining increased movement speed.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0+0",
+        "Move Speed Bonus: 15%\/16%\/17%\/18% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 27%\/28%\/29%\/30%)",
+        "Duration: 3\/4\/5\/6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 4.5\/5.5\/6.5\/7.5)"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Lifestealer_Rage.mp3\/revision\/latest?cb=20191216015435",
       "effects": [
         "Ability: No Target",
         "Affects: Self"
       ],
-      "notes": [
-        "Interrupts Lifestealer's channeling abilities upon cast.",
-        "Upon cast, Rage first applies the spell immunity, then the basic dispel.",
-        "During Rage, Lifestealer cannot be affected by Ghost Form. The buff gets removed immediately."
-      ],
       "mana": "21\/20\/19\/18",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Rage",
       "cooldown": "75\/100\/125\/150",
-      "description": "Launch into a maddened rage, becoming Spell Immune, and gaining increased movement speed.",
-      "hot_key": "Q",
-      "params": [
-        "Cast Animation: 0+0",
-        "Move Speed Bonus: 15%\/16%\/17%\/18% ( 27%\/28%\/29%\/30%)",
-        "Duration: 3\/4\/5\/6 ( 4.5\/5.5\/6.5\/7.5)"
-      ],
       "legacy_key": "R",
       "story": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat."
     },
     {
+      "notes": [
+        "Stacks additively with other sources of lifesteal",
+        "Cannot lifesteal off of wards, buildings and allied units",
+        "Does not work against  Roshan",
+        "The max health as bonus damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Lifestealer's attack damage. The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions"
+      ],
+      "item_behaviour": [],
+      "description": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health.",
+      "hot_key": "W",
+      "params": [
+        "Enemy Max Health as Lifesteal: 1.6%\/2.2%\/2.8%\/3.4% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.8%\/3.4%\/4%\/4.6%)",
+        "Enemy Max Health as Damage: 0.8%\/1.1%\/1.4%\/1.7%"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies \/ Self",
         "Damage: Physical"
       ],
-      "notes": [
-        "Stacks additively with other sources of lifesteal.",
-        "Cannot lifesteal off of wards, buildings and allied units.",
-        "Does not work against Roshan.",
-        "The max health as bonus damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Lifestealer's attack damage. The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Lifestealer's attack damage.",
-        "The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block).",
-        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Feast",
       "cooldown": null,
-      "description": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health.",
-      "hot_key": "W",
-      "params": [
-        "Enemy Max Health as Lifesteal: 1.6%\/2.2%\/2.8%\/3.4% ( 2.8%\/3.4%\/4%\/4.6%)",
-        "Enemy Max Health as Damage: 0.8%\/1.1%\/1.4%\/1.7%"
-      ],
       "legacy_key": "F",
       "story": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path."
     },
     {
+      "notes": [
+        "Debuff of successive attacks does not stack but refresh the duration"
+      ],
+      "item_behaviour": [],
+      "description": "Passively causes Lifestealer's attacks to significantly slow enemy movement speed for 1.5 seconds. Grants you Attack Speed.",
+      "hot_key": "E",
+      "params": [
+        "Attack Speed Bonus: 25\/40\/55\/70",
+        "Move Speed Slow: 10%\/15%\/20%\/25% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 25%\/30%\/35%\/40%)",
+        "Slow Duration: 1.5"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies \/ Self"
       ],
-      "notes": [
-        "Debuff of successive attacks does not stack but refresh the duration."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Ghoul Frenzy",
       "cooldown": null,
-      "description": "Passively causes Lifestealer's attacks to significantly slow enemy movement speed for 1.5 seconds. Grants you Attack Speed.",
-      "hot_key": "E",
-      "params": [
-        "Attack Speed Bonus: 25\/40\/55\/70",
-        "Move Speed Slow: 10%\/15%\/20%\/25% ( 25%\/30%\/35%\/40%)",
-        "Slow Duration: 1.5"
-      ],
       "legacy_key": "G",
       "story": null
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Lifestealer_Open_Wounds.mp3\/revision\/latest?cb=20191216015434",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies \/ Allies",
-        "Damage: Physical"
-      ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "Open Wounds spreads to a random unit within 700 radius that do not have the debuff already, prioritizing heroes, once the affected target collectively takes 500 damage (after all reductions). Treat creep-heroes as creeps. Successive casts on the same target neither stack nor allows the debuff to spread, but refreshes its movement speed slow values and duration. Each Open Wounds debuff can only spread once. It cannot spread to the same unit again per cast. The debuff also does not spread while reaching the damage threshold with no valid targets within its search radius.",
-        "Treat creep-heroes as creeps.",
-        "Successive casts on the same target neither stack nor allows the debuff to spread, but refreshes its movement speed slow values and duration.",
-        "Each Open Wounds debuff can only spread once. It cannot spread to the same unit again per cast.",
-        "The debuff also does not spread while reaching the damage threshold with no valid targets within its search radius.",
-        "The spreading is not limited to the unit Open Wounds was cast on, the Open Wounds debuffs created via spreading can spread as well.",
-        "The debuff can spread onto invisible units and units in the Fog of War. Does not spread to invulnerable units. Neutral creeps are not aggro'd when the debuff is spread onto them.",
-        "Does not spread to invulnerable units.",
-        "Neutral creeps are not aggro'd when the debuff is spread onto them.",
-        "Casting instant kill sources (e.g. Transmute) on a unit affected by Open Wounds heals the caster based on the affected target's current health. The spread damage threshold condition still applies. The heal values are considered and stacks additively with other sources of lifesteal.",
-        "The heal values are considered and stacks additively with other sources of lifesteal.",
-        "Does not heal from and count the following damage sources to its damage threshold: Damage flagged as HP Removal and\/or self-damage. Damage damage dealt by buildings, wards, neutral creeps, or the affected target's allies.",
-        "Damage flagged as HP Removal and\/or self-damage.",
-        "Damage damage dealt by buildings, wards, neutral creeps, or the affected target's allies.",
-        "Applies 7 instances 50%\/50%\/40%\/30%\/20%\/10%\/10% decreasing movement speed slow, decreasing one step per second for its duration.",
-        "The max health as bonus damage is only applied to attacks done by heroes, including clones, excluding creep-heroes. The damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the hero's attack damage. The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions. The conditional attack damage bonus does not affect Roshan.",
-        "The damage is considered as a conditional attack damage bonus.",
-        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the hero's attack damage.",
-        "The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block).",
-        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "The conditional attack damage bonus does not affect Roshan."
+        "Requires  Aghanim's Shard to be unlocked",
+        "Open Wounds spreads to a random unit within 700 radius that do not have the debuff already, prioritizing heroes, once the affected target collectively takes 500 damage (after all reductions). Treat creep-heroes as creeps. Successive casts on the same target neither stack nor allows the debuff to spread, but refreshes its movement speed slow values and duration. Each Open Wounds debuff can only spread once. It cannot spread to the same unit again per cast. The debuff also does not spread while reaching the damage threshold with no valid targets within its search radius",
+        "The spreading is not limited to the unit Open Wounds was cast on, the Open Wounds debuffs created via spreading can spread as well",
+        "The debuff can spread onto invisible units and units in the Fog of War. Does not spread to invulnerable units. Neutral creeps are not aggro'd when the debuff is spread onto them",
+        "Casting instant kill sources (e.g.  Transmute) on a unit affected by Open Wounds heals the caster based on the affected target's current health. The spread damage threshold condition still applies. The heal values are considered and stacks additively with other sources of lifesteal",
+        "Does not heal from and count the following damage sources to its damage threshold: Damage flagged as HP Removal and\/or self-damage. Damage damage dealt by buildings, wards, neutral creeps, or the affected target's allies",
+        "Applies 7 instances 50%\/50%\/40%\/30%\/20%\/10%\/10% decreasing movement speed slow, decreasing one step per second for its duration",
+        "The max health as bonus damage is only applied to attacks done by heroes, including clones, excluding creep-heroes. The damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the hero's attack damage. The attack damage bonus values are considered by lifesteal, critical strike, and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions. The conditional attack damage bonus does not affect  Roshan"
       ],
-      "mana": "15",
       "item_behaviour": [],
-      "name": "Open Wounds",
-      "cooldown": "75",
       "description": "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration. Deals 2% of the target's max health per attack on the target from real heroes. After receiving 500 damage, the Open Wounds fester and spread to a non-infected random enemy within 700 radius.",
       "hot_key": "D",
       "params": [
@@ -124,93 +101,79 @@
         "Max Move Speed Slow: 50%",
         "Slow Duration: 7"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Lifestealer_Open_Wounds.mp3\/revision\/latest?cb=20191216015434",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies",
+        "Damage: Physical"
+      ],
+      "mana": "15",
+      "aghanim": null,
+      "name": "Open Wounds",
+      "cooldown": "75",
       "legacy_key": "W",
       "story": "Fresh wounds and the scent of blood often draw out the scavengers to finish the job."
     },
     {
+      "notes": [
+        "Applies a basic dispel and disjoints projectiles upon cast. Unlike a regular basic dispel, Infest also dispels various buffs (e.g.  Double Damage Rune) on Lifestealer",
+        "During Infest, all of Lifestealer's abilities are hidden, while Infest is replaced by the  Consume sub-ability. Lifestealer is now invulnerable, hidden, and is periodically moved to the host's current position. This affects the following things: Upon Infest ending in any way, Lifestealer reappears at the host's current location. Every aura Lifestealer has (e.g.  Radiance) is bestowed around the host. Ability effects that interact with heroes' presence (e.g.  Smoke of Deceit,  Marksmanship) react on the host's presence.  Relocate forces Lifestealer out of the Infested unit, dealing its area damage.  Recall get dispeled upon casting Infest",
+        "Can fully regenerate Lifestealer's health within 33.33\/25\/20 ( 16.67\/12.5\/10) seconds",
+        "The following effects are applied to the Infested unit: Grants current and max health bonuses by the given value. This counts as setting health. Does not increase the health of ancient creeps. If the affected target is a hero, including illusions and creep-heroes, it grants percentage-based movement speed bonus. If the affected target is a creep, Lifestealer automatically takes control of it, turning it into his unit. Infest also replenishes its mana and set its base movement speed to EXPR LifestealerCurrentMS × 115%\/120%\/125% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 130%\/135%\/140%). The controlled creep also retains its health bar colors for camouflaging purposes. It also can be dominated (e.g.  Holy Persuasion) normally, with its source ability notes fully apply. The affected unit also receives a hidden modifier, which creates the visual effect above it, visible to allies only",
+        "The same target can be affected by multiple sources of Infest. However, the health increase effect does not stack. If the target is a creep, only the first Infest cast can control the unit and use the  Consume sub-ability",
+        "Infest also has the following cast restrictions on units: Can be cast on and control ancient creeps when on Level 2+. Can be cast on, but cannot control ally heroes and ally creep-heroes. Cannot be cast on  Roshan,  Couriers,  Undying Zombies, wards, buildings, enemy heroes and enemy creep-heroes",
+        "The ability's cooldown starts upon leaving the Infested unit, not upon cast",
+        "SCEPTER NOTES Infest can now be cast on enemy heroes and creep-heroes. Does not increase the health or movement speed of such targets, but disarms them. Although having a limited duration on these targets, Lifestealer still may use  Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on the Infested enemy target in 1.25-second intervals, starting immediately upon cast, resulting in up to 5 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. SOULBIND  Infest only affects the primary target"
+      ],
+      "item_behaviour": [],
+      "description": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack. Does not work on enemy heroes.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range:  150 ( 500)",
+        "Target Max Health Bonus: 400\/800\/1200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 460\/920\/1380)",
+        "Target Move Speed Bonus: 15%\/20%\/25% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 30%\/35%\/40%)",
+        "Self Max Health as Health Regen Bonus: 3%\/4%\/5% ( 6%\/8%\/10%)",
+        "Enemy Hero Attack Interval:  1.25",
+        "Enemy Hero Duration:  5"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Lifestealer_Infest.mp3\/revision\/latest?cb=20191216015431",
       "effects": [
         "Ability: Target Unit",
         "Affects: Self ",
         "Damage: "
       ],
-      "notes": [
-        "Applies a basic dispel and disjoints projectiles upon cast. Unlike a regular basic dispel, Infest also dispels various buffs (e.g. Double Damage Rune) on Lifestealer.",
-        "Unlike a regular basic dispel, Infest also dispels various buffs (e.g. Double Damage Rune) on Lifestealer.",
-        "During Infest, all of Lifestealer's abilities are hidden, while Infest is replaced by the Consume sub-ability. Lifestealer is now invulnerable, hidden, and is periodically moved to the host's current position. This affects the following things: Upon Infest ending in any way, Lifestealer reappears at the host's current location. Every aura Lifestealer has (e.g. Radiance) is bestowed around the host. Ability effects that interact with heroes' presence (e.g. Smoke of Deceit, Marksmanship) react on the host's presence. Relocate forces Lifestealer out of the Infested unit, dealing its area damage. Recall get dispeled upon casting Infest.",
-        "Lifestealer is now invulnerable, hidden, and is periodically moved to the host's current position. This affects the following things: Upon Infest ending in any way, Lifestealer reappears at the host's current location. Every aura Lifestealer has (e.g. Radiance) is bestowed around the host. Ability effects that interact with heroes' presence (e.g. Smoke of Deceit, Marksmanship) react on the host's presence. Relocate forces Lifestealer out of the Infested unit, dealing its area damage. Recall get dispeled upon casting Infest.",
-        "Upon Infest ending in any way, Lifestealer reappears at the host's current location.",
-        "Every aura Lifestealer has (e.g. Radiance) is bestowed around the host.",
-        "Ability effects that interact with heroes' presence (e.g. Smoke of Deceit, Marksmanship) react on the host's presence.",
-        "Relocate forces Lifestealer out of the Infested unit, dealing its area damage.",
-        "Recall get dispeled upon casting Infest.",
-        "Can fully regenerate Lifestealer's health within 33.33\/25\/20 (TagTalent 16.67\/12.5\/10) seconds.",
-        "The following effects are applied to the Infested unit: Grants current and max health bonuses by the given value. This counts as setting health. Does not increase the health of ancient creeps. If the affected target is a hero, including illusions and creep-heroes, it grants percentage-based movement speed bonus. If the affected target is a creep, Lifestealer automatically takes control of it, turning it into his unit. Infest also replenishes its mana and set its base movement speed to EXPR LifestealerCurrentMS × 115%\/120%\/125% (TagTalent 130%\/135%\/140%). The controlled creep also retains its health bar colors for camouflaging purposes. It also can be dominated (e.g. Holy Persuasion) normally, with its source ability notes fully apply. The affected unit also receives a hidden modifier, which creates the visual effect above it, visible to allies only.",
-        "Grants current and max health bonuses by the given value. This counts as setting health. Does not increase the health of ancient creeps.",
-        "Does not increase the health of ancient creeps.",
-        "If the affected target is a hero, including illusions and creep-heroes, it grants percentage-based movement speed bonus.",
-        "If the affected target is a creep, Lifestealer automatically takes control of it, turning it into his unit. Infest also replenishes its mana and set its base movement speed to EXPR LifestealerCurrentMS × 115%\/120%\/125% (TagTalent 130%\/135%\/140%). The controlled creep also retains its health bar colors for camouflaging purposes. It also can be dominated (e.g. Holy Persuasion) normally, with its source ability notes fully apply.",
-        "Infest also replenishes its mana and set its base movement speed to EXPR LifestealerCurrentMS × 115%\/120%\/125% (TagTalent 130%\/135%\/140%).",
-        "The controlled creep also retains its health bar colors for camouflaging purposes. It also can be dominated (e.g. Holy Persuasion) normally, with its source ability notes fully apply.",
-        "The affected unit also receives a hidden modifier, which creates the visual effect above it, visible to allies only.",
-        "The same target can be affected by multiple sources of Infest. However, the health increase effect does not stack. If the target is a creep, only the first Infest cast can control the unit and use the Consume sub-ability.",
-        "However, the health increase effect does not stack.",
-        "If the target is a creep, only the first Infest cast can control the unit and use the Consume sub-ability.",
-        "Infest also has the following cast restrictions on units: Can be cast on and control ancient creeps when on Level 2+. Can be cast on, but cannot control ally heroes and ally creep-heroes. Cannot be cast on Roshan, Couriers, Undying Zombies, wards, buildings, enemy heroes and enemy creep-heroes.",
-        "Can be cast on and control ancient creeps when on Level 2+.",
-        "Can be cast on, but cannot control ally heroes and ally creep-heroes.",
-        "Cannot be cast on Roshan, Couriers, Undying Zombies, wards, buildings, enemy heroes and enemy creep-heroes.",
-        "The ability's cooldown starts upon leaving the Infested unit, not upon cast.",
-        "SCEPTER NOTES Infest can now be cast on enemy heroes and creep-heroes. Does not increase the health or movement speed of such targets, but disarms them. Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on the Infested enemy target in 1.25-second intervals, starting immediately upon cast, resulting in up to 5 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "Does not increase the health or movement speed of such targets, but disarms them.",
-        "Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier.",
-        "Causes Lifestealer to perform instant attacks on the Infested enemy target in 1.25-second intervals, starting immediately upon cast, resulting in up to 5 attacks.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "SOULBIND Infest only affects the primary target."
-      ],
       "mana": "100\/75\/50 (TagTalent 20)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Infest",
       "cooldown": "100\/125\/150",
-      "description": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack. Does not work on enemy heroes.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0.2+0",
-        "Cast Range:  150 ( 500)",
-        "Target Max Health Bonus: 400\/800\/1200 ( 460\/920\/1380)",
-        "Target Move Speed Bonus: 15%\/20%\/25% ( 30%\/35%\/40%)",
-        "Self Max Health as Health Regen Bonus: 3%\/4%\/5% ( 6%\/8%\/10%)",
-        "Enemy Hero Attack Interval: 1.25",
-        "Enemy Hero Duration: 5"
-      ],
       "legacy_key": "T",
       "story": "With this infestation, N'aix consumes the life blood of the host, restoring him back to full unholy power."
     },
     {
+      "notes": [
+        "Replaces  Infest until the sub-ability is used, or until Lifestealer gets out of the host. If the infested target is a creep, and Lifestealer takes control over it, it also appears in the infested unit's HUD, in the next available ability slot",
+        "Consume only instant kill creeps upon cast",
+        "Applies the area damage even when the Infested unit dies before Lifestealer consumes it. The damage is applied instantly and does not have a travel time"
+      ],
+      "item_behaviour": [],
+      "description": "Lifestealer eats the host body from the inside out, exploding from within.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0+0",
+        "Effect Radius: 700",
+        "Damage: 150\/275\/400 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 300\/425\/550)"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Lifestealer_Consume.mp3\/revision\/latest?cb=20191216015429",
       "effects": [
         "Ability: No Target",
         "Affects: Enemies \/ Self",
         "Damage: Magical"
       ],
-      "notes": [
-        "Replaces Infest until the sub-ability is used, or until Lifestealer gets out of the host. If the infested target is a creep, and Lifestealer takes control over it, it also appears in the infested unit's HUD, in the next available ability slot.",
-        "If the infested target is a creep, and Lifestealer takes control over it, it also appears in the infested unit's HUD, in the next available ability slot.",
-        "Consume only instant kill creeps upon cast.",
-        "Applies the area damage even when the Infested unit dies before Lifestealer consumes it. The damage is applied instantly and does not have a travel time.",
-        "The damage is applied instantly and does not have a travel time."
-      ],
       "mana": "0",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Consume",
       "cooldown": "0",
-      "description": "Lifestealer eats the host body from the inside out, exploding from within.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0+0",
-        "Effect Radius: 700",
-        "Damage: 150\/275\/400 ( 300\/425\/550)"
-      ],
       "legacy_key": "T",
       "story": null
     }

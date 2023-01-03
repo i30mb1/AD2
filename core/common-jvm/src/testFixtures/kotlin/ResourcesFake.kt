@@ -9,4 +9,5 @@ class ResourcesFake : Resources {
     override fun getAssets(path: String): InputStream = ByteArrayInputStream(ByteArray(1))
     override fun getExternalFilesDir(path: String): File? = null
     override fun getFilesDir(): File? = null
+    override fun getConfiguration(): Any? = null
 }

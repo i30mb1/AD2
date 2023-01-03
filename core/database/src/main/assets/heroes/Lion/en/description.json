@@ -1,29 +1,17 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Lion_Earth_Spike_1.mp3\/revision\/latest?cb=20191216015624",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The spikes' max travel distance is based on the cast range, plus the range buffer. With the default cast range, it has a max travel distance of 850.",
-        "With the default cast range, it has a max travel distance of 850.",
-        "The spikes travel at a speed of 1800, taking 0.47 seconds to travel the full distance.",
-        "With the travel distance and the spikes radius, it can hit units up to 975 range away.",
-        "When unit-targeted, the spikes are released towards their current location upon cast. Spikes do not home and thus can be evaded.",
-        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun.",
-        "While in the air, other units may pass below hit airborne units.",
-        "The spike that hits the target is larger and is elevated. This visual effect can also be seen in the Fog of War. When Earth Spike hits invisible units, the visual effects below the hit unit are still visible.",
-        "When Earth Spike hits invisible units, the visual effects below the hit unit are still visible.",
-        "The damage is applied upon landing, not upon getting hit. When interrupted, the damage will be applied prematurely.",
-        "When interrupted, the damage will be applied prematurely."
+        "The spikes' max travel distance is based on the cast range, plus the range buffer. With the default cast range, it has a max travel distance of 850",
+        "The spikes travel at a speed of 1800, taking 0.47 seconds to travel the full distance",
+        "With the travel distance and the spikes radius, it can hit units up to 975 range away",
+        "When unit-targeted, the spikes are released towards their current location upon cast. Spikes do not home and thus can be evaded",
+        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun",
+        "While in the air, other units may pass below hit airborne units",
+        "The spike that hits the target is larger and is elevated. This visual effect can also be seen in the Fog of War. When Earth Spike hits invisible units, the visual effects below the hit unit are still visible",
+        "The damage is applied upon landing, not upon getting hit. When interrupted, the damage will be applied prematurely"
       ],
-      "mana": "12",
       "item_behaviour": [],
-      "name": "Earth Spike",
-      "cooldown": "85\/110\/135\/160",
       "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
       "hot_key": "Q",
       "params": [
@@ -31,35 +19,30 @@
         "Cast Range:  575",
         "Spikes Range Buffer: 275",
         "Spikes Radius: 125",
-        "Damage: 95\/150\/205\/260 ( 160\/215\/270\/325)",
+        "Damage: 95\/150\/205\/260 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 160\/215\/270\/325)",
         "Stun Duration: 1.4\/1.8\/2.2\/2.6"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Lion_Earth_Spike_1.mp3\/revision\/latest?cb=20191216015624",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "12",
+      "aghanim": null,
+      "name": "Earth Spike",
+      "cooldown": "85\/110\/135\/160",
       "legacy_key": "E",
       "story": "The Demon Witch exercises his demonic covenant, opening a fissure from Hell."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Lion_Hex_1.mp3\/revision\/latest?cb=20191216015630",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies",
-        "Damage: Instant Kill"
-      ],
       "notes": [
-        "Applies a hex on the target, setting its base movement speed to 120, silencing, muting and disarming it. However, the target's movement speed can still be affected by movement speed bonuses from items and abilities. Since Hex sets the base movement speed of the target unit and does not actually apply a slow, all movement speed bonuses and reductions are calculated using the new set base speed.",
-        "However, the target's movement speed can still be affected by movement speed bonuses from items and abilities.",
-        "Since Hex sets the base movement speed of the target unit and does not actually apply a slow, all movement speed bonuses and reductions are calculated using the new set base speed.",
-        "Hex instantly destroys illusions. Treat strong illusions as heroes.",
-        "Treat strong illusions as heroes.",
-        "Lion's hex transforms the target into a frog. The Fin King's Charm and Fin King's Charm of Eminent Revival change the model into a fish.",
-        "The Fin King's Charm and Fin King's Charm of Eminent Revival change the model into a fish.",
-        "TALENT NOTES Hex turns into an area-targeted ability, so that it cannot directly target units anymore. Affects every valid target within the area, including invisible units and units in the Fog of War. Does not affect invulnerable or hidden units.",
-        "Affects every valid target within the area, including invisible units and units in the Fog of War.",
-        "Does not affect invulnerable or hidden units."
+        "Applies a hex on the target, setting its base movement speed to 120, silencing, muting and disarming it. However, the target's movement speed can still be affected by movement speed bonuses from items and abilities. Since Hex sets the base movement speed of the target unit and does not actually apply a slow, all movement speed bonuses and reductions are calculated using the new set base speed",
+        "Hex instantly destroys illusions. Treat strong illusions as heroes",
+        "Lion's hex transforms the target into a frog. The Fin King's Charm and Fin King's Charm of Eminent Revival change the model into a fish",
+        "TALENT NOTES Hex turns into an area-targeted ability, so that it cannot directly target units anymore. Affects every valid target within the area, including invisible units and units in the Fog of War. Does not affect invulnerable or hidden units"
       ],
-      "mana": "24\/20\/16\/12 (TagTalent 21\/17\/13\/9)",
       "item_behaviour": [],
-      "name": "Hex",
-      "cooldown": "125\/150\/175\/200",
       "description": "Transforms an enemy unit into a harmless beast, with all special abilities disabled.",
       "hot_key": "W",
       "params": [
@@ -67,53 +50,35 @@
         "Cast Range:  550",
         "Set Move Speed: 120",
         "Duration: 2.5\/3\/3.5\/4",
-        "<span image=\"images\\Talent\"><\/span> Radius: 250"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Radius:  250"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Lion_Hex_1.mp3\/revision\/latest?cb=20191216015630",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Instant Kill"
+      ],
+      "mana": "24\/20\/16\/12 (TagTalent 21\/17\/13\/9)",
+      "aghanim": null,
+      "name": "Hex",
+      "cooldown": "125\/150\/175\/200",
       "legacy_key": "D",
       "story": "Lion is compelled to share his transfiguration, twisting the essence of those who oppose him."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Lion_Mana_Drain.mp3\/revision\/latest?cb=20191216015631",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies ",
-        "Damage: Instant Kill"
-      ],
       "notes": [
-        "Can only be cast on units that have mana pool.",
-        "The link breaks on the target in the following conditions: When the target gets out of vision, turns invulnerable or hidden. This includes becoming invisible with True Sight immunity. Upon the target's death. When it exceeds the 1100 (TagTalent 1500) break distance. The effective area for the link break distance is half of a sphere and not a flat circle. Therefore, the link can be broken with upward movement sources as well.",
-        "When the target gets out of vision, turns invulnerable or hidden.",
-        "This includes becoming invisible with True Sight immunity.",
-        "Upon the target's death.",
-        "When it exceeds the 1100 (TagTalent 1500) break distance. The effective area for the link break distance is half of a sphere and not a flat circle. Therefore, the link can be broken with upward movement sources as well.",
-        "The effective area for the link break distance is half of a sphere and not a flat circle. Therefore, the link can be broken with upward movement sources as well.",
-        "SHARD NOTES Mana Drain now affects 2 additional random enemy targets, prioritizing heroes, within 1250 search radius centered on Lion. Does not consider units without mana as additional targets. Since the additional links use the ability's cast range, cast range increasing effects increase its search range as well. For secondary targets, the link only breaks on the target(s) in the following conditions: When the channeling on the primary target is interrupted in any way. Upon the secondary target's death, or upon exceeding the break distance. The secondary links stop draining mana and damaging their target(s), if they enter the Fog of War, or when they are affected by invisibility, with or without true sight immunity. In any case, Mana Drain continues to apply its movement speed slow.",
-        "Does not consider units without mana as additional targets.",
-        "Since the additional links use the ability's cast range, cast range increasing effects increase its search range as well.",
-        "For secondary targets, the link only breaks on the target(s) in the following conditions: When the channeling on the primary target is interrupted in any way. Upon the secondary target's death, or upon exceeding the break distance.",
-        "When the channeling on the primary target is interrupted in any way.",
-        "Upon the secondary target's death, or upon exceeding the break distance.",
-        "The secondary links stop draining mana and damaging their target(s), if they enter the Fog of War, or when they are affected by invisibility, with or without true sight immunity. In any case, Mana Drain continues to apply its movement speed slow.",
-        "SHARD NOTES The spell immunity granting upgrade does not apply a spell immunity dispel on Lion.",
-        "The link still affects the target and does not break, even when the target(s) run out of mana, enter the Fog of War, turns untargetable or invisible.",
-        "The mana replenished is based on how much the target actually lost per interval. If they have no mana left, no mana is gained either. When Lion is at full mana, the enemy target is still damaged and continues to lose mana. TALENT NOTES The Mana Drain restores ally talent works the same as well with reversed effects, the mana replenished to the ally is based on how much mana Lion loses. Replenishes the allied illusion's mana and does not destroy them. Both the movement speed slow increasing and Mana Drained as damage talents do not update the current active instance. The damage values are affected by mana loss manipulation sources.",
-        "When Lion is at full mana, the enemy target is still damaged and continues to lose mana.",
-        "TALENT NOTES The Mana Drain restores ally talent works the same as well with reversed effects, the mana replenished to the ally is based on how much mana Lion loses. Replenishes the allied illusion's mana and does not destroy them. Both the movement speed slow increasing and Mana Drained as damage talents do not update the current active instance. The damage values are affected by mana loss manipulation sources.",
-        "Replenishes the allied illusion's mana and does not destroy them.",
-        "Both the movement speed slow increasing and Mana Drained as damage talents do not update the current active instance.",
-        "The damage values are affected by mana loss manipulation sources.",
-        "Provides True Sight over the target(s) for its duration.",
-        "Drains 2\/4\/6\/12 mana in 0.1-second intervals, starting 0.1 seconds after cast, resulting in up to 50 instances. Can drain up to 100\/200\/300\/600 (TagTalent 300\/600\/900\/1800) mana when fully channeled.",
-        "Can drain up to 100\/200\/300\/600 (TagTalent 300\/600\/900\/1800) mana when fully channeled.",
-        "TALENT NOTES With the Mana Drained as damage talent, Mana Drain deals 3\/6\/9\/18 damage using the same intervals, and resulting in the same amount of instances. Can deal up to 150\/300\/450\/900 (TagTalent 450\/900\/1350\/2700) damage (before reductions) when fully channeled.",
-        "Can deal up to 150\/300\/450\/900 (TagTalent 450\/900\/1350\/2700) damage (before reductions) when fully channeled.",
-        "Instantly destroys targeted illusions on the first interval, and does not drain mana from enemy illusions. Treats strong illusion as heroes.",
-        "Treats strong illusion as heroes."
+        "Can only be cast on units that have mana pool",
+        "The link breaks on the target in the following conditions: When the target gets out of vision, turns invulnerable or hidden. This includes becoming invisible with True Sight immunity. Upon the target's death. When it exceeds the 1100 ( 1500) break distance. The effective area for the link break distance is half of a sphere and not a flat circle. Therefore, the link can be broken with upward movement sources as well",
+        "SHARD NOTES Mana Drain now affects 2 additional random enemy targets, prioritizing heroes, within 1250 search radius centered on Lion. Does not consider units without mana as additional targets. Since the additional links use the ability's cast range, cast range increasing effects increase its search range as well. For secondary targets, the link only breaks on the target(s) in the following conditions: When the channeling on the primary target is interrupted in any way. Upon the secondary target's death, or upon exceeding the break distance. The secondary links stop draining mana and damaging their target(s), if they enter the Fog of War, or when they are affected by invisibility, with or without true sight immunity. In any case, Mana Drain continues to apply its movement speed slow",
+        "SHARD NOTES The spell immunity granting upgrade does not apply a spell immunity dispel on Lion",
+        "The link still affects the target and does not break, even when the target(s) run out of mana, enter the Fog of War, turns untargetable or invisible",
+        "The mana replenished is based on how much the target actually lost per interval. If they have no mana left, no mana is gained either. When Lion is at full mana, the enemy target is still damaged and continues to lose mana. TALENT NOTES The Mana Drain restores ally <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent works the same as well with reversed effects, the mana replenished to the ally is based on how much mana Lion loses. Replenishes the allied illusion's mana and does not destroy them. Both the movement speed slow increasing and Mana Drained as damage <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talents do not update the current active instance. The damage values are affected by mana loss manipulation sources",
+        "Provides True Sight over the target(s) for its duration",
+        "Drains 2\/4\/6\/12 mana in 0.1-second intervals, starting 0.1 seconds after cast, resulting in up to 50 instances. Can drain up to 100\/200\/300\/600 ( 300\/600\/900\/1800) mana when fully channeled",
+        "TALENT NOTES With the Mana Drained as damage <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent, Mana Drain deals 3\/6\/9\/18 damage using the same intervals, and resulting in the same amount of instances. Can deal up to 150\/300\/450\/900 ( 450\/900\/1350\/2700) damage (before reductions) when fully channeled",
+        "Instantly destroys targeted illusions on the first interval, and does not drain mana from enemy illusions. Treats strong illusion as heroes"
       ],
-      "mana": "15\/12\/9\/6",
       "item_behaviour": [],
-      "name": "Mana Drain",
-      "cooldown": "10",
       "description": "Absorbs the magical energies of a target enemy unit by taking mana from it every second.",
       "hot_key": "E",
       "params": [
@@ -122,43 +87,33 @@
         "Max Targets: 1 ( 3)",
         "Link Break Distance:  1100 ( 1500)",
         "Mana Drain per Second: 20\/40\/60\/120",
-        "Move Speed Slow: 20%\/25%\/30%\/35% ( 30%\/35%\/40%\/45%)",
+        "Move Speed Slow: 20%\/25%\/30%\/35% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 30%\/35%\/40%\/45%)",
         "Max Channel Time: 5",
-        "<span image=\"images\\Talent\"><\/span> Mana Drained as Damage: 150%",
-        "<span image=\"images\\Talent\"><\/span> Mana Drained as Ally Mana Restore: 100%",
-        "Secondary Target Range Buffer: 400"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Mana Drained as Damage:  150%",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Mana Drained as Ally Mana Restore:  100%",
+        "Secondary Target Range Buffer:  400"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Lion_Mana_Drain.mp3\/revision\/latest?cb=20191216015631",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies ",
+        "Damage: Instant Kill"
+      ],
+      "mana": "15\/12\/9\/6",
+      "aghanim": null,
+      "name": "Mana Drain",
+      "cooldown": "10",
       "legacy_key": "R",
       "story": "Lesser magi are nothing more than a source of magical restoration for the Demon Witch."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Lion_Finger_of_Death_1.mp3\/revision\/latest?cb=20191216015627",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies ",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Places a debuff on the target upon cast, which applies the damage, and the second debuff upon expiring. The debuff lasts 0.25 seconds. This means the damage can be avoided by being invulnerable, hidden, or spell immune as the debuff expires.",
-        "This means the damage can be avoided by being invulnerable, hidden, or spell immune as the debuff expires.",
-        "Grants a stack as long as the affected target hero(es) die while having the second debuff. Grants a stack even if the dying hero has Reincarnation, but not illusions, creep-heroes and the Tempest Double. Treats Meepo Clones as heroes. The affected target can be killed or denied by any unit, including neutral creeps and death by self-damage. Lion does not need to be credited for the kill. The number of stacks gained can be seen on the status buff icon. The current ability damage and max health bonus can be seen in its description. Grants max health bonus per kill while keeping the current health percentage the same. TALENT NOTES Both the max health bonus and damage bonus increasing talents are retroactive and update all already acquired stacks.",
-        "Grants a stack even if the dying hero has Reincarnation, but not illusions, creep-heroes and the Tempest Double.",
-        "Treats Meepo Clones as heroes.",
-        "The affected target can be killed or denied by any unit, including neutral creeps and death by self-damage. Lion does not need to be credited for the kill.",
-        "The number of stacks gained can be seen on the status buff icon. The current ability damage and max health bonus can be seen in its description. Grants max health bonus per kill while keeping the current health percentage the same.",
-        "Grants max health bonus per kill while keeping the current health percentage the same.",
-        "TALENT NOTES Both the max health bonus and damage bonus increasing talents are retroactive and update all already acquired stacks.",
-        "The bonus modifier of successive casts stacks. If cast on the same target successively within the 3-second time frame, each cast grants a stack. Although only gaining bonuses from hero kills, the debuff is placed on every affected target.",
-        "Although only gaining bonuses from hero kills, the debuff is placed on every affected target.",
-        "SCEPTER NOTES Finger of Death is now cast on all enemy units within 325 radius of the primary target. Can hit invisible units and units inside the Fog of War. Grants one stack for Meepo Clones, regardless of how many clones were killed.",
-        "Can hit invisible units and units inside the Fog of War.",
-        "Grants one stack for Meepo Clones, regardless of how many clones were killed.",
-        "SPELL STEAL The ability damage bonus per kill last for the acquired ability's buff duration and is lost upon losing the ability."
+        "Places a debuff on the target upon cast, which applies the damage, and the second debuff upon expiring. The debuff lasts 0.25 seconds. This means the damage can be avoided by being invulnerable, hidden, or spell immune as the debuff expires",
+        "Grants a stack as long as the affected target hero(es) die while having the second debuff. Grants a stack even if the dying hero has Reincarnation, but not illusions, creep-heroes and the  Tempest Double. Treats  Meepo Clones as heroes. The affected target can be killed or denied by any unit, including neutral creeps and death by self-damage. Lion does not need to be credited for the kill. The number of stacks gained can be seen on the status buff icon. The current ability damage and max health bonus can be seen in its description. Grants max health bonus per kill while keeping the current health percentage the same. TALENT NOTES Both the max health bonus and damage bonus increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talents are retroactive and update all already acquired stacks",
+        "The bonus modifier of successive casts stacks. If cast on the same target successively within the 3-second time frame, each cast grants a stack. Although only gaining bonuses from hero kills, the debuff is placed on every affected target",
+        "SCEPTER NOTES Finger of Death is now cast on all enemy units within 325 radius of the primary target. Can hit invisible units and units inside the Fog of War. Grants one stack for  Meepo Clones, regardless of how many clones were killed. SPELL STEAL The ability damage bonus per kill last for the acquired ability's buff duration and is lost upon losing the ability"
       ],
-      "mana": "160\/100\/40 (TagTalent 80\/50\/20)",
       "item_behaviour": [],
-      "name": "Finger of Death",
-      "cooldown": "200\/400\/600",
       "description": "Rips at an enemy unit, trying to turn it inside-out. Deals massive damage and grows stronger with each life it consumes.",
       "hot_key": "R",
       "params": [
@@ -166,11 +121,21 @@
         "Cast Range:  900",
         "Effect Delay: 0.25",
         "Base Damage: 600\/725\/850 ( 700\/825\/950)",
-        "Damage Bonus per Kill: 40 ( 60)",
+        "Damage Bonus per Kill: 40 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 60)",
         "Kill Grace Duration: 3",
-        "<span image=\"images\\Talent\"><\/span> Max Health per Kill: 70",
-        "Radius: 325"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Max Health per Kill:  70",
+        "Radius:  325"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Lion_Finger_of_Death_1.mp3\/revision\/latest?cb=20191216015627",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "160\/100\/40 (TagTalent 80\/50\/20)",
+      "aghanim": null,
+      "name": "Finger of Death",
+      "cooldown": "200\/400\/600",
       "legacy_key": "F",
       "story": "Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force."
     }

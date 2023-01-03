@@ -1,160 +1,119 @@
 {
   "abilities": [
     {
+      "notes": [
+        "The visual and audio effects at the targeted area during the cast point are visible and audible to allies only",
+        "Creates 6 ( 9) waves in 1-second ( 0.75-second) intervals, starting immediately upon cast, resulting in duration of 5 ( 6) seconds",
+        "Despite the visual effects, the damage is applied instantly, and not upon the waves landing",
+        "On each wave, Firestorm first applies the damage, then the debuff. Does not place the burn debuff on  Roshan, but does apply the wave damage",
+        "The burn debuff deals damage in 1-second (0.75-second) intervals, starting immediately as the debuff is applied, resulting in 3 instances. The burn debuff does not stack per interval. Each interval refreshes its duration, resulting in 8 ( 11) possible instances",
+        "Can deal up to 180\/300\/420\/540 + 12%\/16%\/20%\/24% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 20%\/24%\/28%\/32%) of max health as damage (before reductions) when all waves hit. SHARD NOTES it can deal up to 270\/450\/630\/810 + 15.75%\/21%\/26.25%\/31.5% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 26.25%\/31.5%\/36.75%\/42%) of max health as damage",
+        "SHARD NOTES ↓↓ Double-tapping now automatically targets self. Firestorm still cannot target other units. When self-targeting, all effects stay centered on Underlord, following him as he moves, and continues at his corpse's location upon death"
+      ],
+      "item_behaviour": [],
+      "description": "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.5+0.6",
+        "Cast Range:  600\/625\/650\/675",
+        "Effect Radius: 425 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 500)",
+        "Number of Waves: 6 ( 9)",
+        "Wave\/Burn Interval: 1 ( 0.75)",
+        "Damage per Wave: 30\/50\/70\/90",
+        "Max Health as Damage per Second: 1.5%\/2%\/2.5%\/3% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.5%\/3%\/3.5%\/4%)",
+        "Burn Duration: 2 ( 1.5)"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Underlord_Firestorm_1.mp3\/revision\/latest?cb=20191216025834",
       "effects": [
         "Ability: Target Area",
         "Affects: Enemies",
         "Damage: Magical"
       ],
-      "notes": [
-        "The visual and audio effects at the targeted area during the cast point are visible and audible to allies only.",
-        "Creates 6 (TagTalent 9) waves in 1-second (TagTalent 0.75-second) intervals, starting immediately upon cast, resulting in duration of 5 (TagTalent 6) seconds.",
-        "Despite the visual effects, the damage is applied instantly, and not upon the waves landing.",
-        "On each wave, Firestorm first applies the damage, then the debuff. Does not place the burn debuff on Roshan, but does apply the wave damage.",
-        "Does not place the burn debuff on Roshan, but does apply the wave damage.",
-        "The burn debuff deals damage in 1-second (0.75-second) intervals, starting immediately as the debuff is applied, resulting in 3 instances. The burn debuff does not stack per interval. Each interval refreshes its duration, resulting in 8 (TagTalent 11) possible instances.",
-        "The burn debuff does not stack per interval. Each interval refreshes its duration, resulting in 8 (TagTalent 11) possible instances.",
-        "Can deal up to 180\/300\/420\/540 + 12%\/16%\/20%\/24% (TagTalent 20%\/24%\/28%\/32%) of max health as damage (before reductions) when all waves hit. SHARD NOTES it can deal up to 270\/450\/630\/810 + 15.75%\/21%\/26.25%\/31.5% (TagTalent 26.25%\/31.5%\/36.75%\/42%) of max health as damage.",
-        "SHARD NOTES it can deal up to 270\/450\/630\/810 + 15.75%\/21%\/26.25%\/31.5% (TagTalent 26.25%\/31.5%\/36.75%\/42%) of max health as damage.",
-        "SHARD NOTES ↓↓ Double-tapping now automatically targets self. Firestorm still cannot target other units. When self-targeting, all effects stay centered on Underlord, following him as he moves, and continues at his corpse's location upon death.",
-        "When self-targeting, all effects stay centered on Underlord, following him as he moves, and continues at his corpse's location upon death."
-      ],
       "mana": "15\/14\/13\/12 (TagTalent 11\/10\/9\/8)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Firestorm",
       "cooldown": "110\/120\/130\/140",
-      "description": "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time.",
-      "hot_key": "Q",
-      "params": [
-        "Cast Animation: 0.5+0.6",
-        "Cast Range:  600\/625\/650\/675",
-        "Effect Radius: 425 ( 500)",
-        "Number of Waves: 6 ( 9)",
-        "Wave\/Burn Interval: 1 ( 0.75)",
-        "Damage per Wave: 30\/50\/70\/90",
-        "Max Health as Damage per Second: 1.5%\/2%\/2.5%\/3% ( 2.5%\/3%\/3.5%\/4%)",
-        "Burn Duration: 2 ( 1.5)"
-      ],
       "legacy_key": "F",
       "story": "The flames of conquest blaze forth from the darkest depths of the abyss."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Underlord_Pit_of_Malice_1.mp3\/revision\/latest?cb=20191216025837",
-      "effects": [
-        "Ability: Target Area",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "The visual and audio effects at the targeted area during the cast point are visible and audible to allies only.",
-        "Roots the targets, preventing them from moving and casting certain mobility abilities. Fully affects invisible units and units inside the Fog of War. Provides True Sight over the targets.",
-        "Fully affects invisible units and units inside the Fog of War.",
-        "Provides True Sight over the targets.",
-        "The root is applied periodically to every enemy within the area. However, the hidden modifier prevents them from being continuously rooted for the whole duration. This hidden modifier is applied to every unit within the area which does not have the modifier yet. The modifier lasts for 3.6 seconds. Whenever the modifier expires, enemies get instantly rooted again, and then the hidden modifier is reapplied again. This means that Pit of Malice does not root every unit within the area in set intervals. Each unit is rooted every 3.6 seconds based on when they entered the area. The hidden modifier does not disappear upon leaving the area. Quickly leaving and re-entering does not result in an instant root. All pits share the same modifier, therefore the root does not stack \u2014 once rooted, the unit becomes immune to all other pits until the modifier wears off.",
-        "However, the hidden modifier prevents them from being continuously rooted for the whole duration.",
-        "This hidden modifier is applied to every unit within the area which does not have the modifier yet. The modifier lasts for 3.6 seconds.",
-        "Whenever the modifier expires, enemies get instantly rooted again, and then the hidden modifier is reapplied again.",
-        "This means that Pit of Malice does not root every unit within the area in set intervals. Each unit is rooted every 3.6 seconds based on when they entered the area.",
-        "The hidden modifier does not disappear upon leaving the area. Quickly leaving and re-entering does not result in an instant root.",
-        "All pits share the same modifier, therefore the root does not stack \u2014 once rooted, the unit becomes immune to all other pits until the modifier wears off.",
-        "Can root a unit up to 4 times if it stays within the area for the full duration, resulting in a total root time of 4.8\/5.6\/6.4\/7.2 (TagTalent 7.4\/8.2\/9\/9.8) seconds.",
-        "Creates a distinct visual effect around, and plays a distinct sound on affected heroes and illusions, but not around other affected units.",
-        "SCEPTER NOTES Adds a 400 radius aura to the center of Pit of Malice, which reduces enemy's movement speed by 40%. The aura's debuff lingers for 0.5 seconds. Acquiring Aghanim's Scepter immediately updates all current active instances.",
-        "The aura's debuff lingers for 0.5 seconds.",
-        "Acquiring Aghanim's Scepter immediately updates all current active instances."
+        "The visual and audio effects at the targeted area during the cast point are visible and audible to allies only",
+        "Roots the targets, preventing them from moving and casting certain mobility abilities. Fully affects invisible units and units inside the Fog of War. Provides True Sight over the targets",
+        "The root is applied periodically to every enemy within the area. However, the hidden modifier prevents them from being continuously rooted for the whole duration. This hidden modifier is applied to every unit within the area which does not have the modifier yet. The modifier lasts for 3.6 seconds. Whenever the modifier expires, enemies get instantly rooted again, and then the hidden modifier is reapplied again. This means that Pit of Malice does not root every unit within the area in set intervals. Each unit is rooted every 3.6 seconds based on when they entered the area. The hidden modifier does not disappear upon leaving the area. Quickly leaving and re-entering does not result in an instant root. All pits share the same modifier, therefore the root does not stack \u2014 once rooted, the unit becomes immune to all other pits until the modifier wears off",
+        "Can root a unit up to 4 times if it stays within the area for the full duration, resulting in a total root time of 4.8\/5.6\/6.4\/7.2 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 7.4\/8.2\/9\/9.8) seconds",
+        "Creates a distinct visual effect around, and plays a distinct sound on affected heroes and illusions, but not around other affected units",
+        "SCEPTER NOTES Adds a 400 radius aura to the center of Pit of Malice, which reduces enemy's movement speed by 40%. The aura's debuff lingers for 0.5 seconds. Acquiring  Aghanim's Scepter immediately updates all current active instances"
       ],
-      "mana": "21\/19\/17\/15",
       "item_behaviour": [],
-      "name": "Pit of Malice",
-      "cooldown": "80\/100\/120\/140",
       "description": "A deadly pit is conjured at the target location; any unit that enters will be rooted. Each enemy unit within the pit are affected every 3.6 seconds.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.45+0.6",
         "Cast Range:  675",
-        "Effect Radius: 400 ( 475)",
+        "Effect Radius: 400 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 475)",
         "Root Interval: 3.6",
-        "Root Duration: 1.2\/1.4\/1.6\/1.8 ( 1.85\/2.05\/2.25\/2.45)",
+        "Root Duration: 1.2\/1.4\/1.6\/1.8 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1.85\/2.05\/2.25\/2.45)",
         "Pit Duration: 12",
-        "Move Speed Slow: 40%",
-        "Aura Linger Duration: 0.5"
+        "Move Speed Slow:  40%",
+        "Aura Linger Duration:  0.5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Underlord_Pit_of_Malice_1.mp3\/revision\/latest?cb=20191216025837",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies"
+      ],
+      "mana": "21\/19\/17\/15",
+      "aghanim": null,
+      "name": "Pit of Malice",
+      "cooldown": "80\/100\/120\/140",
       "legacy_key": "T",
       "story": "Twisting into the seams of reality itself, Vrogros' manifest hatred paralyzes those who defy his will."
     },
     {
+      "notes": [
+        "Reduces the main attack damage of affected units. Bonus attack damage is not reduced. The aura does not affect invulnerable or hidden units, and its debuff lingers for 0.5 seconds. Does not affect enemies which have no vision over Underlord. However, Underlord still gains attack damage from dying enemies within the radius, despite the debuff not being present",
+        "Grants flat bonus attack damage as long as the dying enemy unit was affected by the debuff, regardless of how it dies. Grants a stack of attack damage bonus when there are multiple  Meepo Clones within the radius. Does not grant bonus attack damage from dying illusions, buildings, wards,  Undying Zombies,  Couriers and the  Tempest Double. Does not grant bonus attack damage if he is invulnerable or hidden as the enemy dies. Each stack places a new buff on Underlord. This means their durations are independent of each other, gaining a new stack does not refresh the existing stacks",
+        "Treats creep-heroes as creeps",
+        "A status buff is visible on the HUD, showing the current amount of bonus attack damage the aura currently grants. Underlord's weapon also glows stronger with green particle effects the more damage stacks he has",
+        "TALENT NOTES Atrophy Aura now grants 50% of the bonus attack damage to all allied heroes, including illusions, clones, and creep-heroes within its radius. However, the bonus attack damage is not provided by an aura, it is placed as an expiring buff on allies. It uses the same modifiers for allies as it does for Underlord, so they work exactly the same. Affected allies gain 15\/17.5\/20\/22.5 bonus attack damage per dying hero and 1\/2\/3\/4 bonus attack damage per dying non-hero units"
+      ],
+      "item_behaviour": [],
+      "description": "Nearby enemy units are weakened, losing a portion of their base damage. If an enemy dies while under this effect, Underlord gains temporary bonus damage.",
+      "hot_key": "E",
+      "params": [
+        "Radius: 900",
+        "Attack Damage Reduction: 5%\/15%\/25%\/35% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 20%\/30%\/40%\/50%)",
+        "Attack Damage Bonus per Hero Death: 30\/35\/40\/45",
+        "Attack Damage Bonus per Non-Hero Death: 2\/4\/6\/8",
+        "Buff Duration: 30\/45\/60\/75",
+        "Aura Linger Duration: 0.5",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Allied Bonus Percentage:  50%"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Aura",
         "Affects: Enemies \/ Self"
       ],
-      "notes": [
-        "Reduces the main attack damage of affected units. Bonus attack damage is not reduced. The aura does not affect invulnerable or hidden units, and its debuff lingers for 0.5 seconds. Does not affect enemies which have no vision over Underlord. However, Underlord still gains attack damage from dying enemies within the radius, despite the debuff not being present.",
-        "The aura does not affect invulnerable or hidden units, and its debuff lingers for 0.5 seconds.",
-        "Does not affect enemies which have no vision over Underlord.",
-        "However, Underlord still gains attack damage from dying enemies within the radius, despite the debuff not being present.",
-        "Grants flat bonus attack damage as long as the dying enemy unit was affected by the debuff, regardless of how it dies. Grants a stack of attack damage bonus when there are multiple Meepo Clones within the radius. Does not grant bonus attack damage from dying illusions, buildings, wards, Undying Zombies, Couriers and the Tempest Double. Does not grant bonus attack damage if he is invulnerable or hidden as the enemy dies. Each stack places a new buff on Underlord. This means their durations are independent of each other, gaining a new stack does not refresh the existing stacks.",
-        "Grants a stack of attack damage bonus when there are multiple Meepo Clones within the radius.",
-        "Does not grant bonus attack damage from dying illusions, buildings, wards, Undying Zombies, Couriers and the Tempest Double.",
-        "Does not grant bonus attack damage if he is invulnerable or hidden as the enemy dies.",
-        "Each stack places a new buff on Underlord. This means their durations are independent of each other, gaining a new stack does not refresh the existing stacks.",
-        "Treats creep-heroes as creeps.",
-        "A status buff is visible on the HUD, showing the current amount of bonus attack damage the aura currently grants. Underlord's weapon also glows stronger with green particle effects the more damage stacks he has.",
-        "Underlord's weapon also glows stronger with green particle effects the more damage stacks he has.",
-        "TALENT NOTES Atrophy Aura now grants 50% of the bonus attack damage to all allied heroes, including illusions, clones, and creep-heroes within its radius. However, the bonus attack damage is not provided by an aura, it is placed as an expiring buff on allies. It uses the same modifiers for allies as it does for Underlord, so they work exactly the same. Affected allies gain 15\/17.5\/20\/22.5 bonus attack damage per dying hero and 1\/2\/3\/4 bonus attack damage per dying non-hero units.",
-        "However, the bonus attack damage is not provided by an aura, it is placed as an expiring buff on allies.",
-        "It uses the same modifiers for allies as it does for Underlord, so they work exactly the same.",
-        "Affected allies gain 15\/17.5\/20\/22.5 bonus attack damage per dying hero and 1\/2\/3\/4 bonus attack damage per dying non-hero units."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Atrophy Aura",
       "cooldown": null,
-      "description": "Nearby enemy units are weakened, losing a portion of their base damage. If an enemy dies while under this effect, Underlord gains temporary bonus damage.",
-      "hot_key": "E",
-      "params": [
-        "Radius: 900",
-        "Attack Damage Reduction: 5%\/15%\/25%\/35% ( 20%\/30%\/40%\/50%)",
-        "Attack Damage Bonus per Hero Death: 30\/35\/40\/45",
-        "Attack Damage Bonus per Non-Hero Death: 2\/4\/6\/8",
-        "Buff Duration: 30\/45\/60\/75",
-        "Aura Linger Duration: 0.5",
-        "<span image=\"images\\Talent\"><\/span> Allied Bonus Percentage: 50%"
-      ],
       "legacy_key": "R",
       "story": "To merely stand in the presence of the Underlord is to feel the conviction of battle sapped from one's soul."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Underlord_Fiend%27s_Gate_1.mp3\/revision\/latest?cb=20220412214405",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Allies \/ Enemies"
-      ],
       "notes": [
-        "The exit portal must not be within 2000 radius of Underlord. A red range indicator around Underlord indicates the restricted area. The portals cannot be placed inside the fountain areas, including the ramps, or inside Roshan's pit. Cannot be placed on impassable terrain, or spots obscured by buildings or trees.",
-        "A red range indicator around Underlord indicates the restricted area.",
-        "The portals cannot be placed inside the fountain areas, including the ramps, or inside Roshan's pit.",
-        "Cannot be placed on impassable terrain, or spots obscured by buildings or trees.",
-        "Upon cast, allies and enemies get a \u203C Ping on their minimap, showing where the portals are placed. The portals have distinct icons on the minimap. It is colored green if Underlord is an ally, and red if he is an enemy. Both portals face each other when created, their particle effects point towards each other, indicating in which direction the other portal lies.",
-        "The portals have distinct icons on the minimap. It is colored green if Underlord is an ally, and red if he is an enemy.",
-        "Both portals face each other when created, their particle effects point towards each other, indicating in which direction the other portal lies.",
-        "Destroy trees and provides flying vision within 200 radius around the portals upon spawning.",
-        "The portals gain their Spell Immunity through a buff, allowing enemies to \u203C Ping it to display their remaining duration.",
-        "Only units with the Warp ability may Right Click or give an attack order (A) on the portal to start the channeling. This includes heroes, Meepo Clones, the Tempest Double and the Vengeance Illusion, Warlock Golems and Familiars. Cannot start the channeling while silenced. However, getting silenced while already channeling does not interrupt it. While channeling, the unit gets moved towards the center of the portal over the 3 second channel time.",
-        "This includes heroes, Meepo Clones, the Tempest Double and the Vengeance Illusion, Warlock Golems and Familiars.",
-        "Cannot start the channeling while silenced. However, getting silenced while already channeling does not interrupt it.",
-        "While channeling, the unit gets moved towards the center of the portal over the 3 second channel time.",
-        "Underlord immediately starts channeling the teleport upon cast. This can be canceled by the player.",
-        "Upon finishing the channeling, the unit gets teleported to the other portal. Does not disjoint projectiles upon teleporting. Does not interrupt queued and\/or ⇧ Shift-queue orders upon teleporting.",
-        "Does not disjoint projectiles upon teleporting.",
-        "Does not interrupt queued and\/or ⇧ Shift-queue orders upon teleporting.",
-        "SCEPTER NOTES Fiend's Gate now creates Pits of Malice based on its current level centered on both portals. Pit of Malice's notes fully apply. If it is not leveled, no pits are spawned.",
-        "Pit of Malice's notes fully apply. If it is not leveled, no pits are spawned."
+        "The exit portal must not be within 2000 radius of Underlord. A red range indicator around Underlord indicates the restricted area. The portals cannot be placed inside the fountain areas, including the ramps, or inside  Roshan's pit. Cannot be placed on impassable terrain, or spots obscured by buildings or trees",
+        "Upon cast, allies and enemies get a \u203C Ping on their minimap, showing where the portals are placed. The portals have distinct icons  on the minimap. It is colored green if Underlord is an ally, and red if he is an enemy. Both portals face each other when created, their particle effects point towards each other, indicating in which direction the other portal lies",
+        "Destroy trees and provides flying vision within 200 radius around the portals upon spawning",
+        "The portals gain their  Spell Immunity through a buff, allowing enemies to \u203C Ping it to display their remaining duration",
+        "Only units with the  Warp ability may  Right Click or give an attack order (A) on the portal to start the channeling. This includes heroes,  Meepo Clones, the  Tempest Double and the   Vengeance Illusion,  Warlock Golems and  Familiars. Cannot start the channeling while silenced. However, getting silenced while already channeling does not interrupt it. While channeling, the unit gets moved towards the center of the portal over the 3 second channel time",
+        "Underlord immediately starts channeling the teleport upon cast. This can be canceled by the player",
+        "Upon finishing the channeling, the unit gets teleported to the other portal. Does not disjoint projectiles upon teleporting. Does not interrupt queued and\/or ⇧ Shift-queue orders upon teleporting",
+        "SCEPTER NOTES Fiend's Gate now creates  Pits of Malice based on its current level centered on both portals. Pit of Malice's notes fully apply. If it is not leveled, no pits are spawned"
       ],
-      "mana": "120\/110\/100",
       "item_behaviour": [],
-      "name": "Fiend's Gate",
-      "cooldown": "100",
       "description": "Opens 2 portals, one next to Underlord and one in the target location. Heroes can channel a portal for 3 seconds to teleport to the other side. Allies that pass through the portal temporarily gain Damage Reduction and Movement Speed. Portals have to be at least 2000 away from each other.",
       "hot_key": "R",
       "params": [
@@ -168,6 +127,15 @@
         "Buff Duration: 5\/6\/7",
         "Portals Duration: 20"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Underlord_Fiend%27s_Gate_1.mp3\/revision\/latest?cb=20220412214405",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Allies \/ Enemies"
+      ],
+      "mana": "120\/110\/100",
+      "aghanim": null,
+      "name": "Fiend's Gate",
+      "cooldown": "100",
       "legacy_key": "D",
       "story": "They come without warning, leaving fire and blood where kingdoms once flourished."
     }

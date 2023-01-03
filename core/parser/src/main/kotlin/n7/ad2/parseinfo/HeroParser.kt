@@ -13,11 +13,11 @@ import java.io.File
 
 fun main() {
     val heroes = getHeroes()
-//    createFileWithHeroes(heroes)
-//    for (hero in heroes) {
-    loadHero(heroes.first(), LocaleHeroes.RU)
-//        loadHero(hero, LocaleHeroes.EN)
-//    }
+    createFileWithHeroes(heroes)
+    for (hero in heroes) {
+        loadHero(hero, LocaleHeroes.RU)
+        loadHero(hero, LocaleHeroes.EN)
+    }
 }
 
 
@@ -237,8 +237,6 @@ private fun loadSections(root: Document, callback: (SectionAndData) -> Unit) {
     }
 }
 
-val availableImages = File(assetsDatabaseItemsImages).listFiles().map { it.name.removeSuffix(".webp") }
-
 private fun JSONObject.loadAbilities(root: Document) {
     val spells = root.getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")
     val abilitiesArray = JSONArray()
@@ -356,7 +354,7 @@ private fun JSONObject.loadAbilities(root: Document) {
 
 private fun loadSpellImage(element: Element, name: String) {
     val url = element.getElementsByAttributeValue("class", "image")[0].attr("href")
-    saveImage(url, assetsDatabaseItemsImages, name)
+    saveImage(url, assetsDatabaseItemsImages, name.replace(" ", "_"))
 }
 
 private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {

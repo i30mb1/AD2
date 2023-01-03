@@ -1,44 +1,16 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Chaos_Knight_Chaos_Bolt_1.mp3\/revision\/latest?cb=20191216012025",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Chaos Bolt travels at a speed of 700.",
-        "Stun duration and raw damage values are shown above the target's head upon hit, visible to allies and enemies, with the duration being shown as a rounded integer up to two decimal places. However, the actual stun duration is not by exact seconds \u2014 it ranges between the min and max values (e.g. at level 1, it could stun for 1.74 seconds).",
-        "However, the actual stun duration is not by exact seconds \u2014 it ranges between the min and max values (e.g. at level 1, it could stun for 1.74 seconds).",
-        "Damage and stun values are inversely related, the longer the stun is, the less damage it deals and vice versa. This means the damage decreases by 6.32\/6.92\/7.27\/7.5 per each additional 0.1 seconds of stun. Has the following values for the damage and stun duration on each level: Level 1: 1.25s \u2013 120, 1.4875s \u2013 105, 1.725s \u2013 90, 1.9625s \u2013 75, 2.2s \u2013 60 Level 2: 1.5s \u2013 180, 1.825s \u2013 157.5, 2.15s \u2013 135, 2.475s \u2013 112.5, 2.8s \u2013 90 Level 3: 1.75s \u2013 240, 2.1625s \u2013 210, 2.575s \u2013 180, 2.9875s \u2013 150, 3.4s \u2013 120 Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150 TALENT NOTES Since both the minimum and maximum value of the stun duration are increased evenly by 0.75, the above damage values remain the same.",
-        "This means the damage decreases by 6.32\/6.92\/7.27\/7.5 per each additional 0.1 seconds of stun. Has the following values for the damage and stun duration on each level: Level 1: 1.25s \u2013 120, 1.4875s \u2013 105, 1.725s \u2013 90, 1.9625s \u2013 75, 2.2s \u2013 60 Level 2: 1.5s \u2013 180, 1.825s \u2013 157.5, 2.15s \u2013 135, 2.475s \u2013 112.5, 2.8s \u2013 90 Level 3: 1.75s \u2013 240, 2.1625s \u2013 210, 2.575s \u2013 180, 2.9875s \u2013 150, 3.4s \u2013 120 Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150",
-        "Level 1: 1.25s \u2013 120, 1.4875s \u2013 105, 1.725s \u2013 90, 1.9625s \u2013 75, 2.2s \u2013 60",
-        "Level 2: 1.5s \u2013 180, 1.825s \u2013 157.5, 2.15s \u2013 135, 2.475s \u2013 112.5, 2.8s \u2013 90",
-        "Level 3: 1.75s \u2013 240, 2.1625s \u2013 210, 2.575s \u2013 180, 2.9875s \u2013 150, 3.4s \u2013 120",
-        "Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150",
-        "",
-        "TALENT NOTES Since both the minimum and maximum value of the stun duration are increased evenly by 0.75, the above damage values remain the same.",
-        "The bolt first applies the debuff, then the damage.",
-        "All illusions owned by Chaos Knight within 675 range of the target also cast a fake Chaos Bolt. They play the whole cast animation and release their fake bolt at the same time the real bolt is released. When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake bolt. When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations. When canceling the cast, the illusions still play the full cast animation, but do not release the fake bolt. The fake bolts do not interact with anything and do not damage or stun the target.",
-        "They play the whole cast animation and release their fake bolt at the same time the real bolt is released.",
-        "When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake bolt.",
-        "When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations.",
-        "When canceling the cast, the illusions still play the full cast animation, but do not release the fake bolt.",
-        "The fake bolts do not interact with anything and do not damage or stun the target.",
-        "SHARD NOTES Chaos Bolt now creates 1 controllable Phantasm illusion upon projectile impact, based on its current level. Does not spawn an illusion, if the projectile gets disjointed, or the target is invulnerable, hidden or spell immune upon impact. Phantasm notes fully apply. If Phantasm is not learned, the illusion does not spawn. The illusion spawned spawns automatically starts attacking the affected enemy. Dispelling the stun or dying does not remove already spawned illusions.",
-        "Does not spawn an illusion, if the projectile gets disjointed, or the target is invulnerable, hidden or spell immune upon impact.",
-        "Phantasm notes fully apply. If Phantasm is not learned, the illusion does not spawn.",
-        "The illusion spawned spawns automatically starts attacking the affected enemy.",
-        "Dispelling the stun or dying does not remove already spawned illusions.",
-        "SHARD NOTES The illusion spawns at different distances depending on the caster and target's collision size as follows: The illusion spawns 58 range away from the target if both the caster and target have a collision size of 8. The illusion spawns 87 range away from the target if either the caster or the target has a collision size of 24.",
-        "The illusion spawns 58 range away from the target if both the caster and target have a collision size of 8.",
-        "The illusion spawns 87 range away from the target if either the caster or the target has a collision size of 24."
+        "Chaos Bolt travels at a speed of 700",
+        "Stun duration and raw damage values are shown above the target's head upon hit, visible to allies and enemies, with the duration being shown as a rounded integer up to two decimal places. However, the actual stun duration is not by exact seconds \u2014 it ranges between the min and max values (e.g. at level 1, it could stun for 1.74 seconds)",
+        "Damage and stun values are inversely related, the longer the stun is, the less damage it deals and vice versa. This means the damage decreases by 6.32\/6.92\/7.27\/7.5 per each additional 0.1 seconds of stun. Has the following values for the damage and stun duration on each level: Level 1: 1.25s \u2013 120, 1.4875s \u2013 105, 1.725s \u2013 90, 1.9625s \u2013 75, 2.2s \u2013 60 Level 2: 1.5s \u2013 180, 1.825s \u2013 157.5, 2.15s \u2013 135, 2.475s \u2013 112.5, 2.8s \u2013 90 Level 3: 1.75s \u2013 240, 2.1625s \u2013 210, 2.575s \u2013 180, 2.9875s \u2013 150, 3.4s \u2013 120 Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150  TALENT NOTES Since both the <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> minimum and maximum value of the stun duration are increased evenly by 0.75, the above damage values remain the same",
+        "The bolt first applies the debuff, then the damage",
+        "All illusions owned by Chaos Knight within 675 range of the target also cast a fake Chaos Bolt. They play the whole cast animation and release their fake bolt at the same time the real bolt is released. When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake bolt. When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations. When canceling the cast, the illusions still play the full cast animation, but do not release the fake bolt. The fake bolts do not interact with anything and do not damage or stun the target",
+        "SHARD NOTES Chaos Bolt now creates 1 controllable  Phantasm illusion upon projectile impact, based on its current level. Does not spawn an illusion, if the projectile gets disjointed, or the target is invulnerable, hidden or spell immune upon impact. Phantasm notes fully apply. If Phantasm is not learned, the illusion does not spawn. The illusion spawned spawns automatically starts attacking the affected enemy. Dispelling the stun or dying does not remove already spawned illusions",
+        "SHARD NOTES The illusion spawns at different distances depending on the caster and target's collision size as follows: The illusion spawns 58 range away from the target if both the caster and target have a collision size of 8. The illusion spawns 87 range away from the target if either the caster or the target has a collision size of 24"
       ],
-      "mana": "13\/12\/11\/10 (TagTalent 10\/9\/8\/7)",
       "item_behaviour": [],
-      "name": "Chaos Bolt",
-      "cooldown": "110\/120\/130\/140",
       "description": "Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage.",
       "hot_key": "Q",
       "params": [
@@ -46,124 +18,102 @@
         "Cast Range:  500 ( 650)",
         "Min Damage: 60\/90\/120\/150",
         "Max Damage: 120\/180\/240\/300",
-        "Min Stun Duration: 1.25\/1.5\/1.75\/2 ( 2\/2.25\/2.5\/2.75)",
-        "Max Stun Duration: 2.2\/2.8\/3.4\/4 ( 2.95\/3.55\/4.15\/4.75)",
-        "Number of Phantasm Illusions: 1",
-        "Illusion Damage Dealt: 100%",
-        "Illusion Damage Taken: 325% ( 250%)",
-        "Illusion Duration: 6"
+        "Min Stun Duration: 1.25\/1.5\/1.75\/2 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2\/2.25\/2.5\/2.75)",
+        "Max Stun Duration: 2.2\/2.8\/3.4\/4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.95\/3.55\/4.15\/4.75)",
+        "Number of Phantasm Illusions:  1",
+        "Illusion Damage Dealt:  100%",
+        "Illusion Damage Taken:  325% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 250%)",
+        "Illusion Duration:  6"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Chaos_Knight_Chaos_Bolt_1.mp3\/revision\/latest?cb=20191216012025",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "13\/12\/11\/10 (TagTalent 10\/9\/8\/7)",
+      "aghanim": null,
+      "name": "Chaos Bolt",
+      "cooldown": "110\/120\/130\/140",
       "legacy_key": "C",
       "story": "Even Chaos Knight cannot predict this manifest of unholy energy."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Chaos_Knight_Reality_Rift.mp3\/revision\/latest?cb=20191216012022",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies \/ Self"
-      ],
       "notes": [
-        "Does not disjoint projectiles for enemies and self.",
-        "Teleports Chaos Knight to a point 250\/300\/350\/400 (TagTalent 475\/525\/575\/625) range away from the target's original position, towards Chaos Knight's original cast location, but not beyond it. The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 (TagTalent 413\/463\/513\/563) range. Chaos Knight's illusions are located around the target from random angles, with the same distance to it as Chaos Knight. The location is determined at the beginning of the cast. A visual effect while casting denotes the point at which Chaos Knight and his target will land. Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight. If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War. Chaos Knight and his illusions are made to face his target and are issued an attack order against the target.",
-        "The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 (TagTalent 413\/463\/513\/563) range.",
-        "Chaos Knight's illusions are located around the target from random angles, with the same distance to it as Chaos Knight.",
-        "The location is determined at the beginning of the cast.",
-        "A visual effect while casting denotes the point at which Chaos Knight and his target will land. Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight. If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War.",
-        "Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight.",
-        "If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War.",
-        "Chaos Knight and his illusions are made to face his target and are issued an attack order against the target.",
-        "When cast on Roshan, Chaos Knight and his illusions still get moved, but Roshan does not.",
-        "The armor debuff is applied to the target upon cast. Chaos Knight does not need to attack it in order to place the debuff.",
-        "The debuff from successive casts does not stack but refreshes the duration.",
-        "Does not interrupt the target's channeling abilities.",
-        "TALENT NOTES Fully affects Couriers upon learning the Reality Rift pierces spell immunity talent."
+        "Does not disjoint projectiles for enemies and self",
+        "Teleports Chaos Knight to a point 250\/300\/350\/400 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 475\/525\/575\/625) range away from the target's original position, towards Chaos Knight's original cast location, but not beyond it. The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 413\/463\/513\/563) range. Chaos Knight's illusions are located around the target from random angles, with the same distance to it as Chaos Knight. The location is determined at the beginning of the cast. A visual effect while casting denotes the point at which Chaos Knight and his target will land. Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight. If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War. Chaos Knight and his illusions are made to face his target and are issued an attack order against the target",
+        "When cast on  Roshan, Chaos Knight and his illusions still get moved, but Roshan does not",
+        "The armor debuff is applied to the target upon cast. Chaos Knight does not need to attack it in order to place the debuff",
+        "The debuff from successive casts does not stack but refreshes the duration",
+        "Does not interrupt the target's channeling abilities",
+        "TALENT NOTES Fully affects  Couriers upon learning the Reality Rift pierces spell immunity <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent"
       ],
-      "mana": "18\/14\/10\/6",
       "item_behaviour": [],
-      "name": "Reality Rift",
-      "cooldown": "50",
       "description": "Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range:  550\/600\/650\/750",
         "Illusion Search Radius: 1375",
-        "Target Pull Distance: 250\/300\/350\/400 ( 475\/525\/575\/625)",
+        "Target Pull Distance: 250\/300\/350\/400 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 475\/525\/575\/625)",
         "Armor Reduction: 4\/5\/6\/7",
         "Duration: 6"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Chaos_Knight_Reality_Rift.mp3\/revision\/latest?cb=20191216012022",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self"
+      ],
+      "mana": "18\/14\/10\/6",
+      "aghanim": null,
+      "name": "Reality Rift",
+      "cooldown": "50",
       "legacy_key": "E",
       "story": "Armageddon rides between the planes, bringing Chaos Knight to his victim wherever he may hide."
     },
     {
+      "notes": [
+        "Increases attack damage by an average of 10.83%\/16.67%\/22.5%\/28.33% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 14.08%\/21.67%\/29.25%\/36.83%) against heroes clones, and illusions. Increases attack damage by an average of 32.91%\/41.66%\/50.41%\/59.16% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 42.79%\/54.16%\/65.54%\/76.91%) against non-hero units. Treats creep-heroes and  Roshan as heroes",
+        "A critical strike proc is decided upon attack begin, not upon landing an attack. When a critical strike procs, Chaos Knight uses a specific crit attack animation, and particle effects appear on his weapon",
+        "The proc chances of multiple critical strike sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority",
+        "Stacks additively with other sources of lifesteal",
+        "Does not proc against wards, buildings and allies",
+        "Chaos Strike uses pseudo-random distribution"
+      ],
+      "item_behaviour": [],
+      "description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage. Deals 1.5x damage to creeps.",
+      "hot_key": "E",
+      "params": [
+        "Proc Chance: 33.33% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 43.33%)",
+        "Min Critical Damage: 125%",
+        "Max Critical Damage: 140%\/175%\/210%\/245%",
+        "Lifesteal: 20%\/30%\/40%\/50% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 42%\/52%\/62%\/72%)",
+        "Non-Hero Damage Percentage: 150%"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Chaos_Knight_Chaos_Strike.mp3\/revision\/latest?cb=20191216012015",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies \/ Self"
       ],
-      "notes": [
-        "Increases attack damage by an average of 10.83%\/16.67%\/22.5%\/28.33% (TagTalent 14.08%\/21.67%\/29.25%\/36.83%) against heroes clones, and illusions. Increases attack damage by an average of 32.91%\/41.66%\/50.41%\/59.16% (TagTalent 42.79%\/54.16%\/65.54%\/76.91%) against non-hero units. Treats creep-heroes and Roshan as heroes.",
-        "Increases attack damage by an average of 32.91%\/41.66%\/50.41%\/59.16% (TagTalent 42.79%\/54.16%\/65.54%\/76.91%) against non-hero units.",
-        "Treats creep-heroes and Roshan as heroes.",
-        "A critical strike proc is decided upon attack begin, not upon landing an attack. When a critical strike procs, Chaos Knight uses a specific crit attack animation, and particle effects appear on his weapon.",
-        "When a critical strike procs, Chaos Knight uses a specific crit attack animation, and particle effects appear on his weapon.",
-        "The proc chances of multiple critical strike sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
-        "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
-        "Stacks additively with other sources of lifesteal.",
-        "Does not proc against wards, buildings and allies.",
-        "Chaos Strike uses pseudo-random distribution."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Chaos Strike",
       "cooldown": null,
-      "description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage. Deals 1.5x damage to creeps.",
-      "hot_key": "E",
-      "params": [
-        "Proc Chance: 33.33% ( 43.33%)",
-        "Min Critical Damage: 125%",
-        "Max Critical Damage: 140%\/175%\/210%\/245%",
-        "Lifesteal: 20%\/30%\/40%\/50% ( 42%\/52%\/62%\/72%)",
-        "Non-Hero Damage Percentage: 150%"
-      ],
       "legacy_key": "R",
       "story": "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Chaos_Knight_Phantasm.mp3\/revision\/latest?cb=20191216012020",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self "
-      ],
       "notes": [
-        "Applies a basic dispel on Chaos Knight and disjoints projectiles upon cast.",
-        "Chaos Knight is invulnerable, hidden and spell immune during the 0.5-second split time. Also provides 400 radius flying vision around Chaos Knight upon cast during the split time.",
-        "Also provides 400 radius flying vision around Chaos Knight upon cast during the split time.",
-        "After the 0.5 seconds split time, Chaos Knight reappears with his illusions. The reappear locations are based on Chaos Knight's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus. Though the formation is always the same, Chaos Knight and his illusions take a random position in the formation and have all the same facing angle. All Phantasm-based illusions have a EXPR 2 * IllusionLVL bounty. The illusions spawn at different distances depending on the caster's collision size as follows: The illusions spawn 135 range away if the caster has a collsion size of 24. The illusions spawn 90 range away if the caster has a collision size of 8.",
-        "The reappear locations are based on Chaos Knight's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point.",
-        "This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus.",
-        "Though the formation is always the same, Chaos Knight and his illusions take a random position in the formation and have all the same facing angle.",
-        "All Phantasm-based illusions have a EXPR 2 * IllusionLVL bounty.",
-        "The illusions spawn at different distances depending on the caster's collision size as follows: The illusions spawn 135 range away if the caster has a collsion size of 24. The illusions spawn 90 range away if the caster has a collision size of 8.",
-        "The illusions spawn 135 range away if the caster has a collsion size of 24.",
-        "The illusions spawn 90 range away if the caster has a collision size of 8.",
-        "Orders the caster to stop after the split time, canceling all queued orders, and orders given during the split time. Also stops all ongoing targeted orders of other units that have been issued before Phantasm was cast.",
-        "Also stops all ongoing targeted orders of other units that have been issued before Phantasm was cast.",
-        "Recasting Phantasm replaces the illusions from the previous cast, no matter under whose control they are.",
-        "Phantasm illusions are strong illusions, meaning they cannot be instantly killed by abilities that normally kill illusions instantly.",
-        "SCEPTER NOTES Phantasm now creates Global illusion of every ally hero and clones, Globally, under Chaos Knight's control. Does not affect invulnerable or hidden allies. Applies a basic dispel on affected allied heroes, but does not disjoint projectiles. Does not turn the ally invulnerable or hidden either, and it does not interrupt their current orders. The same illusion formation notes apply to these illusions as well.",
-        "Does not affect invulnerable or hidden allies.",
-        "Applies a basic dispel on affected allied heroes, but does not disjoint projectiles.",
-        "Does not turn the ally invulnerable or hidden either, and it does not interrupt their current orders.",
-        "The same illusion formation notes apply to these illusions as well.",
-        "SCEPTER NOTES The illusions spawn at different distances depending on the ally's collision size as follows: The illusions spawn 81 range away if the ally has a collision size of 24. The illusions spawn 54 range away if the ally has a collision size of 8.",
-        "The illusions spawn 81 range away if the ally has a collision size of 24.",
-        "The illusions spawn 54 range away if the ally has a collision size of 8."
+        "Applies a basic dispel on Chaos Knight and disjoints projectiles upon cast",
+        "Chaos Knight is invulnerable, hidden and spell immune during the 0.5-second split time. Also provides 400 radius flying vision around Chaos Knight upon cast during the split time",
+        "After the 0.5 seconds split time, Chaos Knight reappears with his illusions. The reappear locations are based on Chaos Knight's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus. Though the formation is always the same, Chaos Knight and his illusions take a random position in the formation and have all the same facing angle. All Phantasm-based illusions have a EXPR 2 * IllusionLVL bounty. The illusions spawn at different distances depending on the caster's collision size as follows: The illusions spawn 135 range away if the caster has a collsion size of 24. The illusions spawn 90 range away if the caster has a collision size of 8",
+        "Orders the caster to stop after the split time, canceling all queued orders, and orders given during the split time. Also stops all ongoing targeted orders of other units that have been issued before Phantasm was cast",
+        "Recasting Phantasm replaces the illusions from the previous cast, no matter under whose control they are",
+        "Phantasm illusions are strong illusions, meaning they cannot be instantly killed by abilities that normally kill illusions instantly",
+        "SCEPTER NOTES Phantasm now creates Global illusion of every ally hero and clones, Globally, under Chaos Knight's control. Does not affect invulnerable or hidden allies. Applies a basic dispel on affected allied heroes, but does not disjoint projectiles. Does not turn the ally invulnerable or hidden either, and it does not interrupt their current orders. The same illusion formation notes apply to these illusions as well",
+        "SCEPTER NOTES The illusions spawn at different distances depending on the ally's collision size as follows: The illusions spawn 81 range away if the ally has a collision size of 24. The illusions spawn 54 range away if the ally has a collision size of 8"
       ],
-      "mana": "75",
       "item_behaviour": [],
-      "name": "Phantasm",
-      "cooldown": "75\/125\/175",
       "description": "Summons several phantasmal copies of the Chaos Knight from alternate dimensions. The phantasms are strong illusions that deal 100% damage, but take 325% damage.",
       "hot_key": "R",
       "params": [
@@ -171,11 +121,20 @@
         "Split Time: 0.5",
         "Number of Illusions: 1\/2\/3 ( 2\/3\/4)",
         "Illusion Damage Dealt: 100%",
-        "Illusion Damage Taken: 325% ( 250%)",
-        "Duration: 30 ( 40)",
-        "Effect Radius: Global",
-        "Number of Illusions From Each Ally: 1"
+        "Illusion Damage Taken: 325% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 250%)",
+        "Duration: 30 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 40)",
+        "Effect Radius:  Global",
+        "Number of Illusions From Each Ally:  1"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Chaos_Knight_Phantasm.mp3\/revision\/latest?cb=20191216012020",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self "
+      ],
+      "mana": "75",
+      "aghanim": null,
+      "name": "Phantasm",
+      "cooldown": "75\/125\/175",
       "legacy_key": "T",
       "story": "Drawing on his battles fought across many worlds and many times, phantasms of the Chaos Knight rise up to quell all who oppose him."
     }

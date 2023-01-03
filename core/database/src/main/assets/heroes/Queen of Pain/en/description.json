@@ -1,85 +1,55 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Queen_of_Pain_Shadow_Strike.mp3\/revision\/latest?cb=20191216022210",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies \/ Self",
-        "Damage: Magical"
-      ],
       "notes": [
-        "A unit with less than 25% of its max health can be denied when it has the Shadow Strike debuff on.",
-        "The dagger travels at a speed of 900.",
-        "Successive casts on the same target remove the debuff from the previous cast and place a new one. This means if the initial damage is dealt again, and the movement speed slow values and instance interval are effectively reset.",
-        "This means if the initial damage is dealt again, and the movement speed slow values and instance interval are effectively reset.",
-        "The movement speed slow starts off at 20%\/35%\/50%\/65% and decreases in 1-second intervals. For how much movement speed slow Shadow Strike slows on each level at each second, please refer to the chart below.",
-        "3 (TagTalent 2.5) seconds after cast, Shadow Strike deals damage and self-heal over time in 3 (TagTalent 2.5)-second intervals.",
-        "The initial damage is dealt upon projectile impact, resulting in 6 (TagTalent 7) total damage instances. Can deal up to 130\/260\/390\/520 (TagTalent 150\/300\/450\/600) (TagTalent 210\/340\/470\/600, 230\/380\/530\/680) damage (before reductions) to the affected target(s).",
-        "Can deal up to 130\/260\/390\/520 (TagTalent 150\/300\/450\/600) (TagTalent 210\/340\/470\/600, 230\/380\/530\/680) damage (before reductions) to the affected target(s).",
-        "However, it does not heal initially on projectile impact, resulting in 5 (TagTalent 6) total heal instances. Treats clones and creep-heroes as heroes, and illusions as creeps. Therefore, it can heal Queen of Pain for up to 50\/100\/150\/200 (TagTalent 60\/120\/180\/240) health from heroes, and 25\/50\/75\/100 (TagTalent 30\/60\/90\/120) health from non-hero units. Always heals for the full amount per instance, regardless of how much damage the target actually takes. Does not continue to heal Queen of Pain at full health.",
-        "Treats clones and creep-heroes as heroes, and illusions as creeps.",
-        "Therefore, it can heal Queen of Pain for up to 50\/100\/150\/200 (TagTalent 60\/120\/180\/240) health from heroes, and 25\/50\/75\/100 (TagTalent 30\/60\/90\/120) health from non-hero units.",
-        "Always heals for the full amount per instance, regardless of how much damage the target actually takes.",
-        "Does not continue to heal Queen of Pain at full health.",
-        "TALENT NOTES The number of instance intervals can be defined as EXPR ⌊ Duration \/ (3 - 0.7)⌋. Therefore, the instance interval's value is reduced to 2.5 seconds instead, resulting in a total of 6 instances within the entire duration.",
-        "Therefore, the instance interval's value is reduced to 2.5 seconds instead, resulting in a total of 6 instances within the entire duration.",
-        "SCEPTER NOTES Shadow Strike now hits all enemy targets within 400 radius of the primary target. These daggers behave just like a regular cast, and can be disjointed normally. Also targets units inside the Fog of War and invisible units. Scream of Pain projectiles are released based on its current level within 550 radius around the affected target in the following conditions: Losing the debuff in any way (e.g. via dispels), including successive casts on the same target, or by debuff expiring. Projectiles are released even when the affected target turns spell immune, invulnerable and hidden, if the conditions are met.",
-        "These daggers behave just like a regular cast, and can be disjointed normally.",
-        "Also targets units inside the Fog of War and invisible units.",
-        "Scream of Pain projectiles are released based on its current level within 550 radius around the affected target in the following conditions: Losing the debuff in any way (e.g. via dispels), including successive casts on the same target, or by debuff expiring. Projectiles are released even when the affected target turns spell immune, invulnerable and hidden, if the conditions are met.",
-        "Losing the debuff in any way (e.g. via dispels), including successive casts on the same target, or by debuff expiring.",
-        "Projectiles are released even when the affected target turns spell immune, invulnerable and hidden, if the conditions are met.",
-        "SCEPTER NOTES The primary affected target releasing the projectiles is not damaged. The damage is sourced to the affected target, and not to Queen of Pain. Scream of Pain projectiles are not released in the following conditions: When the affected target(s) dies while affected by the debuff. When there are no valid targets within range upon debuff expiration. If the affected target is an illusion or the Tempest Double expiring. Projectiles released by the affected target(s) this way do not interrupt their current channeling abilities. Scream of Pain notes fully apply. If it is not learned, Scream of Pain is not released upon losing the debuff.",
-        "Scream of Pain projectiles are not released in the following conditions: When the affected target(s) dies while affected by the debuff. When there are no valid targets within range upon debuff expiration. If the affected target is an illusion or the Tempest Double expiring.",
-        "When the affected target(s) dies while affected by the debuff.",
-        "When there are no valid targets within range upon debuff expiration.",
-        "If the affected target is an illusion or the Tempest Double expiring.",
-        "Projectiles released by the affected target(s) this way do not interrupt their current channeling abilities.",
-        "Scream of Pain notes fully apply. If it is not learned, Scream of Pain is not released upon losing the debuff.",
-        "SPELL STEAL \/ MORPH NOTES The passive Scream of Pain cast upon debuff expiration is based on Queen of Pain's current ability level when acquired."
+        "A unit with less than 25% of its max health can be denied when it has the Shadow Strike debuff on",
+        "The dagger travels at a speed of 900",
+        "Successive casts on the same target remove the debuff from the previous cast and place a new one. This means if the initial damage is dealt again, and the movement speed slow values and instance interval are effectively reset",
+        "The movement speed slow starts off at 20%\/35%\/50%\/65% and decreases in 1-second intervals. For how much movement speed slow Shadow Strike slows on each level at each second, please refer to the chart below",
+        "3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.5) seconds after cast, Shadow Strike deals damage and self-heal over time in 3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.5)-second intervals",
+        "The initial damage is dealt upon projectile impact, resulting in 6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 7) total damage instances. Can deal up to 130\/260\/390\/520 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 150\/300\/450\/600) ( 210\/340\/470\/600, <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 230\/380\/530\/680) damage (before reductions) to the affected target(s)",
+        "However, it does not heal initially on projectile impact, resulting in 5 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 6) total heal instances. Treats clones and creep-heroes as heroes, and illusions as creeps. Therefore, it can heal Queen of Pain for up to 50\/100\/150\/200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 60\/120\/180\/240) health from heroes, and 25\/50\/75\/100 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 30\/60\/90\/120) health from non-hero units. Always heals for the full amount per instance, regardless of how much damage the target actually takes. Does not continue to heal Queen of Pain at full health",
+        "TALENT NOTES The number of instance intervals can be defined as EXPR ⌊ Duration \/ (3 - <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.7)⌋. Therefore, the instance interval's value is reduced to 2.5 seconds instead, resulting in a total of 6 instances within the entire duration",
+        "SCEPTER NOTES Shadow Strike now hits all enemy targets within 400 radius of the primary target. These daggers behave just like a regular cast, and can be disjointed normally. Also targets units inside the Fog of War and invisible units.  Scream of Pain projectiles are released based on its current level within 550 radius around the affected target in the following conditions: Losing the debuff in any way (e.g. via dispels), including successive casts on the same target, or by debuff expiring. Projectiles are released even when the affected target turns spell immune, invulnerable and hidden, if the conditions are met",
+        "SCEPTER NOTES The primary affected target releasing the projectiles is not damaged. The damage is sourced to the affected target, and not to Queen of Pain. Scream of Pain projectiles are not released in the following conditions: When the affected target(s) dies while affected by the debuff. When there are no valid targets within range upon debuff expiration. If the affected target is an illusion or the  Tempest Double expiring. Projectiles released by the affected target(s) this way do not interrupt their current channeling abilities. Scream of Pain notes fully apply. If it is not learned, Scream of Pain is not released upon losing the debuff. SPELL STEAL \/ MORPH NOTES The passive  Scream of Pain cast upon debuff expiration is based on  Queen of Pain's current ability level when acquired"
       ],
-      "mana": "16\/12\/8\/4",
       "item_behaviour": [],
-      "name": "Shadow Strike",
-      "cooldown": "125\/135\/145\/155",
       "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 15 seconds. An instance of damage is dealt every 3 seconds. Queen of Pain relishes in the pain inflicted, healing every time the enemy takes damage. Creeps heal for half the damage only.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.67",
         "Cast Range:  450\/500\/550\/600",
         "Initial Damage: 30\/60\/90\/120 ( 110\/140\/170\/200)",
-        "Number of Instances: 5 ( 6)",
-        "Instance Interval: 3 ( 2.5)",
+        "Number of Instances: 5 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 6)",
+        "Instance Interval: 3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.5)",
         "Damage per Instance: 20\/40\/60\/80",
         "Self Heal per Instance: 10\/20\/30\/40",
         "Creep Heal Percentage: 50%",
         "Move Speed Slow: 20%\/35%\/50%\/65%",
         "Duration: 15",
-        "Radius: 400"
+        "Radius:  400"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Queen_of_Pain_Shadow_Strike.mp3\/revision\/latest?cb=20191216022210",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "16\/12\/8\/4",
+      "aghanim": null,
+      "name": "Shadow Strike",
+      "cooldown": "125\/135\/145\/155",
       "legacy_key": "D",
       "story": "Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Queen_of_Pain_Blink_1.mp3\/revision\/latest?cb=20191216022215",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Self ",
-        "Damage: "
-      ],
       "notes": [
-        "Disjoints projectiles upon cast.",
-        "Attempting to blink less than the minimum distance will blink for 200 range instead.",
-        "Does not blink for the full distance when targeting closer than the max distance. When targeting beyond the max blink distance, Queen of Pain blinks for the max distance towards the targeted point.",
-        "When targeting beyond the max blink distance, Queen of Pain blinks for the max distance towards the targeted point.",
-        "SHARD NOTES Blink first applies the silence debuff, then the damage. The damage fully stack, so enemies within radius of the starting and end location are hit twice, taking 250 damage. The silence debuff from multiple casts does not stack but refreshes the duration instead.",
-        "The damage fully stack, so enemies within radius of the starting and end location are hit twice, taking 250 damage.",
-        "The silence debuff from multiple casts does not stack but refreshes the duration instead."
+        "Disjoints projectiles upon cast",
+        "Attempting to blink less than the minimum distance will blink for 200 range instead",
+        "Does not blink for the full distance when targeting closer than the max distance. When targeting beyond the max blink distance, Queen of Pain blinks for the max distance towards the targeted point",
+        "SHARD NOTES Blink first applies the silence debuff, then the damage. The damage fully stack, so enemies within  radius of the starting and end location are hit twice, taking 250 damage. The silence debuff from multiple casts does not stack but refreshes the duration instead"
       ],
-      "mana": "12\/10\/8\/6 (TagTalent 10\/8\/6\/4)",
       "item_behaviour": [],
-      "name": "Blink",
-      "cooldown": "60",
       "description": "Short distance teleportation that allows Queen of Pain to move in and out of combat.",
       "hot_key": "W",
       "params": [
@@ -87,62 +57,61 @@
         "Cast Range: Global",
         "Min Blink Distance: 200",
         "Max Blink Distance:  1075\/1150\/1225\/1300",
-        "Radius: 300",
-        "Damage: 125",
-        "Silence Duration: 1.75"
+        "Radius:  300",
+        "Damage:  125",
+        "Silence Duration:  1.75"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Queen_of_Pain_Blink_1.mp3\/revision\/latest?cb=20191216022215",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self ",
+        "Damage: "
+      ],
+      "mana": "12\/10\/8\/6 (TagTalent 10\/8\/6\/4)",
+      "aghanim": null,
+      "name": "Blink",
+      "cooldown": "60",
       "legacy_key": "B",
       "story": "The Secret Queen lives up to her title, making her Pain impossible to escape."
     },
     {
+      "notes": [
+        "The projectiles travel at a speed of 900",
+        "Affects invisible units and units in the Fog of War",
+        "Does not affect invulnerable or hidden units"
+      ],
+      "item_behaviour": [],
+      "description": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0+0.63",
+        "Search Radius: 550",
+        "Damage: 75\/150\/225\/300 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 195\/270\/345\/420)"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Queen_of_Pain_Scream_of_Pain.mp3\/revision\/latest?cb=20191216022209",
       "effects": [
         "Ability: No Target",
         "Affects: Enemies",
         "Damage: Magical"
       ],
-      "notes": [
-        "The projectiles travel at a speed of 900.",
-        "Affects invisible units and units in the Fog of War.",
-        "Does not affect invulnerable or hidden units."
-      ],
       "mana": "7",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Scream of Pain",
       "cooldown": "100\/110\/120\/130",
-      "description": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies.",
-      "hot_key": "E",
-      "params": [
-        "Cast Animation: 0+0.63",
-        "Search Radius: 550",
-        "Damage: 75\/150\/225\/300 ( 195\/270\/345\/420)"
-      ],
       "legacy_key": "F",
       "story": "The sultry voice of Akasha beckons her opponents while stealing their souls."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Queen_of_Pain_Sonic_Wave.mp3\/revision\/latest?cb=20191216022211",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies",
-        "Damage: Pure"
-      ],
       "notes": [
-        "Sonic Wave travels at a speed of 900, taking 1 second to travel the full distance.",
-        "With the travel distance and end radius, it can hit units up to 1350.",
-        "The complete area is shaped like a cone.",
-        "The knockback angle depends on the angle between the hit target and Queen of Pain's cast location. This means the knockback direction does not equal the cast direction. Enemies within close proximity may get pushed to the sides. Knocks hit enemies 350 range back over 1.4 seconds, resulting in a knockback speed of 250. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Does not interrupt channeling abilities.",
-        "This means the knockback direction does not equal the cast direction. Enemies within close proximity may get pushed to the sides.",
-        "Knocks hit enemies 350 range back over 1.4 seconds, resulting in a knockback speed of 250.",
-        "Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Does not interrupt channeling abilities.",
-        "Destroys trees within 200 radius enemies come in contact with during the knockback.",
-        "Sonic Wave first applies its damage, then the knockback debuff.",
-        "Fully affects Couriers."
+        "Sonic Wave travels at a speed of 900, taking 1 second to travel the full distance",
+        "With the travel distance and end radius, it can hit units up to 1350",
+        "The complete area is shaped like a cone",
+        "The knockback angle depends on the angle between the hit target and Queen of Pain's cast location. This means the knockback direction does not equal the cast direction. Enemies within close proximity may get pushed to the sides. Knocks hit enemies 350 range back over 1.4 seconds, resulting in a knockback speed of 250. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Does not interrupt channeling abilities",
+        "Destroys trees within 200 radius enemies come in contact with during the knockback",
+        "Sonic Wave first applies its damage, then the knockback debuff",
+        "Fully affects  Couriers"
       ],
-      "mana": "110\/100\/90 (TagTalent 70\/60\/50)",
       "item_behaviour": [],
-      "name": "Sonic Wave",
-      "cooldown": "250\/400\/550",
       "description": "Creates a gigantic wave of sound in front of Queen of Pain, dealing heavy damage to all enemy units in its wake and pushing them back.",
       "hot_key": "R",
       "params": [
@@ -151,10 +120,20 @@
         "Starting Radius: 100",
         "Travel Distance:  900",
         "End Radius: 450",
-        "Damage: 310\/430\/550 ( 510\/630\/750)",
+        "Damage: 310\/430\/550 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 510\/630\/750)",
         "Knockback Distance: 350",
         "Knockback Duration: 1.4"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Queen_of_Pain_Sonic_Wave.mp3\/revision\/latest?cb=20191216022211",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "mana": "110\/100\/90 (TagTalent 70\/60\/50)",
+      "aghanim": null,
+      "name": "Sonic Wave",
+      "cooldown": "250\/400\/550",
       "legacy_key": "W",
       "story": "Her most exquisite of all of torments, Akasha's Sonic Wave puts her poor foes out of their misery."
     }

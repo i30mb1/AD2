@@ -1,30 +1,18 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Venomancer_Venomous_Gale_1.mp3\/revision\/latest?cb=20191216030202",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "A unit with less than 25% of its max health can be denied when it has the Venomous Gale debuff on.",
-        "The gale travels at a speed of 1200, taking 0.71 seconds to reach max distance.",
-        "With the travel distance and gale radius, it can hit units up to 975 range away.",
-        "The movement speed slow decreases over time. Hit units regain 1% of their movement speed in 0.3-second intervals, starting 0.3 seconds after the debuff is applied.",
-        "After the initial damage, it deals damage over time in 3-second intervals, resulting in overall 6 damage instances.",
-        "Venomous Gale can deal up to 125\/300\/475\/650 damage to a single unit (before reductions).",
-        "Debuff from successive casts do not stack but refresh its duration. This means the initial damage is not dealt again, since it only applies upon debuff creation.",
-        "This means the initial damage is not dealt again, since it only applies upon debuff creation.",
-        "The projectile has 280 radius flying vision. This vision does not last.",
-        "TALENT NOTES 2 Plague Wards based on its current level are created around each hit enemy hero, including clones, excluding illusions. The wards are placed within 100 range of every enemy hero affected, on opposite sides of each other. If Plague Ward is not learned, no wards are spawned.",
-        "The wards are placed within 100 range of every enemy hero affected, on opposite sides of each other.",
-        "If Plague Ward is not learned, no wards are spawned."
+        "A unit with less than 25% of its max health can be denied when it has the Venomous Gale debuff on",
+        "The gale travels at a speed of 1200, taking 0.71 seconds to reach max distance",
+        "With the travel distance and gale radius, it can hit units up to 975 range away",
+        "The movement speed slow decreases over time. Hit units regain 1% of their movement speed in 0.3-second intervals, starting 0.3 seconds after the debuff is applied",
+        "After the initial damage, it deals damage over time in 3-second intervals, resulting in overall 6 damage instances",
+        "Venomous Gale can deal up to 125\/300\/475\/650 damage to a single unit (before reductions)",
+        "Debuff from successive casts do not stack but refresh its duration. This means the initial damage is not dealt again, since it only applies upon debuff creation",
+        "The projectile has 280 radius flying vision. This vision does not last",
+        "TALENT NOTES 2  Plague Wards based on its current level are created around each hit enemy hero, including clones, excluding illusions. The wards are placed within 100 range of every enemy hero affected, on opposite sides of each other. If  Plague Ward is not learned, no wards are spawned"
       ],
-      "mana": "21\/20\/19\/18 (TagTalent 16\/15\/14\/13)",
       "item_behaviour": [],
-      "name": "Venomous Gale",
-      "cooldown": "95\/105\/115\/125",
       "description": "Launches a ball of venom in a line, poisoning enemy units so that they take both initial damage and damage over time, as well as suffering slowed movement. Venomous Gale deals damage every 3 seconds over its duration.",
       "hot_key": "Q",
       "params": [
@@ -37,71 +25,63 @@
         "Damage per Instance: 15\/45\/75\/105",
         "Move Speed Slow: 50%",
         "Duration: 15",
-        "<span image=\"images\\Talent\"><\/span> Number of Plague Wards: 2"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Number of Plague Wards:  2"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Venomancer_Venomous_Gale_1.mp3\/revision\/latest?cb=20191216030202",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "21\/20\/19\/18 (TagTalent 16\/15\/14\/13)",
+      "aghanim": null,
+      "name": "Venomous Gale",
+      "cooldown": "95\/105\/115\/125",
       "legacy_key": "E",
       "story": "A concoction of various stings, poisons, and toxins gathered from the jungles of Jidi Isle, victims surviving it are rare."
     },
     {
+      "notes": [
+        "The damage from Poison Sting is flagged as HP Removal, so it does not trigger any on-damage effects",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 6\/9\/12\/15 instances",
+        "Can deal up to 48\/144\/288\/480 damage (before reductions)",
+        "The debuff from successive attacks does not stack, only the duration is refreshed",
+        "Plague Wards' attacks apply Poison Sting based on its current level on enemies as well. If Poison Sting is not learned, no debuffs are applied. The Poison Sting applied by the wards uses a different modifier than Venomancer. These modifiers do not interfere with each other. However, the wards' debuff does not apply damage, movement speed slow, or the health regeneration reduction if the enemy is also affected by both debuffs. The wards' Poison Sting can deal up to 24\/72\/144\/240 damage",
+        "TALENT NOTES With the health regeneration reduction <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent, Poison Sting also applies health regeneration reduction, but not heal reduction or lifesteal reduction"
+      ],
+      "item_behaviour": [],
+      "description": "Adds poison damage to Venomancer's normal attacks and slowing movement speed.",
+      "hot_key": "W",
+      "params": [
+        "Damage per Second: 8\/16\/24\/32",
+        "Plague Wards Damage Percentage: 50%",
+        "Move Speed Slow: 8%\/10%\/12%\/14% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 16%\/18%\/20%\/22%)",
+        "Duration: 6\/9\/12\/15",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Health Regen Reduction:  20%"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies",
         "Damage: Magical"
       ],
-      "notes": [
-        "The damage from Poison Sting is flagged as HP Removal, so it does not trigger any on-damage effects.",
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 6\/9\/12\/15 instances.",
-        "Can deal up to 48\/144\/288\/480 damage (before reductions).",
-        "The debuff from successive attacks does not stack, only the duration is refreshed.",
-        "Plague Wards' attacks apply Poison Sting based on its current level on enemies as well. If Poison Sting is not learned, no debuffs are applied. The Poison Sting applied by the wards uses a different modifier than Venomancer. These modifiers do not interfere with each other. However, the wards' debuff does not apply damage, movement speed slow, or the health regeneration reduction if the enemy is also affected by both debuffs. The wards' Poison Sting can deal up to 24\/72\/144\/240 damage.",
-        "If Poison Sting is not learned, no debuffs are applied.",
-        "The Poison Sting applied by the wards uses a different modifier than Venomancer. These modifiers do not interfere with each other.",
-        "However, the wards' debuff does not apply damage, movement speed slow, or the health regeneration reduction if the enemy is also affected by both debuffs.",
-        "The wards' Poison Sting can deal up to 24\/72\/144\/240 damage.",
-        "TALENT NOTES With the health regeneration reduction talent, Poison Sting also applies health regeneration reduction, but not heal reduction or lifesteal reduction."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Poison Sting",
       "cooldown": null,
-      "description": "Adds poison damage to Venomancer's normal attacks and slowing movement speed.",
-      "hot_key": "W",
-      "params": [
-        "Damage per Second: 8\/16\/24\/32",
-        "Plague Wards Damage Percentage: 50%",
-        "Move Speed Slow: 8%\/10%\/12%\/14% ( 16%\/18%\/20%\/22%)",
-        "Duration: 6\/9\/12\/15",
-        "<span image=\"images\\Talent\"><\/span> Health Regen Reduction: 20%"
-      ],
       "legacy_key": "T",
       "story": "The paralytic sting of the creature which caused his transformation now belongs to the Venomancer."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Venomancer_Plague_Ward.mp3\/revision\/latest?cb=20191216030158",
-      "effects": [
-        "Ability: Target Point"
-      ],
       "notes": [
-        "Plague Wards automatically attack enemies within their attack range, using ◉ Standard auto-attack rules. It is possible to manually give the wards an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
-        "It is possible to manually give the wards an attack target with A or Right Click an enemy in range.",
-        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target.",
-        "It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
-        "Plague Wards' attacks apply Poison Sting based on its current level on enemies as well. Poison Sting notes fully apply. The damage source of the wards' Poison Sting is Venomancer, meaning certain on-damage effects (e.g. Damage Return) react on the Venomancer rather than on the wards. Leveling up ability and learning the health regeneration reduction talent immediately update all current active Plague Wards' Poison Sting ability values.",
-        "Poison Sting notes fully apply.",
-        "The damage source of the wards' Poison Sting is Venomancer, meaning certain on-damage effects (e.g. Damage Return) react on the Venomancer rather than on the wards.",
-        "Leveling up ability and learning the health regeneration reduction talent immediately update all current active Plague Wards' Poison Sting ability values.",
-        "The wards' attack damage is not reduced by damage block.",
-        "Plague Wards have a lower target priority than units and heroes, so they are attacked by towers and lane creeps last. Roshan always prioritizes wards if there are no other units within his attack range. He also destroys Plague Wards with 1 attack.",
-        "Roshan always prioritizes wards if there are no other units within his attack range. He also destroys Plague Wards with 1 attack.",
-        "The wards gain their spell immunity through a buff, so it is possible for enemies to \u203C Ping it to display its remaining duration.",
-        "TALENT NOTES The Plague Wards health and damage multiplier talent does not immediately update current active Plague Wards.",
-        "SPELL STEAL Poison Sting applied is based on Venomancer's current ability level when acquired."
+        "Plague Wards automatically attack enemies within their attack range, using ◉ Standard auto-attack rules. It is possible to manually give the wards an attack target with A or  Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never)",
+        "Plague Wards' attacks apply  Poison Sting based on its current level on enemies as well. Poison Sting notes fully apply. The damage source of the wards' Poison Sting is Venomancer, meaning certain on-damage effects (e.g.  Damage Return) react on the Venomancer rather than on the wards. Leveling up ability and learning the health regeneration reduction <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately update all current active Plague Wards' Poison Sting ability values",
+        "The wards' attack damage is not reduced by damage block",
+        "Plague Wards have a lower target priority than units and heroes, so they are attacked by towers and lane creeps last.  Roshan always prioritizes wards if there are no other units within his attack range. He also destroys Plague Wards with 1 attack",
+        "The wards gain their spell immunity through a buff, so it is possible for enemies to \u203C Ping it to display its remaining duration",
+        "TALENT NOTES The Plague Wards health and damage multiplier <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not immediately update current active Plague Wards. SPELL STEAL  Poison Sting applied is based on  Venomancer's current ability level when acquired"
       ],
-      "mana": "5 (TagTalent 4)",
       "item_behaviour": [],
-      "name": "Plague Ward",
-      "cooldown": "21\/24\/27\/30",
       "description": "Summons a plague ward to attack enemy units and structures. The ward is immune to magic. Wards gain the Poison Sting level from Venomancer, dealing 50% of the full damage.",
       "hot_key": "E",
       "params": [
@@ -109,30 +89,27 @@
         "Cast Range:  850",
         "Ward Duration: 40"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Venomancer_Plague_Ward.mp3\/revision\/latest?cb=20191216030158",
+      "effects": [
+        "Ability: Target Point"
+      ],
+      "mana": "5 (TagTalent 4)",
+      "aghanim": null,
+      "name": "Plague Ward",
+      "cooldown": "21\/24\/27\/30",
       "legacy_key": "W",
       "story": "A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "The projectile travels at a speed of 1800.",
-        "Upon dispelling the debuff, Latent Toxicity first applies the damage, then the stun. The stun upon dispel pierces spell immunity, but it is not applied while invulnerable or hidden.",
-        "The stun upon dispel pierces spell immunity, but it is not applied while invulnerable or hidden.",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 7 instances. Can deal up to 140 damage (before reductions).",
-        "Can deal up to 140 damage (before reductions).",
-        "It is possible to deal up to 420 damage, if the debuff was dispelled at the end before the last damage interval.",
-        "Debuff of successive casts does not stack but refreshes the duration."
+        "Requires  Aghanim's Shard to be unlocked",
+        "The projectile travels at a speed of 1800",
+        "Upon dispelling the debuff, Latent Toxicity first applies the damage, then the stun. The stun upon dispel pierces spell immunity, but it is not applied while invulnerable or hidden",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 7 instances. Can deal up to 140 damage (before reductions)",
+        "It is possible to deal up to 420 damage, if the debuff was dispelled at the end before the last damage interval",
+        "Debuff of successive casts does not stack but refreshes the duration"
       ],
-      "mana": "20",
       "item_behaviour": [],
-      "name": "Latent Toxicity",
-      "cooldown": "75",
       "description": "Applies a weak poison that minorly slows and deals damage to its target. If this poison is dispelled in any way, the target will receive a large amount of damage and be stunned.",
       "hot_key": "D",
       "params": [
@@ -144,30 +121,27 @@
         "Debuff Duration: 7",
         "Stun Duration: 2"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "20",
+      "aghanim": null,
+      "name": "Latent Toxicity",
+      "cooldown": "75",
       "legacy_key": "L",
       "story": "As Venomancer's own origins corroborate, some of Jidi's most horrifying dangers become apparent only with time."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Venomancer_Poison_Nova_1.mp3\/revision\/latest?cb=20191216030159",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Interrupts Venomancer's channeling abilities upon cast.",
-        "Poison Nova expands at a speed of 550, taking 1.08\/1.17\/1.26 seconds to reach max distance. Starts expanding at a radius of 255, enemies within this radius are affected immediately upon cast.",
-        "Starts expanding at a radius of 255, enemies within this radius are affected immediately upon cast.",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 21 (TagTalent 26) instances. Poison Nova's damage over time is not lethal. It does not drop affected units below 1 health from its damage ticks. Can deal up to 420\/630\/840 + 42%\/57.75%\/73.5% of max health (TagTalent 520\/780\/1040 + 52%\/71.5%\/91%) damage to a single unit (before reductions). SCEPTER NOTES Can deal up to 420\/630\/840 + 63%\/78.75%\/94.5% of max health (TagTalent 520\/780\/1040 + 78%\/97.5%\/117%) damage to a single unit.",
-        "Poison Nova's damage over time is not lethal. It does not drop affected units below 1 health from its damage ticks.",
-        "Can deal up to 420\/630\/840 + 42%\/57.75%\/73.5% of max health (TagTalent 520\/780\/1040 + 52%\/71.5%\/91%) damage to a single unit (before reductions).",
-        "SCEPTER NOTES Can deal up to 420\/630\/840 + 63%\/78.75%\/94.5% of max health (TagTalent 520\/780\/1040 + 78%\/97.5%\/117%) damage to a single unit.",
-        "Debuff of successive casts does not stack but refreshes the duration."
+        "Interrupts Venomancer's channeling abilities upon cast",
+        "Poison Nova expands at a speed of 550, taking 1.08\/1.17\/1.26 seconds to reach max distance. Starts expanding at a radius of 255, enemies within this radius are affected immediately upon cast",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 21 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 26) instances. Poison Nova's damage over time is not lethal. It does not drop affected units below 1 health from its damage ticks. Can deal up to 420\/630\/840 + 42%\/57.75%\/73.5% of max health (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 520\/780\/1040 + 52%\/71.5%\/91%) damage to a single unit (before reductions). SCEPTER NOTES Can deal up to 420\/630\/840 + 63%\/78.75%\/94.5% of max health (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 520\/780\/1040 + 78%\/97.5%\/117%) damage to a single unit",
+        "Debuff of successive casts does not stack but refreshes the duration"
       ],
-      "mana": "140\/120\/100 (TagTalent 100\/80\/60)",
       "item_behaviour": [],
-      "name": "Poison Nova",
-      "cooldown": "200\/300\/400",
       "description": "A spreading ring of poison that does damage over time to enemy units around Venomancer. Poison Nova cannot deal lethal damage; targets will be left with at least 1 health.",
       "hot_key": "R",
       "params": [
@@ -176,9 +150,19 @@
         "End Radius: 850\/900\/950",
         "Base Damage per Second: 20\/30\/40",
         "Max Health as Damage per Second: 2%\/2.75%\/3.5% ( 3%\/3.75%\/4.5%)",
-        "Duration: 20 ( 25)",
-        "<span image=\"images\\Talent\"><\/span> Attack Speed Slow: 100"
+        "Duration: 20 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 25)",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Attack Speed Slow:  100"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Venomancer_Poison_Nova_1.mp3\/revision\/latest?cb=20191216030159",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "140\/120\/100 (TagTalent 100\/80\/60)",
+      "aghanim": null,
+      "name": "Poison Nova",
+      "cooldown": "200\/300\/400",
       "legacy_key": "V",
       "story": "In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle."
     }

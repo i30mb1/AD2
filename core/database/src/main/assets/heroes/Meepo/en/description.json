@@ -1,25 +1,15 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5f\/Meepo_Earthbind_1.mp3\/revision\/latest?cb=20191216020328",
-      "effects": [
-        "Ability: Target Area",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "The net travels at a speed of 900.",
-        "With the maximum cast range and radius, Earthbind can hit units up to 720\/970\/1220\/1470 range away.",
-        "Roots the targets, preventing them from moving and casting certain mobility abilities. Provides True Sight and shared vision over the targets.",
-        "Provides True Sight and shared vision over the targets.",
-        "The net provides 300 radius flying vision around itself as it travels. This vision does not last.",
-        "Fully affects invisible units and units inside the Fog of War.",
-        "TALENT NOTES The True Strike on targets talent immediately updates all currently existing Earthbind debuffs. Attacks against the affected target have absolute accuracy, which prevents its attacks from being missed (i.e. evasion or blind effects).",
-        "Attacks against the affected target have absolute accuracy, which prevents its attacks from being missed (i.e. evasion or blind effects)."
+        "The net travels at a speed of 900",
+        "With the maximum cast range and radius, Earthbind can hit units up to 720\/970\/1220\/1470 range away",
+        "Roots the targets, preventing them from moving and casting certain mobility abilities. Provides True Sight and shared vision over the targets",
+        "The net provides 300 radius flying vision around itself as it travels. This vision does not last",
+        "Fully affects invisible units and units inside the Fog of War",
+        "TALENT NOTES The True Strike on targets <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately updates all currently existing Earthbind debuffs. Attacks against the affected target have absolute accuracy, which prevents its attacks from being missed (i.e. evasion or blind effects)"
       ],
-      "mana": "16\/14\/12\/10 (TagTalent 13\/11\/9\/7)",
       "item_behaviour": [],
-      "name": "Earthbind",
-      "cooldown": "70\/80\/90\/100",
       "description": "Tosses a net at the target point, rooting down all enemy units in an area around it.",
       "hot_key": "Q",
       "params": [
@@ -27,97 +17,85 @@
         "Cast Range:  500\/750\/1000\/1250",
         "Radius: 220",
         "Duration: 2",
-        "<span image=\"images\\Talent\"><\/span> Accuracy: 100%"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Accuracy:  100%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5f\/Meepo_Earthbind_1.mp3\/revision\/latest?cb=20191216020328",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies"
+      ],
+      "mana": "16\/14\/12\/10 (TagTalent 13\/11\/9\/7)",
+      "aghanim": null,
+      "name": "Earthbind",
+      "cooldown": "70\/80\/90\/100",
       "legacy_key": "E",
       "story": "Catching dinner in the Riftshadow Ruins can be quite the task."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Meepo_Poof_1.mp3\/revision\/latest?cb=20191216020330",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies \/ Self",
-        "Damage: Pure"
-      ],
       "notes": [
-        "Poof can only be cast on self, clones and illusions of the caster. ↓↓ Double-tapping automatically targets self. To Poof to invulnerable or hidden targets, it has to be unit-targeted to Poof to the target. When ground-targeted, the Meepo closest to the target point is chosen upon cast, which can be the same Meepo who casts Poof.",
-        "↓↓ Double-tapping automatically targets self.",
-        "To Poof to invulnerable or hidden targets, it has to be unit-targeted to Poof to the target.",
-        "When ground-targeted, the Meepo closest to the target point is chosen upon cast, which can be the same Meepo who casts Poof.",
-        "Does not disjoint projectiles.",
-        "Poof deals its damage once at the cast location and once at the destination point. The damage from Poof stacks, so enemies within the cast location and destination point effectively take double the damage.",
-        "The damage from Poof stacks, so enemies within the cast location and destination point effectively take double the damage.",
-        "Can deal up to the following amount of damage (before reductions) when a certain number of Meepos casts it at the same spot: 1x : 80\/120\/160\/200 (TagTalent 140\/180\/220\/260) 2x : 160\/240\/320\/400 (TagTalent 280\/360\/440\/520) 3x : 240\/360\/480\/600 (TagTalent 420\/540\/660\/780) 4x : 320\/480\/640\/800 (TagTalent 560\/720\/880\/1040) 5x : 400\/600\/800\/1000 (TagTalent 700\/900\/1100\/1300)",
-        "1x : 80\/120\/160\/200 (TagTalent 140\/180\/220\/260)",
-        "2x : 160\/240\/320\/400 (TagTalent 280\/360\/440\/520)",
-        "3x : 240\/360\/480\/600 (TagTalent 420\/540\/660\/780)",
-        "4x : 320\/480\/640\/800 (TagTalent 560\/720\/880\/1040)",
-        "5x : 400\/600\/800\/1000 (TagTalent 700\/900\/1100\/1300)",
-        "",
-        "SPELL STEAL This ability's cast point is not modified when acquired."
+        "Poof can only be cast on self, clones and illusions of the caster. ↓↓ Double-tapping automatically targets self. To Poof to invulnerable or hidden targets, it has to be unit-targeted to Poof to the target. When ground-targeted, the Meepo closest to the target point is chosen upon cast, which can be the same Meepo who casts Poof",
+        "Does not disjoint projectiles",
+        "Poof deals its damage once at the cast location and once at the destination point. The damage from Poof stacks, so enemies within the cast location and destination point effectively take double the damage",
+        "Can deal up to the following amount of damage (before reductions) when a certain number of Meepos casts it at the same spot: 1x : 80\/120\/160\/200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 140\/180\/220\/260) 2x : 160\/240\/320\/400 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 280\/360\/440\/520) 3x : 240\/360\/480\/600 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 420\/540\/660\/780) 4x : 320\/480\/640\/800 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 560\/720\/880\/1040) 5x : 400\/600\/800\/1000 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 700\/900\/1100\/1300)  SPELL STEAL This ability's cast point is not modified when acquired"
       ],
-      "mana": "12\/10\/8\/6",
       "item_behaviour": [],
-      "name": "Poof",
-      "cooldown": "80",
       "description": "Drawing mystical energies from the earth, a Meepo can teleport to another Meepo or itself after channeling for 1.5 seconds, dealing damage in both the departure and arrival locations.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 1.5+0",
         "Cast Range: Global",
         "Damage Radius: 400",
-        "Damage: 40\/60\/80\/100 ( 70\/90\/110\/130)"
+        "Damage: 40\/60\/80\/100 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 70\/90\/110\/130)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Meepo_Poof_1.mp3\/revision\/latest?cb=20191216020330",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies \/ Self",
+        "Damage: Pure"
+      ],
+      "mana": "12\/10\/8\/6",
+      "aghanim": null,
+      "name": "Poof",
+      "cooldown": "80",
       "legacy_key": "F",
       "story": "Sometimes breaking one of the Riftshadow Crystals can be just the trick for getting yourself out of a bind. Or your other self."
     },
     {
+      "notes": [
+        "Ransack first deals its health steal as pure damage, heals Meepo, then deals attack damage",
+        "Treat  Couriers and illusions as heroes, and creep-heroes as creeps",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. It is fully affected by spell damage amplification and spell lifesteal",
+        "Heals all Meepos, including the attacking Meepo, excluding illusions, by a set amount. Always heals for the full amount per attack, regardless of how much damage the target actually takes. The heal counts as lifesteal, so that it is affected by lifesteal manipulation, but not by heal manipulation",
+        "Does not work against  Roshan and on allies"
+      ],
+      "item_behaviour": [],
+      "description": "Steals health from the enemy with each strike and heals all other Meepos for that amount.",
+      "hot_key": "E",
+      "params": [
+        "Hero Health Steal: 6\/10\/14\/18 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 14\/18\/22\/26)",
+        "Creep Health Steal: 3\/5\/7\/9 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 11\/13\/15\/17)"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Meepo_Ransack_1.mp3\/revision\/latest?cb=20210109141441",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies \/ Self",
         "Damage: Pure"
       ],
-      "notes": [
-        "Ransack first deals its health steal as pure damage, heals Meepo, then deals attack damage.",
-        "Treat Couriers and illusions as heroes, and creep-heroes as creeps.",
-        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. It is fully affected by spell damage amplification and spell lifesteal.",
-        "This means it is not affected or considered by anything that works with attack damage.",
-        "It is fully affected by spell damage amplification and spell lifesteal.",
-        "Heals all Meepos, including the attacking Meepo, excluding illusions, by a set amount. Always heals for the full amount per attack, regardless of how much damage the target actually takes. The heal counts as lifesteal, so that it is affected by lifesteal manipulation, but not by heal manipulation.",
-        "Always heals for the full amount per attack, regardless of how much damage the target actually takes.",
-        "The heal counts as lifesteal, so that it is affected by lifesteal manipulation, but not by heal manipulation.",
-        "Does not work against Roshan and on allies."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Ransack",
       "cooldown": null,
-      "description": "Steals health from the enemy with each strike and heals all other Meepos for that amount.",
-      "hot_key": "E",
-      "params": [
-        "Hero Health Steal: 6\/10\/14\/18 ( 14\/18\/22\/26)",
-        "Creep Health Steal: 3\/5\/7\/9 ( 11\/13\/15\/17)"
-      ],
       "legacy_key": "G",
       "story": "So you gonna need that, or...?"
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Meepo_Dig_1.mp3\/revision\/latest?cb=20210101011436",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self"
-      ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
-        "Applies a basic dispel on the caster upon cast.",
-        "Stuns the caster for the duration, and turns them invulnerable and hidden.",
-        "Restores health in the form of health regeneration, increasing it by 12.5% of max health per second."
+        "Requires  Aghanim's Scepter to be unlocked",
+        "Applies a basic dispel on the caster upon cast",
+        "Stuns the caster for the duration, and turns them invulnerable and hidden",
+        "Restores health in the form of health regeneration, increasing it by 12.5% of max health per second"
       ],
-      "mana": "50",
       "item_behaviour": [],
-      "name": "Dig",
-      "cooldown": "125",
       "description": "Digs into the ground, dispelling Meepo and causing him to become invulnerable and untargetable for 4 seconds. Restores 50% of his max health over that duration. Can't be cast while rooted.",
       "hot_key": "D",
       "params": [
@@ -125,89 +103,78 @@
         "Max Health Restored: 50%",
         "Duration: 4"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Meepo_Dig_1.mp3\/revision\/latest?cb=20210101011436",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "50",
+      "aghanim": null,
+      "name": "Dig",
+      "cooldown": "125",
       "legacy_key": "T",
       "story": null
     },
     {
+      "notes": [
+        "Unlike most other ultimates, Divided We Stand can be leveled up at level 4\/11\/18 instead of 6\/12\/18",
+        "Upon leveling, the Meepo clones always spawn with full health and mana next to Meepo Prime, even when leveling from a clone",
+        "Meepo and his clones are represented each by an icon with health and mana bars for each on the top left corner of the screen. When a Meepo is selected, its icon becomes brighter. When a Meepo takes damage, its icon blinks red",
+        "The 26 seconds min respawn time does not apply to Meepo if a clone dies to neutral creeps",
+        "Clones benefit from <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talents bonuses, and from any attributes granted by items or buffs. However, they do not benefit from any other stats from item bonuses (damage, health, armor, etc.). The bonuses of  Attribute Bonus and strength talent, and  Power Treads are not copied. When Meepo Prime loses attributes (e.g. to  Decay or  Glaives of Wisdom), the clones' attributes adapt. However, Meepo Clones themselves are still subject to attribute loss and the other Meepos do not adapt to a clone losing attributes",
+        "Increases Meepo and his clones' magic resistance to 32.5%\/36.25%\/40%. Stacks multiplicatively with other sources of magic resistance",
+        "When Meepo respawns with Reincarnation, all clones respawn next to the Meepo Prime, and not at their death location",
+        "SHARD NOTES Adds an active component to Divided We Stand with the passive component still present. Can only be cast if there is another Meepo (clone or illusion) within 300 range of the casting Meepo. Does not count already flung Meepos, so two Meepos together cannot fling each other at the same time. The Meepo within that enables the cast plays a throw animation, but does not have any of its actions interrupted. When cast, releases a projectile onto the target, which travels at a speed of 1000. The casting Meepo also gets moved along with the projectile. While being moved, the Meepo is fully disabled, untargetable and invulnerable. If the movement gets interrupted, the Meepo is no longer disabled, untargetable and invulnerable. The Meepo stops moving along with the projectile if it gets disjointed, if the distance between him and the target exceeds 2200, or when the Meepo dies. However, once the projectile impacts, the Meepo still gets instantly teleported to its location. The projectile first applies the damage, then the debuff",
+        "TALENT NOTES The number of clone increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent automatically grants the extra Meepo clone, and does not require Divided We Stand to be leveled. SPELL STEAL This ability is not acquirable"
+      ],
+      "item_behaviour": [],
+      "description": "Meepo summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. However, the clones cannot wield any items but the boots that Meepo himself wears. If any of the clones die, they all die. Divided We Stand grants all Meepos bonus Magic Resistance.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Number of Meepo Clones: 1\/2\/3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2\/3\/4)",
+        "Clone Experience Gain: 30%",
+        "Magic Resistance Bonus: 10%\/15%\/20%",
+        "Fling Cast Range:  900",
+        "Fling Meepo Search Radius:  300",
+        "Fling Damage:  120",
+        "Fling Move Speed Slow:  60%",
+        "Fling Slow Duration:  3"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Meepo_Divided_We_Stand_1.mp3\/revision\/latest?cb=20210826204546",
       "effects": [
         "Ability: Passive",
         "Affects: Self ",
         "Damage: Instant Kill"
       ],
-      "notes": [
-        "Unlike most other ultimates, Divided We Stand can be leveled up at level 4\/11\/18 instead of 6\/12\/18.",
-        "Upon leveling, the Meepo clones always spawn with full health and mana next to Meepo Prime, even when leveling from a clone.",
-        "Meepo and his clones are represented each by an icon with health and mana bars for each on the top left corner of the screen. When a Meepo is selected, its icon becomes brighter. When a Meepo takes damage, its icon blinks red.",
-        "When a Meepo is selected, its icon becomes brighter. When a Meepo takes damage, its icon blinks red.",
-        "The 26 seconds min respawn time does not apply to Meepo if a clone dies to neutral creeps.",
-        "Clones benefit from talents bonuses, and from any attributes granted by items or buffs. However, they do not benefit from any other stats from item bonuses (damage, health, armor, etc.). The bonuses of Attribute Bonus and strength talent, and Power Treads are not copied. When Meepo Prime loses attributes (e.g. to Decay or Glaives of Wisdom), the clones' attributes adapt. However, Meepo Clones themselves are still subject to attribute loss and the other Meepos do not adapt to a clone losing attributes.",
-        "However, they do not benefit from any other stats from item bonuses (damage, health, armor, etc.).",
-        "The bonuses of Attribute Bonus and strength talent, and Power Treads are not copied.",
-        "When Meepo Prime loses attributes (e.g. to Decay or Glaives of Wisdom), the clones' attributes adapt.",
-        "However, Meepo Clones themselves are still subject to attribute loss and the other Meepos do not adapt to a clone losing attributes.",
-        "Increases Meepo and his clones' magic resistance to 32.5%\/36.25%\/40%. Stacks multiplicatively with other sources of magic resistance.",
-        "Stacks multiplicatively with other sources of magic resistance.",
-        "When Meepo respawns with Reincarnation, all clones respawn next to the Meepo Prime, and not at their death location.",
-        "SHARD NOTES Adds an active component to Divided We Stand with the passive component still present. Can only be cast if there is another Meepo (clone or illusion) within 300 range of the casting Meepo. Does not count already flung Meepos, so two Meepos together cannot fling each other at the same time. The Meepo within that enables the cast plays a throw animation, but does not have any of its actions interrupted. When cast, releases a projectile onto the target, which travels at a speed of 1000. The casting Meepo also gets moved along with the projectile. While being moved, the Meepo is fully disabled, untargetable and invulnerable. If the movement gets interrupted, the Meepo is no longer disabled, untargetable and invulnerable. The Meepo stops moving along with the projectile if it gets disjointed, if the distance between him and the target exceeds 2200, or when the Meepo dies. However, once the projectile impacts, the Meepo still gets instantly teleported to its location. The projectile first applies the damage, then the debuff.",
-        "Can only be cast if there is another Meepo (clone or illusion) within 300 range of the casting Meepo.",
-        "Does not count already flung Meepos, so two Meepos together cannot fling each other at the same time.",
-        "The Meepo within that enables the cast plays a throw animation, but does not have any of its actions interrupted.",
-        "When cast, releases a projectile onto the target, which travels at a speed of 1000.",
-        "The casting Meepo also gets moved along with the projectile.",
-        "While being moved, the Meepo is fully disabled, untargetable and invulnerable.",
-        "If the movement gets interrupted, the Meepo is no longer disabled, untargetable and invulnerable.",
-        "The Meepo stops moving along with the projectile if it gets disjointed, if the distance between him and the target exceeds 2200, or when the Meepo dies.",
-        "However, once the projectile impacts, the Meepo still gets instantly teleported to its location.",
-        "The projectile first applies the damage, then the debuff.",
-        "TALENT NOTES The number of clone increasing talent automatically grants the extra Meepo clone, and does not require Divided We Stand to be leveled.",
-        "SPELL STEAL This ability is not acquirable."
-      ],
       "mana": "18\/16\/14",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Divided We Stand",
       "cooldown": "75",
-      "description": "Meepo summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. However, the clones cannot wield any items but the boots that Meepo himself wears. If any of the clones die, they all die. Divided We Stand grants all Meepos bonus Magic Resistance.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0.2+0",
-        "Number of Meepo Clones: 1\/2\/3 ( 2\/3\/4)",
-        "Clone Experience Gain: 30%",
-        "Magic Resistance Bonus: 10%\/15%\/20%",
-        "Fling Cast Range: 900",
-        "Fling Meepo Search Radius: 300",
-        "Fling Damage: 120",
-        "Fling Move Speed Slow: 60%",
-        "Fling Slow Duration: 3"
-      ],
       "legacy_key": "D",
       "story": "Do I know you?"
     },
     {
+      "notes": [
+        "Requires the level 25 <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent learned to be unlocked",
+        "The Pack Rat <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent allows Meepo to equip regular items in the designated neutral items slot. If  Divided We Stand is not learned, Meepo cannot equip items in the neutral items slot. Divided We Stand item interactions notes fully apply",
+        "When  Boots of Speed-based items are transferred to the neutral items slot, it is now considered a neutral item, and therefore not copied",
+        "Does not transfer items to the neutral items slot when the inventory or backpack slots are full. Regular items in the neutral item slot can be disassembled and are also considered components for item combining or upgrading. Regular items in the neutral item slot also do not have the Transfer to Stash function",
+        "The following items are not transferable to the neutral items slot:  Aegis of the Immortal,  Divine Rapier and  Gem of True Sight"
+      ],
+      "item_behaviour": [],
+      "description": "Can equip any item in the neutral slot.",
+      "hot_key": "",
+      "params": [],
       "audioUrl": "",
       "effects": [
         "Ability: Passive",
         "Affects: Self"
       ],
-      "notes": [
-        "Requires the level 25 talent learned to be unlocked.",
-        "The Pack Rat talent allows Meepo to equip regular items in the designated neutral items slot. If Divided We Stand is not learned, Meepo cannot equip items in the neutral items slot. Divided We Stand item interactions notes fully apply.",
-        "If Divided We Stand is not learned, Meepo cannot equip items in the neutral items slot.",
-        "Divided We Stand item interactions notes fully apply.",
-        "When Boots of Speed-based items are transferred to the neutral items slot, it is now considered a neutral item, and therefore not copied.",
-        "Does not transfer items to the neutral items slot when the inventory or backpack slots are full. Regular items in the neutral item slot can be disassembled and are also considered components for item combining or upgrading. Regular items in the neutral item slot also do not have the Transfer to Stash function.",
-        "Regular items in the neutral item slot can be disassembled and are also considered components for item combining or upgrading.",
-        "Regular items in the neutral item slot also do not have the Transfer to Stash function.",
-        "The following items are not transferable to the neutral items slot: Aegis of the Immortal, Divine Rapier and Gem of True Sight.",
-        "Aegis of the Immortal, Divine Rapier and Gem of True Sight."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Pack Rat",
       "cooldown": null,
-      "description": "Can equip any item in the neutral slot.",
-      "hot_key": "",
-      "params": [],
       "legacy_key": "",
       "story": null
     }

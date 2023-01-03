@@ -1,37 +1,16 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Sven_Storm_Hammer_1.mp3\/revision\/latest?cb=20191216024629",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies ",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The targeting reticule must be centered over an enemy unit.",
-        "The projectile travels at a speed of 1000 and has 225 radius flying vision. This vision does not last.",
-        "Turning invulnerable or hidden does not prevent it from affecting the area around the target.",
-        "Storm Hammer first applies the dispel, then the damage, then the debuff.",
-        "Sven's sword emits some particles during the cast time, visible to everyone.",
-        "SCEPTER NOTES Sven is now moved along with the projectile at the same speed. While being moved, Sven is untargetable, invulnerable, hidden and is prevented from acting. Does not disjoints projectiles. Autocast on disables being moved with the ability projectile. Sven stops moving along with the projectile in the following conditions: When Storm Hammer is disjointed. Upon Sven's death. If the distance between Sven and the target exceeds 2200. If the movement is interrupted (e.g. with teleport), Sven is also no longer disabled, untargetable and invulnerable. The ability upgrade is determined if Sven has Aghanim's Scepter equipped during its cast point. Therefore, losing Aghanim's Scepter while being moved does not stop Sven from being moved along with the projectile.",
-        "While being moved, Sven is untargetable, invulnerable, hidden and is prevented from acting.",
-        "Does not disjoints projectiles.",
-        "Autocast on disables being moved with the ability projectile.",
-        "Sven stops moving along with the projectile in the following conditions: When Storm Hammer is disjointed. Upon Sven's death. If the distance between Sven and the target exceeds 2200. If the movement is interrupted (e.g. with teleport), Sven is also no longer disabled, untargetable and invulnerable.",
-        "When Storm Hammer is disjointed.",
-        "Upon Sven's death.",
-        "If the distance between Sven and the target exceeds 2200.",
-        "If the movement is interrupted (e.g. with teleport), Sven is also no longer disabled, untargetable and invulnerable.",
-        "The ability upgrade is determined if Sven has Aghanim's Scepter equipped during its cast point. Therefore, losing Aghanim's Scepter while being moved does not stop Sven from being moved along with the projectile.",
-        "SCEPTER NOTES Storm Hammer can now also be cast on invulnerable enemies. Although the damage and stun do not affect invulnerable units, the basic dispel does. This means if the source of invulnerability is dispellable, Storm Hammer may fully affect the target, since the dispel is applied first. The dispel is applied on all hit enemies within 255 radius along with the primary target.",
-        "Although the damage and stun do not affect invulnerable units, the basic dispel does.",
-        "This means if the source of invulnerability is dispellable, Storm Hammer may fully affect the target, since the dispel is applied first.",
-        "The dispel is applied on all hit enemies within 255 radius along with the primary target."
+        "The targeting reticule must be centered over an enemy unit",
+        "The projectile travels at a speed of 1000 and has 225 radius flying vision. This vision does not last",
+        "Turning invulnerable or hidden does not prevent it from affecting the area around the target",
+        "Storm Hammer first applies the dispel, then the damage, then the debuff",
+        "Sven's sword emits some particles during the cast time, visible to everyone",
+        "SCEPTER NOTES Sven is now moved along with the projectile at the same speed. While being moved, Sven is untargetable, invulnerable, hidden and is prevented from acting. Does not disjoints projectiles. Autocast on disables being moved with the ability projectile. Sven stops moving along with the projectile in the following conditions: When Storm Hammer is disjointed. Upon Sven's death. If the distance between Sven and the target exceeds 2200. If the movement is interrupted (e.g. with teleport), Sven is also no longer disabled, untargetable and invulnerable. The ability upgrade is determined if Sven has  Aghanim's Scepter equipped during its cast point. Therefore, losing Aghanim's Scepter while being moved does not stop Sven from being moved along with the projectile",
+        "SCEPTER NOTES Storm Hammer can now also be cast on invulnerable enemies. Although the damage and stun do not affect invulnerable units, the basic dispel does. This means if the source of invulnerability is dispellable, Storm Hammer may fully affect the target, since the dispel is applied first. The dispel is applied on all hit enemies within 255 radius along with the primary target"
       ],
-      "mana": "18\/16\/14\/12",
       "item_behaviour": [],
-      "name": "Storm Hammer",
-      "cooldown": "110\/115\/120\/125",
       "description": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target.",
       "hot_key": "Q",
       "params": [
@@ -39,101 +18,102 @@
         "Cast Range:  600 ( 950)",
         "Effect Radius: 255",
         "Damage: 95\/170\/245\/320",
-        "Stun Duration: 1.4\/1.6\/1.8\/2 ( 2.65\/2.85\/3.05\/3.25)"
+        "Stun Duration: 1.4\/1.6\/1.8\/2 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.65\/2.85\/3.05\/3.25)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Sven_Storm_Hammer_1.mp3\/revision\/latest?cb=20191216024629",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "18\/16\/14\/12",
+      "aghanim": null,
+      "name": "Storm Hammer",
+      "cooldown": "110\/115\/120\/125",
       "legacy_key": "T",
       "story": "The Rogue Knight's iron gauntlet, taken from the school of his father, strikes his foes to their core."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Sven_Great_Cleave.mp3\/revision\/latest?cb=20191216024628",
-      "effects": [
-        "Ability: Passive",
-        "Affects: Enemies",
-        "Damage: Physical"
-      ],
       "notes": [
-        "Cleave damage has the following properties: It counts as spell damage. However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal. No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. It is reduced by damage block.",
-        "It counts as spell damage. However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal. No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
-        "No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal.",
-        "No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
-        "Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. It is reduced by damage block.",
-        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit. Multiple sources of cleave fully stack and work independently. Does not cleave upon attacking wards, buildings or allied units. Couriers, wards and buildings are unaffected by cleave. Despite the visual effect, the cleave damage is applied instantly in the whole area.",
-        "Multiple sources of cleave fully stack and work independently.",
-        "Does not cleave upon attacking wards, buildings or allied units. Couriers, wards and buildings are unaffected by cleave.",
-        "Despite the visual effect, the cleave damage is applied instantly in the whole area."
+        "Cleave damage has the following properties: It counts as spell damage. However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal. No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. It is reduced by damage block",
+        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit. Multiple sources of cleave fully stack and work independently. Does not cleave upon attacking wards, buildings or allied units.  Couriers, wards and buildings are unaffected by cleave. Despite the visual effect, the cleave damage is applied instantly in the whole area"
       ],
-      "mana": null,
       "item_behaviour": [],
-      "name": "Great Cleave",
-      "cooldown": null,
       "description": "Sven strikes with great force, cleaving all nearby enemy units with his attack.",
       "hot_key": "W",
       "params": [
         "Starting Radius: 150",
         "Distance: 700",
         "End Radius: 360",
-        "Cleave Damage: 25%\/50%\/75%\/100% ( 50%\/75%\/100%\/125%)"
+        "Cleave Damage: 25%\/50%\/75%\/100% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 50%\/75%\/100%\/125%)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Sven_Great_Cleave.mp3\/revision\/latest?cb=20191216024628",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies",
+        "Damage: Physical"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Great Cleave",
+      "cooldown": null,
       "legacy_key": "C",
       "story": "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Sven_Warcry.mp3\/revision\/latest?cb=20191216024631",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Allies"
-      ],
       "notes": [
-        "Interrupts Sven's channeling abilities upon cast.",
-        "Only affects allied heroes, including clones, illusions and creep-heroes.",
-        "Leveling up the ability or the armor bonus increasing or movement speed bonus increasing talents do not update already existing Warcry buffs.",
-        "SHARD NOTES Adds a passive component to Warcry, with the active effects still present. Warcry now passively affects all allies, including creeps, within 1200 radius and the aura buff lingers for 0.5 seconds. Does not affect buildings and wards. Neither affects invulnerable nor hidden allies as well. However, it fully affects ally Couriers. While active, Warcry grants Sven a total of 12\/15\/18\/21 (TagTalent 22\/25\/28\/31) bonus armor.",
-        "Warcry now passively affects all allies, including creeps, within 1200 radius and the aura buff lingers for 0.5 seconds.",
-        "Does not affect buildings and wards. Neither affects invulnerable nor hidden allies as well.",
-        "However, it fully affects ally Couriers.",
-        "While active, Warcry grants Sven a total of 12\/15\/18\/21 (TagTalent 22\/25\/28\/31) bonus armor."
+        "Interrupts Sven's channeling abilities upon cast",
+        "Only affects allied heroes, including clones, illusions and creep-heroes",
+        "Leveling up the ability or the armor bonus increasing or movement speed bonus increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talents do not update already existing Warcry buffs",
+        "SHARD NOTES Adds a passive component to Warcry, with the active effects still present. Warcry now passively affects all allies, including creeps, within 1200 radius and the aura buff lingers for 0.5 seconds. Does not affect buildings and wards. Neither affects invulnerable nor hidden allies as well. However, it fully affects ally  Couriers. While active, Warcry grants Sven a total of 12\/15\/18\/21 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 22\/25\/28\/31) bonus armor"
       ],
-      "mana": "32\/28\/24\/20",
       "item_behaviour": [],
-      "name": "Warcry",
-      "cooldown": "30\/35\/40\/45",
       "description": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. Lasts 9 seconds.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0+0",
         "Effect Radius: 700",
-        "Move Speed Bonus: 10%\/14%\/18%\/22% ( 18%\/22%\/26%\/30%)",
-        "Armor Bonus: 6\/9\/12\/15 ( 16\/19\/22\/25)",
-        "Duration: 9 ( 12)",
-        "Aura Radius: 1200",
-        "Aura Armor Bonus: 6",
-        "Aura Linger Duration: 0.5"
+        "Move Speed Bonus: 10%\/14%\/18%\/22% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 18%\/22%\/26%\/30%)",
+        "Armor Bonus: 6\/9\/12\/15 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 16\/19\/22\/25)",
+        "Duration: 9 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 12)",
+        "Aura Radius:  1200",
+        "Aura Armor Bonus:  6",
+        "Aura Linger Duration:  0.5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Sven_Warcry.mp3\/revision\/latest?cb=20191216024631",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Allies"
+      ],
+      "mana": "32\/28\/24\/20",
+      "aghanim": null,
+      "name": "Warcry",
+      "cooldown": "30\/35\/40\/45",
       "legacy_key": "W",
       "story": "Calling a few lines from the Vigil Codex fortifies Sven's obedience to his rogue code. So poetic!"
     },
     {
+      "notes": [
+        "Grants flat bonus attack damage based on Sven's main attack damage. Does not further increase bonus attack damage. Sven's current main attack damage is periodically checked and the bonuses are adapted instantly",
+        "Leveling up the ability and the damage increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent do not update an already existing God's Strength buff"
+      ],
+      "item_behaviour": [],
+      "description": "Sven channels his rogue strength, granting bonus damage for 35 seconds.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Attack Damage Bonus: 120%\/160%\/200% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 170%\/210%\/250%)",
+        "Duration: 35"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Sven_God%27s_Strength.mp3\/revision\/latest?cb=20191216024643",
       "effects": [
         "Ability: No Target",
         "Affects: Self"
       ],
-      "notes": [
-        "Grants flat bonus attack damage based on Sven's main attack damage. Does not further increase bonus attack damage. Sven's current main attack damage is periodically checked and the bonuses are adapted instantly.",
-        "Sven's current main attack damage is periodically checked and the bonuses are adapted instantly.",
-        "Leveling up the ability and the damage increasing talent do not update an already existing God's Strength buff."
-      ],
       "mana": "105\/100\/95 (TagTalent 90\/85\/80)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "God's Strength",
       "cooldown": "100\/150\/200",
-      "description": "Sven channels his rogue strength, granting bonus damage for 35 seconds.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0.3+0",
-        "Attack Damage Bonus: 120%\/160%\/200% ( 170%\/210%\/250%)",
-        "Duration: 35"
-      ],
       "legacy_key": "R",
       "story": "With the strength that shattered the Sacred Helm, the Rogue Knight stands unopposed in melee combat."
     }

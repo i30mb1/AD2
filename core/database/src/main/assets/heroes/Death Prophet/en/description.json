@@ -1,22 +1,12 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Death_Prophet_Crypt_Swarm_1.mp3\/revision\/latest?cb=20191216012416",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "When unit-targeted, the Crypt Swarm is released toward its current location upon cast.",
-        "Crypt Swarm travels at a speed of 1100, taking 0.74 seconds to travel the full distance.",
-        "With the travel distance and end radius, Crypt Swarm can hit units up to 1110 range away. The complete area is shaped like a cone.",
-        "The complete area is shaped like a cone."
+        "When unit-targeted, the Crypt Swarm is released toward its current location upon cast",
+        "Crypt Swarm travels at a speed of 1100, taking 0.74 seconds to travel the full distance",
+        "With the travel distance and end radius, Crypt Swarm can hit units up to 1110 range away. The complete area is shaped like a cone"
       ],
-      "mana": "9\/8\/7\/6 (TagTalent 7\/6\/5\/4)",
       "item_behaviour": [],
-      "name": "Crypt Swarm",
-      "cooldown": "80\/90\/100\/110",
       "description": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
       "hot_key": "Q",
       "params": [
@@ -27,23 +17,25 @@
         "End Radius: 300",
         "Damage: 85\/160\/235\/310"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Death_Prophet_Crypt_Swarm_1.mp3\/revision\/latest?cb=20191216012416",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "9\/8\/7\/6 (TagTalent 7\/6\/5\/4)",
+      "aghanim": null,
+      "name": "Crypt Swarm",
+      "cooldown": "80\/90\/100\/110",
       "legacy_key": "R",
       "story": "Krobelus' many trips to the grave gather a flock of the damned."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Death_Prophet_Silence_1.mp3\/revision\/latest?cb=20210829213901",
-      "effects": [
-        "Ability: Target Area",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "The projectile travels at a speed of 1200.",
-        "Applies a debuff on enemies within the area upon projectile impact, entering or leaving the area afterward has no effect."
+        "The projectile travels at a speed of 1200",
+        "Applies a debuff on enemies within the area upon projectile impact, entering or leaving the area afterward has no effect"
       ],
-      "mana": "15\/14\/13\/12",
       "item_behaviour": [],
-      "name": "Silence",
-      "cooldown": "80\/90\/100\/110",
       "description": "Fires a projectile that prevents enemy units in a target area from casting spells.",
       "hot_key": "W",
       "params": [
@@ -52,98 +44,70 @@
         "Radius: 425",
         "Duration: 3\/4\/5\/6"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Death_Prophet_Silence_1.mp3\/revision\/latest?cb=20210829213901",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies"
+      ],
+      "mana": "15\/14\/13\/12",
+      "aghanim": null,
+      "name": "Silence",
+      "cooldown": "80\/90\/100\/110",
       "legacy_key": "E",
       "story": "Peering into the veil of her opponent's demise, Krobelus sees a silent future."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Death_Prophet_Spirit_Siphon.mp3\/revision\/latest?cb=20191216012412",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies \/ Self",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Upon learning, Death Prophet instantly gains 1 charge(s). However, leveling it up further does not instantly grant the other charges.",
-        "The link breaks only when the target gets out of range or dies. Cast range increasing effects increase the link break distance as well.",
-        "Cast range increasing effects increase the link break distance as well.",
-        "Always heals for the full amount per instance, regardless of how much damage the target actually takes. Spirit Siphon first deals the damage, then applies the self heal.",
-        "Spirit Siphon first deals the damage, then applies the self heal.",
-        "Deals damage and heals for 6.25\/12.5\/18.75\/25 (TagTalent 13.75\/20\/26.25\/32.5) in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 24 instances. Can damage and heal up to 150\/300\/450\/600 (TagTalent 330\/480\/630\/780) when the link lasts its full duration (before reductions).",
-        "Can damage and heal up to 150\/300\/450\/600 (TagTalent 330\/480\/630\/780) when the link lasts its full duration (before reductions).",
-        "Cannot be cast on units that already are affected by Spirit Siphon, unless the debuff is dispeled. Cannot be cast on Roshan.",
-        "Cannot be cast on Roshan.",
-        "Does not provide vision over the target. However, the link does not break upon losing vision. When losing vision over the target, the link visually draws to the location where the target was seen last time.",
-        "When losing vision over the target, the link visually draws to the location where the target was seen last time.",
-        "SHARD NOTES Spirit Siphon now applies fear on the target on the 3rd second of the link's duration. The fear relies on the link buff on Death Prophet, and not on the debuff on the target, so even if the debuff gets dispeled, the fear is still applied. Cannot apply the fear if the target is invulnerable, hidden, or spell immune on the 3rd second. Spirit Siphon's fear makes affected enemies run away from the caster and preventing them from acting.",
-        "The fear relies on the link buff on Death Prophet, and not on the debuff on the target, so even if the debuff gets dispeled, the fear is still applied.",
-        "Cannot apply the fear if the target is invulnerable, hidden, or spell immune on the 3rd second.",
-        "Spirit Siphon's fear makes affected enemies run away from the caster and preventing them from acting.",
-        "TALENT NOTES The damage and heal increasing talent does not update the current active instance. However, the movement slow adding talent immediately updates all currently active instances.",
-        "However, the movement slow adding talent immediately updates all currently active instances.",
-        "SOULBIND Can affect the primary target twice, when cast on the secondary target while the primary target is already affected by Spirit Siphon."
+        "Upon learning, Death Prophet instantly gains 1 charge(s). However, leveling it up further does not instantly grant the other charges",
+        "The link breaks only when the target gets out of range or dies. Cast range increasing effects increase the link break distance as well",
+        "Always heals for the full amount per instance, regardless of how much damage the target actually takes. Spirit Siphon first deals the damage, then applies the self heal",
+        "Deals damage and heals for 6.25\/12.5\/18.75\/25 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 13.75\/20\/26.25\/32.5) in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 24 instances. Can damage and heal up to 150\/300\/450\/600 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 330\/480\/630\/780) when the link lasts its full duration (before reductions)",
+        "Cannot be cast on units that already are affected by Spirit Siphon, unless the debuff is dispeled. Cannot be cast on  Roshan",
+        "Does not provide vision over the target. However, the link does not break upon losing vision. When losing vision over the target, the link visually draws to the location where the target was seen last time",
+        "SHARD NOTES Spirit Siphon now applies fear on the target on the 3rd second of the link's duration. The fear relies on the link buff on Death Prophet, and not on the debuff on the target, so even if the debuff gets dispeled, the fear is still applied. Cannot apply the fear if the target is invulnerable, hidden, or spell immune on the 3rd second. Spirit Siphon's fear makes affected enemies run away from the caster and preventing them from acting",
+        "TALENT NOTES The damage and heal increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not update the current active instance. However, the movement slow adding <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately updates all currently active instances. SOULBIND Can affect the primary target twice, when cast on the secondary target while the primary target is already affected by Spirit Siphon"
       ],
-      "mana": "",
       "item_behaviour": [],
-      "name": "Spirit Siphon",
-      "cooldown": "38 ( 18)",
       "description": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range:  500",
         "Link Break Distance:  750",
-        "Damage\/Heal per Second: 25\/50\/75\/100 ( 55\/80\/105\/130)",
+        "Damage\/Heal per Second: 25\/50\/75\/100 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 55\/80\/105\/130)",
         "Drain Duration: 6",
-        "Drain Time Required to Fear: 3",
-        "Fear Duration: 1.5",
-        "<span image=\"images\\Talent\"><\/span> Move Speed Slow: 20%"
+        "Drain Time Required to Fear:  3",
+        "Fear Duration:  1.5",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Move Speed Slow:  20%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Death_Prophet_Spirit_Siphon.mp3\/revision\/latest?cb=20191216012412",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "",
+      "aghanim": null,
+      "name": "Spirit Siphon",
+      "cooldown": "38 ( 18)",
       "legacy_key": "C",
       "story": "Krobelus willingly shows others the path she alone cannot follow."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Death_Prophet_Exorcism_1.mp3\/revision\/latest?cb=20191216012408",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies \/ Self",
-        "Damage: Physical"
-      ],
       "notes": [
-        "The spirits are spawned from Death Prophet in 0.35-second intervals, starting immediately on cast, taking 2.45\/5.25\/8.05 (TagTalent 5.25\/8.05\/10.85) seconds for all spirits to be released.",
-        "The spirits are not units and cannot be interacted with, or affected by anything in any way.",
-        "Spirits move at a speed of 525, roam around, and automatically attack nearby enemies within the 700 radius around Death Prophet. They can only turn by moving in approximately 150 radius arcs.",
-        "They can only turn by moving in approximately 150 radius arcs.",
-        "Spirits choose their target randomly but prioritize units Death Prophet is attacking currently. Once having chosen a target, a spirit sticks to that target until the target dies, gets out of range, or until Death Prophet starts attacking a new target. A spirit's ongoing chase cannot be canceled. A spirit only stops chasing its target after reaching it, or when the distance gets greater than 1900. Although chasing for much further, the spirits cannot damage units which are 1200 range away from Death Prophet. After each attack, the spirits need to return to Death Prophet before being able to attack again.",
-        "Once having chosen a target, a spirit sticks to that target until the target dies, gets out of range, or until Death Prophet starts attacking a new target.",
-        "A spirit's ongoing chase cannot be canceled. A spirit only stops chasing its target after reaching it, or when the distance gets greater than 1900.",
-        "Although chasing for much further, the spirits cannot damage units which are 1200 range away from Death Prophet.",
-        "After each attack, the spirits need to return to Death Prophet before being able to attack again.",
-        "The spirits deals spell damage on every attackable enemy unit upon reaching them, including buildings, wards, and units inside the Fog of War, but not invisible units. Spirits do not choose invulnerable or ethereal units as their attack targets, but will continue to deal damage to the target if it turns invulnerable or ethereal after being acquired as a target. This means the damage is affected by spell lifesteal and spell damage amplification, but does not trigger any on-attack effects, ignores evasion and damage block. Spirits also does not deal damage to ward-type units that requires a fixed amount of attacks to destroy. Couriers have the lowest target priority, they are only damaged if there are no other valid targets within range.",
-        "Spirits do not choose invulnerable or ethereal units as their attack targets, but will continue to deal damage to the target if it turns invulnerable or ethereal after being acquired as a target.",
-        "This means the damage is affected by spell lifesteal and spell damage amplification, but does not trigger any on-attack effects, ignores evasion and damage block.",
-        "Spirits also does not deal damage to ward-type units that requires a fixed amount of attacks to destroy.",
-        "Couriers have the lowest target priority, they are only damaged if there are no other valid targets within range.",
-        "When a spirit gets 2000 range away from Death Prophet, it disappears and then respawns from Death Prophet. Reappearing spirits are still bound to the spawn interval, so when multiple spirits disappear, they do not reappear simultaneously on Death Prophet.",
-        "Reappearing spirits are still bound to the spawn interval, so when multiple spirits disappear, they do not reappear simultaneously on Death Prophet.",
-        "The spirits heal Death Prophet upon returning once Exorcism's duration is up. They do not heal her upon returning after each attack. The heal amount per spirit is based on their damage value, and not on how much damage they actually dealt. This means upon having fully returned, a spirit heals Death Prophet by 14.75 \u2012 16 for each attack it did, regardless of how much damage the enemies actually took.",
-        "The heal amount per spirit is based on their damage value, and not on how much damage they actually dealt.",
-        "This means upon having fully returned, a spirit heals Death Prophet by 14.75 \u2012 16 for each attack it did, regardless of how much damage the enemies actually took.",
-        "Grants a total of 20%\/28%\/36% movement speed bonus while active.",
-        "Successive casts cause the previous cast to end prematurely, making the spirits start returning to Death Prophet and heal her.",
-        "SCEPTER NOTES The passive spirits spawn only work with Death Prophet's abilities. It does not react on items cast or other abilities. Crypt Swarm spawns spirits for each enemy hit damages, even if the damage is negated. Silence spawns spirits for each enemy it silences. Spirit Siphon spawns a spirit for the target upon cast, but not if it gets blocked. A spirit also spawns on every successful attack on a target, including on buildings, but excluding wards. These passive spirits behave like the spirits from a regular cast, meaning they still use the max distances, and have the same movement behaviors.",
-        "Crypt Swarm spawns spirits for each enemy hit damages, even if the damage is negated.",
-        "Silence spawns spirits for each enemy it silences.",
-        "Spirit Siphon spawns a spirit for the target upon cast, but not if it gets blocked.",
-        "A spirit also spawns on every successful attack on a target, including on buildings, but excluding wards.",
-        "These passive spirits behave like the spirits from a regular cast, meaning they still use the max distances, and have the same movement behaviors.",
-        "SCEPTER NOTES The passive spirits deal 89 \u2012 96 (TagTalent 44 \u2012 48) damage, and therefore also heal for 22 \u2012 24 health upon returning. These spirits can chase their targets for up to 20 seconds before giving up and returning to Death Prophet. The Aghanim's Scepter upgrade does not increase the spirit's damage of an active cast.",
-        "These spirits can chase their targets for up to 20 seconds before giving up and returning to Death Prophet.",
-        "The Aghanim's Scepter upgrade does not increase the spirit's damage of an active cast."
+        "The spirits are spawned from Death Prophet in 0.35-second intervals, starting immediately on cast, taking 2.45\/5.25\/8.05 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 5.25\/8.05\/10.85) seconds for all spirits to be released",
+        "The spirits are not units and cannot be interacted with, or affected by anything in any way",
+        "Spirits move at a speed of 525, roam around, and automatically attack nearby enemies within the 700 radius around Death Prophet. They can only turn by moving in approximately 150 radius arcs",
+        "Spirits choose their target randomly but prioritize units Death Prophet is attacking currently. Once having chosen a target, a spirit sticks to that target until the target dies, gets out of range, or until Death Prophet starts attacking a new target. A spirit's ongoing chase cannot be canceled. A spirit only stops chasing its target after reaching it, or when the distance gets greater than 1900. Although chasing for much further, the spirits cannot damage units which are 1200 range away from Death Prophet. After each attack, the spirits need to return to Death Prophet before being able to attack again",
+        "The spirits deals spell damage on every attackable enemy unit upon reaching them, including buildings, wards, and units inside the Fog of War, but not invisible units. Spirits do not choose invulnerable or ethereal units as their attack targets, but will continue to deal damage to the target if it turns invulnerable or ethereal after being acquired as a target. This means the damage is affected by spell lifesteal and spell damage amplification, but does not trigger any on-attack effects, ignores evasion and damage block. Spirits also does not deal damage to ward-type units that requires a fixed amount of attacks to destroy.  Couriers have the lowest target priority, they are only damaged if there are no other valid targets within range",
+        "When a spirit gets 2000 range away from Death Prophet, it disappears and then respawns from Death Prophet. Reappearing spirits are still bound to the spawn interval, so when multiple spirits disappear, they do not reappear simultaneously on Death Prophet",
+        "The spirits heal Death Prophet upon returning once Exorcism's duration is up. They do not heal her upon returning after each attack. The heal amount per spirit is based on their damage value, and not on how much damage they actually dealt. This means upon having fully returned, a spirit heals Death Prophet by 14.75 \u2012 16 for each attack it did, regardless of how much damage the enemies actually took",
+        "Grants a total of 20%\/28%\/36% movement speed bonus while active",
+        "Successive casts cause the previous cast to end prematurely, making the spirits start returning to Death Prophet and heal her",
+        "SCEPTER NOTES The passive spirits spawn only work with Death Prophet's abilities. It does not react on items cast or other abilities.  Crypt Swarm spawns spirits for each enemy hit damages, even if the damage is negated.  Silence spawns spirits for each enemy it silences.  Spirit Siphon spawns a spirit for the target upon cast, but not if it gets blocked. A spirit also spawns on every successful attack on a target, including on buildings, but excluding wards. These passive spirits behave like the spirits from a regular cast, meaning they still use the max distances, and have the same movement behaviors",
+        "SCEPTER NOTES The passive spirits deal 89 \u2012 96 ( 44 \u2012 48) damage, and therefore also heal for 22 \u2012 24 health upon returning. These spirits can chase their targets for up to 20 seconds before giving up and returning to Death Prophet. The  Aghanim's Scepter upgrade does not increase the spirit's damage of an active cast"
       ],
-      "mana": "150",
       "item_behaviour": [],
-      "name": "Exorcism",
-      "cooldown": "200\/300\/400",
       "description": "Unleashes evil spirits to drain the life of nearby enemy units and structures. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Lasts 35 seconds. Passively grants movement speed.",
       "hot_key": "R",
       "params": [
@@ -151,7 +115,7 @@
         "Spirits Acquisition Radius: 700",
         "Max Attack Radius: 1200",
         "Spirits Spawn Interval: 0.35",
-        "Number of Spirits: 8\/16\/24 ( 16\/24\/32)",
+        "Number of Spirits: 8\/16\/24 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 16\/24\/32)",
         "Spirits Min Damage: 59",
         "Spirits Max Damage: 64",
         "Building Damage Percentage: 50%",
@@ -159,11 +123,21 @@
         "Passive Self Move Speed Bonus: 8%\/12%\/16%",
         "Active Self Move Speed Bonus: 12%\/16%\/20%",
         "Exorcism Duration: 35",
-        "Passive Spirit Damage Percentage: 150%",
-        "Passive Spirit Move Speed Slow: 100%",
-        "Passive Spirit Slow Duration: 0.3",
-        "Passive Spirit Max Duration: 20"
+        "Passive Spirit Damage Percentage:  150%",
+        "Passive Spirit Move Speed Slow:  100%",
+        "Passive Spirit Slow Duration:  0.3",
+        "Passive Spirit Max Duration:  20"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Death_Prophet_Exorcism_1.mp3\/revision\/latest?cb=20191216012408",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies \/ Self",
+        "Damage: Physical"
+      ],
+      "mana": "150",
+      "aghanim": null,
+      "name": "Exorcism",
+      "cooldown": "200\/300\/400",
       "legacy_key": "X",
       "story": "Over time, the banshee remnants of her previous lives return to haunt the present."
     }

@@ -1,28 +1,12 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Necrophos_Death_Pulse.mp3\/revision\/latest?cb=20191216020945",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies \/ Allies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The pulses travel at a speed of 400.",
-        "Affects invisible units and units in Fog of War. Does not affect invulnerable and hidden units. Fully affects allied Couriers.",
-        "Does not affect invulnerable and hidden units.",
-        "Fully affects allied Couriers.",
-        "Death Pulse heals Necrophos for the following values while Ghost Shroud is active on each level: Level 1: 61.6\/89.6\/117.6\/145.6 (TagTalent 97.44\/125.44\/153.44\/181.44) Level 2: 63.8\/92.8\/121.8\/150.8 (TagTalent 100.92\/129.92\/158.92\/187.92) Level 3: 66\/96\/126\/156 (TagTalent 104.4\/134.4\/164.4\/194.4) Level 4: 68.2\/99.2\/130.2\/161.2 (TagTalent 107.88\/138.88\/169.88\/200.88)",
-        "Level 1: 61.6\/89.6\/117.6\/145.6 (TagTalent 97.44\/125.44\/153.44\/181.44)",
-        "Level 2: 63.8\/92.8\/121.8\/150.8 (TagTalent 100.92\/129.92\/158.92\/187.92)",
-        "Level 3: 66\/96\/126\/156 (TagTalent 104.4\/134.4\/164.4\/194.4)",
-        "Level 4: 68.2\/99.2\/130.2\/161.2 (TagTalent 107.88\/138.88\/169.88\/200.88)",
-        ""
+        "The pulses travel at a speed of 400",
+        "Affects invisible units and units in Fog of War. Does not affect invulnerable and hidden units. Fully affects allied  Couriers",
+        "Death Pulse heals Necrophos for the following values while  Ghost Shroud is active on each level: Level 1: 61.6\/89.6\/117.6\/145.6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 97.44\/125.44\/153.44\/181.44) Level 2: 63.8\/92.8\/121.8\/150.8 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 100.92\/129.92\/158.92\/187.92) Level 3: 66\/96\/126\/156 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 104.4\/134.4\/164.4\/194.4) Level 4: 68.2\/99.2\/130.2\/161.2 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 107.88\/138.88\/169.88\/200.88)"
       ],
-      "mana": "8\/7\/6\/5 (TagTalent 5.5\/4.5\/3.5\/2.5)",
       "item_behaviour": [],
-      "name": "Death Pulse",
-      "cooldown": "100\/130\/160\/190",
       "description": "Necrophos releases a wave of death around him, dealing damage to enemy units and healing allied units.",
       "hot_key": "Q",
       "params": [
@@ -30,118 +14,106 @@
         "Search Radius: 500",
         "Projectile Speed: 400",
         "Damage: 100\/160\/220\/280",
-        "Heal: 55\/80\/105\/130 ( 87\/112\/137\/162)"
+        "Heal: 55\/80\/105\/130 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 87\/112\/137\/162)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Necrophos_Death_Pulse.mp3\/revision\/latest?cb=20191216020945",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies \/ Allies",
+        "Damage: Magical"
+      ],
+      "mana": "8\/7\/6\/5 (TagTalent 5.5\/4.5\/3.5\/2.5)",
+      "aghanim": null,
+      "name": "Death Pulse",
+      "cooldown": "100\/130\/160\/190",
       "legacy_key": "D",
       "story": "Poor souls who succumb to Rotund'jere's plagues are recycled for future use."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Necrophos_Ghost_Shroud.mp3\/revision\/latest?cb=20191216020946",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self \/ Enemies"
-      ],
       "notes": [
-        "Interrupts Necrophos' channeling abilities upon cast.",
-        "Turns Necrophos ethereal, disarming him, rendering him attack immune and granting 100% physical damage resistance.",
-        "Reduces Necrophos' total magic resistance to 6.25%.",
-        "The magic resistance reduction of multiple ethereal effects does not stack, the one with higher value takes priority.",
-        "Applies heal amplification, health regen amplification, mana restore amplification, and mana regen amplification. Does not apply lifesteal amplification or spell lifesteal amplification.",
-        "Does not apply lifesteal amplification or spell lifesteal amplification.",
-        "The movement speed slow is provided by an aura and its debuff lingers for 0.5 seconds."
+        "Interrupts Necrophos' channeling abilities upon cast",
+        "Turns Necrophos ethereal, disarming him, rendering him attack immune and granting 100% physical damage resistance",
+        "Reduces Necrophos' total magic resistance to 6.25%",
+        "The magic resistance reduction of multiple ethereal effects does not stack, the one with higher value takes priority",
+        "Applies heal amplification, health regen amplification, mana restore amplification, and mana regen amplification. Does not apply lifesteal amplification or spell lifesteal amplification",
+        "The movement speed slow is provided by an aura and its debuff lingers for 0.5 seconds"
       ],
-      "mana": "28\/24\/20\/16 (TagTalent 10)",
       "item_behaviour": [],
-      "name": "Ghost Shroud",
-      "cooldown": "50",
       "description": "Necrophos slips into the realm that separates the living from the dead. Unable to attack or be attacked, he emits an aura that slows enemies around him. He takes additional magic damage in this form, but his restorative powers are amplified.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
         "Slow Radius: 750",
-        "Enemy Move Speed Slow: 12%\/16%\/20%\/24% ( 36%\/40%\/44%\/48%)",
-        "Self Restoration Amplification: 45%\/55%\/65%\/75% ( 60%\/70%\/80%\/90%)",
+        "Enemy Move Speed Slow: 12%\/16%\/20%\/24% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 36%\/40%\/44%\/48%)",
+        "Self Restoration Amplification: 45%\/55%\/65%\/75% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 60%\/70%\/80%\/90%)",
         "Self Magic Resistance Reduction: 25%",
         "Aura Linger Duration: 0.5",
         "Duration: 3\/3.5\/4\/4.5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Necrophos_Ghost_Shroud.mp3\/revision\/latest?cb=20191216020946",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self \/ Enemies"
+      ],
+      "mana": "28\/24\/20\/16 (TagTalent 10)",
+      "aghanim": null,
+      "name": "Ghost Shroud",
+      "cooldown": "50",
       "legacy_key": "T",
       "story": "Rotund'jere uses the souls of his victims as bridge from life to afterlife."
     },
     {
+      "notes": [
+        "The debuff from Heartstopper Aura lingers for 0.5 seconds",
+        "The health loss from Heartstopper Aura is direct HP Removal, so it does not trigger any on-damage effects",
+        "The damage has the no-spell-amplification flag, preventing its damage from being amplified with spell damage amplification. However, its damage can be further increased by magic resistance reduction instead",
+        "Deals 0.12%\/0.24%\/0.36%\/0.48% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.22%\/0.34%\/0.46%\/0.58%) of the affected unit's max health as damage in 0.2-second intervals, starting 0.2 seconds upon learning ability",
+        "The status debuff icon on enemies only shows up when the affected unit has vision over Necrophos. However, the floating damage numbers are always visible",
+        "Does not affect ancient creeps",
+        "Grants Necrophos one regeneration stack per last hit he makes, including denying allied units and destroying buildings, except from killing illusions and the  Tempest Double. All stacks work fully independently from each other. They do not refresh each other but share a status buff. The number of current stacks is visible on the buff. Each stack can regenerate up to 32\/40\/48\/56 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 40\/50\/60\/70) health and mana for its entire duration. Hero kills grant 6 stacks at once, which can regenerate up to 192\/240\/288\/336 (240\/300\/360\/420) health and mana for its entire duration",
+        "With level 4  Ghost Shroud and level 4 Heartstopper Aura, one stack can regenerate up to 79.63 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 98.35) health and mana for its entire duration. For the total of health and mana regenerated per level, please refer to the chart below",
+        "SCEPTER NOTES Heartstopper Aura deals 0.24%\/0.48%\/0.72%\/0.96% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.44%\/0.68%\/0.92%\/1.16%) of the affected unit's max health as damage in 0.2-second intervals during  Ghost Shroud. In total, it deals 1.2%\/2.4%\/3.6%\/4.8% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.2%\/3.4%\/4.6%\/5.8%) of max health as damage per second, as long as Necrophos is affected by Ghost Shroud",
+        "TALENT NOTES The regen reduction <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent only adds health regeneration reduction to Heartstopper Aura, but not heal reduction, lifesteal reduction, or spell lifesteal reduction. The max health lost per second increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not upgrade the damage for already affected units until they lose the debuff and then get affected again"
+      ],
+      "item_behaviour": [],
+      "description": "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of their max health over time. Passively provides regen for 8 seconds for each unit Necrophos kills.",
+      "hot_key": "E",
+      "params": [
+        "Radius: 800",
+        "Max Health Lost per Second: 0.6%\/1.2%\/1.8%\/2.4% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1.1%\/1.7%\/2.3%\/2.9%)",
+        "Ghost Shroud Damage Multiplier: 1 ( 2)",
+        "Stacks per Hero Kill: 6",
+        "Stacks per Non-Hero Kill: 1",
+        "Health Regen Bonus per Stack: 4\/5\/6\/7",
+        "Mana Regen Bonus per Stack: 4\/5\/6\/7",
+        "Stack Duration: 8 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 10)",
+        "Aura Linger Duration: 0.5",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Health Regen Reduction:  32%"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Aura",
         "Affects: Enemies \/ Self",
         "Damage: Magical"
       ],
-      "notes": [
-        "The debuff from Heartstopper Aura lingers for 0.5 seconds.",
-        "The health loss from Heartstopper Aura is direct HP Removal, so it does not trigger any on-damage effects.",
-        "The damage has the no-spell-amplification flag, preventing its damage from being amplified with spell damage amplification. However, its damage can be further increased by magic resistance reduction instead.",
-        "However, its damage can be further increased by magic resistance reduction instead.",
-        "Deals 0.12%\/0.24%\/0.36%\/0.48% (TagTalent 0.22%\/0.34%\/0.46%\/0.58%) of the affected unit's max health as damage in 0.2-second intervals, starting 0.2 seconds upon learning ability.",
-        "The status debuff icon on enemies only shows up when the affected unit has vision over Necrophos. However, the floating damage numbers are always visible.",
-        "However, the floating damage numbers are always visible.",
-        "Does not affect ancient creeps.",
-        "Grants Necrophos one regeneration stack per last hit he makes, including denying allied units and destroying buildings, except from killing illusions and the Tempest Double. All stacks work fully independently from each other. They do not refresh each other but share a status buff. The number of current stacks is visible on the buff. Each stack can regenerate up to 32\/40\/48\/56 (TagTalent 40\/50\/60\/70) health and mana for its entire duration. Hero kills grant 6 stacks at once, which can regenerate up to 192\/240\/288\/336 (240\/300\/360\/420) health and mana for its entire duration.",
-        "All stacks work fully independently from each other. They do not refresh each other but share a status buff. The number of current stacks is visible on the buff.",
-        "Each stack can regenerate up to 32\/40\/48\/56 (TagTalent 40\/50\/60\/70) health and mana for its entire duration.",
-        "Hero kills grant 6 stacks at once, which can regenerate up to 192\/240\/288\/336 (240\/300\/360\/420) health and mana for its entire duration.",
-        "With level 4 Ghost Shroud and level 4 Heartstopper Aura, one stack can regenerate up to 79.63 (TagTalent 98.35) health and mana for its entire duration. For the total of health and mana regenerated per level, please refer to the chart below.",
-        "For the total of health and mana regenerated per level, please refer to the chart below.",
-        "SCEPTER NOTES Heartstopper Aura deals 0.24%\/0.48%\/0.72%\/0.96% (TagTalent 0.44%\/0.68%\/0.92%\/1.16%) of the affected unit's max health as damage in 0.2-second intervals during Ghost Shroud. In total, it deals 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 2.2%\/3.4%\/4.6%\/5.8%) of max health as damage per second, as long as Necrophos is affected by Ghost Shroud.",
-        "In total, it deals 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 2.2%\/3.4%\/4.6%\/5.8%) of max health as damage per second, as long as Necrophos is affected by Ghost Shroud.",
-        "TALENT NOTES The regen reduction talent only adds health regeneration reduction to Heartstopper Aura, but not heal reduction, lifesteal reduction, or spell lifesteal reduction. The max health lost per second increasing talent does not upgrade the damage for already affected units until they lose the debuff and then get affected again.",
-        "The max health lost per second increasing talent does not upgrade the damage for already affected units until they lose the debuff and then get affected again."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Heartstopper Aura",
       "cooldown": null,
-      "description": "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of their max health over time. Passively provides regen for 8 seconds for each unit Necrophos kills.",
-      "hot_key": "E",
-      "params": [
-        "Radius: 800",
-        "Max Health Lost per Second: 0.6%\/1.2%\/1.8%\/2.4% ( 1.1%\/1.7%\/2.3%\/2.9%)",
-        "Ghost Shroud Damage Multiplier: 1 ( 2)",
-        "Stacks per Hero Kill: 6",
-        "Stacks per Non-Hero Kill: 1",
-        "Health Regen Bonus per Stack: 4\/5\/6\/7",
-        "Mana Regen Bonus per Stack: 4\/5\/6\/7",
-        "Stack Duration: 8 ( 10)",
-        "Aura Linger Duration: 0.5",
-        "<span image=\"images\\Talent\"><\/span> Health Regen Reduction: 32%"
-      ],
       "legacy_key": "I",
       "story": "Those who come within a short distance of the Necrophos can feel pestilence and plague in the air."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Necrophos_Death_Seeker.mp3\/revision\/latest?cb=20210101213914",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Allies \/ Enemies"
-      ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "Cannot be cast on self.",
-        "The projectile travels at a speed of 900.",
-        "Death Seeker first applies its debuff, then releases the Death Pulse.",
-        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance. Reduces most enemy heroes' total magic resistance to 6.25%. Stacks multiplicatively with other sources of magic resistance.",
-        "Reduces most enemy heroes' total magic resistance to 6.25%.",
-        "Stacks multiplicatively with other sources of magic resistance.",
-        "The magic resistance reduction of multiple ethereal effects does not stack, the one with higher value takes priority.",
-        "The released Death Pulse is based on its current level. Death Pulse's notes fully apply. If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown. If the target is invulnerable or hidden on impact, the Death Pulse is not released. The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy.",
-        "If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown.",
-        "If the target is invulnerable or hidden on impact, the Death Pulse is not released.",
-        "The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy.",
-        "SPELL STEAL Death Pulse released is based on Necrophos' current ability level when acquired.",
-        "SOULBIND Launch projectile to the primary target first, then the secondary target."
+        "Requires  Aghanim's Shard to be unlocked",
+        "Cannot be cast on self",
+        "The projectile travels at a speed of 900",
+        "Death Seeker first applies its debuff, then releases the Death Pulse",
+        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance. Reduces most enemy heroes' total magic resistance to 6.25%. Stacks multiplicatively with other sources of magic resistance",
+        "The magic resistance reduction of multiple ethereal effects does not stack, the one with higher value takes priority",
+        "The released  Death Pulse is based on its current level. Death Pulse's notes fully apply. If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown. If the target is invulnerable or hidden on impact, the Death Pulse is not released. The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy. SPELL STEAL  Death Pulse released is based on  Necrophos' current ability level when acquired. SOULBIND Launch projectile to the primary target first, then the secondary target"
       ],
-      "mana": "16",
       "item_behaviour": [],
-      "name": "Death Seeker",
-      "cooldown": "125",
       "description": "Spawns a fast moving large Death Pulse towards the target enemy or ally, causing the target to become ethereal. Reduces enemy magic resistance. Spreads towards nearby enemies and allies after impact.",
       "hot_key": "D",
       "params": [
@@ -151,50 +123,47 @@
         "Enemy Magic Resistance Reduction: 25%",
         "Duration: 2.5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Necrophos_Death_Seeker.mp3\/revision\/latest?cb=20210101213914",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies \/ Enemies"
+      ],
+      "mana": "16",
+      "aghanim": null,
+      "name": "Death Seeker",
+      "cooldown": "125",
       "legacy_key": "C",
       "story": null
     },
     {
+      "notes": [
+        "The damage is calculated and dealt to the target at the end of the stun duration. The stun duration is unaffected by status resistance",
+        "Deals enough damage (before reductions) to kill the target when it is at 41%\/44%\/47% of max health. Shares one instance of 0 damage when triggering damage shared sources (e.g.  Fatal Bonds). SHARD NOTES With  Death Seeker, Reaper's Scythe deals enough damage to kill the target when it is at 51%\/56%\/59% of max health",
+        "Reaper's Scythe has the highest priority in the group of kill credit manipulation effects. All damage dealt to the affected target, including from allies, during the stun duration is sourced to Reaper's Scythe, and credited to Necrophos. This means when combined with other kill credit manipulation effects (e.g.  Winter's Curse), the kill credit is still given to Necrophos",
+        "However, the following conditions do not credit Necrophos with the kill credit: When  Spirit Bear is instantly killed due to its owner dying while affected by Reaper's Scythe, without the   Summon Spirit Bear upgrade. When the affected target is brought into   Supernova during the stun duration. When the affected target is swallowed by   Dismember during the stun duration and is not  Ejected when the damage is dealt. When the affected target is affected by a reflected  Omnislash or  Swiftslash. In the case of Swiftslash, it must still be occuring when the damage is dealt. When  Meepo or its  Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the stun duration",
+        "Grants Necrophos a stack as long as he was credited for the kill. Grants a stack even if the dying hero has Reincarnation, or killing illusions and creep-heroes, but not the  Tempest Double. The number of stacks gained can be seen on the status buff icon. The current health and mana regeneration bonus can be seen in its description. The health and mana regeneration bonuses granted are not retroactive. All stacks retain their values from when it was first acquired"
+      ],
+      "item_behaviour": [],
+      "description": "Stuns the target enemy hero, then deals damage based on how much life it is missing. If Necrophos kills an enemy this way, he'll permanently gain Health and Mana Regen. Any kill under this effect is credited to Necrophos.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.45+1.5",
+        "Cast Range:  600 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 700)",
+        "Damage per Missing Health: 0.7\/0.8\/0.9",
+        "Health Regen Bonus per Kill: 2\/4\/6",
+        "Mana Regen Bonus per Kill: 1\/2\/3",
+        "Stun Duration: 1.5"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Necrophos_Reaper%27s_Scythe.mp3\/revision\/latest?cb=20191216020948",
       "effects": [
         "Ability: Target Unit",
         "Affects: Enemy Heroes",
         "Damage: Magical"
       ],
-      "notes": [
-        "The damage is calculated and dealt to the target at the end of the stun duration. The stun duration is unaffected by status resistance.",
-        "The stun duration is unaffected by status resistance.",
-        "Deals enough damage (before reductions) to kill the target when it is at 41%\/44%\/47% of max health. Shares one instance of 0 damage when triggering damage shared sources (e.g. Fatal Bonds). SHARD NOTES With Death Seeker, Reaper's Scythe deals enough damage to kill the target when it is at 51%\/56%\/59% of max health.",
-        "Shares one instance of 0 damage when triggering damage shared sources (e.g. Fatal Bonds).",
-        "SHARD NOTES With Death Seeker, Reaper's Scythe deals enough damage to kill the target when it is at 51%\/56%\/59% of max health.",
-        "Reaper's Scythe has the highest priority in the group of kill credit manipulation effects. All damage dealt to the affected target, including from allies, during the stun duration is sourced to Reaper's Scythe, and credited to Necrophos. This means when combined with other kill credit manipulation effects (e.g. Winter's Curse), the kill credit is still given to Necrophos.",
-        "All damage dealt to the affected target, including from allies, during the stun duration is sourced to Reaper's Scythe, and credited to Necrophos.",
-        "This means when combined with other kill credit manipulation effects (e.g. Winter's Curse), the kill credit is still given to Necrophos.",
-        "However, the following conditions do not credit Necrophos with the kill credit: When Spirit Bear is instantly killed due to its owner dying while affected by Reaper's Scythe, without the Summon Spirit Bear upgrade. When the affected target is brought into Supernova during the stun duration. When the affected target is swallowed by Dismember during the stun duration and is not Ejected when the damage is dealt. When the affected target is affected by a reflected Omnislash or Swiftslash. In the case of Swiftslash, it must still be occuring when the damage is dealt. When Meepo or its Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the stun duration.",
-        "When Spirit Bear is instantly killed due to its owner dying while affected by Reaper's Scythe, without the Summon Spirit Bear upgrade.",
-        "When the affected target is brought into Supernova during the stun duration.",
-        "When the affected target is swallowed by Dismember during the stun duration and is not Ejected when the damage is dealt.",
-        "When the affected target is affected by a reflected Omnislash or Swiftslash. In the case of Swiftslash, it must still be occuring when the damage is dealt.",
-        "When Meepo or its Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the stun duration.",
-        "Grants Necrophos a stack as long as he was credited for the kill. Grants a stack even if the dying hero has Reincarnation, or killing illusions and creep-heroes, but not the Tempest Double. The number of stacks gained can be seen on the status buff icon. The current health and mana regeneration bonus can be seen in its description. The health and mana regeneration bonuses granted are not retroactive. All stacks retain their values from when it was first acquired.",
-        "Grants a stack even if the dying hero has Reincarnation, or killing illusions and creep-heroes, but not the Tempest Double.",
-        "The number of stacks gained can be seen on the status buff icon. The current health and mana regeneration bonus can be seen in its description.",
-        "The health and mana regeneration bonuses granted are not retroactive. All stacks retain their values from when it was first acquired."
-      ],
       "mana": "110",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Reaper's Scythe",
       "cooldown": "250\/375\/500",
-      "description": "Stuns the target enemy hero, then deals damage based on how much life it is missing. If Necrophos kills an enemy this way, he'll permanently gain Health and Mana Regen. Any kill under this effect is credited to Necrophos.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0.45+1.5",
-        "Cast Range:  600 ( 700)",
-        "Damage per Missing Health: 0.7\/0.8\/0.9",
-        "Health Regen Bonus per Kill: 2\/4\/6",
-        "Mana Regen Bonus per Kill: 1\/2\/3",
-        "Stun Duration: 1.5"
-      ],
       "legacy_key": "R",
       "story": "The amount of death and suffering in the air increases the power of the Necrophos's plague magic."
     }

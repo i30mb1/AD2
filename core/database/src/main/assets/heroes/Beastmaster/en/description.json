@@ -1,32 +1,14 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Beastmaster_Wild_Axes_1.mp3\/revision\/latest?cb=20191216011217",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies \/ Self",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The axes either travel at a speed of 1200 or reach the target point in 1 second, whichever is faster. The same applies upon returning. Upon returning, their speed periodically adapts based on their distance to Beastmaster and the remaining travel time. This means the axes fly a maximum of up to 2 seconds, up to 1 second towards the point and up to 1 second back.",
-        "Upon returning, their speed periodically adapts based on their distance to Beastmaster and the remaining travel time.",
-        "This means the axes fly a maximum of up to 2 seconds, up to 1 second towards the point and up to 1 second back.",
-        "Both axes spread up to 450 distance away from each other, before moving back together while traveling towards the targeted point. Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away. The axes fly in arcs, so that the axe coming from Beastmaster's left-hand travels back towards his right hand, and vice versa. They destroy trees within 175 radius they come in contact with, while providing 350 radius flying vision as they travel. This vision does not last.",
-        "Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away.",
-        "The axes fly in arcs, so that the axe coming from Beastmaster's left-hand travels back towards his right hand, and vice versa.",
-        "They destroy trees within 175 radius they come in contact with, while providing 350 radius flying vision as they travel. This vision does not last.",
-        "The axes first apply the debuff, then the damage. This means they effectively amplify their own damage as well. Uses one debuff on hit targets for all stacks. The debuff has a number on it, showing the number of stacks. Since the axes work separately, one of the axes always benefits from 2 stacks of the debuff, if both hit. Successive hits on the same unit fully refresh the whole stack's duration.",
-        "Uses one debuff on hit targets for all stacks. The debuff has a number on it, showing the number of stacks.",
-        "Since the axes work separately, one of the axes always benefits from 2 stacks of the debuff, if both hit.",
-        "Successive hits on the same unit fully refresh the whole stack's duration.",
-        "Applies generic incoming damage amplification on the targets. Stacks additively with other sources of generic incoming damage manipulation. The amplification affects all damage, including Beastmaster's abilities, that is not flagged as HP removal the targets take from Beastmaster and all his player-controlled units. Allies do not benefit from it.",
-        "The amplification affects all damage, including Beastmaster's abilities, that is not flagged as HP removal the targets take from Beastmaster and all his player-controlled units. Allies do not benefit from it.",
-        "Each axe can hit the same unit only once per cast, so the maximum possible damage per axe is 42.4\/75.6\/110\/145.6 (TagTalent 43.4\/77.35\/112.5\/148.85) before reductions."
+        "The axes either travel at a speed of 1200 or reach the target point in 1 second, whichever is faster. The same applies upon returning. Upon returning, their speed periodically adapts based on their distance to Beastmaster and the remaining travel time. This means the axes fly a maximum of up to 2 seconds, up to 1 second towards the point and up to 1 second back",
+        "Both axes spread up to 450 distance away from each other, before moving back together while traveling towards the targeted point. Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away. The axes fly in arcs, so that the axe coming from Beastmaster's left-hand travels back towards his right hand, and vice versa. They destroy trees within 175 radius they come in contact with, while providing 350 radius flying vision as they travel. This vision does not last",
+        "The axes first apply the debuff, then the damage. This means they effectively amplify their own damage as well. Uses one debuff on hit targets for all stacks. The debuff has a number on it, showing the number of stacks. Since the axes work separately, one of the axes always benefits from 2 stacks of the debuff, if both hit. Successive hits on the same unit fully refresh the whole stack's duration",
+        "Applies generic incoming damage amplification on the targets. Stacks additively with other sources of generic incoming damage manipulation. The amplification affects all damage, including Beastmaster's abilities, that is not flagged as HP removal the targets take from Beastmaster and all his player-controlled units. Allies do not benefit from it",
+        "Each axe can hit the same unit only once per cast, so the maximum possible damage per axe is 42.4\/75.6\/110\/145.6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 43.4\/77.35\/112.5\/148.85) before reductions"
       ],
-      "mana": "8 (TagTalent 3)",
       "item_behaviour": [],
-      "name": "Wild Axes",
-      "cooldown": "65",
       "description": "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can hit an enemy once, and amplifies subsequent damage from Beastmaster and his units.",
       "hot_key": "Q",
       "params": [
@@ -36,25 +18,28 @@
         "Axes Travel Distance:  1500",
         "Axes Spread Distance: 450",
         "Damage per Axe: 40\/70\/100\/130",
-        "Damage Amplification per Stack: 6%\/8%\/10%\/12% ( 8.5%\/10.5%\/12.5%\/14.5%)",
+        "Damage Amplification per Stack: 6%\/8%\/10%\/12% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 8.5%\/10.5%\/12.5%\/14.5%)",
         "Stack Duration: 12"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Beastmaster_Wild_Axes_1.mp3\/revision\/latest?cb=20191216011217",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "8 (TagTalent 3)",
+      "aghanim": null,
+      "name": "Wild Axes",
+      "cooldown": "65",
       "legacy_key": "W",
       "story": "While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Beastmaster_Call_of_the_Wild_Boar.mp3\/revision\/latest?cb=20191216011213",
-      "effects": [
-        "Ability: No Target"
-      ],
       "notes": [
-        "Does not destroy previous summons if this ability is used again before the previous Boar expires.",
-        "The boar spawns at a random location within a 100 radius around Beastmaster."
+        "Does not destroy previous summons if this ability is used again before the previous  Boar expires",
+        "The boar spawns at a random location within a 100 radius around Beastmaster"
       ],
-      "mana": "42\/38\/34\/30",
       "item_behaviour": [],
-      "name": "Call of the Wild Boar",
-      "cooldown": "60\/65\/70\/75",
       "description": "Beastmaster calls forth a Boar to aid in the battlefield. The Boar has a passive poison attack that slows attack and movement speeds.",
       "hot_key": "W",
       "params": [
@@ -62,37 +47,26 @@
         "Number of Boars: 1",
         "Boar Duration: 60"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Beastmaster_Call_of_the_Wild_Boar.mp3\/revision\/latest?cb=20191216011213",
+      "effects": [
+        "Ability: No Target"
+      ],
+      "mana": "42\/38\/34\/30",
+      "aghanim": null,
+      "name": "Call of the Wild Boar",
+      "cooldown": "60\/65\/70\/75",
       "legacy_key": "D",
       "story": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Beastmaster_Call_of_the_Wild_Hawk.mp3\/revision\/latest?cb=20191216011215",
-      "effects": [
-        "Ability: Target Area",
-        "Affects: "
-      ],
       "notes": [
-        "Does not destroy previous summons if this ability is used again before the previous Hawk expires.",
-        "The hawk spawns at a random location within a 300 radius around Beastmaster. It spawns invisible, without any fade time.",
-        "The hawk cannot be controlled at all. Once cast, it automatically flies towards the targeted area and stays there. Its flight towards the target area cannot be interrupted by anything. If the hawk gets its movement disabled (e.g. stunned, rooted, etc.), it resumes moving to the location as soon as it can move again. Taunts and hypnotize cause the hawk to stop for its duration, but it resumes as soon as the taunt expires. The hawk completely ignores fear.",
-        "Its flight towards the target area cannot be interrupted by anything.",
-        "If the hawk gets its movement disabled (e.g. stunned, rooted, etc.), it resumes moving to the location as soon as it can move again.",
-        "Taunts and hypnotize cause the hawk to stop for its duration, but it resumes as soon as the taunt expires. The hawk completely ignores fear.",
-        "Hawks do not block neutral creep camps.",
-        "SHARD NOTES Call of the Wild Hawk can now be directly targeted on an enemy unit or set to Autocast. When unit-targeted, the Hawk flies towards that unit's location upon cast, as if ground-targeted. It does not alter its path if the target moves. If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them. If the target gets out of 900 range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location. However, the hawk may attempt to cast Dive Bomb again if the target comes within range again. Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target. With Autocast On, all Hawks will instantly and automatically cast Dive Bomb on the first viable target in range with the same notes as above, regardless of whether it is still flying or stationary. Acquiring Aghanim's Shard does not retroactively grant Dive Bomb to already summoned Hawks.",
-        "When unit-targeted, the Hawk flies towards that unit's location upon cast, as if ground-targeted. It does not alter its path if the target moves.",
-        "If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them.",
-        "If the target gets out of 900 range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location.",
-        "However, the hawk may attempt to cast Dive Bomb again if the target comes within range again.",
-        "Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target.",
-        "With Autocast On, all Hawks will instantly and automatically cast Dive Bomb on the first viable target in range with the same notes as above, regardless of whether it is still flying or stationary.",
-        "Acquiring Aghanim's Shard does not retroactively grant Dive Bomb to already summoned Hawks.",
-        "SOULBIND Summons one Hawk that casts Dive Bomb on the target unit."
+        "Does not destroy previous summons if this ability is used again before the previous  Hawk expires",
+        "The hawk spawns at a random location within a 300 radius around Beastmaster. It spawns invisible, without any fade time",
+        "The hawk cannot be controlled at all. Once cast, it automatically flies towards the targeted area and stays there. Its flight towards the target area cannot be interrupted by anything. If the hawk gets its movement disabled (e.g. stunned, rooted, etc.), it resumes moving to the location as soon as it can move again. Taunts and hypnotize cause the hawk to stop for its duration, but it resumes as soon as the taunt expires. The hawk completely ignores fear",
+        "Hawks do not block neutral creep camps",
+        "SHARD NOTES Call of the Wild Hawk can now be directly targeted on an enemy unit or set to Autocast. When unit-targeted, the Hawk flies towards that unit's location upon cast, as if ground-targeted. It does not alter its path if the target moves. If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them. If the target gets out of 900 range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location. However, the hawk may attempt to cast Dive Bomb again if the target comes within range again. Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target. With Autocast On, all Hawks will instantly and automatically cast  Dive Bomb on the first viable target in range with the same notes as above, regardless of whether it is still flying or stationary. Acquiring  Aghanim's Shard does not retroactively grant Dive Bomb to already summoned Hawks. SOULBIND Summons one Hawk that casts  Dive Bomb on the target unit"
       ],
-      "mana": "60\/50\/40\/30 (TagTalent 50\/40\/30\/20)",
       "item_behaviour": [],
-      "name": "Call of the Wild Hawk",
-      "cooldown": "30",
       "description": "Beastmaster sends an invisible Hawk to scout an area.",
       "hot_key": "E",
       "params": [
@@ -101,59 +75,55 @@
         "Number of Hawks: 1",
         "Hawk Duration: 60"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Beastmaster_Call_of_the_Wild_Hawk.mp3\/revision\/latest?cb=20191216011215",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: "
+      ],
+      "mana": "60\/50\/40\/30 (TagTalent 50\/40\/30\/20)",
+      "aghanim": null,
+      "name": "Call of the Wild Hawk",
+      "cooldown": "30",
       "legacy_key": "E",
       "story": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need."
     },
     {
+      "notes": [
+        "Affects invulnerable, but not hidden units",
+        "The aura's buff lingers for 0.5 seconds"
+      ],
+      "item_behaviour": [],
+      "description": "Untaps the inner fury of nearby allies, passively increasing their attack speed.",
+      "hot_key": "D",
+      "params": [
+        "Radius: 1200",
+        "Attack Speed Bonus: 10\/20\/30\/40 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 20\/30\/40\/50)",
+        "Aura Linger Duration: 0.5"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Aura",
         "Affects: Allies"
       ],
-      "notes": [
-        "Affects invulnerable, but not hidden units.",
-        "The aura's buff lingers for 0.5 seconds."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Inner Beast",
       "cooldown": null,
-      "description": "Untaps the inner fury of nearby allies, passively increasing their attack speed.",
-      "hot_key": "D",
-      "params": [
-        "Radius: 1200",
-        "Attack Speed Bonus: 10\/20\/30\/40 ( 20\/30\/40\/50)",
-        "Aura Linger Duration: 0.5"
-      ],
       "legacy_key": "B",
       "story": "Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies \/ Allies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
-        "The damage and heal are provided by an aura.",
-        "The intervals start out slow and reach a crescendo near the end of the duration.",
-        "Drums of Slom has a minimum pulse interval of 0.2 seconds, plus a server tick. Deals damage and heals in the same interval, starting upon cast, the intervals between pulses are 1\/0.84\/0.7\/0.6\/0.5\/0.4\/0.3\/0.3\/0.2\/0.2\/0.2\/0.2\/0.2. When Beastmaster is silenced, stuned, feared and cycloned, the intervals between strikes will be skipped according to the disable duration, and resumes accordingly to the subsequent interval.",
-        "Deals damage and heals in the same interval, starting upon cast, the intervals between pulses are 1\/0.84\/0.7\/0.6\/0.5\/0.4\/0.3\/0.3\/0.2\/0.2\/0.2\/0.2\/0.2.",
-        "When Beastmaster is silenced, stuned, feared and cycloned, the intervals between strikes will be skipped according to the disable duration, and resumes accordingly to the subsequent interval.",
-        "Drums of Slom will hit 13 times and can deal up to 1430 damage (before reductions). It can heal up to 357.5 health for heroes (and 71.5 health for Beastmaster's player-controlled creeps).",
-        "It can heal up to 357.5 health for heroes (and 71.5 health for Beastmaster's player-controlled creeps).",
-        "The heal amount is based on damage dealt, amplifying (e.g. with Wild Axes), or reducing the damage affects the heal value. The heal value is subjected to heal manipulation despite the floating values shown.",
-        "The heal value is subjected to heal manipulation despite the floating values shown.",
-        "Treats illusions and clones as heroes. Does not affect ancient creeps.",
-        "Does not affect ancient creeps.",
-        "Multiple casts do not stack, but refresh the duration and reset the interval delay."
+        "Requires  Aghanim's Scepter to be unlocked",
+        "The damage and heal are provided by an aura",
+        "The intervals start out slow and reach a crescendo near the end of the duration",
+        "Drums of Slom has a minimum pulse interval of 0.2 seconds, plus a server tick. Deals damage and heals in the same interval, starting upon cast, the intervals between pulses are 1\/0.84\/0.7\/0.6\/0.5\/0.4\/0.3\/0.3\/0.2\/0.2\/0.2\/0.2\/0.2. When Beastmaster is silenced, stuned, feared and cycloned, the intervals between strikes will be skipped according to the disable duration, and resumes accordingly to the subsequent interval",
+        "Drums of Slom will hit 13 times and can deal up to 1430 damage (before reductions). It can heal up to 357.5 health for heroes (and 71.5 health for Beastmaster's player-controlled creeps)",
+        "The heal amount is based on damage dealt, amplifying (e.g. with  Wild Axes), or reducing the damage affects the heal value. The heal value is subjected to heal manipulation despite the floating values shown",
+        "Treats illusions and clones as heroes. Does not affect ancient creeps",
+        "Multiple casts do not stack, but refresh the duration and reset the interval delay"
       ],
-      "mana": "50",
       "item_behaviour": [],
-      "name": "Drums of Slom",
-      "cooldown": "100",
       "description": "Beastmaster beats his drums with ever-increasing speed. Each strike deals damage to enemies around him, healing Beastmaster and units under his control for a portion of damage dealt. Beastmaster cannot strike his drums if he is silenced or stunned.",
       "hot_key": "D",
       "params": [
@@ -166,37 +136,30 @@
         "Aura Linger Duration: 0.2",
         "Duration: 6"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies \/ Allies",
+        "Damage: Magical"
+      ],
+      "mana": "50",
+      "aghanim": null,
+      "name": "Drums of Slom",
+      "cooldown": "100",
       "legacy_key": "V",
       "story": "Nature's rage is timeless, and for those who know the secrets, it's easy to stir the echoes of ire that rejoiced in the downfall of Slom."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Beastmaster_Primal_Roar.mp3\/revision\/latest?cb=20191216011216",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Only enemy units are shoved aside from the path of Primal Roar. Roshan is not affected by the knockback. Affected units are fully disabled during the knockback. Can be cast on Couriers to stun and damage them. However, they are not affected by the knockback as secondary targets.",
-        "Affected units are fully disabled during the knockback.",
-        "Can be cast on Couriers to stun and damage them. However, they are not affected by the knockback as secondary targets.",
-        "Knocks units aside at a speed of 450, up to 450 range away, resulting in a knockback duration of 1 second. Units hit by the knockback destroy trees within 100 radius and are made to face toward the direction they are getting pushed.",
-        "Units hit by the knockback destroy trees within 100 radius and are made to face toward the direction they are getting pushed.",
-        "The knockback and slow have a dynamic range, based on the distance between Beastmaster and the primary target. For every 2 distance between Beastmaster and the target upon cast, the knockback range increases by 1. For example, when the target is 600 range away, the knockback hits units up to 300 range behind the target and behind Beastmaster. The width of the knockback area is fixed at 300, so the affected area is always stadium-shaped.",
-        "For every 2 distance between Beastmaster and the target upon cast, the knockback range increases by 1.",
-        "For example, when the target is 600 range away, the knockback hits units up to 300 range behind the target and behind Beastmaster.",
-        "The width of the knockback area is fixed at 300, so the affected area is always stadium-shaped.",
-        "Considering the dynamic range, the knockback and slow can hit units up to 900 range away.",
-        "When an enemy is perfectly aligned with Beastmaster and his Primal Roar target, it does not get knocked aside. However, the slow and damage are still applied, and the target is still disabled for the knockback duration.",
-        "However, the slow and damage are still applied, and the target is still disabled for the knockback duration.",
-        "On the primary target, the roar first applies the debuff, then the damage. On secondary targets, the roar first applies the damage, then the debuff.",
-        "On secondary targets, the roar first applies the damage, then the debuff.",
-        "The movement speed bonus only affects Beastmaster and his units. Other nearby allies are not buffed."
+        "Only enemy units are shoved aside from the path of Primal Roar.  Roshan is not affected by the knockback. Affected units are fully disabled during the knockback. Can be cast on  Couriers to stun and damage them. However, they are not affected by the knockback as secondary targets",
+        "Knocks units aside at a speed of 450, up to 450 range away, resulting in a knockback duration of 1 second. Units hit by the knockback destroy trees within 100 radius and are made to face toward the direction they are getting pushed",
+        "The knockback and slow have a dynamic range, based on the distance between Beastmaster and the primary target. For every 2 distance between Beastmaster and the target upon cast, the knockback range increases by 1. For example, when the target is 600 range away, the knockback hits units up to 300 range behind the target and behind Beastmaster. The width of the knockback area is fixed at 300, so the affected area is always stadium-shaped",
+        "Considering the dynamic range, the knockback and slow can hit units up to 900 range away",
+        "When an enemy is perfectly aligned with Beastmaster and his Primal Roar target, it does not get knocked aside. However, the slow and damage are still applied, and the target is still disabled for the knockback duration",
+        "On the primary target, the roar first applies the debuff, then the damage. On secondary targets, the roar first applies the damage, then the debuff",
+        "The movement speed bonus only affects Beastmaster and his units. Other nearby allies are not buffed"
       ],
-      "mana": "100\/80\/60 (TagTalent 70\/50\/30)",
       "item_behaviour": [],
-      "name": "Primal Roar",
-      "cooldown": "150\/175\/200",
       "description": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 40% movement speed for 3\/3.5\/4 seconds.",
       "hot_key": "R",
       "params": [
@@ -214,26 +177,27 @@
         "Move Speed Buff Duration: 3\/3.5\/4",
         "Stun Duration: 3\/3.5\/4"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Beastmaster_Primal_Roar.mp3\/revision\/latest?cb=20191216011216",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "100\/80\/60 (TagTalent 70\/50\/30)",
+      "aghanim": null,
+      "name": "Primal Roar",
+      "cooldown": "150\/175\/200",
       "legacy_key": "R",
       "story": "The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: Aura",
-        "Affects: Self"
-      ],
       "notes": [
-        "Affects Beastmaster and all of his player-controlled units immediately upon learning the talent. Does not affect Couriers and wards.",
-        "Does not affect Couriers and wards.",
-        "Increases Beastmaster's movement speed to 330.",
-        "The aura affects invulnerable or hidden units.",
-        "The aura is bestowed even while Beastmaster is dead."
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent. Does not affect  Couriers and wards",
+        "Increases Beastmaster's movement speed to 330",
+        "The aura affects invulnerable or hidden units",
+        "The aura is bestowed even while Beastmaster is dead"
       ],
-      "mana": null,
       "item_behaviour": [],
-      "name": "Move Speed Aura",
-      "cooldown": null,
       "description": "There is no description for this ability.",
       "hot_key": "?",
       "params": [
@@ -241,26 +205,26 @@
         "Move Speed Bonus: 25",
         "Aura Linger Duration: 0.5"
       ],
-      "legacy_key": "",
-      "story": null
-    },
-    {
       "audioUrl": "",
       "effects": [
         "Ability: Aura",
         "Affects: Self"
       ],
-      "notes": [
-        "Affects Beastmaster and all of his player-controlled units immediately upon learning the talent. Does not affect Couriers.",
-        "Does not affect Couriers.",
-        "The aura increases maximum health capacity and keeps the current health percentage.",
-        "The aura affects invulnerable or hidden units.",
-        "The aura is bestowed even while Beastmaster is dead."
-      ],
       "mana": null,
-      "item_behaviour": [],
-      "name": "Health Aura",
+      "aghanim": null,
+      "name": "Move Speed Aura",
       "cooldown": null,
+      "legacy_key": "",
+      "story": null
+    },
+    {
+      "notes": [
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent. Does not affect  Couriers",
+        "The aura increases maximum health capacity and keeps the current health percentage",
+        "The aura affects invulnerable or hidden units",
+        "The aura is bestowed even while Beastmaster is dead"
+      ],
+      "item_behaviour": [],
       "description": "There is no description for this ability.",
       "hot_key": "?",
       "params": [
@@ -268,23 +232,24 @@
         "Health Bonus: 250",
         "Aura Linger Duration: 0.5"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Self"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Health Aura",
+      "cooldown": null,
       "legacy_key": "",
       "story": null
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: Passive",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "The attacks first apply their damage, then the debuff.",
-        "Successive attacks do not increase the slow value but refresh the duration."
+        "The attacks first apply their damage, then the debuff",
+        "Successive attacks do not increase the slow value but refresh the duration"
       ],
-      "mana": null,
       "item_behaviour": [],
-      "name": "Poison",
-      "cooldown": null,
       "description": "Inflicts a poison that slows attack and movement speeds.",
       "hot_key": "?",
       "params": [
@@ -292,33 +257,29 @@
         "Attack Speed Slow: 10\/20\/30\/40",
         "Slow Duration: 3"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Poison",
+      "cooldown": null,
       "legacy_key": "",
       "story": null
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Beastmaster_Hawk_Dive_Bomb_1.mp3\/revision\/latest?cb=20210626132907",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies \/ Self",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. Acquiring Aghanim's Shard does not retroactively grant this ability to already summoned Hawks.",
-        "Acquiring Aghanim's Shard does not retroactively grant this ability to already summoned Hawks.",
-        "The reveal modifier is placed on the Hawk as soon as it begins casting, and lasts until the dive ends.",
-        "Once the cast begins, the player cannot manually cancel it anymore, since casting Dive Bomb is the only order that can be given to the Hawk.",
-        "The hawk dives in an arc for 0.4 seconds, so the speed varies based on the distance. The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate.",
-        "The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate.",
-        "Uses forced movement to move the Hawk. This means it can be interrupted by applying other sources of forced movement to it. The dive cannot be interrupted by anything else. It fully ignores all disables.",
-        "The dive cannot be interrupted by anything else. It fully ignores all disables.",
-        "The Hawk first applies the damage, then the root, and then is instantly killed. The Hawk's death cannot be prevented in any way.",
-        "The Hawk's death cannot be prevented in any way.",
-        "Cannot be cast on Couriers."
+        "Requires  Aghanim's Shard to be unlocked. Acquiring Aghanim's Shard does not retroactively grant this ability to already summoned Hawks",
+        "The reveal modifier is placed on the Hawk as soon as it begins casting, and lasts until the dive ends",
+        "Once the cast begins, the player cannot manually cancel it anymore, since casting Dive Bomb is the only order that can be given to the Hawk",
+        "The hawk dives in an arc for 0.4 seconds, so the speed varies based on the distance. The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate",
+        "Uses forced movement to move the Hawk. This means it can be interrupted by applying other sources of forced movement to it. The dive cannot be interrupted by anything else. It fully ignores all disables",
+        "The Hawk first applies the damage, then the root, and then is instantly killed. The Hawk's death cannot be prevented in any way",
+        "Cannot be cast on  Couriers"
       ],
-      "mana": "0",
       "item_behaviour": [],
-      "name": "Dive Bomb",
-      "cooldown": "0",
       "description": "Reveals itself for 1, and then flies towards the target enemy, dealing 250 damage and rooting them for 2.5 second, killing the hawk.",
       "hot_key": "Q",
       "params": [
@@ -328,6 +289,16 @@
         "Root Duration: 2.5",
         "Dive Duration: 0.4"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Beastmaster_Hawk_Dive_Bomb_1.mp3\/revision\/latest?cb=20210626132907",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Dive Bomb",
+      "cooldown": "0",
       "legacy_key": "D",
       "story": null
     }

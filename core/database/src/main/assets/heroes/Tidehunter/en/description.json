@@ -1,136 +1,105 @@
 {
   "abilities": [
     {
+      "notes": [
+        "Gush's projectile travels at a speed of 2500",
+        "Gush first applies the debuff, then the damage",
+        "Successive debuffs do not update the armor reduction value but refresh its duration",
+        "SCEPTER NOTES Additionally gains ground-targeting functionality. Releases a 260 radius wave, instead of a single target projectile. The wave always travels its full distance. When unit-targeted, the wave is released toward its direction upon cast. However, it does not home in on the target. The wave travels at a speed of 1500, taking 1.47 seconds to travel the full distance. With the travel distance and radius, the wave can hit units up to 2460 range away. The wave fully hits invisible and enemies inside the Fog of War. Provides 200 radius ground vision around each hit enemy for 2 seconds. However, the wave itself does not provide any vision. The second sound is used by the wave"
+      ],
+      "item_behaviour": [],
+      "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor. Lasts 4.5 seconds.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0.6",
+        "Cast Range:  700 ( 2200)",
+        "Damage: 110\/160\/210\/260 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 230\/280\/330\/380)",
+        "Armor Reduction: 3\/4\/5\/6",
+        "Move Speed Slow: 40% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 50%)",
+        "Debuff Duration: 4.5",
+        "Wave Travel Distance:  2200",
+        "Wave Radius:  260"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Tidehunter_Gush_1.mp3\/revision\/latest?cb=20191216025132",
       "effects": [
         "Ability: Target Unit",
         "Affects: Enemies",
         "Damage: Magical"
       ],
-      "notes": [
-        "Gush's projectile travels at a speed of 2500.",
-        "Gush first applies the debuff, then the damage.",
-        "Successive debuffs do not update the armor reduction value but refresh its duration.",
-        "SCEPTER NOTES Additionally gains ground-targeting functionality. Releases a 260 radius wave, instead of a single target projectile. The wave always travels its full distance. When unit-targeted, the wave is released toward its direction upon cast. However, it does not home in on the target. The wave travels at a speed of 1500, taking 1.47 seconds to travel the full distance. With the travel distance and radius, the wave can hit units up to 2460 range away. The wave fully hits invisible and enemies inside the Fog of War. Provides 200 radius ground vision around each hit enemy for 2 seconds. However, the wave itself does not provide any vision. The second sound is used by the wave.",
-        "When unit-targeted, the wave is released toward its direction upon cast. However, it does not home in on the target.",
-        "The wave travels at a speed of 1500, taking 1.47 seconds to travel the full distance.",
-        "With the travel distance and radius, the wave can hit units up to 2460 range away.",
-        "The wave fully hits invisible and enemies inside the Fog of War.",
-        "Provides 200 radius ground vision around each hit enemy for 2 seconds. However, the wave itself does not provide any vision.",
-        "The second sound is used by the wave."
-      ],
       "mana": "12 (TagTalent 7)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Gush",
       "cooldown": "100\/105\/110\/115",
-      "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor. Lasts 4.5 seconds.",
-      "hot_key": "Q",
-      "params": [
-        "Cast Animation: 0.3+0.6",
-        "Cast Range:  700 ( 2200)",
-        "Damage: 110\/160\/210\/260 ( 230\/280\/330\/380)",
-        "Armor Reduction: 3\/4\/5\/6",
-        "Move Speed Slow: 40% ( 50%)",
-        "Debuff Duration: 4.5",
-        "Wave Travel Distance: 2200",
-        "Wave Radius: 260"
-      ],
       "legacy_key": "G",
       "story": "During his championship of the Sunken Isles, Leviathan gained mastery over the open sea."
     },
     {
+      "notes": [
+        "Upon reaching the damage threshold, it applies a strong dispel on Tidehunter. The dispel proc is indicated by a sound effect and water particles on Tidehunter's skin. When Kraken Shell is procced by an ability that first deals its damage and then applies its debuff (e.g.  Storm Hammer), Tidehunter is dispelled before the ability's debuff is applied",
+        "Kraken Shell has an ensured Damage Block. Therefore, Damage Block with a lower value (e.g. the  Damage Block (Melee) innate ability) will not proc, since the higher damage block value takes priority. The passive damage block is always active and it is independent of the damage threshold for the dispel proc. Does not work against damage from wards sources (e.g.  Death Ward etc.). Does not reduce physical damage from abilities, except for these abilities",
+        "Only damage from player-controlled sources (after reductions) is counted towards the debuff removal",
+        "The damage threshold counter for proccing the dispel resets when Tidehunter does not take player-based damage for 7 seconds"
+      ],
+      "item_behaviour": [],
+      "description": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. The hide also removes negative status effects if the damage taken crosses a threshold. Does not stack with items that provide Damage Block.",
+      "hot_key": "W",
+      "params": [
+        "Proc Chance: 100%",
+        "Damage Block: 16\/34\/52\/70 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 56\/74\/92\/110)",
+        "Damage Threshold: 600\/550\/500\/450",
+        "Threshold Reset Timer: 7"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Tidehunter_Kraken_Shell.mp3\/revision\/latest?cb=20191216025135",
       "effects": [
         "Ability: Passive",
         "Affects: Self"
       ],
-      "notes": [
-        "Upon reaching the damage threshold, it applies a strong dispel on Tidehunter. The dispel proc is indicated by a sound effect and water particles on Tidehunter's skin. When Kraken Shell is procced by an ability that first deals its damage and then applies its debuff (e.g. Storm Hammer), Tidehunter is dispelled before the ability's debuff is applied.",
-        "The dispel proc is indicated by a sound effect and water particles on Tidehunter's skin.",
-        "When Kraken Shell is procced by an ability that first deals its damage and then applies its debuff (e.g. Storm Hammer), Tidehunter is dispelled before the ability's debuff is applied.",
-        "Kraken Shell has an ensured Damage Block. Therefore, Damage Block with a lower value (e.g. the Damage Block (Melee) innate ability) will not proc, since the higher damage block value takes priority. The passive damage block is always active and it is independent of the damage threshold for the dispel proc. Does not work against damage from wards sources (e.g. Death Ward etc.). Does not reduce physical damage from abilities, except for these abilities.",
-        "The passive damage block is always active and it is independent of the damage threshold for the dispel proc.",
-        "Does not work against damage from wards sources (e.g. Death Ward etc.).",
-        "Does not reduce physical damage from abilities, except for these abilities.",
-        "Only damage from player-controlled sources (after reductions) is counted towards the debuff removal.",
-        "The damage threshold counter for proccing the dispel resets when Tidehunter does not take player-based damage for 7 seconds."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Kraken Shell",
       "cooldown": null,
-      "description": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. The hide also removes negative status effects if the damage taken crosses a threshold. Does not stack with items that provide Damage Block.",
-      "hot_key": "W",
-      "params": [
-        "Proc Chance: 100%",
-        "Damage Block: 16\/34\/52\/70 ( 56\/74\/92\/110)",
-        "Damage Threshold: 600\/550\/500\/450",
-        "Threshold Reset Timer: 7"
-      ],
       "legacy_key": "R",
       "story": "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet."
     },
     {
+      "notes": [
+        "Causes Tidehunter to perform instant attacks on all hit enemies within the radius. Affects ancient creeps, but not wards and  Roshan. Does not affect buildings, unless the Anchor Smash affect buildings <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent is learned. These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave and the passive Anchor Smash procs being an exception. They have True Strike, but ignore disarms",
+        "Reduces the main attack damage of affected units. Bonus attack damage is not reduced",
+        "Anchor Smash first applies the debuff, then the instant attack",
+        "TALENT NOTES Grants Anchor Smash a 50% chance to passively proc on regular attacks. These procs do not trigger the cooldown and work while on cooldown, and do not cost mana. They do not proc on-cast effects either. The procs use pseudo-random distribution. The affected target(s) effectively takes 2 attacks' worth of damage, plus the attack damage bonus, since Anchor Smash deals damage based on Tidehunter's attack damage. Adds an average of 50% current total attack damage + 20\/42.5\/65\/87.5 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 45\/67.5\/90\/112.5) damage to every attack"
+      ],
+      "item_behaviour": [],
+      "description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.4+0.3",
+        "Radius: 375",
+        "Instant Attack Damage Bonus: 40\/85\/130\/175 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 90\/135\/180\/225)",
+        "Attack Damage Reduction: 30%\/40%\/50%\/60% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 55%\/65%\/75%\/85%)",
+        "Duration: 6",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Proc Chance:  50%"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Tidehunter_Anchor_Smash.mp3\/revision\/latest?cb=20191216025130",
       "effects": [
         "Ability: No Target",
         "Affects: Enemies",
         "Damage: Instant Attack"
       ],
-      "notes": [
-        "Causes Tidehunter to perform instant attacks on all hit enemies within the radius. Affects ancient creeps, but not wards and Roshan. Does not affect buildings, unless the Anchor Smash affect buildings talent is learned. These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave and the passive Anchor Smash procs being an exception. They have True Strike, but ignore disarms.",
-        "Affects ancient creeps, but not wards and Roshan.",
-        "Does not affect buildings, unless the Anchor Smash affect buildings talent is learned.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave and the passive Anchor Smash procs being an exception. They have True Strike, but ignore disarms.",
-        "Reduces the main attack damage of affected units. Bonus attack damage is not reduced.",
-        "Anchor Smash first applies the debuff, then the instant attack.",
-        "TALENT NOTES Grants Anchor Smash a 50% chance to passively proc on regular attacks. These procs do not trigger the cooldown and work while on cooldown, and do not cost mana. They do not proc on-cast effects either. The procs use pseudo-random distribution. The affected target(s) effectively takes 2 attacks' worth of damage, plus the attack damage bonus, since Anchor Smash deals damage based on Tidehunter's attack damage. Adds an average of 50% current total attack damage + 20\/42.5\/65\/87.5 (TagTalent 45\/67.5\/90\/112.5) damage to every attack.",
-        "These procs do not trigger the cooldown and work while on cooldown, and do not cost mana.",
-        "They do not proc on-cast effects either.",
-        "The procs use pseudo-random distribution.",
-        "The affected target(s) effectively takes 2 attacks' worth of damage, plus the attack damage bonus, since Anchor Smash deals damage based on Tidehunter's attack damage.",
-        "Adds an average of 50% current total attack damage + 20\/42.5\/65\/87.5 (TagTalent 45\/67.5\/90\/112.5) damage to every attack."
-      ],
       "mana": "7\/6\/5\/4",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Anchor Smash",
       "cooldown": "40\/50\/60\/70",
-      "description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
-      "hot_key": "E",
-      "params": [
-        "Cast Animation: 0.4+0.3",
-        "Radius: 375",
-        "Instant Attack Damage Bonus: 40\/85\/130\/175 ( 90\/135\/180\/225)",
-        "Attack Damage Reduction: 30%\/40%\/50%\/60% ( 55%\/65%\/75%\/85%)",
-        "Duration: 6",
-        "<span image=\"images\\Talent\"><\/span> Proc Chance: 50%"
-      ],
       "legacy_key": "C",
       "story": "Stolen from one of Admiral Kunkka's flagships, Leviathan's heavy anchor proves useful as a melee weapon."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "Does not require Ravage to be leveled to be unlocked, once Aghanim's Shard is acquired. However, it relies on Ravage to work, since it directly uses its values. This means when Ravage is not learned, Tendrils of the Deep does nothing upon cast. The tendrils does not home to the target in any way.",
-        "However, it relies on Ravage to work, since it directly uses its values. This means when Ravage is not learned, Tendrils of the Deep does nothing upon cast.",
-        "The tendrils does not home to the target in any way.",
-        "Units within 150 radius upon cast are hit instantly. With the travel distance and effect width, it can hit units up to 1087.5 range away. The tendrils travel at a speed of 725 and takes exactly 1.09 seconds to travel the full distance. It can be avoided by teleporting (e.g. Blink) towards Tidehunter over the tendrils shortly after cast.",
-        "With the travel distance and effect width, it can hit units up to 1087.5 range away.",
-        "The tendrils travel at a speed of 725 and takes exactly 1.09 seconds to travel the full distance.",
-        "It can be avoided by teleporting (e.g. Blink) towards Tidehunter over the tendrils shortly after cast.",
-        "Other Ravage notes fully apply.",
-        "SPELL STEAL Ability values are based on Tidehunter's current Ravage level when acquired."
+        "Requires  Aghanim's Shard to be unlocked",
+        "Does not require  Ravage to be leveled to be unlocked, once Aghanim's Shard is acquired. However, it relies on Ravage to work, since it directly uses its values. This means when Ravage is not learned, Tendrils of the Deep does nothing upon cast. The tendrils does not home to the target in any way",
+        "Units within 150 radius upon cast are hit instantly. With the travel distance and effect width, it can hit units up to 1087.5 range away. The tendrils travel at a speed of 725 and takes exactly 1.09 seconds to travel the full distance. It can be avoided by teleporting (e.g.  Blink) towards Tidehunter over the tendrils shortly after cast",
+        "Other Ravage notes fully apply. SPELL STEAL Ability values are based on  Tidehunter's current  Ravage level when acquired"
       ],
-      "mana": "20",
       "item_behaviour": [],
-      "name": "Tendrils of the Deep",
-      "cooldown": "80",
       "description": "Tidehunter unleashes a targeted slew of tentacles that damage and stun enemies within reach. The tentacles deal 50% of Ravage's damage and stun, with a range 75% of Ravage's radius.",
       "hot_key": "D",
       "params": [
@@ -139,35 +108,31 @@
         "Max Travel Distance: 937.5",
         "Effect Width: 150",
         "Damage: 125\/175\/225",
-        "Stun Duration: 1.2\/1.3\/1.4 ( 1.7\/1.8\/1.9)"
+        "Stun Duration: 1.2\/1.3\/1.4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1.7\/1.8\/1.9)"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "20",
+      "aghanim": null,
+      "name": "Tendrils of the Deep",
+      "cooldown": "80",
       "legacy_key": "D",
       "story": null
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Tidehunter_Ravage_1.mp3\/revision\/latest?cb=20191216025128",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The tentacles travel at a speed of 725.",
-        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun.",
-        "While in the air, other units may pass below the affected units.",
-        "The tentacle that hits the target is larger. This visual effect can also be seen in the Fog of War. When Ravage hits invisible and untargetable units, the visual effects below the hit unit are still visible.",
-        "When Ravage hits invisible and untargetable units, the visual effects below the hit unit are still visible.",
-        "The damage is applied upon landing, not upon getting hit. The damage is applied instantly if the stun is dispelled while in the air.",
-        "The damage is applied instantly if the stun is dispelled while in the air.",
-        "Ravage's effect is caused by a 250 units wide ring, which expands around the cast location at the given speed. This means units within 250 radius upon cast are hit instantly. The ring takes exactly 1.38 seconds to cover the remaining distance. It can be avoided by teleporting (e.g. Blink) towards Tidehunter over the ring shortly after cast.",
-        "This means units within 250 radius upon cast are hit instantly.",
-        "The ring takes exactly 1.38 seconds to cover the remaining distance.",
-        "It can be avoided by teleporting (e.g. Blink) towards Tidehunter over the ring shortly after cast."
+        "The tentacles travel at a speed of 725",
+        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun",
+        "While in the air, other units may pass below the affected units",
+        "The tentacle that hits the target is larger. This visual effect can also be seen in the Fog of War. When Ravage hits invisible and untargetable units, the visual effects below the hit unit are still visible",
+        "The damage is applied upon landing, not upon getting hit. The damage is applied instantly if the stun is dispelled while in the air",
+        "Ravage's effect is caused by a 250 units wide ring, which expands around the cast location at the given speed. This means units within 250 radius upon cast are hit instantly. The ring takes exactly 1.38 seconds to cover the remaining distance. It can be avoided by teleporting (e.g.  Blink) towards Tidehunter over the ring shortly after cast"
       ],
-      "mana": "150",
       "item_behaviour": [],
-      "name": "Ravage",
-      "cooldown": "150\/225\/325",
       "description": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
       "hot_key": "R",
       "params": [
@@ -176,8 +141,18 @@
         "Effect Width: 250",
         "Projectile Speed: 725",
         "Damage: 250\/350\/450",
-        "Stun Duration: 2.4\/2.6\/2.8 ( 3.4\/3.6\/3.8)"
+        "Stun Duration: 2.4\/2.6\/2.8 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 3.4\/3.6\/3.8)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Tidehunter_Ravage_1.mp3\/revision\/latest?cb=20191216025128",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "150",
+      "aghanim": null,
+      "name": "Ravage",
+      "cooldown": "150\/225\/325",
       "legacy_key": "V",
       "story": "Calling to the abyssal god Maelrawn has resulted in entire armadas being lost at sea."
     }

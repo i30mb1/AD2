@@ -9,4 +9,5 @@ interface Resources {
     fun getAssets(path: String): InputStream
     fun getExternalFilesDir(path: String): File?
     fun getFilesDir(): File?
+    fun getConfiguration(): Any?
 }

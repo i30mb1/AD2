@@ -1,21 +1,13 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Bane_Enfeeble.mp3\/revision\/latest?cb=20191216011114",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "Reduces the target's total attack damage, including attack damage bonuses.",
-        "Applies heal reduction, health regen reduction, lifesteal reduction, and spell lifesteal reduction on the target.",
-        "The percentage-based cast range reduction stacks additively with other sources.",
-        "Multiple casts on the same target do not stack the debuff but refresh the duration."
+        "Reduces the target's total attack damage, including attack damage bonuses",
+        "Applies heal reduction, health regen reduction, lifesteal reduction, and spell lifesteal reduction on the target",
+        "The percentage-based cast range reduction stacks additively with other sources",
+        "Multiple casts on the same target do not stack the debuff but refresh the duration"
       ],
-      "mana": "28\/21\/14\/7",
       "item_behaviour": [],
-      "name": "Enfeeble",
-      "cooldown": "40\/50\/60\/70",
       "description": "Lowers the enemy's total attack damage, cast range, and regeneration.",
       "hot_key": "Q",
       "params": [
@@ -23,89 +15,70 @@
         "Cast Range:  800\/900\/1000\/1100",
         "Attack Damage Reduction: 45%\/50%\/55%\/60%",
         "Health Restoration Reduction: 45%\/50%\/55%\/60%",
-        "Cast Range Reduction: 30% ( 50%)",
+        "Cast Range Reduction: 30% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 50%)",
         "Duration: 8\/9\/10\/11"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Bane_Enfeeble.mp3\/revision\/latest?cb=20191216011114",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies"
+      ],
+      "mana": "28\/21\/14\/7",
+      "aghanim": null,
+      "name": "Enfeeble",
+      "cooldown": "40\/50\/60\/70",
       "legacy_key": "T",
       "story": "Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts."
     },
     {
+      "notes": [
+        "Despite the visual effects, the heal happens instantly after the damage is dealt, there is no travel time",
+        "The heal amount is based on how much damage the target took from Brain Sap, amplifying or reducing the damage affects the heal value. The heal value itself can still be subjected to heal manipulation",
+        "SHARD NOTES Adds a 550 radius to this ability. The ability must be centered over a unit still. Can target invisible units and units inside the Fog of War. From secondary targets, it can only heal for 18.75\/37.5\/56.25\/75 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 68.75\/87.5\/106.25\/125) health"
+      ],
+      "item_behaviour": [],
+      "description": "Feasts on the vital energies of an enemy unit, healing Bane and dealing damage.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.2+0.5",
+        "Cast Range:  625",
+        "Damage: 75\/150\/225\/300 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 275\/350\/425\/500)",
+        "Damage as Heal: 100%",
+        "Radius:  550",
+        "Secondary Damage as Heal:  25%"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Bane_Brain_Sap.mp3\/revision\/latest?cb=20191216011113",
       "effects": [
         "Ability: Target Unit",
         "Affects: Enemies \/ Self",
         "Damage: Pure"
       ],
-      "notes": [
-        "Despite the visual effects, the heal happens instantly after the damage is dealt, there is no travel time.",
-        "The heal amount is based on how much damage the target took from Brain Sap, amplifying or reducing the damage affects the heal value. The heal value itself can still be subjected to heal manipulation.",
-        "The heal value itself can still be subjected to heal manipulation.",
-        "SHARD NOTES Adds a 550 radius to this ability. The ability must be centered over a unit still. Can target invisible units and units inside the Fog of War. From secondary targets, it can only heal for 18.75\/37.5\/56.25\/75 (TagTalent 68.75\/87.5\/106.25\/125) health.",
-        "Can target invisible units and units inside the Fog of War.",
-        "From secondary targets, it can only heal for 18.75\/37.5\/56.25\/75 (TagTalent 68.75\/87.5\/106.25\/125) health."
-      ],
       "mana": "17\/15\/13\/11 (TagTalent 14\/12\/10\/8)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Brain Sap",
       "cooldown": "100\/120\/140\/160",
-      "description": "Feasts on the vital energies of an enemy unit, healing Bane and dealing damage.",
-      "hot_key": "W",
-      "params": [
-        "Cast Animation: 0.2+0.5",
-        "Cast Range:  625",
-        "Damage: 75\/150\/225\/300 ( 275\/350\/425\/500)",
-        "Damage as Heal: 100%",
-        "Radius: 550",
-        "Secondary Damage as Heal: 25%"
-      ],
       "legacy_key": "B",
       "story": "Atropos finds no greater pleasure than to harvest the fear he creates."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Bane_Nightmare.mp3\/revision\/latest?cb=20191216011117",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies \/ Allies",
-        "Damage: Pure"
-      ],
       "notes": [
-        "↓↓ Double-tapping automatically targets self. Cannot be cast on allies who have ☐ Disabled Help from Bane.",
-        "Cannot be cast on allies who have ☐ Disabled Help from Bane.",
-        "Applies a sleep on affected units, preventing them from acting.",
-        "Nightmare turns affected targets invulnerable for 1 second, preventing affected units from waking up.",
-        "Nightmare has the second highest priority in the group of base vision setting effects, lower than Tree Dance. It sets the affected target's base vision to 200. Since Consume increases the base nighttime vision, therefore, it is reduced by Nightmare. However, other vision bonus sources (e.g. Shade Sight) are applied after the vision reduction.",
-        "Since Consume increases the base nighttime vision, therefore, it is reduced by Nightmare.",
-        "However, other vision bonus sources (e.g. Shade Sight) are applied after the vision reduction.",
-        "Deals damage and self heals in 1-second intervals, starting 1 second after cast, resulting in up to 4\/5\/6\/7 instances. Can deal up to 20\/75\/150\/245 damage to enemy targets, considering the default duration (before reductions).",
-        "Can deal up to 20\/75\/150\/245 damage to enemy targets, considering the default duration (before reductions).",
-        "The target wakes up when a unit starts attacking it, including from manually casting active attack modifiers, or when the target takes damage.",
-        "The target does not wake up when taking damage from certain sources and under a few rare circumstances: From the following instant attack sources: Sleight of Fist, Side Gunner and Stifling Dagger. Any damage from active attack modifiers, be it a debuff (e.g. Burning Spear), or direct damage (e.g. Tidebringer). Any damage flagged as HP Removal. Any damage from already launched ranged attacks if the projectiles hit after the invulnerability period.",
-        "From the following instant attack sources: Sleight of Fist, Side Gunner and Stifling Dagger.",
-        "Any damage from active attack modifiers, be it a debuff (e.g. Burning Spear), or direct damage (e.g. Tidebringer).",
-        "Any damage flagged as HP Removal.",
-        "Any damage from already launched ranged attacks if the projectiles hit after the invulnerability period.",
-        "Enemy targets do not wake up from Nightmare's own damage per second.",
-        "When waking up with an attack, the Nightmare is transferred to the attacking unit at the start of an attack, not when the attack hits.",
-        "When Nightmare is transferred, its duration is refreshed, including the 1-second invulnerability.",
-        "Nightmare cannot be transferred to spell immune units, or to wards and buildings. So their attacks only wake up Nightmared units.",
-        "Bane and illusions of him (regardless of their owner) can deal attack damage to Nightmared units without waking them up or transferring the Nightmare to them. This is innate to Bane. Since this only applies to attack damage, other sources of damage still wake the target up (e.g. Chain Lightning procs).",
-        "This is innate to Bane.",
-        "Since this only applies to attack damage, other sources of damage still wake the target up (e.g. Chain Lightning procs).",
-        "Sleeping units are never automatically attacked, regardless of auto-attack settings. This means that sleeping units are never attacked by lane creeps, neutral creeps, towers and fountains. They are also not considered as targets for secondary attacks (e.g. Moon Glaives). Player-controlled units can still force an attack order on the target (TagTalent Right Click or A) to transfer the Nightmare to themselves. TALENT NOTES The Nightmare self heals talent also heals Bane for the total damage dealt for the default duration. Attacks against the Nightmared target also heal Bane for the damage dealt. Stacks additively with other sources of lifesteal. Cannot lifesteal off of wards, buildings, and allied units.",
-        "This means that sleeping units are never attacked by lane creeps, neutral creeps, towers and fountains.",
-        "They are also not considered as targets for secondary attacks (e.g. Moon Glaives).",
-        "Player-controlled units can still force an attack order on the target (TagTalent Right Click or A) to transfer the Nightmare to themselves.",
-        "TALENT NOTES The Nightmare self heals talent also heals Bane for the total damage dealt for the default duration. Attacks against the Nightmared target also heal Bane for the damage dealt. Stacks additively with other sources of lifesteal. Cannot lifesteal off of wards, buildings, and allied units.",
-        "Attacks against the Nightmared target also heal Bane for the damage dealt.",
-        "Stacks additively with other sources of lifesteal.",
-        "Cannot lifesteal off of wards, buildings, and allied units.",
-        "As long as a unit is affected by Nightmare from Bane, Nightmare is replaced by the Nightmare End sub-ability which allows Bane to wake the unit up.",
-        "Nightmare's invulnerability status effect uses the default Invulnerability icon, instead of its own ability icon."
+        "↓↓ Double-tapping automatically targets self. Cannot be cast on allies who have ☐ Disabled Help from Bane",
+        "Applies a sleep on affected units, preventing them from acting",
+        "Nightmare turns affected targets invulnerable for 1 second, preventing affected units from waking up",
+        "Nightmare has the second highest priority in the group of base vision setting effects, lower than  Tree Dance. It sets the affected target's base vision to 200. Since  Consume increases the base  nighttime vision, therefore, it is reduced by Nightmare. However, other vision bonus sources (e.g.  Shade Sight) are applied after the vision reduction",
+        "Deals damage and self heals in 1-second intervals, starting 1 second after cast, resulting in up to 4\/5\/6\/7 instances. Can deal up to 20\/75\/150\/245 damage to enemy targets, considering the default duration (before reductions)",
+        "The target wakes up when a unit starts attacking it, including from manually casting active attack modifiers, or when the target takes damage",
+        "The target does not wake up when taking damage from certain sources and under a few rare circumstances: From the following instant attack sources:  Sleight of Fist,   Side Gunner and  Stifling Dagger. Any damage from active attack modifiers, be it a debuff (e.g.  Burning Spear), or direct damage (e.g.  Tidebringer). Any damage flagged as HP Removal. Any damage from already launched ranged attacks if the projectiles hit after the invulnerability period",
+        "Enemy targets do not wake up from Nightmare's own damage per second",
+        "When waking up with an attack, the Nightmare is transferred to the attacking unit at the start of an attack, not when the attack hits",
+        "When Nightmare is transferred, its duration is refreshed, including the 1-second invulnerability",
+        "Nightmare cannot be transferred to spell immune units, or to wards and buildings. So their attacks only wake up Nightmared units",
+        "Bane and illusions of him (regardless of their owner) can deal attack damage to Nightmared units without waking them up or transferring the Nightmare to them. This is innate to Bane. Since this only applies to attack damage, other sources of damage still wake the target up (e.g.  Chain Lightning procs)",
+        "Sleeping units are never automatically attacked, regardless of auto-attack settings. This means that sleeping units are never attacked by lane creeps, neutral creeps, towers and fountains. They are also not considered as targets for secondary attacks (e.g.  Moon Glaives). Player-controlled units can still force an attack order on the target ( Right Click or A) to transfer the Nightmare to themselves. TALENT NOTES The Nightmare self heals <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent also heals Bane for the total damage dealt for the default duration. Attacks against the Nightmared target also heal Bane for the damage dealt. Stacks additively with other sources of lifesteal. Cannot lifesteal off of wards, buildings, and allied units",
+        "As long as a unit is affected by Nightmare from Bane, Nightmare is replaced by the  Nightmare End sub-ability which allows Bane to wake the unit up",
+        "Nightmare's invulnerability status effect uses the default  Invulnerability icon, instead of its own ability icon"
       ],
-      "mana": "24\/21\/18\/15 (TagTalent 21\/18\/15\/12)",
       "item_behaviour": [],
-      "name": "Nightmare",
-      "cooldown": "165",
       "description": "Puts the target enemy or friendly Hero to sleep. Sleeping units are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack nightmared targets freely. Enemy Units take Pure Damage Per Second while in Nightmare.",
       "hot_key": "E",
       "params": [
@@ -115,80 +88,78 @@
         "Set Vision Range: 200",
         "Sleep Duration: 4\/5\/6\/7",
         "Invulnerability Duration: 1",
-        "<span image=\"images\\Talent\"><\/span> Lifesteal: 100%"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Lifesteal:  100%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Bane_Nightmare.mp3\/revision\/latest?cb=20191216011117",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies",
+        "Damage: Pure"
+      ],
+      "mana": "24\/21\/18\/15 (TagTalent 21\/18\/15\/12)",
+      "aghanim": null,
+      "name": "Nightmare",
+      "cooldown": "165",
       "legacy_key": "E",
       "story": "A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: Toggle"
-      ],
       "notes": [
-        "Replaces Nightmare until there is no Nightmare debuff from Bane active.",
-        "Does not interrupt Bane's channeling abilities upon cast.",
-        "Can wake a unit up at any time during a Nightmare, even during the 4\/5\/6\/7-second invulnerability.",
-        "Wakes up all units that were put asleep by Nightmare, no matter who put them asleep.",
-        "Can be used while stunned, cycloned, slept, taunted, hidden, or during forced movement.",
-        "Cannot be used while silenced, hexed or prevented from acting. Bane is unable to ⇧ Shift-queue this ability.",
-        "Bane is unable to ⇧ Shift-queue this ability.",
-        "SPELL STEAL Does not grant Nightmare if this sub-ability is the last cast ability."
+        "Replaces  Nightmare until there is no Nightmare debuff from Bane active",
+        "Does not interrupt Bane's channeling abilities upon cast",
+        "Can wake a unit up at any time during a Nightmare, even during the 4\/5\/6\/7-second invulnerability",
+        "Wakes up all units that were put asleep by Nightmare, no matter who put them asleep",
+        "Can be used while stunned, cycloned, slept, taunted, hidden, or during forced movement",
+        "Cannot be used while silenced, hexed or prevented from acting. Bane is unable to ⇧ Shift-queue this ability. SPELL STEAL Does not grant  Nightmare if this sub-ability is the last cast ability"
       ],
-      "mana": "0",
       "item_behaviour": [],
-      "name": "Nightmare End",
-      "cooldown": "0",
       "description": "Ends all ongoing Nightmares.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0+0"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Toggle"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Nightmare End",
+      "cooldown": "0",
       "legacy_key": "E",
       "story": null
     },
     {
+      "notes": [
+        "Fiend's Grip fully disables and provides True Sight over the target until the channeling ends. If the target turns invulnerable or hidden, the channeling stops instantly",
+        "Deals 35\/55\/75 damage and drains 2.5% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 5%) mana in 0.5-second intervals, starting immediately as the channeling begins, resulting in up to 10\/11\/12 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 20\/21\/22) instances. Can deal up to 350\/605\/900 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 700\/1155\/1650) damage (before reductions). Can drain up to 25%\/27.5%\/30% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 50%\/52.5%\/55%) of the target's maximum mana",
+        "Applies the damage first on each interval, then the self mana restore, and then the mana loss",
+        "Unlike other targeted abilities, the caster vision of Fiend's Grip lasts for the entire channel duration (even if it gets canceled), instead of just 2 seconds",
+        "SCEPTER NOTES Now spawn 2 illusions 400 range towards Bane's right and left side, facing towards the target whenever casting Fiend's Grip. The illusions are able to cast abilities and are automatically ordered to cast Fiend's Grip on the same target, with an instant cast time. The illusions can be given any order normally, except for item cast orders. Doing so interrupts the channeling and kills the illusion. The illusions' Fiend's Grip places a different modifier than the real hero does. This modifier only stuns the target if the real hero's modifier is present. However, as soon as the real hero's modifier disappears, the illusions' modifier continues dealing damage and draining mana in its place. In this case, the damage and mana drain is sourced to the illusion, not to Bane. The illusions have a maximum duration of 20 seconds, hard-capping the maximum time they can spend channeling. Since the illusions are actually casting Fiend's Grip as well, this upgrade does not work for heroes who do not have Fiend's Grip (e.g. Spell Reflection). The illusions created neither have gold, nor experience bounty. SOULBIND Prematurely ending the channeling only cancels Fiend's Grip on the originally targeted enemy and does not affect the channeling on the other target, even with the leash debuff expired"
+      ],
+      "item_behaviour": [],
+      "description": "Grips an enemy unit, disabling it and causing heavy damage over time, while stealing mana every 0.5 second based on the unit's maximum mana.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range:  625",
+        "Max Channel Time: 5\/5.5\/6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 10\/10.5\/11)",
+        "Damage per Second: 70\/110\/150",
+        "Max Mana Drain per Second: 5% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 10%)",
+        "Number of Illusions:  2",
+        "Illusion Damage Taken:  200%",
+        "Illusion Duration:  20"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Bane_Fiend%27s_Grip.mp3\/revision\/latest?cb=20191216011115",
       "effects": [
         "Ability: Target Unit",
         "Affects: Enemies \/ Self",
         "Damage: Pure"
       ],
-      "notes": [
-        "Fiend's Grip fully disables and provides True Sight over the target until the channeling ends. If the target turns invulnerable or hidden, the channeling stops instantly.",
-        "If the target turns invulnerable or hidden, the channeling stops instantly.",
-        "Deals 35\/55\/75 damage and drains 2.5% (TagTalent 5%) mana in 0.5-second intervals, starting immediately as the channeling begins, resulting in up to 10\/11\/12 (TagTalent 20\/21\/22) instances. Can deal up to 350\/605\/900 (TagTalent 700\/1155\/1650) damage (before reductions). Can drain up to 25%\/27.5%\/30% (TagTalent 50%\/52.5%\/55%) of the target's maximum mana.",
-        "Can deal up to 350\/605\/900 (TagTalent 700\/1155\/1650) damage (before reductions).",
-        "Can drain up to 25%\/27.5%\/30% (TagTalent 50%\/52.5%\/55%) of the target's maximum mana.",
-        "Applies the damage first on each interval, then the self mana restore, and then the mana loss.",
-        "Unlike other targeted abilities, the caster vision of Fiend's Grip lasts for the entire channel duration (even if it gets canceled), instead of just 2 seconds.",
-        "SCEPTER NOTES Now spawn 2 illusions 400 range towards Bane's right and left side, facing towards the target whenever casting Fiend's Grip. The illusions are able to cast abilities and are automatically ordered to cast Fiend's Grip on the same target, with an instant cast time. The illusions can be given any order normally, except for item cast orders. Doing so interrupts the channeling and kills the illusion. The illusions' Fiend's Grip places a different modifier than the real hero does. This modifier only stuns the target if the real hero's modifier is present. However, as soon as the real hero's modifier disappears, the illusions' modifier continues dealing damage and draining mana in its place. In this case, the damage and mana drain is sourced to the illusion, not to Bane. The illusions have a maximum duration of 20 seconds, hard-capping the maximum time they can spend channeling. Since the illusions are actually casting Fiend's Grip as well, this upgrade does not work for heroes who do not have Fiend's Grip (e.g. Spell Reflection). The illusions created neither have gold, nor experience bounty.",
-        "The illusions are able to cast abilities and are automatically ordered to cast Fiend's Grip on the same target, with an instant cast time.",
-        "The illusions can be given any order normally, except for item cast orders. Doing so interrupts the channeling and kills the illusion.",
-        "The illusions' Fiend's Grip places a different modifier than the real hero does. This modifier only stuns the target if the real hero's modifier is present.",
-        "However, as soon as the real hero's modifier disappears, the illusions' modifier continues dealing damage and draining mana in its place.",
-        "In this case, the damage and mana drain is sourced to the illusion, not to Bane.",
-        "The illusions have a maximum duration of 20 seconds, hard-capping the maximum time they can spend channeling.",
-        "Since the illusions are actually casting Fiend's Grip as well, this upgrade does not work for heroes who do not have Fiend's Grip (e.g. Spell Reflection).",
-        "The illusions created neither have gold, nor experience bounty.",
-        "SOULBIND Prematurely ending the channeling only cancels Fiend's Grip on the originally targeted enemy and does not affect the channeling on the other target, even with the leash debuff expired."
-      ],
       "mana": "120\/110\/100 (TagTalent 75\/65\/55)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Fiend's Grip",
       "cooldown": "200\/300\/400",
-      "description": "Grips an enemy unit, disabling it and causing heavy damage over time, while stealing mana every 0.5 second based on the unit's maximum mana.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0.2+0",
-        "Cast Range:  625",
-        "Max Channel Time: 5\/5.5\/6 ( 10\/10.5\/11)",
-        "Damage per Second: 70\/110\/150",
-        "Max Mana Drain per Second: 5% ( 10%)",
-        "Number of Illusions: 2",
-        "Illusion Damage Taken: 200%",
-        "Illusion Duration: 20"
-      ],
       "legacy_key": "F",
       "story": "Victims of Atropos are frequently torn apart by vivid conjurations of their own nightmares."
     }

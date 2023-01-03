@@ -1,76 +1,51 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Mirana_Starstorm_1.mp3\/revision\/latest?cb=20191216020505",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The meteors takes 0.57 seconds to hit their targets. Does not hit invisible, invulnerable, hidden and untargetable units.",
-        "Does not hit invisible, invulnerable, hidden and untargetable units.",
-        "The initial wave does not hit units inside the Fog of War, but the secondary single meteor does.",
-        "The target for the secondary single meteor is set upon cast, it homes in on the target even after the target has moved out of the radius. The second meteor starts falling exactly 0.8 seconds after cast, and also takes 0.57 seconds to hit its target. Starstorm chooses a new target for the second meteor if the set target dies before or because of the first meteor's impact.",
-        "The second meteor starts falling exactly 0.8 seconds after cast, and also takes 0.57 seconds to hit its target.",
-        "Starstorm chooses a new target for the second meteor if the set target dies before or because of the first meteor's impact.",
-        "The secondary meteor deals 56.25\/112.5\/168.75\/225 (TagTalent 206.25\/262.5\/318.75\/375) damage.",
-        "Can deal a total of 131.25\/262.5\/393.75\/525 (TagTalent 481.25\/612.5\/743.75\/875) damage to a single target (before reductions) with the second meteor hit."
+        "The meteors takes 0.57 seconds to hit their targets. Does not hit invisible, invulnerable, hidden and untargetable units",
+        "The initial wave does not hit units inside the Fog of War, but the secondary single meteor does",
+        "The target for the secondary single meteor is set upon cast, it homes in on the target even after the target has moved out of the radius. The second meteor starts falling exactly 0.8 seconds after cast, and also takes 0.57 seconds to hit its target. Starstorm chooses a new target for the second meteor if the set target dies before or because of the first meteor's impact",
+        "The secondary meteor deals 56.25\/112.5\/168.75\/225 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 206.25\/262.5\/318.75\/375) damage",
+        "Can deal a total of 131.25\/262.5\/393.75\/525 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 481.25\/612.5\/743.75\/875) damage to a single target (before reductions) with the second meteor hit"
       ],
-      "mana": "12",
       "item_behaviour": [],
-      "name": "Starstorm",
-      "cooldown": "80\/95\/110\/125",
       "description": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a 650 radius will be struck a second time for 75% of the damage.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0",
         "Main Radius: 650",
         "Secondary Radius: 650",
-        "Main Damage: 75\/150\/225\/300 ( 275\/350\/425\/500)",
+        "Main Damage: 75\/150\/225\/300 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 275\/350\/425\/500)",
         "Secondary Damage Percentage: 75%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Mirana_Starstorm_1.mp3\/revision\/latest?cb=20191216020505",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "12",
+      "aghanim": null,
+      "name": "Starstorm",
+      "cooldown": "80\/95\/110\/125",
       "legacy_key": "T",
       "story": "The Goddess breaks the strata to empower her Princess in the time of need."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Mirana_Sacred_Arrow_1.mp3\/revision\/latest?cb=20191216020502",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Sacred Arrow travels at a speed of 900, taking 3.41 seconds to travel the full distance.",
-        "The arrow starts traveling 51 range in front of Mirana, and travels forward up to 3067 range. This means units within 50 range in front of Mirana cannot be hit, as it does not search for units right behind the arrow.",
-        "This means units within 50 range in front of Mirana cannot be hit, as it does not search for units right behind the arrow.",
-        "With the travel distance and radius, Sacred Arrow can hit units up to 3163 range away.",
-        "The stun increases by 0.064\/0.076\/0.088\/0.1 seconds and the damage by 3.6 for each 30 distance traveled, resulting in the following values at certain distances (before reductions): 300 Distance: 0.64\/0.76\/0.88\/1 second stun, 96\/186\/276\/366 damage. 600 Distance: 1.28\/1.52\/1.76\/2 second stun, 132\/222\/312\/402 damage. 900 Distance: 1.92\/2.28\/2.64\/3 second stun, 168\/258\/348\/438 damage. 1200 Distance: 2.56\/3.04\/3.52\/4 second stun, 204\/294\/384\/474 damage. 1500 Distance: 3.2\/3.8\/4.4\/5 second stun, 240\/330\/420\/510 damage. The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
-        "300 Distance: 0.64\/0.76\/0.88\/1 second stun, 96\/186\/276\/366 damage.",
-        "600 Distance: 1.28\/1.52\/1.76\/2 second stun, 132\/222\/312\/402 damage.",
-        "900 Distance: 1.92\/2.28\/2.64\/3 second stun, 168\/258\/348\/438 damage.",
-        "1200 Distance: 2.56\/3.04\/3.52\/4 second stun, 204\/294\/384\/474 damage.",
-        "1500 Distance: 3.2\/3.8\/4.4\/5 second stun, 240\/330\/420\/510 damage.",
-        "The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
-        "The arrow first applies the damage, then the debuff.",
-        "The stun duration is shown above the target's head upon hit, visible to allies only. The shown value is rounded.",
-        "If the arrow collides with a unit that is not a hero, ancient creep, or creep-hero, it instantly kills it. The creep is killed by getting its health dealt as damage to it, in the form of HP Removal.",
-        "The creep is killed by getting its health dealt as damage to it, in the form of HP Removal.",
-        "The arrow cannot collide with invulnerable or hidden units and Couriers, it simply flies through them.",
-        "The arrow provides 400 flying vision while traveling, and stays for 3 seconds at the point the arrow hits a target.",
-        "SCEPTER NOTES Sacred Arrow now releases a meteor based on the current level of Starstorm onto every enemy that comes within 500 range as the primary arrow travels. If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 (TagTalent 137.5\/175\/212.5\/250) damage. This results in a total damage of 112.5\/225\/337.5\/450 (TagTalent 412.5\/525\/637.5\/750) against that target, on top of Sacred Arrow's damage (before reductions).",
-        "If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 (TagTalent 137.5\/175\/212.5\/250) damage.",
-        "This results in a total damage of 112.5\/225\/337.5\/450 (TagTalent 412.5\/525\/637.5\/750) against that target, on top of Sacred Arrow's damage (before reductions).",
-        "TALENT NOTES The multishot talent launches 2 extra arrows with the primary arrow. The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center. Although all 3 arrows overlap in front of Mirana, they cannot hit the same target. The Starstorm scepter upgrade is not applied to these arrows.",
-        "The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center.",
-        "Although all 3 arrows overlap in front of Mirana, they cannot hit the same target.",
-        "The Starstorm scepter upgrade is not applied to these arrows.",
-        "SPELL STEAL Starstorm applied is based on Mirana's current ability level when acquired."
+        "Sacred Arrow travels at a speed of 900, taking 3.41 seconds to travel the full distance",
+        "The arrow starts traveling 51 range in front of Mirana, and travels forward up to 3067 range. This means units within 50 range in front of Mirana cannot be hit, as it does not search for units right behind the arrow",
+        "With the travel distance and radius, Sacred Arrow can hit units up to 3163 range away",
+        "The stun increases by 0.064\/0.076\/0.088\/0.1 seconds and the damage by 3.6 for each 30 distance traveled, resulting in the following values at certain distances (before reductions): 300 Distance: 0.64\/0.76\/0.88\/1 second stun, 96\/186\/276\/366 damage. 600 Distance: 1.28\/1.52\/1.76\/2 second stun, 132\/222\/312\/402 damage. 900 Distance: 1.92\/2.28\/2.64\/3 second stun, 168\/258\/348\/438 damage. 1200 Distance: 2.56\/3.04\/3.52\/4 second stun, 204\/294\/384\/474 damage. 1500 Distance: 3.2\/3.8\/4.4\/5 second stun, 240\/330\/420\/510 damage. The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds",
+        "The arrow first applies the damage, then the debuff",
+        "The stun duration is shown above the target's head upon hit, visible to allies only. The shown value is rounded",
+        "If the arrow collides with a unit that is not a hero, ancient creep, or creep-hero, it instantly kills it. The creep is killed by getting its health dealt as damage to it, in the form of HP Removal",
+        "The arrow cannot collide with invulnerable or hidden units and  Couriers, it simply flies through them",
+        "The arrow provides 400 flying vision while traveling, and stays for 3 seconds at the point the arrow hits a target",
+        "SCEPTER NOTES Sacred Arrow now releases a meteor based on the current level of  Starstorm onto every enemy that comes within 500 range as the primary arrow travels. If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 137.5\/175\/212.5\/250) damage. This results in a total damage of 112.5\/225\/337.5\/450 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 412.5\/525\/637.5\/750) against that target, on top of Sacred Arrow's damage (before reductions)",
+        "TALENT NOTES The multishot <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent launches 2 extra arrows with the primary arrow. The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center. Although all 3 arrows overlap in front of Mirana, they cannot hit the same target. The Starstorm scepter upgrade is not applied to these arrows. SPELL STEAL  Starstorm applied is based on  Mirana's current ability level when acquired"
       ],
-      "mana": "19\/18\/17\/16 (TagTalent 17\/16\/15\/14)",
       "item_behaviour": [],
-      "name": "Sacred Arrow",
-      "cooldown": "100",
       "description": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it strikes. The stun duration ranges from 0.01 to 3.2\/3.8\/4.4\/5 seconds, with bonus damage up to 180 added, based on the distance the arrow travels to its target. Instantly kills the first non-ancient creep it hits.",
       "hot_key": "W",
       "params": [
@@ -79,84 +54,74 @@
         "Max Travel Distance:  3067",
         "Max Values Distance: 1500",
         "Arrow Collision Radius: 96",
-        "Number of Arrows: 1 ( 3)",
+        "Number of Arrows: 1 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 3)",
         "Base Damage: 60\/150\/240\/330",
         "Max Bonus Damage: 180",
         "Min Stun Duration: 0.01",
         "Max Stun Duration: 3.2\/3.8\/4.4\/5",
-        "Starstorm Radius: 500",
-        "Secondary Starstorm Damage Percentage: 50%",
-        "<span image=\"images\\Talent\"><\/span> Sacred Arrow Angle: 30°"
+        "Starstorm Radius:  500",
+        "Secondary Starstorm Damage Percentage:  50%",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Sacred Arrow Angle:  30°"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Mirana_Sacred_Arrow_1.mp3\/revision\/latest?cb=20191216020502",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "19\/18\/17\/16 (TagTalent 17\/16\/15\/14)",
+      "aghanim": null,
+      "name": "Sacred Arrow",
+      "cooldown": "100",
       "legacy_key": "R",
       "story": "Lunar energies make the Princess of the Moon's arrows more deadly than most."
     },
     {
+      "notes": [
+        "Upon learning, Mirana instantly gains 3 charges. SHARD NOTES　Acquiring  Aghanim's Shard instantly grants 1 extra charge",
+        "Interrupts Mirana's channeling abilities upon cast",
+        "Leaps at a speed of 1300 for up to 0.44 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.54) seconds",
+        "Always leaps towards the direction Mirana is facing while locking her facing angle during the leap. Moves Mirana upwards over other units and over impassable terrain",
+        "During Leap, Mirana can attack, use items, and cast abilities, except recasting Leap. However, she cannot turn, so targeted abilities and items may only be used in the direction she is facing",
+        "The buff is applied instantly upon cast, not upon landing",
+        "The buff from successive casts does not stack but refreshes its duration",
+        "SHARD NOTES Upon landing, Mirana now releases a wave in front of her that damages and applies movement speed slow to affected enemies in a line. The wave travels at a speed of 1800, taking 0.33 seconds to reach the maximum distance. With the travel distance and radius, it can hit units up to 1050 range away. Leap first applies the damage, then the debuff"
+      ],
+      "item_behaviour": [],
+      "description": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts seconds.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0+0",
+        "Leap Distance: 575 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 700)",
+        "Move Speed Bonus: 8%\/16%\/24%\/32%",
+        "Attack Speed Bonus: 25\/50\/75\/100 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 105\/130\/155\/180)",
+        "Buff Duration: 4",
+        "Wave Distance:  600",
+        "Wave End Radius:  450",
+        "Wave Damage:  150",
+        "Wave Move Speed Slow:  30%",
+        "Wave Slow Duration:  2.5"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Mirana_Leap_1.mp3\/revision\/latest?cb=20191216020515",
       "effects": [
         "Ability: No Target",
         "Affects: Self ",
         "Damage: "
       ],
-      "notes": [
-        "Upon learning, Mirana instantly gains 3 charges. SHARD NOTES　Acquiring Aghanim's Shard instantly grants 1 extra charge.",
-        "SHARD NOTES　Acquiring Aghanim's Shard instantly grants 1 extra charge.",
-        "Interrupts Mirana's channeling abilities upon cast.",
-        "Leaps at a speed of 1300 for up to 0.44 (TagTalent 0.54) seconds.",
-        "Always leaps towards the direction Mirana is facing while locking her facing angle during the leap. Moves Mirana upwards over other units and over impassable terrain.",
-        "Moves Mirana upwards over other units and over impassable terrain.",
-        "During Leap, Mirana can attack, use items, and cast abilities, except recasting Leap. However, she cannot turn, so targeted abilities and items may only be used in the direction she is facing.",
-        "However, she cannot turn, so targeted abilities and items may only be used in the direction she is facing.",
-        "The buff is applied instantly upon cast, not upon landing.",
-        "The buff from successive casts does not stack but refreshes its duration.",
-        "SHARD NOTES Upon landing, Mirana now releases a wave in front of her that damages and applies movement speed slow to affected enemies in a line. The wave travels at a speed of 1800, taking 0.33 seconds to reach the maximum distance. With the travel distance and radius, it can hit units up to 1050 range away. Leap first applies the damage, then the debuff.",
-        "The wave travels at a speed of 1800, taking 0.33 seconds to reach the maximum distance.",
-        "With the travel distance and radius, it can hit units up to 1050 range away.",
-        "Leap first applies the damage, then the debuff."
-      ],
       "mana": "",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Leap",
       "cooldown": "45\/40\/35\/30",
-      "description": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts seconds.",
-      "hot_key": "E",
-      "params": [
-        "Cast Animation: 0+0",
-        "Leap Distance: 575 ( 700)",
-        "Move Speed Bonus: 8%\/16%\/24%\/32%",
-        "Attack Speed Bonus: 25\/50\/75\/100 ( 105\/130\/155\/180)",
-        "Buff Duration: 4",
-        "Wave Distance: 600",
-        "Wave End Radius: 450",
-        "Wave Damage: 150",
-        "Wave Move Speed Slow: 30%",
-        "Wave Slow Duration: 2.5"
-      ],
       "legacy_key": "E",
       "story": "None can fail to recognize Mirana's iconic white beast in the heat of battle."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Mirana_Moonlight_Shadow.mp3\/revision\/latest?cb=20191216020500",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Allies"
-      ],
       "notes": [
-        "Places a buff on all invulnerable and hidden allied heroes, including clones. As long as this buff stays on them, they will keep turning invisible. Treats illusions and creep-heroes as creeps.",
-        "As long as this buff stays on them, they will keep turning invisible.",
-        "Treats illusions and creep-heroes as creeps.",
-        "The movement speed bonus is only applied when fully invisible. It is not applied during the fade delay. Attacking, casting abilities, or using items during the fade delay resets it.",
-        "Attacking, casting abilities, or using items during the fade delay resets it.",
-        "TALENT NOTES The evasion talent is always present while the ability is active, and does not rely on the invisibility. Increases Mirana and her team's survivability against physical attacks by 25%. Evasion uses pseudo-random distribution. Stacks diminishingly with other sources of evasion. Does not update the current instance of Moonlight Shadow.",
-        "Increases Mirana and her team's survivability against physical attacks by 25%.",
-        "Evasion uses pseudo-random distribution.",
-        "Stacks diminishingly with other sources of evasion.",
-        "Does not update the current instance of Moonlight Shadow."
+        "Places a buff on all invulnerable and hidden allied heroes, including clones. As long as this buff stays on them, they will keep turning invisible. Treats illusions and creep-heroes as creeps",
+        "The movement speed bonus is only applied when fully invisible. It is not applied during the fade delay. Attacking, casting abilities, or using items during the fade delay resets it",
+        "TALENT NOTES The evasion <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent is always present while the ability is active, and does not rely on the invisibility. Increases Mirana and her team's survivability against physical attacks by 25%. Evasion uses pseudo-random distribution. Stacks diminishingly with other sources of evasion. Does not update the current instance of Moonlight Shadow"
       ],
-      "mana": "140\/120\/100 (TagTalent 120\/100\/80)",
       "item_behaviour": [],
-      "name": "Moonlight Shadow",
-      "cooldown": "125",
       "description": "Turns Mirana and all allied heroes invisible and grants bonus movement speed. If a hero is revealed, invisibility will restore after the fade delay as long as Moonlight Shadow's duration has not expired.",
       "hot_key": "R",
       "params": [
@@ -165,8 +130,17 @@
         "Fade Delay: 2.5\/2\/1.5",
         "Move Speed Bonus: 9%\/12%\/15%",
         "Duration: 18",
-        "<span image=\"images\\Talent\"><\/span> Evasion: 20%"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Evasion:  20%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Mirana_Moonlight_Shadow.mp3\/revision\/latest?cb=20191216020500",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Allies"
+      ],
+      "mana": "140\/120\/100 (TagTalent 120\/100\/80)",
+      "aghanim": null,
+      "name": "Moonlight Shadow",
+      "cooldown": "125",
       "legacy_key": "W",
       "story": "Her tenure with Selemene allows Mirana to eclipse the ground, wrapping her allies in a cloak of shadows."
     }

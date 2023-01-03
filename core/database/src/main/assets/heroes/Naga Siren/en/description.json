@@ -1,66 +1,45 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Naga_Siren_Mirror_Image.mp3\/revision\/latest?cb=20191216020848",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self"
-      ],
       "notes": [
-        "Applies a basic dispel on Naga Siren and disjoints projectiles upon cast.",
-        "Naga Siren is invulnerable, hidden and spell immune during the split time.",
-        "After the 0.5-second split time, Naga Siren reappears with her illusions. The reappear locations are based on Naga Siren's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus. Though the formation is always the same, Naga Siren and her illusions take a random position in the formation and have all the same facing angle. The illusions have a EXPR 2 * IllusionLVL bounty.",
-        "The reappear locations are based on Naga Siren's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point.",
-        "This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus.",
-        "Though the formation is always the same, Naga Siren and her illusions take a random position in the formation and have all the same facing angle.",
-        "The illusions have a EXPR 2 * IllusionLVL bounty.",
-        "The illusion spawns at different distances depending on the caster's collision size as follows: The distance in between each illusion and the caster is 72 range if the caster's collision size is 8. The distance in between each illusion and the caster is 108 range if the caster's collision size is 24.",
-        "The distance in between each illusion and the caster is 72 range if the caster's collision size is 8.",
-        "The distance in between each illusion and the caster is 108 range if the caster's collision size is 24.",
-        "Orders the caster to stop after the split time, canceling all queued orders, and orders given during the split time. Also stops all ongoing targeted orders of other units that have been issued before Mirror Image was cast.",
-        "Also stops all ongoing targeted orders of other units that have been issued before Mirror Image was cast.",
-        "Successive casts replace the illusions from the previous cast, no matter under whose control they are."
+        "Applies a basic dispel on Naga Siren and disjoints projectiles upon cast",
+        "Naga Siren is invulnerable, hidden and spell immune during the split time",
+        "After the 0.5-second split time, Naga Siren reappears with her illusions. The reappear locations are based on Naga Siren's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus. Though the formation is always the same, Naga Siren and her illusions take a random position in the formation and have all the same facing angle. The illusions have a EXPR 2 * IllusionLVL bounty",
+        "The illusion spawns at different distances depending on the caster's collision size as follows: The distance in between each illusion and the caster is 72 range if the caster's collision size is 8. The distance in between each illusion and the caster is 108 range if the caster's collision size is 24",
+        "Orders the caster to stop after the split time, canceling all queued orders, and orders given during the split time. Also stops all ongoing targeted orders of other units that have been issued before Mirror Image was cast",
+        "Successive casts replace the illusions from the previous cast, no matter under whose control they are"
       ],
-      "mana": "40\/35\/30\/25 (TagTalent 30\/25\/20\/15)",
       "item_behaviour": [],
-      "name": "Mirror Image",
-      "cooldown": "70\/85\/100\/115",
       "description": "Creates multiple images of Naga Siren under her control.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0",
         "Split Time: 0.5",
-        "Number of Illusions: 3 ( 4)",
-        "Illusion Damage Dealt: 25%\/30%\/35%\/40% ( 38%\/43%\/48%\/53%)",
+        "Number of Illusions: 3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 4)",
+        "Illusion Damage Dealt: 25%\/30%\/35%\/40% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 38%\/43%\/48%\/53%)",
         "Illusion Damage Taken: 350%",
         "Illusion Duration: 26"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Naga_Siren_Mirror_Image.mp3\/revision\/latest?cb=20191216020848",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "40\/35\/30\/25 (TagTalent 30\/25\/20\/15)",
+      "aghanim": null,
+      "name": "Mirror Image",
+      "cooldown": "70\/85\/100\/115",
       "legacy_key": "R",
       "story": "Slithice, while being strong in her own right, is notoriously hard to track down."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Naga_Siren_Ensnare_1.mp3\/revision\/latest?cb=20191216020847",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "The net travels at a speed of 1500 (TagTalent 2250).",
-        "Roots the target, preventing it from moving and casting certain mobility abilities. Provides True Sight over the target.",
-        "Provides True Sight over the target.",
-        "All illusions owned by Naga Siren within 900 range of the target also cast a fake Ensnare. They play the whole cast animation and release their fake nets at the same time the real net is released. When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake nets. When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations. When canceling the cast, the illusions still play the full cast animation, but do not release the fake nets. The fake nets do not interact with anything and do not root.",
-        "They play the whole cast animation and release their fake nets at the same time the real net is released.",
-        "When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake nets.",
-        "When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations.",
-        "When canceling the cast, the illusions still play the full cast animation, but do not release the fake nets.",
-        "The fake nets do not interact with anything and do not root.",
-        "SCEPTER NOTES Ensnare can now be cast on and fully affect any invulnerable unit, not just sleeping units. Fully affects Couriers.",
-        "Fully affects Couriers."
+        "The net travels at a speed of 1500 ( 2250)",
+        "Roots the target, preventing it from moving and casting certain mobility abilities. Provides True Sight over the target",
+        "All illusions owned by Naga Siren within 900 range of the target also cast a fake Ensnare. They play the whole cast animation and release their fake nets at the same time the real net is released. When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake nets. When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations. When canceling the cast, the illusions still play the full cast animation, but do not release the fake nets. The fake nets do not interact with anything and do not root",
+        "SCEPTER NOTES Ensnare can now be cast on and fully affect any invulnerable unit, not just sleeping units. Fully affects  Couriers"
       ],
-      "mana": "21\/18\/15\/12 (TagTalent 19\/16\/13\/10)",
       "item_behaviour": [],
-      "name": "Ensnare",
-      "cooldown": "70\/80\/90\/100",
       "description": "Interrupts the target and traps them in place, preventing movement or blinking.",
       "hot_key": "W",
       "params": [
@@ -69,73 +48,58 @@
         "Projectile Speed: 1500 ( 2250)",
         "Duration: 2.75\/3.5\/4.25\/5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Naga_Siren_Ensnare_1.mp3\/revision\/latest?cb=20191216020847",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies"
+      ],
+      "mana": "21\/18\/15\/12 (TagTalent 19\/16\/13\/10)",
+      "aghanim": null,
+      "name": "Ensnare",
+      "cooldown": "70\/80\/90\/100",
       "legacy_key": "E",
       "story": "The only way to escape the onslaught of a Slithereen is to never oppose one in the first place."
     },
     {
+      "notes": [
+        "Each successful attack performed by Naga Siren or her illusions applies the attack counter buff on Naga Siren. If the buff is already present, its stack count gets increased instead. Counts attacks against any enemy unit, except buildings. Does not count attacks from units that do not have this ability (e.g.  Disruption illusions). The counter buff has no duration and lasts indefinitely",
+        "When the counter reaches 6, Rip Tide's effects are applied around all units under Naga Siren's control that have this ability, and the counter buff is removed",
+        "Enemies may only be hit by one instance, even when within range of multiple Rip Tides. Neither the damage nor the debuff stack",
+        "The damage source of all Rip Tides is the unit that performed the triggering attack, meaning on-damage effects react on the unit that triggered it (e.g.  Blade Mail)",
+        "Rip Tide first applies the armor reduction debuff, the Rip Tide damage, and then the attack damage",
+        "TALENT NOTES The armor reduction increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not update already placed debuffs. Already placed debuffs update their values only when refreshed"
+      ],
+      "item_behaviour": [],
+      "description": "Every 6 attacks from naga and her illusions, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for 4 seconds.",
+      "hot_key": "E",
+      "params": [
+        "Required Hits: 6",
+        "Radius: 300",
+        "Damage: 40\/45\/50\/55 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 70\/75\/80\/85)",
+        "Armor Reduction: 2\/4\/6\/8 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 9\/11\/13\/15)",
+        "Duration: 4"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Naga_Siren_Rip_Tide_1.mp3\/revision\/latest?cb=20210101030224",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies",
         "Damage: Magical"
       ],
-      "notes": [
-        "Each successful attack performed by Naga Siren or her illusions applies the attack counter buff on Naga Siren. If the buff is already present, its stack count gets increased instead. Counts attacks against any enemy unit, except buildings. Does not count attacks from units that do not have this ability (e.g. Disruption illusions). The counter buff has no duration and lasts indefinitely.",
-        "If the buff is already present, its stack count gets increased instead.",
-        "Counts attacks against any enemy unit, except buildings.",
-        "Does not count attacks from units that do not have this ability (e.g. Disruption illusions).",
-        "The counter buff has no duration and lasts indefinitely.",
-        "When the counter reaches 6, Rip Tide's effects are applied around all units under Naga Siren's control that have this ability, and the counter buff is removed.",
-        "Enemies may only be hit by one instance, even when within range of multiple Rip Tides. Neither the damage nor the debuff stack.",
-        "The damage source of all Rip Tides is the unit that performed the triggering attack, meaning on-damage effects react on the unit that triggered it (e.g. Blade Mail).",
-        "Rip Tide first applies the armor reduction debuff, the Rip Tide damage, and then the attack damage.",
-        "TALENT NOTES The armor reduction increasing talent does not update already placed debuffs. Already placed debuffs update their values only when refreshed.",
-        "Already placed debuffs update their values only when refreshed."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Rip Tide",
       "cooldown": null,
-      "description": "Every 6 attacks from naga and her illusions, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for 4 seconds.",
-      "hot_key": "E",
-      "params": [
-        "Required Hits: 6",
-        "Radius: 300",
-        "Damage: 40\/45\/50\/55 ( 70\/75\/80\/85)",
-        "Armor Reduction: 2\/4\/6\/8 ( 9\/11\/13\/15)",
-        "Duration: 4"
-      ],
       "legacy_key": "D",
       "story": "A torrent from the Deep Ones crushes the defenses of the Siren's enemies."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies \/ Self"
-      ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
-        "Requires an Ensnared target to be cast. There is no limit to how many targets, including enemies and allies alike, can be moved by Reel In, as long as they are affected by the net, they are considered an Ensnared target. However, Reel In does not interrupt its own channeling when Ensnare expires on the target. While Roshan and ancient creeps (e.g. Couriers) can be Ensnared, Reel In does not consider them to be an Ensnared target. Fully affects spell immune and invulnerable units. Reel In does not affect hidden units, unless it turns hidden while already being moved.",
-        "There is no limit to how many targets, including enemies and allies alike, can be moved by Reel In, as long as they are affected by the net, they are considered an Ensnared target.",
-        "However, Reel In does not interrupt its own channeling when Ensnare expires on the target.",
-        "While Roshan and ancient creeps (e.g. Couriers) can be Ensnared, Reel In does not consider them to be an Ensnared target.",
-        "Fully affects spell immune and invulnerable units.",
-        "Reel In does not affect hidden units, unless it turns hidden while already being moved.",
-        "Upon cast, the Ensnared target is moved towards Naga Siren. Upon the target reaching the 100 min distance, they are no longer moved. The Ensnare target is not disabled during the movement. They can still turn, attack and use items. Reel In only moves the target when it is Ensnared.",
-        "Upon the target reaching the 100 min distance, they are no longer moved.",
-        "The Ensnare target is not disabled during the movement. They can still turn, attack and use items.",
-        "Reel In only moves the target when it is Ensnared.",
-        "Sets the target's movement speed to 100 upon cast. If the target gets moved or teleported, the speed does not adapt. Can move the affected target for 750 distance when channeled for the entire duration. Does not grant the Ensnared targets unobstructed pathing, the targets do not move through cliffs, trees, and other units while channeling.",
-        "If the target gets moved or teleported, the speed does not adapt.",
-        "Can move the affected target for 750 distance when channeled for the entire duration.",
-        "Does not grant the Ensnared targets unobstructed pathing, the targets do not move through cliffs, trees, and other units while channeling.",
-        "SPELL STEAL This ability is not acquirable."
+        "Requires  Aghanim's Scepter to be unlocked",
+        "Requires an  Ensnared target to be cast. There is no limit to how many targets, including enemies and allies alike, can be moved by Reel In, as long as they are affected by the net, they are considered an Ensnared target. However, Reel In does not interrupt its own channeling when Ensnare expires on the target. While  Roshan and ancient creeps (e.g.  Couriers) can be Ensnared, Reel In does not consider them to be an Ensnared target. Fully affects spell immune and invulnerable units. Reel In does not affect hidden units, unless it turns hidden while already being moved",
+        "Upon cast, the Ensnared target is moved towards Naga Siren. Upon the target reaching the 100 min distance, they are no longer moved. The Ensnare target is not disabled during the movement. They can still turn, attack and use items. Reel In only moves the target when it is Ensnared",
+        "Sets the target's movement speed to 100 upon cast. If the target gets moved or teleported, the speed does not adapt. Can move the affected target for 750 distance when channeled for the entire duration. Does not grant the Ensnared targets unobstructed pathing, the targets do not move through cliffs, trees, and other units while channeling. SPELL STEAL This ability is not acquirable"
       ],
-      "mana": "8",
       "item_behaviour": [],
-      "name": "Reel In",
-      "cooldown": "0",
       "description": "Naga Siren channels for up to 5 seconds, pulling all units affected by Naga's Ensnare in a 1400 range towards her at a speed of 150.",
       "hot_key": "D",
       "params": [
@@ -145,66 +109,71 @@
         "Distance Moved: 150",
         "Max Channel Time: 5"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies \/ Self"
+      ],
+      "mana": "8",
+      "aghanim": null,
+      "name": "Reel In",
+      "cooldown": "0",
       "legacy_key": "L",
       "story": "Even the youngest Slithereen are well schooled in trawling for prey with nothing but their wits and nets."
     },
     {
+      "notes": [
+        "Applies a sleep on affected units, preventing them from acting until woken up",
+        "Affected units are invulnerable while sleeping",
+        "Song of the Siren's radius is centered on Naga Siren for the entire duration, so if she moves far enough away from affected units, they wake up",
+        "The sleep is provided by an aura. Its debuff lingers for 0.4 seconds",
+        "Song of the Siren cannot be interrupted. Only Naga Siren's death or the  Song of the Siren End sub-ability can stop it. However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability",
+        "Does not affect  Roshan,  Couriers, wards or hidden units. Does affect buildings. Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren",
+        "SHARD NOTES A second aura is provided by Naga Siren, which increases the health regeneration of allies within range. Uses the same radius and aura linger duration values as the aura that affects enemies. Affects invulnerable, but not hidden allies. Does not affect buildings or wards. Can regenerate up to 42% of an ally's max health over its full duration"
+      ],
+      "item_behaviour": [],
+      "description": "All enemies in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked. Using Song of the Siren again will end the duration early.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 1+0.3",
+        "Radius: 1000\/1200\/1400 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1500\/1700\/1900)",
+        "Duration: 7 ( 8)",
+        "Aura Linger Duration: 0.4",
+        "Max Health as Health Regen Bonus:  5%"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Naga_Siren_Song_of_the_Siren.mp3\/revision\/latest?cb=20191216020844",
       "effects": [
         "Ability: No Target",
         "Affects: Enemies "
       ],
-      "notes": [
-        "Applies a sleep on affected units, preventing them from acting until woken up.",
-        "Affected units are invulnerable while sleeping.",
-        "Song of the Siren's radius is centered on Naga Siren for the entire duration, so if she moves far enough away from affected units, they wake up.",
-        "The sleep is provided by an aura. Its debuff lingers for 0.4 seconds.",
-        "Song of the Siren cannot be interrupted. Only Naga Siren's death or the Song of the Siren End sub-ability can stop it. However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability.",
-        "However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability.",
-        "Does not affect Roshan, Couriers, wards or hidden units. Does affect buildings. Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren.",
-        "Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren.",
-        "SHARD NOTES A second aura is provided by Naga Siren, which increases the health regeneration of allies within range. Uses the same radius and aura linger duration values as the aura that affects enemies. Affects invulnerable, but not hidden allies. Does not affect buildings or wards. Can regenerate up to 42% of an ally's max health over its full duration.",
-        "Uses the same radius and aura linger duration values as the aura that affects enemies.",
-        "Affects invulnerable, but not hidden allies. Does not affect buildings or wards.",
-        "Can regenerate up to 42% of an ally's max health over its full duration."
-      ],
       "mana": "160\/120\/80",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Song of the Siren",
       "cooldown": "150\/175\/200",
-      "description": "All enemies in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked. Using Song of the Siren again will end the duration early.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 1+0.3",
-        "Radius: 1000\/1200\/1400 ( 1500\/1700\/1900)",
-        "Duration: 7 ( 8)",
-        "Aura Linger Duration: 0.4",
-        "Max Health as Health Regen Bonus: 5%"
-      ],
       "legacy_key": "G",
       "story": "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Naga_Siren_Song_of_the_Siren_End.mp3\/revision\/latest?cb=20191216020843",
-      "effects": [
-        "Ability: No Target"
-      ],
       "notes": [
-        "Replaces Song of the Siren until the sub-ability is used, the song duration ends or Naga Siren's death.",
-        "Naga Siren is unable to level Song of the Siren up while this sub-ability is active.",
-        "Goes into a 1-second cooldown right after Song of the Siren is cast, this is to prevent accidental double-casts prematurely ending the ability.",
-        "When cast, enemies wake up after the aura's 0.4-second linger duration.",
-        "SPELL STEAL Does not grant Song of the Siren if this sub-ability is the last cast ability."
+        "Replaces  Song of the Siren until the sub-ability is used, the song duration ends or Naga Siren's death",
+        "Naga Siren is unable to level Song of the Siren up while this sub-ability is active",
+        "Goes into a 1-second cooldown right after Song of the Siren is cast, this is to prevent accidental double-casts prematurely ending the ability",
+        "When cast, enemies wake up after the aura's 0.4-second linger duration. SPELL STEAL Does not grant  Song of the Siren if this sub-ability is the last cast ability"
       ],
-      "mana": "1",
       "item_behaviour": [],
-      "name": "Song of the Siren End",
-      "cooldown": "0",
       "description": "Release enemy units from your song so they can be targeted again.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0+0.97"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Naga_Siren_Song_of_the_Siren_End.mp3\/revision\/latest?cb=20191216020843",
+      "effects": [
+        "Ability: No Target"
+      ],
+      "mana": "1",
+      "aghanim": null,
+      "name": "Song of the Siren End",
+      "cooldown": "0",
       "legacy_key": "G",
       "story": null
     }

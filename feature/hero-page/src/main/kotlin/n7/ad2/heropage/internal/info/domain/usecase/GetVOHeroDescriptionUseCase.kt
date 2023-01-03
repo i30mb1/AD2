@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.single
+import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
@@ -17,7 +18,6 @@ import n7.ad2.heropage.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.toStringList
 import n7.ad2.logger.Logger
 import n7.ad2.repositories.HeroRepository
-import n7.ad2.repositories.model.Ability
 import n7.ad2.repositories.model.LocalHeroDescription
 import n7.ad2.spanparser.SpanParser
 import n7.ad2.ui.adapter.BodyViewHolder
@@ -30,6 +30,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     private val spanParser: SpanParser,
     private val logger: Logger,
     private val dispatchers: DispatchersProvider,
+    private val appInformation: AppInformation,
 ) {
 
     sealed class HeroInfo {
@@ -44,7 +45,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     ): Flow<List<VOHeroInfo>> = flow {
         val localHero = heroRepository.getHero(heroName)
         val info = heroRepository.getHeroDescription(localHero.name, locale).single()
-
         emit(buildList {
             add(getAttributes(localHero, info, heroInfo))
             add(getSpells(info, heroInfo))
@@ -56,21 +56,27 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     add(VOHeroInfo.Body(BodyViewHolder.Data(info.history.toSpanned())))
                     info.trivia?.let { list ->
                         add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_trivia))))
-                        add(VOHeroInfo.Body(BodyViewHolder.Data(list.toStringList(true).toSpanned())))
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(list.toStringList(true))))
                     }
                 }
                 is HeroInfo.Spell -> {
-                    val selectedSpell: Ability = info.abilities.find { ability -> ability.name == heroInfo.name } ?: error("could not find ability")
+                    val selectedSpell = info.abilities.find { ability -> ability.name == heroInfo.name } ?: error("could not find ability")
                     add(VOHeroInfo.HeaderSound(selectedSpell.name, selectedSpell.hotKey, selectedSpell.legacyKey, false, selectedSpell.audioUrl))
                     selectedSpell.description?.let { add(VOHeroInfo.Body(BodyViewHolder.Data(it.toSpanned()))) }
                     selectedSpell.story?.let { add(VOHeroInfo.Body(BodyViewHolder.Data(it.toSpanned()))) }
-                    selectedSpell.notes?.let {
+                    selectedSpell.notes?.let { notes ->
                         add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_notes))))
-                        add(VOHeroInfo.Body(BodyViewHolder.Data(it.toStringList(true).toSpanned())))
+                        val text = notes
+                            .mapNotNull { spanParser.toSpannable(it, appInformation.isNightMode) }
+                            .toStringList(true)
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(text)))
                     }
-                    selectedSpell.params?.let {
+                    selectedSpell.params?.let { params ->
                         add(VOHeroInfo.Header(HeaderViewHolder.Data(res.getString(R.string.hero_fragment_params))))
-                        add(VOHeroInfo.Body(BodyViewHolder.Data(it.toStringList(true).toSpanned())))
+                        val text = params
+                            .mapNotNull { spanParser.toSpannable(it, appInformation.isNightMode) }
+                            .toStringList(true)
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(text)))
                     }
                 }
             }

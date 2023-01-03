@@ -1,67 +1,46 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Omniknight_Purification.mp3\/revision\/latest?cb=20191216021244",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Allies \/ Enemies",
-        "Damage: Pure"
-      ],
       "notes": [
-        "The targeting reticule must be centered over an allied unit. ↓↓ Double-tapping automatically targets self.",
-        "↓↓ Double-tapping automatically targets self.",
-        "Always heals for the full amount per instance, regardless of how much damage the target actually takes.",
-        "Despite the visual effects, the damage is applied instantly to all enemy units within range of the target.",
-        "Purification first applies its damage, then the heal.",
-        "Fully affects ally Couriers."
+        "The targeting reticule must be centered over an allied unit. ↓↓ Double-tapping automatically targets self",
+        "Always heals for the full amount per instance, regardless of how much damage the target actually takes",
+        "Despite the visual effects, the damage is applied instantly to all enemy units within range of the target",
+        "Purification first applies its damage, then the heal",
+        "Fully affects ally  Couriers"
       ],
-      "mana": "18\/16\/14\/12 (TagTalent 16\/14\/12\/10)",
       "item_behaviour": [],
-      "name": "Purification",
-      "cooldown": "80\/95\/110\/125",
       "description": "Instantly heals a friendly unit and damages all nearby enemy units.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+1.4",
         "Cast Range:  550",
         "Damage Radius: 260",
-        "Damage\/Heal: 90\/160\/230\/300 ( 250\/320\/390\/460)"
+        "Damage\/Heal: 90\/160\/230\/300 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 250\/320\/390\/460)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Omniknight_Purification.mp3\/revision\/latest?cb=20191216021244",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies \/ Enemies",
+        "Damage: Pure"
+      ],
+      "mana": "18\/16\/14\/12 (TagTalent 16\/14\/12\/10)",
+      "aghanim": null,
+      "name": "Purification",
+      "cooldown": "80\/95\/110\/125",
       "legacy_key": "R",
       "story": "Priests of the Omniscience are adept at removing impurities from fellow warriors."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Omniknight_Heavenly_Grace.mp3\/revision\/latest?cb=20191216021242",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Allied Heroes"
-      ],
       "notes": [
-        "Can only be cast on allied heroes, including illusions, clones, and creep-heroes. ↓↓ Double-tapping automatically targets self. Cannot be cast on Couriers.",
-        "↓↓ Double-tapping automatically targets self.",
-        "Cannot be cast on Couriers.",
-        "Heavenly Grace first applies the buff, and then the strong dispel on the target. When cast on an ally, Omniknight receives both the buff and the dispel.",
-        "When cast on an ally, Omniknight receives both the buff and the dispel.",
-        "Total strength and health regeneration bonus when dispelling a certain amount of debuffs: 1 Debuff: 11\/20\/29\/38 (TagTalent 14\/23\/32\/41) strength and 11\/16\/21\/26 (TagTalent 14\/19\/24\/29) health regeneration. 2 Debuffs: 14\/24\/34\/44 (TagTalent 20\/30\/40\/50) strength and 14\/20\/26\/32 (TagTalent 20\/26\/32\/38) health regeneration. 3 Debuffs: 17\/28\/39\/50 (TagTalent 26\/37\/48\/59) strength and 17\/24\/31\/38 (TagTalent 26\/33\/40\/47) health regeneration. 4 Debuffs: 20\/32\/44\/56 (TagTalent 32\/44\/56\/68) strength and 20\/28\/36\/44 (TagTalent 32\/40\/48\/56) health regeneration. 5 Debuffs: 23\/36\/49\/62 (TagTalent 38\/51\/64\/77) strength and 23\/32\/41\/50 (TagTalent 38\/47\/56\/65) health regeneration.",
-        "1 Debuff: 11\/20\/29\/38 (TagTalent 14\/23\/32\/41) strength and 11\/16\/21\/26 (TagTalent 14\/19\/24\/29) health regeneration.",
-        "2 Debuffs: 14\/24\/34\/44 (TagTalent 20\/30\/40\/50) strength and 14\/20\/26\/32 (TagTalent 20\/26\/32\/38) health regeneration.",
-        "3 Debuffs: 17\/28\/39\/50 (TagTalent 26\/37\/48\/59) strength and 17\/24\/31\/38 (TagTalent 26\/33\/40\/47) health regeneration.",
-        "4 Debuffs: 20\/32\/44\/56 (TagTalent 32\/44\/56\/68) strength and 20\/28\/36\/44 (TagTalent 32\/40\/48\/56) health regeneration.",
-        "5 Debuffs: 23\/36\/49\/62 (TagTalent 38\/51\/64\/77) strength and 23\/32\/41\/50 (TagTalent 38\/47\/56\/65) health regeneration.",
-        "",
-        "Successive casts do not stack but refresh its duration and ability values.",
-        "Heavenly Grace effectively grants the following bonuses per dispelled debuff: 160\/320\/480\/640 + 60\/80\/100\/120 (TagTalent 120\/140\/160\/180) bonus health 8.8\/13.6\/18.4\/23.2 + 3.3\/4.4\/5.5\/6.6 (TagTalent 6.6\/7.7\/8.8\/9.9) bonus health regeneration. 8\/16\/24\/32 + 3\/4\/5\/6 (TagTalent 6\/7\/8\/9) bonus main attack damage to heroes.",
-        "160\/320\/480\/640 + 60\/80\/100\/120 (TagTalent 120\/140\/160\/180) bonus health",
-        "8.8\/13.6\/18.4\/23.2 + 3.3\/4.4\/5.5\/6.6 (TagTalent 6.6\/7.7\/8.8\/9.9) bonus health regeneration.",
-        "8\/16\/24\/32 + 3\/4\/5\/6 (TagTalent 6\/7\/8\/9) bonus main attack damage to heroes.",
-        "Can regenerate up to 88\/136\/184\/232 + 33\/44\/55\/66 (TagTalent 66\/77\/88\/99) per dispelled debuff health over its full duration. With the duration increasing talent, it can regenerate up to 123.2\/190.4\/257.6\/324.8 + 46.2\/61.6\/77\/92.4 (TagTalent 92.4\/107.8\/123.2\/138.6) per dispelled debuff health over its full duration.",
-        "With the duration increasing talent, it can regenerate up to 123.2\/190.4\/257.6\/324.8 + 46.2\/61.6\/77\/92.4 (TagTalent 92.4\/107.8\/123.2\/138.6) per dispelled debuff health over its full duration.",
-        "TALENT NOTES The strength\/health regeneration bonus per debuff increasing talent immediately updates all currently active buffs."
+        "Can only be cast on allied heroes, including illusions, clones, and creep-heroes. ↓↓ Double-tapping automatically targets self. Cannot be cast on  Couriers",
+        "Heavenly Grace first applies the buff, and then the strong dispel on the target. When cast on an ally, Omniknight receives both the buff and the dispel",
+        "Total  strength and health regeneration bonus when dispelling a certain amount of debuffs: 1 Debuff: 11\/20\/29\/38 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 14\/23\/32\/41) strength and 11\/16\/21\/26 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 14\/19\/24\/29) health regeneration. 2 Debuffs: 14\/24\/34\/44 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 20\/30\/40\/50) strength and 14\/20\/26\/32 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 20\/26\/32\/38) health regeneration. 3 Debuffs: 17\/28\/39\/50 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 26\/37\/48\/59) strength and 17\/24\/31\/38 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 26\/33\/40\/47) health regeneration. 4 Debuffs: 20\/32\/44\/56 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 32\/44\/56\/68) strength and 20\/28\/36\/44 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 32\/40\/48\/56) health regeneration. 5 Debuffs: 23\/36\/49\/62 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 38\/51\/64\/77) strength and 23\/32\/41\/50 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 38\/47\/56\/65) health regeneration.",
+        "Successive casts do not stack but refresh its duration and ability values",
+        "Heavenly Grace effectively grants the following bonuses per dispelled debuff: 160\/320\/480\/640 + 60\/80\/100\/120 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 120\/140\/160\/180) bonus health 8.8\/13.6\/18.4\/23.2 + 3.3\/4.4\/5.5\/6.6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 6.6\/7.7\/8.8\/9.9) bonus health regeneration. 8\/16\/24\/32 + 3\/4\/5\/6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 6\/7\/8\/9) bonus main attack damage to  heroes",
+        "Can regenerate up to 88\/136\/184\/232 + 33\/44\/55\/66 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 66\/77\/88\/99) per dispelled debuff health over its full duration. With the duration increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent, it can regenerate up to 123.2\/190.4\/257.6\/324.8 + 46.2\/61.6\/77\/92.4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 92.4\/107.8\/123.2\/138.6) per dispelled debuff health over its full duration",
+        "TALENT NOTES The strength\/health regeneration bonus per debuff increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately updates all currently active buffs"
       ],
-      "mana": "26\/22\/18\/14",
       "item_behaviour": [],
-      "name": "Heavenly Grace",
-      "cooldown": "95\/105\/115\/125",
       "description": "Applies a strong dispel on an ally and grants both them and Omniknight bonus Strength and HP Regen based on the amount of Debuffs dispelled.",
       "hot_key": "W",
       "params": [
@@ -69,58 +48,58 @@
         "Cast Range:  700",
         "Base Strength Bonus: 8\/16\/24\/32",
         "Base Health Regen Bonus: 8\/12\/16\/20",
-        "Strength\/Health Regen Bonus per Debuff: 3\/4\/5\/6 ( 6\/7\/8\/9)",
-        "Duration: 10 ( 14)"
+        "Strength\/Health Regen Bonus per Debuff: 3\/4\/5\/6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 6\/7\/8\/9)",
+        "Duration: 10 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 14)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Omniknight_Heavenly_Grace.mp3\/revision\/latest?cb=20191216021242",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allied Heroes"
+      ],
+      "mana": "26\/22\/18\/14",
+      "aghanim": null,
+      "name": "Heavenly Grace",
+      "cooldown": "95\/105\/115\/125",
       "legacy_key": "E",
       "story": "The All Seeing One casts down his protection over those that Purist calls friends."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Omniknight_Hammer_of_Purity_1.mp3\/revision\/latest?cb=20220412211734",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies",
-        "Damage: Pure"
-      ],
       "notes": [
-        "Although seeming like a melee ability, the cast range can be further increased by other cast range bonuses. However, it is not affected by attack range bonuses.",
-        "The projectile travels at a speed of 1200.",
-        "The damage is based on Omniknight's main attack damage. Other attack damage bonuses are ignored. This means the base attack damage granting talent affects Hammer of Purity's damage as well. Considers the min and max attack damage values of Omniknight, so the damage varies like how regular attacks do.",
-        "This means the base attack damage granting talent affects Hammer of Purity's damage as well.",
-        "Considers the min and max attack damage values of Omniknight, so the damage varies like how regular attacks do.",
-        "Hammer of Purity first applies the debuff, the hammer damage, then the attack damage."
+        "Although seeming like a  melee ability, the cast range can be further increased by other cast range bonuses. However, it is not affected by attack range bonuses",
+        "The projectile travels at a speed of 1200",
+        "The damage is based on Omniknight's main attack damage. Other attack damage bonuses are ignored. This means the base attack damage granting <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent affects Hammer of Purity's damage as well. Considers the min and max attack damage values of Omniknight, so the damage varies like how regular attacks do",
+        "Hammer of Purity first applies the debuff, the hammer damage, then the attack damage"
       ],
-      "mana": "16\/14\/12\/10 (TagTalent 10\/8\/6\/4)",
       "item_behaviour": [],
-      "name": "Hammer of Purity",
-      "cooldown": "40\/45\/50\/55",
       "description": "Omniknight fires his hammer to a target to deal pure damage based on a percentage of his base damage and slows the target",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+1.4",
         "Cast Range:  350",
         "Base Damage: 50\/75\/100\/125",
-        "Main Attack Damage as Damage: 60%\/80%\/100%\/120% ( 135%\/155%\/175%\/195%)",
+        "Main Attack Damage as Damage: 60%\/80%\/100%\/120% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 135%\/155%\/175%\/195%)",
         "Move Speed Slow: 14%\/22%\/30%\/38%",
         "Duration: 5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Omniknight_Hammer_of_Purity_1.mp3\/revision\/latest?cb=20220412211734",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "mana": "16\/14\/12\/10 (TagTalent 10\/8\/6\/4)",
+      "aghanim": null,
+      "name": "Hammer of Purity",
+      "cooldown": "40\/45\/50\/55",
       "legacy_key": "D",
       "story": null
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Ability: Aura",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "The aura's debuff lingers for 1 second."
+        "Requires  Aghanim's Shard to be unlocked",
+        "The aura's debuff lingers for 1 second"
       ],
-      "mana": null,
       "item_behaviour": [],
-      "name": "Degen Aura",
-      "cooldown": null,
       "description": "Greatly degenerates the movement capabilities of enemy units that stray too near.",
       "hot_key": "?",
       "params": [
@@ -128,33 +107,41 @@
         "Move Speed Slow: 40%",
         "Aura Linger Duration: 1"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Enemies"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Degen Aura",
+      "cooldown": null,
       "legacy_key": "",
       "story": "The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Omniknight_Guardian_Angel_1.mp3\/revision\/latest?cb=20191216021248",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Allies"
-      ],
       "notes": [
-        "Affects all allied units, except for wards, Couriers, invulnerable and hidden units.",
-        "SCEPTER NOTES Guardian Angel now affects buildings and hidden units. Stacks multiplicatively with other sources of status resistance. Acquiring Aghanim's Scepter immediately grants status resistance bonus to the current active instance, affecting all units within 1200 radius.",
-        "Stacks multiplicatively with other sources of status resistance.",
-        "Acquiring Aghanim's Scepter immediately grants status resistance bonus to the current active instance, affecting all units within 1200 radius."
+        "Affects all allied units, except for wards,  Couriers, invulnerable and hidden units",
+        "SCEPTER NOTES Guardian Angel now affects buildings and hidden units. Stacks multiplicatively with other sources of status resistance. Acquiring  Aghanim's Scepter immediately grants status resistance bonus to the current active instance, affecting all units within 1200 radius"
       ],
-      "mana": "160\/140\/120 (TagTalent 130\/110\/90)",
       "item_behaviour": [],
-      "name": "Guardian Angel",
-      "cooldown": "150\/200\/250",
       "description": "Omniknight calls upon a Guardian Angel that grants allies immunity from physical damage.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0.9",
         "Radius: 1200 ( Global)",
         "Duration: 5\/6\/7 ( 8\/9\/10)",
-        "Status Resistance Bonus: 40%"
+        "Status Resistance Bonus:  40%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Omniknight_Guardian_Angel_1.mp3\/revision\/latest?cb=20191216021248",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Allies"
+      ],
+      "mana": "160\/140\/120 (TagTalent 130\/110\/90)",
+      "aghanim": null,
+      "name": "Guardian Angel",
+      "cooldown": "150\/200\/250",
       "legacy_key": "G",
       "story": "The All Seeing One casts down his protection over those that Purist calls friend."
     }

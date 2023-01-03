@@ -39,7 +39,7 @@ class GetItemInfoUseCase @Inject constructor(
                 add(VOItemInfo.Recipe(itemName, ItemRepository.getFullUrlItemImage(localItemDescription.name), voRecipes))
             }
             if (localItemDescription.description != null) add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.description.toSpanned())))
-            if (localItemDescription.bonuses != null) add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.bonuses.toStringList().toSpanned())))
+            if (localItemDescription.bonuses != null) add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.bonuses.toStringList())))
 
             localItemDescription.abilities?.let { list ->
                 for (ability in list) {
@@ -48,8 +48,8 @@ class GetItemInfoUseCase @Inject constructor(
                     if (ability.effects != null) ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
                     if (ability.description != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
-                    if (ability.params != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true).toSpanned())))
-                    if (ability.notes != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true).toSpanned())))
+                    if (ability.params != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true))))
+                    if (ability.notes != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true))))
                     if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), n7.ad2.ui.R.drawable.mana)))
                     if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), n7.ad2.ui.R.drawable.cooldown)))
                 }
@@ -57,22 +57,22 @@ class GetItemInfoUseCase @Inject constructor(
 
             localItemDescription.tips?.let { tips ->
                 add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.tips))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(tips.toStringList(true).toSpanned())))
+                add(VOItemInfo.Body(BodyViewHolder.Data(tips.toStringList(true))))
             }
 
             localItemDescription.lore?.let { lore ->
                 add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.lore))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(lore.toStringList(true).toSpanned())))
+                add(VOItemInfo.Body(BodyViewHolder.Data(lore.toStringList(true))))
             }
 
             localItemDescription.trivia?.let { trivia ->
                 add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.trivia))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(trivia.toStringList(true).toSpanned())))
+                add(VOItemInfo.Body(BodyViewHolder.Data(trivia.toStringList(true))))
             }
 
             localItemDescription.additionalInformation?.let { additionalInfo ->
                 add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.additional_information))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(additionalInfo.toStringList(true).toSpanned())))
+                add(VOItemInfo.Body(BodyViewHolder.Data(additionalInfo.toStringList(true))))
             }
 
         }

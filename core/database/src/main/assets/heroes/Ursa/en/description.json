@@ -1,33 +1,17 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Ursa_Earthshock_1.mp3\/revision\/latest?cb=20191216030125",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies ",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Interrupts Ursa's channeling abilities upon cast.",
-        "Ursa leaps 250 range forwards, 83 range high, at a speed of 1000 and for up to 0.25 seconds.",
-        "Always leaps toward the direction Ursa is facing, and can leap over other units and over impassable terrain. During leap, Ursa can attack, turn, and cast abilities. While in the air, other units may pass below Ursa.",
-        "During leap, Ursa can attack, turn, and cast abilities.",
-        "While in the air, other units may pass below Ursa.",
-        "Earthshock and the Enrage buff is applied upon losing the leap buff. If the leap gets interrupted in any way, Earthshock is applied at Ursa's current location.",
-        "If the leap gets interrupted in any way, Earthshock is applied at Ursa's current location.",
-        "Earthshock first applies the debuff, the damage, then the Fury Swipe stacks.",
-        "Successive debuffs refresh its duration but does not update its ability values.",
-        "SHARD NOTES Earthshock now applies the current level of Enrage upon cast. Enrage notes fully apply. If it is not learned, no buff is applied. Only the incoming damage reduction and status resistance bonus are applied. Other of Enrage's cast effects (e.g. strong dispel and area of effect talent) are not applied. If the buff is already present, its duration gets extended by instead.",
-        "Enrage notes fully apply. If it is not learned, no buff is applied.",
-        "Only the incoming damage reduction and status resistance bonus are applied. Other of Enrage's cast effects (e.g. strong dispel and area of effect talent) are not applied.",
-        "If the buff is already present, its duration gets extended by instead.",
-        "TALENT NOTES The Earthshock applies Fury Swipes talent instantly applies 2 stacks of Fury Swipes based on its current level, within radius upon impact. Fury Swipes notes fully apply. If it is not leveled, no stacks are applied.",
-        "Fury Swipes notes fully apply. If it is not leveled, no stacks are applied."
+        "Interrupts Ursa's channeling abilities upon cast",
+        "Ursa leaps 250 range forwards, 83 range high, at a speed of 1000 and for up to 0.25 seconds",
+        "Always leaps toward the direction Ursa is facing, and can leap over other units and over impassable terrain. During leap, Ursa can attack, turn, and cast abilities. While in the air, other units may pass below Ursa",
+        "Earthshock and the Enrage buff is applied upon losing the leap buff. If the leap gets interrupted in any way, Earthshock is applied at Ursa's current location",
+        "Earthshock first applies the debuff, the damage, then the Fury Swipe stacks",
+        "Successive debuffs refresh its duration but does not update its ability values",
+        "SHARD NOTES Earthshock now applies the current level of  Enrage upon cast. Enrage notes fully apply. If it is not learned, no buff is applied. Only the incoming damage reduction and status resistance bonus are applied. Other of Enrage's cast effects (e.g. strong dispel and area of effect <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent) are not applied. If the buff is already present, its duration gets extended by  instead",
+        "TALENT NOTES The Earthshock applies Fury Swipes <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent instantly applies 2 stacks of  Fury Swipes based on its current level, within radius upon impact. Fury Swipes notes fully apply. If it is not leveled, no stacks are applied"
       ],
-      "mana": "14\/12\/10\/8 (TagTalent 12\/10\/8\/6)",
       "item_behaviour": [],
-      "name": "Earthshock",
-      "cooldown": "95",
       "description": "Ursa leaps forward 250 units and slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for 4 seconds.",
       "hot_key": "Q",
       "params": [
@@ -38,112 +22,109 @@
         "Move Speed Slow: 22%\/28%\/34%\/40%",
         "Slow Duration: 4",
         "Leap Duration: 0.25",
-        "Enrage Duration: 1.5",
-        "<span image=\"images\\Talent\"><\/span> Fury Swipe Stacks: 2"
+        "Enrage Duration:  1.5",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Fury Swipe Stacks:  2"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Ursa_Earthshock_1.mp3\/revision\/latest?cb=20191216030125",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "14\/12\/10\/8 (TagTalent 12\/10\/8\/6)",
+      "aghanim": null,
+      "name": "Earthshock",
+      "cooldown": "95",
       "legacy_key": "E",
       "story": "The very steps of a male ursine shake the ground as well as the resolve of opposing warriors."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Ursa_Overpower.mp3\/revision\/latest?cb=20191216030123",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self"
-      ],
       "notes": [
-        "A charge is consumed whenever an attack is executed. Therefore, missed attacks use up charges as well.",
-        "The number of remaining charges is visible on the buff icon. The buff and the visual effects of the ability are visible to everyone.",
-        "Successive casts do not stack but refresh the whole amount of charges instead."
+        "A charge is consumed whenever an attack is executed. Therefore, missed attacks use up charges as well",
+        "The number of remaining charges is visible on the buff icon. The buff and the visual effects of the ability are visible to everyone",
+        "Successive casts do not stack but refresh the whole amount of charges instead"
       ],
-      "mana": "12\/11\/10\/9",
       "item_behaviour": [],
-      "name": "Overpower",
-      "cooldown": "30\/40\/50\/60",
       "description": "Using his skill in combat, Ursa gains increased attack speed for a number of subsequent attacks.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0",
         "Attack Speed Bonus: 400",
-        "Number of Attacks: 3\/4\/5\/6 ( 6\/7\/8\/9)",
+        "Number of Attacks: 3\/4\/5\/6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 6\/7\/8\/9)",
         "Duration: 20"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Ursa_Overpower.mp3\/revision\/latest?cb=20191216030123",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "12\/11\/10\/9",
+      "aghanim": null,
+      "name": "Overpower",
+      "cooldown": "30\/40\/50\/60",
       "legacy_key": "V",
       "story": "For a behemoth of his size, Ursa is deceptively nimble."
     },
     {
+      "notes": [
+        "Fury Swipe's damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Ursa's attack damage. The attack damage bonus values are not considered by critical strike. However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+        "On each attack Fury Swipes first adds 1 stack and then deals damage based on the stack count. This means that the bonus attack damage is applied even with the first attack. Each successful attack refreshes the whole stack. Missed attacks neither place the buff, nor add a stack or refresh it. The number of Fury Swipe stacks is visible on the debuff icon placed on affected units. Damage is amplified by spell amplification (e.g.  Kaya) but not spell damage bonus (e.g. neutral items)",
+        "For how much damage Fury Swipe deals on each level, and the total damage it accumulates over a certain amount of attacks, please refer to the chart below",
+        "Does not work against buildings, wards and allied units",
+        "TALENT NOTES The stack duration increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not increase the debuff duration against  Roshan"
+      ],
+      "item_behaviour": [],
+      "description": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage. If the same target is not attacked after 8\/12\/16\/20 seconds, the bonus damage is lost.",
+      "hot_key": "E",
+      "params": [
+        "Attack Damage Bonus per Stack: 10\/19\/28\/37 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 22\/31\/40\/49)",
+        "Debuff Duration: 8\/12\/16\/20 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 28\/32\/36\/40)",
+        "Debuff Duration on Roshan: 10"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies",
         "Damage: Physical"
       ],
-      "notes": [
-        "Fury Swipe's damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Ursa's attack damage. The attack damage bonus values are not considered by critical strike. However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Ursa's attack damage.",
-        "The attack damage bonus values are not considered by critical strike.",
-        "However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block).",
-        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "On each attack Fury Swipes first adds 1 stack and then deals damage based on the stack count. This means that the bonus attack damage is applied even with the first attack. Each successful attack refreshes the whole stack. Missed attacks neither place the buff, nor add a stack or refresh it. The number of Fury Swipe stacks is visible on the debuff icon placed on affected units. Damage is amplified by spell amplification (e.g. Kaya) but not spell damage bonus (e.g. neutral items).",
-        "This means that the bonus attack damage is applied even with the first attack.",
-        "Each successful attack refreshes the whole stack. Missed attacks neither place the buff, nor add a stack or refresh it.",
-        "The number of Fury Swipe stacks is visible on the debuff icon placed on affected units.",
-        "Damage is amplified by spell amplification (e.g. Kaya) but not spell damage bonus (e.g. neutral items).",
-        "For how much damage Fury Swipe deals on each level, and the total damage it accumulates over a certain amount of attacks, please refer to the chart below.",
-        "Does not work against buildings, wards and allied units.",
-        "TALENT NOTES The stack duration increasing talent does not increase the debuff duration against Roshan."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Fury Swipes",
       "cooldown": null,
-      "description": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage. If the same target is not attacked after 8\/12\/16\/20 seconds, the bonus damage is lost.",
-      "hot_key": "E",
-      "params": [
-        "Attack Damage Bonus per Stack: 10\/19\/28\/37 ( 22\/31\/40\/49)",
-        "Debuff Duration: 8\/12\/16\/20 ( 28\/32\/36\/40)",
-        "Debuff Duration on Roshan: 10"
-      ],
       "legacy_key": "W",
       "story": "In nature, the wounded rarely survive the attacks of hungry predators."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Ursa_Enrage.mp3\/revision\/latest?cb=20191216030122",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self "
-      ],
       "notes": [
-        "Interrupts Ursa's channeling abilities upon cast.",
-        "Applies a strong dispel on Ursa upon cast.",
-        "Applies generic incoming damage reduction on Ursa. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Ursa takes that is not flagged as HP removal.",
-        "The reduction affects all damage Ursa takes that is not flagged as HP removal.",
-        "Stacks multiplicatively with other sources of status resistance.",
-        "Causes Ursa's and his allies' model to glow red and increases its size by 20%. This has no impact on their collision size.",
-        "Multiple casts of Enrage do not stack, but refresh the duration. If the buff is already present, its duration gets extended instead.",
-        "If the buff is already present, its duration gets extended instead.",
-        "SCEPTER NOTES Enrage can now be cast while stunned, cycloned, slept, taunted, hidden or during forced movement. It cannot be cast while silenced, hexed or prevented from acting. Ursa is unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Scepter.",
-        "It cannot be cast while silenced, hexed or prevented from acting.",
-        "Ursa is unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Scepter.",
-        "TALENT NOTES The area of effect talent applies the Enrage buff to allies 700 radius around Ursa. Affects heroes, clones, illusions and creep-heroes. Other units are not affected. Does not affect invulnerable and hidden ally heroes. Does not apply the strong dispel on ally heroes upon cast. Grants 40% incoming damage reduction and 25% (TagTalent 30%) status resistance bonus to affected allies.",
-        "Affects heroes, clones, illusions and creep-heroes. Other units are not affected.",
-        "Does not affect invulnerable and hidden ally heroes.",
-        "Does not apply the strong dispel on ally heroes upon cast.",
-        "Grants 40% incoming damage reduction and 25% (TagTalent 30%) status resistance bonus to affected allies."
+        "Interrupts Ursa's channeling abilities upon cast",
+        "Applies a strong dispel on Ursa upon cast",
+        "Applies generic incoming damage reduction on Ursa. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Ursa takes that is not flagged as HP removal",
+        "Stacks multiplicatively with other sources of status resistance",
+        "Causes Ursa's and his allies' model to glow red and increases its size by 20%. This has no impact on their collision size",
+        "Multiple casts of Enrage do not stack, but refresh the duration. If the buff is already present, its duration gets extended instead",
+        "SCEPTER NOTES Enrage can now be cast while stunned, cycloned, slept, taunted, hidden or during forced movement. It cannot be cast while silenced, hexed or prevented from acting. Ursa is unable to ⇧ Shift-queue this ability upon acquiring  Aghanim's Scepter",
+        "TALENT NOTES The area of effect <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent applies the Enrage buff to allies 700 radius around Ursa. Affects heroes, clones, illusions and creep-heroes. Other units are not affected. Does not affect invulnerable and hidden ally heroes. Does not apply the strong dispel on ally heroes upon cast. Grants 40% incoming damage reduction and 25% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 30%) status resistance bonus to affected allies"
       ],
-      "mana": null,
       "item_behaviour": [],
-      "name": "Enrage",
-      "cooldown": null,
       "description": "Ursa goes into a frenzy, providing damage reduction and status resistance. Removes any existing debuffs.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Incoming Damage Reduction: 80%",
-        "Status Resistance Bonus: 50% ( 60%)",
+        "Status Resistance Bonus: 50% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 60%)",
         "Duration: 4\/4.5\/5",
-        "<span image=\"images\\Talent\"><\/span> Radius: 700",
-        "<span image=\"images\\Talent\"><\/span> Ally Enrage Bonus Percentage: 50%"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Radius:  700",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Ally Enrage Bonus Percentage:  50%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Ursa_Enrage.mp3\/revision\/latest?cb=20191216030122",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self "
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Enrage",
+      "cooldown": null,
       "legacy_key": "R",
       "story": "Ulfsaar succumbs to his ancient spirit, becoming the most ferocious creature on the battlefield."
     }

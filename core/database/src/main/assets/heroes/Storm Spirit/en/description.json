@@ -1,25 +1,15 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Storm_Spirit_Static_Remnant_1.mp3\/revision\/latest?cb=20191216024539",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "After a remnant is placed, it takes 1 second for it to be able to explode and deal damage.",
-        "When a remnant expires, it still explodes and deals damage around it. Remnant can be triggered by invisible units and deal damage to them.",
-        "Remnant can be triggered by invisible units and deal damage to them.",
-        "Checks for enemies and neutrals in 0.1-seconds intervals, beginning instantly upon cast.",
-        "The remnants are visible on the minimap with the same color as Radiant or Dire units, not the color of the player.",
-        "Remnants provide 500 radius flying vision at their location for its duration or until exploding.",
-        "TALENT NOTES The damage increasing talent does not update already placed Static Remnants."
+        "After a remnant is placed, it takes 1 second for it to be able to explode and deal damage",
+        "When a remnant expires, it still explodes and deals damage around it. Remnant can be triggered by invisible units and deal damage to them",
+        "Checks for enemies and neutrals in 0.1-seconds intervals, beginning instantly upon cast",
+        "The remnants are visible on the minimap with the same color as  Radiant or  Dire units, not the color of the player",
+        "Remnants provide 500 radius flying vision at their location for its duration or until exploding",
+        "TALENT NOTES The damage increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not update already placed Static Remnants"
       ],
-      "mana": "3.5 (TagTalent 2.25)",
       "item_behaviour": [],
-      "name": "Static Remnant",
-      "cooldown": "70\/80\/90\/100",
       "description": "Creates an explosively charged image of Storm Spirit that lasts 12 seconds and will detonate and deal damage if an enemy unit comes near it.",
       "hot_key": "Q",
       "params": [
@@ -27,91 +17,68 @@
         "Trigger Radius: 235",
         "Damage Radius: 260",
         "Activation Delay: 1",
-        "Damage: 120\/180\/240\/300 ( 170\/230\/290\/350)",
+        "Damage: 120\/180\/240\/300 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 170\/230\/290\/350)",
         "Remnant Duration: 12"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Storm_Spirit_Static_Remnant_1.mp3\/revision\/latest?cb=20191216024539",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "3.5 (TagTalent 2.25)",
+      "aghanim": null,
+      "name": "Static Remnant",
+      "cooldown": "70\/80\/90\/100",
       "legacy_key": "R",
       "story": "Raijin Thunderkeg's duality allowed him to admire himself in shocking fashion."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Storm_Spirit_Electric_Vortex.mp3\/revision\/latest?cb=20191216024545",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies \/ Self"
-      ],
       "notes": [
-        "Electric Vortex pulls affected units at a speed of 128.57\/122.22\/118.18\/115.38 (TagTalent 100).",
-        "If the affected unit gets affected by another source of horizontal forced movement, it stops pulling and continues as soon as the other source expires. This means, unlike other forced movement effects, Electric Vortex is not canceled by them but is temporarily stopped instead.",
-        "This means, unlike other forced movement effects, Electric Vortex is not canceled by them but is temporarily stopped instead.",
-        "If the target gets moved more than 1200 range away from the original cast location, the link breaks immediately.",
-        "Successive casts on the same target refresh the pull duration, and reset the pull distance, but do not update the pull location.",
-        "SCEPTER NOTES Electric Vortex now turns into a non-targetable ability affecting all enemy units within 475 radius. Does not target invisible, invulnerable or hidden units or units in the Fog of War within the radius. Still triggers Overload upon cast while no enemies are within range.",
-        "Does not target invisible, invulnerable or hidden units or units in the Fog of War within the radius.",
-        "Still triggers Overload upon cast while no enemies are within range."
+        "Electric Vortex pulls affected units at a speed of 128.57\/122.22\/118.18\/115.38 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 100)",
+        "If the affected unit gets affected by another source of horizontal forced movement, it stops pulling and continues as soon as the other source expires. This means, unlike other forced movement effects, Electric Vortex is not canceled by them but is temporarily stopped instead",
+        "If the target gets moved more than 1200 range away from the original cast location, the link breaks immediately",
+        "Successive casts on the same target refresh the pull duration, and reset the pull distance, but do not update the pull location",
+        "SCEPTER NOTES Electric Vortex now turns into a non-targetable ability affecting all enemy units within 475 radius. Does not target invisible, invulnerable or hidden units or units in the Fog of War within the radius. Still triggers  Overload upon cast while no enemies are within range"
       ],
-      "mana": "20\/18\/16\/14",
       "item_behaviour": [],
-      "name": "Electric Vortex",
-      "cooldown": "60\/70\/80\/90",
       "description": "A vortex that pulls an enemy unit to Storm Spirit's location.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.77",
         "Cast Range:  300 ( 0)",
-        "Pull Duration: 1.4\/1.8\/2.2\/2.6 ( 1.8\/2.2\/2.6\/3)",
+        "Pull Duration: 1.4\/1.8\/2.2\/2.6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1.8\/2.2\/2.6\/3)",
         "Pull Distance: 180\/220\/260\/300",
-        "Radius: 475"
+        "Radius:  475"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Storm_Spirit_Electric_Vortex.mp3\/revision\/latest?cb=20191216024545",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self"
+      ],
+      "mana": "20\/18\/16\/14",
+      "aghanim": null,
+      "name": "Electric Vortex",
+      "cooldown": "60\/70\/80\/90",
       "legacy_key": "E",
       "story": "Raijin's thunderous, boisterous energy often draws others into an electrifying situation."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Storm_Spirit_Overload.mp3\/revision\/latest?cb=20191216024538",
-      "effects": [
-        "Ability: Passive",
-        "Affects: Enemies ",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities that do not trigger on-cast effects.",
-        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
-        "This means it is not affected or considered by anything that works with attack damage.",
-        "This also means that it fully works with spell damage amplification and spell lifesteal.",
-        "The slow and damage are applied to all enemy units within the radius around the attacked target. On the primary target, the attack first applies the debuff, then its own damage. On secondary targets, it first applies the damage, then the debuff.",
-        "On the primary target, the attack first applies the debuff, then its own damage.",
-        "On secondary targets, it first applies the damage, then the debuff.",
-        "The charge is released upon successfully hitting a target. If the attack misses or is disjointed, nothing happens.",
-        "Each attack checks for the buff on Storm Spirit upon successfully hitting the target. If the buff is present, the charge is released. This means when Storm Spirit gains the buff while an attack projectile is flying, that attack still releases the charge when it hits.",
-        "This means when Storm Spirit gains the buff while an attack projectile is flying, that attack still releases the charge when it hits.",
-        "Attacking buildings or allies do not release the charge. However, attacking wards does.",
-        "SHARD NOTES Adds an active component to Overload, with the passive effects still present. Interrupts Storm Spirit's channeling abilities upon cast. Triggers Overload upon cast as well, and fully stack with it on the same attack. The buff is only placed on ally heroes. Neither places the buff on invulnerable nor hidden units. Treats clones and creep-heroes as heroes, and illusions as creeps. Attacking buildings now consumes a charge, but it does nothing.",
-        "Interrupts Storm Spirit's channeling abilities upon cast.",
-        "Triggers Overload upon cast as well, and fully stack with it on the same attack.",
-        "The buff is only placed on ally heroes. Neither places the buff on invulnerable nor hidden units. Treats clones and creep-heroes as heroes, and illusions as creeps.",
-        "Treats clones and creep-heroes as heroes, and illusions as creeps.",
-        "Attacking buildings now consumes a charge, but it does nothing.",
-        "SHARD NOTES The Overload values for the buff are set upon cast, and do not update if it gets leveled up after cast. The Overload effects applied by an ally are credited to that ally, and not to Storm Spirit. The bouncing Overload talent only works for Storm Spirit, and not for allies. Successive casts refresh the buff duration and reset the charges. The number of charges is visible on the buff icon.",
-        "The Overload effects applied by an ally are credited to that ally, and not to Storm Spirit.",
-        "The bouncing Overload talent only works for Storm Spirit, and not for allies.",
-        "Successive casts refresh the buff duration and reset the charges. The number of charges is visible on the buff icon.",
-        "TALENT NOTES Overload attack(s) now bounce toward the closest random enemy unit, without priorities, within 700 radius of the attack target. The bouncing projectiles travel at the same speed as the leading attack projectile and can be further increased by other attack projectile speed bonuses.",
-        "The bouncing projectiles travel at the same speed as the leading attack projectile and can be further increased by other attack projectile speed bonuses.",
-        "Does not perform instant attacks. The projectiles deal regular spell damage. This means they do not trigger any attack modifier or on-hit effects and ignore evasion. However, it is still affected by damage block sources and Bulwark, but not Resonant Pulse.",
-        "This means they do not trigger any attack modifier or on-hit effects and ignore evasion.",
-        "However, it is still affected by damage block sources and Bulwark, but not Resonant Pulse.",
-        "TALENT NOTES The Overload attack bounce damage has the following flags: No-spell-lifesteal flag, preventing their damage from utilizing spell lifesteal. No-spell-amplification flag, preventing their damage from being amplified with spell damage amplification.",
-        "No-spell-lifesteal flag, preventing their damage from utilizing spell lifesteal.",
-        "No-spell-amplification flag, preventing their damage from being amplified with spell damage amplification.",
-        "The bouncing projectiles deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. This means it works with critical strike and quell, since these are included in the initial damage calculations. This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit. It also means that other conditional attack damage bonuses (i.e. Javelin damage proc) are not included, since these happen later in the calculations as well. The bouncing projectiles all apply Ovearload's area damage and slow.",
-        "This means it works with critical strike and quell, since these are included in the initial damage calculations.",
-        "This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit.",
-        "It also means that other conditional attack damage bonuses (i.e. Javelin damage proc) are not included, since these happen later in the calculations as well.",
-        "The bouncing projectiles all apply Ovearload's area damage and slow."
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities that do not trigger on-cast effects",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal",
+        "The slow and damage are applied to all enemy units within the radius around the attacked target. On the primary target, the attack first applies the debuff, then its own damage. On secondary targets, it first applies the damage, then the debuff",
+        "The charge is released upon successfully hitting a target. If the attack misses or is disjointed, nothing happens",
+        "Each attack checks for the buff on Storm Spirit upon successfully hitting the target. If the buff is present, the charge is released. This means when Storm Spirit gains the buff while an attack projectile is flying, that attack still releases the charge when it hits",
+        "Attacking buildings or allies do not release the charge. However, attacking wards does",
+        "SHARD NOTES Adds an active component to Overload, with the passive effects still present. Interrupts Storm Spirit's channeling abilities upon cast. Triggers Overload upon cast as well, and fully stack with it on the same attack. The buff is only placed on ally heroes. Neither places the buff on invulnerable nor hidden units. Treats clones and creep-heroes as heroes, and illusions as creeps. Attacking buildings now consumes a charge, but it does nothing",
+        "SHARD NOTES The Overload values for the buff are set upon cast, and do not update if it gets leveled up after cast. The Overload effects applied by an ally are credited to that ally, and not to Storm Spirit. The bouncing Overload <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent only works for Storm Spirit, and not for allies. Successive casts refresh the buff duration and reset the charges. The number of charges is visible on the buff icon",
+        "TALENT NOTES Overload attack(s) now bounce toward the closest random enemy unit, without priorities, within 700 radius of the attack target. The bouncing projectiles travel at the same speed as the leading attack projectile and can be further increased by other attack projectile speed bonuses",
+        "Does not perform instant attacks. The projectiles deal regular spell damage. This means they do not trigger any attack modifier or on-hit effects and ignore evasion. However, it is still affected by damage block sources and  Bulwark, but not  Resonant Pulse",
+        "TALENT NOTES The Overload attack bounce damage has the following flags: No-spell-lifesteal flag, preventing their damage from utilizing spell lifesteal. No-spell-amplification flag, preventing their damage from being amplified with spell damage amplification",
+        "The bouncing projectiles deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. This means it works with critical strike and quell, since these are included in the initial damage calculations. This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit. It also means that other conditional attack damage bonuses (i.e.  Javelin damage proc) are not included, since these happen later in the calculations as well. The bouncing projectiles all apply Ovearload's area damage and slow"
       ],
-      "mana": "30",
       "item_behaviour": [],
-      "name": "Overload",
-      "cooldown": "150",
       "description": "Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies.",
       "hot_key": "E",
       "params": [
@@ -121,50 +88,40 @@
         "Move Speed Slow: 80%",
         "Attack Speed Slow: 80",
         "Slow Duration: 0.8",
-        "<span image=\"images\\Talent\"><\/span> Bounce Search Radius: 700",
-        "<span image=\"images\\Talent\"><\/span> Number of Bounces: 2",
-        "<span image=\"images\\Talent\"><\/span> Attack Damage as Bounce Damage: 75%",
-        "Active Radius: 750",
-        "Active Attack Speed Bonus: 40",
-        "Active Number of Overload Charges: 3",
-        "Active Duration: 12"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Bounce Search Radius:  700",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Number of Bounces:  2",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Attack Damage as Bounce Damage:  75%",
+        "Active Radius:  750",
+        "Active Attack Speed Bonus:  40",
+        "Active Number of Overload Charges:  3",
+        "Active Duration:  12"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Storm_Spirit_Overload.mp3\/revision\/latest?cb=20191216024538",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "30",
+      "aghanim": null,
+      "name": "Overload",
+      "cooldown": "150",
       "legacy_key": "V",
       "story": "Pow! Zip! Zap!"
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Storm_Spirit_Ball_Lightning.mp3\/revision\/latest?cb=20191216024543",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Self \/ Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Disjoints projectiles upon cast. ↓↓ Double-tapping automatically casts it on Storm Spirit's current location.",
-        "↓↓ Double-tapping automatically casts it on Storm Spirit's current location.",
-        "Storm Spirit is invulnerable and can turn, attack, and cast abilities during Ball Lightning.",
-        "Successive casts while traveling has no effect, but is still registered as cast, proccing on-cast effects. The activation mana cost gets refunded.",
-        "Destroys trees within 100 radius and provides 400 radius flying vision around Storm Spirit while traveling.",
-        "Ball Lightning deals damage around Storm Spirit as he travels. An enemy may only be damaged once per cast. The damage starts at 0 and increases by 8\/12\/16 for every 100 distance traveled. Ball Lightning deals 0 damage for distances less than 100 distance. Fully procs on damage effects, such as Corrosive Skin, except for abilities which have a minimum damage threshold (e.g. Gravekeeper's Cloak).",
-        "The damage starts at 0 and increases by 8\/12\/16 for every 100 distance traveled.",
-        "Ball Lightning deals 0 damage for distances less than 100 distance. Fully procs on damage effects, such as Corrosive Skin, except for abilities which have a minimum damage threshold (e.g. Gravekeeper's Cloak).",
-        "Fully procs on damage effects, such as Corrosive Skin, except for abilities which have a minimum damage threshold (e.g. Gravekeeper's Cloak).",
-        "Drains Storm Spirit's mana after every 100 distance traveled, resulting in 0.07\/0.05\/0.04-second intervals. Ball Lightning stops immediately upon Storm Sprit's death, when running out of mana while traveling, when reaching its destination, and being affected by other forced movement sources.",
-        "Ball Lightning stops immediately upon Storm Sprit's death, when running out of mana while traveling, when reaching its destination, and being affected by other forced movement sources.",
-        "The mana cost displayed in the ability's tooltip is based on Storm Spirit's max mana, showing how much it costs to initially cast Ball Lightning.",
-        "This is how much damage Ball Lightning can deal around Storm Spirit at certain travel distances (before reductions): 500 Distance: 40\/60\/80 damage, 75 + 10.75% max mana. 1000 Distance: 80\/120\/160 damage, 125 + 14% max mana. 2500 Distance: 200\/300\/400 damage, 275 + 23.75% max mana. 5000 Distance: 400\/600\/800 damage, 525 + 40% max mana.",
-        "500 Distance: 40\/60\/80 damage, 75 + 10.75% max mana.",
-        "1000 Distance: 80\/120\/160 damage, 125 + 14% max mana.",
-        "2500 Distance: 200\/300\/400 damage, 275 + 23.75% max mana.",
-        "5000 Distance: 400\/600\/800 damage, 525 + 40% max mana.",
-        "",
-        "TALENT NOTES The auto remnant in Ball Lightning talent automatically creates a Static Remnant based on its current level every 500 distance Storm Spirit travels. These remnants created are independent from the cooldown, do not cost mana, and do not trigger on-cast effects.",
-        "These remnants created are independent from the cooldown, do not cost mana, and do not trigger on-cast effects."
+        "Disjoints projectiles upon cast. ↓↓ Double-tapping automatically casts it on Storm Spirit's current location",
+        "Storm Spirit is invulnerable and can turn, attack, and cast abilities during Ball Lightning",
+        "Successive casts while traveling has no effect, but is still registered as cast, proccing on-cast effects. The activation mana cost gets refunded",
+        "Destroys trees within 100 radius and provides 400 radius flying vision around Storm Spirit while traveling",
+        "Ball Lightning deals damage around Storm Spirit as he travels. An enemy may only be damaged once per cast. The damage starts at 0 and increases by 8\/12\/16 for every 100 distance traveled. Ball Lightning deals 0 damage for distances less than 100 distance. Fully procs on damage effects, such as  Corrosive Skin, except for abilities which have a minimum damage threshold (e.g.  Gravekeeper's Cloak)",
+        "Drains Storm Spirit's mana after every 100 distance traveled, resulting in 0.07\/0.05\/0.04-second intervals. Ball Lightning stops immediately upon Storm Sprit's death, when running out of mana while traveling, when reaching its destination, and being affected by other forced movement sources",
+        "The mana cost displayed in the ability's tooltip is based on Storm Spirit's max mana, showing how much it costs to initially cast Ball Lightning",
+        "This is how much damage Ball Lightning can deal around Storm Spirit at certain travel distances (before reductions): 500 Distance: 40\/60\/80 damage,  75 + 10.75% max mana. 1000 Distance: 80\/120\/160 damage,  125 + 14% max mana. 2500 Distance: 200\/300\/400 damage,  275 + 23.75% max mana. 5000 Distance: 400\/600\/800 damage,  525 + 40% max mana.",
+        "TALENT NOTES The auto remnant in Ball Lightning <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent automatically creates a  Static Remnant based on its current level every 500 distance Storm Spirit travels. These remnants created are independent from the cooldown, do not cost mana, and do not trigger on-cast effects"
       ],
-      "mana": "0",
       "item_behaviour": [],
-      "name": "Ball Lightning",
-      "cooldown": "25 + 7.5% of Max Mana",
       "description": "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 25+7.5% of his total mana pool, and the cost per 100 units traveled is 10+0.65% of his total mana pool. Damage is expressed in damage per 100 units traveled.",
       "hot_key": "R",
       "params": [
@@ -176,8 +133,18 @@
         "Self Moved Distance as Damage: 8\/12\/16",
         "Distance as Base Mana Cost: 10",
         "Distance as Max Mana Cost: 0.65%",
-        "<span image=\"images\\Talent\"><\/span> Auto Static Remnant Drop Distance: 500"
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Auto Static Remnant Drop Distance:  500"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Storm_Spirit_Ball_Lightning.mp3\/revision\/latest?cb=20191216024543",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Ball Lightning",
+      "cooldown": "25 + 7.5% of Max Mana",
       "legacy_key": "G",
       "story": "The Storm is coming in."
     }

@@ -1,18 +1,20 @@
 package n7.ad2.ktx
 
+import android.text.Spannable
 import android.text.SpannableStringBuilder
 
 private const val SEPARATOR = "- "
 private const val COLON = ": "
 
-fun List<String>.toStringList(withSeparator: Boolean = false): String {
-    val builder = StringBuilder()
+
+fun List<CharSequence>.toStringList(withSeparator: Boolean = false): Spannable {
+    val builder = SpannableStringBuilder()
     forEachIndexed { index, text ->
         if (withSeparator) builder.append(SEPARATOR)
         builder.append(text)
         if (index != lastIndex) builder.append(System.lineSeparator())
     }
-    return builder.toString()
+    return builder
 }
 
 fun List<String>.toStringListWithDashAfterColon(): String {

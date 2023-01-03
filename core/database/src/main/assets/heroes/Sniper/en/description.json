@@ -1,32 +1,17 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Sniper_Shrapnel.mp3\/revision\/latest?cb=20191216024011",
-      "effects": [
-        "Ability: Target Area",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Sniper gets all 3 charges immediately upon learning Shrapnel. TALENT NOTES Acquiring the charges increasing talent immediately grants 6 charges.",
-        "TALENT NOTES Acquiring the charges increasing talent immediately grants 6 charges.",
-        "Shrapnel starts dealing damage, applying its movement speed slow and providing vision after the effect delay.",
-        "Provides 450 radius flying vision at the targeted area.",
-        "The damage and the slow are both provided by an aura and its debuff lingers for 0.5 seconds. Multiple overlapping instances of the aura do not stack.",
-        "Multiple overlapping instances of the aura do not stack.",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances. Can deal up to 275\/440\/605\/770 (TagTalent 539\/704\/869\/1034) damage to a single unit (before reductions).",
-        "Can deal up to 275\/440\/605\/770 (TagTalent 539\/704\/869\/1034) damage to a single unit (before reductions).",
-        "Does not affect buildings.",
-        "Leveling up Shrapnel immediately updates all already existing Shrapnel instances. However, the already placed debuffs on enemies do not update.",
-        "TALENT NOTES The slow increasing talent immediately updates all already existing Shrapnel instances as well. However, the already placed debuffs on enemies do not update either. The damage increasing talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies.",
-        "The slow increasing talent immediately updates all already existing Shrapnel instances as well. However, the already placed debuffs on enemies do not update either.",
-        "The damage increasing talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies.",
-        "SPELL STEAL Grants all 3 charges upon initially acquiring ability. Subsequent ability acquisition only grants the remaining charges."
+        "Sniper gets all 3 charges immediately upon learning Shrapnel. TALENT NOTES Acquiring the charges increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately grants 6 charges",
+        "Shrapnel starts dealing damage, applying its movement speed slow and providing vision after the effect delay",
+        "Provides 450 radius flying vision at the targeted area",
+        "The damage and the slow are both provided by an aura and its debuff lingers for 0.5 seconds. Multiple overlapping instances of the aura do not stack",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances. Can deal up to 275\/440\/605\/770 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 539\/704\/869\/1034) damage to a single unit (before reductions)",
+        "Does not affect buildings",
+        "Leveling up Shrapnel immediately updates all already existing Shrapnel instances. However, the already placed debuffs on enemies do not update",
+        "TALENT NOTES The slow increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately updates all already existing Shrapnel instances as well. However, the already placed debuffs on enemies do not update either. The damage increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies. SPELL STEAL Grants all 3 charges upon initially acquiring ability. Subsequent ability acquisition only grants the remaining charges"
       ],
-      "mana": "0",
       "item_behaviour": [],
-      "name": "Shrapnel",
-      "cooldown": "35",
       "description": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every seconds.",
       "hot_key": "Q",
       "params": [
@@ -34,73 +19,66 @@
         "Cast Range:  1800",
         "Effect Radius: 400",
         "Effect Delay: 1.2",
-        "Damage per Second: 25\/40\/55\/70 ( 49\/64\/79\/94)",
-        "Move Speed Slow: 12%\/18%\/24%\/30% ( 26%\/32%\/38%\/44%)",
+        "Damage per Second: 25\/40\/55\/70 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 49\/64\/79\/94)",
+        "Move Speed Slow: 12%\/18%\/24%\/30% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 26%\/32%\/38%\/44%)",
         "Shrapnel Duration: 10",
         "Aura Linger Duration: 0.5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Sniper_Shrapnel.mp3\/revision\/latest?cb=20191216024011",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Shrapnel",
+      "cooldown": "35",
       "legacy_key": "R",
       "story": "Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations."
     },
     {
+      "notes": [
+        "Headshot can miss",
+        "The proccing attack first applies the debuffs, then its own damage",
+        "The damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Sniper's attack damage. The attack damage bonus values are not considered by critical strike or cleave. However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+        "Adds an average of 8\/20\/32\/44 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 20\/32\/44\/56) damage to each attack",
+        "Sets the proc chance to 100% while  Take Aim is active. During Take Aim, it increases his attack damage output by 20\/50\/80\/110 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 50\/80\/110\/140). If is not leveled, or if the caster does not have Headshot, it is not applied",
+        "Cannot proc against wards and buildings, but can proc against allies",
+        "Upon proccing, Headshot knocks back the target, away from Sniper. The knockback does not interrupt channeling abilities. The knockback is not applied on units who are already affected by other sources of forced movement. Knocks units back at a speed of 100 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 380). Destroys trees within 100 radius enemies come in contact with during the knockback",
+        "Headshot uses pseudo-random distribution"
+      ],
+      "item_behaviour": [],
+      "description": "Sniper increases his accuracy, giving him a chance to deal extra damage and briefly knocks back his enemies. Headshots briefly slow enemy movement and attack speed slowed by -100%.",
+      "hot_key": "W",
+      "params": [
+        "Proc Chance: 40%",
+        "Damage: 20\/50\/80\/110 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 50\/80\/110\/140)",
+        "Move Speed Slow: 100%",
+        "Attack Speed Slow: 100",
+        "Knockback Distance: 10 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 38)",
+        "Slow Duration: 0.5",
+        "Knockback Duration: 0.1"
+      ],
       "audioUrl": "",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies",
         "Damage: Physical"
       ],
-      "notes": [
-        "Headshot can miss.",
-        "The proccing attack first applies the debuffs, then its own damage.",
-        "The damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Sniper's attack damage. The attack damage bonus values are not considered by critical strike or cleave. However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Sniper's attack damage.",
-        "The attack damage bonus values are not considered by critical strike or cleave.",
-        "However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g. damage block).",
-        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "Adds an average of 8\/20\/32\/44 (TagTalent 20\/32\/44\/56) damage to each attack.",
-        "Sets the proc chance to 100% while Take Aim is active. During Take Aim, it increases his attack damage output by 20\/50\/80\/110 (TagTalent 50\/80\/110\/140). If is not leveled, or if the caster does not have Headshot, it is not applied.",
-        "During Take Aim, it increases his attack damage output by 20\/50\/80\/110 (TagTalent 50\/80\/110\/140).",
-        "If is not leveled, or if the caster does not have Headshot, it is not applied.",
-        "Cannot proc against wards and buildings, but can proc against allies.",
-        "Upon proccing, Headshot knocks back the target, away from Sniper. The knockback does not interrupt channeling abilities. The knockback is not applied on units who are already affected by other sources of forced movement. Knocks units back at a speed of 100 (TagTalent 380). Destroys trees within 100 radius enemies come in contact with during the knockback.",
-        "The knockback does not interrupt channeling abilities.",
-        "The knockback is not applied on units who are already affected by other sources of forced movement.",
-        "Knocks units back at a speed of 100 (TagTalent 380).",
-        "Destroys trees within 100 radius enemies come in contact with during the knockback.",
-        "Headshot uses pseudo-random distribution."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Headshot",
       "cooldown": null,
-      "description": "Sniper increases his accuracy, giving him a chance to deal extra damage and briefly knocks back his enemies. Headshots briefly slow enemy movement and attack speed slowed by -100%.",
-      "hot_key": "W",
-      "params": [
-        "Proc Chance: 40%",
-        "Damage: 20\/50\/80\/110 ( 50\/80\/110\/140)",
-        "Move Speed Slow: 100%",
-        "Attack Speed Slow: 100",
-        "Knockback Distance: 10 ( 38)",
-        "Slow Duration: 0.5",
-        "Knockback Duration: 0.1"
-      ],
       "legacy_key": "D",
       "story": "Taking potshots at steepstalkers in his childhood has been thoroughly refined into perfect leads on enemy combatants."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Sniper_Take_Aim.mp3\/revision\/latest?cb=20210828223317",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self"
-      ],
       "notes": [
-        "Interrupts Sniper's channeling abilities upon cast.",
-        "Passively increases Sniper's total attack range to 650\/750\/850\/950 (TagTalent 750\/850\/950\/1050)."
+        "Interrupts Sniper's channeling abilities upon cast",
+        "Passively increases Sniper's total attack range to 650\/750\/850\/950 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 750\/850\/950\/1050)"
       ],
-      "mana": "20\/18\/16\/14",
       "item_behaviour": [],
-      "name": "Take Aim",
-      "cooldown": "50",
       "description": "Extends the attack range of Sniper's rifle. Can be activated to provide 100% Headshot chance. Slows you by 45%\/40%\/35%\/30% for the duration.",
       "hot_key": "E",
       "params": [
@@ -108,40 +86,32 @@
         "Passive Attack Range Bonus: 100\/200\/300\/400",
         "Active Self Move Speed Slow: 45%\/40%\/35%\/30%",
         "Active Set Headshot Proc Chance: 100%",
-        "Active Duration: 3 ( 4)"
+        "Active Duration: 3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 4)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Sniper_Take_Aim.mp3\/revision\/latest?cb=20210828223317",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "20\/18\/16\/14",
+      "aghanim": null,
+      "name": "Take Aim",
+      "cooldown": "50",
       "legacy_key": "E",
       "story": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Sniper_Concussive_Grenade_1.mp3\/revision\/latest?cb=20210103153442",
-      "effects": [
-        "Ability: Target Area",
-        "Affects: Self \/ Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "The grenade travels at a speed of 2500 until reaching the targeted point. The projectile has 200 radius flying vision. This vision does not last.",
-        "The projectile has 200 radius flying vision. This vision does not last.",
-        "Knocks Sniper and enemies within the radius away from the targeted point at a speed of 1187.5 upon cast. The knockback distance is always 475, no matter how far the unit is from the center. Also knocks Sniper and the affected enemies 100 range upwards, resulting in a small arc. Can push units over impassable terrain. Destroys trees any unit comes in contact with during the knockback.",
-        "The knockback distance is always 475, no matter how far the unit is from the center.",
-        "Also knocks Sniper and the affected enemies 100 range upwards, resulting in a small arc.",
-        "Can push units over impassable terrain. Destroys trees any unit comes in contact with during the knockback.",
-        "Affected enemies are fully disabled during the knockback. Although Sniper is affected by the knockback, he is not disabled.",
-        "Although Sniper is affected by the knockback, he is not disabled.",
-        "Although not mentioned in the tooltip, enemies are also disarmed, on top of being slowed.",
-        "Concussive Grenade first applies the debuff, then the knockback, then the damage.",
-        "Concussive Grenade cancels most position-changing effects.",
-        "Affects units that are currently being affected by horizontal forced movement. Does not affect units that are currently being affected by upward movement. The 3 notes above also apply to the caster.",
-        "Does not affect units that are currently being affected by upward movement.",
-        "The 3 notes above also apply to the caster.",
-        "Does not affect Roshan."
+        "Requires  Aghanim's Shard to be unlocked",
+        "The grenade travels at a speed of 2500 until reaching the targeted point. The projectile has 200 radius flying vision. This vision does not last",
+        "Knocks Sniper and enemies within the radius away from the targeted point at a speed of 1187.5 upon cast. The knockback distance is always 475, no matter how far the unit is from the center. Also knocks Sniper and the affected enemies 100 range upwards, resulting in a small arc. Can push units over impassable terrain. Destroys trees any unit comes in contact with during the knockback",
+        "Affected enemies are fully disabled during the knockback. Although Sniper is affected by the knockback, he is not disabled",
+        "Although not mentioned in the tooltip, enemies are also disarmed, on top of being slowed",
+        "Concussive Grenade first applies the debuff, then the knockback, then the damage",
+        "Concussive Grenade cancels most position-changing effects. Affects units that are currently being affected by horizontal forced movement. Does not affect units that are currently being affected by upward movement. The 3 notes above also apply to the caster",
+        "Does not affect  Roshan"
       ],
-      "mana": "10",
       "item_behaviour": [],
-      "name": "Concussive Grenade",
-      "cooldown": "50",
       "description": "Launches a grenade at the target area, dealing damage to enemies and knocking them and Sniper himself back. Enemies affected have their movement slowed after the knockback.",
       "hot_key": "D",
       "params": [
@@ -154,40 +124,32 @@
         "Move Speed Slow: 50%",
         "Debuff Duration: 3"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Sniper_Concussive_Grenade_1.mp3\/revision\/latest?cb=20210103153442",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Self \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "10",
+      "aghanim": null,
+      "name": "Concussive Grenade",
+      "cooldown": "50",
       "legacy_key": "C",
       "story": null
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Sniper_Assassinate_1.mp3\/revision\/latest?cb=20191216024003",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The projectile travels at a speed of 2500.",
-        "Assassinate first applies the damage, then the stun debuff.",
-        "Although the stun duration is set to 0.01 seconds, it lasts 0.033 seconds due to the server tick rate limit.",
-        "Assassinate places a debuff on the target as soon as Sniper begins casting. The debuff lasts 4 seconds, or until the projectile lands, or the cast gets canceled. Grants shared vision with the targeted unit. Does not provide any vision when targeting neutral creeps. Also, it grants True Sight over the target, meaning it cannot be canceled or be disjointed with invisibility without True Sight immunity. The debuff is visible to everyone. The crosshair above the target is visible to allies only.",
-        "The debuff lasts 4 seconds, or until the projectile lands, or the cast gets canceled.",
-        "Grants shared vision with the targeted unit. Does not provide any vision when targeting neutral creeps.",
-        "Also, it grants True Sight over the target, meaning it cannot be canceled or be disjointed with invisibility without True Sight immunity.",
-        "The debuff is visible to everyone. The crosshair above the target is visible to allies only.",
-        "Can directly target invulnerable units, and does not get canceled if the target turns invulnerable during the cast time. The vision debuff is not placed when targeting an invulnerable unit but stays if the unit turned invulnerable during the cast time. The projectile does not affect the target if it is still invulnerable on impact.",
-        "The vision debuff is not placed when targeting an invulnerable unit but stays if the unit turned invulnerable during the cast time.",
-        "The projectile does not affect the target if it is still invulnerable on impact.",
-        "Cannot target hidden units and gets canceled when the target turns hidden.",
-        "Assassinate has an increased cast range buffer of 600, instead of using the default 250. This means once the cast animation begins, the target has to move at least 3600 range away from Sniper to be considered out of range.",
-        "This means once the cast animation begins, the target has to move at least 3600 range away from Sniper to be considered out of range.",
-        "The initial weapon loading sound during the cast time is audible to Sniper only.",
-        "SCEPTER NOTES Acquiring Aghanim's Scepter immediately updates all current projectiles.",
-        "SPELL STEAL This ability's and its Ability Upgrade's cast point is not modified when acquired.",
-        "SOULBIND Fires a projectile at the primary target after the cast animation, then another projectile is fired instantly on the secondary target."
+        "The projectile travels at a speed of 2500",
+        "Assassinate first applies the damage, then the stun debuff",
+        "Although the stun duration is set to 0.01 seconds, it lasts 0.033 seconds due to the server tick rate limit",
+        "Assassinate places a debuff on the target as soon as Sniper begins casting. The debuff lasts 4 seconds, or until the projectile lands, or the cast gets canceled. Grants shared vision with the targeted unit. Does not provide any vision when targeting neutral creeps. Also, it grants True Sight over the target, meaning it cannot be canceled or be disjointed with invisibility without True Sight immunity. The debuff is visible to everyone. The crosshair above the target is visible to allies only",
+        "Can directly target invulnerable units, and does not get canceled if the target turns invulnerable during the cast time. The vision debuff is not placed when targeting an invulnerable unit but stays if the unit turned invulnerable during the cast time. The projectile does not affect the target if it is still invulnerable on impact",
+        "Cannot target hidden units and gets canceled when the target turns hidden",
+        "Assassinate has an increased cast range buffer of 600, instead of using the default 250. This means once the cast animation begins, the target has to move at least 3600 range away from Sniper to be considered out of range",
+        "The initial weapon loading sound during the cast time is audible to Sniper only",
+        "SCEPTER NOTES Acquiring  Aghanim's Scepter immediately updates all current projectiles. SPELL STEAL This ability's and its  Ability Upgrade's cast point is not modified when acquired. SOULBIND Fires a projectile at the primary target after the cast animation, then another projectile is fired instantly on the secondary target"
       ],
-      "mana": "20\/15\/10",
       "item_behaviour": [],
-      "name": "Assassinate",
-      "cooldown": "175\/225\/275",
       "description": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.",
       "hot_key": "R",
       "params": [
@@ -198,6 +160,16 @@
         "Stun Duration: 0.01 ( 1\/1.25\/1.5)",
         "Vision Buff Max Duration: 4"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Sniper_Assassinate_1.mp3\/revision\/latest?cb=20191216024003",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "20\/15\/10",
+      "aghanim": null,
+      "name": "Assassinate",
+      "cooldown": "175\/225\/275",
       "legacy_key": "T",
       "story": "In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test."
     }

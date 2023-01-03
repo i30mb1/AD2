@@ -1,176 +1,160 @@
 {
   "abilities": [
     {
+      "notes": [
+        "Deals 14\/20\/26\/32 extra damage + 0.5%\/0.9%\/1.3%\/1.7% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.8%\/1.2%\/1.6%\/2%) of the target's max mana as damage (before reductions)",
+        "Burned mana as damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Anti-Mage's attack damage. The attack damage bonus values are not considered by critical strike. However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+        "Illusions burn a reduced amount of 14\/20\/26\/32 mana + 0.5%\/0.9%\/1.3%\/1.7% max mana per hit. Illusions also deal a reduced amount of bonus damage; 7\/10\/13\/16 extra damage + 0.25%\/0.45%\/0.65%\/0.85% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.4%\/0.6%\/0.8%\/1%) of the target's max mana as damage (before reductions)",
+        "Applies the mana loss first, and then the damage, and then, if the target has no mana left, the slow debuff",
+        "Does not work against allied units when attacking them",
+        "Fully stacks with other Mana Break sources"
+      ],
+      "item_behaviour": [],
+      "description": "Burns an opponent's mana on each attack and deals damage equal to a percentage of the mana burnt. Enemies with no mana left are temporarily slowed.",
+      "hot_key": "Q",
+      "params": [
+        "Mana Burned per Hit: 28\/40\/52\/64",
+        "Max Mana Burned per Hit: 1%\/1.8%\/2.6%\/3.4% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1.6%\/2.4%\/3.2%\/4%)",
+        "Burned Mana as Damage: 50%",
+        "Illusion Percentage: 50%",
+        "Move Speed Slow on Full Drain: 25%\/30%\/35%\/40%",
+        "Slow Duration: 0.75"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Anti-Mage_Mana_Break.mp3\/revision\/latest?cb=20191216010736",
       "effects": [
         "Ability: Passive",
         "Affects: Enemies",
         "Damage: Physical"
       ],
-      "notes": [
-        "Deals 14\/20\/26\/32 extra damage + 0.5%\/0.9%\/1.3%\/1.7% (TagTalent 0.8%\/1.2%\/1.6%\/2%) of the target's max mana as damage (before reductions).",
-        "Burned mana as damage is considered as a conditional attack damage bonus. Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Anti-Mage's attack damage. The attack damage bonus values are not considered by critical strike. However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block). Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Anti-Mage's attack damage.",
-        "The attack damage bonus values are not considered by critical strike.",
-        "However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g. damage block).",
-        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "Illusions burn a reduced amount of 14\/20\/26\/32 mana + 0.5%\/0.9%\/1.3%\/1.7% max mana per hit. Illusions also deal a reduced amount of bonus damage; 7\/10\/13\/16 extra damage + 0.25%\/0.45%\/0.65%\/0.85% (TagTalent 0.4%\/0.6%\/0.8%\/1%) of the target's max mana as damage (before reductions)",
-        "Illusions also deal a reduced amount of bonus damage; 7\/10\/13\/16 extra damage + 0.25%\/0.45%\/0.65%\/0.85% (TagTalent 0.4%\/0.6%\/0.8%\/1%) of the target's max mana as damage (before reductions)",
-        "Applies the mana loss first, and then the damage, and then, if the target has no mana left, the slow debuff.",
-        "Does not work against allied units when attacking them.",
-        "Fully stacks with other Mana Break sources."
-      ],
       "mana": null,
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Mana Break",
       "cooldown": null,
-      "description": "Burns an opponent's mana on each attack and deals damage equal to a percentage of the mana burnt. Enemies with no mana left are temporarily slowed.",
-      "hot_key": "Q",
-      "params": [
-        "Mana Burned per Hit: 28\/40\/52\/64",
-        "Max Mana Burned per Hit: 1%\/1.8%\/2.6%\/3.4% ( 1.6%\/2.4%\/3.2%\/4%)",
-        "Burned Mana as Damage: 50%",
-        "Illusion Percentage: 50%",
-        "Move Speed Slow on Full Drain: 25%\/30%\/35%\/40%",
-        "Slow Duration: 0.75"
-      ],
       "legacy_key": "R",
       "story": "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Anti-Mage_Blink_1.mp3\/revision\/latest?cb=20191216010740",
-      "effects": [
-        "Ability: Target Point",
-        "Affects: Self"
-      ],
       "notes": [
-        "Blink disjoints projectiles upon cast.",
-        "Attempting to blink less than the min distance will blink for 200 range instead.",
-        "Does not blink for the full distance when targeting closer than the max distance. When targeting beyond the max blink distance, Anti-Mage blinks for the max distance towards the targeted point.",
-        "When targeting beyond the max blink distance, Anti-Mage blinks for the max distance towards the targeted point."
+        "Blink disjoints projectiles upon cast",
+        "Attempting to blink less than the min distance will blink for 200 range instead",
+        "Does not blink for the full distance when targeting closer than the max distance. When targeting beyond the max blink distance, Anti-Mage blinks for the max distance towards the targeted point"
       ],
-      "mana": "12\/10\/8\/6 (TagTalent 11\/9\/7\/5)",
       "item_behaviour": [],
-      "name": "Blink",
-      "cooldown": "45",
       "description": "Short distance teleportation that allows Anti-Mage to move in and out of combat.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.53",
         "Cast Range: Global",
         "Min Blink Distance: 200",
-        "Max Blink Distance:  750\/900\/1050\/1200 ( 1000\/1150\/1300\/1450)"
+        "Max Blink Distance:  750\/900\/1050\/1200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1000\/1150\/1300\/1450)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Anti-Mage_Blink_1.mp3\/revision\/latest?cb=20191216010740",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self"
+      ],
+      "mana": "12\/10\/8\/6 (TagTalent 11\/9\/7\/5)",
+      "aghanim": null,
+      "name": "Blink",
+      "cooldown": "45",
       "legacy_key": "B",
       "story": "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive."
     },
     {
+      "notes": [
+        "Interrupts Anti-Mage's channeling abilities on cast",
+        "Stacks multiplicatively with other sources of magic resistance",
+        "Increases Anti-Mage's total magic resistance to 36.25%\/43.75%\/51.25%\/58.75% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 51.25%\/58.75%\/66.25%\/73.75%)",
+        "There is no limit to how many unit-targeted abilities that can be blocked and reflected while active. Counterspell has the highest priority of all Spell Block and Spell Reflection abilities, which causes  Linken's Sphere,  Lotus Orb,  Mirror Shield and an allied  Planar Pocket to not trigger for Anti-Mage while Counterspell is active. However, unlike other spell reflection sources, Counterspell does not reflect  Phantom Strike and  Blink Strike. They do get blocked still. Does not stack with  Soulbind, preventing it from duplicating spells onto a chained ally",
+        "SHARD NOTES Counterspell now provides two auras. Both auras linger for 0.5 seconds. The first aura has a radius of 900 and reduces enemy spell damage by 10%. The second aura has a radius of 300 and increases the spell damage reduction of the first aura to 30%. Applies generic outgoing damage reduction on enemies within range. Stacks additively with other sources of generic outgoing damage manipulation. The reduction affects only spell damage enemies deal that is not flagged as HP removal. Fully affects enemies who do not have vision over Anti-Mage despite the debuff not being visible on their HUD"
+      ],
+      "item_behaviour": [],
+      "description": "Passively grants you magic resistance. Can be activated to create an anti-magic shell around you that sends any targeted spells back towards enemies instead of affecting you.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0+0",
+        "Magic Resistance Bonus: 15%\/25%\/35%\/45% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 35%\/45%\/55%\/65%)",
+        "Shield Duration: 1.2",
+        "Aura Far Radius:  900",
+        "Aura Close Radius:  300",
+        "Far Outgoing Spell Damage Reduction:  10%",
+        "Close Outgoing Spell Damage Reduction:  20%",
+        "Aura Linger Duration:  0.5"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Anti-Mage_Counterspell_1.mp3\/revision\/latest?cb=20191216010734",
       "effects": [
         "Ability: No Target",
         "Affects: Self "
       ],
-      "notes": [
-        "Interrupts Anti-Mage's channeling abilities on cast.",
-        "Stacks multiplicatively with other sources of magic resistance.",
-        "Increases Anti-Mage's total magic resistance to 36.25%\/43.75%\/51.25%\/58.75% (TagTalent 51.25%\/58.75%\/66.25%\/73.75%).",
-        "There is no limit to how many unit-targeted abilities that can be blocked and reflected while active. Counterspell has the highest priority of all Spell Block and Spell Reflection abilities, which causes Linken's Sphere, Lotus Orb, Mirror Shield and an allied Planar Pocket to not trigger for Anti-Mage while Counterspell is active. However, unlike other spell reflection sources, Counterspell does not reflect Phantom Strike and Blink Strike. They do get blocked still. Does not stack with Soulbind, preventing it from duplicating spells onto a chained ally.",
-        "Counterspell has the highest priority of all Spell Block and Spell Reflection abilities, which causes Linken's Sphere, Lotus Orb, Mirror Shield and an allied Planar Pocket to not trigger for Anti-Mage while Counterspell is active.",
-        "However, unlike other spell reflection sources, Counterspell does not reflect Phantom Strike and Blink Strike. They do get blocked still.",
-        "Does not stack with Soulbind, preventing it from duplicating spells onto a chained ally.",
-        "SHARD NOTES Counterspell now provides two auras. Both auras linger for 0.5 seconds. The first aura has a radius of 900 and reduces enemy spell damage by 10%. The second aura has a radius of 300 and increases the spell damage reduction of the first aura to 30%. Applies generic outgoing damage reduction on enemies within range. Stacks additively with other sources of generic outgoing damage manipulation. The reduction affects only spell damage enemies deal that is not flagged as HP removal. Fully affects enemies who do not have vision over Anti-Mage despite the debuff not being visible on their HUD.",
-        "The first aura has a radius of 900 and reduces enemy spell damage by 10%.",
-        "The second aura has a radius of 300 and increases the spell damage reduction of the first aura to 30%.",
-        "Applies generic outgoing damage reduction on enemies within range. Stacks additively with other sources of generic outgoing damage manipulation.",
-        "The reduction affects only spell damage enemies deal that is not flagged as HP removal.",
-        "Fully affects enemies who do not have vision over Anti-Mage despite the debuff not being visible on their HUD."
-      ],
       "mana": "15\/11\/7\/3",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Counterspell",
       "cooldown": "45",
-      "description": "Passively grants you magic resistance. Can be activated to create an anti-magic shell around you that sends any targeted spells back towards enemies instead of affecting you.",
-      "hot_key": "E",
-      "params": [
-        "Cast Animation: 0+0",
-        "Magic Resistance Bonus: 15%\/25%\/35%\/45% ( 35%\/45%\/55%\/65%)",
-        "Shield Duration: 1.2",
-        "Aura Far Radius: 900",
-        "Aura Close Radius: 300",
-        "Far Outgoing Spell Damage Reduction: 10%",
-        "Close Outgoing Spell Damage Reduction: 20%",
-        "Aura Linger Duration: 0.5"
-      ],
       "legacy_key": "C",
       "story": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation."
     },
     {
+      "notes": [
+        "Requires  Aghanim's Scepter to be unlocked",
+        "The cast range of this ability is equal to  Blink's max travel distance. If Blink is not learned, Blink Fragment will have 750 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1000) cast range by default",
+        "The illusion is created facing the same direction as the caster, along with Blink's ability particles, sounds and animations",
+        "The illusion cannot act and is uncontrollable. However, it is not invulnerable and can be attacked and killed normally. The illusion is permanently phased. The illusion has a EXPR 2 * IllusionLVL bounty",
+        "When targeting an enemy, the illusion attacks that enemy",
+        "When ground-targeted, the illusion relies on ◉ Standard auto-attack rules. The illusion ignores the player's auto-attack settings and is always in auto-attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed",
+        "When ground-targeted, the illusion spawns at different distances depending on the caster and target's collision size as follows: The illusion spawns 58 range away from the target if both the caster and target have a collision size of 8. The illusion spawns 87 range away from the target if either the caster or the target has a collision size of 24",
+        "Counterspell is cast simultaneously by the illusion whenever Anti-Mage casts it"
+      ],
+      "item_behaviour": [],
+      "description": "Blinks an illusion at the target enemy or location and attack for a brief time. Counterspell is replicated on the Blink Fragment illusion. Has Charges",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.2+0.84",
+        "Cast Range:  750\/900\/1050\/1200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1000\/1150\/1300\/1450)",
+        "Illusion Damage Dealt: 75%",
+        "Illusion Damage Taken: 200%",
+        "Illusion Duration: 7"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Anti-Mage_Blink_Fragment_1.mp3\/revision\/latest?cb=20201220204524",
       "effects": [
         "Ability: Target Point",
         "Affects: Enemies"
       ],
-      "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
-        "The cast range of this ability is equal to Blink's max travel distance. If Blink is not learned, Blink Fragment will have 750 (TagTalent 1000) cast range by default.",
-        "If Blink is not learned, Blink Fragment will have 750 (TagTalent 1000) cast range by default.",
-        "The illusion is created facing the same direction as the caster, along with Blink's ability particles, sounds and animations.",
-        "The illusion cannot act and is uncontrollable. However, it is not invulnerable and can be attacked and killed normally. The illusion is permanently phased. The illusion has a EXPR 2 * IllusionLVL bounty.",
-        "The illusion is permanently phased.",
-        "The illusion has a EXPR 2 * IllusionLVL bounty.",
-        "When targeting an enemy, the illusion attacks that enemy.",
-        "When ground-targeted, the illusion relies on ◉ Standard auto-attack rules. The illusion ignores the player's auto-attack settings and is always in auto-attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
-        "The illusion ignores the player's auto-attack settings and is always in auto-attack mode.",
-        "When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
-        "When ground-targeted, the illusion spawns at different distances depending on the caster and target's collision size as follows: The illusion spawns 58 range away from the target if both the caster and target have a collision size of 8. The illusion spawns 87 range away from the target if either the caster or the target has a collision size of 24.",
-        "The illusion spawns 58 range away from the target if both the caster and target have a collision size of 8.",
-        "The illusion spawns 87 range away from the target if either the caster or the target has a collision size of 24.",
-        "Counterspell is cast simultaneously by the illusion whenever Anti-Mage casts it."
-      ],
       "mana": "",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Blink Fragment",
       "cooldown": "25",
-      "description": "Blinks an illusion at the target enemy or location and attack for a brief time. Counterspell is replicated on the Blink Fragment illusion. Has Charges",
-      "hot_key": "D",
-      "params": [
-        "Cast Animation: 0.2+0.84",
-        "Cast Range:  750\/900\/1050\/1200 ( 1000\/1150\/1300\/1450)",
-        "Illusion Damage Dealt: 75%",
-        "Illusion Damage Taken: 200%",
-        "Illusion Duration: 7"
-      ],
       "legacy_key": "F",
       "story": null
     },
     {
+      "notes": [
+        "The targeting reticule must be centered over an enemy unit",
+        "The damage is calculated based on the primary target's mana but applied to all enemies within the radius",
+        "Mana Void first applies the debuff, then the damage",
+        "Only the primary target gets stunned",
+        "Can be cast on units without a mana pool, applying the mini-stun only",
+        "Plays a sound effect during the cast time, which is audible to everyone"
+      ],
+      "item_behaviour": [],
+      "description": "For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies. The main target is also mini-stunned.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0.63",
+        "Cast Range:  600",
+        "Radius: 500 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 650)",
+        "Damage per Missing Mana: 0.8\/0.95\/1.1 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.9\/1.05\/1.2)",
+        "Stun Duration: 0.3"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Anti-Mage_Mana_Void.mp3\/revision\/latest?cb=20191216010737",
       "effects": [
         "Ability: Target Unit",
         "Affects: Enemies",
         "Damage: Magical"
       ],
-      "notes": [
-        "The targeting reticule must be centered over an enemy unit.",
-        "The damage is calculated based on the primary target's mana but applied to all enemies within the radius.",
-        "Mana Void first applies the debuff, then the damage.",
-        "Only the primary target gets stunned.",
-        "Can be cast on units without a mana pool, applying the mini-stun only.",
-        "Plays a sound effect during the cast time, which is audible to everyone."
-      ],
       "mana": "70 (TagTalent 20)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Mana Void",
       "cooldown": "100\/200\/300",
-      "description": "For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies. The main target is also mini-stunned.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0.3+0.63",
-        "Cast Range:  600",
-        "Radius: 500 ( 650)",
-        "Damage per Missing Mana: 0.8\/0.95\/1.1 ( 0.9\/1.05\/1.2)",
-        "Stun Duration: 0.3"
-      ],
       "legacy_key": "V",
       "story": "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts."
     }

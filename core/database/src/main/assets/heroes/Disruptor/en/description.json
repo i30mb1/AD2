@@ -1,79 +1,60 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Disruptor_Thunder_Strike.mp3\/revision\/latest?cb=20191216012436",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies ",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Turning invulnerable or hidden does not stop Thunder Strike from hitting other units and grants its bonuses within the radius.",
-        "Exposes the affected target, but does not provide True Sight over it.",
-        "The strikes first apply the slow debuff, then the damage.",
-        "The debuff persists through death. If the target dies, Thunder Strike continues to apply damage at its death location.",
-        "Strikes the target in 2-second intervals, starting immediately as the debuff is placed, resulting in 4 (TagTalent 7) strikes.",
-        "Can deal up to 140\/240\/340\/440 damage to a single unit (before reductions).",
-        "Provides 450 range flying vision for 3.34 seconds at the target's last location when the debuff expires or is removed.",
-        "Successive casts on the same unit do not stack but refresh the duration.",
-        "TALENT NOTES The damage increasing talent immediately upgrades all currently active instances. However, the number of strikes increasing talent does not update the current active instance. With the damage increasing talent, it can deal up to 260\/360\/460\/560 damage. With the number of strikes talent, it can deal up to 245\/420\/595\/770 damage. With both talents, it can deal up to 455\/630\/805\/980 damage.",
-        "However, the number of strikes increasing talent does not update the current active instance.",
-        "With the damage increasing talent, it can deal up to 260\/360\/460\/560 damage.",
-        "With the number of strikes talent, it can deal up to 245\/420\/595\/770 damage.",
-        "With both talents, it can deal up to 455\/630\/805\/980 damage.",
-        "SHARD NOTES Each strike now also buffs allies within the area, increasing their movement and attack speed. Acquiring Aghanim's Shard does not update the current active instance. Multiple instances of the buff do not stack but refresh the duration.",
-        "Acquiring Aghanim's Shard does not update the current active instance.",
-        "Multiple instances of the buff do not stack but refresh the duration."
+        "Turning invulnerable or hidden does not stop Thunder Strike from hitting other units and grants its bonuses within the radius",
+        "Exposes the affected target, but does not provide True Sight over it",
+        "The strikes first apply the slow debuff, then the damage",
+        "The debuff persists through death. If the target dies, Thunder Strike continues to apply damage at its death location",
+        "Strikes the target in 2-second intervals, starting immediately as the debuff is placed, resulting in 4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 7) strikes",
+        "Can deal up to 140\/240\/340\/440 damage to a single unit (before reductions)",
+        "Provides 450 range flying vision for 3.34 seconds at the target's last location when the debuff expires or is removed",
+        "Successive casts on the same unit do not stack but refresh the duration",
+        "TALENT NOTES The damage increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately upgrades all currently active instances. However, the number of strikes increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not update the current active instance. With the damage increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent, it can deal up to 260\/360\/460\/560 damage. With the number of strikes <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent, it can deal up to 245\/420\/595\/770 damage. With both <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talents, it can deal up to 455\/630\/805\/980 damage",
+        "SHARD NOTES Each strike now also buffs allies within the area, increasing their movement and attack speed. Acquiring  Aghanim's Shard does not update the current active instance. Multiple instances of the buff do not stack but refresh the duration"
       ],
-      "mana": "18\/15\/12\/9",
       "item_behaviour": [],
-      "name": "Thunder Strike",
-      "cooldown": "125\/130\/135\/140",
       "description": "Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a small radius and slows enemy movement speed and attack speed by 100 for 6 seconds. Provides vision of its target.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.05+0",
         "Cast Range:  800",
         "Radius: 240 ( 450)",
-        "Number of Strikes: 4 ( 7)",
-        "Damage per Strike: 35\/60\/85\/110 ( 65\/90\/115\/140)",
+        "Number of Strikes: 4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 7)",
+        "Damage per Strike: 35\/60\/85\/110 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 65\/90\/115\/140)",
         "Enemy Move Speed Slow: 100%",
         "Enemy Attack Speed Slow: 100",
         "Slow Duration: 0.1\/0.2\/0.3\/0.4",
-        "Thunder Strike Duration: 6 ( 12)",
-        "Ally Move Speed Bonus: 25%",
-        "Ally Attack Speed Bonus: 50",
-        "Ally Buff Duration: 1.5"
+        "Thunder Strike Duration: 6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 12)",
+        "Ally Move Speed Bonus:  25%",
+        "Ally Attack Speed Bonus:  50",
+        "Ally Buff Duration:  1.5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Disruptor_Thunder_Strike.mp3\/revision\/latest?cb=20191216012436",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "18\/15\/12\/9",
+      "aghanim": null,
+      "name": "Thunder Strike",
+      "cooldown": "125\/130\/135\/140",
       "legacy_key": "C",
       "story": "Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Disruptor_Glimpse.mp3\/revision\/latest?cb=20191216012442",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemy Heroes",
-        "Damage: Instant Kill"
-      ],
       "notes": [
-        "Glimpse does not instantly move the target back. A projectile spawns from the target which travels towards the mark. The projectile travels at a speed of 600, or reaches the mark in 1.8 seconds, whichever is faster. The projectile provides 400 range flying vision while traveling, which lingers for 3.34 seconds at the marked location.",
-        "The projectile travels at a speed of 600, or reaches the mark in 1.8 seconds, whichever is faster.",
-        "The projectile provides 400 range flying vision while traveling, which lingers for 3.34 seconds at the marked location.",
-        "If the target was dead for more than 4 seconds, the target gets moved to the team's fountain instead.",
-        "The location at which the target lands after Glimpse is marked with a blue visual effect which is visible to everyone.",
-        "Does not move spell immune or hidden units, but can move invulnerable units. Does not kill strong illusions. Following the general rule of position changing effects, it can cancel abilities like Time Walk or Ball Lightning.",
-        "Does not kill strong illusions.",
-        "Following the general rule of position changing effects, it can cancel abilities like Time Walk or Ball Lightning.",
-        "The target is silenced and is given a stop command as soon as it is moved back, effectively canceling channeling abilities.",
-        "Glimpse deals damage (before reductions) to the affected target upon arriving at the marked location. Deals 50 damage per 466.67\/350\/280\/233.33 (TagTalent 175\/155.56\/140\/127.27) distance, based on the distance between the start and end point upon arrival, reaching max damage values at 1400 distance.",
-        "Deals 50 damage per 466.67\/350\/280\/233.33 (TagTalent 175\/155.56\/140\/127.27) distance, based on the distance between the start and end point upon arrival, reaching max damage values at 1400 distance.",
-        "Does not disjoint projectiles for the target upon teleporting them.",
-        "Cannot be cast on creep-heroes."
+        "Glimpse does not instantly move the target back. A projectile spawns from the target which travels towards the mark. The projectile travels at a speed of 600, or reaches the mark in 1.8 seconds, whichever is faster. The projectile provides 400 range flying vision while traveling, which lingers for 3.34 seconds at the marked location",
+        "If the target was dead for more than 4 seconds, the target gets moved to the team's fountain instead",
+        "The location at which the target lands after Glimpse is marked with a blue visual effect which is visible to everyone",
+        "Does not move spell immune or hidden units, but can move invulnerable units. Does not kill strong illusions. Following the general rule of position changing effects, it can cancel abilities like  Time Walk or  Ball Lightning",
+        "The target is silenced and is given a stop command as soon as it is moved back, effectively canceling channeling abilities",
+        "Glimpse deals damage (before reductions) to the affected target upon arriving at the marked location. Deals 50 damage per 466.67\/350\/280\/233.33 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 175\/155.56\/140\/127.27) distance, based on the distance between the start and end point upon arrival, reaching max damage values at 1400 distance",
+        "Does not disjoint projectiles for the target upon teleporting them",
+        "Cannot be cast on creep-heroes"
       ],
-      "mana": "24\/22\/20\/18 (TagTalent 12\/10\/8\/6)",
       "item_behaviour": [],
-      "name": "Glimpse",
-      "cooldown": "70\/85\/100\/115",
       "description": "Teleports the target hero back to where it was 4 seconds ago. Instantly kills illusions.",
       "hot_key": "W",
       "params": [
@@ -83,39 +64,31 @@
         "Min Distance: 0",
         "Max Distance: 1400",
         "Min Damage: 50",
-        "Max Damage: 150\/200\/250\/300 ( 400\/450\/500\/550)"
+        "Max Damage: 150\/200\/250\/300 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 400\/450\/500\/550)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Disruptor_Glimpse.mp3\/revision\/latest?cb=20191216012442",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemy Heroes",
+        "Damage: Instant Kill"
+      ],
+      "mana": "24\/22\/20\/18 (TagTalent 12\/10\/8\/6)",
+      "aghanim": null,
+      "name": "Glimpse",
+      "cooldown": "70\/85\/100\/115",
       "legacy_key": "D",
       "story": "Playing with electricity can have unexpected results."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Disruptor_Kinetic_Field.mp3\/revision\/latest?cb=20191216012444",
-      "effects": [
-        "Ability: Target Area",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "The actual Kinetic Field duration starts right after the 1-second effect delay. The visual and sound effects during the effect delay are visible and audible to everyone.",
-        "The visual and sound effects during the effect delay are visible and audible to everyone.",
+        "The actual Kinetic Field duration starts right after the 1-second effect delay. The visual and sound effects during the effect delay are visible and audible to everyone",
         "Provides 350 range ground vision at the center of the area for 5.5 seconds upon cast",
-        "Stops enemies by slowing them with a movement speed slow aura. The aura has a radius of 418 and is centered on the field. The slow gets exponentially stronger towards the visible barrier, which has a 350 radius. This effectively causes enemy units touching the barrier to come to halt. The slow is only present when facing the barrier. Units at the barrier facing away from it are not slowed. The aura's effect lingers for 0.5 seconds, resulting in an effective duration of 3.1\/3.7\/4.3\/4.9 (TagTalent 5.1\/5.7\/6.3\/6.9) seconds. Since the slow is fluctuating a lot, it is not displayed in the HUD.",
-        "The slow gets exponentially stronger towards the visible barrier, which has a 350 radius.",
-        "This effectively causes enemy units touching the barrier to come to halt.",
-        "The slow is only present when facing the barrier. Units at the barrier facing away from it are not slowed.",
-        "The aura's effect lingers for 0.5 seconds, resulting in an effective duration of 3.1\/3.7\/4.3\/4.9 (TagTalent 5.1\/5.7\/6.3\/6.9) seconds.",
-        "Since the slow is fluctuating a lot, it is not displayed in the HUD.",
-        "Stops units with flying movement and units with unobstructed movement as well.",
-        "Besides preventing enemies from walking in or out of the area, the following movement abilities are unable to pass the barrier either: Jetpack, Starbreaker, Skewer, Rebound (initial dash), God's Rebuke, Leap, Primal Spring, Tree Dance, Sun Ray, Onslaught, Pounce, Firesnap Cookie, Arctic Burn, Force Staff and Hurricane Pike. The following units are not affected by abilities, however, they also cannot pass the barrier as well: Phantom, Healing Ward and Wraith Pact Totem.",
-        "Jetpack, Starbreaker, Skewer, Rebound (initial dash), God's Rebuke, Leap, Primal Spring, Tree Dance, Sun Ray, Onslaught, Pounce, Firesnap Cookie, Arctic Burn, Force Staff and Hurricane Pike.",
-        "The following units are not affected by abilities, however, they also cannot pass the barrier as well: Phantom, Healing Ward and Wraith Pact Totem.",
-        "Phantom, Healing Ward and Wraith Pact Totem.",
-        "Deals 0 damage to units affected by the slow modifier in 0.25-second intervals. Fully procs on-damage effects (e.g. Corrosive Skin), except for abilities that have a minimum damage threshold (e.g. Gravekeeper's Cloak).",
-        "Fully procs on-damage effects (e.g. Corrosive Skin), except for abilities that have a minimum damage threshold (e.g. Gravekeeper's Cloak)."
+        "Stops enemies by slowing them with a movement speed slow aura. The aura has a radius of 418 and is centered on the field. The slow gets exponentially stronger towards the visible barrier, which has a 350 radius. This effectively causes enemy units touching the barrier to come to halt. The slow is only present when facing the barrier. Units at the barrier facing away from it are not slowed. The aura's effect lingers for 0.5 seconds, resulting in an effective duration of 3.1\/3.7\/4.3\/4.9 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 5.1\/5.7\/6.3\/6.9) seconds. Since the slow is fluctuating a lot, it is not displayed in the HUD",
+        "Stops units with flying movement and units with unobstructed movement as well",
+        "Besides preventing enemies from walking in or out of the area, the following movement abilities are unable to pass the barrier either:  Jetpack,  Starbreaker,  Skewer,  Rebound (initial dash),  God's Rebuke,  Leap,  Primal Spring,  Tree Dance,  Sun Ray,  Onslaught,  Pounce,  Firesnap Cookie,  Arctic Burn,  Force Staff and  Hurricane Pike. The following units are not affected by abilities, however, they also cannot pass the barrier as well:  Phantom,  Healing Ward and  Wraith Pact Totem",
+        "Deals 0 damage to units affected by the slow modifier in 0.25-second intervals. Fully procs on-damage effects (e.g.  Corrosive Skin), except for abilities that have a minimum damage threshold (e.g.  Gravekeeper's Cloak)"
       ],
-      "mana": "19\/16\/13\/10 (TagTalent 16\/13\/10\/7)",
       "item_behaviour": [],
-      "name": "Kinetic Field",
-      "cooldown": "70",
       "description": "After a short formation time, creates a circular barrier of kinetic energy that enemies can't pass.",
       "hot_key": "E",
       "params": [
@@ -124,44 +97,50 @@
         "Field Radius: 350",
         "Effect Delay: 1",
         "Aura Linger Duration: 0.5",
-        "Duration: 2.6\/3.2\/3.8\/4.4 ( 4.6\/5.2\/5.8\/6.4)"
+        "Duration: 2.6\/3.2\/3.8\/4.4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 4.6\/5.2\/5.8\/6.4)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Disruptor_Kinetic_Field.mp3\/revision\/latest?cb=20191216012444",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies"
+      ],
+      "mana": "19\/16\/13\/10 (TagTalent 16\/13\/10\/7)",
+      "aghanim": null,
+      "name": "Kinetic Field",
+      "cooldown": "70",
       "legacy_key": "E",
       "story": "The stryder is immune to the gale-force winds that will consume its adversaries."
     },
     {
+      "notes": [
+        "The silence and mute is provided by an aura, its effects do not linger. Static Storm applies all effects to invulnerable units, but not hidden units. SCEPTER NOTES Does not update the current instance if the affected target is within the effect radius while acquiring the item. Since the ability upgrade is determined if Disruptor has  Aghanim's Scepter equipped when the affected target(s) are within the effect radius, therefore, the effect radius applies the mute upon enemies re-entering",
+        "Deals a total of 20 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 28) damage instances over 6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 8) seconds, resulting in 0.3-second (or <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 0.286-second) intervals",
+        "The damage on each instance is determined by the given max damage per second, divided by the max instance, then multiplied by the current instance count. Can deal up to 630\/866.25\/1102.5 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 870\/1196.25\/1522.5) damage to a single unit (before reductions)",
+        "Provides 500 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 700) range flying vision at the center of the area for 6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 8) seconds",
+        "For how much damage Static Storm deals in each interval on each level, with the duration increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent, please refer to the chart below"
+      ],
+      "item_behaviour": [],
+      "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but increases in power over the duration.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.05+0",
+        "Cast Range:  800",
+        "Storm Radius: 500 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 700)",
+        "Number of Pulses: 20 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 28)",
+        "Max Damage per Second: 200\/275\/350",
+        "Aura Linger Duration: 0",
+        "Duration: 6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 8)"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Disruptor_Static_Storm.mp3\/revision\/latest?cb=20191216012434",
       "effects": [
         "Ability: Target Area",
         "Affects: Enemies",
         "Damage: Magical"
       ],
-      "notes": [
-        "The silence and mute is provided by an aura, its effects do not linger. Static Storm applies all effects to invulnerable units, but not hidden units. SCEPTER NOTES Does not update the current instance if the affected target is within the effect radius while acquiring the item. Since the ability upgrade is determined if Disruptor has Aghanim's Scepter equipped when the affected target(s) are within the effect radius, therefore, the effect radius applies the mute upon enemies re-entering.",
-        "Static Storm applies all effects to invulnerable units, but not hidden units.",
-        "SCEPTER NOTES Does not update the current instance if the affected target is within the effect radius while acquiring the item.",
-        "Since the ability upgrade is determined if Disruptor has Aghanim's Scepter equipped when the affected target(s) are within the effect radius, therefore, the effect radius applies the mute upon enemies re-entering.",
-        "Deals a total of 20 (TagTalent 28) damage instances over 6 (TagTalent 8) seconds, resulting in 0.3-second (or 0.286-second) intervals.",
-        "The damage on each instance is determined by the given max damage per second, divided by the max instance, then multiplied by the current instance count. Can deal up to 630\/866.25\/1102.5 (TagTalent 870\/1196.25\/1522.5) damage to a single unit (before reductions).",
-        "Can deal up to 630\/866.25\/1102.5 (TagTalent 870\/1196.25\/1522.5) damage to a single unit (before reductions).",
-        "Provides 500 (TagTalent 700) range flying vision at the center of the area for 6 (TagTalent 8) seconds.",
-        "For how much damage Static Storm deals in each interval on each level, with the duration increasing talent, please refer to the chart below."
-      ],
       "mana": "90\/80\/70",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Static Storm",
       "cooldown": "125\/175\/225",
-      "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but increases in power over the duration.",
-      "hot_key": "R",
-      "params": [
-        "Cast Animation: 0.05+0",
-        "Cast Range:  800",
-        "Storm Radius: 500 ( 700)",
-        "Number of Pulses: 20 ( 28)",
-        "Max Damage per Second: 200\/275\/350",
-        "Aura Linger Duration: 0",
-        "Duration: 6 ( 8)"
-      ],
       "legacy_key": "R",
       "story": "A summer squall in Druud is a hardship that only an Oglodi can survive."
     }

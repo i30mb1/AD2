@@ -1,63 +1,45 @@
 {
   "abilities": [
     {
+      "notes": [
+        "Surges with a speed of 1250 and disjoints projectiles upon cast",
+        "Morphling turns invulnerable, and his hero model cannot be directly selected during Waveform. However, Morphling can still be selected through the hero icon. Morphling can turn, attack, cast abilities, and use items during Waveform",
+        "With the travel distance and radius, Waveform can hit units up to 900\/1000\/1100\/1200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1150\/1250\/1350\/1450) distance away. Fully affects invisible enemy units and units in the Fog of War",
+        "Does not travel the full distance, when targeting closer than the max distance",
+        "TALENT NOTES The Waveform attack targets <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent causes Morphling to perform instant attacks on every enemy hit by Waveform. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Does not affect  Couriers"
+      ],
+      "item_behaviour": [],
+      "description": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path. Morphling is invulnerable during Waveform.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.25+0",
+        "Cast Range:  700\/800\/900\/1000 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 950\/1050\/1150\/1250)",
+        "Max Travel Distance:  700\/800\/900\/1000 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 950\/1050\/1150\/1250)",
+        "Damage Radius: 200",
+        "Damage: 75\/150\/225\/300"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Morphling_Waveform.mp3\/revision\/latest?cb=20191216020828",
       "effects": [
         "Ability: Target Point",
         "Affects: Enemies \/ Self",
         "Damage: Magical"
       ],
-      "notes": [
-        "Surges with a speed of 1250 and disjoints projectiles upon cast.",
-        "Morphling turns invulnerable, and his hero model cannot be directly selected during Waveform. However, Morphling can still be selected through the hero icon. Morphling can turn, attack, cast abilities, and use items during Waveform.",
-        "However, Morphling can still be selected through the hero icon.",
-        "Morphling can turn, attack, cast abilities, and use items during Waveform.",
-        "With the travel distance and radius, Waveform can hit units up to 900\/1000\/1100\/1200 (TagTalent 1150\/1250\/1350\/1450) distance away. Fully affects invisible enemy units and units in the Fog of War.",
-        "Fully affects invisible enemy units and units in the Fog of War.",
-        "Does not travel the full distance, when targeting closer than the max distance.",
-        "TALENT NOTES The Waveform attack targets talent causes Morphling to perform instant attacks on every enemy hit by Waveform. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Does not affect Couriers.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "Does not affect Couriers."
-      ],
       "mana": "21\/18\/15\/12 (TagTalent 12.6\/10.8\/9\/7.2)",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Waveform",
       "cooldown": "130",
-      "description": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path. Morphling is invulnerable during Waveform.",
-      "hot_key": "Q",
-      "params": [
-        "Cast Animation: 0.25+0",
-        "Cast Range:  700\/800\/900\/1000 ( 950\/1050\/1150\/1250)",
-        "Max Travel Distance:  700\/800\/900\/1000 ( 950\/1050\/1150\/1250)",
-        "Damage Radius: 200",
-        "Damage: 75\/150\/225\/300"
-      ],
       "legacy_key": "W",
       "story": "A torrential flood takes enemies by force."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Morphling_Adaptive_Strike_%28Agility%29_1.mp3\/revision\/latest?cb=20191216020828",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Casting this puts the other Adaptive Strike (Strength) on a fixed 3-second cooldown. This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown reductions.",
-        "This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown reductions.",
-        "The projectile travels at a speed of 1150.",
-        "The damage multiplier values are not fixed. They adapt linearly in smooth intervals depending on the difference between Morphling's agility and strength.",
-        "The values change with each percent difference between agility and strength, even when it is just a minimal change. It also checks Morphling's current attributes upon projectile impact. The multiplier counts both base and bonus attributes.",
-        "It also checks Morphling's current attributes upon projectile impact.",
-        "The multiplier counts both base and bonus attributes.",
-        "EXPR Damage: 55\/65\/75\/85 + ΣAgi × DamageMultipler Damage Multiplier: 0.5, 1\/1.5\/2\/2.5 when CasterΣAgi × 0.5 > CasterΣStr",
-        "Damage: 55\/65\/75\/85 + ΣAgi × DamageMultipler",
-        "Damage Multiplier: 0.5, 1\/1.5\/2\/2.5 when CasterΣAgi × 0.5 > CasterΣStr"
+        "Casting this puts the other Adaptive Strike (Strength) on a fixed 3-second cooldown. This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown reductions",
+        "The projectile travels at a speed of 1150",
+        "The damage multiplier values are not fixed. They adapt linearly in smooth intervals depending on the difference between Morphling's  agility and  strength",
+        "The values change with each percent difference between agility and strength, even when it is just a minimal change. It also checks Morphling's current attributes upon projectile impact. The multiplier counts both base and bonus attributes",
+        "EXPR Damage: 55\/65\/75\/85 + ΣAgi × DamageMultipler Damage Multiplier: 0.5, 1\/1.5\/2\/2.5 when CasterΣAgi × 0.5 > CasterΣStr"
       ],
-      "mana": "10",
       "item_behaviour": [],
-      "name": "Adaptive Strike (Agility)",
-      "cooldown": "40\/50\/60\/70",
       "description": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier. If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used. Also puts Adaptive Strike (Strength) on a 3 second cooldown.",
       "hot_key": "W",
       "params": [
@@ -69,30 +51,27 @@
         "Max Bonus Damage Agility Multiplier: 1\/1.5\/2\/2.5",
         "Adaptive Strike (Strength) Downtime: 3"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Morphling_Adaptive_Strike_%28Agility%29_1.mp3\/revision\/latest?cb=20191216020828",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "10",
+      "aghanim": null,
+      "name": "Adaptive Strike (Agility)",
+      "cooldown": "40\/50\/60\/70",
       "legacy_key": "E",
       "story": "The Morphling calls upon his elements to crush his opponents with waves."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Morphling_Adaptive_Strike_%28Strength%29_1.mp3\/revision\/latest?cb=20191216020820",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Enemies"
-      ],
       "notes": [
-        "Casting this puts the other Adaptive Strike (Agility) on a fixed 3-second cooldown. This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown reductions.",
-        "This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown reductions.",
-        "The projectile travels at a speed of 1150.",
-        "The knockback and stun values are not fixed. They adapt linearly in smooth intervals depending on the difference between Morphling's agility and strength. Both values change with each percent difference between agility and strength, even when it is just a minimal change. It also checks Morphling's current attributes upon projectile impact. The knockback and stun values count both base and bonus attributes.",
-        "Both values change with each percent difference between agility and strength, even when it is just a minimal change.",
-        "It also checks Morphling's current attributes upon projectile impact.",
-        "The knockback and stun values count both base and bonus attributes.",
-        "When EXPR CasterΣStr × 0.5 > CasterΣAgi, the knockback and stun duration are at their maximum at 500 and 1.5\/2\/2.5\/3 (TagTalent 2.5\/3\/3.5\/4) seconds respectively, else the knockback distance and stun duration are at their minimum at 100 and 0.5 (TagTalent 1.5) seconds respectively. Knocks the target back at a speed of 1000, resulting in a knockback duration of 0.1 \u2012 0.5 seconds.",
-        "Knocks the target back at a speed of 1000, resulting in a knockback duration of 0.1 \u2012 0.5 seconds."
+        "Casting this puts the other Adaptive Strike (Agility) on a fixed 3-second cooldown. This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown reductions",
+        "The projectile travels at a speed of 1150",
+        "The knockback and stun values are not fixed. They adapt linearly in smooth intervals depending on the difference between Morphling's  agility and  strength. Both values change with each percent difference between agility and strength, even when it is just a minimal change. It also checks Morphling's current attributes upon projectile impact. The knockback and stun values count both base and bonus attributes",
+        "When EXPR CasterΣStr × 0.5 > CasterΣAgi, the knockback and stun duration are at their maximum at 500 and 1.5\/2\/2.5\/3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.5\/3\/3.5\/4) seconds respectively, else the knockback distance and stun duration are at their minimum at 100 and 0.5 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1.5) seconds respectively. Knocks the target back at a speed of 1000, resulting in a knockback duration of 0.1 \u2012 0.5 seconds"
       ],
-      "mana": "10",
       "item_behaviour": [],
-      "name": "Adaptive Strike (Strength)",
-      "cooldown": "40\/50\/60\/70",
       "description": "Launches a surge of water toward an enemy unit, stunning and knocking back the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun\/knockback is dealt. Also puts Adaptive Strike (Agility) on a 3 second cooldown.",
       "hot_key": "E",
       "params": [
@@ -101,41 +80,33 @@
         "Number of Targets: 1",
         "Min Knockback Distance: 100",
         "Max Knockback Distance: 500",
-        "Min Stun Duration: 0.5 ( 1.5)",
-        "Max Stun Duration: 1.5\/2\/2.5\/3 ( 2.5\/3\/3.5\/4)",
+        "Min Stun Duration: 0.5 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1.5)",
+        "Max Stun Duration: 1.5\/2\/2.5\/3 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 2.5\/3\/3.5\/4)",
         "Adaptive Strike (Agility) Downtime: 3"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Morphling_Adaptive_Strike_%28Strength%29_1.mp3\/revision\/latest?cb=20191216020820",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies"
+      ],
+      "mana": "10",
+      "aghanim": null,
+      "name": "Adaptive Strike (Strength)",
+      "cooldown": "40\/50\/60\/70",
       "legacy_key": "T",
       "story": "The Morphling calls upon his elements to crush his opponents with waves."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Morphling_Attribute_Shift_%28Agility_Gain%29.mp3\/revision\/latest?cb=20191216020822",
-      "effects": [
-        "Ability: Toggle",
-        "Affects: Self"
-      ],
       "notes": [
-        "Does not interrupt Morphling's channeling abilities upon toggling.",
-        "Costs 1\/1\/1\/1 mana per shift interval, resulting in 5\/10\/15\/20 mana per second. The mana cost per second is fixed and it is not affected by mana loss manipulation.",
-        "The mana cost per second is fixed and it is not affected by mana loss manipulation.",
-        "Converts 5\/10\/15\/20 attribute points per second, resulting in the following changes per second: : Gains\/loses 0.8\/1.7\/2.5\/3.3 main armor, 5\/10\/15\/20 attack speed, and 5\/10\/15\/20 main attack damage. : Gains\/loses 100\/200\/300\/400 max health, and 0.5\/1\/1.5\/2 health regeneration. The strength bonus\/loss counts as setting health, it does not keep the current health percentage but instead adds\/removes 20 health per strength to\/from the current health pool. However, for other amplifications and reductions, only the part that exceeds the current health percentage is affected.",
-        ": Gains\/loses 0.8\/1.7\/2.5\/3.3 main armor, 5\/10\/15\/20 attack speed, and 5\/10\/15\/20 main attack damage.",
-        ": Gains\/loses 100\/200\/300\/400 max health, and 0.5\/1\/1.5\/2 health regeneration. The strength bonus\/loss counts as setting health, it does not keep the current health percentage but instead adds\/removes 20 health per strength to\/from the current health pool. However, for other amplifications and reductions, only the part that exceeds the current health percentage is affected.",
-        "The strength bonus\/loss counts as setting health, it does not keep the current health percentage but instead adds\/removes 20 health per strength to\/from the current health pool.",
-        "However, for other amplifications and reductions, only the part that exceeds the current health percentage is affected.",
-        "Attribute Shift continues to convert attributes even if Morphling is disabled, but cannot be toggled On \/ Off while disabled. SHARD NOTES This restriction is removed upon acquring Aghanim's Shard, allowing Morphling to toggle Attribute Shift even while disabled. However, Morphling is now unable to ⇧ Shift-queue this ability. It can be toggled while stunned, cycloned, slept, taunted, hidden, or during forced movement, but not while silenced, hexed or prevented from acting.",
-        "SHARD NOTES This restriction is removed upon acquring Aghanim's Shard, allowing Morphling to toggle Attribute Shift even while disabled. However, Morphling is now unable to ⇧ Shift-queue this ability.",
-        "It can be toggled while stunned, cycloned, slept, taunted, hidden, or during forced movement, but not while silenced, hexed or prevented from acting.",
-        "Toggling one Attribute Shift ability On automatically toggles the other Off. If Attribute Shift cannot convert anymore due to a lack of attribute points or mana, the toggle status remains the same, but the process is paused until it can continue.",
-        "If Attribute Shift cannot convert anymore due to a lack of attribute points or mana, the toggle status remains the same, but the process is paused until it can continue.",
-        "Can only convert Morphling's base agility and strength. Bonus attributes are not converted. The agility bonus is granted as bonus attributes, and it effectively grants 0.5\/0.83\/1.17\/1.5 (TagTalent 1.5\/1.83\/2.17\/2.5) main armor, and 3\/5\/7\/9 (TagTalent 9\/11\/13\/15) attack speed and main attack damage bonus.",
-        "The agility bonus is granted as bonus attributes, and it effectively grants 0.5\/0.83\/1.17\/1.5 (TagTalent 1.5\/1.83\/2.17\/2.5) main armor, and 3\/5\/7\/9 (TagTalent 9\/11\/13\/15) attack speed and main attack damage bonus.",
-        "Shifted attributes are permanent and not reverted on death."
+        "Does not interrupt Morphling's channeling abilities upon toggling",
+        "Costs 1\/1\/1\/1 mana per shift interval, resulting in 5\/10\/15\/20 mana per second. The mana cost per second is fixed and it is not affected by mana loss manipulation",
+        "Converts 5\/10\/15\/20 attribute points per second, resulting in the following changes per second: : Gains\/loses 0.8\/1.7\/2.5\/3.3 main armor, 5\/10\/15\/20 attack speed, and 5\/10\/15\/20 main attack damage. : Gains\/loses 100\/200\/300\/400 max health, and 0.5\/1\/1.5\/2 health regeneration. The strength bonus\/loss counts as setting health, it does not keep the current health percentage but instead adds\/removes 20 health per strength to\/from the current health pool. However, for other amplifications and reductions, only the part that exceeds the current health percentage is affected",
+        "Attribute Shift continues to convert attributes even if Morphling is disabled, but cannot be toggled On \/ Off while disabled. SHARD NOTES This restriction is removed upon acquring  Aghanim's Shard, allowing Morphling to toggle Attribute Shift even while disabled. However, Morphling is now unable to ⇧ Shift-queue this ability. It can be toggled while stunned, cycloned, slept, taunted, hidden, or during forced movement, but not while silenced, hexed or prevented from acting",
+        "Toggling one Attribute Shift ability On automatically toggles the other Off. If Attribute Shift cannot convert anymore due to a lack of attribute points or mana, the toggle status remains the same, but the process is paused until it can continue",
+        "Can only convert Morphling's base agility and strength. Bonus attributes are not converted. The agility bonus is granted as bonus attributes, and it effectively grants 0.5\/0.83\/1.17\/1.5 ( 1.5\/1.83\/2.17\/2.5) main armor, and 3\/5\/7\/9 ( 9\/11\/13\/15) attack speed and main attack damage bonus",
+        "Shifted attributes are permanent and not reverted on death"
       ],
-      "mana": "",
       "item_behaviour": [],
-      "name": "Attribute Shift (Agility Gain)",
-      "cooldown": "5\/10\/15\/20\/ second",
       "description": "Morphling shifts its form, pulling points from Strength and pouring them into Agility. The process is reversible. Additional points in Attribute Shift increase the rate of stat change. Passively grants bonus Agility.",
       "hot_key": "D",
       "params": [
@@ -144,25 +115,26 @@
         "Points per Shift: 1",
         "Agility Bonus: 3\/5\/7\/9 ( 9\/11\/13\/15)"
       ],
-      "legacy_key": "D",
-      "story": "Shifting water makes it difficult to discern the nature of Morphling."
-    },
-    {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Morphling_Attribute_Shift_%28Strength_Gain%29.mp3\/revision\/latest?cb=20191216020823",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Morphling_Attribute_Shift_%28Agility_Gain%29.mp3\/revision\/latest?cb=20191216020822",
       "effects": [
         "Ability: Toggle",
         "Affects: Self"
       ],
-      "notes": [
-        "Same notes as for Attribute Shift (Agility Gain) apply.",
-        "Does not interrupt Morphling's channeling abilities upon toggling.",
-        "The strength bonus is granted as bonus attributes, and it effectively grants 60\/100\/140\/180 (TagTalent 180\/220\/260\/300) health and 0.3\/0.5\/0.7\/0.9 (TagTalent 0.9\/1.1\/1.3\/1.5) health regeneration bonus.",
-        "Shifted attributes are permanent and not reverted on death."
-      ],
       "mana": "",
-      "item_behaviour": [],
-      "name": "Attribute Shift (Strength Gain)",
+      "aghanim": null,
+      "name": "Attribute Shift (Agility Gain)",
       "cooldown": "5\/10\/15\/20\/ second",
+      "legacy_key": "D",
+      "story": "Shifting water makes it difficult to discern the nature of Morphling."
+    },
+    {
+      "notes": [
+        "Same notes as for  Attribute Shift (Agility Gain) apply",
+        "Does not interrupt Morphling's channeling abilities upon toggling",
+        "The strength bonus is granted as bonus attributes, and it effectively grants 60\/100\/140\/180 ( 180\/220\/260\/300) health and 0.3\/0.5\/0.7\/0.9 ( 0.9\/1.1\/1.3\/1.5) health regeneration bonus",
+        "Shifted attributes are permanent and not reverted on death"
+      ],
+      "item_behaviour": [],
       "description": "Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible. Additional points in Attribute Shift increase the rate of stat change. Passively grants bonus Strength.",
       "hot_key": "F",
       "params": [
@@ -171,97 +143,73 @@
         "Points per Shift: 1",
         "Strength Bonus: 3\/5\/7\/9 ( 9\/11\/13\/15)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Morphling_Attribute_Shift_%28Strength_Gain%29.mp3\/revision\/latest?cb=20191216020823",
+      "effects": [
+        "Ability: Toggle",
+        "Affects: Self"
+      ],
+      "mana": "",
+      "aghanim": null,
+      "name": "Attribute Shift (Strength Gain)",
+      "cooldown": "5\/10\/15\/20\/ second",
       "legacy_key": "F",
       "story": "Shifting water makes it difficult to discern the nature of Morphling."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Morphling_Morph.mp3\/revision\/latest?cb=20191216020825",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Self "
-      ],
       "notes": [
-        "Does not replace Morphling with a clone of the target. Morph only copies the target's model, hitbox, including equipped cosmetic items. This means he is still registered as Morphling, therefore it neither acquires innate abilities nor other innate ability traits (e.g. being able to attack Nightmared units). This also means that Morphling can still be killed normally in the Morphed form since it is still him and not a separate clone or illusion. Morphling is visually distinguishable from the original hero while Morphed. Neither dispels buff and debuffs upon morphing and unmorphing. Most channeling abilities are interrupted upon unmorphing, except for Phase Shift, Upheaval, and casting item abilities.",
-        "This means he is still registered as Morphling, therefore it neither acquires innate abilities nor other innate ability traits (e.g. being able to attack Nightmared units).",
-        "This also means that Morphling can still be killed normally in the Morphed form since it is still him and not a separate clone or illusion.",
-        "Morphling is visually distinguishable from the original hero while Morphed.",
-        "Neither dispels buff and debuffs upon morphing and unmorphing.",
-        "Most channeling abilities are interrupted upon unmorphing, except for Phase Shift, Upheaval, and casting item abilities.",
-        "Morphling keeps his current health and mana percentages upon morphing. Does not copy the target's current health or mana.",
-        "Also copies the target's attribute values, primary attribute, movement speed, attack range, and range type. This means when targeting a melee strength hero, Morphling becomes a melee strength hero for the duration. This causes items that use different values for melee and ranged heroes (e.g. Manta Style) to now adapt to Morphling accordingly. Attack range bonuses are not overridden and still work normally. Only copies the target's base attributes. Bonus attributes from abilities and items are not copied. All other base stats (e.g. attack values, armor, magic resistance, etc.) are not copied either. Does not copy the target's transformed state as well (e.g. Elder Dragon Form).",
-        "This means when targeting a melee strength hero, Morphling becomes a melee strength hero for the duration.",
-        "This causes items that use different values for melee and ranged heroes (e.g. Manta Style) to now adapt to Morphling accordingly.",
-        "Attack range bonuses are not overridden and still work normally.",
-        "Only copies the target's base attributes. Bonus attributes from abilities and items are not copied.",
-        "All other base stats (e.g. attack values, armor, magic resistance, etc.) are not copied either.",
-        "Does not copy the target's transformed state as well (e.g. Elder Dragon Form).",
-        "Morphling keeps his own items during Morph, he does not copy the target's items.",
-        "Can only be cast on enemy heroes, including illusions and clones. Cannot be cast on creep-heroes. When cast on illusions, it copies the hero who owns the illusion and not the hero the illusion is based on. Therefore, casting ability on an illusion based on a dead hero does nothing. For example, when targeting Disruption illusions, Morphling turns into Shadow Demon, and not the hero Disruption was cast on. However, it cannot target Morphling itself or illusions under Morphling's control. An Enchanted Morphling illusion is still treated as its own illusion and can still not be targeted.",
-        "When cast on illusions, it copies the hero who owns the illusion and not the hero the illusion is based on. Therefore, casting ability on an illusion based on a dead hero does nothing.",
-        "For example, when targeting Disruption illusions, Morphling turns into Shadow Demon, and not the hero Disruption was cast on.",
-        "However, it cannot target Morphling itself or illusions under Morphling's control.",
-        "An Enchanted Morphling illusion is still treated as its own illusion and can still not be targeted.",
-        "SCEPTER NOTES Morph now places a buff on Morphling and a debuff on the target, based on the target's primary attribute. Targeted strength heroes lose 40% status resistance while Morphling gains it. Stacks multiplicatively with other sources of status resistance. Targeted agility heroes lose 70 attack speed while Morphling gains it. Targeted intelligence heroes lose 25% spell damage amplification while Morphling gains it. Applies generic outgoing damage manipulation. Stacks additively with other sources of generic outgoing damage manipulation. The manipulation affects only spell damage the target deals that is not flagged as HP removal. All targets lose 20% of all their attributes, while Morphling gains based on how much the target lost. The attributes are removed and granted as bonus attributes. Does not change base attributes. All values are set upon cast and do not adapt to any changes. They persist even when losing Aghanim's Scepter. The modifiers are independent from each other, when one loses its modifier, the other still keeps it.",
-        "Targeted strength heroes lose 40% status resistance while Morphling gains it. Stacks multiplicatively with other sources of status resistance.",
-        "Stacks multiplicatively with other sources of status resistance.",
-        "Targeted agility heroes lose 70 attack speed while Morphling gains it.",
-        "Targeted intelligence heroes lose 25% spell damage amplification while Morphling gains it. Applies generic outgoing damage manipulation. Stacks additively with other sources of generic outgoing damage manipulation. The manipulation affects only spell damage the target deals that is not flagged as HP removal.",
-        "Applies generic outgoing damage manipulation. Stacks additively with other sources of generic outgoing damage manipulation.",
-        "The manipulation affects only spell damage the target deals that is not flagged as HP removal.",
-        "All targets lose 20% of all their attributes, while Morphling gains based on how much the target lost. The attributes are removed and granted as bonus attributes. Does not change base attributes.",
-        "The attributes are removed and granted as bonus attributes. Does not change base attributes.",
-        "All values are set upon cast and do not adapt to any changes. They persist even when losing Aghanim's Scepter.",
-        "The modifiers are independent from each other, when one loses its modifier, the other still keeps it.",
-        "SPELL STEAL This ability is not acquirable.",
-        "SOULBIND Morph only affects the primary target."
+        "Does not replace Morphling with a clone of the target. Morph only copies the target's model, hitbox, including equipped cosmetic items. This means he is still registered as Morphling, therefore it neither acquires innate abilities nor other innate ability traits (e.g. being able to attack  Nightmared units). This also means that Morphling can still be killed normally in the Morphed form since it is still him and not a separate clone or illusion. Morphling is visually distinguishable from the original hero while Morphed. Neither dispels buff and debuffs upon morphing and unmorphing. Most channeling abilities are interrupted upon unmorphing, except for  Phase Shift,  Upheaval, and casting item abilities",
+        "Morphling keeps his current health and mana percentages upon morphing. Does not copy the target's current health or mana",
+        "Also copies the target's attribute values, primary attribute, movement speed, attack range, and range type. This means when targeting a melee strength hero, Morphling becomes a  melee  strength hero for the duration. This causes items that use different values for melee and ranged heroes (e.g.  Manta Style) to now adapt to Morphling accordingly. Attack range bonuses are not overridden and still work normally. Only copies the target's base attributes. Bonus attributes from abilities and items are not copied. All other base stats (e.g. attack values, armor, magic resistance, etc.) are not copied either. Does not copy the target's transformed state as well (e.g.  Elder Dragon Form)",
+        "Morphling keeps his own items during Morph, he does not copy the target's items",
+        "Can only be cast on enemy heroes, including illusions and clones. Cannot be cast on creep-heroes. When cast on illusions, it copies the hero who owns the illusion and not the hero the illusion is based on. Therefore, casting ability on an illusion based on a dead hero does nothing. For example, when targeting  Disruption illusions, Morphling turns into  Shadow Demon, and not the hero Disruption was cast on. However, it cannot target Morphling itself or illusions under Morphling's control. An  Enchanted Morphling illusion is still treated as its own illusion and can still not be targeted",
+        "SCEPTER NOTES Morph now places a buff on Morphling and a debuff on the target, based on the target's primary attribute. Targeted  strength heroes lose 40% status resistance while Morphling gains it. Stacks multiplicatively with other sources of status resistance. Targeted  agility heroes lose 70 attack speed while Morphling gains it. Targeted  intelligence heroes lose 25% spell damage amplification while Morphling gains it. Applies generic outgoing damage manipulation. Stacks additively with other sources of generic outgoing damage manipulation. The manipulation affects only spell damage the target deals that is not flagged as HP removal. All targets lose 20% of all their attributes, while Morphling gains based on how much the target lost. The attributes are removed and granted as bonus attributes. Does not change base attributes. All values are set upon cast and do not adapt to any changes. They persist even when losing  Aghanim's Scepter. The modifiers are independent from each other, when one loses its modifier, the other still keeps it. SPELL STEAL This ability is not acquirable. SOULBIND Morph only affects the primary target"
       ],
-      "mana": "140\/100\/60",
       "item_behaviour": [],
-      "name": "Morph",
-      "cooldown": "50",
       "description": "Morphling changes his form to match the targeted enemy, gaining their basic abilities. Can be toggled for the duration of the ability.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.25+0.1",
         "Cast Range:  700\/850\/1000",
-        "Duration: 20 ( 36)",
-        "All Attributes Steal: 20%",
-        "Strength Status Resistance Steal: 40%",
-        "Agility Attack Speed Steal: 70",
-        "Intelligence Spell Damage Amp Steal: 25%"
+        "Duration: 20 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 36)",
+        "All Attributes Steal:  20%",
+        "Strength Status Resistance Steal:  40%",
+        "Agility Attack Speed Steal:  70",
+        "Intelligence Spell Damage Amp Steal:  25%"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Morphling_Morph.mp3\/revision\/latest?cb=20191216020825",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Self "
+      ],
+      "mana": "140\/100\/60",
+      "aghanim": null,
+      "name": "Morph",
+      "cooldown": "50",
       "legacy_key": "R",
       "story": "Staring into Morphling produces a reflection that mimics the beholder."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Morphling_Morph_Replicate.mp3\/revision\/latest?cb=20191216020824",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self"
-      ],
       "notes": [
-        "Morph Replicate replaces Morph until it expires. The Legacy Keys for Morph Replicate is the same as the target's ultimate ability's.",
-        "The Legacy Keys for Morph Replicate is the same as the target's ultimate ability's.",
-        "Interrupts Morphling's channeling abilities upon cast.",
-        "Casting this does not end Morph. Instead, it shifts Morphling back to his original form. When used again, it shifts Morphling back into the target. Goes on cooldown whenever forms get shifted.",
-        "Goes on cooldown whenever forms get shifted.",
-        "Upon each Morph and Morph Replicate cast, it checks for Morphling and the affected target's basic abilities, then it removes Morphling's abilities and replaces them with the affected target's basic abilities, including their passive abilities and sub-abilities. Therefore, Morphling has to cast Morph Replicate twice to update all copied abilities and their values. This affects the following things: Invoked abilities. New basic abilities acquired via Spell Steal upon morphing into them. New Devoured and Death Pact abilities. Non-ultimate abilities granted by Aghanim's Scepter and Aghanim's Shard are only copied if both Morphling and the affected target have the respective item as well. Does not copy talent upgrades at all.",
-        "Therefore, Morphling has to cast Morph Replicate twice to update all copied abilities and their values.",
-        "This affects the following things: Invoked abilities. New basic abilities acquired via Spell Steal upon morphing into them. New Devoured and Death Pact abilities. Non-ultimate abilities granted by Aghanim's Scepter and Aghanim's Shard are only copied if both Morphling and the affected target have the respective item as well. Does not copy talent upgrades at all.",
-        "Invoked abilities.",
-        "New basic abilities acquired via Spell Steal upon morphing into them.",
-        "New Devoured and Death Pact abilities.",
-        "Non-ultimate abilities granted by Aghanim's Scepter and Aghanim's Shard are only copied if both Morphling and the affected target have the respective item as well. Does not copy talent upgrades at all."
+        "Morph Replicate replaces  Morph until it expires. The Legacy Keys for Morph Replicate is the same as the target's ultimate ability's",
+        "Interrupts Morphling's channeling abilities upon cast",
+        "Casting this does not end Morph. Instead, it shifts Morphling back to his original form. When used again, it shifts Morphling back into the target. Goes on cooldown whenever forms get shifted",
+        "Upon each  Morph and  Morph Replicate cast, it checks for Morphling and the affected target's basic abilities, then it removes Morphling's abilities and replaces them with the affected target's basic abilities, including their passive abilities and sub-abilities. Therefore, Morphling has to cast Morph Replicate twice to update all copied abilities and their values. This affects the following things:  Invoked abilities. New basic abilities acquired via  Spell Steal upon morphing into them. New  Devoured and <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span>  Death Pact abilities. Non-ultimate abilities granted by  Aghanim's Scepter and  Aghanim's Shard are only copied if both Morphling and the affected target have the respective item as well. Does not copy <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent upgrades at all"
       ],
-      "mana": "1",
       "item_behaviour": [],
-      "name": "Morph Replicate",
-      "cooldown": "0",
       "description": "Toggles Morphling's form between his own and the replicated enemy.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0+0"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Morphling_Morph_Replicate.mp3\/revision\/latest?cb=20191216020824",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "1",
+      "aghanim": null,
+      "name": "Morph Replicate",
+      "cooldown": "0",
       "legacy_key": "?",
       "story": null
     }

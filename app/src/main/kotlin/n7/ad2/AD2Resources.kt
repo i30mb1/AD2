@@ -13,4 +13,5 @@ class AD2Resources @Inject constructor(
     override fun getAssets(path: String): InputStream = application.assets.open(path)
     override fun getExternalFilesDir(path: String): File? = application.getExternalFilesDir(path)
     override fun getFilesDir(): File? = application.noBackupFilesDir
+    override fun getConfiguration(): Any? = application.resources.configuration
 }

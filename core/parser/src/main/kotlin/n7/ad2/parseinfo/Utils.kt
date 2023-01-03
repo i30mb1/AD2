@@ -42,12 +42,14 @@ internal fun getTextFromNodeFormatted(element: Node): String {
     return getTextFromNode(element).removeSuffix(".").trim()
 }
 
+val availableImages = File(assetsDatabaseItemsImages)?.listFiles()?.map { it.name.removeSuffix(".webp") } ?: emptyList()
+
 private fun getTextFromNode(element: Node): String {
     val result = StringBuilder()
     if (element is Element) {
-        val attr = element.attr("data-image-name").removeSuffix(" icon.png").removeSuffix(".png")
+        val attr = element.attr("data-image-key").removeSuffix("_icon.png").removeSuffix(".png")
         val imageName = availableImages.find { it == attr }
-        if (imageName != null) result.append("<span image=\"$imageName.png\">$imageName</span>")
+        if (imageName != null) result.append("<span image=\"images/$imageName.webp\">$imageName</span>")
         element.childNodes().forEach { node ->
             result.append(getTextFromNode(node))
         }

@@ -1,173 +1,140 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Abaddon_Mist_Coil_1.mp3\/revision\/latest?cb=20191216010529",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Self \/ Allies \/ Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "The projectile travels at a speed of 1300.",
-        "Deals pure damage to self and magical damage to enemies.",
-        "The self-inflicted damage is applied instantly upon cast and never lethal, so it cannot be used to deny oneself. Deals 55\/80\/105\/130 (TagTalent 80\/105\/130\/155) damage to self.",
-        "Deals 55\/80\/105\/130 (TagTalent 80\/105\/130\/155) damage to self.",
-        "If the target ally turns invulnerable, hidden or untargetable before projectile impact, it still gets healed by it.",
-        "Does not affect Couriers.",
-        "SHARD NOTES Mist Coil now causes Abaddon to perform an instant attack on enemy targets on projectile hit. These instant attacks can proc any attack modifiers (e.g. Curse of Avernus) and on-hit effects normally. They do not have True Strike, but completely ignore disarms. If the caster is a ranged hero, the instant attacks do not use attack projectiles and are instant, but still count as ranged attacks. Cleave effects are based on the target's position, damaging a trapezoid area in the opposite direction where the projectile came from. Mist Coil first applies its own damage, then the instant attack.",
-        "These instant attacks can proc any attack modifiers (e.g. Curse of Avernus) and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "If the caster is a ranged hero, the instant attacks do not use attack projectiles and are instant, but still count as ranged attacks.",
-        "Cleave effects are based on the target's position, damaging a trapezoid area in the opposite direction where the projectile came from.",
-        "Mist Coil first applies its own damage, then the instant attack.",
-        "TALENT NOTES The heal and damage increasing talent immediately upgrades all of Abaddon's currently flying Mist Coil projectiles.",
-        "The area of effect talent adds a radius to this ability. The ability must be centered over a unit still. Upon cast, Abaddon sends Mist Coils based on its current level towards every ally and enemy within radius, excluding himself. These behave just like a regular cast, and can be disjointed normally. Also targets units inside the Fog of War and invisible units. However, invisible targets instantly disjoint it. Deals one instance of self-damage to Abaddon, regardless of how many Mist Coils are released. SCEPTER NOTES Does not upgrade the passive releases of Borrowed Time.",
-        "Upon cast, Abaddon sends Mist Coils based on its current level towards every ally and enemy within radius, excluding himself.",
-        "These behave just like a regular cast, and can be disjointed normally.",
-        "Also targets units inside the Fog of War and invisible units. However, invisible targets instantly disjoint it.",
-        "Deals one instance of self-damage to Abaddon, regardless of how many Mist Coils are released.",
-        "SCEPTER NOTES Does not upgrade the passive releases of Borrowed Time."
+        "The projectile travels at a speed of 1300",
+        "Deals pure damage to self and magical damage to enemies",
+        "The self-inflicted damage is applied instantly upon cast and never lethal, so it cannot be used to deny oneself. Deals 55\/80\/105\/130 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 80\/105\/130\/155) damage to self",
+        "If the target ally turns invulnerable, hidden or untargetable before projectile impact, it still gets healed by it",
+        "Does not affect  Couriers",
+        "SHARD NOTES Mist Coil now causes Abaddon to perform an instant attack on enemy targets on projectile hit. These instant attacks can proc any attack modifiers (e.g. <span image=\"images\/Curse_of_Avernus.webp\">Curse_of_Avernus<\/span> Curse of Avernus) and on-hit effects normally. They do not have True Strike, but completely ignore disarms. If the caster is a  ranged hero, the instant attacks do not use attack projectiles and are instant, but still count as ranged attacks. Cleave effects are based on the target's position, damaging a trapezoid area in the opposite direction where the projectile came from. Mist Coil first applies its own damage, then the instant attack",
+        "TALENT NOTES The heal and damage increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent immediately upgrades all of Abaddon's currently flying Mist Coil projectiles",
+        "The area of effect <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent adds a radius to this ability. The ability must be centered over a unit still. Upon cast, Abaddon sends Mist Coils based on its current level towards every ally and enemy within  radius, excluding himself. These behave just like a regular cast, and can be disjointed normally. Also targets units inside the Fog of War and invisible units. However, invisible targets instantly disjoint it. Deals one instance of self-damage to Abaddon, regardless of how many Mist Coils are released. SCEPTER NOTES Does not upgrade the passive releases of <span image=\"images\/Borrowed_Time.webp\">Borrowed_Time<\/span> Borrowed Time"
       ],
-      "mana": "5.5",
       "item_behaviour": [],
-      "name": "Mist Coil",
-      "cooldown": "50",
       "description": "Abaddon releases a coil of deathly mist that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.25+0.4",
         "Cast Range:  575",
         "Self Damage Percentage: 50%",
-        "Enemy Target Damage: 110\/160\/210\/260 ( 160\/210\/260\/310)",
-        "Ally Target Heal: 110\/160\/210\/260 ( 160\/210\/260\/310)",
-        "<span image=\"images\\Talent\"><\/span> Radius: 400"
+        "Enemy Target Damage: 110\/160\/210\/260 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 160\/210\/260\/310)",
+        "Ally Target Heal: 110\/160\/210\/260 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 160\/210\/260\/310)",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Radius:  400"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Abaddon_Mist_Coil_1.mp3\/revision\/latest?cb=20191216010529",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Self \/ Allies \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "5.5",
+      "aghanim": null,
+      "name": "Mist Coil",
+      "cooldown": "50",
       "legacy_key": "D",
       "story": "A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Abaddon_Aphotic_Shield_1.mp3\/revision\/latest?cb=20191216010532",
-      "effects": [
-        "Ability: Target Unit",
-        "Affects: Allies \/ Enemies",
-        "Damage: Magical"
-      ],
       "notes": [
-        "Applies a strong dispel on the target upon cast. ↓↓ Double-tapping automatically targets self.",
-        "↓↓ Double-tapping automatically targets self.",
-        "Aphotic Shield fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
-        "Aphotic Shield has the second lowest priority in the group of damage negating effects. This means when combined with other damage negating abilities (e.g. Borrowed Time or Refraction), the shield does not absorb any damage until the other sources are gone.",
-        "This means when combined with other damage negating abilities (e.g. Borrowed Time or Refraction), the shield does not absorb any damage until the other sources are gone.",
-        "Does not deal damage to invisible units or units in the Fog of War. Losing the Aphotic Shield buff always causes it to burst and deal area damage, no matter how the shield was lost.",
-        "Losing the Aphotic Shield buff always causes it to burst and deal area damage, no matter how the shield was lost.",
-        "The area damage is independent from the amount of absorbed damage. It always deals the full 110\/140\/170\/200 (TagTalent 210\/240\/270\/300) damage (before reductions).",
-        "Successive casts on the same unit do not stack. Upon recast, the previous shield gets destroyed, dealing its area damage and a new one gets applied.",
-        "TALENT NOTES The shield capacity and damage increasing talent does not affect any of the current active Aphotic Shields. Increases both shield capacity and burst area damage despite the talent description stating it increases the shield capacity only.",
-        "Increases both shield capacity and burst area damage despite the talent description stating it increases the shield capacity only."
+        "Applies a strong dispel on the target upon cast. ↓↓ Double-tapping automatically targets self",
+        "Aphotic Shield fully negates damage (after all reductions), causing several on-damage effects to not trigger",
+        "Aphotic Shield has the second lowest priority in the group of damage negating effects. This means when combined with other damage negating abilities (e.g. <span image=\"images\/Borrowed_Time.webp\">Borrowed_Time<\/span> Borrowed Time or  Refraction), the shield does not absorb any damage until the other sources are gone",
+        "Does not deal damage to invisible units or units in the Fog of War. Losing the Aphotic Shield buff always causes it to burst and deal area damage, no matter how the shield was lost",
+        "The area damage is independent from the amount of absorbed damage. It always deals the full 110\/140\/170\/200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 210\/240\/270\/300) damage (before reductions)",
+        "Successive casts on the same unit do not stack. Upon recast, the previous shield gets destroyed, dealing its area damage and a new one gets applied",
+        "TALENT NOTES The shield capacity and damage increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not affect any of the current active Aphotic Shields. Increases both shield capacity and burst area damage despite the talent description stating it increases the shield capacity only"
       ],
-      "mana": "12\/10\/8\/6",
       "item_behaviour": [],
-      "name": "Aphotic Shield",
-      "cooldown": "85\/100\/115\/130",
       "description": "Summons dark energies around an ally unit, creating a shield that absorbs a set amount of damage before expiring. When the shield is destroyed it will burst and deal damage equal to the amount it could absorb to an area around it. Removes certain types of negative buffs and stuns on cast.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.33",
         "Cast Range:  550",
         "Damage Radius: 675",
-        "Shield Capacity: 110\/140\/170\/200 ( 210\/240\/270\/300)",
-        "Burst Damage: 110\/140\/170\/200 ( 210\/240\/270\/300)",
+        "Shield Capacity: 110\/140\/170\/200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 210\/240\/270\/300)",
+        "Burst Damage: 110\/140\/170\/200 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 210\/240\/270\/300)",
         "Duration: 15"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Abaddon_Aphotic_Shield_1.mp3\/revision\/latest?cb=20191216010532",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "12\/10\/8\/6",
+      "aghanim": null,
+      "name": "Aphotic Shield",
+      "cooldown": "85\/100\/115\/130",
       "legacy_key": "T",
       "story": "The powers of the black mist rise to absorb attacks like the black mist absorbs light."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Abaddon_Curse_of_Avernus.mp3\/revision\/latest?cb=20191216010528",
-      "effects": [
-        "Ability: Passive",
-        "Affects: Allies \/ Enemies"
-      ],
       "notes": [
-        "Each successful attack done on an enemy unit without the curse debuff, places the initial debuff, or increases its counter if it already has the debuff.",
-        "The initial debuff's duration gets refreshed on each hit. The required hits do not need to all happen within 5 seconds.",
-        "When the initial debuff's counter reaches 4 (TagTalent 3), it gets removed and replaced by the curse debuff. TALENT NOTES The movement speed slow increasing talent only increases the curse movement speed slow.",
-        "TALENT NOTES The movement speed slow increasing talent only increases the curse movement speed slow.",
-        "Any allied heroes attacking the cursed enemy get the speed buff. The buff is granted upon successfully landing an attack on the cursed target. This means missed attacks do not grant the buff. For ranged heroes, this also means they gain the buff only on projectile impact. The speed buff only works when attacking cursed targets. When executing an attack against a unit that is not cursed, the buff gets removed.",
-        "This means missed attacks do not grant the buff. For ranged heroes, this also means they gain the buff only on projectile impact.",
-        "The speed buff only works when attacking cursed targets. When executing an attack against a unit that is not cursed, the buff gets removed.",
-        "The speed buff is only granted to allied heroes, illusions, and clones. Non-hero units do not get the buff. Treats creep-heroes as creeps.",
-        "The debuffs can be placed on buildings, but cannot be placed on wards, allied or attached units."
+        "Each successful attack done on an enemy unit without the curse debuff, places the initial debuff, or increases its counter if it already has the debuff",
+        "The initial debuff's duration gets refreshed on each hit. The required hits do not need to all happen within 5 seconds",
+        "When the initial debuff's counter reaches 4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 3), it gets removed and replaced by the curse debuff. TALENT NOTES The movement speed slow increasing <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent only increases the curse movement speed slow",
+        "Any allied heroes attacking the cursed enemy get the speed buff. The buff is granted upon successfully landing an attack on the cursed target. This means missed attacks do not grant the buff. For  ranged heroes, this also means they gain the buff only on projectile impact. The speed buff only works when attacking cursed targets. When executing an attack against a unit that is not cursed, the buff gets removed",
+        "The speed buff is only granted to allied heroes, illusions, and clones. Non-hero units do not get the buff. Treats creep-heroes as creeps",
+        "The debuffs can be placed on buildings, but cannot be placed on wards, allied or attached units"
       ],
-      "mana": null,
       "item_behaviour": [],
-      "name": "Curse of Avernus",
-      "cooldown": null,
       "description": "Abaddon strikes an enemy, slowing the target's movement speed. If the target gets hit 4 times, they become affected by a chilling curse causing them to be silenced and slowed, and all attacks against them gain an attack speed boost.",
       "hot_key": "E",
       "params": [
-        "Required Hits: 4 ( 3)",
+        "Required Hits: 4 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 3)",
         "Initial Move Speed Slow: 10%\/15%\/20%\/25% ( 20%\/25%\/30%\/35%)",
-        "Curse Move Speed Slow: 15%\/30%\/45%\/60% ( 30%\/45%\/60%\/75%)",
+        "Curse Move Speed Slow: 15%\/30%\/45%\/60% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 30%\/45%\/60%\/75%)",
         "Curse Attack Speed Bonus: 40\/60\/80\/100",
         "Initial Debuff Duration: 5",
         "Curse Debuff Duration: 4.5",
         "Speed Buff Duration: 4"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Abaddon_Curse_of_Avernus.mp3\/revision\/latest?cb=20191216010528",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Allies \/ Enemies"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Curse of Avernus",
+      "cooldown": null,
       "legacy_key": "F",
       "story": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Abaddon_Borrowed_Time.mp3\/revision\/latest?cb=20191216010527",
-      "effects": [
-        "Ability: No Target",
-        "Affects: Self "
-      ],
       "notes": [
-        "Interrupts Abaddon's channeling abilities when manually cast. However, it does not interrupt Abaddon's channeling abilities when passively activated. The passive activation does not count as an ability cast.",
-        "However, it does not interrupt Abaddon's channeling abilities when passively activated.",
-        "The passive activation does not count as an ability cast.",
-        "Can be manually activated even while stunned, cycloned, slept, taunted, hidden, or during forced movement.",
-        "Borrowed Time cannot be manually activated while silenced, hexed or prevented from acting, but it can be passively activated. Abaddon is unable to ⇧ Shift-queue this ability.",
-        "Abaddon is unable to ⇧ Shift-queue this ability.",
-        "Applies a strong dispel upon activation, be it manually or passively activated.",
-        "Activates automatically when a damage instance (without the HP Removal flag) drops Abaddon's health below 400, or hits Abaddon while already below 400 health. The damage is dealt before Borrowed Time is activated, meaning if the damage instance exceeds Abaddon's current health, he dies without Borrowed Time activating. This also means that it does not save Abaddon from instantly killing effects (e.g. Culling Blade and Ice Blast).",
-        "The damage is dealt before Borrowed Time is activated, meaning if the damage instance exceeds Abaddon's current health, he dies without Borrowed Time activating.",
-        "This also means that it does not save Abaddon from instantly killing effects (e.g. Culling Blade and Ice Blast).",
-        "Borrowed Time fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
-        "Borrowed Time converts damage into healing after reductions.",
-        "Borrowed Time has the highest priority in the group of damage-negating abilities. This means when combined with other damage-negating effects (e.g. Aphotic Shield or False Promise), Borrowed Time negates the damage while the others do not. For False Promise, this means that Borrowed Time first turns damage into heals, and then it is registered by False Promise as a heal and not as damage.",
-        "This means when combined with other damage-negating effects (e.g. Aphotic Shield or False Promise), Borrowed Time negates the damage while the others do not.",
-        "For False Promise, this means that Borrowed Time first turns damage into heals, and then it is registered by False Promise as a heal and not as damage.",
-        "As with all damage manipulating effects, Borrowed Time only negates and heals from the 3 damage types. It does not heal from HP Removal. The only exceptions are Heartstopper Aura and False Promise, which it does heal from. However, Borrowed Time does not passively activate from them.",
-        "The only exceptions are Heartstopper Aura and False Promise, which it does heal from. However, Borrowed Time does not passively activate from them.",
-        "SCEPTER NOTES Borrowed Time now provides a 1200 radius aura and its buff lingers for 0.5 seconds. The aura does not affect invulnerable or hidden units. Places a damage-counting buff on allies within the radius, counting any damage the ally takes after all reductions. The damage counter does not react on damage flagged as HP Removal. The counted damage is checked on each damage instance. This means only one Mist Coil may be released per damage instance, no matter the amount of damage taken. If the counted damage is higher than the 525 health trigger threshold, the threshold value gets subtracted from it, and a Mist Coil gets released. Since the threshold value gets subtracted from the counted damage, excess damage of big damage instances is not lost, and directly counts towards the next possible trigger. This means a single 1575 damage instance (3 times larger than the trigger threshold) triggers one Mist Coil, but the next two damage instances are guaranteed to trigger a Mist Coil each. The damage counter has no reset timer. It only resets when the ally loses the buff in between damage instances. Mist Coils based on the current level are passively cast automatically and instantly, regardless of mana and cooldown, and even while Abaddon is disabled. Mist Coil notes fully apply. If it is not learned, no coils are released. TALENT NOTES The area of effect talent does not upgrade passively released Mist Coils.",
-        "The aura does not affect invulnerable or hidden units.",
-        "Places a damage-counting buff on allies within the radius, counting any damage the ally takes after all reductions.",
-        "The damage counter does not react on damage flagged as HP Removal.",
-        "The counted damage is checked on each damage instance. This means only one Mist Coil may be released per damage instance, no matter the amount of damage taken.",
-        "If the counted damage is higher than the 525 health trigger threshold, the threshold value gets subtracted from it, and a Mist Coil gets released.",
-        "Since the threshold value gets subtracted from the counted damage, excess damage of big damage instances is not lost, and directly counts towards the next possible trigger.",
-        "This means a single 1575 damage instance (3 times larger than the trigger threshold) triggers one Mist Coil, but the next two damage instances are guaranteed to trigger a Mist Coil each.",
-        "The damage counter has no reset timer. It only resets when the ally loses the buff in between damage instances.",
-        "Mist Coils based on the current level are passively cast automatically and instantly, regardless of mana and cooldown, and even while Abaddon is disabled.",
-        "Mist Coil notes fully apply. If it is not learned, no coils are released.",
-        "TALENT NOTES The area of effect talent does not upgrade passively released Mist Coils.",
-        "SPELL STEAL Does not require Mist Coil to be acquired for it to be passively released."
+        "Interrupts Abaddon's channeling abilities when manually cast. However, it does not interrupt Abaddon's channeling abilities when passively activated. The passive activation does not count as an ability cast",
+        "Can be manually activated even while stunned, cycloned, slept, taunted, hidden, or during forced movement",
+        "Borrowed Time cannot be manually activated while silenced, hexed or prevented from acting, but it can be passively activated. Abaddon is unable to ⇧ Shift-queue this ability",
+        "Applies a strong dispel upon activation, be it manually or passively activated",
+        "Activates automatically when a damage instance (without the HP Removal flag) drops Abaddon's health below 400, or hits Abaddon while already below 400 health. The damage is dealt before Borrowed Time is activated, meaning if the damage instance exceeds Abaddon's current health, he dies without Borrowed Time activating. This also means that it does not save Abaddon from instantly killing effects (e.g.  Culling Blade and  Ice Blast)",
+        "Borrowed Time fully negates damage (after most reductions), causing several on-damage effects to not trigger",
+        "Borrowed Time converts damage into healing after reductions",
+        "Borrowed Time has the second highest priority in the group of damage-negating abilities. This means when combined with other damage-negating effects (e.g. <span image=\"images\/Aphotic_Shield.webp\">Aphotic_Shield<\/span> Aphotic Shield), Borrowed Time negates the damage while the others do not. If combined with  False Promise, both effects attempt to negate damage. Therefore both the incoming damage and the resultant healing are registered and delayed by False Promise",
+        "Borrowed Time negates and heals from all damage types. This includes damage flagged as HP Removal; however, Borrowed Time does not passively activate from them",
+        "SCEPTER NOTES Borrowed Time now provides a 1200 radius aura and its buff lingers for 0.5 seconds. The aura does not affect invulnerable or hidden units. Places a damage-counting buff on allies within the radius, counting any damage the ally takes after all reductions. The damage counter does not react on damage flagged as HP Removal. The counted damage is checked on each damage instance. This means only one <span image=\"images\/Mist_Coil.webp\">Mist_Coil<\/span> Mist Coil may be released per damage instance, no matter the amount of damage taken. If the counted damage is higher than the 525 health trigger threshold, the threshold value gets subtracted from it, and a Mist Coil gets released. Since the threshold value gets subtracted from the counted damage, excess damage of big damage instances is not lost, and directly counts towards the next possible trigger. This means a single 1575 damage instance (3 times larger than the trigger threshold) triggers one Mist Coil, but the next two damage instances are guaranteed to trigger a Mist Coil each. The damage counter has no reset timer. It only resets when the ally loses the buff in between damage instances. Mist Coils based on the current level are passively cast automatically and instantly, regardless of mana and cooldown, and even while Abaddon is disabled. Mist Coil notes fully apply. If it is not learned, no coils are released. TALENT NOTES The area of effect <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> talent does not upgrade passively released Mist Coils. SPELL STEAL Does not require <span image=\"images\/Mist_Coil.webp\">Mist_Coil<\/span> Mist Coil to be acquired for it to be passively released"
       ],
-      "mana": "60\/50\/40 (TagTalent 52\/42\/32)",
       "item_behaviour": [],
-      "name": "Borrowed Time",
-      "cooldown": "0",
       "description": "When activated, all damage dealt to you will heal instead of harm. Most negative buffs will also be removed. If the ability is not on cooldown, it will automatically activate if your health falls below 400.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
         "Passive Health Threshold: 400",
         "Duration: 4\/5\/6 ( 7\/8\/9)",
-        "Radius: 1200",
-        "Mist Coil Trigger Health Threshold: 525",
-        "Aura Linger Duration: 0.5"
+        "Radius:  1200",
+        "Mist Coil Trigger Health Threshold:  525",
+        "Aura Linger Duration:  0.5"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Abaddon_Borrowed_Time.mp3\/revision\/latest?cb=20191216010527",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self "
+      ],
+      "mana": "60\/50\/40 (TagTalent 52\/42\/32)",
+      "aghanim": null,
+      "name": "Borrowed Time",
+      "cooldown": "0",
       "legacy_key": "B",
       "story": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding. What should hurt, instead heals; and what should kill gives strength anew."
     }

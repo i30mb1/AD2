@@ -1,89 +1,52 @@
 {
   "abilities": [
     {
+      "notes": [
+        "Снаряд летит со скоростью 1400 единиц",
+        "Любой союзный юнит, атакующий врага, получает бафф скорости. Бафф дается во время анимации атаки (то ест при начале атаки, замахе). Бафф даётся даже в случаях промаха атакой и остаётся при смене цели после замаха по жертве. Не накладывает бафф при мгновенных атаках. После получения бафф остается на всю длительность, поэтому его можно использовать при атаке других целей. Бафф скорости дается любому союзному юниту, включая постройки и варды",
+        "При повышении уровня во время уже действующего заклинания значения замедления на жертве не обновляются. Показатели увеличения скорости атаки также не обновляются, если союзник обновляет эффект. Однако если эффект пропадёт и союзник снова начнёт атаковать жертву заклинания, то он будет получать новое значение скорости атаки",
+        "Penitence сначала накладывает дебафф, затем наносит урон"
+      ],
+      "item_behaviour": [],
+      "description": "Заставляет вражеское существо передвигаться медленнее, а союзников \u2014 атаковать его быстрее.",
+      "hot_key": "Q",
+      "params": [
+        "Анимация применения: 0,3+0,77",
+        "Дальность применения: 800",
+        "Замедление скорости передвижения цели: 18%\/24%\/30%\/36% (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 30%\/36%\/42%\/48%)",
+        "Доп. скорость атаки союзникам: 25\/50\/75\/100",
+        "Длительность дебаффа: 5\/6\/7\/8",
+        "Длительность баффа: 2",
+        "<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> Урон:  225"
+      ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Chen_Penitence_1.mp3\/revision\/latest?cb=20191216012058",
       "effects": [
         "Способность: Направленная на существо",
         "Действует на: Врагов",
         "Урон: "
       ],
-      "notes": [
-        "Снаряд летит со скоростью 1400 единиц.",
-        "Любой союзный юнит, атакующий врага, получает бафф скорости. Бафф дается во время анимации атаки (то ест при начале атаки, замахе). Бафф даётся даже в случаях промаха атакой и остаётся при смене цели после замаха по жертве. Не накладывает бафф при мгновенных атаках. После получения бафф остается на всю длительность, поэтому его можно использовать при атаке других целей. Бафф скорости дается любому союзному юниту, включая постройки и варды.",
-        "Бафф даётся даже в случаях промаха атакой и остаётся при смене цели после замаха по жертве.",
-        "Не накладывает бафф при мгновенных атаках.",
-        "После получения бафф остается на всю длительность, поэтому его можно использовать при атаке других целей.",
-        "Бафф скорости дается любому союзному юниту, включая постройки и варды.",
-        "При повышении уровня во время уже действующего заклинания значения замедления на жертве не обновляются. Показатели увеличения скорости атаки также не обновляются, если союзник обновляет эффект. Однако если эффект пропадёт и союзник снова начнёт атаковать жертву заклинания, то он будет получать новое значение скорости атаки.",
-        "Показатели увеличения скорости атаки также не обновляются, если союзник обновляет эффект. Однако если эффект пропадёт и союзник снова начнёт атаковать жертву заклинания, то он будет получать новое значение скорости атаки.",
-        "Penitence сначала накладывает дебафф, затем наносит урон."
-      ],
       "mana": "14\/13\/12\/11",
-      "item_behaviour": [],
+      "aghanim": null,
       "name": "Penitence",
       "cooldown": "70\/75\/70\/85",
-      "description": "Заставляет вражеское существо передвигаться медленнее, а союзников \u2014 атаковать его быстрее.",
-      "hot_key": "Q",
-      "params": [
-        "Анимация применения: 0,3+0,77",
-        "Дальность применения: 800",
-        "Замедление скорости передвижения цели: 18%\/24%\/30%\/36% ( 30%\/36%\/42%\/48%)",
-        "Доп. скорость атаки союзникам: 25\/50\/75\/100",
-        "Длительность дебаффа: 5\/6\/7\/8",
-        "Длительность баффа: 2",
-        "Урон: 225"
-      ],
       "legacy_key": "E",
       "story": "Пусть рыцарь веры и не способен подчинять вражеских героев, как свою животную паству, сила его убеждения вполне может пошатнуть решимость противника."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Chen_Holy_Persuasion.mp3\/revision\/latest?cb=20191216012102",
-      "effects": [
-        "Способность: Направленная на существо",
-        "Действует на: Вражеских существ",
-        "Урон: Мгновенное убийство"
-      ],
       "notes": [
-        "Применяет на цель базовое развеивание, снимая положительные и отрицательные эффекты.",
-        "Если новый приручаемый крип превысит максимальное количество подчиненных крипов, самый ранний из прирученных (включая древних крипов) мгновенно умрет. Смерть крипов никому не засчитывается, поэтому опыт за них никто не получает.",
-        "Смерть крипов никому не засчитывается, поэтому опыт за них никто не получает.",
-        "Может подчинить любого крипа в пределах доступного уровня, включая призываемых существ, но исключая Рошана, катапульты и крипов-героев и древних крипов. ПРИМЕЧАНИЯ К AGHANIM'S SHARD Древние крипы могут быть подчинены в количестве до 1\/2\/3 крипов в зависимости от уровня Hand of God. Древние крипы входят в максимальное число подчинённых существ, поэтому это улучшение не позволяет подчинить большее число крипов. Если при приручении древнего крипа превышено максимальное количество крипов, самый ранний из древних крипов умрет.",
-        "ПРИМЕЧАНИЯ К AGHANIM'S SHARD Древние крипы могут быть подчинены в количестве до 1\/2\/3 крипов в зависимости от уровня Hand of God.",
-        "Древние крипы входят в максимальное число подчинённых существ, поэтому это улучшение не позволяет подчинить большее число крипов.",
-        "Если при приручении древнего крипа превышено максимальное количество крипов, самый ранний из древних крипов умрет.",
-        "Если Hand of God не изучена, то Holy Persuasion всё равно можно применить на древних крипов, но она ничего не сделает, потратит ману и уйдёт на перезарядку.",
-        "С 4-м уровнем Holy Persuasion Chen может подчинить следующее количество крипов (и древних крипов) на каждом уровне Hand of God: Уровень 1: Максимум 3 крипа с 1 древним крипом. Уровень 2: Максимум 2 крипа с 2 древними крипами. Уровень 3: Максимум 1 крип с 3 древними крипами.",
-        "Уровень 1: Максимум 3 крипа с 1 древним крипом.",
-        "Уровень 2: Максимум 2 крипа с 2 древними крипами.",
-        "Уровень 3: Максимум 1 крип с 3 древними крипами.",
-        "",
+        "Применяет на цель базовое развеивание, снимая положительные и отрицательные эффекты",
+        "Если новый приручаемый крип превысит максимальное количество подчиненных крипов, самый ранний из прирученных (включая древних крипов) мгновенно умрет. Смерть крипов никому не засчитывается, поэтому опыт за них никто не получает",
+        "Может подчинить любого крипа в пределах доступного уровня, включая призываемых существ, но исключая  Рошана, катапульты и крипов-героев и древних крипов. ПРИМЕЧАНИЯ К AGHANIM'S SHARD Древние крипы могут быть подчинены в количестве до 1\/2\/3 крипов в зависимости от уровня  Hand of God. Древние крипы входят в максимальное число подчинённых существ, поэтому это улучшение не позволяет подчинить большее число крипов. Если при приручении древнего крипа превышено максимальное количество крипов, самый ранний из древних крипов умрет. Если Hand of God не изучена, то Holy Persuasion всё равно можно применить на древних крипов, но она ничего не сделает, потратит ману и уйдёт на перезарядку",
+        "С 4-м уровнем Holy Persuasion Chen может подчинить следующее количество крипов (и древних крипов) на каждом уровне   Hand of God: Уровень 1: Максимум 3 крипа с 1 древним крипом. Уровень 2: Максимум 2 крипа с 2 древними крипами. Уровень 3: Максимум 1 крип с 3 древними крипами.",
         "Следующие нейтральные крипы не могут быть подчинены из-за ограничения в уровне: 4-й уровень: Может подчинить любых нейтральных крипов. На 3-м уровне не может подчинить: <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Древний гранитный голем\"><img alt=\"Ancient Granite Golem icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Ancient Granite Golem icon.png\" data-image-key=\"Ancient_Granite_Golem_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D1%80%D0%BE%D0%BC%D0%BE%D0%B7%D0%B0%D0%B2%D1%80\" title=\"Древний громозавр\"><img alt=\"Ancient Thunderhide icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Ancient Thunderhide icon.png\" data-image-key=\"Ancient_Thunderhide_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D1%87%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD\" title=\"Древний чёрный дракон\"><img alt=\"Ancient Black Dragon icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Ancient Black Dragon icon.png\" data-image-key=\"Ancient_Black_Dragon_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D1%88%D0%B0%D0%BC%D0%B0%D0%BD_%D0%BB%D1%8C%D0%B4%D0%B0\" title=\"Древний шаман льда\"><img alt=\"Ancient Ice Shaman icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Ice Shaman icon.png\" data-image-key=\"Ancient_Ice_Shaman_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%B0%D1%82%D0%B8%D1%80-%D0%BC%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Сатир-мучитель\"><img alt=\"Satyr Tormenter icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Satyr Tormenter icon.png\" data-image-key=\"Satyr_Tormenter_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A2%D1%80%D0%BE%D0%BB%D0%BB%D1%8C-%D0%BD%D0%B5%D0%BA%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82\" title=\"Тролль-некромант\"><img alt=\"Dark Troll Summoner icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Dark Troll Summoner icon.png\" data-image-key=\"Dark_Troll_Summoner_icon.png\" data-src=\"\" \/><\/a> , На 2-м уровне также не может подчинить: <a href=\"\/ru\/wiki\/%D0%92%D0%BE%D0%B6%D0%B0%D0%BA_%D0%B2%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2\" title=\"Вожак волков\"><img alt=\"Alpha Wolf icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Alpha Wolf icon.png\" data-image-key=\"Alpha_Wolf_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%92%D0%BE%D0%B8%D0%BD_%D0%9D%D0%B5%D0%BA%D1%80%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0\" title=\"Воин Некрономикона\"><img alt=\"Necronomicon Warrior icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Necronomicon Warrior icon.png\" data-image-key=\"Necronomicon_Warrior_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D0%B8%D0%BA%D0%BE%D0%BA%D1%80%D1%8B%D0%BB-%D0%BF%D0%BE%D1%82%D1%80%D0%BE%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Дикокрыл-потрошитель\"><img alt=\"Wildwing Ripper icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Wildwing Ripper icon.png\" data-image-key=\"Wildwing_Ripper_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D1%80%D0%BE%D1%85%D0%BE%D0%B7%D0%B0%D0%B2%D1%80\" title=\"Древний грохозавр\"><img alt=\"Ancient Rumblehide icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Rumblehide icon.png\" data-image-key=\"Ancient_Rumblehide_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Древний каменный голем\"><img alt=\"Ancient Rock Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Rock Golem icon.png\" data-image-key=\"Ancient_Rock_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Древний морозный голем\"><img alt=\"Ancient Frostbitten Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Frostbitten Golem icon.png\" data-image-key=\"Ancient_Frostbitten_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9A%D0%B5%D0%BD%D1%82%D0%B0%D0%B2%D1%80-%D0%B7%D0%B0%D1%85%D0%B2%D0%B0%D1%82%D1%87%D0%B8%D0%BA\" title=\"Кентавр-захватчик\"><img alt=\"Centaur Conqueror icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Centaur Conqueror icon.png\" data-image-key=\"Centaur_Conqueror_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9B%D1%83%D1%87%D0%BD%D0%B8%D0%BA_%D0%9D%D0%B5%D0%BA%D1%80%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0\" title=\"Лучник Некрономикона\"><img alt=\"Necronomicon Archer icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Necronomicon Archer icon.png\" data-image-key=\"Necronomicon_Archer_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD-%D0%BA%D1%80%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Медведемон-крушитель\"><img alt=\"Hellbear Smasher icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Hellbear Smasher icon.png\" data-image-key=\"Hellbear_Smasher_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BD%D0%B0%D0%BB%D1%91%D1%82%D1%87%D0%B8%D0%BA\" title=\"Сосновый налётчик\"><img alt=\"Warpine Raider icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Warpine Raider icon.png\" data-image-key=\"Warpine_Raider_icon.png\" data-src=\"\" \/><\/a> , На 1-м уровне также не может подчинить: <a href=\"\/ru\/wiki\/%D0%93%D0%BB%D0%B8%D0%BD%D1%8F%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Глиняный голем\"><img alt=\"Mud Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Mud Golem icon.png\" data-image-key=\"Mud_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Малый голем\"><img alt=\"Shard Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Shard Golem icon.png\" data-image-key=\"Shard_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD\" title=\"Медведемон\"><img alt=\"Hellbear icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Hellbear icon.png\" data-image-key=\"Hellbear_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%B0%D1%82%D0%B8%D1%80-%D0%B4%D1%83%D1%88%D0%B5%D0%BA%D1%80%D0%B0%D0%B4\" title=\"Сатир-душекрад\"><img alt=\"Satyr Mindstealer icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Satyr Mindstealer icon.png\" data-image-key=\"Satyr_Mindstealer_icon.png\" data-src=\"\" \/><\/a> ,",
-        "4-й уровень: Может подчинить любых нейтральных крипов.",
-        "На 3-м уровне не может подчинить: <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Древний гранитный голем\"><img alt=\"Ancient Granite Golem icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Ancient Granite Golem icon.png\" data-image-key=\"Ancient_Granite_Golem_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D1%80%D0%BE%D0%BC%D0%BE%D0%B7%D0%B0%D0%B2%D1%80\" title=\"Древний громозавр\"><img alt=\"Ancient Thunderhide icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Ancient Thunderhide icon.png\" data-image-key=\"Ancient_Thunderhide_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D1%87%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD\" title=\"Древний чёрный дракон\"><img alt=\"Ancient Black Dragon icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Ancient Black Dragon icon.png\" data-image-key=\"Ancient_Black_Dragon_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D1%88%D0%B0%D0%BC%D0%B0%D0%BD_%D0%BB%D1%8C%D0%B4%D0%B0\" title=\"Древний шаман льда\"><img alt=\"Ancient Ice Shaman icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Ice Shaman icon.png\" data-image-key=\"Ancient_Ice_Shaman_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%B0%D1%82%D0%B8%D1%80-%D0%BC%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Сатир-мучитель\"><img alt=\"Satyr Tormenter icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Satyr Tormenter icon.png\" data-image-key=\"Satyr_Tormenter_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A2%D1%80%D0%BE%D0%BB%D0%BB%D1%8C-%D0%BD%D0%B5%D0%BA%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82\" title=\"Тролль-некромант\"><img alt=\"Dark Troll Summoner icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Dark Troll Summoner icon.png\" data-image-key=\"Dark_Troll_Summoner_icon.png\" data-src=\"\" \/><\/a> ,",
-        "На 2-м уровне также не может подчинить: <a href=\"\/ru\/wiki\/%D0%92%D0%BE%D0%B6%D0%B0%D0%BA_%D0%B2%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2\" title=\"Вожак волков\"><img alt=\"Alpha Wolf icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Alpha Wolf icon.png\" data-image-key=\"Alpha_Wolf_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%92%D0%BE%D0%B8%D0%BD_%D0%9D%D0%B5%D0%BA%D1%80%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0\" title=\"Воин Некрономикона\"><img alt=\"Necronomicon Warrior icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Necronomicon Warrior icon.png\" data-image-key=\"Necronomicon_Warrior_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D0%B8%D0%BA%D0%BE%D0%BA%D1%80%D1%8B%D0%BB-%D0%BF%D0%BE%D1%82%D1%80%D0%BE%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Дикокрыл-потрошитель\"><img alt=\"Wildwing Ripper icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Wildwing Ripper icon.png\" data-image-key=\"Wildwing_Ripper_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D1%80%D0%BE%D1%85%D0%BE%D0%B7%D0%B0%D0%B2%D1%80\" title=\"Древний грохозавр\"><img alt=\"Ancient Rumblehide icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Rumblehide icon.png\" data-image-key=\"Ancient_Rumblehide_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Древний каменный голем\"><img alt=\"Ancient Rock Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Rock Golem icon.png\" data-image-key=\"Ancient_Rock_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Древний морозный голем\"><img alt=\"Ancient Frostbitten Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Ancient Frostbitten Golem icon.png\" data-image-key=\"Ancient_Frostbitten_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9A%D0%B5%D0%BD%D1%82%D0%B0%D0%B2%D1%80-%D0%B7%D0%B0%D1%85%D0%B2%D0%B0%D1%82%D1%87%D0%B8%D0%BA\" title=\"Кентавр-захватчик\"><img alt=\"Centaur Conqueror icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Centaur Conqueror icon.png\" data-image-key=\"Centaur_Conqueror_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9B%D1%83%D1%87%D0%BD%D0%B8%D0%BA_%D0%9D%D0%B5%D0%BA%D1%80%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0\" title=\"Лучник Некрономикона\"><img alt=\"Necronomicon Archer icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Necronomicon Archer icon.png\" data-image-key=\"Necronomicon_Archer_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD-%D0%BA%D1%80%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Медведемон-крушитель\"><img alt=\"Hellbear Smasher icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Hellbear Smasher icon.png\" data-image-key=\"Hellbear_Smasher_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BD%D0%B0%D0%BB%D1%91%D1%82%D1%87%D0%B8%D0%BA\" title=\"Сосновый налётчик\"><img alt=\"Warpine Raider icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Warpine Raider icon.png\" data-image-key=\"Warpine_Raider_icon.png\" data-src=\"\" \/><\/a> ,",
-        "На 1-м уровне также не может подчинить: <a href=\"\/ru\/wiki\/%D0%93%D0%BB%D0%B8%D0%BD%D1%8F%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Глиняный голем\"><img alt=\"Mud Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Mud Golem icon.png\" data-image-key=\"Mud_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%B5%D0%BC\" title=\"Малый голем\"><img alt=\"Shard Golem icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Shard Golem icon.png\" data-image-key=\"Shard_Golem_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD\" title=\"Медведемон\"><img alt=\"Hellbear icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Hellbear icon.png\" data-image-key=\"Hellbear_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%B0%D1%82%D0%B8%D1%80-%D0%B4%D1%83%D1%88%D0%B5%D0%BA%D1%80%D0%B0%D0%B4\" title=\"Сатир-душекрад\"><img alt=\"Satyr Mindstealer icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Satyr Mindstealer icon.png\" data-image-key=\"Satyr_Mindstealer_icon.png\" data-src=\"\" \/><\/a> ,",
-        "Если максимальный запас здоровья крипа ниже значения способности, текущее здоровье и показатель максимального увеличивается до значения способности. Увеличение здоровья не считается за лечение, оно просто меняет значение здоровья существа. Здоровье у уже подчиненных крипов не увеличивается с поднятием уровня способности или выбором увеличивающего значения минимального здоровья таланта.",
-        "Увеличение здоровья не считается за лечение, оно просто меняет значение здоровья существа.",
-        "Здоровье у уже подчиненных крипов не увеличивается с поднятием уровня способности или выбором увеличивающего значения минимального здоровья таланта.",
-        "Восстанавливает всю ману крипа при помощи устновки значения маны.",
-        "Даёт обычный прямой бонусный урон от атаки подчинённым крипам.",
-        "Может телепортировать только крипов, подчинённых этой способностью. Не телепортирует других существ под контролем Chen. Не может выбрать целью неуязвимых или спрятанных существ, но телепортирует их, если они получат эффекты после применения способности. Место появления основано на положении Chen при телепортации, существо появляется в 120 единицах на севере, западе, юге или востоке от героя. Самое первое существо появляется возле Chen в случайном месте, остальные союзники появляются против часовой стрелки. Отдает цели команду \"стоп\" после телепортации, отменяя её произносимые способности и текущие приказы действия. При телепортации позволяет избежать снарядов. Урон, превышающий 0 (до учета снижений), от любого игрока (включая союзников, но исключая себя) или Рошана, развеивает эффект. Если Chen умер при завершении длительности баффа, то телепортация не произойдет.",
-        "Не может выбрать целью неуязвимых или спрятанных существ, но телепортирует их, если они получат эффекты после применения способности.",
-        "Место появления основано на положении Chen при телепортации, существо появляется в 120 единицах на севере, западе, юге или востоке от героя.",
-        "Самое первое существо появляется возле Chen в случайном месте, остальные союзники появляются против часовой стрелки.",
-        "Отдает цели команду \"стоп\" после телепортации, отменяя её произносимые способности и текущие приказы действия.",
-        "При телепортации позволяет избежать снарядов.",
-        "Урон, превышающий 0 (до учета снижений), от любого игрока (включая союзников, но исключая себя) или Рошана, развеивает эффект.",
-        "Если Chen умер при завершении длительности баффа, то телепортация не произойдет.",
-        "↓↓ Двойное нажатие автоматически выбирает всех существ под контролем Chen, исключая варды, иллюзии, клонов и недревних крипов-героев. Не ограничивается крипами, подчинёнными только Holy Persuasion. Крипы, подчинённые другим способом (например, при помощи Helm of the Dominator или призванные) также выбираются в качестве цели и телепортируются. В отличии от телепортации отдельных существ, применение на себя выбирает неуязвимых и спрятанных существ.",
-        "Не ограничивается крипами, подчинёнными только Holy Persuasion. Крипы, подчинённые другим способом (например, при помощи Helm of the Dominator или призванные) также выбираются в качестве цели и телепортируются.",
-        "В отличии от телепортации отдельных существ, применение на себя выбирает неуязвимых и спрятанных существ.",
-        "ПРИМЕЧАНИЯ К AGHANIM'S SCEPTER Получение улучшения мгновенно даёт Martyrdom всем подчинённым крипам."
+        "Если максимальный запас здоровья крипа ниже значения способности, текущее здоровье и показатель максимального увеличивается до значения способности. Увеличение здоровья не считается за лечение, оно просто меняет значение здоровья существа. Здоровье у уже подчиненных крипов не увеличивается с поднятием уровня способности или выбором увеличивающего значения минимального здоровья <span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> таланта",
+        "Восстанавливает всю ману крипа при помощи устновки значения маны",
+        "Даёт обычный прямой бонусный урон от атаки подчинённым крипам",
+        "Может телепортировать только крипов, подчинённых этой способностью. Не телепортирует других существ под контролем Chen. Не может выбрать целью неуязвимых или спрятанных существ, но телепортирует их, если они получат эффекты после применения способности. Место появления основано на положении Chen при телепортации, существо появляется в 120 единицах на севере, западе, юге или востоке от героя. Самое первое существо появляется возле Chen в случайном месте, остальные союзники появляются против часовой стрелки. Отдает цели команду \"стоп\" после телепортации, отменяя её произносимые способности и текущие приказы действия. При телепортации позволяет избежать снарядов. Урон, превышающий 0 (до учета снижений), от любого игрока (включая союзников, но исключая себя) или  Рошана, развеивает эффект. Если Chen умер при завершении длительности баффа, то телепортация не произойдет",
+        "↓↓ Двойное нажатие автоматически выбирает всех существ под контролем Chen, исключая варды, иллюзии, клонов и недревних крипов-героев. Не ограничивается крипами, подчинёнными только Holy Persuasion. Крипы, подчинённые другим способом (например, при помощи  Helm of the Dominator или призванные) также выбираются в качестве цели и телепортируются. В отличии от телепортации отдельных существ, применение на себя выбирает неуязвимых и спрятанных существ",
+        "ПРИМЕЧАНИЯ К AGHANIM'S SCEPTER Получение улучшения мгновенно даёт  Martyrdom всем подчинённым крипам"
       ],
-      "mana": "15",
       "item_behaviour": [],
-      "name": "Holy Persuasion",
-      "cooldown": "90\/110\/130\/150",
       "description": "Подчиняет вражеского или нейтрального крипа, увеличивая его урон и скорость передвижения. Если его максимальный запас здоровья ниже определённого порога, то здоровье существа увеличится до этого значения. Применив способность на приручённое существо, владелец способности телепортирует его к себе. Применив способность на себя, он перенес1т к себе всех своих подконтрольных крипов. Если крип получит урон от игрока, телепортация прервётся.",
       "hot_key": "W",
       "params": [
@@ -91,32 +54,33 @@
         "Дальность применения:  600",
         "Дальность применения телепортации: Глобальная",
         "Максимум существ: 1\/2\/3\/4",
-        "Минимальное базовое здоровье: 700\/800\/900\/1000 ( 1900\/2000\/2100\/2200)",
+        "Минимальное базовое здоровье: 700\/800\/900\/1000 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 1900\/2000\/2100\/2200)",
         "Доп. скорость передвижения: 10\/20\/30\/40",
-        "Доп. урон: 4\/10\/16\/22 ( 16\/22\/28\/34)",
+        "Доп. урон: 4\/10\/16\/22 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 16\/22\/28\/34)",
         "Макс. уровень приручаемых крипов: 3\/4\/5\/6",
-        "Задержка до телепортации: 6 ( 4)"
+        "Задержка до телепортации: 6 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 4)"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Chen_Holy_Persuasion.mp3\/revision\/latest?cb=20191216012102",
+      "effects": [
+        "Способность: Направленная на существо",
+        "Действует на: Вражеских существ",
+        "Урон: Мгновенное убийство"
+      ],
+      "mana": "15",
+      "aghanim": null,
+      "name": "Holy Persuasion",
+      "cooldown": "90\/110\/130\/150",
       "legacy_key": "T",
       "story": "Пусть они и не рыцари, пастырь обращает диких зверей в единоверцев так же, как когда-то был обращён сам."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Способность: Аура",
-        "Действует на: Союзников"
-      ],
       "notes": [
-        "Аура действует на всех подконтрольных Chen существ и на союзных героев, включая иллюзии и клонов. Не действует на крипов-героев.",
-        "Не действует на крипов-героев.",
-        "Бафф ауры задерживается на 0,5 сек.",
-        "Аура восстанавливает до 60\/120\/180\/240 здоровья в минуту.",
-        "Не действует на неуязвимых существ."
+        "Аура действует на всех подконтрольных Chen существ и на союзных героев, включая иллюзии и клонов. Не действует на крипов-героев",
+        "Бафф ауры задерживается на 0,5 сек",
+        "Аура восстанавливает до 60\/120\/180\/240 здоровья в минуту",
+        "Не действует на неуязвимых существ"
       ],
-      "mana": null,
       "item_behaviour": [],
-      "name": "Divine Favor",
-      "cooldown": null,
       "description": "Дарует герою пассивную ауру, которая увеличивает восстановление здоровья и броню",
       "hot_key": "E",
       "params": [
@@ -125,72 +89,77 @@
         "Дополнительная броня: 1\/2\/3\/4",
         "Длительность задержки ауры: 0,5"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Способность: Аура",
+        "Действует на: Союзников"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Divine Favor",
+      "cooldown": null,
       "legacy_key": "F",
       "story": "Заразный фанатизм Чена привлекает сторонников и наполняет их силой."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Chen_Hand_of_God.mp3\/revision\/latest?cb=20191216012101",
-      "effects": [
-        "Способность: Ненаправленная",
-        "Действует на: Союзных героев"
-      ],
       "notes": [
-        "Все существа под контролем Chen получают лечение, включая его иллюзии, призываемых существ и прирученных или подчиненных юнитов.",
-        "Не лечит любых союзных существ не-героев или иллюзий за исключением клонов героев.",
-        "Может вылечить союзников, если они неуязвимы или спрятаны.",
-        "Лечение происходит с интервалом в 1 секунду, начиная спустя 1 секунду после применения. Начальное лечение накладывает одновременном с первым периодическим лечением, в результате применяясь 8 раз. Может вылечить до 360\/540\/720 (TagTalent 640\/820\/1000) единиц здоровья одному существу за всю длительность.",
-        "Может вылечить до 360\/540\/720 (TagTalent 640\/820\/1000) единиц здоровья одному существу за всю длительность.",
-        "Hand of God first сначала применяет бафф, затем лечение, затем сильное развеивание. Периодическое лечение от несколько применений не сочетается, но его длительность обновляется.",
-        "Периодическое лечение от несколько применений не сочетается, но его длительность обновляется.",
-        "Фраза героя, проигрываемая при использование, слышна всем союзникам, но не врагам.",
-        "ПРИМЕЧАНИЯ К AGHANIM'S SHARD Holy Persuasion может подчинить древних крипов в количестве до 1\/2\/3 крипов в зависимости от уровня Hand of God."
+        "Все существа под контролем Chen получают лечение, включая его иллюзии, призываемых существ и прирученных или подчиненных юнитов",
+        "Не лечит любых союзных существ не-героев или иллюзий за исключением клонов героев",
+        "Может вылечить союзников, если они неуязвимы или спрятаны",
+        "Лечение происходит с интервалом в 1 секунду, начиная спустя 1 секунду после применения. Начальное лечение накладывает одновременном с первым периодическим лечением, в результате применяясь 8 раз. Может вылечить до 360\/540\/720 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 640\/820\/1000) единиц здоровья одному существу за всю длительность",
+        "Hand of God first сначала применяет бафф, затем лечение, затем сильное развеивание. Периодическое лечение от несколько применений не сочетается, но его длительность обновляется",
+        "Фраза героя, проигрываемая при использование, слышна всем союзникам, но не врагам",
+        "ПРИМЕЧАНИЯ К AGHANIM'S SHARD  Holy Persuasion может подчинить древних крипов в количестве до 1\/2\/3 крипов в зависимости от уровня  Hand of God"
       ],
-      "mana": "150\/130\/110 (TagTalent 120\/100\/80)",
       "item_behaviour": [],
-      "name": "Hand of God",
-      "cooldown": "200\/300\/400",
       "description": "Лечит всех союзных героев и подконтрольных крипов, где бы они ни находились. Сперва применяется сильное лечение, а затем периодическое, которое действует 20\/30\/40 сек.",
       "hot_key": "R",
       "params": [
         "Анимация применения: 0,3+0,93",
         "Дальность: Глобальная",
-        "Лечение: 200\/300\/400 ( 400\/500\/600)",
-        "Лечение в секунду: 20\/30\/40 ( 30\/40\/50)",
+        "Лечение: 200\/300\/400 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 400\/500\/600)",
+        "Лечение в секунду: 20\/30\/40 (<span image=\"images\/Talent_tree_symbol.webp\">Talent_tree_symbol<\/span> 30\/40\/50)",
         "Длительность: 8",
-        "Макс. древних крипов: 1\/2\/3"
+        "Макс. древних крипов:  1\/2\/3"
       ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Chen_Hand_of_God.mp3\/revision\/latest?cb=20191216012101",
+      "effects": [
+        "Способность: Ненаправленная",
+        "Действует на: Союзных героев"
+      ],
+      "mana": "150\/130\/110 (TagTalent 120\/100\/80)",
+      "aghanim": null,
+      "name": "Hand of God",
+      "cooldown": "200\/300\/400",
       "legacy_key": "D",
       "story": "Используя ментальную связь со своими рабами, рыцарь веры поддерживает здоровье и хорошее самочувствие всех, кто разделяет его фанатизм."
     },
     {
-      "audioUrl": "",
-      "effects": [
-        "Способность: Направленная на существо",
-        "Действует на: Союзников",
-        "Урон: Мгновенное убийство"
-      ],
       "notes": [
-        "Требуется Aghanim's Scepter для разблокировки. Если способность Hand of God не изучена, то при её применении ничего не произойдёт, а способность уйдёт на перезарядку только у применившего её крипа. Эта способность выдаётся всем подчинённым крипам сразу после приобретения Aghanim's Scepter. Если Chen потеряет улучшение от Aghanim's Scepter, то эта способность мгновенно исчезнет у всех подчинённых крипов.",
-        "Если способность Hand of God не изучена, то при её применении ничего не произойдёт, а способность уйдёт на перезарядку только у применившего её крипа.",
-        "Эта способность выдаётся всем подчинённым крипам сразу после приобретения Aghanim's Scepter.",
-        "Если Chen потеряет улучшение от Aghanim's Scepter, то эта способность мгновенно исчезнет у всех подчинённых крипов.",
-        "Martyrdom имеет общую перезарядку для всех подчинённых крипов. Только что подчинённые крипы не будут иметь перезарядку у Martyrdom.",
-        "Только что подчинённые крипы не будут иметь перезарядку у Martyrdom.",
-        "Нельзя применить на неуязвимых существ и на курьеров.",
-        "↓↓ Двойное нажатие мгновенно убьёт подчинённого крипа.",
-        "Смерть крипов никому не засчитывается, поэтому опыт за них никто не получает.",
-        "Примечания к Hand of God полностью применимы."
+        "Требуется  Aghanim's Scepter для разблокировки. Если способность  Hand of God не изучена, то при её применении ничего не произойдёт, а способность уйдёт на перезарядку только у применившего её крипа. Эта способность выдаётся всем  подчинённым крипам сразу после приобретения Aghanim's Scepter. Если Chen потеряет улучшение от Aghanim's Scepter, то эта способность мгновенно исчезнет у всех подчинённых крипов",
+        "Martyrdom имеет общую перезарядку для всех подчинённых крипов. Только что подчинённые крипы не будут иметь перезарядку у Martyrdom",
+        "Нельзя применить на неуязвимых существ и на  курьеров",
+        "↓↓ Двойное нажатие мгновенно убьёт подчинённого крипа",
+        "Смерть крипов никому не засчитывается, поэтому опыт за них никто не получает",
+        "Примечания к Hand of God полностью применимы"
       ],
-      "mana": "8",
       "item_behaviour": [],
-      "name": "Martyrdom",
-      "cooldown": "0",
       "description": "Пожертвовать жизнью этого существа, чтобы излечить любого союзника способностью Hand of God текущего уровня.",
       "hot_key": "R",
       "params": [
         "Анимация применения: 0,3+0,93",
         "Дальность применения: Глобальная"
       ],
+      "audioUrl": "",
+      "effects": [
+        "Способность: Направленная на существо",
+        "Действует на: Союзников",
+        "Урон: Мгновенное убийство"
+      ],
+      "mana": "8",
+      "aghanim": null,
+      "name": "Martyrdom",
+      "cooldown": "0",
       "legacy_key": "?",
       "story": null
     }
