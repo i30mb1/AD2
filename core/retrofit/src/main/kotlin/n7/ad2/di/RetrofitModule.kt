@@ -1,9 +1,5 @@
 package n7.ad2.di
 
-import dagger.Binds
-import dagger.Module
-import dagger.Provides
-import dagger.Reusable
 import dagger.multibindings.IntoSet
 import dagger.multibindings.Multibinds
 import n7.ad2.AppInformation
@@ -18,13 +14,13 @@ import javax.inject.Qualifier
 @Qualifier
 private annotation class InternalApi
 
-@Module
+@dagger.Module
 interface RetrofitModule {
 
     @InternalApi
     @IntoSet
-    @Binds
-    @Reusable
+    @dagger.Binds
+    @dagger.Reusable
     fun provideMockInterceptor(mockInterceptor: MockInterceptor): Interceptor
 
     @InternalApi
@@ -34,16 +30,16 @@ interface RetrofitModule {
     companion object {
 
         @InternalApi
-        @Provides
-        @Reusable
+        @dagger.Provides
+        @dagger.Reusable
         fun provideHttpLogger(logger: Logger): HttpLoggingInterceptor {
             val result = HttpLoggingInterceptor(logger::log)
             result.level = HttpLoggingInterceptor.Level.BASIC
             return result
         }
 
-        @Provides
-        @Reusable
+        @dagger.Provides
+        @dagger.Reusable
         fun provideBaseOkHttpClientBuilder(
             @InternalApi httpLoggingInterceptor: HttpLoggingInterceptor,
             @InternalApi interceptors: Set<@JvmSuppressWildcards Interceptor>,
@@ -62,8 +58,8 @@ interface RetrofitModule {
             return builder
         }
 
-        @Provides
-        @Reusable
+        @dagger.Provides
+        @dagger.Reusable
         fun provideBaseOkHttpClient(baseOkHttpClientBuilder: OkHttpClient.Builder): OkHttpClient {
             return baseOkHttpClientBuilder.build()
         }

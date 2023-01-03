@@ -5,7 +5,7 @@ import n7.ad2.apppreference.domain.usecase.GetCurrentDayUseCase
 import n7.ad2.dagger.ApplicationScope
 
 @dagger.Module
-class AppPreferenceModule {
+object AppPreferenceModule {
 
     @ApplicationScope
     @dagger.Provides

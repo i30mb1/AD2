@@ -1,14 +1,13 @@
 package n7.ad2.di
 
 import com.squareup.moshi.Moshi
-import dagger.Provides
 import n7.ad2.dagger.ApplicationScope
 
 @dagger.Module
-class MoshiModule {
+object MoshiModule {
 
     @ApplicationScope
-    @Provides
+    @dagger.Provides
     fun moshi(): Moshi = Moshi.Builder().build()
 
 }

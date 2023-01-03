@@ -1,20 +1,17 @@
 package n7.ad2.coroutines
 
-import dagger.Module
-import dagger.Provides
-import dagger.Reusable
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 
-@Module
-class CoroutineModule {
+@dagger.Module
+object CoroutineModule {
 
-    @Reusable
-    @Provides
+    @dagger.Reusable
+    @dagger.Provides
     fun provideDispatchers(): DispatchersProvider = DispatchersProvider()
 
-    @Provides
+    @dagger.Provides
     fun provideCoroutineScope(): CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
 }

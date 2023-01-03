@@ -2,9 +2,6 @@ package n7.ad2.di
 
 import android.app.Application
 import androidx.work.WorkManager
-import dagger.Binds
-import dagger.Provides
-import dagger.Reusable
 import dagger.multibindings.ElementsIntoSet
 import n7.ad2.AD2AppInformation
 import n7.ad2.AD2Provider
@@ -30,36 +27,36 @@ import java.util.Calendar
 @dagger.Module
 interface ApplicationModule {
 
-    @Reusable
-    @Binds
+    @dagger.Reusable
+    @dagger.Binds
     fun provideAppInfo(appInformation: AD2AppInformation): AppInformation
 
-    @Reusable
-    @Binds
+    @dagger.Reusable
+    @dagger.Binds
     fun provideAppResource(appResources: AD2Resources): Resources
 
-    @Reusable
-    @Binds
+    @dagger.Reusable
+    @dagger.Binds
     fun provideAppSettings(appSettings: AD2Settings): AppSettings
 
     @ApplicationScope
-    @Binds
+    @dagger.Binds
     fun provideLogger(logger: AppLogger): Logger
 
     companion object {
 
-        @Provides
+        @dagger.Provides
         fun provideProvider(): Provider = AD2Provider
 
-        @Provides
+        @dagger.Provides
         fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
 
         @ApplicationScope
-        @Provides
+        @dagger.Provides
         fun provideCalendar(): Calendar = Calendar.getInstance()
 
         @ElementsIntoSet
-        @Provides
+        @dagger.Provides
         fun provideInitializers(yandexMetricsInit: YandexMetricsInit): Set<Initializer> {
             return setOf(
                 SystemInfoInitializer(),
