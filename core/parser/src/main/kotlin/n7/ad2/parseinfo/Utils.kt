@@ -1,5 +1,8 @@
 package n7.ad2.parseinfo
 
+import org.jsoup.nodes.Element
+import org.jsoup.nodes.Node
+import org.jsoup.nodes.TextNode
 import java.io.File
 import java.net.URL
 import javax.imageio.ImageIO
@@ -32,4 +35,25 @@ internal fun saveFile(path: String, fileName: String, text: String) {
     file.createNewFile()
     file.writeText(text)
     println("file (${file.length()} bytes) saved in '$path'")
+}
+
+
+internal fun getTextFromNodeFormatted(element: Node): String {
+    return getTextFromNode(element).removeSuffix(".").trim()
+}
+
+private fun getTextFromNode(element: Node): String {
+    val result = StringBuilder()
+    if (element is Element) {
+        val attr = element.attr("data-image-name").removeSuffix(" icon.png").removeSuffix(".png")
+        val imageName = availableImages.find { it == attr }
+        if (imageName != null) result.append("<span image=\"$imageName.png\">$imageName</span>")
+        element.childNodes().forEach { node ->
+            result.append(getTextFromNode(node))
+        }
+    }
+    if (element is TextNode) {
+        result.append(element.text())
+    }
+    return result.toString()
 }

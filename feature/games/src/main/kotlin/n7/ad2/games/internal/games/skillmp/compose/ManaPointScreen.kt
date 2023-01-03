@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
@@ -40,6 +41,7 @@ internal fun ManaPointScreen(
 ) {
     val color by rememberUpdatedState(newValue = Color(state.backgroundColor).copy(alpha = 0.2f))
     val animateColor = animateColorAsState(targetValue = color, animationSpec = tween(2_000))
+    val offset = with(LocalDensity.current) { 5.toDp() }
     Column(
         modifier = Modifier
             .fillMaxSize()

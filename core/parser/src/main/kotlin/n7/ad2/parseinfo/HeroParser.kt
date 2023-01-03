@@ -14,11 +14,12 @@ import java.io.File
 fun main() {
     val heroes = getHeroes()
 //    createFileWithHeroes(heroes)
-    for (hero in heroes) {
-        loadHero(hero, LocaleHeroes.RU)
-        loadHero(hero, LocaleHeroes.EN)
-    }
+//    for (hero in heroes) {
+    loadHero(heroes.first(), LocaleHeroes.RU)
+//        loadHero(hero, LocaleHeroes.EN)
+//    }
 }
+
 
 private fun loadResponse(hero: Hero, locale: LocaleHeroes) {
     val root = Jsoup.connect(locale.soundUrl.format(hero.name)).postDataCharset("UTF-8").get()
@@ -236,6 +237,8 @@ private fun loadSections(root: Document, callback: (SectionAndData) -> Unit) {
     }
 }
 
+val availableImages = File(assetsDatabaseItemsImages).listFiles().map { it.name.removeSuffix(".webp") }
+
 private fun JSONObject.loadAbilities(root: Document) {
     val spells = root.getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")
     val abilitiesArray = JSONArray()
@@ -269,40 +272,6 @@ private fun JSONObject.loadAbilities(root: Document) {
 
         val description = spell.getElementsByTag("div")[12].text()
         abilityObject["description"] = description
-
-        val params = spell.getElementsByAttributeValue("style", "font-size:98%;")
-        val jsonParams = JSONArray()
-        for (param in params) {
-            val result = StringBuilder()
-//            for (element in param.children()) {
-//                val elementText = when (element.tagName()) {
-//                    "span" -> {
-//                        val result = StringBuilder()
-//                        for (child in element.children()) {
-//                            if (child.tagName() == "a") result.append("<spannnn>")
-//                            else result.append(child.text())
-//                        }
-//                        result.toString()
-//                    }
-//                    else -> " " + element.text()
-//                }
-//                result.append(elementText)
-//            }
-            for (childNode in param.childNodes()) {
-                val childResult = when (childNode) {
-                    is TextNode -> childNode.text()
-                    is Element -> {
-                        val containsHrefTalent = childNode.attributes()["href"] == "/wiki/Talents"
-                        if (containsHrefTalent) "<span image=\"images\\Talent\"></span>"
-                        else childNode.text()
-                    }
-                    else -> ""
-                }
-                result.append(childResult)
-            }
-            jsonParams.add(result.toString().trim())
-        }
-        abilityObject["params"] = jsonParams
 
         val cooldown = spell.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; width:240px;").getOrNull(0)
         if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
@@ -339,16 +308,49 @@ private fun JSONObject.loadAbilities(root: Document) {
         abilityObject["story"] = story?.text()
 
         val notesBlock = spell.getElementsByAttributeValue("style", "flex:1 1 450px; word-wrap:break-word;").getOrNull(0)
-        val notes = notesBlock?.getElementsByTag("li")
-        JSONArray().apply {
-            notes?.forEach {
-                add(it.text().replace("( ", "(TagTalent "))
+        val notesArray = JSONArray()
+        notesBlock?.children()?.forEach notesForEach@{ element ->
+            if (element.tagName() != "ul") return@notesForEach
+            val result = getTextFromNodeFormatted(element)
+            if (result.isNotEmpty()) notesArray.add(result)
+        }
+
+        abilityObject["notes"] = notesArray.ifEmpty { null }
+
+        val infoBlock = spell.getElementsByAttributeValue("style", "display:inline-block; vertical-align:top; padding:3px 5px; border:1px solid rgba(0, 0, 0, 0);").getOrNull(0)
+        val jsonParams = JSONArray()
+        if (infoBlock != null) for (block in infoBlock.children()) {
+            val style = block.attributes()["style"]
+            val params = listOf<String>()
+            when (style) {
+                "font-size:98%;" -> {
+                    val result = getTextFromNodeFormatted(block)
+                    jsonParams.add(result)
+                }
             }
 
-            abilityObject["notes"] = this
+
+//            for (element in param.children()) {
+//                val elementText = when (element.tagName()) {
+//                    "span" -> {
+//                        val result = StringBuilder()
+//                        for (child in element.children()) {
+//                            if (child.tagName() == "a") result.append("<spannnn>")
+//                            else result.append(child.text())
+//                        }
+//                        result.toString()
+//                    }
+//                    else -> " " + element.text()
+//                }
+//                result.append(elementText)
+//            }
         }
+        abilityObject["params"] = jsonParams
+        abilityObject["aghanim"] = null
+
         abilitiesArray.add(abilityObject)
     }
+
     put("abilities", abilitiesArray)
 }
 
