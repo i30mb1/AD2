@@ -354,7 +354,7 @@ private fun JSONObject.loadAbilities(root: Document) {
 
 private fun loadSpellImage(element: Element, name: String) {
     val url = element.getElementsByAttributeValue("class", "image")[0].attr("href")
-    saveImage(url, assetsDatabaseItemsImages, name.replace(" ", "_"))
+    saveImage(url, assetsDatabaseSpells, name.replace(" ", "_"))
 }
 
 private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
