@@ -39,23 +39,29 @@ internal fun saveFile(path: String, fileName: String, text: String) {
 
 
 internal fun getTextFromNodeFormatted(element: Node): String {
-    return getTextFromNode(element).removeSuffix(".").trim()
+    return getTextFromNode(element).removeSuffix(".").trim().replace(". ", "\n")
 }
 
-val availableImages = File(assetsDatabaseItemsImages)?.listFiles()?.map { it.name.removeSuffix(".webp") } ?: emptyList()
+data class Image(val path: String, val name: String, val formattedName: String)
+
+val availableImages = File(assetsDatabaseItemsImages)?.listFiles()?.map {
+    val name = it.name.substringBefore(".")
+    val formattedName = "[${name.replace("_", " ")}]"
+    val path = it.path.substringAfter("assets\\").replace("\\", "/")
+    Image(path, name, formattedName)
+} ?: emptyList()
 
 private fun getTextFromNode(element: Node): String {
     val result = StringBuilder()
-    if (element is Element) {
-        val attr = element.attr("data-image-key").removeSuffix("_icon.png").removeSuffix(".png")
-        val imageName = availableImages.find { it == attr }
-        if (imageName != null) result.append("<span image=\"images/$imageName.webp\">$imageName</span>")
+    if (element is TextNode) {
+        return element.text()
+    } else if (element is Element) {
+        val attr = element.attr("data-image-key").substringBefore(".").removeSuffix("_icon")
+        val item = availableImages.find { it.name == attr }
+        if (item != null) result.append("<span image=\"${item.path}\">${item.formattedName}</span>")
         element.childNodes().forEach { node ->
             result.append(getTextFromNode(node))
         }
-    }
-    if (element is TextNode) {
-        result.append(element.text())
     }
     return result.toString()
 }
