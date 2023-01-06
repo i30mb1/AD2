@@ -2,7 +2,7 @@ package n7.ad2.parseinfo
 
 import org.jsoup.Jsoup
 
-class HeroItem(val name: String, val href: String, val section: String)
+class HeroItem(val name: String, val formattedName: String, val href: String, val section: String)
 
 class GetItemsUseCase {
 
@@ -32,10 +32,10 @@ class GetItemsUseCase {
                     for (item in element.children()) {
                         if (item.children().size < 2) continue
                         val itemHref = item.child(1).attr("href") ?: throw Exception("could not find item href")
-                        val itemName = item.child(1).attr("title") ?: throw Exception("could not find item name")
-
-                        val heroItem = HeroItem(itemName, itemHref, itemSection)
-                        if (!ignoreList.contains(heroItem.name)) result.add(heroItem)
+                        val formattedName = item.child(1).attr("title") ?: throw Exception("could not find item name")
+                        val itemName = formattedName.replace(" ", "_").lowercase()
+                        val heroItem = HeroItem(itemName, formattedName, itemHref, itemSection)
+                        if (!ignoreList.contains(formattedName)) result.add(heroItem)
                     }
 
                 }

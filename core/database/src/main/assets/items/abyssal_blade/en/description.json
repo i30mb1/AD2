@@ -61,10 +61,10 @@
         "Blocked Damage (TagAghanimRanged): 35"
       ],
       "notes": [
+        "Damage Block uses pseudo-random distribution and has the following properties: When multiple different sources proc on the same attack, the one with a higher value takes priority. However, multiple sources of the same value stack multiplicatively. Does not work against damage from wards sources (e.g. Death Ward etc.). Does not reduce physical damage from abilities, except for these abilities.",
+        "When multiple different sources proc on the same attack, the one with a higher value takes priority. However, multiple sources of the same value stack multiplicatively.",
         "Does not work against damage from wards sources (e.g. Death Ward etc.).",
-        "Does not reduce physical damage from abilities, except for these spells.",
-        "Stacks with all other sources of Damage Block.",
-        "Damage Block uses pseudo-random distribution."
+        "Does not reduce physical damage from abilities, except for these abilities."
       ],
       "mana": null,
       "abilityName": "Damage Block",

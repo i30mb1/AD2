@@ -90,12 +90,16 @@ internal class AD2SpanParser @Inject constructor(
             "linearGradient" -> result[0, result.length] = setLinearGradient(value, result)
             "underline" -> result[0, result.length] = UnderlineSpan()
             "image" -> {
-                val parts = value.split(".")
-                val path = parts[0] + ".${parts[1]}"
-                val pathNight = (if (isNightTheme) "${parts[0]}-night" else parts[0]) + ".${parts[1]}"
-                val drawable = runCatching { Drawable.createFromStream(res.getAssets(pathNight), null) }.getOrNull()
-                    ?: runCatching { Drawable.createFromStream(res.getAssets(path), null) }.getOrNull()
-                if (drawable != null) result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
+                try {
+                    val parts = value.split(".")
+                    val path = parts[0] + ".${parts[1]}"
+                    val pathNight = (if (isNightTheme) "${parts[0]}-night" else parts[0]) + ".${parts[1]}"
+                    val drawable = runCatching { Drawable.createFromStream(res.getAssets(pathNight), null) }.getOrNull()
+                        ?: runCatching { Drawable.createFromStream(res.getAssets(path), null) }.getOrNull()
+                    if (drawable != null) result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
+                } catch (e: Exception) {
+                    println("fff")
+                }
             }
             "click" -> result[0, result.length] = AD2ClickableSpan(AD2ClickableSpan.Data(value, bufferText))
             "style" -> when (value) {

@@ -13,14 +13,13 @@
         "Interrupts the caster's channeling abilities upon cast.",
         "Affects allied heroes, including illusions and buildings, invulnerable and hidden units. Does not affect creep-heroes.",
         "Does not affect creep-heroes.",
-        "Does not affect units that have been affected by Guard in the last 34 seconds. A status buff icon on affected units shows how much time is left for it to be able to get affected by the aforementioned abilities again. The stack limit duration is set upon cast and is unaffected by cooldown manipulation.",
-        "A status buff icon on affected units shows how much time is left for it to be able to get affected by the aforementioned abilities again.",
+        "Does not affect units that have been affected by Guard in the last 34 seconds. A status buff icon on affected units shows the remaining time for it to be able to get affected by the Guard again. The stack limit duration is set upon cast and is unaffected by cooldown manipulation.",
+        "A status buff icon on affected units shows the remaining time for it to be able to get affected by the Guard again.",
         "The stack limit duration is set upon cast and is unaffected by cooldown manipulation.",
-        "Guard has an ensured damage block. Therefore damage block with a lower value (e.g. Vanguard etc.) will not proc, since the higher damage block value takes priority.",
+        "Guard has an ensured Damage Block and has the following properties: Therefore, Damage Block with a lower value (e.g. the Damage Block passive ability) will not proc, since the higher damage block value takes priority. Does not work against damage from wards sources (e.g. Death Ward etc.). Does not reduce physical damage from abilities, except for these abilities.",
+        "Therefore, Damage Block with a lower value (e.g. the Damage Block passive ability) will not proc, since the higher damage block value takes priority.",
         "Does not work against damage from wards sources (e.g. Death Ward etc.).",
-        "Does not reduce physical damage from abilities, except for these spells.",
-        "Stacks with all other sources of Damage Block.",
-        "Damage Block uses pseudo-random distribution."
+        "Does not reduce physical damage from abilities, except for these abilities."
       ],
       "mana": "0",
       "abilityName": "Guard",
@@ -38,10 +37,10 @@
         "Blocked Damage (TagAghanimRanged): 50"
       ],
       "notes": [
-        "Does not work against damage from wards sources (e.g. Death Ward etc.).",
-        "Does not reduce physical damage from abilities, except for these spells.",
-        "Stacks with all other sources of damage block.",
-        "Damage Block uses pseudo-random distribution."
+        "Damage Block uses pseudo-random distribution and has the following properties: When multiple different sources proc on the same attack, the one with a higher value takes priority. However, multiple sources of the same value stack multiplicatively. Does not work against damage from wards sources. Does not reduce physical damage from abilities, except for these abilities.",
+        "When multiple different sources proc on the same attack, the one with a higher value takes priority. However, multiple sources of the same value stack multiplicatively.",
+        "Does not work against damage from wards sources.",
+        "Does not reduce physical damage from abilities, except for these abilities."
       ],
       "mana": null,
       "abilityName": "Damage Block",

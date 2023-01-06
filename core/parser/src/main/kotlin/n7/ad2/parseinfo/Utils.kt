@@ -43,14 +43,14 @@ internal fun getTextFromNodeFormatted(element: Node): String {
 
 data class Image(val path: String, val name: String, val formattedName: String)
 
-val availableImagesSpells = File(assetsDatabaseSpells)?.listFiles()?.map {
+val availableImagesSpells = File(assetsDatabaseSpells).listFiles()?.map {
     val name = it.name.substringBefore(".")
     val formattedName = "[${name.replace("_", " ")}]"
     val path = it.path.substringAfter("assets\\").replace("\\", "/")
     Image(path, name, formattedName)
 } ?: emptyList()
 
-val availableImagesItems = File(assetsDatabaseItems)?.listFiles()?.map {
+val availableImagesItems = File(assetsDatabaseItems).listFiles()?.map {
     val name = it.name.replace(" ", "_")
     val formattedName = "[${name.replace("_", " ")}]"
     val path = it.path.substringAfter("assets\\").replace("\\", "/") + "/full.webp"
@@ -62,14 +62,12 @@ fun getTextFromNode(element: Node): String {
     if (element is TextNode) {
         return element.text()
     } else {
-        val result = StringBuilder()
         val attr = element.attr("data-image-key").substringBefore(".").removeSuffix("_icon").replace("%27", "'")
         val item = availableImages.find { it.name == attr }
-        if (item != null) result.append("<span image=\"${item.path}\">${item.formattedName}</span>")
+        val span = if (item != null) "<span image=\"${item.path}\">${item.formattedName}</span>" else ""
 //        else if (attr.isNotEmpty()) error("не нашли картинку [$attr]")
-        element.childNodes().forEach { node ->
-            result.append(getTextFromNode(node))
+        return element.childNodes().fold(span) { value: String, node: Node ->
+            value + getTextFromNode(node)
         }
-        return result.toString()
     }
 }

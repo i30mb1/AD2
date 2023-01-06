@@ -1,902 +1,902 @@
 [
   {
-    "name": "Observer Ward",
+    "name": "observer_ward",
     "section": "Consumables"
   },
   {
-    "name": "Clarity",
+    "name": "clarity",
     "section": "Consumables"
   },
   {
-    "name": "Sentry Ward",
+    "name": "sentry_ward",
     "section": "Consumables"
   },
   {
-    "name": "Smoke of Deceit",
+    "name": "smoke_of_deceit",
     "section": "Consumables"
   },
   {
-    "name": "Enchanted Mango",
+    "name": "enchanted_mango",
     "section": "Consumables"
   },
   {
-    "name": "Faerie Fire",
+    "name": "faerie_fire",
     "section": "Consumables"
   },
   {
-    "name": "Tome of Knowledge",
+    "name": "tome_of_knowledge",
     "section": "Consumables"
   },
   {
-    "name": "Dust of Appearance",
+    "name": "dust_of_appearance",
     "section": "Consumables"
   },
   {
-    "name": "Tango",
+    "name": "tango",
     "section": "Consumables"
   },
   {
-    "name": "Healing Salve",
+    "name": "healing_salve",
     "section": "Consumables"
   },
   {
-    "name": "Town Portal Scroll",
+    "name": "town_portal_scroll",
     "section": "Consumables"
   },
   {
-    "name": "Bottle",
+    "name": "bottle",
     "section": "Consumables"
   },
   {
-    "name": "Aghanim's Shard",
+    "name": "aghanim's_shard",
     "section": "Consumables"
   },
   {
-    "name": "Iron Branch",
+    "name": "iron_branch",
     "section": "Attributes"
   },
   {
-    "name": "Gauntlets of Strength",
+    "name": "gauntlets_of_strength",
     "section": "Attributes"
   },
   {
-    "name": "Mantle of Intelligence",
+    "name": "mantle_of_intelligence",
     "section": "Attributes"
   },
   {
-    "name": "Slippers of Agility",
+    "name": "slippers_of_agility",
     "section": "Attributes"
   },
   {
-    "name": "Circlet",
+    "name": "circlet",
     "section": "Attributes"
   },
   {
-    "name": "Band of Elvenskin",
+    "name": "band_of_elvenskin",
     "section": "Attributes"
   },
   {
-    "name": "Belt of Strength",
+    "name": "belt_of_strength",
     "section": "Attributes"
   },
   {
-    "name": "Crown",
+    "name": "crown",
     "section": "Attributes"
   },
   {
-    "name": "Robe of the Magi",
+    "name": "robe_of_the_magi",
     "section": "Attributes"
   },
   {
-    "name": "Blade of Alacrity",
+    "name": "blade_of_alacrity",
     "section": "Attributes"
   },
   {
-    "name": "Ogre Axe",
+    "name": "ogre_axe",
     "section": "Attributes"
   },
   {
-    "name": "Staff of Wizardry",
+    "name": "staff_of_wizardry",
     "section": "Attributes"
   },
   {
-    "name": "Quelling Blade",
+    "name": "quelling_blade",
     "section": "Equipment"
   },
   {
-    "name": "Ring of Protection",
+    "name": "ring_of_protection",
     "section": "Equipment"
   },
   {
-    "name": "Infused Raindrops",
+    "name": "infused_raindrops",
     "section": "Equipment"
   },
   {
-    "name": "Orb of Venom",
+    "name": "orb_of_venom",
     "section": "Equipment"
   },
   {
-    "name": "Blight Stone",
+    "name": "blight_stone",
     "section": "Equipment"
   },
   {
-    "name": "Blades of Attack",
+    "name": "blades_of_attack",
     "section": "Equipment"
   },
   {
-    "name": "Gloves of Haste",
+    "name": "gloves_of_haste",
     "section": "Equipment"
   },
   {
-    "name": "Chainmail",
+    "name": "chainmail",
     "section": "Equipment"
   },
   {
-    "name": "Quarterstaff",
+    "name": "quarterstaff",
     "section": "Equipment"
   },
   {
-    "name": "Helm of Iron Will",
+    "name": "helm_of_iron_will",
     "section": "Equipment"
   },
   {
-    "name": "Blitz Knuckles",
+    "name": "blitz_knuckles",
     "section": "Equipment"
   },
   {
-    "name": "Broadsword",
+    "name": "broadsword",
     "section": "Equipment"
   },
   {
-    "name": "Javelin",
+    "name": "javelin",
     "section": "Equipment"
   },
   {
-    "name": "Claymore",
+    "name": "claymore",
     "section": "Equipment"
   },
   {
-    "name": "Mithril Hammer",
+    "name": "mithril_hammer",
     "section": "Equipment"
   },
   {
-    "name": "Ring of Regen",
+    "name": "ring_of_regen",
     "section": "Miscellaneous"
   },
   {
-    "name": "Sage's Mask",
+    "name": "sage's_mask",
     "section": "Miscellaneous"
   },
   {
-    "name": "Magic Stick",
+    "name": "magic_stick",
     "section": "Miscellaneous"
   },
   {
-    "name": "Fluffy Hat",
+    "name": "fluffy_hat",
     "section": "Miscellaneous"
   },
   {
-    "name": "Wind Lace",
+    "name": "wind_lace",
     "section": "Miscellaneous"
   },
   {
-    "name": "Boots of Speed",
+    "name": "boots_of_speed",
     "section": "Miscellaneous"
   },
   {
-    "name": "Cloak",
+    "name": "cloak",
     "section": "Miscellaneous"
   },
   {
-    "name": "Voodoo Mask",
+    "name": "voodoo_mask",
     "section": "Miscellaneous"
   },
   {
-    "name": "Gem of True Sight",
+    "name": "gem_of_true_sight",
     "section": "Miscellaneous"
   },
   {
-    "name": "Morbid Mask",
+    "name": "morbid_mask",
     "section": "Miscellaneous"
   },
   {
-    "name": "Shadow Amulet",
+    "name": "shadow_amulet",
     "section": "Miscellaneous"
   },
   {
-    "name": "Ghost Scepter",
+    "name": "ghost_scepter",
     "section": "Miscellaneous"
   },
   {
-    "name": "Blink Dagger",
+    "name": "blink_dagger",
     "section": "Miscellaneous"
   },
   {
-    "name": "Energy Booster",
+    "name": "energy_booster",
     "section": "Secret"
   },
   {
-    "name": "Ring of Health",
+    "name": "ring_of_health",
     "section": "Secret"
   },
   {
-    "name": "Void Stone",
+    "name": "void_stone",
     "section": "Secret"
   },
   {
-    "name": "Vitality Booster",
+    "name": "vitality_booster",
     "section": "Secret"
   },
   {
-    "name": "Point Booster",
+    "name": "point_booster",
     "section": "Secret"
   },
   {
-    "name": "Talisman of Evasion",
+    "name": "talisman_of_evasion",
     "section": "Secret"
   },
   {
-    "name": "Platemail",
+    "name": "platemail",
     "section": "Secret"
   },
   {
-    "name": "Hyperstone",
+    "name": "hyperstone",
     "section": "Secret"
   },
   {
-    "name": "Ultimate Orb",
+    "name": "ultimate_orb",
     "section": "Secret"
   },
   {
-    "name": "Demon Edge",
+    "name": "demon_edge",
     "section": "Secret"
   },
   {
-    "name": "Eaglesong",
+    "name": "eaglesong",
     "section": "Secret"
   },
   {
-    "name": "Mystic Staff",
+    "name": "mystic_staff",
     "section": "Secret"
   },
   {
-    "name": "Reaver",
+    "name": "reaver",
     "section": "Secret"
   },
   {
-    "name": "Sacred Relic",
+    "name": "sacred_relic",
     "section": "Secret"
   },
   {
-    "name": "Magic Wand",
+    "name": "magic_wand",
     "section": "Accessories"
   },
   {
-    "name": "Bracer",
+    "name": "bracer",
     "section": "Accessories"
   },
   {
-    "name": "Null Talisman",
+    "name": "null_talisman",
     "section": "Accessories"
   },
   {
-    "name": "Wraith Band",
+    "name": "wraith_band",
     "section": "Accessories"
   },
   {
-    "name": "Soul Ring",
+    "name": "soul_ring",
     "section": "Accessories"
   },
   {
-    "name": "Orb of Corrosion",
+    "name": "orb_of_corrosion",
     "section": "Accessories"
   },
   {
-    "name": "Falcon Blade",
+    "name": "falcon_blade",
     "section": "Accessories"
   },
   {
-    "name": "Power Treads",
+    "name": "power_treads",
     "section": "Accessories"
   },
   {
-    "name": "Oblivion Staff",
+    "name": "oblivion_staff",
     "section": "Accessories"
   },
   {
-    "name": "Phase Boots",
+    "name": "phase_boots",
     "section": "Accessories"
   },
   {
-    "name": "Perseverance",
+    "name": "perseverance",
     "section": "Accessories"
   },
   {
-    "name": "Mask of Madness",
+    "name": "mask_of_madness",
     "section": "Accessories"
   },
   {
-    "name": "Hand of Midas",
+    "name": "hand_of_midas",
     "section": "Accessories"
   },
   {
-    "name": "Helm of the Dominator",
+    "name": "helm_of_the_dominator",
     "section": "Accessories"
   },
   {
-    "name": "Boots of Travel",
+    "name": "boots_of_travel",
     "section": "Accessories"
   },
   {
-    "name": "Moon Shard",
+    "name": "moon_shard",
     "section": "Accessories"
   },
   {
-    "name": "Helm of the Overlord",
+    "name": "helm_of_the_overlord",
     "section": "Accessories"
   },
   {
-    "name": "Buckler",
+    "name": "buckler",
     "section": "Support"
   },
   {
-    "name": "Headdress",
+    "name": "headdress",
     "section": "Support"
   },
   {
-    "name": "Ring of Basilius",
+    "name": "ring_of_basilius",
     "section": "Support"
   },
   {
-    "name": "Urn of Shadows",
+    "name": "urn_of_shadows",
     "section": "Support"
   },
   {
-    "name": "Tranquil Boots",
+    "name": "tranquil_boots",
     "section": "Support"
   },
   {
-    "name": "Medallion of Courage",
+    "name": "medallion_of_courage",
     "section": "Support"
   },
   {
-    "name": "Arcane Boots",
+    "name": "arcane_boots",
     "section": "Support"
   },
   {
-    "name": "Drum of Endurance",
+    "name": "drum_of_endurance",
     "section": "Support"
   },
   {
-    "name": "Mekansm",
+    "name": "mekansm",
     "section": "Support"
   },
   {
-    "name": "Holy Locket",
+    "name": "holy_locket",
     "section": "Support"
   },
   {
-    "name": "Vladmir's Offering",
+    "name": "vladmir's_offering",
     "section": "Support"
   },
   {
-    "name": "Spirit Vessel",
+    "name": "spirit_vessel",
     "section": "Support"
   },
   {
-    "name": "Pipe of Insight",
+    "name": "pipe_of_insight",
     "section": "Support"
   },
   {
-    "name": "Wraith Pact",
+    "name": "wraith_pact",
     "section": "Support"
   },
   {
-    "name": "Boots of Bearing",
+    "name": "boots_of_bearing",
     "section": "Support"
   },
   {
-    "name": "Guardian Greaves",
+    "name": "guardian_greaves",
     "section": "Support"
   },
   {
-    "name": "Veil of Discord",
+    "name": "veil_of_discord",
     "section": "Magical"
   },
   {
-    "name": "Glimmer Cape",
+    "name": "glimmer_cape",
     "section": "Magical"
   },
   {
-    "name": "Force Staff",
+    "name": "force_staff",
     "section": "Magical"
   },
   {
-    "name": "Aether Lens",
+    "name": "aether_lens",
     "section": "Magical"
   },
   {
-    "name": "Witch Blade",
+    "name": "witch_blade",
     "section": "Magical"
   },
   {
-    "name": "Solar Crest",
+    "name": "solar_crest",
     "section": "Magical"
   },
   {
-    "name": "Dagon",
+    "name": "dagon",
     "section": "Magical"
   },
   {
-    "name": "Eul's Scepter of Divinity",
+    "name": "eul's_scepter_of_divinity",
     "section": "Magical"
   },
   {
-    "name": "Rod of Atos",
+    "name": "rod_of_atos",
     "section": "Magical"
   },
   {
-    "name": "Orchid Malevolence",
+    "name": "orchid_malevolence",
     "section": "Magical"
   },
   {
-    "name": "Aghanim's Scepter",
+    "name": "aghanim's_scepter",
     "section": "Magical"
   },
   {
-    "name": "Refresher Orb",
+    "name": "refresher_orb",
     "section": "Magical"
   },
   {
-    "name": "Octarine Core",
+    "name": "octarine_core",
     "section": "Magical"
   },
   {
-    "name": "Scythe of Vyse",
+    "name": "scythe_of_vyse",
     "section": "Magical"
   },
   {
-    "name": "Aghanim's Blessing",
+    "name": "aghanim's_blessing",
     "section": "Magical"
   },
   {
-    "name": "Gleipnir",
+    "name": "gleipnir",
     "section": "Magical"
   },
   {
-    "name": "Revenant's Brooch",
+    "name": "revenant's_brooch",
     "section": "Magical"
   },
   {
-    "name": "Wind Waker",
+    "name": "wind_waker",
     "section": "Magical"
   },
   {
-    "name": "Hood of Defiance",
+    "name": "hood_of_defiance",
     "section": "Armor"
   },
   {
-    "name": "Vanguard",
+    "name": "vanguard",
     "section": "Armor"
   },
   {
-    "name": "Blade Mail",
+    "name": "blade_mail",
     "section": "Armor"
   },
   {
-    "name": "Aeon Disk",
+    "name": "aeon_disk",
     "section": "Armor"
   },
   {
-    "name": "Soul Booster",
+    "name": "soul_booster",
     "section": "Armor"
   },
   {
-    "name": "Eternal Shroud",
+    "name": "eternal_shroud",
     "section": "Armor"
   },
   {
-    "name": "Crimson Guard",
+    "name": "crimson_guard",
     "section": "Armor"
   },
   {
-    "name": "Lotus Orb",
+    "name": "lotus_orb",
     "section": "Armor"
   },
   {
-    "name": "Black King Bar",
+    "name": "black_king_bar",
     "section": "Armor"
   },
   {
-    "name": "Bloodstone",
+    "name": "bloodstone",
     "section": "Armor"
   },
   {
-    "name": "Hurricane Pike",
+    "name": "hurricane_pike",
     "section": "Armor"
   },
   {
-    "name": "Linken's Sphere",
+    "name": "linken's_sphere",
     "section": "Armor"
   },
   {
-    "name": "Manta Style",
+    "name": "manta_style",
     "section": "Armor"
   },
   {
-    "name": "Shiva's Guard",
+    "name": "shiva's_guard",
     "section": "Armor"
   },
   {
-    "name": "Heart of Tarrasque",
+    "name": "heart_of_tarrasque",
     "section": "Armor"
   },
   {
-    "name": "Assault Cuirass",
+    "name": "assault_cuirass",
     "section": "Armor"
   },
   {
-    "name": "Crystalys",
+    "name": "crystalys",
     "section": "Weapons"
   },
   {
-    "name": "Meteor Hammer",
+    "name": "meteor_hammer",
     "section": "Weapons"
   },
   {
-    "name": "Armlet of Mordiggian",
+    "name": "armlet_of_mordiggian",
     "section": "Weapons"
   },
   {
-    "name": "Skull Basher",
+    "name": "skull_basher",
     "section": "Weapons"
   },
   {
-    "name": "Shadow Blade",
+    "name": "shadow_blade",
     "section": "Weapons"
   },
   {
-    "name": "Desolator",
+    "name": "desolator",
     "section": "Weapons"
   },
   {
-    "name": "Battle Fury",
+    "name": "battle_fury",
     "section": "Weapons"
   },
   {
-    "name": "Ethereal Blade",
+    "name": "ethereal_blade",
     "section": "Weapons"
   },
   {
-    "name": "Nullifier",
+    "name": "nullifier",
     "section": "Weapons"
   },
   {
-    "name": "Butterfly",
+    "name": "butterfly",
     "section": "Weapons"
   },
   {
-    "name": "Monkey King Bar",
+    "name": "monkey_king_bar",
     "section": "Weapons"
   },
   {
-    "name": "Radiance",
+    "name": "radiance",
     "section": "Weapons"
   },
   {
-    "name": "Daedalus",
+    "name": "daedalus",
     "section": "Weapons"
   },
   {
-    "name": "Silver Edge",
+    "name": "silver_edge",
     "section": "Weapons"
   },
   {
-    "name": "Divine Rapier",
+    "name": "divine_rapier",
     "section": "Weapons"
   },
   {
-    "name": "Abyssal Blade",
+    "name": "abyssal_blade",
     "section": "Weapons"
   },
   {
-    "name": "Bloodthorn",
+    "name": "bloodthorn",
     "section": "Weapons"
   },
   {
-    "name": "Dragon Lance",
+    "name": "dragon_lance",
     "section": "Artifacts"
   },
   {
-    "name": "Kaya",
+    "name": "kaya",
     "section": "Artifacts"
   },
   {
-    "name": "Sange",
+    "name": "sange",
     "section": "Artifacts"
   },
   {
-    "name": "Yasha",
+    "name": "yasha",
     "section": "Artifacts"
   },
   {
-    "name": "Mage Slayer",
+    "name": "mage_slayer",
     "section": "Artifacts"
   },
   {
-    "name": "Diffusal Blade",
+    "name": "diffusal_blade",
     "section": "Artifacts"
   },
   {
-    "name": "Echo Sabre",
+    "name": "echo_sabre",
     "section": "Artifacts"
   },
   {
-    "name": "Maelstrom",
+    "name": "maelstrom",
     "section": "Artifacts"
   },
   {
-    "name": "Heaven's Halberd",
+    "name": "heaven's_halberd",
     "section": "Artifacts"
   },
   {
-    "name": "Kaya and Sange",
+    "name": "kaya_and_sange",
     "section": "Artifacts"
   },
   {
-    "name": "Sange and Yasha",
+    "name": "sange_and_yasha",
     "section": "Artifacts"
   },
   {
-    "name": "Yasha and Kaya",
+    "name": "yasha_and_kaya",
     "section": "Artifacts"
   },
   {
-    "name": "Satanic",
+    "name": "satanic",
     "section": "Artifacts"
   },
   {
-    "name": "Eye of Skadi",
+    "name": "eye_of_skadi",
     "section": "Artifacts"
   },
   {
-    "name": "Mjollnir",
+    "name": "mjollnir",
     "section": "Artifacts"
   },
   {
-    "name": "Arcane Blink",
+    "name": "arcane_blink",
     "section": "Artifacts"
   },
   {
-    "name": "Overwhelming Blink",
+    "name": "overwhelming_blink",
     "section": "Artifacts"
   },
   {
-    "name": "Swift Blink",
+    "name": "swift_blink",
     "section": "Artifacts"
   },
   {
-    "name": "Arcane Ring",
+    "name": "arcane_ring",
     "section": "Tier 1"
   },
   {
-    "name": "Broom Handle",
+    "name": "broom_handle",
     "section": "Tier 1"
   },
   {
-    "name": "Fairy's Trinket",
+    "name": "fairy's_trinket",
     "section": "Tier 1"
   },
   {
-    "name": "Lance of Pursuit",
+    "name": "lance_of_pursuit",
     "section": "Tier 1"
   },
   {
-    "name": "Occult Bracelet",
+    "name": "occult_bracelet",
     "section": "Tier 1"
   },
   {
-    "name": "Pig Pole",
+    "name": "pig_pole",
     "section": "Tier 1"
   },
   {
-    "name": "Possessed Mask",
+    "name": "possessed_mask",
     "section": "Tier 1"
   },
   {
-    "name": "Seeds of Serenity",
+    "name": "seeds_of_serenity",
     "section": "Tier 1"
   },
   {
-    "name": "Trusty Shovel",
+    "name": "trusty_shovel",
     "section": "Tier 1"
   },
   {
-    "name": "Tumbler's Toy",
+    "name": "tumbler's_toy",
     "section": "Tier 1"
   },
   {
-    "name": "Brigand's Blade",
+    "name": "brigand's_blade",
     "section": "Tier 2"
   },
   {
-    "name": "Bullwhip",
+    "name": "bullwhip",
     "section": "Tier 2"
   },
   {
-    "name": "Dagger of Ristul",
+    "name": "dagger_of_ristul",
     "section": "Tier 2"
   },
   {
-    "name": "Dragon Scale",
+    "name": "dragon_scale",
     "section": "Tier 2"
   },
   {
-    "name": "Eye of the Vizier",
+    "name": "eye_of_the_vizier",
     "section": "Tier 2"
   },
   {
-    "name": "Grove Bow",
+    "name": "grove_bow",
     "section": "Tier 2"
   },
   {
-    "name": "Nether Shawl",
+    "name": "nether_shawl",
     "section": "Tier 2"
   },
   {
-    "name": "Philosopher's Stone",
+    "name": "philosopher's_stone",
     "section": "Tier 2"
   },
   {
-    "name": "Pupil's Gift",
+    "name": "pupil's_gift",
     "section": "Tier 2"
   },
   {
-    "name": "Ring of Aquila",
+    "name": "ring_of_aquila",
     "section": "Tier 2"
   },
   {
-    "name": "Specialist's Array",
+    "name": "specialist's_array",
     "section": "Tier 2"
   },
   {
-    "name": "Vambrace",
+    "name": "vambrace",
     "section": "Tier 2"
   },
   {
-    "name": "Blast Rig",
+    "name": "blast_rig",
     "section": "Tier 3"
   },
   {
-    "name": "Ceremonial Robe",
+    "name": "ceremonial_robe",
     "section": "Tier 3"
   },
   {
-    "name": "Cloak of Flames",
+    "name": "cloak_of_flames",
     "section": "Tier 3"
   },
   {
-    "name": "Elven Tunic",
+    "name": "elven_tunic",
     "section": "Tier 3"
   },
   {
-    "name": "Enchanted Quiver",
+    "name": "enchanted_quiver",
     "section": "Tier 3"
   },
   {
-    "name": "Mind Breaker",
+    "name": "mind_breaker",
     "section": "Tier 3"
   },
   {
-    "name": "Ogre Seal Totem",
+    "name": "ogre_seal_totem",
     "section": "Tier 3"
   },
   {
-    "name": "Paladin Sword",
+    "name": "paladin_sword",
     "section": "Tier 3"
   },
   {
-    "name": "Psychic Headband",
+    "name": "psychic_headband",
     "section": "Tier 3"
   },
   {
-    "name": "Quickening Charm",
+    "name": "quickening_charm",
     "section": "Tier 3"
   },
   {
-    "name": "Titan Sliver",
+    "name": "titan_sliver",
     "section": "Tier 3"
   },
   {
-    "name": "Ascetic's Cap",
+    "name": "ascetic's_cap",
     "section": "Tier 4"
   },
   {
-    "name": "Flicker",
+    "name": "flicker",
     "section": "Tier 4"
   },
   {
-    "name": "Havoc Hammer",
+    "name": "havoc_hammer",
     "section": "Tier 4"
   },
   {
-    "name": "Ninja Gear",
+    "name": "ninja_gear",
     "section": "Tier 4"
   },
   {
-    "name": "Penta-Edged Sword",
+    "name": "penta-edged_sword",
     "section": "Tier 4"
   },
   {
-    "name": "Spell Prism",
+    "name": "spell_prism",
     "section": "Tier 4"
   },
   {
-    "name": "Stormcrafter",
+    "name": "stormcrafter",
     "section": "Tier 4"
   },
   {
-    "name": "Telescope",
+    "name": "telescope",
     "section": "Tier 4"
   },
   {
-    "name": "Timeless Relic",
+    "name": "timeless_relic",
     "section": "Tier 4"
   },
   {
-    "name": "Trickster Cloak",
+    "name": "trickster_cloak",
     "section": "Tier 4"
   },
   {
-    "name": "Witchbane",
+    "name": "witchbane",
     "section": "Tier 4"
   },
   {
-    "name": "Apex",
+    "name": "apex",
     "section": "Tier 5"
   },
   {
-    "name": "Arcanist's Armor",
+    "name": "arcanist's_armor",
     "section": "Tier 5"
   },
   {
-    "name": "Book of Shadows",
+    "name": "book_of_shadows",
     "section": "Tier 5"
   },
   {
-    "name": "Book of the Dead",
+    "name": "book_of_the_dead",
     "section": "Tier 5"
   },
   {
-    "name": "Ex Machina",
+    "name": "ex_machina",
     "section": "Tier 5"
   },
   {
-    "name": "Fallen Sky",
+    "name": "fallen_sky",
     "section": "Tier 5"
   },
   {
-    "name": "Force Boots",
+    "name": "force_boots",
     "section": "Tier 5"
   },
   {
-    "name": "Giant's Ring",
+    "name": "giant's_ring",
     "section": "Tier 5"
   },
   {
-    "name": "Mirror Shield",
+    "name": "mirror_shield",
     "section": "Tier 5"
   },
   {
-    "name": "Pirate Hat",
+    "name": "pirate_hat",
     "section": "Tier 5"
   },
   {
-    "name": "Seer Stone",
+    "name": "seer_stone",
     "section": "Tier 5"
   },
   {
-    "name": "Stygian Desolator",
+    "name": "stygian_desolator",
     "section": "Tier 5"
   }
 ]

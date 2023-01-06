@@ -13,8 +13,8 @@ import java.io.File
 private val getItemsUseCase = GetItemsUseCase()
 
 fun main() {
-//    val itemsEnglish = getItemsUseCase(LOCALE.EN)
-//    writeItemsInFile(itemsEnglish)
+    val itemsEnglish = getItemsUseCase(LOCALE.EN)
+    writeItemsInFile(itemsEnglish)
     loadItemsOneByOne(LOCALE.EN)
     loadItemsOneByOne(LOCALE.RU)
 }
@@ -24,7 +24,7 @@ private fun writeItemsInFile(items: List<HeroItem>) {
         JSONObject(mapOf("name" to hero.name, "section" to hero.section))
     }
         .toString()
-    File(assetsDatabase + "items.json").writeText(itemsJson)
+    File(assetsDatabase + "/items.json").writeText(itemsJson)
 }
 
 private fun loadItemsOneByOne(locale: LOCALE) {
@@ -105,7 +105,7 @@ private fun JSONObject.loadCostAndBoughtFrom(root: Document, item: HeroItem) {
         val elements = table.getElementsByAttributeValue("style", style)
         (elements[0].childNodes()[0].childNodes()[0] as TextNode).text().trim()
     } catch (e: Exception) {
-        println("Could load cost for ${item.name}")
+        println("Could load cost for ${item.formattedName}")
         null
     }
     put("cost", cost)

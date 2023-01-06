@@ -105,10 +105,15 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             .onEach { state ->
                 when (state) {
                     is HeroInfoViewModel.State.Data -> {
+                        binding.rv.isVisible = true
                         binding.error.isVisible = false
                         heroInfoAdapter.submitList(state.list) { binding.rv.invalidateItemDecorations() }
                     }
-                    is HeroInfoViewModel.State.Error -> binding.error.setError(state.error.message)
+                    is HeroInfoViewModel.State.Error -> {
+                        binding.rv.isVisible = false
+                        binding.error.isVisible = true
+                        binding.error.setError(state.error.stackTraceToString())
+                    }
                     HeroInfoViewModel.State.Loading -> {
 
                     }
