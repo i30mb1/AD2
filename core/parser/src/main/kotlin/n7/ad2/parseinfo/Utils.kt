@@ -36,9 +36,14 @@ internal fun saveFile(path: String, fileName: String, text: String) {
     println("file (${file.length()} bytes) saved in '$path'")
 }
 
+fun String.toCamelCase(delimiter: String = " "): String {
+    return split(delimiter).joinToString(delimiter) { word ->
+        word.replaceFirstChar(Char::titlecaseChar)
+    }
+}
 
 internal fun getTextFromNodeFormatted(element: Node): String {
-    return getTextFromNode(element).removeSuffix(".").trim().replace(". ", "\n")
+    return getTextFromNode(element).removeSuffix(".").trim().replace(". ", "\n ")
 }
 
 data class Image(val path: String, val name: String, val formattedName: String)
@@ -51,7 +56,7 @@ val availableImagesSpells = File(assetsDatabaseSpells).listFiles()?.map {
 } ?: emptyList()
 
 val availableImagesItems = File(assetsDatabaseItems).listFiles()?.map {
-    val name = it.name.replace(" ", "_")
+    val name = it.name.toCamelCase("_")
     val formattedName = "[${name.replace("_", " ")}]"
     val path = it.path.substringAfter("assets\\").replace("\\", "/") + "/full.webp"
     Image(path, name, formattedName)
