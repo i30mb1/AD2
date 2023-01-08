@@ -5,7 +5,8 @@ import java.net.URL
 import javax.imageio.ImageIO
 
 internal fun saveImage(url: String, path: String, name: String) {
-    saveImageInternal(url, path.lowercase().replace(" ", "_"), name)
+    val pathFormatted = path.lowercase().replace(" ", "_")
+    saveImageInternal(url, pathFormatted, name)
 }
 
 private fun saveImageInternal(url: String, path: String, name: String) {

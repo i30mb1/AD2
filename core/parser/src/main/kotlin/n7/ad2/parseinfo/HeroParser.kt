@@ -20,7 +20,6 @@ fun main() {
     }
 }
 
-
 private fun loadResponse(hero: Hero, locale: LocaleHeroes) {
     val root = Jsoup.connect(locale.soundUrl.format(hero.name)).postDataCharset("UTF-8").get()
     val allResponsesWithCategories = JSONArray()

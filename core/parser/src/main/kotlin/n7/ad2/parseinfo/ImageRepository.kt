@@ -22,9 +22,8 @@ internal object ImageRepository {
     fun update() {
         heroes = File(assetsDatabaseHeroes).listFiles()?.mapNotNull { file ->
             val image = file.listFiles()?.find { it.name.contains("minimap") } ?: return@mapNotNull null
-            val extension = image.name.substringAfter(".")
-            val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/minimap.$extension"
-            val name = file.name + "_minimap.$extension"
+            val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/${image.name}"
+            val name = file.name
             Image(path, name)
         } ?: emptyList()
         spells = File(assetsDatabaseSpells).listFiles()?.map { file ->
