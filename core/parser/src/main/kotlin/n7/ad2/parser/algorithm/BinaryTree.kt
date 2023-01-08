@@ -1,4 +1,4 @@
-package n7.ad2.parseinfo.algorithm
+package n7.ad2.parser.algorithm
 
 import java.util.ArrayDeque
 import java.util.Stack

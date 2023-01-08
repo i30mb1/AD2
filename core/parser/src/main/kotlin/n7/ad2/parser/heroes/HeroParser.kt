@@ -1,7 +1,14 @@
 @file:Suppress("BlockingMethodInNonBlockingContext")
 
-package n7.ad2.parseinfo
+package n7.ad2.parser.heroes
 
+import n7.ad2.parser.LocaleHeroes
+import n7.ad2.parser.assetsDatabase
+import n7.ad2.parser.assetsDatabaseHeroes
+import n7.ad2.parser.assetsDatabaseSpells
+import n7.ad2.parser.getTextFromNodeFormatted
+import n7.ad2.parser.saveFile
+import n7.ad2.parser.saveImage
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.jsoup.Jsoup
@@ -219,7 +226,7 @@ private fun JSONObject.loadMainAttributes(root: Document) {
     put("mainAttributes", attrs)
 }
 
-data class SectionAndData(val name: String, val data: Elements)
+private data class SectionAndData(val name: String, val data: Elements)
 
 private fun loadSections(root: Document, callback: (SectionAndData) -> Unit) {
     val sections: Elements = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
@@ -320,29 +327,12 @@ private fun JSONObject.loadAbilities(root: Document) {
         val jsonParams = JSONArray()
         if (infoBlock != null) for (block in infoBlock.children()) {
             val style = block.attributes()["style"]
-            val params = listOf<String>()
             when (style) {
                 "font-size:98%;" -> {
                     val result = getTextFromNodeFormatted(block)
                     jsonParams.add(result)
                 }
             }
-
-
-//            for (element in param.children()) {
-//                val elementText = when (element.tagName()) {
-//                    "span" -> {
-//                        val result = StringBuilder()
-//                        for (child in element.children()) {
-//                            if (child.tagName() == "a") result.append("<spannnn>")
-//                            else result.append(child.text())
-//                        }
-//                        result.toString()
-//                    }
-//                    else -> " " + element.text()
-//                }
-//                result.append(elementText)
-//            }
         }
         abilityObject["params"] = jsonParams
         abilityObject["aghanim"] = null

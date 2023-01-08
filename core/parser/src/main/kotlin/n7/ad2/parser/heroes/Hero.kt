@@ -1,4 +1,4 @@
-package n7.ad2.parseinfo
+package n7.ad2.parser.heroes
 
 internal class Hero(
     val name: String,

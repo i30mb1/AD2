@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package n7.ad2.parseinfo
+package n7.ad2.parser
 
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
@@ -24,7 +24,7 @@ private fun writeItemsInFile(items: List<HeroItem>) {
         JSONObject(mapOf("name" to hero.name, "section" to hero.section))
     }
         .toString()
-    File(assetsDatabase + "/items.json").writeText(itemsJson)
+    File("$assetsDatabase/items.json").writeText(itemsJson)
 }
 
 private fun loadItemsOneByOne(locale: LOCALE) {

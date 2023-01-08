@@ -1,4 +1,4 @@
-package n7.ad2.parseinfo
+package n7.ad2.parser
 
 import java.io.File
 
@@ -23,16 +23,16 @@ internal object ImageRepository {
         heroes = File(assetsDatabaseHeroes).listFiles()?.mapNotNull { file ->
             val image = file.listFiles()?.find { it.name.contains("minimap") } ?: return@mapNotNull null
             val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/${image.name}"
-            val name = file.name
-            Image(path, name)
+            Image(path, file.name)
         } ?: emptyList()
         spells = File(assetsDatabaseSpells).listFiles()?.map { file ->
             val name = file.name.substringBefore(".")
             val path = file.path.substringAfter("assets\\").replace("\\", "/")
             Image(path, name)
         } ?: emptyList()
-        items = File(assetsDatabaseItems).listFiles()?.map { file ->
-            val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/full.webp"
+        items = File(assetsDatabaseItems).listFiles()?.mapNotNull { file ->
+            val image = file.listFiles()?.find { it.name.contains("full") } ?: return@mapNotNull null
+            val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/${image.name}"
             Image(path, file.name)
         } ?: emptyList()
     }

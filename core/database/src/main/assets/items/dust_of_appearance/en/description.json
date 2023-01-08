@@ -3,6 +3,7 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Dust_of_Appearance_Reveal.mp3\/revision\/latest?cb=20191227195411",
       "effects": [
+        "Cast Animation: 0+0",
         "Radius: 1050",
         "Damage: 25",
         "Move Speed Slow: 20%",

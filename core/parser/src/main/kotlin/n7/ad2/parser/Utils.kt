@@ -1,4 +1,4 @@
-package n7.ad2.parseinfo
+package n7.ad2.parser
 
 internal fun String.removeBrackets(): String {
     return removeSurrounding("(", ")")

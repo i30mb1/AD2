@@ -1,4 +1,4 @@
-package n7.ad2.parseinfo
+package n7.ad2.parser
 
 enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: String) {
     RU(

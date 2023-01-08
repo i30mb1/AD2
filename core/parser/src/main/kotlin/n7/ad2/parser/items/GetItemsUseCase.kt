@@ -1,4 +1,4 @@
-package n7.ad2.parseinfo
+package n7.ad2.parser
 
 import org.jsoup.Jsoup
 

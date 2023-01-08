@@ -1,4 +1,4 @@
-package n7.ad2.parseinfo
+package n7.ad2.parser
 
 internal enum class LocaleHeroes(val mainUrl: String, val heroesUrl: String, val soundUrl: String, val folder: String) {
     RU(
