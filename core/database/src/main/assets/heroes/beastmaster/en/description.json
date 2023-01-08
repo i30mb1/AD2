@@ -6,19 +6,19 @@
         "Both axes spread up to 450 distance away from each other, before moving back together while traveling towards the targeted point\n Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away\n The axes fly in arcs, so that the axe coming from Beastmaster's left-hand travels back towards his right hand, and vice versa\n They destroy trees within 175 radius they come in contact with, while providing 350 radius flying vision as they travel\n This vision does not last",
         "The axes first apply the debuff, then the damage\n This means they effectively amplify their own damage as well\n Uses one debuff on hit targets for all stacks\n The debuff has a number on it, showing the number of stacks\n Since the axes work separately, one of the axes always benefits from 2 stacks of the debuff, if both hit\n Successive hits on the same unit fully refresh the whole stack's duration",
         "Applies generic incoming damage amplification on the targets\n Stacks additively with other sources of generic incoming damage manipulation\n The amplification affects all damage, including Beastmaster's abilities, that is not flagged as HP removal the targets take from Beastmaster and all his player-controlled units\n Allies do not benefit from it",
-        "Each axe can hit the same unit only once per cast, so the maximum possible damage per axe is 42.4\/75.6\/110\/145.6 ( 43.4\/77.35\/112.5\/148.85) before reductions"
+        "Each axe can hit the same unit only once per cast, so the maximum possible damage per axe is 42.4\/75.6\/110\/145.6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 43.4\/77.35\/112.5\/148.85) before reductions"
       ],
       "item_behaviour": [],
       "description": "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can hit an enemy once, and amplifies subsequent damage from Beastmaster and his units.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.47",
-        "Cast Range:  1500",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1500",
         "Axes Radius: 175",
-        "Axes Travel Distance:  1500",
+        "Axes Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1500",
         "Axes Spread Distance: 450",
         "Damage per Axe: 40\/70\/100\/130",
-        "Damage Amplification per Stack: 6%\/8%\/10%\/12% ( 8.5%\/10.5%\/12.5%\/14.5%)",
+        "Damage Amplification per Stack: 6%\/8%\/10%\/12% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 8.5%\/10.5%\/12.5%\/14.5%)",
         "Stack Duration: 12"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Beastmaster_Wild_Axes_1.mp3\/revision\/latest?cb=20191216011217",
@@ -36,7 +36,7 @@
     },
     {
       "notes": [
-        "Does not destroy previous summons if this ability is used again before the previous  Boar expires",
+        "Does not destroy previous summons if this ability is used again before the previous <span image=\"images\/beastmaster_boar.png\">[picture:beastmaster_boar]<\/span> Boar expires",
         "The boar spawns at a random location within a 100 radius around Beastmaster"
       ],
       "item_behaviour": [],
@@ -60,11 +60,11 @@
     },
     {
       "notes": [
-        "Does not destroy previous summons if this ability is used again before the previous  Hawk expires",
+        "Does not destroy previous summons if this ability is used again before the previous <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Hawk expires",
         "The hawk spawns at a random location within a 300 radius around Beastmaster\n It spawns invisible, without any fade time",
         "The hawk cannot be controlled at all\n Once cast, it automatically flies towards the targeted area and stays there\n Its flight towards the target area cannot be interrupted by anything\n If the hawk gets its movement disabled (e.g\n stunned, rooted, etc.), it resumes moving to the location as soon as it can move again\n Taunts and hypnotize cause the hawk to stop for its duration, but it resumes as soon as the taunt expires\n The hawk completely ignores fear",
         "Hawks do not block neutral creep camps",
-        "SHARD NOTES Call of the Wild Hawk can now be directly targeted on an enemy unit or set to Autocast\n When unit-targeted, the Hawk flies towards that unit's location upon cast, as if ground-targeted\n It does not alter its path if the target moves\n If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them\n If the target gets out of 900 range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location\n However, the hawk may attempt to cast Dive Bomb again if the target comes within range again\n Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target\n With Autocast On, all Hawks will instantly and automatically cast  Dive Bomb on the first viable target in range with the same notes as above, regardless of whether it is still flying or stationary\n Acquiring <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard does not retroactively grant Dive Bomb to already summoned Hawks\n SOULBIND Summons one Hawk that casts  Dive Bomb on the target unit"
+        "SHARD NOTES Call of the Wild Hawk can now be directly targeted on an enemy unit or set to Autocast\n When unit-targeted, the Hawk flies towards that unit's location upon cast, as if ground-targeted\n It does not alter its path if the target moves\n If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them\n If the target gets out of 900 range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location\n However, the hawk may attempt to cast Dive Bomb again if the target comes within range again\n Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target\n With Autocast On, all Hawks will instantly and automatically cast <span image=\"images\/dive_bomb_%28hawk%29.png\">[picture:dive_bomb_%28hawk%29]<\/span> Dive Bomb on the first viable target in range with the same notes as above, regardless of whether it is still flying or stationary\n Acquiring <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard does not retroactively grant Dive Bomb to already summoned Hawks\n SOULBIND Summons one Hawk that casts <span image=\"images\/dive_bomb_%28hawk%29.png\">[picture:dive_bomb_%28hawk%29]<\/span> Dive Bomb on the target unit"
       ],
       "item_behaviour": [],
       "description": "Beastmaster sends an invisible Hawk to scout an area.",
@@ -97,7 +97,7 @@
       "hot_key": "D",
       "params": [
         "Radius: 1200",
-        "Attack Speed Bonus: 10\/20\/30\/40 ( 20\/30\/40\/50)",
+        "Attack Speed Bonus: 10\/20\/30\/40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20\/30\/40\/50)",
         "Aura Linger Duration: 0.5"
       ],
       "audioUrl": "",
@@ -114,12 +114,12 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "The damage and heal are provided by an aura",
         "The intervals start out slow and reach a crescendo near the end of the duration",
         "Drums of Slom has a minimum pulse interval of 0.2 seconds, plus a server tick\n Deals damage and heals in the same interval, starting upon cast, the intervals between pulses are 1\/0.84\/0.7\/0.6\/0.5\/0.4\/0.3\/0.3\/0.2\/0.2\/0.2\/0.2\/0.2\n When Beastmaster is silenced, stuned, feared and cycloned, the intervals between strikes will be skipped according to the disable duration, and resumes accordingly to the subsequent interval",
         "Drums of Slom will hit 13 times and can deal up to 1430 damage (before reductions)\n It can heal up to 357.5 health for heroes (and 71.5 health for Beastmaster's player-controlled creeps)",
-        "The heal amount is based on damage dealt, amplifying (e.g\n with  Wild Axes), or reducing the damage affects the heal value\n The heal value is subjected to heal manipulation despite the floating values shown",
+        "The heal amount is based on damage dealt, amplifying (e.g\n with <span image=\"images\/wild_axes.webp\">[picture:wild_axes]<\/span> Wild Axes), or reducing the damage affects the heal value\n The heal value is subjected to heal manipulation despite the floating values shown",
         "Treats illusions and clones as heroes\n Does not affect ancient creeps",
         "Multiple casts do not stack, but refresh the duration and reset the interval delay"
       ],
@@ -151,7 +151,7 @@
     },
     {
       "notes": [
-        "Only enemy units are shoved aside from the path of Primal Roar\n  Roshan is not affected by the knockback\n Affected units are fully disabled during the knockback\n Can be cast on  Couriers to stun and damage them\n However, they are not affected by the knockback as secondary targets",
+        "Only enemy units are shoved aside from the path of Primal Roar\n <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan is not affected by the knockback\n Affected units are fully disabled during the knockback\n Can be cast on <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers to stun and damage them\n However, they are not affected by the knockback as secondary targets",
         "Knocks units aside at a speed of 450, up to 450 range away, resulting in a knockback duration of 1 second\n Units hit by the knockback destroy trees within 100 radius and are made to face toward the direction they are getting pushed",
         "The knockback and slow have a dynamic range, based on the distance between Beastmaster and the primary target\n For every 2 distance between Beastmaster and the target upon cast, the knockback range increases by 1\n For example, when the target is 600 range away, the knockback hits units up to 300 range behind the target and behind Beastmaster\n The width of the knockback area is fixed at 300, so the affected area is always stadium-shaped",
         "Considering the dynamic range, the knockback and slow can hit units up to 900 range away",
@@ -164,7 +164,7 @@
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.63",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Move Speed Bonus Radius: 900",
         "Area Width: 300",
         "Knockback Distance: 450",
@@ -192,7 +192,7 @@
     },
     {
       "notes": [
-        "Affects Beastmaster and all of his player-controlled units immediately upon learning the  talent\n Does not affect  Couriers and wards",
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers and wards",
         "Increases Beastmaster's movement speed to 330",
         "The aura affects invulnerable or hidden units",
         "The aura is bestowed even while Beastmaster is dead"
@@ -219,7 +219,7 @@
     },
     {
       "notes": [
-        "Affects Beastmaster and all of his player-controlled units immediately upon learning the  talent\n Does not affect  Couriers",
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "The aura increases maximum health capacity and keeps the current health percentage",
         "The aura affects invulnerable or hidden units",
         "The aura is bestowed even while Beastmaster is dead"
@@ -271,13 +271,13 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked\n Acquiring Aghanim's Shard does not retroactively grant this ability to already summoned Hawks",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked\n Acquiring Aghanim's Shard does not retroactively grant this ability to already summoned Hawks",
         "The reveal modifier is placed on the Hawk as soon as it begins casting, and lasts until the dive ends",
         "Once the cast begins, the player cannot manually cancel it anymore, since casting Dive Bomb is the only order that can be given to the Hawk",
         "The hawk dives in an arc for 0.4 seconds, so the speed varies based on the distance\n The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate",
         "Uses forced movement to move the Hawk\n This means it can be interrupted by applying other sources of forced movement to it\n The dive cannot be interrupted by anything else\n It fully ignores all disables",
         "The Hawk first applies the damage, then the root, and then is instantly killed\n The Hawk's death cannot be prevented in any way",
-        "Cannot be cast on  Couriers"
+        "Cannot be cast on <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Reveals itself for 1, and then flies towards the target enemy, dealing 250 damage and rooting them for 2.5 second, killing the hawk.",

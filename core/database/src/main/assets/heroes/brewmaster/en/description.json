@@ -10,7 +10,7 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.4",
-        "Radius: 400 ( 600)",
+        "Radius: 400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 600)",
         "Damage: 90\/160\/230\/300",
         "Move Speed Slow: 25%\/35%\/45%\/55%",
         "Attack Speed Slow: 25\/35\/45\/55",
@@ -33,23 +33,23 @@
       "notes": [
         "Cinder Brew's projectiles travel at a speed of 1600",
         "Despite the visual effect, Cinder Brew does not launch a single projectile towards the center of the targeted area\n Instead, it launches individual projectiles on every enemy within the area\n These projectiles are invisible and disjointable\n This means Cinder Brew's targets are decided upon ability cast, and not upon the visible effect reaching the targeted area\n It also means that enemies entering the area after cast are not affect, while enemies leaving the area after cast are still affected\n Does not target invisible, invulnerable or hidden units",
-        "When an enemy with the Cinder Brew debuff takes any spell damage (of the 3 damage types), the duration of the debuff gets extended by 3, and the damage starts\n The debuff may be ignited only once\n The debuff still slows after getting ignited\n Does not react on abilities with the HP Removal flag (e.g\n  Heartstopper Aura etc.) and instant attack sources",
-        "The damage interval is based on the debuff's duration, so that it always deals 8 instances of damage\n Each instance deals 10\/20\/30\/40 ( 13\/26\/39\/52) damage",
+        "When an enemy with the Cinder Brew debuff takes any spell damage (of the 3 damage types), the duration of the debuff gets extended by 3, and the damage starts\n The debuff may be ignited only once\n The debuff still slows after getting ignited\n Does not react on abilities with the HP Removal flag (e.g\n <span image=\"images\/heartstopper_aura.webp\">[picture:heartstopper_aura]<\/span> Heartstopper Aura etc.) and instant attack sources",
+        "The damage interval is based on the debuff's duration, so that it always deals 8 instances of damage\n Each instance deals 10\/20\/30\/40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 13\/26\/39\/52) damage",
         "Recasting onto the same units does not stack, but refreshes the duration instead\n The debuff is not updated to the current level\n When recasting on an already ignited enemy, it refreshes the ignited debuff\n The ignition does not get reset\n The damage interval does not update once ignited\n The amount of intervals is hardcoded, so it continues to deal damage until the debuff expires",
-        "TALENT NOTES The Cinder Brew Fear  applies fear on enemies once the debuff gets ignited, making them run towards their fountain and preventing them from acting"
+        "TALENT NOTES The Cinder Brew Fear <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> applies fear on enemies once the debuff gets ignited, making them run towards their fountain and preventing them from acting"
       ],
       "item_behaviour": [],
       "description": "Drenches himself and an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage. Duration is increased by 3 seconds when enemies are ignited. While Brewmaster is Brewed Up, His Drunken Brawler Stances are stronger.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.4",
-        "Cast Range:  850",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 850",
         "Radius: 400",
         "Move Speed Slow: 24%\/28%\/32%\/36%",
-        "Ignition Total Damage: 80\/160\/240\/320 ( 104\/208\/312\/416)",
-        "Duration: 5 ( 6.5)",
+        "Ignition Total Damage: 80\/160\/240\/320 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 104\/208\/312\/416)",
+        "Duration: 5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6.5)",
         "Ignite Duration Increase: 3",
-        "Fear Duration:  1.5"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Fear Duration:  1.5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Brewmaster_Cinder_Brew_1.mp3\/revision\/latest?cb=20191216011409",
       "effects": [
@@ -65,28 +65,28 @@
     },
     {
       "notes": [
-        "Interrupts Brewmaster's channeling abilities upon changing stances\n Switch stances as follows: Earth Stance ➜ Storm Stance ➜ Fire Stance ➜  Void Stance ➜ Earth Stance The particle effects around Brewmaster indicate the current stance he is in",
-        "Earth Stance 3\/9\/15\/21 ( 4\/12\/20\/28) armor and 15%\/30%\/45%\/60% ( 20%\/40%\/60%\/80%) magic resistance while affected by  Cinder Brew\n Increases Brewmaster's total magic resistance to 28.75%\/32.5%\/36.25%\/40%\n Increases Brewmaster's total magic resistance to 36.25%\/47.5%\/58.75%\/70% ( 40%\/55%\/70%\/85%) while affected by Cinder Brew\n Stacks multiplicatively with other sources of magic resistance",
-        "Storm Stance Provides 45%\/60%\/75%\/90% ( 60%\/80%\/100%\/120%) evasion and 20%\/40%\/60%\/80% movement speed while affected by Cinder Brew\n Increases Brewmaster's survivability against attacks by 18%\/25%\/33%\/43%\n Increases Brewmaster's survivability against attacks by 82%\/150%\/300%\/900% while affected by Cinder Brew\n Stacks multiplicatively with other sources of evasion\n Drunken Brawler's evasion uses pseudo-random distribution",
-        "Fire Stance The critical strike has a 72% ( 96%) chance to proc while affected by Cinder Brew\n Increases attack damage by an average of 10.8%\/14.4%\/18%\/21.6%\n Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% ( 43.2%\/57.6%\/72%\/86.4% while affected by Cinder Brew\n A cricital strike proc is decided upon attack begin, not upon landing an attack\n When a critical strike procs, Brewmaster uses a specific crit attack animation, and particle effects appear on his weapon\n The proc chances of multiple critical strike sources stack\n If two sources of critical strike proc at the same time, the higher multiplier has priority\n Drunken Brawler's critical strike uses pseudo-random distribution",
-        "SHARD NOTES Drunken Brawler additionally gains the  Void Stance\n Provides 60% ( 80%) status resistance and slows movement speed by 75% ( 100%) while affected by  Cinder Brew\n The slow value checks for the Cinder Brew buffs continuously and updates the slow value instantly\n Successive attacks do not increase the slow value but refresh the duration\n The attacks first apply their damage, then the debuff\n Works against any unit, including wards, buildings, and allies\n Stacks multiplicatively with other sources of status resistance",
-        "TALENT NOTES The Brewlings Drunken Brawler  talent grants each  Primal Split Brewling their respective  Drunken Brawler stances as a passive ability, based on its current level\n SPELL STEAL Does not acquire this ability if it is the last cast ability"
+        "Interrupts Brewmaster's channeling abilities upon changing stances\n Switch stances as follows: Earth Stance ➜ Storm Stance ➜ Fire Stance ➜ <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Void Stance ➜ Earth Stance The particle effects around Brewmaster indicate the current stance he is in",
+        "<span image=\"images\/drunken_brawler_%28earth%29.png\">[picture:drunken_brawler_%28earth%29]<\/span> Earth Stance 3\/9\/15\/21 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4\/12\/20\/28) armor and 15%\/30%\/45%\/60% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20%\/40%\/60%\/80%) magic resistance while affected by <span image=\"images\/cinder_brew.webp\">[picture:cinder_brew]<\/span> Cinder Brew\n Increases Brewmaster's total magic resistance to 28.75%\/32.5%\/36.25%\/40%\n Increases Brewmaster's total magic resistance to 36.25%\/47.5%\/58.75%\/70% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 40%\/55%\/70%\/85%) while affected by Cinder Brew\n Stacks multiplicatively with other sources of magic resistance",
+        "<span image=\"images\/drunken_brawler_%28storm%29.png\">[picture:drunken_brawler_%28storm%29]<\/span> Storm Stance Provides 45%\/60%\/75%\/90% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 60%\/80%\/100%\/120%) evasion and 20%\/40%\/60%\/80% movement speed while affected by Cinder Brew\n Increases Brewmaster's survivability against attacks by 18%\/25%\/33%\/43%\n Increases Brewmaster's survivability against attacks by 82%\/150%\/300%\/900% while affected by Cinder Brew\n Stacks multiplicatively with other sources of evasion\n Drunken Brawler's evasion uses pseudo-random distribution",
+        "<span image=\"images\/drunken_brawler_%28fire%29.png\">[picture:drunken_brawler_%28fire%29]<\/span> Fire Stance The critical strike has a 72% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 96%) chance to proc while affected by Cinder Brew\n Increases attack damage by an average of 10.8%\/14.4%\/18%\/21.6%\n Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 43.2%\/57.6%\/72%\/86.4% while affected by Cinder Brew\n A cricital strike proc is decided upon attack begin, not upon landing an attack\n When a critical strike procs, Brewmaster uses a specific crit attack animation, and particle effects appear on his weapon\n The proc chances of multiple critical strike sources stack\n If two sources of critical strike proc at the same time, the higher multiplier has priority\n Drunken Brawler's critical strike uses pseudo-random distribution",
+        "SHARD NOTES Drunken Brawler additionally gains the <span image=\"images\/drunken_brawler_%28void%29.png\">[picture:drunken_brawler_%28void%29]<\/span> Void Stance\n Provides 60% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 80%) status resistance and slows movement speed by 75% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100%) while affected by <span image=\"images\/cinder_brew.webp\">[picture:cinder_brew]<\/span> Cinder Brew\n The slow value checks for the Cinder Brew buffs continuously and updates the slow value instantly\n Successive attacks do not increase the slow value but refresh the duration\n The attacks first apply their damage, then the debuff\n Works against any unit, including wards, buildings, and allies\n Stacks multiplicatively with other sources of status resistance",
+        "TALENT NOTES The Brewlings Drunken Brawler <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent grants each <span image=\"images\/primal_split.webp\">[picture:primal_split]<\/span> Primal Split Brewling their respective <span image=\"images\/drunken_brawler.webp\">[picture:drunken_brawler]<\/span> Drunken Brawler stances as a passive ability, based on its current level\n SPELL STEAL Does not acquire this ability if it is the last cast ability"
       ],
       "item_behaviour": [],
       "description": "Brewmaster can switch stances based on the elements he controls gaining passive bonuses that improve against enemies affected by Cinder Brew. Earth Stance - Grants 1\/3\/5\/7 armor and 5%\/10%\/15%\/20% Magic Resistance. Bonuses are 3x when Brewed Up. Storm Stance - Grants 15%\/20%\/25%\/30% evasion and 5%\/7%\/9%\/11% Bonus Move Speed. Bonuses are 3x when Brewed Up Fire Stance Grants 24% chance to crit for 145%\/160%\/175%\/190% of your attack damage. Chance is 3x when Brewed Up.",
       "hot_key": "E",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Earth Stance Armor Bonus: 1\/3\/5\/7",
         "Earth Stance Magic Resistance Bonus: 5%\/10%\/15%\/20%",
         "Storm Stance Evasion: 15%\/20%\/25%\/30%",
         "Storm Stance Move Speed Bonus: 5%\/7%\/9%\/11%",
         "Fire Stance Critical Chance: 24%",
         "Fire Stance Critical Damage: 145%\/160%\/175%\/190%",
-        "Cinder Brew Multiplier: 3 ( 4)",
-        "Void Stance Status Resistance Bonus:  20%",
-        "Void Stance Move Speed Slow:  25%",
-        "Void Stance Slow Duration:  2"
+        "Cinder Brew Multiplier: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Void Stance Status Resistance Bonus:  20%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Void Stance Move Speed Slow:  25%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Void Stance Slow Duration:  2"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Brewmaster_Drunken_Brawler_2.mp3\/revision\/latest?cb=20191216011348",
       "effects": [
@@ -102,8 +102,8 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
-        "Summons a Brewing based on current  Drunken Brawler Stance and current level of  Primal Split\n If either ability is not leveled, nothing happens upon cast, wasting the mana and cooldown\n The ability icon also changes accordingly to the current Drunken Brawler Stance\n The Brewling is spawned 100 range in front of Brewmaster's cast location, and its facing angle equals Brewmaster's facing angle upon cast\n The Brewling does not bestow any aura Brewmaster has",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Summons a Brewing based on current <span image=\"images\/drunken_brawler.webp\">[picture:drunken_brawler]<\/span> Drunken Brawler Stance and current level of <span image=\"images\/primal_split.webp\">[picture:primal_split]<\/span> Primal Split\n If either ability is not leveled, nothing happens upon cast, wasting the mana and cooldown\n The ability icon also changes accordingly to the current Drunken Brawler Stance\n The Brewling is spawned 100 range in front of Brewmaster's cast location, and its facing angle equals Brewmaster's facing angle upon cast\n The Brewling does not bestow any aura Brewmaster has",
         "Casting Primal Companion replaces all existing Brewling from a previous cast, creating new ones based on the current level of Primal Split and resetting the cooldown of all Brewlings' abilities\n Primal Split also resets the cooldown of Primal Companion upon cast",
         "Despite Primal Compnaion's tooltip, the Brewlings' abilities do not have a cooldown penalty\n The Brewlings are also not disarmed despite having a disarm indicator when they are outside of the penalty distance",
         "A Brewling cannot be re-summoned if it has taken player-based damage in the last 3 seconds\n Has no minimum damage threshold\n Damage is checked before any sort of reduction, so fully blocked damage also prevents re-summoning it\n The cooldown is unaffected by cooldown reduction\n However, it is affected by cooldown resetting\n The following damage sources does not trigger the damage cooldown: HP Removal sources\n Damage from buildings, lane creeps and neutral creeps",
@@ -137,13 +137,13 @@
     {
       "notes": [
         "Brewmaster is invulnerable and hidden during the split time and duration\n Does not apply dispel upon cast",
-        "During Primal Split, Brewmaster is periodically moved to Earth's position\n If Earth dies, Brewmaster is moved to Storm's position; if both Earth and Storm died, he is moved to Fire\n SHARD NOTES Brewmaster is now moved to Void's position if all 3 Brewlings die\n In short, Brewmaster is moved according to the following sequence: Earth ➜ Storm ➜ Fire (➜  Void) ➜ Earth",
-        "This Brewling priority and sequence affect the following things: Earth is selected by default upon cast, and can Tab ↹ through units in the aforementioned order\n Every aura Brewmaster has (e.g\n  Gem of True Sight etc.) is bestowed around the current Brewling he is moved to\n Ability effects that interact with heroes' presence (e.g\n  Smoke of Deceit,  Blur etc.) react on the current Brewling he is moved to\n During Primal Split, Brewmaster dies when all Brewlings are killed\n The kill is credited to the hero who kills the last Brewling\n Once the duration ends, Brewmaster appears at the place of the current Brewling he is moved to\n Teleporting abilities (i.e\n  Relocate) cause the periodic moving of Brewmaster to get canceled, so the notes above do not apply anymore",
+        "During Primal Split, Brewmaster is periodically moved to Earth's position\n If Earth dies, Brewmaster is moved to Storm's position; if both Earth and Storm died, he is moved to Fire\n SHARD NOTES Brewmaster is now moved to Void's position if all 3 Brewlings die\n In short, Brewmaster is moved according to the following sequence: Earth ➜ Storm ➜ Fire (➜ <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Void) ➜ Earth",
+        "This Brewling priority and sequence affect the following things: Earth is selected by default upon cast, and can Tab ↹ through units in the aforementioned order\n Every aura Brewmaster has (e.g\n <span image=\"items\/gem_of_true_sight\/full.webp\">[picture:gem_of_true_sight]<\/span> Gem of True Sight etc.) is bestowed around the current Brewling he is moved to\n Ability effects that interact with heroes' presence (e.g\n <span image=\"items\/smoke_of_deceit\/full.webp\">[picture:smoke_of_deceit]<\/span> Smoke of Deceit, <span image=\"images\/blur.webp\">[picture:blur]<\/span> Blur etc.) react on the current Brewling he is moved to\n During Primal Split, Brewmaster dies when all Brewlings are killed\n The kill is credited to the hero who kills the last Brewling\n Once the duration ends, Brewmaster appears at the place of the current Brewling he is moved to\n Teleporting abilities (i.e\n <span image=\"images\/relocate.webp\">[picture:relocate]<\/span> Relocate) cause the periodic moving of Brewmaster to get canceled, so the notes above do not apply anymore",
         "The Brewlings are summoned ancient creep-heroes, making them interact differently with several abilities\n The Brewlings are unable to activate runes",
-        "Casting Primal Split replaces all existing Brewlings from a previous cast or from a  Primal Companion cast, creating new ones based on the current level and resetting the cooldown of all Brewlings' abilities",
-        "The Brewlings always spawn in the same formation, forming an equilateral triangle which fits within a 100 radius circle\n All Brewlings' facing angle equals Brewmaster's facing angle upon cast\n  Earth is spawned 100 range in front of Brewmaster's cast location\n  Storm is spawned 50 range behind and 86.603 range to the left of Brewmaster's cast location\n  Fire is spawned 50 range behind and 86.603 range to the right of Brewmaster's cast location",
-        "SHARD NOTES The Brewlings now spawn in a square formation instead, that fits in a 100 radius circle\n  Earth is spawned 100 range in front of Brewmaster's cast location\n  Storm is spawned 100 range to the left of Brewmaster's cast location\n  Fire is spawned 100 range to the right of Brewmaster's cast location\n  Void is spawned 100 range behind Brewmaster's cast location",
-        "SHARD NOTES The Void Strike modifier on  Void has no effect, it does not grant Void Brewmaster's attack modifiers\n SPELL STEAL Grants  Drunken Brawler upon acquiring this ability"
+        "Casting Primal Split replaces all existing Brewlings from a previous cast or from a <span image=\"images\/primal_companion.webp\">[picture:primal_companion]<\/span> Primal Companion cast, creating new ones based on the current level and resetting the cooldown of all Brewlings' abilities",
+        "The Brewlings always spawn in the same formation, forming an equilateral triangle which fits within a 100 radius circle\n All Brewlings' facing angle equals Brewmaster's facing angle upon cast\n <span image=\"images\/brewmaster_earth_minimap.png\">[picture:brewmaster_earth_minimap]<\/span> Earth is spawned 100 range in front of Brewmaster's cast location\n <span image=\"images\/brewmaster_storm_minimap.png\">[picture:brewmaster_storm_minimap]<\/span> Storm is spawned 50 range behind and 86.603 range to the left of Brewmaster's cast location\n <span image=\"images\/brewmaster_fire_minimap.png\">[picture:brewmaster_fire_minimap]<\/span> Fire is spawned 50 range behind and 86.603 range to the right of Brewmaster's cast location",
+        "SHARD NOTES The Brewlings now spawn in a square formation instead, that fits in a 100 radius circle\n <span image=\"images\/brewmaster_earth_minimap.png\">[picture:brewmaster_earth_minimap]<\/span> Earth is spawned 100 range in front of Brewmaster's cast location\n <span image=\"images\/brewmaster_storm_minimap.png\">[picture:brewmaster_storm_minimap]<\/span> Storm is spawned 100 range to the left of Brewmaster's cast location\n <span image=\"images\/brewmaster_fire_minimap.png\">[picture:brewmaster_fire_minimap]<\/span> Fire is spawned 100 range to the right of Brewmaster's cast location\n <span image=\"images\/brewmaster_void_minimap.png\">[picture:brewmaster_void_minimap]<\/span> Void is spawned 100 range behind Brewmaster's cast location",
+        "SHARD NOTES The Void Strike modifier on <span image=\"images\/brewmaster_void_minimap.png\">[picture:brewmaster_void_minimap]<\/span> Void has no effect, it does not grant Void Brewmaster's attack modifiers\n SPELL STEAL Grants <span image=\"images\/drunken_brawler.webp\">[picture:drunken_brawler]<\/span> Drunken Brawler upon acquiring this ability"
       ],
       "item_behaviour": [],
       "description": "Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival, each with their own abilities. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.",
@@ -237,7 +237,7 @@
     {
       "notes": [
         "Dispel Magic first applies a basic dispel on all units within the area, then the damage",
-        "The damage is applied to summoned units, including illusions, but excluding clones\n Does not damage the  Spirit Bear or  Primal Split Brewlings, but does damage  Familiars and  Warlock Golems\n Does not damage wards or  Undying Zombies\n Does not affect  Couriers at all",
+        "The damage is applied to summoned units, including illusions, but excluding clones\n Does not damage the <span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear or <span image=\"images\/primal_split.webp\">[picture:primal_split]<\/span> Primal Split Brewlings, but does damage <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars and <span image=\"images\/warlock_golem.png\">[picture:warlock_golem]<\/span> Warlock Golems\n Does not damage wards or <span image=\"images\/undying_zombie.png\">[picture:undying_zombie]<\/span> Undying Zombies\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers at all",
         "Affects invulnerable, but not hidden units"
       ],
       "item_behaviour": [],
@@ -264,9 +264,9 @@
     },
     {
       "notes": [
-        "Applies a cyclone effect on the target upon cast, so it turns it invulnerable and fully disables it\n Does not dispel the target\n However, Cyclone is always dispelled by  Dispel Magic regardless of alliances",
+        "Applies a cyclone effect on the target upon cast, so it turns it invulnerable and fully disables it\n Does not dispel the target\n However, Cyclone is always dispelled by <span image=\"images\/dispel_magic_%28storm%29.png\">[picture:dispel_magic_%28storm%29]<\/span> Dispel Magic regardless of alliances",
         "While cycloned, the affected unit is moved upwards and has no collision, other units may pass below the cycloned unit",
-        "Can be cast on  Roshan, but has no effect, since Roshan is immune to forced movement\n He only gets interrupted"
+        "Can be cast on <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, but has no effect, since Roshan is immune to forced movement\n He only gets interrupted"
       ],
       "item_behaviour": [],
       "description": "Encloses a unit in a tornado, removing it from the battlefield.",
@@ -300,7 +300,7 @@
       "description": "Provides temporary invisibility, bonus movement speed and attack damage when invisible.",
       "hot_key": "E",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Fade Time: 0.6",
         "Move Speed Bonus: 50%",
         "Damage: 140\/200\/260",

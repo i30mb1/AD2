@@ -4,27 +4,27 @@
       "notes": [
         "Interrupts Clockwerk's channeling abilities upon cast",
         "Remains active even when Clockwerk is disabled",
-        "Discharges a total of 16 ( 24) shrapnels, starting immediately upon cast",
-        "Can deal a total of 320\/720\/1120\/1520 damage to heroes (before reductions)\n The damage increasing  talent can deal a total of 704\/1104\/1504\/1904 damage\n The interval reducing  talent can deal a total of 480\/1080\/1680\/2280 damage\n With both  talents, it deals a total of 1056\/1656\/2256\/2856 damage",
-        "Deals 40\/90\/140\/190 ( 88\/138\/188\/238) damage per discharge to non-hero units\n Treats illusions and creep-heroes as heroes\n Can deal a total of 640\/1440\/2240\/3040 damage to non-hero units\n (before reductions)\n The damage increasing  talent can deal a total of 1408\/2208\/3008\/3808 damage\n The interval reducing  talent can deal a total of 960\/2160\/3360\/4560 damage\n With both  talents, it deals a total of 2112\/3312\/4512\/5712 damage",
-        "Successive casts and the interval reducing  talent does not update the current instance, but refreshes the duration instead\n The current instance must expire first for the ability values to be updated",
+        "Discharges a total of 16 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 24) shrapnels, starting immediately upon cast",
+        "Can deal a total of 320\/720\/1120\/1520 damage to heroes (before reductions)\n The damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can deal a total of 704\/1104\/1504\/1904 damage\n The interval reducing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can deal a total of 480\/1080\/1680\/2280 damage\n With both <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents, it deals a total of 1056\/1656\/2256\/2856 damage",
+        "Deals 40\/90\/140\/190 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 88\/138\/188\/238) damage per discharge to non-hero units\n Treats illusions and creep-heroes as heroes\n Can deal a total of 640\/1440\/2240\/3040 damage to non-hero units\n (before reductions)\n The damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can deal a total of 1408\/2208\/3008\/3808 damage\n The interval reducing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can deal a total of 960\/2160\/3360\/4560 damage\n With both <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents, it deals a total of 2112\/3312\/4512\/5712 damage",
+        "Successive casts and the interval reducing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update the current instance, but refreshes the duration instead\n The current instance must expire first for the ability values to be updated",
         "Each shrapnel first applies the damage, then the debuff",
         "Hits units in the Fog of War, but not invisible, invulnerable and hidden units",
-        "Both leveling up the ability and the damage increasing  talent immediately updates the currently running instance",
-        "SCEPTER NOTES While  Overclocking, Battery Assault now stuns and damage all valid units within 275 search radius"
+        "Both leveling up the ability and the damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates the currently running instance",
+        "SCEPTER NOTES While <span image=\"images\/overclocking.webp\">[picture:overclocking]<\/span> Overclocking, Battery Assault now stuns and damage all valid units within 275 search radius"
       ],
       "item_behaviour": [],
       "description": "Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun. Deals double damage to creeps.",
       "hot_key": "Q",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Search Radius: 275",
-        "Shrapnel Interval: 0.7 ( 0.45)",
-        "Damage per Shrapnel: 20\/45\/70\/95 ( 44\/69\/94\/119)",
+        "Shrapnel Interval: 0.7 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.45)",
+        "Damage per Shrapnel: 20\/45\/70\/95 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 44\/69\/94\/119)",
         "Non-Hero Damage Multiplier: 2",
         "Stun Duration: 0.1",
         "Assault Duration: 10.5",
-        "Effect Radius:  275"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Effect Radius:  275"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Clockwerk_Battery_Assault_1.mp3\/revision\/latest?cb=20191215184902",
       "effects": [
@@ -42,13 +42,13 @@
     {
       "notes": [
         "The cogs are always placed in the same formation\n 8 cogs are placed so that they form a circle around Clockwerk\n The center of the circle is empty\n Each cog is spawned 215 range away from Clockwerk, effectively blocking a 255 radius circle due to their collision size\n All cogs are placed at a 164.5 range distance from each other\n Together with their collision size, the gap between the cogs is 4.5\n This means that any unit trapped within the center of the circle cannot move out unless it has unobstructed movement or its collision size is smaller than or equal to 4.5",
-        "A cog shocks the first enemy unit which comes within 185 range of it from the outside\n A cog can only shock a unit once\n The cogs only shock units that have mana (e.g\n  Ranged Creep), units without mana are not shocked (e.g\n  Roshan)\n Does not shock units who are already under the effect forced movement sources, except for <span image=\"items\/force_staff\/full.webp\">[Force Staff]<\/span> Force Staff and <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike\n The shock does not require vision and can hit invisible enemies, or enemies in the Fog of War",
+        "A cog shocks the first enemy unit which comes within 185 range of it from the outside\n A cog can only shock a unit once\n The cogs only shock units that have mana (e.g\n <span image=\"images\/melee_creep_radiant.png\">[picture:melee_creep_radiant]<\/span> Ranged Creep), units without mana are not shocked (e.g\n <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan)\n Does not shock units who are already under the effect forced movement sources, except for <span image=\"items\/force_staff\/full.webp\">[picture:force_staff]<\/span> Force Staff and <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike\n The shock does not require vision and can hit invisible enemies, or enemies in the Fog of War",
         "Knocks units back into the direction they approach the cog from\n The knockback distance is 300 at a speed of 300, so it lasts exactly 1 second\n Destroys trees enemies come in contact with during the knockback\n Affected enemies are fully disabled during the knockback\n Therefore, the shock first applies the knockback, the damage, and then the mana loss",
         "Although the cogs deliver the shocks, all effects (knockback, damage, and mana loss) are sourced to the caster, not the cog",
         "Non-player-controlled units (i.e\n lane creeps) do not try to path around the cogs, but simply walk against them as if they are not there\n This effectively causes them to get stuck, until they change directions (e.g\n when being aggro'd), or until the cogs expire",
         "The cogs can also be attacked and destroyed or denied by allies, taking the same amount of attacks as enemies\n Only Clockwerk can destroy them in one hit",
         "Despite having 100 health, attacking the cogs deals 0 damage\n The cogs' health bar does not visually decrease when attacking them either",
-        "Power Cogs has an aura at its center with a radius of 225 that debuffs enemies\n By default, the debuff does nothing but create particle effects on enemies within\n The aura only affects heroes, illusions, clones, and creep-heroes\n The aura always lasts the full duration and lingers for 0.5 seconds, even if all cogs get destroyed\n TALENT NOTES The same debuff also leashes enemies upon learning the leash units inside  talent, preventing them from casting certain mobility abilities\n With the spell immunity  talent, the aura now grants Clockwerk spell immunity within the radius\n SCEPTER NOTES While  Overclocking, the same aura also grants Clockwerk 250 attack speed bonus within the radius"
+        "Power Cogs has an aura at its center with a radius of 225 that debuffs enemies\n By default, the debuff does nothing but create particle effects on enemies within\n The aura only affects heroes, illusions, clones, and creep-heroes\n The aura always lasts the full duration and lingers for 0.5 seconds, even if all cogs get destroyed\n TALENT NOTES The same debuff also leashes enemies upon learning the leash units inside <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, preventing them from casting certain mobility abilities\n With the spell immunity <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, the aura now grants Clockwerk spell immunity within the radius\n SCEPTER NOTES While <span image=\"images\/overclocking.webp\">[picture:overclocking]<\/span> Overclocking, the same aura also grants Clockwerk 250 attack speed bonus within the radius"
       ],
       "item_behaviour": [],
       "description": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down. Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one.",
@@ -58,7 +58,7 @@
         "Cogs Spawn Radius: 215",
         "Cogs Aura Radius: 225",
         "Number of Cogs: 8",
-        "Attacks to Destroy: 2 ( 4)",
+        "Attacks to Destroy: 2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4)",
         "Shock Search Radius: 185",
         "Shock Damage: 50\/125\/200\/275",
         "Shock Mana Loss: 50\/80\/110\/140",
@@ -66,7 +66,7 @@
         "Shock Knockback Duration: 1",
         "Cogs Duration: 5\/6\/7\/8",
         "Effects Linger Duration: 0.5",
-        "Attack Speed Bonus:  250"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Attack Speed Bonus:  250"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Clockwerk_Power_Cogs_1.mp3\/revision\/latest?cb=20191215184910",
       "effects": [
@@ -84,10 +84,10 @@
     {
       "notes": [
         "The Rocket Flare travels at a speed of 2250",
-        "Provides flying vision in a 600 radius for 1 second while traveling and for 6 seconds at the targeted area after reaching it\n TALENT NOTES The Rocket Flare True Sight  talent grants True Sight at the targeted area for 10 seconds\n Immediately updates all of Clockwerk's currently flying rockets\n However, it does not add True Sight to rockets that already reached their targeted point and exploded\n The True Sight is provided by an aura which affects enemies\n Its debuff lingers for 0.5 seconds\n Does not reveal   Enchanted Trees",
+        "Provides flying vision in a 600 radius for 1 second while traveling and for 6 seconds at the targeted area after reaching it\n TALENT NOTES The Rocket Flare True Sight <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent grants True Sight at the targeted area for 10 seconds\n Immediately updates all of Clockwerk's currently flying rockets\n However, it does not add True Sight to rockets that already reached their targeted point and exploded\n The True Sight is provided by an aura which affects enemies\n Its debuff lingers for 0.5 seconds\n Does not reveal <span image=\"images\/eyes_in_the_forest_minimap.png\">[picture:eyes_in_the_forest_minimap]<\/span> <span image=\"images\/eyes_in_the_forest.webp\">[picture:eyes_in_the_forest]<\/span> Enchanted Trees",
         "The projectile can be seen on the minimap\n It appears green to allies and red to enemies (enemies require vision over it to see it)",
-        "SCEPTER NOTES While  Overclocking, Rocket Flare fires a total of 3 rockets, launched in 0.15-second intervals of each other upon cast\n The rockets are launched in the following sequence: Target Area ➤ 125° to the right area ➤ 125° to the left area\n Overclocking also sets the cooldown to 3 while active\n Does not reset the ability's cooldown if cast before Overclocking is active\n The cooldown reducing  talent is not applied to the Overclocking Rocket Flare cooldown",
-        "SHARD NOTES While  Jetpack is active, Rocket Flare can be cast without facing the targeted area"
+        "SCEPTER NOTES While <span image=\"images\/overclocking.webp\">[picture:overclocking]<\/span> Overclocking, Rocket Flare fires a total of 3 rockets, launched in 0.15-second intervals of each other upon cast\n The rockets are launched in the following sequence: Target Area ➤ 125° to the right area ➤ 125° to the left area\n Overclocking also sets the cooldown to 3 while active\n Does not reset the ability's cooldown if cast before Overclocking is active\n The cooldown reducing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent is not applied to the Overclocking Rocket Flare cooldown",
+        "SHARD NOTES While <span image=\"images\/jetpack.webp\">[picture:jetpack]<\/span> Jetpack is active, Rocket Flare can be cast without facing the targeted area"
       ],
       "item_behaviour": [],
       "description": "Fires a global range flare that explodes over a given area, damaging enemies and providing vision for 6 seconds.",
@@ -96,12 +96,12 @@
         "Cast Animation: 0.3+0",
         "Cast Range: Global",
         "Radius: 600",
-        "Number of Flares: 1 ( 3)",
+        "Number of Flares: 1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 3)",
         "Damage: 80\/120\/160\/200",
         "Vision Duration: 6",
-        "Overclocking Cooldown:  3",
-        "True Sight Duration:  10",
-        "True Sight Linger Duration:  0.5"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Overclocking Cooldown:  3",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> True Sight Duration:  10",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> True Sight Linger Duration:  0.5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Clockwerk_Rocket_Flare_1.mp3\/revision\/latest?cb=20191215184914",
       "effects": [
@@ -118,7 +118,7 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Interrupts Clockwerk's channeling abilities upon cast",
         "The stun at the end of the duration cannot be avoided in any way\n It is applied even when invulnerable or hidden\n The stun duration is unaffected by status resistance"
       ],
@@ -126,7 +126,7 @@
       "description": "Supercharges Clockwerks abilities: Battery Assault affects all enemies in it's range; Clockwerk's attack speed in Power Cogs is increased; Rocket Flares have a reduced cooldown and fire additional rockets to either side of the target; Hookshot stun radius and duration is increased. Clockwerk becomes stunned after the duration runs out.",
       "hot_key": "D",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Battery Assault Radius: 275",
         "Power Cogs Self Attack Speed Bonus: 250",
         "Number of Bonus Rocket Flares: 2",
@@ -150,12 +150,12 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Upon cast, Clockwerk ascends 260 units above the z-axis\n While Jetpack is active, Clockwerk is disarmed and does not need to turn to cast abilities or items",
         "For better readability, the turn rate during the flight is given as degrees per second, instead of radians per 0.03 seconds\n 75° per second equal a turn rate of 0.039",
         "Clockwerk turns for a maximum of 1 second per issued move order\n This means a single move order does not cause him to fly in a circle around the targeted point\n Clockwerk's final path and direction pre-move order depends on a vector from his position to the targeted point, which is always parallel with the path",
-        "Clockwerk is not disabled while flying and can use any items and abilities normally\n Casting  Hookshot ends Jetpack if it latches on a target and starts pulling\n Does not end it if it misses",
-        "The flight speed equals Clockwerk's current movement speed\n SPELL STEAL  Rubick ascends 150 units above the z-axis instead and does not turn into a flying unit"
+        "Clockwerk is not disabled while flying and can use any items and abilities normally\n Casting <span image=\"images\/hookshot.webp\">[picture:hookshot]<\/span> Hookshot ends Jetpack if it latches on a target and starts pulling\n Does not end it if it misses",
+        "The flight speed equals Clockwerk's current movement speed\n SPELL STEAL <span image=\"images\/rubick_minimap.png\">[picture:rubick_minimap]<\/span> Rubick ascends 150 units above the z-axis instead and does not turn into a flying unit"
       ],
       "item_behaviour": [],
       "description": "Clockwerk activates a jetpack, gaining flying movement, flying vision, and bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Jetpack is cancelled upon casting Hookshot.",
@@ -185,23 +185,23 @@
         "The area damage and stun around Clockwerk always happens, regardless of whether the hook latched on an ally or enemy",
         "When latching on an ally, the ally is not disabled and can act freely\n It is not interrupted either",
         "When latching on an enemy, it gets stunned for 1.5\/1.75\/2 seconds, or until Clockwerk reaches it\n This means if Clockwerk does not reach it, it is stunned for the full duration\n This can happen when either the pull gets canceled, or when the target gets moved too far away during the pull",
-        "The latched enemy is also hit by the stun and area damage\n This means the latched target is stunned up to 2\/2.25\/2.5 ( 2.75\/3.125\/3.5) seconds than secondary targets, due to the initial latch stun",
+        "The latched enemy is also hit by the stun and area damage\n This means the latched target is stunned up to 2\/2.25\/2.5 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2.75\/3.125\/3.5) seconds than secondary targets, due to the initial latch stun",
         "Hookshot first applies the debuff, then the damage",
-        "Fully ignores  Couriers, wards, buildings and hidden units\n Can latch on invulnerable or invisible units",
-        "SCEPTER NOTES While  Overclocking, Hookshot's stun and damage radius is increased to 262.5",
-        "SHARD NOTES While  Jetpack is active, Hookshot can be cast without facing the targeted area"
+        "Fully ignores <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards, buildings and hidden units\n Can latch on invulnerable or invisible units",
+        "SCEPTER NOTES While <span image=\"images\/overclocking.webp\">[picture:overclocking]<\/span> Overclocking, Hookshot's stun and damage radius is increased to 262.5",
+        "SHARD NOTES While <span image=\"images\/jetpack.webp\">[picture:jetpack]<\/span> Jetpack is active, Hookshot can be cast without facing the targeted area"
       ],
       "item_behaviour": [],
       "description": "Fires a grappling device rapidly at the target location. If the hook hits a unit, Clockwerk launches himself into the target, stunning and dealing damage. Any enemies Clockwerk collides with along the way are damaged and stunned.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range:  2000\/2500\/3000",
-        "Max Travel Distance:  2000\/2500\/3000",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 2000\/2500\/3000",
+        "Max Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 2000\/2500\/3000",
         "Hook Latch Radius: 125",
-        "Stun\/Damage Radius: 175 ( 262.5)",
+        "Stun\/Damage Radius: 175 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 262.5)",
         "Damage: 75\/175\/275",
-        "Stun Duration: 1.5\/1.75\/2 ( 2.25\/2.625\/3)"
+        "Stun Duration: 1.5\/1.75\/2 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2.25\/2.625\/3)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Clockwerk_Hookshot_1.mp3\/revision\/latest?cb=20191215184903",
       "effects": [

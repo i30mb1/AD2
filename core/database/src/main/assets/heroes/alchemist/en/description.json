@@ -5,22 +5,22 @@
         "The armor reduction and ally armor increasing bonus is provided by an aura\n Its debuff lingers for 0.5 seconds\n The damage is independent from the aura",
         "Deals damage in 1-second intervals, starting immediately upon cast, resulting in up to 17 instances",
         "Can deal up to 340\/425\/510\/595 damage to a single unit (before reductions)",
-        "When leveling up the ability while a cast is already active, the armor reduction value on already affected units does not update to the new value\n However, if an enemy receives the debuff after leveling it up, that enemy receives the new armor reduction value\n TALENT NOTES The armor reduction notes fully apply to the ally armor bonus  talent\n The damage value does not update and is always based on the level the ability was cast on",
+        "When leveling up the ability while a cast is already active, the armor reduction value on already affected units does not update to the new value\n However, if an enemy receives the debuff after leveling it up, that enemy receives the new armor reduction value\n TALENT NOTES The armor reduction notes fully apply to the ally armor bonus <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n The damage value does not update and is always based on the level the ability was cast on",
         "The damage of multiple instances of Acid Spray fully stacks\n However, the enemy armor reduction and ally armor bonus value does not",
-        "Does not affect  Couriers"
+        "Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take damage per second and have their armor reduced.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.7",
-        "Cast Range:  900",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
         "Radius: 475\/525\/575\/625",
         "Damage per Second: 20\/25\/30\/35",
-        "Enemy Armor Reduction: 4\/5\/6\/7 ( 5\/6\/7\/8)",
+        "Enemy Armor Reduction: 4\/5\/6\/7 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 5\/6\/7\/8)",
         "Aura Linger Duration: 0.5",
         "Duration: 16",
-        "Ally Armor Bonus Percentage:  100%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Ally Armor Bonus Percentage:  100%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Alchemist_Acid_Spray_1.mp3\/revision\/latest?cb=20191216010552",
       "effects": [
@@ -39,25 +39,25 @@
       "notes": [
         "Interrupts Alchemist's channeling abilities upon cast",
         "A timer above Alchemist's head shows how much time is left before the concoction blows up\n This timer is visible to everyone",
-        "While brewing the concoction, Alchemist has increased movement speed, and he can move around and act freely\n The increased movement speed buff lasts until the  Unstable Concoction Throw sub-ability is used or the concoction blows up\n The brewing animation and particles are visible to everyone\n The Unstable Concoction buff is hidden",
+        "While brewing the concoction, Alchemist has increased movement speed, and he can move around and act freely\n The increased movement speed buff lasts until the <span image=\"images\/unstable_concoction_throw.webp\">[picture:unstable_concoction_throw]<\/span> Unstable Concoction Throw sub-ability is used or the concoction blows up\n The brewing animation and particles are visible to everyone\n The Unstable Concoction buff is hidden",
         "The sound can be heard by enemies only when the ability was cast within their vision range",
-        "The damage starts at 0 and increases by 3\/4.4\/5.8\/7.2 ( 11\/12.4\/13.8\/15.2) for each 0.1 seconds brewed, reaching the full damage in 5 seconds",
+        "The damage starts at 0 and increases by 3\/4.4\/5.8\/7.2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 11\/12.4\/13.8\/15.2) for each 0.1 seconds brewed, reaching the full damage in 5 seconds",
         "The stun duration starts at 0.25 seconds and increases by 0.03\/0.045\/0.06\/0.075 for each 0.1 seconds brewed, reaching 1.75\/2.5\/3.25\/4 in 5 seconds",
         "The concoction first applies the damage, then the debuff",
-        "Unstable Concoction always affects a 250 ( 375) radius around where it explodes, including when it explodes on Alchemist\n When Alchemist dies while brewing, it instantly blows up, damaging enemy units around Alchemist based on the brewed duration\n The self-inflicted damage is lethal, it can be used to deny oneself",
-        "TALENT NOTES Both radius increasing and the maximum damage increasing  talents immediately updates all of Alchemist's currently brewing concoction and all of his currently flying concoction projectiles\n SPELL STEAL Instantly stuns the caster for the total channel duration upon losing the ability\n MORPH NOTES Does not stun the caster upon losing the ability or while the countdown ends when the  Morph buff expires"
+        "Unstable Concoction always affects a 250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 375) radius around where it explodes, including when it explodes on Alchemist\n When Alchemist dies while brewing, it instantly blows up, damaging enemy units around Alchemist based on the brewed duration\n The self-inflicted damage is lethal, it can be used to deny oneself",
+        "TALENT NOTES Both radius increasing and the maximum damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents immediately updates all of Alchemist's currently brewing concoction and all of his currently flying concoction projectiles\n SPELL STEAL Instantly stuns the caster for the total channel duration upon losing the ability\n MORPH NOTES Does not stun the caster upon losing the ability or while the countdown ends when the <span image=\"images\/morph.webp\">[picture:morph]<\/span> Morph buff expires"
       ],
       "item_behaviour": [],
       "description": "Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal damage in an area around the explosion. The longer the concoction brews, the more damage it deals and the longer the stun. Alchemist is faster while charging the concoction. After 5 seconds, the brew reaches its maximum damage and stun time. However, after 5.5 seconds, the concoction will explode on Alchemist himself if not thrown.",
       "hot_key": "W",
       "params": [
-        "Cast Animation:  0+0",
-        "Concoction Radius: 250 ( 375)",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
+        "Concoction Radius: 250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 375)",
         "Max Brew Time: 5",
         "Max Throw Time: 5.5",
         "Move Speed Bonus: 4%\/8%\/12%\/16%",
         "Min Damage: 0",
-        "Max Damage: 150\/220\/290\/360 ( 550\/620\/690\/760)",
+        "Max Damage: 150\/220\/290\/360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 550\/620\/690\/760)",
         "Min Stun Duration: 0.25",
         "Max Stun Duration: 1.75\/2.5\/3.25\/4"
       ],
@@ -76,17 +76,17 @@
     },
     {
       "notes": [
-        "Replaces  Unstable Concoction until the sub-ability is used or the concoction blows up",
+        "Replaces <span image=\"images\/unstable_concoction.webp\">[picture:unstable_concoction]<\/span> Unstable Concoction until the sub-ability is used or the concoction blows up",
         "The targeting reticule must be centered over an enemy unit",
         "The concoction travels at a speed of 900",
-        "Once thrown, Unstable Concoction stops brewing\n Can only be cast on at heroes and illusions\n Cannot be cast on, but can stun and damage non-hero units within the radius\n When connecting with an invulnerable or hidden target, it still applies its area effect, hitting nearby units\n SPELL STEAL Grants  Unstable Concoction if this sub-ability is the last cast ability"
+        "Once thrown, Unstable Concoction stops brewing\n Can only be cast on at heroes and illusions\n Cannot be cast on, but can stun and damage non-hero units within the radius\n When connecting with an invulnerable or hidden target, it still applies its area effect, hitting nearby units\n SPELL STEAL Grants <span image=\"images\/unstable_concoction.webp\">[picture:unstable_concoction]<\/span> Unstable Concoction if this sub-ability is the last cast ability"
       ],
       "item_behaviour": [],
       "description": "Throw it before it blows up!",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.5",
-        "Cast Range:  775"
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 775"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Alchemist_Unstable_Concoction_2.mp3\/revision\/latest?cb=20191216010549",
       "effects": [
@@ -103,12 +103,12 @@
     },
     {
       "notes": [
-        "Greevil's Greed triggers and grants a stack on every last hit Alchemist makes on units that have a death gold bounty, except for buildings, illusions, and the  Tempest Double\n Denies or last hits from his player-controlled units do not add to the current stack\n Does not trigger on units that have Reincarnation as well, except for  Wraith King Skeletons",
+        "Greevil's Greed triggers and grants a stack on every last hit Alchemist makes on units that have a death gold bounty, except for buildings, illusions, and the <span image=\"images\/arc_warden_tempest_double_minimap.png\">[picture:arc_warden_tempest_double_minimap]<\/span> Tempest Double\n Denies or last hits from his player-controlled units do not add to the current stack\n Does not trigger on units that have Reincarnation as well, except for <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Wraith King Skeletons",
         "All stacks work fully independently from each other\n They last 36 seconds each and do not refresh each other\n The status buff icon shows how much extra gold Alchemist gains on his next last hit\n A second bounty number appears over Alchemist, showing the amount of extra gold earned\n This number is only visible to Alchemist",
         "The minimum amount of last hits needed to reach the gold bonus cap and bonus attack damage cap is 4\/5\/6\/7 within the 36-second stack duration",
         "Gold earned through Greevil's Greed is unreliable",
-        "The  Bounty Rune multiplier only affects the amount of gold Alchemist gains (regardless of whether he collects the rune himself)\n Allies still gain the default value",
-        "TALENT NOTES The last hit notes fully apply to the attack damage bonus per Greevil's Greed stack  talent\n Grants flat bonus attack damage per stack, values displayed on the HUD are rounded up"
+        "The <span image=\"images\/bounty_rune_minimap.png\">[picture:bounty_rune_minimap]<\/span> Bounty Rune multiplier only affects the amount of gold Alchemist gains (regardless of whether he collects the rune himself)\n Allies still gain the default value",
+        "TALENT NOTES The last hit notes fully apply to the attack damage bonus per Greevil's Greed stack <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Grants flat bonus attack damage per stack, values displayed on the HUD are rounded up"
       ],
       "item_behaviour": [],
       "description": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 36 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold.",
@@ -119,8 +119,8 @@
         "Gold Bonus Cap: 15\/18\/21\/24",
         "Stack Duration: 36",
         "Bounty Rune Multiplier: 1.8\/2.2\/2.6\/3",
-        "Attack Damage Bonus per Stack:  4.5",
-        "Attack Damage Bonus Cap:  22.5\/27\/31.5\/36"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Attack Damage Bonus per Stack:  4.5",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Attack Damage Bonus Cap:  22.5\/27\/31.5\/36"
       ],
       "audioUrl": "",
       "effects": [
@@ -136,10 +136,10 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Applies a basic dispel on the target ally upon cast\n ↓↓ Double-tapping automatically targets self",
         "The projectile travels at a speed of 900",
-        "Increases Alchemist's total movement speed to 335, and to 375\/385\/395 when combined with  Chemical Rage",
+        "Increases Alchemist's total movement speed to 335, and to 375\/385\/395 when combined with <span image=\"images\/chemical_rage.webp\">[picture:chemical_rage]<\/span> Chemical Rage",
         "Can regenerate up to 400 health over its full duration"
       ],
       "item_behaviour": [],
@@ -147,7 +147,7 @@
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.63",
-        "Cast Range:  800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
         "Move Speed Bonus: 30",
         "Attack Speed Bonus: 50",
         "Health Regen Bonus: 40",
@@ -168,11 +168,11 @@
     {
       "notes": [
         "Chemical Rage disjoints projectiles and applies a basic dispel on Alchemist upon cast",
-        "Increases Alchemist's total movement speed to 345\/355\/365 ( 395\/405\/415), and sets his base attack time to 1.2\/1.1\/1 ( 1.1\/1\/0.9)",
-        "Can regenerate up to 1500\/2250\/3000 ( 3000\/3750\/4500) health over its full duration",
+        "Increases Alchemist's total movement speed to 345\/355\/365 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 395\/405\/415), and sets his base attack time to 1.2\/1.1\/1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.1\/1\/0.9)",
+        "Can regenerate up to 1500\/2250\/3000 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3000\/3750\/4500) health over its full duration",
         "Chemical Rage is fully canceled on death",
         "Successive casts before the previous cast finishes refresh the duration and update all ability values to the current level",
-        "Fully affects  Couriers"
+        "Fully affects <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and health regeneration.",
@@ -180,9 +180,9 @@
       "params": [
         "Cast Animation: 0+0",
         "Transformation Time: 0.35",
-        "Base Attack Time: 1.2\/1.1\/1 ( 1.1\/1\/0.9)",
-        "Health Regen Bonus: 50\/75\/100 ( 100\/125\/150)",
-        "Move Speed Bonus: 40\/50\/60 ( 90\/100\/110)",
+        "Base Attack Time: 1.2\/1.1\/1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.1\/1\/0.9)",
+        "Health Regen Bonus: 50\/75\/100 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100\/125\/150)",
+        "Move Speed Bonus: 40\/50\/60 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 90\/100\/110)",
         "Rage Duration: 30"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Alchemist_Chemical_Rage.mp3\/revision\/latest?cb=20191216010547",
@@ -199,9 +199,9 @@
     },
     {
       "notes": [
-        "This is innate to Alchemist, despite  Chemical Rage's in-game ability upgrade tooltip",
-        "<span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter has an active ability for Alchemist, allowing him to cast it on allied heroes (excluding clones and illusions)\n ↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self\n Once cast, the Scepter is consumed and the target ally passively receives all of <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter's upgrades, as well as the item's attributes: 10  \/  \/  all stats 175 health and 175 mana The 4200  net worth of the item transfers from Alchemist to the target hero\n Self-casting does not change the net worth\n Doing so does not change Alchemist's or the target's GPM\n A hero can only be targeted once by Aghanim's Scepter Synth",
-        "If the target ally bought Aghanim's Scepter and has it in their inventory or backpack, it gets refunded, removing it and granting them 4200 \n If the target ally already has <span image=\"items\/aghanim's_blessing\/full.webp\">[Aghanim's Blessing]<\/span> Aghanim's Blessing or  Aghanim's Blessing - Roshan consumed, it gets refunded as well, granting them 5800 \n It does not matter how the target acquired Aghanim's Blessing, the gold is always refunded to the target ally by Alchemist, except when targeting himself\n Gold refunded this way is considered as unreliable gold",
+        "This is innate to Alchemist, despite <span image=\"images\/chemical_rage.webp\">[picture:chemical_rage]<\/span> Chemical Rage's in-game ability upgrade tooltip",
+        "<span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter has an active ability for Alchemist, allowing him to cast it on allied heroes (excluding clones and illusions)\n ↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self\n Once cast, the Scepter is consumed and the target ally passively receives all of <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter's upgrades, as well as the item's attributes: 10 <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> \/ <span image=\"images\/agility_attribute_symbol.png\">[picture:agility_attribute_symbol]<\/span> \/ <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span> all stats 175 health and 175 mana The 4200 <span image=\"images\/gold_symbol.png\">[picture:gold_symbol]<\/span> net worth of the item transfers from Alchemist to the target hero\n Self-casting does not change the net worth\n Doing so does not change Alchemist's or the target's GPM\n A hero can only be targeted once by Aghanim's Scepter Synth",
+        "If the target ally bought Aghanim's Scepter and has it in their inventory or backpack, it gets refunded, removing it and granting them 4200 <span image=\"images\/gold_symbol.png\">[picture:gold_symbol]<\/span>\n If the target ally already has <span image=\"items\/aghanim's_blessing\/full.webp\">[picture:aghanim's_blessing]<\/span> Aghanim's Blessing or <span image=\"images\/aghanim's_blessing_-_roshan.png\">[picture:aghanim's_blessing_-_roshan]<\/span> Aghanim's Blessing - Roshan consumed, it gets refunded as well, granting them 5800 <span image=\"images\/gold_symbol.png\">[picture:gold_symbol]<\/span>\n It does not matter how the target acquired Aghanim's Blessing, the gold is always refunded to the target ally by Alchemist, except when targeting himself\n Gold refunded this way is considered as unreliable gold",
         "Grants the bonuses to Alchemist upon cast on allied heroes",
         "The number of stacks and amount of bonuses gained can be seen on the status buff icon\n Grants flat bonus attack damage\n Grants generic bonus outgoing damage amplification\n Stacks additively with other sources of generic outgoing damage manipulation\n The amplification affects only spell damage the Alchemist deals that are not flagged as HP removal",
         "Since up to 4 allies and Alchemist himself can be infused, Alchemist can gain up to 100 attack damage and 25% spell damage amplification bonus"
@@ -210,7 +210,7 @@
       "description": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. Alchemist will gain bonus damage and spell amplification for each gifted Scepter.",
       "hot_key": "?",
       "params": [
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Attack Damage Bonus per Stack: 20",
         "Outgoing Spell Damage Amp Bonus per Stack: 5%"
       ],

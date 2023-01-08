@@ -4,10 +4,10 @@
       "notes": [
         "Chaos Bolt travels at a speed of 700",
         "Stun duration and raw damage values are shown above the target's head upon hit, visible to allies and enemies, with the duration being shown as a rounded integer up to two decimal places\n However, the actual stun duration is not by exact seconds \u2014 it ranges between the min and max values (e.g\n at level 1, it could stun for 1.74 seconds)",
-        "Damage and stun values are inversely related, the longer the stun is, the less damage it deals and vice versa\n This means the damage decreases by 6.32\/6.92\/7.27\/7.5 per each additional 0.1 seconds of stun\n Has the following values for the damage and stun duration on each level: Level 1: 1.25s \u2013 120, 1.4875s \u2013 105, 1.725s \u2013 90, 1.9625s \u2013 75, 2.2s \u2013 60 Level 2: 1.5s \u2013 180, 1.825s \u2013 157.5, 2.15s \u2013 135, 2.475s \u2013 112.5, 2.8s \u2013 90 Level 3: 1.75s \u2013 240, 2.1625s \u2013 210, 2.575s \u2013 180, 2.9875s \u2013 150, 3.4s \u2013 120 Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150  TALENT NOTES Since both the  minimum and maximum value of the stun duration are increased evenly by 0.75, the above damage values remain the same",
+        "Damage and stun values are inversely related, the longer the stun is, the less damage it deals and vice versa\n This means the damage decreases by 6.32\/6.92\/7.27\/7.5 per each additional 0.1 seconds of stun\n Has the following values for the damage and stun duration on each level: Level 1: 1.25s \u2013 120, 1.4875s \u2013 105, 1.725s \u2013 90, 1.9625s \u2013 75, 2.2s \u2013 60 Level 2: 1.5s \u2013 180, 1.825s \u2013 157.5, 2.15s \u2013 135, 2.475s \u2013 112.5, 2.8s \u2013 90 Level 3: 1.75s \u2013 240, 2.1625s \u2013 210, 2.575s \u2013 180, 2.9875s \u2013 150, 3.4s \u2013 120 Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150  TALENT NOTES Since both the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> minimum and maximum value of the stun duration are increased evenly by 0.75, the above damage values remain the same",
         "The bolt first applies the debuff, then the damage",
         "All illusions owned by Chaos Knight within 675 range of the target also cast a fake Chaos Bolt\n They play the whole cast animation and release their fake bolt at the same time the real bolt is released\n When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake bolt\n When illusions are moving or attacking, they continue to do so and do not turn to face the target\n They still play the cast animation, overriding their move or attack animations\n When canceling the cast, the illusions still play the full cast animation, but do not release the fake bolt\n The fake bolts do not interact with anything and do not damage or stun the target",
-        "SHARD NOTES Chaos Bolt now creates 1 controllable  Phantasm illusion upon projectile impact, based on its current level\n Does not spawn an illusion, if the projectile gets disjointed, or the target is invulnerable, hidden or spell immune upon impact\n Phantasm notes fully apply\n If Phantasm is not learned, the illusion does not spawn\n The illusion spawned spawns automatically starts attacking the affected enemy\n Dispelling the stun or dying does not remove already spawned illusions",
+        "SHARD NOTES Chaos Bolt now creates 1 controllable <span image=\"images\/phantasm.webp\">[picture:phantasm]<\/span> Phantasm illusion upon projectile impact, based on its current level\n Does not spawn an illusion, if the projectile gets disjointed, or the target is invulnerable, hidden or spell immune upon impact\n Phantasm notes fully apply\n If Phantasm is not learned, the illusion does not spawn\n The illusion spawned spawns automatically starts attacking the affected enemy\n Dispelling the stun or dying does not remove already spawned illusions",
         "SHARD NOTES The illusion spawns at different distances depending on the caster and target's collision size as follows: The illusion spawns 58 range away from the target if both the caster and target have a collision size of 8\n The illusion spawns 87 range away from the target if either the caster or the target has a collision size of 24"
       ],
       "item_behaviour": [],
@@ -15,15 +15,15 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.4",
-        "Cast Range:  500 ( 650)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 500 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 650)",
         "Min Damage: 60\/90\/120\/150",
         "Max Damage: 120\/180\/240\/300",
-        "Min Stun Duration: 1.25\/1.5\/1.75\/2 ( 2\/2.25\/2.5\/2.75)",
-        "Max Stun Duration: 2.2\/2.8\/3.4\/4 ( 2.95\/3.55\/4.15\/4.75)",
-        "Number of Phantasm Illusions:  1",
-        "Illusion Damage Dealt:  100%",
-        "Illusion Damage Taken:  325% ( 250%)",
-        "Illusion Duration:  6"
+        "Min Stun Duration: 1.25\/1.5\/1.75\/2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2\/2.25\/2.5\/2.75)",
+        "Max Stun Duration: 2.2\/2.8\/3.4\/4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.95\/3.55\/4.15\/4.75)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Number of Phantasm Illusions:  1",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Illusion Damage Dealt:  100%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Illusion Damage Taken:  325% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 250%)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Illusion Duration:  6"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Chaos_Knight_Chaos_Bolt_1.mp3\/revision\/latest?cb=20191216012025",
       "effects": [
@@ -41,21 +41,21 @@
     {
       "notes": [
         "Does not disjoint projectiles for enemies and self",
-        "Teleports Chaos Knight to a point 250\/300\/350\/400 ( 475\/525\/575\/625) range away from the target's original position, towards Chaos Knight's original cast location, but not beyond it\n The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 ( 413\/463\/513\/563) range\n Chaos Knight's illusions are located around the target from random angles, with the same distance to it as Chaos Knight\n The location is determined at the beginning of the cast\n A visual effect while casting denotes the point at which Chaos Knight and his target will land\n Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight\n If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War\n Chaos Knight and his illusions are made to face his target and are issued an attack order against the target",
-        "When cast on  Roshan, Chaos Knight and his illusions still get moved, but Roshan does not",
+        "Teleports Chaos Knight to a point 250\/300\/350\/400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 475\/525\/575\/625) range away from the target's original position, towards Chaos Knight's original cast location, but not beyond it\n The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 413\/463\/513\/563) range\n Chaos Knight's illusions are located around the target from random angles, with the same distance to it as Chaos Knight\n The location is determined at the beginning of the cast\n A visual effect while casting denotes the point at which Chaos Knight and his target will land\n Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight\n If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War\n Chaos Knight and his illusions are made to face his target and are issued an attack order against the target",
+        "When cast on <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, Chaos Knight and his illusions still get moved, but Roshan does not",
         "The armor debuff is applied to the target upon cast\n Chaos Knight does not need to attack it in order to place the debuff",
         "The debuff from successive casts does not stack but refreshes the duration",
         "Does not interrupt the target's channeling abilities",
-        "TALENT NOTES Fully affects  Couriers upon learning the Reality Rift pierces spell immunity  talent"
+        "TALENT NOTES Fully affects <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers upon learning the Reality Rift pierces spell immunity <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent"
       ],
       "item_behaviour": [],
       "description": "Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.5",
-        "Cast Range:  550\/600\/650\/750",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 550\/600\/650\/750",
         "Illusion Search Radius: 1375",
-        "Target Pull Distance: 250\/300\/350\/400 ( 475\/525\/575\/625)",
+        "Target Pull Distance: 250\/300\/350\/400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 475\/525\/575\/625)",
         "Armor Reduction: 4\/5\/6\/7",
         "Duration: 6"
       ],
@@ -73,7 +73,7 @@
     },
     {
       "notes": [
-        "Increases attack damage by an average of 10.83%\/16.67%\/22.5%\/28.33% ( 14.08%\/21.67%\/29.25%\/36.83%) against heroes clones, and illusions\n Increases attack damage by an average of 32.91%\/41.66%\/50.41%\/59.16% ( 42.79%\/54.16%\/65.54%\/76.91%) against non-hero units\n Treats creep-heroes and  Roshan as heroes",
+        "Increases attack damage by an average of 10.83%\/16.67%\/22.5%\/28.33% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14.08%\/21.67%\/29.25%\/36.83%) against heroes clones, and illusions\n Increases attack damage by an average of 32.91%\/41.66%\/50.41%\/59.16% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 42.79%\/54.16%\/65.54%\/76.91%) against non-hero units\n Treats creep-heroes and <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan as heroes",
         "A critical strike proc is decided upon attack begin, not upon landing an attack\n When a critical strike procs, Chaos Knight uses a specific crit attack animation, and particle effects appear on his weapon",
         "The proc chances of multiple critical strike sources stack\n If two sources of critical strike proc at the same time, the higher multiplier has priority",
         "Stacks additively with other sources of lifesteal",
@@ -84,10 +84,10 @@
       "description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage. Deals 1.5x damage to creeps.",
       "hot_key": "E",
       "params": [
-        "Proc Chance: 33.33% ( 43.33%)",
+        "Proc Chance: 33.33% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 43.33%)",
         "Min Critical Damage: 125%",
         "Max Critical Damage: 140%\/175%\/210%\/245%",
-        "Lifesteal: 20%\/30%\/40%\/50% ( 42%\/52%\/62%\/72%)",
+        "Lifesteal: 20%\/30%\/40%\/50% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 42%\/52%\/62%\/72%)",
         "Non-Hero Damage Percentage: 150%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Chaos_Knight_Chaos_Strike.mp3\/revision\/latest?cb=20191216012015",
@@ -119,12 +119,12 @@
       "params": [
         "Cast Animation: 0.4+0",
         "Split Time: 0.5",
-        "Number of Illusions: 1\/2\/3 ( 2\/3\/4)",
+        "Number of Illusions: 1\/2\/3 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2\/3\/4)",
         "Illusion Damage Dealt: 100%",
-        "Illusion Damage Taken: 325% ( 250%)",
-        "Duration: 30 ( 40)",
-        "Effect Radius:  Global",
-        "Number of Illusions From Each Ally:  1"
+        "Illusion Damage Taken: 325% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 250%)",
+        "Duration: 30 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 40)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Effect Radius:  Global",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Number of Illusions From Each Ally:  1"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Chaos_Knight_Phantasm.mp3\/revision\/latest?cb=20191216012020",
       "effects": [

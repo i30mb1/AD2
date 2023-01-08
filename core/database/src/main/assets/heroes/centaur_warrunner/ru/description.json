@@ -11,7 +11,7 @@
         "Анимация применения: 0,5+0,3",
         "Радиус: 330",
         "Урон: 120\/180\/240\/300",
-        "Длительность оглушения: 2\/2,2\/2,4\/2,6 ( 3\/3,2\/3,4\/3,6)"
+        "Длительность оглушения: 2\/2,2\/2,4\/2,6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3\/3,2\/3,4\/3,6)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Centaur_Warrunner_Hoof_Stomp.mp3\/revision\/latest?cb=20191216011917",
       "effects": [
@@ -31,8 +31,8 @@
         "Double Edge наносит магический урон как цели, так и самому заклинателю",
         "Центром радиуса урона является сама цель, а не Centaur Warrunner",
         "Double Edge сначала наносит урон всем противникам (в случайном порядке), а потом заклинателю\n Урон, наносимый себе, не может быть смертельным, поэтому его нельзя использовать для добивания себя\n Сначала даёт бонус к силе, затем накладывает замедление, после наносит урон",
-        "При улучшении с <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard повышение  силы даётся только в том случае, если задетый враг \u2014 герой (включая клонов, исключая иллюзии и крипов героев)\n Применение способности по герою увеличит накопленное число эффектов и обновит их длительность\n Может увеличить всю силу (базовую и бонусную) на 15%\/30%\/45%\/60%\/75% за каждое число эффектов",
-        "Увеличивает здоровье на 20, бонус к восстановлению здоровья на 0,1 и основной урон от атаки за каждую единицу силы\n При обновлении значений силы текущее здоровье Centaur Warrunner остаётся на прежнем уровне\n Бонус к характеристикам убирается по истечении баффа или при смерти\n Текущий процент здоровья не сохраняется\n Увеличение здоровья не считается лечением, оно не взаимодействует с усилением лечения\n Таким образом, увеличение здоровья не учитывается в процентном пороге здоровья  Ice Blast и отложенном лечении  False Promise"
+        "При улучшении с <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard повышение <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> силы даётся только в том случае, если задетый враг \u2014 герой (включая клонов, исключая иллюзии и крипов героев)\n Применение способности по герою увеличит накопленное число эффектов и обновит их длительность\n Может увеличить всю силу (базовую и бонусную) на 15%\/30%\/45%\/60%\/75% за каждое число эффектов",
+        "Увеличивает здоровье на 20, бонус к восстановлению здоровья на 0,1 и основной урон от атаки за каждую единицу силы\n При обновлении значений силы текущее здоровье Centaur Warrunner остаётся на прежнем уровне\n Бонус к характеристикам убирается по истечении баффа или при смерти\n Текущий процент здоровья не сохраняется\n Увеличение здоровья не считается лечением, оно не взаимодействует с усилением лечения\n Таким образом, увеличение здоровья не учитывается в процентном пороге здоровья <span image=\"images\/ice_blast.webp\">[picture:ice_blast]<\/span> Ice Blast и отложенном лечении <span image=\"images\/false_promise.webp\">[picture:false_promise]<\/span> False Promise"
       ],
       "item_behaviour": [],
       "description": "Герой совершает сокрушительный удар, нанося урон себе, цели и всем врагам неподалёку от неё. Урон этой способности частично зависит от силы владельца, и он не может погибнуть от её применения.",
@@ -42,12 +42,12 @@
         "Дальность применения: 150",
         "Радиус урона: 220",
         "Базовый урон: 120\/180\/240\/300",
-        "Дополнительный урон от силы: 60%\/80%\/100%\/120% ( 100%\/120%\/140%\/160%)",
-        "Максимальное число эффектов:  5",
-        "Бонус к силе за эффект:  15%",
-        "Замедление скорости передвижения:  25%",
-        "Длительность замедления:  2",
-        "Длительность эффекта:  15"
+        "Дополнительный урон от силы: 60%\/80%\/100%\/120% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100%\/120%\/140%\/160%)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Максимальное число эффектов:  5",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Бонус к силе за эффект:  15%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Замедление скорости передвижения:  25%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Длительность замедления:  2",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Длительность эффекта:  15"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Centaur_Warrunner_Double_Edge.mp3\/revision\/latest?cb=20191216011916",
       "effects": [
@@ -66,19 +66,19 @@
       "notes": [
         "Retaliate срабатывает только при попадании атаки по Centaur Warrunner вне зависимости от расстояния\n Это значит, что способность не срабатывает на промахнувшиеся атаки",
         "Сначала возвращаемый урон наносится атакующему, и только после этого \u2014 самому Centaur Warrunner",
-        "Вторичные атаки от  Moon Glaives,  Split Shot до выбора героем  таланта и  Flak Cannon не активируют Retaliate\n При этом вторичные атаки от других источников мгновенных атак способность активируют\n Не срабатывает от атак вардов и  нетленных зомби",
-        "Срабатывает от атак построек\n Наносит 7,5\/12,5\/17,5\/22,5 ( 30\/35\/40\/45) + 10%\/13%\/16%\/19% от  силы в качестве урона за каждое срабатывание (до учёта сопротивлений) постройкам",
+        "Вторичные атаки от <span image=\"images\/moon_glaives.webp\">[picture:moon_glaives]<\/span> Moon Glaives, <span image=\"images\/split_shot.webp\">[picture:split_shot]<\/span> Split Shot до выбора героем <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> таланта и <span image=\"images\/flak_cannon.webp\">[picture:flak_cannon]<\/span> Flak Cannon не активируют Retaliate\n При этом вторичные атаки от других источников мгновенных атак способность активируют\n Не срабатывает от атак вардов и <span image=\"images\/undying_zombie.png\">[picture:undying_zombie]<\/span> нетленных зомби",
+        "Срабатывает от атак построек\n Наносит 7,5\/12,5\/17,5\/22,5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/35\/40\/45) + 10%\/13%\/16%\/19% от <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> силы в качестве урона за каждое срабатывание (до учёта сопротивлений) постройкам",
         "Действует на союзных существ: если союзник умрет от возвращаемого урона - это будет засчитано за добивание",
-        "Изначально Retaliate \u2014 это аура, но она распространяется только на владельца до выбора соответствующего  таланта\n Бафф не отображается на владельце\n При выборе дающего ауру  таланта она начинает распространятся только на героев и крипов-героев\n Влияет на неуязвимых союзников, но не на спрятанных союзников\n Бафф от ауры задерживается на 0,5 сек"
+        "Изначально Retaliate \u2014 это аура, но она распространяется только на владельца до выбора соответствующего <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> таланта\n Бафф не отображается на владельце\n При выборе дающего ауру <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> таланта она начинает распространятся только на героев и крипов-героев\n Влияет на неуязвимых союзников, но не на спрятанных союзников\n Бафф от ауры задерживается на 0,5 сек"
       ],
       "item_behaviour": [],
       "description": "Каждый удар по герою наносит урон и атакующему. Помимо базового урона наносится дополнительный, зависящий от силы владельца способности. Наносит башням половину урона.",
       "hot_key": "E",
       "params": [
-        "Ответный урон: 15\/25\/35\/45 ( 60\/70\/80\/90)",
+        "Ответный урон: 15\/25\/35\/45 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 60\/70\/80\/90)",
         "Силы в виде урона: 20%\/26%\/32%\/38%",
         "Длительность задержки ауры: 0,5",
-        "Радиус ауры:  1200"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Радиус ауры:  1200"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Centaur_Warrunner_Retaliate_1.mp3\/revision\/latest?cb=20191216011907",
       "effects": [
@@ -95,11 +95,11 @@
     },
     {
       "notes": [
-        "Требуется <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter для разблокировки",
+        "Требуется <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter для разблокировки",
         "Считает крипов-героев за героев",
         "Союзный герой запрыгивает в тележку по дуге с высотой 450 и вариативной длинной\n Длительность прыжка всегда составляет 0,5 сек\n Союзный герой также находится в оцепенении во время прыжка",
-        "Во время поездки союзный герой имеет сквозное передвижение, иммунитет к атакам и становится невыбираемым\n Любая атака или способность, целящаяся в героя в тележке и уже находящаяся в процессе замаха или анимации, будет отменена\n При этом союзный также не сможет выбрать себя своими предметами (включая ↓↓ Двойное нажатие), кроме следующий исключений: <span image=\"items\/glimmer_cape\/full.webp\">[Glimmer Cape]<\/span> Glimmer Cape, <span image=\"items\/healing_salve\/full.webp\">[Healing Salve]<\/span> Healing Salve, <span image=\"items\/moon_shard\/full.webp\">[Moon Shard]<\/span> Moon Shard и <span image=\"items\/shadow_amulet\/full.webp\">[Shadow Amulet]<\/span> Shadow Amulet\n Способность не предотвращает отражение заклинаний обратно в союзного героя",
-        "Во время действия Hitch A Ride каждое заклинание будет считать, будто союзный героей невидим и имеет иммунитет к раскрытию невидимости\n Следующие способности проходят через её невидимость:  Heat-Seeking Missile,  Cinder Brew, Ошибка Lua в Модуль:Ability_ID на строке 62: Не найдено данных Cargo для \"Ethernal Chains\".,  Concussive Shot,  Wrath of Nature,  Omnislash,  Mana Drain,  Exorcism и  Thundergod's Wrath В отличие от взаимодействия с другими источниками невидимости,  жуки,  фантомы и  нетленные зомби не будут мгновенно умирать при запрыгивания героя в тележку",
+        "Во время поездки союзный герой имеет сквозное передвижение, иммунитет к атакам и становится невыбираемым\n Любая атака или способность, целящаяся в героя в тележке и уже находящаяся в процессе замаха или анимации, будет отменена\n При этом союзный также не сможет выбрать себя своими предметами (включая ↓↓ Двойное нажатие), кроме следующий исключений: <span image=\"items\/glimmer_cape\/full.webp\">[picture:glimmer_cape]<\/span> Glimmer Cape, <span image=\"items\/healing_salve\/full.webp\">[picture:healing_salve]<\/span> Healing Salve, <span image=\"items\/moon_shard\/full.webp\">[picture:moon_shard]<\/span> Moon Shard и <span image=\"items\/shadow_amulet\/full.webp\">[picture:shadow_amulet]<\/span> Shadow Amulet\n Способность не предотвращает отражение заклинаний обратно в союзного героя",
+        "Во время действия Hitch A Ride каждое заклинание будет считать, будто союзный героей невидим и имеет иммунитет к раскрытию невидимости\n Следующие способности проходят через её невидимость: <span image=\"images\/heat-seeking_missile.webp\">[picture:heat-seeking_missile]<\/span> Heat-Seeking Missile, <span image=\"images\/cinder_brew.webp\">[picture:cinder_brew]<\/span> Cinder Brew, Ошибка Lua в Модуль:Ability_ID на строке 62: Не найдено данных Cargo для \"Ethernal Chains\"., <span image=\"images\/concussive_shot.webp\">[picture:concussive_shot]<\/span> Concussive Shot, <span image=\"images\/wrath_of_nature.webp\">[picture:wrath_of_nature]<\/span> Wrath of Nature, <span image=\"images\/omnislash.webp\">[picture:omnislash]<\/span> Omnislash, <span image=\"images\/mana_drain.webp\">[picture:mana_drain]<\/span> Mana Drain, <span image=\"images\/exorcism.webp\">[picture:exorcism]<\/span> Exorcism и <span image=\"images\/thundergod's_wrath.webp\">[picture:thundergod's_wrath]<\/span> Thundergod's Wrath В отличие от взаимодействия с другими источниками невидимости, <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> жуки, <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> фантомы и <span image=\"images\/undying_zombie.png\">[picture:undying_zombie]<\/span> нетленные зомби не будут мгновенно умирать при запрыгивания героя в тележку",
         "Если Centaur Warrunner телепортируется на расстояние больше, чем 600, то тележка мгновенно исчезнет, а союзный герой спешится\n Hitch A Ride перекрывается все эффекты, меняющее местоположение цели, делая телепортацию единственной возможностью для спешивания союзника\n Если союзный герой телепортируется на любое расстояние (даже 0), то тележка исчезнет\n Тележка также исчезнет, если Centaur Warrunner или союзник в тележке умрёт"
       ],
       "item_behaviour": [],
@@ -126,11 +126,11 @@
     {
       "notes": [
         "При использовании прерывает произносимые заклинания Centaur Warrunner",
-        "Действует на каждого подконтрольного игрокам союзного юнита, исключая  курьеров, варды, постройки и иллюзии на основе  Haunt",
+        "Действует на каждого подконтрольного игрокам союзного юнита, исключая <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> курьеров, варды, постройки и иллюзии на основе <span image=\"images\/haunt.webp\">[picture:haunt]<\/span> Haunt",
         "Затронутые союзники получают эффект сквозного передвижения и ускорение, поэтому их нельзя замедлить ниже установленного значения",
-        "Урон от  силы рассчитывается при каждом отдельном прохождении через врага, поэтому он мгновенно адаптируется при изменении силы Centaur Warrunner\n Тем не менее, множитель урона фиксируется до окончания действия и не изменится, если увеличить уровень Stampede",
+        "Урон от <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> силы рассчитывается при каждом отдельном прохождении через врага, поэтому он мгновенно адаптируется при изменении силы Centaur Warrunner\n Тем не менее, множитель урона фиксируется до окончания действия и не изменится, если увеличить уровень Stampede",
         "Stampede сначала наносит урон, затем применяет дебафф",
-        "Источником урона является союзник под эффектом, поэтому эффекты от урона будут действовать на союзника, а не на Centaur Warrunner (например <span image=\"items\/blade_mail\/full.webp\">[Blade Mail]<\/span> Blade Mail)",
+        "Источником урона является союзник под эффектом, поэтому эффекты от урона будут действовать на союзника, а не на Centaur Warrunner (например <span image=\"items\/blade_mail\/full.webp\">[picture:blade_mail]<\/span> Blade Mail)",
         "Звуковой эффект является глобальным и может быть услышан врагами даже сквозь туман войны"
       ],
       "item_behaviour": [],

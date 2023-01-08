@@ -13,7 +13,7 @@ import java.io.File
 
 fun main() {
     val heroes = getHeroes()
-    createFileWithHeroes(heroes)
+//    createFileWithHeroes(heroes)
     for (hero in heroes) {
         loadHero(hero, LocaleHeroes.RU)
         loadHero(hero, LocaleHeroes.EN)
