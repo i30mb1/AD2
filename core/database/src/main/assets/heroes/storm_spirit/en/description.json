@@ -1,0 +1,197 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "After a remnant is placed, it takes 1 second for it to be able to explode and deal damage",
+        "When a remnant expires, it still explodes and deals damage around it\n Remnant can be triggered by invisible units and deal damage to them",
+        "Checks for enemies and neutrals in 0.1-seconds intervals, beginning instantly upon cast",
+        "The remnants are visible on the minimap with the same color as  Radiant or  Dire units, not the color of the player",
+        "Remnants provide 500 radius flying vision at their location for its duration or until exploding",
+        "TALENT NOTES The damage increasing  talent does not update already placed Static Remnants"
+      ],
+      "item_behaviour": [],
+      "description": "Creates an explosively charged image of Storm Spirit that lasts 12 seconds and will detonate and deal damage if an enemy unit comes near it.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0+1.1",
+        "Trigger Radius: 235",
+        "Damage Radius: 260",
+        "Activation Delay: 1",
+        "Damage: 120\/180\/240\/300 ( 170\/230\/290\/350)",
+        "Remnant Duration: 12"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Storm_Spirit_Static_Remnant_1.mp3\/revision\/latest?cb=20191216024539",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "3.5 (TagTalent 2.25)",
+      "aghanim": null,
+      "name": "Static Remnant",
+      "cooldown": "70\/80\/90\/100",
+      "legacy_key": "R",
+      "story": "Raijin Thunderkeg's duality allowed him to admire himself in shocking fashion."
+    },
+    {
+      "notes": [
+        "Electric Vortex pulls affected units at a speed of 128.57\/122.22\/118.18\/115.38 ( 100)",
+        "If the affected unit gets affected by another source of horizontal forced movement, it stops pulling and continues as soon as the other source expires\n This means, unlike other forced movement effects, Electric Vortex is not canceled by them but is temporarily stopped instead",
+        "If the target gets moved more than 1200 range away from the original cast location, the link breaks immediately",
+        "Successive casts on the same target refresh the pull duration, and reset the pull distance, but do not update the pull location",
+        "SCEPTER NOTES Electric Vortex now turns into a non-targetable ability affecting all enemy units within 475 radius\n Does not target invisible, invulnerable or hidden units or units in the Fog of War within the radius\n Still triggers  Overload upon cast while no enemies are within range"
+      ],
+      "item_behaviour": [],
+      "description": "A vortex that pulls an enemy unit to Storm Spirit's location.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+0.77",
+        "Cast Range:  300 ( 0)",
+        "Pull Duration: 1.4\/1.8\/2.2\/2.6 ( 1.8\/2.2\/2.6\/3)",
+        "Pull Distance: 180\/220\/260\/300",
+        "Radius:  475"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Storm_Spirit_Electric_Vortex.mp3\/revision\/latest?cb=20191216024545",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self"
+      ],
+      "mana": "20\/18\/16\/14",
+      "aghanim": null,
+      "name": "Electric Vortex",
+      "cooldown": "60\/70\/80\/90",
+      "legacy_key": "E",
+      "story": "Raijin's thunderous, boisterous energy often draws others into an electrifying situation."
+    },
+    {
+      "notes": [
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities that do not trigger on-cast effects",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage\n This means it is not affected or considered by anything that works with attack damage\n This also means that it fully works with spell damage amplification and spell lifesteal",
+        "The slow and damage are applied to all enemy units within the radius around the attacked target\n On the primary target, the attack first applies the debuff, then its own damage\n On secondary targets, it first applies the damage, then the debuff",
+        "The charge is released upon successfully hitting a target\n If the attack misses or is disjointed, nothing happens",
+        "Each attack checks for the buff on Storm Spirit upon successfully hitting the target\n If the buff is present, the charge is released\n This means when Storm Spirit gains the buff while an attack projectile is flying, that attack still releases the charge when it hits",
+        "Attacking buildings or allies do not release the charge\n However, attacking wards does",
+        "SHARD NOTES Adds an active component to Overload, with the passive effects still present\n Interrupts Storm Spirit's channeling abilities upon cast\n Triggers Overload upon cast as well, and fully stack with it on the same attack\n The buff is only placed on ally heroes\n Neither places the buff on invulnerable nor hidden units\n Treats clones and creep-heroes as heroes, and illusions as creeps\n Attacking buildings now consumes a charge, but it does nothing",
+        "SHARD NOTES The Overload values for the buff are set upon cast, and do not update if it gets leveled up after cast\n The Overload effects applied by an ally are credited to that ally, and not to Storm Spirit\n The bouncing Overload  talent only works for Storm Spirit, and not for allies\n Successive casts refresh the buff duration and reset the charges\n The number of charges is visible on the buff icon",
+        "TALENT NOTES Overload attack(s) now bounce toward the closest random enemy unit, without priorities, within 700 radius of the attack target\n The bouncing projectiles travel at the same speed as the leading attack projectile and can be further increased by other attack projectile speed bonuses",
+        "Does not perform instant attacks\n The projectiles deal regular spell damage\n This means they do not trigger any attack modifier or on-hit effects and ignore evasion\n However, it is still affected by damage block sources and  Bulwark, but not  Resonant Pulse",
+        "TALENT NOTES The Overload attack bounce damage has the following flags: No-spell-lifesteal flag, preventing their damage from utilizing spell lifesteal\n No-spell-amplification flag, preventing their damage from being amplified with spell damage amplification",
+        "The bouncing projectiles deal damage based on the damage amount calculated for the leading attack\n Attack damage amount is calculated upon attack begin\n This means it works with critical strike and quell, since these are included in the initial damage calculations\n This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit\n It also means that other conditional attack damage bonuses (i.e\n <span image=\"items\/javelin\/full.webp\">[Javelin]<\/span> Javelin damage proc) are not included, since these happen later in the calculations as well\n The bouncing projectiles all apply Ovearload's area damage and slow"
+      ],
+      "item_behaviour": [],
+      "description": "Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0+0",
+        "Damage Radius: 300",
+        "Damage: 30\/50\/70\/90",
+        "Move Speed Slow: 80%",
+        "Attack Speed Slow: 80",
+        "Slow Duration: 0.8",
+        "Bounce Search Radius:  700",
+        "Number of Bounces:  2",
+        "Attack Damage as Bounce Damage:  75%",
+        "Active Radius:  750",
+        "Active Attack Speed Bonus:  40",
+        "Active Number of Overload Charges:  3",
+        "Active Duration:  12"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Storm_Spirit_Overload.mp3\/revision\/latest?cb=20191216024538",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "30",
+      "aghanim": null,
+      "name": "Overload",
+      "cooldown": "150",
+      "legacy_key": "V",
+      "story": "Pow! Zip! Zap!"
+    },
+    {
+      "notes": [
+        "Disjoints projectiles upon cast\n ↓↓ Double-tapping automatically casts it on Storm Spirit's current location",
+        "Storm Spirit is invulnerable and can turn, attack, and cast abilities during Ball Lightning",
+        "Successive casts while traveling has no effect, but is still registered as cast, proccing on-cast effects\n The activation mana cost gets refunded",
+        "Destroys trees within 100 radius and provides 400 radius flying vision around Storm Spirit while traveling",
+        "Ball Lightning deals damage around Storm Spirit as he travels\n An enemy may only be damaged once per cast\n The damage starts at 0 and increases by 8\/12\/16 for every 100 distance traveled\n Ball Lightning deals 0 damage for distances less than 100 distance\n Fully procs on damage effects, such as  Corrosive Skin, except for abilities which have a minimum damage threshold (e.g\n  Gravekeeper's Cloak)",
+        "Drains Storm Spirit's mana after every 100 distance traveled, resulting in 0.07\/0.05\/0.04-second intervals\n Ball Lightning stops immediately upon Storm Sprit's death, when running out of mana while traveling, when reaching its destination, and being affected by other forced movement sources",
+        "The mana cost displayed in the ability's tooltip is based on Storm Spirit's max mana, showing how much it costs to initially cast Ball Lightning",
+        "This is how much damage Ball Lightning can deal around Storm Spirit at certain travel distances (before reductions): 500 Distance: 40\/60\/80 damage,  75 + 10.75% max mana\n 1000 Distance: 80\/120\/160 damage,  125 + 14% max mana\n 2500 Distance: 200\/300\/400 damage,  275 + 23.75% max mana\n 5000 Distance: 400\/600\/800 damage,  525 + 40% max mana.",
+        "TALENT NOTES The auto remnant in Ball Lightning  talent automatically creates a  Static Remnant based on its current level every 500 distance Storm Spirit travels\n These remnants created are independent from the cooldown, do not cost mana, and do not trigger on-cast effects"
+      ],
+      "item_behaviour": [],
+      "description": "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 25+7.5% of his total mana pool, and the cost per 100 units traveled is 10+0.65% of his total mana pool. Damage is expressed in damage per 100 units traveled.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: Global",
+        "Damage Radius: 200",
+        "Travel Speed: 1400\/1850\/2300",
+        "Travel Distance Interval: 100",
+        "Self Moved Distance as Damage: 8\/12\/16",
+        "Distance as Base Mana Cost: 10",
+        "Distance as Max Mana Cost: 0.65%",
+        "Auto Static Remnant Drop Distance:  500"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Storm_Spirit_Ball_Lightning.mp3\/revision\/latest?cb=20191216024543",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Ball Lightning",
+      "cooldown": "25 + 7.5% of Max Mana",
+      "legacy_key": "G",
+      "story": "The Storm is coming in."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.0,
+    "attrStrength": 21.0,
+    "attrIntelligence": 23.0,
+    "attrIntelligenceInc": 3.9,
+    "attrAgilityInc": 2.6,
+    "attrAgility": 22.0
+  },
+  "description": "Zips across the map to engage in fights. In a final act of desperation, the elementalist Thunderkeg cast a suicidal spell that merged his being with the Storm Celestial. From this fusion, the Storm Spirit was born. Now known by his combined name, Raijin Thunderkeg leaves behind crackling Static Remnant of himself, boastful poses that shock foes as he pulls them into an Electric Vortex. Every ability he casts Overloads him with energy, which he gleefully discharges on the next unfortunate target. Like a jolly weatherman, Raijin forecasts victory with a boisterous laugh. The Storm Spirit flashes across the land in the form of Ball of Lightning, zapping his enemies senseless, and zipping away before any can hope to catch him.  Carry Escape Nuker Initiator Disabler ★★☆",
+  "trivia": [
+    "Storm Spirit, like Brewmaster, Earth Spirit and Ember Spirit, was a Pandaren in DotA. He was re-skinned to avoid copyright issues with Blizzard, since Pandaren are a race of in the Warcraft Universe.",
+    "The line Link▶️ I'll spirit you away!, as well as him muttering Spirit... Away... when he dies may be a reference to the film Spirited Away.",
+    "Storm Spirit's speech is very similar to Ninjor, a character from the Power Rangers franchise, whose voice acting is largely based on the character Dudley Do-Right, from the Dudley Do-Right Show.",
+    "Eul's Scepter of Divinity has an equivalent in Heroes of Newerth called \"Stormspirit\".",
+    "Ball lightning is an unexplained and potentially dangerous atmospheric electrical phenomenon. The term refers to reports of luminous, spherical objects that vary from pea-sized to several meters in diameter. Though usually associated with thunderstorms, the phenomenon lasts considerably longer than the split-second flash of a lightning bolt.",
+    "Storm Spirit's voice line \"I'll save this till it's five oclock somewhere\" is a reference to the song It's Five O' Clock Somewhere by Alan Jackson."
+  ],
+  "history": "Storm Spirit is literally a force of nature--the wild power of wind and weather, bottled in human form. And a boisterous, jovial, irrepressible form it is! As jolly as a favorite uncle, he injects every scene with crackling energy. But it was not always thus, and there was tragedy in his creation. Generations ago, in the plains beyond the Wailing Mountains, a good people lay starving in drought and famine. A simple elementalist, Thunderkeg by name, used a forbidden spell to summon the spirit of the storm, asking for rain. Enraged at this mortal\u2019s presumption, the Storm Celestial known as Raijin lay waste to the land, scouring it bare with winds and flood. Thunderkeg was no match for the Celestial--at least until he cast a suicidal spell that forged their fates into one: he captured the Celestial in the cage of his own body. Trapped together, Thunderkeg's boundless good humor fused with Raijin's crazed energy, creating the jovial Raijin Thunderkeg, a Celestial who walks the world in physical form.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "2x Overload Attack Bounce",
+        "talent_left": "500 Distance Auto Remnant in Ball Lightning"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+0.4s Electric Vortex",
+        "talent_left": "-1.25s Static Remnant Cooldown"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+250 Health",
+        "talent_left": "+50 Static Remnant Damage"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+20 Attack Speed",
+        "talent_left": "+1.5 Mana Regen"
+      }
+    ],
+    "notes": [
+      "The health talent increases maximum health capacity, and keeps the current health percentage."
+    ]
+  }
+}

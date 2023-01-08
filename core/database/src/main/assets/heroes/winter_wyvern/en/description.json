@@ -1,0 +1,191 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Interrupts Winter Wyvern's channeling abilities upon cast",
+        "Turns Winter Wyvern into a flying unit, allowing her to fly over impassable terrain, trees, units, and buildings for its duration\n However, it does not grant her flying vision",
+        "Increases Winter Wyvern's attack range to 775\/825\/875\/925, projectile speed to 1200, night vision range to 1200 and reduces attack point to 0.1",
+        "Each enemy can only receive the debuff once per cast\n Successive attacks on the same target neither stack, reapply, nor refresh the duration\n However, leveling up ability immediately update the next applied debuff, but does not affect the damage intervals\n Does not affect wards, buildings, allies and  Roshan",
+        "The attacks first apply the debuff, then their own attack damage",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 5 ( 7) instances\n Can deal up to 27%\/30%\/34%\/38% ( 35%\/40%\/44%\/48%) of the target's current health as damage (before reductions), assuming nothing else affects the target's health\n Despite the damage per second is current-health based, it is still lethal",
+        "Destroys trees within a 175 radius at the end of the duration",
+        "SCEPTER NOTES Turns Arctic Burn into a toggle ability, and it no longer interrupts Winter Wyvern's channeling abilities upon toggling On \/ Off\n Removes the one debuff per target limit, successive attacks now reapply and refresh the debuff on the same target\n This is determined if Winter Wyvern has <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter equipped upon the attack projectile connecting with the affected target\n Activating the ability now costs 100 mana\n Arctic Burn now drains Winter Wyvern's mana in 1-second intervals, starting 1 second after toggling\n If toggled On, Arctic Burn continues working even when silenced, disabled, or hidden\n SPELL STEAL  Rubick ascends 150 units above the z-axis instead and does not turn into a flying unit"
+      ],
+      "item_behaviour": [],
+      "description": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a burning freeze that strips them of 6%\/7%\/8%\/9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation:  0+0",
+        "Set Attack Point: 0.1",
+        "Attack Range Bonus: 350\/400\/450\/500",
+        "Attack Projectile Speed Bonus: 500",
+        "Night Vision Bonus: 400",
+        "Current Health as Damage per Second: 6%\/7%\/8%\/9%",
+        "Enemy Move Speed Slow: 16%\/24%\/32%\/40% ( 28%\/36%\/44%\/52%)",
+        "Debuff Duration: 5 ( 7)",
+        "Flying Duration: 7\/8\/9\/10 ( Indefinite)",
+        "Self Move Speed Bonus:  25%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Winter_Wyvern_Arctic_Burn_1.mp3\/revision\/latest?cb=20191216030732",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "38\/32\/26\/20 (TagTalent 0)",
+      "aghanim": null,
+      "name": "Arctic Burn",
+      "cooldown": "100 + 20\/ second",
+      "legacy_key": "R",
+      "story": "The same organ where some dragons stoke their inner flame is, in Auroth, a crucible of unimaginable cold. From deep within her frosty gullet, an exhalation sends enemies into burning agony."
+    },
+    {
+      "notes": [
+        "The initial projectile travels at a speed between 650 \u2013 4000\n It adapts so that it reaches the target in 1 second\n This means when the target gets more than 4000 range away on cast, it takes more than 1 second to reach it\n Vice versa, if the target gets closer than 650 range on cast, it takes less than 1 second to reach it",
+        "However, the secondary projectiles travel at a speed of 800",
+        "Fully affects invisible and units in the Fog of War",
+        "The splinters first apply the damage, the debuff, then the stun",
+        "TALENT NOTES The Splinter Blast stun  talent only affects the secondary targets, like the damage and slow\n The stun does not replace the slow\n The slow is still applied, effectively slowing hit units for 2.5 seconds"
+      ],
+      "item_behaviour": [],
+      "description": "Launches a ball of brittle ice towards an enemy. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a 500 base radius. Enemies struck by these splinters are slowed by 30%.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+1.17",
+        "Cast Range:  1200",
+        "Splinter Search Radius: 500 ( 900)",
+        "Damage: 100\/180\/260\/340 ( 200\/280\/360\/440)",
+        "Move Speed Slow: 30%",
+        "Slow Duration: 4",
+        "Stun Duration:  1.5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Winter_Wyvern_Splinter_Blast_1.mp3\/revision\/latest?cb=20191216030729",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "7",
+      "aghanim": null,
+      "name": "Splinter Blast",
+      "cooldown": "105\/120\/135\/150",
+      "legacy_key": "T",
+      "story": "Produced slowly by specialized vesicles in her frozen gullet, Winter Wyvern blast shards of ice at her enemies."
+    },
+    {
+      "notes": [
+        "Cannot be cast on allies who have ☐ Disabled Help from Winter Wyvern\n ↓↓ Double-tapping automatically targets self",
+        "Stuns the allied target and turns it immune to physical damage\n The target can still be attacked and affected by other damage types",
+        "Heals for 7.5\/8.75\/10\/11.25 ( 13.75\/15\/16.25\/17.5) + 0.44%\/0.63%\/0.81%\/1% max health in 0.25-second intervals, starting 0.25 seconds after the buff is placed, resulting in 16 instances\n Can heal up to 120\/140\/160\/180 ( 220\/240\/260\/280) + 7%\/10%\/13%\/16% of a unit's max health over its full duration",
+        "SHARD NOTES Losing the Cold Embrace buff in any way now causes  Splinter Blast secondary projectiles to be released based on its current level\n Splinter Blast notes fully apply\n If it is not learned, no projectiles are released\n Splinters released this way do not require vision, and can target invisible units and units inside the Fog of War\n However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility"
+      ],
+      "item_behaviour": [],
+      "description": "Encases an ally in an icy cocoon, freezing them solid while healing a base amount as well as a percentage of their maximum health each second. The cocoon blocks all physical damage.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.3+0.63",
+        "Cast Range:  850\/900\/950\/1000",
+        "Base Heal Per Second: 30\/35\/40\/45 ( 55\/60\/65\/70)",
+        "Max Health as Heal Per Second: 1.75%\/2.5%\/3.25%\/4%",
+        "Duration: 4",
+        "Splinter Blast Radius:  1200"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Winter_Wyvern_Cold_Embrace.mp3\/revision\/latest?cb=20191216030726",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies ",
+        "Damage: "
+      ],
+      "mana": "24\/21\/18\/15 (TagTalent 20\/17\/14\/11)",
+      "aghanim": null,
+      "name": "Cold Embrace",
+      "cooldown": "50\/60\/70\/80",
+      "legacy_key": "E",
+      "story": "From winter's heart comes a cold, healing embrace. The ice slows the blood and allows the spell to better work its curative magic."
+    },
+    {
+      "notes": [
+        "Stuns and provides True Sight over the target, while its allies within the radius get taunted, forcing them to attack the primary target\n Enemies that enter the radius after cast is also taunted for its remaining duration\n If no valid enemies are within 525 radius for a total of 2.5 seconds, the debuff gets removed\n Does not affect or check for spell immune, invulnerable, or hidden enemies, wards or buildings within the radius\n Only affects units allied to the target\n This means when cast on an enemy, neutral creeps are not taunted, and vice versa\n Despite not getting taunted when targeting an enemy, neutral creeps still prevent the curse debuff from being removed prematurely",
+        "Cannot be cast on  Couriers",
+        "The taunt is based on an aura, with an infinite linger duration\n The debuff gets cleared when the debuff on the primary target expires, or when the target dies\n Has the same taunt priority with  Berserker's Call,  Little Friends and   Life Break, but lower than  Duel\n This means the taunt sticks on the affected units, and getting moved outside the radius does not free the unit from the taunt\n This also means the taunt sticks even if the debuff got removed on the primary target due to no enemies being within the area",
+        "The taunt area is centered on the primary target and follows them when they are affected by other forced movement sources",
+        "Applies generic incoming damage reduction on the targets\n Stacks additively with other sources of generic incoming damage manipulation\n This means that sources of generic incoming damage amplification can be used to counter the effect\n The reduction affects all damage that is not flagged as HP removal the targets take from any source except for Winter Wyvern",
+        "Winter's Curse has a lower priority than  Reaper's Scythe, but higher than  Little Friends, in the group of kill credit manipulation effects\n All damage dealt to the affected target, including from allies, during the taunt duration is sourced to Winter's Curse, and credited to Winter Wyvern\n Even when the taunt duration expires, the kill is also credited to Winter Wyvern if the allied projectile kills the affected target\n When combined with other kill credit manipulation effects (e.g\n  Reaper's Scythe), Reaper's Scythe takes priority instead",
+        "However, the following conditions do not credit Winter Wyvern with the kill credit: When the affected target is brought into   Supernova during the taunt duration\n When  Meepo or its  Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the taunt duration\n When the affected target dies from  Ice Blast's max health percentage kill threshold\n When the affected target enters   Wraith Delay",
+        "Does not disable any abilities\n However, most passive abilities do not affect allied units",
+        "When the primary target dies, the taunt effect ends immediately"
+      ],
+      "item_behaviour": [],
+      "description": "Winter Wyvern freezes an enemy in place while striking those nearby with a maddening curse which causes them to attack their frozen ally with increased attack speed. The frozen ally and those cursed to attack their ally are immune to all damage from their enemies with the exception of Winter Wyvern or her controlled units.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+1.37",
+        "Cast Range:  700\/750\/800",
+        "Radius: 525",
+        "Curse Damage Reduction: 100%",
+        "Curse Attack Speed Bonus: 65",
+        "Duration: 4.5\/5\/5.5 ( 6\/6.5\/7)",
+        "Nearby Allies Check Timer: 2.5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Winter_Wyvern_Winter%27s_Curse.mp3\/revision\/latest?cb=20191216030732",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies"
+      ],
+      "mana": "90\/85\/80",
+      "aghanim": null,
+      "name": "Winter's Curse",
+      "cooldown": "250",
+      "legacy_key": "W",
+      "story": "The oldest of the bookwurm's spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.5,
+    "attrStrength": 22.0,
+    "attrIntelligence": 26.0,
+    "attrIntelligenceInc": 3.6,
+    "attrAgilityInc": 1.7,
+    "attrAgility": 16.0
+  },
+  "description": "Able to force her enemies to attack their own ally Where most dragons originate fire, the Winter Wyvern stores unfathomable cold. Soaring over the treeline, she breathes a blistering chill, causing painful Burning Colds. Gentle with her companions, she encases them in an Icy Cocoon, freezing them solid while healing them in curative magic. Auroth has no time for would-be dragon-slayers. Should the enemy be foolish to gather, her Winter's Curse compels her attackers to turn against one another. As frozen crystals form inside her gullet, she blasts the gathering with Icy Splinters that shatters upon impact of closely packed foes.  Support Disabler Nuker ★★☆",
+  "trivia": [
+    "Winter Wyvern made her first official Dota 2 appearance in the New Bloom trailer \"The Coming of the Year Beast\" which was showcased the first time after the finals of the Dota 2 Asia Championship 2015 on the 9th of February 2015. The trailer video was later posted on the official Dota 2 blog as part 1 of the New Bloom event. Her next official appearance was in the comic \"The new neighbors\", which was posted on the 10th of February 2015 on the official Dota 2 blog. In the comic, she is depicted as an \"artistic\" dragon with interests in books who does not follow the traditional behavior of dragons razing cities to the ground.",
+    "Her next official appearance was in the comic \"The new neighbors\", which was posted on the 10th of February 2015 on the official Dota 2 blog. In the comic, she is depicted as an \"artistic\" dragon with interests in books who does not follow the traditional behavior of dragons razing cities to the ground.",
+    "Much like Legion Commander, who is also voiced by Merle Dandridge, the gender of Winter Wyvern was changed from male to female with the transition from DotA to Dota 2.[1]",
+    "In DotA, Winter Wyvern makes use the model of the Warcraft 3 version of a frost wyrm, a well known undead dragon type from the Warcraft universe.[2]",
+    "Winter Wyvern's response when meeting Axe as an ally, Link▶️ \"In this world, nothing is certain but ice and axes\" is a nod to a quote by Benjamin Franklin, which states: \"In this world nothing can be said to be certain, except death and taxes.\"[3]",
+    "Winter Wyvern's response, Link▶️ \"Winter is coming. Winter Wyvern that is.\" is a reference to Game of Thrones, specifically the motto of the House of Stark: \"Winter is coming.\"[4]",
+    "Winter Wyvern's rivalry line towards Dragon Knight Link▶️\"I knew Slyrak, Dragon Knight. You're no Slyrak.\" is a reference to Lloyd Bentsen's political quip \"... I knew Jack Kennedy... Senator, you're no Jack Kennedy\".[5]",
+    "When the hero's abilities were showcased in The International 2016, Winter's Curse was cast on a Naga Siren, which caused her team mates, Gyrocopter, Ancient Apparition, Earthshaker and Storm Spirit, to kill her. This is in reference to how Aui_2000, who played Naga during Game 4 in the finals of the previous International against CDEC, was subsequently kicked out of the team."
+  ],
+  "history": "Like many great poets, Auroth just wants time to write, but the Winter Wyvern's life is full of interruptions. The epics of the Eldwurms have a long and colorful history, but some fear that the remaining dragon scholars are not as prolific as they once were, with few lines added to the Eldwurm Eddas since the last age of greatness. Auroth laments: \"We forget that there is more to life than triumph and dominion over enemies. We must also live our lives in the pursuit of creative expression.\" She embarks on research expeditions, collecting books for inspiration. But all this research can be terribly distracting, and she spends less time writing than she should. Although she knows she should be lurking in her lair, adding to the Eddas, she finds herself engaged in epic battles against powerful enemies. She loots castles, raids ancient libraries... and if she happens to heap glory on herself in the process, she tells herself that it's merely a side effect of her research. The fact is, while her skill and power on the battlefield are legendary, her scholarly travails have thus far hardly been the stuff of literary acclaim. But she is not content to stand as a protagonist of heroic lore. She wishes also to create it.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+1.5s Winter's Curse Duration",
+        "talent_left": "Splinter Blast 1.5s Stun"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+12% Arctic Burn Slow",
+        "talent_left": "+100 Splinter Blast Damage"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+2s Arctic Burn Burn Debuff Duration",
+        "talent_left": "+400 Splinter Blast Shatter Radius"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+25HP\/s Cold Embrace Heal",
+        "talent_left": "+35 Damage"
+      }
+    ],
+    "notes": [
+      "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+      "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+    ]
+  }
+}

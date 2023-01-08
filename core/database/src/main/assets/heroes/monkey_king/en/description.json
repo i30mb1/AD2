@@ -1,0 +1,341 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Boundless Strike's effect length is neither affected by cast range bonuses, nor by attack range bonuses",
+        "The ability's effects are instantly applied within its whole area\n There is no travel time",
+        "The effect starts 75 range in front of Monkey King and has an actual length of 1025, adding up to 1100 effective length\n With the starting distance, effect length, and width, it can hit units up to 1250 range away\n It can also hit units 75 range behind Monkey King, due to its radius and starting position",
+        "Causes Monkey King to perform an instant attack on all hit enemies\n The stun is independent from these attacks\n These instant attacks can proc any attack modifiers and on-hit effects normally, except cleave\n They have True Strike, but completely ignore disarms\n Despite the audio effect, <span image=\"items\/daedalus\/full.webp\">[Daedalus]<\/span> Daedalus has still only a chance to proc\n Boundless Strike does not guarantee chance-based effects to proc\n Boundless Strike has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority",
+        "Boundless Strike procs  Jingu Mastery, placing the debuff on all hit enemy heroes, or adding one hit to the counter if the target is already debuffed\n If Monkey King has the Jingu Mastery buff, it loses a charge whenever Boundless Strike is cast, regardless of whether it hits a unit or not\n The bonus attack damage and lifesteal from Jingu Mastery are applied to all hit targets, despite using up only one charge",
+        "During  Tree Dance, casting Boundless Strike does not unperch Monkey King",
+        "The strike first applies the debuff, then the instant attack",
+        "The sound during the cast animation is audible to everyone",
+        "Does not affect  Couriers",
+        "SHARD NOTES Boundless Strike moves Monkey King 1100 range away upon cast, to the end of the ability's effect length when Autocast is turned on\n Monkey King moves at a speed of 5000 for up to 0.2 seconds, with a height between 100 \u2013 150 upwards in an arc\n SPELL STEAL The instant attack uses  Rubick's projectile to attack the affected targets\n It is disjointable\n Uses the normal cast animation when stolen"
+      ],
+      "item_behaviour": [],
+      "description": "Monkey King enlarges his staff and slams it against the ground, stunning enemies in a line and damaging them with a critical hit based on his attack. Has True Strike.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.4+0.5",
+        "Cast Range:  1100",
+        "Effect Length: 1100",
+        "Effect Width: 150",
+        "Critical Damage: 135%\/165%\/195%\/225%",
+        "Stun Duration: 1\/1.2\/1.4\/1.6 ( 1.3\/1.5\/1.7\/1.9)"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Monkey_King_Boundless_Strike.mp3\/revision\/latest?cb=20191216020658",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies ",
+        "Damage: Instant Attack"
+      ],
+      "mana": "28\/26\/24\/22 (TagTalent 21\/19\/17\/15)",
+      "aghanim": null,
+      "name": "Boundless Strike",
+      "cooldown": "100",
+      "legacy_key": "B",
+      "story": "The legendary Jingu Bang grows to match its master's will, ensuring no enemy can escape the Monkey King's reach."
+    },
+    {
+      "notes": [
+        "Monkey King leaps to the target tree at a speed of 800, reaching the tree within up to 1.13 ( 1.69) seconds",
+        "Moves Monkey King upwards in an arc, with a top height of 192\n During the leap, other units may pass below Monkey King\n The activity modifier only appears during the leap and is responsible for the leaping animation",
+        "Although it visually looks like Monkey King is above the ground while perched, he still is considered to be on the ground\n The height is part of the animations",
+        "Tree Dance has several different cooldowns which activate at different times\n When cast, the leap's total duration is added to the cooldown, resulting in a cooldown of 1.55\/1.4\/1.25\/1.1 \u2012 2.58\/2.43\/2.28\/2.13 ( 3.14\/2.99\/2.84\/2.69) seconds\n Upon unperching with a move ( Right Click) or attack command (A), it goes on cooldown for 1.45\/1.3\/1.15\/1 seconds\n Does not go on cooldown when unperched in other ways\n Upon taking player-based, fountain or  Roshan-based damage on the ground, it goes on a 3-second cooldown\n Only reacts on damage greater than 0 after damage reductions\n Does not react on self-damage and damage flagged as HP Removal\n All of these cooldowns are unaffected by percentage-based cooldown reductions, but are affected by flat reductions and cooldown resets",
+        "During the leap, Monkey King is disabled and prevented from acting\n The last given order gets queued up and executed as soon as he lands\n The leap is immediately canceled if the distance between Monkey King and the targeted tree exceeds 1850",
+        "Tree Dance has the highest priority in the group of base vision setting effects\n During the leap and while on a tree, Monkey King gains flying vision, but has his  daytime and  nighttime vision reduced to 700 and 500 respectively\n Other vision bonus sources (e.g\n <span image=\"items\/moon_shard\/full.webp\">[Moon Shard]<\/span> Shade Sight) are applied after the vision reduction\n <span image=\"items\/moon_shard\/full.webp\">[Moon Shard]<\/span> Consume's  nighttime vision bonus is also granted to the caster during the leap and while on the tree",
+        "While perched on a tree, Monkey King is hidden from sight\n He can only be seen with flying vision\n He can also be seen when standing 2 levels of ground higher than the tree Monkey King sits on, allowing <span image=\"items\/observer_ward\/full.webp\">[Observer Ward]<\/span> Observer Wards to spot him when the ward is on an elevated spot\n However, he cannot be seen when getting thrown in the air by upward movement sources (e.g\n  Toss)",
+        "While on a tree, Monkey King can perform any action normally, with some of them unperching him, while others do not\n Casting  Boundless Strike,  Mischief or any item abilities does not unperch him\n Casting  Wukong's Command, moving or attacking does unperch him\n Directional Move and Patrol have no effect when ordered while on a tree\n While Tree Dance is on cooldown, Monkey King is disarmed and unable to move while perched on a tree, preventing him from attacking and unperching\n Forced movement, cyclone and teleport sources (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[Blink Dagger]<\/span> Blink Dagger-based items) unperches Monkey King as well",
+        "While on a tree, Tree Dance can be cast again, targeting another nearby tree\n All trees within cast range are highlighted with a white glow\n Monkey King cannot cast Tree Dance on the tree he is perching on",
+        "Monkey King only gets stunned if the tree he perches on is destroyed\n Getting unperched in other ways (e.g\n forced movement) does not result in a stun\n The unperch stun is applied even when Monkey King is spell immune, invulnerable or hidden, and its stun duration is not affected by status resistance\n SPELL STEAL  Primal Spring and the  Spring Early is granted if this ability is the last cast ability\n  Rubick is not hidden from sight due to collision size, he is also unperched upon losing this ability\n MORPH NOTES Neither sets  Morphling's  daytime nor  nighttime vision"
+      ],
+      "item_behaviour": [],
+      "description": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage from player controlled units or Roshan while on the ground puts Tree Dance on cooldown.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.1+0",
+        "Cast Range from Ground:  900 ( 1350)",
+        "Cast Range from Tree:  1000 ( 1450)",
+        "Damage Cooldown: 3",
+        "Set Day Tree Vision Range: 700",
+        "Set Night Tree Vision Range: 500",
+        "Unperch Stun Duration: 4"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Monkey_King_Tree_Dance_1.mp3\/revision\/latest?cb=20191216020644",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Self "
+      ],
+      "mana": "1.45\/1.3\/1.15\/1",
+      "aghanim": null,
+      "name": "Tree Dance",
+      "cooldown": "0",
+      "legacy_key": "T",
+      "story": "Sun Wukong dances nimbly along the treetop canopy, always just out of arm's reach."
+    },
+    {
+      "notes": [
+        "This ability is only active during the cast time of  Tree Dance, during the leap from the ground onto a tree, and while on a tree\n It is inactive while leaping from one tree to another, and while on the ground",
+        "Leaps towards the target area at a speed of 1300, reaching it in up to 0.77 seconds, based on distance\n Primal Spring is also canceled if the distance between the tree he is perching on and the target area exceeds 1850",
+        "Moves Monkey King upwards in an arc, with a top height of 192\n During the leap, other units may pass below Monkey King\n The activity modifier only appears during the leap and is responsible for the leaping animation\n When targeting beyond the max leap distance, Monkey King leaps for the max distance towards the targeted point",
+        "The damage and movement speed slow values are based on the time spent channeling, meaning their potency increases per each server tick spent channeling, up to 54 times\n The damage increases by 2.642\/3.962\/5.283\/6.604 per server tick, starting immediately, reaching 142.6\/214\/285.3\/356.6 damage in 1.6 seconds\n The slow increases by 0.4%\/0.8%\/1.1%\/1.5% per server tick, also starting immediately, reaching 20%\/40%\/60%\/80% slow in 1.6 seconds",
+        "Successive Primal Spring hits on the same enemies refresh the slow duration, but does not update the movement speed slow values based on the channel time",
+        "Primal Spring's ability effects are canceled in the following conditions: If Monkey King is affected by other forced movement sources while leaping\n When the tree Monkey King is perched on is destroyed while channeling Primal Spring",
+        "Primal Spring first applies the damage, then the debuff",
+        "The visual effects at the target area during the channeling are visible to allies only, but the channeling sound is audible to enemies, even through the Fog of War\n SPELL STEAL Does nothing when channeling upon losing ability"
+      ],
+      "item_behaviour": [],
+      "description": "Monkey King springs out from his tree perch, damaging and slowing enemies in the area where he lands. Damage and slow amounts are in proportion to channel duration.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range: Global",
+        "Max Leap Distance:  1000",
+        "Radius: 375",
+        "Max Channel Time: 1.6",
+        "Max Damage: 140\/210\/280\/350",
+        "Max Move Speed Slow: 20%\/40%\/60%\/80%",
+        "Slow Duration: 4"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Monkey_King_Primal_Spring_1.mp3\/revision\/latest?cb=20191216020640",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "20\/18\/16\/14 (TagTalent 0)",
+      "aghanim": null,
+      "name": "Primal Spring",
+      "cooldown": "100",
+      "legacy_key": "G",
+      "story": "Leaping from the safety of cover into the midst of his enemies, Sun Wukong attacks without mercy."
+    },
+    {
+      "notes": [
+        "Replaces  Primal Spring until the channeling ends, or until Monkey King's death",
+        "Immediately ends the channeling of Primal Spring, causing Monkey King to jump earlier",
+        "Monkey King is unable to ⇧ Shift-queue this ability"
+      ],
+      "item_behaviour": [],
+      "description": "There is no description for this ability.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation:  0+0"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Spring Early",
+      "cooldown": "0",
+      "legacy_key": "G",
+      "story": null
+    },
+    {
+      "notes": [
+        "Each successful attack was done on an enemy hero and clones while Monkey King does not have the Jingu Mastery buff active places the debuff on the target hero, or adds one to its counter if the target already has the debuff\n Treat illusions and creep-heroes as creeps\n Invulnerable target(s) do not add one attack to its counter",
+        "Successive hits on valid target(s) first add one to its counter, refresh the debuff duration, then apply its attack damage\n The 4 hits do not all need to happen within 7\/8\/9\/10 seconds",
+        "Upon hitting the same target 4 times, the debuff on the target disappears and Monkey King receives the buff\n Grants regular flat bonus attack damage\n Stacks additively with other sources of lifesteal\n Cannot lifesteal off of buildings or allied units\n Can lifesteal off of wards that do not require a fixed amount of attacks to be destroyed",
+        "A charge gets used upon successfully attacking any unit, including buildings, wards, and allied units, always applying the bonus attack damage",
+        "Boundless Strike's instant attacks procs Jingu Mastery, placing the debuff on all hit enemy heroes, or adding one hit to the counter if the target is already debuffed\n If Monkey King has the Jingu Mastery buff, it loses a charge whenever Boundless Strike is cast, regardless of whether it hits a unit or not\n The bonus attack damage and lifesteal from Jingu Mastery are applied to all hit targets, despite using up only one charge",
+        "When leveling up Jingu Mastery while the buff is active, the attack damage and lifesteal bonus updates after using one charge\n Does not consume charges while destroying items or runes",
+        "Jingu Mastery does not work for  Wukong's Command clones\n They can neither add stacks on enemies nor gain the buff if Monkey King had it upon cast\n SCEPTER NOTES This restriction is now removed upon acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter\n It now works for the clones, although slightly different\n Instead of placing a debuff on their attack target to count attacks, the clones themselves gain the counter instead\n This means Jingu Mastery works independently for each clone and does not interfere with Monkey King's current stacks\n Clones treat creep-heroes as heroes\n SPELL STEAL Can only be acquired indirectly from   Wukong's Command"
+      ],
+      "item_behaviour": [],
+      "description": "Monkey King's attacks awaken the Jingu Bang's power. Upon the fourth hit on the same enemy hero, Monkey King earns four charged attacks that have bonus damage and lifesteal.",
+      "hot_key": "D",
+      "params": [
+        "Required Hits: 4",
+        "Charges: 4 ( 6)",
+        "Attack Damage Bonus: 40\/70\/100\/130 ( 170\/200\/230\/260)",
+        "Lifesteal: 25%\/40%\/55%\/70%",
+        "Counter Duration: 7\/8\/9\/10",
+        "Buff Duration: 35"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Monkey_King_Jingu_Mastery.mp3\/revision\/latest?cb=20191216020638",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies \/ Self"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Jingu Mastery",
+      "cooldown": null,
+      "legacy_key": "R",
+      "story": "Always sensitive to the moods of its master, the Jingu Bang radiates power when Sun Wukong's combat fervor is on full display."
+    },
+    {
+      "notes": [
+        "This is an innate ability and does not need to be learned\n It is bound to Monkey King himself",
+        "Interrupts Monkey King's channeling abilities, move orders, and attack orders upon cast",
+        "Transforms Monkey King into a random nearby entity\n For more information, see here",
+        "When disguising as an item, tree, or rune, sets Monkey King's movement speed to 200\n When disguising as a  Courier, it sets Monkey King's movement speed to 380\n When disguising any other unit, it sets Monkey King's movement speed to that unit's default movement speed\n Sets Monkey King's movement speed to an absolute value\n No other movement speed bonuses or slows can change this, except haste sources",
+        "Monkey King's selection box adapts to the disguise's models\n However, his collision size does not change",
+        "During  Tree Dance, casting Mischief does not unperch Monkey King",
+        "Monkey King's minimap icon is hidden from the enemy while disguised\n If disguised as a unit, Monkey King's over-head health bar copies the look of that unit's health bar, including the team color\n If disguised as an item, rune, or tree, Monkey King's health bar is fully hidden",
+        "All auto-attack settings ignore the Monkey King while in disguise\n Lane creeps, neutral creeps, towers, and fountains do not automatically attack him\n Units of players which have auto attack settings of ◉ Standard or ◎ Always and the ground-attack command does not attack him automatically either, but can be forced to attack him (A)\n Monkey King is still fully affected by other abilities, and he can still be targeted normally\n Attachable particle effects of abilities are still attached to him",
+        "During the initial 0.2 ( 0.4) seconds, Mischief fully negates damage, causing several on-damage effects to not trigger\n Damage greater than 0 (after reductions) dispels the effect\n Does not get dispelled by damage flagged as HP Removal\n SPELL STEAL \/ MORPH NOTES This ability is not acquirable"
+      ],
+      "item_behaviour": [],
+      "description": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants damage immunity for 0.2 seconds upon transforming.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Set Move Speed (Default): 200",
+        "Set Move Speed (Courier): 380",
+        "Creep Search Radius: 200",
+        "Rune Search Radius: 300",
+        "Tree Search Radius: 350",
+        "Courier Search Radius: 400",
+        "Damage Immunity Duration: 0.2 ( 0.4)"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Monkey_King_Mischief.mp3\/revision\/latest?cb=20200510123903",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "15",
+      "aghanim": null,
+      "name": "Mischief",
+      "cooldown": "0",
+      "legacy_key": "F",
+      "story": "Watch out for that tree."
+    },
+    {
+      "notes": [
+        "Replaces  Mischief until the sub-ability is used or the disguise ends",
+        "Interrupts Monkey King's channeling abilities, move order, and attack order upon cast"
+      ],
+      "item_behaviour": [],
+      "description": "Reverts Monkey King's shape to his original form.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0+0.53"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Monkey_King_Revert_Form.mp3\/revision\/latest?cb=20200510123905",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "1",
+      "aghanim": null,
+      "name": "Revert Form",
+      "cooldown": "0",
+      "legacy_key": "F",
+      "story": null
+    },
+    {
+      "notes": [
+        "Upon cast, 14 ( 21) clones of Monkey King spawn which immediately walk to their determined spot in the formation\n They walk at a speed of 700 and have unobstructed movement",
+        "The formation they take is always the same except when space is limited by the edges of the map\n The first ring soldiers form a pentagon within a 300 radius circle, with the tip always facing north\n The second ring soldiers form a nonagon within a 750 radius circle, with the tip always facing north as well\n TALENT NOTES The third ring soldiers form a heptagon within a 1100 radius circle, with the tip always facing north as well",
+        "The soldiers are invulnerable and considered hidden (although visible), making them immune to almost every ability\n They are uncontrollable, unselectable, and can neither pick up nor drop any items\n They copy most of Monkey King's items, and are able to use attack modifiers and bestow auras he had upon cast",
+        "The soldiers are hero clones of Monkey King, copying  \/  \/  all attributes of Monkey King, with some special exceptions\n They are not illusions\n Their base stats and attributes adapt whenever summoned (e.g\n permanent attribute loss from  Glaives of Wisdom or  Essence Shift)\n While the clones can be affected by attack speed buffs and slows, they may only attack once per 1.2 seconds, even if their attack misses\n However, the soldiers are fully affected by attack animation bonus sources\n Their  daytime and  nighttime vision is set to 600\n They provide the vision while walking to their spot and while standing there",
+        "The soldiers only attack enemy heroes, clones, creep-heroes and illusions they see inside Wukong's Command\n Invisible enemies and enemies inside the Fog of War within the circles are not attacked\n Other units and any unit outside the circle are fully ignored, even when within attack range of a soldier\n Since the soldiers use regular attacks, their damage is reduced by damage block",
+        "The buffs of a consumed <span image=\"items\/aghanim's_blessing\/full.webp\">[Aghanim's Blessing]<\/span> Aghanim's Blessing and <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard are copied as well\n However, other permanent buffs (e.g\n <span image=\"items\/moon_shard\/full.webp\">[Moon Shard]<\/span> Moon Shard or  Duel) are not copied",
+        "If Monkey King moves more than 780 ( 1130) range away from the center of the circle, or when he dies, the soldiers disappear and the ability ends",
+        "Successive casts immediately end the current instance while active",
+        "When Monkey King dies, the soldiers immediately disappear",
+        "Jingu Mastery does not work for the clones\n They neither can add stacks on enemies, nor gain the buff if Monkey King had it upon cast\n SCEPTER NOTES This restriction is now removed upon acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter\n It now works for the clones, although slightly different\n Instead of placing a debuff on their attack target to count attacks, the clones themselves gain the counter instead\n This means Jingu Mastery works independently for each clone and does not interfere with Monkey King's current stacks\n Clones treat creep-heroes as heroes",
+        "SCEPTER NOTES The passive soldiers' spawn uses a fixed replenish time instead of a spawn interval\n The charge replenish timer counts even without having <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter\n This means a soldier will immediately spawn upon acquiring the item\n Upon replenishing a charge, but Monkey King the condition does not allow passive spawns, Wukong's Command spawns the soldier as soon as the circumstances allow it to\n The passive soldiers do not spawn in the following conditions: While Monkey King is affected by the  Tree Dance bounce leap and bounce perch modifiers While disguised with  Mischief\n While Monkey King is fully invisible, hidden or dead\n The fixed replenish time is not affected by any cooldown reduction sources\n Passively spawned soldiers can attack any unit, except  Roshan\n The passive soldiers only attack buildings when Monkey King is within 500 range of them\n However, the buildings attacking restriction is not applied to  ranged heroes\n SPELL STEAL This ability's cast point is not modified when acquired\n Soldiers still provide vision, but they stop attacking and moving upon losing ability\n Soldiers from the previous cast neither continue attacking nor moving upon re-acquiring ability"
+      ],
+      "item_behaviour": [],
+      "description": "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King is granted bonus armor for the spell's duration.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 1+0.37",
+        "Cast Range:  550",
+        "First Ring Radius: 300",
+        "Second Ring Radius: 750",
+        "Leadership Radius: 780 ( 1130)",
+        "Number of First Ring Soldiers: 5",
+        "Number of Second Ring Soldiers: 9",
+        "Soldiers Attack Interval: 1.2",
+        "Armor Bonus: 14\/19\/24",
+        "Max Duration: 13",
+        "Third Ring Radius:  1100",
+        "Number of Third Ring Soldiers:  7",
+        "Passive Spawn Radius:  300",
+        "Passive Spawn Interval:  4"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Monkey_King_Wukong%27s_Command_1.mp3\/revision\/latest?cb=20191216020648",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemy Heroes",
+        "Damage: Physical"
+      ],
+      "mana": "120\/100\/80",
+      "aghanim": null,
+      "name": "Wukong's Command",
+      "cooldown": "100",
+      "legacy_key": "W",
+      "story": "Monkey King rips out a tuft of fur to blow at his enemies, charging each strand to transform into a copy of himself."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.8,
+    "attrStrength": 18.0,
+    "attrIntelligence": 20.0,
+    "attrIntelligenceInc": 1.8,
+    "attrAgilityInc": 3.7,
+    "attrAgility": 22.0
+  },
+  "description": "Springs from the cover of the tree tops. Always in search of a good fight, Monkey King Dances and travels atop of trees aiming to Spring from leafy cover and surprise his enemies. A tuft of hair\u2014plucked from his head\u2014scatters into the wind, calling and commanding upon an army of Monkey Soldiers to overwhelm opponents, this agile Trickster revels in the chaos of battle, ready to show is Mastery over his arts, slamming his legendary Boundless Staff down on any hopes of escape.  Carry Escape Disabler Initiator ★★☆",
+  "trivia": [
+    "Monkey King's name, lore and abilities are based on Sun Wukong, the legendary hero from the Chinese classic Journey to the West. In the novel, the Monkey King wields the Ruyi Jingu Bang, a flexible magical staff that can change size and length. The name for Mischief in Dota 2's Chinese client is \"Seventy-two Transformations\" (七十二变, Qī shí èr biàn), a reference from the novel to Sun Wukong's ability to change into numerous forms. This is referenced by his voice line, \u201CLycan\u2019s got one transformation, I\u2019ve got seventy-two.\u201D Wukong's Command is based on one of the Monkey King's magical powers from the novel. He creates clones of himself from his hair, which he pulls from the back of his head, and blows into the wind. In the novel he can fly on a cloud, called the Cloud Somersault technique. This is referenced by the names of his 6.80 beta abilities(Nimble Nimbus, Cloud Dance), the cloud riding effect added by Great Sage\u2019s Reckoning, and his voice line: \u201CWhere\u2019s my cloud?\u201D",
+    "In the novel, the Monkey King wields the Ruyi Jingu Bang, a flexible magical staff that can change size and length.",
+    "The name for Mischief in Dota 2's Chinese client is \"Seventy-two Transformations\" (七十二变, Qī shí èr biàn), a reference from the novel to Sun Wukong's ability to change into numerous forms. This is referenced by his voice line, \u201CLycan\u2019s got one transformation, I\u2019ve got seventy-two.\u201D",
+    "Wukong's Command is based on one of the Monkey King's magical powers from the novel. He creates clones of himself from his hair, which he pulls from the back of his head, and blows into the wind.",
+    "In the novel he can fly on a cloud, called the Cloud Somersault technique. This is referenced by the names of his 6.80 beta abilities(Nimble Nimbus, Cloud Dance), the cloud riding effect added by Great Sage\u2019s Reckoning, and his voice line: \u201CWhere\u2019s my cloud?\u201D",
+    "Monkey King is the first original hero made for Dota 2. All previous heroes were ported from DotA.",
+    "Monkey King is based on early concepts developed during the DotA era. An easter egg boss fight versus Monkey King was added to the 6.79 DotA map to hint at his upcoming release.[1] Monkey King's stats were revealed in the version 6.80 beta, but he was never added to the release version.[2]",
+    "An easter egg boss fight versus Monkey King was added to the 6.79 DotA map to hint at his upcoming release.[1]",
+    "Monkey King's stats were revealed in the version 6.80 beta, but he was never added to the release version.[2]",
+    "Phantom Lancer was based off of Monkey King\u2019s 6.80 beta version, his original model was approximately the same as the present Phantom Lancer, as well as his abilities. However, this version was not released and instead was released with some changes as Phantom Lancer. Monkey King's rivalry line against Phantom Lancer, Link▶️ \"Honestly, I don't see the resemblance.\", acknowledges this. His beta abilities included much the same mechanics as Phantom Lancer\u2019s current ones: a ranged spell to create an illusion to attack an enemy hero(\u201CEcho Sweep\u201D), temporary invulnerability with illusions created on return(\u201CCloud Dance\u201D), a dash towards a point(\u201CFlicker\u201D), and a passive to create illusions upon attacking an enemy hero(\u201CNimble Nimbus\u201D). See Monkey King\/Old Abilities.",
+    "Monkey King's rivalry line against Phantom Lancer, Link▶️ \"Honestly, I don't see the resemblance.\", acknowledges this.",
+    "His beta abilities included much the same mechanics as Phantom Lancer\u2019s current ones: a ranged spell to create an illusion to attack an enemy hero(\u201CEcho Sweep\u201D), temporary invulnerability with illusions created on return(\u201CCloud Dance\u201D), a dash towards a point(\u201CFlicker\u201D), and a passive to create illusions upon attacking an enemy hero(\u201CNimble Nimbus\u201D).",
+    "See Monkey King\/Old Abilities.",
+    "Several early ability concepts were considered for Monkey King's Dota 2 release, including a \"pickpocket\" ability.",
+    "The Banana item, which only appeared in private lobbies, may have been an early hint to Monkey King's release. The item was removed on the same patch as Monkey King was released.",
+    "Monkey King's default weapon is based on the in-game item, Monkey King Bar.",
+    "Mischief's lore line Watch out for that tree is a reference to George of the Jungle, a classic comedy film.",
+    "The Monkey King concept has been widely used throughout the ARTS\/MOBA genre, with other Monkey King heroes appearing in League of Legends, Heroes of Newerth, Vainglory, Strife, SMITE, and Paragon.",
+    "The emblem on a ground made by Primal Spring is called a bagua, which is a Daoist symbol that represents the fundamental principles of reality.",
+    "Monkey King's was voiced in his teaser trailer by Matthew Mercer, who also voiced the Monkey King hero from Heroes of Newerth. However, his voice actor was later changed to Bill Millsap.",
+    "Monkey King's Chinese voice actor is Shihong Li, who also voiced Monkey King in the famous 1986 TV show, Journey to the West.",
+    "The sound effect played during Wukong's Command ( Link▶️) comes from a Balinese music and dance called kecak. Accompanied by male chorus, this ritual song depicts a battle where a group of monkeys (Vanara) helped Prince Rama to fight the evil King Ravana.",
+    "One of Monkey King's lines directed at Storm Spirit, \"I've seen Xin and Kaolin. Where's your other brother?\" implies the existence of a fourth spirit, presumably Void Spirit, who was revealed two years later at The International 2019."
+  ],
+  "history": "For 500 years the mountain pressed down upon him, only his head free from the crushing weight of the stonewrought prison the elder gods had summoned to halt his childish rebellion. Moss grew along the lines of his exposed face, tufts of grass sprouted from his ears; his vision was framed in wildflowers reaching from the soil around his cheeks. Most thought him long dead, tormented by the gods for waging war against the heavens until naught but his legend survived. But, as the stories go, the Monkey King cannot die. So he waited. Until the gods came to offer a chance at absolution, he endured. And when they did come to name the price, Sun Wukong accepted their charge: he would accompany a young acolyte on a secret pilgrimage, protect him from demons and dangers of the road, and guide the man home in possession of a coveted relic. Do that, and humbly obey the human's commands in service to their holy mission, and Wukong would prove himself reformed. For a change, Sun Wukong fulfilled his oath to the gods with honor, and atoned for the sins of past insurrections. The acolyte, much learned in hardships, was returned to his home temple, relic in hand; and Wukong-finding himself for the first time in proper standing with any gods of consequence-was content for a short while to give up his old thirst for adventure and glory. But the Monkey King was born for mischief...and offending the gods never gets old.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "0 Cooldown Primal Spring",
+        "talent_left": "Additional Wukong's Command Ring"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+2 Jingu Mastery Charges",
+        "talent_left": "-7s Boundless Strike Cooldown"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+450 Tree Dance Cast Range",
+        "talent_left": "+130 Jingu Mastery Damage"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+0.2s Mischief Damage Immunity Duration",
+        "talent_left": "+0.3s Boundless Strike Stun Duration"
+      }
+    ],
+    "notes": [
+      "Talents are fully copied by the Wukong's Command Soldiers. Except for Jingu Mastery talents, the Soldiers do not benefit from other talents as they cannot use active abilities.",
+      "Except for Jingu Mastery talents, the Soldiers do not benefit from other talents as they cannot use active abilities."
+    ]
+  }
+}

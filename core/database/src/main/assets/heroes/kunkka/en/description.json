@@ -1,0 +1,300 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "With the cast time and effect delay, the total delay is 2 seconds at all levels",
+        "Torrent can be cast without having to face toward the targeted area, as long as the targeted area is within the cast range",
+        "Provides 350 radius ground vision over the targeted area upon cast for 3.13 seconds",
+        "The affected units are stunned, moved upwards, and can still be attacked\n While in the air, other units may pass below the affected units",
+        "The stun and slow are applied at the same time, so overall, the slow lasts for 2.6\/3.6\/4.6\/5.6 ( 3.08\/4.08\/5.08\/6.08) seconds",
+        "The stun lasts slightly longer than the knock-up, so hit units are on the ground for the remaining 0.07 seconds of the stun",
+        "Torrent's stun and knock-up debuff is not affected by status resistance\n However, the movement speed slow debuff is",
+        "After casting, a visual effect appears at the targeted area and a sound effect plays for the delay period\n These effects are visible and audible to allies only",
+        "Deals damage in 0.2-second intervals, starting 0.2 seconds after the effect delay, resulting in 8 ( 10) damage instances\n The damage per interval is based on the total damage divided by its duration, and then multiplied by 0.2\n This results in 10\/20\/30\/40 damage per interval (before reductions)\n TALENT NOTES Therefore, the stun duration increasing  talent increases the total damage to 104\/208\/312\/416"
+      ],
+      "item_behaviour": [],
+      "description": "Summons a rising torrent that, after a short delay, hurls enemy units into the sky, stunning, dealing damage and slowing movement speed.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.4+0",
+        "Cast Range:  1300",
+        "Effect Radius: 225 ( 305)",
+        "Effect Delay: 1.6",
+        "Total Damage: 80\/160\/240\/320",
+        "Move Speed Slow: 40%",
+        "Slow Duration: 1\/2\/3\/4",
+        "Stun Duration: 1.6 ( 2.08)",
+        "Knockup Duration: 1.53 ( 1.99)"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Kunkka_Torrent_1.mp3\/revision\/latest?cb=20191216014830",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "16\/14\/12\/10",
+      "aghanim": null,
+      "name": "Torrent",
+      "cooldown": "100",
+      "legacy_key": "E",
+      "story": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral."
+    },
+    {
+      "notes": [
+        "Upon leveling Tidebringer the first time, it has Autocast on by default",
+        "Tidebringer's cast range can only be further increased by attack range bonuses of the same range type as the caster\n However, it is not affected by cast range bonuses\n Both Autocast and manually casting it uses Kunkka's current attack range",
+        "Grants regular flat bonus attack damage whenever the ability goes off cooldown, and the bonus is removed when going on cooldown",
+        "Cleave damage has the following properties: It counts as spell damage\n However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal\n No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification\n Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took\n It is reduced by damage block",
+        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit\n Multiple sources of cleave fully stack and work independently\n Does not cleave upon attacking wards, buildings or allied units\n  Couriers, wards and buildings are unaffected by cleave\n Despite the visual effect, the cleave damage is applied instantly in the whole area",
+        "The particle effects on hit enemies are visible on invisible enemies and through the Fog of War",
+        "Plays an audio effect when going off cooldown, audible to the player only",
+        "When off cooldown, Kunkka's weapons emit particle effects, visible to allies and enemies",
+        "TALENT NOTES Upon learning the movement speed slow adding  talent, Tidebringer applies a 1-second 60% movement speed slow on all hit targets within the cleave area\n The attack first applies the movement speed debuff, then the cleave damage"
+      ],
+      "item_behaviour": [],
+      "description": "Kunkka's legendary sword grants increased damage and cleaves a large area of effect in front of him for a single strike.",
+      "hot_key": "W",
+      "params": [
+        "Cast Range:  150",
+        "Starting Radius: 150",
+        "Distance: 650\/800\/950\/1100",
+        "End Radius: 500\/550\/600\/650",
+        "Cleave Damage: 150% ( 220%)",
+        "Attack Damage Bonus: 30\/60\/90\/120",
+        "Move Speed Slow:  60%",
+        "Slow Duration:  1"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/95\/Kunkka_Tidebringer_1.mp3\/revision\/latest?cb=20200509115806",
+      "effects": [
+        "Ability: Active Attack Modifier",
+        "Affects: Self \/ Enemies",
+        "Damage: Physical"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Tidebringer",
+      "cooldown": null,
+      "legacy_key": "D",
+      "story": "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract."
+    },
+    {
+      "notes": [
+        "↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Kunkka",
+        "The target is given a stop command as soon as it is teleported back, effectively canceling channeling abilities",
+        "Does not disjoint projectiles for the target upon getting teleported back",
+        "Marks the target's current location with a red X\n This X is visible to enemies only when they have vision over the unit, or the X itself",
+        "Can be also cast on clones, illusions and creep-heroes",
+        "The affected unit leaves behind a red dotted line while walking, showing which direction it went\n These lines stop drawing for the enemies if the unit is not visible\n However, already-drawn lines stay visible\n Once the unit turns visible again, a straight line of red lines is drawn towards their last known location\n These red lines ignore the actual path the unit took\n They simply draw from its current to its previously last known location",
+        "Multiple instances of X Marks the Spot on the same target do not stack\n Only the duration gets visually refreshed\n Although refreshed, the return timer is unaffected so that the unit still returns based on the first cast\n Every cast creates its own X below the target\n If the modifier expires, it returns to the X of the first cast\n If any of the casters use the  Return sub-ability, the unit returns to the X that the caster created\n Once the unit returned to any of the X's, all other instances get completely canceled, although not visually",
+        "Despite the visual effects, the target does not return to the X after dying and respawning during it",
+        "When the target is invulnerable or hidden, it does not get returned to the X, causing the ability to get wasted",
+        "Provides 400 radius ground vision around the X mark for 5.94 seconds",
+        "TALENT NOTES The movement speed change  talent grants movement speed bonus to if the affected target is an ally, and slows if the target is an enemy\n SPELL STEAL \/ MORPH NOTES The affected target immediately returns to the original  X Marks the Spot upon losing ability"
+      ],
+      "item_behaviour": [],
+      "description": "Targets a friendly or enemy Hero, marks their position with an X, and returns them to it after several seconds. Kunkka can trigger the return at any time during the duration. Lasts twice as long on allied heroes.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.4+0",
+        "Cast Range:  550\/700\/850\/1000",
+        "Enemy Duration: 4",
+        "Ally Duration: 8",
+        "Move Speed Change:  25%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Kunkka_X_Marks_the_Spot.mp3\/revision\/latest?cb=20191216014831",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Heroes"
+      ],
+      "mana": "30\/24\/18\/12",
+      "aghanim": null,
+      "name": "X Marks the Spot",
+      "cooldown": "50",
+      "legacy_key": "X",
+      "story": "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment."
+    },
+    {
+      "notes": [
+        "Replaces  X Marks the Spot until the sub-ability is used or the X disappears on the target",
+        "Despite being a sub-ability, Return procs all on-cast effects like a regular ability\n SOULBIND Only returns the primary target upon cast"
+      ],
+      "item_behaviour": [],
+      "description": "Returns the marked hero to the X.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.4+0"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Heroes"
+      ],
+      "mana": "1",
+      "aghanim": null,
+      "name": "Return",
+      "cooldown": "0",
+      "legacy_key": "X",
+      "story": null
+    },
+    {
+      "notes": [
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Does not require  Torrent to be leveled to be unlocked, once Aghanim's Scepter is acquired\n However, it relies on Torrent to work, since it directly uses its values\n This means when Torrent is not learned, Torrent Storm does nothing upon cast\n Torrent notes fully apply",
+        "Torrent Storm's radius is centered on and follows Kunkka",
+        "Creates a Torrent based on the current level immediately upon cast, and then one every 0.25 seconds, for a total of 21 Torrents\n Each Torrent can spawn within a random distance of 300 to 1100 away from Kunkka\n The Torrent spawn radius is divided into four 90° segments (0°\u201390°, 90°\u2013180°, 180°\u2013270°, 270°\u2013360°)\n The first Torrent occurs within the northeast segment of the circle, following Torrents proceeding counterclockwise",
+        "Unlike a manually cast Torrent, the particle effect and the sound during the Torrents' delay are completely visible and audible to enemies",
+        "Successive casts of Torrent Storm fully stack, with each cast creating its own independent instance",
+        "When Kunkka dies, the Torrents still occur at his death location"
+      ],
+      "item_behaviour": [],
+      "description": "Releases a visible Torrent in a random area around Kunkka once every 0.25 for 5 seconds. Spawns in within 1100 range of him.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.4+0.53",
+        "Min Spawn Radius: 300",
+        "Max Spawn Radius: 1100",
+        "Spawn Interval: 0.25",
+        "Storm Duration: 5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Kunkka_Torrent_Storm.mp3\/revision\/latest?cb=20200509120416",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "70",
+      "aghanim": null,
+      "name": "Torrent Storm",
+      "cooldown": "250",
+      "legacy_key": "R",
+      "story": "A hundred leagues of dry land couldn't keep these seas at bay."
+    },
+    {
+      "notes": [
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "The wave travels at a speed of 700, taking 3.29 seconds to travel the full distance",
+        "The wave spawns 900 range away from Kunkka, from the opposite direction where Kunkka is facing",
+        "With the travel distance and radius, the wave can hit units up to 2150 range away",
+        "Moves hit enemies a fixed 600 distance from where they originally are, towards the direction the wave is traveling\n Enemies are only disarmed during the knockback\n They cannot attack, but can still turn and cast abilities and items\n Does not interrupt the enemy's channeling abilities",
+        "The wave first applies the damage, then the debuff",
+        "Provides 200 radius ground vision around the affected targets for 2 seconds"
+      ],
+      "item_behaviour": [],
+      "description": "Releases a Tidal Wave that spawns behind Kunkka. Deals damage and drags enemies along it for the duration. Enemies cannot attack while being dragged.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0.2+1",
+        "Cast Range:  1400",
+        "Travel Distance:  2300",
+        "Radius: 750",
+        "Damage: 250",
+        "Knockback Distance: 600",
+        "Knockback Duration: 1.25"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Kunkka_Tidal_Wave_1.mp3\/revision\/latest?cb=20201229231613",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "12",
+      "aghanim": null,
+      "name": "Tidal Wave",
+      "cooldown": "75",
+      "legacy_key": "W",
+      "story": null
+    },
+    {
+      "notes": [
+        "Ghostship travels at a speed of 650, reaching the crash site in 3.08 seconds",
+        "The ship spawns 2000 range away from the targeted point, from the opposite direction where Kunkka is facing and crashes at the targeted point",
+        "The ship first applies the damage, then the debuff",
+        "A visual indicator appears at the location, showing the ship's destination point and radius\n The indicator is only visible to allies",
+        "The Admiral's Rum buff applies to allied heroes that come within 450 range of the ship at any time during its travel\n Only affects allied heroes and clones, excluding illusions and creep-heroes\n Applies unique incoming damage reduction on the buffed allies\n Stacks multiplicatively with all other sources of incoming damage manipulation\n The reduction affects all damage the buffed allies take that is not flagged as HP removal",
+        "Once the absorb buff expires, the Rum Hangover buff is placed, which lasts 10 seconds\n This buff deals 4% of the previously reduced damage as health cost in 1-second intervals until all the reduced damage is returned, resulting in 10 instances",
+        "The health cost counts as setting health and is thus never lethal",
+        "The Rum has a low priority among damage mitigation effects\n Generally, it does not reduce damage for units when other damage negating effects are active",
+        "Rums from multiple casts do not stack but refresh the duration instead\n This delays the Rum wear-off buff",
+        "The Rum buff and Rum hangover buff do not interact with each other when having both (by recasting while having the hangover buff)",
+        "The ship provides 300 radius flying vision around itself as it travels\n This vision does not last",
+        "TALENT NOTES The Ghostship Fleet  talent spawns 3 ships at the same location, traveling towards the same destination\n The ships spawn in 3.5-second intervals, starting immediately on cast, so that the last ship spawns 7 seconds after cast\n Ghostship's spawn location is set upon cast and does not adapt to the caster's current position as they spawn"
+      ],
+      "item_behaviour": [],
+      "description": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  1000",
+        "Ship Radius: 450",
+        "Travel Distance: 2000",
+        "Number of Ships: 1 ( 3)",
+        "Ship Spawn Interval: 3.5",
+        "Impact Damage: 400\/500\/600",
+        "Rum Move Speed Bonus: 15%",
+        "Rum Damage Reduction: 40%",
+        "Rum Duration: 10",
+        "Rum Hangover Duration: 10",
+        "Stun Duration: 1.4"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Kunkka_Ghostship.mp3\/revision\/latest?cb=20191216014835",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies \/ ",
+        "Damage: Magical"
+      ],
+      "mana": "80\/70\/60",
+      "aghanim": null,
+      "name": "Ghostship",
+      "cooldown": "125\/175\/225",
+      "legacy_key": "T",
+      "story": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.8,
+    "attrStrength": 24.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 1.8,
+    "attrAgilityInc": 1.6,
+    "attrAgility": 14.0
+  },
+  "description": "Disrupts enemy positioning and disables them. It is said that none survived the battle at the Trembling Isle, save perhaps, the Admiral of the Claddish fleet. Man or phantom, Kunkka's presence on the battlefield is duly felt by all. Armed with the legendary Tidebringer, the Admiral strikes with a single blow at all who stand before him. A veteran of innumerable naval engagements, Kunkka times his skills with Planned Precision, predicting Tidal Waves and catching opponents in a rising Torrent, disrupting the battlefield with a Storm of Geysers, or summoning the ephemeral Ghostly Shipwreck to dash them upon the rocks. Should his aim prove true, he and his allies will have no trouble cleaning up whatever is left.  Carry Support Disabler Initiator Durable Nuker ★★☆",
+  "trivia": [
+    "Kunkka was named in honour of the artist who made numerous pieces of loading screen art for DotA and Dota 2.[1]",
+    "Kunkka's official alternate\/fun names were \"Daelin Proudmoore\", \"CoCo\", and \"Captain Obvious\". Daelin Proudmoore was a campaign boss in Warcraft III: The Frozen Throne; his hero model is borrowed by Kunkka in DotA.",
+    "In his DotA biography, it is stated that some people called him \"Jack Sparrow,\" but it was never seen as his name in-game. Jack Sparrow is the name of the main character in the Pirates of the Carribean movie franchise.",
+    "His rival hero taunts against Slardar, Death Prophet, and Doom, and his allied lines for Windranger and Ancient Apparition, all come from Samuel Taylor Coleridge's poem, The Rime of the Ancient Mariner.",
+    "His battle begin line Link▶️ \"Rough seas ahead, crew. Strap me to the mizzen when I give the word.\" is likely a reference to The Odyssey, where Odysseus commands his crew to strap him to the mast so he could hear the Sirens sing.",
+    "Jon St. John, Kunkka's voice actor, originally suggested to Valve to base Kunkka's voice on the voice he used for Varian Wrynn from World of Warcraft. The final voice is based on a \"bad impression\" of Captain Picard, a character from the Star Trek universe.[2]",
+    "The final voice is based on a \"bad impression\" of Captain Picard, a character from the Star Trek universe.[2]"
+  ],
+  "history": "As The Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the demons of the Cataract made a concerted grab at the lands of men. After years of small sorties, and increasingly bold and devastating attacks, the demon fleet flung all its carnivorous ships at the Trembling Isle. Desperate, the Suicide-Mages of Cladd committed their ultimate rite, summoning a host of ancestral spirits to protect the fleet. Against the demons, this was just barely enough to turn the tide. As Kunkka watched the demons take his ships down one by one, he had the satisfaction of wearing away their fleet with his ancestral magic. But at the battle's peak, something in the clash of demons, men and atavistic spirits must have stirred a fourth power that had been slumbering in the depths. The waves rose up in towering spouts around the few remaining ships, and Maelrawn the Tentacular appeared amid the fray. His tendrils wove among the ships, drawing demon and human craft together, churning the water and wind into a raging chaos. What happened in the crucible of that storm, none may truly say. The Cataract roars off into the void, deserted by its former denizens. Kunkka is now The Admiral of but one ship, a ghostly rig which endlessly replays the final seconds of its destruction. Whether he died in that crash is anyone's guess. Not even Tidehunter, who summoned Maelrawn, knows for sure.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "Ghostship Fleet",
+        "talent_left": "-2s Tidebringer Cooldown"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+80 Torrent AoE",
+        "talent_left": "+70% Tidebringer Cleave"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+45 Damage",
+        "talent_left": "+30% Torrent Knock Up\/Stun Duration"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "Tidebringer applies 60% slow for 1s",
+        "talent_left": "+25% X Marks the Spot Movement Speed"
+      }
+    ],
+    "notes": [
+      "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+      "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+    ]
+  }
+}

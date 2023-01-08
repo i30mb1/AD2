@@ -16,6 +16,10 @@ internal fun String.removeBrackets(): String {
 }
 
 internal fun saveImage(url: String, path: String, name: String) {
+    saveImageInternal(url, path.lowercase().replace(" ", "_"), name)
+}
+
+private fun saveImageInternal(url: String, path: String, name: String) {
     val bufferImageIO = ImageIO.read(URL(url))
     val directory = File(path)
     directory.mkdirs()
@@ -28,6 +32,10 @@ internal fun saveImage(url: String, path: String, name: String) {
 }
 
 internal fun saveFile(path: String, fileName: String, text: String) {
+    saveFileInternal(path.lowercase().replace(" ", "_"), fileName, text)
+}
+
+private fun saveFileInternal(path: String, fileName: String, text: String) {
     val directory = File(path)
     directory.mkdirs()
     val file = File(path, fileName)

@@ -1,0 +1,353 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The axes either travel at a speed of 1200 or reach the target point in 1 second, whichever is faster\n The same applies upon returning\n Upon returning, their speed periodically adapts based on their distance to Beastmaster and the remaining travel time\n This means the axes fly a maximum of up to 2 seconds, up to 1 second towards the point and up to 1 second back",
+        "Both axes spread up to 450 distance away from each other, before moving back together while traveling towards the targeted point\n Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away\n The axes fly in arcs, so that the axe coming from Beastmaster's left-hand travels back towards his right hand, and vice versa\n They destroy trees within 175 radius they come in contact with, while providing 350 radius flying vision as they travel\n This vision does not last",
+        "The axes first apply the debuff, then the damage\n This means they effectively amplify their own damage as well\n Uses one debuff on hit targets for all stacks\n The debuff has a number on it, showing the number of stacks\n Since the axes work separately, one of the axes always benefits from 2 stacks of the debuff, if both hit\n Successive hits on the same unit fully refresh the whole stack's duration",
+        "Applies generic incoming damage amplification on the targets\n Stacks additively with other sources of generic incoming damage manipulation\n The amplification affects all damage, including Beastmaster's abilities, that is not flagged as HP removal the targets take from Beastmaster and all his player-controlled units\n Allies do not benefit from it",
+        "Each axe can hit the same unit only once per cast, so the maximum possible damage per axe is 42.4\/75.6\/110\/145.6 ( 43.4\/77.35\/112.5\/148.85) before reductions"
+      ],
+      "item_behaviour": [],
+      "description": "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can hit an enemy once, and amplifies subsequent damage from Beastmaster and his units.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0.47",
+        "Cast Range:  1500",
+        "Axes Radius: 175",
+        "Axes Travel Distance:  1500",
+        "Axes Spread Distance: 450",
+        "Damage per Axe: 40\/70\/100\/130",
+        "Damage Amplification per Stack: 6%\/8%\/10%\/12% ( 8.5%\/10.5%\/12.5%\/14.5%)",
+        "Stack Duration: 12"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Beastmaster_Wild_Axes_1.mp3\/revision\/latest?cb=20191216011217",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "8 (TagTalent 3)",
+      "aghanim": null,
+      "name": "Wild Axes",
+      "cooldown": "65",
+      "legacy_key": "W",
+      "story": "While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries."
+    },
+    {
+      "notes": [
+        "Does not destroy previous summons if this ability is used again before the previous  Boar expires",
+        "The boar spawns at a random location within a 100 radius around Beastmaster"
+      ],
+      "item_behaviour": [],
+      "description": "Beastmaster calls forth a Boar to aid in the battlefield. The Boar has a passive poison attack that slows attack and movement speeds.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+0.67",
+        "Number of Boars: 1",
+        "Boar Duration: 60"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Beastmaster_Call_of_the_Wild_Boar.mp3\/revision\/latest?cb=20191216011213",
+      "effects": [
+        "Ability: No Target"
+      ],
+      "mana": "42\/38\/34\/30",
+      "aghanim": null,
+      "name": "Call of the Wild Boar",
+      "cooldown": "60\/65\/70\/75",
+      "legacy_key": "D",
+      "story": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need."
+    },
+    {
+      "notes": [
+        "Does not destroy previous summons if this ability is used again before the previous  Hawk expires",
+        "The hawk spawns at a random location within a 300 radius around Beastmaster\n It spawns invisible, without any fade time",
+        "The hawk cannot be controlled at all\n Once cast, it automatically flies towards the targeted area and stays there\n Its flight towards the target area cannot be interrupted by anything\n If the hawk gets its movement disabled (e.g\n stunned, rooted, etc.), it resumes moving to the location as soon as it can move again\n Taunts and hypnotize cause the hawk to stop for its duration, but it resumes as soon as the taunt expires\n The hawk completely ignores fear",
+        "Hawks do not block neutral creep camps",
+        "SHARD NOTES Call of the Wild Hawk can now be directly targeted on an enemy unit or set to Autocast\n When unit-targeted, the Hawk flies towards that unit's location upon cast, as if ground-targeted\n It does not alter its path if the target moves\n If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them\n If the target gets out of 900 range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location\n However, the hawk may attempt to cast Dive Bomb again if the target comes within range again\n Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target\n With Autocast On, all Hawks will instantly and automatically cast  Dive Bomb on the first viable target in range with the same notes as above, regardless of whether it is still flying or stationary\n Acquiring <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard does not retroactively grant Dive Bomb to already summoned Hawks\n SOULBIND Summons one Hawk that casts  Dive Bomb on the target unit"
+      ],
+      "item_behaviour": [],
+      "description": "Beastmaster sends an invisible Hawk to scout an area.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.3+0.67",
+        "Cast Range: Global",
+        "Number of Hawks: 1",
+        "Hawk Duration: 60"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Beastmaster_Call_of_the_Wild_Hawk.mp3\/revision\/latest?cb=20191216011215",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: "
+      ],
+      "mana": "60\/50\/40\/30 (TagTalent 50\/40\/30\/20)",
+      "aghanim": null,
+      "name": "Call of the Wild Hawk",
+      "cooldown": "30",
+      "legacy_key": "E",
+      "story": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need."
+    },
+    {
+      "notes": [
+        "Affects invulnerable, but not hidden units",
+        "The aura's buff lingers for 0.5 seconds"
+      ],
+      "item_behaviour": [],
+      "description": "Untaps the inner fury of nearby allies, passively increasing their attack speed.",
+      "hot_key": "D",
+      "params": [
+        "Radius: 1200",
+        "Attack Speed Bonus: 10\/20\/30\/40 ( 20\/30\/40\/50)",
+        "Aura Linger Duration: 0.5"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Allies"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Inner Beast",
+      "cooldown": null,
+      "legacy_key": "B",
+      "story": "Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom."
+    },
+    {
+      "notes": [
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "The damage and heal are provided by an aura",
+        "The intervals start out slow and reach a crescendo near the end of the duration",
+        "Drums of Slom has a minimum pulse interval of 0.2 seconds, plus a server tick\n Deals damage and heals in the same interval, starting upon cast, the intervals between pulses are 1\/0.84\/0.7\/0.6\/0.5\/0.4\/0.3\/0.3\/0.2\/0.2\/0.2\/0.2\/0.2\n When Beastmaster is silenced, stuned, feared and cycloned, the intervals between strikes will be skipped according to the disable duration, and resumes accordingly to the subsequent interval",
+        "Drums of Slom will hit 13 times and can deal up to 1430 damage (before reductions)\n It can heal up to 357.5 health for heroes (and 71.5 health for Beastmaster's player-controlled creeps)",
+        "The heal amount is based on damage dealt, amplifying (e.g\n with  Wild Axes), or reducing the damage affects the heal value\n The heal value is subjected to heal manipulation despite the floating values shown",
+        "Treats illusions and clones as heroes\n Does not affect ancient creeps",
+        "Multiple casts do not stack, but refresh the duration and reset the interval delay"
+      ],
+      "item_behaviour": [],
+      "description": "Beastmaster beats his drums with ever-increasing speed. Each strike deals damage to enemies around him, healing Beastmaster and units under his control for a portion of damage dealt. Beastmaster cannot strike his drums if he is silenced or stunned.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Radius: 600",
+        "Max Instances: 13",
+        "Damage per Interval: 110",
+        "Damage Percentage as Heal (Hero): 25%",
+        "Damage Percentage as Heal (Creeps): 5%",
+        "Aura Linger Duration: 0.2",
+        "Duration: 6"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies \/ Allies",
+        "Damage: Magical"
+      ],
+      "mana": "50",
+      "aghanim": null,
+      "name": "Drums of Slom",
+      "cooldown": "100",
+      "legacy_key": "V",
+      "story": "Nature's rage is timeless, and for those who know the secrets, it's easy to stir the echoes of ire that rejoiced in the downfall of Slom."
+    },
+    {
+      "notes": [
+        "Only enemy units are shoved aside from the path of Primal Roar\n  Roshan is not affected by the knockback\n Affected units are fully disabled during the knockback\n Can be cast on  Couriers to stun and damage them\n However, they are not affected by the knockback as secondary targets",
+        "Knocks units aside at a speed of 450, up to 450 range away, resulting in a knockback duration of 1 second\n Units hit by the knockback destroy trees within 100 radius and are made to face toward the direction they are getting pushed",
+        "The knockback and slow have a dynamic range, based on the distance between Beastmaster and the primary target\n For every 2 distance between Beastmaster and the target upon cast, the knockback range increases by 1\n For example, when the target is 600 range away, the knockback hits units up to 300 range behind the target and behind Beastmaster\n The width of the knockback area is fixed at 300, so the affected area is always stadium-shaped",
+        "Considering the dynamic range, the knockback and slow can hit units up to 900 range away",
+        "When an enemy is perfectly aligned with Beastmaster and his Primal Roar target, it does not get knocked aside\n However, the slow and damage are still applied, and the target is still disabled for the knockback duration",
+        "On the primary target, the roar first applies the debuff, then the damage\n On secondary targets, the roar first applies the damage, then the debuff",
+        "The movement speed bonus only affects Beastmaster and his units\n Other nearby allies are not buffed"
+      ],
+      "item_behaviour": [],
+      "description": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 40% movement speed for 3\/3.5\/4 seconds.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.5+0.63",
+        "Cast Range:  600",
+        "Move Speed Bonus Radius: 900",
+        "Area Width: 300",
+        "Knockback Distance: 450",
+        "Knockback Duration: 1",
+        "Damage: 150\/225\/300",
+        "Enemy Move Speed Slow: 60%",
+        "Enemy Attack Speed Slow: 60",
+        "Slow Duration: 3\/3.5\/4",
+        "Ally Move Speed Bonus: 40%",
+        "Move Speed Buff Duration: 3\/3.5\/4",
+        "Stun Duration: 3\/3.5\/4"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Beastmaster_Primal_Roar.mp3\/revision\/latest?cb=20191216011216",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "100\/80\/60 (TagTalent 70\/50\/30)",
+      "aghanim": null,
+      "name": "Primal Roar",
+      "cooldown": "150\/175\/200",
+      "legacy_key": "R",
+      "story": "The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies."
+    },
+    {
+      "notes": [
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the  talent\n Does not affect  Couriers and wards",
+        "Increases Beastmaster's movement speed to 330",
+        "The aura affects invulnerable or hidden units",
+        "The aura is bestowed even while Beastmaster is dead"
+      ],
+      "item_behaviour": [],
+      "description": "There is no description for this ability.",
+      "hot_key": "?",
+      "params": [
+        "Radius: Global",
+        "Move Speed Bonus: 25",
+        "Aura Linger Duration: 0.5"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Self"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Move Speed Aura",
+      "cooldown": null,
+      "legacy_key": "",
+      "story": null
+    },
+    {
+      "notes": [
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the  talent\n Does not affect  Couriers",
+        "The aura increases maximum health capacity and keeps the current health percentage",
+        "The aura affects invulnerable or hidden units",
+        "The aura is bestowed even while Beastmaster is dead"
+      ],
+      "item_behaviour": [],
+      "description": "There is no description for this ability.",
+      "hot_key": "?",
+      "params": [
+        "Radius: Global",
+        "Health Bonus: 250",
+        "Aura Linger Duration: 0.5"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Self"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Health Aura",
+      "cooldown": null,
+      "legacy_key": "",
+      "story": null
+    },
+    {
+      "notes": [
+        "The attacks first apply their damage, then the debuff",
+        "Successive attacks do not increase the slow value but refresh the duration"
+      ],
+      "item_behaviour": [],
+      "description": "Inflicts a poison that slows attack and movement speeds.",
+      "hot_key": "?",
+      "params": [
+        "Move Speed Slow: 10%\/18%\/26%\/34%",
+        "Attack Speed Slow: 10\/20\/30\/40",
+        "Slow Duration: 3"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Poison",
+      "cooldown": null,
+      "legacy_key": "",
+      "story": null
+    },
+    {
+      "notes": [
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked\n Acquiring Aghanim's Shard does not retroactively grant this ability to already summoned Hawks",
+        "The reveal modifier is placed on the Hawk as soon as it begins casting, and lasts until the dive ends",
+        "Once the cast begins, the player cannot manually cancel it anymore, since casting Dive Bomb is the only order that can be given to the Hawk",
+        "The hawk dives in an arc for 0.4 seconds, so the speed varies based on the distance\n The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate",
+        "Uses forced movement to move the Hawk\n This means it can be interrupted by applying other sources of forced movement to it\n The dive cannot be interrupted by anything else\n It fully ignores all disables",
+        "The Hawk first applies the damage, then the root, and then is instantly killed\n The Hawk's death cannot be prevented in any way",
+        "Cannot be cast on  Couriers"
+      ],
+      "item_behaviour": [],
+      "description": "Reveals itself for 1, and then flies towards the target enemy, dealing 250 damage and rooting them for 2.5 second, killing the hawk.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 1+0",
+        "Cast Range: 900",
+        "Damage: 250",
+        "Root Duration: 2.5",
+        "Dive Duration: 0.4"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Beastmaster_Hawk_Dive_Bomb_1.mp3\/revision\/latest?cb=20210626132907",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Dive Bomb",
+      "cooldown": "0",
+      "legacy_key": "D",
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.9,
+    "attrStrength": 23.0,
+    "attrIntelligence": 16.0,
+    "attrIntelligenceInc": 1.9,
+    "attrAgilityInc": 1.6,
+    "attrAgility": 18.0
+  },
+  "description": "Summons beasts to aid his hunt. Raised in the royal menagerie of Slom, Karroch learned to converse with beasts from a young age. With this unique talent, the Beastmaster is able to summon to his side a trusty poison-spitting Boar and a scouting Hawk. In addition to his companions, Karroch has mastered the art of throwing Wild Axes, cutting down trees and foes before returning to his hands. The Beastmaster awakens the Inner Beast of nearby allies, increasing their attack speed. Should an enemy attempt to flee, Karroch lets loose a piercing Primal Roar, incapacitating the target and clearing the path to its demise.  Initiator Disabler Durable Nuker ★★☆",
+  "trivia": [
+    "Beastmaster's original name was Rexxar, a character in the Warcraft universe. Rexxar was the main playable character of the bonus campaign in Warcraft III: The Frozen Throne.",
+    "Rexxar was the main playable character of the bonus campaign in Warcraft III: The Frozen Throne.",
+    "Beastmaster's item the \"Shrieking Razorback\" design seems to be based on the Shriekers from Tremors II: Aftershocks.[1]",
+    "Beastmaster's lines Link▶️ Link▶️ \"Basshunter, on the hunt\" are a reference to Swedish singer Basshunter, who has a song about DotA.",
+    "Link▶️ \"I'll be creeping while you are sleeping\" is a reference to the lyrics of said song."
+  ],
+  "history": "Karroch was born a child of the stocks. His mother died in childbirth; his father, a farrier for the Last King of Slom, was trampled to death when he was five. Afterward Karroch was indentured to the king's menagerie, where he grew up among all the beasts of the royal court: lions, apes, fell-deer, and things less known, things barely believed in. When the lad was seven, an explorer brought in a beast like none before seen. Dragged before the King in chains, the beast spoke, though its mouth moved not. Its words: a plea for freedom. The King only laughed and ordered the beast perform for his amusement; and when it refused, struck it with the Mad Scepter and ordered it dragged to the stocks. Over the coming months, the boy Karroch sneaked food and medicinal draughts to the wounded creature, but only managed to slow its deterioration. Wordlessly, the beast spoke to the boy, and over time their bond strengthened until the boy found he could hold up his end of a conversation. He could, in fact, speak now to all the creatures of the King's menagerie. On the night the beast died, a rage came over the boy. He incited the animals of the court to rebel and threw open their cages to set them amok on the palace grounds. The Last King was mauled in the mayhem. In the chaos, one regal stag bowed to the boy who had freed him; and with Beastmaster astride him, leapt the high walls of the estate, and escaped. Now a man, Karroch the Beastmaster has not lost his ability to converse with wild creatures. He has grown into a warrior at one with nature's savagery.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "-5 Wild Axes Cooldown",
+        "talent_left": "-30s Primal Roar Cooldown"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+35 Boar Damage",
+        "talent_left": "+250 Health Beastmaster Controlled"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+25 Movespeed Beastmaster Controlled",
+        "talent_left": "+10 Inner Beast Attack Speed"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+30 Damage",
+        "talent_left": "+2.5% Wild Axes Damage Amp Per Stack"
+      }
+    ],
+    "notes": [
+      "The health talent is provided by an aura.",
+      "The movement speed talent is provided by an aura.",
+      "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+      "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+    ]
+  }
+}

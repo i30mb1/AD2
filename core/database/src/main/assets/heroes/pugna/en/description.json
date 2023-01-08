@@ -1,0 +1,199 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Deals 50\/90\/130\/170 ( 130\/170\/210\/250) damage to buildings",
+        "The visual effects and the sound during the 0.8-second effect delay are only visible and audible to allies"
+      ],
+      "item_behaviour": [],
+      "description": "An exploding pulse deals damage to enemies and structures in the area. Deals half damage to structures.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range:  600",
+        "Blast Radius: 400",
+        "Effect Delay: 0.8",
+        "Damage: 100\/180\/260\/340 ( 260\/340\/420\/500)",
+        "Building Damage Percentage: 50%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Pugna_Nether_Blast_1.mp3\/revision\/latest?cb=20210424155908",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "5 (TagTalent 4)",
+      "aghanim": null,
+      "name": "Nether Blast",
+      "cooldown": "85\/105\/125\/145",
+      "legacy_key": "B",
+      "story": "The Arts of Oblivion include a deafening blast of emerald flames from the Nether Reaches."
+    },
+    {
+      "notes": [
+        "Does not interrupt Pugna's channeling abilities upon cast\n While channeling, Decrepify has no cast time and does not require facing the target to cast",
+        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Pugna",
+        "Does not slow allied targets",
+        "Stacks multiplicatively with other sources of magic resistance\n Reduces most allied heroes' total magic resistance to 6.25%\n Reduces most enemy heroes' total magic resistance to 2%\/-5%\/-13%\/-20%",
+        "Decrepify's magic resistance reduction does not stack with other ethereal effects, the one with a higher value takes priority",
+        "Successive casts on the same target update the ability values of the current instance, with the latter cast overriding the previous cast, regardless of factions",
+        "Can be cast on allied  Nether Wards and  Tombstones, but not enemy ones\n Cannot be cast on any other wards"
+      ],
+      "item_behaviour": [],
+      "description": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Afflicted units take extra magic damage.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.2+0.4",
+        "Cast Range:  400\/475\/550\/625",
+        "Enemy Move Speed Slow: 30%\/40%\/50%\/60%",
+        "Ally Magic Resistance Reduction: 25%",
+        "Enemy Magic Resistance Reduction: 30%\/40%\/50%\/60%",
+        "Duration: 3.5 ( 4.5)"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Pugna_Decrepify.mp3\/revision\/latest?cb=20191216022123",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies"
+      ],
+      "mana": "16\/13\/10\/7",
+      "aghanim": null,
+      "name": "Decrepify",
+      "cooldown": "80",
+      "legacy_key": "C",
+      "story": "A now-mastered relic from his childhood, Pugna delights in banishing others into the Nether Realm, whether for good, evil, or simple enjoyment."
+    },
+    {
+      "notes": [
+        "↓↓ Double-tapping automatically places the  Nether Ward right in front of Pugna, 150 ( 500) range away from him",
+        "Illusions and creep-heroes are treated as creeps when attacking the Nether Ward",
+        "The aura only affects enemy heroes, including illusions, clones, and creep-heroes",
+        "The damage is independent from the aura, so even though the debuff lingers, Nether Ward cannot damage units beyond 1400 radius\n Unlike the aura, the damage affects every enemy unit and not just heroes",
+        "The damage triggers on every instance of mana usage from abilities\n If an ability costs no mana to use, it does not trigger it\n This means if an ability uses mana over time (e.g\n  Chakram), the flare triggers on every single instance of mana they use",
+        "The damage does not trigger on mana loss caused by abilities that removes mana offensively (e.g\n  Mana Burn or  Mana Break)\n Fully ignores abilities that do not trigger on-cast effects (i.e\n active attack modifiers and toggle-abilities)",
+        "The damage is dealt before the actual ability is cast, so if the target dies to Nether Ward's damage, the ability stays unused\n This means that damage-negating effects with mana cost (e.g\n  Refraction) or abilities granting spell immunity with mana cost (e.g\n  Rage), do not save the caster if the damage is lethal\n Dying with  Reincarnation ready triggers the damage, but it does not prevent Reincarnation from going off",
+        "The damage source is the ward itself, meaning certain on-damage effects (e.g\n <span image=\"items\/blade_mail\/full.webp\">[Blade Mail]<\/span> Damage Return) react on the ward rather than on Pugna",
+        "Fully affects invulnerable and invisible units and units in the Fog of War",
+        "SHARD NOTES  Life Drain can now be cast on the Nether Ward, and causes it to refract and be cast on all enemy heroes within  radius of the ward\n Life Drain refracted this way treats illusions and creep-heroes as heroes\n The range uses Life Drain's current cast range and is affected by cast range bonuses\n This only happens once upon cast; enemies entering the refract radius after cast are not affected\n Life Drain can be cast on any Nether Wards, regardless of factions\n Multiple Life Drains from different sources can be cast on the same Nether Ward as well, creating independent Life Drain refractions\n Although Nether Ward is refracting Life Drain, the damage is sourced to its caster, and not to the  Nether Ward\n Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal",
+        "SHARD NOTES Life Drain cast this way drains 112\/168\/224 health per second per affected target\n Can drain up to 1120\/1680\/2240 health per affected target (before reductions) when fully channeled\n The effect is interrupted when the channeling is canceled or when the Nether Ward is destroyed\n Life Drain and its scepter upgrade notes fully apply\n SCEPTER NOTES The refracted Life Drain also grants a stack of 1% spell damage amplification per affected target in 0.25-second intervals, starting 0.25 seconds after cast, resulting in the same amount of instances as its damage instances"
+      ],
+      "item_behaviour": [],
+      "description": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.2+0.4",
+        "Cast Range:  150 ( 500)",
+        "Radius: 1400",
+        "Hero Attacks to Destroy: 4 ( 7)",
+        "Non-Hero Attacks to Destroy: 16 ( 28)",
+        "Base Damage: 50\/60\/70\/80",
+        "Damage per Used Mana: 1\/1.2\/1.4\/1.6 ( 2.75\/2.95\/3.15\/3.35)",
+        "Ward Duration: 18\/22\/26\/30",
+        "Aura Linger Duration: 0.5",
+        "Life Drain Refract Radius:  700",
+        "Life Drain Damage Percentage:  70%",
+        "Life Drain Spell Amp Change per Second:  4%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Pugna_Nether_Ward_1.mp3\/revision\/latest?cb=20191216022128",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "35",
+      "aghanim": null,
+      "name": "Nether Ward",
+      "cooldown": "80",
+      "legacy_key": "W",
+      "story": "While at the lamasery for the Arts of Oblivion, Pugna learned to dominate his classmates with a simple ward charged with Nether magic."
+    },
+    {
+      "notes": [
+        "The links break when the targets turn invulnerable or hidden, exceed the break distance, or run out of health",
+        "Exposes the affected targets, and provides True Sight over it\n Also provides 200 radius ground vision centered on the affected target upon cast for 10 seconds\n This vision does not follow the affected target and its duration is independent of the channeling time",
+        "The health restored equals the amount of damage dealt per tick after all reductions\n This means if the damage instance is increased or reduced, it heals for the same increased or reduced values\n This also goes for targeting allies\n The more damage it deals to Pugna, the more it heals and vice versa\n As a result, Pugna cannot heal allies if he has 100% magic resistance (e.g\n  Fate's Edict) or is under the effects of Magic Barrier sources\n TALENT NOTES The Life Drain heal increasing  talent amplifies the healing done by 20%\n This amplifies Life Drain's healing only, and stacks multiplicatively with other sources of heal amplification\n It is not affected by any general outgoing heal manipulation (e.g\n <span image=\"items\/holy_locket\/full.webp\">[Holy Locket]<\/span> Holy Blessing) on Pugna, but it can be affected by any incoming heal manipulation on the target",
+        "If Pugna's or the allied hero's health is full and the damaged unit is a hero, it restores their mana instead\n This means it also restores mana on allied non-hero units when they are at full health since Pugna (i.e\n a hero) is damaged\n Just like the health restoring, the amount of mana restored equals the amount of damage dealt after all reductions and amplifications (including the heal increasing  talent)\n The mana restored is neither affected by incoming nor outgoing mana restore manipulation\n Only restores mana to ally heroes\n Treats strong illusions and creep-heroes as creeps\n Can be cast on ally  Couriers",
+        "The self-damage when targeting allies is lethal, so it can be used to deny oneself",
+        "Drains 40\/60\/80 health in 0.25-second intervals, starting 0.25 seconds after cast, resulting in up to 40 instances\n Can drain up to 1600\/2400\/3200 health (before reductions) when fully channeled",
+        "TALENT NOTES The heal increasing  talent amplifies the heal value to 48\/72\/96 without changing the damage value\n It can heal up to 1920\/2880\/3840 health, while the damage dealt remains unchanged",
+        "The color of Life Drain's link changes depending on the situation: When draining life from an enemy, the link is red ➜ green (pink ➜ blue if Pugna is at full health)\n When draining life into an ally, the link is green ➜ green (blue ➜ green if the ally is at full health)",
+        "Instantly destroys targeted enemy illusions on the first instance\n Allied illusions are not destroyed",
+        "Life Drain first deals damage, then heal, then applies its spell damage amplification on each interval",
+        "When Pugna turns invisible, Life Drain's particle effects continue to draw towards his last known location for the enemies",
+        "SCEPTER NOTES Life Drain now applies generic outgoing spell damage reduction on the affected enemy target while applying the same generic outgoing spell damage amplification on Pugna\n Stacks additively with other sources of generic outgoing damage manipulation\n Treats clones as heroes, illusions, and creep-heroes as creeps\n The reduction affects only spell damage enemies deal that is not flagged as HP removal\n Grants a stack of 2% spell damage amplification in 0.25-second intervals, starting 0.25 seconds after cast, resulting in the same amount of instances as its damage instances\n Vice versa, the affected target loses the same amount of spell damage amplification per interval\n Can grant up to 78% spell damage amplification bonus when fully channeled\n Life Drain can only grant up to 100% spell damage amplification bonus to Pugna, while the affected target can only lose up to a flat 75%\n With the spell damage amplification bonus, it can drain up to 2224\/3336\/4448 health (before reductions) when fully channeled\n The heal increasing  talent can heal up to 2668.8\/4003.2\/5337.6 health in total",
+        "SCEPTER NOTES Each stack places a new buff\/debuff on both Pugna and the affected target and refreshes the buff\/debuff duration\n The counter modifiers on both Pugna and his targets show how much spell damage amplification they gained or lost\n Upon death, the dying hero's outgoing spell damage values restore back to their normal values, while Pugna keeps the spell damage amplification values for the remaining duration\n SOULBIND Life Drain on the primary target ends prematurely when the secondary target is no longer affected by it\n However, prematurely ending the channeling on the primary target does not affect the channeling on the other target, even with the leash debuff expired"
+      ],
+      "item_behaviour": [],
+      "description": "When cast on an enemy, Pugna drains health from the target enemy unit to heal himself and grant vision over the target. If Pugna has full HP, and the enemy target is a Hero, Life Drain will restore mana instead. When cast on an ally, Pugna will drain his own health into his ally.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range:  700",
+        "Max Channel Time: 10",
+        "Link Break Distance:  900",
+        "Instance Interval: 0.25",
+        "Health Drain per Second: 160\/240\/320",
+        "Outgoing Spell Amp Change per Second:  8%",
+        "Self Max Outgoing Spell Amp Bonus:  100%",
+        "Enemy Max Outgoing Spell Damage Reduction:  75%",
+        "Buff\/Debuff Duration:  8",
+        "Life Drain Heal Amplification:  20%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Pugna_Life_Drain.mp3\/revision\/latest?cb=20191216022124",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies",
+        "Damage: Magical"
+      ],
+      "mana": "7 (TagTalent 3.5)",
+      "aghanim": null,
+      "name": "Life Drain",
+      "cooldown": "125\/175\/225",
+      "legacy_key": "D",
+      "story": "Pugna has truly become more powerful than even the grandmaster of Oblivion."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.0,
+    "attrStrength": 19.0,
+    "attrIntelligence": 24.0,
+    "attrIntelligenceInc": 5.2,
+    "attrAgilityInc": 1.3,
+    "attrAgility": 24.0
+  },
+  "description": "Drains enemy life to heal himself. A crafty trickster, Pugna turns the enemy's power against itself as he Blasts their defenses. While his Nether Ward strikes nearby foes that dare to cast a spell. He Decrepifies his target, temporary banishing them to another realm, and Drains Life from his enemies while replenishing himself with their vitality, ensuring that he will be ready for the next assault.  Nuker Pusher ★★☆",
+  "trivia": [
+    "According to Alchemist's rival hero taunt, Pugna is composed largely of phosphorus. Being a skeleton, he would be made of the phosphorus-containing mineral hydroxyapatite, a major component of bone.",
+    "Several lines of dialogue reference Viper being Pugna's pet before he was summoned from the Nether by a wizard.",
+    "\"Pugna\" is a Latin word that translates to a few meanings, namely \"fight\", \"dispute\", or \"conflict\".",
+    "Pugna's unused response Link▶️ \"First, do no harm.\" is a reference to the medical principle \"Primum non nocere\", which is latin and translates into \"First, do no harm\".[1]",
+    "In DotA, Pugna's title was Oblivion. While his lore and lines still mention \"Oblivion\" in Dota 2, this is now the name of his art of sorcery rather than his title, making Pugna one of the few Dota 2 heroes without both a name and a title."
+  ],
+  "history": "In the realm of Pugna's birth, near the vents of the Nether Reaches, there stood a lamasery devoted to the Arts of Oblivion, which drew its power from the nether energies. The Grandmaster of the temple compound had himself passed into Oblivion several years prior, leaving his academy without a leader. From the moment of their master's death, the regents of the temple began rites of divination to identify their master's reincarnation, and eventually all signs converged on the immediate neighborhood. Several villages squatted in the shadow of the temple, their alleys and plazas full of the laughter of squalling children. Pugna, a mere thirteen months of age, was but one candidate among the local brats, and on the appointed day he was presented at the temple alongside two other promising tots. The lamas offered a jumble of worn relics to the children, treasured possessions of their former grandmaster. One boy reached for a porphyry wand that had belonged to the lama...and put it in his nostril. An impish girl pulled out an amulet that had also been the lama's, and immediately swallowed it. Pugna regarded the other two coolly, gave a merry laugh, and blasted them with gouts of emerald flame, reducing them to ashes in an instant. He then snatched up the wand and amulet, saying 'Mine!' The regents hoisted the beaming Pugna on their shoulders, wrapped him in their grandmaster's vestments, and rushed him to the throne before his mood could change. Within five years, the temple itself was another pile of ash, which pleased Pugna to no end.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+160 Nether Blast Damage",
+        "talent_left": "+1.75 Netherward Damage Per Mana"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+20% Life Drain Heal",
+        "talent_left": "+1s Decrepify Duration"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-1s Netherblast Cooldown",
+        "talent_left": "+3 Nether Ward Health"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+20 Movement Speed",
+        "talent_left": "+200 Health"
+      }
+    ],
+    "notes": [
+      "The health talent increases maximum health capacity, and keeps the current health percentage."
+    ]
+  }
+}

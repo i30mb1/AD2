@@ -1,0 +1,244 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Does not interrupt Troll Warlord's channeling abilities upon toggling",
+        "Toggling On disables  Whirling Axes (Ranged) and then enables  Whirling Axes (Melee)\n Turns Troll Warlord into a  melee unit with 150 attack range, and sets his base attack time to 1.4 while active\n This causes items that use different values for melee and ranged heroes (e.g\n <span image=\"items\/manta_style\/full.webp\">[Manta Style]<\/span> Manta Style) to now treat the caster as a melee hero\n Attack range bonuses are not overridden and still work normally\n Also, it increases Troll Warlord's total movement speed to 305\/315\/325\/335 ( 330\/340\/350\/360)",
+        "When toggling On while a  ranged projectile is airborne, the projectile is treated as a melee attack by items, but it does not proc Berserker's Rage's root chance\n These attacks landed are also considered as  melee attacks, and therefore using  melee values (i.e\n can cleave, bash etc.)\n However, <span image=\"items\/quelling_blade\/full.webp\">[Quelling Blade]<\/span> Quelling Blade uses the ranged values if Troll Warlord is in ranged form at the start of the projectile",
+        "Berserker's Rage  melee and  ranged form persists through Troll Warlord's death\n He respawns with the same form as he dies",
+        "The root proc is decided upon attack point and if Troll Warlord is in  melee form\n The root proccing attack first applies the debuff, then its own damage\n Provides True Sight over the target for its duration\n Berserker's Rage's proc chance uses pseudo-random distribution",
+        "The root does not work against wards, buildings, and allied units",
+        "When toggled Off, all changes are reverted and he becomes a  ranged unit again\n SPELL STEAL All ability effects apply upon toggling On \/ Off\n However, upon toggling Off and as long as the acquired ability is not lost,  Rubick is considered  melee hero\n He still attacks with 550 attack range, the attacks are Instant and do not have a projectile, his attacks cannot miss uphill and are treated as a  melee hero by items"
+      ],
+      "item_behaviour": [],
+      "description": "While active, Troll Warlord swaps from using ranged to melee attacks. Melee attacks have a chance to ensnare, preventing the target from moving or using mobility spells. Berserker's Rage also grants additional movement speed, armor, and decreases base attack time. Whirling Axes has different functionality while Berserker's Rage is active.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation:  0+0",
+        "Armor Bonus: 4\/5\/6\/7 ( 14\/15\/16\/17)",
+        "Move Speed Bonus: 15\/25\/35\/45 ( 40\/50\/60\/70)",
+        "Attack Range Loss: 350",
+        "Base Attack Time: 1.4",
+        "Root Chance: 14%\/16%\/18%\/20%",
+        "Root Duration: 0.8\/1.2\/1.6\/2"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Troll_Warlord_Berserker%27s_Rage_1.mp3\/revision\/latest?cb=20191216025527",
+      "effects": [
+        "Ability: Toggle",
+        "Affects: Self \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Berserker's Rage",
+      "cooldown": "0",
+      "legacy_key": "G",
+      "story": "Like his anger, Troll Warlord's supply of axes is infinite."
+    },
+    {
+      "notes": [
+        "Whirling Axes (Ranged) is only available when  Berserker's Rage is toggled Off",
+        "The axes travel at a speed of 1500, taking 0.63 seconds to travel the full distance",
+        "Spawns 5 axes which spread up to 25° and affect units within 100 radius around them\n Has no starting radius, the axes spawn at one point in front of Troll Warlord\n So the total area is shaped like a cone",
+        "With the travel distance and axes radius, it can hit units up to 1050 range away",
+        "The axes first apply a basic dispel, then the damage, then the debuff",
+        "Does not affect  Roshan",
+        "While  Battle Trance is active, Whirling Axes (Ranged) has no cast time and does not require Troll Warlord to face the targeted direction"
+      ],
+      "item_behaviour": [],
+      "description": "Troll hurls a fistful of five axes in a cone shape over 950 range, slowing and damaging enemy units.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range:  950",
+        "Axes Travel Distance:  950",
+        "Axes Radius: 100",
+        "Axes Spread End Radius: 206.17",
+        "Damage: 90 ( 180)",
+        "Move Speed Slow: 40%",
+        "Slow Duration: 2.5\/3\/3.5\/4 ( 4.5\/5\/5.5\/6)"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Troll_Warlord_Whirling_Axes_%28Ranged%29_1.mp3\/revision\/latest?cb=20191216025521",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "9 (TagTalent 4)",
+      "aghanim": null,
+      "name": "Whirling Axes (Ranged)",
+      "cooldown": "60 ( 30)",
+      "legacy_key": "E",
+      "story": "Only axes fueled by hate whirl with such a deadly spin."
+    },
+    {
+      "notes": [
+        "Whirling Axes (Melee) is only available when  Berserker's Rage is toggled On",
+        "Interrupts Troll Warlord's channeling abilities upon cast\n SCEPTER NOTES Applies a basic dispel on Troll Warlord upon cast",
+        "The axes travel out at a speed of 1250 and move out at a speed of 233.33 until reaching the max distance in 1.5 seconds, and then returning to Troll Warlord at the same speed\n The axes always spawn towards east and west at Troll Warlord's position and rotate clockwise\n With the max spin radius and axes radius, it can hit units up to 450 range away",
+        "The axes first apply the damage, then the debuff",
+        "Only units within 100 range of an axe are damaged and blinded\n The visual effects of this ability are offset and do not reflect the actual currently affected area\n The full damage and debuff are dealt the first time when a unit comes in contact with an axe, being hit by the other axe does not deal extra damage or reapply the debuff",
+        "Stacks additively with other sources of blind\n Blind uses pseudo-random distribution",
+        "Does not affect  Roshan",
+        "If Troll Warlord dies, the ability ends and the axes disappear"
+      ],
+      "item_behaviour": [],
+      "description": "Troll hurls two axes around him in a close range area of effect, damaging enemy units and causing them to miss some attacks.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation:  0+0",
+        "Spin Radius: 350",
+        "Axes Radius: 100",
+        "Damage: 50\/100\/150\/200 ( 140\/190\/240\/290)",
+        "Miss Chance: 60%",
+        "Blind Duration: 5 ( 7)",
+        "Whirl Duration: 3"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Troll_Warlord_Whirling_Axes_%28Melee%29_1.mp3\/revision\/latest?cb=20191216025518",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "9 (TagTalent 4)",
+      "aghanim": null,
+      "name": "Whirling Axes (Melee)",
+      "cooldown": "50 ( 25)",
+      "legacy_key": "F",
+      "story": "Keep your enemies close."
+    },
+    {
+      "notes": [
+        "Troll Warlord gains or loses stacks as soon as his attacks land on the target\n This means that missed or disjointed attacks do not count, and in ranged form, it reacts on projectile hit, not on launch",
+        "When already having stacks, the first attack against a new target removes the previous stacks, without granting a new stack\n Attacks redirected by  Bulwark counts as attacking a new target\n Grants attack speed bonus against any unit, including allies, wards and buildings",
+        "For how much attack speed bonus (and with the attack speed increasing  talent) Fervor grants with a certain amount of stacks on each level, please refer to the chart below"
+      ],
+      "item_behaviour": [],
+      "description": "With each continuous blow on the same target, Troll gains increased attack speed. If Troll changes targets, the stacks drop to zero.",
+      "hot_key": "D",
+      "params": [
+        "Max Stacks: 12",
+        "Attack Speed Bonus per Stack: 15\/20\/25\/30 ( 20\/25\/30\/35)"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Self"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Fervor",
+      "cooldown": null,
+      "legacy_key": "V",
+      "story": "If at first you don't succeed, strike, strike again."
+    },
+    {
+      "notes": [
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard upgrade to be unlocked",
+        "Interrupts Troll Warlord's channeling abilities upon cast",
+        "Affects invulnerable and hidden ally heroes, clones, illusions\n Treats illusions and creep-heroes as creeps",
+        "Rampage works independently from  Berserker's Rage\n When cast, it checks for the caster's current range type\n Creates red particles if the caster was  melee on cast, and teal if they were  ranged\n Rampage checks for the caster's range type periodically and updates the buff immediately\n However, the particle effects do not update",
+        "Stacks multiplicatively with other sources of status resistance",
+        "Despite the tooltip, the buff is dispellable by any dispel and it fully works on spell immune allies"
+      ],
+      "item_behaviour": [],
+      "description": "Grants all allied Heroes globally a bonus based on whichever stance Troll Warlord is currently in. Ranged provides bonus Attack Speed and melee provides Status Resistance.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation: 0+0",
+        "Radius: Global",
+        "Attack Speed Bonus (Ranged): 70",
+        "Status Resistance Bonus (Melee): 25%",
+        "Duration: 5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Troll_Warlord_Rampage_1.mp3\/revision\/latest?cb=20220412213727",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Allies"
+      ],
+      "mana": "80",
+      "aghanim": null,
+      "name": "Rampage",
+      "cooldown": "75",
+      "legacy_key": "T",
+      "story": null
+    },
+    {
+      "notes": [
+        "Interrupts Troll Warlord's channeling abilities upon cast",
+        "Battle Trance first applies the buff, then the basic dispel upon cast",
+        "Stacks additively with other sources of lifesteal",
+        "When cast while not attacking, Troll Warlord automatically chooses a valid attack target, including  Couriers, within the search radius\n Prioritizes heroes over other units\n Uses ◉ Standard auto-attack rules to decide for attack targets\n Does not target  Roshan, buildings, wards, allies, sleeping, invulnerable, hidden or attack immune enemies\n Treats creep-heroes as creeps",
+        "When cast while already attacking a target, Troll Warlord sticks to that target, even if it is  Roshan, buildings, wards, or an ally\n He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies)",
+        "Grants shared vision over the current attack target as long as he stays within 900 range of the target, revealing it through the Fog of War\n Does not provide True Sight",
+        "While attacking, Troll Warlord becomes almost fully uncontrollable\n He is phased and hasted, fully ignoring movement speed slows, and completely ignores taunts\n The caster can only be ordered to toggle  Berserker's Rage, or cast both  Whirling Axes and  Rampage\n Other abilities cannot be cast\n Fear can stop him from attacking and cause conflicting movement\n When no enemies are nearby, he becomes controllable and can be affected by movement speed slows again, until another visible enemy enters the search radius",
+        "Prevents Troll Warlord from dying by setting his minimum health to 1\n This affect the following things: Troll Warlord cannot die to damage, including HP removal sources:  False Promise's delayed damage\n Stops  Ice Blast kill health threshold from killing him\n However, it does not protect him against certain instant kill sources:  Culling Blade's kill threshold When   Wraith Delay expires",
+        "Battle Trance can only be dispelled by an ally   Dismember or an ally   Supernova",
+        "Damage taken is not reduced, so any damage event still registers the full damage",
+        "TALENT NOTES The Battle Trance strong dispel  talent turns the basic dispel into a strong dispel\n Also allows Battle Trance to be cast while stunned, cycloned, taunted, slept, hidden, or during forced movement\n Does not allow it from being cast while silenced, hexed or prevented from acting\n Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent"
+      ],
+      "item_behaviour": [],
+      "description": "Troll unleashes a powerful battle trance, that forces you to continuously attack the closest enemy unit within 900 range, prioritizing heroes. Damage does not kill you during this mode. Grants you bonus lifesteal, attack speed and movement speed. Applies a Basic Dispel.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0+0.5",
+        "Enemy Search Radius: 900",
+        "Lifesteal: 40%\/60%\/80%",
+        "Self Move Speed Bonus: 25%\/30%\/35% ( 45%\/50%\/55%)",
+        "Self Attack Speed Bonus: 140\/170\/200",
+        "Duration: 6.5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Troll_Warlord_Battle_Trance_1.mp3\/revision\/latest?cb=20191216025526",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "90\/80\/70",
+      "aghanim": null,
+      "name": "Battle Trance",
+      "cooldown": "150",
+      "legacy_key": "R",
+      "story": "An adrenaline rush of pure hatred quickens your blades."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.5,
+    "attrStrength": 21.0,
+    "attrIntelligence": 13.0,
+    "attrIntelligenceInc": 1.0,
+    "attrAgilityInc": 3.3,
+    "attrAgility": 23.0
+  },
+  "description": "Swaps between ranged and melee attacks at will. Jah'rakal is an intolerable scoundrel, even for a troll. As such, being kicked out of the troll encampment only served to fuel his anger. The next day, he returned with axes in hand, and slew his former comrades in a Berserker's Rage. With each passing blow, the self-styled Troll Warlord accelerates his swings in an irate Fervor. Instantly able to swap between melee and ranged attacks, he throws his Whirling Axes to cripple from afar, while chopping down adjacent foes. To challenge Jah'rakal is to invite one's own death. The Troll Warlord enters a Battle Trance, channeling pure hatred into unequaled speed as he Rampages forward, decimating his opponents in a storm of bloody axes.  Carry Pusher Disabler Durable ★★☆",
+  "trivia": [
+    "Jah'rakal's lore and certain dialogue lines make several references to Internet trolls, a type of identity or role assumed by certain Internet users.",
+    "Troll Warlord's alternate name in DotA was Cory Clark a nod to the famous internet troll.",
+    "Battle Trance's Link▶️ sound effect is based on Link▶️ this and Link▶️ this line combined.",
+    "Troll Warlord's rare Whirling Axes cast response Link▶️ \"Axes of evil.\" is a reference to the term \"axis of evil\" which former U.S. president George W. Bush coined and used many times during his presidency."
+  ],
+  "history": "It's an easy thing to offend a troll. A prickly and contentious race, trolls thrive on argument and strife, missing no excuse to raise their voices in dispute. Males grow to maturity in subterranean chambers beneath their matriarch's domicile, feeding and amusing themselves while contributing nothing. Often they stay for years beyond the age of maturity, while the matriarch provides them with sustenance. When young trolls are finally pushed from their sub-chamber, they gather with others of their kind, forming roving gangs of malcontents who complain loudly about all manner of vexation. As much as trolls love to argue, imagine how rare it is for a troll to be driven from his own kind for being too difficult to get along with. Such was Jah'rakal's fate, a monger troll from deep in the Hoven. So deluded was he, so bitter and abrasive, that even other trolls found his company intolerable. After one particularly vitriolic outburst in which he claimed the lion's share of loot from their latest raid, his cohorts finally snapped. They turned on him, beat him with clubs, and drove him from the encampment. Enraged at his banishment, he returned the next day, armed with steel, and slew them all, one by one. He then swore a blood oath: he would ever after be a fighting force unto himself. Now he roams the world as the Troll Warlord, bitter and angry, the Imperial high commander of an army of one.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "Whirling Axes Pierce Magic Immunity",
+        "talent_left": "Battle Trance Strong Dispels"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+20% Battle Trance Movement Speed",
+        "talent_left": "+10 Berserker's Rage Armor"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+5 Fervor Attack Speed",
+        "talent_left": "+90 Whirling Axes Damage"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+2 Whirling Axes Debuff Duration",
+        "talent_left": "+25 Berserker's Rage Movement Speed"
+      }
+    ]
+  }
+}

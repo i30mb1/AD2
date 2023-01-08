@@ -1,0 +1,210 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Reduces the target's total attack damage, including attack damage bonuses",
+        "Applies heal reduction, health regen reduction, lifesteal reduction, and spell lifesteal reduction on the target",
+        "The percentage-based cast range reduction stacks additively with other sources",
+        "Multiple casts on the same target do not stack the debuff but refresh the duration"
+      ],
+      "item_behaviour": [],
+      "description": "Lowers the enemy's total attack damage, cast range, and regeneration.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.2+0.57",
+        "Cast Range:  800\/900\/1000\/1100",
+        "Attack Damage Reduction: 45%\/50%\/55%\/60%",
+        "Health Restoration Reduction: 45%\/50%\/55%\/60%",
+        "Cast Range Reduction: 30% ( 50%)",
+        "Duration: 8\/9\/10\/11"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Bane_Enfeeble.mp3\/revision\/latest?cb=20191216011114",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies"
+      ],
+      "mana": "28\/21\/14\/7",
+      "aghanim": null,
+      "name": "Enfeeble",
+      "cooldown": "40\/50\/60\/70",
+      "legacy_key": "T",
+      "story": "Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts."
+    },
+    {
+      "notes": [
+        "Despite the visual effects, the heal happens instantly after the damage is dealt, there is no travel time",
+        "The heal amount is based on how much damage the target took from Brain Sap, amplifying or reducing the damage affects the heal value\n The heal value itself can still be subjected to heal manipulation",
+        "SHARD NOTES Adds a 550 radius to this ability\n The ability must be centered over a unit still\n Can target invisible units and units inside the Fog of War\n From secondary targets, it can only heal for 18.75\/37.5\/56.25\/75 ( 68.75\/87.5\/106.25\/125) health"
+      ],
+      "item_behaviour": [],
+      "description": "Feasts on the vital energies of an enemy unit, healing Bane and dealing damage.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.2+0.5",
+        "Cast Range:  625",
+        "Damage: 75\/150\/225\/300 ( 275\/350\/425\/500)",
+        "Damage as Heal: 100%",
+        "Radius:  550",
+        "Secondary Damage as Heal:  25%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Bane_Brain_Sap.mp3\/revision\/latest?cb=20191216011113",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Pure"
+      ],
+      "mana": "17\/15\/13\/11 (TagTalent 14\/12\/10\/8)",
+      "aghanim": null,
+      "name": "Brain Sap",
+      "cooldown": "100\/120\/140\/160",
+      "legacy_key": "B",
+      "story": "Atropos finds no greater pleasure than to harvest the fear he creates."
+    },
+    {
+      "notes": [
+        "↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Bane",
+        "Applies a sleep on affected units, preventing them from acting",
+        "Nightmare turns affected targets invulnerable for 1 second, preventing affected units from waking up",
+        "Nightmare has the second highest priority in the group of base vision setting effects, lower than  Tree Dance\n It sets the affected target's base vision to 200\n Since <span image=\"items\/moon_shard\/full.webp\">[Moon Shard]<\/span> Consume increases the base  nighttime vision, therefore, it is reduced by Nightmare\n However, other vision bonus sources (e.g\n <span image=\"items\/moon_shard\/full.webp\">[Moon Shard]<\/span> Shade Sight) are applied after the vision reduction",
+        "Deals damage and self heals in 1-second intervals, starting 1 second after cast, resulting in up to 4\/5\/6\/7 instances\n Can deal up to 20\/75\/150\/245 damage to enemy targets, considering the default duration (before reductions)",
+        "The target wakes up when a unit starts attacking it, including from manually casting active attack modifiers, or when the target takes damage",
+        "The target does not wake up when taking damage from certain sources and under a few rare circumstances: From the following instant attack sources:  Sleight of Fist,   Side Gunner and  Stifling Dagger\n Any damage from active attack modifiers, be it a debuff (e.g\n  Burning Spear), or direct damage (e.g\n  Tidebringer)\n Any damage flagged as HP Removal\n Any damage from already launched ranged attacks if the projectiles hit after the invulnerability period",
+        "Enemy targets do not wake up from Nightmare's own damage per second",
+        "When waking up with an attack, the Nightmare is transferred to the attacking unit at the start of an attack, not when the attack hits",
+        "When Nightmare is transferred, its duration is refreshed, including the 1-second invulnerability",
+        "Nightmare cannot be transferred to spell immune units, or to wards and buildings\n So their attacks only wake up Nightmared units",
+        "Bane and illusions of him (regardless of their owner) can deal attack damage to Nightmared units without waking them up or transferring the Nightmare to them\n This is innate to Bane\n Since this only applies to attack damage, other sources of damage still wake the target up (e.g\n <span image=\"items\/maelstrom\/full.webp\">[Maelstrom]<\/span> Chain Lightning procs)",
+        "Sleeping units are never automatically attacked, regardless of auto-attack settings\n This means that sleeping units are never attacked by lane creeps, neutral creeps, towers and fountains\n They are also not considered as targets for secondary attacks (e.g\n  Moon Glaives)\n Player-controlled units can still force an attack order on the target ( Right Click or A) to transfer the Nightmare to themselves\n TALENT NOTES The Nightmare self heals  talent also heals Bane for the total damage dealt for the default duration\n Attacks against the Nightmared target also heal Bane for the damage dealt\n Stacks additively with other sources of lifesteal\n Cannot lifesteal off of wards, buildings, and allied units",
+        "As long as a unit is affected by Nightmare from Bane, Nightmare is replaced by the  Nightmare End sub-ability which allows Bane to wake the unit up",
+        "Nightmare's invulnerability status effect uses the default Lua error in Module:Ability_ID at line 61: Could not find Cargo data for \"Invulnerability\"\n icon, instead of its own ability icon"
+      ],
+      "item_behaviour": [],
+      "description": "Puts the target enemy or friendly Hero to sleep. Sleeping units are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack nightmared targets freely. Enemy Units take Pure Damage Per Second while in Nightmare.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.4+0.57",
+        "Cast Range:  425\/500\/575\/650",
+        "Damage per Second: 5\/15\/25\/35",
+        "Set Vision Range: 200",
+        "Sleep Duration: 4\/5\/6\/7",
+        "Invulnerability Duration: 1",
+        "Lifesteal:  100%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Bane_Nightmare.mp3\/revision\/latest?cb=20191216011117",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Allies",
+        "Damage: Pure"
+      ],
+      "mana": "24\/21\/18\/15 (TagTalent 21\/18\/15\/12)",
+      "aghanim": null,
+      "name": "Nightmare",
+      "cooldown": "165",
+      "legacy_key": "E",
+      "story": "A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep."
+    },
+    {
+      "notes": [
+        "Replaces  Nightmare until there is no Nightmare debuff from Bane active",
+        "Does not interrupt Bane's channeling abilities upon cast",
+        "Can wake a unit up at any time during a Nightmare, even during the 4\/5\/6\/7-second invulnerability",
+        "Wakes up all units that were put asleep by Nightmare, no matter who put them asleep",
+        "Can be used while stunned, cycloned, slept, taunted, hidden, or during forced movement",
+        "Cannot be used while silenced, hexed or prevented from acting\n Bane is unable to ⇧ Shift-queue this ability\n SPELL STEAL Does not grant  Nightmare if this sub-ability is the last cast ability"
+      ],
+      "item_behaviour": [],
+      "description": "Ends all ongoing Nightmares.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation:  0+0"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Toggle"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Nightmare End",
+      "cooldown": "0",
+      "legacy_key": "E",
+      "story": null
+    },
+    {
+      "notes": [
+        "Fiend's Grip fully disables and provides True Sight over the target until the channeling ends\n If the target turns invulnerable or hidden, the channeling stops instantly",
+        "Deals 35\/55\/75 damage and drains 2.5% ( 5%) mana in 0.5-second intervals, starting immediately as the channeling begins, resulting in up to 10\/11\/12 ( 20\/21\/22) instances\n Can deal up to 350\/605\/900 ( 700\/1155\/1650) damage (before reductions)\n Can drain up to 25%\/27.5%\/30% ( 50%\/52.5%\/55%) of the target's maximum mana",
+        "Applies the damage first on each interval, then the self mana restore, and then the mana loss",
+        "Unlike other targeted abilities, the caster vision of Fiend's Grip lasts for the entire channel duration (even if it gets canceled), instead of just 2 seconds",
+        "SCEPTER NOTES Now spawn 2 illusions 400 range towards Bane's right and left side, facing towards the target whenever casting Fiend's Grip\n The illusions are able to cast abilities and are automatically ordered to cast Fiend's Grip on the same target, with an instant cast time\n The illusions can be given any order normally, except for item cast orders\n Doing so interrupts the channeling and kills the illusion\n The illusions' Fiend's Grip places a different modifier than the real hero does\n This modifier only stuns the target if the real hero's modifier is present\n However, as soon as the real hero's modifier disappears, the illusions' modifier continues dealing damage and draining mana in its place\n In this case, the damage and mana drain is sourced to the illusion, not to Bane\n The illusions have a maximum duration of 20 seconds, hard-capping the maximum time they can spend channeling\n Since the illusions are actually casting Fiend's Grip as well, this upgrade does not work for heroes who do not have Fiend's Grip (e.g\n Spell Reflection)\n The illusions created neither have gold, nor experience bounty\n SOULBIND Prematurely ending the channeling only cancels Fiend's Grip on the originally targeted enemy and does not affect the channeling on the other target, even with the leash debuff expired"
+      ],
+      "item_behaviour": [],
+      "description": "Grips an enemy unit, disabling it and causing heavy damage over time, while stealing mana every 0.5 second based on the unit's maximum mana.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range:  625",
+        "Max Channel Time: 5\/5.5\/6 ( 10\/10.5\/11)",
+        "Damage per Second: 70\/110\/150",
+        "Max Mana Drain per Second: 5% ( 10%)",
+        "Number of Illusions:  2",
+        "Illusion Damage Taken:  200%",
+        "Illusion Duration:  20"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Bane_Fiend%27s_Grip.mp3\/revision\/latest?cb=20191216011115",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Pure"
+      ],
+      "mana": "120\/110\/100 (TagTalent 75\/65\/55)",
+      "aghanim": null,
+      "name": "Fiend's Grip",
+      "cooldown": "200\/300\/400",
+      "legacy_key": "F",
+      "story": "Victims of Atropos are frequently torn apart by vivid conjurations of their own nightmares."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.5,
+    "attrStrength": 22.0,
+    "attrIntelligence": 22.0,
+    "attrIntelligenceInc": 2.5,
+    "attrAgilityInc": 2.5,
+    "attrAgility": 22.0
+  },
+  "description": "Puts his enemies to sleep, incapacitating them. Formed from the ichor of Nyctasha, Atropos is the vaporous embodiment of pure fear. Sheer terror Enfeebles his enemies, diminishing their efficiency on the battlefield. The Bane Elemental puts heroes to sleep, sending them into a restless and contagious Nightmare as he feeds on their vital energies by Sapping their Brains. Some will never wake. Caught in the Fiend's Grip, Bane's victims can only swing at imagined phantoms as fear chokes the life from their bodies.  Support Disabler Nuker Durable ★★☆",
+  "trivia": [
+    "The origin of the name \"Atropos\" comes from Greek mythology. One of the Moirai Sisters (commonly referred to as the Sisters of Fate), Atropos was the sister in charge of cutting the \"Life Thread\" of those who were going to die. Her name literally means 'the no-Turning One' (> α 'no, without' + τρέπειν 'to turn'), referring to the irreversible and inevitable destiny of death.",
+    "Bane's rival line towards Tinker Link▶️ \"Do Tinkers dream of electric sheepsticks?\" is a reference to the book Do Androids Dream of Electric Sheep?. \"Sheepstick\" is also a commonly used name for the Scythe of Vyse.",
+    "The theme and abilities of Bane are based on the game Tactics Ogre: The Knight of Lodis. In this game, there is a Bane \"element\" which provides spells that are named Enfeeble, Brain Sap, Nightmare and Fiend's Grip, with a similar theme of Bane in Dota 2.",
+    "Bane's move line Link▶️ \"Sleep no more!\" is a reference to Shakespeare's play Hamlet, in particular, his famous \"To be or not to be\" soliloquy. Hamlet reasons over whether to take his own life or carry on: \"To die, to sleep-. No more-and by a sleep we say to end...\"",
+    "Fiend's Grip sound effect makes use of one of Bane's lines (\" Link▶️ The bane of your existence\").",
+    "Bane's Last hit Response \" Link▶️ The wages of fear\" is a reference to the film of the same name.",
+    "Bane is the only hero in Dota that has both the same base value as well as the same growth value on all 3 attributes. Even when general attribute value adjustments have been made on other heroes through different versions, Bane has still kept this peculiarity in every version, intentionally."
+  ],
+  "history": "When the gods have nightmares, it is Bane Elemental who brings them. Also known as Atropos, Bane was born from the midnight terrors of the goddess Nyctasha. A force of terror too powerful to be contained by sleep, he surfaced from her slumbers, fed upon her immortality, and stole his vaporous form from her inky blood. He is the essence of fear. Mortals who hear his voice hear their darkest secrets whispered in their ear. He calls to the hidden fear in every Hero's heart. Wakefulness is no protection, for Bane's black blood, continuously dripping, is a tar that traps his enemies in nightmare. In the presence of Bane, every Hero remembers to fear the dark.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+200 Brain Sap Damage\/Heal",
+        "talent_left": "+5s Fiend's Grip Duration"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "-3s Nightmare Cooldown",
+        "talent_left": "+30 Movement Speed"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-3s Brain Sap Cooldown",
+        "talent_left": "+5% Fiend's Grip Max Mana Drain"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "Nightmare Damage Heals Bane",
+        "talent_left": "+20% Enfeeble Cast Range Reduction"
+      }
+    ]
+  }
+}

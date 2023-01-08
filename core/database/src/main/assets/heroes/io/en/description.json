@@ -1,0 +1,270 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Tethering a unit that is 700 units or further away causes Io to latch on and pull itself to the target\n Pulls Io at a speed of 1000, until coming within 300 range of the target\n Can pull Io over impassable terrain and through trees\n Destroys trees within 150 radius around Io once the pull ends\n If Io breaks the tether while getting pulled to the tethered target, the pull immediately stops\n The pull gets interrupted when Io gets stunned, hexed, hidden, feared, hypnotized, or rooted during the pull\n Forced movement sources cancel the pull as well, but only after the movement ends, and not upon getting applied\n Taunts, leashes, and silences do not interrupt the pulling\n If the distance between Io and the target gets greater than 2150 during the pull, the pull ends, and the Tether breaks",
+        "If the distance between Io and the target gets greater than 1000, the Tether breaks\n When the distance between Io and the tethered target gets greater than 700, the link's visual appearance changes\n The link changes color at 700 distance and jiggles at 800 distance",
+        "Tether has no set duration\n It breaks only when exceeding the break distances, when Io or the target dies, when affected by an allied   Dismember, or when using the  Break Tether sub-ability",
+        "The movement speed bonus is only applied to the tethered ally, while Io copies the target ally's movement speed\n Sets Io's base movement speed is equal to the base speed of the target, plus any speed bonuses they have, flat and percentage\n Since it sets Io's base movement speed, percentage-based movement speed bonuses and slows are based on this value during Tether\n Fully overrides any flat movement speed bonuses and reductions on Io, from items and abilities alike\n If the target is slowed, the slow is not copied by Io\n Tether copies the target's movement speed as if they are not slowed\n Does not copy the target's movement speed while Io is hasted\n While tethered, Io cannot bypass the maximum movement speed limit, even if the tethered ally does\n Prevents other abilities from unlocking the movement speed limit as well (e.g\n <span image=\"items\/force_boots\/full.webp\">[Force Boots]<\/span> Force Boots,  Thirst)",
+        "The tethered unit benefits from  Overcharge,  Relocate, and from Io regenerating or replenishing health and mana\n Tethered units still benefit from all those effects even when turning invulnerable or hidden\n The heal and mana restore transfer happens regardless of how much Io actually healed or restored\n The health\/mana transfer percent is applied after all reductions and amplifications on Io",
+        "If Io or the tethered unit is invisible, enemies can only see a fake link leading to the invisible unit's last known location\n If the tethered unit is visible to the enemy, enemies can still see the unit is tethered",
+        "The movement speed slow gets applied to every enemy that comes within approximately 55 range of the tether link on each server tick",
+        "Cannot be cast on  Couriers",
+        "SHARD NOTES Tether now passively grants Io spell lifesteal and the 10% spell lifesteal is also shared with the Tethered target\n Spell lifesteal from other sources can not be shared this way\n Stacks additively with other sources of spell lifesteal\n Heals for 2% from non-hero units\n Treats creep-heroes as creeps and does not heal off of illusions\n The shared spell lifesteal is still sourced to Io, not to the tethered ally",
+        "TALENT NOTES Most of Tether's  talents affects both the target and the caster\n The attack damage bonus  talent immediately updates the Tether buff both on the target and the caster\n Grants regular flat bonus attack damage\n The health bonus  immediately updates the Tether buff on the target, but not the buff on the caster\n The health talent increases maximum health capacity and keeps the current health percentage\n However, both the movement speed bonus increasing and movement speed and attack speed slow  talent does not update the current instance",
+        "The attack tethered ally target  talent causes Io performs instant attacks on every enemy the tethered ally attacks\n These instant attacks can proc any attack modifiers and on-hit effects normally\n They do not have True Strike\n The attacks are performed as soon as the ally launches their attack (including instant attacks from the ally)\n It does not matter whether the attack actually hits or not\n If Io is stunned or disarmed, no instant attack is performed\n Does not perform attacks when the tethered target also has this talent (i.e\n an illusion of Io)\n SPELL STEAL Immediately breaks upon losing ability\n MORPH NOTES Immediately breaks upon losing ability and while  Morphing back to original form"
+      ],
+      "item_behaviour": [],
+      "description": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, the tethered unit gains a portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether. Tether briefly slows enemies touching it.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range:  1600",
+        "Tether Break Distance: 1000",
+        "Tether Pull Distance: 700",
+        "Tether Break Distance During Pull: 2150",
+        "Heal\/Restore Transfer Factor: 0.6\/0.8\/1\/1.2",
+        "Target Move Speed Bonus: 6%\/8%\/10%\/12% ( 12%\/14%\/16%\/18%)",
+        "Enemy Move Speed Slow: 15%\/25%\/35%\/45% ( 30%\/40%\/50%\/60%)",
+        "Enemy Attack Speed Slow: 15\/25\/35\/45 ( 30\/40\/50\/60)",
+        "Slow Duration: 0.2",
+        "Attack Damage Bonus:  15",
+        "Health Bonus:  400",
+        "Passive Spell Lifesteal Bonus:  10%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Io_Tether_1.mp3\/revision\/latest?cb=20191216014349",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Self \/ Allies \/ Enemies",
+        "Damage: "
+      ],
+      "mana": "12",
+      "aghanim": null,
+      "name": "Tether",
+      "cooldown": "40",
+      "legacy_key": "T",
+      "story": "The benevolent touch of Io brings strength from between the planes."
+    },
+    {
+      "notes": [
+        "Replaces  Tether until the sub-ability is used or the tether is broken",
+        "Interrupts Io's channeling abilities upon cast",
+        "Break Tether goes on a 0.25-second cooldown when Tether is cast, this is to prevent accidental double-casts and prematurely ending the ability"
+      ],
+      "item_behaviour": [],
+      "description": "Break the link to the tethered unit.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0+0",
+        "Initial Cooldown: 0.25"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target"
+      ],
+      "mana": "1",
+      "aghanim": null,
+      "name": "Break Tether",
+      "cooldown": "0",
+      "legacy_key": "T",
+      "story": null
+    },
+    {
+      "notes": [
+        "Interrupts Io's channeling abilities upon cast",
+        "Summons a spirit in 1-second intervals, starting immediately upon cast, taking 5 seconds to summon all 5 spirits\n The first spirit is always spawned to the north of Io, with the next spirit spawning behind the previous spirit\n The spirits expand automatically to its 650 maximum distance upon cast\n The spirits always rotate clockwise and are centered around Io's location, following it wherever it goes\n Moving the Spirits  In or  Out do not break their formation\n They always rotate in a circle and keep an equal distance from each other",
+        "The spirits complete a revolution every 2.7 seconds regardless of distance from Io\n Their angular velocity is constant, meaning their speed increases the further away they are from the caster\n This means the first created spirit can rotate at most 7 times around Io",
+        "When a non-hero unit, illusion, or a creep-hero comes within 150 radius of the spirits, it takes the collision damage\n Heroes and the  Spirit Bear do not take this collision damage\n Fully ignores  Couriers",
+        "When a hero, or a creep-hero comes within 110 radius, the spirit explodes, dealing the explosion damage and slowing enemies within a 360 radius\n The explosion damage and slow affect all enemies within the area, not only heroes\n The explosions first apply the damage, then the slow",
+        "Spirits do not collide with or explode on invulnerable or hidden units",
+        "Remaining spirits explode simultaneously at the end of the duration, dealing the explosion damage around them\n Successive casts instantly cause the current active spirits to explode as well",
+        "Spirits provide 150 radius flying vision for 3 seconds at the location where they collided with a hero\n They do not provide vision when exploding caused by expiring or recasting",
+        "The spirits are invisible to the enemy if Io is invisible",
+        "Can deal up to 150\/250\/350\/450 ( 425\/525\/625\/725) damage to a single unit when all spirits explode on a target (before reductions)",
+        "SCEPTER NOTES Spirits now turn into a passive ability, constantly spawning spirits around Io with the same intervals\n The  Spirits In and  Spirits Out sub-abilities become permanently available as well\n The Spirits' now has an Infinite duration and they do not explode unless colliding with heroes\n If the spirits did not collide with a hero for more than 6 seconds, the next explosion will deal twice the damage\n This is because when the colliding spirit exploded, the newly spawned spirit now takes its place and collides with the enemy hero again",
+        "When acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter while a cast is already active, the spirits from that cast disappear without exploding while creating new spirits\n When losing Aghanim's Scepter, the spirits from it disappear immediately, without exploding\n SPELL STEAL Spirits immediately explode upon losing the ability\n MORPH NOTES Spirits immediately explode upon losing the ability and while  Morphing back to original form"
+      ],
+      "item_behaviour": [],
+      "description": "Summon five particle spirits that dance in a circle around Io. If a particle collides with an enemy hero, it explodes, damaging all enemy units in an area around it. Creeps take minor damage from touching a particle spirit, but do not cause them to explode. When its duration ends, any remaining Spirits explode.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation:  0+0",
+        "Non-Hero Collision Radius: 150",
+        "Hero Collision Radius: 110",
+        "Explosion Radius: 360",
+        "Number of Spirits: 5",
+        "Collision Damage: 10\/15\/20\/25",
+        "Explosion Damage: 30\/50\/70\/90 ( 85\/105\/125\/145)",
+        "Duration: 19 ( Infinite)",
+        "Explosion Move Speed Slow:  15%",
+        "Slow Duration:  0.3"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Io_Spirits_1.mp3\/revision\/latest?cb=20191216014346",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "26\/24\/22\/20",
+      "aghanim": null,
+      "name": "Spirits",
+      "cooldown": "100\/110\/120\/130",
+      "legacy_key": "W",
+      "story": "Io twists the particles of the universe with his unimaginable capabilities."
+    },
+    {
+      "notes": [
+        "Interrupts Io's channeling abilities upon cast",
+        "Applies generic outgoing damage amplification on Io and the tethered ally\n Stacks additively with other sources of generic outgoing damage manipulation\n The amplification affects only spell damage Io and the tethered ally deal that is not flagged as HP removal\n SHARD NOTES Overcharge increases the total outgoing spell damage amplification to 28%\/30%\/32%\/34% on Io and the  Tethered ally",
+        "Io does not need to be already tethered to the target transfer Overcharge\n Tethering afterward transfers it as well\n The Overcharge on allies does not show a duration, and always appears like a permanent buff",
+        "Can regenerate up to 4%\/4.8%\/5.6%\/6.4% of Io's max health over the duration\n Can restore up to 4%\/4.8%\/5.6%\/6.4% ( 5.6%\/6.4%\/7.2%\/8%) of the target's max health + 2.4%\/3.84%\/5.6%\/7.68% ( 3.36%\/5.12%\/7.2%\/9.6%) of Io's max health on the Tethered ally\n TALENT NOTES The max health regeneration increasing  talent does not update the current Tether instance"
+      ],
+      "item_behaviour": [],
+      "description": "Io gains bonus attack speed, spell amplification, and HP Regen based on max health. If Io is tethered to an ally, that unit also gains the bonuses.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation:  0+0",
+        "Attack Speed Bonus: 35\/60\/85\/110",
+        "Max Health as Health Regen Bonus: 0.5%\/0.6%\/0.7%\/0.8% ( 0.7%\/0.8%\/0.9%\/1%)",
+        "Outgoing Spell Damage Amp: 8%\/10%\/12%\/14% ( 18%\/20%\/22%\/24%)",
+        "Duration: 8"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Io_Overcharge.mp3\/revision\/latest?cb=20191216014342",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self \/ Allies"
+      ],
+      "mana": "25\/22\/19\/16",
+      "aghanim": null,
+      "name": "Overcharge",
+      "cooldown": "40\/60\/80\/100",
+      "legacy_key": "V",
+      "story": "Drawing on the energy of matter from all worlds, Io begins the unravelling of time."
+    },
+    {
+      "notes": [
+        "This ability is hidden if Io does not have the spirits buff",
+        "Does not interrupt Io's channeling abilities upon cast",
+        "Moves the spirits towards Io at a speed of 250\n It takes 1.8 seconds from moving the spirits from maximum to minimum distance",
+        "SCEPTER NOTES This sub-ability becomes permanently available"
+      ],
+      "item_behaviour": [],
+      "description": "Calls the spirits closer to you. Can be toggled on and off.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation:  0+0",
+        "Min Distance: 200"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Toggle"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Spirits In",
+      "cooldown": "0",
+      "legacy_key": "D",
+      "story": null
+    },
+    {
+      "notes": [
+        "This ability is hidden if Io does not have the spirits buff",
+        "Does not interrupt Io's channeling abilities upon cast",
+        "Moves the spirits away from Io at a speed of 250\n It takes 1.8 seconds from moving the spirits from minimum to maximum distance",
+        "SCEPTER NOTES This sub-ability becomes permanently available"
+      ],
+      "item_behaviour": [],
+      "description": "Sends the spirits farther away from you. Can be toggled on and off.",
+      "hot_key": "F",
+      "params": [
+        "Cast Animation:  0+0",
+        "Max Distance: 650"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Toggle"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Spirits Out",
+      "cooldown": "0",
+      "legacy_key": "E",
+      "story": null
+    },
+    {
+      "notes": [
+        "↓↓ Double-tapping automatically targets the team's fountain\n ☐ Disabled Help prevents Io from relocating the tethered ally",
+        "If Io is rooted, stunned, slept, cycloned, or hexed during the effect delay, Relocate gets cancelled\n If Io is silenced as the delay finishes, the teleport does not happen\n Disabling the tethered ally of Io does not prevent the ally from getting teleported if Io successfully does so\n The returning teleportation cannot be prevented",
+        "Enemies get a \u203C Ping on their minimap during the teleport delay, showing them where Relocate was targeted\n Creates a visual effect at the targeted point during the teleport delay, which is visible to everyone\n Creates a visual effect at Io's position before the teleport happens, which also is visible to everyone",
+        "Relocate interrupts channeling abilities and every current order of Io and the tethered ally both on initial teleport, and when teleporting back",
+        "Disjoints projectiles for Io upon teleporting to the targeted point, but does not disjoint upon teleporting back\n Does not disjoint projectiles for the teleported ally in any way",
+        "Io may  Break Tether at any time to prevent bringing an ally back",
+        "Can only teleport heroes, clones, illusions and creep-heroes\n This includes invulnerable and hidden targets",
+        "Destroys trees within 150 radius around Io upon both teleports",
+        "Successive casts teleports Io and the affected ally to the newly selected location upon each cast, but it Relocates them back to the first point when the ability was cast\n Does not refresh the duration\n Io and the affected ally are Relocated back after 12 seconds"
+      ],
+      "item_behaviour": [],
+      "description": "Teleports Io and any tethered ally to any location. After the spell expires Io and any tethered ally will return to their original location. Double-click to teleport to your team's base fountain.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Cast Range: Global",
+        "Effect Delay: 3.5\/3.25\/3",
+        "Duration: 12"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Io_Relocate_1.mp3\/revision\/latest?cb=20191216014343",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Self \/ "
+      ],
+      "mana": "100\/90\/80 (TagTalent 75\/65\/55)",
+      "aghanim": null,
+      "name": "Relocate",
+      "cooldown": "175",
+      "legacy_key": "R",
+      "story": "Io is the embodiment of the mystery of the universe."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.0,
+    "attrStrength": 17.0,
+    "attrIntelligence": 23.0,
+    "attrIntelligenceInc": 1.7,
+    "attrAgilityInc": 1.6,
+    "attrAgility": 14.0
+  },
+  "description": "Links to its allies to buff them. The phenomenon that is Io manifests on the physical plane as a wisp of light, its purpose beyond mortal understanding. Accompanied by complementary Spirits that roam around the wisp at its will, it flits to and fro the battlefield, searching for an ally to Tether to. Those blessed with Io's bond feel their feet lighten as the Wisp channels its own regenerative powers into their body. Should its host falter, Io begins to Overcharge, augmenting that ally's speed while strengthening his resolve. As a force unbound by the laws of corporeal space, Io is able to temporarily Relocate itself and an ally to any point in the world, often saving a companion from certain death.  Support Escape Nuker ★★★",
+  "trivia": [
+    "Io is the name of a priestess of Hera in Greek Mythology. She was seduced by Zeus and subsequently incurred Hera's wrath. Io is also the name of one of four Galilean moons of Jupiter, which was named after the same character in Greek Mythology.",
+    "Io is also the name of one of four Galilean moons of Jupiter, which was named after the same character in Greek Mythology.",
+    "Io's fun names in DotA were Weird Ball and Santelmo. Santelmo may refer to St. Elmo's Fire, a weather phenomenon that creates sparks of bright energy similar to that of lightning, mostly occurring from sharply pointed structures. Santelmo may also refer to the Philippine's folklore creature which is a head of fire, or a ball of fire which Io resembles.",
+    "Enigma, Chaos Knight, Keeper of the Light, and Io together represent the four fundamental forces of the universe with Io representing the electromagnetic force, as alluded to in its lore as the attractive and repulsive force, the charge that binds existence together, its powers over magnetism, as well as its abilities which requires Io to pull itself towards allies.",
+    "Io's facing direction is marked by an arc-like effect.",
+    "Io has several \"tentacles\" that randomly palpate any visible unit within 256 range of it, enemies and allies alike, randomly switching between units every few seconds. This is purely for aesthetic purposes. A hidden modifier modifier_wisp_tentacles is responsible for this effect."
+  ],
+  "history": "Io is everywhere, and in all things. Denounced by enemies as the great unmaker, worshiped by scholars as the twinkling of a divine eye, this strange Wisp of life-force occupies all planes at once, the merest fraction of its being crossing into physical existence at any one moment. Like the great twin riders Dark and Light, and yet another ancient traveler whose true history is lost to the ages, Io the Wisp is a Fundamental of the universe, a force older than time, a wanderer from realms far beyond mortal understanding. Io is nothing less than the sum of all attractive and repulsive forces within the material field, a sentient manifestation of the charge that bind existence together. It is only in the controlled warping of these electrical waylines that Io's presence can be experienced on the physical plane. A benevolent, cooperative force, Io bonds its strange magnetism to others so that the power of allies might be enhanced. Its motives inscrutable, its strength unimaginable, Io moves through the physical plane, the perfect expression of the mysteries of the universe.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+400 Health to Tethered Units",
+        "talent_left": "Attack Tethered Ally's Target"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+0.2% Overcharge Max HP Regen Bonus",
+        "talent_left": "-25s Relocate Cooldown"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+6% Tether Movement Speed",
+        "talent_left": "+55 Spirits Hero Damage"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+15% Tether Move\/Attack Slow",
+        "talent_left": "+15 Attack Damage to Tethered Units"
+      }
+    ]
+  }
+}

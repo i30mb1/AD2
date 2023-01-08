@@ -13,11 +13,11 @@ import java.io.File
 
 fun main() {
     val heroes = getHeroes()
-//    createFileWithHeroes(heroes)
-//    for (hero in heroes) {
-    loadHero(heroes.first(), LocaleHeroes.RU)
-//        loadHero(hero, LocaleHeroes.EN)
-//    }
+    createFileWithHeroes(heroes)
+    for (hero in heroes) {
+        loadHero(hero, LocaleHeroes.RU)
+        loadHero(hero, LocaleHeroes.EN)
+    }
 }
 
 
@@ -123,7 +123,8 @@ private fun getHeroes(): List<Hero> {
         if (heroName == "Anti-Mage") heroMainAttribute = "Agility"
         if (heroName == "Ancient Apparition") heroMainAttribute = "Intelligence"
         val href = element.getElementsByTag("a")[0].attr("href")
-        result.add(Hero(heroName, heroMainAttribute, href))
+        val folderName = heroName.replace(" ", "_").lowercase()
+        result.add(Hero(heroName, folderName, heroMainAttribute, href))
     }
     return result
 }
@@ -144,7 +145,7 @@ private fun loadHero(hero: Hero, locale: LocaleHeroes) {
     }
     result.loadMainAttributes(root)
 
-    val path = "$assetsDatabase/heroes/${hero.name}/${locale.folder}"
+    val path = "$assetsDatabase/heroes/${hero.folderName}/${locale.folder}"
     saveFile(path, "description.json", result.toJSONString())
 }
 
@@ -354,7 +355,8 @@ private fun JSONObject.loadAbilities(root: Document) {
 
 private fun loadSpellImage(element: Element, name: String) {
     val url = element.getElementsByAttributeValue("class", "image")[0].attr("href")
-    saveImage(url, assetsDatabaseSpells, name.replace(" ", "_"))
+    val nameFormatted = name.replace(" ", "_").lowercase()
+    saveImage(url, assetsDatabaseSpells, nameFormatted)
 }
 
 private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {

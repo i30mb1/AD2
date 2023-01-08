@@ -1,0 +1,209 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Blade Fury cannot be cast during  Omnislash and  Swiftslash",
+        "Does not interrupt Juggernaut's channeling abilities upon cast",
+        "Applies spell immunity for the duration and a basic dispel upon cast\n Juggernaut cannot be affected by <span image=\"items\/ghost_scepter\/full.webp\">[Ghost Scepter]<\/span> Ghost Form for its duration\n The buff gets removed immediately",
+        "Juggernaut can perform attacks, cast abilities, and use items during Blade Fury\n However, both Omnislash and Swiftslash are inactive for the duration and cannot be cast",
+        "During Blade Fury, Juggernaut's attacks deal 0 damage, except against wards and buildings\n Attack modifiers (i.e\n <span image=\"items\/monkey_king_bar\/full.webp\">[Monkey King Bar]<\/span> Monkey King Bar etc.) still apply their effects and damage on procs\n Despite the visual effect, critical strike, lifesteal, and cleave have no effect, since they are based on the actual damage dealt",
+        "Deals 18\/23\/28\/33 ( 48\/53\/58\/63) damage in 0.2-second intervals, starting 0.2 seconds after cast, resulting in 25 ( 30) damage instances\n Can deal up to 450\/575\/700\/825 damage to a single unit (before reductions)",
+        "SHARD NOTES Juggernaut performs instant attacks on random enemies within the area in 1.2-second intervals, starting 0.2 seconds after cast, resulting in up to 5 attacks\n These instant attacks can proc any attack modifiers and on-hit effects normally\n They do not have True Strike, but completely ignore disarms and stuns\n The instant attack targets are chosen randomly, there are no priorities\n The instant attack does not target buildings or wards\n Unlike the regular attacks that can be performed during Blade Fury, the instant attacks' damage can be defined as EXPR ΣAtk × 75%, instead of 0\n Since the instant attack damage comes from a regular attack, it counts as attack damage and is affected by damage block\n Still does not affect  Couriers\n Also increases Juggernaut's movement speed to 375 while active",
+        "TALENT NOTES With the duration increasing  talent, it can deal up to 540\/690\/840\/990 damage\n With the damage increasing  talent, it can deal up to 1200\/1325\/1450\/1575 damage\n With the both  talents, it can deal up to 1440\/1590\/1740\/1890 damage"
+      ],
+      "item_behaviour": [],
+      "description": "Causes a bladestorm of destructive force around Juggernaut, rendering him immune to magic and dealing damage to nearby enemy units.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation:  0+0",
+        "Radius: 260 ( 335)",
+        "Damage per Second: 90\/115\/140\/165 ( 240\/265\/290\/315)",
+        "Duration: 5 ( 6)",
+        "Move Speed Bonus:  75",
+        "Instant Attack Damage:  75%",
+        "Instant Attack Interval:  1.2"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Juggernaut_Blade_Fury_1.mp3\/revision\/latest?cb=20191216014540",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "42\/34\/26\/18",
+      "aghanim": null,
+      "name": "Blade Fury",
+      "cooldown": "120\/110\/100\/90",
+      "legacy_key": "F",
+      "story": "Yurnero's renowned katana techniques are feared by warriors and sorcerers alike."
+    },
+    {
+      "notes": [
+        "Upon cast, Healing Ward automatically follows Juggernaut 250 distance behind him, if no other order is given",
+        "The heal is provided by an aura and lingers for 2.5 seconds\n The auras of multiple Healing Wards do not stack",
+        "Can regenerate up to 55%\/82.5%\/110%\/137.5% of a unit's max health over its full duration\n Can fully regenerate a unit's health within 50\/33.33\/25\/20 seconds",
+        "Does not affect wards, buildings, invulnerable or hidden units\n Fully affect  Couriers"
+      ],
+      "item_behaviour": [],
+      "description": "Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healing Ward moves at 325 movement speed after being summoned. Lasts 2.5 seconds.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+0.47",
+        "Cast Range:  350",
+        "Radius: 400",
+        "Attacks to Destroy: 1 ( 3)",
+        "Max Health as Health Regen Bonus: 2%\/3%\/4%\/5%",
+        "Aura Linger Duration: 2.5",
+        "Duration: 25"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Juggernaut_Healing_Ward.mp3\/revision\/latest?cb=20191216014542",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Allies"
+      ],
+      "mana": "60 (TagTalent 40)",
+      "aghanim": null,
+      "name": "Healing Ward",
+      "cooldown": "140\/130\/120\/110",
+      "legacy_key": "G",
+      "story": "Of the rituals learned at the Isle of Masks, tending wounds with a bit of voodoo magic has proven to be quite useful."
+    },
+    {
+      "notes": [
+        "Increases attack damage by an average of 16%\/20%\/24%\/28%",
+        "A critical strike proc is decided upon attack begin, not upon landing an attack\n When a critical strike procs, Juggernaut uses a specific crit attack animation, and particle effects appear on his weapon",
+        "The proc chances of multiple crit sources stack\n If two sources of critical strike proc simultaneously, the higher crit multiplier has priority",
+        "Blade Dance uses pseudo-random distribution",
+        "TALENT NOTES The Blade Dance lifesteal  talent adds lifesteal to the proccing attack\n Does not proc on other critical strike sources\n Unlike other sources of lifesteal, Blade Dance's lifesteal is calculated before incoming damage manipulations on the target, including armor\n Stacks additively with other sources of lifesteal"
+      ],
+      "item_behaviour": [],
+      "description": "Gives Juggernaut a chance to deal critical damage on each attack.",
+      "hot_key": "E",
+      "params": [
+        "Proc Chance: 20%\/25%\/30%\/35%",
+        "Critical Damage: 180%",
+        "Lifesteal:  40%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Juggernaut_Blade_Dance.mp3\/revision\/latest?cb=20191216014552",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies "
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Blade Dance",
+      "cooldown": null,
+      "legacy_key": "C",
+      "story": "The last remnant of his heritage's commitment to bladework, Yurnero ensures that the style is remembered."
+    },
+    {
+      "notes": [
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Swiftslash cannot be cast during  Blade Fury",
+        "Does not require  Omnislash to be leveled to be unlocked, once Aghanim's Scepter is acquired\n However, it relies on Omnislash to work, since it directly uses its values\n This means when Omnislash is not learned, Swiftslash does nothing upon cast\n Omnislash notes fully apply",
+        "Swiftslash is distinguished by blue particles, as opposed to the orange particles of Omnislash"
+      ],
+      "item_behaviour": [],
+      "description": "Performs a short Omnislash for 0.8 seconds.",
+      "hot_key": "D",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  550",
+        "Duration: 0.8"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Juggernaut_Swiftslash.mp3\/revision\/latest?cb=20200419153429",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Instant Attack"
+      ],
+      "mana": "20",
+      "aghanim": null,
+      "name": "Swiftslash",
+      "cooldown": "125",
+      "legacy_key": "W",
+      "story": null
+    },
+    {
+      "notes": [
+        "Turns Juggernaut spell immune, invulnerable, rooted for the whole duration, and applies a basic dispel on cast",
+        "Juggernaut can cast abilities and use items during Omnislash\n However,  Blade Fury is inactive for the duration and cannot be cast\n During Omnislash, Juggernaut does not need to turn in order to cast targeted abilities or items",
+        "The slash interval equals Juggernaut's current attack rate divided by 1.5\n EXPR Slash Interval:  With the attack speed limits, the minimum and maximum possible slash intervals are 0.133 \u2012 4.667 seconds per slash respectively\n The interval is not set on cast\n On each slash, the interval updates based on his current attack rate",
+        "Causes Juggernaut to perform instant attacks on enemies he slashes\n These instant attacks can proc any attack modifiers and on-hit effects normally\n They do not have True Strike, but completely ignore disarms",
+        "Can neither be cast on nor jump on wards, and buildings\n Can be cast on  Couriers, but not jump on them\n Can jump on invulnerable, attack immune and ethereal units\n However, the instant attacks do not trigger\n Cannot jump on units in the Fog of War, invisible or hidden units and  Undying Zombies",
+        "If no valid targets can be found within range and within 0.15 seconds after the previous jump, Omnislash ends prematurely",
+        "On each slash, Juggernaut is positioned at the opposite side of the target from Juggernaut's position, facing the target\n The slash radius is centered around Juggernaut, not around the current target",
+        "Provides 200 radius flying vision lasting 1 second on each slash around the current target",
+        "Recasting Omnislash while the previous cast is still active cancels the previous cast and starts a new instance\n This also applies when  Swiftslash is cast during Omnislash, the former canceling the latter and vice versa",
+        "Centers the player's camera perspective on Juggernaut upon cast, following his position during Omnislash"
+      ],
+      "item_behaviour": [],
+      "description": "Juggernaut leaps towards the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate. Juggernaut is invulnerable for the duration.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  350",
+        "Search Radius: 425",
+        "Attack Rate Divisor: 1.5",
+        "Attack Damage Bonus: 30\/40\/50",
+        "Attack Speed Bonus: 40",
+        "Duration: 3\/3.25\/3.5 ( 4\/4.25\/4.5)"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Juggernaut_Omnislash.mp3\/revision\/latest?cb=20191216014545",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies \/ Self",
+        "Damage: Instant Attack"
+      ],
+      "mana": "130",
+      "aghanim": null,
+      "name": "Omnislash",
+      "cooldown": "200\/275\/350",
+      "legacy_key": "E",
+      "story": "\u2018The fruits of discipline; with practice comes strength.\u2019"
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.2,
+    "attrStrength": 20.0,
+    "attrIntelligence": 14.0,
+    "attrIntelligenceInc": 1.4,
+    "attrAgilityInc": 2.8,
+    "attrAgility": 34.0
+  },
+  "description": "Slices through his enemies with precise strikes. What laid under the Juggernaut's mask, none could say. The last of his kind, Yurnero carries alone the martial traditions of his native isle, now sunken forever beneath the waves. Dancing with his Blade, the Juggernaut elevates swordplay to an art form, Swiftly Slashing foes in an unstoppable Blade Fury, striking the most vulnerable spots. With skills honed to such perfection, Yurnero can keep on Slashing and Dashing between opponents while giving them absolutely no chance to retaliate even in the slightest. Their only option to escape this onslaught is to book it as quickly as possible. After eviscerating his foes, Yurnero places his portable mobile Healing Ward that emits meditative energies to revitalize himself and nearby allies.  Carry Pusher Escape ★☆☆",
+  "trivia": [
+    "Juggernaut's backstory and appearance bear many similarities to that of the Seguleh people in the \"Malazan Book of the Fallen\" series of books by Steven Erikson.",
+    "Juggernaut's ultimate, Omnislash, is inspired by and named after the signature move of Cloud Strife from the game Final Fantasy VII.[1]",
+    "The rare line Link▶️ \"Screw it, I'm going to five blades!\" is a reference to an article from The Onion about the increasing number of blades put into razors.[2]",
+    "The line Link▶️ \"And then... there were none...\" may be a reference to the Agatha Christie book by the same name.",
+    "The line Link▶️ \"I'm the Juggernaut, Lich!\" is a play on the quote \"I'm the Juggernaut, bitch.\", taken from a YouTube parody featuring re-dubbed scenes from X-Men: The Animated Series."
+  ],
+  "history": "No one has ever seen the face hidden beneath the mask of Yurnero the Juggernaut. It is only speculation that he even has one. For defying a corrupt lord, Yurnero was exiled from the ancient Isle of Masks--a punishment that saved his life. The isle soon after vanished beneath the waves in a night of vengeful magic. He alone remains to carry on the Isle's long Juggernaut tradition, one of ritual and swordplay. The last practitioner of the art, Yurnero's confidence and courage are the result of endless practice; his inventive bladework proves that he has never stopped challenging himself. Still, his motives are as unreadable as his expression. For a hero who has lost everything twice over, he fights as if victory is a foregone conclusion.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+2 Healing Ward Health",
+        "talent_left": "+1s Omnislash Duration"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+40% Blade Dance Lifesteal",
+        "talent_left": "+150 Blade Fury DPS"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-20s Healing Ward Cooldown",
+        "talent_left": "+1s Blade Fury Duration"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+5 All Stats",
+        "talent_left": "+75 Blade Fury Radius"
+      }
+    ],
+    "notes": [
+      "The \/ \/ all stats talent effectively grants Juggernaut 100 health, 0.5 health regeneration, 0.83 main armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 main attack damage bonus."
+    ]
+  }
+}

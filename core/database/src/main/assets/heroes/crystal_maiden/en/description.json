@@ -1,0 +1,218 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Provides 900 radius ground vision at the target area for 6 seconds",
+        "Crystal Nova first applies the damage, then the debuff",
+        "Plays a sound effect during the cast time which is audible to everyone",
+        "Successive casts do not update the movement speed and attack speed slow values but refresh the slow duration"
+      ],
+      "item_behaviour": [],
+      "description": "A burst of damaging frost slows enemy movement and attack rate in the targeted area.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0.6",
+        "Cast Range:  700",
+        "Effect Radius: 425 ( 550)",
+        "Damage: 130\/170\/210\/260 ( 370\/410\/450\/500)",
+        "Move Speed Slow: 20%\/30%\/40%\/50%",
+        "Attack Speed Slow: 30\/45\/60\/75",
+        "Slow Duration: 5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Crystal_Maiden_Crystal_Nova.mp3\/revision\/latest?cb=20191216012225",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "11\/10\/9\/8 (TagTalent 8\/7\/6\/5)",
+      "aghanim": null,
+      "name": "Crystal Nova",
+      "cooldown": "115\/135\/155\/175",
+      "legacy_key": "V",
+      "story": "The air temperature around Rylai drops rapidly, chilling all around her to the core."
+    },
+    {
+      "notes": [
+        "Despite the visual effects, Frostbite applies its effects immediately and cannot be disjointed",
+        "Roots and disarms the target, preventing it from moving, attacking, and casting certain mobility abilities\n Provides True Sight over the target",
+        "Deals 25 damage in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 6\/8\/10\/12 ( 11\/13\/15\/17) damage instances to heroes and 40 ( 45) to creeps\n Can deal up to 150\/200\/250\/300 ( 275\/325\/375\/425) damage to heroes and 1000 ( 1125) damage to creeps (before reductions)",
+        "Treats illusions, creep-heroes, ancient creeps and  Roshan as heroes",
+        "Successive casts do not stack but refresh the duration"
+      ],
+      "item_behaviour": [],
+      "description": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. Lasts 10 seconds on creeps level 6 or lower.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.3+0.6",
+        "Cast Range:  600 ( 725)",
+        "Damage Interval: 0.25",
+        "Damage per Second: 100",
+        "Hero Duration: 1.5\/2\/2.5\/3 ( 2.75\/3.25\/3.75\/4.25)",
+        "Creep Duration: 10 ( 11.25)"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Crystal_Maiden_Frostbite.mp3\/revision\/latest?cb=20191216012227",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "9\/8\/7\/6",
+      "aghanim": null,
+      "name": "Frostbite",
+      "cooldown": "125\/135\/145\/155",
+      "legacy_key": "E",
+      "story": "Rylai channels winds from the Blueheart Glacier, imprisoning attackers in thick blocks of ice."
+    },
+    {
+      "notes": [
+        "Arcane Aura provide two auras, and its buff lingers for 0.5 seconds\n The first aura has a Global radius\n The second proximity aura grants her allies 1.2\/1.8\/2.4\/3 mana regeneration bonus per ability level within 1200 radius\n Crystal Maiden receives 6 times of the base mana regeneration value, regenerating 2.4\/3.6\/4.8\/6 mana per second per ability level",
+        "The base mana regeneration aura can regenerate up to 24\/36\/48\/60 mana per minute for allies\n Within the proximity aura radius, allies can regenerate up to 72\/108\/144\/180 mana per minute\n Can regenerate up to 144\/216\/288\/360 mana per minute for Crystal Maiden",
+        "Does not affect invulnerable or hidden units"
+      ],
+      "item_behaviour": [],
+      "description": "Gives additional mana regeneration to all friendly units on the map. Allies within a 1200 radius of Crystal Maiden receive 2x the mana regeneration. Crystal Maiden herself receives 6x the bonus.",
+      "hot_key": "E",
+      "params": [
+        "Aura Radius: Global",
+        "Proximity Aura Radius: 1200",
+        "Base Mana Regen Bonus: 0.4\/0.6\/0.8\/1",
+        "Proximity Bonus Factor: 3",
+        "Self Bonus Factor: 6",
+        "Aura Linger Duration: 0.5"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Aura",
+        "Affects: Allies"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Arcane Aura",
+      "cooldown": null,
+      "legacy_key": "R",
+      "story": "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance."
+    },
+    {
+      "notes": [
+        "The slow is applied to all enemies within the radius in 0.1-second intervals, regardless of the ice explosions",
+        "The explosions occur in 0.1 ( 0.083)-second intervals, starting 0.1 ( 0.083) seconds after cast, resulting in 99 ( 121) explosions",
+        "Each ice explosion can spawn within a random distance of 195 to 785 away from Crystal Maiden\n The explosion spawn radius is divided into four 90° segments (0°\u201390°, 90°\u2013180°, 180°\u2013270°, 270°\u2013360°)\n The first explosion occurs within the northeast segment of the circle, following explosions proceeding counterclockwise",
+        "With the max spawn radius and explosion radius, it can damage units up to 1105 range away",
+        "The average damage is roughly constant up to a radius of 485, falling off after that\n It is slightly less than 50% at a radius of 785\n The very center does 5% more damage\n It approximately deals 2000\/3300\/4800 ( 2400\/3960\/5760) damage to enemies within 485 range over the full duration, ±1.9 ( ±2.28) explosions",
+        "The radius is always centered on Crystal Maiden and follows her even when she is moved",
+        "Despite the visual effects, the damage is dealt as the falling ice shards are spawned, not upon them reaching the ground",
+        "SCEPTER NOTES Freezing Field now provides an aura that tracks enemies within the area\n The tracker lingers for 0.1 seconds\n If an enemy unit is affected by the tracker for 1.75 seconds,  Frostbite is applied to the enemy unit based on its current level\n A unit can only be affected by Frostbite once per cast of Freezing Field\n Even if they re-enter the area, they are not affected a second time\n If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, and refreshing the duration\n The tracker resets whenever it is reapplied to a unit\n This means a unit must be affected by it for 1.75 seconds continuously in order to be frostbitten",
+        "The tracker is placed on enemies even without having <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter, tracking the duration enemies spend within the area normally\n This means when acquiring the item while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them\n The tracker does not affect invulnerable or hidden units",
+        "SHARD NOTES Freezing Field no longer requires channeling and Crystal Maiden can move and act freely during its duration\n Still interrupts Crystal Maiden's channeling abilities upon cast\n While Freezing Field is active, it applies a 75% movement speed slow on Crystal Maiden, which can be off-set by movement speed bonuses, including haste\n Freezing Field is interrupted if Crystal Maiden gets stunned, silenced, cycloned, feared, hexed or slept during it\n It also stops when Crystal Maiden dies, or when she uses the  Stop Freezing Field sub-ability\n The following abilities are now no longer able to interrupt Freezing Field:  Glimpse,  Earth Splitter,  Relocate,  Recall,  X Marks the Spot,  Return,  Overgrowth and  Nether Swap\n SPELL STEAL The passive  Frostbite applied is based on  Crystal Maiden's current ability level when acquired\n SOULBIND The passive  Frostbite applied on any of the targets is not shared with the other"
+      ],
+      "item_behaviour": [],
+      "description": "Surrounds Crystal Maiden with 100 random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts 10 seconds.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0+0",
+        "Max Channel Time: 10 ( 0)",
+        "Slow Radius: 810",
+        "Min Explosion Spawn Radius: 195",
+        "Max Explosion Spawn Radius: 785",
+        "Explosion Damage Radius: 320",
+        "Self Armor Bonus: 20",
+        "Explosion Spawn Interval: 0.1 ( 0.083)",
+        "Damage per Explosion: 105\/170\/250 ( 155\/220\/300)",
+        "Move Speed Slow: 40%",
+        "Attack Speed Slow: 60",
+        "Slow Duration: 1",
+        "Frostbite Timer:  1.75",
+        "Self Move Speed Slow:  75%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Crystal_Maiden_Freezing_Field.mp3\/revision\/latest?cb=20191216012226",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies ",
+        "Damage: Magical"
+      ],
+      "mana": "100",
+      "aghanim": null,
+      "name": "Freezing Field",
+      "cooldown": "200\/400\/600",
+      "legacy_key": "F",
+      "story": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught."
+    },
+    {
+      "notes": [
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Replaces  Freezing Field until the sub-ability is used or the duration ends",
+        "Interrupts Crystal Maiden's channeling abilities upon cast",
+        "Goes into a 1-second cooldown right after Freezing Field is cast, this is to prevent accidental double-casts prematurely ending the ability"
+      ],
+      "item_behaviour": [],
+      "description": "Immediately stops the Freezing Field",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation:  0+0",
+        "Max Duration: 10"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self"
+      ],
+      "mana": "1",
+      "aghanim": null,
+      "name": "Stop Freezing Field",
+      "cooldown": "0",
+      "legacy_key": "F",
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.2,
+    "attrStrength": 17.0,
+    "attrIntelligence": 16.0,
+    "attrIntelligenceInc": 3.3,
+    "attrAgilityInc": 1.6,
+    "attrAgility": 16.0
+  },
+  "description": "Unleashes a high damage blizzard upon her foes. Wherever Rylai went, the cold went with her. Fields and orchards withered in her wake, leaving her parents no choice but to pack her off to Icewrack, a realm in the frigid north. Under the tutelage of a hermit wizard, Rylai learned to imprison her enemies with a Thick Block of Ice, holding them in place as she Freezes the Ground. Magic flourishes under her, stimulating Arcane Energy Regeneration in all her companions. In the heat of battle, Rylai keeps a cool head. Channeling her elemental talents, the Crystal Maiden summons enormous shards of ice from the skies, obliterating all foes foolish enough to remain in her Freezing Field.  Support Disabler Nuker Jungler ★☆☆",
+  "trivia": [
+    "Rylai is one of the oldest heroes from the original DotA in Reign of Chaos DotA. Her title used to be Frost Maiden.",
+    "Rylai's name in Warcraft DotA was Rylai Crestfall. Her surname was removed in the transition to Dota 2 for the implementation of her sibling rivalry with Lina.",
+    "Crystal Maiden's Arcane Aura used to be named Brilliance Aura.",
+    "In early versions of DotA, Crystal Maiden and Lich used to share the same Frost Blast ability (although they were both named Frost Nova). However, in later updates, Crystal Maiden's Frost Nova was changed to Crystal Nova, turning it into a free-cast area-of-effect ability, while Lich kept the original effects.",
+    "In Warcraft DotA, Crystal Maiden's Frostbite can freeze the enemy's Fountain and the duration was counted as creep.",
+    "League of Legends features an item called Rylai's Crystal Scepter as an homage to Crystal Maiden, boosting Ability (spell) Power and adding a slowing effect to spells and abilities.",
+    "In World of Warcraft an Alliance NPC is named Rylai Crestfall, a homage to the original Crystal Maiden from Warcraft III's DotA.",
+    "Crystal Maiden's leveling-up response Link▶️ \"Is it cold in here or is it just me?\" is a reference to the action movie Demolition Man.[1]",
+    "Crystal Maiden's respawning line Link▶️ \"You only live ice...\" is a reference to the 1967 James Bond film You Only Live Twice based on the novel of the same name.",
+    "Crystal Maiden's line Link▶️ \"It's all fun and games until someone's frozen solid.\" is a reference to a novel written by Christopher Brookmyre entitled All Fun and Games until Somebody Loses an Eye.",
+    "Crystal Maiden's rare response Link▶️ \"Can you guess my... favorite poet?\" is a reference to Robert Frost due to his last name, and also an allusion to Frost's poem \"Fire and Ice\". Crystal Maiden is the ice, and her sister Lina is fire. An excerpt: \"Some say the world will end in fire, some say in ice ... know enough of hate, to say that for destruction ice is also great, and would suffice."
+  ],
+  "history": "Born in a temperate realm, raised with her fiery older sister Lina, Rylai the Crystal Maiden soon found that her innate elemental affinity to ice created trouble for all those around her. Wellsprings and mountain rivers froze in moments if she stopped to rest nearby; ripening crops were bitten by frost, and fruiting orchards turned to mazes of ice and came crashing down, spoiled. When their exasperated parents packed Lina off to the equator, Rylai found herself banished to the cold northern realm of Icewrack, where she was taken in by an Ice Wizard who had carved himself a hermitage at the crown of the Blueheart Glacier. After long study, the wizard pronounced her ready for solitary practice and left her to take his place, descending into the glacier to hibernate for a thousand years. Her mastery of the Frozen Arts has only deepened since that time, and now her skills are unmatched.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+1.25s Frostbite Duration",
+        "talent_left": "+240 Crystal Nova Damage"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+200 Attack Speed",
+        "talent_left": "+50 Freezing Field Damage"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+125 Frostbite Cast Range",
+        "talent_left": "-3s Crystal Nova Cooldown"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+250 Health",
+        "talent_left": "+125 Crystal Nova AoE"
+      }
+    ],
+    "notes": [
+      "The health talent increases maximum health capacity, and keeps the current health percentage."
+    ]
+  }
+}

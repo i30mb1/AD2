@@ -1,0 +1,182 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Whenever an affected unit casts an ability, the duration is increased by 2 seconds\n The penalty duration has no stack limit\n Fully ignores abilities that do not trigger on-cast effects (e.g\n active attack modifiers and toggleable-abilities)",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 6 + 2 per penalty instances\n Can deal up to 136\/204\/272\/340 + 32\/48\/64\/80 per penalty ( 208\/276\/344\/412 + 56\/72\/88\/104 per penalty) damage to a single unit (before reductions)",
+        "If an affected unit gets silenced, the debuff duration is suspended and the damage and slow values are multiplied by 1.5 until the silence expires\n The cooldown in the ability description refers to the debuff countdown instead of the ability's cooldown\n Suspends the duration by increasing the debuff's duration by 1 second on each interval\n Slows movement speed by 15%\/22.5%\/30%\/37.5% for silenced units\n Deals an additional 24\/36\/48\/60 ( 42\/54\/66\/78) damage per second to silenced units\n The initial damage is not amplified if the target was silenced when Arcane Curse was cast",
+        "Successive casts of Arcane Curse fully stack, with each cast placing a debuff independent of each other",
+        "The sound effect played on every damage instance is only audible to the affected unit's player"
+      ],
+      "item_behaviour": [],
+      "description": "Curses the target area, dealing damage and causing enemy heroes to take damage over time and slowing their movement speed. Silenced enemies take 1.5x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The cooldown is paused as long as the target is silenced.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0.37",
+        "Cast Range:  1000",
+        "Radius: 340\/360\/380\/400",
+        "Initial Damage: 40\/60\/80\/100",
+        "Damage per Second: 16\/24\/32\/40 ( 28\/36\/44\/52)",
+        "Move Speed Slow: 10%\/15%\/20%\/25%",
+        "Silenced Multiplier: 1.5",
+        "Base Duration: 6",
+        "Penalty Duration: 2"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Silencer_Arcane_Curse_1.mp3\/revision\/latest?cb=20191216023209",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "20\/18\/16\/14",
+      "aghanim": null,
+      "name": "Arcane Curse",
+      "cooldown": "130\/135\/140\/145",
+      "legacy_key": "C",
+      "story": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries."
+    },
+    {
+      "notes": [
+        "Glaives of Wisdom's cast range can only be further increased by attack range bonuses of the same range type as the caster\n It is not affected by cast range bonuses\n Both Autocast and manually casting it uses Silencer's current attack range",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage\n This means it is not affected or considered by anything that works with attack damage\n This also means that it fully works with spell damage amplification and spell lifesteal",
+        "Glaives of Wisdom neither work against nor bounce to allies,  Couriers, buildings or wards",
+        "Checks Silencer's  intelligence upon projectile hit, so changes in his intelligence while the projectile flies affect its damage\n Glaives of Wisdom first steal intelligence, and applies its spell damage, then the attack damage\n Therefore, the stolen intelligence affects the glaives' damage right away, but still depends on the attack hitting the target",
+        "The temporary intelligence steal cannot reduce enemy intelligence below 0, but Silencer always gains the full amount of intelligence, no matter how much the target has left\n Cannot steal intelligence from illusions or from  Meepo Clones, but can temporarily steal from the  Tempest Double\n Reduces the target's current mana by 12\/12\/24\/36 ( 36\/36\/48\/60), instead of keeping the current mana percentage\n This lost mana is returned upon the debuff expiring\n The target also effectively loses 0.05\/0.05\/0.1\/0.15 ( 0.15\/0.15\/0.2\/0.25) mana regeneration, and 1\/1\/2\/3 ( 3\/3\/4\/5) main attack damage if it is an intelligence hero\n Vice versa, it temporarily increases Silencer's mana, mana regeneration, and main attack damage by the same amount per cast\n Unlike the target, Silencer keeps his current mana percentage upon gaining and losing the temporary intelligence",
+        "Each attack places a new hidden modifier buff\/debuff on both Silencer and the target\n This means their durations are independent from each other\n The counter modifiers on both Silencer and his targets show how much intelligence they gained or lost\n Upon death, the dying hero's intelligence restores back to its normal values, while Silencer keeps the bonus intelligence values for the remaining duration",
+        "Permanently stolen  intelligence is removed from the enemy's base intelligence and added to Silencer's base intelligence\n A +2 ( +4) appears above Silencer's head, indicating that he stole the enemy's intelligence\n The number of stolen intelligence gained\/lost can be seen on the status buff icon\n Does not permanently steal intelligence if the enemy hero has Reincarnation, is an illusion, from the  Tempest Double\n Grants a stack in the following conditions as long as Silencer or the owner of the ability is alive: The enemy hero(es) dying within the 925 steal radius, including denied enemy heroes\n To permanently steal intelligence outside the steal radius, Silencer has to be credited for the kill\n Other player-controlled units do not count\n When  Meepo or its  Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, only the Prime gets its intelligence stolen",
+        "The permanent intelligence steal cannot reduce enemy base intelligence below 1\n Silencer also does not gain intelligence from heroes that are at 1 intelligence\n Enemy heroes effectively lose 24 ( 48) mana, 0.1 ( 0.2) mana regeneration, and 2 ( 4) main attack damage if it is an intelligence hero\n Vice versa, it permanently increases Silencer's mana, mana regeneration, and main attack damage by the same amount per stack\n The permanent intelligence steal is not retroactive, it cannot gain charges from kills and deaths before Glaives of Wisdom is learned",
+        "SHARD NOTES Each successful attack with Glaives of Wisdom adds 1 to the attack counting buff\n Glaives of Wisdom gain 1 charge per attack instance, no matter how many enemies got hit by the Glaives Bounces talent\n The buff is always present, but it is hidden when at 0 charges\n Neither count attacks done against allies, wards or buildings, nor triggers on the attack applying the silence\n Once the counter reaches 3, Silencer gains the attack buff\n The buff causes the next attack to apply a 1.75-second silence onto the primary attacked target\n Neither the charges nor the attack buff have a duration and last indefinitely",
+        "TALENT NOTES Glaives of Wisdom now bounces towards the closest enemy unit within 600 range of the attack target\n The bouncing glaives travel at the same speed as the leading attack projectile\n The projectile speed can be further increased by other attack projectile speed bonuses\n Does not bounce back to the same unit if it already hit all other nearby units\n Cannot bounce on invisible enemies or enemies in the Fog of War",
+        "TALENT NOTES The projectiles deals spell damage in a separate instance\n They are not instant attacks\n This means they do not trigger any attack modifier or on-hit effects, and ignore evasion\n However, it is still affected by damage block sources and  Bulwark, but not  Resonant Pulse\n The bounce projectile damage has the following flags: No-spell-lifesteal flag, preventing their damage from utilizing spell lifesteal\n No-spell-amplification flag, preventing their damage from being amplified with spell damage amplification",
+        "The bouncing glaives deal damage based on the damage amount calculated for the leading attack\n Attack damage amount is calculated upon attack begin\n This means it works with critical strike and quell, since these are included in the initial damage calculations\n This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit\n It also means that other conditional attack damage bonuses (i.e\n <span image=\"items\/javelin\/full.webp\">[Javelin]<\/span> Javelin damage proc) are not included, since these happen later in the calculations as well\n The bouncing glaives still apply the intelligence-based damage separately, and temporarily steal intelligence of its target as well, if it is a hero"
+      ],
+      "item_behaviour": [],
+      "description": "Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily steals his target's intelligence with each hit. If Silencer kills an affected enemy hero, he permanently steals 2 Intelligence.",
+      "hot_key": "W",
+      "params": [
+        "Cast Range:  600",
+        "Permanent Intelligence Steal Radius: 925",
+        "Permanent Intelligence Steal: 2 ( 4)",
+        "Intelligence as Damage: 15%\/35%\/55%\/75% ( 25%\/45%\/65%\/85%)",
+        "Temporary Intelligence Steal: 1\/1\/2\/3 ( 3\/3\/4\/5)",
+        "Temporary Steal Duration: 20\/25\/30\/35",
+        "Required Hits:  3",
+        "Silence Duration:  1.75",
+        "Bounce Search Radius:  600",
+        "Number of Bounces:  2"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Silencer_Glaives_of_Wisdom_1.mp3\/revision\/latest?cb=20191216023203",
+      "effects": [
+        "Ability: Active Attack Modifier",
+        "Affects: Enemies",
+        "Damage: Pure"
+      ],
+      "mana": "0",
+      "aghanim": null,
+      "name": "Glaives of Wisdom",
+      "cooldown": "15",
+      "legacy_key": "W",
+      "story": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat."
+    },
+    {
+      "notes": [
+        "When the target casts an ability during the 4 seconds initial debuff duration, the target gets damaged, then silenced and muted, and then the cast ability takes effect\n Although the silence happens first, the ability's effects are already queued up, therefore the silence does not prevent the target from casting the ability\n However death does stop the ability, meaning if the damage from Last Word is enough to kill the target, the cast ability does not go off\n This means that damage negating effects (e.g\n  Refraction) and abilities that provide spell immunity (e.g\n  Rage) do not block Last Word's damage",
+        "Fully ignores abilities that do not trigger on-cast effects (e.g\n active attack modifiers and toggle-abilities)\n Triggers on channeling abilities, but waits for the channel to stop first\n With  Phase Shift, Last Word only applies its effects when the ability is canceled by the player prematurely\n This means if Phase Shift expires on its own, Last Word's damage and silence are not applied",
+        "When the initial debuff expires, it still damages and silences the target\n Last Word first applies the debuff, then the damage",
+        "Deals the base damage and Silencer's current  intelligence to units without attributes (e.g\n lane creeps)",
+        "The initial debuff provides shared vision over the target for its duration",
+        "SCEPTER NOTES Last Word turns into an area-targeted ability, so that it cannot directly target units anymore\n Can target invisible units and units inside the Fog of War"
+      ],
+      "item_behaviour": [],
+      "description": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
+      "hot_key": "E",
+      "params": [
+        "Cast Animation: 0.3+0.47",
+        "Cast Range:  900",
+        "Base Damage: 120\/160\/200\/240",
+        "Intelligence Difference Multiplier: 1\/1.5\/2\/2.5 ( 1.8\/2.3\/2.8\/3.3)",
+        "Initial Debuff Duration: 4",
+        "Silence Duration: 3\/4\/5\/6",
+        "Radius:  500"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Silencer_Last_Word.mp3\/revision\/latest?cb=20191216023207",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "22\/18\/14\/10",
+      "aghanim": null,
+      "name": "Last Word",
+      "cooldown": "100\/105\/110\/115",
+      "legacy_key": "T",
+      "story": "Nortrom ensures that spells uttered by his opponents will be their last."
+    },
+    {
+      "notes": [
+        "The silence affects spell immune, invisible and invulnerable units\n Does not affect  Couriers and hidden units",
+        "The sound effect of Global Silence which plays on each enemy's hero has the highest sound priority in the game\n This means it heavily tones down other game sounds for enemies, making it basically the only sound they can hear during the silence"
+      ],
+      "item_behaviour": [],
+      "description": "Silencer stops all sound, preventing enemy heroes and units on the map from casting spells.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0.37",
+        "Radius: Global",
+        "Duration: 4.5\/5.25\/6"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/14\/Silencer_Global_Silence_1.mp3\/revision\/latest?cb=20191216023205",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Enemies"
+      ],
+      "mana": "130\/115\/100 (TagTalent 105\/90\/75)",
+      "aghanim": null,
+      "name": "Global Silence",
+      "cooldown": "300\/450\/600",
+      "legacy_key": "E",
+      "story": "With a shock to the ground, all magic and sound pauses, and Nortrom fulfills his prophecy."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.2,
+    "attrStrength": 19.0,
+    "attrIntelligence": 25.0,
+    "attrIntelligenceInc": 2.9,
+    "attrAgilityInc": 2.4,
+    "attrAgility": 22.0
+  },
+  "description": "Can silence all enemies on the map. Two hundred years of selective breeding had produced Nortrom, the prophesied war-mage that would bring glory to the order of Aeol Drias. Therefore, disgust and disappointment followed when it was found that the boy could cast not even a hex. Yet, on the day of final testing, Nortrom would have the Last Word. His arranged opponents fell under an Arcane Curse, draining their health and prolonging the curse with each incantation made. Then, there was Global Silence. Not a gasp or whisper escaped their lips as Nortrom cut his challengers to ribbons with his multi-pronged Glaives, stealing their intelligence to add to his own. At that moment, it became clear to all watching \u2014 The absence of magic can be the greatest magic of all.  Carry Support Disabler Initiator Nuker ★★☆",
+  "trivia": [
+    "Unlike most heroes, Silencer's attack projectiles actually use the model of his equipped cosmetic weapon.",
+    "Like Death Prophet, Omniknight and Io, Silencer received a color palette change, changing his model and icons, having his former red armor replaced with violet. Before his palette change, newer players would occasionally mistake Silencer for Dragon Knight, and he would sometimes be referred to as \"The other Dragon Knight\". Even after the palette swap, some older players may refer to him as \"Purple Dragon Knight\".",
+    "Before his palette change, newer players would occasionally mistake Silencer for Dragon Knight, and he would sometimes be referred to as \"The other Dragon Knight\". Even after the palette swap, some older players may refer to him as \"Purple Dragon Knight\".",
+    "Silencer's spell sound effects are based on some of his voice lines. Arcane Curse debuff sounds is based on \" Link▶️ Curse you!\", Last Word is based on one of his laughing lines and Global Silence is based on Link▶️ this.",
+    "Chen is a member of the Knights of the Fold which would make him an enemy to Silencer based on Silencer's background. Despite this, there is no dialogue between the two heroes."
+  ],
+  "history": "Part of the seventh and final generation of a carefully designed pedigree, Nortrom was bred by the ancient order of the Aeol Drias to be the greatest magic user the world had ever seen. He was the prophesied one, the culmination of two-hundred years of careful pairings, a war-mage who would bring glory to the order, and destruction to their sworn enemies, The Knights of the Fold. Raised with other young mages in a hidden cantonment among the hills of the Hazhadal Barrens, the order's preceptors waited for Nortrom's abilities to manifest. While the other students honed their talents with fire, or ice, or incantatory spells, Nortrom sat silent and talentless, unable to cast so much as a hex. As the day of final testing approached, he still hadn't found his magic. In disgust, the preceptors berated him, while the children laughed. \"You are no mage,\" the head of the order declared. Still, Nortrom did not slink away. He entered the day of testing and faced down the young mages who had mocked him. And then his preceptors learned a valuable lesson: a lack of magic can be the greatest magic of all. Nortrom silenced the young mages one by one and defeated them in single combat, until he alone stood as champion of the Aeol Drias, in fulfillment of the prophecy.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "2 Glaives of Wisdom Bounces",
+        "talent_left": "Last Word Mutes"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+10% Glaives of Wisdom Damage",
+        "talent_left": "Arcane Curse Undispellable"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "-25s Global Silence Cooldown",
+        "talent_left": "+0.8x Last Word Int Multiplier"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+12 Arcane Curse Damage",
+        "talent_left": "+20 Attack Speed"
+      }
+    ]
+  }
+}

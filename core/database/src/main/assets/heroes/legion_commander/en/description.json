@@ -1,0 +1,186 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Overwhelming Odds first deals the current health as damage if the affected target is a summoned unit, then the base damage, and then the bonus damage",
+        "Generally treats clones and creep-heroes as heroes\n Does not treat the  Shard Golem and dominated units as summoned units\n Completely ignores  Couriers, wards, invulnerable and hidden units within the radius",
+        "The current health as damage bonus only affects the following units: Illusions,  Boar,  Eidolon,  Forged Spirit,  Hawk,  Lycan Lane Wolf,  Lycan Wolf,  Necronomicon Archer,  Necronomicon Warrior,  Skeleton Warrior,  Spiderite,  Spiderling,  Treant,  Undying Zombie,  Wraith King Skeleton,  Familiar and  Warlock Golem",
+        "With no other units nearby, Overwhelming Odds deals 70\/130\/190\/250 ( 170\/230\/290\/350) damage to a lone hero target (before reductions)\n For 2\/3\/4\/5 heroes, with no other units nearby, it can deal up to the following damage: 2 Heroes: 105\/195\/285\/375 ( 305\/395\/485\/575) damage per hero, 210\/390\/570\/750 ( 610\/790\/970\/1150) total damage\n 3 Heroes: 140\/260\/380\/500 ( 440\/560\/680\/800) damage per hero, 420\/780\/1140\/1500 ( 1320\/1680\/2040\/2400) total damage\n 4 Heroes: 175\/325\/475\/625 ( 575\/725\/875\/1025) damage per hero, 700\/1300\/1900\/2500 ( 2300\/2900\/3500\/4100) total damage\n 5 Heroes: 210\/390\/570\/750 ( 710\/890\/1070\/1250) damage per hero, 1050\/1950\/2850\/3750 ( 3550\/4450\/5350\/6250) total damage\n  It also grants up to 9%\/18%\/27%\/36%\/45% movement speed and 5\/10\/15\/20\/25 armor bonus when hitting up to 5 heroes",
+        "The initial part of the ability's sound effect plays during the cast animation and is audible to everyone",
+        "Successive buffs from multiple casts do not stack but refresh its duration\n The movement speed and armor bonus gets updated on each cast based on how many targets were hit"
+      ],
+      "item_behaviour": [],
+      "description": "Turns the enemies' numbers against them, dealing damage and granting you bonus movement speed per unit or per hero. Deals bonus damage to illusions and summoned units as a percent of their current health.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  1000",
+        "Radius: 330\/340\/350\/360 ( 430\/440\/450\/460)",
+        "Base Damage: 35\/65\/95\/125",
+        "Damage per Creep: 14\/16\/18\/20",
+        "Damage per Hero: 35\/65\/95\/125 ( 135\/165\/195\/225)",
+        "Current Health as Damage to Summons: 25%",
+        "Move Speed Bonus per Creep: 3%",
+        "Move Speed Bonus per Hero: 9%",
+        "Buff Duration: 7 ( 15)",
+        "Armor Bonus per Creep:  1",
+        "Armor Bonus per Hero:  5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Legion_Commander_Overwhelming_Odds_1.mp3\/revision\/latest?cb=20191216014947",
+      "effects": [
+        "Ability: Target Area",
+        "Affects: Enemies \/ Self",
+        "Damage: Magical"
+      ],
+      "mana": "15",
+      "aghanim": null,
+      "name": "Overwhelming Odds",
+      "cooldown": "100\/110\/120\/130",
+      "legacy_key": "W",
+      "story": "The archers of Stonehall are ready at Tresdin's command."
+    },
+    {
+      "notes": [
+        "Applies a strong dispel on the target upon cast\n Press the Attack first applies the buff, then the dispel, then the spell immunity\n ↓↓ Double-tapping automatically targets self",
+        "Can regenerate up to 150\/200\/250\/300 ( 350\/400\/450\/500) health over its full duration",
+        "If Legion Commander is victorious in a  Duel, Press the Attack based on its current level is applied on her\n This unit-targeted Press the Attack is not applied on the enemy target if it is victorious",
+        "TALENT NOTES Press the Attack now turns into an area-targeted ability, so that it cannot directly target units anymore\n ↓↓ Double-tapping now centers the radius around Legion Commander\n This  talent does not upgrade the passive self-cast upon victory\n The spell immunity granting  talent does not apply a spell immunity dispel on the target"
+      ],
+      "item_behaviour": [],
+      "description": "Removes debuffs and disables from the target friendly unit, and grants bonus attack speed and health regen for a short time.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation: 0.2+0.93",
+        "Cast Range:  700",
+        "Health Regen Bonus: 30\/40\/50\/60 ( 70\/80\/90\/100)",
+        "Attack Speed Bonus: 65\/90\/115\/140",
+        "Duration: 5",
+        "Radius:  250",
+        "Spell Immunity Duration:  1.5"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Legion_Commander_Press_the_Attack.mp3\/revision\/latest?cb=20191216014950",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Allies"
+      ],
+      "mana": "16\/15\/14\/13",
+      "aghanim": null,
+      "name": "Press the Attack",
+      "cooldown": "110",
+      "legacy_key": "T",
+      "story": "The rallying horn of the Bronze Legion is able to inspire any heart."
+    },
+    {
+      "notes": [
+        "Only procs when a unit starts an attack against Legion Commander, regardless of distance\n This means canceled and\/or missed attacks from units can proc it as well",
+        "Can proc on attacks from any unit, regardless of faction or unit type, including wards and buildings",
+        "Upon proccing, Legion Commander receives a buff, which grants 1000 attack speed and lifesteal bonus\n This buff lasts for 1 second, or until she lands an attack, whichever is shorter\n Missed attacks do not count",
+        "If the ability procs while already attacking, Legion Commander performs an instant attack on the current attack target instead\n This instant attack does not interfere with the ongoing attack and does not have any attack animation\n The instant attack can proc any attack modifiers and on-hit effects normally\n They do not have True Strike\n This means the instant attack also uses up the attack speed and lifesteal bonus immediately",
+        "Stacks additively with other sources of lifesteal\n Cannot lifesteal off of wards, buildings, and allied units",
+        "Moment of Courage uses pseudo-random distribution"
+      ],
+      "item_behaviour": [],
+      "description": "When attacked, Legion Commander has a chance to immediately counterattack with bonus lifesteal.",
+      "hot_key": "E",
+      "params": [
+        "Proc Chance: 25% ( 37%)",
+        "Lifesteal: 55%\/65%\/75%\/85% ( 105%\/115%\/125%\/135%)",
+        "Attack Speed Bonus: 1000",
+        "Duration: 1"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Legion_Commander_Moment_of_Courage.mp3\/revision\/latest?cb=20191216014945",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Self",
+        "Damage: Instant Attack"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Moment of Courage",
+      "cooldown": null,
+      "legacy_key": "E",
+      "story": "Tresdin knows that an enemy's most vulnerable moment often follows their fiercest stroke."
+    },
+    {
+      "notes": [
+        "Provides True Sight for both factions, over both Legion Commander and the affected target for its duration\n It also silences and mutes both duelists, grants them unobstructed pathing, and taunts them against each other\n Duel has the highest priority in the group of taunt sources\n This means when combined with other taunt sources (e.g\n  Winter's Curse), other taunts cannot make dueling units change their attacking targets\n Both affected duelists can be affected, but cannot be moved by forced movement and fear sources\n When affected by fear, the duelist simply does not attack",
+        "The Duel is nulled in the following conditions: When the distance between the duelists exceeds 2000 at any point during its duration, resulting in no victor\n When either duelist is being affected by True Sight immunity sources (e.g\n  Depth Shroud)\n When either duelist is brought into   Supernova or swallowed by   Dismember\n Duel ends when the duration of a reflected  Omnislash or  Swiftslash ends\n When Legion Commander shatters from  Ice Blast's kill health threshold\n When both duelists survive the duel",
+        "The following conditions also do not grant the winner attack damage bonus to Legion Commander: If the affected target is an illusion, a creep-hero, or the  Tempest Double\n When  Meepo or its  Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the Duel duration",
+        "Grants the winner a stack of flat bonus attack damage and considers the duelist a winner in the following conditions: Grants a stack even if the dying hero has Reincarnation\n The opponent dies before the duration ends\n The opponent is killed or denied by any unit, including neutral creeps and death by self-damage\n The winner does not need to be credited for the kill\n For clones, the  Tempest Double loses the granted bonus upon respawning, while the bonus is granted permanently to the Dueled  Meepo Clone\n For illusions, the granted stack lasts until the illusion expires",
+        "The number of bonus attack damage gained can be seen on the status buff icon and can be seen in its description",
+        "If Legion Commander is victorious based on the aforementioned conditions,  Press the Attack based on its current level is applied on her\n If it is not leveled, or if the caster does not have Press the Attack, it is not applied\n Press the Attack notes fully apply\n Press the Attack applied this way is independent from the ability and does not cost any mana",
+        "Multiple instances of Duel on the same target work independently of each other, with each instance having its own duration",
+        "SCEPTER NOTES Duel now applies generic incoming damage reduction to both Legion Commander and the affected target that affects all damage they take from any source, except each other\n Does not affect damage flagged as HP Removal\n Stacks additively with other sources of generic incoming damage manipulation",
+        "TALENT NOTES The winner attack damage bonus increasing  talent does not update the current active instance\n SOULBIND Attacks the primary taunted target first\n When the primary target is killed, then the secondary target\n Duels the creep-hero if its the secondary target, but neither can be the winner\n If Legion Commander dies, both affected targets will receive bonus damage"
+      ],
+      "item_behaviour": [],
+      "description": "Legion Commander and the target enemy hero are forced to attack each other for a short duration. Neither hero can use items nor abilities. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  200\/250\/300",
+        "Winner Attack Damage Bonus: 10\/20\/30 ( 18\/28\/38)",
+        "Duration: 4\/4.75\/5.5 ( 6\/7\/8)",
+        "Incoming Damage Reduction:  50%"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Legion_Commander_Duel_1.mp3\/revision\/latest?cb=20191216014943",
+      "effects": [
+        "Ability: Target Unit",
+        "Affects: Enemy Heroes"
+      ],
+      "mana": "50 (TagTalent 30)",
+      "aghanim": null,
+      "name": "Duel",
+      "cooldown": "75",
+      "legacy_key": "D",
+      "story": "To face a soldier of Stonehall in single combat is a challenge few can resist."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.3,
+    "attrStrength": 25.0,
+    "attrIntelligence": 20.0,
+    "attrIntelligenceInc": 2.2,
+    "attrAgilityInc": 1.7,
+    "attrAgility": 18.0
+  },
+  "description": "Increases power with each duel victory. Renowned for her intrepid defense of Stonehall, the commander of the Bronze Legion swore a brutal vengeance upon its Abyssal Invaders. The call of Tresdin's horn Heals, Hastens and Inspires her soldiers. Faced with Overwhelming Odds, the commander calls down a spread of arrows from the archers of Stonehall. But above all, Tresdin relishes these one-on-one Duels. Locked in single combat, and with a Moment of Courage, she counter-strikes instinctively, slashing twice in the time her opponent takes to swing once. With each victory claimed, the Legion Commander adds to her strength, scaling her potential upwards without limit, until at last she can be a relentless one-woman army.  Carry Disabler Initiator Durable Nuker ★☆☆",
+  "trivia": [
+    "The transition of content from DotA to Dota 2 involved a change in gender for Legion Commander, despite the character and ability names remaining unchanged. She still makes references to her old characterization in a collection of lines when engaging certain heroes: When engaging heroes with mounts, she will often express her jealousy or interest for them ( Link▶️ \"I like your mount.\"). Her hero model in DotA rode a mount. She also comments on facial hair when dueling or killing certain heroes ( Link▶️ \"Nice mustache.\"). Her DotA hero model had a mustache. In DotA, her counterpart often expressed his distrust for anything which was not human. This is heavily expanded in Dota 2, where Legion Commander will instead express her distrust for numerous roles or states of being, instead of a single racial entity, in a bulk of her rival hero taunts.",
+    "When engaging heroes with mounts, she will often express her jealousy or interest for them ( Link▶️ \"I like your mount.\"). Her hero model in DotA rode a mount.",
+    "She also comments on facial hair when dueling or killing certain heroes ( Link▶️ \"Nice mustache.\"). Her DotA hero model had a mustache.",
+    "In DotA, her counterpart often expressed his distrust for anything which was not human. This is heavily expanded in Dota 2, where Legion Commander will instead express her distrust for numerous roles or states of being, instead of a single racial entity, in a bulk of her rival hero taunts.",
+    "Tresdin's response, Link▶️ \"War. War always changes.\" is a reference to the signature Fallout quote, \"War. War never changes.\"",
+    "Her response, Link▶️ \"You won't win the war by dying for your Ancient. You'll win by making the other dumb, unfed bastard die for theirs!\" is a reference to the popular George S. Patton quote: \"The object of war is not to die for your country but to make the other bastard die for his.\"",
+    "The horn sound effect when deploying Link▶️ Press the Attack utilizes the same Link▶️ sound the Concheror item uses in Team Fortress 2, another title from Valve.",
+    "Her voice actress, Merle Dandridge, is also well known for providing the voice of Alyx Vance, a character in the game Half Life 2, another title by Valve.",
+    "When dueling Zeus, There is a chance of Legion Commander yelling Thunderdome! Link▶️ which a reference to the Thunderdome of Mad Max Beyond Thunderdome!",
+    "When dueling Ogre Magi, Legion Commander has only 1% to say \"Multi-ogre Battle Arena!\". This is a reference to the game genre Dota 2 is, MOBA - Multiplayer Online Battle Arena.",
+    "In The Lab, a VR game by Valve, there are some Bendie soldiers who wield Legion Commander's sword in the minigame Longshot, along with other Dota 2 weapons like Axe's war axe, Huskar's spear and Stout Shield."
+  ],
+  "history": "They came without warning. Within the city walls of Stonehall there came a rumble and a terrible sound, and from blackness unknown came a force of beasts numbering beyond count, wielding flame and foul sorcery, slaying and snatching mothers and sons to dark purpose. Of once-mighty Stonehall's military strength only the Bronze Legion, led by the indomitable Commander Tresdin, was near enough to answer the call of battle. They rode into their city, fighting through bloodstained alleyways and burning markets, cutting their way through the monstrous throng to the source of the sudden invasion: an ethereal rift within the city square, and at its precipice thundered their dreaded champion. Enwrapped in a corrosive shimmer, the leader of the abyssal horde swung its massive blade, cleaving a legionnaire in two as his flesh began to spoil. Tresdin lifted her blood-stained sword and settled her sights on the beast. It turned, smiling at her through a maze of teeth. Heedless of the battle raging around them, they charged one another. Deflecting blow after blow, the pair danced their deadly duel as the Bronze Legion met its end around them. Tresdin leapt forward as her foe swung its sword to meet her. The odds turned. The attack smashed into Tresdin suddenly, a brutal thrust from the side, but even as her balance slipped she rallied her strength for another stroke. Blade scraped on blade, beyond the hilt to the gnarled paw below, carving it in two in a fearsome spray of sparks and blood. The vile audience looked on in astonishment as she pressed the attack, driving her blade through her foe's flesh into the stampeding heart within. With a scream that split the clouds above, the beast erupted in a torrent of gore and anguish. The stygian portal wavered, the power sustaining the chasm beyond vanishing as suddenly as it had appeared. The remaining invaders fell quickly to Stonehall steel. Though victorious, the survivors saw little to celebrate: the city lay in ruins, and survivors were few. Fires continued to spread. Unfurling her banners of war, Tresdin gathered what allies she could. Her anger smoldered as she pledged brutal vengeance upon the forces of the abyss, and damned be any who would dare stand in her way.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "+50% Moment of Courage Lifesteal",
+        "talent_left": "Press the Attack grants 1.5s Spell Immunity"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "250 AoE Press The Attack",
+        "talent_left": "+12% Moment Proc Chance"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+40 Press The Attack HP Regen",
+        "talent_left": "+100 Overwhelming Odds Hero Damage"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+100 Overwhelming Odds Radius",
+        "talent_left": "+8 Duel Damage Bonus"
+      }
+    ]
+  }
+}

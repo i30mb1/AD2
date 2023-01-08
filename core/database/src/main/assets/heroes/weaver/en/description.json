@@ -1,0 +1,214 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The Swarm spawn within a 300 radius randomly around Weaver and moves forward at a speed of 750, taking 4 seconds to reach the maximum distance\n The  Beetles are not attackable when traveling as a swarm\n They are only attackable after latching onto targets\n They provide flying vision while traveling forwards, and while latched onto their targets\n They have the highest priority for auto-attack behaviors, together with  Phantoms\n With the maximum travel distance, spawn radius, and latch radius, the Beetles can latch on units 3400 range away",
+        "The Beetle latches 64 range in front of any enemy unit that comes within 100 radius, unless another Beetle has already latched onto it\n This means that multiple casts do not affect the same unit more than once, and its duration cannot be refreshed\n Can latch on invulnerable units, but not invisible or hidden units\n Does not latch on enemy  Couriers",
+        "The Beetle and its latched target have the following interactions: When the latched target turns invisible, while not under True Sight, the Beetle dies instantly\n When the latched target is hidden, the Beetle is still latched onto the target and not removed\n When the latched target is affected by the following abilities, the Beetle disappears:  Infest,   Dismember,  Gobble Up and  Voodoo Switcheroo\n The Beetle dies instantly while entering  Chronosphere\n Beetles that disappear or die instantly in the aforementioned situations above are not credited to anyone",
+        "The Swarm deals damage in 1.15\/1.0\/0.85\/0.7-second intervals, starting immediately when it is latched on a unit, this results in 14\/17\/19\/23 possible attacks\n Although the Beetles are latched to their targets, the damage is sourced to Weaver, not the Beetles\n Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal\n Can deal up to 252\/340\/418\/552 damage to each latched enemy (before reductions)",
+        "The armor reduction is bound to the Beetle and independent from the damage per tick\n The armor reduction fully affects ethereal units, but not invulnerable units\n Can reduce up to 14\/17\/19\/23 ( 21\/25.5\/28.5\/34.5) armor per unit",
+        "On each interval, The Swarm first applies the armor reduction, then the damage"
+      ],
+      "item_behaviour": [],
+      "description": "Weaver launches a swarm of 12 young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed.",
+      "hot_key": "Q",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range:  3000",
+        "Max Travel Distance:  3000",
+        "Beetles Spawn Radius: 300",
+        "Beetles Latch Radius: 100",
+        "Number of Beetles: 12",
+        "Non-Hero Attacks to Destroy: 6\/6\/8\/8 ( 10\/10\/12\/12)",
+        "Hero Attacks to Destroy: 3\/3\/4\/4 ( 5\/5\/6\/6)",
+        "Tick Interval: 1.15\/1.0\/0.85\/0.7",
+        "Damage per Tick: 18\/20\/22\/24",
+        "Armor Reduction per Tick: 1 ( 1.5)",
+        "Beetle Duration: 16"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Weaver_The_Swarm_1.mp3\/revision\/latest?cb=20191216030509",
+      "effects": [
+        "Ability: Target Point",
+        "Affects: Enemies",
+        "Damage: Physical"
+      ],
+      "mana": "44\/36\/28\/20",
+      "aghanim": null,
+      "name": "The Swarm",
+      "cooldown": "110",
+      "legacy_key": "R",
+      "story": "Skitskurr opens a gap in the space time fabric, allowing young Weavers to slip through and aid him in combat."
+    },
+    {
+      "notes": [
+        "Does not interrupt Weaver's channeling abilities upon cast",
+        "Disjoints projectiles upon cast, if the enemy has no True Sight on Weaver",
+        "Shukuchi can only damage the same unit once per cast",
+        "During the fade time, Weaver can cast abilities, use items and perform attacks without breaking the invisibility",
+        "The invisibility is broken upon reaching the cast point of abilities or items, or upon landing an attack\n Missed attacks do not break it\n Weaver can pick up, drop or attack items without breaking the invisibility",
+        "Grants haste and phased movement while fully invisible, meaning Weaver cannot be slowed below the hasted value\n Unlike other phased movement sources, Shukuchi turns Weaver phased instantly upon cast, instead of after the fade time\n Shukuchi still grants 200\/230\/260\/290 movement speed bonus on top of the haste movement, but this will not be reflected in the HUD unless the caster unlocks maximum movement speed",
+        "SHARD NOTES Shukuchi now applies a 6-second debuff on all affected enemies\n  Geminate Attack now procs on every affected enemy unit that have the Shukuchi debuff within 1200 range of the primary attack target",
+        "TALENT NOTES Acquiring the Shukuchi charges  talent instantly grants 1 extra charge"
+      ],
+      "item_behaviour": [],
+      "description": "Weaver shifts out of visibility, gaining max movement speed --doing harm to any enemies it passes through.",
+      "hot_key": "W",
+      "params": [
+        "Cast Animation:  0+0",
+        "Fade Time: 0.25",
+        "Damage Radius: 175",
+        "Damage: 100\/125\/150\/175 ( 150\/175\/200\/225)",
+        "Haste Speed: 550",
+        "Duration: 4",
+        "Debuff Duration:  6"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Weaver_Shukuchi.mp3\/revision\/latest?cb=20191216030508",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self \/ Enemies",
+        "Damage: Magical"
+      ],
+      "mana": "15\/12\/9\/6 (TagTalent 0)",
+      "aghanim": null,
+      "name": "Shukuchi",
+      "cooldown": "15\/12\/9\/6",
+      "legacy_key": "C",
+      "story": "As the Weavers worked in the fabric of creation, small wormholes allowed them to slip through time to better work their craft."
+    },
+    {
+      "notes": [
+        "Upon leveling Geminate Attack the first time, it has Autocast on by default\n Despite being an active ability, Geminate Attack can trigger while silenced, if set to Autocast",
+        "Geminate Attack's cast range can only be further increased by attack range bonuses of the same range as the caster\n However, it is not affected by cast range bonuses\n Both Autocast and manually casting it uses Weaver's current attack range",
+        "Causes Weaver to perform 1 ( 2) instant attack(s) on the attacked target 0.25 seconds after releasing the leading attack\n These instant attacks can proc any attack modifiers and on-hit effects normally\n They do not have True Strike, but completely ignore disarms\n They do not break  Disguise as well",
+        "For  melee units, if the enemy target is farther than 350 range more than the attacker's range, the attack will always miss",
+        "The bonus attack damage is only applied to the extra attacks\n The attack that triggers Geminate Attack does not deal more damage\n Weaver has to be alive for these extra attacks to happen\n There is no range limit for these extra attacks, they launch regardless of how far away the target is currently at\n Even if the initial attack damage kills the target before Geminate Attack triggers, the extra attacks are still released, hitting the dead target",
+        "Works against enemy buildings,  Couriers and wards\n Neither work against allies nor  Observer and Sentry Wards",
+        "SHARD NOTES Geminate Attack now procs on every affected enemy unit that have the  Shukuchi debuff within 1200 range centered around the primary attack target\n Geminate Attack procs fully works against Shukuchi-marked targets regardless of source\n Unlike the instant attacks on the primary target, these instant attacks on secondary targets do not trigger attack modifiers or on-hit effects\n They do not have True Strike, but completely ignore disarms as well\n These Geminate Attacks on secondary targets are launched simultaneously with the extra attacks on the primary attack target"
+      ],
+      "item_behaviour": [],
+      "description": "Allows Weaver to dispatch two attacks at once.",
+      "hot_key": "E",
+      "params": [
+        "Cast Range:  425",
+        "Effect Delay: 0.25",
+        "Number of Extra Attacks: 1 ( 2)",
+        "Attack Damage Bonus: 15\/30\/45\/60 ( 105\/120\/135\/150)",
+        "Target Search Radius:  1200"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Weaver_Geminate_Attack.mp3\/revision\/latest?cb=20191216030516",
+      "effects": [
+        "Ability: Active Attack Modifier",
+        "Affects: Enemies",
+        "Damage: Instant Attack"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Geminate Attack",
+      "cooldown": null,
+      "legacy_key": "E",
+      "story": "Skitskurr's relationship with time is somewhat variable, causing his actions to be witnessed \u2014 and felt \u2014 more than once."
+    },
+    {
+      "notes": [
+        "Weaver is ordered to stop right after getting moved back, this automatically cancels the cast backswing of Time Lapse\n However, ⇧ Shift-queue commands are not canceled",
+        "Time Lapse disjoints projectiles and applies a strong dispel upon cast\n Only affects Weaver's position, health, mana, and status debuffs\n Buffs are not removed",
+        "Sets Weaver's or the target ally's health and mana back to what it was 5 seconds ago\n Time Lapse neither deals damage nor heals\n Therefore, it does not interact with any on-damage effects\n When cast right after respawning, the caster's health, mana, and position are set to what they were before death\n This means that it does not kill the caster when cast immediately after respawning",
+        "SCEPTER NOTES Time Lapse now turns into a unit-targeted ability, applying all the effects on the target\n Can only target heroes, excluding creep-heroes\n Treats clones and illusions as heroes\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Weaver\n However, unit-targeting does not order the target to stop, so their channeling abilities are not canceled\n The 0.53 cast backswing is only used when cast on allies since self-casting automatically cancels the backswing\n When cast on allies right after respawning, their health, mana, and position are not set back to what they were before the death\n This means allies cannot be sent back to their death location after respawning, unlike how Weaver can when self-casting"
+      ],
+      "item_behaviour": [],
+      "description": "Weaver warps backward to whatever position it was in five seconds earlier--regaining the HP and mana from that time. No effect on cooldown, gold or experience.",
+      "hot_key": "R",
+      "params": [
+        "Cast Animation: 0.3+0.53",
+        "Lapsed Time: 5",
+        "Cast Range:  500"
+      ],
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Weaver_Time_Lapse.mp3\/revision\/latest?cb=20191216030512",
+      "effects": [
+        "Ability: No Target",
+        "Affects: Self "
+      ],
+      "mana": "70\/55\/40 (TagTalent 40)",
+      "aghanim": null,
+      "name": "Time Lapse",
+      "cooldown": "150\/75\/0",
+      "legacy_key": "T",
+      "story": "If Skitskurr does not deem the current reality of the world to fit his desires, he simply crawls back in time to right what was wronged."
+    },
+    {
+      "notes": [
+        "Grants Weaver's attacks Mana Break, causing his attacks to burn the target's mana and deal damage based on the burned mana",
+        "Burned mana as damage is considered as a conditional attack damage bonus\n Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Weaver's attack damage\n The attack damage bonus values are not considered by critical strike\n However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g\n damage block)\n Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+        "Effectively increases Weaver's attack damage by 16 against units which have enough mana to burn\n Effectively increases the attack damage of Weaver's illusions by 8 against units which have enough mana to burn",
+        "Applies the mana loss first, the attack damage, then the burned mana as damage",
+        "Does not work against allied units when attacking them",
+        "Fully stacks with other sources of Mana Break"
+      ],
+      "item_behaviour": [],
+      "description": "There is no description for this ability.",
+      "hot_key": "?",
+      "params": [
+        "Mana Burned per Hit: 20",
+        "Illusion Mana Burned per Hit: 10",
+        "Burned Mana as Damage: 80%"
+      ],
+      "audioUrl": "",
+      "effects": [
+        "Ability: Passive",
+        "Affects: Enemies",
+        "Damage: Physical"
+      ],
+      "mana": null,
+      "aghanim": null,
+      "name": "Mana Break",
+      "cooldown": null,
+      "legacy_key": "",
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.0,
+    "attrStrength": 16.0,
+    "attrIntelligence": 20.0,
+    "attrIntelligenceInc": 2.0,
+    "attrAgilityInc": 3.1,
+    "attrAgility": 17.0
+  },
+  "description": "Rewinds time to reverse damage and position. All Weavers worked to maintain the fabric of creation, save one Skitskurr, who took it upon himself to create that which had not been woven. Cast out for his ambitions, Skitskurr was now free from his obligations, free to weave a new reality of his own. Opening a gap in spacetime, the Weaver invites \"The Swarm\" \u2014 young Weavers to latch onto enemies, and nibble away at their armor. Nearly impossible to pin down, he slips into micro-wormholes, passing through enemies and reappearing with Shukuchi. The fabric of time frays around Skitskurr, occasionally replaying, causing his Geminate Attacks to be witnessed \u2014 and felt \u2014 more than once. The Weaver takes brinkmanship to an extreme. Fighting to the verge of death, Skitskurr turns back the clock with Time Lapse, reversing his injuries and undoing his foes' efforts, much to their dismay.  Carry Escape ★★☆",
+  "trivia": [
+    "Weaver's original title was Nerubian Weaver, and his original name was Anub'seran. Nerubians are a race of arachnids in the Warcraft universe.",
+    "Weaver's fun name in DotA was Anoob'seran.",
+    "Geminate Attack is frequently misread as Germinate Attack. To geminate is to double, coming from the Latin word for twin (as in Gemini).",
+    "Shukuchi is a Japanese term for rapid movement, or teleportation. The ability's name is a reference to an ability of the same name of a character named Soujiro from the anime Rurouni Kenshin.[1]",
+    "Weaver draws many inspirations from a character of the same name in the novel, Perdido Street Station.",
+    "Weaver's Time Lapse icon may also be a reference to the box art of the movie Alien 3, considering that Sigourney Weaver has the lead role in the film."
+  ],
+  "history": "The fabric of creation needs constant care, lest it grow tattered; for when it unravels, whole worlds come undone. It is the work of the Weavers to keep the fabric tight, to repair worn spots in the mesh of reality. They also defend from the things that gnaw and lay their eggs in frayed regions, whose young can quickly devour an entire universe if the Weavers let their attention lapse. Skitskurr was a master Weaver, charged with keeping one small patch of creation tightly woven and unfaded. But the job was not enough to satisfy. It nagged him that the original work of creation all lay in the past; the Loom had done its work and travelled on. He wanted to create rather than merely maintain\u2014to weave worlds of his own devising. He began making small changes to his domain, but the thrill of creation proved addictive, and his strokes became bolder, pulling against the pattern that the Loom had woven. The guardians came, with their scissors, and Weaver's world was pared off, snipped from the cosmic tapestry, which they rewove without him in it. Skitskurr found himself alone, apart from his kind, a state that would have been torment for any other Weaver. But Skitskurr rejoiced, for now he was free. Free to create for himself, to begin anew. The raw materials he needed to weave a new reality were all around him. All he had to do was tear apart this old world at the seams.",
+  "talents": {
+    "hero_talents": [
+      {
+        "talent_lvl": "25",
+        "talent_right": "2 Shukuchi Charges",
+        "talent_left": "+1 Geminate Attack"
+      },
+      {
+        "talent_lvl": "20",
+        "talent_right": "+90 Geminate Attack Damage",
+        "talent_left": "+0.5 Swarm Armor Reduction"
+      },
+      {
+        "talent_lvl": "15",
+        "talent_right": "+20 Mana Break",
+        "talent_left": "+2 Swarm Attacks to Kill"
+      },
+      {
+        "talent_lvl": "10",
+        "talent_right": "+50 Shukuchi Damage",
+        "talent_left": "+9 Strength"
+      }
+    ],
+    "notes": [
+      "The strength talent effectively grants Weaver 180 health and 0.9 health regeneration bonus."
+    ]
+  }
+}
