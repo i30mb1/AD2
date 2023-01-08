@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "Uses the  nighttime values during the night from  Dark Ascension and  Eclipse",
+        "Uses the <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime values during the night from <span image=\"images\/dark_ascension.webp\">[picture:dark_ascension]<\/span> Dark Ascension and <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse",
         "Void first applies the slow debuff, then the damage, then the stun debuff",
         "SCEPTER NOTES Turns Void into a non-targetable ability affecting all enemy units within 900 radius\n Does not target invisible units or units inside the Fog of War within the radius"
       ],
@@ -11,15 +11,15 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.47",
-        "Cast Range:  525 ( 0)",
-        "Damage: 80\/160\/240\/320 ( 130\/210\/290\/370)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 525 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 0)",
+        "Damage: 80\/160\/240\/320 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 130\/210\/290\/370)",
         "Move Speed Slow: 50%",
         "Attack Speed Slow: 50",
         "Day Slow Duration: 1.25",
         "Night Slow Duration: 2.5\/3\/3.5\/4",
         "Day Stun Duration: 0",
-        "Night Stun Duration: 0.1 ( 1)",
-        "Radius:  900"
+        "Night Stun Duration: 0.1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Radius:  900"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Night_Stalker_Void.mp3\/revision\/latest?cb=20191216021028",
       "effects": [
@@ -36,7 +36,7 @@
     },
     {
       "notes": [
-        "Uses the  nighttime values during the night from  Dark Ascension and  Eclipse",
+        "Uses the <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime values during the night from <span image=\"images\/dark_ascension.webp\">[picture:dark_ascension]<\/span> Dark Ascension and <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse",
         "The silence is provided by an aura, its debuff lingers for 0.5 seconds",
         "The aura's duration does not update when it turns day or night while the buff is on"
       ],
@@ -44,7 +44,7 @@
       "description": "Night Stalker horrifies all nearby enemies, causing them to become silenced while near him. The effect lasts longer at night.",
       "hot_key": "W",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Radius: 375",
         "Day Duration: 3",
         "Night Duration: 4.5\/5\/5.5\/6",
@@ -64,20 +64,20 @@
     },
     {
       "notes": [
-        "Grants passive bonuses only during  nighttime, also works during the nighttime of  Dark Ascension and  Eclipse\n TALENT NOTES Stacks multiplicatively with other sources of status resistance",
-        "SHARD NOTES Adds an active component to Hunter in the Night, with the passive effects still present\n Can be cast on any unit except for heroes, illusions, clones, creep-heroes, wards, buildings and  Roshan\n Cannot be cast on ancient creeps during  daytime, but can during  nighttime\n The targeted creep is instantly killed, granting its gold and experience bounties if it was an enemy, denying it if it was an ally\n Despite the visual effect, the health and mana restored are applied instantly upon cast"
+        "Grants passive bonuses only during <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime, also works during the nighttime of <span image=\"images\/dark_ascension.webp\">[picture:dark_ascension]<\/span> Dark Ascension and <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse\n TALENT NOTES Stacks multiplicatively with other sources of status resistance",
+        "SHARD NOTES Adds an active component to Hunter in the Night, with the passive effects still present\n Can be cast on any unit except for heroes, illusions, clones, creep-heroes, wards, buildings and <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan\n Cannot be cast on ancient creeps during <span image=\"images\/daytime.png\">[picture:daytime]<\/span> daytime, but can during <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime\n The targeted creep is instantly killed, granting its gold and experience bounties if it was an enemy, denying it if it was an ally\n Despite the visual effect, the health and mana restored are applied instantly upon cast"
       ],
       "item_behaviour": [],
       "description": "Night Stalker is in his element at night, attacking and moving with great swiftness.",
       "hot_key": "E",
       "params": [
-        "Cast Animation: 0+1.07",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Cast Animation: 0+1.07",
         "Passive Move Speed Bonus: 22%\/28%\/34%\/40%",
-        "Passive Attack Speed Bonus: 20\/40\/60\/80 ( 120\/140\/160\/180)",
-        "Cast Range:  150",
-        "Active Max Health as Heal:  35%",
-        "Active Max Mana as Mana Restore:  25%",
-        "Status Resistance Bonus:  15%"
+        "Passive Attack Speed Bonus: 20\/40\/60\/80 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 120\/140\/160\/180)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 150",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Active Max Health as Heal:  35%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Active Max Mana as Mana Restore:  25%",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Status Resistance Bonus:  15%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Night_Stalker_Hunter_in_the_Night_move.mp3\/revision\/latest?cb=20191216021026",
       "effects": [
@@ -94,18 +94,18 @@
     },
     {
       "notes": [
-        "Time of Day modifying abilities has the following priorities:  Supernova ➤  Eclipse ➤ Dark Ascension\n Dark Ascension's bonuses are not disabled during Supernova's  daytime\n However, the vision is limited to Night Stalker's default daytime vision\n Eclipse does not interfere with the  nighttime caused by Dark Ascension in any way \u2014 they do not cancel or pause each other's nighttime",
+        "Time of Day modifying abilities has the following priorities: <span image=\"images\/supernova.webp\">[picture:supernova]<\/span> Supernova ➤ <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse ➤ Dark Ascension\n Dark Ascension's bonuses are not disabled during Supernova's <span image=\"images\/daytime.png\">[picture:daytime]<\/span> daytime\n However, the vision is limited to Night Stalker's default daytime vision\n Eclipse does not interfere with the <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime caused by Dark Ascension in any way \u2014 they do not cancel or pause each other's nighttime",
         "Upon cast, Night Stalker ascends 150 units above the z-axis",
-        "Grants regular flat bonus attack damage\n TALENT NOTES The damage increasing  talent immediately updates the currently active instance",
-        "Destroys trees within a 150 radius at the end of the duration\n SPELL STEAL  Rubick neither ascends above the z-axis nor turns into a flying unit"
+        "Grants regular flat bonus attack damage\n TALENT NOTES The damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates the currently active instance",
+        "Destroys trees within a 150 radius at the end of the duration\n SPELL STEAL <span image=\"images\/rubick_minimap.png\">[picture:rubick_minimap]<\/span> Rubick neither ascends above the z-axis nor turns into a flying unit"
       ],
       "item_behaviour": [],
       "description": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. Night Stalker gains flight and bonus damage during this time. Has unobstructed vision.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
-        "Attack Damage Bonus: 50\/100\/150 ( 85\/135\/185)",
-        "Duration: 30 ( 38)"
+        "Attack Damage Bonus: 50\/100\/150 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 85\/135\/185)",
+        "Duration: 30 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Night_Stalker_Dark_Ascension.mp3\/revision\/latest?cb=20191216021025",
       "effects": [

@@ -6,16 +6,16 @@
         "Always heals for the full amount per instance, regardless of how much damage the target actually takes",
         "Despite the visual effects, the damage is applied instantly to all enemy units within range of the target",
         "Purification first applies its damage, then the heal",
-        "Fully affects ally  Couriers"
+        "Fully affects ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Instantly heals a friendly unit and damages all nearby enemy units.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+1.4",
-        "Cast Range:  550",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 550",
         "Damage Radius: 260",
-        "Damage\/Heal: 90\/160\/230\/300 ( 250\/320\/390\/460)"
+        "Damage\/Heal: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 250\/320\/390\/460)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Omniknight_Purification.mp3\/revision\/latest?cb=20191216021244",
       "effects": [
@@ -32,24 +32,24 @@
     },
     {
       "notes": [
-        "Can only be cast on allied heroes, including illusions, clones, and creep-heroes\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on  Couriers",
+        "Can only be cast on allied heroes, including illusions, clones, and creep-heroes\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "Heavenly Grace first applies the buff, and then the strong dispel on the target\n When cast on an ally, Omniknight receives both the buff and the dispel",
-        "Total  strength and health regeneration bonus when dispelling a certain amount of debuffs: 1 Debuff: 11\/20\/29\/38 ( 14\/23\/32\/41) strength and 11\/16\/21\/26 ( 14\/19\/24\/29) health regeneration\n 2 Debuffs: 14\/24\/34\/44 ( 20\/30\/40\/50) strength and 14\/20\/26\/32 ( 20\/26\/32\/38) health regeneration\n 3 Debuffs: 17\/28\/39\/50 ( 26\/37\/48\/59) strength and 17\/24\/31\/38 ( 26\/33\/40\/47) health regeneration\n 4 Debuffs: 20\/32\/44\/56 ( 32\/44\/56\/68) strength and 20\/28\/36\/44 ( 32\/40\/48\/56) health regeneration\n 5 Debuffs: 23\/36\/49\/62 ( 38\/51\/64\/77) strength and 23\/32\/41\/50 ( 38\/47\/56\/65) health regeneration.",
+        "Total <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> strength and health regeneration bonus when dispelling a certain amount of debuffs: 1 Debuff: 11\/20\/29\/38 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14\/23\/32\/41) strength and 11\/16\/21\/26 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14\/19\/24\/29) health regeneration\n 2 Debuffs: 14\/24\/34\/44 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20\/30\/40\/50) strength and 14\/20\/26\/32 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20\/26\/32\/38) health regeneration\n 3 Debuffs: 17\/28\/39\/50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 26\/37\/48\/59) strength and 17\/24\/31\/38 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 26\/33\/40\/47) health regeneration\n 4 Debuffs: 20\/32\/44\/56 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 32\/44\/56\/68) strength and 20\/28\/36\/44 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 32\/40\/48\/56) health regeneration\n 5 Debuffs: 23\/36\/49\/62 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38\/51\/64\/77) strength and 23\/32\/41\/50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38\/47\/56\/65) health regeneration.",
         "Successive casts do not stack but refresh its duration and ability values",
-        "Heavenly Grace effectively grants the following bonuses per dispelled debuff: 160\/320\/480\/640 + 60\/80\/100\/120 ( 120\/140\/160\/180) bonus health 8.8\/13.6\/18.4\/23.2 + 3.3\/4.4\/5.5\/6.6 ( 6.6\/7.7\/8.8\/9.9) bonus health regeneration\n 8\/16\/24\/32 + 3\/4\/5\/6 ( 6\/7\/8\/9) bonus main attack damage to  heroes",
-        "Can regenerate up to 88\/136\/184\/232 + 33\/44\/55\/66 ( 66\/77\/88\/99) per dispelled debuff health over its full duration\n With the duration increasing  talent, it can regenerate up to 123.2\/190.4\/257.6\/324.8 + 46.2\/61.6\/77\/92.4 ( 92.4\/107.8\/123.2\/138.6) per dispelled debuff health over its full duration",
-        "TALENT NOTES The strength\/health regeneration bonus per debuff increasing  talent immediately updates all currently active buffs"
+        "Heavenly Grace effectively grants the following bonuses per dispelled debuff: 160\/320\/480\/640 + 60\/80\/100\/120 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 120\/140\/160\/180) bonus health 8.8\/13.6\/18.4\/23.2 + 3.3\/4.4\/5.5\/6.6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6.6\/7.7\/8.8\/9.9) bonus health regeneration\n 8\/16\/24\/32 + 3\/4\/5\/6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6\/7\/8\/9) bonus main attack damage to <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> heroes",
+        "Can regenerate up to 88\/136\/184\/232 + 33\/44\/55\/66 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 66\/77\/88\/99) per dispelled debuff health over its full duration\n With the duration increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, it can regenerate up to 123.2\/190.4\/257.6\/324.8 + 46.2\/61.6\/77\/92.4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 92.4\/107.8\/123.2\/138.6) per dispelled debuff health over its full duration",
+        "TALENT NOTES The strength\/health regeneration bonus per debuff increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates all currently active buffs"
       ],
       "item_behaviour": [],
       "description": "Applies a strong dispel on an ally and grants both them and Omniknight bonus Strength and HP Regen based on the amount of Debuffs dispelled.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+1.3",
-        "Cast Range:  700",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700",
         "Base Strength Bonus: 8\/16\/24\/32",
         "Base Health Regen Bonus: 8\/12\/16\/20",
-        "Strength\/Health Regen Bonus per Debuff: 3\/4\/5\/6 ( 6\/7\/8\/9)",
-        "Duration: 10 ( 14)"
+        "Strength\/Health Regen Bonus per Debuff: 3\/4\/5\/6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6\/7\/8\/9)",
+        "Duration: 10 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Omniknight_Heavenly_Grace.mp3\/revision\/latest?cb=20191216021242",
       "effects": [
@@ -65,9 +65,9 @@
     },
     {
       "notes": [
-        "Although seeming like a  melee ability, the cast range can be further increased by other cast range bonuses\n However, it is not affected by attack range bonuses",
+        "Although seeming like a <span image=\"images\/melee.png\">[picture:melee]<\/span> melee ability, the cast range can be further increased by other cast range bonuses\n However, it is not affected by attack range bonuses",
         "The projectile travels at a speed of 1200",
-        "The damage is based on Omniknight's main attack damage\n Other attack damage bonuses are ignored\n This means the base attack damage granting  talent affects Hammer of Purity's damage as well\n Considers the min and max attack damage values of Omniknight, so the damage varies like how regular attacks do",
+        "The damage is based on Omniknight's main attack damage\n Other attack damage bonuses are ignored\n This means the base attack damage granting <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent affects Hammer of Purity's damage as well\n Considers the min and max attack damage values of Omniknight, so the damage varies like how regular attacks do",
         "Hammer of Purity first applies the debuff, the hammer damage, then the attack damage"
       ],
       "item_behaviour": [],
@@ -75,9 +75,9 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+1.4",
-        "Cast Range:  350",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 350",
         "Base Damage: 50\/75\/100\/125",
-        "Main Attack Damage as Damage: 60%\/80%\/100%\/120% ( 135%\/155%\/175%\/195%)",
+        "Main Attack Damage as Damage: 60%\/80%\/100%\/120% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 135%\/155%\/175%\/195%)",
         "Move Speed Slow: 14%\/22%\/30%\/38%",
         "Duration: 5"
       ],
@@ -96,7 +96,7 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "The aura's debuff lingers for 1 second"
       ],
       "item_behaviour": [],
@@ -121,17 +121,17 @@
     },
     {
       "notes": [
-        "Affects all allied units, except for wards,  Couriers, invulnerable and hidden units",
-        "SCEPTER NOTES Guardian Angel now affects buildings and hidden units\n Stacks multiplicatively with other sources of status resistance\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter immediately grants status resistance bonus to the current active instance, affecting all units within 1200 radius"
+        "Affects all allied units, except for wards, <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, invulnerable and hidden units",
+        "SCEPTER NOTES Guardian Angel now affects buildings and hidden units\n Stacks multiplicatively with other sources of status resistance\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter immediately grants status resistance bonus to the current active instance, affecting all units within 1200 radius"
       ],
       "item_behaviour": [],
       "description": "Omniknight calls upon a Guardian Angel that grants allies immunity from physical damage.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0.9",
-        "Radius: 1200 ( Global)",
-        "Duration: 5\/6\/7 ( 8\/9\/10)",
-        "Status Resistance Bonus:  40%"
+        "Radius: 1200 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Global)",
+        "Duration: 5\/6\/7 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 8\/9\/10)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Status Resistance Bonus:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Omniknight_Guardian_Angel_1.mp3\/revision\/latest?cb=20191216021248",
       "effects": [

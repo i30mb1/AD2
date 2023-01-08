@@ -12,8 +12,8 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.4",
-        "Cast Range:  450\/500\/550\/600",
-        "Effect Radius: 400\/450\/500\/550 ( 500\/550\/600\/650)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 450\/500\/550\/600",
+        "Effect Radius: 400\/450\/500\/550 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 500\/550\/600\/650)",
         "Damage: 100\/150\/200\/250",
         "Pull Duration: 0.3\/0.4\/0.5\/0.6"
       ],
@@ -32,22 +32,22 @@
     },
     {
       "notes": [
-        "Ion Shell can be cast on both enemy and ally units, but damaging only enemy units\n The affected unit with the shell itself is not damaged\n The damage affects invisible enemies within the radius, However, the visual effects do not appear\n Cannot be cast on  Couriers\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Dark Seer",
+        "Ion Shell can be cast on both enemy and ally units, but damaging only enemy units\n The affected unit with the shell itself is not damaged\n The damage affects invisible enemies within the radius, However, the visual effects do not appear\n Cannot be cast on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Dark Seer",
         "Successive casts on the same unit do not stack, but refresh the duration and update the damage to the current level instead\n When two opposing heroes cast it on the same target, the modifier updates and start damaging the enemies of the latest caster\n However, the modifier status does not update\n Whether it is treated as a buff or debuff is determined upon the first cast, and not updated on refresh",
-        "Deals 4.5\/7.5\/10.5\/13.5 ( 12\/15\/18\/21) damage in 0.15-second intervals, starting 0.15 seconds after the cast, resulting in 140\/160\/180\/200 damage instances",
-        "Can deal up to 630\/1200\/1890\/2700 ( 1680\/2400\/3240\/4200) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration",
-        "TALENT NOTES All Ion Shell  talents does not instantly update the current active instances\n The max health increasing  talent increases the max health of the targeted ally by 250, keeping the current health percentage the same\n Acquiring the Ion Shell charges  talent instantly grants 1 extra charge"
+        "Deals 4.5\/7.5\/10.5\/13.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 12\/15\/18\/21) damage in 0.15-second intervals, starting 0.15 seconds after the cast, resulting in 140\/160\/180\/200 damage instances",
+        "Can deal up to 630\/1200\/1890\/2700 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1680\/2400\/3240\/4200) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration",
+        "TALENT NOTES All Ion Shell <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents does not instantly update the current active instances\n The max health increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent increases the max health of the targeted ally by 250, keeping the current health percentage the same\n Acquiring the Ion Shell charges <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent instantly grants 1 extra charge"
       ],
       "item_behaviour": [],
       "description": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.7",
-        "Cast Range:  800",
-        "Damage Radius: 275 ( 325)",
-        "Damage per Second: 30\/50\/70\/90 ( 80\/100\/120\/140)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
+        "Damage Radius: 275 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 325)",
+        "Damage per Second: 30\/50\/70\/90 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 80\/100\/120\/140)",
         "Duration: 21\/24\/27\/30",
-        "Max Health Bonus:  250"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Max Health Bonus:  250"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Dark_Seer_Ion_Shell.mp3\/revision\/latest?cb=20191216012241",
       "effects": [
@@ -66,23 +66,23 @@
       "notes": [
         "↓↓ Double-tapping automatically targets self",
         "Applies haste and grants phased movement on the target, meaning it cannot be slowed while affected",
-        "Fully affects  Couriers",
-        "SHARD NOTES The Surged target now creates a 150 radius trail on the its current location in 0.5-second intervals\n Autocast on disables this effect\n Deals 35 damage in 0.5-second intervals (before reductions), starting 0.5 seconds after the debuff is applied, resulting in 14 damage instances\n Can deal up to 490 damage to a single unit when the affected unit stays in range for the full duration\n When the Surged target dies, the already existing trail on the ground still stays for the remaining duration\n Acquiring <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard does not update the current active instance",
-        "TALENT NOTES The area of effect  talent turns Surge into a 350 radius area-targeted ability, so that it cannot directly target units anymore\n ↓↓ Double-tapping now centers the radius around Dark Seer"
+        "Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
+        "SHARD NOTES The Surged target now creates a 150 radius trail on the its current location in 0.5-second intervals\n Autocast on disables this effect\n Deals 35 damage in 0.5-second intervals (before reductions), starting 0.5 seconds after the debuff is applied, resulting in 14 damage instances\n Can deal up to 490 damage to a single unit when the affected unit stays in range for the full duration\n When the Surged target dies, the already existing trail on the ground still stays for the remaining duration\n Acquiring <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard does not update the current active instance",
+        "TALENT NOTES The area of effect <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent turns Surge into a 350 radius area-targeted ability, so that it cannot directly target units anymore\n ↓↓ Double-tapping now centers the radius around Dark Seer"
       ],
       "item_behaviour": [],
       "description": "Charges a target friendly unit with power, giving it a brief burst of movement speed and removes unit collisions. Allows the unit to reach maximum movement speed and cannot be slowed.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0.57",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Haste Speed: 550",
         "Duration: 3\/4\/5\/6",
-        "Trail Radius:  150",
-        "Trail Move Speed Slow:  50%",
-        "Trail Damage per Instance:  35",
-        "Trail Duration:  7",
-        "Radius:  350"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Trail Radius:  150",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Trail Move Speed Slow:  50%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Trail Damage per Instance:  35",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Trail Duration:  7",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Radius:  350"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Dark_Seer_Surge.mp3\/revision\/latest?cb=20191216012245",
       "effects": [
@@ -99,14 +99,14 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Grants Dark Seer's attacks True Strike when not on cooldown\n The cooldown triggers upon successfully landing an attack on an enemy",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage\n This means it is not affected or considered by anything that works with attack damage\n This also means that it fully works with spell damage amplification and spell lifesteal",
         "Constantly checks the distance Dark Seer moves and calculates the damage, knockback distance, knockback duration, and stun duration accordingly\n For every 10 distance moved, the damage increases by 4.444, knockback distance by 3.333, knockback duration by 0.011, and stun duration by 0.023",
-        "Teleporting effects (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[Blink Dagger]<\/span> Blink) may only add up to 600 range to the distance counter, no matter how big the actual teleported distance was\n Does not consider upward movement distances\n The distance counter never resets, so it is possible to perform multiple full power punches in a row, with the help of cooldown resetting sources",
+        "Teleporting effects (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[picture:blink_dagger]<\/span> Blink) may only add up to 600 range to the distance counter, no matter how big the actual teleported distance was\n Does not consider upward movement distances\n The distance counter never resets, so it is possible to perform multiple full power punches in a row, with the help of cooldown resetting sources",
         "These are the damage, knockback distance, and stun duration values at certain distances moved in the last 3 seconds (before reductions): 0 distance moved: 50 damage, 50 knockback distance, 0.1s knockback duration, 0.2s stun duration\n 180 distance moved: 130 damage, 110 knockback distance, 0.305s knockback duration, 0.61s stun duration\n 360 distance moved: 210 damage, 170 knockback distance, 0.51s knockback duration, 1.02s stun duration\n 540 distance moved: 290 damage, 230 knockback distance, 0.715s knockback duration, 1.43s stun duration\n 720 distance moved: 370 damage, 290 knockback distance, 0.92s knockback duration, 1.84s stun duration\n 900 distance moved: 450 damage, 350 knockback distance, 1.125s knockback duration, 2.25s stun duration.",
         "Normal Punch first applies the stun, then the damage, then the knockback, then the attack damage",
-        "If  Wall of Replica is not learned, the illusion deals 80% damage by default",
+        "If <span image=\"images\/wall_of_replica.webp\">[picture:wall_of_replica]<\/span> Wall of Replica is not learned, the illusion deals 80% damage by default",
         "The illusion is spawned 350 range behind the enemy's determined landing position, 0.25 seconds after Normal Punch was delivered\n The illusion can be controlled normally and is initially ordered to attack the punched target\n Successive punches can create multiple illusions\n The illusion has a EXPR 2 * IllusionLVL bounty",
         "The punch particle and sound effects upgrade when the distance counter is at 300, and upgrade again when at 900"
       ],
@@ -123,7 +123,7 @@
         "Min Stun Duration: 0.2",
         "Max Stun Duration: 2.25",
         "Number of Illusions: 1",
-        "Illusion Damage Dealt: 70%\/85%\/100% ( 90%\/105%\/120%)",
+        "Illusion Damage Dealt: 70%\/85%\/100% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 90%\/105%\/120%)",
         "Illusion Damage Taken: 200%",
         "Illusion Spawn Delay: 0.25",
         "Illusion Duration: 6"
@@ -144,10 +144,10 @@
     {
       "notes": [
         "The values of the wall are set upon cast and do not update upon leveling the ability up after having placed the wall",
-        "A wall can only create one illusion per player\n There cannot be more than one illusion per player per wall\n This means when there are multiple walls up (with multiple casts), each wall only creates one illusion for each enemy\n This also means that when an enemy has multiple heroes ( Meepo Clones and the  Tempest Double), they are still limited to one illusion per wall\n Even if the illusion gets  Enchanted, the wall still cannot create another illusion until the previous one dies\n When the illusion dies, the wall can create a new illusion of that hero as soon as it comes in range",
-        "Only creates illusions of real heroes\n Does not create illusions of illusions pathing through the wall\n Can create illusions of Divided We Stand and Tempest Double as well, but not of  Wukong's Command clones\n Can create the illusions of invulnerable enemies, but not hidden ones\n The slow, however, is not placed on invulnerable units",
+        "A wall can only create one illusion per player\n There cannot be more than one illusion per player per wall\n This means when there are multiple walls up (with multiple casts), each wall only creates one illusion for each enemy\n This also means that when an enemy has multiple heroes (<span image=\"images\/divided_we_stand.webp\">[picture:divided_we_stand]<\/span> Meepo Clones and the <span image=\"images\/arc_warden_tempest_double_minimap.png\">[picture:arc_warden_tempest_double_minimap]<\/span> Tempest Double), they are still limited to one illusion per wall\n Even if the illusion gets <span image=\"images\/enchant.webp\">[picture:enchant]<\/span> Enchanted, the wall still cannot create another illusion until the previous one dies\n When the illusion dies, the wall can create a new illusion of that hero as soon as it comes in range",
+        "Only creates illusions of real heroes\n Does not create illusions of illusions pathing through the wall\n Can create illusions of Divided We Stand and Tempest Double as well, but not of <span image=\"images\/wukong's_command.webp\">[picture:wukong's_command]<\/span> Wukong's Command clones\n Can create the illusions of invulnerable enemies, but not hidden ones\n The slow, however, is not placed on invulnerable units",
         "Upon spawning, the illusions are automatically ordered to attack the heroes they are based on",
-        "Illusions created by Wall of Replica have a static 5  and 5XP bounty which does not scale with levels",
+        "Illusions created by Wall of Replica have a static 5 <span image=\"images\/gold_symbol.png\">[picture:gold_symbol]<\/span> and 5XP bounty which does not scale with levels",
         "The illusions' duration is based on the remaining duration of the wall from which they originate",
         "The illusion spawns 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8\n It appears either north, east, south, or west from the target",
         "Wall of Replica illusions are visually distinguishable for the enemies",
@@ -158,12 +158,12 @@
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.73",
-        "Cast Range:  1300",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1300",
         "Number of Walls: 1",
         "Wall Length: 1300",
         "Wall Width: 50",
         "Move Speed Slow: 50%\/60%\/70%",
-        "Illusion Damage Dealt: 70%\/85%\/100% ( 90%\/105%\/120%)",
+        "Illusion Damage Dealt: 70%\/85%\/100% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 90%\/105%\/120%)",
         "Illusion Damage Taken: 200%",
         "Duration: 30",
         "Slow Duration: 1"

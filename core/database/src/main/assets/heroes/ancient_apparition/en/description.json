@@ -3,26 +3,26 @@
     {
       "notes": [
         "Cold Feet places an initial debuff on the affected target and places an icy marker at its current position upon cast",
-        "As long as the target stays within 715 ( 915) radius of the mark, it takes damage from the debuff and after 4 seconds it is stuned",
-        "If the target moves 715 ( 915) range away from the mark at any point during the initial debuff, the ability completely stops, removing the debuff and the marker\n This means even when the target moves back within range, it is not frozen or damaged further\n Also considers the target's vertical position, getting moved far up enough can stop Cold Feet as well",
+        "As long as the target stays within 715 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 915) radius of the mark, it takes damage from the debuff and after 4 seconds it is stuned",
+        "If the target moves 715 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 915) range away from the mark at any point during the initial debuff, the ability completely stops, removing the debuff and the marker\n This means even when the target moves back within range, it is not frozen or damaged further\n Also considers the target's vertical position, getting moved far up enough can stop Cold Feet as well",
         "When cast on units that already have the Cold Feet modifier, nothing happens",
-        "Deals 15\/25\/35\/45 ( 35\/45\/55\/65) damage in 0.5-second intervals, starting immediately upon cast, resulting in 8 instances",
+        "Deals 15\/25\/35\/45 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 35\/45\/55\/65) damage in 0.5-second intervals, starting immediately upon cast, resulting in 8 instances",
         "The stun is applied 1 second after the last instance",
-        "Can deal up to 120\/200\/280\/360 ( 280\/360\/440\/520) damage to the target (before reductions)",
-        "TALENT NOTES Both damage per second increasing and break distance increasing  talents does not update the current instance of already placed Cold Feet debuffs",
-        "The area of effect  talent turns Cold Feet into an area-targeted ability with 450 radius, so that it cannot directly target units anymore\n The break distances are different for each hit enemy\n They do not share it\n Fully affects invisible enemies and enemies inside the Fog of War"
+        "Can deal up to 120\/200\/280\/360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 280\/360\/440\/520) damage to the target (before reductions)",
+        "TALENT NOTES Both damage per second increasing and break distance increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents does not update the current instance of already placed Cold Feet debuffs",
+        "The area of effect <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent turns Cold Feet into an area-targeted ability with 450 radius, so that it cannot directly target units anymore\n The break distances are different for each hit enemy\n They do not share it\n Fully affects invisible enemies and enemies inside the Fog of War"
       ],
       "item_behaviour": [],
       "description": "Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 4 seconds.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.01+0",
-        "Cast Range:  700\/800\/900\/1000",
-        "Break Distance: 715 ( 915)",
-        "Damage per Second: 30\/50\/70\/90 ( 70\/90\/110\/130)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700\/800\/900\/1000",
+        "Break Distance: 715 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 915)",
+        "Damage per Second: 30\/50\/70\/90 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 70\/90\/110\/130)",
         "Damage Duration: 4",
         "Stun Duration: 2\/2.5\/3\/3.5",
-        "Radius:  450"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Radius:  450"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Ancient_Apparition_Cold_Feet.mp3\/revision\/latest?cb=20191216010624",
       "effects": [
@@ -40,7 +40,7 @@
     {
       "notes": [
         "All effects, including the attack speed slow and damage per second debuff, are provided by an aura\n The aura lingers for 0.5 seconds",
-        "Reduces most heroes' total magic resistance to 13%\/11%\/9%\/6% ( 9%\/7%\/5%\/2%)\n TALENT NOTES The movement speed slow and magic resistance reduction increasing  talent immediately upgrades all currently active Ice Vortexes, including already placed debuffs",
+        "Reduces most heroes' total magic resistance to 13%\/11%\/9%\/6% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 9%\/7%\/5%\/2%)\n TALENT NOTES The movement speed slow and magic resistance reduction increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately upgrades all currently active Ice Vortexes, including already placed debuffs",
         "Successive casts of Ice Vortex do not stack\n A unit can only be affected by one of them even when multiple of them are overlapping",
         "Provides 200 radius flying vision at the targeted point for its duration",
         "SHARD NOTES Ice Vortex now deals damage in 1-second intervals, starting 1 second after receiving the debuff, resulting in up to 14 possible instances\n Can deal up to 560 damage (before reductions) to a single unit within the area for the entire duration\n Acquiring the item immediately upgrades all currently active Ice Vortexes, including already placed debuffs"
@@ -50,14 +50,14 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.01+0",
-        "Cast Range:  1500",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1500",
         "Effect Radius: 300",
-        "Move Speed Slow: 16%\/19%\/22%\/25% ( 21%\/24%\/27%\/30%)",
-        "Magic Resistance Reduction: 16%\/19%\/22%\/25% ( 21%\/24%\/27%\/30%)",
+        "Move Speed Slow: 16%\/19%\/22%\/25% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 21%\/24%\/27%\/30%)",
+        "Magic Resistance Reduction: 16%\/19%\/22%\/25% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 21%\/24%\/27%\/30%)",
         "Aura Linger Duration: 0.5",
         "Duration: 14",
-        "Attack Speed Slow:  16\/19\/22\/25 ( 21\/24\/27\/30)",
-        "Damage per Second:  40"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Attack Speed Slow:  16\/19\/22\/25 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 21\/24\/27\/30)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Damage per Second:  40"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Ancient_Apparition_Ice_Vortex.mp3\/revision\/latest?cb=20191216010618",
       "effects": [
@@ -74,7 +74,7 @@
     },
     {
       "notes": [
-        "The cast range equals the caster's attack range and the bonus attack range from the ability\n It can only be further increased by attack range bonuses of the same range type as the caster\n However, it is not affected by cast range bonuses\n For Ancient Apparition, the total range for this ability is 735\/795\/855\/915 ( 935\/995\/1055\/1115)",
+        "The cast range equals the caster's attack range and the bonus attack range from the ability\n It can only be further increased by attack range bonuses of the same range type as the caster\n However, it is not affected by cast range bonuses\n For Ancient Apparition, the total range for this ability is 735\/795\/855\/915 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 935\/995\/1055\/1115)",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage\n This means it is not affected or considered by anything that works with attack damage\n This also means that it fully works with spell damage amplification and spell lifesteal",
         "The debuffs from successive casts fully stack, with each instance creating its own debuff",
         "The attacks first apply the debuff, then the spell damage, then the attack damage",
@@ -84,8 +84,8 @@
       "description": "Enhances Ancient Apparition's attack with increased range, heavy magic damage, and movement slow.",
       "hot_key": "E",
       "params": [
-        "Attack Range Bonus: 60\/120\/180\/240 ( 260\/320\/380\/440)",
-        "Damage: 40\/80\/120\/160 ( 120\/160\/200\/240)",
+        "Attack Range Bonus: 60\/120\/180\/240 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 260\/320\/380\/440)",
+        "Damage: 40\/80\/120\/160 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 120\/160\/200\/240)",
         "Move Speed Slow: 100%",
         "Slow Duration: 0.7\/0.8\/0.9\/1"
       ],
@@ -104,18 +104,18 @@
     },
     {
       "notes": [
-        "Upon cast, Ice Blast is replaced by the  Release sub-ability\n The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries\n The tracer projectile itself is harmless\n It neither deals damage nor places the debuff\n The tracer is visible to allies only\n The initial cast sound is also only audible to allies",
+        "Upon cast, Ice Blast is replaced by the <span image=\"images\/release.webp\">[picture:release]<\/span> Release sub-ability\n The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries\n The tracer projectile itself is harmless\n It neither deals damage nor places the debuff\n The tracer is visible to allies only\n The initial cast sound is also only audible to allies",
         "The explosion radius starts at 275 and increases by 50 for every second the tracer has traveled, capped at 1000 radius\n Thus, it takes at least 15 seconds to reach the maximum radius, equaling 22500 units traveled",
         "The tracer provides 500 radius flying vision around itself as it travels\n This vision does not last",
         "The debuff is only placed on heroes, clones and creep-heroes, but not on illusions",
         "The debuff can also be placed on spell immune or invulnerable, but not on hidden units",
         "Unlike the debuff, the explosion damage hits all enemy units, including creeps, excluding buildings and wards",
-        "The debuff freezes health, and prevents the current health of affected units from increasing\n However, it does not prevent the following abilities from increasing the hero's health:  Death Pact,  Infest,  True Form,  Wolf Bite,  Shapeshift,  Supernova,  Sunder,  Whirling Death,  Decay and  Time Lapse",
-        "Units affected by the debuff die instantly when their health drops below the threshold\n The debuff checks the unit's health upon taking damage, excluding damage flagged by HP removal\n The kill is credited to the source of the damage which brought them below the threshold\n However, if it was caused by self-inflicted damage, Ancient Apparition is credited instead\n Has a lower priority than  Winter's Curse, so if affected by both, Winter's Curse takes priority\n Has a higher priority than  Reaper's Scythe, so if affected by both, Ice Blast takes priority",
-        "Min health (e.g\n  Shallow Grave) prevents affected units from dying to the shatter for its duration\n Invulnerable units cannot shatter",
+        "The debuff freezes health, and prevents the current health of affected units from increasing\n However, it does not prevent the following abilities from increasing the hero's health: <span image=\"images\/death_pact.webp\">[picture:death_pact]<\/span> Death Pact, <span image=\"images\/infest.webp\">[picture:infest]<\/span> Infest, <span image=\"images\/true_form.webp\">[picture:true_form]<\/span> True Form, <span image=\"images\/wolf_bite.webp\">[picture:wolf_bite]<\/span> Wolf Bite, <span image=\"images\/shapeshift.webp\">[picture:shapeshift]<\/span> Shapeshift, <span image=\"images\/supernova.webp\">[picture:supernova]<\/span> Supernova, <span image=\"images\/sunder.webp\">[picture:sunder]<\/span> Sunder, <span image=\"images\/whirling_death.webp\">[picture:whirling_death]<\/span> Whirling Death, <span image=\"images\/decay.webp\">[picture:decay]<\/span> Decay and <span image=\"images\/time_lapse.webp\">[picture:time_lapse]<\/span> Time Lapse",
+        "Units affected by the debuff die instantly when their health drops below the threshold\n The debuff checks the unit's health upon taking damage, excluding damage flagged by HP removal\n The kill is credited to the source of the damage which brought them below the threshold\n However, if it was caused by self-inflicted damage, Ancient Apparition is credited instead\n Has a lower priority than <span image=\"images\/winter's_curse.webp\">[picture:winter's_curse]<\/span> Winter's Curse, so if affected by both, Winter's Curse takes priority\n Has a higher priority than <span image=\"images\/reaper's_scythe.webp\">[picture:reaper's_scythe]<\/span> Reaper's Scythe, so if affected by both, Ice Blast takes priority",
+        "Min health (e.g\n <span image=\"images\/shallow_grave.webp\">[picture:shallow_grave]<\/span> Shallow Grave) prevents affected units from dying to the shatter for its duration\n Invulnerable units cannot shatter",
         "The debuff deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 10\/11\/12 instances",
         "The debuff itself can deal up to 125\/220\/384 damage (before reductions)\n Together with the explosion, Ice Blast can deal up to 375\/545\/784 damage",
-        "Does not affect  Couriers"
+        "Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Launches a tracer towards any location of the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touched the icy ball of hail as it travels, are frostbitten, taking damage and prevented from regenerating or healing. If a frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
@@ -128,7 +128,7 @@
         "Max Explosion Radius: 1000",
         "Explosion Damage: 250\/325\/400",
         "Damage per Second: 12.5\/20\/32",
-        "Health Percentage Kill Threshold: 12%\/13%\/14% ( 16%\/17%\/18%)",
+        "Health Percentage Kill Threshold: 12%\/13%\/14% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 16%\/17%\/18%)",
         "Duration: 10\/11\/12"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Ancient_Apparition_Ice_Blast_1.mp3\/revision\/latest?cb=20191216010624",
@@ -146,7 +146,7 @@
     },
     {
       "notes": [
-        "Replaces  Ice Blast until the sub-ability is used or the tracer disappears",
+        "Replaces <span image=\"images\/ice_blast.webp\">[picture:ice_blast]<\/span> Ice Blast until the sub-ability is used or the tracer disappears",
         "Upon cast, the tracer stops traveling and marks the total area hit by the explosion once the main projectile reaches its position",
         "It also provides 650 radius flying vision at that position for 4 seconds",
         "The Ice Blast projectile travels at a speed of 750, or reaches the targeted point 1.75 seconds after launch, whichever is faster",
@@ -154,7 +154,7 @@
         "It is not released when the tracer reaches the map boundary\n In this case, the ability is wasted",
         "Every enemy unit which comes within 275 radius of the projectile as it travels, or is hit by the explosion, gets the frostbitten debuff\n The debuff starts expiring only once outside of the range of the projectile\n Getting within range again immediately refreshes the duration",
         "The projectile is fully visible to enemies\n But unlike the tracer, it is not visible on the minimap",
-        "The projectile provides 500 radius flying vision as it travels, which lasts for 3 seconds\n SPELL STEAL Grants  Ice Blast if this sub-ability is the last cast ability"
+        "The projectile provides 500 radius flying vision as it travels, which lasts for 3 seconds\n SPELL STEAL Grants <span image=\"images\/ice_blast.webp\">[picture:ice_blast]<\/span> Ice Blast if this sub-ability is the last cast ability"
       ],
       "item_behaviour": [],
       "description": "Releases the ice blast to explode at the tracer's current location.",

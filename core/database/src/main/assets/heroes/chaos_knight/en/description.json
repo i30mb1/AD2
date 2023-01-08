@@ -46,7 +46,7 @@
         "The armor debuff is applied to the target upon cast\n Chaos Knight does not need to attack it in order to place the debuff",
         "The debuff from successive casts does not stack but refreshes the duration",
         "Does not interrupt the target's channeling abilities",
-        "TALENT NOTES Fully affects <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers upon learning the Reality Rift pierces spell immunity <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent"
+        "TALENT NOTES Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers upon learning the Reality Rift pierces spell immunity <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent"
       ],
       "item_behaviour": [],
       "description": "Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds.",

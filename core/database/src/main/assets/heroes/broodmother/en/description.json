@@ -4,8 +4,8 @@
       "notes": [
         "Grants regular flat bonus attack damage",
         "Stacks additively with other sources of lifesteal\n Cannot lifesteal off of buildings or allied units\n Can lifesteal off of wards that do not require a fixed amount of attacks to be destroyed",
-        "SHARD NOTES Insatiable Hunger now additionally grants a flat 12 attack damage bonus, stacking additively in 1-second intervals, starting 1 second upon cast\n With the base attack damage bonus, it can grant up to 143\/177\/211\/245 attack damage bonus at its 9th\/11th\/13th\/15th interval\n Acquiring <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard does not update the current active instance",
-        "TALENT NOTES The base attack time  talent does not update the current active instance\n Reduces Broodmother's base attack time to 1.4 while active"
+        "SHARD NOTES Insatiable Hunger now additionally grants a flat 12 attack damage bonus, stacking additively in 1-second intervals, starting 1 second upon cast\n With the base attack damage bonus, it can grant up to 143\/177\/211\/245 attack damage bonus at its 9th\/11th\/13th\/15th interval\n Acquiring <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard does not update the current active instance",
+        "TALENT NOTES The base attack time <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update the current active instance\n Reduces Broodmother's base attack time to 1.4 while active"
       ],
       "item_behaviour": [],
       "description": "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack.",
@@ -14,9 +14,9 @@
         "Cast Animation: 0.2+0.5",
         "Base Attack Damage Bonus: 35\/45\/55\/65",
         "Lifesteal: 40%\/60%\/80%\/100%",
-        "Duration: 8\/10\/12\/14 ( 10\/12\/14\/16)",
-        "Attack Damage Bonus Increase per Second:  12",
-        "Base Attack Time:  1.4"
+        "Duration: 8\/10\/12\/14 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 10\/12\/14\/16)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Attack Damage Bonus Increase per Second:  12",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Base Attack Time:  1.4"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Broodmother_Insatiable_Hunger.mp3\/revision\/latest?cb=20191216011847",
       "effects": [
@@ -34,11 +34,11 @@
       "notes": [
         "Has a Global cast range when there is another Spin Web within 900 range of the targeted point",
         "Upon learning, Broodmother instantly gains 4 charges\n However, leveling it up further does not instantly grant the extra charges",
-        "The buff only affects the caster, and all  Spiderlings and  Spiderites under the player's control\n Other player-controlled units are unaffected\n The movement speed bonus gets lower by 0.18%\/0.28%\/0.38%\/0.48% for every 1% of health missing, reaching 9%\/14%\/19%\/24% bonus when at 1% health\n The health percentage is checked periodically and the effects are adapted instantly\n Does not affect invulnerable or hidden units",
+        "The buff only affects the caster, and all <span image=\"images\/broodmother_spiderling.png\">[picture:broodmother_spiderling]<\/span> Spiderlings and <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Spiderites under the player's control\n Other player-controlled units are unaffected\n The movement speed bonus gets lower by 0.18%\/0.28%\/0.38%\/0.48% for every 1% of health missing, reaching 9%\/14%\/19%\/24% bonus when at 1% health\n The health percentage is checked periodically and the effects are adapted instantly\n Does not affect invulnerable or hidden units",
         "Can regenerate up to 300\/420\/540\/660 health in one minute",
         "Spin Webs also increases Broodmother's and her Spiderlings (including Spiderites) turn rate to 0.8 and 0.7 respectively",
         "The effects are provided by an aura and its buff lingers for 0.15 seconds\n Leveling up the ability instantly updates the values of all current active Spin Webs",
-        "Spin Webs are visible on the minimap for Broodmother and her team\n They do not provide vision but are selectable through the Fog of War\n Broodmother can destroy any of her webs with the  Destroy Spin Web sub-ability",
+        "<span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Spin Webs are visible on the minimap for Broodmother and her team\n They do not provide vision but are selectable through the Fog of War\n Broodmother can destroy any of her webs with the <span image=\"images\/destroy_spin_web.webp\">[picture:destroy_spin_web]<\/span> Destroy Spin Web sub-ability",
         "The webs do not block neutral creep camps\n SPELL STEAL \/ MORPH NOTES All created Spin Webs immediately disappear upon losing ability"
       ],
       "item_behaviour": [],
@@ -46,9 +46,9 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.4",
-        "Cast Range:  1000",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000",
         "Web Radius: 900",
-        "Max Amount of Webs: 3\/5\/7\/9 ( 6\/8\/10\/12)",
+        "Max Amount of Webs: 3\/5\/7\/9 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6\/8\/10\/12)",
         "Health Regen Bonus: 5\/7\/9\/11",
         "Turn Rate Bonus: 0.2",
         "Min Move Speed Bonus Health Threshold: 1%",
@@ -76,20 +76,20 @@
         "The bonus damage only triggers for allied hero attacks (including illusions and clones, excluding creep-heroes), and any attacks done by units owned by Broodmother",
         "Stacks additively with other sources of blind\n Blind uses pseudo-random distribution",
         "Successive casts do not update the ability values but refresh the duration",
-        "TALENT NOTES The area of effect  talent turns Silken Bola into a 400 radius area-targeted ability, so that it cannot directly target units anymore"
+        "TALENT NOTES The area of effect <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent turns Silken Bola into a 400 radius area-targeted ability, so that it cannot directly target units anymore"
       ],
       "item_behaviour": [],
       "description": "Slows the target enemy, causes them to miss and deals impact damage. Units that attack the target deal bonus magic damage.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0.67",
-        "Cast Range:  750",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 750",
         "Damage: 100\/120\/140\/160",
         "Attack Damage Bonus Against Target: 6\/7\/8\/9",
-        "Move Speed Slow: 25%\/35%\/45%\/55% ( 60%\/70%\/80%\/90%)",
-        "Miss Chance: 40%\/45%\/50%\/55% ( 75%\/80%\/85%\/90%)",
+        "Move Speed Slow: 25%\/35%\/45%\/55% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 60%\/70%\/80%\/90%)",
+        "Miss Chance: 40%\/45%\/50%\/55% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 75%\/80%\/85%\/90%)",
         "Duration: 6",
-        "Radius:  400"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Radius:  400"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Broodmother_Silken_Bola_1.mp3\/revision\/latest?cb=20201224014000",
       "effects": [
@@ -106,8 +106,8 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
-        "Has a Global cast range when there is a  Spin Web within 900 range of the targeted point\n The vector direction of Spinner's Snare is not considered, only the initially selected center point matters",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Has a Global cast range when there is a <span image=\"images\/spin_web.webp\">[picture:spin_web]<\/span> Spin Web within 900 range of the targeted point\n The vector direction of Spinner's Snare is not considered, only the initially selected center point matters",
         "Cannot be cast within the vicinity of another web line\n The vector must not overlap with another line to cast",
         "The web line forms over a 2-second duration, during which the line is completely inactive",
         "The web lines are completely invisible to the enemy and cannot be revealed",
@@ -122,7 +122,7 @@
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.56",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Line Length: 900",
         "Line Width: 50",
         "Line Formation Time: 2",
@@ -149,18 +149,18 @@
       "notes": [
         "The projectile travels at a speed of 1200",
         "Spawn Spiderling first applies the debuff, then the damage",
-        "Spiderlings only spawn when the targeted unit dies while having the debuff on\n It does not matter who kills the target, if it dies in any way, the Spiderlings spawn\n The amount of spiders spawned is based on the level of the ability as the spawn happens, and not on what level it was upon cast",
+        "<span image=\"images\/broodmother_spiderling.png\">[picture:broodmother_spiderling]<\/span> Spiderlings only spawn when the targeted unit dies while having the debuff on\n It does not matter who kills the target, if it dies in any way, the Spiderlings spawn\n The amount of spiders spawned is based on the level of the ability as the spawn happens, and not on what level it was upon cast",
         "Multiple instances of Spawn Spiderlings on the same target fully stack, with each cast placing a separate debuff\n Has a stack limit of 7\n If an enemy has already 7 instances of the debuff, a new cast does not affect them at all",
-        "Spiderlings and Spiderites are fully affected by  Spin Web",
-        "TALENT NOTES The damage increasing  talent immediately upgrades all of Broodmother's currently flying Spawn Spiderling projectiles\n The health increasing  talent does not upgrade any of Broodmother's currently living Spiderlings or Spiderites"
+        "Spiderlings and Spiderites are fully affected by <span image=\"images\/spin_web.webp\">[picture:spin_web]<\/span> Spin Web",
+        "TALENT NOTES The damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately upgrades all of Broodmother's currently flying Spawn Spiderling projectiles\n The health increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not upgrade any of Broodmother's currently living Spiderlings or Spiderites"
       ],
       "item_behaviour": [],
       "description": "Broodmother injects her young into an enemy unit, dealing damage. The spiderlings will hatch if the target is killed while under this influence.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0.5",
-        "Cast Range:  900",
-        "Damage: 260\/340\/420 ( 340\/420\/500)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
+        "Damage: 260\/340\/420 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 340\/420\/500)",
         "Number of Spiderlings: 4\/5\/6",
         "Debuff Duration: 20",
         "Spiderling Duration: 40\/45\/50"
@@ -186,7 +186,7 @@
       "description": "Destroys the selected Spin Web.",
       "hot_key": "Q",
       "params": [
-        "Cast Animation:  0+0"
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0"
       ],
       "audioUrl": "",
       "effects": [
@@ -232,9 +232,9 @@
       "notes": [
         "Successive hits with Spawn Spiderite on the same target do not stack, only the debuff gets refreshed",
         "The attacks first apply their damage, then the debuff",
-        "The  Spiderite only spawns when the attacked unit dies while having the debuff on\n It does not matter who kills the target, if it dies in any way, the Spiderite spawns",
+        "The <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Spiderite only spawns when the attacked unit dies while having the debuff on\n It does not matter who kills the target, if it dies in any way, the Spiderite spawns",
         "Does not affect wards and buildings, but affects allies",
-        "Spiderites are fully affected by  Spin Web",
+        "Spiderites are fully affected by <span image=\"images\/spin_web.webp\">[picture:spin_web]<\/span> Spin Web",
         "Spiderites do not have this ability"
       ],
       "item_behaviour": [],

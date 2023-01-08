@@ -4,19 +4,19 @@
       "notes": [
         "The projectile travels at a speed of 1350",
         "Magic Missile first applies the debuff, then the damage",
-        "SHARD NOTES Magic Missile's projectile now bounces on another unit, prioritizing heroes, within a 650 ( 775) radius\n The bounce distance can be further increased by other cast range bonuses\n Can bounce to invisible, untargetable, and units in the Fog of War\n Can never hit the same unit twice per cast\n If the current target turns invulnerable or hidden, it does not bounce upon reaching them\n All bounces together can deal up to 180\/360\/540\/720 ( 580\/760\/940\/1120) damage (before reductions)",
-        "TALENT NOTES Fully affects  Couriers upon learning the Magic Missile pierces spell immunity  talent"
+        "SHARD NOTES Magic Missile's projectile now bounces on another unit, prioritizing heroes, within a 650 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 775) radius\n The bounce distance can be further increased by other cast range bonuses\n Can bounce to invisible, untargetable, and units in the Fog of War\n Can never hit the same unit twice per cast\n If the current target turns invulnerable or hidden, it does not bounce upon reaching them\n All bounces together can deal up to 180\/360\/540\/720 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 580\/760\/940\/1120) damage (before reductions)",
+        "TALENT NOTES Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers upon learning the Magic Missile pierces spell immunity <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent"
       ],
       "item_behaviour": [],
       "description": "Fires a magic missile at an enemy unit, stunning and dealing damage.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.5",
-        "Cast Range:  650 ( 775)",
-        "Number of Targets: 1 ( 2)",
-        "Damage: 90\/180\/270\/360 ( 290\/380\/470\/560)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 775)",
+        "Number of Targets: 1 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 2)",
+        "Damage: 90\/180\/270\/360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 290\/380\/470\/560)",
         "Stun Duration: 1.4\/1.5\/1.6\/1.7",
-        "Bounce Distance:  650 ( 775)"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Bounce Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 775)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vengeful_Spirit_Magic_Missile_1.mp3\/revision\/latest?cb=20191216030141",
       "effects": [
@@ -38,18 +38,18 @@
         "The wave provides 350radius flying vision as it travels, which lasts for 4 seconds\n This vision starts 100 range away from Vengeful Spirit\n With the travel distance and vision radius, the vision reaches up to 1850 range away",
         "Although affected targets only recieve one debuff, successive cast do not stack, but update its ability values and refresh its duration",
         "The wave first applies the debuff, then the damage",
-        "Does not affect  Couriers"
+        "Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Vengeful Spirit lets loose a wicked cry, weakening the armor of enemies and giving vision of the path ahead.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.5",
-        "Cast Range:  1400",
-        "Wave Travel Distance:  1400",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1400",
+        "Wave Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1400",
         "Effect Radius: 325",
         "Damage: 85\/100\/115\/130",
-        "Armor Reduction: 3\/4\/5\/6 ( 5\/6\/7\/8)",
+        "Armor Reduction: 3\/4\/5\/6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 5\/6\/7\/8)",
         "Duration: 8"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vengeful_Spirit_Wave_of_Terror.mp3\/revision\/latest?cb=20191216030144",
@@ -71,20 +71,20 @@
         "Grants flat bonus attack damage based on the affected unit's main attack damage\n Does not further increase bonus attack damage",
         "The aura affects invulnerable, but not hidden allies",
         "SCEPTER NOTES Vengeance Aura now creates 1 strong illusion 108 range away either north, east, south or west at Vengeful Spirit's death location, including with Reincarnation\n It spawns with full mana, health, and all abilities off-cooldown, regardless of their cooldown status on Vengeful Spirit\n It can cast abilities, but not item abilities\n The Vengeance Illusion's duration is set equal to Vengeful Spirit's respawn time upon creation\n The BUYBACK next respawn time increase does not further increase the illusion's duration\n The illusion disappears once Vengeful Spirit respawns, or when it reaches the normal death duration",
-        "The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies\n This illusion uses the hero health bar instead of the regular unit health bar like other illusions\n The Vengeance Illusion neither have gold, nor experience bounty\n This illusion cannot be  Enchanted\n It gets slowed instead",
-        "SCEPTER NOTES Vengeful Spirit now can gain experience even while dead\n While dead, she is periodically moved along with the Vengeance Illusion, allowing her to gain experience around the illusion\n However, these effects require the illusion to be alive\n If the Vengeance Illusion dies, she neither is moved along nor can gain experience\n This also allows her to respawn at the illusion's location, instead of at the fountain\n Upon respawn, Vengeful Spirit's facing angle same as the last Vengeance Illusion facing angle, and she is fully affected by the  Fountain Invulnerability Buff"
+        "The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies\n This illusion uses the hero health bar instead of the regular unit health bar like other illusions\n The Vengeance Illusion neither have gold, nor experience bounty\n This illusion cannot be <span image=\"images\/enchant.webp\">[picture:enchant]<\/span> Enchanted\n It gets slowed instead",
+        "SCEPTER NOTES Vengeful Spirit now can gain experience even while dead\n While dead, she is periodically moved along with the Vengeance Illusion, allowing her to gain experience around the illusion\n However, these effects require the illusion to be alive\n If the Vengeance Illusion dies, she neither is moved along nor can gain experience\n This also allows her to respawn at the illusion's location, instead of at the fountain\n Upon respawn, Vengeful Spirit's facing angle same as the last Vengeance Illusion facing angle, and she is fully affected by the <span image=\"images\/rejuvenation_aura.png\">[picture:rejuvenation_aura]<\/span> Fountain Invulnerability Buff"
       ],
       "item_behaviour": [],
       "description": "Vengeful Spirit's presence increases the damage of nearby friendly heroes.",
       "hot_key": "E",
       "params": [
         "Radius: 1200",
-        "Attack Damage Bonus: 11%\/18%\/25%\/32% ( 27%\/34%\/41%\/48%)",
+        "Attack Damage Bonus: 11%\/18%\/25%\/32% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 27%\/34%\/41%\/48%)",
         "Aura Linger Duration: 0.5",
-        "Number of Illusions on Death:  1",
-        "Illusion Damage Dealt:  100%",
-        "Illusion Damage Taken:  100%",
-        "Illusion Move Speed Bonus:  12%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Number of Illusions on Death:  1",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Illusion Damage Dealt:  100%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Illusion Damage Taken:  100%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Illusion Move Speed Bonus:  12%"
       ],
       "audioUrl": "",
       "effects": [
@@ -104,7 +104,7 @@
         "Does not disjoint projectiles upon swapping, neither for the caster nor for the target",
         "Destroys trees within 300 radius around Vengeful Spirit and the target",
         "Can be cast on allies without damaging them",
-        "Can be cast on illusions,  Spirit Bear and on invulnerable units\n Cannote be cast on hidden units\n Cannot be cast on allies who have ☐ Disabled Help from Vengeful Spirit",
+        "Can be cast on illusions, <span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear and on invulnerable units\n Cannote be cast on hidden units\n Cannot be cast on allies who have ☐ Disabled Help from Vengeful Spirit",
         "Vengeful Spirit always gains the buff, no matter if she targets an ally or an enemy\n Applies generic incoming damage reduction on allies\n Stacks additively with other sources of generic incoming damage manipulation\n The reduction affects all damage the allies take that is not flagged as HP removal\n SOULBIND Swaps position with the secondary target upon casting on the primary target\n Vengeful Spirit first swaps position with the primary target, then the primary target swaps with the secondary target, then the secondary target swaps with Vengeful Spirit"
       ],
       "item_behaviour": [],
@@ -112,8 +112,8 @@
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.4+0",
-        "Cast Range:  800\/950\/1100",
-        "Damage: 50 ( 200)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800\/950\/1100",
+        "Damage: 50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 200)",
         "Ally\/Self Incoming Damage Reduction: 30%\/40%\/50%",
         "Damage Reduction Duration: 3"
       ],

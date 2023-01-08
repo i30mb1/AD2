@@ -151,7 +151,7 @@
     },
     {
       "notes": [
-        "Only enemy units are shoved aside from the path of Primal Roar\n <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan is not affected by the knockback\n Affected units are fully disabled during the knockback\n Can be cast on <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers to stun and damage them\n However, they are not affected by the knockback as secondary targets",
+        "Only enemy units are shoved aside from the path of Primal Roar\n <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan is not affected by the knockback\n Affected units are fully disabled during the knockback\n Can be cast on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers to stun and damage them\n However, they are not affected by the knockback as secondary targets",
         "Knocks units aside at a speed of 450, up to 450 range away, resulting in a knockback duration of 1 second\n Units hit by the knockback destroy trees within 100 radius and are made to face toward the direction they are getting pushed",
         "The knockback and slow have a dynamic range, based on the distance between Beastmaster and the primary target\n For every 2 distance between Beastmaster and the target upon cast, the knockback range increases by 1\n For example, when the target is 600 range away, the knockback hits units up to 300 range behind the target and behind Beastmaster\n The width of the knockback area is fixed at 300, so the affected area is always stadium-shaped",
         "Considering the dynamic range, the knockback and slow can hit units up to 900 range away",
@@ -192,7 +192,7 @@
     },
     {
       "notes": [
-        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers and wards",
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers and wards",
         "Increases Beastmaster's movement speed to 330",
         "The aura affects invulnerable or hidden units",
         "The aura is bestowed even while Beastmaster is dead"
@@ -219,7 +219,7 @@
     },
     {
       "notes": [
-        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
+        "Affects Beastmaster and all of his player-controlled units immediately upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "The aura increases maximum health capacity and keeps the current health percentage",
         "The aura affects invulnerable or hidden units",
         "The aura is bestowed even while Beastmaster is dead"
@@ -277,7 +277,7 @@
         "The hawk dives in an arc for 0.4 seconds, so the speed varies based on the distance\n The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate",
         "Uses forced movement to move the Hawk\n This means it can be interrupted by applying other sources of forced movement to it\n The dive cannot be interrupted by anything else\n It fully ignores all disables",
         "The Hawk first applies the damage, then the root, and then is instantly killed\n The Hawk's death cannot be prevented in any way",
-        "Cannot be cast on <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
+        "Cannot be cast on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Reveals itself for 1, and then flies towards the target enemy, dealing 250 damage and rooting them for 2.5 second, killing the hawk.",

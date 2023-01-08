@@ -2,19 +2,19 @@
   "abilities": [
     {
       "notes": [
-        "Наносит 14\/20\/26\/32 дополнительного урона + 0,5%\/0,9%\/1,3%\/1,7% ( 0,8%\/1,2%\/1,6%\/2%) от максимального запаса маны цели в виде урона (до учёта сопротивлений)\n Дополнительный урон наносится вместе с уроном атаки и считается за урон от атаки\n От этого урона идет лечение вампиризмом и он может быть прорубающим, но он не может быть критическим\n На урон также не действуют бонусы или уменьшения атаки, основанные на процентах, но он может быть снижен уменьшениями, использующими фиксированное значение",
-        "Атаки иллюзий выжигают меньшее количество маны: 14\/20\/26\/32 единиц + 0,5%\/0,9%\/1,3%\/1,7% от максимального запаса за удар\n Иллюзии также имеют меньший бонусный урон: 7\/10\/13\/16 дополнительного урона + 0,25%\/0,45%\/0,65%\/0,85% ( 0,4%\/0,6%\/0,8%\/1%) от максимального запаса маны цели в виде урона (до учёта сопротивлений)",
+        "Наносит 14\/20\/26\/32 дополнительного урона + 0,5%\/0,9%\/1,3%\/1,7% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0,8%\/1,2%\/1,6%\/2%) от максимального запаса маны цели в виде урона (до учёта сопротивлений)\n Дополнительный урон наносится вместе с уроном атаки и считается за урон от атаки\n От этого урона идет лечение вампиризмом и он может быть прорубающим, но он не может быть критическим\n На урон также не действуют бонусы или уменьшения атаки, основанные на процентах, но он может быть снижен уменьшениями, использующими фиксированное значение",
+        "Атаки иллюзий выжигают меньшее количество маны: 14\/20\/26\/32 единиц + 0,5%\/0,9%\/1,3%\/1,7% от максимального запаса за удар\n Иллюзии также имеют меньший бонусный урон: 7\/10\/13\/16 дополнительного урона + 0,25%\/0,45%\/0,65%\/0,85% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0,4%\/0,6%\/0,8%\/1%) от максимального запаса маны цели в виде урона (до учёта сопротивлений)",
         "Если после атаки по цели у неё заканчивается мана, то она замедляется на 0,75 секунд\n Несколько срабатываний на цель не складываются, но обновляют длительность\n Иллюзии также имеют этот эффект",
         "Сначала сжигает ману, затем наносит урон",
         "Не действует на союзных существ при атаке",
-        "Складывается со способностью  Manabreak у Diffusal Blade"
+        "Складывается со способностью <span image=\"images\/diffusal_blade_1.png\">[picture:diffusal_blade_1]<\/span> Manabreak у Diffusal Blade"
       ],
       "item_behaviour": [],
       "description": "Сжигает ману врага с каждым ударом. Mana Break наносит противнику урон в размере 50% от сожженной маны.",
       "hot_key": "Q",
       "params": [
         "Сжигание маны за удар: 28\/40\/52\/64",
-        "Сжигаемая доля от макс\n маны: 1%\/1,8%\/2,6%\/3,4% ( 1,6%\/2,4%\/3,2%\/4%)",
+        "Сжигаемая доля от макс\n маны: 1%\/1,8%\/2,6%\/3,4% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1,6%\/2,4%\/3,2%\/4%)",
         "Урон за единицу маны: 50%",
         "Процент для иллюзий: 50%",
         "Замедление целей без маны: 25%\/30%\/35%\/40%",
@@ -45,7 +45,7 @@
       "params": [
         "Анимация применения: 0,4+0,53",
         "Дальность применения: Глобальная",
-        "Макс\n дальность телепортации: 750\/900\/1050\/1200 ( 1000\/1150\/1300\/1450)"
+        "Макс\n дальность телепортации: 750\/900\/1050\/1200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1000\/1150\/1300\/1450)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Anti-Mage_Blink_1.mp3\/revision\/latest?cb=20191216010740",
       "effects": [
@@ -62,22 +62,22 @@
     {
       "notes": [
         "Сочетается мультипликативно с другими источниками сопротивления магии",
-        "Увеличивает общее значение сопротивления магии Anti-Mage до 36,25%\/43,75%\/51,25%\/58,75% ( 51,25%\/58,75%\/66,25%\/73,75%)",
+        "Увеличивает общее значение сопротивления магии Anti-Mage до 36,25%\/43,75%\/51,25%\/58,75% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 51,25%\/58,75%\/66,25%\/73,75%)",
         "Отраженные прерываемые способности можно отменить",
-        "Эффекты от <span image=\"items\/linken's_sphere\/full.webp\">[Linken's Sphere]<\/span> Linken's Sphere, <span image=\"items\/mirror_shield\/full.webp\">[Mirror Shield]<\/span> Mirror Shield и <span image=\"items\/lotus_orb\/full.webp\">[Lotus Orb]<\/span> Lotus Orb сработают только в том случае, если  Counterspell находится на перезарядке\n  Counterspell не отражает заклинания, отраженные <span image=\"items\/mirror_shield\/full.webp\">[Mirror Shield]<\/span> Mirror Shield и <span image=\"items\/lotus_orb\/full.webp\">[Lotus Orb]<\/span> Lotus Orb (отраженные заклинания повторно не отражаются)\n Эффект использует обычную перезарядку, поэтому на неё действуют любые эффекты, манипулирующие перезарядкой\n В отличие от других источников отражения заклинаний, способность не отражает  Phantom Strike и  Blink Strike\n Эти способности только блокируются"
+        "Эффекты от <span image=\"items\/linken's_sphere\/full.webp\">[picture:linken's_sphere]<\/span> Linken's Sphere, <span image=\"items\/mirror_shield\/full.webp\">[picture:mirror_shield]<\/span> Mirror Shield и <span image=\"items\/lotus_orb\/full.webp\">[picture:lotus_orb]<\/span> Lotus Orb сработают только в том случае, если <span image=\"images\/counterspell.webp\">[picture:counterspell]<\/span> Counterspell находится на перезарядке\n <span image=\"images\/counterspell.webp\">[picture:counterspell]<\/span> Counterspell не отражает заклинания, отраженные <span image=\"items\/mirror_shield\/full.webp\">[picture:mirror_shield]<\/span> Mirror Shield и <span image=\"items\/lotus_orb\/full.webp\">[picture:lotus_orb]<\/span> Lotus Orb (отраженные заклинания повторно не отражаются)\n Эффект использует обычную перезарядку, поэтому на неё действуют любые эффекты, манипулирующие перезарядкой\n В отличие от других источников отражения заклинаний, способность не отражает <span image=\"images\/phantom_strike.webp\">[picture:phantom_strike]<\/span> Phantom Strike и <span image=\"images\/blink_strike.webp\">[picture:blink_strike]<\/span> Blink Strike\n Эти способности только блокируются"
       ],
       "item_behaviour": [],
       "description": "Увеличивает сопротивление магическому урону. Можно применить, чтобы создать вокруг себя противомагический щит, который полностью отражает все направленные заклинания обратно во врага.",
       "hot_key": "E",
       "params": [
         "Анимация применения: 0+0",
-        "Доп\n сопротивление магии: 15%\/25%\/35%\/45% ( 35%\/45%\/55%\/65%)",
+        "Доп\n сопротивление магии: 15%\/25%\/35%\/45% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 35%\/45%\/55%\/65%)",
         "Длительность: 1,2",
-        "Внешний радиус ауры:  900",
-        "Внутренний радиус ауры:  300",
-        "Снижение магического урона во внешнем радиусе:  10%",
-        "Множитель снижения магического урона во внутреннем радиусе:  3",
-        "Длительность ауры:  0,5"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Внешний радиус ауры:  900",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Внутренний радиус ауры:  300",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Снижение магического урона во внешнем радиусе:  10%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Множитель снижения магического урона во внутреннем радиусе:  3",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Длительность ауры:  0,5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Anti-Mage_Counterspell_1.mp3\/revision\/latest?cb=20191216010734",
       "effects": [
@@ -93,22 +93,22 @@
     },
     {
       "notes": [
-        "Требуется <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter для разблокировки",
-        "Созданная иллюзия смотрит в том же направлении, что и заклинатель, использует частицы и звук способности  Blink",
-        "Если  Blink не изучена, то Blink Fragment будет использовать дальность применения способности Blink первого уровня",
+        "Требуется <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter для разблокировки",
+        "Созданная иллюзия смотрит в том же направлении, что и заклинатель, использует частицы и звук способности <span image=\"images\/blink_%28anti-mage%29.png\">[picture:blink_%28anti-mage%29]<\/span> Blink",
+        "Если <span image=\"images\/blink_%28anti-mage%29.png\">[picture:blink_%28anti-mage%29]<\/span> Blink не изучена, то Blink Fragment будет использовать дальность применения способности Blink первого уровня",
         "Иллюзия полностью неконтролируемая",
         "Иллюзия не является неуязвимой, её можно атаковать и убить",
         "Если целью является враждебный юнит, то иллюзия будет атаковать это существо",
         "Если целью является точка, то иллюзия будет использовать стандартные правила автоатаки\n Иллюзия игнорирует настройки автоатаки игрока и всегда использует стандартную автоатаку\n Если рядом с точкой нет противников, то иллюзия будет стоять, пока в радиусе автоатаки не появится враг",
         "Иллюзия имеет сквозное передвижение",
-        "Иллюзия от этой способности получает бонусы от улучшения  Counterspell с помощью <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard, создавая иллюзии Anti-Mage при успешном отражении способности"
+        "Иллюзия от этой способности получает бонусы от улучшения <span image=\"images\/counterspell.webp\">[picture:counterspell]<\/span> Counterspell с помощью <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard, создавая иллюзии Anti-Mage при успешном отражении способности"
       ],
       "item_behaviour": [],
       "description": "Перемещает к выбранному врагу или в выбранную точку иллюзию, которая 7 секунд атакует противников. Эта иллюзия применяет Counterspell одновременно с основным героем. Имеет заряда.",
       "hot_key": "D",
       "params": [
         "Анимация применения: 0,2+0,84",
-        "Дальность применения: 750\/900\/1050\/1200 ( 1000\/1150\/1300\/1450)",
+        "Дальность применения: 750\/900\/1050\/1200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1000\/1150\/1300\/1450)",
         "Урон иллюзии: 25%",
         "Урон по иллюзии: 200%",
         "Длительность иллюзии: 7"
@@ -140,8 +140,8 @@
       "params": [
         "Анимация применения: 0,3+0,63",
         "Дальность применения: 600",
-        "Радиус: 500 ( 650)",
-        "Урон за единицу отсутствующей маны: 0,8\/0,95\/1,1 ( 0,9\/1,05\/1,2)",
+        "Радиус: 500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 650)",
+        "Урон за единицу отсутствующей маны: 0,8\/0,95\/1,1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0,9\/1,05\/1,2)",
         "Длительность оглушения: 0,3"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Anti-Mage_Mana_Void.mp3\/revision\/latest?cb=20191216010737",

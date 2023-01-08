@@ -13,21 +13,28 @@ internal object ImageRepository {
 
     private lateinit var spells: List<Image>
     private lateinit var items: List<Image>
+    private lateinit var heroes: List<Image>
 
     init {
         update()
     }
 
     fun update() {
-        spells = File(assetsDatabaseSpells).listFiles()?.map {
-            val name = it.name.substringBefore(".")
-            val path = it.path.substringAfter("assets\\").replace("\\", "/")
+        heroes = File(assetsDatabaseHeroes).listFiles()?.mapNotNull { file ->
+            val file = file.listFiles()?.find { it.name.contains("minimap") } ?: return@mapNotNull null
+            val extension = file.name.substringAfter(".")
+            val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/minimap.$extension"
+            val name = file.name + "_minimap"
+            Image(path, name)
+        } ?: emptyList()
+        spells = File(assetsDatabaseSpells).listFiles()?.map { file ->
+            val name = file.name.substringBefore(".")
+            val path = file.path.substringAfter("assets\\").replace("\\", "/")
             Image(path, name)
         } ?: emptyList()
         items = File(assetsDatabaseItems).listFiles()?.map { file ->
-            val name = file.name
             val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/full.webp"
-            Image(path, name)
+            Image(path, file.name)
         } ?: emptyList()
     }
 

@@ -2,25 +2,25 @@
   "abilities": [
     {
       "notes": [
-        "The mine always reaches the targeted area within 1.2 seconds, no matter how far the targeted area is\n If the bomb enters a  Chronosphere before reaching the targeted point, it instantly disappears\n The bomb destroys trees within 100 radius upon landing",
+        "The mine always reaches the targeted area within 1.2 seconds, no matter how far the targeted area is\n If the bomb enters a <span image=\"images\/chronosphere.webp\">[picture:chronosphere]<\/span> Chronosphere before reaching the targeted point, it instantly disappears\n The bomb destroys trees within 100 radius upon landing",
         "Once Sticky Bomb reaches the area, it searches for enemy heroes, including illusions, clones and creep-heroes\n This search happens only once upon landing, it does not continuously search for enemies\n Can detect invisible heroes and heroes inside the Fog of War, but not invulnerable or hidden heroes\n If a valid target is found, the bomb starts moving towards the target after a 0.1-second delay\n Sticky Bomb moves at an initial speed of 500, and accelerates at a rate of 2000 distance per second until reaching the target\n There is no maximum acceleration speed for Sticky Mine\n Once it starts moving, the latching cannot be prevented in any way except death",
         "The bomb latches when it comes within 100 range of the target and keeps that distance throughout\n Once latched, it cannot be removed in any way, not even by death\n Although the latch slow debuff is dispellable, doing so does not remove the bomb\n The bomb explodes 2 seconds after latching onto the target",
         "Multiple bombs may latch onto the same target, with each having independent explosion delays\n However, multiple instances of the movement speed slow debuff does not stack\n The status buff icon just shows how many bombs are currently latched",
         "If the bomb could not find any hero, it stays at the targeted location\n The bomb does not move around, the circling animation has no influence on the bomb's actual position\n The bomb will also explode in 2 seconds after landing, if it could not find a hero to latch on",
-        "The damage is sourced to Techies, and not to the  Sticky Bomb\n Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal",
+        "The damage is sourced to Techies, and not to the <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Sticky Bomb\n Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal",
         "The explosion first applies the damage, then the slow debuff",
         "The ability does not provide any vision or True Sight\n However, the bomb itself has 700 radius ground vision at all times",
-        "The bombs can be selected by with Tab ↹\n Although the bombs have  Pinpoint Detonate, it cannot be used"
+        "The bombs can be selected by with Tab ↹\n Although the bombs have <span image=\"images\/pinpoint_detonate_%28remote_mine%29.png\">[picture:pinpoint_detonate_%28remote_mine%29]<\/span> Pinpoint Detonate, it cannot be used"
       ],
       "item_behaviour": [],
       "description": "Lobs a Sticky Bomb towards the target area. If it lands next to an enemy hero, the bomb will stick to it, slowing its movement speed. After a few seconds the bomb will explode, dealing damage in an area around the detonation and applying a secondary slow for 3 seconds.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.1+0.7",
-        "Cast Range:  1000",
-        "Latch Radius: 250 ( 375)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000",
+        "Latch Radius: 250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 375)",
         "Latch Move Speed Slow: 25%\/35%\/45%\/55%",
-        "Explosion Radius: 300 ( 425)",
+        "Explosion Radius: 300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 425)",
         "Explosion Delay: 2",
         "Explosion Damage: 90\/180\/270\/360",
         "Explosion Move Speed Slow: 15%\/25%\/35%\/45%",
@@ -41,9 +41,9 @@
     },
     {
       "notes": [
-        "Reactive Tazer only triggers when a unit lands an attack, regardless of distance\n This means it cannot trigger on missed attacks\n Does not trigger on instant attacks that cannot proc attack modifiers (e.g\n  Split Shot before learning the  talent and  Flak Cannon)\n Does not trigger on the attacks from buildings, wards, and allies\n If the attacking unit turns invisible, the particle beam draw towards their current location\n However, the particle impact effects appear at their last known location",
+        "Reactive Tazer only triggers when a unit lands an attack, regardless of distance\n This means it cannot trigger on missed attacks\n Does not trigger on instant attacks that cannot proc attack modifiers (e.g\n <span image=\"images\/split_shot.webp\">[picture:split_shot]<\/span> Split Shot before learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent and <span image=\"images\/flak_cannon.webp\">[picture:flak_cannon]<\/span> Flak Cannon)\n Does not trigger on the attacks from buildings, wards, and allies\n If the attacking unit turns invisible, the particle beam draw towards their current location\n However, the particle impact effects appear at their last known location",
         "Losing the buff in any way first applies a basic dispel, the disarm debuff, and then the damage",
-        "SCEPTER NOTES ↓↓ Double-tapping automatically targets self\n Cannot be cast on  Couriers\n Reactive Tazer can now trigger on attacks or damage sourced from enemies, including buildings and wards\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter immediately updates already existing Reactive Tazer buffs, causing them to deal damage upon expiring"
+        "SCEPTER NOTES ↓↓ Double-tapping automatically targets self\n Cannot be cast on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers\n Reactive Tazer can now trigger on attacks or damage sourced from enemies, including buildings and wards\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter immediately updates already existing Reactive Tazer buffs, causing them to deal damage upon expiring"
       ],
       "item_behaviour": [],
       "description": "Techies trigger an electric charge giving them bonus movement speed for a short period of time. Enemies attacking Techies are temporarily disarmed and get a Basic Dispel. At the end of the effect, the charge explodes, disarming all enemies within the radius.",
@@ -54,8 +54,8 @@
         "Move Speed Bonus: 18%\/22%\/26%\/30%",
         "Disarm Duration: 2.4\/2.7\/3\/3.3",
         "Buff Duration: 6",
-        "Cast Range:  500",
-        "Damage:  300"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 500",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Damage:  300"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Techies_Reactive_Tazer.mp3\/revision\/latest?cb=20220412212708",
       "effects": [
@@ -74,7 +74,7 @@
       "notes": [
         "The leap always takes 0.75 seconds, so the horizontal speed varies between 0 \u2012 1333.33",
         "Leaps in an arc up to 281.108 range high, so that other units can pass below them",
-        "The self-damage is never lethal, so it cannot be used to deny oneself\n This damage has a flag set so that most forms of generic damage manipulation are ignored\n However, it is not considered HP Removal and can be mitigated by other sources of manipulation such as  Aphotic Shield",
+        "The self-damage is never lethal, so it cannot be used to deny oneself\n This damage has a flag set so that most forms of generic damage manipulation are ignored\n However, it is not considered HP Removal and can be mitigated by other sources of manipulation such as <span image=\"images\/aphotic_shield.webp\">[picture:aphotic_shield]<\/span> Aphotic Shield",
         "The explosion first applies the debuff, then the area damage, then the self damage and then the stun\n The self-damage and area damage is dealt upon landing",
         "Destroys trees within 400 radius around Techies upon landing",
         "Can be interrupted by forced movement sources during the leap, but is not interrupted by any other disables\n SPELL STEAL This ability's cast point is not modified when acquired"
@@ -84,13 +84,13 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 1+0.9",
-        "Cast Range:  1000 ( 1300)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 1300)",
         "Damage\/Silence Radius: 400",
         "Current Health as Self Damage: 35%\/30%\/25%\/20%",
-        "Area Damage: 200\/300\/400\/500 ( 400\/500\/600\/700)",
+        "Area Damage: 200\/300\/400\/500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 400\/500\/600\/700)",
         "Leap Duration: 0.75",
         "Silence Duration: 4\/5\/6\/7",
-        "Stun Duration:  1.75"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Stun Duration:  1.75"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Techies_Blast_Off%21_1.mp3\/revision\/latest?cb=20191216024800",
       "effects": [
@@ -110,7 +110,7 @@
         "This is innate to Techies does not need to be learned",
         "Cannot be placed inside the fountain area",
         "Only 1 sign can exist on the map at a time\n Planting a second sign causes the previous one to immediately disappear\n The Minefield Sign has no death animation, it visually linger for a few seconds and then sink into the ground",
-        "The invulnerability is granted by an aura and lingers for 0.5 seconds\n The aura only affects  Proximity Mines\n Other ward-type units are not affected",
+        "The invulnerability is granted by an aura and lingers for 0.5 seconds\n The aura only affects <span image=\"images\/proximity_mines.webp\">[picture:proximity_mines]<\/span> Proximity Mines\n Other ward-type units are not affected",
         "The sign is permanently phased and it can be seen by everyone",
         "It neither blocks unit pathing, nor blocks neutral creep camps\n SPELL STEAL This ability is not acquirable"
       ],
@@ -119,7 +119,7 @@
       "hot_key": "F",
       "params": [
         "Cast Animation: 1+0.53",
-        "Cast Range:  10",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 10",
         "Mines Invulnerability Radius: 500",
         "Max Signs: 1",
         "Duration: 60",
@@ -141,11 +141,11 @@
       "notes": [
         "Techies gets all 3 charges immediately upon learning Proximity Mines",
         "Proximity Mines cannot be placed within 350 radius of other allied Proximity Mines\n When selecting the ability, all own Proximity Mines display a red circle, indicating their trigger radius\n The area targeting indicator upon selecting the ability shows this placement radius, and not the trigger radius",
-        "The mines cannot be triggered during the 1 ( 0.2)-second activation delay\n During this delay, Proximity Mines are visible to the enemies\n Once active, they turn invisible",
-        "It takes a total of 2 ( 1.2) seconds for a Proximity Mine to detonate when placed right next to an enemy unit or building",
+        "The mines cannot be triggered during the 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.2)-second activation delay\n During this delay, Proximity Mines are visible to the enemies\n Once active, they turn invisible",
+        "It takes a total of 2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.2) seconds for a Proximity Mine to detonate when placed right next to an enemy unit or building",
         "The mines only detonate when an enemy stands within its trigger radius for 1 second\n This means quickly entering and leaving the area does not cause them to trigger\n Upon entering its trigger radius, the mine emits a sound, warning the enemy that they are within the trigger radius\n Both the warning and mine explosion sound is audible to everyone through the Fog of War\n Can be triggered by invisible, but not by invulnerable or hidden units\n Proximity Mines cannot be triggered by or affect wards and units with flying movement\n If the enemy leaves the area or turns invulnerable, the mine turns invisible again and the detonation delay resets",
-        "Despite the ability description, Proximity Mines does not have True Sight immunity against the following abilities:  Chronosphere and   Waning Rift\n Although being able to see Proximity Mines with  Reveal, it is not attackable",
-        "Proximity Mines only damage and debuff enemies when they are triggered, not when they are destroyed by attacks\n The damage source is the mine itself, meaning certain on-damage effects (e.g\n <span image=\"items\/blade_mail\/full.webp\">[Blade Mail]<\/span> Damage Return) react on the mine rather than on Techies\n The damage is based on the current level as it detonates, and not as it was placed\n The mines deal 200\/287.5\/375 \u2012 400\/575\/750 ( 60\/86.25\/112.5 \u2012 120\/172.5\/225) damage (before reductions) based on the distance and dealing full damage within a 150 radius\n Provides 300 radius flying vision at its location for 1 second after detonating",
+        "Despite the ability description, Proximity Mines does not have True Sight immunity against the following abilities: <span image=\"images\/chronosphere.webp\">[picture:chronosphere]<\/span> Chronosphere and <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/waning_rift.webp\">[picture:waning_rift]<\/span> Waning Rift\n Although being able to see Proximity Mines with <span image=\"items\/gem_of_true_sight\/full.webp\">[picture:gem_of_true_sight]<\/span> Reveal, it is not attackable",
+        "Proximity Mines only damage and debuff enemies when they are triggered, not when they are destroyed by attacks\n The damage source is the mine itself, meaning certain on-damage effects (e.g\n <span image=\"items\/blade_mail\/full.webp\">[picture:blade_mail]<\/span> Damage Return) react on the mine rather than on Techies\n The damage is based on the current level as it detonates, and not as it was placed\n The mines deal 200\/287.5\/375 \u2012 400\/575\/750 (<span image=\"images\/glyph_of_fortification.png\">[picture:glyph_of_fortification]<\/span> 60\/86.25\/112.5 \u2012 120\/172.5\/225) damage (before reductions) based on the distance and dealing full damage within a 150 radius\n Provides 300 radius flying vision at its location for 1 second after detonating",
         "Proximity Mines first apply the magic resistance reduction, then the damage\n Reduces most heroes' magic resistance to 14%\/10%\/6%\n Stacks multiplicatively with other sources of magic resistance\n Multiple instances of the debuff do not stack, but refresh the debuff instead\n However, it does not reduce the buildings' magic resistance",
         "Proximity Mines do not block neutral creep camps",
         "Leveling up ability immedaitely update Proximity Mines' ability values"
@@ -155,11 +155,11 @@
       "hot_key": "R",
       "params": [
         "Cast Animation: 0+0.47",
-        "Cast Range:  400",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 400",
         "Min Plant Distance: 350",
         "Max Damage Radius: 150",
         "Trigger\/Min Damage Radius: 500",
-        "Activation Delay: 1 ( 0.2)",
+        "Activation Delay: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.2)",
         "Detonation Delay: 1",
         "Damage: 400\/575\/750",
         "Min Damage Percentage: 50%",

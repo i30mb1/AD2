@@ -187,7 +187,7 @@
         "When latching on an enemy, it gets stunned for 1.5\/1.75\/2 seconds, or until Clockwerk reaches it\n This means if Clockwerk does not reach it, it is stunned for the full duration\n This can happen when either the pull gets canceled, or when the target gets moved too far away during the pull",
         "The latched enemy is also hit by the stun and area damage\n This means the latched target is stunned up to 2\/2.25\/2.5 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2.75\/3.125\/3.5) seconds than secondary targets, due to the initial latch stun",
         "Hookshot first applies the debuff, then the damage",
-        "Fully ignores <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards, buildings and hidden units\n Can latch on invulnerable or invisible units",
+        "Fully ignores <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards, buildings and hidden units\n Can latch on invulnerable or invisible units",
         "SCEPTER NOTES While <span image=\"images\/overclocking.webp\">[picture:overclocking]<\/span> Overclocking, Hookshot's stun and damage radius is increased to 262.5",
         "SHARD NOTES While <span image=\"images\/jetpack.webp\">[picture:jetpack]<\/span> Jetpack is active, Hookshot can be cast without facing the targeted area"
       ],

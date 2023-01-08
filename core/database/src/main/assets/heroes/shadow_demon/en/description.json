@@ -3,20 +3,20 @@
     {
       "notes": [
         "Disruption fully disables the target and turns it invulnerable and hidden for its duration\n Does not disjoint projectiles\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Shadow Demon",
-        "The following abilities fully affects the target under the effect of the most recent Disruption cast by Shadow Demon, regardless of its source:  Shadow Poison adding new stack or increasing its stacks\n Casting  Shadow Poison Release or losing the Shadow Poison debuff in any way still causes the damage to be dealt\n  Demonic Purge and  Demonic Cleanse's damage and heal respectively",
+        "The following abilities fully affects the target under the effect of the most recent Disruption cast by Shadow Demon, regardless of its source: <span image=\"images\/shadow_poison.webp\">[picture:shadow_poison]<\/span> Shadow Poison adding new stack or increasing its stacks\n Casting <span image=\"images\/shadow_poison_release.webp\">[picture:shadow_poison_release]<\/span> Shadow Poison Release or losing the Shadow Poison debuff in any way still causes the damage to be dealt\n <span image=\"images\/demonic_purge.webp\">[picture:demonic_purge]<\/span> Demonic Purge and <span image=\"images\/demonic_cleanse.webp\">[picture:demonic_cleanse]<\/span> Demonic Cleanse's damage and heal respectively",
         "Always creates the illusions, even when cast on allies or self\n Can be cast on illusions, creating illusions based on the original hero\n Does not create illusions if the affected target dies while affected by Disruption",
         "When the target turns invisible during Disruption, the visual effects turn invisible as well",
         "The illusions are created at the end of the duration\n When the target dies during Disruption, no illusions are created\n The current health of the illusions is determined upon casting Disruption, not upon creating the illusions at the end of the duration\n This means any health loss caused by Shadow Demon's abilities during Disruption does not affect the health of the illusions that are about to spawn\n All other stats like hero level or current mana are determined upon creating the illusions\n The illusions have a EXPR 2 * IllusionLVL bounty",
         "The targeted unit's position is not shuffled with the possible illusion's position\n It always reappears between the 2 illusions, at the right vertex of an isosceles right triangle\n The illusions spawn 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8\n Each illusion appears either north, east, south, or west from the hero and faces the same direction as the hero does",
         "The illusions carry the caster's name, not the targeted unit's player name, revealing that they are illusions when not cast on self",
-        "TALENT NOTES Acquiring the Disruption Charges  talent instantly grants 1 extra charge"
+        "TALENT NOTES Acquiring the Disruption Charges <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent instantly grants 1 extra charge"
       ],
       "item_behaviour": [],
       "description": "Banishes the targeted unit from the battlefield for a short duration. Upon returning, two illusions of the banished unit are created under Shadow Demon's control.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range:  650",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650",
         "Number of Illusions: 2",
         "Illusion Damage Dealt: 30%\/45%\/60%\/75%",
         "Illusion Damage Taken: 300%",
@@ -37,8 +37,8 @@
     },
     {
       "notes": [
-        "Disseminate has no damage delay, so all targets within the radius are damaged at the same time\n Can be cast on any units, except wards and hidden units\n Can only be cast on ally  Couriers\n ↓↓ Double-tapping automatically targets self",
-        "Damage shared is the same type as the source damage\n Shares all 3 damage types, but not from HP Removal effects (e.g\n  Sunder, <span image=\"items\/soul_ring\/full.webp\">[Soul Ring]<\/span> Soul Ring)\n Therefore, the shared damage interacts with every on-damage effects (i.e\n disabling <span image=\"items\/blink_dagger\/full.webp\">[Blink Dagger]<\/span> Blink Dagger)\n Shared magical damage is still affected by magic resistance\n However, shared physical damage is not affected by damage block\n It is also fully affected by outgoing damage manipulation, if the amplification is sourced to Shadow Demon\n Instant kill effects in the form of HP Removal (e.g\n  Sacred Arrow on creeps) shares an instance of 0 damage within its radius\n Fully procs on-damage effects such as  Corrosive Skin, except those which have a minimum damage threshold (e.g\n  Gravekeeper's Cloak)",
+        "Disseminate has no damage delay, so all targets within the radius are damaged at the same time\n Can be cast on any units, except wards and hidden units\n Can only be cast on ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers\n ↓↓ Double-tapping automatically targets self",
+        "Damage shared is the same type as the source damage\n Shares all 3 damage types, but not from HP Removal effects (e.g\n <span image=\"images\/sunder.webp\">[picture:sunder]<\/span> Sunder, <span image=\"items\/soul_ring\/full.webp\">[picture:soul_ring]<\/span> Soul Ring)\n Therefore, the shared damage interacts with every on-damage effects (i.e\n disabling <span image=\"items\/blink_dagger\/full.webp\">[picture:blink_dagger]<\/span> Blink Dagger)\n Shared magical damage is still affected by magic resistance\n However, shared physical damage is not affected by damage block\n It is also fully affected by outgoing damage manipulation, if the amplification is sourced to Shadow Demon\n Instant kill effects in the form of HP Removal (e.g\n <span image=\"images\/sacred_arrow.webp\">[picture:sacred_arrow]<\/span> Sacred Arrow on creeps) shares an instance of 0 damage within its radius\n Fully procs on-damage effects such as <span image=\"images\/corrosive_skin.webp\">[picture:corrosive_skin]<\/span> Corrosive Skin, except those which have a minimum damage threshold (e.g\n <span image=\"images\/gravekeeper's_cloak.webp\">[picture:gravekeeper's_cloak]<\/span> Gravekeeper's Cloak)",
         "Disseminate's damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag",
         "Spreads the full damage value before the affected enemy targets actually take the damage\n This means that the damage spreads before all manipulations, so that it may only be affected by incoming damage manipulation the affected targets have\n This also means it shares damage instances that exceeded the targets' current health and killed them\n The shared damage is always sourced to Shadow Demon\n Therefore, if a unit dies to the damage done by Disseminate, Shadow Demon gets credited for the kill",
         "Non-player-controlled units are not aggro'd by the damage\n Neutral creeps do not react to the damage",
@@ -49,9 +49,9 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range:  700\/800\/900\/1000",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700\/800\/900\/1000",
         "Radius: 675",
-        "Damage Shared: 20%\/25%\/30%\/35% ( 30%\/35%\/40%\/45%)",
+        "Damage Shared: 20%\/25%\/30%\/35% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30%\/35%\/40%\/45%)",
         "Duration: 6"
       ],
       "audioUrl": "",
@@ -72,10 +72,10 @@
         "Shadow Poison travels at a speed of 1000 and always travels the full distance, which takes 1.5 seconds",
         "The projectile provides 350 radius non-lingering flying vision around the poison cloud as it travels\n Provides 300 radius flying vision around each enemy unit it hits, and also upon reaching the maximum travel distance\n This vision lingers for 3.5 seconds",
         "With the travel distance and effect radius, it can hit units up to 1700 range away",
-        "Fully affects invisible units and units under the effect of the most recent  Disruption cast by Shadow Demon\n Does not affect invulnerable units or units affected other hidden sources",
+        "Fully affects invisible units and units under the effect of the most recent <span image=\"images\/disruption.webp\">[picture:disruption]<\/span> Disruption cast by Shadow Demon\n Does not affect invulnerable units or units affected other hidden sources",
         "Shadow Poison first applies the initial damage, then adds 1 stack to all enemy units within 200 radius of it on each cast\n The poison first applies the debuff or adds 1 stack to an existing debuff, then deals the initial damage\n Successive hits on the same unit fully refresh the whole stack's duration",
-        "The first 5 stacks get their damage multiplied by 1\/2\/4\/8\/16 depending on the amount of stacks\n Every following stack adds 50 ( 57.5) damage on top of that, so the damage starts growing linearly after the 5th stack\n Therefore, the poison's max potency is reached at the 5th stack\n The damage difference between applying 2 separate stacks of five and 1 stack of ten (excluding the initial damage) is 134\/326\/518\/710 ( 154.1\/374.9\/595.7\/816.5)\n For how much damage each stack of Shadow Poison deals on each level up to the 10th stack, with the damage increasing  talent (before reductions), please refer to the chart below",
-        "Casting  Shadow Poison Release or losing the Shadow Poison debuff in any way causes the damage to be dealt",
+        "The first 5 stacks get their damage multiplied by 1\/2\/4\/8\/16 depending on the amount of stacks\n Every following stack adds 50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 57.5) damage on top of that, so the damage starts growing linearly after the 5th stack\n Therefore, the poison's max potency is reached at the 5th stack\n The damage difference between applying 2 separate stacks of five and 1 stack of ten (excluding the initial damage) is 134\/326\/518\/710 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 154.1\/374.9\/595.7\/816.5)\n For how much damage each stack of Shadow Poison deals on each level up to the 10th stack, with the damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent (before reductions), please refer to the chart below",
+        "Casting <span image=\"images\/shadow_poison_release.webp\">[picture:shadow_poison_release]<\/span> Shadow Poison Release or losing the Shadow Poison debuff in any way causes the damage to be dealt",
         "From the same source, successive casts update the ability values and refresh the whole stack's duration\n From different sources, successive casts increase the stack count of the first applied stack\n The damage values are not updated, and therefore the stack damage value is based on the first applied stack",
         "The current number of stacks is visible to Shadow Demon and his allies above the affected units\n Enemies cannot see it\n This number is visually capped at 19, however, the poison has no stack limit and can be stacked infinitely\n The current number of stacks is also shown on the debuff icon, which is visible to everyone\n SPELL STEAL \/ MORPH NOTES Successive casts of different ability levels increase the stack count of the first applied stack\n However, the damage values are not updated, the stack damage value is based on the first applied stack"
       ],
@@ -84,13 +84,13 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.25+0",
-        "Cast Range:  1500",
-        "Travel Distance:  1500",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1500",
+        "Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1500",
         "Effect Radius: 200",
-        "Initial Damage: 30\/40\/50\/60 ( 34.5\/46\/57.5\/69)",
+        "Initial Damage: 30\/40\/50\/60 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 34.5\/46\/57.5\/69)",
         "Stacks to Multiply: 5",
-        "Multiplied Stack Damage: 24\/36\/48\/60 ( 27.6\/41.4\/55.2\/69)",
-        "Non-Multiplied Stack Damage: 50 ( 57.5)",
+        "Multiplied Stack Damage: 24\/36\/48\/60 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 27.6\/41.4\/55.2\/69)",
+        "Non-Multiplied Stack Damage: 50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 57.5)",
         "Stack Duration: 10"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Shadow_Demon_Shadow_Poison_1.mp3\/revision\/latest?cb=20191216022839",
@@ -108,8 +108,8 @@
     },
     {
       "notes": [
-        "Shadow Poison Release is unlocked upon learning  Shadow Poison and stays always active",
-        "Shadow Demon still plays the full ability cast animation when casting this sub-ability while there are no units affected by Shadow Poison\n SPELL STEAL Does not grant  Shadow Poison if this sub-ability is the last cast ability"
+        "Shadow Poison Release is unlocked upon learning <span image=\"images\/shadow_poison.webp\">[picture:shadow_poison]<\/span> Shadow Poison and stays always active",
+        "Shadow Demon still plays the full ability cast animation when casting this sub-ability while there are no units affected by Shadow Poison\n SPELL STEAL Does not grant <span image=\"images\/shadow_poison.webp\">[picture:shadow_poison]<\/span> Shadow Poison if this sub-ability is the last cast ability"
       ],
       "item_behaviour": [],
       "description": "Releases the poison to do damage on all affected enemies. Units under the effect of Disruption can still be affected by Shadow Poison.",
@@ -130,22 +130,22 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "↓↓ Double-tapping automatically targets self",
-        "Applies a basic dispel on the target upon cast and over its entire duration\n The heal is applied after the end of the duration\n A unit can only be affected by either  Demonic Purge or Demonic Cleanse, but not both",
-        "Can be cast on invulnerable allies, fully affecting them\n Fully affects the target under the effect of the most recent  Disruption cast by Shadow Demon, regardless of its source\n Cannot be cast on allies affected by other hidden sources\n Can only be cast on ally  Couriers",
-        "The heal is bound to the modifier\n Therefore, successive casts remove the modifier from a previous cast, triggering the heal, then applying a new instance\n It starts at 0 and increases by 1.43\/1.9\/2.38 ( 2.38\/2.86\/3.33) for each server tick affected, reaching the max values in 7 seconds",
-        "Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter instantly grants 2 extra charges\n This only happens once, re-acquiring it does not grant another 2 charges",
-        "TALENT NOTES Both of  Demonic Purge's damage increasing and cooldown reducing  talent also affects Demonic Cleanse\n The damage increasing  talent increases Demonic Cleanse's heal value instead"
+        "Applies a basic dispel on the target upon cast and over its entire duration\n The heal is applied after the end of the duration\n A unit can only be affected by either <span image=\"images\/demonic_purge.webp\">[picture:demonic_purge]<\/span> Demonic Purge or Demonic Cleanse, but not both",
+        "Can be cast on invulnerable allies, fully affecting them\n Fully affects the target under the effect of the most recent <span image=\"images\/disruption.webp\">[picture:disruption]<\/span> Disruption cast by Shadow Demon, regardless of its source\n Cannot be cast on allies affected by other hidden sources\n Can only be cast on ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
+        "The heal is bound to the modifier\n Therefore, successive casts remove the modifier from a previous cast, triggering the heal, then applying a new instance\n It starts at 0 and increases by 1.43\/1.9\/2.38 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.38\/2.86\/3.33) for each server tick affected, reaching the max values in 7 seconds",
+        "Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter instantly grants 2 extra charges\n This only happens once, re-acquiring it does not grant another 2 charges",
+        "TALENT NOTES Both of <span image=\"images\/demonic_purge.webp\">[picture:demonic_purge]<\/span> Demonic Purge's damage increasing and cooldown reducing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent also affects Demonic Cleanse\n The damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent increases Demonic Cleanse's heal value instead"
       ],
       "item_behaviour": [],
       "description": "Cleanses the target allied unit, removing negative buffs for the duration. At the end of the duration, the unit is healed. Units under the effect of Disruption can still be affected by Demonic Cleanse.",
       "hot_key": "F",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range:  800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
         "Min Heal: 0",
-        "Max Heal: 300\/400\/500 ( 500\/600\/700)",
+        "Max Heal: 300\/400\/500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 500\/600\/700)",
         "Duration: 7"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Shadow_Demon_Demonic_Purge_1.mp3\/revision\/latest?cb=20191216022844",
@@ -162,20 +162,20 @@
     },
     {
       "notes": [
-        "Applies a basic dispel on the target upon cast and over its entire duration\n The damage is applied after the end of the duration\n A unit can only be affected by either Demonic Purge or  Demonic Cleanse, but not both",
-        "Can be cast on invulnerable units, applying the initial dispel and the debuff if the invulnerability can be dispelled\n However, if the target is an enemy and if the invulnerability cannot be dispelled, only the initial dispel is applied, and the debuff is not\n Fully affects the target under the effect of the most recent  Disruption cast by Shadow Demon, regardless of its source\n Cannot be cast on enemies affected by other hidden sources\n Can only be cast on enemy  Couriers",
+        "Applies a basic dispel on the target upon cast and over its entire duration\n The damage is applied after the end of the duration\n A unit can only be affected by either Demonic Purge or <span image=\"images\/demonic_cleanse.webp\">[picture:demonic_cleanse]<\/span> Demonic Cleanse, but not both",
+        "Can be cast on invulnerable units, applying the initial dispel and the debuff if the invulnerability can be dispelled\n However, if the target is an enemy and if the invulnerability cannot be dispelled, only the initial dispel is applied, and the debuff is not\n Fully affects the target under the effect of the most recent <span image=\"images\/disruption.webp\">[picture:disruption]<\/span> Disruption cast by Shadow Demon, regardless of its source\n Cannot be cast on enemies affected by other hidden sources\n Can only be cast on enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "The movement speed slow starts at 100% decreases over time to 20%\n Hit units regain 0.381% of their movement speed on each server tick\n This translates to 11.43% movement speed regained per second",
-        "The damage is bound to the modifier\n Therefore, successive casts remove the modifier from a previous cast, triggering the damage, then applying a new instance\n It starts at 0 and increases by 1.43\/1.9\/2.38 ( 2.38\/2.86\/3.33) for each server tick affected, reaching the max values in 7 seconds",
-        "SCEPTER NOTES Demonic Purge now applies Break on the target as well\n The break stops affecting the target before it deals its damage\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter instantly grants 2 extra charges\n This only happens once, re-acquiring it does not grant another 2 charges"
+        "The damage is bound to the modifier\n Therefore, successive casts remove the modifier from a previous cast, triggering the damage, then applying a new instance\n It starts at 0 and increases by 1.43\/1.9\/2.38 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.38\/2.86\/3.33) for each server tick affected, reaching the max values in 7 seconds",
+        "SCEPTER NOTES Demonic Purge now applies Break on the target as well\n The break stops affecting the target before it deals its damage\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter instantly grants 2 extra charges\n This only happens once, re-acquiring it does not grant another 2 charges"
       ],
       "item_behaviour": [],
       "description": "Purges the target enemy unit, removing positive buffs, and slowing the target for the duration. The unit slowly regains its movement speed until the end of the duration, upon which damage is dealt. Units under the effect of Disruption can still be affected by Demonic Purge.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range:  800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
         "Min Damage: 0",
-        "Max Damage: 300\/400\/500 ( 500\/600\/700)",
+        "Max Damage: 300\/400\/500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 500\/600\/700)",
         "Min Move Speed Slow: 20%",
         "Max Move Speed Slow: 100%",
         "Duration: 7"

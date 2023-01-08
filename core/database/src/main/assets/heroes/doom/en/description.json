@@ -2,9 +2,9 @@
   "abilities": [
     {
       "notes": [
-        "Upon leveling Devour for the first time, it has Autocast on by default\n Autocast enables acquiring abilities of neutral creeps\n It does not cast the ability automatically\n The acquired abilities appear in the dedicated  Fourth and  Fifth ability slot",
-        "Cannot devour  Roshan,  Couriers, wards, creep-heroes, and ancient creeps\n TALENT NOTES Devour's ancient creeps targeting restriction is removed upon learning the  talent",
-        "The following creeps cannot be devoured due to the level restriction: Level 4: Can devour all creeps Level 3: Can devour all creeps Level 2, cannot devour:  Ancient Black Dragon,  Ancient Granite Golem,  Ancient Ice Shaman,  Ancient Thunderhide,  Dark Troll Summoner,  Satyr Tormenter, Level 1, additionally:  Alpha Wolf,  Ancient Frostbitten Golem,  Ancient Rock Golem,  Ancient Rumblehide,  Centaur Conqueror,  Hellbear Smasher,  Necronomicon Archer,  Necronomicon Warrior,  Warpine Raider,  Wildwing Ripper,",
+        "Upon leveling Devour for the first time, it has Autocast on by default\n Autocast enables acquiring abilities of neutral creeps\n It does not cast the ability automatically\n The acquired abilities appear in the dedicated <span image=\"images\/devoured_ability_1.webp\">[picture:devoured_ability_1]<\/span> Fourth and <span image=\"images\/devoured_ability_2.webp\">[picture:devoured_ability_2]<\/span> Fifth ability slot",
+        "Cannot devour <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards, creep-heroes, and ancient creeps\n TALENT NOTES Devour's ancient creeps targeting restriction is removed upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent",
+        "The following creeps cannot be devoured due to the level restriction: Level 4: Can devour all creeps Level 3: Can devour all creeps Level 2, cannot devour: <span image=\"images\/ancient_black_dragon.png\">[picture:ancient_black_dragon]<\/span> Ancient Black Dragon, <span image=\"images\/ancient_granite_golem.png\">[picture:ancient_granite_golem]<\/span> Ancient Granite Golem, <span image=\"images\/ancient_ice_shaman.png\">[picture:ancient_ice_shaman]<\/span> Ancient Ice Shaman, <span image=\"images\/ancient_thunderhide.png\">[picture:ancient_thunderhide]<\/span> Ancient Thunderhide, <span image=\"images\/dark_troll_summoner.png\">[picture:dark_troll_summoner]<\/span> Dark Troll Summoner, <span image=\"images\/satyr_tormenter.png\">[picture:satyr_tormenter]<\/span> Satyr Tormenter, Level 1, additionally: <span image=\"images\/alpha_wolf.png\">[picture:alpha_wolf]<\/span> Alpha Wolf, <span image=\"images\/ancient_frostbitten_golem.png\">[picture:ancient_frostbitten_golem]<\/span> Ancient Frostbitten Golem, <span image=\"images\/ancient_rock_golem.png\">[picture:ancient_rock_golem]<\/span> Ancient Rock Golem, <span image=\"images\/ancient_rumblehide.png\">[picture:ancient_rumblehide]<\/span> Ancient Rumblehide, <span image=\"images\/centaur_conqueror.png\">[picture:centaur_conqueror]<\/span> Centaur Conqueror, <span image=\"images\/hellbear_smasher.png\">[picture:hellbear_smasher]<\/span> Hellbear Smasher, <span image=\"images\/necronomicon_archer.png\">[picture:necronomicon_archer]<\/span> Necronomicon Archer, <span image=\"images\/necronomicon_warrior.png\">[picture:necronomicon_warrior]<\/span> Necronomicon Warrior, <span image=\"images\/warpine_raider.png\">[picture:warpine_raider]<\/span> Warpine Raider, <span image=\"images\/wildwing_ripper.png\">[picture:wildwing_ripper]<\/span> Wildwing Ripper,",
         "The targeted creep is instantly killed upon cast, granting its bounty and experience like a regular last hit\n Then it applies the Devour buff on self, granting its armor and magic resistance bonus, then grants unreliable gold when the buff expires\n TALENT NOTES Increases Doom's total magic resistance to 36.25% while the buff is active\n Stacks multiplicatively with other sources of magic resistance",
         "Despite the ability description stating that the duration is equal to the ability's cooldown, cooldown reduction sources affect the ability's cooldown but not the duration",
         "Successive casts fully stack with each instance having its own independent buff duration"
@@ -14,12 +14,12 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.5",
-        "Cast Range:  300",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 300",
         "Max Creep Level: 4\/5\/6\/6",
         "Gold Bonus: 50\/100\/150\/200",
         "Armor Bonus: 1\/3\/5\/7",
         "Digest Duration: 60",
-        "Magic Resistance Bonus:  15%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Magic Resistance Bonus:  15%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Doom_Devour.mp3\/revision\/latest?cb=20191216012532",
       "effects": [
@@ -38,9 +38,9 @@
       "notes": [
         "Scorched Earth's radius is centered on Doom for its duration\n If Doom is hidden, Scorched Earth stops applying its damage and its visual effect disappears, until Doom is no longer hidden",
         "The movement speed bonus is provided by an aura and lingers for 0.5 seconds\n However, the damage applied is independent from the aura",
-        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 10\/12\/14\/16 possible instances\n Can deal up to 200\/420\/700\/1040 ( 400\/660\/980\/1360) damage to a single enemy when within range for the entire duration (before reductions)",
-        "Leveling up the ability does not update the current instance\n TALENT NOTES However, the damage increasing  talent immediately updates the damage per second of the current instance",
-        "Both leveling up and the movement speed increasing  talent does not update the movement speed bonus of the current instance",
+        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 10\/12\/14\/16 possible instances\n Can deal up to 200\/420\/700\/1040 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 400\/660\/980\/1360) damage to a single enemy when within range for the entire duration (before reductions)",
+        "Leveling up the ability does not update the current instance\n TALENT NOTES However, the damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates the damage per second of the current instance",
+        "Both leveling up and the movement speed increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update the movement speed bonus of the current instance",
         "Successive casts do not stack but refresh the ability values and duration"
       ],
       "item_behaviour": [],
@@ -49,8 +49,8 @@
       "params": [
         "Cast Animation: 0+0.5",
         "Radius: 600",
-        "Damage per Second: 20\/35\/50\/65 ( 40\/55\/70\/85)",
-        "Move Speed Bonus: 9%\/11%\/13%\/15% ( 19%\/21%\/23%\/25%)",
+        "Damage per Second: 20\/35\/50\/65 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 40\/55\/70\/85)",
+        "Move Speed Bonus: 9%\/11%\/13%\/15% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 19%\/21%\/23%\/25%)",
         "Aura Linger Duration: 0.5",
         "Duration: 10\/12\/14\/16"
       ],
@@ -71,25 +71,25 @@
       "notes": [
         "Infernal Blade's cast range can only be further increased by attack range bonuses of the same range type as the caster\n However, it is not affected by cast range bonuses\n Both Autocast and manually casting it uses Doom's current attack range",
         "Only works with regular attacks\n Instant attacks cannot trigger Infernal Blade",
-        "Cannot be cast on  Roshan",
+        "Cannot be cast on <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances",
-        "Can deal up to 80\/120\/160\/200 + 4%\/8%\/12%\/16% ( 12.4%\/16.4%\/20.4%\/24.4%) of the target's max health as damage (before reductions)",
-        "Successive casts on the same target fully stack and its debuff works independently\n Both leveling up the ability and the max health as damage increasing  talent does not update the damage of the current instances",
+        "Can deal up to 80\/120\/160\/200 + 4%\/8%\/12%\/16% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 12.4%\/16.4%\/20.4%\/24.4%) of the target's max health as damage (before reductions)",
+        "Successive casts on the same target fully stack and its debuff works independently\n Both leveling up the ability and the max health as damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update the damage of the current instances",
         "Infernal Blade first applies the level damage bonus, the bash, the burn debuff, then the attack damage\n Infernal Blade's bash fully stacks with other bash sources",
-        "SHARD NOTES If the target's level is 3\/6\/9\/12\/15\/18\/21\/24\/25\/26\/27\/28\/29\/30, 150 bonus damage is applied and the stun duration is increased to 1.8\n Works against creeps with the right level as well\n The following units are always hit by the bonus damage and bash duration:  Ancient Black Dragon,  Ancient Black Drake,  Ancient Granite Golem,  Ancient Ice Shaman,  Ancient Thunderhide,  Dark Troll Summoner,  Flagbearer Creep,  Forged Spirit,  Ghost,  Giant Wolf,  Harpy Stormcrafter,  Hill Troll,  Lycan Lane Wolf,  Melee Creep,  Ogre Frostmage,  Satyr Tormenter,  Spiderling,"
+        "SHARD NOTES If the target's level is 3\/6\/9\/12\/15\/18\/21\/24\/25\/26\/27\/28\/29\/30, 150 bonus damage is applied and the stun duration is increased to 1.8\n Works against creeps with the right level as well\n The following units are always hit by the bonus damage and bash duration: <span image=\"images\/ancient_black_dragon.png\">[picture:ancient_black_dragon]<\/span> Ancient Black Dragon, <span image=\"images\/ancient_black_drake.png\">[picture:ancient_black_drake]<\/span> Ancient Black Drake, <span image=\"images\/ancient_granite_golem.png\">[picture:ancient_granite_golem]<\/span> Ancient Granite Golem, <span image=\"images\/ancient_ice_shaman.png\">[picture:ancient_ice_shaman]<\/span> Ancient Ice Shaman, <span image=\"images\/ancient_thunderhide.png\">[picture:ancient_thunderhide]<\/span> Ancient Thunderhide, <span image=\"images\/dark_troll_summoner.png\">[picture:dark_troll_summoner]<\/span> Dark Troll Summoner, <span image=\"images\/melee_creep_radiant.png\">[picture:melee_creep_radiant]<\/span> Flagbearer Creep, <span image=\"images\/invoker_forged_spirit.png\">[picture:invoker_forged_spirit]<\/span> Forged Spirit, <span image=\"images\/ghost.png\">[picture:ghost]<\/span> Ghost, <span image=\"images\/giant_wolf.png\">[picture:giant_wolf]<\/span> Giant Wolf, <span image=\"images\/harpy_stormcrafter.png\">[picture:harpy_stormcrafter]<\/span> Harpy Stormcrafter, <span image=\"images\/hill_troll.png\">[picture:hill_troll]<\/span> Hill Troll, <span image=\"images\/lycan_wolf.png\">[picture:lycan_wolf]<\/span> Lycan Lane Wolf, <span image=\"images\/melee_creep_radiant.png\">[picture:melee_creep_radiant]<\/span> Melee Creep, <span image=\"images\/ogre_frostmage.png\">[picture:ogre_frostmage]<\/span> Ogre Frostmage, <span image=\"images\/satyr_tormenter.png\">[picture:satyr_tormenter]<\/span> Satyr Tormenter, <span image=\"images\/broodmother_spiderling.png\">[picture:broodmother_spiderling]<\/span> Spiderling,"
       ],
       "item_behaviour": [],
       "description": "Doom swings his burning sword, igniting the enemy. Stuns for 0.6 seconds and applies a second burn that deals a base damage plus a percentage of the target's Max HP as damage per second.",
       "hot_key": "E",
       "params": [
-        "Cast Range:  200",
+        "Cast Range: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 200",
         "Base Damage per second: 20\/30\/40\/50",
-        "Max Health as Damage per Second: 1%\/2%\/3%\/4% ( 3.1%\/4.1%\/5.1%\/6.1%)",
+        "Max Health as Damage per Second: 1%\/2%\/3%\/4% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.1%\/4.1%\/5.1%\/6.1%)",
         "Damage Duration: 4",
-        "Bash Duration: 0.6 ( 1.2)",
-        "Level Multiplier:  3",
-        "Level Multiplier Damage Bonus:  150",
-        "Level Multiplier Bash Duration:  1.8"
+        "Bash Duration: 0.6 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 1.2)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Level Multiplier:  3",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Level Multiplier Damage Bonus:  150",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Level Multiplier Bash Duration:  1.8"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Doom_Infernal_Blade.mp3\/revision\/latest?cb=20191216012527",
       "effects": [
@@ -106,8 +106,8 @@
     },
     {
       "notes": [
-        "Only acquires the first and second ability of the neutral creep\n If it has a third ability, it is not acquired\n This means when cast on an  Ancient Black Dragon, it acquires  Fireball and  Splash Attack, but not  Dragonhide Aura\n Devouring a creep with no abilities does not remove the already acquired abilities",
-        "Does not acquire any of the attack class abilities, or the  Inspiration Aura\n Can only gain abilities from neutral creeps\n Other units' abilities cannot be gained\n Abilities are gained instantly upon devouring the creep\n The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see here)\n Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is  Devoured with Autocast on",
+        "Only acquires the first and second ability of the neutral creep\n If it has a third ability, it is not acquired\n This means when cast on an <span image=\"images\/ancient_black_dragon.png\">[picture:ancient_black_dragon]<\/span> Ancient Black Dragon, it acquires <span image=\"images\/fireball_%28ancient_black_dragon%29.png\">[picture:fireball_%28ancient_black_dragon%29]<\/span> Fireball and <span image=\"images\/splash_attack_%28ancient_black_dragon%29.png\">[picture:splash_attack_%28ancient_black_dragon%29]<\/span> Splash Attack, but not <span image=\"images\/dragonhide_aura_%28ancient_black_dragon%29.png\">[picture:dragonhide_aura_%28ancient_black_dragon%29]<\/span> Dragonhide Aura\n Devouring a creep with no abilities does not remove the already acquired abilities",
+        "Does not acquire any of the attack class abilities, or the <span image=\"images\/inspiration_aura_%28flagbearer_creep%29.png\">[picture:inspiration_aura_%28flagbearer_creep%29]<\/span> Inspiration Aura\n Can only gain abilities from neutral creeps\n Other units' abilities cannot be gained\n Abilities are gained instantly upon devouring the creep\n The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see here)\n Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is <span image=\"images\/devour.webp\">[picture:devour]<\/span> Devoured with Autocast on",
         "The abilities use the original cast point of the neutral creeps they come from\n However, the cast backswing differs depending on the ability acquired (see chart)",
         "Uses the player-controlled radius for acquired aura abilities",
         "EXPR Cast point: Original Cast Point of Acquired Ability Cast backswing: 1.1 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.1"
@@ -132,8 +132,8 @@
     },
     {
       "notes": [
-        "The following abilities will take up this slot when acquired via  Devour:  Splash Attack,  Slam,  Packleader's Aura,  Raise Dead,  Death Throe: Power,  Death Throe: Rush,  Heal Amplification Aura,  Shard Split,  Mana Aura,  Unholy Aura,  Toughness Aura",
-        "Other notes of  Devoured Ability 1 fully apply",
+        "The following abilities will take up this slot when acquired via <span image=\"images\/devour.webp\">[picture:devour]<\/span> Devour: <span image=\"images\/splash_attack_%28ancient_black_dragon%29.png\">[picture:splash_attack_%28ancient_black_dragon%29]<\/span> Splash Attack, <span image=\"images\/slam_%28ancient_thunderhide%29.png\">[picture:slam_%28ancient_thunderhide%29]<\/span> Slam, <span image=\"images\/packleader's_aura_%28alpha_wolf%29.png\">[picture:packleader's_aura_%28alpha_wolf%29]<\/span> Packleader's Aura, <span image=\"images\/raise_dead_%28dark_troll_summoner%29.png\">[picture:raise_dead_%28dark_troll_summoner%29]<\/span> Raise Dead, <span image=\"images\/death_throe_power_%28hellbear_smasher%29.png\">[picture:death_throe_power_%28hellbear_smasher%29]<\/span> Death Throe: Power, <span image=\"images\/death_throe_rush_%28hellbear%29.png\">[picture:death_throe_rush_%28hellbear%29]<\/span> Death Throe: Rush, <span image=\"images\/heal_amplification_aura_%28hill_troll_priest%29.png\">[picture:heal_amplification_aura_%28hill_troll_priest%29]<\/span> Heal Amplification Aura, <span image=\"images\/shard_split_%28mud_golem%29.png\">[picture:shard_split_%28mud_golem%29]<\/span> Shard Split, <span image=\"images\/mana_aura_%28satyr_mindstealer%29.png\">[picture:mana_aura_%28satyr_mindstealer%29]<\/span> Mana Aura, <span image=\"images\/unholy_aura_%28satyr_tormenter%29.png\">[picture:unholy_aura_%28satyr_tormenter%29]<\/span> Unholy Aura, <span image=\"images\/toughness_aura_%28wildwing_ripper%29.png\">[picture:toughness_aura_%28wildwing_ripper%29]<\/span> Toughness Aura",
+        "Other notes of <span image=\"images\/devoured_ability_1.webp\">[picture:devoured_ability_1]<\/span> Devoured Ability 1 fully apply",
         "EXPR Cast point: Original Cast Point of Acquired Ability Cast backswing: 1.1 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.1"
       ],
       "item_behaviour": [],
@@ -158,22 +158,22 @@
       "notes": [
         "A unit with less than 25% of its max health can be denied when it has the Doom debuff on",
         "Applies a basic dispel on the affected target upon cast\n Cannot be cast on ancient creeps",
-        "Silences, Mutes and also Breaks the target, preventing it from casting abilities and using item abilities\n Doom does not affect the following mechanics: The current state of toggled On abilities\n They remain On if Doom is cast on them while toggled on\n Item related player actions (e.g\n selling, disassembling etc.)\n Activating runes\n Leveling up abilities or learning  talents",
+        "Silences, Mutes and also Breaks the target, preventing it from casting abilities and using item abilities\n Doom does not affect the following mechanics: The current state of toggled On abilities\n They remain On if Doom is cast on them while toggled on\n Item related player actions (e.g\n selling, disassembling etc.)\n Activating runes\n Leveling up abilities or learning <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents",
         "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 16 instances\n Can deal up to 480\/720\/960 damage (before reductions)",
         "Leveling up the ability does not update the damage of already debuffs",
         "Successive casts on the same unit do not stack but refresh the ability values",
-        "SCEPTER NOTES Doom now turns into an aura with 325 radius and it does not linger\n Enemies within radius of the affected target are also Doomed following the same intervals\n ↓↓ Double-tapping automatically target self\n Self-casting ability does not disable Doom in any way and he can use his other abilities and items\n Doom first applies the damage, then the aura\n While active, both acquiring and losing <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter does not update the current instance\n SOULBIND Can indirectly affect ancient creeps if they are the secondary target, while Doom is cast on the primary target"
+        "SCEPTER NOTES Doom now turns into an aura with 325 radius and it does not linger\n Enemies within radius of the affected target are also Doomed following the same intervals\n ↓↓ Double-tapping automatically target self\n Self-casting ability does not disable Doom in any way and he can use his other abilities and items\n Doom first applies the damage, then the aura\n While active, both acquiring and losing <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter does not update the current instance\n SOULBIND Can indirectly affect ancient creeps if they are the secondary target, while Doom is cast on the primary target"
       ],
       "item_behaviour": [],
       "description": "Inflicts a curse that dispels an enemy Hero and prevents them from casting spells or using items, while taking damage over time.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.4",
-        "Cast Range:  500",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 500",
         "Damage per Second: 30\/45\/60",
         "Duration: 16",
-        "Radius:  325",
-        "Aura Linger Duration:  0"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Radius:  325",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Aura Linger Duration:  0"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Doom_Doom.mp3\/revision\/latest?cb=20191216012527",
       "effects": [

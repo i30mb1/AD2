@@ -12,9 +12,9 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range:  700",
-        "Effect Radius: 425 ( 550)",
-        "Damage: 130\/170\/210\/260 ( 370\/410\/450\/500)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700",
+        "Effect Radius: 425 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 550)",
+        "Damage: 130\/170\/210\/260 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 370\/410\/450\/500)",
         "Move Speed Slow: 20%\/30%\/40%\/50%",
         "Attack Speed Slow: 30\/45\/60\/75",
         "Slow Duration: 5"
@@ -36,8 +36,8 @@
       "notes": [
         "Despite the visual effects, Frostbite applies its effects immediately and cannot be disjointed",
         "Roots and disarms the target, preventing it from moving, attacking, and casting certain mobility abilities\n Provides True Sight over the target",
-        "Deals 25 damage in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 6\/8\/10\/12 ( 11\/13\/15\/17) damage instances to heroes and 40 ( 45) to creeps\n Can deal up to 150\/200\/250\/300 ( 275\/325\/375\/425) damage to heroes and 1000 ( 1125) damage to creeps (before reductions)",
-        "Treats illusions, creep-heroes, ancient creeps and  Roshan as heroes",
+        "Deals 25 damage in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 6\/8\/10\/12 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 11\/13\/15\/17) damage instances to heroes and 40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 45) to creeps\n Can deal up to 150\/200\/250\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 275\/325\/375\/425) damage to heroes and 1000 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1125) damage to creeps (before reductions)",
+        "Treats illusions, creep-heroes, ancient creeps and <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan as heroes",
         "Successive casts do not stack but refresh the duration"
       ],
       "item_behaviour": [],
@@ -45,11 +45,11 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range:  600 ( 725)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 725)",
         "Damage Interval: 0.25",
         "Damage per Second: 100",
-        "Hero Duration: 1.5\/2\/2.5\/3 ( 2.75\/3.25\/3.75\/4.25)",
-        "Creep Duration: 10 ( 11.25)"
+        "Hero Duration: 1.5\/2\/2.5\/3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.75\/3.25\/3.75\/4.25)",
+        "Creep Duration: 10 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 11.25)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Crystal_Maiden_Frostbite.mp3\/revision\/latest?cb=20191216012227",
       "effects": [
@@ -96,34 +96,34 @@
     {
       "notes": [
         "The slow is applied to all enemies within the radius in 0.1-second intervals, regardless of the ice explosions",
-        "The explosions occur in 0.1 ( 0.083)-second intervals, starting 0.1 ( 0.083) seconds after cast, resulting in 99 ( 121) explosions",
+        "The explosions occur in 0.1 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 0.083)-second intervals, starting 0.1 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 0.083) seconds after cast, resulting in 99 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 121) explosions",
         "Each ice explosion can spawn within a random distance of 195 to 785 away from Crystal Maiden\n The explosion spawn radius is divided into four 90° segments (0°\u201390°, 90°\u2013180°, 180°\u2013270°, 270°\u2013360°)\n The first explosion occurs within the northeast segment of the circle, following explosions proceeding counterclockwise",
         "With the max spawn radius and explosion radius, it can damage units up to 1105 range away",
-        "The average damage is roughly constant up to a radius of 485, falling off after that\n It is slightly less than 50% at a radius of 785\n The very center does 5% more damage\n It approximately deals 2000\/3300\/4800 ( 2400\/3960\/5760) damage to enemies within 485 range over the full duration, ±1.9 ( ±2.28) explosions",
+        "The average damage is roughly constant up to a radius of 485, falling off after that\n It is slightly less than 50% at a radius of 785\n The very center does 5% more damage\n It approximately deals 2000\/3300\/4800 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 2400\/3960\/5760) damage to enemies within 485 range over the full duration, ±1.9 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> ±2.28) explosions",
         "The radius is always centered on Crystal Maiden and follows her even when she is moved",
         "Despite the visual effects, the damage is dealt as the falling ice shards are spawned, not upon them reaching the ground",
-        "SCEPTER NOTES Freezing Field now provides an aura that tracks enemies within the area\n The tracker lingers for 0.1 seconds\n If an enemy unit is affected by the tracker for 1.75 seconds,  Frostbite is applied to the enemy unit based on its current level\n A unit can only be affected by Frostbite once per cast of Freezing Field\n Even if they re-enter the area, they are not affected a second time\n If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, and refreshing the duration\n The tracker resets whenever it is reapplied to a unit\n This means a unit must be affected by it for 1.75 seconds continuously in order to be frostbitten",
-        "The tracker is placed on enemies even without having <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter, tracking the duration enemies spend within the area normally\n This means when acquiring the item while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them\n The tracker does not affect invulnerable or hidden units",
-        "SHARD NOTES Freezing Field no longer requires channeling and Crystal Maiden can move and act freely during its duration\n Still interrupts Crystal Maiden's channeling abilities upon cast\n While Freezing Field is active, it applies a 75% movement speed slow on Crystal Maiden, which can be off-set by movement speed bonuses, including haste\n Freezing Field is interrupted if Crystal Maiden gets stunned, silenced, cycloned, feared, hexed or slept during it\n It also stops when Crystal Maiden dies, or when she uses the  Stop Freezing Field sub-ability\n The following abilities are now no longer able to interrupt Freezing Field:  Glimpse,  Earth Splitter,  Relocate,  Recall,  X Marks the Spot,  Return,  Overgrowth and  Nether Swap\n SPELL STEAL The passive  Frostbite applied is based on  Crystal Maiden's current ability level when acquired\n SOULBIND The passive  Frostbite applied on any of the targets is not shared with the other"
+        "SCEPTER NOTES Freezing Field now provides an aura that tracks enemies within the area\n The tracker lingers for 0.1 seconds\n If an enemy unit is affected by the tracker for 1.75 seconds, <span image=\"images\/frostbite.webp\">[picture:frostbite]<\/span> Frostbite is applied to the enemy unit based on its current level\n A unit can only be affected by Frostbite once per cast of Freezing Field\n Even if they re-enter the area, they are not affected a second time\n If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, and refreshing the duration\n The tracker resets whenever it is reapplied to a unit\n This means a unit must be affected by it for 1.75 seconds continuously in order to be frostbitten",
+        "The tracker is placed on enemies even without having <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter, tracking the duration enemies spend within the area normally\n This means when acquiring the item while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them\n The tracker does not affect invulnerable or hidden units",
+        "SHARD NOTES Freezing Field no longer requires channeling and Crystal Maiden can move and act freely during its duration\n Still interrupts Crystal Maiden's channeling abilities upon cast\n While Freezing Field is active, it applies a 75% movement speed slow on Crystal Maiden, which can be off-set by movement speed bonuses, including haste\n Freezing Field is interrupted if Crystal Maiden gets stunned, silenced, cycloned, feared, hexed or slept during it\n It also stops when Crystal Maiden dies, or when she uses the <span image=\"images\/stop_freezing_field.webp\">[picture:stop_freezing_field]<\/span> Stop Freezing Field sub-ability\n The following abilities are now no longer able to interrupt Freezing Field: <span image=\"images\/glimpse.webp\">[picture:glimpse]<\/span> Glimpse, <span image=\"images\/earth_splitter.webp\">[picture:earth_splitter]<\/span> Earth Splitter, <span image=\"images\/relocate.webp\">[picture:relocate]<\/span> Relocate, <span image=\"images\/recall.webp\">[picture:recall]<\/span> Recall, <span image=\"images\/x_marks_the_spot.webp\">[picture:x_marks_the_spot]<\/span> X Marks the Spot, <span image=\"images\/return_%28kunkka%29.png\">[picture:return_%28kunkka%29]<\/span> Return, <span image=\"images\/overgrowth.webp\">[picture:overgrowth]<\/span> Overgrowth and <span image=\"images\/nether_swap.webp\">[picture:nether_swap]<\/span> Nether Swap\n SPELL STEAL The passive <span image=\"images\/frostbite.webp\">[picture:frostbite]<\/span> Frostbite applied is based on <span image=\"images\/crystal_maiden_minimap.png\">[picture:crystal_maiden_minimap]<\/span> Crystal Maiden's current ability level when acquired\n SOULBIND The passive <span image=\"images\/frostbite.webp\">[picture:frostbite]<\/span> Frostbite applied on any of the targets is not shared with the other"
       ],
       "item_behaviour": [],
       "description": "Surrounds Crystal Maiden with 100 random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts 10 seconds.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
-        "Max Channel Time: 10 ( 0)",
+        "Max Channel Time: 10 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 0)",
         "Slow Radius: 810",
         "Min Explosion Spawn Radius: 195",
         "Max Explosion Spawn Radius: 785",
         "Explosion Damage Radius: 320",
         "Self Armor Bonus: 20",
-        "Explosion Spawn Interval: 0.1 ( 0.083)",
-        "Damage per Explosion: 105\/170\/250 ( 155\/220\/300)",
+        "Explosion Spawn Interval: 0.1 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 0.083)",
+        "Damage per Explosion: 105\/170\/250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 155\/220\/300)",
         "Move Speed Slow: 40%",
         "Attack Speed Slow: 60",
         "Slow Duration: 1",
-        "Frostbite Timer:  1.75",
-        "Self Move Speed Slow:  75%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Frostbite Timer:  1.75",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Self Move Speed Slow:  75%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Crystal_Maiden_Freezing_Field.mp3\/revision\/latest?cb=20191216012226",
       "effects": [
@@ -140,8 +140,8 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
-        "Replaces  Freezing Field until the sub-ability is used or the duration ends",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
+        "Replaces <span image=\"images\/freezing_field.webp\">[picture:freezing_field]<\/span> Freezing Field until the sub-ability is used or the duration ends",
         "Interrupts Crystal Maiden's channeling abilities upon cast",
         "Goes into a 1-second cooldown right after Freezing Field is cast, this is to prevent accidental double-casts prematurely ending the ability"
       ],
@@ -149,7 +149,7 @@
       "description": "Immediately stops the Freezing Field",
       "hot_key": "R",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Max Duration: 10"
       ],
       "audioUrl": "",

@@ -3,14 +3,14 @@
     {
       "notes": [
         "For all of the Spirit Bear's stats, please refer to the Spirit Bear's abilities section below",
-        "Spirit Bear is a creep-hero, making it interact differently with several abilities\n Please refer to this page for detailed ability interactions",
-        "The Spirit Bear levels up together with Lone Druid, gaining 5 attack damage and 90 health with each level\n The bonuses are applied immediately and do not require the Spirit Bear to be re-summoned\n Grants flat base attack damage\n Therefore, it is affected by percentage-based attack damage bonuses or reductions\n Grants max health, while the current health remains the same flat amount\n For how much bonus health and base attack damage Spirit Bear gains each level, please refer to the chart below\n At Level 30, it can grant up to 145 base attack damage and 2610 max health bonus\n TALENT NOTES All Spirit Bear related  talents immediately update the current active summon",
-        "On the first cast of Summon Spirit Bear, the bear is actually summoned\n On every following cast, its total health and mana are just replenished or revived\n Since the re-summon is not considered as death, buffs and debuffs are neither dispelled, nor projectiles are disjointed\n Leveling this ability automatically levels Spirit Bear's  Demolish and  Entangling Claws\n It is also considered as killing the current Spirit Bear and reviving it\n Therefore, leveling this ability dispels buff and debuff, disjoint projectiles and interrupt the Spirit Bear's current channeling abilities",
+        "<span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear is a creep-hero, making it interact differently with several abilities\n Please refer to this page for detailed ability interactions",
+        "The Spirit Bear levels up together with Lone Druid, gaining 5 attack damage and 90 health with each level\n The bonuses are applied immediately and do not require the Spirit Bear to be re-summoned\n Grants flat base attack damage\n Therefore, it is affected by percentage-based attack damage bonuses or reductions\n Grants max health, while the current health remains the same flat amount\n For how much bonus health and base attack damage Spirit Bear gains each level, please refer to the chart below\n At Level 30, it can grant up to 145 base attack damage and 2610 max health bonus\n TALENT NOTES All Spirit Bear related <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents immediately update the current active summon",
+        "On the first cast of Summon Spirit Bear, the bear is actually summoned\n On every following cast, its total health and mana are just replenished or revived\n Since the re-summon is not considered as death, buffs and debuffs are neither dispelled, nor projectiles are disjointed\n Leveling this ability automatically levels Spirit Bear's <span image=\"images\/demolish_%28spirit_bear%29.png\">[picture:demolish_%28spirit_bear%29]<\/span> Demolish and <span image=\"images\/entangling_claws_%28spirit_bear%29.png\">[picture:entangling_claws_%28spirit_bear%29]<\/span> Entangling Claws\n It is also considered as killing the current Spirit Bear and reviving it\n Therefore, leveling this ability dispels buff and debuff, disjoint projectiles and interrupt the Spirit Bear's current channeling abilities",
         "The backlash damage is dealt as pure damage to Lone Druid from the unit that killed the Spirit Bear\n Denying the Spirit Bear causes no backlash damage unless it is killed by neutral creeps",
         "The Spirit Bear cannot be re-summoned if it has taken damage from a player in the last 3 seconds\n Has no minimum damage threshold\n Damage is checked before any sort of reduction, so fully blocked damage also prevents re-summoning it\n If the Spirit Bear dies, it can be re-summoned immediately",
-        "The Spirit Bear can use every item, except for placing  Observer and Sentry Wards\n It can also activate runes\n  Transmute grants Lone Druid the gold and experience when the Spirit Bear uses it\n Spell reflection sources do not trigger on the Spirit Bear\n The Spirit Bear cannot have illusions, the  Illusion Rune and <span image=\"items\/manta_style\/full.webp\">[Manta Style]<\/span> Manta Style do not spawn illusions of the bear\n For more information about Spirit Bear and its item interactions, please refer to the chart below",
-        "When the Spirit Bear is 1100 range away from Lone Druid, it gets disarmed, turns slightly grey and uses different animations\n Both the grey hue and disarm symbol is visible to allies only\n The animations are visible to everyone\n SCEPTER NOTES Summon Spirit Bear's attack restriction is removed upon acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter\n Spirit Bear can now attack at any range from Lone Druid, and survives if Lone Druid dies",
-        "Has a cast backswing of 0.57 while in  True Form\n SPELL STEAL The summoned  Spirit Bear has its own inventory that can equip  Rubick's items\n The bear is instantly killed upon losing the ability, and all items are dropped on its death location"
+        "The Spirit Bear can use every item, except for placing <span image=\"images\/observer_and_sentry_wards_1.png\">[picture:observer_and_sentry_wards_1]<\/span> Observer and Sentry Wards\n It can also activate runes\n <span image=\"items\/hand_of_midas\/full.webp\">[picture:hand_of_midas]<\/span> Transmute grants Lone Druid the gold and experience when the Spirit Bear uses it\n Spell reflection sources do not trigger on the Spirit Bear\n The Spirit Bear cannot have illusions, the <span image=\"images\/illusion_rune_minimap.png\">[picture:illusion_rune_minimap]<\/span> Illusion Rune and <span image=\"items\/manta_style\/full.webp\">[picture:manta_style]<\/span> Manta Style do not spawn illusions of the bear\n For more information about Spirit Bear and its item interactions, please refer to the chart below",
+        "When the Spirit Bear is 1100 range away from Lone Druid, it gets disarmed, turns slightly grey and uses different animations\n Both the grey hue and disarm symbol is visible to allies only\n The animations are visible to everyone\n SCEPTER NOTES Summon Spirit Bear's attack restriction is removed upon acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter\n Spirit Bear can now attack at any range from Lone Druid, and survives if Lone Druid dies",
+        "Has a cast backswing of 0.57 while in <span image=\"images\/true_form.webp\">[picture:true_form]<\/span> True Form\n SPELL STEAL The summoned <span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear has its own inventory that can equip <span image=\"images\/rubick_minimap.png\">[picture:rubick_minimap]<\/span> Rubick's items\n The bear is instantly killed upon losing the ability, and all items are dropped on its death location"
       ],
       "item_behaviour": [],
       "description": "Summons a powerful Spirit Bear companion that can equip items. If the bear moves 1100 distance away from the Lone Druid, it cannot attack. Lone Druid suffers 20% of his max health as backlash damage if the Spirit Bear dies. Spirit Bear does not benefit from attributes. Spirit Bear has the Return, Demolish, and Entangling Roots abilities.",
@@ -18,7 +18,7 @@
       "params": [
         "Cast Animation: 0.5+0.63",
         "Max Health as Backlash Damage: 20%",
-        "Attack Proximity Range: 1100 ( Global)",
+        "Attack Proximity Range: 1100 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Global)",
         "Health Bonus per Level: 90",
         "Attack Damage Bonus per Level: 5",
         "Duration: Permanent"
@@ -38,9 +38,9 @@
     },
     {
       "notes": [
-        "Spirit Link only affects the caster and the caster's  Spirit Bear\n Does not affect any other player-controlled units",
+        "Spirit Link only affects the caster and the caster's <span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear\n Does not affect any other player-controlled units",
         "Uses lifesteal, but instead of healing the attacking Spirit Bear, it heals the Spirit Bear's owner instead\n The lifesteal is affected by lifesteal amplification, but only if the amplification source is on Lone Druid",
-        "Armor shared between Lone Druid and the Spirit Bear is granted as bonus armor\n Periodically checks Lone Druid's and the Spirit Bear's main and bonus armor (excluding its own armor bonus) and adapts the bonuses immediately\n The armor shared is not capped at 0 armor, meaning the shared armor value can be a negative value\n Effectively grants the Spirit Bear the following bonus armor per  True Form level while active: Level 1:  0.64\/0.96\/1.28\/1.6 Level 2:  0.8\/1.2\/1.6\/2 Level 3:  0.96\/1.44\/1.92\/2.4  TALENT NOTES The Spirit Bear armor  talent effectively grants Lone Druid 2.8 bonus armor as well",
+        "Armor shared between Lone Druid and the Spirit Bear is granted as bonus armor\n Periodically checks Lone Druid's and the Spirit Bear's main and bonus armor (excluding its own armor bonus) and adapts the bonuses immediately\n The armor shared is not capped at 0 armor, meaning the shared armor value can be a negative value\n Effectively grants the Spirit Bear the following bonus armor per <span image=\"images\/true_form.webp\">[picture:true_form]<\/span> True Form level while active: Level 1: <span image=\"images\/armor.png\">[picture:armor]<\/span> 0.64\/0.96\/1.28\/1.6 Level 2: <span image=\"images\/armor.png\">[picture:armor]<\/span> 0.8\/1.2\/1.6\/2 Level 3: <span image=\"images\/armor.png\">[picture:armor]<\/span> 0.96\/1.44\/1.92\/2.4  TALENT NOTES The Spirit Bear armor <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent effectively grants Lone Druid 2.8 bonus armor as well",
         "The visual effect upon leveling up only appears when the Spirit Bear is within 1500 range of Lone Druid"
       ],
       "item_behaviour": [],
@@ -68,7 +68,7 @@
         "Savage Roar is always cast by Lone Druid and the Spirit Bear simultaneously, no matter who was given the order\n However, if the other would normally not be able to cast it (e.g\n stunned or silenced), the effect does not occur\n SHARD NOTES The simultaneous cast restriction while disabled is removed, so that the other casts it even when normally unable to cast Savage Roar\n The current cooldown status is ignored and does not prevent the ability from triggering if still on cooldown\n The cooldown always triggers, regardless of any status",
         "Applies fear on all hit enemies within the radius, forcing them to run towards their fountain, while preventing them from acting\n SHARD NOTES Savage Roar now also applies a basic dispel on both Lone Druid and the Spirit Bear upon cast, while granting allies attack speed and movement speed bonuses",
         "Only affects enemy player-controlled units\n Lane and neutral creeps are unaffected",
-        "The simultaneous Savage Roar cast goes on a fixed 38\/32\/26\/20 ( 30\/24\/18\/12)-second cooldown\n This cooldown can be reset with cooldown resetting sources, but it is not affected by percentage-based cooldown reductions\n It also shares cooldown with the Spirit Bear's  Savage Roar",
+        "The simultaneous Savage Roar cast goes on a fixed 38\/32\/26\/20 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/24\/18\/12)-second cooldown\n This cooldown can be reset with cooldown resetting sources, but it is not affected by percentage-based cooldown reductions\n It also shares cooldown with the Spirit Bear's <span image=\"images\/savage_roar.webp\">[picture:savage_roar]<\/span> Savage Roar",
         "If Savage Roar is not leveled, or if the caster does not have this ability, the Spirit Bear will not have this ability\n SPELL STEAL The simultaneous Savage Roar cast is not considered as the last cast ability"
       ],
       "item_behaviour": [],
@@ -79,11 +79,11 @@
         "Enemy Radius: 375",
         "Enemy Move Speed Bonus: 20%",
         "Enemy Duration: 1.1\/1.6\/2.1\/2.6",
-        "Simultaneous Cast Downtime: 38\/32\/26\/20 ( 30\/24\/18\/12)",
-        "Ally Radius:  700",
-        "Ally Move Speed Bonus:  20%",
-        "Ally Attack Speed Bonus:  60",
-        "Ally Duration:  5"
+        "Simultaneous Cast Downtime: 38\/32\/26\/20 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/24\/18\/12)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Radius:  700",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Move Speed Bonus:  20%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Attack Speed Bonus:  60",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Duration:  5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Lone_Druid_Savage_Roar.mp3\/revision\/latest?cb=20191216015752",
       "effects": [
@@ -99,9 +99,9 @@
     },
     {
       "notes": [
-        "Only available during  True Form",
-        "Same notes as for Spirit Bear's  Demolish apply",
-        "Although only showing 3 levels in the HUD, the ability still scales up to level 4 based on Summon Spirit Bear's level\n If  Summon Spirit Bear is not learned, or if the caster does not have this ability, Lone Druid is unable to use Demolish",
+        "Only available during <span image=\"images\/true_form.webp\">[picture:true_form]<\/span> True Form",
+        "Same notes as for Spirit Bear's <span image=\"images\/demolish_%28spirit_bear%29.png\">[picture:demolish_%28spirit_bear%29]<\/span> Demolish apply",
+        "Although only showing 3 levels in the HUD, the ability still scales up to level 4 based on Summon Spirit Bear's level\n If <span image=\"images\/summon_spirit_bear.webp\">[picture:summon_spirit_bear]<\/span> Summon Spirit Bear is not learned, or if the caster does not have this ability, Lone Druid is unable to use Demolish",
         "Increases Lone Druid's total magic resistance to 49.75%"
       ],
       "item_behaviour": [],
@@ -125,9 +125,9 @@
     },
     {
       "notes": [
-        "Only available during  True Form",
-        "Same notes as for Spirit Bear's  Entangling Claws apply",
-        "Although only showing 3 levels in the HUD, the ability still scales up to level 4 based on Summon Spirit Bear's level\n If  Summon Spirit Bear is not learned, or if the caster does not have this ability, Lone Druid is unable to use Entangling Claws"
+        "Only available during <span image=\"images\/true_form.webp\">[picture:true_form]<\/span> True Form",
+        "Same notes as for Spirit Bear's <span image=\"images\/entangling_claws_%28spirit_bear%29.png\">[picture:entangling_claws_%28spirit_bear%29]<\/span> Entangling Claws apply",
+        "Although only showing 3 levels in the HUD, the ability still scales up to level 4 based on Summon Spirit Bear's level\n If <span image=\"images\/summon_spirit_bear.webp\">[picture:summon_spirit_bear]<\/span> Summon Spirit Bear is not learned, or if the caster does not have this ability, Lone Druid is unable to use Entangling Claws"
       ],
       "item_behaviour": [],
       "description": "Attacks have a chance to cause roots to burst from the ground, immobilizing the attacked enemy unit, and dealing damage per second.",
@@ -153,9 +153,9 @@
     {
       "notes": [
         "During the transformation, Lone Druid is prevented from acting and it cannot be interrupted\n If Lone Druid dies during the transformation time, the ability's cooldown resets",
-        "Turns Lone Druid into a  melee unit with 225 attack range, and set his base attack time to 1.7 for its duration\n This causes items that use different values for melee and ranged heroes (e.g\n <span image=\"items\/manta_style\/full.webp\">[Manta Style]<\/span> Manta Style) to now treat the caster as a melee hero\n Attack range bonuses are not overridden and still work normally",
-        "Lone Druid gets his current and max health increased by the given value\n This counts as setting health\n Upon losing the buff, his current health stays the same and only the max health bonus gets reverted\n TALENT NOTES The maximum health increasing  talent does not upgrade the current active True Form instance",
-        "While active, Lone Druid gains  Demolish and  Entangling Claws based on the same level as the Spirit Bear's abilities: The Demolish has a higher building attack damage bonus of 15%\/30%\/45%\/60% for Lone Druid\n The Entangling Claws has a higher proc chance of 30% for Lone Druid",
+        "Turns Lone Druid into a <span image=\"images\/melee.png\">[picture:melee]<\/span> melee unit with 225 attack range, and set his base attack time to 1.7 for its duration\n This causes items that use different values for melee and ranged heroes (e.g\n <span image=\"items\/manta_style\/full.webp\">[picture:manta_style]<\/span> Manta Style) to now treat the caster as a melee hero\n Attack range bonuses are not overridden and still work normally",
+        "Lone Druid gets his current and max health increased by the given value\n This counts as setting health\n Upon losing the buff, his current health stays the same and only the max health bonus gets reverted\n TALENT NOTES The maximum health increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not upgrade the current active True Form instance",
+        "While active, Lone Druid gains <span image=\"images\/demolish_%28spirit_bear%29.png\">[picture:demolish_%28spirit_bear%29]<\/span> Demolish and <span image=\"images\/entangling_claws_%28spirit_bear%29.png\">[picture:entangling_claws_%28spirit_bear%29]<\/span> Entangling Claws based on the same level as the Spirit Bear's abilities: The Demolish has a higher building attack damage bonus of 15%\/30%\/45%\/60% for Lone Druid\n The Entangling Claws has a higher proc chance of 30% for Lone Druid",
         "True Form persists through Lone Druid's death\n If he dies during it, he respawns in True Form",
         "Changes Lone Druid's model and alters his voice"
       ],
@@ -167,7 +167,7 @@
         "Transformation Time: 1.933",
         "Base Attack Time: 1.7",
         "Armor Bonus: 8\/10\/12",
-        "Health Bonus: 500\/1000\/1500 ( 1500\/2000\/2500)",
+        "Health Bonus: 500\/1000\/1500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1500\/2000\/2500)",
         "Attack Range Loss: 325",
         "Duration: 40"
       ],
@@ -235,7 +235,7 @@
     },
     {
       "notes": [
-        "Same notes as for Lone Druid's  Savage Roar apply\n The Spirit Bear's Savage Roar has a lower duration than Lone Druid's Savage Roar",
+        "Same notes as for Lone Druid's <span image=\"images\/savage_roar.webp\">[picture:savage_roar]<\/span> Savage Roar apply\n The Spirit Bear's Savage Roar has a lower duration than Lone Druid's Savage Roar",
         "Spirit Bear acquires this ability as soon as Lone Druid learns it"
       ],
       "item_behaviour": [],
@@ -246,11 +246,11 @@
         "Enemy Radius: 375",
         "Enemy Move Speed Bonus: 20%",
         "Enemy Duration: 1.1\/1.6\/2.1\/2.6",
-        "Simultaneous Cast Downtime: 38\/32\/26\/20 ( 30\/24\/18\/12)",
-        "Ally Radius:  700",
-        "Ally Move Speed Bonus:  20%",
-        "Ally Attack Speed Bonus:  60",
-        "Ally Duration:  5"
+        "Simultaneous Cast Downtime: 38\/32\/26\/20 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/24\/18\/12)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Radius:  700",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Move Speed Bonus:  20%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Attack Speed Bonus:  60",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Duration:  5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Lone_Druid_Savage_Roar.mp3\/revision\/latest?cb=20191216015752",
       "effects": [

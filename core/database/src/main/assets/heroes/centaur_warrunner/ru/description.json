@@ -126,7 +126,7 @@
     {
       "notes": [
         "При использовании прерывает произносимые заклинания Centaur Warrunner",
-        "Действует на каждого подконтрольного игрокам союзного юнита, исключая <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> курьеров, варды, постройки и иллюзии на основе <span image=\"images\/haunt.webp\">[picture:haunt]<\/span> Haunt",
+        "Действует на каждого подконтрольного игрокам союзного юнита, исключая <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> курьеров, варды, постройки и иллюзии на основе <span image=\"images\/haunt.webp\">[picture:haunt]<\/span> Haunt",
         "Затронутые союзники получают эффект сквозного передвижения и ускорение, поэтому их нельзя замедлить ниже установленного значения",
         "Урон от <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> силы рассчитывается при каждом отдельном прохождении через врага, поэтому он мгновенно адаптируется при изменении силы Centaur Warrunner\n Тем не менее, множитель урона фиксируется до окончания действия и не изменится, если увеличить уровень Stampede",
         "Stampede сначала наносит урон, затем применяет дебафф",

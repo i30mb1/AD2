@@ -17,7 +17,7 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.8",
-        "Cast Range:  1000\/1100\/1200\/1300",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000\/1100\/1200\/1300",
         "Bramble Spawn Radius: 500",
         "Root Search Radius: 90",
         "Bramble Spawn Delay: 0.3",
@@ -45,9 +45,9 @@
       "notes": [
         "Does not interrupt Dark Willow's channeling abilities upon cast",
         "Shadow Realm's effect delay does not work like the fade time of invisibility\n The ability's buff is placed after the 0.3-second delay, so that all of the ability's effects are delayed\n Successive casts do not remove the buff from a previous cast, but refresh its duration after the effect delay",
-        "Increases Dark Willow's total attack range to 1075\n The attack range bonus works for  ranged heroes only",
-        "During Shadow Realm, Dark Willow is phased, attack immune and unselectable\n Any attack or ability targeting Dark Willow which is already in its attack or cast animation gets canceled\n Dark Willow can be targeted by self-targeted abilities or ↓↓ Double-tapping, as well as allied abilities through  Portrait-casting, but only if these abilities do not require facing the target to cast (e.g\n <span image=\"items\/glimmer_cape\/full.webp\">[Glimmer Cape]<\/span> Glimmer)\n Allied abilities targeting Dark Willow only work when already within range\n Otherwise, the ordered unit attempts to get in range, but cancels immediately upon coming within range\n Does not prevent Spell Reflection from reflecting abilities back at her",
-        "Due to the unselectability, almost every ability treats Dark Willow as if she were invisible, except the following abilities:  Heat-Seeking Missile,  Cinder Brew, <span image=\"items\/gleipnir\/full.webp\">[Gleipnir]<\/span> Eternal Chains,  Concussive Shot,  Wrath of Nature,  Omnislash,  Mana Drain,  Exorcism and  Thundergod's Wrath\n Unlike with invisibility, attached units and  Undying Zombies do not instantly die when Shadow Realm is cast",
+        "Increases Dark Willow's total attack range to 1075\n The attack range bonus works for <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged heroes only",
+        "During Shadow Realm, Dark Willow is phased, attack immune and unselectable\n Any attack or ability targeting Dark Willow which is already in its attack or cast animation gets canceled\n Dark Willow can be targeted by self-targeted abilities or ↓↓ Double-tapping, as well as allied abilities through <span image=\"images\/self-cast_cursor_%28black%29.png\">[picture:self-cast_cursor_%28black%29]<\/span> Portrait-casting, but only if these abilities do not require facing the target to cast (e.g\n <span image=\"items\/glimmer_cape\/full.webp\">[picture:glimmer_cape]<\/span> Glimmer)\n Allied abilities targeting Dark Willow only work when already within range\n Otherwise, the ordered unit attempts to get in range, but cancels immediately upon coming within range\n Does not prevent Spell Reflection from reflecting abilities back at her",
+        "Due to the unselectability, almost every ability treats Dark Willow as if she were invisible, except the following abilities: <span image=\"images\/heat-seeking_missile.webp\">[picture:heat-seeking_missile]<\/span> Heat-Seeking Missile, <span image=\"images\/cinder_brew.webp\">[picture:cinder_brew]<\/span> Cinder Brew, <span image=\"items\/gleipnir\/full.webp\">[picture:gleipnir]<\/span> Eternal Chains, <span image=\"images\/concussive_shot.webp\">[picture:concussive_shot]<\/span> Concussive Shot, <span image=\"images\/wrath_of_nature.webp\">[picture:wrath_of_nature]<\/span> Wrath of Nature, <span image=\"images\/omnislash.webp\">[picture:omnislash]<\/span> Omnislash, <span image=\"images\/mana_drain.webp\">[picture:mana_drain]<\/span> Mana Drain, <span image=\"images\/exorcism.webp\">[picture:exorcism]<\/span> Exorcism and <span image=\"images\/thundergod's_wrath.webp\">[picture:thundergod's_wrath]<\/span> Thundergod's Wrath\n Unlike with invisibility, attached units and <span image=\"images\/undying_zombie.png\">[picture:undying_zombie]<\/span> Undying Zombies do not instantly die when Shadow Realm is cast",
         "When cast while attacking an enemy, Dark Willow is ordered to stop, so that the attack out of Shadow Realm is not wasted\n However, when she is given an attack order (A) while outside attack range, casting Shadow Realm while she moves does not stop her from attacking immediately",
         "Casting abilities or items during Shadow Realm does not end it, only attacking does",
         "The Shadow Realm buff is lost upon launching an attack\n Upon launch, Dark Willow gets the attack logic buff, which is responsible for the damage\n This buff disappears upon hitting the target, or within 3 seconds, whichever is shorter\n This means if the projectile flies for more than 3 seconds, the damage is not applied\n The buff responsible for the damage is lost on death, so when dying before projectile hit negates the damage\n The buff only works for the attack that created it\n Any other projectiles launched afterwards do not apply the bonus damage\n SCEPTER NOTES Attacking now no longer ends Shadow Realm, and each attack launched applies the Shadow Realm damage",
@@ -60,12 +60,12 @@
       "description": "Dark Willow recedes into the shadows, becoming untargetable. Her next attack has increased attack range and deals bonus magic damage, and will end Shadow Realm. Damage scales based on how long she remains under the effects of Shadow Realm, the maximum being reached after 3.5 seconds.",
       "hot_key": "W",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Effect Delay: 0.3",
         "Attack Range Bonus: 600",
         "Max Damage: 90\/180\/270\/360",
         "Max Damage Duration: 3.5",
-        "Duration: 5 ( 7)"
+        "Duration: 5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 7)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Dark_Willow_Shadow_Realm_1.mp3\/revision\/latest?cb=20191216012334",
       "effects": [
@@ -84,19 +84,19 @@
       "notes": [
         "The sound and visual effect during the delay on the target is audible and visible to everyone\n The visual effect indicates the area to be affected on each second",
         "Turning invulnerable or hidden does not prevent the debuff from affecting the area around the target",
-        "SHARD NOTES Losing the initial debuff in any way now causes 4  Brambles based on the current level to spawn around the target\n Bramble Maze's notes fully apply\n If it is not leveled, no brambles spawn\n The brambles are always placed 175 range away from the target, towards north, east, south, and west\n Unlike the brambles from a regular cast, these brambles spawn simultaneously"
+        "SHARD NOTES Losing the initial debuff in any way now causes 4 <span image=\"images\/bramble_maze.webp\">[picture:bramble_maze]<\/span> Brambles based on the current level to spawn around the target\n Bramble Maze's notes fully apply\n If it is not leveled, no brambles spawn\n The brambles are always placed 175 range away from the target, towards north, east, south, and west\n Unlike the brambles from a regular cast, these brambles spawn simultaneously"
       ],
       "item_behaviour": [],
       "description": "Dark Willow casts an ancient fae curse on the target. After a delay, the target and nearby enemies are stunned.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.2+0.83",
-        "Cast Range:  600\/625\/650\/675",
-        "Stun Radius: 360 ( 520)",
-        "Effect Delay: 4 ( 3)",
-        "Stun Duration: 1.5\/2\/2.5\/3 ( 2\/2.5\/3\/3.5)",
-        "Bramble Spawn Radius:  175",
-        "Number of Brambles:  4"
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600\/625\/650\/675",
+        "Stun Radius: 360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 520)",
+        "Effect Delay: 4 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 3)",
+        "Stun Duration: 1.5\/2\/2.5\/3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2\/2.5\/3\/3.5)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Bramble Spawn Radius:  175",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Number of Brambles:  4"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Dark_Willow_Cursed_Crown_1.mp3\/revision\/latest?cb=20191216012332",
       "effects": [
@@ -114,26 +114,26 @@
     {
       "notes": [
         "Interrupts Dark Willow's channeling abilities upon cast",
-        "While active,  Terrorize is inactive and cannot be cast",
-        "Bedlam is inactive during Terrorize's cast time and stays inactive until  Jex fully returns to Dark Willow after terrorizing enemies",
+        "While active, <span image=\"images\/terrorize.webp\">[picture:terrorize]<\/span> Terrorize is inactive and cannot be cast",
+        "Bedlam is inactive during Terrorize's cast time and stays inactive until <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Jex fully returns to Dark Willow after terrorizing enemies",
         "On cast, Jex always appears on the west side and rotates clockwise around Dark Willow",
         "Jex rotates around Dark Willow at a speed of 837.76, taking 1.5 seconds to finish a revolution\n This results in 3.33 revolutions over the whole duration",
         "On each strike, Jex chooses a visible random target within range\n There are no priorities\n Does not strike buildings or wards\n The strike radius is centered on Jex\n A light pink glow surrounds it, indicating the strike area\n Jex continues striking even when Dark Willow is disabled\n It stops only when she dies, or when expiring\n The strikes are not regular attacks, they do not interact with any on-attack effects\n Bedlam deals regular spell damage\n This means that spell damage amplification and spell lifesteal fully work with it\n Dark Willow is the damage source\n The projectiles travel at a speed of 1400",
         "With its 0.25-second strike interval, it can deal up to 20 damage instances",
-        "Can deal up to 1400\/2400\/3400 ( 2000\/3000\/4000) damage to a single unit (before reductions)",
+        "Can deal up to 1400\/2400\/3400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2000\/3000\/4000) damage to a single unit (before reductions)",
         "Successive casts refresh the duration",
         "The ability itself provides no vision, but Jex has 600 ground vision which it provides for the duration",
-        "TALENT NOTES Both damage increasing and spell immunity piercing  talents immediately update the current active instance\n SPELL STEAL Does not grant  Terrorize upon acquiring  Bedlam, and vice versa\n Bedlam can be cast right away even when  Jex has not returned from the previous Terrorize cast\n However, when both abilities are acquired via   Spell Steal, they get turned inactive as normal"
+        "TALENT NOTES Both damage increasing and spell immunity piercing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents immediately update the current active instance\n SPELL STEAL Does not grant <span image=\"images\/terrorize.webp\">[picture:terrorize]<\/span> Terrorize upon acquiring <span image=\"images\/bedlam.webp\">[picture:bedlam]<\/span> Bedlam, and vice versa\n Bedlam can be cast right away even when <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Jex has not returned from the previous Terrorize cast\n However, when both abilities are acquired via <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/spell_steal.webp\">[picture:spell_steal]<\/span> Spell Steal, they get turned inactive as normal"
       ],
       "item_behaviour": [],
       "description": "Dark Willow's pet wisp roams around her for the duration, rapidly attacking nearby enemies. Bedlam cannot be used while Terrorize is active.",
       "hot_key": "D",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Roam Radius: 200",
         "Search Radius: 300",
         "Strike Interval: 0.25",
-        "Damage per Strike: 70\/120\/170 ( 100\/150\/200)",
+        "Damage per Strike: 70\/120\/170 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100\/150\/200)",
         "Seconds per Revolution: 1.5",
         "Duration: 5"
       ],
@@ -152,20 +152,20 @@
     },
     {
       "notes": [
-        "Terrorize is inactive during  Bedlam",
-        "Terrorize is also inactive during its cast time and stays inactive until  Jex fully returns to Dark Willow after terrorizing enemies\n This means Terrorize cannot be cast again until Jex returned from a previous cast",
+        "Terrorize is inactive during <span image=\"images\/bedlam.webp\">[picture:bedlam]<\/span> Bedlam",
+        "Terrorize is also inactive during its cast time and stays inactive until <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Jex fully returns to Dark Willow after terrorizing enemies\n This means Terrorize cannot be cast again until Jex returned from a previous cast",
         "During the cast time, Jex appears 300 range above Dark Willow and then travels to the target point at a speed of 2000, and returns at a speed of 600",
         "The visual effect at the target area during the cast time\/effect delay is visible to allies only\n The sound is audible to everyone",
         "Applies fear on all hit enemies within the radius, making them run towards their fountain and preventing them from acting\n When hitting neutral creeps, they retreat to their camps instead",
         "Exposes all affected targets, but does not provide True Sight over them",
-        "The ability itself provides no vision, but Jex has 600 ground vision which it provides during the duration\n SPELL STEAL This ability's cast point is not modified when acquired\n Terrorize can still be cast while  Bedlam is active\n However, when both abilities are acquired via   Spell Steal, they get turned inactive as normal"
+        "The ability itself provides no vision, but Jex has 600 ground vision which it provides during the duration\n SPELL STEAL This ability's cast point is not modified when acquired\n Terrorize can still be cast while <span image=\"images\/bedlam.webp\">[picture:bedlam]<\/span> Bedlam is active\n However, when both abilities are acquired via <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/spell_steal.webp\">[picture:spell_steal]<\/span> Spell Steal, they get turned inactive as normal"
       ],
       "item_behaviour": [],
       "description": "Dark Willow releases her pet wisp to terrorize her enemies. After a short delay, all enemies in the target area become fearful and run toward their home fountain. Terrorize cannot be used while Bedlam is active.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 1+2.57",
-        "Cast Range:  1200",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1200",
         "Radius: 400",
         "Duration: 3.5\/3.75\/4"
       ],

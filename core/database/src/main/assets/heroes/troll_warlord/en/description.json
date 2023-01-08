@@ -3,20 +3,20 @@
     {
       "notes": [
         "Does not interrupt Troll Warlord's channeling abilities upon toggling",
-        "Toggling On disables  Whirling Axes (Ranged) and then enables  Whirling Axes (Melee)\n Turns Troll Warlord into a  melee unit with 150 attack range, and sets his base attack time to 1.4 while active\n This causes items that use different values for melee and ranged heroes (e.g\n <span image=\"items\/manta_style\/full.webp\">[Manta Style]<\/span> Manta Style) to now treat the caster as a melee hero\n Attack range bonuses are not overridden and still work normally\n Also, it increases Troll Warlord's total movement speed to 305\/315\/325\/335 ( 330\/340\/350\/360)",
-        "When toggling On while a  ranged projectile is airborne, the projectile is treated as a melee attack by items, but it does not proc Berserker's Rage's root chance\n These attacks landed are also considered as  melee attacks, and therefore using  melee values (i.e\n can cleave, bash etc.)\n However, <span image=\"items\/quelling_blade\/full.webp\">[Quelling Blade]<\/span> Quelling Blade uses the ranged values if Troll Warlord is in ranged form at the start of the projectile",
-        "Berserker's Rage  melee and  ranged form persists through Troll Warlord's death\n He respawns with the same form as he dies",
-        "The root proc is decided upon attack point and if Troll Warlord is in  melee form\n The root proccing attack first applies the debuff, then its own damage\n Provides True Sight over the target for its duration\n Berserker's Rage's proc chance uses pseudo-random distribution",
+        "Toggling On disables <span image=\"images\/whirling_axes_%28ranged%29.png\">[picture:whirling_axes_%28ranged%29]<\/span> Whirling Axes (Ranged) and then enables <span image=\"images\/whirling_axes_%28melee%29.png\">[picture:whirling_axes_%28melee%29]<\/span> Whirling Axes (Melee)\n Turns Troll Warlord into a <span image=\"images\/melee.png\">[picture:melee]<\/span> melee unit with 150 attack range, and sets his base attack time to 1.4 while active\n This causes items that use different values for melee and ranged heroes (e.g\n <span image=\"items\/manta_style\/full.webp\">[picture:manta_style]<\/span> Manta Style) to now treat the caster as a melee hero\n Attack range bonuses are not overridden and still work normally\n Also, it increases Troll Warlord's total movement speed to 305\/315\/325\/335 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 330\/340\/350\/360)",
+        "When toggling On while a <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged projectile is airborne, the projectile is treated as a melee attack by items, but it does not proc Berserker's Rage's root chance\n These attacks landed are also considered as <span image=\"images\/melee.png\">[picture:melee]<\/span> melee attacks, and therefore using <span image=\"images\/melee.png\">[picture:melee]<\/span> melee values (i.e\n can cleave, bash etc.)\n However, <span image=\"items\/quelling_blade\/full.webp\">[picture:quelling_blade]<\/span> Quelling Blade uses the ranged values if Troll Warlord is in ranged form at the start of the projectile",
+        "Berserker's Rage <span image=\"images\/melee.png\">[picture:melee]<\/span> melee and <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged form persists through Troll Warlord's death\n He respawns with the same form as he dies",
+        "The root proc is decided upon attack point and if Troll Warlord is in <span image=\"images\/melee.png\">[picture:melee]<\/span> melee form\n The root proccing attack first applies the debuff, then its own damage\n Provides True Sight over the target for its duration\n Berserker's Rage's proc chance uses pseudo-random distribution",
         "The root does not work against wards, buildings, and allied units",
-        "When toggled Off, all changes are reverted and he becomes a  ranged unit again\n SPELL STEAL All ability effects apply upon toggling On \/ Off\n However, upon toggling Off and as long as the acquired ability is not lost,  Rubick is considered  melee hero\n He still attacks with 550 attack range, the attacks are Instant and do not have a projectile, his attacks cannot miss uphill and are treated as a  melee hero by items"
+        "When toggled Off, all changes are reverted and he becomes a <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged unit again\n SPELL STEAL All ability effects apply upon toggling On \/ Off\n However, upon toggling Off and as long as the acquired ability is not lost, <span image=\"images\/rubick_minimap.png\">[picture:rubick_minimap]<\/span> Rubick is considered <span image=\"images\/melee.png\">[picture:melee]<\/span> melee hero\n He still attacks with 550 attack range, the attacks are Instant and do not have a projectile, his attacks cannot miss uphill and are treated as a <span image=\"images\/melee.png\">[picture:melee]<\/span> melee hero by items"
       ],
       "item_behaviour": [],
       "description": "While active, Troll Warlord swaps from using ranged to melee attacks. Melee attacks have a chance to ensnare, preventing the target from moving or using mobility spells. Berserker's Rage also grants additional movement speed, armor, and decreases base attack time. Whirling Axes has different functionality while Berserker's Rage is active.",
       "hot_key": "Q",
       "params": [
-        "Cast Animation:  0+0",
-        "Armor Bonus: 4\/5\/6\/7 ( 14\/15\/16\/17)",
-        "Move Speed Bonus: 15\/25\/35\/45 ( 40\/50\/60\/70)",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
+        "Armor Bonus: 4\/5\/6\/7 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14\/15\/16\/17)",
+        "Move Speed Bonus: 15\/25\/35\/45 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 40\/50\/60\/70)",
         "Attack Range Loss: 350",
         "Base Attack Time: 1.4",
         "Root Chance: 14%\/16%\/18%\/20%",
@@ -37,26 +37,26 @@
     },
     {
       "notes": [
-        "Whirling Axes (Ranged) is only available when  Berserker's Rage is toggled Off",
+        "Whirling Axes (Ranged) is only available when <span image=\"images\/berserker's_rage.webp\">[picture:berserker's_rage]<\/span> Berserker's Rage is toggled Off",
         "The axes travel at a speed of 1500, taking 0.63 seconds to travel the full distance",
         "Spawns 5 axes which spread up to 25° and affect units within 100 radius around them\n Has no starting radius, the axes spawn at one point in front of Troll Warlord\n So the total area is shaped like a cone",
         "With the travel distance and axes radius, it can hit units up to 1050 range away",
         "The axes first apply a basic dispel, then the damage, then the debuff",
-        "Does not affect  Roshan",
-        "While  Battle Trance is active, Whirling Axes (Ranged) has no cast time and does not require Troll Warlord to face the targeted direction"
+        "Does not affect <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan",
+        "While <span image=\"images\/battle_trance.webp\">[picture:battle_trance]<\/span> Battle Trance is active, Whirling Axes (Ranged) has no cast time and does not require Troll Warlord to face the targeted direction"
       ],
       "item_behaviour": [],
       "description": "Troll hurls a fistful of five axes in a cone shape over 950 range, slowing and damaging enemy units.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0",
-        "Cast Range:  950",
-        "Axes Travel Distance:  950",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 950",
+        "Axes Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 950",
         "Axes Radius: 100",
         "Axes Spread End Radius: 206.17",
-        "Damage: 90 ( 180)",
+        "Damage: 90 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 180)",
         "Move Speed Slow: 40%",
-        "Slow Duration: 2.5\/3\/3.5\/4 ( 4.5\/5\/5.5\/6)"
+        "Slow Duration: 2.5\/3\/3.5\/4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4.5\/5\/5.5\/6)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Troll_Warlord_Whirling_Axes_%28Ranged%29_1.mp3\/revision\/latest?cb=20191216025521",
       "effects": [
@@ -73,25 +73,25 @@
     },
     {
       "notes": [
-        "Whirling Axes (Melee) is only available when  Berserker's Rage is toggled On",
+        "Whirling Axes (Melee) is only available when <span image=\"images\/berserker's_rage.webp\">[picture:berserker's_rage]<\/span> Berserker's Rage is toggled On",
         "Interrupts Troll Warlord's channeling abilities upon cast\n SCEPTER NOTES Applies a basic dispel on Troll Warlord upon cast",
         "The axes travel out at a speed of 1250 and move out at a speed of 233.33 until reaching the max distance in 1.5 seconds, and then returning to Troll Warlord at the same speed\n The axes always spawn towards east and west at Troll Warlord's position and rotate clockwise\n With the max spin radius and axes radius, it can hit units up to 450 range away",
         "The axes first apply the damage, then the debuff",
         "Only units within 100 range of an axe are damaged and blinded\n The visual effects of this ability are offset and do not reflect the actual currently affected area\n The full damage and debuff are dealt the first time when a unit comes in contact with an axe, being hit by the other axe does not deal extra damage or reapply the debuff",
         "Stacks additively with other sources of blind\n Blind uses pseudo-random distribution",
-        "Does not affect  Roshan",
+        "Does not affect <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan",
         "If Troll Warlord dies, the ability ends and the axes disappear"
       ],
       "item_behaviour": [],
       "description": "Troll hurls two axes around him in a close range area of effect, damaging enemy units and causing them to miss some attacks.",
       "hot_key": "E",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Spin Radius: 350",
         "Axes Radius: 100",
-        "Damage: 50\/100\/150\/200 ( 140\/190\/240\/290)",
+        "Damage: 50\/100\/150\/200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 140\/190\/240\/290)",
         "Miss Chance: 60%",
-        "Blind Duration: 5 ( 7)",
+        "Blind Duration: 5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 7)",
         "Whirl Duration: 3"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Troll_Warlord_Whirling_Axes_%28Melee%29_1.mp3\/revision\/latest?cb=20191216025518",
@@ -110,15 +110,15 @@
     {
       "notes": [
         "Troll Warlord gains or loses stacks as soon as his attacks land on the target\n This means that missed or disjointed attacks do not count, and in ranged form, it reacts on projectile hit, not on launch",
-        "When already having stacks, the first attack against a new target removes the previous stacks, without granting a new stack\n Attacks redirected by  Bulwark counts as attacking a new target\n Grants attack speed bonus against any unit, including allies, wards and buildings",
-        "For how much attack speed bonus (and with the attack speed increasing  talent) Fervor grants with a certain amount of stacks on each level, please refer to the chart below"
+        "When already having stacks, the first attack against a new target removes the previous stacks, without granting a new stack\n Attacks redirected by <span image=\"images\/bulwark.webp\">[picture:bulwark]<\/span> Bulwark counts as attacking a new target\n Grants attack speed bonus against any unit, including allies, wards and buildings",
+        "For how much attack speed bonus (and with the attack speed increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent) Fervor grants with a certain amount of stacks on each level, please refer to the chart below"
       ],
       "item_behaviour": [],
       "description": "With each continuous blow on the same target, Troll gains increased attack speed. If Troll changes targets, the stacks drop to zero.",
       "hot_key": "D",
       "params": [
         "Max Stacks: 12",
-        "Attack Speed Bonus per Stack: 15\/20\/25\/30 ( 20\/25\/30\/35)"
+        "Attack Speed Bonus per Stack: 15\/20\/25\/30 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20\/25\/30\/35)"
       ],
       "audioUrl": "",
       "effects": [
@@ -134,10 +134,10 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard upgrade to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard upgrade to be unlocked",
         "Interrupts Troll Warlord's channeling abilities upon cast",
         "Affects invulnerable and hidden ally heroes, clones, illusions\n Treats illusions and creep-heroes as creeps",
-        "Rampage works independently from  Berserker's Rage\n When cast, it checks for the caster's current range type\n Creates red particles if the caster was  melee on cast, and teal if they were  ranged\n Rampage checks for the caster's range type periodically and updates the buff immediately\n However, the particle effects do not update",
+        "Rampage works independently from <span image=\"images\/berserker's_rage.webp\">[picture:berserker's_rage]<\/span> Berserker's Rage\n When cast, it checks for the caster's current range type\n Creates red particles if the caster was <span image=\"images\/melee.png\">[picture:melee]<\/span> melee on cast, and teal if they were <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged\n Rampage checks for the caster's range type periodically and updates the buff immediately\n However, the particle effects do not update",
         "Stacks multiplicatively with other sources of status resistance",
         "Despite the tooltip, the buff is dispellable by any dispel and it fully works on spell immune allies"
       ],
@@ -168,14 +168,14 @@
         "Interrupts Troll Warlord's channeling abilities upon cast",
         "Battle Trance first applies the buff, then the basic dispel upon cast",
         "Stacks additively with other sources of lifesteal",
-        "When cast while not attacking, Troll Warlord automatically chooses a valid attack target, including  Couriers, within the search radius\n Prioritizes heroes over other units\n Uses ◉ Standard auto-attack rules to decide for attack targets\n Does not target  Roshan, buildings, wards, allies, sleeping, invulnerable, hidden or attack immune enemies\n Treats creep-heroes as creeps",
-        "When cast while already attacking a target, Troll Warlord sticks to that target, even if it is  Roshan, buildings, wards, or an ally\n He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies)",
+        "When cast while not attacking, Troll Warlord automatically chooses a valid attack target, including <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, within the search radius\n Prioritizes heroes over other units\n Uses ◉ Standard auto-attack rules to decide for attack targets\n Does not target <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, buildings, wards, allies, sleeping, invulnerable, hidden or attack immune enemies\n Treats creep-heroes as creeps",
+        "When cast while already attacking a target, Troll Warlord sticks to that target, even if it is <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, buildings, wards, or an ally\n He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies)",
         "Grants shared vision over the current attack target as long as he stays within 900 range of the target, revealing it through the Fog of War\n Does not provide True Sight",
-        "While attacking, Troll Warlord becomes almost fully uncontrollable\n He is phased and hasted, fully ignoring movement speed slows, and completely ignores taunts\n The caster can only be ordered to toggle  Berserker's Rage, or cast both  Whirling Axes and  Rampage\n Other abilities cannot be cast\n Fear can stop him from attacking and cause conflicting movement\n When no enemies are nearby, he becomes controllable and can be affected by movement speed slows again, until another visible enemy enters the search radius",
-        "Prevents Troll Warlord from dying by setting his minimum health to 1\n This affect the following things: Troll Warlord cannot die to damage, including HP removal sources:  False Promise's delayed damage\n Stops  Ice Blast kill health threshold from killing him\n However, it does not protect him against certain instant kill sources:  Culling Blade's kill threshold When   Wraith Delay expires",
-        "Battle Trance can only be dispelled by an ally   Dismember or an ally   Supernova",
+        "While attacking, Troll Warlord becomes almost fully uncontrollable\n He is phased and hasted, fully ignoring movement speed slows, and completely ignores taunts\n The caster can only be ordered to toggle <span image=\"images\/berserker's_rage.webp\">[picture:berserker's_rage]<\/span> Berserker's Rage, or cast both <span image=\"images\/whirling_axes.png\">[picture:whirling_axes]<\/span> Whirling Axes and <span image=\"images\/rampage.webp\">[picture:rampage]<\/span> Rampage\n Other abilities cannot be cast\n Fear can stop him from attacking and cause conflicting movement\n When no enemies are nearby, he becomes controllable and can be affected by movement speed slows again, until another visible enemy enters the search radius",
+        "Prevents Troll Warlord from dying by setting his minimum health to 1\n This affect the following things: Troll Warlord cannot die to damage, including HP removal sources: <span image=\"images\/false_promise.webp\">[picture:false_promise]<\/span> False Promise's delayed damage\n Stops <span image=\"images\/ice_blast.webp\">[picture:ice_blast]<\/span> Ice Blast kill health threshold from killing him\n However, it does not protect him against certain instant kill sources: <span image=\"images\/culling_blade.webp\">[picture:culling_blade]<\/span> Culling Blade's kill threshold When <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/reincarnation.webp\">[picture:reincarnation]<\/span> Wraith Delay expires",
+        "Battle Trance can only be dispelled by an ally <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> <span image=\"images\/dismember.webp\">[picture:dismember]<\/span> Dismember or an ally <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/supernova.webp\">[picture:supernova]<\/span> Supernova",
         "Damage taken is not reduced, so any damage event still registers the full damage",
-        "TALENT NOTES The Battle Trance strong dispel  talent turns the basic dispel into a strong dispel\n Also allows Battle Trance to be cast while stunned, cycloned, taunted, slept, hidden, or during forced movement\n Does not allow it from being cast while silenced, hexed or prevented from acting\n Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent"
+        "TALENT NOTES The Battle Trance strong dispel <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent turns the basic dispel into a strong dispel\n Also allows Battle Trance to be cast while stunned, cycloned, taunted, slept, hidden, or during forced movement\n Does not allow it from being cast while silenced, hexed or prevented from acting\n Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent"
       ],
       "item_behaviour": [],
       "description": "Troll unleashes a powerful battle trance, that forces you to continuously attack the closest enemy unit within 900 range, prioritizing heroes. Damage does not kill you during this mode. Grants you bonus lifesteal, attack speed and movement speed. Applies a Basic Dispel.",
@@ -184,7 +184,7 @@
         "Cast Animation: 0+0.5",
         "Enemy Search Radius: 900",
         "Lifesteal: 40%\/60%\/80%",
-        "Self Move Speed Bonus: 25%\/30%\/35% ( 45%\/50%\/55%)",
+        "Self Move Speed Bonus: 25%\/30%\/35% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 45%\/50%\/55%)",
         "Self Attack Speed Bonus: 140\/170\/200",
         "Duration: 6.5"
       ],

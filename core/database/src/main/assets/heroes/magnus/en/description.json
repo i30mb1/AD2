@@ -2,33 +2,33 @@
   "abilities": [
     {
       "notes": [
-        "The Shockwaves travel at a speed of 900, taking 1.333 ( 1.5) seconds to reach the maximum distance",
-        "With the travel distance and radius, it can hit units up to 1400 ( 1600) range away",
+        "The Shockwaves travel at a speed of 900, taking 1.333 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1.5) seconds to reach the maximum distance",
+        "With the travel distance and radius, it can hit units up to 1400 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1600) range away",
         "Hit enemies are pulled towards the center of the Shockwave and towards the cast location\n The further enemies are from the center of the shockwave, the stronger the pull force is towards its center than towards the cast location\n Pulls hit enemies 150 range over 0.2 seconds, resulting in a speed of 750\n Pulled enemies destroy trees in their path",
         "Shockwave first applies the pull debuff, then the slow debuff, and then the damage",
         "The particle effects and a sound effect start playing at the beginning of the cast",
         "The slow of multiple casts does not stack, it only refreshes the duration",
-        "Slows and damages  Roshan but does not pull him",
-        "SCEPTER NOTES Shockwave erupts 1.5 seconds after cast, hitting enemies along the path the projectile took\n Does not affect ancient creeps\n The affected area has a rectangular shape with a length of 1350 and a width of 250\n This means unlike the projectile itself, the eruption can only hit units up to 1350 range away, since it is not circular like the projectile\n The eruption first deals 67.5\/120\/172.5\/225 ( 161.25\/213.75\/266.25\/318.75) damage to enemies, and then applies the debuff\n Together with the projectile, it can deal up to 157.5\/280\/402.5\/525 ( 376.25\/498.75\/621.25\/743.75) damage to enemies (before reductions)\n The debuff initially reduces movement speed and main armor by 75%\n Bonus armor is not reduced\n Enemies regain 0.5% of their armor on each server tick, and 5% on every 10th server tick"
+        "Slows and damages <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan but does not pull him",
+        "SCEPTER NOTES Shockwave erupts 1.5 seconds after cast, hitting enemies along the path the projectile took\n Does not affect ancient creeps\n The affected area has a rectangular shape with a length of 1350 and a width of 250\n This means unlike the projectile itself, the eruption can only hit units up to 1350 range away, since it is not circular like the projectile\n The eruption first deals 67.5\/120\/172.5\/225 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 161.25\/213.75\/266.25\/318.75) damage to enemies, and then applies the debuff\n Together with the projectile, it can deal up to 157.5\/280\/402.5\/525 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 376.25\/498.75\/621.25\/743.75) damage to enemies (before reductions)\n The debuff initially reduces movement speed and main armor by 75%\n Bonus armor is not reduced\n Enemies regain 0.5% of their armor on each server tick, and 5% on every 10th server tick"
       ],
       "item_behaviour": [],
       "description": "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for a brief period.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+1.2",
-        "Cast Range:  1200 ( 1400)",
-        "Wave Distance:  1200 ( 1350)",
-        "Wave Radius: 200 ( 250)",
-        "Damage: 90\/160\/230\/300 ( 215\/285\/355\/425)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1200 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1400)",
+        "Wave Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1200 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1350)",
+        "Wave Radius: 200 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 250)",
+        "Damage: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 215\/285\/355\/425)",
         "Move Speed Slow: 75%",
         "Pull Distance: 150",
         "Pull Duration: 0.2",
-        "Slow Duration: 0.9 ( 1.4)",
-        "Erupt Delay:  1.5",
-        "Erupt Damage Percentage:  75%",
-        "Erupt Main Armor Reduction:  75%",
-        "Erupt Move Speed Slow:  75%",
-        "Erupt Debuff Duration:  5"
+        "Slow Duration: 0.9 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.4)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Erupt Delay:  1.5",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Erupt Damage Percentage:  75%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Erupt Main Armor Reduction:  75%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Erupt Move Speed Slow:  75%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Erupt Debuff Duration:  5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Magnus_Shockwave_1.mp3\/revision\/latest?cb=20191216015854",
       "effects": [
@@ -45,25 +45,25 @@
     },
     {
       "notes": [
-        "Grants the following bonuses when self-cast: 17.5%\/35%\/52.5%\/70% ( 35%\/52.5%\/70%\/87.5%) cleave damage\n 21%\/35%\/49%\/63% ( 38.5%\/52.5%\/66.5%\/80.5%) attack damage bonus\n ↓↓ Double-tapping automatically targets self\n Can be cast on Couriers but does nothing",
-        "Grants regular flat bonus attack damage based on the affected unit's main attack damage\n Does not further increase bonus attack damage\n The unit's current main attack damage is periodically checked and the bonuses are adapted instantly\n TALENT NOTES The damage and cleave increasing  talent instantly upgrade the current active instance as well",
-        "Grants cleave if the affected hero's range type is  melee",
+        "Grants the following bonuses when self-cast: 17.5%\/35%\/52.5%\/70% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 35%\/52.5%\/70%\/87.5%) cleave damage\n 21%\/35%\/49%\/63% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38.5%\/52.5%\/66.5%\/80.5%) attack damage bonus\n ↓↓ Double-tapping automatically targets self\n Can be cast on Couriers but does nothing",
+        "Grants regular flat bonus attack damage based on the affected unit's main attack damage\n Does not further increase bonus attack damage\n The unit's current main attack damage is periodically checked and the bonuses are adapted instantly\n TALENT NOTES The damage and cleave increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent instantly upgrade the current active instance as well",
+        "Grants cleave if the affected hero's range type is <span image=\"images\/melee.png\">[picture:melee]<\/span> melee",
         "Cleave damage has the following properties: It counts as spell damage\n However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal\n No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification\n Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took\n It is reduced by damage block",
-        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit\n Multiple sources of cleave fully stack and work independently\n Does not cleave upon attacking wards, buildings or allied units\n  Couriers, wards and buildings are unaffected by cleave\n Despite the visual effect, the cleave damage is applied instantly in the whole area"
+        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit\n Multiple sources of cleave fully stack and work independently\n Does not cleave upon attacking wards, buildings or allied units\n <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards and buildings are unaffected by cleave\n Despite the visual effect, the cleave damage is applied instantly in the whole area"
       ],
       "item_behaviour": [],
       "description": "Gives an allied unit bonus damage and cleave on attack. Magnus receives 75% larger bonus.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+1.07",
-        "Cast Range:  800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
         "Cleave Starting Radius: 150",
         "Cleave Distance: 650",
         "Cleave End Radius: 360",
-        "Cleave Damage: 10%\/20%\/30%\/40% ( 20%\/30%\/40%\/50%)",
-        "Attack Damage Bonus: 12%\/20%\/28%\/36% ( 22%\/30%\/38%\/46%)",
+        "Cleave Damage: 10%\/20%\/30%\/40% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20%\/30%\/40%\/50%)",
+        "Attack Damage Bonus: 12%\/20%\/28%\/36% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 22%\/30%\/38%\/46%)",
         "Self Bonus Percentage: 75%",
-        "Duration: 35 ( 45)"
+        "Duration: 35 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 45)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Magnus_Empower.mp3\/revision\/latest?cb=20191216015850",
       "effects": [
@@ -81,7 +81,7 @@
     {
       "notes": [
         "Magnus charges forward at a speed of 900",
-        "Moves Magnus in 30 range instances\n When targeting any distance which is not a multiplier of that number, it gets rounded down\n This means the min possible distance is 30, and the actual max distance is 900\/960\/1050\/1110 ( 1260\/1350\/1410\/1500)",
+        "Moves Magnus in 30 range instances\n When targeting any distance which is not a multiplier of that number, it gets rounded down\n This means the min possible distance is 30, and the actual max distance is 900\/960\/1050\/1110 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1260\/1350\/1410\/1500)",
         "During the Skewer, Magnus is fully disabled and prevented from acting\n When targeting beyond the max skewer distance, Magnus charges for the max distance towards the targeted point",
         "Enemy heroes within 145 radius around Magnus get moved in front of him and dragged along",
         "Dragged heroes are stunned during the drag, and land 200 range away in front of Magnus at the end of the charge",
@@ -96,7 +96,7 @@
       "params": [
         "Cast Animation: 0.3+0.33",
         "Cast Range: Global",
-        "Max Skewer Distance:  900\/975\/1050\/1125 ( 1275\/1350\/1425\/1500)",
+        "Max Skewer Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900\/975\/1050\/1125 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1275\/1350\/1425\/1500)",
         "Skewer Radius: 145",
         "Damage: 80\/170\/260\/350",
         "Move Speed Slow: 20%\/30%\/40%\/50%",
@@ -118,13 +118,13 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Horn Toss' search area is a circular segment with a radius of 325, and cutting off and at a total angle of 230°\n This means it affects units in front of Magnus, and to his left and right up to a certain degree",
         "The center of the search area is located 75 range in front of Magnus, which approximately aligns with the position of his horn\n This means Horn Toss can hit units up to 400 range in front of Magnus",
         "Enemies are always tossed at a location between 180 \u2012 210 range behind Magnus, varying based on where they were in front of him",
         "Enemies are moved over Magnus' head, in an arc with a height of 300, and varying lengths\n The toss always takes 0.6 seconds\n Affected enemies cannot attack, but can still turn and cast abilities and items\n Interrupts the enemies' channeling abilities\n Affected enemies destroy trees within 200 radius upon landing",
         "The damage is applied upon cast, while the slow debuff is placed upon landing\n However, the toss modifier itself applies the slow as well",
-        "Stuns and damages  Roshan but does not toss him"
+        "Stuns and damages <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan but does not toss him"
       ],
       "item_behaviour": [],
       "description": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies take damage, spend 0.6 seconds in the air, and then are heavily slowed　upon landing.",
@@ -157,9 +157,9 @@
       "notes": [
         "Instantly pulls all affected units 150 range in front of Magnus\n The particle effects and a sound effect start playing at the beginning of the cast",
         "Reverse Polarity first applies the strength buff, the debuff, then the damage",
-        "There is no limit to how many units can be affected\n Fully affect  Couriers",
-        "Stuns and damages  Roshan but does not pull him",
-        "TALENT NOTES The strength per hero hit  can grant up to 16\/32\/48\/64\/80  strength bonus when hitting up to 5 heroes, and also granting the following bonuses: 320\/640\/960\/1280\/1600 health, 1.6\/3.2\/4.8\/6.4\/8 health regeneration and 16\/32\/48\/64\/80 main attack damage bonus\n Treat clones as heroes, illusions and creep-heroes as creeps\n Each hit enemy hero increases its stack count and refreshes the duration of the entire stack"
+        "There is no limit to how many units can be affected\n Fully affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
+        "Stuns and damages <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan but does not pull him",
+        "TALENT NOTES The strength per hero hit <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> can grant up to 16\/32\/48\/64\/80 <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> strength bonus when hitting up to 5 heroes, and also granting the following bonuses: 320\/640\/960\/1280\/1600 health, 1.6\/3.2\/4.8\/6.4\/8 health regeneration and 16\/32\/48\/64\/80 main attack damage bonus\n Treat clones as heroes, illusions and creep-heroes as creeps\n Each hit enemy hero increases its stack count and refreshes the duration of the entire stack"
       ],
       "item_behaviour": [],
       "description": "Magnus changes properties of matter, sucking all nearby enemies in front of him and stunning them with a powerful slam and dealing damage.",
@@ -168,9 +168,9 @@
         "Cast Animation: 0.3+1.3",
         "Radius: 410",
         "Damage: 75\/150\/225",
-        "Stun Duration: 2.75\/3.25\/3.75 ( 3.75\/4.25\/4.75)",
-        "Strength Bonus per Hero Hit:  16",
-        "Buff Duration:  15"
+        "Stun Duration: 2.75\/3.25\/3.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.75\/4.25\/4.75)",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Strength Bonus per Hero Hit:  16",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Buff Duration:  15"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Magnus_Reverse_Polarity_1.mp3\/revision\/latest?cb=20191216015852",
       "effects": [

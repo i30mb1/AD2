@@ -16,10 +16,10 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.59",
-        "Cast Range:  1300",
-        "Max Travel Distance:  1300",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1300",
+        "Max Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1300",
         "Hook Search Radius: 100",
-        "Damage: 150\/220\/290\/360 ( 270\/340\/410\/480)"
+        "Damage: 150\/220\/290\/360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 270\/340\/410\/480)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Pudge_Meat_Hook_1.mp3\/revision\/latest?cb=20191216022014",
       "effects": [
@@ -40,21 +40,21 @@
         "The self-damage is never lethal, so it cannot be used to deny oneself",
         "The area damage and self-damage are independent from each other, so when the self-damage is blocked, the area damage is still applied",
         "The slow and damage are provided by an aura\n This aura debuff lingers for 0.5 seconds\n When an enemy leaves the area, the lingering debuff continues slowing and damaging until expiring\n When Rot is toggled Off, the lingering debuff only slows, but stops dealing damage",
-        "Deals 6\/12\/18\/24 ( 26\/32\/38\/44) damage in 0.2-second intervals\n The time intervals are set for the whole game when Rot is toggled On the first time",
+        "Deals 6\/12\/18\/24 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 26\/32\/38\/44) damage in 0.2-second intervals\n The time intervals are set for the whole game when Rot is toggled On the first time",
         "If toggled On, Rot continues working even when silenced, disabled, or hidden",
         "Leveling up Rot while already toggled on immediately updates the damage\n The slow on already debuffed enemies is not updated\n However, new enemies entering its area get slowed based on its current level",
-        "SCEPTER NOTES Rot's debuff now also applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction\n Immediately updates the damage when <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter is acquired while toggled On, but not the radius"
+        "SCEPTER NOTES Rot's debuff now also applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction\n Immediately updates the damage when <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter is acquired while toggled On, but not the radius"
       ],
       "item_behaviour": [],
       "description": "A toxic cloud that deals intense damage and slows movement--harming not only enemy units but Pudge himself.",
       "hot_key": "W",
       "params": [
-        "Cast Animation:  0+0",
-        "Radius: 250 ( 450)",
-        "Damage per Second: 30\/60\/90\/120 ( 130\/160\/190\/220)",
-        "Move Speed Slow: 14%\/20%\/26%\/32% ( 30%\/36%\/42%\/48%)",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
+        "Radius: 250 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 450)",
+        "Damage per Second: 30\/60\/90\/120 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 130\/160\/190\/220)",
+        "Move Speed Slow: 14%\/20%\/26%\/32% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30%\/36%\/42%\/48%)",
         "Aura Linger Duration: 0.5",
-        "Health Restoration Reduction:  25%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Health Restoration Reduction:  25%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Pudge_Rot.mp3\/revision\/latest?cb=20191216022017",
       "effects": [
@@ -72,23 +72,23 @@
     {
       "notes": [
         "Does not interrupt Pudge's channeling abilities upon cast",
-        "Flesh Heap negates a portion of damage (after all reductions), causing several on-damage effects to not trigger if reduced to 0\n Does not negate damage on units affected by  Aphotic Shield,  Defense Matrix,  Resonant Pulse, and  Refraction",
+        "Flesh Heap negates a portion of damage (after all reductions), causing several on-damage effects to not trigger if reduced to 0\n Does not negate damage on units affected by <span image=\"images\/aphotic_shield.webp\">[picture:aphotic_shield]<\/span> Aphotic Shield, <span image=\"images\/defense_matrix.webp\">[picture:defense_matrix]<\/span> Defense Matrix, <span image=\"images\/resonant_pulse.webp\">[picture:resonant_pulse]<\/span> Resonant Pulse, and <span image=\"images\/refraction.webp\">[picture:refraction]<\/span> Refraction",
         "Successive casts do not stack but refresh the duration",
-        "Upon gaining a stack, a +1 indicator appears above Pudge's head\n The number of stacks and amount of  strength granted can be seen on the status buff icon",
-        "Grants Pudge a stack as long as he was credited for the kill\n To gain a stack from outside the kill radius, Pudge has to make the killing blow himself\n His summons or illusions do not count\n Denied enemy heroes grant a stack as well, as long as it happens within 450 range of Pudge\n Grants one stack for  Meepo Clones, regardless of how many clones were nearby",
-        "Does not grant a stack in the following conditions: If the dying hero has Reincarnation\n From killing illusions and the  Tempest Double\n When Pudge is dead as the kill happens",
-        "Each stack effectively grants 22\/28\/34\/40 ( 33\/42\/51\/60) health, 0.11\/0.14\/0.17\/0.2 ( 0.17\/0.21\/0.26\/0.3) health regeneration and 1.1\/1.4\/1.7\/2 ( 1.65\/2.1\/2.55\/3) main attack damage bonus",
-        "Upon leveling Flesh Heap, all stacks adapt to its new values\n SPELL STEAL \/ MORPH NOTES The  strength bonus per death last for the acquired ability's buff duration and is lost upon losing the ability"
+        "Upon gaining a stack, a +1 indicator appears above Pudge's head\n The number of stacks and amount of <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> strength granted can be seen on the status buff icon",
+        "Grants Pudge a stack as long as he was credited for the kill\n To gain a stack from outside the kill radius, Pudge has to make the killing blow himself\n His summons or illusions do not count\n Denied enemy heroes grant a stack as well, as long as it happens within 450 range of Pudge\n Grants one stack for <span image=\"images\/divided_we_stand.webp\">[picture:divided_we_stand]<\/span> Meepo Clones, regardless of how many clones were nearby",
+        "Does not grant a stack in the following conditions: If the dying hero has Reincarnation\n From killing illusions and the <span image=\"images\/arc_warden_tempest_double_minimap.png\">[picture:arc_warden_tempest_double_minimap]<\/span> Tempest Double\n When Pudge is dead as the kill happens",
+        "Each stack effectively grants 22\/28\/34\/40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 33\/42\/51\/60) health, 0.11\/0.14\/0.17\/0.2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.17\/0.21\/0.26\/0.3) health regeneration and 1.1\/1.4\/1.7\/2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.65\/2.1\/2.55\/3) main attack damage bonus",
+        "Upon leveling Flesh Heap, all stacks adapt to its new values\n SPELL STEAL \/ MORPH NOTES The <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> strength bonus per death last for the acquired ability's buff duration and is lost upon losing the ability"
       ],
       "item_behaviour": [],
       "description": "Gives Pudge damage block against all sources. Passively grants bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity. Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
       "hot_key": "E",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Enemy Death Radius: 450",
         "Kill Radius: 1600",
-        "Strength Bonus per Death: 1.1\/1.4\/1.7\/2 ( 1.65\/2.1\/2.55\/3)",
-        "Blocked Damage: 8\/14\/20\/26 ( 12\/21\/30\/39)",
+        "Strength Bonus per Death: 1.1\/1.4\/1.7\/2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.65\/2.1\/2.55\/3)",
+        "Blocked Damage: 8\/14\/20\/26 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 12\/21\/30\/39)",
         "Duration: 5\/6\/7\/8"
       ],
       "audioUrl": "",
@@ -105,9 +105,9 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Interrupts Pudge's channeling abilities upon cast",
-        "Initially, this sub-ability is inactive until  Dismember is cast on an ally\n Upon cast, the ally is ejected, ignoring the order lock duration\n The sub-ability then disappears from the HUD completely instead of turning inactive again, and reappears only when Dismember is cast on allies again",
+        "Initially, this sub-ability is inactive until <span image=\"images\/dismember.webp\">[picture:dismember]<\/span> Dismember is cast on an ally\n Upon cast, the ally is ejected, ignoring the order lock duration\n The sub-ability then disappears from the HUD completely instead of turning inactive again, and reappears only when Dismember is cast on allies again",
         "The hero can simply get out of Pudge themselves, by issuing any order 3 seconds after being swallowed\n This means Eject can regenerate a minimum of 15% of the ally's max health within its full order lock duration",
         "If Pudge dies, the ally is automatically ejected"
       ],
@@ -115,7 +115,7 @@
       "description": "Ejects the swallowed allied hero inside of you.",
       "hot_key": "D",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Ally Order Lock Duration: 3"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Pudge_Eject.mp3\/revision\/latest?cb=20200827134123",
@@ -133,28 +133,28 @@
     {
       "notes": [
         "Fully disables the target as long as it is channeled",
-        "Pulls the target closer to Pudge at a speed of 75\n The pull debuff disappears when the target gets within 125 range of Pudge\n Provides True Sight over the target upon cast\n Does not provide True Sight if the affected target turns invisible while Dismember is channeling, this does not interrupt the channeling as well\n Provides 200 radius ground vision over the affected target upon cast for 3 ( 3.8) seconds if the affected target is a hero, or 6 ( 6.8) seconds if the affected target is a creep\n This vision does not follow the affected target and its duration is independent of the channeling time\n If the target turns invulnerable or hidden, the channeling stops instantly",
+        "Pulls the target closer to Pudge at a speed of 75\n The pull debuff disappears when the target gets within 125 range of Pudge\n Provides True Sight over the target upon cast\n Does not provide True Sight if the affected target turns invisible while Dismember is channeling, this does not interrupt the channeling as well\n Provides 200 radius ground vision over the affected target upon cast for 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.8) seconds if the affected target is a hero, or 6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6.8) seconds if the affected target is a creep\n This vision does not follow the affected target and its duration is independent of the channeling time\n If the target turns invulnerable or hidden, the channeling stops instantly",
         "Treats clones and illusions as heroes",
-        "Treats  Couriers as creeps and can be cast on enemy Couriers",
+        "Treats <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers as creeps and can be cast on enemy Couriers",
         "Treats creep-heroes partly as heroes, and partly as creeps\n Uses the hero duration for creep-heroes, but uses the non-hero amount of ticks for them\n However, the damage per instance is calculated to match the total damage a hero would take, and not a creep",
         "Dismember deals a fixed amount of intervals spread evenly over its full duration, with the first tick happening immediately upon cast\n Always heals for the full amount per instance, regardless of how much damage the target actually takes",
         "Pudge's Dismember responses are Global and audible to everyone, even through the Fog of War",
-        "SHARD NOTES Dismember can now be cast on allied heroes, clones and illusions, excluding creep-heroes\n Cannot be cast on allies who have ☐ Disabled Help from Pudge\n Disjoints projectiles and applies a strong dispel on the target upon cast\n The allied hero is invulnerable, hidden and spell immune while swallowed\n Only one hero may be swallowed at a time\n Swallowing a second hero automatically ejects the previous ally\n However, Pudge may cast Dismember on an enemy target while swallowing an ally hero at the same time\n During Dismember, the allied hero is periodically moved to Pudge's current position\n This means their auras are effectively bestowed around Pudge until ejected\n The periodic movement gets interrupted by teleport effects, without the ally getting ejected\n They stay swallowed at the location they got teleported to\n Can fully regenerate the swallowed ally's health within 20 seconds\n Pudge receives the hidden modifier upon cast, which creates the visual indicator above him, visible to allies only\n SPELL STEAL  Rubick's responses upon cast are not Global and only audible to him, his Dismember also does not use blade ringing sounds\n SOULBIND Prematurely ending the channeling only cancels Dismember on the originally targeted enemy and does not affect the channeling on the other target, even with the leash debuff expired"
+        "SHARD NOTES Dismember can now be cast on allied heroes, clones and illusions, excluding creep-heroes\n Cannot be cast on allies who have ☐ Disabled Help from Pudge\n Disjoints projectiles and applies a strong dispel on the target upon cast\n The allied hero is invulnerable, hidden and spell immune while swallowed\n Only one hero may be swallowed at a time\n Swallowing a second hero automatically ejects the previous ally\n However, Pudge may cast Dismember on an enemy target while swallowing an ally hero at the same time\n During Dismember, the allied hero is periodically moved to Pudge's current position\n This means their auras are effectively bestowed around Pudge until ejected\n The periodic movement gets interrupted by teleport effects, without the ally getting ejected\n They stay swallowed at the location they got teleported to\n Can fully regenerate the swallowed ally's health within 20 seconds\n Pudge receives the hidden modifier upon cast, which creates the visual indicator above him, visible to allies only\n SPELL STEAL <span image=\"images\/rubick_minimap.png\">[picture:rubick_minimap]<\/span> Rubick's responses upon cast are not Global and only audible to him, his Dismember also does not use blade ringing sounds\n SOULBIND Prematurely ending the channeling only cancels Dismember on the originally targeted enemy and does not affect the channeling on the other target, even with the leash debuff expired"
       ],
       "item_behaviour": [],
       "description": "Pudge chows down on an enemy unit, disabling it and dealing damage over time. Damage is increased by Pudge's Strength and heals him for the total amount. Pudge pulls the unit at a rate of 75 units, up to a minimum of 125. Lasts longer on creeps.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range:  160",
-        "Hero Max Channel Time: 3 ( 3.8)",
-        "Non-Hero Max Channel Time: 6 ( 6.8)",
-        "Hero Total Number of Intervals: 6 ( 8)",
-        "Non-Hero Total Number of Intervals: 9 ( 11)",
-        "Base Damage\/Heal per Second: 80\/100\/120 ( 144\/180\/216)",
-        "Strength as Damage\/Heal per Second: 30%\/60%\/90% ( 54%\/108%\/162%)",
-        "Ally Cast Range:  300",
-        "Ally Max Health as Health Regen:  5%"
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 160",
+        "Hero Max Channel Time: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.8)",
+        "Non-Hero Max Channel Time: 6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6.8)",
+        "Hero Total Number of Intervals: 6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 8)",
+        "Non-Hero Total Number of Intervals: 9 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 11)",
+        "Base Damage\/Heal per Second: 80\/100\/120 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 144\/180\/216)",
+        "Strength as Damage\/Heal per Second: 30%\/60%\/90% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 54%\/108%\/162%)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 300",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Max Health as Health Regen:  5%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Pudge_Dismember_1.mp3\/revision\/latest?cb=20200419184839",
       "effects": [

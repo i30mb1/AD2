@@ -4,19 +4,19 @@
       "notes": [
         "The projectile travels at a speed of 1650 and searches for enemies or trees within 46° at the opposite side of the target from where Shackleshot was cast\n This means when Windranger teleports away after cast, it latches on targets based on the cast location, not her new location\n The complete search area is shaped like a triangle, with 575 being the triangle's height\n Therefore, the triangle has two sides with a length of 624.66, and the third side has a length of 488.15",
         "Shackleshot always prioritizes units over trees as its secondary target, and picks the furthest suitable unit or tree\n If the primary target dies before Shackleshot reaches it, the projectile can still latch to a secondary unit and stun it\n It can also latch on invisible units and units in the Fog of War",
-        "If the target is not shackled, it is stunned for 0.75 seconds using the default stunned debuff\n If the target is shackled to a unit, both of them are stunned for 2\/2.6\/3.2\/3.8 ( 2.8\/3.4\/4\/4.6) seconds using the shackleshot debuff\n The stun persists, even when the primary or the secondary unit dies, or if the tree is destroyed earlier\n The stun also persists when one of the targets is freed from the stun earlier",
-        "TALENT NOTES The stun duration increasing  talent only increases the success stun duration\n The fail stun duration is not increased"
+        "If the target is not shackled, it is stunned for 0.75 seconds using the default stunned debuff\n If the target is shackled to a unit, both of them are stunned for 2\/2.6\/3.2\/3.8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.8\/3.4\/4\/4.6) seconds using the shackleshot debuff\n The stun persists, even when the primary or the secondary unit dies, or if the tree is destroyed earlier\n The stun also persists when one of the targets is freed from the stun earlier",
+        "TALENT NOTES The stun duration increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent only increases the success stun duration\n The fail stun duration is not increased"
       ],
       "item_behaviour": [],
       "description": "Shackles the target to an enemy unit or tree in a line directly behind it. If no unit or tree is present, the stun duration is reduced to 0.75.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.15+0.45",
-        "Cast Range:  800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
         "Shackle Search Range: 575",
         "Shackle Search Angle: 46°",
         "Max Shackle Targets: 2",
-        "Success Stun Duration: 2\/2.6\/3.2\/3.8 ( 2.8\/3.4\/4\/4.6)",
+        "Success Stun Duration: 2\/2.6\/3.2\/3.8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.8\/3.4\/4\/4.6)",
         "Fail Stun Duration: 0.75"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Windranger_Shackleshot_1.mp3\/revision\/latest?cb=20191216030602",
@@ -35,19 +35,19 @@
       "notes": [
         "Powershot travels at a speed of 3000, taking 0.87 seconds to reach the maximum distance\n The arrow provides 400 radius flying vision while traveling forwards, and the vision sticks at its final location for 3.34 seconds\n With the travel distance and damage radius, the arrow can damage units up to 2725 range away\n Powershot destroys trees within 50 radius around it while traveling\n Trees destroyed do not reduce the arrow's damage",
         "The maximum damage is done after the fully channeling for 1 second\n Each channeled server tick increase its damage by 5\/8.33\/11.67\/15\n The sound of a bow getting stretched during channeling time is audible to allies only",
-        "Every time Powershot hits an enemy, its current damage is reduced by 20% ( 5%)\n For how much damage a fully channeled arrow deals, and with the damage reduction per unit hit  talent (before reductions), please refer to the chart below\n To reach 1 damage, the arrow needs to hit 23\/25\/27\/28 ( 98\/108\/115\/120) targets"
+        "Every time Powershot hits an enemy, its current damage is reduced by 20% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 5%)\n For how much damage a fully channeled arrow deals, and with the damage reduction per unit hit <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent (before reductions), please refer to the chart below\n To reach 1 damage, the arrow needs to hit 23\/25\/27\/28 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 98\/108\/115\/120) targets"
       ],
       "item_behaviour": [],
       "description": "Windranger charges her bow for up to 1 second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
-        "Cast Range:  2600",
-        "Travel Distance:  2600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 2600",
+        "Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 2600",
         "Damage Radius: 125",
         "Max Channel Time: 1",
         "Max Damage: 150\/250\/350\/450",
-        "Damage Reduction per Unit Hit: 20% ( 5%)"
+        "Damage Reduction per Unit Hit: 20% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 5%)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Windranger_Powershot_1.mp3\/revision\/latest?cb=20191216030558",
       "effects": [
@@ -67,22 +67,22 @@
         "Interrupts Windranger's channeling abilities upon cast",
         "Grants 100% evasion for its duration",
         "The movement speed slow and blind are provided by an aura on Windranger and its debuff lingers for 2.5 seconds\n Stacks additively with other sources of blind\n Blind uses pseudo-random distribution",
-        "SCEPTER NOTES Windrun now grants phased movement for its duration\n Its invisibility is also no longer broken upon casting her own abilities or attacking\n A visual effect will indicate Windranger's attacks and ability casting, showing the source of the projectile\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter does not update the current active instance\n The invisibility is provided by a second buff, independent of the Windrun buff, so breaking it prevents Windranger from going invisible again\n Windranger can pick up or drop items without breaking the invisibility",
-        "TALENT NOTES With the undispellable windrun  talent, Windrun can only be dispellable by death"
+        "SCEPTER NOTES Windrun now grants phased movement for its duration\n Its invisibility is also no longer broken upon casting her own abilities or attacking\n A visual effect will indicate Windranger's attacks and ability casting, showing the source of the projectile\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter does not update the current active instance\n The invisibility is provided by a second buff, independent of the Windrun buff, so breaking it prevents Windranger from going invisible again\n Windranger can pick up or drop items without breaking the invisibility",
+        "TALENT NOTES With the undispellable windrun <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, Windrun can only be dispellable by death"
       ],
       "item_behaviour": [],
       "description": "Increases movement speed and adds evasion from all physical attacks, while slowing movement of nearby enemies.",
       "hot_key": "E",
       "params": [
-        "Cast Animation:  0+0",
-        "Slow Radius: 325 ( 550)",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
+        "Slow Radius: 325 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 550)",
         "Evasion: 100%",
         "Self Move Speed Bonus: 60%",
-        "Enemy Move Speed Slow: 15%\/20%\/25%\/30% ( 35%\/40%\/45%\/50%)",
+        "Enemy Move Speed Slow: 15%\/20%\/25%\/30% (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 35%\/40%\/45%\/50%)",
         "Aura Linger Duration: 2.5",
         "Duration: 3\/4\/5\/6",
-        "Invisibility Fade Time:  0.2",
-        "Miss Chance:  40%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Invisibility Fade Time:  0.2",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Miss Chance:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Windranger_Windrun.mp3\/revision\/latest?cb=20191216030607",
       "effects": [
@@ -98,7 +98,7 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Recasting Gale Force while a previous cast is still active immediately ends the previous cast",
         "The effect is provided by an aura, its debuff lingers for 0.5 seconds",
         "Pushes enemies within the radius at a speed of 240 towards the selected direction\n With the duration and aura linger duration, Gale Force can push enemies for a total distance of 840",
@@ -111,7 +111,7 @@
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.47",
-        "Cast Range:  1500",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1500",
         "Radius: 1000",
         "Push Speed: 240",
         "Duration: 3",
@@ -131,27 +131,27 @@
     },
     {
       "notes": [
-        "The cast range of Focus Fire is based on the attack range of the caster\n It can only be further increased by attack range bonuses of the same range type as the caster\n However, it is not affected by cast range bonuses\n However, this does not include the unlimited range while <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike is active",
+        "The cast range of Focus Fire is based on the attack range of the caster\n It can only be further increased by attack range bonuses of the same range type as the caster\n However, it is not affected by cast range bonuses\n However, this does not include the unlimited range while <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike is active",
         "Upon cast, Focus Fire orders Windranger to attack the target and allows her to move while attacking the target",
-        "Windranger automatically attacks the Focus Fire target whenever she is in attack range unless she is given an order that is not a move or attack order\n The automatic attacking can be paused by ordering her to stop (S) or hold position (H) once\n When paused, she no longer attacks the target while moving\n To resume the automatic attacking, a new attack order ( Right Click) on target or (A) must be given to her",
-        "Reduces Windranger's main and bonus attack damage when attacking the target\n EXPR (Atk Main + Atk Bonus) × 70% ( 86%) Other conditional bonus sources (e.g\n Mana Break) added to the primary attack is not reduced",
+        "Windranger automatically attacks the Focus Fire target whenever she is in attack range unless she is given an order that is not a move or attack order\n The automatic attacking can be paused by ordering her to stop (S) or hold position (H) once\n When paused, she no longer attacks the target while moving\n To resume the automatic attacking, a new attack order (<span image=\"images\/keyboard_white_mouse_right.png\">[picture:keyboard_white_mouse_right]<\/span> Right Click) on target or (A) must be given to her",
+        "Reduces Windranger's main and bonus attack damage when attacking the target\n EXPR (Atk Main + Atk Bonus) × 70% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 86%) Other conditional bonus sources (e.g\n Mana Break) added to the primary attack is not reduced",
         "Windranger can switch attack targets without losing the buff against the Focus Fire target",
         "When switching attack targets, the attack speed and damage adapt as soon as the attack begins",
         "Casting Focus Fire on multiple targets only grants the attack speed and damage reduction against the most recent target",
         "Focus Fire ends prematurely when Windranger dies but persists through the target's death",
-        "Can be cast on any enemy unit, including buildings and  Couriers, excluding wards, invulnerable or hidden units",
-        "TALENT NOTES The Focus Fire cooldown advance  talent cause Focus Fire to skip 20 seconds of its current cooldown if the target dies\n The cooldown skip only happens if the dying target is a hero or clones, it does not matter how the target dies or is credited for, the cooldown skip always triggers\n This effect can be triggered multiple times per cast, possible if the target reincarnates, buys back, or against a resummoned  Tempest Double\n Treats illusions and creep-heroes as creeps\n SOULBIND Does not affect the secondary target at all"
+        "Can be cast on any enemy unit, including buildings and <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, excluding wards, invulnerable or hidden units",
+        "TALENT NOTES The Focus Fire cooldown advance <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent cause Focus Fire to skip 20 seconds of its current cooldown if the target dies\n The cooldown skip only happens if the dying target is a hero or clones, it does not matter how the target dies or is credited for, the cooldown skip always triggers\n This effect can be triggered multiple times per cast, possible if the target reincarnates, buys back, or against a resummoned <span image=\"images\/arc_warden_tempest_double_minimap.png\">[picture:arc_warden_tempest_double_minimap]<\/span> Tempest Double\n Treats illusions and creep-heroes as creeps\n SOULBIND Does not affect the secondary target at all"
       ],
       "item_behaviour": [],
       "description": "Windranger channels the wind to gain 350\/425\/500 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage. Extra damage from secondary item effects is not reduced.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0+0",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 600",
         "Attack Speed Bonus: 350\/425\/500",
-        "Attack Damage Reduction: 30% ( 14%)",
+        "Attack Damage Reduction: 30% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14%)",
         "Duration: 20",
-        "Cooldown Skip on Target Death:  20"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Cooldown Skip on Target Death:  20"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Windranger_Focus_Fire.mp3\/revision\/latest?cb=20191216030555",
       "effects": [

@@ -6,7 +6,7 @@
         "Применяет к Slardar сквозное передвижение, позволяя проходить сквозь других существ и варды, пока действует способность",
         "Бонусы от реки активируются, пока Slardar непосредственно находится в воде\n То есть, если герой перемещается вертикально, то бонусы прекращают действие до соприкосновения с водой\n Бонусы от реки не задерживаются",
         "Несколько источников бонусов не сочетаются",
-        "Сопротивление эффектам от <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter сочетаются по закону убывающей полезности с другими источниками сопротивления"
+        "Сопротивление эффектам от <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter сочетаются по закону убывающей полезности с другими источниками сопротивления"
       ],
       "item_behaviour": [],
       "description": "Герой стремительно скользит, передвигаясь значительно быстрее и проходя сквозь других существ. Снимает ограничение на скорость передвижения и увеличивает её в реке.",
@@ -16,9 +16,9 @@
         "Доп\n скорость передвижения в реке: 18%",
         "Доп\n скорость передвижения при активации: 25%\/30%\/35%\/40%",
         "Длительность: 10",
-        "Восстановление здоровья в реке: 2\/4\/6\/8 ( 24\/26\/28\/30)",
-        "Доп\n броня в реке: 1\/2\/3\/4 ( 12\/13\/14\/15)",
-        "Сопротивление эффектам в реке:  40%"
+        "Восстановление здоровья в реке: 2\/4\/6\/8 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 24\/26\/28\/30)",
+        "Доп\n броня в реке: 1\/2\/3\/4 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 12\/13\/14\/15)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Сопротивление эффектам в реке:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Slardar_Guardian_Sprint.mp3\/revision\/latest?cb=20191216023816",
       "effects": [
@@ -36,24 +36,24 @@
       "notes": [
         "Оглушение и замедление применяются одновременно, поэтому в итоге замедление будет действовать 1,0007619047619 сек",
         "Способность сначала применяет дебаффы, затем наносит урон",
-        "С <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter пруд создает ауру радиусом , дающую заклинателю те же бонусы, что и река\n В отличии от реки пруд не дает бонусы ни другим существам, ни иллюзиям заклинателя\n Также бонусы пруда, в отличии от реки, задерживаются на сек\n Бонусы от нескольких применений не складываются",
-        "С <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard применяет ко всем врагам, затронутым Slithereen Crush,  Corrosive Haze текущего уровня\n Slithereen Crush сначала применяет дебафф, затем наносит урон\n Поэтому урон способности увеличивается\n Если Corrosive Haze не изучена, то дебафф не применяется"
+        "С <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter пруд создает ауру радиусом , дающую заклинателю те же бонусы, что и река\n В отличии от реки пруд не дает бонусы ни другим существам, ни иллюзиям заклинателя\n Также бонусы пруда, в отличии от реки, задерживаются на сек\n Бонусы от нескольких применений не складываются",
+        "С <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard применяет ко всем врагам, затронутым Slithereen Crush, <span image=\"images\/corrosive_haze.webp\">[picture:corrosive_haze]<\/span> Corrosive Haze текущего уровня\n Slithereen Crush сначала применяет дебафф, затем наносит урон\n Поэтому урон способности увеличивается\n Если Corrosive Haze не изучена, то дебафф не применяется"
       ],
       "item_behaviour": [],
       "description": "Бьёт по земле, оглушая наземных врагов неподалёку и нанося им урон. После оглушения враги будут замедлены.",
       "hot_key": "W",
       "params": [
         "Анимация применения: 0,35+0,6",
-        "Радиус: 350 ( 425)",
-        "Радиус пруда: 250 ( 600)",
-        "Урон: 70\/140\/210\/280 ( 220\/290\/360\/430)",
+        "Радиус: 350 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 425)",
+        "Радиус пруда: 250 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 600)",
+        "Урон: 70\/140\/210\/280 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 220\/290\/360\/430)",
         "Замедление скорости передвижения: 20%\/25%\/30%\/35%",
         "Замедление скорости атаки: 20\/25\/30\/35",
-        "Длительность оглушения: 1 ( 1,2)",
+        "Длительность оглушения: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1,2)",
         "Длительность замедления: 3\/4\/5\/6",
-        "Длительность пруда: 3\/4\/5\/6 ( 22\/23\/24\/25)",
+        "Длительность пруда: 3\/4\/5\/6 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 22\/23\/24\/25)",
         "Длительность задержки ауры: 0,5",
-        "Длительность Corrosive Haze:  5"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Длительность Corrosive Haze:  5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Slardar_Slithereen_Crush.mp3\/revision\/latest?cb=20191216023820",
       "effects": [
@@ -70,7 +70,7 @@
     },
     {
       "notes": [
-        "Не сочетается с другими источниками оглушающего удара\n Оглушение от <span image=\"items\/skull_basher\/full.webp\">[Skull Basher]<\/span> Skull Basher и <span image=\"items\/abyssal_blade\/full.webp\">[Abyssal Blade]<\/span> Abyssal Blade отключено для Slardar\n В режиме Ability Draft эти эффекты оглушения не отключаются для игрока, выбравшего Bash of the Deep",
+        "Не сочетается с другими источниками оглушающего удара\n Оглушение от <span image=\"items\/skull_basher\/full.webp\">[picture:skull_basher]<\/span> Skull Basher и <span image=\"items\/abyssal_blade\/full.webp\">[picture:abyssal_blade]<\/span> Abyssal Blade отключено для Slardar\n В режиме Ability Draft эти эффекты оглушения не отключаются для игрока, выбравшего Bash of the Deep",
         "Каждая успешная атака по вражескому герою или крипу добавляет один заряд к счётчику баффа\n Бафф всегда активен, но его иконка скрывается, если у счётчика нет зарядов",
         "Не учитывает атаки по союзникам, вардам или строениям и не оглушает их",
         "У зарядов нет установленной длительности действия",
@@ -83,7 +83,7 @@
       "hot_key": "E",
       "params": [
         "Ударов для активации: 4",
-        "Доп\n урон: 50\/100\/150\/200 ( 100\/150\/200\/250)",
+        "Доп\n урон: 50\/100\/150\/200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100\/150\/200\/250)",
         "Урон по крипам: 200%",
         "Длительность оглушения: 1,3"
       ],
@@ -111,7 +111,7 @@
         "Анимация применения: 0,3+0,67",
         "Дальность применения: 700\/800\/900",
         "Радиус пруда: 100",
-        "Снижение брони: 10\/15\/20 ( 104)",
+        "Снижение брони: 10\/15\/20 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 104)",
         "Длительность: 18",
         "Длительность пруда: 8"
       ],

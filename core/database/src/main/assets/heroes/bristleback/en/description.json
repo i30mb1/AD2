@@ -44,7 +44,7 @@
         "Places one debuff on each hit enemy and a stack debuff on each cast on each hit enemy\n The first debuff shows the number of stack debuffs on the status icon\n The stack debuffs are hidden\n The stacks' durations are independent from each other\n Successive casts do not refresh previous stacks' durations\n With the current cooldown and stack duration, it can be stacked up to 5 times\n To reach the damage cap, additional passive procs from <span image=\"images\/bristleback_ability.png\">[picture:bristleback_ability]<\/span> Bristleback are required\n The damage cap is reached with 20\/18\/17\/15 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 12\/12\/11\/10) stacks\n So to reach it, 15\/13\/12\/10 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 7\/7\/6\/5) passive casts are required (not considering cooldown reductions)",
         "Checks how many stacks units have first and deal damage based on that, and then increases the number of stacks\n This means the first hit only deals the base damage",
         "For how much damage Quill Spray deals with a certain amount of stack on each level (before reductions), please refer to the chart below",
-        "Fully affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
+        "Fully affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Sprays enemy units with quills dealing damage in an area of effect around Bristleback. Deals bonus damage for every time a unit was hit by Quill Spray in the last 14 seconds.",

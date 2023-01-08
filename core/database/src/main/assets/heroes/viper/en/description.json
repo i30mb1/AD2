@@ -4,25 +4,25 @@
       "notes": [
         "Poison Attack's cast range can only be further increased by attack range bonuses of the same range type as the caster\n It is not affected by cast range bonuses\n Since Poison Attack grants attack range bonus while active, both Autocast and manually casting it uses Viper's current attack range",
         "Poison Attack places one debuff on the target, successive attacks increase its stack count, and resets the duration of the entire stack\n Does not work against allied units or wards\n The number of stacks can be seen on the status buff icon as well",
-        "With 5 ( 8) stacks, it reduces the enemy target's movement speed by 15%\/30%\/45%\/60% ( 24%\/48%\/72%\/96%)\n The movement speed slow increasing  talent further increases the movement speed reduction to 18.75%\/37.5%\/56.25%\/75% ( 30%\/60%\/90%\/120%)",
-        "With max stacks, Poison Attack also reduces the affected enemy hero's magic resistance to 10%\/2.5%\/-5%\/-12.5% ( 1%\/-11%\/-23%\/-35%)\n The magic resistance reduction increasing  talent further reduces the value to -8.75%\/-16.25%\/-23.75%\/-31.25% ( -29%\/-41%\/-53%\/-65%)\n The magic resistance reduction of Poison Attack stacks additively by itself\n However, it stacks multiplicatively with other sources of magic resistance\n For how much actual magic resistance is reduced with a certain amount of stacks on each level, please refer to the chart below",
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances\n With max stacks, Poison Attack can deal up to 20\/40\/60\/80 ( 32\/64\/96\/128) damage per second, and a total of 80\/160\/240\/320 ( 128\/256\/384\/512) against enemy units in 4 seconds\n With the damage per second increasing  talent, it can deal up to 25\/50\/75\/100 ( 40\/80\/120\/160) damage per second, and a total of 100\/200\/300\/400 ( 160\/320\/480\/640) against enemy units\n For how much damage per second and total damage (before reductions) Poison Attack deals with a certain amount of stacks on each level, please refer to the chart below",
+        "With 5 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 8) stacks, it reduces the enemy target's movement speed by 15%\/30%\/45%\/60% (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 24%\/48%\/72%\/96%)\n The movement speed slow increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent further increases the movement speed reduction to 18.75%\/37.5%\/56.25%\/75% (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 30%\/60%\/90%\/120%)",
+        "With max stacks, Poison Attack also reduces the affected enemy hero's magic resistance to 10%\/2.5%\/-5%\/-12.5% (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 1%\/-11%\/-23%\/-35%)\n The magic resistance reduction increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent further reduces the value to -8.75%\/-16.25%\/-23.75%\/-31.25% (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> -29%\/-41%\/-53%\/-65%)\n The magic resistance reduction of Poison Attack stacks additively by itself\n However, it stacks multiplicatively with other sources of magic resistance\n For how much actual magic resistance is reduced with a certain amount of stacks on each level, please refer to the chart below",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances\n With max stacks, Poison Attack can deal up to 20\/40\/60\/80 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 32\/64\/96\/128) damage per second, and a total of 80\/160\/240\/320 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 128\/256\/384\/512) against enemy units in 4 seconds\n With the damage per second increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, it can deal up to 25\/50\/75\/100 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 40\/80\/120\/160) damage per second, and a total of 100\/200\/300\/400 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 160\/320\/480\/640) against enemy units\n For how much damage per second and total damage (before reductions) Poison Attack deals with a certain amount of stacks on each level, please refer to the chart below",
         "The attacks first apply the debuff, then their own damage",
-        "SHARD NOTES Poison Attack now reduces armor and also applies its effects on buildings as well\n Reduces armor by 1\/2\/3\/4\/5\/6\/7\/8 per stack\n With max stacks, Poison Attack reduces all affected buildings' total magic resistance to -32%\/-48%\/-64%\/-80% ( -72%\/-88%\/-104%\/-120%) This means it can deal up to 16.9\/37.89\/62.98\/92.16 ( 22.02\/48.13\/78.34\/112.64) damage per second to buildings"
+        "SHARD NOTES Poison Attack now reduces armor and also applies its effects on buildings as well\n Reduces armor by 1\/2\/3\/4\/5\/6\/7\/8 per stack\n With max stacks, Poison Attack reduces all affected buildings' total magic resistance to -32%\/-48%\/-64%\/-80% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> -72%\/-88%\/-104%\/-120%) This means it can deal up to 16.9\/37.89\/62.98\/92.16 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 22.02\/48.13\/78.34\/112.64) damage per second to buildings"
       ],
       "item_behaviour": [],
       "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance deduction while dealing damage over time. Stacks up to 5 times.",
       "hot_key": "Q",
       "params": [
-        "Cast Range:  600\/640\/680\/720",
+        "Cast Range: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 600\/640\/680\/720",
         "Attack Range Bonus: 25\/65\/105\/145",
-        "Max Stacks: 5 ( 8)",
-        "Damage per Second per Stack: 4\/8\/12\/16 ( 5\/10\/15\/20)",
-        "Move Speed Slow per Stack: 3%\/6%\/9%\/12% ( 3.75%\/7.5%\/11.25%\/15%)",
-        "Magic Resistance Reduction per Stack: 4%\/6%\/8%\/10% ( 9%\/11%\/13%\/15%)",
+        "Max Stacks: 5 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 8)",
+        "Damage per Second per Stack: 4\/8\/12\/16 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 5\/10\/15\/20)",
+        "Move Speed Slow per Stack: 3%\/6%\/9%\/12% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.75%\/7.5%\/11.25%\/15%)",
+        "Magic Resistance Reduction per Stack: 4%\/6%\/8%\/10% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 9%\/11%\/13%\/15%)",
         "Duration: 4",
-        "Armor Reduction per Stack:  1",
-        "Building Damage Percentage:  40%"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Armor Reduction per Stack:  1",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Building Damage Percentage:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Viper_Poison_Attack_1.mp3\/revision\/latest?cb=20191216030223",
       "effects": [
@@ -42,9 +42,9 @@
         "Nethertoxin's projectile travels at a speed of 2000",
         "All effects of Nethertoxin, including the damage per interval, are provided by an aura\n Its debuff lingers for 0.5 seconds",
         "Deals damage in 0.5-second intervals, starting 0.5 seconds after receiving the debuff, resulting in up to 14\/15\/16\/17 instances",
-        "The damage increases by 2.19\/3.44\/4.69\/5.94 for each 0.5 seconds spent within the area\n Since both the  minimum and maximum value of the damage per interval are increased evenly by 40, the damage increase per interval above remains the same\n As the damage increases per interval, and once it reaches the maximum 25\/37.5\/50\/62.5 ( 45\/57.5\/70\/82.5) damage per interval, the damage at subsequent intervals deal the maximum damage, until the end of its duration\n Can deal up to 271.25\/438.75\/631.25\/848.75 ( 551.25\/738.75\/951.25\/1188.75) damage within the area for the entire duration\n For how much damage per interval Nethertoxin deals, with the damage increasing  talent, please refer to the chart below",
+        "The damage increases by 2.19\/3.44\/4.69\/5.94 for each 0.5 seconds spent within the area\n Since both the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> minimum and maximum value of the damage per interval are increased evenly by 40, the damage increase per interval above remains the same\n As the damage increases per interval, and once it reaches the maximum 25\/37.5\/50\/62.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 45\/57.5\/70\/82.5) damage per interval, the damage at subsequent intervals deal the maximum damage, until the end of its duration\n Can deal up to 271.25\/438.75\/631.25\/848.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 551.25\/738.75\/951.25\/1188.75) damage within the area for the entire duration\n For how much damage per interval Nethertoxin deals, with the damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, please refer to the chart below",
         "The damage value resets whenever the enemy leaves the radius and enters it again\n It does not count accumulated time spent within the radius",
-        "Leveling up the ability or the damage increasing  talent does not update the damage of already placed debuffs\n However, if the debuff is applied after leveling the ability or the talent, the affected enemy takes the new damage values",
+        "Leveling up the ability or the damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update the damage of already placed debuffs\n However, if the debuff is applied after leveling the ability or the talent, the affected enemy takes the new damage values",
         "Multiple instances of Nethertoxin's debuff do not stack"
       ],
       "item_behaviour": [],
@@ -52,10 +52,10 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.5",
-        "Cast Range:  900",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
         "Radius: 400",
-        "Min Damage per Second: 15\/20\/25\/30 ( 55\/60\/65\/70)",
-        "Max Damage per Second: 50\/75\/100\/125 ( 90\/115\/140\/165)",
+        "Min Damage per Second: 15\/20\/25\/30 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 55\/60\/65\/70)",
+        "Max Damage per Second: 50\/75\/100\/125 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 90\/115\/140\/165)",
         "Max Damage Duration: 4",
         "Damage Interval: 0.5",
         "Aura Linger Duration: 0.5",
@@ -76,25 +76,25 @@
     },
     {
       "notes": [
-        "Increases Viper's total magic resistance to 33%\/36%\/40%\/44% ( 44%\/48%\/51%\/55%)",
+        "Increases Viper's total magic resistance to 33%\/36%\/40%\/44% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 44%\/48%\/51%\/55%)",
         "The damage and attack speed slow debuff is applied to whoever damages Viper within 1400 range",
-        "Corrosive Skin procs on all 3 damage types, but not self-inflicted damage and HP Removal effects (e.g\n  Sunder, <span image=\"items\/soul_ring\/full.webp\">[Soul Ring]<\/span> Soul Ring etc.)\n Damage procced is dealt to the damage source itself\n This means that the damage dealt by abilities that are not sourced from the caster (e.g\n  Proximity Mines), do not trigger Corrosive Skin debuff on the caster\n The damage dealt has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag",
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances\n Can deal a total of 32\/64\/96\/128 ( 104\/136\/168\/200) damage (before reductions)",
+        "Corrosive Skin procs on all 3 damage types, but not self-inflicted damage and HP Removal effects (e.g\n <span image=\"images\/sunder.webp\">[picture:sunder]<\/span> Sunder, <span image=\"items\/soul_ring\/full.webp\">[picture:soul_ring]<\/span> Soul Ring etc.)\n Damage procced is dealt to the damage source itself\n This means that the damage dealt by abilities that are not sourced from the caster (e.g\n <span image=\"images\/proximity_mines.webp\">[picture:proximity_mines]<\/span> Proximity Mines), do not trigger Corrosive Skin debuff on the caster\n The damage dealt has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances\n Can deal a total of 32\/64\/96\/128 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 104\/136\/168\/200) damage (before reductions)",
         "Successive procs of Corrosive Skin on the same target do not stack, only the debuff gets refreshed",
         "Does not affect buildings, wards, hidden or allied units\n Places the debuff on invulnerable units\n Slows the attack speed of invulnerable units, however, it does not damage them",
-        "SCEPTER NOTES Corrosive Skin now reduces a total of 16\/32\/48\/64 attack speed within 500 radius upon proc\n Corrosive Skin now first applies the damage per second, then the debuff\n It still deals damage in the same intervals, resulting in a total of 5 damage instances\n Within the near radius, it can deal a total of 80\/160\/240\/320 ( 260\/340\/420\/500) damage\n Within 501 \u2012 1400 radius, it deals up to a total of 40\/80\/120\/160 ( 130\/170\/210\/250) damage instead"
+        "SCEPTER NOTES Corrosive Skin now reduces a total of 16\/32\/48\/64 attack speed within 500 radius upon proc\n Corrosive Skin now first applies the damage per second, then the debuff\n It still deals damage in the same intervals, resulting in a total of 5 damage instances\n Within the near radius, it can deal a total of 80\/160\/240\/320 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 260\/340\/420\/500) damage\n Within 501 \u2012 1400 radius, it deals up to a total of 40\/80\/120\/160 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 130\/170\/210\/250) damage instead"
       ],
       "item_behaviour": [],
       "description": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages it in a 1400 radius. The acid exudate also increases Viper's resistance to magic.",
       "hot_key": "E",
       "params": [
         "Radius: 1400",
-        "Magic Resistance Bonus: 10%\/15%\/20%\/25% ( 25%\/30%\/35%\/40%)",
-        "Damage per Second: 8\/16\/24\/32 ( 26\/34\/42\/50)",
+        "Magic Resistance Bonus: 10%\/15%\/20%\/25% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 25%\/30%\/35%\/40%)",
+        "Damage per Second: 8\/16\/24\/32 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 26\/34\/42\/50)",
         "Attack Speed Slow: 8\/16\/24\/32",
         "Duration: 4",
-        "Near Radius:  500",
-        "Corrosive Skin Multiplier:  2"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Near Radius:  500",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Corrosive Skin Multiplier:  2"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Viper_Corrosive_Skin.mp3\/revision\/latest?cb=20191216030233",
       "effects": [
@@ -111,18 +111,18 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Upon cast, Viper rises 100 distance upwards, then dives to the ground at a speed of 500 in 0.1 seconds",
         "The Corrosive Skin values applied to enemies by Nosedive within the effect radius are doubled by default, regardless of its near radius",
         "Destroys trees within a 100 radius around Viper upon landing",
-        "Nosedive first apply the disarm debuff, then the  Corrosive Skin debuff\n Corrosive Skin notes fully apply\n If it is not learned, Nosedive only applies the disarm, and the Corrosive Skin debuff is not applied"
+        "Nosedive first apply the disarm debuff, then the <span image=\"images\/corrosive_skin.webp\">[picture:corrosive_skin]<\/span> Corrosive Skin debuff\n Corrosive Skin notes fully apply\n If it is not learned, Nosedive only applies the disarm, and the Corrosive Skin debuff is not applied"
       ],
       "item_behaviour": [],
       "description": "Viper slams into the ground, disarming each enemy in a 500 AoE for 2 seconds and splattering everyone in a 1200 AoE with the effect of Corrosive Skin.",
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+0",
-        "Cast Range:  375",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 375",
         "Effect Radius: 1200",
         "Disarm Radius: 500",
         "Corrosive Skin Multiplier: 2",
@@ -145,18 +145,18 @@
       "notes": [
         "Viper Strike's projectile travels at a speed of 1200",
         "The slow decreases over time\n The affected target regains 0.3%\/0.4%\/0.5% of their movement speed and 0.267\/0.4\/0.533 attack speed on each server tick\n This equals to 8%\/12%\/16% movement speed and 8\/12\/16 attack speed regained per second",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is applied, resulting in 5 damage instances\n Can deal up to 400\/600\/800 ( 800\/1000\/1200) damage (before reductions)",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is applied, resulting in 5 damage instances\n Can deal up to 400\/600\/800 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 800\/1000\/1200) damage (before reductions)",
         "Successive casts of Viper Strike on the same target do not stack, only the debuff gets refreshed",
         "The particle effects on Viper's wings during the cast time are visible to everyone, showing that the ability is being cast",
-        "Fully affects  Couriers"
+        "Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Viper slows the targeted enemy unit's movement and attack speed while also dealing poison damage over time. The slowing effect reduces over the duration of the poison.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.53",
-        "Cast Range:  500",
-        "Damage per Second: 80\/120\/160 ( 160\/200\/240)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 500",
+        "Damage per Second: 80\/120\/160 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 160\/200\/240)",
         "Move Speed Slow: 40%\/60%\/80%",
         "Attack Speed Slow: 40\/60\/80",
         "Duration: 5"

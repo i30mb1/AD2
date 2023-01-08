@@ -5,21 +5,21 @@
         "Split Earth first applies the debuff, then the damage",
         "Destroys trees within the affected radius",
         "Split Earth has no visual or audio indicator during the effect delay",
-        "SHARD NOTES Split Earth now applies its effect 4 times at the targeted point\n The first instance still happens 0.35 seconds after cast\n The following instances happen 5.35\/10.35\/15.35 seconds after cast\n The visual effect during the delay between the extra instances is visible to everyone\n Each instance has the following radius: Level 1: 150\/210\/270\/330 ( 190\/250\/310\/370) Level 2: 175\/235\/295\/355 ( 215\/275\/335\/395) Level 3: 200\/260\/320\/380 ( 240\/300\/360\/420) Level 4: 225\/285\/345\/405 ( 265\/325\/385\/445)"
+        "SHARD NOTES Split Earth now applies its effect 4 times at the targeted point\n The first instance still happens 0.35 seconds after cast\n The following instances happen 5.35\/10.35\/15.35 seconds after cast\n The visual effect during the delay between the extra instances is visible to everyone\n Each instance has the following radius: Level 1: 150\/210\/270\/330 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 190\/250\/310\/370) Level 2: 175\/235\/295\/355 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 215\/275\/335\/395) Level 3: 200\/260\/320\/380 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 240\/300\/360\/420) Level 4: 225\/285\/345\/405 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 265\/325\/385\/445)"
       ],
       "item_behaviour": [],
       "description": "Splits the earth under enemies. Deals damage and stuns for a short duration.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.7+0.67",
-        "Cast Range:  650",
-        "Base Radius: 150\/175\/200\/225 ( 190\/215\/240\/265)",
-        "Number of Instances: 1 ( 4)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650",
+        "Base Radius: 150\/175\/200\/225 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 190\/215\/240\/265)",
+        "Number of Instances: 1 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 4)",
         "Effect Delay: 0.35",
         "Damage: 120\/180\/240\/300",
         "Stun Duration: 2",
-        "Radius Increase per Instance:  60",
-        "Radius Increase Interval:  5"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Radius Increase per Instance:  60",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Radius Increase Interval:  5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Leshrac_Split_Earth.mp3\/revision\/latest?cb=20191216015216",
       "effects": [
@@ -38,8 +38,8 @@
       "notes": [
         "Diabolic Edict's radius is centered on and follows Leshrac",
         "Randomly selects nearby valid units, including buildings, for each explosion\n There are no priorities\n Fully affects invisible units and units in the Fog of War\n When no valid targets are nearby, the explosions randomly appear within a square with 500 side lengths\n These random explosions deal no damage",
-        "Creates explosions in 0.25 ( 0.15)-second intervals, starting immediately as the ability is cast, resulting in 40 ( 65) explosions",
-        "Can deal up to 280\/560\/840\/1120 ( 455\/910\/1365\/1820) damage to a single target",
+        "Creates explosions in 0.25 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.15)-second intervals, starting immediately as the ability is cast, resulting in 40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 65) explosions",
+        "Can deal up to 280\/560\/840\/1120 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 455\/910\/1365\/1820) damage to a single target",
         "Successive cast of Diabolic Edict fully stack, with each cast creating its own independent instance",
         "When Leshrac dies, the explosions still occur at his death location"
       ],
@@ -49,7 +49,7 @@
       "params": [
         "Cast Animation: 0.5+0.87",
         "Radius: 500",
-        "Number of Explosions: 40 ( 65)",
+        "Number of Explosions: 40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 65)",
         "Damage per Explosion: 7\/14\/21\/28",
         "Duration: 10"
       ],
@@ -69,9 +69,9 @@
     {
       "notes": [
         "The lightning hits the initial target after the 0.25-second effect delay and then jumps to other targets in 0.25-second intervals, so hitting all targets takes 1.25\/1.75\/2.25\/2.75 seconds\n This means the initial lightning can be avoided by being invulnerable, hidden, or spell immune\n However, this does not prevent it from jumping",
-        "Lightning Storm does not jump on to invisible units, or units in the Fog of War\n The lightning storm buff is a hidden buff required for the lightning to jump\n It cannot hit the same unit again per cast\n TALENT NOTES The bounce twice on units  talent can only hit the same unit again per cast when all other valid targets within the jump distance are hit\n Once all valid units are hit, Lightning Storm starts jumping on the same units again\n However, it still does not jump on the same unit twice in a row, so a lone target is hit only once",
+        "Lightning Storm does not jump on to invisible units, or units in the Fog of War\n The lightning storm buff is a hidden buff required for the lightning to jump\n It cannot hit the same unit again per cast\n TALENT NOTES The bounce twice on units <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can only hit the same unit again per cast when all other valid targets within the jump distance are hit\n Once all valid units are hit, Lightning Storm starts jumping on the same units again\n However, it still does not jump on the same unit twice in a row, so a lone target is hit only once",
         "Successive cast of Lightning Storm fully stack, with each cast creating its own independent instance",
-        "All jumps together can deal up to 350\/840\/1530\/2420 ( 850\/1540\/2430\/3520) damage (before reductions) per storm instance",
+        "All jumps together can deal up to 350\/840\/1530\/2420 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 850\/1540\/2430\/3520) damage (before reductions) per storm instance",
         "Lightning Storm first applies the damage, then the debuff"
       ],
       "item_behaviour": [],
@@ -79,12 +79,12 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.3+1.04",
-        "Cast Range:  650",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650",
         "Jump Distance: 475",
-        "Total Storm Instances: 1 ( 2)",
+        "Total Storm Instances: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2)",
         "Number of Jumps: 5\/7\/9\/11",
         "Effect Delay: 0.25",
-        "Damage: 70\/120\/170\/220 ( 170\/220\/270\/320)",
+        "Damage: 70\/120\/170\/220 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 170\/220\/270\/320)",
         "Move Speed Slow: 75%",
         "Slow Duration: 0.4\/0.6\/0.8\/1"
       ],
@@ -103,7 +103,7 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Interrupts Leshrac's channeling abilities upon cast",
         "Turns Leshrac and all enemies within the radius ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance",
         "Reduces most heroes' total magic resistance to 2.5%",
@@ -115,7 +115,7 @@
       "description": "Causes Leshrac and all nearby enemies to turn ethereal, preventing them from attacking, slowing them, and making them take more magic damage. Increases Leshrac's speed rather than reducing it. Does not cause Leshrac to take amplified damage.",
       "hot_key": "D",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Radius: 450",
         "Enemy Magic Resistance Reduction: 30%",
         "Move Speed Change: 30%",
@@ -144,9 +144,9 @@
       "description": "Creates waves of damaging energy around Leshrac, one per second, to damage nearby enemy units. Drains Leshrac's mana with each pulse.",
       "hot_key": "R",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Radius: 525",
-        "Damage per Second: 90\/140\/190 ( 130\/180\/230)",
+        "Damage per Second: 90\/140\/190 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 130\/180\/230)",
         "Pulse Nova Downtime: 1"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Leshrac_Pulse_Nova.mp3\/revision\/latest?cb=20200509130123",

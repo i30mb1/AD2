@@ -3,8 +3,8 @@
     {
       "notes": [
         "The ink travels at a speed of 2000",
-        "With the travel distance and end radius, the ink takes 0.7 ( 1.2) seconds to reach max distance and can hit units up to 1560 ( 2560) range away",
-        "The ink trail starts 120 range towards Grimstroke's left side and travels towards the targeted point\n This means the ink's travel direction is not based on the caster's facing direction, but instead on the angle between the aforementioned points\n  Portrait-casting automatically launches Stroke of Fate to the right of Grimstroke's facing direction",
+        "With the travel distance and end radius, the ink takes 0.7 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.2) seconds to reach max distance and can hit units up to 1560 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2560) range away",
+        "The ink trail starts 120 range towards Grimstroke's left side and travels towards the targeted point\n This means the ink's travel direction is not based on the caster's facing direction, but instead on the angle between the aforementioned points\n <span image=\"images\/self-cast_cursor_%28black%29.png\">[picture:self-cast_cursor_%28black%29]<\/span> Portrait-casting automatically launches Stroke of Fate to the right of Grimstroke's facing direction",
         "Stroke of Fate first applies the damage, then the debuff",
         "The damage increment has no cap and counts any valid units hit by the ink\n Neither affects nor counts invulnerable or hidden units to the total damage",
         "Plays an initial sound and particles upon start casting, visible and audible to everyone",
@@ -15,12 +15,12 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.6+0.63",
-        "Cast Range:  1400 ( 2400)",
-        "Wave Distance:  1400 ( 2400)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2400)",
+        "Wave Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2400)",
         "Start Radius: 120",
         "End Radius: 160",
-        "Base Damage: 100\/160\/220\/280 ( 150\/240\/330\/420)",
-        "Damage Increment per Hit: 20\/30\/40\/50 ( 30\/45\/60\/75)",
+        "Base Damage: 100\/160\/220\/280 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 150\/240\/330\/420)",
+        "Damage Increment per Hit: 20\/30\/40\/50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/45\/60\/75)",
         "Move Speed Slow: 50%\/60%\/70%\/80%",
         "Slow Duration: 1.75"
       ],
@@ -39,26 +39,26 @@
     },
     {
       "notes": [
-        "The  Phantom travels to the target at a speed of 850",
-        "The phantom is attackable (A or  Left Click) as soon as it is launched, so it can be killed before it reaches its target\n Phantoms have the highest priority for auto-attack behaviors, together with  Beetles",
+        "The <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Phantom travels to the target at a speed of 850",
+        "The phantom is attackable (A or <span image=\"images\/keyboard_white_mouse_left.png\">[picture:keyboard_white_mouse_left]<\/span> Left Click) as soon as it is launched, so it can be killed before it reaches its target\n Phantoms have the highest priority for auto-attack behaviors, together with <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Beetles",
         "The Phantom latches onto the target when it comes within 130 range of it\n Once latched, it always stays 130 range in front of the target",
         "The Phantom instantly dies in the following conditions: When its target turns invisible or spell immune, including while the Phantom is still traveling towards it\n When its target turns invulnerable or hidden, but not while traveling",
-        "The Phantom returns to Grimstroke at a speed of 1150 upon expiring, when its target dies, or after 10 damage instances\n It does not return when it is killed\n  Chronosphere instantly causes already latched Phantoms to return to their caster, and freezes traveling Phantoms",
-        "While attached, the Phantom silences its target and deals damage to it\n Damage dealt to the affected target is sourced to Grimstroke, not the Phantom\n Deals 5\/10\/15\/20 ( 30\/35\/40\/45) damage in 0.5-second intervals, starting immediately upon reaching the target, resulting in 10 instances\n Can deal up to 170\/300\/430\/560 ( 420\/550\/680\/810) damage to each latched enemy, including the final rend damage (before reductions)",
+        "The Phantom returns to Grimstroke at a speed of 1150 upon expiring, when its target dies, or after 10 damage instances\n It does not return when it is killed\n <span image=\"images\/chronosphere.webp\">[picture:chronosphere]<\/span> Chronosphere instantly causes already latched Phantoms to return to their caster, and freezes traveling Phantoms",
+        "While attached, the Phantom silences its target and deals damage to it\n Damage dealt to the affected target is sourced to Grimstroke, not the Phantom\n Deals 5\/10\/15\/20 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/35\/40\/45) damage in 0.5-second intervals, starting immediately upon reaching the target, resulting in 10 instances\n Can deal up to 170\/300\/430\/560 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 420\/550\/680\/810) damage to each latched enemy, including the final rend damage (before reductions)",
         "Successive casts on the target fully stack, although all casts share one debuff\n The damage per second is increased for each stack\n All casts share the same damage interval and are summed up into one instance per interval",
         "The Phantom resets the cooldown of the Phantom's Embrace upon having fully returned to Grimstroke\n With multiple Phantoms, each fully returned Phantom resets the cooldown of the ability independently\n The cooldown also is reset if the target dies at any time during Phantom's Embrace, even when it dies to the Phantom itself",
         "The phantom provides shared vision over the target while flying towards it, and while latched\n The vision instantly stops once letting go of the target\n The phantom itself has 200 ground vision as well, which it provides while traveling to the target and while latched\n However, this vision is not applied while the phantom travels back to the caster",
-        "The phantom cannot be interacted with while it returns to the caster\n SOULBIND Only the  Phantom returned from the primary target refreshes the ability's cooldown"
+        "The phantom cannot be interacted with while it returns to the caster\n SOULBIND Only the <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Phantom returned from the primary target refreshes the ability's cooldown"
       ],
       "item_behaviour": [],
       "description": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once latched, the phantom damages and silences. If she survives the full latch duration she rends her victim for heavy damage and refreshes Phantom's Embrace's cooldown. Hero attacks against the phantom count as 3 attacks each.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0+0",
-        "Cast Range:  900",
-        "Hero Attacks to Destroy: 2\/2\/3\/3 ( 3\/3\/4\/4)",
-        "Non-Hero Attacks to Destroy: 6\/6\/9\/9 ( 9\/9\/12\/12)",
-        "Damage per Second: 10\/20\/30\/40 ( 60\/70\/80\/90)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
+        "Hero Attacks to Destroy: 2\/2\/3\/3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3\/3\/4\/4)",
+        "Non-Hero Attacks to Destroy: 6\/6\/9\/9 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 9\/9\/12\/12)",
+        "Damage per Second: 10\/20\/30\/40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 60\/70\/80\/90)",
         "Rend Damage: 120\/200\/280\/360",
         "Latch Duration: 5"
       ],
@@ -79,8 +79,8 @@
       "notes": [
         "Has a longer cast backswing of 0.86 when cast on self, due to a different animation\n ↓↓ Double-tapping automatically targets self",
         "Ink Swell first applies the damage, then the debuff",
-        "The tendrils deal 5\/7\/9\/11 ( 7\/9.8\/12.6\/15.4) damage in 0.2-second intervals, starting immediately as the buff is placed, resulting in up to 15 instances\n They can deal up to 75\/105\/135\/165 ( 105\/147\/189\/231) damage to a single unit (before reductions)",
-        "The damage and stun upon losing the buff are based on the number of damage instances the tendrils applied to a single enemy hero\n This means to reach the max damage and stun, at least one enemy hero must be damaged throughout the whole duration of Ink Swell\n Only counts damage dealt to real heroes and clones, excluding illusions and creep-heroes\n The actual amount of damage dealt does not matter, Ink Swell only considers the amount of damage instances applied\n The stun duration increases by 0.09\/0.15\/0.22\/0.28 seconds, and the damage by 7.2\/14.4\/21.6\/28.8 ( 10.08\/20.16\/30.24\/40.32) for each instance applied, reaching the maximum after 13 instances",
+        "The tendrils deal 5\/7\/9\/11 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 7\/9.8\/12.6\/15.4) damage in 0.2-second intervals, starting immediately as the buff is placed, resulting in up to 15 instances\n They can deal up to 75\/105\/135\/165 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 105\/147\/189\/231) damage to a single unit (before reductions)",
+        "The damage and stun upon losing the buff are based on the number of damage instances the tendrils applied to a single enemy hero\n This means to reach the max damage and stun, at least one enemy hero must be damaged throughout the whole duration of Ink Swell\n Only counts damage dealt to real heroes and clones, excluding illusions and creep-heroes\n The actual amount of damage dealt does not matter, Ink Swell only considers the amount of damage instances applied\n The stun duration increases by 0.09\/0.15\/0.22\/0.28 seconds, and the damage by 7.2\/14.4\/21.6\/28.8 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 10.08\/20.16\/30.24\/40.32) for each instance applied, reaching the maximum after 13 instances",
         "When the debuff is lost prematurely, it still applies the area expire damage and stun, based on the damage instances applied up to that point\n However, if the affected unit dies, the area expire damage and stun will not apply",
         "The expire damage and stun only apply when there is at least one enemy hero within the area",
         "Recasting Ink Swell on the same target refreshes the duration, without resetting the damage instance counter",
@@ -91,15 +91,15 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.15+0.73\/0.86",
-        "Cast Range:  400\/525\/650\/775",
-        "Radius: 375 ( 525)",
-        "Move Speed Bonus: 12%\/14%\/16%\/18% ( 28%\/30%\/32%\/34%)",
-        "Tendrils Damage per Second: 25\/35\/45\/55 ( 35\/49\/63\/77)",
-        "Expire Max Damage: 90\/180\/270\/360 ( 126\/252\/378\/504)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 400\/525\/650\/775",
+        "Radius: 375 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 525)",
+        "Move Speed Bonus: 12%\/14%\/16%\/18% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 28%\/30%\/32%\/34%)",
+        "Tendrils Damage per Second: 25\/35\/45\/55 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 35\/49\/63\/77)",
+        "Expire Max Damage: 90\/180\/270\/360 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 126\/252\/378\/504)",
         "Max Stun Duration: 1.1\/1.9\/2.7\/3.5",
         "Max Damage\/Stun Accumulation Time: 2.5",
         "Buff Duration: 3",
-        "Damage as Heal:  40%"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Damage as Heal:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Grimstroke_Ink_Swell_1.mp3\/revision\/latest?cb=20191216014001",
       "effects": [
@@ -116,7 +116,7 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "The created illusions are visually distinguishable from the real hero for allies and enemies\n The illusion spawns 58 range away randomly on the north, south, east, and west from the target\n The illusion gains its spell immunity and movement speed bonus through a buff, so it is possible for enemies to check the buff and \u203C Ping the remaining duration of the illusion\n The illusion has a EXPR 2 * IllusionLVL bounty",
         "Successive casts do not replace existing Dark Portrait illusions"
       ],
@@ -125,7 +125,7 @@
       "hot_key": "D",
       "params": [
         "Cast Animation: 0+0.54",
-        "Cast Range:  1200",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1200",
         "Number of Illusions: 1",
         "Illusion Damage Dealt: 150%",
         "Illusion Damage Taken: 350%",
@@ -149,27 +149,27 @@
         "The targeting reticule must be centered over an enemy unit",
         "Only binds the primary target to heroes, clones and creep-heroes, excluding illusions\n However, the primary target can be an illusion\n Does not bind to nearby invisible or invulnerable heroes",
         "Leashes the target and the ally it is bound to, preventing them from casting certain mobility abilities\n Does not leash the target if it is not bound to an ally\n Exposes and provides shared vision and True Sight over both targets",
-        "The more the chain gets stretched, the slower the affected heroes can walk away from each other, eventually coming to a full stop\n It directly affects their movement speed\n The chain is considered fully stretched at 600 range, but can be stretched up to 700 range before it breaks\n In order to stretch it further than 600, forced movement sources or abilities with teleporting effects must be used\n This means most forced movement sources can break the leash, except the following abilities:  Skewer,  Leap,  Pounce,  Tree Dance,  Primal Spring,  Toggle Movement, <span image=\"items\/force_staff\/full.webp\">[Force Staff]<\/span> Force Staff and <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike\n However, <span image=\"items\/force_staff\/full.webp\">[Force Staff]<\/span> Force and <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Thrust (Ally) can break the chain if the target hasn't moved after being bound",
+        "The more the chain gets stretched, the slower the affected heroes can walk away from each other, eventually coming to a full stop\n It directly affects their movement speed\n The chain is considered fully stretched at 600 range, but can be stretched up to 700 range before it breaks\n In order to stretch it further than 600, forced movement sources or abilities with teleporting effects must be used\n This means most forced movement sources can break the leash, except the following abilities: <span image=\"images\/skewer.webp\">[picture:skewer]<\/span> Skewer, <span image=\"images\/leap.webp\">[picture:leap]<\/span> Leap, <span image=\"images\/pounce.webp\">[picture:pounce]<\/span> Pounce, <span image=\"images\/tree_dance.webp\">[picture:tree_dance]<\/span> Tree Dance, <span image=\"images\/primal_spring.webp\">[picture:primal_spring]<\/span> Primal Spring, <span image=\"images\/toggle_movement.webp\">[picture:toggle_movement]<\/span> Toggle Movement, <span image=\"items\/force_staff\/full.webp\">[picture:force_staff]<\/span> Force Staff and <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike\n However, <span image=\"items\/force_staff\/full.webp\">[picture:force_staff]<\/span> Force and <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Thrust (Ally) can break the chain if the target hasn't moved after being bound",
         "If either enemy manages to break the binding link, the debuff stays active on the primary target and immediately leashes the next valid enemy target within the latch radius to them",
         "The ability animations are based on and affected by status resistance\n This affects the following things on both the primary and the secondary target: EXPR StatusResistance1 > StatusResistance2 The chain disappears, and the primary target is no longer affected by Soulbind\n However, the secondary target is still fully affected by Soulbind's effects\n EXPR StatusResistance2 > StatusResistance1 The chain disappears, and the secondary target is no longer affected by Soulbind\n The primary target will still be fully affected by Soulbind, and leashes the next valid enemy target following the ability notes above",
         "A valid unit may only be affected by one Soulbind at a time\n Successive casts on the same primary target, or on the secondary target refreshes the duration on both targets\n Successive casts on a third target within the range of the already linked two do not link the third valid target to any other two until the previous Soulbind expires",
         "The following conditions do not duplicate the unit-targeted ability onto the secondary target: Abilities and item casts by creep-heroes\n Abilities that cannot be reflected by Spell Reflection\n When an illusion is the primary target\n When the primary target is affected by any other Spell Reflection sources\n Soulbind has the lowest priority in the group of Spell Refection sources",
         "The duplicated ability cast also ignores all sources of Spell Reflection on the secondary target, this means the duplicated cast cannot be reflected again\n Most ability effects are first applied to the secondary target, then the primary target\n Charge-based abilities only consume a single charge when the ability is also cast on the secondary target",
-        "The duplicated ability interacts with spell immunity as follows: Abilities that pierce spell immunity when reflected are duplicated on the secondary target, which is stated in the ability's notes respectively\n Certain abilities that do not pierce spell immunity will still be cast on the bound spell immune target, applying other of its ability effects, despite not affecting them (e.g\n   Finger of Death)",
+        "The duplicated ability interacts with spell immunity as follows: Abilities that pierce spell immunity when reflected are duplicated on the secondary target, which is stated in the ability's notes respectively\n Certain abilities that do not pierce spell immunity will still be cast on the bound spell immune target, applying other of its ability effects, despite not affecting them (e.g\n <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/finger_of_death.webp\">[picture:finger_of_death]<\/span> Finger of Death)",
         "A full list of unique interactions with Soulbind can be found here",
-        "TALENT NOTES The spell damage amplification  talent only amplifies the outgoing spell damage of abilities to both bound targets"
+        "TALENT NOTES The spell damage amplification <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent only amplifies the outgoing spell damage of abilities to both bound targets"
       ],
       "item_behaviour": [],
       "description": "Binds a targeted enemy hero to its nearest allied hero within the bind radius, preventing both from moving away from each other. Any unit-targeted ability that either bound hero receives also gets cast on the other hero. If the bind is broken before the duration expires, the initial target will be bound to its nearest allied hero in the radius.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.15+0.5",
-        "Cast Range:  700\/800\/900",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700\/800\/900",
         "Max Bound Units: 2",
         "Latch Radius: 600",
         "Break Distance: 700",
         "Duration: 6\/7\/8",
-        "Bound Units Spell Damage Amplification:  25%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Bound Units Spell Damage Amplification:  25%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Grimstroke_Soulbind_1.mp3\/revision\/latest?cb=20191216013951",
       "effects": [

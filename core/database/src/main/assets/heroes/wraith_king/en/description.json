@@ -3,25 +3,25 @@
     {
       "notes": [
         "Wraithfire Blast travels at a speed of 1200",
-        "The stun and movement speed slow are applied at the same time, so overall, the slow lasts for 3.1\/3.4\/3.7\/4 ( 3.8\/4.1\/4.4\/4.7) seconds",
-        "Casting Wraithfire Blast orders all of  Wraith King Skeletons to attack the affected target\n Increases Wraith King Skeletons' total movement and attack speed to 375 and 125 respectively",
+        "The stun and movement speed slow are applied at the same time, so overall, the slow lasts for 3.1\/3.4\/3.7\/4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.8\/4.1\/4.4\/4.7) seconds",
+        "Casting Wraithfire Blast orders all of <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Wraith King Skeletons to attack the affected target\n Increases Wraith King Skeletons' total movement and attack speed to 375 and 125 respectively",
         "Upon cast, it deals the impact damage instantly, and the damage over time in 1-second intervals, starting immediately after the stun\n Can deal up to 115\/170\/225\/280 damage (before reductions)",
         "The blast first applies the impact damage, then the debuffs",
-        "TALENT NOTES With the Reincarnation casts Wraithfire Blast  talent, Wraithfire Blast gets cast on enemies within 900 radius upon triggering  Reincarnation\n These projectile travels at a speed of 500\n Only targets enemy heroes and clones\n Treats illusions and creep-heroes as creeps\n These blasts can target enemies inside the Fog of War and invisible units\n However, invisible targets instantly disjoint them\n These Wraithfire Blasts fully replace Reincarnation's slow, however, only when both Wraithfire Blast and the  talent are learned"
+        "TALENT NOTES With the Reincarnation casts Wraithfire Blast <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, Wraithfire Blast gets cast on enemies within 900 radius upon triggering <span image=\"images\/reincarnation.webp\">[picture:reincarnation]<\/span> Reincarnation\n These projectile travels at a speed of 500\n Only targets enemy heroes and clones\n Treats illusions and creep-heroes as creeps\n These blasts can target enemies inside the Fog of War and invisible units\n However, invisible targets instantly disjoint them\n These Wraithfire Blasts fully replace Reincarnation's slow, however, only when both Wraithfire Blast and the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent are learned"
       ],
       "item_behaviour": [],
       "description": "Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target. Summoned skeletons around the target will receive bonus movement and attack speed for the duration of the debuff.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.35+0.5",
-        "Cast Range:  525",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 525",
         "Impact Damage: 75\/90\/105\/120",
         "Damage over Time: 20\/40\/60\/80",
         "Enemy Move Speed Slow: 20%",
         "Skeleton Move Speed Bonus: 25",
         "Skeleton Attack Speed Bonus: 25",
         "Buff\/Debuff Duration: 2",
-        "Stun Duration: 1.1\/1.4\/1.7\/2 ( 1.8\/2.1\/2.4\/2.7)"
+        "Stun Duration: 1.1\/1.4\/1.7\/2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.8\/2.1\/2.4\/2.7)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Wraith_King_Wraithfire_Blast_1.mp3\/revision\/latest?cb=20191216030829",
       "effects": [
@@ -38,26 +38,26 @@
     },
     {
       "notes": [
-        "Stacks additively with other sources of lifesteal\n Cannot lifesteal off of wards, buildings, and allied units\n The lifesteal aura affects  Wraith King Skeleton within 1200 radius\n Does not affect other heroes or any of Wraith King's player-controlled units",
-        "Grants 1  Wraith King Skeleton charge per 2 units killed by Wraith King or any of his player-controlled units\n Does not grant charges from denies\n Spawns 1 skeleton per charge, resulting in 0\/1\/2\/3\/4\/5\/6\/7\/8 ( 6\/7\/8\/9\/10\/11\/12\/13\/14) skeletons at 0 \u2012 8 charges\n The skeletons spawn in 0.25-second intervals, starting immediately upon cast\n This results in a total spawn time of 0\/0.25\/0.5\/0.75\/1\/1.25\/1.5\/1.75\/2\/2.25\/2.5\/2.75\/3\/3.25 seconds",
+        "Stacks additively with other sources of lifesteal\n Cannot lifesteal off of wards, buildings, and allied units\n The lifesteal aura affects <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Wraith King Skeleton within 1200 radius\n Does not affect other heroes or any of Wraith King's player-controlled units",
+        "Grants 1 <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Wraith King Skeleton charge per 2 units killed by Wraith King or any of his player-controlled units\n Does not grant charges from denies\n Spawns 1 skeleton per charge, resulting in 0\/1\/2\/3\/4\/5\/6\/7\/8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6\/7\/8\/9\/10\/11\/12\/13\/14) skeletons at 0 \u2012 8 charges\n The skeletons spawn in 0.25-second intervals, starting immediately upon cast\n This results in a total spawn time of 0\/0.25\/0.5\/0.75\/1\/1.25\/1.5\/1.75\/2\/2.25\/2.5\/2.75\/3\/3.25 seconds",
         "The skeletons spawn at a random spot within a 300 radius of Wraith King",
         "These skeletons reincarnate once when killed\n This cannot be prevented\n Just like with hero reincarnation, killing the skeletons grants no gold or experience bounty when they reincarnate\n Reincarnating does not reset the skeleton's duration\n This means they do not reincarnate when expiring either",
-        "These skeletons cannot be controlled\n They automatically choose an attack target within ≈6500 range\n If no unit is within that range, they move to the closest lane and walk it down like lane creeps\n If their current attack target turns invisible, the skeletons may stop and do nothing\n After a while, they select a new target or return to the lanes\n The skeletons do not block neutral creep camps\n Casting  Wraithfire Blast on a target affects the following things: Upon its cast time, it orders all skeletons within ≈2000 radius to attack that target, even when the ability is blocked, reflected, or disjointed\n Successive Wraithfire Blast casts from the same faction, re-order the skeletons to attack the latest affected target\n Wraithfire Blast casts while the skeletons reincarnate do not order them to attack the target\n The Reincarnation casts Wraithfire Blast  talent also do not order the skeletons to attack the target as well"
+        "These skeletons cannot be controlled\n They automatically choose an attack target within ≈6500 range\n If no unit is within that range, they move to the closest lane and walk it down like lane creeps\n If their current attack target turns invisible, the skeletons may stop and do nothing\n After a while, they select a new target or return to the lanes\n The skeletons do not block neutral creep camps\n Casting <span image=\"images\/wraithfire_blast.webp\">[picture:wraithfire_blast]<\/span> Wraithfire Blast on a target affects the following things: Upon its cast time, it orders all skeletons within ≈2000 radius to attack that target, even when the ability is blocked, reflected, or disjointed\n Successive Wraithfire Blast casts from the same faction, re-order the skeletons to attack the latest affected target\n Wraithfire Blast casts while the skeletons reincarnate do not order them to attack the target\n The Reincarnation casts Wraithfire Blast <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent also do not order the skeletons to attack the target as well"
       ],
       "item_behaviour": [],
       "description": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. For every two kills Wraith King or any unit he controls accrue on enemy units, Vampiric Aura adds a skeleton charge. Skeletons respawn once when killed.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0.5",
-        "Lifesteal: 9%\/16%\/23%\/30% ( 17%\/24%\/31%\/38%)",
+        "Lifesteal: 9%\/16%\/23%\/30% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 17%\/24%\/31%\/38%)",
         "Charge Gain Radius: 1200",
         "Skeletons Spawn Radius: 300",
         "Number of Creep Kills to Gain Charge: 2",
         "Max Skeleton Charges: 2\/4\/6\/8",
         "Additional Skeletons per Charge: 1",
         "Skeleton Respawn Delay: 3",
-        "Skeleton Duration: 40 ( 50)",
-        "Base Number of Skeletons:  6"
+        "Skeleton Duration: 40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 50)",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Base Number of Skeletons:  6"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Wraith_King_Mortal_Strike_2.mp3\/revision\/latest?cb=20191216030817",
       "effects": [
@@ -100,14 +100,14 @@
       "notes": [
         "Reincarnation cannot be prevented in any way, as long as Wraith King has enough mana and the ability is off-cooldown\n Fully stacks with other Reincarnation sources, with this ability triggering first when off-cooldown",
         "Revives with full health and mana\n Does not resets the cooldowns of items and abilities",
-        "Provides 1800  daytime and 800  nighttime ground vision respectively at Wraith King's death location during its delay",
+        "Provides 1800 <span image=\"images\/daytime.png\">[picture:daytime]<\/span> daytime and 800 <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime ground vision respectively at Wraith King's death location during its delay",
         "The movement speed slow is applied on enemy heroes and clones upon triggering Reincarnation\n Treat illusions and creep-heroes as creeps",
         "SCEPTER NOTES Reincarnation now provides a 1200 radius aura and its buff lingers for 0.5 seconds\n The aura only affects all allied heroes, clones and illusions\n Does not affect invulnerable or hidden heroes, and creep-heroes\n The aura is bestowed to nearby allies even while Wraith King is dead",
-        "SCEPTER NOTES Wraith Delay's 7-second duration triggers when the hero reaches 1 health\n Units in Wraith Form are kept alive by having their minimum health set to 1\n Damage taken is technically not reduced\n Does not trigger in the following circumstances: If the target is affected by  Shallow Grave,  Battle Trance, or have other Reincarnation sources\n If the target is an illusion, despite the aura affecting them\n If the unit dies by its duration expiring (e.g\n the  Tempest Double)\n If the unit is instant killed (e.g\n killed by  Culling Blade)\n When  Meepo or its  Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the Wraith Delay",
+        "SCEPTER NOTES Wraith Delay's 7-second duration triggers when the hero reaches 1 health\n Units in Wraith Form are kept alive by having their minimum health set to 1\n Damage taken is technically not reduced\n Does not trigger in the following circumstances: If the target is affected by <span image=\"images\/shallow_grave.webp\">[picture:shallow_grave]<\/span> Shallow Grave, <span image=\"images\/battle_trance.webp\">[picture:battle_trance]<\/span> Battle Trance, or have other Reincarnation sources\n If the target is an illusion, despite the aura affecting them\n If the unit dies by its duration expiring (e.g\n the <span image=\"images\/tempest_double.webp\">[picture:tempest_double]<\/span> Tempest Double)\n If the unit is instant killed (e.g\n killed by <span image=\"images\/culling_blade.webp\">[picture:culling_blade]<\/span> Culling Blade)\n When <span image=\"images\/meepo_minimap.png\">[picture:meepo_minimap]<\/span> Meepo or its <span image=\"images\/divided_we_stand.webp\">[picture:divided_we_stand]<\/span> Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the Wraith Delay",
         "SCEPTER NOTES Grants the affected heroes unobstructed movement, allowing them to move through units and trees and impassable terrain\n Wraith Form causes the hero's model size to increase by 25% for its duration\n This has no impact on its collision size\n It also increases movement speed by 25% and attack speed by 75 for the duration\n Allies in Wraith Form can act freely like regular heroes, and can still be interacted normally, without any restrictions\n This means they still are fully affected by attacks and abilities normally, and already existing buffs and debuffs continue to affect them\n During Wraith Delay, the hero's health bar is visible to allies only",
         "SCEPTER NOTES When the Wraith Delay duration ends, the hero dies\n The kill is credited to whoever put the hero in Wraith Form\n This death cannot be prevented in any way\n It ignores invulnerability and everything that would normally prevent death\n If the hero has Reincarnation sources, it triggers normally once the hero dies",
-        "SHARD NOTES 3  Wraith King Skeletons are also summoned for each enemy hero within 900 radius upon triggering Reincarnation\n Skeleton notes of  Vampiric Spirit fully apply\n If it is not learned, no skeletons are summoned\n Treats clones and illusions as heroes and creep-heroes as creeps\n The skeletons are also summoned for enemies inside the Fog of War and invisible units",
-        "TALENT NOTES With the Reincarnation casts Wraithfire Blast  talent,  Wraithfire Blast gets cast on enemies within 900 radius upon triggering  Reincarnation\n These projectile travels at a speed of 500\n Only targets enemy heroes and clones\n Treats illusions and creep-heroes as creeps\n These blasts can target enemies inside the Fog of War and invisible units\n However, invisible targets instantly disjoint them\n These Wraithfire Blasts fully replace Reincarnation's slow, however, only when both Wraithfire Blast and the  talent are learned"
+        "SHARD NOTES 3 <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Wraith King Skeletons are also summoned for each enemy hero within 900 radius upon triggering Reincarnation\n Skeleton notes of <span image=\"images\/vampiric_aura.png\">[picture:vampiric_aura]<\/span> Vampiric Spirit fully apply\n If it is not learned, no skeletons are summoned\n Treats clones and illusions as heroes and creep-heroes as creeps\n The skeletons are also summoned for enemies inside the Fog of War and invisible units",
+        "TALENT NOTES With the Reincarnation casts Wraithfire Blast <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, <span image=\"images\/wraithfire_blast.webp\">[picture:wraithfire_blast]<\/span> Wraithfire Blast gets cast on enemies within 900 radius upon triggering <span image=\"images\/reincarnation.webp\">[picture:reincarnation]<\/span> Reincarnation\n These projectile travels at a speed of 500\n Only targets enemy heroes and clones\n Treats illusions and creep-heroes as creeps\n These blasts can target enemies inside the Fog of War and invisible units\n However, invisible targets instantly disjoint them\n These Wraithfire Blasts fully replace Reincarnation's slow, however, only when both Wraithfire Blast and the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent are learned"
       ],
       "item_behaviour": [],
       "description": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle. Upon death, enemy units in a 900 radius will be slowed.",
@@ -115,15 +115,15 @@
       "params": [
         "Enemy Effect Radius: 900",
         "Reincarnation Delay: 3",
-        "Enemy Move Speed Slow: 75% ( 0%)",
-        "Enemy Attack Speed Slow: 75 ( 0)",
-        "Enemy Slow Duration: 5 ( 0)",
-        "Wraith Delay Radius:  1200",
-        "Wraith Delay Move Speed Bonus:  25%",
-        "Wraith Delay Attack Speed Bonus:  75",
-        "Wraith Delay Duration:  7",
-        "Aura Linger Duration:  0.5",
-        "Number of Skeletons per Enemy Hero:  3"
+        "Enemy Move Speed Slow: 75% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0%)",
+        "Enemy Attack Speed Slow: 75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0)",
+        "Enemy Slow Duration: 5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Wraith Delay Radius:  1200",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Wraith Delay Move Speed Bonus:  25%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Wraith Delay Attack Speed Bonus:  75",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Wraith Delay Duration:  7",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Aura Linger Duration:  0.5",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Number of Skeletons per Enemy Hero:  3"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Wraith_King_Reincarnation_1.mp3\/revision\/latest?cb=20191216030825",
       "effects": [

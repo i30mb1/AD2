@@ -2,25 +2,25 @@
   "abilities": [
     {
       "notes": [
-        "Sniper gets all 3 charges immediately upon learning Shrapnel\n TALENT NOTES Acquiring the charges increasing  talent immediately grants 6 charges",
+        "Sniper gets all 3 charges immediately upon learning Shrapnel\n TALENT NOTES Acquiring the charges increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately grants 6 charges",
         "Shrapnel starts dealing damage, applying its movement speed slow and providing vision after the effect delay",
         "Provides 450 radius flying vision at the targeted area",
         "The damage and the slow are both provided by an aura and its debuff lingers for 0.5 seconds\n Multiple overlapping instances of the aura do not stack",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances\n Can deal up to 275\/440\/605\/770 ( 539\/704\/869\/1034) damage to a single unit (before reductions)",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances\n Can deal up to 275\/440\/605\/770 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 539\/704\/869\/1034) damage to a single unit (before reductions)",
         "Does not affect buildings",
         "Leveling up Shrapnel immediately updates all already existing Shrapnel instances\n However, the already placed debuffs on enemies do not update",
-        "TALENT NOTES The slow increasing  talent immediately updates all already existing Shrapnel instances as well\n However, the already placed debuffs on enemies do not update either\n The damage increasing  talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies\n SPELL STEAL Grants all 3 charges upon initially acquiring ability\n Subsequent ability acquisition only grants the remaining charges"
+        "TALENT NOTES The slow increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates all already existing Shrapnel instances as well\n However, the already placed debuffs on enemies do not update either\n The damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies\n SPELL STEAL Grants all 3 charges upon initially acquiring ability\n Subsequent ability acquisition only grants the remaining charges"
       ],
       "item_behaviour": [],
       "description": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 35 seconds.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range:  1800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1800",
         "Effect Radius: 400",
         "Effect Delay: 1.2",
-        "Damage per Second: 25\/40\/55\/70 ( 49\/64\/79\/94)",
-        "Move Speed Slow: 12%\/18%\/24%\/30% ( 26%\/32%\/38%\/44%)",
+        "Damage per Second: 25\/40\/55\/70 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 49\/64\/79\/94)",
+        "Move Speed Slow: 12%\/18%\/24%\/30% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 26%\/32%\/38%\/44%)",
         "Shrapnel Duration: 10",
         "Aura Linger Duration: 0.5"
       ],
@@ -42,10 +42,10 @@
         "Headshot can miss",
         "The proccing attack first applies the debuffs, then its own damage",
         "The damage is considered as a conditional attack damage bonus\n Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Sniper's attack damage\n The attack damage bonus values are not considered by critical strike or cleave\n However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g\n damage block)\n Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
-        "Adds an average of 8\/20\/32\/44 ( 20\/32\/44\/56) damage to each attack",
-        "Sets the proc chance to 100% while  Take Aim is active\n During Take Aim, it increases his attack damage output by 20\/50\/80\/110 ( 50\/80\/110\/140)\n If is not leveled, or if the caster does not have Headshot, it is not applied",
+        "Adds an average of 8\/20\/32\/44 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20\/32\/44\/56) damage to each attack",
+        "Sets the proc chance to 100% while <span image=\"images\/take_aim.webp\">[picture:take_aim]<\/span> Take Aim is active\n During Take Aim, it increases his attack damage output by 20\/50\/80\/110 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 50\/80\/110\/140)\n If is not leveled, or if the caster does not have Headshot, it is not applied",
         "Cannot proc against wards and buildings, but can proc against allies",
-        "Upon proccing, Headshot knocks back the target, away from Sniper\n The knockback does not interrupt channeling abilities\n The knockback is not applied on units who are already affected by other sources of forced movement\n Knocks units back at a speed of 100 ( 380)\n Destroys trees within 100 radius enemies come in contact with during the knockback",
+        "Upon proccing, Headshot knocks back the target, away from Sniper\n The knockback does not interrupt channeling abilities\n The knockback is not applied on units who are already affected by other sources of forced movement\n Knocks units back at a speed of 100 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 380)\n Destroys trees within 100 radius enemies come in contact with during the knockback",
         "Headshot uses pseudo-random distribution"
       ],
       "item_behaviour": [],
@@ -53,10 +53,10 @@
       "hot_key": "W",
       "params": [
         "Proc Chance: 40%",
-        "Damage: 20\/50\/80\/110 ( 50\/80\/110\/140)",
+        "Damage: 20\/50\/80\/110 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 50\/80\/110\/140)",
         "Move Speed Slow: 100%",
         "Attack Speed Slow: 100",
-        "Knockback Distance: 10 ( 38)",
+        "Knockback Distance: 10 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38)",
         "Slow Duration: 0.5",
         "Knockback Duration: 0.1"
       ],
@@ -76,17 +76,17 @@
     {
       "notes": [
         "Interrupts Sniper's channeling abilities upon cast",
-        "Passively increases Sniper's total attack range to 650\/750\/850\/950 ( 750\/850\/950\/1050)"
+        "Passively increases Sniper's total attack range to 650\/750\/850\/950 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 750\/850\/950\/1050)"
       ],
       "item_behaviour": [],
       "description": "Extends the attack range of Sniper's rifle. Can be activated to provide 100% Headshot chance. Slows you by 45%\/40%\/35%\/30% for the duration.",
       "hot_key": "E",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Passive Attack Range Bonus: 100\/200\/300\/400",
         "Active Self Move Speed Slow: 45%\/40%\/35%\/30%",
         "Active Set Headshot Proc Chance: 100%",
-        "Active Duration: 3 ( 4)"
+        "Active Duration: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Sniper_Take_Aim.mp3\/revision\/latest?cb=20210828223317",
       "effects": [
@@ -102,21 +102,21 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "The grenade travels at a speed of 2500 until reaching the targeted point\n The projectile has 200 radius flying vision\n This vision does not last",
         "Knocks Sniper and enemies within the radius away from the targeted point at a speed of 1187.5 upon cast\n The knockback distance is always 475, no matter how far the unit is from the center\n Also knocks Sniper and the affected enemies 100 range upwards, resulting in a small arc\n Can push units over impassable terrain\n Destroys trees any unit comes in contact with during the knockback",
         "Affected enemies are fully disabled during the knockback\n Although Sniper is affected by the knockback, he is not disabled",
         "Although not mentioned in the tooltip, enemies are also disarmed, on top of being slowed",
         "Concussive Grenade first applies the debuff, then the knockback, then the damage",
         "Concussive Grenade cancels most position-changing effects\n Affects units that are currently being affected by horizontal forced movement\n Does not affect units that are currently being affected by upward movement\n The 3 notes above also apply to the caster",
-        "Does not affect  Roshan"
+        "Does not affect <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan"
       ],
       "item_behaviour": [],
       "description": "Launches a grenade at the target area, dealing damage to enemies and knocking them and Sniper himself back. Enemies affected have their movement slowed after the knockback.",
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+0.8",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Radius: 375",
         "Damage: 25",
         "Knockback Distance: 475",
@@ -147,17 +147,17 @@
         "Cannot target hidden units and gets canceled when the target turns hidden",
         "Assassinate has an increased cast range buffer of 600, instead of using the default 250\n This means once the cast animation begins, the target has to move at least 3600 range away from Sniper to be considered out of range",
         "The initial weapon loading sound during the cast time is audible to Sniper only",
-        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter immediately updates all current projectiles\n SPELL STEAL This ability's and its <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Ability Upgrade's cast point is not modified when acquired\n SOULBIND Fires a projectile at the primary target after the cast animation, then another projectile is fired instantly on the secondary target"
+        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter immediately updates all current projectiles\n SPELL STEAL This ability's and its <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Ability Upgrade's cast point is not modified when acquired\n SOULBIND Fires a projectile at the primary target after the cast animation, then another projectile is fired instantly on the secondary target"
       ],
       "item_behaviour": [],
       "description": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.",
       "hot_key": "R",
       "params": [
-        "Cast Animation: 2+1.37 ( 0.5+2.87 )",
-        "Cast Range:  3000",
+        "Cast Animation: 2+1.37 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 0.5+2.87 )",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 3000",
         "Cast Range Buffer: 600",
         "Damage: 320\/510\/700",
-        "Stun Duration: 0.01 ( 1\/1.25\/1.5)",
+        "Stun Duration: 0.01 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1\/1.25\/1.5)",
         "Vision Buff Max Duration: 4"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Sniper_Assassinate_1.mp3\/revision\/latest?cb=20191216024003",

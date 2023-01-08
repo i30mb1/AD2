@@ -3,24 +3,24 @@
     {
       "notes": [
         "Does not interrupt Slardar's channeling abilities upon cast",
-        "Grants phased movement for the duration, allowing Slardar to pass through other units and wards\n Grants a total of 43%\/48%\/53%\/58% movement speed bonus while active inside the river\n Can regenerate up to 120\/240\/360\/480 ( 1440\/1560\/1680\/1800) health in one minute while inside the river",
-        "The river bonuses are applied when Slardar makes physical contact with the following: River water\n Puddle created by  Slithereen Crush upon cast\n Puddles left behind by a  Corrosive Hazed enemy unit cast\n The aforementioned puddles have to be created by Slardar for the bonuses to be applied",
+        "Grants phased movement for the duration, allowing Slardar to pass through other units and wards\n Grants a total of 43%\/48%\/53%\/58% movement speed bonus while active inside the river\n Can regenerate up to 120\/240\/360\/480 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1440\/1560\/1680\/1800) health in one minute while inside the river",
+        "The river bonuses are applied when Slardar makes physical contact with the following: River water\n Puddle created by <span image=\"images\/slithereen_crush.webp\">[picture:slithereen_crush]<\/span> Slithereen Crush upon cast\n Puddles left behind by a <span image=\"images\/corrosive_haze.webp\">[picture:corrosive_haze]<\/span> Corrosive Hazed enemy unit cast\n The aforementioned puddles have to be created by Slardar for the bonuses to be applied",
         "While on river water, the bonuses are still granted when Slardar turns invulnerable\n However, if being moved by upward movement sources, the bonuses are lost until he lands back in the water",
         "While in puddles created by Slardar's abilities, the bonuses are still granted when Slardar is being moved by upward movement sources\n However, the bonuses are lost when Slardar turns invulnerable",
         "Multiple instances of the river bonus do not stack, and the bonuses of the river do not linger at all",
-        "SCEPTER NOTES Stacks multiplicatively with other sources of status resistance\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter immediately grants the river passive bonuses\n The puddles created by  Slithereen Crush and  Corrosive Haze does not provide any river bonuses if the caster does not have Guardian Sprint"
+        "SCEPTER NOTES Stacks multiplicatively with other sources of status resistance\n Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter immediately grants the river passive bonuses\n The puddles created by <span image=\"images\/slithereen_crush.webp\">[picture:slithereen_crush]<\/span> Slithereen Crush and <span image=\"images\/corrosive_haze.webp\">[picture:corrosive_haze]<\/span> Corrosive Haze does not provide any river bonuses if the caster does not have Guardian Sprint"
       ],
       "item_behaviour": [],
       "description": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar gains movement speed bonus while in the river.",
       "hot_key": "Q",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "River Move Speed Bonus: 18%",
         "Active Move Speed Bonus: 25%\/30%\/35%\/40%",
         "Active Duration: 10",
-        "River Health Regen Bonus: 2\/4\/6\/8 ( 24\/26\/28\/30)",
-        "River Armor Bonus: 1\/2\/3\/4 ( 12\/13\/14\/15)",
-        "River Status Resistance Bonus:  40%"
+        "River Health Regen Bonus: 2\/4\/6\/8 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 24\/26\/28\/30)",
+        "River Armor Bonus: 1\/2\/3\/4 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 12\/13\/14\/15)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> River Status Resistance Bonus:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Slardar_Guardian_Sprint.mp3\/revision\/latest?cb=20191216023816",
       "effects": [
@@ -36,27 +36,27 @@
     },
     {
       "notes": [
-        "The stun and movement speed slow are applied at the same time, so overall, the slow lasts for 4\/5\/6\/7 ( 4.2\/5.2\/6.2\/7.2) seconds",
+        "The stun and movement speed slow are applied at the same time, so overall, the slow lasts for 4\/5\/6\/7 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4.2\/5.2\/6.2\/7.2) seconds",
         "Slithereen Crush first applies the stun debuff, then the slow debuff, then the Corrosive Haze debuff, and then the damage",
-        "The puddle created provides an aura that grants Slardar the river bonuses\n Unlike the river, the puddle created by Slithereen Crush has a linger duration of 0.5 seconds, and only grants the bonuses to Slardar\n Can regenerate up to 7\/18\/33\/52 ( 45\/94\/147\/204) health within the area for the entire duration\n Multiple instances of the river bonus do not stack",
-        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter immediately grants the river passive bonuses\n The puddles created by Slithereen Crush do not provide any river bonuses if the caster does not have Guardian Sprint\n Guardian Sprint notes fully apply\n If it is not leveled, no bonuses are applied",
-        "SHARD NOTES  Corrosive Haze based on its current level gets applied to all enemies hit by Slithereen Crush\n Corrosive Haze notes fully apply\n If it is not leveled, no debuff is applied"
+        "The puddle created provides an aura that grants Slardar the river bonuses\n Unlike the river, the puddle created by Slithereen Crush has a linger duration of 0.5 seconds, and only grants the bonuses to Slardar\n Can regenerate up to 7\/18\/33\/52 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 45\/94\/147\/204) health within the area for the entire duration\n Multiple instances of the river bonus do not stack",
+        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter immediately grants the river passive bonuses\n The puddles created by Slithereen Crush do not provide any river bonuses if the caster does not have Guardian Sprint\n Guardian Sprint notes fully apply\n If it is not leveled, no bonuses are applied",
+        "SHARD NOTES <span image=\"images\/corrosive_haze.webp\">[picture:corrosive_haze]<\/span> Corrosive Haze based on its current level gets applied to all enemies hit by Slithereen Crush\n Corrosive Haze notes fully apply\n If it is not leveled, no debuff is applied"
       ],
       "item_behaviour": [],
       "description": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.35+0.6",
-        "Effect Radius: 350 ( 425)",
-        "Puddle Radius: 250 ( 600)",
-        "Damage: 70\/140\/210\/280 ( 220\/290\/360\/430)",
+        "Effect Radius: 350 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 425)",
+        "Puddle Radius: 250 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 600)",
+        "Damage: 70\/140\/210\/280 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 220\/290\/360\/430)",
         "Move Speed Slow: 20%\/25%\/30%\/35%",
         "Attack Speed Slow: 20\/25\/30\/35",
-        "Stun Duration: 1 ( 1.2)",
+        "Stun Duration: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.2)",
         "Slow Duration: 3\/4\/5\/6",
-        "Puddle Duration: 3\/4\/5\/6 ( 22\/23\/24\/25)",
+        "Puddle Duration: 3\/4\/5\/6 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 22\/23\/24\/25)",
         "Puddle Aura Linger Duration: 0.5",
-        "Corrosive Haze Duration:  5"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Corrosive Haze Duration:  5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Slardar_Slithereen_Crush.mp3\/revision\/latest?cb=20191216023820",
       "effects": [
@@ -73,21 +73,21 @@
     },
     {
       "notes": [
-        "Does not stack with other bashes\n The bash from <span image=\"items\/skull_basher\/full.webp\">[Skull Basher]<\/span> Skull Basher and <span image=\"items\/abyssal_blade\/full.webp\">[Abyssal Blade]<\/span> Abyssal Blade is innately disabled for Slardar, even if Bash of the Deep is not leveled up",
+        "Does not stack with other bashes\n The bash from <span image=\"items\/skull_basher\/full.webp\">[picture:skull_basher]<\/span> Skull Basher and <span image=\"items\/abyssal_blade\/full.webp\">[picture:abyssal_blade]<\/span> Abyssal Blade is innately disabled for Slardar, even if Bash of the Deep is not leveled up",
         "Each successful attack done on an enemy hero or creep adds one to the attack counting buff\n The buff is always present but is hidden at 0 charges",
         "Does not count attacks done against allies, wards or buildings, nor bashes them on the bashing attack",
         "The charges have no duration and last indefinitely",
         "When the charges reach 4, the bash is applied and the charges are set back to 0",
         "The triggering attack first applies the debuff, then its own damage",
         "The bonus damage is considered as a conditional attack damage bonus\n Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Slardar's attack damage\n The attack damage bonus values are not considered by critical strike\n However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g\n damage block)\n Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
-        "Deals 100\/200\/300\/400 ( 200\/300\/400\/500) damage (before reductions) to non-hero units\n Treats illusions and creep-heroes as creeps\n Fully affects enemy  Couriers"
+        "Deals 100\/200\/300\/400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 200\/300\/400\/500) damage (before reductions) to non-hero units\n Treats illusions and creep-heroes as creeps\n Fully affects enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "After 3 attacks, your next attack will bash the target. Deals double damage against creeps.",
       "hot_key": "E",
       "params": [
         "Required Hits: 4",
-        "Damage: 50\/100\/150\/200 ( 100\/150\/200\/250)",
+        "Damage: 50\/100\/150\/200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100\/150\/200\/250)",
         "Creep Damage Percentage: 200%",
         "Stun Duration: 1.3"
       ],
@@ -109,18 +109,18 @@
         "Provides shared vision and True Sight over the target",
         "Creates 1 puddle at the target's current location in 0.5-second intervals, starting immediately upon cast\n A puddle is only created if the previous puddles are more than 50 range away from the target's current location\n If there is a previous puddle within range, it gets its duration refreshed instead\n This means, despite the description, it does not create a continuous trail and has gaps between the puddles depending on the target's speed",
         "Each created puddle has its own independent duration",
-        "Armor reduction of successive casts does not stack, but immediately updates the ability values, including its  talent upgrades and refresh the duration\n TALENT NOTES Both armor reduction increasing and Corrosive Haze undispellable  talents do not update the current active instance",
-        "Fully affects enemy  Couriers",
-        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter immediately grants the river passive bonuses\n The puddles created by Corrosive Haze do not provide any river bonuses if the caster does not have Guardian Sprint\n Unlike the river, the puddle created has a linger duration of 0.5 seconds, and grants the bonuses to Slardar and his illusions\n Guardian Sprint notes fully apply\n If it is not leveled, no bonuses are applied\n Multiple instances of the river bonus do not stack"
+        "Armor reduction of successive casts does not stack, but immediately updates the ability values, including its <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent upgrades and refresh the duration\n TALENT NOTES Both armor reduction increasing and Corrosive Haze undispellable <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents do not update the current active instance",
+        "Fully affects enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
+        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter immediately grants the river passive bonuses\n The puddles created by Corrosive Haze do not provide any river bonuses if the caster does not have Guardian Sprint\n Unlike the river, the puddle created has a linger duration of 0.5 seconds, and grants the bonuses to Slardar and his illusions\n Guardian Sprint notes fully apply\n If it is not leveled, no bonuses are applied\n Multiple instances of the river bonus do not stack"
       ],
       "item_behaviour": [],
       "description": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility. The enemy unit leaves a trail of water behind it for 8 seconds.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.67",
-        "Cast Range:  700\/800\/900",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700\/800\/900",
         "Puddle Radius: 100",
-        "Armor Reduction: 10\/15\/20 ( 14\/19\/24)",
+        "Armor Reduction: 10\/15\/20 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14\/19\/24)",
         "Debuff Duration: 18",
         "Puddle Duration: 8",
         "Puddle Aura Linger Duration: 0.5"

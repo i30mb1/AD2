@@ -3,21 +3,21 @@
     {
       "notes": [
         "The bolt travels at a speed of 500\n The projectile has a 325 radius flying vision\n This vision does not linger\n Also provides the same vision at the target's location for 3.34 seconds upon successfully hitting it",
-        "Checks Skywrath Mage's  intelligence upon releasing the projectile\n This means that the projectile's damage is set upon launch and does not adapt when losing or gaining intelligence",
-        "This is how much damage Arcane Bolt deals with a certain amount of intelligence (before reductions): Level 1 (25 ): 113\/133\/153\/173 damage Level 5 (41 ): 137\/157\/177\/197 damage Level 10 (61 ): 168\/188\/208\/228 damage Level 15 (82 ): 199\/219\/239\/259 damage Level 20 (102 ): 229\/249\/269\/289 damage Level 25 (123 ): 260\/280\/300\/320 damage Level 30 (143 ): 291\/311\/331\/351 damage",
-        "SCEPTER NOTES Whenever Arcane Bolt is cast, a different random target, prioritizing heroes, within the search radius is also targeted by a second Arcane Bolt\n The search radius is centered around the primary target, not around Skywrath Mage\n Since it uses a defined radius and is not based on the cast range, it is not affected by cast range modifying abilities (e.g\n <span image=\"items\/aether_lens\/full.webp\">[Aether Lens]<\/span> Aether Lens)\n Treats clones and illusions as heroes and creep-heroes as creeps\n If no other valid targets are found within the search radius, the second Arcane Bolt is not released",
-        "TALENT NOTES The additional Arcane Bolt per cast  talent adds a 3rd target to this, following the same rules as the <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter upgrade\n Fully affects  Couriers upon learning the Arcane Bolt pierces spell immunity  talent"
+        "Checks Skywrath Mage's <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span> intelligence upon releasing the projectile\n This means that the projectile's damage is set upon launch and does not adapt when losing or gaining intelligence",
+        "This is how much damage Arcane Bolt deals with a certain amount of intelligence (before reductions): Level 1 (25 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span>): 113\/133\/153\/173 damage Level 5 (41 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span>): 137\/157\/177\/197 damage Level 10 (61 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span>): 168\/188\/208\/228 damage Level 15 (82 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span>): 199\/219\/239\/259 damage Level 20 (102 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span>): 229\/249\/269\/289 damage Level 25 (123 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span>): 260\/280\/300\/320 damage Level 30 (143 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span>): 291\/311\/331\/351 damage",
+        "SCEPTER NOTES Whenever Arcane Bolt is cast, a different random target, prioritizing heroes, within the search radius is also targeted by a second Arcane Bolt\n The search radius is centered around the primary target, not around Skywrath Mage\n Since it uses a defined radius and is not based on the cast range, it is not affected by cast range modifying abilities (e.g\n <span image=\"items\/aether_lens\/full.webp\">[picture:aether_lens]<\/span> Aether Lens)\n Treats clones and illusions as heroes and creep-heroes as creeps\n If no other valid targets are found within the search radius, the second Arcane Bolt is not released",
+        "TALENT NOTES The additional Arcane Bolt per cast <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent adds a 3rd target to this, following the same rules as the <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter upgrade\n Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers upon learning the Arcane Bolt pierces spell immunity <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent"
       ],
       "item_behaviour": [],
       "description": "Skywrath Mage launches a slow-moving bolt of arcane magic, dealing damage to an enemy unit based on Skywrath Mage's intelligence.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.1+0.9",
-        "Cast Range:  875",
-        "Number of Targets: 1 ( 2) ( 2,  3)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 875",
+        "Number of Targets: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2) (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2, <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3)",
         "Base Damage: 75\/95\/115\/135",
         "Intelligence as Damage Multiplier: 1.5",
-        "Secondary Targets Search Radius:  700 ( 700)"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Secondary Targets Search Radius:  700 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 700)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Skywrath_Mage_Arcane_Bolt_1.mp3\/revision\/latest?cb=20191216023606",
       "effects": [
@@ -40,17 +40,17 @@
         "The area damage deals 90\/135\/180\/225 damage to creeps\n The area damage treats illusions and creep-heroes as creeps",
         "Concussive Shot first applies the damage, then the debuff",
         "Movement speed slow of successive shots neither stack nor update its ability values but refresh the duration",
-        "SCEPTER NOTES Whenever Concussive Shot is cast, a different random target, prioritizing heroes, within the search radius is also targeted by a second Concussive Shot\n Uses the same search radius as the primary projectile, but slightly different targeting behaviors\n The <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Ability Upgrade now treats illusions and creep-heroes as heroes\n Still neither target wards nor buildings\n Does not target invisible, invulnerable, hidden, or spell immune units or units in the Fog of War\n If no other valid targets are found within the search radius, the second Concussive Shot is not released",
-        "TALENT NOTES The Global Concussive Shot  talent does not consider enemy  Couriers as valid targets or secondary targets"
+        "SCEPTER NOTES Whenever Concussive Shot is cast, a different random target, prioritizing heroes, within the search radius is also targeted by a second Concussive Shot\n Uses the same search radius as the primary projectile, but slightly different targeting behaviors\n The <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Ability Upgrade now treats illusions and creep-heroes as heroes\n Still neither target wards nor buildings\n Does not target invisible, invulnerable, hidden, or spell immune units or units in the Fog of War\n If no other valid targets are found within the search radius, the second Concussive Shot is not released",
+        "TALENT NOTES The Global Concussive Shot <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not consider enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers as valid targets or secondary targets"
       ],
       "item_behaviour": [],
       "description": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range. Upon impact, it deals damage and slows in an area of effect. Deals 75% damage to creeps.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0+1.03",
-        "Search Radius: 1600 ( Global)",
+        "Search Radius: 1600 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Global)",
         "Effect Radius: 250",
-        "Number of Targets: 1 ( 2)",
+        "Number of Targets: 1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2)",
         "Damage: 120\/180\/240\/300",
         "Creep Damage Percentage: 75%",
         "Move Speed Slow: 40%",
@@ -71,7 +71,7 @@
     },
     {
       "notes": [
-        "Reduces most heroes' total magic resistance to 10%\/6%\/2%\/-1% ( 1%\/-3%\/-7%\/-10%)\n Treats illusions and creep-heroes as creeps\n The magic resistance reduction does not affect creeps",
+        "Reduces most heroes' total magic resistance to 10%\/6%\/2%\/-1% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1%\/-3%\/-7%\/-10%)\n Treats illusions and creep-heroes as creeps\n The magic resistance reduction does not affect creeps",
         "Successive casts on the same target do not stack but refresh the duration",
         "SCEPTER NOTES Whenever Ancient Seal is cast, a different random target, prioritizing heroes, within the search radius is also targeted\n The search radius is centered around the primary target, not around Skywrath Mage\n Treats illusions and clones as heroes and creep-heroes as creeps\n Does not target invisible, invulnerable, hidden, or spell immune units or units in the Fog of War\n If no other valid targets are found within the search radius, the second Ancient Seal is not applied"
       ],
@@ -80,11 +80,11 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.1+0.97",
-        "Cast Range:  700\/750\/800\/850",
-        "Number of Targets: 1 ( 2)",
-        "Magic Resistance Reduction: 20%\/25%\/30%\/35% ( 32%\/37%\/42%\/47%)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700\/750\/800\/850",
+        "Number of Targets: 1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2)",
+        "Magic Resistance Reduction: 20%\/25%\/30%\/35% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 32%\/37%\/42%\/47%)",
         "Duration: 3\/4\/5\/6",
-        "Secondary Target Search Radius:  700"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Secondary Target Search Radius:  700"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Skywrath_Mage_Ancient_Seal.mp3\/revision\/latest?cb=20191216023604",
       "effects": [
@@ -100,13 +100,13 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Gains a stack whenever one of Skywrath Mage's abilities deals damage to enemies (before reductions)\n Fully procs on-damage effects, abilities dealing 0 damage or negative damage to units also grant a stack\n Fully procs on abilities reflected as well\n Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities that do not trigger on-cast effects\n Does not trigger on HP Removal flagged damage sources",
         "Shield of the Scion's first grants its bonuses before the triggering abilities are cast",
         "Each stack places a new hidden modifier buff on Skywrath Mage\n This means their durations are independent of each other\n The counter modifiers on Skywrath Mage shows how much intelligence and armor he gained\n The number of stacks can be seen on the status buff icon",
         "Each stack effectively grants 24 mana and 0.1 mana regeneration bonus, and 2 main attack damage bonus per hero hit",
-        "For  Arcane Bolt and  Concussive Shot: The ability grants a stack per hero hit",
-        "For  Mystic Flare: The ability grants a stack per hero hit and per damage interval\n Can grant up to a total of 44  intelligence bonus and 11 armor bonus per hero hit"
+        "For <span image=\"images\/arcane_bolt.webp\">[picture:arcane_bolt]<\/span> Arcane Bolt and <span image=\"images\/concussive_shot.webp\">[picture:concussive_shot]<\/span> Concussive Shot: The ability grants a stack per hero hit",
+        "For <span image=\"images\/mystic_flare.webp\">[picture:mystic_flare]<\/span> Mystic Flare: The ability grants a stack per hero hit and per damage interval\n Can grant up to a total of 44 <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span> intelligence bonus and 11 armor bonus per hero hit"
       ],
       "item_behaviour": [],
       "description": "Every time Skywrath Mage deals magic damage to an enemy hero with an ability, he gains a buff that grants bonus Intelligence and Armor. Each charge stacks independently.",
@@ -132,7 +132,7 @@
       "notes": [
         "If enemy heroes are within the radius (including illusions, clones and creep-heroes), only the heroes are affected\n Non-hero units only get damaged if no enemy heroes are within the area\n Does not affect spell immune, invulnerable and hidden units",
         "Deals damage in 0.1-second intervals, starting 0.1 seconds after cast, resulting in 22 damage instances",
-        "This is how much damage Mystic Flare deals when hitting a certain amount of units for the full duration (before reductions): 1 Unit: 36.36\/54.55\/72.73 ( 56.82\/75\/93.18) per interval, and 800\/1200\/1600 ( 1250\/1650\/2050) total damage\n 2 Units: 18.18\/27.27\/36.36 ( 28.41\/37.5\/46.59) per interval, and 400\/600\/800 ( 625\/825\/1025) total damage\n 3 Units: 12.12\/18.18\/24.24 ( 18.94\/25\/31.06) per interval, and 266.67\/400\/533.33 ( 416.67\/550\/683.33) total damage\n 4 Units: 9.09\/13.64\/18.18 ( 14.2\/18.75\/23.3) per interval, and 200\/300\/400 ( 312.5\/412.5\/512.5) total damage\n 5 Units: 7.27\/10.91\/14.55 ( 11.36\/15\/18.64) per interval, and 160\/240\/320 ( 250\/330\/410) total damage.",
+        "This is how much damage Mystic Flare deals when hitting a certain amount of units for the full duration (before reductions): 1 Unit: 36.36\/54.55\/72.73 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 56.82\/75\/93.18) per interval, and 800\/1200\/1600 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1250\/1650\/2050) total damage\n 2 Units: 18.18\/27.27\/36.36 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 28.41\/37.5\/46.59) per interval, and 400\/600\/800 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 625\/825\/1025) total damage\n 3 Units: 12.12\/18.18\/24.24 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 18.94\/25\/31.06) per interval, and 266.67\/400\/533.33 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 416.67\/550\/683.33) total damage\n 4 Units: 9.09\/13.64\/18.18 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14.2\/18.75\/23.3) per interval, and 200\/300\/400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 312.5\/412.5\/512.5) total damage\n 5 Units: 7.27\/10.91\/14.55 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 11.36\/15\/18.64) per interval, and 160\/240\/320 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 250\/330\/410) total damage.",
         "A hidden debuff is responsible for the particle effects on hit enemies\n It has only visual purposes\n The debuff is placed by an aura and lingers for 0.5 seconds",
         "SCEPTER NOTES Casting Mystic Flare now automatically casts another instance centered on a random enemy, prioritizing heroes, within the search radius but outside the 170 effect radius\n The search radius is centered around the targeted area, not around Skywrath Mage\n Treats illusions and clones as heroes, and creep-heroes as creeps\n Ignores invisible, invulnerable, hidden, or spell immune units within the search radius\n If no other valid targets are found within the search radius, the second Mystic Flare is not released"
       ],
@@ -141,13 +141,13 @@
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.1+0",
-        "Cast Range:  1200",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1200",
         "Flare Radius: 170",
-        "Number of Flares: 1 ( 2)",
+        "Number of Flares: 1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2)",
         "Damage Interval: 0.1",
-        "Total Damage: 800\/1200\/1600 ( 1250\/1650\/2050)",
+        "Total Damage: 800\/1200\/1600 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1250\/1650\/2050)",
         "Flare Duration: 2.2",
-        "Secondary Target Search Radius:  700"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Secondary Target Search Radius:  700"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Skywrath_Mage_Mystic_Flare_1.mp3\/revision\/latest?cb=20191216023602",
       "effects": [

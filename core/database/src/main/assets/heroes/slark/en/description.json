@@ -3,8 +3,8 @@
     {
       "notes": [
         "Interrupts Slark's channeling abilities upon cast",
-        "Deals 9\/16\/23\/30 ( 16\/23\/30\/37) damage within a 325 radius in 0.1-second intervals, starting 1.5 seconds after cast for a total of 10 instances",
-        "Slark takes 2.7\/4.8\/6.9\/9 ( 4.8\/6.9\/9\/11.1) damage in the same intervals, resulting in 27\/48\/69\/90 ( 48\/69\/90\/111) total damage\n Applies a strong dispel on Slark in the same intervals, before each of its damage instances\n The self-damage is never lethal and it can be reduced or amplified",
+        "Deals 9\/16\/23\/30 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 16\/23\/30\/37) damage within a 325 radius in 0.1-second intervals, starting 1.5 seconds after cast for a total of 10 instances",
+        "Slark takes 2.7\/4.8\/6.9\/9 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4.8\/6.9\/9\/11.1) damage in the same intervals, resulting in 27\/48\/69\/90 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 48\/69\/90\/111) total damage\n Applies a strong dispel on Slark in the same intervals, before each of its damage instances\n The self-damage is never lethal and it can be reduced or amplified",
         "Dark Pact's visual and sound effects during the 1.5 seconds delay are only visible and audible to allies\n For enemies, they instantly see and hear the ability effects after the effect delay",
         "The visual effects of the damaging pulses are visible even when Slark is invisible, but not in the Fog of War",
         "Dark Pact ends 2.5 seconds after cast, but ends instantly upon Slark's death",
@@ -14,10 +14,10 @@
       "description": "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and dealing damage to enemy units around him and to himself. Slark only takes 30% of the damage.",
       "hot_key": "Q",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Damage Radius: 325",
         "Effect Delay: 1.5",
-        "Total Damage: 90\/160\/230\/300 ( 160\/230\/300\/370)",
+        "Total Damage: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 160\/230\/300\/370)",
         "Self Damage Percentage: 30%",
         "Pulses Duration: 1"
       ],
@@ -36,27 +36,27 @@
     },
     {
       "notes": [
-        "Leaps at a speed of 933.33 ( 1599.99) for up to 0.75 seconds\n Does not disjoint projectiles upon cast",
+        "Leaps at a speed of 933.33 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1599.99) for up to 0.75 seconds\n Does not disjoint projectiles upon cast",
         "Pounce have the following leap mechanics: Always leaps towards the direction Slark is facing\n Does not lock Slark's facing angle during the leap\n Always leaps the full distance, unless an enemy hero gets within 120 radius of Slark during the leap\n Moves Slark upwards over other units and over impassable terrain",
         "Slark can turn and cast abilities and items during Pounce, but cannot attack",
-        "With the maximum distance and latch radius, Pounce can latch on enemy heroes up to 820 ( 1320) range away\n Can only latch on heroes and clones\n Does not latch on illusions and creep-heroes\n Can latch on invisible units, but not on invulnerable or hidden units\n When latching on a unit, Slark is automatically ordered to attack the target\n Pounce first applies the leash debuff, then apply 0\/1\/2\/3  Essence Shift stacks based on its current level\n Essence Shift notes fully apply\n If it is not learned, no stacks are applied",
+        "With the maximum distance and latch radius, Pounce can latch on enemy heroes up to 820 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1320) range away\n Can only latch on heroes and clones\n Does not latch on illusions and creep-heroes\n Can latch on invisible units, but not on invulnerable or hidden units\n When latching on a unit, Slark is automatically ordered to attack the target\n Pounce first applies the leash debuff, then apply 0\/1\/2\/3 <span image=\"images\/essence_shift.webp\">[picture:essence_shift]<\/span> Essence Shift stacks based on its current level\n Essence Shift notes fully apply\n If it is not learned, no stacks are applied",
         "Stops the enemy by slowing their movement speed\n The slow gets exponentially stronger towards the edges of the 120 leash radius\n This effectively causes the target to come to halt if the leash is stretched too much\n The slow is only present when facing away from the center\n The target is not slowed when facing toward the center\n Since the slow is fluctuating a lot, it is not displayed in the HUD",
-        "The leashed enemy hero is prevented from casting certain mobility abilities\n If cast before getting leashed, the following abilities are not able to break the leash:  Skewer,  Leap,  Pounce,  Tree Dance,  Primal Spring,  Toggle Movement, and an enemy-targeted <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike\n Every other position changing effect, can break the leash when stretching it beyond the maximum radius\n <span image=\"items\/force_staff\/full.webp\">[Force Staff]<\/span> Force Staff, <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike, <span image=\"items\/force_boots\/full.webp\">[Force Boots]<\/span> Force Boots, and <span image=\"items\/psychic_headband\/full.webp\">[Psychic Headband]<\/span> Psychic Headband instantly dispel the Pounce debuff on the target, regardless of the maximum radius",
-        "When the leash expires while a position-changing effect (e.g\n knockback) is ongoing, it instantly cancels the position-changing effect\n This goes for the following abilities:  Flamebreak,  Primal Roar,  Power Cogs,  Hookshot,  Vacuum,  Gust,  Boulder Smash,  Rolling Boulder,  Geomagnetic Grip,  Deafening Blast,  Tether,  Blinding Light,  Adaptive Strike (Strength),  Blast Off!,  Charge of Darkness,  Greater Bash,  Timber Chain,  Walrus PUNCH!, <span image=\"items\/force_staff\/full.webp\">[Force Staff]<\/span> Force Staff and <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike",
+        "The leashed enemy hero is prevented from casting certain mobility abilities\n If cast before getting leashed, the following abilities are not able to break the leash: <span image=\"images\/skewer.webp\">[picture:skewer]<\/span> Skewer, <span image=\"images\/leap.webp\">[picture:leap]<\/span> Leap, <span image=\"images\/pounce.webp\">[picture:pounce]<\/span> Pounce, <span image=\"images\/tree_dance.webp\">[picture:tree_dance]<\/span> Tree Dance, <span image=\"images\/primal_spring.webp\">[picture:primal_spring]<\/span> Primal Spring, <span image=\"images\/toggle_movement.webp\">[picture:toggle_movement]<\/span> Toggle Movement, and an enemy-targeted <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike\n Every other position changing effect, can break the leash when stretching it beyond the maximum radius\n <span image=\"items\/force_staff\/full.webp\">[picture:force_staff]<\/span> Force Staff, <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike, <span image=\"items\/force_boots\/full.webp\">[picture:force_boots]<\/span> Force Boots, and <span image=\"items\/psychic_headband\/full.webp\">[picture:psychic_headband]<\/span> Psychic Headband instantly dispel the Pounce debuff on the target, regardless of the maximum radius",
+        "When the leash expires while a position-changing effect (e.g\n knockback) is ongoing, it instantly cancels the position-changing effect\n This goes for the following abilities: <span image=\"images\/flamebreak.webp\">[picture:flamebreak]<\/span> Flamebreak, <span image=\"images\/primal_roar.webp\">[picture:primal_roar]<\/span> Primal Roar, <span image=\"images\/power_cogs.webp\">[picture:power_cogs]<\/span> Power Cogs, <span image=\"images\/hookshot.webp\">[picture:hookshot]<\/span> Hookshot, <span image=\"images\/vacuum.webp\">[picture:vacuum]<\/span> Vacuum, <span image=\"images\/gust.webp\">[picture:gust]<\/span> Gust, <span image=\"images\/boulder_smash.webp\">[picture:boulder_smash]<\/span> Boulder Smash, <span image=\"images\/rolling_boulder.webp\">[picture:rolling_boulder]<\/span> Rolling Boulder, <span image=\"images\/geomagnetic_grip.webp\">[picture:geomagnetic_grip]<\/span> Geomagnetic Grip, <span image=\"images\/deafening_blast.webp\">[picture:deafening_blast]<\/span> Deafening Blast, <span image=\"images\/tether.webp\">[picture:tether]<\/span> Tether, <span image=\"images\/blinding_light.webp\">[picture:blinding_light]<\/span> Blinding Light, <span image=\"images\/adaptive_strike_%28strength%29.png\">[picture:adaptive_strike_%28strength%29]<\/span> Adaptive Strike (Strength), <span image=\"images\/blast_off%21.png\">[picture:blast_off%21]<\/span> Blast Off!, <span image=\"images\/charge_of_darkness.webp\">[picture:charge_of_darkness]<\/span> Charge of Darkness, <span image=\"images\/greater_bash.webp\">[picture:greater_bash]<\/span> Greater Bash, <span image=\"images\/timber_chain.webp\">[picture:timber_chain]<\/span> Timber Chain, <span image=\"images\/walrus_punch.png\">[picture:walrus_punch]<\/span> Walrus PUNCH!, <span image=\"items\/force_staff\/full.webp\">[picture:force_staff]<\/span> Force Staff and <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike",
         "Destroys trees within 100 radius around Slark upon landing",
         "Pounce cannot be cast during Pounce\n During the leap, Pounce is on a non-refreshable cooldown which is bound to the leap buff",
-        "Deals 0 damage to the affected unit\n Fully procs on damage effects, such as  Corrosive Skin, except for abilities which have a minimum damage threshold (e.g\n  Gravekeeper's Cloak)"
+        "Deals 0 damage to the affected unit\n Fully procs on damage effects, such as <span image=\"images\/corrosive_skin.webp\">[picture:corrosive_skin]<\/span> Corrosive Skin, except for abilities which have a minimum damage threshold (e.g\n <span image=\"images\/gravekeeper's_cloak.webp\">[picture:gravekeeper's_cloak]<\/span> Gravekeeper's Cloak)"
       ],
       "item_behaviour": [],
       "description": "Slark leaps forward, grabbing the first hero he connects with and applying Essence Shift Stacks. That unit is leashed, and can only move a limited distance away from Slark's landing position.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.53",
-        "Leap Distance: 700 ( 1200)",
+        "Leap Distance: 700 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1200)",
         "Latch Radius: 120",
         "Leash Radius: 400",
         "Essence Shift Stacks: 0\/1\/2\/3",
-        "Leash Duration: 2.5\/2.75\/3\/3.25 ( 3\/3.25\/3.5\/3.75)"
+        "Leash Duration: 2.5\/2.75\/3\/3.25 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3\/3.25\/3.5\/3.75)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Slark_Pounce_1.mp3\/revision\/latest?cb=20191216023921",
       "effects": [
@@ -72,13 +72,13 @@
     },
     {
       "notes": [
-        "Essence Shift steals 1 of  \/  \/  all attributes ( 2  agility, 1  strength and  intelligence respectively) before the attack damage is applied\n Effective stats loss from losing strength and intelligence per stack: 20 health, 0.1 health regeneration, 12 mana and 0.05 mana regeneration\n Effective stats loss from losing agility per stack: 0.17 ( 0.33) main armor, 1 ( 2) attack speed, and 1 ( 2) main attack damage if the target is an  agility hero\n Effectively grants Slark 0.5 ( 0.67) main armor, 3 ( 4) attack speed and 3 ( 4) main attack damage bonus per stack",
+        "Essence Shift steals 1 of <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> \/ <span image=\"images\/agility_attribute_symbol.png\">[picture:agility_attribute_symbol]<\/span> \/ <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span> all attributes (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2 <span image=\"images\/agility_attribute_symbol.png\">[picture:agility_attribute_symbol]<\/span> agility, 1 <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> strength and <span image=\"images\/intelligence_attribute_symbol.png\">[picture:intelligence_attribute_symbol]<\/span> intelligence respectively) before the attack damage is applied\n Effective stats loss from losing strength and intelligence per stack: 20 health, 0.1 health regeneration, 12 mana and 0.05 mana regeneration\n Effective stats loss from losing agility per stack: 0.17 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.33) main armor, 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2) attack speed, and 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2) main attack damage if the target is an <span image=\"images\/agility_attribute_symbol.png\">[picture:agility_attribute_symbol]<\/span> agility hero\n Effectively grants Slark 0.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.67) main armor, 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4) attack speed and 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4) main attack damage bonus per stack",
         "Essence Shift cannot reduce any attribute below 0\n However, Slark continues to gain agility, even when the attacked hero has no more attributes left to steal\n This applies to the temporary steal, as well as the permanent steal",
         "Each stack places a new buff on Slark and a new debuff on the affected enemy\n This means their durations are independent from each other\n The number of stacks and the duration of the last stack can be seen on the status buff icon",
         "Upon death, the dying hero's attributes restore back to their normal values, while Slark keeps the bonus agility values for the remaining duration",
         "When Slark dies, he loses all temporarily stolen attributes, but the affected enemies do not get theirs back, and vice versa",
         "Can temporarily steal attributes from allies and clones, but not from illusions",
-        "Permanently stolen  agility is removed from the enemy's bonus agility and added to Slark's bonus agility\n Does not permanently steal agility if the enemy hero has Reincarnation, is an illusion, or from the  Tempest Double Grants a stack in the following conditions as long as the Essence Shift debuff has not expired: The hero, including ally heroes, has to die within the 300 steal radius while having the Essence Shift debuff, including denied enemy heroes\n To permanently steal agility outside the steal radius, Slark has to be credited for the kill\n Other player-controlled units do not count\n Can steal independently from each  Meepo Clones as long as it fulfill the conditions above\n Can steal agility even when Slark is dead as the kill happens",
+        "Permanently stolen <span image=\"images\/agility_attribute_symbol.png\">[picture:agility_attribute_symbol]<\/span> agility is removed from the enemy's bonus agility and added to Slark's bonus agility\n Does not permanently steal agility if the enemy hero has Reincarnation, is an illusion, or from the <span image=\"images\/arc_warden_tempest_double_minimap.png\">[picture:arc_warden_tempest_double_minimap]<\/span> Tempest Double Grants a stack in the following conditions as long as the Essence Shift debuff has not expired: The hero, including ally heroes, has to die within the 300 steal radius while having the Essence Shift debuff, including denied enemy heroes\n To permanently steal agility outside the steal radius, Slark has to be credited for the kill\n Other player-controlled units do not count\n Can steal independently from each <span image=\"images\/divided_we_stand.webp\">[picture:divided_we_stand]<\/span> Meepo Clones as long as it fulfill the conditions above\n Can steal agility even when Slark is dead as the kill happens",
         "The number of stolen agility gained can be seen on the status buff icon"
       ],
       "item_behaviour": [],
@@ -88,9 +88,9 @@
         "Permanent Steal Radius: 300",
         "Permanent Agility Steal: 1",
         "Enemy Strength\/Intelligence Lost per Attack: 1",
-        "Enemy Agility Lost per Attack: 1 ( 2)",
-        "Self Agility Gained per Attack: 3 ( 4)",
-        "Duration: 20\/40\/60\/80 ( 70\/90\/110\/130)"
+        "Enemy Agility Lost per Attack: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2)",
+        "Self Agility Gained per Attack: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4)",
+        "Duration: 20\/40\/60\/80 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 70\/90\/110\/130)"
       ],
       "audioUrl": "",
       "effects": [
@@ -106,19 +106,19 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
-        "Applies the Depth Shroud modifier based on the current level of Shadow Dance on allies within the area\n Shadow Dance notes fully apply\n If it is not learned, nothing happens upon cast, wasting mana and cooldown\n Does not prevent being revealed by  Chronosphere",
-        "The modifier provides the same invisibility, movement speed, health regeneration and attack speed bonus as  Shadow Dance does\n The modifier fully stacks with those of Shadow Dance\n This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed and 120\/180\/240 ( 200\/260\/320) health regeneration bonus while affected by Depth Shroud\n TALENT NOTES The attack speed bonus is only granted while  Shadow Dance or Depth Shroud is active\n However, the attack speed bonus is not doubled",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
+        "Applies the Depth Shroud modifier based on the current level of Shadow Dance on allies within the area\n Shadow Dance notes fully apply\n If it is not learned, nothing happens upon cast, wasting mana and cooldown\n Does not prevent being revealed by <span image=\"images\/chronosphere.webp\">[picture:chronosphere]<\/span> Chronosphere",
+        "The modifier provides the same invisibility, movement speed, health regeneration and attack speed bonus as <span image=\"images\/shadow_dance.webp\">[picture:shadow_dance]<\/span> Shadow Dance does\n The modifier fully stacks with those of Shadow Dance\n This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed and 120\/180\/240 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 200\/260\/320) health regeneration bonus while affected by Depth Shroud\n TALENT NOTES The attack speed bonus is only granted while <span image=\"images\/shadow_dance.webp\">[picture:shadow_dance]<\/span> Shadow Dance or Depth Shroud is active\n However, the attack speed bonus is not doubled",
         "The buff is provided by an aura\n Its buff lingers for 0.5 seconds",
-        "Affects every allied unit, including  Couriers, except buildings and wards\n Does not affect invulnerable or hidden units",
-        "Can regenerate up to 210\/315\/420 ( 350\/455\/560) health over its full duration"
+        "Affects every allied unit, including <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, except buildings and wards\n Does not affect invulnerable or hidden units",
+        "Can regenerate up to 210\/315\/420 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 350\/455\/560) health over its full duration"
       ],
       "item_behaviour": [],
       "description": "Creates a cloud at the target location. All allies inside the radius are hidden and affected by Shadow Dance.",
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.1+0.8",
-        "Cast Range:  800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
         "Radius: 250",
         "Duration: 3",
         "Aura Linger Duration: 0.5"
@@ -140,25 +140,25 @@
         "Interrupts Slark's channeling abilities upon cast",
         "Slark gains or loses the health regeneration and movement speed bonus 0.5 seconds after getting in or out of enemy vision, or casting Shadow Dance",
         "If Slark is damaged by a neutral creep, the health regeneration and movement speed bonus are lost for 2 seconds",
-        "Upon cast, Slark turns invisible and cannot be revealed by anything\n However, the black cloud created is visible to enemies\n Does not grant phased movement\n Neither grants the health regeneration nor movement speed bonus when being targeted by an enemy  Snowball",
+        "Upon cast, Slark turns invisible and cannot be revealed by anything\n However, the black cloud created is visible to enemies\n Does not grant phased movement\n Neither grants the health regeneration nor movement speed bonus when being targeted by an enemy <span image=\"images\/snowball.webp\">[picture:snowball]<\/span> Snowball",
         "The invisibility is granted by an aura, however, its buff does not linger\n The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed",
-        "Can regenerate up to 3600\/5400\/7200 ( 6000\/7800\/9600) health in one minute passively",
-        "While active, Shadow Dance can regenerate up to 240\/382.5\/540 ( 400\/552.5\/720) health\n With the duration increasing  talent, it can regenerate up to 500\/682.5\/880 health\n With both  talents, it can regenerate up to 500\/682.5\/880 health",
-        "TALENT NOTES The attack speed bonus is only granted while Shadow Dance or  Depth Shroud is active"
+        "Can regenerate up to 3600\/5400\/7200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6000\/7800\/9600) health in one minute passively",
+        "While active, Shadow Dance can regenerate up to 240\/382.5\/540 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 400\/552.5\/720) health\n With the duration increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, it can regenerate up to 500\/682.5\/880 health\n With both <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents, it can regenerate up to 500\/682.5\/880 health",
+        "TALENT NOTES The attack speed bonus is only granted while Shadow Dance or <span image=\"images\/depth_shroud.webp\">[picture:depth_shroud]<\/span> Depth Shroud is active"
       ],
       "item_behaviour": [],
       "description": "When used, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark. Passively, when not visible to the enemy team, Slark gains bonus movement speed and health regeneration.",
       "hot_key": "R",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Aura Radius: 0",
         "Fade Time: 0",
         "Move Speed Bonus: 24%\/36%\/48%",
-        "Health Regeneration Bonus: 60\/90\/120 ( 100\/130\/160)",
+        "Health Regeneration Bonus: 60\/90\/120 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100\/130\/160)",
         "Passive Activation Delay: 0.5",
         "Neutral Creep Damage Deactivate Duration: 2",
-        "Active Duration: 4\/4.25\/4.5 ( 5\/5.25\/5.5)",
-        "Active Attack Speed Bonus:  75"
+        "Active Duration: 4\/4.25\/4.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 5\/5.25\/5.5)",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Active Attack Speed Bonus:  75"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Slark_Shadow_Dance.mp3\/revision\/latest?cb=20191216023923",
       "effects": [

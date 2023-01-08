@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "Deals 50\/90\/130\/170 ( 130\/170\/210\/250) damage to buildings",
+        "Deals 50\/90\/130\/170 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 130\/170\/210\/250) damage to buildings",
         "The visual effects and the sound during the 0.8-second effect delay are only visible and audible to allies"
       ],
       "item_behaviour": [],
@@ -10,10 +10,10 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Blast Radius: 400",
         "Effect Delay: 0.8",
-        "Damage: 100\/180\/260\/340 ( 260\/340\/420\/500)",
+        "Damage: 100\/180\/260\/340 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 260\/340\/420\/500)",
         "Building Damage Percentage: 50%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Pugna_Nether_Blast_1.mp3\/revision\/latest?cb=20210424155908",
@@ -37,18 +37,18 @@
         "Stacks multiplicatively with other sources of magic resistance\n Reduces most allied heroes' total magic resistance to 6.25%\n Reduces most enemy heroes' total magic resistance to 2%\/-5%\/-13%\/-20%",
         "Decrepify's magic resistance reduction does not stack with other ethereal effects, the one with a higher value takes priority",
         "Successive casts on the same target update the ability values of the current instance, with the latter cast overriding the previous cast, regardless of factions",
-        "Can be cast on allied  Nether Wards and  Tombstones, but not enemy ones\n Cannot be cast on any other wards"
+        "Can be cast on allied <span image=\"images\/nether_ward.webp\">[picture:nether_ward]<\/span> Nether Wards and <span image=\"images\/tombstone.webp\">[picture:tombstone]<\/span> Tombstones, but not enemy ones\n Cannot be cast on any other wards"
       ],
       "item_behaviour": [],
       "description": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Afflicted units take extra magic damage.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.4",
-        "Cast Range:  400\/475\/550\/625",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 400\/475\/550\/625",
         "Enemy Move Speed Slow: 30%\/40%\/50%\/60%",
         "Ally Magic Resistance Reduction: 25%",
         "Enemy Magic Resistance Reduction: 30%\/40%\/50%\/60%",
-        "Duration: 3.5 ( 4.5)"
+        "Duration: 3.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4.5)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Pugna_Decrepify.mp3\/revision\/latest?cb=20191216022123",
       "effects": [
@@ -64,16 +64,16 @@
     },
     {
       "notes": [
-        "↓↓ Double-tapping automatically places the  Nether Ward right in front of Pugna, 150 ( 500) range away from him",
+        "↓↓ Double-tapping automatically places the <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Nether Ward right in front of Pugna, 150 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 500) range away from him",
         "Illusions and creep-heroes are treated as creeps when attacking the Nether Ward",
         "The aura only affects enemy heroes, including illusions, clones, and creep-heroes",
         "The damage is independent from the aura, so even though the debuff lingers, Nether Ward cannot damage units beyond 1400 radius\n Unlike the aura, the damage affects every enemy unit and not just heroes",
-        "The damage triggers on every instance of mana usage from abilities\n If an ability costs no mana to use, it does not trigger it\n This means if an ability uses mana over time (e.g\n  Chakram), the flare triggers on every single instance of mana they use",
-        "The damage does not trigger on mana loss caused by abilities that removes mana offensively (e.g\n  Mana Burn or  Mana Break)\n Fully ignores abilities that do not trigger on-cast effects (i.e\n active attack modifiers and toggle-abilities)",
-        "The damage is dealt before the actual ability is cast, so if the target dies to Nether Ward's damage, the ability stays unused\n This means that damage-negating effects with mana cost (e.g\n  Refraction) or abilities granting spell immunity with mana cost (e.g\n  Rage), do not save the caster if the damage is lethal\n Dying with  Reincarnation ready triggers the damage, but it does not prevent Reincarnation from going off",
-        "The damage source is the ward itself, meaning certain on-damage effects (e.g\n <span image=\"items\/blade_mail\/full.webp\">[Blade Mail]<\/span> Damage Return) react on the ward rather than on Pugna",
+        "The damage triggers on every instance of mana usage from abilities\n If an ability costs no mana to use, it does not trigger it\n This means if an ability uses mana over time (e.g\n <span image=\"images\/chakram.webp\">[picture:chakram]<\/span> Chakram), the flare triggers on every single instance of mana they use",
+        "The damage does not trigger on mana loss caused by abilities that removes mana offensively (e.g\n <span image=\"images\/mana_burn.webp\">[picture:mana_burn]<\/span> Mana Burn or <span image=\"images\/mana_break.webp\">[picture:mana_break]<\/span> Mana Break)\n Fully ignores abilities that do not trigger on-cast effects (i.e\n active attack modifiers and toggle-abilities)",
+        "The damage is dealt before the actual ability is cast, so if the target dies to Nether Ward's damage, the ability stays unused\n This means that damage-negating effects with mana cost (e.g\n <span image=\"images\/refraction.webp\">[picture:refraction]<\/span> Refraction) or abilities granting spell immunity with mana cost (e.g\n <span image=\"images\/rage.webp\">[picture:rage]<\/span> Rage), do not save the caster if the damage is lethal\n Dying with <span image=\"images\/reincarnation.webp\">[picture:reincarnation]<\/span> Reincarnation ready triggers the damage, but it does not prevent Reincarnation from going off",
+        "The damage source is the ward itself, meaning certain on-damage effects (e.g\n <span image=\"items\/blade_mail\/full.webp\">[picture:blade_mail]<\/span> Damage Return) react on the ward rather than on Pugna",
         "Fully affects invulnerable and invisible units and units in the Fog of War",
-        "SHARD NOTES  Life Drain can now be cast on the Nether Ward, and causes it to refract and be cast on all enemy heroes within  radius of the ward\n Life Drain refracted this way treats illusions and creep-heroes as heroes\n The range uses Life Drain's current cast range and is affected by cast range bonuses\n This only happens once upon cast; enemies entering the refract radius after cast are not affected\n Life Drain can be cast on any Nether Wards, regardless of factions\n Multiple Life Drains from different sources can be cast on the same Nether Ward as well, creating independent Life Drain refractions\n Although Nether Ward is refracting Life Drain, the damage is sourced to its caster, and not to the  Nether Ward\n Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal",
+        "SHARD NOTES <span image=\"images\/life_drain.webp\">[picture:life_drain]<\/span> Life Drain can now be cast on the Nether Ward, and causes it to refract and be cast on all enemy heroes within  radius of the ward\n Life Drain refracted this way treats illusions and creep-heroes as heroes\n The range uses Life Drain's current cast range and is affected by cast range bonuses\n This only happens once upon cast; enemies entering the refract radius after cast are not affected\n Life Drain can be cast on any Nether Wards, regardless of factions\n Multiple Life Drains from different sources can be cast on the same Nether Ward as well, creating independent Life Drain refractions\n Although Nether Ward is refracting Life Drain, the damage is sourced to its caster, and not to the <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Nether Ward\n Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal",
         "SHARD NOTES Life Drain cast this way drains 112\/168\/224 health per second per affected target\n Can drain up to 1120\/1680\/2240 health per affected target (before reductions) when fully channeled\n The effect is interrupted when the channeling is canceled or when the Nether Ward is destroyed\n Life Drain and its scepter upgrade notes fully apply\n SCEPTER NOTES The refracted Life Drain also grants a stack of 1% spell damage amplification per affected target in 0.25-second intervals, starting 0.25 seconds after cast, resulting in the same amount of instances as its damage instances"
       ],
       "item_behaviour": [],
@@ -81,17 +81,17 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.2+0.4",
-        "Cast Range:  150 ( 500)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 150 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 500)",
         "Radius: 1400",
-        "Hero Attacks to Destroy: 4 ( 7)",
-        "Non-Hero Attacks to Destroy: 16 ( 28)",
+        "Hero Attacks to Destroy: 4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 7)",
+        "Non-Hero Attacks to Destroy: 16 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 28)",
         "Base Damage: 50\/60\/70\/80",
-        "Damage per Used Mana: 1\/1.2\/1.4\/1.6 ( 2.75\/2.95\/3.15\/3.35)",
+        "Damage per Used Mana: 1\/1.2\/1.4\/1.6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.75\/2.95\/3.15\/3.35)",
         "Ward Duration: 18\/22\/26\/30",
         "Aura Linger Duration: 0.5",
-        "Life Drain Refract Radius:  700",
-        "Life Drain Damage Percentage:  70%",
-        "Life Drain Spell Amp Change per Second:  4%"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Life Drain Refract Radius: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Life Drain Damage Percentage:  70%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Life Drain Spell Amp Change per Second:  4%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Pugna_Nether_Ward_1.mp3\/revision\/latest?cb=20191216022128",
       "effects": [
@@ -110,16 +110,16 @@
       "notes": [
         "The links break when the targets turn invulnerable or hidden, exceed the break distance, or run out of health",
         "Exposes the affected targets, and provides True Sight over it\n Also provides 200 radius ground vision centered on the affected target upon cast for 10 seconds\n This vision does not follow the affected target and its duration is independent of the channeling time",
-        "The health restored equals the amount of damage dealt per tick after all reductions\n This means if the damage instance is increased or reduced, it heals for the same increased or reduced values\n This also goes for targeting allies\n The more damage it deals to Pugna, the more it heals and vice versa\n As a result, Pugna cannot heal allies if he has 100% magic resistance (e.g\n  Fate's Edict) or is under the effects of Magic Barrier sources\n TALENT NOTES The Life Drain heal increasing  talent amplifies the healing done by 20%\n This amplifies Life Drain's healing only, and stacks multiplicatively with other sources of heal amplification\n It is not affected by any general outgoing heal manipulation (e.g\n <span image=\"items\/holy_locket\/full.webp\">[Holy Locket]<\/span> Holy Blessing) on Pugna, but it can be affected by any incoming heal manipulation on the target",
-        "If Pugna's or the allied hero's health is full and the damaged unit is a hero, it restores their mana instead\n This means it also restores mana on allied non-hero units when they are at full health since Pugna (i.e\n a hero) is damaged\n Just like the health restoring, the amount of mana restored equals the amount of damage dealt after all reductions and amplifications (including the heal increasing  talent)\n The mana restored is neither affected by incoming nor outgoing mana restore manipulation\n Only restores mana to ally heroes\n Treats strong illusions and creep-heroes as creeps\n Can be cast on ally  Couriers",
+        "The health restored equals the amount of damage dealt per tick after all reductions\n This means if the damage instance is increased or reduced, it heals for the same increased or reduced values\n This also goes for targeting allies\n The more damage it deals to Pugna, the more it heals and vice versa\n As a result, Pugna cannot heal allies if he has 100% magic resistance (e.g\n <span image=\"images\/fate's_edict.webp\">[picture:fate's_edict]<\/span> Fate's Edict) or is under the effects of Magic Barrier sources\n TALENT NOTES The Life Drain heal increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent amplifies the healing done by 20%\n This amplifies Life Drain's healing only, and stacks multiplicatively with other sources of heal amplification\n It is not affected by any general outgoing heal manipulation (e.g\n <span image=\"items\/holy_locket\/full.webp\">[picture:holy_locket]<\/span> Holy Blessing) on Pugna, but it can be affected by any incoming heal manipulation on the target",
+        "If Pugna's or the allied hero's health is full and the damaged unit is a hero, it restores their mana instead\n This means it also restores mana on allied non-hero units when they are at full health since Pugna (i.e\n a hero) is damaged\n Just like the health restoring, the amount of mana restored equals the amount of damage dealt after all reductions and amplifications (including the heal increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent)\n The mana restored is neither affected by incoming nor outgoing mana restore manipulation\n Only restores mana to ally heroes\n Treats strong illusions and creep-heroes as creeps\n Can be cast on ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "The self-damage when targeting allies is lethal, so it can be used to deny oneself",
         "Drains 40\/60\/80 health in 0.25-second intervals, starting 0.25 seconds after cast, resulting in up to 40 instances\n Can drain up to 1600\/2400\/3200 health (before reductions) when fully channeled",
-        "TALENT NOTES The heal increasing  talent amplifies the heal value to 48\/72\/96 without changing the damage value\n It can heal up to 1920\/2880\/3840 health, while the damage dealt remains unchanged",
+        "TALENT NOTES The heal increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent amplifies the heal value to 48\/72\/96 without changing the damage value\n It can heal up to 1920\/2880\/3840 health, while the damage dealt remains unchanged",
         "The color of Life Drain's link changes depending on the situation: When draining life from an enemy, the link is red ➜ green (pink ➜ blue if Pugna is at full health)\n When draining life into an ally, the link is green ➜ green (blue ➜ green if the ally is at full health)",
         "Instantly destroys targeted enemy illusions on the first instance\n Allied illusions are not destroyed",
         "Life Drain first deals damage, then heal, then applies its spell damage amplification on each interval",
         "When Pugna turns invisible, Life Drain's particle effects continue to draw towards his last known location for the enemies",
-        "SCEPTER NOTES Life Drain now applies generic outgoing spell damage reduction on the affected enemy target while applying the same generic outgoing spell damage amplification on Pugna\n Stacks additively with other sources of generic outgoing damage manipulation\n Treats clones as heroes, illusions, and creep-heroes as creeps\n The reduction affects only spell damage enemies deal that is not flagged as HP removal\n Grants a stack of 2% spell damage amplification in 0.25-second intervals, starting 0.25 seconds after cast, resulting in the same amount of instances as its damage instances\n Vice versa, the affected target loses the same amount of spell damage amplification per interval\n Can grant up to 78% spell damage amplification bonus when fully channeled\n Life Drain can only grant up to 100% spell damage amplification bonus to Pugna, while the affected target can only lose up to a flat 75%\n With the spell damage amplification bonus, it can drain up to 2224\/3336\/4448 health (before reductions) when fully channeled\n The heal increasing  talent can heal up to 2668.8\/4003.2\/5337.6 health in total",
+        "SCEPTER NOTES Life Drain now applies generic outgoing spell damage reduction on the affected enemy target while applying the same generic outgoing spell damage amplification on Pugna\n Stacks additively with other sources of generic outgoing damage manipulation\n Treats clones as heroes, illusions, and creep-heroes as creeps\n The reduction affects only spell damage enemies deal that is not flagged as HP removal\n Grants a stack of 2% spell damage amplification in 0.25-second intervals, starting 0.25 seconds after cast, resulting in the same amount of instances as its damage instances\n Vice versa, the affected target loses the same amount of spell damage amplification per interval\n Can grant up to 78% spell damage amplification bonus when fully channeled\n Life Drain can only grant up to 100% spell damage amplification bonus to Pugna, while the affected target can only lose up to a flat 75%\n With the spell damage amplification bonus, it can drain up to 2224\/3336\/4448 health (before reductions) when fully channeled\n The heal increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can heal up to 2668.8\/4003.2\/5337.6 health in total",
         "SCEPTER NOTES Each stack places a new buff\/debuff on both Pugna and the affected target and refreshes the buff\/debuff duration\n The counter modifiers on both Pugna and his targets show how much spell damage amplification they gained or lost\n Upon death, the dying hero's outgoing spell damage values restore back to their normal values, while Pugna keeps the spell damage amplification values for the remaining duration\n SOULBIND Life Drain on the primary target ends prematurely when the secondary target is no longer affected by it\n However, prematurely ending the channeling on the primary target does not affect the channeling on the other target, even with the leash debuff expired"
       ],
       "item_behaviour": [],
@@ -127,16 +127,16 @@
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.2+0",
-        "Cast Range:  700",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700",
         "Max Channel Time: 10",
-        "Link Break Distance:  900",
+        "Link Break Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
         "Instance Interval: 0.25",
         "Health Drain per Second: 160\/240\/320",
-        "Outgoing Spell Amp Change per Second:  8%",
-        "Self Max Outgoing Spell Amp Bonus:  100%",
-        "Enemy Max Outgoing Spell Damage Reduction:  75%",
-        "Buff\/Debuff Duration:  8",
-        "Life Drain Heal Amplification:  20%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Outgoing Spell Amp Change per Second:  8%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Self Max Outgoing Spell Amp Bonus:  100%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Enemy Max Outgoing Spell Damage Reduction:  75%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Buff\/Debuff Duration:  8",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Life Drain Heal Amplification:  20%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Pugna_Life_Drain.mp3\/revision\/latest?cb=20191216022124",
       "effects": [

@@ -7,7 +7,7 @@
         "Can deal up to 340\/425\/510\/595 damage to a single unit (before reductions)",
         "When leveling up the ability while a cast is already active, the armor reduction value on already affected units does not update to the new value\n However, if an enemy receives the debuff after leveling it up, that enemy receives the new armor reduction value\n TALENT NOTES The armor reduction notes fully apply to the ally armor bonus <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n The damage value does not update and is always based on the level the ability was cast on",
         "The damage of multiple instances of Acid Spray fully stacks\n However, the enemy armor reduction and ally armor bonus value does not",
-        "Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
+        "Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take damage per second and have their armor reduced.",
@@ -172,7 +172,7 @@
         "Can regenerate up to 1500\/2250\/3000 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3000\/3750\/4500) health over its full duration",
         "Chemical Rage is fully canceled on death",
         "Successive casts before the previous cast finishes refresh the duration and update all ability values to the current level",
-        "Fully affects <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
+        "Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and health regeneration.",

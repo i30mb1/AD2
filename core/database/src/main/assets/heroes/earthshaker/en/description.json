@@ -3,28 +3,28 @@
     {
       "notes": [
         "Fissure's effects are instantly applied within its whole area\n There is no travel time",
-        "The fissure is created using many segments lined up in front of Earthshaker\n The amount of segments determines the total effective range of the Fissure\n The segments have a collision size of 24, and a distance of 8.25 between each other, with the first one being placed 8.25 range in front of Earthshaker\n This means the actual length of the Fissure can only be a factor of 56.25\n It is defined as (2 * 24 + 8.25) so that it never exceeds the listed values\n Therefore, Fissure consists of 24 ( 30) segments, resulting in an actual range of 1350 ( 1687.5)\n Every unit (except wards and buildings) which is within that radius upon cast is pushed aside",
-        "The stun and damage are applied in a circular shape around each segment\n This means the total damage\/stun radius consists of multiple overlapping circles, and not a smooth line\n A unit can only be hit by one instance per cast, even when within the damage\/stun radius of multiple segments\n Can hit units up to 1575 ( 1912.5) range in front and 216.75 range behind Earthshaker",
+        "The fissure is created using many segments lined up in front of Earthshaker\n The amount of segments determines the total effective range of the Fissure\n The segments have a collision size of 24, and a distance of 8.25 between each other, with the first one being placed 8.25 range in front of Earthshaker\n This means the actual length of the Fissure can only be a factor of 56.25\n It is defined as (2 * 24 + 8.25) so that it never exceeds the listed values\n Therefore, Fissure consists of 24 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30) segments, resulting in an actual range of 1350 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1687.5)\n Every unit (except wards and buildings) which is within that radius upon cast is pushed aside",
+        "The stun and damage are applied in a circular shape around each segment\n This means the total damage\/stun radius consists of multiple overlapping circles, and not a smooth line\n A unit can only be hit by one instance per cast, even when within the damage\/stun radius of multiple segments\n Can hit units up to 1575 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1912.5) range in front and 216.75 range behind Earthshaker",
         "Fissure first applies the debuff, then the damage",
-        "Units with flying movement (e.g\n  Arctic Burn) or unobstructed movement (e.g\n  Spectral Dagger) are not blocked by Fissure\n They still are fully affected by it otherwise when hit\n They are pushed aside, stuned and damaged",
+        "Units with flying movement (e.g\n <span image=\"images\/arctic_burn.webp\">[picture:arctic_burn]<\/span> Arctic Burn) or unobstructed movement (e.g\n <span image=\"images\/spectral_dagger.webp\">[picture:spectral_dagger]<\/span> Spectral Dagger) are not blocked by Fissure\n They still are fully affected by it otherwise when hit\n They are pushed aside, stuned and damaged",
         "Non-player-controlled units (i.e\n lane creeps) do not try to path around the Fissure, but simply walk against it as if it is not there\n This effectively causes them to get stuck, until they change directions (e.g\n when being aggro'd), or until the Fissure dissipates",
-        "SHARD NOTES The Fissure segments provide the caster with unobstructed movement while within 150 range of them\n The modifier lingers for 1 second\n This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area\n It also applies  Aftershock based on its current level around each of Fissure's segments whenever it gets triggered\n A unit can only be hit by one instance of Aftershock per cast, even when within the damage and\/or stun radius of multiple segments or multiple different Fissures\n The Aftershock uses a reduced stun duration of 0.45\/0.55\/0.65\/0.75 seconds\n SPELL STEAL  Aftershock applied is based on the acquired  Fissure level"
+        "SHARD NOTES The Fissure segments provide the caster with unobstructed movement while within 150 range of them\n The modifier lingers for 1 second\n This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area\n It also applies <span image=\"images\/aftershock.webp\">[picture:aftershock]<\/span> Aftershock based on its current level around each of Fissure's segments whenever it gets triggered\n A unit can only be hit by one instance of Aftershock per cast, even when within the damage and\/or stun radius of multiple segments or multiple different Fissures\n The Aftershock uses a reduced stun duration of 0.45\/0.55\/0.65\/0.75 seconds\n SPELL STEAL <span image=\"images\/aftershock.webp\">[picture:aftershock]<\/span> Aftershock applied is based on the acquired <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Fissure level"
       ],
       "item_behaviour": [],
       "description": "Slams the ground with a mighty totem, creating an impassable ridge of stone while stunning and damaging enemy units along its line.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.69+0",
-        "Cast Range:  1400 ( 1720)",
-        "Fissure Length:  1400 ( 1720)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1720)",
+        "Fissure Length: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1720)",
         "Fissure Pathing Block Radius: 24",
         "Fissure Damage\/Stun Radius: 225",
-        "Damage: 110\/160\/210\/260 ( 200\/250\/300\/350)",
+        "Damage: 110\/160\/210\/260 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 200\/250\/300\/350)",
         "Stun Duration: 1\/1.25\/1.5\/1.75",
         "Fissure Duration: 6.5\/7\/7.5\/8",
-        "Free Pathing Radius:  150",
-        "Free Pathing Linger Duration:  1",
-        "Aftershock Stun Duration Percentage:  50%"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Free Pathing Radius:  150",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Free Pathing Linger Duration:  1",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Aftershock Stun Duration Percentage:  50%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Earthshaker_Fissure_1.mp3\/revision\/latest?cb=20191216013150",
       "effects": [
@@ -41,27 +41,27 @@
     },
     {
       "notes": [
-        "Upon cast, Enchant Totem increases Earthshaker's attack range to 225\n Grants flat bonus attack damage based on the caster's main attack damage\n Does not further increase bonus attack damage\n The Enchant Totem buff is only used up upon successfully hitting a target\n Missed attacks do not waste it\n Leveling up the ability or the attack damage bonus  talent does not instantly update the current active instance",
-        "SCEPTER NOTES Enchant Totem turns into an area-targeted ability\n It may only target the ground or self\n ↓↓ Double-tapping automatically targets self\n The targeting reticule shows the radius of  Aftershock, even when it has not been learned yet\n When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.1-second cast animation and not leaping\n Earthshaker is unable to self-target when he is invulnerable",
-        "SCEPTER NOTES When ground-targeted, it has no cast point or cast backswing\n The leap duration is always 0.8 seconds, so the speed adapts based on the targeted distance\n The leap height is always 950 range on the z-axis\n During the leap, Earthshaker is fully disabled and prevented from acting\n While in the air, other units may pass below Earthshaker\n The ability counts as cast as soon as the leap starts\n However,  Aftershock and the totem buff are applied upon landing\n Getting disabled during the leap does not prevent the Aftershock and the totem buff from being applied\n Getting hit by other sources of forced movement causes the leap's trajectory to change, but it is not interrupted\n However, it causes the ability to not apply Aftershock or the totem buff upon landing\n The ability is fully and immediately canceled when being affected by upward movement, teleport, root and leash sources",
-        "The Enchant Totem buff grants the caster cleave for its duration, if the caster's range type is  melee",
+        "Upon cast, Enchant Totem increases Earthshaker's attack range to 225\n Grants flat bonus attack damage based on the caster's main attack damage\n Does not further increase bonus attack damage\n The Enchant Totem buff is only used up upon successfully hitting a target\n Missed attacks do not waste it\n Leveling up the ability or the attack damage bonus <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not instantly update the current active instance",
+        "SCEPTER NOTES Enchant Totem turns into an area-targeted ability\n It may only target the ground or self\n ↓↓ Double-tapping automatically targets self\n The targeting reticule shows the radius of <span image=\"images\/aftershock.webp\">[picture:aftershock]<\/span> Aftershock, even when it has not been learned yet\n When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.1-second cast animation and not leaping\n Earthshaker is unable to self-target when he is invulnerable",
+        "SCEPTER NOTES When ground-targeted, it has no cast point or cast backswing\n The leap duration is always 0.8 seconds, so the speed adapts based on the targeted distance\n The leap height is always 950 range on the z-axis\n During the leap, Earthshaker is fully disabled and prevented from acting\n While in the air, other units may pass below Earthshaker\n The ability counts as cast as soon as the leap starts\n However, <span image=\"images\/aftershock.webp\">[picture:aftershock]<\/span> Aftershock and the totem buff are applied upon landing\n Getting disabled during the leap does not prevent the Aftershock and the totem buff from being applied\n Getting hit by other sources of forced movement causes the leap's trajectory to change, but it is not interrupted\n However, it causes the ability to not apply Aftershock or the totem buff upon landing\n The ability is fully and immediately canceled when being affected by upward movement, teleport, root and leash sources",
+        "The Enchant Totem buff grants the caster cleave for its duration, if the caster's range type is <span image=\"images\/melee.png\">[picture:melee]<\/span> melee",
         "Cleave damage has the following properties: It counts as spell damage\n However, it has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal\n No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification\n Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took\n It is reduced by damage block",
-        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit\n Multiple sources of cleave fully stack and work independently\n Does not cleave upon attacking wards, buildings or allied units\n  Couriers, wards and buildings are unaffected by cleave\n Despite the visual effect, the cleave damage is applied instantly in the whole area"
+        "The complete cleave area is shaped like an isocseles trapezoid in front of the attacking unit\n Multiple sources of cleave fully stack and work independently\n Does not cleave upon attacking wards, buildings or allied units\n <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards and buildings are unaffected by cleave\n Despite the visual effect, the cleave damage is applied instantly in the whole area"
       ],
       "item_behaviour": [],
       "description": "Empowers Earthshaker's totem, causing it to deal extra damage and have 75 bonus attack range on the next attack.",
       "hot_key": "W",
       "params": [
-        "Cast Animation: 0.6+0.5 ( 0+0 )",
+        "Cast Animation: 0.6+0.5 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 0+0 )",
         "Attack Range Bonus: 75",
-        "Attack Damage Bonus: 100%\/200%\/300%\/400% ( 150%\/250%\/350%\/450%)",
+        "Attack Damage Bonus: 100%\/200%\/300%\/400% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 150%\/250%\/350%\/450%)",
         "Buff Duration: 14",
-        "Cast Range:  950",
-        "Leap Duration:  0.8",
-        "Cleave Starting Radius:  150",
-        "Cleave Distance:  650",
-        "Cleave End Radius:  360",
-        "Cleave Damage:  40%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Cast Range:  950",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Leap Duration:  0.8",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Cleave Starting Radius:  150",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Cleave Distance:  650",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Cleave End Radius:  360",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Cleave Damage:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Earthshaker_Enchant_Totem_1.mp3\/revision\/latest?cb=20191216013148",
       "effects": [
@@ -79,14 +79,14 @@
       "notes": [
         "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects",
         "Aftershock first applies the stun debuff, then the damage, then the effects of the triggering ability",
-        "The stun does not stack with the stun of  Fissure\n It follows the regular rule of stuns \u2014 the longer stun overrides the shorter one"
+        "The stun does not stack with the stun of <span image=\"images\/fissure.webp\">[picture:fissure]<\/span> Fissure\n It follows the regular rule of stuns \u2014 the longer stun overrides the shorter one"
       ],
       "item_behaviour": [],
       "description": "Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when Earthshaker casts his abilities.",
       "hot_key": "E",
       "params": [
-        "Radius: 300 ( 500)",
-        "Damage: 75\/100\/125\/150 ( 125\/150\/175\/200)",
+        "Radius: 300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 500)",
+        "Damage: 75\/100\/125\/150 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 125\/150\/175\/200)",
         "Stun Duration: 0.9\/1.1\/1.3\/1.5"
       ],
       "audioUrl": "",
@@ -109,7 +109,7 @@
         "The echo search radii are centered around each unit hit by the initial damage\n Echo waves are sent out to every enemy unit within the search radius, except to the unit itself\n This means the echo waves targets can be up to 1200 range away from Earthshaker upon cast\n This also means when only one enemy is within the radius, it takes no damage, since it cannot send echoes to itself",
         "Wards and buildings are completely ignored, they do not release and are not targeted by echoes",
         "Fully affects invisible units and units in the Fog of War",
-        "Can deal the following amount of damage when hitting a certain amount of heroes, with no other units nearby (before reductions): 2 Heroes: 240\/320\/400 ( 320\/400\/480) damage to each hero, 480\/640\/800 ( 640\/800\/960) total damage\n 3 Heroes: 380\/500\/620 ( 540\/660\/780) damage to each hero, 1140\/1500\/1860 ( 1620\/1980\/2340) total damage\n 4 Heroes: 520\/680\/840 ( 760\/920\/1080) damage to each hero, 2080\/2720\/3360 ( 3040\/3680\/4320) total damage\n 5 Heroes: 660\/860\/1060 ( 980\/1180\/1380) damage to each hero, 3300\/4300\/5300 ( 4900\/5900\/6900) total damage.",
+        "Can deal the following amount of damage when hitting a certain amount of heroes, with no other units nearby (before reductions): 2 Heroes: 240\/320\/400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 320\/400\/480) damage to each hero, 480\/640\/800 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 640\/800\/960) total damage\n 3 Heroes: 380\/500\/620 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 540\/660\/780) damage to each hero, 1140\/1500\/1860 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1620\/1980\/2340) total damage\n 4 Heroes: 520\/680\/840 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 760\/920\/1080) damage to each hero, 2080\/2720\/3360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3040\/3680\/4320) total damage\n 5 Heroes: 660\/860\/1060 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 980\/1180\/1380) damage to each hero, 3300\/4300\/5300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4900\/5900\/6900) total damage.",
         "The delay modifier is placed on every enemy damaged by Echo Slam\n It lasts for 10.5 seconds\n If an enemy dies with this modifier, they are counted by Planetfall's kill counter for unlocking the second style\n If the enemy is killed by Earthshaker, they receive the kill effect modifier, which creates the custom death effect of the Arcana"
       ],
       "item_behaviour": [],
@@ -120,7 +120,7 @@
         "Initial Search Radius: 600",
         "Echo Search Radius: 600",
         "Base Damage: 100\/140\/180",
-        "Echo Damage: 70\/90\/110 ( 110\/130\/150)"
+        "Echo Damage: 70\/90\/110 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 110\/130\/150)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Earthshaker_Echo_Slam_1.mp3\/revision\/latest?cb=20191216013146",
       "effects": [

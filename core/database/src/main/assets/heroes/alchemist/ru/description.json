@@ -7,7 +7,7 @@
         "В сумме может нанести до 320\/400\/480\/560 одному существу (без учета снижений)",
         "При улучшении способности или взятии таланта после применения заклинания и пока оно еще активно, значение снижения брони у уже затронутых врагов остается прежним\n Если же враг получит дебафф после этого момента, то значение снижения брони будет новым (то же самое относится и к <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> повышению брони)\n Количество урона всегда остается того же уровня, что и в момент произнесения заклинания",
         "Урон от нескольких применений Acid Spray складывается, но снижение брони (или <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> повышение) \u2014 нет",
-        "Не действует на <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> курьеров"
+        "Не действует на <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> курьеров"
       ],
       "item_behaviour": [],
       "description": "Распыляет в указанной области облако кислоты, которое наносит врагам периодический урон и снижает их броню.",

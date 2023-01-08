@@ -2,25 +2,25 @@
   "abilities": [
     {
       "notes": [
-        "Также использует ночные значения во время ночи от  Eclipse",
+        "Также использует ночные значения во время ночи от <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse",
         "Void сначала применяет замедление, затем наносит урон, потом - оглушает",
-        "Во время действия  Hunter in the Night остаточная анимация равна 0,57",
-        "При улучшении <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter Void становится ненаправленным заклинанием и действует на всех противников в радиусе 900\n Не выбирает невидимых существ и существ в тумане войны"
+        "Во время действия <span image=\"images\/hunter_in_the_night.webp\">[picture:hunter_in_the_night]<\/span> Hunter in the Night остаточная анимация равна 0,57",
+        "При улучшении <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter Void становится ненаправленным заклинанием и действует на всех противников в радиусе 900\n Не выбирает невидимых существ и существ в тумане войны"
       ],
       "item_behaviour": [],
       "description": "Создаёт губительную пустоту, которая замедляет врага и наносит ему урон. Ночью ненадолго оглушает жертву, останавливая прерываемые способности, а замедление длится дольше.",
       "hot_key": "Q",
       "params": [
         "Анимация применения: 0,3+0,33",
-        "Дальность применения: 525 ( 0)",
-        "Урон: 80\/160\/240\/320 ( 130\/210\/290\/370)",
+        "Дальность применения: 525 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 0)",
+        "Урон: 80\/160\/240\/320 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 130\/210\/290\/370)",
         "Замедление скорости передвижения: 50%",
         "Замедление скорости атаки: 50",
         "Длительность замедления днём: 1,25",
         "Длительность замедления ночью: 2,5\/3\/3,5\/4",
         "Длительность оглушения днём: 0",
-        "Длительность оглушения ночью: 0,1 ( 0,8)",
-        "Радиус:  900"
+        "Длительность оглушения ночью: 0,1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 0,8)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Радиус:  900"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Night_Stalker_Void.mp3\/revision\/latest?cb=20191216021028",
       "effects": [
@@ -37,10 +37,10 @@
     },
     {
       "notes": [
-        "Также использует ночные значения во время ночи от  Eclipse",
+        "Также использует ночные значения во время ночи от <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse",
         "Безмолвие предоставлено аурой, чей дебафф задерживается на 0,5 сек",
         "Длительность активированной ауры не обновляется при смене времени суток",
-        "Во время действия  Hunter in the Night остаточная анимация равна 0,67"
+        "Во время действия <span image=\"images\/hunter_in_the_night.webp\">[picture:hunter_in_the_night]<\/span> Hunter in the Night остаточная анимация равна 0,67"
       ],
       "item_behaviour": [],
       "description": "Герой вселяет ужас во врагов рядом с собой, отчего на них действует безмолвие. Ночью эффект длится дольше.",
@@ -66,19 +66,19 @@
     },
     {
       "notes": [
-        "Также действует во время ночи от  Eclipse",
-        "При улучшении с <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard Hunter in the Night становится активной способностью\n Пассивные эффекты также сохраняются\n Может быть применена на любое существо, кроме героев, иллюзий, клонов, крипов-геров, вардов, построек и  Рошана\n Не может быть использована на древних крипов днём, но может быть использована на них ночью\n Выбранный крип мгновенно убивается, давая золото и опыт в виде награды, если это был противник, или добиваясь, если это был союзник\n Несмотря на визуальные эффекты, восстановление здоровья и маны происходит мгновенно при применении"
+        "Также действует во время ночи от <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse",
+        "При улучшении с <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard Hunter in the Night становится активной способностью\n Пассивные эффекты также сохраняются\n Может быть применена на любое существо, кроме героев, иллюзий, клонов, крипов-геров, вардов, построек и <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Рошана\n Не может быть использована на древних крипов днём, но может быть использована на них ночью\n Выбранный крип мгновенно убивается, давая золото и опыт в виде награды, если это был противник, или добиваясь, если это был союзник\n Несмотря на визуальные эффекты, восстановление здоровья и маны происходит мгновенно при применении"
       ],
       "item_behaviour": [],
       "description": "Ночью герой оказывается в своей стихии: он атакует и передвигается увеличенной скоростью.",
       "hot_key": "E",
       "params": [
-        "Анимация применения: 0+1,07",
-        "Доп\n скорость передвижения: 22%\/28%\/34%\/40% ( 37%\/43%\/49%\/55%)",
-        "Доп\n скорость атаки: 20\/40\/60\/80 ( 120\/140\/160\/180)",
-        "Дальность применения:  150",
-        "Восстановление от макс\n здоровья:  35%",
-        "Восстановление от макс\n маны:  35%"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Анимация применения: 0+1,07",
+        "Доп\n скорость передвижения: 22%\/28%\/34%\/40% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 37%\/43%\/49%\/55%)",
+        "Доп\n скорость атаки: 20\/40\/60\/80 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 120\/140\/160\/180)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Дальность применения:  150",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Восстановление от макс\n здоровья:  35%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Восстановление от макс\n маны:  35%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Night_Stalker_Hunter_in_the_Night_move.mp3\/revision\/latest?cb=20191216021026",
       "effects": [
@@ -95,17 +95,17 @@
     },
     {
       "notes": [
-        "У ночи от Dark Ascension ниже приоритет, чем у дня, вызванного  Supernova\n Пока на карте светло от Supernova, Night Stalker всё также летает, обладает дополнительным уроном и беспрепятственным обзором, но обзор ограничивается его базовым дневным значением",
+        "У ночи от Dark Ascension ниже приоритет, чем у дня, вызванного <span image=\"images\/supernova.webp\">[picture:supernova]<\/span> Supernova\n Пока на карте светло от Supernova, Night Stalker всё также летает, обладает дополнительным уроном и беспрепятственным обзором, но обзор ограничивается его базовым дневным значением",
         "При использовании ночью остаточная анимация равна 0,5",
-        "Даёт обычный прямой бонусный урон от атаки\n Выбор  таланта на увеличение урона значение обновляется мгновенно, даже во время действия способности"
+        "Даёт обычный прямой бонусный урон от атаки\n Выбор <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> таланта на увеличение урона значение обновляется мгновенно, даже во время действия способности"
       ],
       "item_behaviour": [],
       "description": "Подавляет солнечный свет, создавая непроглядную тьму и раскрывая силы героя в полной мере. Он получает беспрепятственный обзор, свободное передвижение и дополнительный урон.",
       "hot_key": "R",
       "params": [
         "Анимация применения: 0,3+0",
-        "Дополнительный урон: 50\/100\/150 ( 85\/135\/185)",
-        "Длительность: 30 ( 38)"
+        "Дополнительный урон: 50\/100\/150 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 85\/135\/185)",
+        "Длительность: 30 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Night_Stalker_Dark_Ascension.mp3\/revision\/latest?cb=20191216021025",
       "effects": [

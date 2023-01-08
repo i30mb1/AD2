@@ -12,12 +12,12 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.77",
-        "Cast Range:  800",
-        "Target Move Speed Slow: 12%\/20%\/28%\/36% ( 24%\/32%\/40%\/48%)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
+        "Target Move Speed Slow: 12%\/20%\/28%\/36% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 24%\/32%\/40%\/48%)",
         "Allies Attack Speed Bonus: 25\/50\/75\/100",
         "Debuff Duration: 5\/6\/7\/8",
         "Buff Duration: 2",
-        "Damage:  225"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Damage:  225"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Chen_Penitence_1.mp3\/revision\/latest?cb=20191216012058",
       "effects": [
@@ -36,29 +36,29 @@
       "notes": [
         "Applies a basic dispel on the target which removes buffs and debuffs",
         "Persuading a new creep while already having the maximum amount of creeps instantly kills the oldest persuaded creep\n The death is not credited to anyone so that no one gets experience from it",
-        "Cannot persuade  Roshan,  Siege Creeps,  Couriers,  Necronomicon Warriors,  Necronomicon Archers, creep-heroes and ancient creeps\n SHARD NOTES Ancient creeps can now be persuaded, with a maximum of 1\/2\/3 ancient creeps per level of  Hand of God\n Ancient creeps are included in the max units count as well, so it does not allow Chen to have more creeps persuaded\n When persuading an ancient creep while already having the maximum amount of ancient creeps, the oldest persuaded ancient creep dies\n If Hand of God is not learned, Holy Persuasion can still be cast on ancient creeps, but it does nothing, wasting the mana and cooldown",
-        "With Level 4 Holy Persuasion, Chen can persuade the following number of creeps (and ancient creeps) on each level of   Hand of God: Level 1: Max 3 creeps with 1 ancient creep\n Level 2: Max 2 creeps with 2 ancient creeps\n Level 3: Max 1 creeps with 3 ancient creeps.",
-        "The following neutral creeps cannot be persuaded due to the level restriction: Level 4: Can persuade all neutral creeps Level 3 cannot persuade:  Ancient Black Dragon,  Ancient Granite Golem,  Ancient Ice Shaman,  Ancient Thunderhide,  Dark Troll Summoner,  Satyr Tormenter, Level 2, additionally unpersuadable:  Alpha Wolf,  Ancient Frostbitten Golem,  Ancient Rock Golem,  Ancient Rumblehide,  Centaur Conqueror,  Hellbear Smasher,  Warpine Raider,  Wildwing Ripper, Level 1, additionally unpersuadable:  Hellbear,  Mud Golem,  Satyr Mindstealer,  Shard Golem,",
-        "When the creep's max health is below the minimum health threshold, its maximum and current health are increased by the difference\n This counts as setting health and does not count as a heal\n Leveling the ability or the min health increasing  talent does not update the health of already persuaded creeps",
+        "Cannot persuade <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Siege Creeps, <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, <span image=\"images\/necronomicon_warrior.png\">[picture:necronomicon_warrior]<\/span> Necronomicon Warriors, <span image=\"images\/necronomicon_archer.png\">[picture:necronomicon_archer]<\/span> Necronomicon Archers, creep-heroes and ancient creeps\n SHARD NOTES Ancient creeps can now be persuaded, with a maximum of 1\/2\/3 ancient creeps per level of <span image=\"images\/hand_of_god.webp\">[picture:hand_of_god]<\/span> Hand of God\n Ancient creeps are included in the max units count as well, so it does not allow Chen to have more creeps persuaded\n When persuading an ancient creep while already having the maximum amount of ancient creeps, the oldest persuaded ancient creep dies\n If Hand of God is not learned, Holy Persuasion can still be cast on ancient creeps, but it does nothing, wasting the mana and cooldown",
+        "With Level 4 Holy Persuasion, Chen can persuade the following number of creeps (and ancient creeps) on each level of <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> <span image=\"images\/hand_of_god.webp\">[picture:hand_of_god]<\/span> Hand of God: Level 1: Max 3 creeps with 1 ancient creep\n Level 2: Max 2 creeps with 2 ancient creeps\n Level 3: Max 1 creeps with 3 ancient creeps.",
+        "The following neutral creeps cannot be persuaded due to the level restriction: Level 4: Can persuade all neutral creeps Level 3 cannot persuade: <span image=\"images\/ancient_black_dragon.png\">[picture:ancient_black_dragon]<\/span> Ancient Black Dragon, <span image=\"images\/ancient_granite_golem.png\">[picture:ancient_granite_golem]<\/span> Ancient Granite Golem, <span image=\"images\/ancient_ice_shaman.png\">[picture:ancient_ice_shaman]<\/span> Ancient Ice Shaman, <span image=\"images\/ancient_thunderhide.png\">[picture:ancient_thunderhide]<\/span> Ancient Thunderhide, <span image=\"images\/dark_troll_summoner.png\">[picture:dark_troll_summoner]<\/span> Dark Troll Summoner, <span image=\"images\/satyr_tormenter.png\">[picture:satyr_tormenter]<\/span> Satyr Tormenter, Level 2, additionally unpersuadable: <span image=\"images\/alpha_wolf.png\">[picture:alpha_wolf]<\/span> Alpha Wolf, <span image=\"images\/ancient_frostbitten_golem.png\">[picture:ancient_frostbitten_golem]<\/span> Ancient Frostbitten Golem, <span image=\"images\/ancient_rock_golem.png\">[picture:ancient_rock_golem]<\/span> Ancient Rock Golem, <span image=\"images\/ancient_rumblehide.png\">[picture:ancient_rumblehide]<\/span> Ancient Rumblehide, <span image=\"images\/centaur_conqueror.png\">[picture:centaur_conqueror]<\/span> Centaur Conqueror, <span image=\"images\/hellbear_smasher.png\">[picture:hellbear_smasher]<\/span> Hellbear Smasher, <span image=\"images\/warpine_raider.png\">[picture:warpine_raider]<\/span> Warpine Raider, <span image=\"images\/wildwing_ripper.png\">[picture:wildwing_ripper]<\/span> Wildwing Ripper, Level 1, additionally unpersuadable: <span image=\"images\/hellbear.png\">[picture:hellbear]<\/span> Hellbear, <span image=\"images\/mud_golem.png\">[picture:mud_golem]<\/span> Mud Golem, <span image=\"images\/satyr_mindstealer.png\">[picture:satyr_mindstealer]<\/span> Satyr Mindstealer, <span image=\"images\/shard_golem.png\">[picture:shard_golem]<\/span> Shard Golem,",
+        "When the creep's max health is below the minimum health threshold, its maximum and current health are increased by the difference\n This counts as setting health and does not count as a heal\n Leveling the ability or the min health increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update the health of already persuaded creeps",
         "Fully restores the creep's mana upon persuading by setting mana",
         "Grants regular flat bonus attack damage to the persuaded creeps",
-        "Can only be cast on units persuaded with Holy Persuasion to teleport them\n Cannot target any other unit under Chen's control\n Cannot target invulnerable or hidden persuaded creeps, but can teleport them if they turned invulnerable or hidden after cast\n The teleport locations are based on Chen's position upon teleporting, with the units appearing 120 range to his north, east, south, or west\n The very first persuaded unit teleported to Chen teleports randomly north, south, east, or west, and the following persuaded units continue counterclockwise\n Gives the target a stop command after teleporting it, canceling channeling abilities, and stopping queued orders\n Disjoints projectiles upon teleporting\n Damage greater than 0 (before reductions) from player-based damage (including  Roshan), but excluding from self, dispels the teleport buff\n If Chen is dead as the buff expires, the teleport does not happen",
-        "↓↓ Double-tapping or  Portrait-casting automatically targets all units under Chen's control, excluding wards, illusions, clones and non-ancient creep-heroes\n This is not limited to persuaded creeps, units acquired via other means (e.g\n  Helm of the Dominator, or other summons) are targeted as well\n Targets invulnerable and hidden units as well",
-        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter retroactively grants the  Martyrdom ability to the persuaded creeps"
+        "Can only be cast on units persuaded with Holy Persuasion to teleport them\n Cannot target any other unit under Chen's control\n Cannot target invulnerable or hidden persuaded creeps, but can teleport them if they turned invulnerable or hidden after cast\n The teleport locations are based on Chen's position upon teleporting, with the units appearing 120 range to his north, east, south, or west\n The very first persuaded unit teleported to Chen teleports randomly north, south, east, or west, and the following persuaded units continue counterclockwise\n Gives the target a stop command after teleporting it, canceling channeling abilities, and stopping queued orders\n Disjoints projectiles upon teleporting\n Damage greater than 0 (before reductions) from player-based damage (including <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan), but excluding from self, dispels the teleport buff\n If Chen is dead as the buff expires, the teleport does not happen",
+        "↓↓ Double-tapping or <span image=\"images\/self-cast_cursor_%28black%29.png\">[picture:self-cast_cursor_%28black%29]<\/span> Portrait-casting automatically targets all units under Chen's control, excluding wards, illusions, clones and non-ancient creep-heroes\n This is not limited to persuaded creeps, units acquired via other means (e.g\n <span image=\"items\/helm_of_the_dominator\/full.webp\">[picture:helm_of_the_dominator]<\/span> Helm of the Dominator, or other summons) are targeted as well\n Targets invulnerable and hidden units as well",
+        "SCEPTER NOTES Acquiring <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter retroactively grants the <span image=\"images\/martyrdom.webp\">[picture:martyrdom]<\/span> Martyrdom ability to the persuaded creeps"
       ],
       "item_behaviour": [],
       "description": "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage. Can be cast on converted creeps to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage dispels the buff.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.77",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Teleport Cast Range: Global",
         "Max Units: 1\/2\/3\/4",
-        "Creep Min Base Health: 700\/800\/900\/1000 ( 1900\/2000\/2100\/2200)",
+        "Creep Min Base Health: 700\/800\/900\/1000 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1900\/2000\/2100\/2200)",
         "Creep Move Speed Bonus: 10\/20\/30\/40",
-        "Attack Damage Bonus: 4\/10\/16\/22 ( 16\/22\/28\/34)",
+        "Attack Damage Bonus: 4\/10\/16\/22 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 16\/22\/28\/34)",
         "Persuasion Creep Max Level: 3\/4\/5\/6",
-        "Teleport Delay: 6 ( 4)"
+        "Teleport Delay: 6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Chen_Holy_Persuasion.mp3\/revision\/latest?cb=20191216012102",
       "effects": [
@@ -106,10 +106,10 @@
         "All units controlled by Chen are healed, including his illusions, summons (except for non-ancient creep-heroes) and persuaded or dominated units",
         "Does not heal any allied non-hero units or illusions, except for clones",
         "Can heal allies while they are invulnerable and while hidden",
-        "Heals in 1-second intervals, 1 second after cast, the initial heal is applied together with the first heal per second instance, resulting in 8 heal instances\n Can heal up to 360\/540\/720 ( 640\/820\/1000) health over its duration",
+        "Heals in 1-second intervals, 1 second after cast, the initial heal is applied together with the first heal per second instance, resulting in 8 heal instances\n Can heal up to 360\/540\/720 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 640\/820\/1000) health over its duration",
         "Hand of God first applies the buff, then the heal, then the strong dispel\n Heal per second from successive casts do not stack but refresh its duration",
         "The voice line upon cast is global for allies and not audible for enemies",
-        "SHARD NOTES  Holy Persuasion now allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God"
+        "SHARD NOTES <span image=\"images\/holy_persuasion.webp\">[picture:holy_persuasion]<\/span> Holy Persuasion now allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God"
       ],
       "item_behaviour": [],
       "description": "Heals all allied heroes on the map as well as all units under Chen's control. A large heal is applied at first and a slow heal over time is applied for afterwards.",
@@ -117,10 +117,10 @@
       "params": [
         "Cast Animation: 0.3+0.93",
         "Radius: Global",
-        "Initial Heal: 200\/300\/400 ( 400\/500\/600)",
-        "Heal per Second: 20\/30\/40 ( 30\/40\/50)",
+        "Initial Heal: 200\/300\/400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 400\/500\/600)",
+        "Heal per Second: 20\/30\/40 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/40\/50)",
         "Duration: 8",
-        "Max Ancient Creeps Count:  1\/2\/3"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Max Ancient Creeps Count:  1\/2\/3"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Chen_Hand_of_God.mp3\/revision\/latest?cb=20191216012101",
       "effects": [
@@ -136,12 +136,12 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter and  Hand of God to be leveled to be unlocked\n This ability is granted to the  Persuaded Creeps once Aghanim's Scepter is acquired\n When losing Aghanim's Scepter, the ability disappears immediately from the persuaded creeps",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter and <span image=\"images\/hand_of_god.webp\">[picture:hand_of_god]<\/span> Hand of God to be leveled to be unlocked\n This ability is granted to the <span image=\"images\/holy_persuasion.webp\">[picture:holy_persuasion]<\/span> Persuaded Creeps once Aghanim's Scepter is acquired\n When losing Aghanim's Scepter, the ability disappears immediately from the persuaded creeps",
         "Martyrdom's cooldown is shared among all persuaded units\n It is possible to have different cooldown values if another unit is persuaded after Martyrdom is cast",
-        "Cannot be cast on invulnerable units and  Couriers",
+        "Cannot be cast on invulnerable units and <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "↓↓ Double-tapping instantly kills the persuaded unit\n The death is not credited to anyone so that no one gets experience from it",
         "The cooldown is shared between all persuaded units",
-        "Does not affect  Couriers",
+        "Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "Hand of God notes fully apply"
       ],
       "item_behaviour": [],

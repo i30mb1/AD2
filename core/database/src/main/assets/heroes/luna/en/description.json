@@ -5,21 +5,21 @@
         "Lucent Beam first applies the damage, then the debuff",
         "Luna's glaive emits particles during the cast time, visible to everyone",
         "Provides 200 radius ground vision around the affected target for 3 seconds",
-        "SHARD NOTES Lucent Beam now grants a stack of bonus attack damage per hero hit, including  Eclipse's beams\n The buff durations are independent from each other, successive casts do not refresh the duration of previous stacks\n The number of flat bonus attack damage gained can be seen on the status buff icon and can be seen in its description\n Treats illusions and creep-heroes as heroes\n It is possible to have up to 30\/30\/30\/30 ( 30\/30\/45\/45) bonus attack damage, when cast on enemies and then every time after the ability's cooldown",
-        "TALENT NOTES The Glaives fired on Lucent Beam  talent launches 2 instant attacks on random enemies, closest from the target's location, within 500 search radius of the target upon cast\n Despite the description, it neither launches Moon Glaives upon cast, nor relies on Moon Glaves to be leveled for the instant attacks to proc\n The instant attacks originate from the targeted point or unit, they can proc any attack modifiers and on-hit effects normally (including  Moon Glaives)\n They do not have True Strike, but ignore disarms\n The attacks do not target invisible units, but can target units in Fog of War\n This  talent upgrade does not upgrade  Eclipse's beams"
+        "SHARD NOTES Lucent Beam now grants a stack of bonus attack damage per hero hit, including <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse's beams\n The buff durations are independent from each other, successive casts do not refresh the duration of previous stacks\n The number of flat bonus attack damage gained can be seen on the status buff icon and can be seen in its description\n Treats illusions and creep-heroes as heroes\n It is possible to have up to 30\/30\/30\/30 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 30\/30\/45\/45) bonus attack damage, when cast on enemies and then every time after the ability's cooldown",
+        "TALENT NOTES The Glaives fired on Lucent Beam <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent launches 2 instant attacks on random enemies, closest from the target's location, within 500 search radius of the target upon cast\n Despite the description, it neither launches Moon Glaives upon cast, nor relies on Moon Glaves to be leveled for the instant attacks to proc\n The instant attacks originate from the targeted point or unit, they can proc any attack modifiers and on-hit effects normally (including <span image=\"images\/moon_glaives.webp\">[picture:moon_glaives]<\/span> Moon Glaives)\n They do not have True Strike, but ignore disarms\n The attacks do not target invisible units, but can target units in Fog of War\n This <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent upgrade does not upgrade <span image=\"images\/eclipse.webp\">[picture:eclipse]<\/span> Eclipse's beams"
       ],
       "item_behaviour": [],
       "description": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+0.47",
-        "Cast Range:  800",
-        "Damage: 80\/160\/240\/320 ( 180\/260\/340\/420)",
-        "Stun Duration: 0.8 ( 1.2)",
-        "Attack Damage Bonus:  15",
-        "Buff Duration:  12",
-        "Instant Attack Search Radius:  500",
-        "Number of Instant Attacks:  2"
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
+        "Damage: 80\/160\/240\/320 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 180\/260\/340\/420)",
+        "Stun Duration: 0.8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.2)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Attack Damage Bonus:  15",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Buff Duration:  12",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Instant Attack Search Radius:  500",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Number of Instant Attacks:  2"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Luna_Lucent_Beam_1.mp3\/revision\/latest?cb=20191216015815",
       "effects": [
@@ -37,11 +37,11 @@
     {
       "notes": [
         "The bouncing glaives travel at the same speed as the leading attack's projectile\n This means their speed can be further increased by other attack projectile speed bonuses",
-        "Does not perform instant attacks\n The projectiles deal regular spell damage\n This means they do not trigger any attack modifier or on-hit effects, and ignore evasion\n However, it is still affected by damage block sources and  Bulwark, but not  Resonant Pulse",
+        "Does not perform instant attacks\n The projectiles deal regular spell damage\n This means they do not trigger any attack modifier or on-hit effects, and ignore evasion\n However, it is still affected by damage block sources and <span image=\"images\/bulwark.webp\">[picture:bulwark]<\/span> Bulwark, but not <span image=\"images\/resonant_pulse.webp\">[picture:resonant_pulse]<\/span> Resonant Pulse",
         "Moon Glavies' damage has the following flags: No-spell-lifesteal flag, preventing its damage from utilizing spell lifesteal\n No-spell-amplification flag, preventing its damage from being amplified with spell damage amplification",
-        "The glaives deal damage based on the damage amount calculated for the leading attack\n Attack damage amount is calculated upon attack begin\n This means it works with critical strike and quell, since these are included in the initial damage calculations\n This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit\n It also means that other conditional attack damage bonuses (i.e\n <span image=\"items\/javelin\/full.webp\">[Javelin]<\/span> Javelin damage proc) are not included, since these happen later in the calculations as well",
-        "Effectively increases Luna's attack damage by 71.88%\/93.75%\/120.26%\/153.89% ( 93.1%\/122.47%\/158.69%\/205.88%) if all 3\/4\/5\/6 bounces hit",
-        "Can bounce back to the same units if it already hit all other nearby units\n Cannot bounce to invisible units and on units in the Fog of War\n Does bounce to, but does not damage ethereal units\n Does not bounce to wards,  Couriers and allies, but it does bounce off of them when attacking them\n Fully works against buildings",
+        "The glaives deal damage based on the damage amount calculated for the leading attack\n Attack damage amount is calculated upon attack begin\n This means it works with critical strike and quell, since these are included in the initial damage calculations\n This also means that it does not matter how much damage the attack actually did to the target since that part is being calculated on projectile hit\n It also means that other conditional attack damage bonuses (i.e\n <span image=\"items\/javelin\/full.webp\">[picture:javelin]<\/span> Javelin damage proc) are not included, since these happen later in the calculations as well",
+        "Effectively increases Luna's attack damage by 71.88%\/93.75%\/120.26%\/153.89% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 93.1%\/122.47%\/158.69%\/205.88%) if all 3\/4\/5\/6 bounces hit",
+        "Can bounce back to the same units if it already hit all other nearby units\n Cannot bounce to invisible units and on units in the Fog of War\n Does bounce to, but does not damage ethereal units\n Does not bounce to wards, <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers and allies, but it does bounce off of them when attacking them\n Fully works against buildings",
         "Upon learning, Luna's glaive permanently emits blue particles, visible to everyone"
       ],
       "item_behaviour": [],
@@ -50,7 +50,7 @@
       "params": [
         "Search Radius: 500",
         "Number of Bounces: 3\/4\/5\/6",
-        "Damage Reduction per Bounce: 56%\/50%\/44%\/38% ( 48%\/42%\/36%\/30%)"
+        "Damage Reduction per Bounce: 56%\/50%\/44%\/38% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 48%\/42%\/36%\/30%)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Luna_Moon_Glaives.mp3\/revision\/latest?cb=20191216015815",
       "effects": [
@@ -67,7 +67,7 @@
     },
     {
       "notes": [
-        "Increases Luna's  nighttime vision range to 1050\/1300\/1550\/1800",
+        "Increases Luna's <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime vision range to 1050\/1300\/1550\/1800",
         "Grants regular flat bonus attack damage",
         "The aura's buff lingers for 0.5 seconds",
         "Affects invulnerable, but not hidden units\n Treat creep-heroes and clones as heroes",
@@ -80,7 +80,7 @@
         "Day Radius: 1200",
         "Night Radius: Global",
         "Self Base Night Vision Bonus: 250\/500\/750\/1000",
-        "Attack Damage Bonus: 6\/14\/20\/28 ( 41\/49\/55\/63)",
+        "Attack Damage Bonus: 6\/14\/20\/28 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 41\/49\/55\/63)",
         "Aura Linger Duration: 0.5"
       ],
       "audioUrl": "",
@@ -97,15 +97,15 @@
     },
     {
       "notes": [
-        "Eclipse turns the Time of Day into  nighttime for 10 seconds\n This is independent from Eclipse's duration\n Time of Day modifying abilities has the following priorities:  Supernova ➤ Eclipse ➤  Dark Ascension\n However, it does not interfere with the  nighttime caused by Dark Ascension in any way \u2014 they do not cancel or pause each other's nighttime",
-        "Eclipse's beams deal damage based on the current level of  Lucent Beam\n If it is not leveled, or if the caster does not have Lucent Beam, Eclipse deals no damage\n Eclipse notes fully apply\n The maximum possible damage to a single target (before reductions) on each level of Lucent Beam is: Level 1: 400 ( 900) ( 480\/960\/1440,  1080\/2160\/3240) Level 2: 800 ( 1300) ( 960\/1920\/2880,  1560\/3120\/4680) Level 3: 1200 ( 1700) ( 1440\/2880\/4320,  2040\/4080\/6120) Level 4: 1600 ( 2100) ( 1920\/3840\/5760,  2520\/5040\/7560)",
+        "Eclipse turns the Time of Day into <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime for 10 seconds\n This is independent from Eclipse's duration\n Time of Day modifying abilities has the following priorities: <span image=\"images\/supernova.webp\">[picture:supernova]<\/span> Supernova ➤ Eclipse ➤ <span image=\"images\/dark_ascension.webp\">[picture:dark_ascension]<\/span> Dark Ascension\n However, it does not interfere with the <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime caused by Dark Ascension in any way \u2014 they do not cancel or pause each other's nighttime",
+        "Eclipse's beams deal damage based on the current level of <span image=\"images\/lucent_beam.webp\">[picture:lucent_beam]<\/span> Lucent Beam\n If it is not leveled, or if the caster does not have Lucent Beam, Eclipse deals no damage\n Eclipse notes fully apply\n The maximum possible damage to a single target (before reductions) on each level of Lucent Beam is: Level 1: 400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 900) (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 480\/960\/1440, <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1080\/2160\/3240) Level 2: 800 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1300) (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 960\/1920\/2880, <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1560\/3120\/4680) Level 3: 1200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1700) (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1440\/2880\/4320, <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2040\/4080\/6120) Level 4: 1600 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2100) (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1920\/3840\/5760, <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2520\/5040\/7560)",
         "Does not hit invisible units and units in the Fog of War",
         "Successive casts of Eclipse work independently of each other",
-        "When Luna dies, Eclipse ends prematurely\n However, the  nighttime it created persists",
+        "When Luna dies, Eclipse ends prematurely\n However, the <span image=\"images\/nighttime.png\">[picture:nighttime]<\/span> nighttime it created persists",
         "Luna's glaive emits particles during the cast time, visible to everyone",
-        "SCEPTER NOTES Adds area-targeting functionality to Eclipse\n It may be unit-targeted on an ally or ground-targeted\n ↓↓ Double-tapping automatically targets self\n When targeting an ally, it follows that ally like how a regular cast follows Luna\n Can target any allied units, including  Couriers, except for wards and buildings\n Eclipse ends when the targeted ally dies, instead of Luna\n When ground-targeted, it stays stationary at the targeted point\n Provides 675 radius ground vision for its duration\n Eclipse still ends prematurely when Luna dies",
-        "SHARD NOTES Each hero hit by Eclipse's beam also grants a stack of bonus attack damage\n The buff durations are independent from each other, and the counter modifiers on Luna shows how much regular flat bonus attack damage is granted\n It is possible to have up to 75 \u2012 90\/135\/180 ( or 90\/180\/270) min and max bonus attack damage respectively if all beams hit",
-        "TALENT NOTES The Eclipse mini-stun  talent causes the beams to stun enemies for 0.25 seconds\n This stun is not based on Lucent Beam's stun, and is applied regardless of the Lucent Beam's ability level\n Lucent Beam first apply their damage, then the stun\n Learning this  talent immediately updates all currently active Eclipse instances\n SPELL STEAL  Lucent Beams applied is based on  Luna's current ability level when acquired"
+        "SCEPTER NOTES Adds area-targeting functionality to Eclipse\n It may be unit-targeted on an ally or ground-targeted\n ↓↓ Double-tapping automatically targets self\n When targeting an ally, it follows that ally like how a regular cast follows Luna\n Can target any allied units, including <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, except for wards and buildings\n Eclipse ends when the targeted ally dies, instead of Luna\n When ground-targeted, it stays stationary at the targeted point\n Provides 675 radius ground vision for its duration\n Eclipse still ends prematurely when Luna dies",
+        "SHARD NOTES Each hero hit by Eclipse's beam also grants a stack of bonus attack damage\n The buff durations are independent from each other, and the counter modifiers on Luna shows how much regular flat bonus attack damage is granted\n It is possible to have up to 75 \u2012 90\/135\/180 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> or 90\/180\/270) min and max bonus attack damage respectively if all beams hit",
+        "TALENT NOTES The Eclipse mini-stun <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent causes the beams to stun enemies for 0.25 seconds\n This stun is not based on Lucent Beam's stun, and is applied regardless of the Lucent Beam's ability level\n Lucent Beam first apply their damage, then the stun\n Learning this <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates all currently active Eclipse instances\n SPELL STEAL <span image=\"images\/lucent_beam.webp\">[picture:lucent_beam]<\/span> Lucent Beams applied is based on <span image=\"images\/luna_minimap.png\">[picture:luna_minimap]<\/span> Luna's current ability level when acquired"
       ],
       "item_behaviour": [],
       "description": "Showers random nearby enemies with strikes from Luna's current level of Lucent Beam. These beams do not stun their targets, and there is a maximum number of times that a single target can be struck. Also turns day into night for 10 seconds.",
@@ -113,13 +113,13 @@
       "params": [
         "Cast Animation: 0.5+0.37",
         "Search Radius: 675",
-        "Number of Beams: 6\/9\/12 ( 6\/12\/18)",
-        "Max Beams per Unit: 5 ( 6\/12\/18)",
-        "Beam Interval: 0.6 ( 0.3)",
-        "Eclipse Duration: 2.4\/4.2\/6 ( 1.8\/3.6\/5.4)",
+        "Number of Beams: 6\/9\/12 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 6\/12\/18)",
+        "Max Beams per Unit: 5 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 6\/12\/18)",
+        "Beam Interval: 0.6 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 0.3)",
+        "Eclipse Duration: 2.4\/4.2\/6 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1.8\/3.6\/5.4)",
         "Night Duration: 10",
-        "Stun Duration per Beam:  0.25",
-        "Cast Range:  2500"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Stun Duration per Beam:  0.25",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 2500"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Luna_Eclipse_1.mp3\/revision\/latest?cb=20191216015818",
       "effects": [

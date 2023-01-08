@@ -3,9 +3,9 @@
     {
       "notes": [
         "The projectile has ≈100 radius flying vision, and travels at a speed of 1200 until reaching the targeted point\n This vision last for 2 seconds at the targeted point upon reaching it",
-        "Ice Shards are always created in the same formation\n The open side of the shards circle is always facing towards Tusk's position upon cast\n The shards' formation is a 200 radius circle with one open side\n The center of the circle is 200 range before the targeted point\n The first shard is always created at the targeted point, in one line with Tusk's position upon cast\n The next shards are placed 40° further to the left and the right respectively, up to 6 shards (9 shards would form a full circle)\n Each shard's collision radius is approximately 67, and the distance between them is about 6, which is too small for most units to move through, except  Wraith King Skeletons\n SHARD NOTES 4 additional shards are placed to the left and right side of the last shards at the semi-circle's opening, forming a U-shape\n The shape has a width of 200, and has a length of 480\n This effectively increases the length of Ice Shards' formation by 280 from the tails of the open circle",
+        "Ice Shards are always created in the same formation\n The open side of the shards circle is always facing towards Tusk's position upon cast\n The shards' formation is a 200 radius circle with one open side\n The center of the circle is 200 range before the targeted point\n The first shard is always created at the targeted point, in one line with Tusk's position upon cast\n The next shards are placed 40° further to the left and the right respectively, up to 6 shards (9 shards would form a full circle)\n Each shard's collision radius is approximately 67, and the distance between them is about 6, which is too small for most units to move through, except <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Wraith King Skeletons\n SHARD NOTES 4 additional shards are placed to the left and right side of the last shards at the semi-circle's opening, forming a U-shape\n The shape has a width of 200, and has a length of 480\n This effectively increases the length of Ice Shards' formation by 280 from the tails of the open circle",
         "Non-player-controlled units (i.e\n lane creeps) do not try to path around Ice Shards, but simply walk against them as if they are not there\n This effectively causes them to get stuck, until they change directions (e.g\n when being aggroed), or until the shards dissipate",
-        "Units with flying movement (e.g\n  Arctic Burn) or unobstructed movement (e.g\n  Spectral Dagger) are not blocked by Ice Shards\n They still are fully affected by it otherwise when hit\n They will be either pushed aside or inside and damaged",
+        "Units with flying movement (e.g\n <span image=\"images\/arctic_burn.webp\">[picture:arctic_burn]<\/span> Arctic Burn) or unobstructed movement (e.g\n <span image=\"images\/spectral_dagger.webp\">[picture:spectral_dagger]<\/span> Spectral Dagger) are not blocked by Ice Shards\n They still are fully affected by it otherwise when hit\n They will be either pushed aside or inside and damaged",
         "SHARD NOTES Two 200 radius auras are now created at the centerline of the formation\n The first source is placed at the center of the default shards formation, 200 range before the targeted point\n The second source is placed 200 range behind the first source, between the additional 4 shards\n Since both sources overlap, the auras cover a total length of 600\n The damage per second and movement speed slow effects are provided by the auras and its debuff lingers for 0.5 seconds\n Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in up to 4\/5\/6\/7 instances\n Can deal up to 240\/300\/360\/420 damage (before reductions) to a single unit within the area for the entire duration"
       ],
       "item_behaviour": [],
@@ -13,16 +13,16 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.1+0",
-        "Cast Range:  1800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1800",
         "Damage Radius: 200",
         "Shards Spawn Radius: 200",
         "Shards Spawn Angle: 40°",
-        "Number of Shards: 7 ( 11)",
+        "Number of Shards: 7 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 11)",
         "Damage: 75\/150\/225\/300",
         "Shards Duration: 4\/5\/6\/7",
-        "Damage per Second:  60",
-        "Move Speed Slow:  40%",
-        "Aura Linger Duration:  0.5"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Damage per Second:  60",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Move Speed Slow:  40%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Aura Linger Duration:  0.5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Tusk_Ice_Shards_1.mp3\/revision\/latest?cb=20191216025612",
       "effects": [
@@ -40,15 +40,15 @@
     {
       "notes": [
         "The Snowball chases the target for up to 3 seconds and travels at a speed of 625\/650\/675\/700\n It can travel for up to 1875\/1950\/2025\/2100 range",
-        "Upon cast, a Snowball target indicator appears only visible for allies, and exposes the affected target, but does not provide True Sight over it\n Reveal units affected by  Shadow Dance despite not providing True Sight\n The target indicator lasts for 6 seconds until Tusk's death, the Snowball disappears or when the Snowball misses its target\n Only heroes, illusions, and clones will display hero icons, other units gathered display a black-circled question mark",
+        "Upon cast, a Snowball target indicator appears only visible for allies, and exposes the affected target, but does not provide True Sight over it\n Reveal units affected by <span image=\"images\/shadow_dance.webp\">[picture:shadow_dance]<\/span> Shadow Dance despite not providing True Sight\n The target indicator lasts for 6 seconds until Tusk's death, the Snowball disappears or when the Snowball misses its target\n Only heroes, illusions, and clones will display hero icons, other units gathered display a black-circled question mark",
         "Snowball destroys trees, and increases its radius by 40 per second up to 240\/280\/320 as it rolls forward",
-        "Tusk can  Right Click on allied heroes and clones to gather them into the Snowball at any point, even if they are invisible or invulnerable\n Vice versa, allies can also  Right Click the Snowball, within ≈100 range, to jump inside as well\n Can gather invulnerable allies but not hidden ones\n Cannot gather allies who have ☐ Disabled Help from Tusk\n Allies affected by  Flaming Lasso,  Black Hole or  Chronosphere cannot be gathered\n However, attempting to gather in any ally affected by the aforementioned abilities still adds the gathered damage to Snowball",
-        "Only gathered allied heroes and clones increase its damage\n Can gather summoned units, Tusk's  Courier, illusions and creep-heroes, but it does not increase its damage\n Cannot gather wards\n Does not disjoint projectiles for gathered targets",
+        "Tusk can <span image=\"images\/keyboard_white_mouse_right.png\">[picture:keyboard_white_mouse_right]<\/span> Right Click on allied heroes and clones to gather them into the Snowball at any point, even if they are invisible or invulnerable\n Vice versa, allies can also <span image=\"images\/keyboard_white_mouse_right.png\">[picture:keyboard_white_mouse_right]<\/span> Right Click the Snowball, within ≈100 range, to jump inside as well\n Can gather invulnerable allies but not hidden ones\n Cannot gather allies who have ☐ Disabled Help from Tusk\n Allies affected by <span image=\"images\/flaming_lasso.webp\">[picture:flaming_lasso]<\/span> Flaming Lasso, <span image=\"images\/black_hole.webp\">[picture:black_hole]<\/span> Black Hole or <span image=\"images\/chronosphere.webp\">[picture:chronosphere]<\/span> Chronosphere cannot be gathered\n However, attempting to gather in any ally affected by the aforementioned abilities still adds the gathered damage to Snowball",
+        "Only gathered allied heroes and clones increase its damage\n Can gather summoned units, Tusk's <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Courier, illusions and creep-heroes, but it does not increase its damage\n Cannot gather wards\n Does not disjoint projectiles for gathered targets",
         "Units inside Snowball are invulnerable, hidden and spell immune\n Allies inside the Snowball are fully disabled and are prevented from acting\n Tusk is muted and disarmed during Snowball\n He can cast his abilities, but cannot use items or attack",
-        "Tusk cannot be forced out of the Snowball, while other units within can still be forced out by teleporting abilities, without reducing the gathered damage\n If he is teleported by  Dark Rift while Snowball is rolling, Tusk is forced out and Snowball is fully canceled",
+        "Tusk cannot be forced out of the Snowball, while other units within can still be forced out by teleporting abilities, without reducing the gathered damage\n If he is teleported by <span image=\"images\/dark_rift.png\">[picture:dark_rift]<\/span> Dark Rift while Snowball is rolling, Tusk is forced out and Snowball is fully canceled",
         "When Snowball connects with its target, Tusk is given an attack order on the target, regardless of auto-attack settings",
         "Snowball first applies the debuff, then the damage",
-        "This is how much damage Snowball deals (before reductions) with a certain amount of heroes including Tusk: 1 Hero: 105\/190\/275\/360 ( 225\/310\/395\/480) damage\n 2 Heroes: 130\/240\/350\/460 ( 250\/360\/470\/580) damage\n 3 Heroes: 155\/290\/425\/560 ( 275\/410\/545\/680) damage\n 4 Heroes: 180\/340\/500\/660 ( 300\/460\/620\/780) damage\n  Tusk is not counted, so if no allied heroes are gathered, only the base damage is applied",
+        "This is how much damage Snowball deals (before reductions) with a certain amount of heroes including Tusk: 1 Hero: 105\/190\/275\/360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 225\/310\/395\/480) damage\n 2 Heroes: 130\/240\/350\/460 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 250\/360\/470\/580) damage\n 3 Heroes: 155\/290\/425\/560 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 275\/410\/545\/680) damage\n 4 Heroes: 180\/340\/500\/660 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 300\/460\/620\/780) damage\n  Tusk is not counted, so if no allied heroes are gathered, only the base damage is applied",
         "A hidden debuff provides shared vision over the target until the Snowball stops\n Does not provide True Sight\n SPELL STEAL \/ MORPH NOTES Snowball disappears upon losing ability\n SOULBIND Only affects the primary target"
       ],
       "item_behaviour": [],
@@ -56,13 +56,13 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0.5",
-        "Cast Range:  1150",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1150",
         "Damage\/Stun Radius: 200",
         "Radius Increase per Second: 40",
         "Gather Radius: 350",
         "Max Stationary Time: 3",
         "Max Chase Duration: 3",
-        "Base Damage: 80\/140\/200\/260 ( 200\/260\/320\/380)",
+        "Base Damage: 80\/140\/200\/260 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 200\/260\/320\/380)",
         "Damage Bonus per Gathered Hero: 25\/50\/75\/100",
         "Snowball Speed: 625\/650\/675\/700",
         "Stun Duration: 0.8\/1\/1.2\/1.4"
@@ -82,14 +82,14 @@
     },
     {
       "notes": [
-        "Replaces  Snowball until the sub-ability is used, or Snowball reaches its target or expires\n Tusk is unable to ⇧ Shift-queue this ability",
+        "Replaces <span image=\"images\/snowball.webp\">[picture:snowball]<\/span> Snowball until the sub-ability is used, or Snowball reaches its target or expires\n Tusk is unable to ⇧ Shift-queue this ability",
         "Tusk is unable to level Snowball up while this sub-ability is active"
       ],
       "item_behaviour": [],
       "description": "Launch the snowball toward the target.",
       "hot_key": "W",
       "params": [
-        "Cast Animation:  0+0"
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0"
       ],
       "audioUrl": "",
       "effects": [
@@ -116,9 +116,9 @@
       "description": "Temporarily applies a negative debuff aura around you, causing enemies that are attacked under it to take bonus physical damage and reduced movement speed. Lasts 5 seconds.",
       "hot_key": "E",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Radius: 350",
-        "Attack Damage Bonus: 20\/45\/70\/95 ( 45\/70\/95\/120)",
+        "Attack Damage Bonus: 20\/45\/70\/95 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 45\/70\/95\/120)",
         "Move Speed Slow: 75%",
         "Slow Duration: 0.5",
         "Aura Duration: 5",
@@ -138,8 +138,8 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
-        "Can be cast on any enemy unit, including enemy  Couriers, excluding buildings and wards\n However, when cast on  Roshan, he does not get moved, but all other effects still apply, including the area damage\n Walrus Kick has a 6-second cooldown when cast on creeps",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Can be cast on any enemy unit, including enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, excluding buildings and wards\n However, when cast on <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, he does not get moved, but all other effects still apply, including the area damage\n Walrus Kick has a 6-second cooldown when cast on creeps",
         "The target is kicked away from Tusk in an arc 1400 range far and 360 range high, while rotating 180° on the x-axis\n Walrus Kick cannot be overridden by any other forced movement\n While in the air, other units may pass below the kicked unit",
         "The slow has a total duration of 5, but it is applied at the same time as the stun, therefore effectively lasting 4 seconds",
         "Walrus Kick first applies the slow debuff, then the knockback debuff, then the damage",
@@ -150,7 +150,7 @@
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+1.3",
-        "Cast Range:  250",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 250",
         "Damage Radius: 250",
         "Knockback Distance: 1400",
         "Damage: 350",
@@ -175,24 +175,24 @@
     {
       "notes": [
         "Walrus PUNCH!'s cast range only be further increased by attack range bonuses of the same range type as the caster\n However, it is not affected by cast range bonuses\n Both Autocast and manually casting it uses Tusk's current attack range",
-        "The attack from Walrus PUNCH! cannot miss\n Despite being an active attack modifier, manually casting Walrus PUNCH! procs all on-cast effects like a regular ability\n Can be cast  on every enemy unit, including enemy  Couriers, except wards, buildings, and allied units\n However, when cast on  Roshan, only the stun and movement speed slow are applied",
-        "The affected target is hurled 650 range (or 1200 range if lethal) into the air during the stun duration, while rotating 180° on the x-axis\n The speed adapts to changed stun duration\n Can be cast while the enemy target(s) are affected by  Flaming Lasso, but not  Pulverize\n Walrus PUNCH! cannot be overridden by any other upward movement sources",
+        "The attack from Walrus PUNCH! cannot miss\n Despite being an active attack modifier, manually casting Walrus PUNCH! procs all on-cast effects like a regular ability\n Can be cast  on every enemy unit, including enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, except wards, buildings, and allied units\n However, when cast on <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, only the stun and movement speed slow are applied",
+        "The affected target is hurled 650 range (or 1200 range if lethal) into the air during the stun duration, while rotating 180° on the x-axis\n The speed adapts to changed stun duration\n Can be cast while the enemy target(s) are affected by <span image=\"images\/flaming_lasso.webp\">[picture:flaming_lasso]<\/span> Flaming Lasso, but not <span image=\"images\/pulverize.webp\">[picture:pulverize]<\/span> Pulverize\n Walrus PUNCH! cannot be overridden by any other upward movement sources",
         "While in the air, other units may pass below the hurled unit",
-        "The slow has a total duration of 3\/4\/5 ( 3.5\/4.5\/5.5), but it is applied at the same time as the stun, therefore effectively lasting 2\/3\/4 seconds",
+        "The slow has a total duration of 3\/4\/5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.5\/4.5\/5.5), but it is applied at the same time as the stun, therefore effectively lasting 2\/3\/4 seconds",
         "The punch first applies the knockback debuff, then the slow debuff, then the damage, then the self attack animation bonus\n Plays a sound as soon as the attack starts\n The sound only stops playing upon landing the punch\n This reduces Tusk's attack animation to 0.216+0.384 for the next attack\n The attack animation bonus only applies to manual casts",
-        "TALENT NOTES Walrus Punch now gains a 12% chance to passively proc on regular attacks\n These procs do not trigger the cooldown and work while on cooldown, and do not cost mana\n They do not proc on-cast effects either\n The procs use pseudo-random distribution\n When Walrus PUNCH! procs during a manual cast or Autocast order, the proc takes priority, and it does not go on cooldown or consume mana\n Adds an average of 24%\/30%\/36% ( 33%\/39%\/45%) damage to every attack"
+        "TALENT NOTES Walrus Punch now gains a 12% chance to passively proc on regular attacks\n These procs do not trigger the cooldown and work while on cooldown, and do not cost mana\n They do not proc on-cast effects either\n The procs use pseudo-random distribution\n When Walrus PUNCH! procs during a manual cast or Autocast order, the proc takes priority, and it does not go on cooldown or consume mana\n Adds an average of 24%\/30%\/36% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 33%\/39%\/45%) damage to every attack"
       ],
       "item_behaviour": [],
       "description": "Tusk connects with his mighty Walrus Punch, a critical strike so powerful it launches its victim into the air. The victim is slowed upon landing.",
       "hot_key": "R",
       "params": [
-        "Cast Range:  150",
+        "Cast Range: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 150",
         "Self Attack Animation Speed Bonus: 40%",
-        "Critical Damage: 300%\/350%\/400% ( 375%\/425%\/475%)",
+        "Critical Damage: 300%\/350%\/400% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 375%\/425%\/475%)",
         "Enemy Move Speed Slow: 40%",
         "Slow Duration: 2\/3\/4",
-        "Stun Duration: 1 ( 1.5)",
-        "Proc Chance:  12%"
+        "Stun Duration: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.5)",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Proc Chance:  12%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Tusk_Walrus_PUNCH%21.mp3\/revision\/latest?cb=20191216025622",
       "effects": [

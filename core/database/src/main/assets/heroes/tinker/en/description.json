@@ -16,16 +16,16 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.4+1",
-        "Cast Range:  650 ( 850)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 850)",
         "Damage Radius: 250",
-        "Damage: 75\/150\/225\/300 ( 155\/230\/305\/380)",
+        "Damage: 75\/150\/225\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 155\/230\/305\/380)",
         "Miss Chance: 100%",
-        "Hero Duration: 3\/3.5\/4\/4.5 ( 5\/5.5\/6\/6.5)",
-        "Creep Duration: 6 ( 8)",
-        "Bounce Search Radius:  700",
-        "Number of Bounces:  1",
-        "Max Health Reduction:  10%",
-        "Current Health Reduction:  10%"
+        "Hero Duration: 3\/3.5\/4\/4.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 5\/5.5\/6\/6.5)",
+        "Creep Duration: 6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 8)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Bounce Search Radius:  700",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Number of Bounces:  1",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Max Health Reduction:  10%",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Current Health Reduction:  10%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Tinker_Laser.mp3\/revision\/latest?cb=20191216025246",
       "effects": [
@@ -45,7 +45,7 @@
         "Interrupts Tinker's channeling abilities upon cast",
         "The missiles travel at a speed of 700",
         "Heat-Seeking Missile first applies the damage, then the bash debuff",
-        "When all missiles hit, they collectively deal up to 230\/380\/530\/680 ( 345\/570\/795\/1020) damage (before reductions)",
+        "When all missiles hit, they collectively deal up to 230\/380\/530\/680 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 345\/570\/795\/1020) damage (before reductions)",
         "Does not target invisible, invulnerable, hidden or enemies inside in the Fog of War\n Does target clones and illusions",
         "When cast while no valid targets are in range, the missiles are released and fall on the ground, indicating the cast failed"
       ],
@@ -55,9 +55,9 @@
       "params": [
         "Cast Animation: 0+1.2",
         "Search Radius: 2500",
-        "Number of Targets: 2 ( 3)",
+        "Number of Targets: 2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3)",
         "Damage per Rocket: 115\/190\/265\/340",
-        "Bash Duration:  0.25"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Bash Duration:  0.25"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Tinker_Heat-Seeking_Missile_1.mp3\/revision\/latest?cb=20191216025258",
       "effects": [
@@ -74,8 +74,8 @@
     },
     {
       "notes": [
-        "↓↓ Double-tapping automatically targets self\n Fully affects ally  Couriers",
-        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger\n Except for the following abilities: When combined with the following damage-negating effects (i.e\n  Aphotic Shield,  Ghostship,  Shield Crash and  Mischief), Defense Matrix negates the damage while the abilities aforementioned do not\n Shields the affected target from the 3 damage types, but not heals and HP Removal effects (e.g\n  Sunder, <span image=\"items\/soul_ring\/full.webp\">[Soul Ring]<\/span> Soul Ring etc.)",
+        "↓↓ Double-tapping automatically targets self\n Fully affects ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
+        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger\n Except for the following abilities: When combined with the following damage-negating effects (i.e\n <span image=\"images\/aphotic_shield.webp\">[picture:aphotic_shield]<\/span> Aphotic Shield, <span image=\"images\/ghostship.webp\">[picture:ghostship]<\/span> Ghostship, <span image=\"images\/shield_crash.webp\">[picture:shield_crash]<\/span> Shield Crash and <span image=\"images\/mischief.webp\">[picture:mischief]<\/span> Mischief), Defense Matrix negates the damage while the abilities aforementioned do not\n Shields the affected target from the 3 damage types, but not heals and HP Removal effects (e.g\n <span image=\"images\/sunder.webp\">[picture:sunder]<\/span> Sunder, <span image=\"items\/soul_ring\/full.webp\">[picture:soul_ring]<\/span> Soul Ring etc.)",
         "Successive casts do not stack but refresh the duration and reset the shield capacity",
         "Stacks multiplicatively with other sources of status resistance",
         "TALENT NOTES Stacks multiplicatively with other sources of percentage-based cooldown reductions"
@@ -85,11 +85,11 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.2+0.6",
-        "Cast Range:  650",
-        "Shield Capacity: 100\/180\/240\/320 ( 225\/305\/365\/445)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650",
+        "Shield Capacity: 100\/180\/240\/320 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 225\/305\/365\/445)",
         "Status Resistance Bonus: 10%\/20%\/30%\/40%",
         "Duration: 15",
-        "Cooldown Reduction Bonus:  25%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Cooldown Reduction Bonus:  25%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Tinker_Defense_Matrix.mp3\/revision\/latest?cb=20210103154706",
       "effects": [
@@ -105,7 +105,7 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "The projectile travels at a speed of 1900",
         "Warp Flare first applies the debuff, the damage, then the teleport",
         "Warp Flare teleports the target away from Tinker upon projectile hit\n Neither interrupts the affected target's channeling abilities nor changes the target's facing angle",
@@ -117,7 +117,7 @@
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+0.5",
-        "Cast Range:  700",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700",
         "Teleport Distance: 600",
         "Damage: 50",
         "Attack Range Reduction: 40%",
@@ -140,13 +140,13 @@
     {
       "notes": [
         "↓↓ Double-tapping the ability while being at least 1500 range away from the team's fountain, automatically targets the fountain",
-        "When ground-targeted, it automatically searches for the closest valid target for Tinker teleport to\n At Level 1, Keen Conveyance can only target buildings\n Level 2 can target non-hero units as well, and level 3 can target allied heroes as well\n Treats the  Spirit Bear as a hero\n Treats other creep-heroes as creeps\n Cannot directly target buildings\n Instead, it uses the minimum teleport distance",
+        "When ground-targeted, it automatically searches for the closest valid target for Tinker teleport to\n At Level 1, Keen Conveyance can only target buildings\n Level 2 can target non-hero units as well, and level 3 can target allied heroes as well\n Treats the <span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear as a hero\n Treats other creep-heroes as creeps\n Cannot directly target buildings\n Instead, it uses the minimum teleport distance",
         "Disjoints projectiles upon teleporting",
         "During the channeling, the teleport destination is marked with a visual effect in the same color as the player, and a sound is played\n The sound and visual effects are visible and audible to everyone\n The visual effect is also visible while teleporting to invisible allies",
         "Also marks the point on the minimap for allies\n The mark is in the player's color and lasts as long as the channeling does",
         "Provides 200 range flying vision at the destination point for 4.5 seconds, even if the channeling is canceled\n The vision lingers for 1 second",
         "The targeted unit's priority is lowered, meaning it is attacked as the last auto-attack target by other units",
-        "When the targeted unit dies or changes ownership (e.g\n  Enchant) during the channeling, the teleport gets canceled, wasting the cooldown and mana cost\n Since buildings are not directly targeted, the destruction of the building or loss of Outposts does not cancel the teleport"
+        "When the targeted unit dies or changes ownership (e.g\n <span image=\"images\/enchant.webp\">[picture:enchant]<\/span> Enchant) during the channeling, the teleport gets canceled, wasting the cooldown and mana cost\n Since buildings are not directly targeted, the destruction of the building or loss of Outposts does not cancel the teleport"
       ],
       "item_behaviour": [],
       "description": "Teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
@@ -157,8 +157,8 @@
         "Min Targeting Distance to Building: 70",
         "Max Targeting Distance to Building: 800",
         "Max Targeting Distance to Outposts: 250",
-        "Channel Time: 4.5\/4\/3.5 ( 4\/3.5\/3)",
-        "Channel Time to Outpost: 5 ( 4.5)"
+        "Channel Time: 4.5\/4\/3.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4\/3.5\/3)",
+        "Channel Time to Outpost: 5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4.5)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Tinker_Keen_Conveyance_1.mp3\/revision\/latest?cb=20210829210017",
       "effects": [
@@ -175,8 +175,8 @@
     {
       "notes": [
         "Rearm's cooldown is not reset when the channeling is interrupted",
-        "The following items' cooldowns are not reset by Rearm: <span image=\"items\/aeon_disk\/full.webp\">[Aeon Disk]<\/span> Aeon Disk, <span image=\"items\/arcane_boots\/full.webp\">[Arcane Boots]<\/span> Arcane Boots, <span image=\"items\/black_king_bar\/full.webp\">[Black King Bar]<\/span> Black King Bar,  Hand of Midas,  Helm of the Dominator,  Helm of the Overlord, <span image=\"items\/linken's_sphere\/full.webp\">[Linken's Sphere]<\/span> Linken's Sphere, <span image=\"items\/meteor_hammer\/full.webp\">[Meteor Hammer]<\/span> Meteor Hammer,  Pipe of Insight, <span image=\"items\/refresher_orb\/full.webp\">[Refresher Orb]<\/span> Refresher Orb,  Refresher Shard and Neutral Items\n Visually resets the cooldown of  Tranquil Boots, but does not skip the broken state\n Does not reset charges on charge-based items (e.g\n  Drum of Endurance)\n Only resets cooldowns of items owned by Tinker, his inventory, and his backpack\n Items in the stash, in other units' inventories (e.g\n  Courier) or dropped items are unaffected\n Allied items in his inventory or backpack do not have their cooldowns reset\n When the channeling is interrupted, nothing is rearmed",
-        "Can rearm <span image=\"items\/crimson_guard\/full.webp\">[Crimson Guard]<\/span> Crimson Guard and <span image=\"items\/mekansm\/full.webp\">[Mekansm]<\/span> Mekansm, but does not reset their stack restriction timer\n The same rule applies when rearming <span image=\"items\/guardian_greaves\/full.webp\">[Guardian Greaves]<\/span> Guardian Greaves, but <span image=\"items\/guardian_greaves\/full.webp\">[Guardian Greaves]<\/span> Mend still restores mana",
+        "The following items' cooldowns are not reset by Rearm: <span image=\"items\/aeon_disk\/full.webp\">[picture:aeon_disk]<\/span> Aeon Disk, <span image=\"items\/arcane_boots\/full.webp\">[picture:arcane_boots]<\/span> Arcane Boots, <span image=\"items\/black_king_bar\/full.webp\">[picture:black_king_bar]<\/span> Black King Bar, <span image=\"items\/hand_of_midas\/full.webp\">[picture:hand_of_midas]<\/span> Hand of Midas, <span image=\"items\/helm_of_the_dominator\/full.webp\">[picture:helm_of_the_dominator]<\/span> Helm of the Dominator, <span image=\"items\/helm_of_the_overlord\/full.webp\">[picture:helm_of_the_overlord]<\/span> Helm of the Overlord, <span image=\"items\/linken's_sphere\/full.webp\">[picture:linken's_sphere]<\/span> Linken's Sphere, <span image=\"items\/meteor_hammer\/full.webp\">[picture:meteor_hammer]<\/span> Meteor Hammer, <span image=\"items\/pipe_of_insight\/full.webp\">[picture:pipe_of_insight]<\/span> Pipe of Insight, <span image=\"items\/refresher_orb\/full.webp\">[picture:refresher_orb]<\/span> Refresher Orb, <span image=\"images\/refresher_shard.png\">[picture:refresher_shard]<\/span> Refresher Shard and Neutral Items\n Visually resets the cooldown of <span image=\"images\/tranquil_boots_%28active%29.png\">[picture:tranquil_boots_%28active%29]<\/span> Tranquil Boots, but does not skip the broken state\n Does not reset charges on charge-based items (e.g\n <span image=\"items\/drum_of_endurance\/full.webp\">[picture:drum_of_endurance]<\/span> Drum of Endurance)\n Only resets cooldowns of items owned by Tinker, his inventory, and his backpack\n Items in the stash, in other units' inventories (e.g\n <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Courier) or dropped items are unaffected\n Allied items in his inventory or backpack do not have their cooldowns reset\n When the channeling is interrupted, nothing is rearmed",
+        "Can rearm <span image=\"items\/crimson_guard\/full.webp\">[picture:crimson_guard]<\/span> Crimson Guard and <span image=\"items\/mekansm\/full.webp\">[picture:mekansm]<\/span> Mekansm, but does not reset their stack restriction timer\n The same rule applies when rearming <span image=\"items\/guardian_greaves\/full.webp\">[picture:guardian_greaves]<\/span> Guardian Greaves, but <span image=\"items\/guardian_greaves\/full.webp\">[picture:guardian_greaves]<\/span> Mend still restores mana",
         "Rearm's sound gets shorter with each level to match the decreasing channel time",
         "The Rearm modifier is only for informational purposes\n SPELL STEAL This ability is not acquirable"
       ],

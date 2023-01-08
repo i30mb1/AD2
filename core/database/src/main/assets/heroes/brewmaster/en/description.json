@@ -237,7 +237,7 @@
     {
       "notes": [
         "Dispel Magic first applies a basic dispel on all units within the area, then the damage",
-        "The damage is applied to summoned units, including illusions, but excluding clones\n Does not damage the <span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear or <span image=\"images\/primal_split.webp\">[picture:primal_split]<\/span> Primal Split Brewlings, but does damage <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars and <span image=\"images\/warlock_golem.png\">[picture:warlock_golem]<\/span> Warlock Golems\n Does not damage wards or <span image=\"images\/undying_zombie.png\">[picture:undying_zombie]<\/span> Undying Zombies\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers at all",
+        "The damage is applied to summoned units, including illusions, but excluding clones\n Does not damage the <span image=\"images\/lone_druid_spirit_bear.png\">[picture:lone_druid_spirit_bear]<\/span> Spirit Bear or <span image=\"images\/primal_split.webp\">[picture:primal_split]<\/span> Primal Split Brewlings, but does damage <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars and <span image=\"images\/warlock_golem.png\">[picture:warlock_golem]<\/span> Warlock Golems\n Does not damage wards or <span image=\"images\/undying_zombie.png\">[picture:undying_zombie]<\/span> Undying Zombies\n Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers at all",
         "Affects invulnerable, but not hidden units"
       ],
       "item_behaviour": [],

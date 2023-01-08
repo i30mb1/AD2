@@ -2,22 +2,22 @@
   "abilities": [
     {
       "notes": [
-        "The spikes travel at a speed of 2000 ( 3000), reaching max range in 0.25\/0.28\/0.3\/0.33 ( 0.43) seconds\n The spikes do not travel the full distance when targeting closer than the max range",
+        "The spikes travel at a speed of 2000 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 3000), reaching max range in 0.25\/0.28\/0.3\/0.33 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 0.43) seconds\n The spikes do not travel the full distance when targeting closer than the max range",
         "Sand King is teleported instantly towards the targeted point once the spikes reach it\n Does not disjoint projectiles upon cast or upon teleporting\n The burrowing and reappearing takes 0.53 seconds from the moment the ability is cast, during which Sand King is disabled and prevented from acting",
         "When unit-targeted, Sand King chases the target until it is within range and casts Burrowstrike toward its direction\n The spikes still do not home in on the target, and thus can be evaded\n Unit-targeting only determines the direction upon cast\n These interactions mainly affect Burrowstrike's Spell Reflection as follows: When reflected, if the cast range is less than the range between Sand King and the target, the reflected Burrowstrike will be cast on the spot where Sand King originally casts the ability\n When the distance between Sand King and the target is equal or greater than the cast range, Burrowstrike will be reflected toward Sand King as a unit-targeted ability\n Whether Sand King is hit by Burrowstrike depends on the distance between the two, as well as the Burrowstrike speed",
         "Hit units are knocked up 350 range for the initial 0.52 seconds of the stun\n While in the air, other units may pass below hit airborne units\n The damage is applied upon landing, not upon getting hit",
-        "With the maximum cast range and radius, it can hit units up to 650\/700\/750\/800 ( 1450) range away",
-        "SCEPTER NOTES Burrowstrike now applies  Caustic Finale debuff based on its current level on all hit heroes\n Treats clones as heroes, illusions and creep-heroes as creeps\n Caustic Finale notes fully apply\n If it is not leveled, no debuffs are applied\n SPELL STEAL \/ MORPH NOTES  Caustic Finale applied is based on  Sand King's current ability level when acquired\n SOULBIND The caster appears at the unit-targeted location\n The Burrowstrike cast first hits the secondary target, then the primary target"
+        "With the maximum cast range and radius, it can hit units up to 650\/700\/750\/800 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1450) range away",
+        "SCEPTER NOTES Burrowstrike now applies <span image=\"images\/caustic_finale.webp\">[picture:caustic_finale]<\/span> Caustic Finale debuff based on its current level on all hit heroes\n Treats clones as heroes, illusions and creep-heroes as creeps\n Caustic Finale notes fully apply\n If it is not leveled, no debuffs are applied\n SPELL STEAL \/ MORPH NOTES <span image=\"images\/caustic_finale.webp\">[picture:caustic_finale]<\/span> Caustic Finale applied is based on <span image=\"images\/sand_king_minimap.png\">[picture:sand_king_minimap]<\/span> Sand King's current ability level when acquired\n SOULBIND The caster appears at the unit-targeted location\n The Burrowstrike cast first hits the secondary target, then the primary target"
       ],
       "item_behaviour": [],
       "description": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0.53",
-        "Cast Range:  500\/550\/600\/650 ( 1300)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 500\/550\/600\/650 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1300)",
         "Spikes Radius: 150",
         "Damage: 100\/160\/220\/280",
-        "Stun Duration: 1.6\/1.8\/2\/2.2 ( 1.9\/2.1\/2.3\/2.5)"
+        "Stun Duration: 1.6\/1.8\/2\/2.2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.9\/2.1\/2.3\/2.5)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Sand_King_Burrowstrike.mp3\/revision\/latest?cb=20191216022824",
       "effects": [
@@ -45,13 +45,13 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0+0.5",
-        "Radius: 425\/500\/575\/650 ( 550\/625\/700\/775)",
+        "Radius: 425\/500\/575\/650 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 550\/625\/700\/775)",
         "Fade Delay: 0.7",
         "Damage per Second: 25\/45\/65\/85",
         "Duration: 20\/25\/30\/35",
         "Aura Linger Duration: 0.5",
-        "Miss Chance:  35%",
-        "Move Speed Slow:  35%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Miss Chance:  35%",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Move Speed Slow:  35%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Sand_King_Sand_Storm.mp3\/revision\/latest?cb=20191216022822",
       "effects": [
@@ -68,7 +68,7 @@
     },
     {
       "notes": [
-        "The area damage triggers only when the unit is killed by one of its enemies while having the debuff on\n This means the unit does not explode in the following conditions: When being denied\n Summons and illusions when its duration expires\n When killed without a credited source\n When  Meepo or its  Meepo Clones is instantly killed due to either the Prime or any one of its clones dying",
+        "The area damage triggers only when the unit is killed by one of its enemies while having the debuff on\n This means the unit does not explode in the following conditions: When being denied\n Summons and illusions when its duration expires\n When killed without a credited source\n When <span image=\"images\/meepo_minimap.png\">[picture:meepo_minimap]<\/span> Meepo or its <span image=\"images\/divided_we_stand.webp\">[picture:divided_we_stand]<\/span> Meepo Clones is instantly killed due to either the Prime or any one of its clones dying",
         "When an illusion dies with the debuff, only the base damage is applied within the radius, the max health as damage is not applied",
         "Successive attacks on the same target do not stack and do not update the debuff values, but refresh the duration\n All Caustic Finale values are set upon the initial debuff placement",
         "The debuff is not placed on allies, buildings, and wards"
@@ -78,7 +78,7 @@
       "hot_key": "E",
       "params": [
         "Damage Radius: 500",
-        "Base Damage: 70\/90\/110\/130 ( 170\/190\/210\/230)",
+        "Base Damage: 70\/90\/110\/130 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 170\/190\/210\/230)",
         "Max Health as Damage: 10%\/14%\/18%\/22%",
         "Move Speed Slow: 14%\/18%\/22%\/26%",
         "Debuff Duration: 6"
@@ -99,28 +99,28 @@
     {
       "notes": [
         "Once cast, the damage pulses cannot be canceled in any way, not even by Sand King's death",
-        "The pulses are all centered on and follow Sand King\n The pulses happen in 0.5\/0.375\/0.3 ( 0.27\/0.23\/0.2)-second intervals, starting 0.5\/0.375\/0.3 ( 0.27\/0.23\/0.2) seconds after cast\n This means it takes 3 seconds for the ability to release all pulses after the initial delay\n The pulses have a radius of 500\/525\/550\/575\/600\/625\/650\/675\/700\/725\/750\/775\/800\/825\/850\n TALENT NOTES With the radius increasing  talent, they have a radius of 600\/625\/650\/675\/700\/725\/750\/775\/800\/825\/850\/875\/900\/925\/950",
-        "Can deal a total of 660\/960\/1300 ( 1210\/1560\/1950) ( 720\/1040\/1400,  1320\/1690\/2100) damage (before reductions) without any talents",
+        "The pulses are all centered on and follow Sand King\n The pulses happen in 0.5\/0.375\/0.3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.27\/0.23\/0.2)-second intervals, starting 0.5\/0.375\/0.3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0.27\/0.23\/0.2) seconds after cast\n This means it takes 3 seconds for the ability to release all pulses after the initial delay\n The pulses have a radius of 500\/525\/550\/575\/600\/625\/650\/675\/700\/725\/750\/775\/800\/825\/850\n TALENT NOTES With the radius increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, they have a radius of 600\/625\/650\/675\/700\/725\/750\/775\/800\/825\/850\/875\/900\/925\/950",
+        "Can deal a total of 660\/960\/1300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1210\/1560\/1950) (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 720\/1040\/1400, <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1320\/1690\/2100) damage (before reductions) without any talents",
         "The slow is applied to enemies on each pulse\n Multiple instances of the slow on a unit do not stack but refresh the duration\n Can slow a single unit for up to 6 seconds\n Each pulse first applies the damage, then the debuff",
         "Successive casts of Epicenter fully stack, with each cast creating its own independent instance",
-        "SHARD NOTES Epicenter now passively releases a single pulse when Sand King collectively moves a distance of 700\n The pulses are based on Epicenter's current level\n If it is not learned, the passive pulses are not released\n However, the distance counter still counts even if Epicenter is not learned\n Moving includes horizontal forced movement and teleporting effects (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[Blink Dagger]<\/span> Blink) as well\n Teleporting effects may only add up to 700 range to the distance counter, no matter how far the actual teleported distance was\n This means long-distance teleports may only release one pulse and not multiple pulses based on the entire distance\n The distance counter has no time limit\n It only resets upon releasing a passive pulse",
-        "SHARD NOTES When no enemies are within 425 ( 525) radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is a valid target\n The pulses are not visible to the enemy if they have no vision over Sand King\n Pulses also trigger on invisible enemies within the area"
+        "SHARD NOTES Epicenter now passively releases a single pulse when Sand King collectively moves a distance of 700\n The pulses are based on Epicenter's current level\n If it is not learned, the passive pulses are not released\n However, the distance counter still counts even if Epicenter is not learned\n Moving includes horizontal forced movement and teleporting effects (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[picture:blink_dagger]<\/span> Blink) as well\n Teleporting effects may only add up to 700 range to the distance counter, no matter how far the actual teleported distance was\n This means long-distance teleports may only release one pulse and not multiple pulses based on the entire distance\n The distance counter has no time limit\n It only resets upon releasing a passive pulse",
+        "SHARD NOTES When no enemies are within 425 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 525) radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is a valid target\n The pulses are not visible to the enemy if they have no vision over Sand King\n Pulses also trigger on invisible enemies within the area"
       ],
       "item_behaviour": [],
       "description": "After a cast point of 2 seconds, Sand King sends a disturbance into the earth, causing it to shudder violently. All enemies caught within range will take damage and become slowed. Each subsequent pulse increases the radius of damage dealt.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 2+0",
-        "Base Pulse Radius: 500 ( 600)",
+        "Base Pulse Radius: 500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 600)",
         "Radius Increase per Pulse: 25",
-        "Number of Pulses: 6\/8\/10 ( 11\/13\/15)",
-        "Damage per Pulse: 110\/120\/130 ( 120\/130\/140)",
+        "Number of Pulses: 6\/8\/10 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 11\/13\/15)",
+        "Damage per Pulse: 110\/120\/130 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 120\/130\/140)",
         "Move Speed Slow: 30%",
         "Attack Speed Slow: 30",
         "Slow Duration: 3",
         "Epicenter Duration: 3",
-        "Passive Distance per Pulse:  700",
-        "Passive Pulse Radius:  425 ( 525)"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Passive Distance per Pulse:  700",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Passive Pulse Radius:  425 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 525)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Sand_King_Epicenter_1.mp3\/revision\/latest?cb=20191216022820",
       "effects": [

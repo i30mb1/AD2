@@ -3,7 +3,7 @@
     {
       "notes": [
         "При сработавшей Multicast Fireblast поражает одну и ту же цель несколько раз с интервалом в 0,6 сек",
-        "Здесь указано, сколько урона может нанести Fireblast, сработавшая несколько раз (до уменьшений) и сколько будет длится оглушение на каждом уровне: 2x Multicast: 140\/260\/380\/500 ( 620\/740\/860\/980) урона, 2,1 сек\n оглушения\n 3x Multicast: 210\/390\/570\/750 ( 930\/1110\/1290\/1470) урона, 2,7 сек\n оглушения\n 4x Multicast: 280\/520\/760\/1000 ( 1240\/1480\/1720\/1960) урона, 3,3 сек\n оглушения.",
+        "Здесь указано, сколько урона может нанести Fireblast, сработавшая несколько раз (до уменьшений) и сколько будет длится оглушение на каждом уровне: 2x Multicast: 140\/260\/380\/500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 620\/740\/860\/980) урона, 2,1 сек\n оглушения\n 3x Multicast: 210\/390\/570\/750 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 930\/1110\/1290\/1470) урона, 2,7 сек\n оглушения\n 4x Multicast: 280\/520\/760\/1000 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1240\/1480\/1720\/1960) урона, 3,3 сек\n оглушения.",
         "Каждая волна сначала наносит урон, затем применяет дебафф"
       ],
       "item_behaviour": [],
@@ -11,9 +11,9 @@
       "hot_key": "Q",
       "params": [
         "Анимация применения: 0,45+0,53",
-        "Дальность применения: 475 ( 476)",
+        "Дальность применения: 475 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 476)",
         "Интервал Multicast: 0,6",
-        "Урон: 70\/130\/190\/250 ( 310\/370\/430\/490)",
+        "Урон: 70\/130\/190\/250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 310\/370\/430\/490)",
         "Длительность оглушения: 1,5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Ogre_Magi_Fireblast.mp3\/revision\/latest?cb=20191216021153",
@@ -37,19 +37,19 @@
         "При сработавшей Multicast запускает снаряды Ignite с интервалом в 0,6 сек\n в случайных врагов или нейтральных крипов в радиусе 1600 единиц от Ogre Magi\n Multicast также выпускает 2 снаряда за применение\n Не может выбрать целью невидимых, неуязвимых, спрятанных существ или существ в тумане войны\n Приоритет выше для существ без дебаффа от Ignite\n Может выбрать одно и то же существо несколько раз",
         "Дебаффы от Ignite не складываются между собой\n При этом новое применение добавляет свою длительность к уже существующему дебаффу, а не обновляет его",
         "Наносит урон с интервалом в 1 секунду сразу после применения дебаффа\n С сработавшей Multicast на цель каждый снаряд с тиком наносит урон при попадании\n При этом таймер тиков сбрасывается при каждом попадании, поэтому все тики, кроме 1, при попадании отменяются, в среднем срабатывая до: Без Multicast: 6\/7\/8\/9 раз\n 2x Multicast: 11\/13\/15\/17 раз\n 3x Multicast: 16\/19\/22\/25 раз\n 4x Multicast: 21\/25\/29\/33 раз.",
-        "Ниже указано, сколько урона нанесет Ignite с и без Multicast (до уменьшений): Без Multicast: 120\/210\/320\/450 ( 216\/322\/448\/594) урона\n 2x Multicast: 220\/390\/600\/850 ( 396\/598\/840\/1122) урона\n 3x Multicast: 320\/570\/880\/1250 ( 576\/874\/1232\/1650) урона\n 4x Multicast: 420\/750\/1160\/1650 ( 756\/1150\/1624\/2178) урона."
+        "Ниже указано, сколько урона нанесет Ignite с и без Multicast (до уменьшений): Без Multicast: 120\/210\/320\/450 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 216\/322\/448\/594) урона\n 2x Multicast: 220\/390\/600\/850 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 396\/598\/840\/1122) урона\n 3x Multicast: 320\/570\/880\/1250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 576\/874\/1232\/1650) урона\n 4x Multicast: 420\/750\/1160\/1650 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 756\/1150\/1624\/2178) урона."
       ],
       "item_behaviour": [],
       "description": "Обливает цель и ещё одно случайное существо летучим веществом, поджигая их. Жертвы испытывают невероятную боль, получают урон и передвигаются медленнее.",
       "hot_key": "W",
       "params": [
         "Анимация применения: 0,45+0,43",
-        "Дальность применения: 700\/800\/900\/1000 ( 701\/801\/901\/1001)",
+        "Дальность применения: 700\/800\/900\/1000 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 701\/801\/901\/1001)",
         "Радиус поиска доп\n цели: 900\/1000\/1100\/1200",
         "Радиус Multicast: 1600",
         "Интервал Multicast: 0,6",
         "Число целей: 2",
-        "Урон в секунду: 20\/30\/40\/50 ( 36\/46\/56\/66)",
+        "Урон в секунду: 20\/30\/40\/50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 36\/46\/56\/66)",
         "Замедление скорости передвижения: 20%\/22%\/24%\/26%",
         "Длительность: 5\/6\/7\/8"
       ],
@@ -79,11 +79,11 @@
       "hot_key": "E",
       "params": [
         "Анимация применения: 0,45+0,67",
-        "Дальность применения: 600 ( 601)",
+        "Дальность применения: 600 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 601)",
         "Радиус Multicast: 700",
         "Доп\n скорость передвижения: 7%\/9%\/11%\/13%",
-        "Доп\n скорость атаки: 30\/40\/50\/60 ( 55\/65\/75\/85)",
-        "Доп\n скорость атаки для владельца: 30\/50\/70\/90 ( 55\/75\/95\/115)",
+        "Доп\n скорость атаки: 30\/40\/50\/60 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 55\/65\/75\/85)",
+        "Доп\n скорость атаки для владельца: 30\/50\/70\/90 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 55\/75\/95\/115)",
         "Длительность: 30"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Ogre_Magi_Bloodlust.mp3\/revision\/latest?cb=20191216021152",
@@ -100,20 +100,20 @@
     },
     {
       "notes": [
-        "Требует <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter для разблокировки",
+        "Требует <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter для разблокировки",
         "Ogre Magi всегда будет хватать маны для использования данной способности, поскольку она всегда требует 30% от его текущего запаса маны (округленный показатель)",
         "Описание показывает текущий расход маны и обновляется всякий раз, когда курсор мыши наводится на иконку способности",
         "При сработавшей Multicast, Unrefined Fireblast поражает одну и ту же цель несколько раз с интервалом в 0,6 сек",
         "Ниже указано, сколько урона нанесет Unrefined Fireblast, сработавшая несколько раз (до уменьшений) и сколько будет длится оглушение на каждом уровне: 2x Multicast: 550 урона, 2,1 сек\n оглушения\n 3x Multicast: 825 урона, 2,7 сек\n оглушения\n 4x Multicast: 1100 урона, 3,3 сек\n оглушения.",
         "Каждая волна сначала наносит урон, затем применяет дебафф",
-        "В режиме Ability Draft эта способность недоступна из-за связи заклинаний, даваемых <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter, с ультимативными способностями"
+        "В режиме Ability Draft эта способность недоступна из-за связи заклинаний, даваемых <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter, с ультимативными способностями"
       ],
       "item_behaviour": [],
       "description": "Поражает врага огненной волной, нанося цели урон и оглушая её. На применение этой способности уходит 30% текущего запаса маны.",
       "hot_key": "D",
       "params": [
         "Анимация применения: 0,45+0,53",
-        "Дальность применения: 475 ( 476)",
+        "Дальность применения: 475 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 476)",
         "Интервал Multicast: 0,6",
         "Урон: 275",
         "Длительность оглушения: 1,5"
@@ -133,7 +133,7 @@
     },
     {
       "notes": [
-        "Требует <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard для разблокировки",
+        "Требует <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard для разблокировки",
         "С сработавшей Multicast мгновенно применяет бафф к случайным союзникам в радиусе",
         "Можно применять на любое союзное существо, не являющееся вардом\n В этот список также включены постройки",
         "Нельзя применять на неуязвимых союзников; при этом Multicast союзников выбирает",
@@ -173,7 +173,7 @@
     },
     {
       "notes": [
-        "Помимо срабатывания собственных заклинаний Multicast может активировать направленные на цель предметы при выборе врагов\n Следующие предметы активируют Multicast: <span image=\"items\/force_staff\/full.webp\">[Force Staff]<\/span> Force Staff, <span image=\"items\/heaven's_halberd\/full.webp\">[Heaven's Halberd]<\/span> Heaven's Halberd, <span image=\"items\/abyssal_blade\/full.webp\">[Abyssal Blade]<\/span> Abyssal Blade,  Diffusal Blade, <span image=\"items\/bloodthorn\/full.webp\">[Bloodthorn]<\/span> Bloodthorn, <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike, <span image=\"items\/ethereal_blade\/full.webp\">[Ethereal Blade]<\/span> Ethereal Blade,  Eul's Scepter of Divinity,  Medallion of Courage,  Dagon,  Hand of Midas,  Rod of Atos, <span image=\"items\/solar_crest\/full.webp\">[Solar Crest]<\/span> Solar Crest, <span image=\"items\/nullifier\/full.webp\">[Nullifier]<\/span> Nullifier, <span image=\"items\/orchid_malevolence\/full.webp\">[Orchid Malevolence]<\/span> Orchid Malevolence,  Scythe of Vyse,  Clumsy Net,  Iron Talon\n Следующие предметы активируют Multicast, но не срабатывают: <span image=\"items\/spirit_vessel\/full.webp\">[Spirit Vessel]<\/span> Spirit Vessel,  Urn of Shadows\n Следующие предметы не активируются Multicast:  Helm of the Dominator",
+        "Помимо срабатывания собственных заклинаний Multicast может активировать направленные на цель предметы при выборе врагов\n Следующие предметы активируют Multicast: <span image=\"items\/force_staff\/full.webp\">[picture:force_staff]<\/span> Force Staff, <span image=\"items\/heaven's_halberd\/full.webp\">[picture:heaven's_halberd]<\/span> Heaven's Halberd, <span image=\"items\/abyssal_blade\/full.webp\">[picture:abyssal_blade]<\/span> Abyssal Blade, <span image=\"images\/diffusal_blade_1.png\">[picture:diffusal_blade_1]<\/span> Diffusal Blade, <span image=\"items\/bloodthorn\/full.webp\">[picture:bloodthorn]<\/span> Bloodthorn, <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike, <span image=\"items\/ethereal_blade\/full.webp\">[picture:ethereal_blade]<\/span> Ethereal Blade, <span image=\"items\/eul's_scepter_of_divinity\/full.webp\">[picture:eul's_scepter_of_divinity]<\/span> Eul's Scepter of Divinity, <span image=\"items\/medallion_of_courage\/full.webp\">[picture:medallion_of_courage]<\/span> Medallion of Courage, <span image=\"images\/dagon_1.png\">[picture:dagon_1]<\/span> Dagon, <span image=\"items\/hand_of_midas\/full.webp\">[picture:hand_of_midas]<\/span> Hand of Midas, <span image=\"items\/rod_of_atos\/full.webp\">[picture:rod_of_atos]<\/span> Rod of Atos, <span image=\"items\/solar_crest\/full.webp\">[picture:solar_crest]<\/span> Solar Crest, <span image=\"items\/nullifier\/full.webp\">[picture:nullifier]<\/span> Nullifier, <span image=\"items\/orchid_malevolence\/full.webp\">[picture:orchid_malevolence]<\/span> Orchid Malevolence, <span image=\"items\/scythe_of_vyse\/full.webp\">[picture:scythe_of_vyse]<\/span> Scythe of Vyse, <span image=\"images\/clumsy_net.png\">[picture:clumsy_net]<\/span> Clumsy Net, <span image=\"images\/iron_talon.png\">[picture:iron_talon]<\/span> Iron Talon\n Следующие предметы активируют Multicast, но не срабатывают: <span image=\"items\/spirit_vessel\/full.webp\">[picture:spirit_vessel]<\/span> Spirit Vessel, <span image=\"items\/urn_of_shadows\/full.webp\">[picture:urn_of_shadows]<\/span> Urn of Shadows\n Следующие предметы не активируются Multicast: <span image=\"items\/helm_of_the_dominator\/full.webp\">[picture:helm_of_the_dominator]<\/span> Helm of the Dominator",
         "Активирует предметы только при выборе врагов, даже если сам предмет по умолчанию может выбрать целью союзника\n Если поблизости нет врагов, то Multicast не даст эффекта\n Он не может выбрать целью одно и то же существо несколько раз\n Предметы продолжают действовать по своим правилам выбора цели\n Например, предмет, выбирающий только крипов, не может умножить своё действие на вражеских героев",
         "Радиус множественного срабатывания основан на дальности применения предмета, дополнительной дальности применения и дальности в 600 от способности",
         "При срабатывании нескольких множителей выбирается наивысшее значение\n Без срабатывания: 25%\/25%\/25% 2x Multicast: 75%\/45%\/45% 3x Multicast: 0%\/30%\/15% 4x Multicast: 0%\/0%\/15%\n То есть в среднем каждое заклинание применяется в 175%\/205%\/220% случаев",

@@ -126,7 +126,7 @@
     {
       "notes": [
         "Interrupts Centaur Warrunner's channeling abilities upon cast",
-        "Affects every player-controlled allied unit, except for the following units: <span image=\"images\/animal_courier_radiant_minimap.webp\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards, buildings and <span image=\"images\/haunt.webp\">[picture:haunt]<\/span> Haunt-based illusions",
+        "Affects every player-controlled allied unit, except for the following units: <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards, buildings and <span image=\"images\/haunt.webp\">[picture:haunt]<\/span> Haunt-based illusions",
         "Affected allies become phased and hasted, meaning they cannot be slowed below the hasted value\n Affects invulnerable and hidden units as well",
         "Checks Centaur Warrunner's current <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> strength whenever trampling an enemy, so it adapts immediately\n However, the strength as damage multiplier is set upon cast and does not adapt upon leveling up the ability\n The strength as damage multiplier is not capped at 0 strength, meaning if the Centaur has negative strength, it deals 0 damage per second\n Fully procs on-damage effects (e.g\n <span image=\"images\/corrosive_skin.webp\">[picture:corrosive_skin]<\/span> Corrosive Skin) when the caster has 0 strength, except for abilities that have a minimum damage threshold (e.g\n <span image=\"images\/gravekeeper's_cloak.webp\">[picture:gravekeeper's_cloak]<\/span> Gravekeeper's Cloak)",
         "Stampede first applies the damage, then the debuff",

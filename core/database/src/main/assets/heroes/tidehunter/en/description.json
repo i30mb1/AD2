@@ -12,13 +12,13 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range:  700 ( 2200)",
-        "Damage: 110\/160\/210\/260 ( 230\/280\/330\/380)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2200)",
+        "Damage: 110\/160\/210\/260 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 230\/280\/330\/380)",
         "Armor Reduction: 3\/4\/5\/6",
-        "Move Speed Slow: 40% ( 50%)",
+        "Move Speed Slow: 40% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 50%)",
         "Debuff Duration: 4.5",
-        "Wave Travel Distance:  2200",
-        "Wave Radius:  260"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Wave Travel Distance:  2200",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Wave Radius:  260"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Tidehunter_Gush_1.mp3\/revision\/latest?cb=20191216025132",
       "effects": [
@@ -35,8 +35,8 @@
     },
     {
       "notes": [
-        "Upon reaching the damage threshold, it applies a strong dispel on Tidehunter\n The dispel proc is indicated by a sound effect and water particles on Tidehunter's skin\n When Kraken Shell is procced by an ability that first deals its damage and then applies its debuff (e.g\n  Storm Hammer), Tidehunter is dispelled before the ability's debuff is applied",
-        "Kraken Shell has an ensured Damage Block\n Therefore, Damage Block with a lower value (e.g\n the  Damage Block (Melee) innate ability) will not proc, since the higher damage block value takes priority\n The passive damage block is always active and it is independent of the damage threshold for the dispel proc\n Does not work against damage from wards sources (e.g\n  Death Ward etc.)\n Does not reduce physical damage from abilities, except for these abilities",
+        "Upon reaching the damage threshold, it applies a strong dispel on Tidehunter\n The dispel proc is indicated by a sound effect and water particles on Tidehunter's skin\n When Kraken Shell is procced by an ability that first deals its damage and then applies its debuff (e.g\n <span image=\"images\/storm_hammer.webp\">[picture:storm_hammer]<\/span> Storm Hammer), Tidehunter is dispelled before the ability's debuff is applied",
+        "Kraken Shell has an ensured Damage Block\n Therefore, Damage Block with a lower value (e.g\n the <span image=\"images\/unknown.png\">[picture:unknown]<\/span> Damage Block (Melee) innate ability) will not proc, since the higher damage block value takes priority\n The passive damage block is always active and it is independent of the damage threshold for the dispel proc\n Does not work against damage from wards sources (e.g\n <span image=\"images\/death_ward.webp\">[picture:death_ward]<\/span> Death Ward etc.)\n Does not reduce physical damage from abilities, except for these abilities",
         "Only damage from player-controlled sources (after reductions) is counted towards the debuff removal",
         "The damage threshold counter for proccing the dispel resets when Tidehunter does not take player-based damage for 7 seconds"
       ],
@@ -45,7 +45,7 @@
       "hot_key": "W",
       "params": [
         "Proc Chance: 100%",
-        "Damage Block: 16\/34\/52\/70 ( 56\/74\/92\/110)",
+        "Damage Block: 16\/34\/52\/70 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 56\/74\/92\/110)",
         "Damage Threshold: 600\/550\/500\/450",
         "Threshold Reset Timer: 7"
       ],
@@ -63,10 +63,10 @@
     },
     {
       "notes": [
-        "Causes Tidehunter to perform instant attacks on all hit enemies within the radius\n Affects ancient creeps, but not wards and  Roshan\n Does not affect buildings, unless the Anchor Smash affect buildings  talent is learned\n These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave and the passive Anchor Smash procs being an exception\n They have True Strike, but ignore disarms",
+        "Causes Tidehunter to perform instant attacks on all hit enemies within the radius\n Affects ancient creeps, but not wards and <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan\n Does not affect buildings, unless the Anchor Smash affect buildings <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent is learned\n These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave and the passive Anchor Smash procs being an exception\n They have True Strike, but ignore disarms",
         "Reduces the main attack damage of affected units\n Bonus attack damage is not reduced",
         "Anchor Smash first applies the debuff, then the instant attack",
-        "TALENT NOTES Grants Anchor Smash a 50% chance to passively proc on regular attacks\n These procs do not trigger the cooldown and work while on cooldown, and do not cost mana\n They do not proc on-cast effects either\n The procs use pseudo-random distribution\n The affected target(s) effectively takes 2 attacks' worth of damage, plus the attack damage bonus, since Anchor Smash deals damage based on Tidehunter's attack damage\n Adds an average of 50% current total attack damage + 20\/42.5\/65\/87.5 ( 45\/67.5\/90\/112.5) damage to every attack"
+        "TALENT NOTES Grants Anchor Smash a 50% chance to passively proc on regular attacks\n These procs do not trigger the cooldown and work while on cooldown, and do not cost mana\n They do not proc on-cast effects either\n The procs use pseudo-random distribution\n The affected target(s) effectively takes 2 attacks' worth of damage, plus the attack damage bonus, since Anchor Smash deals damage based on Tidehunter's attack damage\n Adds an average of 50% current total attack damage + 20\/42.5\/65\/87.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 45\/67.5\/90\/112.5) damage to every attack"
       ],
       "item_behaviour": [],
       "description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
@@ -74,10 +74,10 @@
       "params": [
         "Cast Animation: 0.4+0.3",
         "Radius: 375",
-        "Instant Attack Damage Bonus: 40\/85\/130\/175 ( 90\/135\/180\/225)",
-        "Attack Damage Reduction: 30%\/40%\/50%\/60% ( 55%\/65%\/75%\/85%)",
+        "Instant Attack Damage Bonus: 40\/85\/130\/175 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 90\/135\/180\/225)",
+        "Attack Damage Reduction: 30%\/40%\/50%\/60% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 55%\/65%\/75%\/85%)",
         "Duration: 6",
-        "Proc Chance:  50%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Proc Chance:  50%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Tidehunter_Anchor_Smash.mp3\/revision\/latest?cb=20191216025130",
       "effects": [
@@ -94,10 +94,10 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
-        "Does not require  Ravage to be leveled to be unlocked, once Aghanim's Shard is acquired\n However, it relies on Ravage to work, since it directly uses its values\n This means when Ravage is not learned, Tendrils of the Deep does nothing upon cast\n The tendrils does not home to the target in any way",
-        "Units within 150 radius upon cast are hit instantly\n With the travel distance and effect width, it can hit units up to 1087.5 range away\n The tendrils travel at a speed of 725 and takes exactly 1.09 seconds to travel the full distance\n It can be avoided by teleporting (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[Blink Dagger]<\/span> Blink) towards Tidehunter over the tendrils shortly after cast",
-        "Other Ravage notes fully apply\n SPELL STEAL Ability values are based on  Tidehunter's current  Ravage level when acquired"
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
+        "Does not require <span image=\"images\/ravage.webp\">[picture:ravage]<\/span> Ravage to be leveled to be unlocked, once Aghanim's Shard is acquired\n However, it relies on Ravage to work, since it directly uses its values\n This means when Ravage is not learned, Tendrils of the Deep does nothing upon cast\n The tendrils does not home to the target in any way",
+        "Units within 150 radius upon cast are hit instantly\n With the travel distance and effect width, it can hit units up to 1087.5 range away\n The tendrils travel at a speed of 725 and takes exactly 1.09 seconds to travel the full distance\n It can be avoided by teleporting (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[picture:blink_dagger]<\/span> Blink) towards Tidehunter over the tendrils shortly after cast",
+        "Other Ravage notes fully apply\n SPELL STEAL Ability values are based on <span image=\"images\/tidehunter_minimap.png\">[picture:tidehunter_minimap]<\/span> Tidehunter's current <span image=\"images\/ravage.webp\">[picture:ravage]<\/span> Ravage level when acquired"
       ],
       "item_behaviour": [],
       "description": "Tidehunter unleashes a targeted slew of tentacles that damage and stun enemies within reach. The tentacles deal 50% of Ravage's damage and stun, with a range 75% of Ravage's radius.",
@@ -108,7 +108,7 @@
         "Max Travel Distance: 937.5",
         "Effect Width: 150",
         "Damage: 125\/175\/225",
-        "Stun Duration: 1.2\/1.3\/1.4 ( 1.7\/1.8\/1.9)"
+        "Stun Duration: 1.2\/1.3\/1.4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.7\/1.8\/1.9)"
       ],
       "audioUrl": "",
       "effects": [
@@ -130,7 +130,7 @@
         "While in the air, other units may pass below the affected units",
         "The tentacle that hits the target is larger\n This visual effect can also be seen in the Fog of War\n When Ravage hits invisible and untargetable units, the visual effects below the hit unit are still visible",
         "The damage is applied upon landing, not upon getting hit\n The damage is applied instantly if the stun is dispelled while in the air",
-        "Ravage's effect is caused by a 250 units wide ring, which expands around the cast location at the given speed\n This means units within 250 radius upon cast are hit instantly\n The ring takes exactly 1.38 seconds to cover the remaining distance\n It can be avoided by teleporting (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[Blink Dagger]<\/span> Blink) towards Tidehunter over the ring shortly after cast"
+        "Ravage's effect is caused by a 250 units wide ring, which expands around the cast location at the given speed\n This means units within 250 radius upon cast are hit instantly\n The ring takes exactly 1.38 seconds to cover the remaining distance\n It can be avoided by teleporting (e.g\n <span image=\"items\/blink_dagger\/full.webp\">[picture:blink_dagger]<\/span> Blink) towards Tidehunter over the ring shortly after cast"
       ],
       "item_behaviour": [],
       "description": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
@@ -141,7 +141,7 @@
         "Effect Width: 250",
         "Projectile Speed: 725",
         "Damage: 250\/350\/450",
-        "Stun Duration: 2.4\/2.6\/2.8 ( 3.4\/3.6\/3.8)"
+        "Stun Duration: 2.4\/2.6\/2.8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.4\/3.6\/3.8)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Tidehunter_Ravage_1.mp3\/revision\/latest?cb=20191216025128",
       "effects": [

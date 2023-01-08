@@ -3,23 +3,23 @@
     {
       "notes": [
         "Fatal Bonds have no bounce delay, so all targets are bonded and damaged at the same time",
-        "When cast multiple times, it searches and prioritizes enemies which were not debuffed by the previous cast, and then it searches for the next closest units\n The debuff can still stack on the same units if no other previously bonded units are nearby\n Can bond units inside the Fog of War, but cannot bond invisible units\n Does not affect  Roshan at all\n Successive casts of Fatal Bonds fully stack and work independently from each other",
-        "Damage shared is the same type as the source damage\n Shares all 3 damage types, but not from HP Removal effects (e.g\n  Sunder)\n Therefore, the shared damage interacts with every on-damage effects (i.e\n disabling <span image=\"items\/blink_dagger\/full.webp\">[Blink Dagger]<\/span> Blink Dagger)\n Shared physical damage and magical damage is still affected by damage block and magic resistance respectively\n It is also fully affected by outgoing damage manipulation, if the amplification is sourced to Warlock\n Instant kill effects in the form of HP Removal (e.g\n  Sacred Arrow on creeps) shares an instance of 0 damage to all affected targets\n Fully procs on-damage effects such as  Corrosive Skin, except those which have a minimum damage threshold (e.g\n  Gravekeeper's Cloak)",
+        "When cast multiple times, it searches and prioritizes enemies which were not debuffed by the previous cast, and then it searches for the next closest units\n The debuff can still stack on the same units if no other previously bonded units are nearby\n Can bond units inside the Fog of War, but cannot bond invisible units\n Does not affect <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan at all\n Successive casts of Fatal Bonds fully stack and work independently from each other",
+        "Damage shared is the same type as the source damage\n Shares all 3 damage types, but not from HP Removal effects (e.g\n <span image=\"images\/sunder.webp\">[picture:sunder]<\/span> Sunder)\n Therefore, the shared damage interacts with every on-damage effects (i.e\n disabling <span image=\"items\/blink_dagger\/full.webp\">[picture:blink_dagger]<\/span> Blink Dagger)\n Shared physical damage and magical damage is still affected by damage block and magic resistance respectively\n It is also fully affected by outgoing damage manipulation, if the amplification is sourced to Warlock\n Instant kill effects in the form of HP Removal (e.g\n <span image=\"images\/sacred_arrow.webp\">[picture:sacred_arrow]<\/span> Sacred Arrow on creeps) shares an instance of 0 damage to all affected targets\n Fully procs on-damage effects such as <span image=\"images\/corrosive_skin.webp\">[picture:corrosive_skin]<\/span> Corrosive Skin, except those which have a minimum damage threshold (e.g\n <span image=\"images\/gravekeeper's_cloak.webp\">[picture:gravekeeper's_cloak]<\/span> Gravekeeper's Cloak)",
         "Fatal Bonds' damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag",
         "Spreads the full damage value before the affected enemy targets actually take the damage\n This means that the damage spreads before all manipulations, so that it may only be affected by incoming damage manipulation the affected targets have\n This also means it shares damage instances that exceeded the targets' current health and killed them\n The shared damage is always sourced to Warlock\n Therefore, if a unit dies to the damage done by Fatal Bonds, Warlock gets credited for the kill",
         "The distance between the bonded units does not matter\n Once bonded, they always spread and\/or receive the spread damage",
         "Non-player-controlled units are not aggro'd by the damage\n Neutral creeps do not react to the damage",
-        "Increases the total damage output of every damage by 60%\/80%\/100%\/120% ( 75%\/95%\/115%\/135%) when the maximum amount of units is bonded"
+        "Increases the total damage output of every damage by 60%\/80%\/100%\/120% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 75%\/95%\/115%\/135%) when the maximum amount of units is bonded"
       ],
       "item_behaviour": [],
       "description": "Binds several enemy units together, causing a percentage of the damage dealt to one of them to be felt by the others.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0",
-        "Cast Range:  1000",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000",
         "Bounce Distance: 700",
         "Number of Bounces: 6",
-        "Damage Shared: 12%\/16%\/20%\/24% ( 15%\/19%\/23%\/27%)",
+        "Damage Shared: 12%\/16%\/20%\/24% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 15%\/19%\/23%\/27%)",
         "Bonds Duration: 25"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Warlock_Fatal_Bonds_1.mp3\/revision\/latest?cb=20191216030434",
@@ -38,9 +38,9 @@
     {
       "notes": [
         "↓↓ Double-tapping automatically targets self",
-        "Can be cast on allied  Couriers",
+        "Can be cast on allied <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "Deals damage or heals in 1-second intervals, starting 1 second after cast, resulting in 10 instances",
-        "Can deal up to 150\/250\/350\/450 ( 400\/500\/600\/700) damage to the target (before reductions), or heal for the same amount of health if cast on an ally\n TALENT NOTES Learning the damage and heal increasing  talent does not update already existing modifiers",
+        "Can deal up to 150\/250\/350\/450 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 400\/500\/600\/700) damage to the target (before reductions), or heal for the same amount of health if cast on an ally\n TALENT NOTES Learning the damage and heal increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update already existing modifiers",
         "Successive casts of Shadow Word fully stack and work independently from each other",
         "The first sound is played when the target is an ally, and the second sound when it is an enemy",
         "SHARD NOTES Shadow Word now turns into a 450 radius area-targeted ability, so that it cannot directly target units anymore\n ↓↓ Double-tapping centers the radius around Warlock\n Can target invisible units and units inside the Fog of War"
@@ -50,10 +50,10 @@
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.4+0.6",
-        "Cast Range:  600\/700\/800\/900",
-        "Damage\/Heal per Second: 15\/25\/35\/45 ( 40\/50\/60\/70)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600\/700\/800\/900",
+        "Damage\/Heal per Second: 15\/25\/35\/45 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 40\/50\/60\/70)",
         "Duration: 10",
-        "Radius:  450"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Radius:  450"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5e\/Warlock_Shadow_Word_1.mp3\/revision\/latest?cb=20191216030441",
       "effects": [
@@ -71,7 +71,7 @@
     {
       "notes": [
         "The strength of the Upheaval is based on Warlock's channel duration, not on how long a unit stands in the affected area\n Both the debuff and buff values are applied and\/or refreshed in the same intervals",
-        "Upheaval's ability values increases as follows on each server tick, starting 1 tick after cast: The movement speed slow increases by 0.33%\/0.5%\/0.67%\/0.83% per tick, taking 5.5\/4.67\/4.25\/4 seconds to reach max values\n The damage per second increases by 1.17\/2\/2.83\/3.67 damage per tick, taking 3.5\/6\/8.5\/11 seconds to reach max values\n TALENT NOTES The ally attack speed bonus  talent increases by 0.4 attack speed bonus per tick, taking 5.83 seconds to reach max values\n Learning the  talent immediately updates the current instance",
+        "Upheaval's ability values increases as follows on each server tick, starting 1 tick after cast: The movement speed slow increases by 0.33%\/0.5%\/0.67%\/0.83% per tick, taking 5.5\/4.67\/4.25\/4 seconds to reach max values\n The damage per second increases by 1.17\/2\/2.83\/3.67 damage per tick, taking 3.5\/6\/8.5\/11 seconds to reach max values\n TALENT NOTES The ally attack speed bonus <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent increases by 0.4 attack speed bonus per tick, taking 5.83 seconds to reach max values\n Learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates the current instance",
         "With the max channel time and the debuff duration, it can deal up to a total 358.75\/660\/998.75\/1375 damage (before reductions) within the area for the entire duration\n For how much damage Upheaval deals per increased second, please refer to the chart below",
         "Successive damage per second debuffs of Upheaval fully stack and work independently from each other\n However, successive debuffs applied update its movement speed slow values and refreshes its duration"
       ],
@@ -80,16 +80,16 @@
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.4+0",
-        "Cast Range:  900",
-        "Radius: 500\/550\/600\/650 ( 575\/625\/675\/725)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
+        "Radius: 500\/550\/600\/650 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 575\/625\/675\/725)",
         "Max Channel Time: 10\/12\/14\/16",
         "Damage Increase per Second: 10",
         "Max Damage per Second: 35\/60\/85\/110",
         "Move Speed Slow Increase per Second: 10%\/15%\/20%\/25%",
         "Max Move Speed Slow: 55%\/70%\/85%\/100%",
         "Buff\/Debuff Duration: 3",
-        "Ally Attack Speed Bonus Increase per Second:  12",
-        "Ally Max Attack Speed Bonus:  70"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Ally Attack Speed Bonus Increase per Second:  12",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Ally Max Attack Speed Bonus:  70"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Warlock_Upheaval.mp3\/revision\/latest?cb=20191216030444",
       "effects": [
@@ -106,27 +106,27 @@
     },
     {
       "notes": [
-        "Warlock Golems are always summoned at the center of the targeted area\n They are considered as creep-heroes and ancient creeps, making them interact differently with several abilities",
-        "Successive casts of Chaotic Offering do not replace any of the currently active Warlock Golems from a previous cast\n Leveling up the ability, learning the magic resistance or armor increasing  talents does not update already existing golems",
+        "<span image=\"images\/warlock_golem.png\">[picture:warlock_golem]<\/span> Warlock Golems are always summoned at the center of the targeted area\n They are considered as creep-heroes and ancient creeps, making them interact differently with several abilities",
+        "Successive casts of Chaotic Offering do not replace any of the currently active Warlock Golems from a previous cast\n Leveling up the ability, learning the magic resistance or armor increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents does not update already existing golems",
         "Upon spawning, Warlock Golems destroy all trees within 600 radius around them",
         "The visual effects and sounds during the effect delay are visible and audible to everyone\n It also plays a sound effect during the cast time, which is audible to everyone as well",
-        "Does not affect enemy  Couriers",
+        "Does not affect enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "SCEPTER NOTES Chaotic Offering now summons a second golem 0.2 seconds after the first golem\n The second golem applies the area stun and destroys all trees within the radius as well, effectively extending the total stun duration to 1.2 seconds",
-        "TALENT NOTES The Golem on Death  talent automatically and passively casts Chaotic Offering centered on Warlock's death location whenever he dies\n Does not trigger when Warlock has Reincarnation\n Applies the area stun like a manual cast and summons 1 Warlock Golem\n The Golem lasts its full duration, it is not bound to Warlock's death timer and does not disappear when he respawns\n Chaotic Offering notes and all of Warlock Golem's  talents fully apply\n The <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter upgrades are not applied to this on-death passive cast"
+        "TALENT NOTES The Golem on Death <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent automatically and passively casts Chaotic Offering centered on Warlock's death location whenever he dies\n Does not trigger when Warlock has Reincarnation\n Applies the area stun like a manual cast and summons 1 Warlock Golem\n The Golem lasts its full duration, it is not bound to Warlock's death timer and does not disappear when he respawns\n Chaotic Offering notes and all of Warlock Golem's <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents fully apply\n The <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter upgrades are not applied to this on-death passive cast"
       ],
       "item_behaviour": [],
       "description": "Summons a Golem from the depths, stunning enemies for one second. The Golem lives 60 seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.5+0.7",
-        "Cast Range:  1000",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000",
         "Stun Radius: 600",
         "Effect Delay: 0.5",
-        "Number of Golems: 1 ( 2)",
+        "Number of Golems: 1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2)",
         "Stun Duration: 1",
         "Golem Duration: 60",
-        "Golem Spawn Interval:  0.2",
-        "Number of Golems on Death:  1"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Golem Spawn Interval:  0.2",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Number of Golems on Death:  1"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/ff\/Warlock_Chaotic_Offering_1.mp3\/revision\/latest?cb=20191216030434",
       "effects": [

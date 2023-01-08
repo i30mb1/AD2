@@ -3,14 +3,14 @@
     {
       "notes": [
         "The slow and speed bonus values are independent from each other\n Upon cast, Visage gains movement speed based on his current movement speed while the affected target loses movement speed based on theirs\n The same applies to the attack speed bonus and its reduction\n This also means when either Visage or the target loses the buff\/debuff, the other still keeps theirs",
-        "The buff is also independently applied to  Familiars within 900 range of Visage\n Dispelling Visage does not remove the buff on the Familiars\n The buff is applied even while they are invulnerable (i.e\n  Stone Form), but not when hidden\n This buff is not applied to other player-controlled units\n Since the buff is not aura-based, Familiars can move away from Visage and still keep the buff after Grave Chill is cast"
+        "The buff is also independently applied to <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars within 900 range of Visage\n Dispelling Visage does not remove the buff on the Familiars\n The buff is applied even while they are invulnerable (i.e\n <span image=\"images\/stone_form_%28familiar%29.png\">[picture:stone_form_%28familiar%29]<\/span> Stone Form), but not when hidden\n This buff is not applied to other player-controlled units\n Since the buff is not aura-based, Familiars can move away from Visage and still keep the buff after Grave Chill is cast"
       ],
       "item_behaviour": [],
       "description": "Visage drains the movement and attack speed of the targeted unit, gaining it for itself and nearby familiars.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.2+0.57",
-        "Cast Range:  625",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 625",
         "Familiar Search Radius: 900",
         "Move Speed Change: 15%\/20%\/25%\/30%",
         "Attack Speed Change: 25\/40\/55\/70",
@@ -32,26 +32,26 @@
       "notes": [
         "The projectile travels at a speed of 1000",
         "Each instance of damage taken by heroes within 1800 radius is saved for 6 seconds or until Soul Assumption is cast\n When the sum of the saved damage exceeds 100 damage, a charge is added\n A total of 300\/400\/500\/600 damage is needed, within the radius in the last 6 seconds to reach the maximum amount of charges",
-        "Counts damage values of all 3 damage types between 2 \u2013 3000 (after reductions) that is dealt by player-controlled units and  Roshan to heroes and clones\n Does not count self-inflicted damage (e.g\n  Mist Coil), damage flagged as HP Removal (e.g\n <span image=\"items\/soul_ring\/full.webp\">[Soul Ring]<\/span> Soul Ring), and from illusions and creep-heroes",
+        "Counts damage values of all 3 damage types between 2 \u2013 3000 (after reductions) that is dealt by player-controlled units and <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan to heroes and clones\n Does not count self-inflicted damage (e.g\n <span image=\"images\/mist_coil.webp\">[picture:mist_coil]<\/span> Mist Coil), damage flagged as HP Removal (e.g\n <span image=\"items\/soul_ring\/full.webp\">[picture:soul_ring]<\/span> Soul Ring), and from illusions and creep-heroes",
         "The number of current charges is visible in the form of yellow bars above Visage\n This is visible to Visage and his allies only",
         "Upon cast, Soul Assumption's damage is set and the charges counter is reset upon projectile launch\n The projectile's visual appearance also reflects the number of charges, revealing how much damage it is approximately about to deal",
-        "With 0\/1\/2\/3\/4\/5\/6 charges, Soul Assumption can deal 20\/90\/160\/230\/300\/370\/440 ( 20\/110\/200\/290\/380\/470\/560) damage to the target (before reductions)",
-        "TALENT NOTES The Soul Assumption multishot  talent launches 1 additional projectile towards random visible valid targets within the range\n With the cast range and the range buffer, the ability has a search range of 1300\n Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens\n The secondary target is chosen randomly within the area, with heroes (including illusions and clones) being prioritized\n Treats creep-heroes as creeps\n Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well"
+        "With 0\/1\/2\/3\/4\/5\/6 charges, Soul Assumption can deal 20\/90\/160\/230\/300\/370\/440 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 20\/110\/200\/290\/380\/470\/560) damage to the target (before reductions)",
+        "TALENT NOTES The Soul Assumption multishot <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent launches 1 additional projectile towards random visible valid targets within the range\n With the cast range and the range buffer, the ability has a search range of 1300\n Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens\n The secondary target is chosen randomly within the area, with heroes (including illusions and clones) being prioritized\n Treats creep-heroes as creeps\n Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well"
       ],
       "item_behaviour": [],
       "description": "Visage gathers charges of soul essence each time nearby heroes take more than 100 damage. When the essence is released, it deals base damage as well as damage for each gathered soul charge.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.2+0.57",
-        "Cast Range:  1000",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000",
         "Damage Gather Radius: 1800",
-        "Number of Targets: 1 ( 2)",
+        "Number of Targets: 1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2)",
         "Charge Gain Damage Threshold: 100",
         "Max Charges: 3\/4\/5\/6",
         "Base Damage: 20",
-        "Damage per Charge: 70 ( 90)",
+        "Damage per Charge: 70 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 90)",
         "Charge Duration: 6",
-        "Secondary Target Range Buffer:  300"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Secondary Target Range Buffer: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 300"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Visage_Soul_Assumption_1.mp3\/revision\/latest?cb=20191216030321",
       "effects": [
@@ -71,8 +71,8 @@
         "Applies generic incoming damage reduction on Visage\n Stacks additively with other sources of generic incoming damage manipulation\n The reduction affects all damage Visage takes that is not flagged as HP removal\n The damage reduction only reacts on player-based damage greater than 40 (after all other reductions) that is not self-inflicted",
         "Upon learning, 4 floating stones appear around Visage, indicating the number of layers he has\n A stone disappears for each missing layer\n The number of layers can be seen on the status buff icon as well\n The recharge time for each layer is independent of all others\n Multiple layers can recharge at once, if they are removed quickly enough\n Damage dealt to Familiars does not remove layers",
         "With 4 layers, the damage reduction is hard capped at 32%\/48%\/64%\/80%\n For how much damage reduction is granted per layer, please refer to the chart below",
-        "The aura also affects all  Familiars under Visage's control, granting them damage reduction based on the current charges on Visage\n The buff lingers for 0.5 seconds\n Unlike the damage reduction on Visage, this damage reduction has no minimum threshold, reducing all damage they take\n The buff is applied even while they are invulnerable (i.e\n  Stone Form), but not when hidden\n This buff is not applied to other player-controlled units\n TALENT NOTES The Gravekeeper's Cloak armor  talent also grants armor to the Familiars\n Visage receives this armor bonus from the ability's passive modifier, since the aura only affects Familiars",
-        "SHARD NOTES Adds an active component to Gravekeeper's Cloak, with the passive effects still present\n Except for the health regeneration values, the other values are taken from  Familiars'  Stone Form, based on the current level of  Summon Familiars\n Can regenerate 4.17% of Visage's maximum health per second over the duration\n Stone Form notes fully apply\n If Summon Familiars is not learned, nothing happens upon cast, wasting the mana and cooldown"
+        "The aura also affects all <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars under Visage's control, granting them damage reduction based on the current charges on Visage\n The buff lingers for 0.5 seconds\n Unlike the damage reduction on Visage, this damage reduction has no minimum threshold, reducing all damage they take\n The buff is applied even while they are invulnerable (i.e\n <span image=\"images\/stone_form_%28familiar%29.png\">[picture:stone_form_%28familiar%29]<\/span> Stone Form), but not when hidden\n This buff is not applied to other player-controlled units\n TALENT NOTES The Gravekeeper's Cloak armor <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent also grants armor to the Familiars\n Visage receives this armor bonus from the ability's passive modifier, since the aura only affects Familiars",
+        "SHARD NOTES Adds an active component to Gravekeeper's Cloak, with the passive effects still present\n Except for the health regeneration values, the other values are taken from <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars' <span image=\"images\/stone_form_%28familiar%29.png\">[picture:stone_form_%28familiar%29]<\/span> Stone Form, based on the current level of <span image=\"images\/summon_familiars.webp\">[picture:summon_familiars]<\/span> Summon Familiars\n Can regenerate 4.17% of Visage's maximum health per second over the duration\n Stone Form notes fully apply\n If Summon Familiars is not learned, nothing happens upon cast, wasting the mana and cooldown"
       ],
       "item_behaviour": [],
       "description": "Visage generates a layered barrier that protects him from damage. If he receives damage from a player, one layer is removed, and takes time to recover.",
@@ -85,8 +85,8 @@
         "Min Damage Threshold: 40",
         "Layer Recharge Time: 6\/5\/4\/3",
         "Aura Linger Duration: 0.5",
-        "Active Max Health Restored:  25%",
-        "Armor Bonus:  10"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Active Max Health Restored:  25%",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Armor Bonus:  10"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Visage_Gravekeeper%27s_Cloak.mp3\/revision\/latest?cb=20210103162728",
       "effects": [
@@ -104,7 +104,7 @@
     {
       "notes": [
         "Does not interrupt Visage's channeling abilities upon cast",
-        "This ability is disabled when no  Familiar has  Stone Form ready\n The ability goes on a cooldown equal to the cooldown time of the Stone Form with the lowest cooldown among all Familiars\n The cooldown is not affected by any cooldown reduction and cooldown resets sources, it periodically updates itself to match the next lowest Stone Form cooldown\n This means re-casting  Summon Familiars while the sub-ability is on cooldown, Stone Form is instantly ready to be cast again",
+        "This ability is disabled when no <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiar has <span image=\"images\/stone_form_%28familiar%29.png\">[picture:stone_form_%28familiar%29]<\/span> Stone Form ready\n The ability goes on a cooldown equal to the cooldown time of the Stone Form with the lowest cooldown among all Familiars\n The cooldown is not affected by any cooldown reduction and cooldown resets sources, it periodically updates itself to match the next lowest Stone Form cooldown\n This means re-casting <span image=\"images\/summon_familiars.webp\">[picture:summon_familiars]<\/span> Summon Familiars while the sub-ability is on cooldown, Stone Form is instantly ready to be cast again",
         "Upon cast, it orders the closest Familiar to enter Stone Form automatically\n Familiars entering Stone Form via this sub-ability do not trigger on-cast effects\n If the familiar is stunned, silenced, sleeping, hidden, taunted, feared, or hypnotized, it cannot be made to enter Stone Form",
         "This ability can be cast when Visage is stunned, cycloned, sleeping, taunted, hidden, or during forced movement\n However, he cannot use this ability while silenced, hexed or prevented from acting\n Visage is unable to ⇧ Shift-queue this ability"
       ],
@@ -112,7 +112,7 @@
       "description": "After a short delay, the nearest Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area. The Familiar becomes invulnerable, and will regain its health very rapidly. After 6 seconds, the Familiar will automatically leave Stone Form.",
       "hot_key": "D",
       "params": [
-        "Cast Animation:  0+0"
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0"
       ],
       "audioUrl": "",
       "effects": [
@@ -128,9 +128,9 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Silent as the Grave does not interrupt Visage's channeling abilities upon cast",
-        "Only affects Visage and his  Familiars, regardless of where they are on the map\n Does not affect any other player-controlled units",
+        "Only affects Visage and his <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars, regardless of where they are on the map\n Does not affect any other player-controlled units",
         "The invisibility is lost upon reaching the cast point of abilities, or upon landing an attack on an enemy\n This means if the attack misses, the invisibility is not lost\n Visage can pick up, drop, and attack items without breaking the invisibility",
         "Grants Visage flying movement, but does not grant flying vision",
         "The attack damage buff is granted whenever the invisibility buff is lost in any way\n The attack damage bonus is also granted by the invisibility buff itself so that the first attack out of the invisibility has the bonus as well\n Grants regular flat bonus attack damage based on Visage's and his Familiars' main attack damage respectively\n Does not further increase bonus attack damage\n Their current main attack damage is periodically checked and the bonuses are adapted instantly"
@@ -139,7 +139,7 @@
       "description": "Turns Visage and familiars invisible, granting Visage bonus movement speed and upgrading its movement type to flying. When Visage or its familiars leave invisibility they deal more damage for 4 seconds. Lasts 35 seconds. Invisibility ends when attacking or casting.",
       "hot_key": "F",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Fade Time: 0",
         "Move Speed Bonus: 20%",
         "Attack Damage Bonus: 25%",
@@ -162,15 +162,15 @@
       "notes": [
         "Interrupts Visage's channeling abilities upon cast",
         "Does not update any values of already summoned Familiars upon leveling up the ability\n Casting Summon Familiars replaces all existing Familiars from a previous cast, creating new ones based on the current level",
-        "The  Familiars are summoned 200 range in front on Visage, with 120 range distance between the Familiars\n Familiars have flying movement\n They are considered as creep-heroes and ancient creeps, making them interact differently with several abilities",
-        "TALENT NOTES Visage and the Familiars have a innate hidden modifier that manages the  talent bonuses for them\n Therefore the attack damage and movement speed increasing  talents are immediately applied to existing Familiars and Visage's illusions\n  Armor Corruption from multiple sources fully stacks\n Visage and all Familiars together can reduce a total of 3 ( 4) armor"
+        "The <span image=\"images\/visage_familiar.png\">[picture:visage_familiar]<\/span> Familiars are summoned 200 range in front on Visage, with 120 range distance between the Familiars\n Familiars have flying movement\n They are considered as creep-heroes and ancient creeps, making them interact differently with several abilities",
+        "TALENT NOTES Visage and the Familiars have a innate hidden modifier that manages the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent bonuses for them\n Therefore the attack damage and movement speed increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents are immediately applied to existing Familiars and Visage's illusions\n <span image=\"images\/armor_corruption.png\">[picture:armor_corruption]<\/span> Armor Corruption from multiple sources fully stacks\n Visage and all Familiars together can reduce a total of 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4) armor"
       ],
       "item_behaviour": [],
       "description": "Conjures blind Familiars to fight for Visage. Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing. While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health. Familiars grant high bounty when killed.",
       "hot_key": "R",
       "params": [
-        "Cast Animation:  0+0",
-        "Number of Familiars: 2 ( 3)",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
+        "Number of Familiars: 2 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3)",
         "Familiar Duration: Permanent"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Visage_Summon_Familiars.mp3\/revision\/latest?cb=20191216030324",

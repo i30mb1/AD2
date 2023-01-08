@@ -13,7 +13,7 @@ import java.io.File
 
 fun main() {
     val heroes = getHeroes()
-//    createFileWithHeroes(heroes)
+    createFileWithHeroes(heroes)
     for (hero in heroes) {
         loadHero(hero, LocaleHeroes.RU)
         loadHero(hero, LocaleHeroes.EN)
@@ -146,7 +146,8 @@ private fun loadHero(hero: Hero, locale: LocaleHeroes) {
     result.loadMainAttributes(root)
 
     val path = "$assetsDatabase/heroes/${hero.folderName}/${locale.folder}"
-    saveFile(path, "description.json", result.toJSONString())
+    val isSaved = saveFile(path, "description.json", result.toJSONString())
+    if (isSaved) println("hero ${hero.name}-${locale.folder} info saved")
 }
 
 private fun loadHeroMinimap(root: Document, hero: Hero) {

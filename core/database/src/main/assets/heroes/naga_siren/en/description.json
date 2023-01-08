@@ -15,8 +15,8 @@
       "params": [
         "Cast Animation: 0.4+0",
         "Split Time: 0.5",
-        "Number of Illusions: 3 ( 4)",
-        "Illusion Damage Dealt: 25%\/30%\/35%\/40% ( 38%\/43%\/48%\/53%)",
+        "Number of Illusions: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4)",
+        "Illusion Damage Dealt: 25%\/30%\/35%\/40% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38%\/43%\/48%\/53%)",
         "Illusion Damage Taken: 350%",
         "Illusion Duration: 26"
       ],
@@ -34,18 +34,18 @@
     },
     {
       "notes": [
-        "The net travels at a speed of 1500 ( 2250)",
+        "The net travels at a speed of 1500 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2250)",
         "Roots the target, preventing it from moving and casting certain mobility abilities\n Provides True Sight over the target",
         "All illusions owned by Naga Siren within 900 range of the target also cast a fake Ensnare\n They play the whole cast animation and release their fake nets at the same time the real net is released\n When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake nets\n When illusions are moving or attacking, they continue to do so and do not turn to face the target\n They still play the cast animation, overriding their move or attack animations\n When canceling the cast, the illusions still play the full cast animation, but do not release the fake nets\n The fake nets do not interact with anything and do not root",
-        "SCEPTER NOTES Ensnare can now be cast on and fully affect any invulnerable unit, not just sleeping units\n Fully affects  Couriers"
+        "SCEPTER NOTES Ensnare can now be cast on and fully affect any invulnerable unit, not just sleeping units\n Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Interrupts the target and traps them in place, preventing movement or blinking.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.47",
-        "Cast Range:  575\/600\/625\/650 ( 862.5\/900\/937.5\/975)",
-        "Projectile Speed: 1500 ( 2250)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 575\/600\/625\/650 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 862.5\/900\/937.5\/975)",
+        "Projectile Speed: 1500 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2250)",
         "Duration: 2.75\/3.5\/4.25\/5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Naga_Siren_Ensnare_1.mp3\/revision\/latest?cb=20191216020847",
@@ -62,12 +62,12 @@
     },
     {
       "notes": [
-        "Each successful attack performed by Naga Siren or her illusions applies the attack counter buff on Naga Siren\n If the buff is already present, its stack count gets increased instead\n Counts attacks against any enemy unit, except buildings\n Does not count attacks from units that do not have this ability (e.g\n  Disruption illusions)\n The counter buff has no duration and lasts indefinitely",
+        "Each successful attack performed by Naga Siren or her illusions applies the attack counter buff on Naga Siren\n If the buff is already present, its stack count gets increased instead\n Counts attacks against any enemy unit, except buildings\n Does not count attacks from units that do not have this ability (e.g\n <span image=\"images\/disruption.webp\">[picture:disruption]<\/span> Disruption illusions)\n The counter buff has no duration and lasts indefinitely",
         "When the counter reaches 6, Rip Tide's effects are applied around all units under Naga Siren's control that have this ability, and the counter buff is removed",
         "Enemies may only be hit by one instance, even when within range of multiple Rip Tides\n Neither the damage nor the debuff stack",
-        "The damage source of all Rip Tides is the unit that performed the triggering attack, meaning on-damage effects react on the unit that triggered it (e.g\n <span image=\"items\/blade_mail\/full.webp\">[Blade Mail]<\/span> Blade Mail)",
+        "The damage source of all Rip Tides is the unit that performed the triggering attack, meaning on-damage effects react on the unit that triggered it (e.g\n <span image=\"items\/blade_mail\/full.webp\">[picture:blade_mail]<\/span> Blade Mail)",
         "Rip Tide first applies the armor reduction debuff, the Rip Tide damage, and then the attack damage",
-        "TALENT NOTES The armor reduction increasing  talent does not update already placed debuffs\n Already placed debuffs update their values only when refreshed"
+        "TALENT NOTES The armor reduction increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update already placed debuffs\n Already placed debuffs update their values only when refreshed"
       ],
       "item_behaviour": [],
       "description": "Every 6 attacks from naga and her illusions, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for 4 seconds.",
@@ -75,8 +75,8 @@
       "params": [
         "Required Hits: 6",
         "Radius: 300",
-        "Damage: 40\/45\/50\/55 ( 70\/75\/80\/85)",
-        "Armor Reduction: 2\/4\/6\/8 ( 9\/11\/13\/15)",
+        "Damage: 40\/45\/50\/55 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 70\/75\/80\/85)",
+        "Armor Reduction: 2\/4\/6\/8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 9\/11\/13\/15)",
         "Duration: 4"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Naga_Siren_Rip_Tide_1.mp3\/revision\/latest?cb=20210101030224",
@@ -94,8 +94,8 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
-        "Requires an  Ensnared target to be cast\n There is no limit to how many targets, including enemies and allies alike, can be moved by Reel In, as long as they are affected by the net, they are considered an Ensnared target\n However, Reel In does not interrupt its own channeling when Ensnare expires on the target\n While  Roshan and ancient creeps (e.g\n  Couriers) can be Ensnared, Reel In does not consider them to be an Ensnared target\n Fully affects spell immune and invulnerable units\n Reel In does not affect hidden units, unless it turns hidden while already being moved",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires an <span image=\"images\/ensnare.webp\">[picture:ensnare]<\/span> Ensnared target to be cast\n There is no limit to how many targets, including enemies and allies alike, can be moved by Reel In, as long as they are affected by the net, they are considered an Ensnared target\n However, Reel In does not interrupt its own channeling when Ensnare expires on the target\n While <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan and ancient creeps (e.g\n <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers) can be Ensnared, Reel In does not consider them to be an Ensnared target\n Fully affects spell immune and invulnerable units\n Reel In does not affect hidden units, unless it turns hidden while already being moved",
         "Upon cast, the Ensnared target is moved towards Naga Siren\n Upon the target reaching the 100 min distance, they are no longer moved\n The Ensnare target is not disabled during the movement\n They can still turn, attack and use items\n Reel In only moves the target when it is Ensnared",
         "Sets the target's movement speed to 100 upon cast\n If the target gets moved or teleported, the speed does not adapt\n Can move the affected target for 750 distance when channeled for the entire duration\n Does not grant the Ensnared targets unobstructed pathing, the targets do not move through cliffs, trees, and other units while channeling\n SPELL STEAL This ability is not acquirable"
       ],
@@ -127,8 +127,8 @@
         "Affected units are invulnerable while sleeping",
         "Song of the Siren's radius is centered on Naga Siren for the entire duration, so if she moves far enough away from affected units, they wake up",
         "The sleep is provided by an aura\n Its debuff lingers for 0.4 seconds",
-        "Song of the Siren cannot be interrupted\n Only Naga Siren's death or the  Song of the Siren End sub-ability can stop it\n However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability",
-        "Does not affect  Roshan,  Couriers, wards or hidden units\n Does affect buildings\n Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren",
+        "Song of the Siren cannot be interrupted\n Only Naga Siren's death or the <span image=\"images\/song_of_the_siren_end.webp\">[picture:song_of_the_siren_end]<\/span> Song of the Siren End sub-ability can stop it\n However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability",
+        "Does not affect <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, wards or hidden units\n Does affect buildings\n Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren",
         "SHARD NOTES A second aura is provided by Naga Siren, which increases the health regeneration of allies within range\n Uses the same radius and aura linger duration values as the aura that affects enemies\n Affects invulnerable, but not hidden allies\n Does not affect buildings or wards\n Can regenerate up to 42% of an ally's max health over its full duration"
       ],
       "item_behaviour": [],
@@ -136,10 +136,10 @@
       "hot_key": "R",
       "params": [
         "Cast Animation: 1+0.3",
-        "Radius: 1000\/1200\/1400 ( 1500\/1700\/1900)",
-        "Duration: 7 ( 8)",
+        "Radius: 1000\/1200\/1400 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1500\/1700\/1900)",
+        "Duration: 7 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 8)",
         "Aura Linger Duration: 0.4",
-        "Max Health as Health Regen Bonus:  5%"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Max Health as Health Regen Bonus:  5%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Naga_Siren_Song_of_the_Siren.mp3\/revision\/latest?cb=20191216020844",
       "effects": [
@@ -155,10 +155,10 @@
     },
     {
       "notes": [
-        "Replaces  Song of the Siren until the sub-ability is used, the song duration ends or Naga Siren's death",
+        "Replaces <span image=\"images\/song_of_the_siren.webp\">[picture:song_of_the_siren]<\/span> Song of the Siren until the sub-ability is used, the song duration ends or Naga Siren's death",
         "Naga Siren is unable to level Song of the Siren up while this sub-ability is active",
         "Goes into a 1-second cooldown right after Song of the Siren is cast, this is to prevent accidental double-casts prematurely ending the ability",
-        "When cast, enemies wake up after the aura's 0.4-second linger duration\n SPELL STEAL Does not grant  Song of the Siren if this sub-ability is the last cast ability"
+        "When cast, enemies wake up after the aura's 0.4-second linger duration\n SPELL STEAL Does not grant <span image=\"images\/song_of_the_siren.webp\">[picture:song_of_the_siren]<\/span> Song of the Siren if this sub-ability is the last cast ability"
       ],
       "item_behaviour": [],
       "description": "Release enemy units from your song so they can be targeted again.",

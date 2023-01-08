@@ -4,12 +4,12 @@
       "notes": [
         "The projectile travels at a speed of 1000",
         "When targeting allies, the area effect is still applied to surrounding enemies\n The ally only gets dispelled\n Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast\n ↓↓ Double-tapping automatically targets self",
-        "Always dispels  Fate's Edict on affected targets",
+        "Always dispels <span image=\"images\/fate's_edict.webp\">[picture:fate's_edict]<\/span> Fate's Edict on affected targets",
         "Fortune's End first applies the dispel, then the debuff, then the damage",
-        "Can directly be cast on invulnerable units, fully affecting them, though the damage gets negated by the invulnerability\n Does not affect hidden targets\n When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but the main target is not affected\n Can be cast on and fully affects ally  Couriers, but not enemy Couriers\n Can neither target, nor affect wards and buildings",
+        "Can directly be cast on invulnerable units, fully affecting them, though the damage gets negated by the invulnerability\n Does not affect hidden targets\n When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but the main target is not affected\n Can be cast on and fully affects ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, but not enemy Couriers\n Can neither target, nor affect wards and buildings",
         "Applies a visual effect on the targeted unit upon cast, indicating that it is directly targeted\n This visual effect is visible to everyone\n The sound during the channeling is audible to everyone as well",
         "The channeling is not canceled when the target turns spell immune, invisible, invulnerable, hidden or dies\n When the channeling is interrupted through disables, the projectile is released prematurely\n The damage and dispel effect are static, only the root duration is based on the time spent channeling",
-        "The root duration starts at 0.75 ( 1.25) and increases by 0.08 for each 0.1 seconds channeled, reaching 2.75 ( 3.25) in 2.5 seconds\n TALENT NOTES The instant Fortune's End  talent removes the need for channeling and causes the projectile to be released instantly on max power\n Selecting the  talent while already channeling Fortune's End visually removes the channeling bar, but does not interfere with the cast in any way",
+        "The root duration starts at 0.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.25) and increases by 0.08 for each 0.1 seconds channeled, reaching 2.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.25) in 2.5 seconds\n TALENT NOTES The instant Fortune's End <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent removes the need for channeling and causes the projectile to be released instantly on max power\n Selecting the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent while already channeling Fortune's End visually removes the channeling bar, but does not interfere with the cast in any way",
         "Fortune's End roots affected targets, preventing them from moving and casting certain mobility abilities\n Provides True Sight over the targets"
       ],
       "item_behaviour": [],
@@ -17,12 +17,12 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0+0",
-        "Cast Range:  850",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 850",
         "Effect Radius: 300",
-        "Max Channel Time: 2.5 ( 0)",
-        "Damage: 100\/160\/220\/280 ( 180\/240\/300\/360)",
-        "Min Root Duration: 0.75 ( 1.25)",
-        "Max Root Duration: 2.75 ( 3.25)"
+        "Max Channel Time: 2.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 0)",
+        "Damage: 100\/160\/220\/280 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 180\/240\/300\/360)",
+        "Min Root Duration: 0.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.25)",
+        "Max Root Duration: 2.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.25)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Oracle_Fortune%27s_End_1.mp3\/revision\/latest?cb=20191216021406",
       "effects": [
@@ -41,14 +41,14 @@
       "notes": [
         "Applies a disarm and sets the target's magic resistance to 100%\n ↓↓ Double-tapping automatically targets self\n Cannot be cast on allies who have ☐ Disabled Help from Oracle",
         "Fate's Edict always places a debuff on the target, no matter it is an enemy or an ally\n This means if cast on self or an ally, allies can dispel it, while enemies cannot\n Vice versa, if cast on enemies, enemies can dispel it, while allies cannot",
-        "Fortune's End can always dispel the modifier, regardless of the target's faction\n Since it applies a debuff on allies, any dispel (e.g\n  False Promise or <span image=\"items\/lotus_orb\/full.webp\">[Lotus Orb]<\/span> Echo Shell) will dispel it from allies"
+        "<span image=\"images\/fortune's_end.webp\">[picture:fortune's_end]<\/span> Fortune's End can always dispel the modifier, regardless of the target's faction\n Since it applies a debuff on allies, any dispel (e.g\n <span image=\"images\/false_promise.webp\">[picture:false_promise]<\/span> False Promise or <span image=\"items\/lotus_orb\/full.webp\">[picture:lotus_orb]<\/span> Echo Shell) will dispel it from allies"
       ],
       "item_behaviour": [],
       "description": "Oracle enraptures a target, disarming them and granting them 100% magic damage resistance. Can be cast on allies and enemies.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+1.1",
-        "Cast Range:  500\/600\/700\/800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 500\/600\/700\/800",
         "Magic Resistance: 100%",
         "Duration: 3.5\/4\/4.5\/5"
       ],
@@ -69,15 +69,15 @@
         "The damage is applied instantly upon cast, followed by the heal over time\n The damage is lethal to enemies, but not to allies, so it cannot be used for denying\n Cannot be cast on allies who have ☐ Disabled Help from Oracle\n ↓↓ Double-tapping automatically targets self",
         "Successive casts on the same target fully stack, with each cast having its own intervals and instances",
         "Heals in 1-second intervals, starting 1 second after cast, resulting in 9 instances of heal",
-        "Can heal up to 99\/198\/297\/396 health per cast\n Effectively heals up to 9\/18\/27\/36 health when considering the initial damage\n TALENT NOTES With the enemy damage increasing  talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage (before reductions)"
+        "Can heal up to 99\/198\/297\/396 health per cast\n Effectively heals up to 9\/18\/27\/36 health when considering the initial damage\n TALENT NOTES With the enemy damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage (before reductions)"
       ],
       "item_behaviour": [],
       "description": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate health over time. The amount of health regenerated over its duration exceeds the amount of initial damage. Can be cast on enemies and allies.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.15+1.14",
-        "Cast Range:  850",
-        "Enemy Damage: 90\/180\/270\/360 ( 117\/234\/351\/468)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 850",
+        "Enemy Damage: 90\/180\/270\/360 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 117\/234\/351\/468)",
         "Ally Damage: 90\/180\/270\/360",
         "Heal per Second: 11\/22\/33\/44",
         "Duration: 9"
@@ -97,20 +97,20 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Deals damage and heals in 1-second intervals, starting immediately upon cast, resulting in up to 11 instances\n Since it starts immediately upon cast, the first heal instance is not affected by the heal amplification",
         "Can deal up to 660 damage to a single unit (before reductions) while healing for the same amount of health\n With its own amplification, it can effectively heal up to 810 health, considering the first instance not being amplified",
         "Only applies heal manipulation\n Does not grant health regen manipulation, lifesteal manipulation, or spell lifesteal manipulation\n Stacks multiplicatively with other sources of heal manipulation",
         "The heal manipulation is provided by an aura and lingers for 0.5 seconds\n The heal and damage are independent from the aura",
         "The damage and heal of multiple instances of Rain of Destiny fully stacks\n However, the heal manipulation does not",
-        "Places the modifier on  Couriers, but does not heal or damage them"
+        "Places the modifier on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, but does not heal or damage them"
       ],
       "item_behaviour": [],
       "description": "Brings forth rain to the target area. Enemies standing in the area receive damage and have reduced heal amplification. Allies in the area heal and have increased incoming heal amplification.",
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.2+1.07",
-        "Cast Range:  650",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 650",
         "Radius: 650",
         "Damage\/Heal per Second: 60",
         "Heal Amplification\/Reduction: 25%",
@@ -134,27 +134,27 @@
       "notes": [
         "Applies a strong dispel on the target upon cast\n Can be cast on illusions and creep-heroes\n ↓↓ Double-tapping automatically targets self",
         "False Promise fully negates damage (after most reductions), causing several on-damage effects to not trigger",
-        "False Promise has the second highest priority in the group of damage negating abilities\n It also negates healing effects\n This means when combined with other damage negating effects (e.g\n  Aphotic Shield), False Promise negates the damage while the others do not\n If combined with  Borrowed Time, both effects attempt to negate damage\n False Promise therefore registers and delays both the incoming damage and the resultant healing from Borrowed Time",
+        "False Promise has the second highest priority in the group of damage negating abilities\n It also negates healing effects\n This means when combined with other damage negating effects (e.g\n <span image=\"images\/aphotic_shield.webp\">[picture:aphotic_shield]<\/span> Aphotic Shield), False Promise negates the damage while the others do not\n If combined with <span image=\"images\/borrowed_time.webp\">[picture:borrowed_time]<\/span> Borrowed Time, both effects attempt to negate damage\n False Promise therefore registers and delays both the incoming damage and the resultant healing from Borrowed Time",
         "False Promise negates and delays all damage types, including damage flagged as HP Removal",
-        "Does not prevent instant killing effects (e.g\n  Culling Blade or  Ice Blast)",
-        "Just like damage, False Promise also prevents the hero's health from increasing, with a few exceptions\n Unlike negated damage, the ability negates healing effects before any amplifications or reductions (e.g\n  Ghost Shroud and  Ice Blast)\n Only actual heals are counted by False Promise\n Other means of health increase are not counted, although may still be prevented (e.g\n health gained from  strength)\n Does not prevent setting health sources from increasing the hero's health\n Does not prevent the following abilities from increasing the hero's health as well:  Time Walk,  Supernova and  Whirling Death,  Decay and  Unholy Strength",
+        "Does not prevent instant killing effects (e.g\n <span image=\"images\/culling_blade.webp\">[picture:culling_blade]<\/span> Culling Blade or <span image=\"images\/ice_blast.webp\">[picture:ice_blast]<\/span> Ice Blast)",
+        "Just like damage, False Promise also prevents the hero's health from increasing, with a few exceptions\n Unlike negated damage, the ability negates healing effects before any amplifications or reductions (e.g\n <span image=\"images\/ghost_shroud.webp\">[picture:ghost_shroud]<\/span> Ghost Shroud and <span image=\"images\/ice_blast.webp\">[picture:ice_blast]<\/span> Ice Blast)\n Only actual heals are counted by False Promise\n Other means of health increase are not counted, although may still be prevented (e.g\n health gained from <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> strength)\n Does not prevent setting health sources from increasing the hero's health\n Does not prevent the following abilities from increasing the hero's health as well: <span image=\"images\/time_walk.webp\">[picture:time_walk]<\/span> Time Walk, <span image=\"images\/supernova.webp\">[picture:supernova]<\/span> Supernova and <span image=\"images\/whirling_death.webp\">[picture:whirling_death]<\/span> Whirling Death, <span image=\"images\/decay.webp\">[picture:decay]<\/span> Decay and <span image=\"images\/armlet_of_mordiggian_%28inactive%29.png\">[picture:armlet_of_mordiggian_%28inactive%29]<\/span> Unholy Strength",
         "At the end of the duration, the target gets healed if the overall heal was higher, or damaged if the damage was higher\n All healing received gets summed up into one instance and doubled\n Then, the heal sum gets subtracted from each individual damage instance in order\n This is repeated until either all damage instances are negated by the heal, or until the summed heal value depletes\n If the heal sum depletes, then the remaining damage instances get applied in order\n The damage is flagged as HP Removal\n Therefore, if the target dies, the kill is credited to whoever's instance that dealt the killing blow, which can be the first, last or any other instance in between\n Non-lethal damage instances blocked during False Promise are still not lethal when re-applied at the end of the duration\n If all damage instances get negated instead, the remaining heal sum gets applied as a single heal to the target\n This heal is always credited to Oracle",
         "If the target is invulnerable as False Promise expires, the delayed heal and damage wait for it to become vulnerable again",
         "Successive casts on the same target do not stack, but refresh the duration\n The blocked heal and damage counters are not reset",
         "If the accumulated damage exceeds the accumulated heal, the orb above the target glows red and emits fire, indicating it will receive damage",
         "SHARD NOTES False Promise also grants the target invisibility with a -second fade delay\n Attacking, casting abilities or using items breaks the invisibility and resets the fade delay\n Does not grant phased movement",
-        "TALENT NOTES The False Promise armor  talent immediately updates all existing modifiers on already affected allies"
+        "TALENT NOTES The False Promise armor <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent immediately updates all existing modifiers on already affected allies"
       ],
       "item_behaviour": [],
       "description": "Temporarily alters an ally's destiny, delaying any healing or damage taken until False Promise ends. Any healing that is delayed by False Promise is doubled. Removes most negative status effects and disables on initial cast.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.3+0.97",
-        "Cast Range:  700\/850\/1000",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700\/850\/1000",
         "Delayed Heal Amplification: 100%",
-        "Duration: 7\/8.5\/10 ( 8.5\/10\/11.5)",
-        "Fade Delay:  0.15",
-        "Armor Bonus:  10"
+        "Duration: 7\/8.5\/10 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 8.5\/10\/11.5)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Fade Delay:  0.15",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Armor Bonus:  10"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Oracle_False_Promise_1.mp3\/revision\/latest?cb=20191216021412",
       "effects": [

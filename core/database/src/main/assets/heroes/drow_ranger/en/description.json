@@ -7,26 +7,26 @@
         "The attacks first apply Hypothermia debuff, then the slow debuff, then their own damage",
         "Movement speed slow of successive casts do not stack but refresh the duration",
         "Frost Arrows does not work against allied units, buildings or wards",
-        "SHARD NOTES Frost Arrows now place one hypothermia debuff on the enemy\n This debuff gets stronger when it gets refreshed with successive casts\n Works against every unit Frost Arrows can affect\n Also works when applied with  Multishot or instant attacks (e.g\n   Splinter Shots)\n A number on the icon, as well as a number above the target show the current amount of stacks on them\n The debuff applies heal reduction, health regeneration reduction, lifesteal reduction and spell lifesteal reduction on the target\n Can reduce health restoration by up to 10%\/20%\/30%\/40%\/50%\/60%\/70%, based on the amount of stacks",
+        "SHARD NOTES Frost Arrows now place one hypothermia debuff on the enemy\n This debuff gets stronger when it gets refreshed with successive casts\n Works against every unit Frost Arrows can affect\n Also works when applied with <span image=\"images\/multishot.webp\">[picture:multishot]<\/span> Multishot or instant attacks (e.g\n <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/marksmanship.webp\">[picture:marksmanship]<\/span> Splinter Shots)\n A number on the icon, as well as a number above the target show the current amount of stacks on them\n The debuff applies heal reduction, health regeneration reduction, lifesteal reduction and spell lifesteal reduction on the target\n Can reduce health restoration by up to 10%\/20%\/30%\/40%\/50%\/60%\/70%, based on the amount of stacks",
         "If the target dies, including Reincarnation, with the hypothermia debuff on them, they release projectile towards all enemies within a 650 radius around them\n These projectiles travel at a speed of 1300\n The projectiles first apply the damage, then the debuff\n The projectiles deal up to 60\/120\/180\/240\/300\/360\/420 damage, based on how many stacks the unit had",
-        "SHARD NOTES The bonus damage increases to the following values with certain amount of hypothermia stacks on each level: Level 1: 11\/16\/21\/26\/31\/36\/41 ( 26\/31\/36\/41\/46\/51\/56) damage Level 2: 17\/22\/27\/32\/37\/42\/47 ( 32\/37\/42\/47\/52\/57\/62) damage Level 3: 23\/28\/33\/38\/43\/48\/53 ( 38\/43\/48\/53\/58\/63\/68) damage Level 4: 29\/34\/39\/44\/49\/54\/59 ( 44\/49\/54\/59\/64\/69\/74) damage"
+        "SHARD NOTES The bonus damage increases to the following values with certain amount of hypothermia stacks on each level: Level 1: 11\/16\/21\/26\/31\/36\/41 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 26\/31\/36\/41\/46\/51\/56) damage Level 2: 17\/22\/27\/32\/37\/42\/47 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 32\/37\/42\/47\/52\/57\/62) damage Level 3: 23\/28\/33\/38\/43\/48\/53 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 38\/43\/48\/53\/58\/63\/68) damage Level 4: 29\/34\/39\/44\/49\/54\/59 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 44\/49\/54\/59\/64\/69\/74) damage"
       ],
       "item_behaviour": [],
       "description": "Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage. Slow lasts 1.5 seconds.",
       "hot_key": "Q",
       "params": [
-        "Cast Range:  625",
-        "Base Damage: 6\/12\/18\/24 ( 21\/27\/33\/39)",
+        "Cast Range: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 625",
+        "Base Damage: 6\/12\/18\/24 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 21\/27\/33\/39)",
         "Move Speed Slow: 10%\/25%\/40%\/55%",
         "Slow Duration: 1.5",
-        "Burst Radius:  650",
-        "Max Stacks:  7",
-        "Extra Damage per Stack:  5",
-        "Burst Damage per Stack:  60",
-        "Burst Move Speed Slow:  40%",
-        "Health Restoration Reduction per Stack:  10%",
-        "Burst Slow Duration:  2",
-        "Stacks Duration:  7"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Burst Radius:  650",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Max Stacks:  7",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Extra Damage per Stack:  5",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Burst Damage per Stack:  60",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Burst Move Speed Slow:  40%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Health Restoration Reduction per Stack:  10%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Burst Slow Duration:  2",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Stacks Duration:  7"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Drow_Ranger_Frost_Arrows.mp3\/revision\/latest?cb=20191215202224",
       "effects": [
@@ -48,20 +48,20 @@
         "Since the knockback distances does not scale with higher ability levels, but the knockback duration does, the knockback speed gets lower on each level\n This results in a maximum knockback speed is 750\/642.86\/562.5\/500, while the minimum speed is 1.67\/1.43\/1.25\/1.11",
         "Can push units over impassable terrain\n Destroys trees enemies come in contact with during the knockback",
         "Units are not disabled during the knockback\n They can still turn, attack and use items\n Does not interrupt channeling abilities\n Successive debuffs do not stack but refresh the duration instead",
-        "Does not affect  Roshan",
-        "TALENT NOTES The Gust reveal invisible enemies  talent instantly update the current active debuffs\n The debuff places True Sight on affected units in the Fog of War and on invulnerable units, but not on hidden units or on wards\n Cannot detect units under the effect of  Shadow Dance,  Depth Shroud and  Smoke of Deceit (although the debuff is still placed on them)"
+        "Does not affect <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan",
+        "TALENT NOTES The Gust reveal invisible enemies <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent instantly update the current active debuffs\n The debuff places True Sight on affected units in the Fog of War and on invulnerable units, but not on hidden units or on wards\n Cannot detect units under the effect of <span image=\"images\/shadow_dance.webp\">[picture:shadow_dance]<\/span> Shadow Dance, <span image=\"images\/depth_shroud.webp\">[picture:depth_shroud]<\/span> Depth Shroud and <span image=\"items\/smoke_of_deceit\/full.webp\">[picture:smoke_of_deceit]<\/span> Smoke of Deceit (although the debuff is still placed on them)"
       ],
       "item_behaviour": [],
       "description": "Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to Drow. Drow Gains Movement Speed for the same duration.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.25+0.6",
-        "Cast Range:  900",
-        "Travel Distance:  900",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
+        "Travel Distance: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900",
         "Effect Radius: 250",
         "Max Knockback Distance: 450",
         "Knockback Duration: 0.6\/0.7\/0.8\/0.9",
-        "Self Move Speed Bonus: 10% ( 25%)",
+        "Self Move Speed Bonus: 10% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 25%)",
         "Buff\/Debuff Duration: 3\/4\/5\/6"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Drow_Ranger_Gust.mp3\/revision\/latest?cb=20191215202225",
@@ -82,10 +82,10 @@
         "Releases the waves in a 0.55-second interval\n The first wave starts 0.1 seconds after the channel begins\n Within the waves, the arrows are released with a 0.033-second delay between them, so it takes 0.1 seconds for all arrows of one wave to be released\n This results in a total duration of 1.3 seconds to release all arrows, making it safe to cancel the last 0.45 seconds of the channeling without losing an arrow",
         "The arrows are released in a cone centered in front of Drow Ranger\n The first arrow in each wave always starts on Drow Ranger's right side\n The cone's angle is calculated as if 6 arrows get released per wave\n If 6 arrows would get released, the cone's angle would be 50°\n However, since only 4 arrows get released, the cone's angle is 33.33°, with an angle of 8.33° between each arrow\n Considering Drow Ranger's default attack range of 625, the cone has a length of 1094, and an end radius of 358.5\n The travel distance can be further increased by other attack range bonuses",
         "The arrows provide 100 radius flying vision around them as they travel",
-        "An enemy may only be hit one arrow per wave, so that up to 3 ( 6) arrows can hit the same enemy per cast",
-        "Despite the appearance, Multishot are not instant attacks\n Instead, it deals physical spell damage based on the caster's average main attack damage, plus  Frost Arrows' damage\n Other attack damage bonuses are ignored\n This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal\n The damage dealt can be defined as ( 6\/12\/18\/24 +  f(x) + 32.5 + ΣAgi) × 100%\/120%\/140%\/160% ( 125%\/145%\/165%\/185%) Multishot does not affect attack immune units",
-        "The arrows also apply  Frost Arrows on their targets, based on its current level\n If Frost Arrows is not leveled, its damage and debuffs are not applied\n The Frost Arrows applied by Multishot do not cost any mana\n Like on regular attacks, the arrows first apply Hypothermia debuff, then the slow debuff, then their own damage\n Also like on regular attacks, the Frost Arrows damage is dealt in one instance together with the Multishot's damage and is affected by the damage percentage as well",
-        "Does not affect  Couriers"
+        "An enemy may only be hit one arrow per wave, so that up to 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6) arrows can hit the same enemy per cast",
+        "Despite the appearance, Multishot are not instant attacks\n Instead, it deals physical spell damage based on the caster's average main attack damage, plus <span image=\"images\/frost_arrows.webp\">[picture:frost_arrows]<\/span> Frost Arrows' damage\n Other attack damage bonuses are ignored\n This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal\n The damage dealt can be defined as (<span image=\"images\/frost_arrows.webp\">[picture:frost_arrows]<\/span> 6\/12\/18\/24 + <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> f(x) + 32.5 + ΣAgi) × 100%\/120%\/140%\/160% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 125%\/145%\/165%\/185%) Multishot does not affect attack immune units",
+        "The arrows also apply <span image=\"images\/frost_arrows.webp\">[picture:frost_arrows]<\/span> Frost Arrows on their targets, based on its current level\n If Frost Arrows is not leveled, its damage and debuffs are not applied\n The Frost Arrows applied by Multishot do not cost any mana\n Like on regular attacks, the arrows first apply Hypothermia debuff, then the slow debuff, then their own damage\n Also like on regular attacks, the Frost Arrows damage is dealt in one instance together with the Multishot's damage and is affected by the damage percentage as well",
+        "Does not affect <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying longer duration Frost Arrows. Lasts up to 1.75 seconds.",
@@ -93,13 +93,13 @@
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: Global",
-        "Attack Range as Travel Distance:  175%",
+        "Attack Range as Travel Distance: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 175%",
         "Arrows Cone Angle: 50°",
         "Arrows Collision Radius: 90",
-        "Max Channel Time: 1.75 ( 2.85)",
-        "Number of Waves: 3 ( 6)",
+        "Max Channel Time: 1.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2.85)",
+        "Number of Waves: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6)",
         "Arrows per Wave: 4",
-        "Main Attack Damage as Damage: 100%\/120%\/140%\/160% ( 125%\/145%\/165%\/185%)",
+        "Main Attack Damage as Damage: 100%\/120%\/140%\/160% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 125%\/145%\/165%\/185%)",
         "Arrows Slow Duration: 1.25\/2\/2.75\/3.5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Drow_Ranger_Multishot.mp3\/revision\/latest?cb=20191215202228",
@@ -118,15 +118,15 @@
     {
       "notes": [
         "An icy particle effect is visible on Drow Ranger while Marksmanship is active",
-        "The aura checks for nearby enemy heroes, including invulnerable or hidden enemies, in 0.1-second intervals and adapts the bonus accordingly\n Neither reacts on the presence of illusions nor creep-heroes\n Checks for Drow Ranger's  agility within the same intervals and adapts the bonus agility instantly\n The aura affects invulnerable, but not hidden  ranged allies, and its buff lingers for 0.5 seconds",
+        "The aura checks for nearby enemy heroes, including invulnerable or hidden enemies, in 0.1-second intervals and adapts the bonus accordingly\n Neither reacts on the presence of illusions nor creep-heroes\n Checks for Drow Ranger's <span image=\"images\/agility_attribute_symbol.png\">[picture:agility_attribute_symbol]<\/span> agility within the same intervals and adapts the bonus agility instantly\n The aura affects invulnerable, but not hidden <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged allies, and its buff lingers for 0.5 seconds",
         "Marksmanship's damage is considered as a conditional attack damage bonus\n Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to Drow Ranger's attack damage\n The attack damage bonus values are not considered by critical strike\n However, it is considered by lifesteal and cleave, and it can be reduced only by flat reductions (e.g\n damage block)\n Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
         "Marksmanship grants the proccing attack True Strike and the proc damage ignores main armor\n Neither proc against attacking buildings nor attacking allies",
         "Marksmanship uses pseudo-random distribution",
-        "Visually alters Drow Ranger's attack projectile when proccing\n All attack projectiles have the following visual priorities: <span image=\"items\/desolator\/full.webp\">[Desolator]<\/span> Corruption or <span image=\"items\/stygian_desolator\/full.webp\">[Stygian Desolator]<\/span> Greater Corruption ➤  Cold Attack ➤ Marksmanship procs",
-        "SCEPTER NOTES Successful attacks now release 2 splinter projectiles within 375 radius on random enemies around the primary attacked target\n Missed or disjointed attacks do not release any splinters\n Attacks do not splinter to or from invisible, invulnerable or hidden units\n Attacks also do not splinter to  Couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets\n The enemy hero search radius does not disable this upgrade",
-        "Splinter projectiles are considered as regular spell projectiles\n The splinters use Drow Ranger's 1250 projectile speed and are disjointable\n For  melee heroes, it uses the same arrow model, splinter projectiles, and has the same projectile speed\n Causes Drow Ranger to perform an instant attack on the target if the splinter hits its target\n The instant attacks do not use attack projectiles and are instant, but still count as a  ranged attack if coming from Drow Ranger\n These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship)\n They do not have True Strike",
-        "SCEPTER NOTES The instant attacks deal damage to secondary targets based on Drow Ranger's total attack damage independently from the primary attacked target\n The 50% splinter damage reduction only applies to her main attack damage\n Other damage dealt in separate instances (e.g\n <span image=\"items\/maelstrom\/full.webp\">[Maelstrom]<\/span> Chain Lightning) is unaffected",
-        "When  Frost Arrows is set to Autocast, Frost Arrows based on its current level and the upgrade is applied with the instant attack\n The Autocast check is performed when the instant attack is performed\n The Frost Arrows applied are independent from the ability and do not cost any mana"
+        "Visually alters Drow Ranger's attack projectile when proccing\n All attack projectiles have the following visual priorities: <span image=\"items\/desolator\/full.webp\">[picture:desolator]<\/span> Corruption or <span image=\"items\/stygian_desolator\/full.webp\">[picture:stygian_desolator]<\/span> Greater Corruption ➤ <span image=\"items\/eye_of_skadi\/full.webp\">[picture:eye_of_skadi]<\/span> Cold Attack ➤ Marksmanship procs",
+        "SCEPTER NOTES Successful attacks now release 2 splinter projectiles within 375 radius on random enemies around the primary attacked target\n Missed or disjointed attacks do not release any splinters\n Attacks do not splinter to or from invisible, invulnerable or hidden units\n Attacks also do not splinter to <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets\n The enemy hero search radius does not disable this upgrade",
+        "Splinter projectiles are considered as regular spell projectiles\n The splinters use Drow Ranger's 1250 projectile speed and are disjointable\n For <span image=\"images\/melee.png\">[picture:melee]<\/span> melee heroes, it uses the same arrow model, splinter projectiles, and has the same projectile speed\n Causes Drow Ranger to perform an instant attack on the target if the splinter hits its target\n The instant attacks do not use attack projectiles and are instant, but still count as a <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged attack if coming from Drow Ranger\n These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship)\n They do not have True Strike",
+        "SCEPTER NOTES The instant attacks deal damage to secondary targets based on Drow Ranger's total attack damage independently from the primary attacked target\n The 50% splinter damage reduction only applies to her main attack damage\n Other damage dealt in separate instances (e.g\n <span image=\"items\/maelstrom\/full.webp\">[picture:maelstrom]<\/span> Chain Lightning) is unaffected",
+        "When <span image=\"images\/frost_arrows.webp\">[picture:frost_arrows]<\/span> Frost Arrows is set to Autocast, Frost Arrows based on its current level and the upgrade is applied with the instant attack\n The Autocast check is performed when the instant attack is performed\n The Frost Arrows applied are independent from the ability and do not cost any mana"
       ],
       "item_behaviour": [],
       "description": "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their base armor. Grants Drow and nearby ranged heroes with bonus agility based on Drow's current agility. This ability is disabled if there is an enemy hero within 400 range.",
@@ -135,12 +135,12 @@
         "Enemy Hero Search Radius: 400",
         "Aura Radius: 1200",
         "Agility as Ranged Agility Bonus: 30%\/40%\/50%",
-        "Proc Chance: 20%\/30%\/40% ( 32%\/42%\/52%)",
+        "Proc Chance: 20%\/30%\/40% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 32%\/42%\/52%)",
         "Proc Damage: 40\/60\/80",
         "Aura Linger Duration: 0.5",
-        "Splinter Search Radius:  375",
-        "Max Splinter Targets:  2",
-        "Splinter Damage Reduction:  50%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Splinter Search Radius:  375",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Max Splinter Targets:  2",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Splinter Damage Reduction:  50%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Drow_Ranger_Marksmanship.mp3\/revision\/latest?cb=20191215202226",
       "effects": [

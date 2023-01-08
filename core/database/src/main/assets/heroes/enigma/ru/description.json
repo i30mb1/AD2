@@ -3,9 +3,9 @@
     {
       "notes": [
         "Первое оглушение срабатывает при применении, затем через каждые 2 секунды",
-        "При каждом срабатывании Malefice сначала наносит урон, затем применяется оглушение\n ПРИМЕЧАНИЯ К AGHANIM'S SHARD Malefice теперь создаёт  неполноценых эйдолонов на основе текущего уровня  Demonic Conversion за тик оглушения\n Может создать максимум 3 ( 7) неполноценых эйдолонов за всё время\n Неполноценые эйдолоны, созданные таким образом, не могут размножаться, но их продолжительность все еще обновляется после запуска 7-го атакующего снаряда\n Если способность  Demonic Conversion не изучена, то эйдолоны появляться не будут",
-        "Может нанести до 120\/180\/240\/300 ( 280\/420\/560\/700) единиц урона (до учёта сопротивлений)\n C увеличивающим урон  талантом может нанести 210\/270\/330\/390 урона\n С увеличивающим количество срабатываний  талантом может нанести 280\/420\/560\/700 урона\n С обоими  талантами может нанести 490\/630\/770\/910 урона",
-        "Может оглушить суммарно на 1,2\/1,8\/2,4\/3 сек\n ПРИМЕЧАНИЯ К AGHANIM'S SHARD С улучшением может суммарно оглушить на 2,25\/2,85\/3,45\/4,05 сек\n С увеличивающим количество срабатываний  талантом может суммарно оглушить на 2,8\/4,2\/5,6\/7 сек\n С  талантом и улучшением от <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard может суммарно оглушить на 5,25\/6,65\/8,05\/9,45 сек",
+        "При каждом срабатывании Malefice сначала наносит урон, затем применяется оглушение\n ПРИМЕЧАНИЯ К AGHANIM'S SHARD Malefice теперь создаёт <span image=\"images\/enigma_eidolon.png\">[picture:enigma_eidolon]<\/span> неполноценых эйдолонов на основе текущего уровня <span image=\"images\/demonic_conversion.webp\">[picture:demonic_conversion]<\/span> Demonic Conversion за тик оглушения\n Может создать максимум 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 7) неполноценых эйдолонов за всё время\n Неполноценые эйдолоны, созданные таким образом, не могут размножаться, но их продолжительность все еще обновляется после запуска 7-го атакующего снаряда\n Если способность <span image=\"images\/demonic_conversion.webp\">[picture:demonic_conversion]<\/span> Demonic Conversion не изучена, то эйдолоны появляться не будут",
+        "Может нанести до 120\/180\/240\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 280\/420\/560\/700) единиц урона (до учёта сопротивлений)\n C увеличивающим урон <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> талантом может нанести 210\/270\/330\/390 урона\n С увеличивающим количество срабатываний <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> талантом может нанести 280\/420\/560\/700 урона\n С обоими <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> талантами может нанести 490\/630\/770\/910 урона",
+        "Может оглушить суммарно на 1,2\/1,8\/2,4\/3 сек\n ПРИМЕЧАНИЯ К AGHANIM'S SHARD С улучшением может суммарно оглушить на 2,25\/2,85\/3,45\/4,05 сек\n С увеличивающим количество срабатываний <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> талантом может суммарно оглушить на 2,8\/4,2\/5,6\/7 сек\n С <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> талантом и улучшением от <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard может суммарно оглушить на 5,25\/6,65\/8,05\/9,45 сек",
         "Несколько применений Malefice не складываются, но обновляют длительность\n Способность продолжает срабатывать с интервалами первого применения"
       ],
       "item_behaviour": [],
@@ -13,13 +13,13 @@
       "hot_key": "Q",
       "params": [
         "Анимация применения: 0,3+0,6",
-        "Дальность применения:  600",
-        "Количество оглушений: 3 ( 7)",
+        "Дальность применения: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
+        "Количество оглушений: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 7)",
         "Интервал между оглушениями: 2",
-        "Урон за оглушение: 40\/60\/80\/100 ( 70\/90\/110\/130)",
-        "Длительность оглушения за интервал: 0,4\/0,6\/0,8\/1 ( 0,75\/0,95\/1,15\/1,35)",
-        "Длительность: 4 ( 12)",
-        "Количество эйдолонов на каждое срабатывание:  1"
+        "Урон за оглушение: 40\/60\/80\/100 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 70\/90\/110\/130)",
+        "Длительность оглушения за интервал: 0,4\/0,6\/0,8\/1 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 0,75\/0,95\/1,15\/1,35)",
+        "Длительность: 4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 12)",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Количество эйдолонов на каждое срабатывание:  1"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Enigma_Malefice.mp3\/revision\/latest?cb=20191216013739",
       "effects": [
@@ -40,17 +40,17 @@
         "Атака строений или союзных существ не учитывается в качестве атак для размножения, но атака вардов - учитывается\n Атака засчитывается при запуске снаряда, а не при его попадании\n Эйдолоны размножаются после запуска 7-го снаряда от атаки, не принимая во внимание, была ли атакована подходящая цель или нет (например, строение)",
         "При размножении здоровье эйдолонов обновляется, создаются эйдолоны, не способные размножаться\n Так как при размножении эйдолоны не погибают, все находящиеся на них баффы и дебаффы не пропадают, а летящие в них снаряды достигают своей цели\n Длительность начальных эйдолонов не обновляется\n При этом время жизни разделившихся эйдолонов увеличивается на 2 секунды",
         "Название создающихся эйдолонов зависит от уровня способности Demonic Conversion и меняется следующим образом: Малый эйдолон ➜ Эйдолон ➜ Большой эйдолон ➜ Устрашающий эйдолон",
-        "Нельзя использовать на древних крипов, варды, крипов-героев, призванных существ  воина Некрономикона,  лучника Некрономикона и нейтральних крипов выше 4 уровня: <a href=\"\/ru\/wiki\/%D0%92%D0%BE%D0%B6%D0%B0%D0%BA_%D0%B2%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2\" title=\"Вожак волков\"><img alt=\"Alpha Wolf icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Alpha Wolf icon.png\" data-image-key=\"Alpha_Wolf_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D0%B8%D0%BA%D0%BE%D0%BA%D1%80%D1%8B%D0%BB-%D0%BF%D0%BE%D1%82%D1%80%D0%BE%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Дикокрыл-потрошитель\"><img alt=\"Wildwing Ripper icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Wildwing Ripper icon.png\" data-image-key=\"Wildwing_Ripper_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9A%D0%B5%D0%BD%D1%82%D0%B0%D0%B2%D1%80-%D0%B7%D0%B0%D1%85%D0%B2%D0%B0%D1%82%D1%87%D0%B8%D0%BA\" title=\"Кентавр-захватчик\"><img alt=\"Centaur Conqueror icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Centaur Conqueror icon.png\" data-image-key=\"Centaur_Conqueror_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD-%D0%BA%D1%80%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Медведемон-крушитель\"><img alt=\"Hellbear Smasher icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Hellbear Smasher icon.png\" data-image-key=\"Hellbear_Smasher_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%B0%D1%82%D0%B8%D1%80-%D0%BC%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Сатир-мучитель\"><img alt=\"Satyr Tormenter icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Satyr Tormenter icon.png\" data-image-key=\"Satyr_Tormenter_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BD%D0%B0%D0%BB%D1%91%D1%82%D1%87%D0%B8%D0%BA\" title=\"Сосновый налётчик\"><img alt=\"Warpine Raider icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Warpine Raider icon.png\" data-image-key=\"Warpine_Raider_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A2%D1%80%D0%BE%D0%BB%D0%BB%D1%8C-%D0%BD%D0%B5%D0%BA%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82\" title=\"Тролль-некромант\"><img alt=\"Dark Troll Summoner icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Dark Troll Summoner icon.png\" data-image-key=\"Dark_Troll_Summoner_icon.png\" data-src=\"\" \/><\/a> ,",
-        "Выбор увеличивающего скорость атаки эйдолонов  таланта мгновенно обновит показатели всех уже существующих  эйдолонов"
+        "Нельзя использовать на древних крипов, варды, крипов-героев, призванных существ <span image=\"images\/necronomicon_warrior.png\">[picture:necronomicon_warrior]<\/span> воина Некрономикона, <span image=\"images\/necronomicon_archer.png\">[picture:necronomicon_archer]<\/span> лучника Некрономикона и нейтральних крипов выше 4 уровня: <a href=\"\/ru\/wiki\/%D0%92%D0%BE%D0%B6%D0%B0%D0%BA_%D0%B2%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2\" title=\"Вожак волков\"><img alt=\"Alpha Wolf icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Alpha Wolf icon.png\" data-image-key=\"Alpha_Wolf_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%94%D0%B8%D0%BA%D0%BE%D0%BA%D1%80%D1%8B%D0%BB-%D0%BF%D0%BE%D1%82%D1%80%D0%BE%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Дикокрыл-потрошитель\"><img alt=\"Wildwing Ripper icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Wildwing Ripper icon.png\" data-image-key=\"Wildwing_Ripper_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9A%D0%B5%D0%BD%D1%82%D0%B0%D0%B2%D1%80-%D0%B7%D0%B0%D1%85%D0%B2%D0%B0%D1%82%D1%87%D0%B8%D0%BA\" title=\"Кентавр-захватчик\"><img alt=\"Centaur Conqueror icon.png\" src=\"\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint\" data-image-name=\"Centaur Conqueror icon.png\" data-image-key=\"Centaur_Conqueror_icon.png\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD-%D0%BA%D1%80%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Медведемон-крушитель\"><img alt=\"Hellbear Smasher icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Hellbear Smasher icon.png\" data-image-key=\"Hellbear_Smasher_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%B0%D1%82%D0%B8%D1%80-%D0%BC%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C\" title=\"Сатир-мучитель\"><img alt=\"Satyr Tormenter icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Satyr Tormenter icon.png\" data-image-key=\"Satyr_Tormenter_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BD%D0%B0%D0%BB%D1%91%D1%82%D1%87%D0%B8%D0%BA\" title=\"Сосновый налётчик\"><img alt=\"Warpine Raider icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Warpine Raider icon.png\" data-image-key=\"Warpine_Raider_icon.png\" data-src=\"\" \/><\/a> , <a href=\"\/ru\/wiki\/%D0%A2%D1%80%D0%BE%D0%BB%D0%BB%D1%8C-%D0%BD%D0%B5%D0%BA%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82\" title=\"Тролль-некромант\"><img alt=\"Dark Troll Summoner icon.png\" src=\"data:image\/gif;base64,R0lGODlhAQABAIABAAAAAP\/\/\/yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"noprint lazyload\" data-image-name=\"Dark Troll Summoner icon.png\" data-image-key=\"Dark_Troll_Summoner_icon.png\" data-src=\"\" \/><\/a> ,",
+        "Выбор увеличивающего скорость атаки эйдолонов <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> таланта мгновенно обновит показатели всех уже существующих <span image=\"images\/enigma_eidolon.png\">[picture:enigma_eidolon]<\/span> эйдолонов"
       ],
       "item_behaviour": [],
       "description": "Превращает крипа в три подконтрольных фрагмента самого героя \u2014 эйдолонов. Они раздваиваются после нескольких атак, при этом полностью восстанавливая здоровье.",
       "hot_key": "W",
       "params": [
         "Анимация применения: 0,3+0,7",
-        "Дальность применения:  700",
+        "Дальность применения: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700",
         "Макс\n уровень крипа: 4",
-        "Число эйдолонов: 3 ( 8)",
+        "Число эйдолонов: 3 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 8)",
         "Атак для раздвоения: 6",
         "Длительность: 40"
       ],
@@ -81,7 +81,7 @@
       "params": [
         "Анимация применения: 0,1+0",
         "Дальность применения: 700",
-        "Радиус: 550 ( 750)",
+        "Радиус: 550 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 750)",
         "Урон от текущего здоровья в секунду: 5%\/7%\/9%\/11%",
         "Длительность: 9\/10\/11\/12",
         "Длительность задержки ауры: 0,5"
@@ -104,13 +104,13 @@
         "Полностью обезвреживает всех пойманных врагов и применяет к ним безмолвие",
         "Затягивает задетых существ по спирали против часовой стрелки к центру со скоростью в 30 единиц, в результате чего существа могут преодолеть расстояние до 120 единиц\n Чем ближе существа к центру, тем сильнее они к нему притягиваются; уже находящиеся в центре практически не притягиваются, но продолжают движение по максимальной дистанции\n Это может быть выражено формулой: EXPR r = 0,25^θ\n [?]",
         "Может затягивать существ на непроходимую территорию и сквозь деревья без их разрушения",
-        "Существ под действием Black Hole можно вытянуть из неё с помощью определенных заклинаний\n Однако следующие способности и предметы не смогут вытянуть существ из Black Hole: <span image=\"items\/force_staff\/full.webp\">[Force Staff]<\/span> Force Staff, <span image=\"items\/hurricane_pike\/full.webp\">[Hurricane Pike]<\/span> Hurricane Pike,  Snowball,  Dispose и  Geomagnetic Grip",
+        "Существ под действием Black Hole можно вытянуть из неё с помощью определенных заклинаний\n Однако следующие способности и предметы не смогут вытянуть существ из Black Hole: <span image=\"items\/force_staff\/full.webp\">[picture:force_staff]<\/span> Force Staff, <span image=\"items\/hurricane_pike\/full.webp\">[picture:hurricane_pike]<\/span> Hurricane Pike, <span image=\"images\/snowball.webp\">[picture:snowball]<\/span> Snowball, <span image=\"images\/dispose.webp\">[picture:dispose]<\/span> Dispose и <span image=\"images\/geomagnetic_grip.webp\">[picture:geomagnetic_grip]<\/span> Geomagnetic Grip",
         "Притягивание и обезвреживание предоставлены в виде ауры, которая задерживается на 0,5 секунды или до отмены произнесения, в зависимости от того, что произойдет раньше",
-        "Не действует на варды или постройки\n Действует на  курьеров",
+        "Не действует на варды или постройки\n Действует на <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> курьеров",
         "Дает наземный обзор в радиусе 800 единиц на 4 секунды в выбранной точке",
         "Наносит урон с интервалом в 1 секунду спустя 1 секунду после применения, срабатывая 4 раз",
-        "Может нанести до 400\/600\/800 ( 600\/800\/1000) (+  14%} от макс\n здоровья) единиц урона (до учёта сопротивлений)",
-        "ПРИМЕЧАНИЯ К AGHANIM'S SCEPTER Дополнительный урон наносится тем же источником в том же радиусе и с той же длительностью, что и Black Hole\n Дополнительный урон не действует на  Рошана, он получает только базовый урон",
+        "Может нанести до 400\/600\/800 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 600\/800\/1000) (+ <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 14%} от макс\n здоровья) единиц урона (до учёта сопротивлений)",
+        "ПРИМЕЧАНИЯ К AGHANIM'S SCEPTER Дополнительный урон наносится тем же источником в том же радиусе и с той же длительностью, что и Black Hole\n Дополнительный урон не действует на <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Рошана, он получает только базовый урон",
         "ПРИМЕЧАНИЯ К AGHANIM'S SCEPTER Затягивает существ в радиусе 1200 также по спирали против часовой стрелки со скоростью 175, в результате чего максимальное преодолеваемое расстояние становится равным 700\n Чем ближе существа к центру, тем сильнее они к нему притягиваются\n Однако, в отличие от притяжение внутри самой области Black Hole, это движение по спирали намного слабее, оно больше направлено к центру\n Внешнее притяжение создаётся отдельной аурой, которая сохраняется 0,5 секунд или до прекращения произнесения заклинания в зависимости от того, что заканчивается раньше\n Это притяжение не обезвреживает цели, а придаёт им скорость в сторону центра Black Hole\n Если цель убегает от Black Hole, то она фактически будет замедляться на , а если бежать в сторону центра заклинания, то наоборот \u2014 ускоряться на \n Не действует на противников, которые находятся под дейсвтием модификатора самого Black Hole"
       ],
       "item_behaviour": [],
@@ -118,15 +118,15 @@
       "hot_key": "R",
       "params": [
         "Анимация применения: 0,3+0",
-        "Дальность применения:  275",
+        "Дальность применения: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 275",
         "Макс\n длительность: 4",
         "Радиус действия внутри: 420",
         "Скорость притягивания внутри: 30",
-        "Урон в секунду: 100\/150\/200 ( 150\/200\/250)",
+        "Урон в секунду: 100\/150\/200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 150\/200\/250)",
         "Длительность задержки ауры: 0,5",
-        "Радиус действия снаружи:  1200",
-        "Скорость втягивания снаружи:  175",
-        "Урон в сек\n от макс\n здоровья:  3,5%"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Радиус действия снаружи:  1200",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Скорость втягивания снаружи:  175",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Урон в сек\n от макс\n здоровья:  3,5%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Enigma_Black_Hole.mp3\/revision\/latest?cb=20191216013746",
       "effects": [

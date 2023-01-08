@@ -12,8 +12,8 @@
         "Анимация применения: 0,2+1,4",
         "Дальность применения: 550",
         "Радиус урона: 260",
-        "Урон: 90\/160\/230\/300 ( 250\/320\/390\/460)",
-        "Лечение: 90\/160\/230\/300 ( 250\/320\/390\/460)"
+        "Урон: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 250\/320\/390\/460)",
+        "Лечение: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 250\/320\/390\/460)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Omniknight_Purification.mp3\/revision\/latest?cb=20191216021244",
       "effects": [
@@ -32,8 +32,8 @@
       "notes": [
         "При использовании применяет сильное развеивание на цель",
         "Heavenly Grace сначала применяет бафф, затем развеивание",
-        "Дополнительная сила дает цели 160\/360\/560\/760 здоровья, 0,8\/1,8\/2,8\/3,8 регенерации здоровья (и 8\/18\/28\/38 урона для героев  силы)",
-        "Восстанавливает до 30\/40\/50\/60 ( 60\/70\/80\/90) здоровья за всю длительность",
+        "Дополнительная сила дает цели 160\/360\/560\/760 здоровья, 0,8\/1,8\/2,8\/3,8 регенерации здоровья (и 8\/18\/28\/38 урона для героев <span image=\"images\/strength_attribute_symbol.png\">[picture:strength_attribute_symbol]<\/span> силы)",
+        "Восстанавливает до 30\/40\/50\/60 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 60\/70\/80\/90) здоровья за всю длительность",
         "Сопротивление эффектам складывается по закону убывающей полезности с другими источниками сопротивления"
       ],
       "item_behaviour": [],
@@ -44,8 +44,8 @@
         "Дальность применения: 700",
         "Доп\n сила: 8\/18\/28\/38",
         "Восстановление здоровья: 8\/12\/16\/20",
-        "Доп\n сила и восстановление здоровья за развеянный эффект: 3\/4\/5\/6 ( 6\/7\/8\/9)",
-        "Длительность: 10 ( 14)"
+        "Доп\n сила и восстановление здоровья за развеянный эффект: 3\/4\/5\/6 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6\/7\/8\/9)",
+        "Длительность: 10 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Omniknight_Heavenly_Grace.mp3\/revision\/latest?cb=20191216021242",
       "effects": [
@@ -98,7 +98,7 @@
         "Анимация применения: 0,3+1,4",
         "Дальность применения: 350",
         "Базовый урон: 50\/75\/100\/125",
-        "Урон от базового урона атаки: 55%\/70%\/85%\/100% ( 130%\/145%\/160%\/175%)",
+        "Урон от базового урона атаки: 55%\/70%\/85%\/100% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 130%\/145%\/160%\/175%)",
         "Замедление передвижения: 14%\/22%\/30%\/38%",
         "Длительность: 5"
       ],
@@ -118,16 +118,16 @@
     {
       "notes": [
         "Действует на всех союзных существ, за исключением вардов, курьеров, неуязвимых и спрятанных существ",
-        "Действует на постройки только после улучшения <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter"
+        "Действует на постройки только после улучшения <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter"
       ],
       "item_behaviour": [],
       "description": "Призывает ангела-хранителя, который полностью защищает союзников от физического урона.",
       "hot_key": "R",
       "params": [
         "Анимация применения: 0,4+0,9",
-        "Радиус: 1200 ( Глобальный)",
-        "Длительность: 5\/6,5\/8 ( 8\/9\/10)",
-        "Сопротивление эффектам:  40%"
+        "Радиус: 1200 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Глобальный)",
+        "Длительность: 5\/6,5\/8 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 8\/9\/10)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Сопротивление эффектам:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Omniknight_Guardian_Angel_1.mp3\/revision\/latest?cb=20191216021248",
       "effects": [

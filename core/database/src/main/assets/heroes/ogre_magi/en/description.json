@@ -3,20 +3,20 @@
     {
       "notes": [
         "Fireblast first applies the damage, then the debuff, then the attack damage",
-        "When  Multicast, Fireblast hits the same target several times in 0.6-second intervals",
-        "This is how much damage a multicast Fireblast deals (before reductions) and how long it stuns on each level: 2x Multicast: 140\/260\/380\/500 ( 620\/740\/860\/980) damage, 2.1 seconds stun\n 3x Multicast: 210\/390\/570\/750 ( 930\/1110\/1290\/1470) damage, 2.7 seconds stun\n 4x Multicast: 280\/520\/760\/1000 ( 1240\/1480\/1720\/1960) damage, 3.3 seconds stun.",
-        "TALENT NOTES Fireblast now gains a 17% chance to passively proc on regular attacks\n These procs do not trigger the cooldown and work while on cooldown, and do not cost mana\n They do not proc on-cast effects either, and they can Multicast\n The procs use pseudo-random distribution\n In average, adds the following damage values to every attack (considering average  Multicast chances on each level)\n Multicast Level 0: 11.9\/22.1\/32.3\/42.5 ( 52.7\/62.9\/73.1\/83.3) Multicast Level 1: 20.83\/38.68\/56.53\/74.38 ( 92.23\/110.08\/127.93\/145.78) Multicast Level 2: 24.4\/45.31\/66.22\/87.13 ( 108.04\/128.95\/149.86\/170.77) Multicast Level 3: 26.18\/48.62\/71.06\/93.5 ( 115.94\/138.38\/160.82\/183.26)"
+        "When <span image=\"images\/multicast.webp\">[picture:multicast]<\/span> Multicast, Fireblast hits the same target several times in 0.6-second intervals",
+        "This is how much damage a multicast Fireblast deals (before reductions) and how long it stuns on each level: 2x Multicast: 140\/260\/380\/500 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 620\/740\/860\/980) damage, 2.1 seconds stun\n 3x Multicast: 210\/390\/570\/750 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 930\/1110\/1290\/1470) damage, 2.7 seconds stun\n 4x Multicast: 280\/520\/760\/1000 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1240\/1480\/1720\/1960) damage, 3.3 seconds stun.",
+        "TALENT NOTES Fireblast now gains a 17% chance to passively proc on regular attacks\n These procs do not trigger the cooldown and work while on cooldown, and do not cost mana\n They do not proc on-cast effects either, and they can Multicast\n The procs use pseudo-random distribution\n In average, adds the following damage values to every attack (considering average <span image=\"images\/multicast.webp\">[picture:multicast]<\/span> Multicast chances on each level)\n Multicast Level 0: 11.9\/22.1\/32.3\/42.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 52.7\/62.9\/73.1\/83.3) Multicast Level 1: 20.83\/38.68\/56.53\/74.38 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 92.23\/110.08\/127.93\/145.78) Multicast Level 2: 24.4\/45.31\/66.22\/87.13 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 108.04\/128.95\/149.86\/170.77) Multicast Level 3: 26.18\/48.62\/71.06\/93.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 115.94\/138.38\/160.82\/183.26)"
       ],
       "item_behaviour": [],
       "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.45+0.53",
-        "Cast Range:  475",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 475",
         "Multicast Interval: 0.6",
-        "Damage: 70\/130\/190\/250 ( 310\/370\/430\/490)",
+        "Damage: 70\/130\/190\/250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 310\/370\/430\/490)",
         "Stun Duration: 1.5",
-        "Proc Chance:  17%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Proc Chance:  17%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Ogre_Magi_Fireblast.mp3\/revision\/latest?cb=20191216021153",
       "effects": [
@@ -36,22 +36,22 @@
         "Ignite travels at a speed of 1000",
         "The second projectile only targets enemies which do not have the Ignite debuff yet",
         "If multiple enemies which are not ignited yet are within range, it chooses the closer target for the second projectile\n Cannot target invisible, invulnerable, or hidden units, or units inside the Fog of War",
-        "When  Multicast, Ogre Magi launches Ignite projectiles in 0.6-second intervals at random enemy or neutral units within 1400 range\n The multicasts launch 2 projectiles per cast as well, just like a regular cast\n Cannot target invisible, invulnerable, or hidden units, or units inside the Fog of War\n Prioritizes units which do not have the Ignite debuff already\n Can hit the same unit multiple times",
+        "When <span image=\"images\/multicast.webp\">[picture:multicast]<\/span> Multicast, Ogre Magi launches Ignite projectiles in 0.6-second intervals at random enemy or neutral units within 1400 range\n The multicasts launch 2 projectiles per cast as well, just like a regular cast\n Cannot target invisible, invulnerable, or hidden units, or units inside the Fog of War\n Prioritizes units which do not have the Ignite debuff already\n Can hit the same unit multiple times",
         "The debuff from Ignite does not stack with itself\n However, a new instance adds its duration to the existing debuff, instead of refreshing it",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is placed\n When  Multicast onto the same target, each projectile applies a damage tick on impact\n However, the tick timer gets reset on each impact as well, so that all but 1 of the ticks on impact get canceled out, resulting in average up to: No Multicast: 6\/7\/8\/9 damage instances\n 2x Multicast: 11\/13\/15\/17 damage instances\n 3x Multicast: 16\/19\/22\/25 damage instances\n 4x Multicast: 21\/25\/29\/33 damage instances.",
-        "This is how much damage Ignite can deal with and without Multicast (before reductions): No Multicast: 120\/210\/320\/450 ( 216\/322\/448\/594) damage\n 2x Multicast: 220\/390\/600\/850 ( 396\/598\/840\/1122) damage\n 3x Multicast: 320\/570\/880\/1250 ( 576\/874\/1232\/1650) damage\n 4x Multicast: 420\/750\/1160\/1650 ( 756\/1150\/1624\/2178) damage."
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed\n When <span image=\"images\/multicast.webp\">[picture:multicast]<\/span> Multicast onto the same target, each projectile applies a damage tick on impact\n However, the tick timer gets reset on each impact as well, so that all but 1 of the ticks on impact get canceled out, resulting in average up to: No Multicast: 6\/7\/8\/9 damage instances\n 2x Multicast: 11\/13\/15\/17 damage instances\n 3x Multicast: 16\/19\/22\/25 damage instances\n 4x Multicast: 21\/25\/29\/33 damage instances.",
+        "This is how much damage Ignite can deal with and without Multicast (before reductions): No Multicast: 120\/210\/320\/450 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 216\/322\/448\/594) damage\n 2x Multicast: 220\/390\/600\/850 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 396\/598\/840\/1122) damage\n 3x Multicast: 320\/570\/880\/1250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 576\/874\/1232\/1650) damage\n 4x Multicast: 420\/750\/1160\/1650 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 756\/1150\/1624\/2178) damage."
       ],
       "item_behaviour": [],
       "description": "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.35+0.6",
-        "Cast Range:  700\/800\/900\/1000",
-        "Secondary Target Search Radius:  900\/1000\/1100\/1200",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 700\/800\/900\/1000",
+        "Secondary Target Search Radius: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 900\/1000\/1100\/1200",
         "Multicast Radius: 1400",
         "Multicast Interval: 0.6",
         "Number of Targets: 2",
-        "Damage per Second: 20\/30\/40\/50 ( 36\/46\/56\/66)",
+        "Damage per Second: 20\/30\/40\/50 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 36\/46\/56\/66)",
         "Move Speed Slow: 20%\/22%\/24%\/26%",
         "Duration: 5\/6\/7\/8"
       ],
@@ -72,21 +72,21 @@
       "notes": [
         "Despite the visual effect, the buff is applied instantly on the target upon cast\n The projectile has only a visual purpose",
         "Can be cast on any ally, including buildings and invulnerable allies, excluding wards\n ↓↓ Double-tapping automatically targets self",
-        "When  Multicast, instantly applies the Bloodlust buff on random allies within the radius",
+        "When <span image=\"images\/multicast.webp\">[picture:multicast]<\/span> Multicast, instantly applies the Bloodlust buff on random allies within the radius",
         "Increase the targets' model by 25% for its duration\n This has no impact on its collision size",
         "With Autocast, Ogre Magi automatically casts this ability on the closest ally hero that does not have the Bloodlust buff on\n There are no priorities\n This includes Ogre Magi himself, clones, creep-heroes, but not illusions\n Does not automatically target lane creeps, spell immune creep-heroes and other allied or own summons\n Interrupts Ogre Magi's current order and makes him forget queued commands\n This cannot occur while channeling an ability, though",
-        "Fully affects  Couriers"
+        "Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attack speed if cast on Ogre himself. Can be cast on towers.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.45+0.67",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Multicast Radius: 700",
         "Move Speed Bonus: 7%\/9%\/11%\/13%",
-        "Ally Attack Speed Bonus: 30\/40\/50\/60 ( 55\/65\/75\/85)",
-        "Self Attack Speed Bonus: 30\/50\/70\/90 ( 55\/75\/95\/115)",
+        "Ally Attack Speed Bonus: 30\/40\/50\/60 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 55\/65\/75\/85)",
+        "Self Attack Speed Bonus: 30\/50\/70\/90 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 55\/75\/95\/115)",
         "Duration: 30"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Ogre_Magi_Bloodlust.mp3\/revision\/latest?cb=20191216021152",
@@ -103,10 +103,10 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Ogre Magi can never be out of mana to cast this ability, since it always costs 35% of his current mana pool, rounded down\n Therefore, this ability can be cast even with 0 mana\n The tooltip shows the momentary mana cost based on Ogre Magi's current mana, and updates whenever the tooltip is called",
         "Unrefined Fireblast first applies the damage, then the debuff",
-        "When  Multicast, Unrefined Fireblast hits the same target several times in 0.6-second intervals",
+        "When <span image=\"images\/multicast.webp\">[picture:multicast]<\/span> Multicast, Unrefined Fireblast hits the same target several times in 0.6-second intervals",
         "This is how much damage a multicast Unrefined Fireblast deals (before reductions) and how long it stuns on each level: 2x Multicast: 550 damage, 2.1 seconds stun\n 3x Multicast: 825 damage, 2.7 seconds stun\n 4x Multicast: 1100 damage, 3.3 seconds stun."
       ],
       "item_behaviour": [],
@@ -114,7 +114,7 @@
       "hot_key": "D",
       "params": [
         "Cast Animation: 0.45+0.53",
-        "Cast Range:  475",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 475",
         "Multicast Interval: 0.6",
         "Damage: 275",
         "Stun Duration: 1.5"
@@ -134,23 +134,23 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Can be cast on any allied, including buildings, excluding wards\n Cannot be cast on invulnerable units\n However, Multicast can target invulnerable units\n ↓↓ Double-tapping automatically targets self",
-        "When  Multicast, instantly applies the Fire Shield buff on random allies within the radius\n There are no priorities\n This includes Ogre Magi himself, clones, creep-heroes, but not illusions\n Does not automatically target lane creeps, spell immune creep-heroes and other allied or own summons",
+        "When <span image=\"images\/multicast.webp\">[picture:multicast]<\/span> Multicast, instantly applies the Fire Shield buff on random allies within the radius\n There are no priorities\n This includes Ogre Magi himself, clones, creep-heroes, but not illusions\n Does not automatically target lane creeps, spell immune creep-heroes and other allied or own summons",
         "The shield only reacts on attack damage greater than 0 (after reductions), meaning the damage reduction only applies to the attack damage dealt from attacks it reacts to\n Can only trigger when an enemy unit lands an attack, including instant attacks, regardless of distance\n This means it cannot trigger on missed attacks\n Only reacts on hero attacks, enemy and ally, including clones and illusions, excluding creep-heroes",
         "The fireballs travel at a speed of 1400",
         "The damage source of the fireballs is always Ogre Magi, and not the buffed unit",
         "All fireballs together can deal 375 damage (before reductions)",
         "The number of remaining attacks is visualized by the visual effect, with one fire orb orbiting the unit for each remaining instance\n A number on the status buff shows the remaining charges as well",
         "Successive casts on the same target refresh the duration and reset the number of attack instances",
-        "Fully affects  Couriers"
+        "Fully affects <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Creates a shield around the target ally, absorbing a percentage of the damage of next 3 attacks from enemy heroes. When damage is absorbed, a fireball is launched at the attacker.",
       "hot_key": "F",
       "params": [
         "Cast Animation: 0.2+0.6",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Multicast Radius: 1000",
         "Number of Attacks: 3",
         "Incoming Attack Damage Reduction: 85%",
@@ -172,19 +172,19 @@
     },
     {
       "notes": [
-        "Besides his own abilities, Multicast can only proc on single-target items when targeting enemies, including neutral items\n Multicast only triggers if the targeted unit is an enemy, even for items that can target allies or trees\n Multicast items only target enemies, even when the item itself can target allies by default\n Does not trigger for  Helm of the Dominator and  Helm of the Overlord\n Although it triggers for  Urn of Shadows and <span image=\"items\/spirit_vessel\/full.webp\">[Spirit Vessel]<\/span> Spirit Vessel, they do not get their effects multiplied by Multicast\n If no other enemies are nearby, Multicast does nothing\n It cannot target the same units multiple times\n The items are still restricted to their own targeting rules\n For example, an item that only targets creeps cannot multicast onto enemy heroes",
+        "Besides his own abilities, Multicast can only proc on single-target items when targeting enemies, including neutral items\n Multicast only triggers if the targeted unit is an enemy, even for items that can target allies or trees\n Multicast items only target enemies, even when the item itself can target allies by default\n Does not trigger for <span image=\"items\/helm_of_the_dominator\/full.webp\">[picture:helm_of_the_dominator]<\/span> Helm of the Dominator and <span image=\"items\/helm_of_the_overlord\/full.webp\">[picture:helm_of_the_overlord]<\/span> Helm of the Overlord\n Although it triggers for <span image=\"items\/urn_of_shadows\/full.webp\">[picture:urn_of_shadows]<\/span> Urn of Shadows and <span image=\"items\/spirit_vessel\/full.webp\">[picture:spirit_vessel]<\/span> Spirit Vessel, they do not get their effects multiplied by Multicast\n If no other enemies are nearby, Multicast does nothing\n It cannot target the same units multiple times\n The items are still restricted to their own targeting rules\n For example, an item that only targets creeps cannot multicast onto enemy heroes",
         "The range of items Multicast is the total of the item's cast range, Ogre Magi's current cast range, and the 600 buffer range",
         "Multicast is resolved in a single roll, rolling from the highest chance to the lowest\n This results in the following distribution for each level: No Multicast: 25%\/25%\/25% 2x Multicast: 75%\/45%\/45% 3x Multicast: 0%\/30%\/15% 4x Multicast: 0%\/0%\/15%\n This means each ability is cast 1.75\/2.05\/2.2 times on average",
-        "Ally  Couriers are not valid targets for  Bloodlust and  Fire Shield Multicasts\n SOULBIND Procs independently for both enemies bound per ability cast"
+        "Ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers are not valid targets for <span image=\"images\/bloodlust.webp\">[picture:bloodlust]<\/span> Bloodlust and <span image=\"images\/fire_shield.webp\">[picture:fire_shield]<\/span> Fire Shield Multicasts\n SOULBIND Procs independently for both enemies bound per ability cast"
       ],
       "item_behaviour": [],
       "description": "Enables Ogre Magi to cast his abilities and items multiple times with each use.",
       "hot_key": "R",
       "params": [
-        "Ignite Multicast Range:  1400",
+        "Ignite Multicast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1400",
         "Bloodlust Multicast Radius: 700",
         "Fire Shield Multicast Radius: 1000",
-        "Item Multicast Buffer Range:  600",
+        "Item Multicast Buffer Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "2x Multicast Chance: 75%\/75%\/75%",
         "3x Multicast Chance: 0%\/30%\/30%",
         "4x Multicast Chance: 0%\/0%\/15%"

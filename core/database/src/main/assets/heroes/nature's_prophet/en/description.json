@@ -3,7 +3,7 @@
     {
       "notes": [
         "Can directly be cast on any unit, except for ancient creeps, creep-heroes, buildings, wards, or invulnerable units\n ↓↓ Double-tapping automatically targets self",
-        "Creates a planted tree on every 45°th of a 150 radius circle, resulting in 8 trees forming a ring and trapping the targeted unit\n Trees created with Sprout act exactly like the other trees on the map\n They block pathing, vision, and interact with other abilities the same way\n Sprout trees have a different model and are smaller than other trees on the map and they do not have a dying animation\n <span image=\"items\/tango\/full.webp\">[Tango]<\/span> Tango heals for twice as long when targeting a Sprout tree",
+        "Creates a planted tree on every 45°th of a 150 radius circle, resulting in 8 trees forming a ring and trapping the targeted unit\n Trees created with Sprout act exactly like the other trees on the map\n They block pathing, vision, and interact with other abilities the same way\n Sprout trees have a different model and are smaller than other trees on the map and they do not have a dying animation\n <span image=\"items\/tango\/full.webp\">[picture:tango]<\/span> Tango heals for twice as long when targeting a Sprout tree",
         "Destroying one tree is enough to allow units to walk in and out of the ring of trees",
         "Sprout grants 250 range flying vision around the targeted point for its duration\n The vision granted is not provided by the trees and remains even after all Sprouted trees are destroyed",
         "Units not controlled by any player do not try to path around the Sprout trees, but simply walk against them as if they are not there\n This effectively causes them to get stuck, until they change directions",
@@ -14,13 +14,13 @@
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.35+0.44",
-        "Cast Range:  625\/700\/775\/850",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 625\/700\/775\/850",
         "Trees Spawn Radius: 150",
         "Number of Trees: 8",
         "Duration: 3\/4\/5\/6",
-        "Aura Radius:  200",
-        "Miss Chance:  100%",
-        "Aura Linger Duration:  0.5"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Aura Radius:  200",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Miss Chance:  100%",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Aura Linger Duration:  0.5"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Nature%27s_Prophet_Sprout_1.mp3\/revision\/latest?cb=20191216020912",
       "effects": [
@@ -38,7 +38,7 @@
       "notes": [
         "Disjoints projectiles upon teleporting",
         "↓↓ Double-tapping automatically targets the team's fountain",
-        "Unlike the teleport of <span image=\"items\/town_portal_scroll\/full.webp\">[Town Portal Scroll]<\/span> Town Portal Scroll, canceling this one neither puts the ability on cooldown, nor consumes mana",
+        "Unlike the teleport of <span image=\"items\/town_portal_scroll\/full.webp\">[picture:town_portal_scroll]<\/span> Town Portal Scroll, canceling this one neither puts the ability on cooldown, nor consumes mana",
         "During the cast time, a visual effect is created around Nature's Prophet and at the target location\n These visual effects are visible to everyone",
         "Also plays a sound at the target location, however, this is only audible to enemies when Nature's Prophet is visible to them\n SPELL STEAL This ability's cast point is not modified when acquired"
       ],
@@ -67,16 +67,16 @@
         "Destroys all trees in the target area, regardless of how many Treants are created",
         "Treants always spawn at the center of the area",
         "Must have at least 1 tree within its area to be castable\n Targeting an area without trees gives an error message\n However, if trees within the targeted area disappear during the cast time, the ability is not canceled, wasting mana and cooldown",
-        "TALENT NOTES Despite the  talent's description, the Treants health and damage multiplier  talent does not multiply the health and damage values by 2.5\n Instead, it adds 825 health and 27\/39\/51\/63 min\/max attack damage to the  Treants\n This effectively increases the health of Treants by 2.5x\n This effectively increases the average attack damage of Treants by 2.64\/2.7\/2.7\/2.7x"
+        "TALENT NOTES Despite the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent's description, the Treants health and damage multiplier <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not multiply the health and damage values by 2.5\n Instead, it adds 825 health and 27\/39\/51\/63 min\/max attack damage to the <span image=\"images\/nature's_prophet_treant.png\">[picture:nature's_prophet_treant]<\/span> Treants\n This effectively increases the health of Treants by 2.5x\n This effectively increases the average attack damage of Treants by 2.64\/2.7\/2.7\/2.7x"
       ],
       "item_behaviour": [],
       "description": "Converts an area of trees into Treants under the command of Nature's Prophet.",
       "hot_key": "E",
       "params": [
         "Cast Animation: 0.5+1.23",
-        "Cast Range:  750",
-        "Radius: 150\/225\/300\/375 ( 275\/350\/425\/500)",
-        "Number of Treants: 2\/3\/4\/5 ( 7\/8\/9\/10)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 750",
+        "Radius: 150\/225\/300\/375 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 275\/350\/425\/500)",
+        "Number of Treants: 2\/3\/4\/5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 7\/8\/9\/10)",
         "Treant Duration: 60"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Nature%27s_Prophet_Nature%27s_Call.mp3\/revision\/latest?cb=20191216020911",
@@ -93,11 +93,11 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
         "Curse of the Oldgrowth's effects are instantly applied within its whole area\n There is no travel time",
-        "Checks for trees periodically within 15 radius and adapts the damage and movement speed slow values instantly\n Trees includes  Treants regardless of factions, regular trees and planted trees (e.g\n  Sprout)",
-        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 7 instances\n Can deal a minimum 360\/480\/600\/720 damage (before reductions) to the unit trapped by Sprout for the entire duration\n Deals 0 damage per second to affected enemy targets if there are no trees within the radius\n Fully procs on-damage effects if no abilities are on cooldown, such as  Corrosive Skin, except those which have a minimum damage threshold (e.g\n  Gravekeeper's Cloak)",
-        "The debuff exposes the target, but does not provide True Sight over them, and slows their movement speed\n Does not apply the debuff on invisible units and units under  Disguise"
+        "Checks for trees periodically within 15 radius and adapts the damage and movement speed slow values instantly\n Trees includes <span image=\"images\/nature's_prophet_treant.png\">[picture:nature's_prophet_treant]<\/span> Treants regardless of factions, regular trees and planted trees (e.g\n <span image=\"images\/sprout.webp\">[picture:sprout]<\/span> Sprout)",
+        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 7 instances\n Can deal a minimum 360\/480\/600\/720 damage (before reductions) to the unit trapped by Sprout for the entire duration\n Deals 0 damage per second to affected enemy targets if there are no trees within the radius\n Fully procs on-damage effects if no abilities are on cooldown, such as <span image=\"images\/corrosive_skin.webp\">[picture:corrosive_skin]<\/span> Corrosive Skin, except those which have a minimum damage threshold (e.g\n <span image=\"images\/gravekeeper's_cloak.webp\">[picture:gravekeeper's_cloak]<\/span> Gravekeeper's Cloak)",
+        "The debuff exposes the target, but does not provide True Sight over them, and slows their movement speed\n Does not apply the debuff on invisible units and units under <span image=\"items\/smoke_of_deceit\/full.webp\">[picture:smoke_of_deceit]<\/span> Disguise"
       ],
       "item_behaviour": [],
       "description": "Applies a curse on all enemy heroes within 1200 range, displaying them in fog, slowing them, and causing damage over time based on the number of trees within 250 radius. Treants count as trees for this purpose.",
@@ -127,9 +127,9 @@
       "notes": [
         "When ground-targeted, Wrath of Nature automatically jumps on the closest visible enemy",
         "Bounces in 0.25-second intervals, so hitting all targets takes 4.25 seconds",
-        "Does not bounce on  Couriers, invisible units or units in the Fog of War",
+        "Does not bounce on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers, invisible units or units in the Fog of War",
         "Can never hit the same unit twice per cast",
-        "All bounces together can collectively deal up to 5243.9\/6839.9\/8435.8 ( 6611.9\/8207.9\/9803.8) damage\n For how much damage each bounce deals on each level, please refer to the chart below",
+        "All bounces together can collectively deal up to 5243.9\/6839.9\/8435.8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 6611.9\/8207.9\/9803.8) damage\n For how much damage each bounce deals on each level, please refer to the chart below",
         "The caster receives one stack of attack damage for each enemy killed by Wrath of Nature\n To gain a stack, enemies have to die to the damage\n Killing an enemy with the Wrath of Nature debuff does not grant a stack\n Each instance has its own independent duration\n The status buff shows the current amount of damage the stack provides\n There is no stack limit\n For how much regular flat bonus attack damage each bounce of Wrath of Nature grants per kill, please refer to the chart below",
         "SCEPTER NOTES Wrath of Nature now roots and disarms all hit enemies and provides True Sight over them\n The duration starts at 2 and increases by 0.106 seconds per bounce\n Wrath of Nature first applies the debuff, then the damage\n For the root duration increase per bounce from the 1st to the 18th target, please refer to the chart below"
       ],
@@ -142,11 +142,11 @@
         "Bounce Distance: Global",
         "Number of Bounces: 18",
         "Damage Increment per Bounce: 10%",
-        "Base Damage: 115\/150\/185 ( 145\/180\/215)",
+        "Base Damage: 115\/150\/185 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 145\/180\/215)",
         "Attack Damage Bonus per Kill: 6",
         "Attack Damage Bonus Duration: 50",
-        "Min Root Duration:  2",
-        "Max Root Duration:  3.8"
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Min Root Duration:  2",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Max Root Duration:  3.8"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Nature%27s_Prophet_Wrath_of_Nature_1.mp3\/revision\/latest?cb=20191216020919",
       "effects": [

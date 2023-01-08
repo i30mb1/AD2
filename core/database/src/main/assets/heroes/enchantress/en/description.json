@@ -7,15 +7,15 @@
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage\n This also means that it fully works with spell damage amplification and spell lifesteal",
         "Impetus deals its damage before the attack damage is applied, but still depends on the attack hitting the target",
         "Impetus does not work against allied units, buildings or wards",
-        "The damage is capped at a distance of 1750, resulting in the following maximum damage values: Treats creep-heroes and  Roshan as heroes, illusions as creeps\n Can deal a total of 140\/210\/280\/350 ( 253.75\/323.75\/393.75\/463.75) damage to heroes\n Can deal a total of 280\/420\/560\/700 ( 507.5\/647.5\/787.5\/927.5) damage to creeps",
-        "Cannot be cast on  Couriers"
+        "The damage is capped at a distance of 1750, resulting in the following maximum damage values: Treats creep-heroes and <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan as heroes, illusions as creeps\n Can deal a total of 140\/210\/280\/350 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 253.75\/323.75\/393.75\/463.75) damage to heroes\n Can deal a total of 280\/420\/560\/700 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 507.5\/647.5\/787.5\/927.5) damage to creeps",
+        "Cannot be cast on <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is. The farther the target, the greater the damage dealt. Deals double damage to creeps and illusions.",
       "hot_key": "Q",
       "params": [
-        "Cast Range:  575",
-        "Distance as Damage: 8%\/12%\/16%\/20% ( 14.5%\/18.5%\/22.5%\/26.5%)",
+        "Cast Range: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 575",
+        "Distance as Damage: 8%\/12%\/16%\/20% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 14.5%\/18.5%\/22.5%\/26.5%)",
         "Distance Cap: 1750",
         "Creep Damage Multiplier: 2"
       ],
@@ -34,20 +34,20 @@
     },
     {
       "notes": [
-        "Casting Enchant on heroes and on the following targets applies the movement speed slow and a basic dispel on them (the long sound is played): Clones, creep-heroes and on the   Vengeance Illusion\n  Couriers can be targeted, but it has no effect on them, wasting the mana and cooldown\n Successive casts on heroes refresh its duration",
-        "Cannot be cast on ancient creeps,  Siege Creeps,  Necronomicon Warriors and  Necronomicon Archers\n Cannot be cast again on enchanted creeps from the same faction\n TALENT NOTES Enchant's ancient creeps targeting restriction is removed upon learning the  talent\n Treats creep-heroes with the ancient tags (e.g\n  Roshan) now as heroes, hence only applies the movement speed slow",
+        "Casting Enchant on heroes and on the following targets applies the movement speed slow and a basic dispel on them (the long sound is played): Clones, creep-heroes and on the <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/vengeance_aura.webp\">[picture:vengeance_aura]<\/span> Vengeance Illusion\n <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers can be targeted, but it has no effect on them, wasting the mana and cooldown\n Successive casts on heroes refresh its duration",
+        "Cannot be cast on ancient creeps, <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Siege Creeps, <span image=\"images\/necronomicon_warrior.png\">[picture:necronomicon_warrior]<\/span> Necronomicon Warriors and <span image=\"images\/necronomicon_archer.png\">[picture:necronomicon_archer]<\/span> Necronomicon Archers\n Cannot be cast again on enchanted creeps from the same faction\n TALENT NOTES Enchant's ancient creeps targeting restriction is removed upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n Treats creep-heroes with the ancient tags (e.g\n <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan) now as heroes, hence only applies the movement speed slow",
         "Slowed units leave behind a trail of flowers as they move, which is only visible when having vision over the unit",
         "Casting Enchant on any other enemy unit enchants it (short sound is played)\n Enchant applies a basic dispel on the target creep which removes buffs and debuffs\n Then it increases the enchanted creep's max health while fully healing it, and grants flat bonus attack damage to it\n However, its mana is not restored",
         "Treats illusions as creeps\n Enchanting an illusion does not change the creator of the illusion\n It also does not heal and grant the enchanted illusion bonus attack damage\n The enchanted illusion is also not counted to the max enchanted units allowed",
         "Enchanting a new creep instantly kills the previous enchanted creep\n There are no limit to how many illusions that can be enchanted\n When an enchanted creep's duration ends, it gets instantly killed as well\n These deaths are not credited to anyone so that no one gets experience from it",
-        "The following neutral creeps cannot be targeted at all due to the level restriction: Level 4: Can enchant all neutral creeps Level 3: Can enchant all neutral creeps Level 2 cannot enchant:  Ancient Black Dragon,  Ancient Granite Golem,  Ancient Ice Shaman,  Ancient Thunderhide,  Dark Troll Summoner,  Satyr Tormenter, Level 1, additionally:  Alpha Wolf,  Ancient Frostbitten Golem,  Ancient Rock Golem,  Ancient Rumblehide,  Centaur Conqueror,  Hellbear Smasher,  Warpine Raider,  Wildwing Ripper,"
+        "The following neutral creeps cannot be targeted at all due to the level restriction: Level 4: Can enchant all neutral creeps Level 3: Can enchant all neutral creeps Level 2 cannot enchant: <span image=\"images\/ancient_black_dragon.png\">[picture:ancient_black_dragon]<\/span> Ancient Black Dragon, <span image=\"images\/ancient_granite_golem.png\">[picture:ancient_granite_golem]<\/span> Ancient Granite Golem, <span image=\"images\/ancient_ice_shaman.png\">[picture:ancient_ice_shaman]<\/span> Ancient Ice Shaman, <span image=\"images\/ancient_thunderhide.png\">[picture:ancient_thunderhide]<\/span> Ancient Thunderhide, <span image=\"images\/dark_troll_summoner.png\">[picture:dark_troll_summoner]<\/span> Dark Troll Summoner, <span image=\"images\/satyr_tormenter.png\">[picture:satyr_tormenter]<\/span> Satyr Tormenter, Level 1, additionally: <span image=\"images\/alpha_wolf.png\">[picture:alpha_wolf]<\/span> Alpha Wolf, <span image=\"images\/ancient_frostbitten_golem.png\">[picture:ancient_frostbitten_golem]<\/span> Ancient Frostbitten Golem, <span image=\"images\/ancient_rock_golem.png\">[picture:ancient_rock_golem]<\/span> Ancient Rock Golem, <span image=\"images\/ancient_rumblehide.png\">[picture:ancient_rumblehide]<\/span> Ancient Rumblehide, <span image=\"images\/centaur_conqueror.png\">[picture:centaur_conqueror]<\/span> Centaur Conqueror, <span image=\"images\/hellbear_smasher.png\">[picture:hellbear_smasher]<\/span> Hellbear Smasher, <span image=\"images\/warpine_raider.png\">[picture:warpine_raider]<\/span> Warpine Raider, <span image=\"images\/wildwing_ripper.png\">[picture:wildwing_ripper]<\/span> Wildwing Ripper,"
       ],
       "item_behaviour": [],
       "description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing its attack damage and max health. Only one creep can be controlled at a time.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.3+0.67",
-        "Cast Range:  500\/550\/600\/650",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 500\/550\/600\/650",
         "Hero Move Speed Slow: 55%",
         "Hero Slow Duration: 3.75\/4.5\/5.25\/6",
         "Max Enchanted Creeps: 1",
@@ -71,7 +71,7 @@
     },
     {
       "notes": [
-        "Every 0.5 seconds, each wisp chooses a random allied unit to heal\n So it is possible to heal up to 8 ( 13) allies at a time",
+        "Every 0.5 seconds, each wisp chooses a random allied unit to heal\n So it is possible to heal up to 8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 13) allies at a time",
         "The heal targets are chosen randomly, without any priorities\n Multiple wisps can randomly select the same unit\n Each wisp approaches its chosen target, indicating the wisp is healing the target",
         "Nature's Attendants ignores ancient creeps and allies that already are at full health",
         "It can heal invulnerable units, but not hidden units",
@@ -79,7 +79,7 @@
         "When Enchantress dies, the wisps still continue to heal units nearby her death location\n When Reincarnation triggers, the wisps fly back from nearby units to Enchantress upon respawning",
         "Successive casts do not stack but refresh the duration",
         "Can heal a total of 32\/64\/96\/128 health per second or 392\/864\/1416\/2048 health over its full duration",
-        "TALENT NOTES The movement speed increasing  talent does not update the current active instance\n Increases Enchantress' total movement speed to 350 while active\n The number of wisps increasing  talent can heal a total of 52\/104\/156\/208 health per second or 468\/1040\/1716\/2496 health over its full duration\n However, the ability's visual effects do not adapt for this  talent\n The bonus heal per wisp  talent can heal a total of 192\/224\/256\/288 health per second or 1728\/2240\/2816\/3456 health over its full duration\n With both  talents, it can heal a total of 312\/364\/416\/468 health per second or 2808\/3640\/4576\/5616 health over its full duration"
+        "TALENT NOTES The movement speed increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent does not update the current active instance\n Increases Enchantress' total movement speed to 350 while active\n The number of wisps increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can heal a total of 52\/104\/156\/208 health per second or 468\/1040\/1716\/2496 health over its full duration\n However, the ability's visual effects do not adapt for this <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent\n The bonus heal per wisp <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent can heal a total of 192\/224\/256\/288 health per second or 1728\/2240\/2816\/3456 health over its full duration\n With both <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents, it can heal a total of 312\/364\/416\/468 health per second or 2808\/3640\/4576\/5616 health over its full duration"
       ],
       "item_behaviour": [],
       "description": "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts 9\/10\/11\/12 seconds.",
@@ -87,10 +87,10 @@
       "params": [
         "Cast Animation: 0.3+0.93",
         "Search Radius: 275",
-        "Number of Wisps: 8 ( 13)",
-        "Heal per Second per Wisp: 4\/8\/12\/16 ( 24\/28\/32\/36)",
+        "Number of Wisps: 8 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 13)",
+        "Heal per Second per Wisp: 4\/8\/12\/16 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 24\/28\/32\/36)",
         "Duration: 9\/10\/11\/12",
-        "Move Speed Bonus:  30"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Move Speed Bonus:  30"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Enchantress_Nature%27s_Attendants.mp3\/revision\/latest?cb=20191216013606",
       "effects": [
@@ -106,23 +106,23 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter to be unlocked",
+        "Requires <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter to be unlocked",
         "Interrupts Enchantress' channeling abilities upon cast",
         "Sproink disjoints projectiles upon cast",
         "Upon cast, Enchantress leaps in an arc with a height of 150 and 180° away from the direction Enchantress is facing\n Leaps at a speed of 1250 for up to 0.4 seconds, or until touching the ground again\n Can leap over other units and over impassable terrain\n This means the leap distance and duration can be reduced\/increased by jumping up\/down a ramp or impassable terrain",
         "During Sproink, Enchantress can attack, cast abilities, and use items",
-        "0.2 seconds after cast, Enchantress performs instant attacks on the furthest 3 enemies within the search radius\n This means if the leap gets interrupted before that, the instant attacks do not happen\n The instant attacks are also not performed if  Impetus is not learned, or when she is disarmed\n The instant attacks apply Impetus based on its current level on their targets, they do not cost any mana, and are applied even if Impetus is currently not castable\n These instant attacks can proc any attack modifiers and on-hit effects normally\n They do not have True Strike\n Fully ignores  Couriers",
+        "0.2 seconds after cast, Enchantress performs instant attacks on the furthest 3 enemies within the search radius\n This means if the leap gets interrupted before that, the instant attacks do not happen\n The instant attacks are also not performed if <span image=\"images\/impetus.webp\">[picture:impetus]<\/span> Impetus is not learned, or when she is disarmed\n The instant attacks apply Impetus based on its current level on their targets, they do not cost any mana, and are applied even if Impetus is currently not castable\n These instant attacks can proc any attack modifiers and on-hit effects normally\n They do not have True Strike\n Fully ignores <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
         "With Enchantress' base attack range and Sproink's attack range buffer, the ability has a search radius of 775\n Searches for enemies all around her, meaning it may target enemies behind Enchantress as well",
-        "For  melee units, if the enemy target is farther than 350 range more than the attacker's range, the attack will always miss"
+        "For <span image=\"images\/melee.png\">[picture:melee]<\/span> melee units, if the enemy target is farther than 350 range more than the attacker's range, the attack will always miss"
       ],
       "item_behaviour": [],
       "description": "Leaps backward, and dodges incoming projectiles, and launches an Impetus attack on the 3 furthest enemy units within Enchantress' attack range + 200.",
       "hot_key": "D",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Leap Distance: 500",
         "Leap Duration: 0.4",
-        "Impetus Attacks Range Buffer:  200",
+        "Impetus Attacks Range Buffer: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 200",
         "Number of Impetus Attacks: 3"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Enchantress_Sproink.mp3\/revision\/latest?cb=20191216013606",
@@ -140,21 +140,21 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
-        "Provides True Sight over the target, while all creeps (including lane, neutral and ancient creeps), regardless of its faction that are within the radius get taunted, forcing them to attack the affected target\n Creep-heroes can be targeted, but they are not affected by the taunt\n Treats illusions as heroes\n Has the same taunt priority with  Berserker's Call,   Life Break and  Winter's Curse, but lower than  Duel",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
+        "Provides True Sight over the target, while all creeps (including lane, neutral and ancient creeps), regardless of its faction that are within the radius get taunted, forcing them to attack the affected target\n Creep-heroes can be targeted, but they are not affected by the taunt\n Treats illusions as heroes\n Has the same taunt priority with <span image=\"images\/berserker's_call.webp\">[picture:berserker's_call]<\/span> Berserker's Call, <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/life_break.webp\">[picture:life_break]<\/span> Life Break and <span image=\"images\/winter's_curse.webp\">[picture:winter's_curse]<\/span> Winter's Curse, but lower than <span image=\"images\/duel.webp\">[picture:duel]<\/span> Duel",
         "Creeps that enter the search radius after the cast are also taunted for its remaining duration\n Does not affect or check for spell immune, invulnerable, or hidden enemies, wards or buildings",
         "The search radius is centered around the affected target's current location and follows the target at all times",
         "Three wisps appear above the affected target, while a single wisp appears on the taunted creep, visible to everyone",
         "The taunt is based on an aura, with an infinite linger duration\n The debuff gets cleared when the debuff on the primary target expires, or when the target dies\n This means the taunt sticks on the affected units, and getting moved outside the radius does not free the unit from the taunt\n This also means the taunt sticks even if the debuff got removed on the primary target due to no enemies being within the area",
         "Little Friends has the lowest priority in the group of kill credit manipulation effects\n All damage dealt to the affected target from creeps during the taunt duration is neither sourced to Little Friends, nor credited to Enchantress\n The hidden debuff is responsible for giving the kill credit to Enchantress\n The kill credit is still given to Enchantress if the creep's attack projectile lands the kill upon the ability's duration expiring",
-        "However, the following conditions do not credit Enchantress with the kill credit\n When combined with other higher priority kill credit manipulation effects (e.g\n  Reaper's Scythe and\/or  Winter's Curse)\n When the affected target dies to  Ice Blast's kill threshold\n When  Meepo or its  Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the stun duration\n When the affected target is brought into   Supernova and the  Phoenix Sun is destroyed or denied\n When affected by   Wraith Delay"
+        "However, the following conditions do not credit Enchantress with the kill credit\n When combined with other higher priority kill credit manipulation effects (e.g\n <span image=\"images\/reaper's_scythe.webp\">[picture:reaper's_scythe]<\/span> Reaper's Scythe and\/or <span image=\"images\/winter's_curse.webp\">[picture:winter's_curse]<\/span> Winter's Curse)\n When the affected target dies to <span image=\"images\/ice_blast.webp\">[picture:ice_blast]<\/span> Ice Blast's kill threshold\n When <span image=\"images\/meepo_minimap.png\">[picture:meepo_minimap]<\/span> Meepo or its <span image=\"images\/divided_we_stand.webp\">[picture:divided_we_stand]<\/span> Meepo Clones is instantly killed due to either the Prime or any one of its clones dying, including being denied, during the stun duration\n When the affected target is brought into <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/supernova.webp\">[picture:supernova]<\/span> Supernova and the <span image=\"images\/unknown_unit.png\">[picture:unknown_unit]<\/span> Phoenix Sun is destroyed or denied\n When affected by <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/reincarnation.webp\">[picture:reincarnation]<\/span> Wraith Delay"
       ],
       "item_behaviour": [],
       "description": "All creeps, ally, enemy and neutral within a radius will gain bonus movement and attack speed and attack Enchantress' chosen target for 6 seconds.",
       "hot_key": "D",
       "params": [
         "Cast Animation: 0+0",
-        "Cast Range:  600",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 600",
         "Search Radius: 1200",
         "Taunt Move Speed Bonus: 100%",
         "Taunt Attack Speed Bonus: 100",
@@ -182,7 +182,7 @@
       "description": "Enchantress beguiles her enemies, slowing their attacks when she is attacked.",
       "hot_key": "R",
       "params": [
-        "Attack Speed Slow: 120\/160\/200 ( 185\/225\/265)"
+        "Attack Speed Slow: 120\/160\/200 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 185\/225\/265)"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Enchantress_Untouchable.mp3\/revision\/latest?cb=20191216013607",
       "effects": [

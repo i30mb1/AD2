@@ -6,23 +6,23 @@
         "The lifted unit is stunned while in the air and is not affected by the area stun upon landing\n The stun modifier is always placed as a debuff, while the main modifier is based on the alliance of the target\n SHARD NOTES This means the stun can be dispelled with strong dispels when casting on allies or self, while the lift itself cannot\n Since the lift itself does not disable the target, allies can attack, turn, and cast abilities and items during the lift if the stun gets dispelled",
         "While in the air, other units may pass below the lifted unit",
         "When the lift ends prematurely, the lifted unit instantly lands and applies the area stun and damage\n Telekinesis first applies the stun, then the damage",
-        "Cannot lift  Roshan, he will be stunned for the lift duration instead",
-        "Casting Telekinesis on units affected by  Black Hole,  Chronosphere or  Duel does nothing, wasting the mana and cooldown",
-        "With  Arcane Supremacy, Telekinesis has the following cast ranges with  Arcane Supremacy on each level: Level 1: 650\/700\/750\/800 cast range\n Level 2: 675\/725\/775\/825 cast range\n Level 3: 700\/750\/800\/850 cast range\n Level 4: 725\/775\/825\/875 cast range\n  TALENT NOTES The landing damage is also further increased to 199.5\/206.5\/213.5\/220.5",
-        "SHARD NOTES Telekinesis uses the reduced cooldown when targeting self or allies, and the regular cooldown when targeting enemies\n ↓↓ Double-tapping automatically targets self\n Can be cast on ally  Couriers\n SPELL STEAL This ability is not acquirable\n MORPH NOTES Can be reflected but not castable on  Rubick"
+        "Cannot lift <span image=\"images\/roshan.png\">[picture:roshan]<\/span> Roshan, he will be stunned for the lift duration instead",
+        "Casting Telekinesis on units affected by <span image=\"images\/black_hole.webp\">[picture:black_hole]<\/span> Black Hole, <span image=\"images\/chronosphere.webp\">[picture:chronosphere]<\/span> Chronosphere or <span image=\"images\/duel.webp\">[picture:duel]<\/span> Duel does nothing, wasting the mana and cooldown",
+        "With <span image=\"images\/arcane_supremacy.webp\">[picture:arcane_supremacy]<\/span> Arcane Supremacy, Telekinesis has the following cast ranges with <span image=\"images\/arcane_supremacy.webp\">[picture:arcane_supremacy]<\/span> Arcane Supremacy on each level: Level 1: 650\/700\/750\/800 cast range\n Level 2: 675\/725\/775\/825 cast range\n Level 3: 700\/750\/800\/850 cast range\n Level 4: 725\/775\/825\/875 cast range\n  TALENT NOTES The landing damage is also further increased to 199.5\/206.5\/213.5\/220.5",
+        "SHARD NOTES Telekinesis uses the reduced cooldown when targeting self or allies, and the regular cooldown when targeting enemies\n ↓↓ Double-tapping automatically targets self\n Can be cast on ally <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers\n SPELL STEAL This ability is not acquirable\n MORPH NOTES Can be reflected but not castable on <span image=\"images\/rubick_minimap.png\">[picture:rubick_minimap]<\/span> Rubick"
       ],
       "item_behaviour": [],
       "description": "Rubick uses his telekinetic powers to lift the enemy into the air briefly and then hurls them back at the ground. The unit lands on the ground with such force that it stuns nearby enemies.",
       "hot_key": "Q",
       "params": [
         "Cast Animation: 0.1+0.97",
-        "Cast Range:  550\/575\/600\/625",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 550\/575\/600\/625",
         "Stun Radius: 325",
-        "Lift Duration: 1.2\/1.5\/1.8\/2.1 ( 1.8\/2.1\/2.4\/2.7)",
+        "Lift Duration: 1.2\/1.5\/1.8\/2.1 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.8\/2.1\/2.4\/2.7)",
         "Landing Time: 0.3",
         "Stun Duration: 1.2\/1.4\/1.6\/1.8",
-        "Ally Cooldown:  19.6\/18.2\/16.8\/15.4 ( 11.2\/9.8\/8.4\/7)",
-        "Landing Damage:  175"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Ally Cooldown:  19.6\/18.2\/16.8\/15.4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 11.2\/9.8\/8.4\/7)",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Landing Damage:  175"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Rubick_Telekinesis_1.mp3\/revision\/latest?cb=20191216022735",
       "effects": [
@@ -39,9 +39,9 @@
     },
     {
       "notes": [
-        "Replaces  Telekinesis when it is cast on an enemy, and stays until the lifted unit lands",
+        "Replaces <span image=\"images\/telekinesis.webp\">[picture:telekinesis]<\/span> Telekinesis when it is cast on an enemy, and stays until the lifted unit lands",
         "Allows Rubick to determine where the lifted enemy will land after the lift duration\n Does not prematurely end the lift",
-        "Targeting further than the maximum allowed throw distance throws the enemy 375 ( 615) distance towards the targeted point\n The enemy moves towards the targeted point during the last 0.3 seconds of the lift duration\n Therefore, the speed varies between 0 \u2012 1250 ( 2050), depending on the chosen distance",
+        "Targeting further than the maximum allowed throw distance throws the enemy 375 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 615) distance towards the targeted point\n The enemy moves towards the targeted point during the last 0.3 seconds of the lift duration\n Therefore, the speed varies between 0 \u2012 1250 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 2050), depending on the chosen distance",
         "Can be cast multiple times during the lift\n The enemy lands on the last chosen location\n When cast while the target is already being moved to a previously targeted point, it continues moving to that previous point\n However, upon reaching it, the target is instantly teleported to the last targeted location",
         "The center of the targeted area is marked with green particles, which are visible to allies only",
         "Destroys trees within 325 radius of the lifted target upon landing",
@@ -53,7 +53,7 @@
       "params": [
         "Cast Animation: 0.1+1.07",
         "Cast Range: Global",
-        "Max Throw Distance: 375 ( 615)",
+        "Max Throw Distance: 375 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 615)",
         "Stun Radius: 325",
         "Landing Time: 0.3",
         "Stun Duration: 1.2\/1.4\/1.6\/1.8"
@@ -72,10 +72,10 @@
     },
     {
       "notes": [
-        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard to be unlocked",
-        "Replaces  Telekinesis when it is cast on an ally or on self, and stays until the lifted unit lands",
+        "Requires <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard to be unlocked",
+        "Replaces <span image=\"images\/telekinesis.webp\">[picture:telekinesis]<\/span> Telekinesis when it is cast on an ally or on self, and stays until the lifted unit lands",
         "Allows Rubick to determine where the lifted ally or himself will land\n Reduces the remaining lift duration to 0.5 when used\n Cannot be cast on allies who have ☐ Disabled Help from Rubick",
-        "Targeting further than the maximum allowed throw distance throws the ally 693.75 ( 1137.75) distance towards the targeted point\n The ally moves towards the targeted point during the last 0.3 seconds of the lift duration\n Therefore, the speed varies between 0 \u2012 2312.5 ( 3792.5), depending on the chosen distance",
+        "Targeting further than the maximum allowed throw distance throws the ally 693.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1137.75) distance towards the targeted point\n The ally moves towards the targeted point during the last 0.3 seconds of the lift duration\n Therefore, the speed varies between 0 \u2012 2312.5 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3792.5), depending on the chosen distance",
         "When cast, the ability turns inactive, so it can be only cast once",
         "Can be used while stunned, cycloned, slept, taunted, hidden, or during Forced Movement",
         "Cannot be used only while silenced, hexed, prevented from acting or upon death\n Rubick cannot ⇧ Shift-queue this ability",
@@ -87,9 +87,9 @@
       "description": "Chooses the location you will land when Telekinesis finishes.",
       "hot_key": "Q",
       "params": [
-        "Cast Animation:  0+0",
+        "Cast Animation: <span image=\"images\/instant_cast_time.png\">[picture:instant_cast_time]<\/span> 0+0",
         "Cast Range: Global",
-        "Max Throw Distance: 693.75 ( 1137.75)",
+        "Max Throw Distance: 693.75 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1137.75)",
         "Stun Radius: 325",
         "Throw Delay: 0.5",
         "Landing Time: 0.3",
@@ -113,19 +113,19 @@
         "Reduces the main attack damage of affected units\n Bonus attack damage is not reduced",
         "The total damage up to the first 5 bounces deal on each level are 443.5\/776.1\/1108.7\/1441.4\n Fade Bolt will take 75\/84\/90\/94 bounces to reach 1 damage",
         "The bolt first applies the damage, then the debuff",
-        "With  Arcane Supremacy, Fade Bolt has a total cast range of 900\/950\/1000\/1050\n At Level 4, it also increases the base damage to 126\/220.5\/315\/409.5\n SPELL STEAL This ability is not acquirable"
+        "With <span image=\"images\/arcane_supremacy.webp\">[picture:arcane_supremacy]<\/span> Arcane Supremacy, Fade Bolt has a total cast range of 900\/950\/1000\/1050\n At Level 4, it also increases the base damage to 126\/220.5\/315\/409.5\n SPELL STEAL This ability is not acquirable"
       ],
       "item_behaviour": [],
       "description": "Rubick creates a powerful stream of arcane energy that travels between enemy units, dealing damage and reducing their attack damage. Each jump deals less damage.",
       "hot_key": "W",
       "params": [
         "Cast Animation: 0.1+0.93",
-        "Cast Range:  800",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 800",
         "Bounce Distance: 440",
         "Number of Bounces: Infinite",
         "Base Damage: 100\/175\/250\/325",
         "Bounce Damage Reduction: 6%",
-        "Attack Damage Reduction: 14%\/21%\/28%\/35% ( 26%\/33%\/40%\/47%)",
+        "Attack Damage Reduction: 14%\/21%\/28%\/35% (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 26%\/33%\/40%\/47%)",
         "Duration: 10"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Rubick_Fade_Bolt_1.mp3\/revision\/latest?cb=20191216022739",
@@ -143,7 +143,7 @@
     },
     {
       "notes": [
-        "Applies generic outgoing damage amplification on Rubick\n Stacks additively with other sources of generic outgoing damage manipulation\n The amplification affects only spell damage Rubick deals that are not flagged as HP removal\n Arcane Supremacy further increases the spell amplification for abilities stolen by  Spell Steal  talent up to a total of 54%\/58%\/62%\/66%"
+        "Applies generic outgoing damage amplification on Rubick\n Stacks additively with other sources of generic outgoing damage manipulation\n The amplification affects only spell damage Rubick deals that are not flagged as HP removal\n Arcane Supremacy further increases the spell amplification for abilities stolen by <span image=\"images\/spell_steal.webp\">[picture:spell_steal]<\/span> Spell Steal <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent up to a total of 54%\/58%\/62%\/66%"
       ],
       "item_behaviour": [],
       "description": "Rubick's mastery of the arcane allows him to have a larger cast range and increased potency.",
@@ -167,14 +167,14 @@
     {
       "notes": [
         "The cooldown and charges of stolen abilities are saved\n Re-acquiring an ability does not reset its previous cooldown or charges, with some exceptions listed here\n Rubick gets the same initial charges when the ability is learned for charge-based abilities\n Cooldown reseting effects have no effect on the cooldowns of abilities Rubick currently does not have",
-        "Sets the cast point to for stolen abilities if the stolen ability's original cast point is higher than the set value\n However, this does not affect abilities with 0 cast point\n The following abilities tagged with DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN do not get their cast point modified upon acquired:  Terrorize,  God's Rebuke,  Poof,  Boundless Strike,  Teleportation,  Requiem of Souls,  Assassinate and  Blast Off!\n For   Assassinate, once the item is equipped, it no longer uses the cast point for acquired abilities since the upgrade changes the cast point",
+        "Sets the cast point to for stolen abilities if the stolen ability's original cast point is higher than the set value\n However, this does not affect abilities with 0 cast point\n The following abilities tagged with DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN do not get their cast point modified upon acquired: <span image=\"images\/terrorize.webp\">[picture:terrorize]<\/span> Terrorize, <span image=\"images\/god's_rebuke.webp\">[picture:god's_rebuke]<\/span> God's Rebuke, <span image=\"images\/poof.webp\">[picture:poof]<\/span> Poof, <span image=\"images\/boundless_strike.webp\">[picture:boundless_strike]<\/span> Boundless Strike, <span image=\"images\/teleportation.webp\">[picture:teleportation]<\/span> Teleportation, <span image=\"images\/requiem_of_souls.webp\">[picture:requiem_of_souls]<\/span> Requiem of Souls, <span image=\"images\/assassinate.webp\">[picture:assassinate]<\/span> Assassinate and <span image=\"images\/blast_off%21.png\">[picture:blast_off%21]<\/span> Blast Off!\n For <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/assassinate.webp\">[picture:assassinate]<\/span> Assassinate, once the item is equipped, it no longer uses the cast point for acquired abilities since the upgrade changes the cast point",
         "The stolen ability's cast backswing is equal to the original ability's",
         "The stolen ability's channeling notes fully apply",
-        "Abilities granted by <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter and <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard are considered stand-alone abilities, and can be acquired without having the respective item equipped",
+        "Abilities granted by <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter and <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard are considered stand-alone abilities, and can be acquired without having the respective item equipped",
         "Any illusion creating abilities create illusions of Rubick based on the intended visual appearance, and not of the original hero",
-        "For ability interactions with summoned and  Dominated units, the following rules generally apply: Units with limited duration (e.g\n  Holy Persuasion and  Chaotic Offering etc.) are not killed upon losing the ability\n Units with permanent duration (e.g\n  Summon Familiars are killed upon losing the ability unless stated otherwise",
+        "For ability interactions with summoned and <span image=\"items\/helm_of_the_dominator\/full.webp\">[picture:helm_of_the_dominator]<\/span> Dominated units, the following rules generally apply: Units with limited duration (e.g\n <span image=\"images\/holy_persuasion.webp\">[picture:holy_persuasion]<\/span> Holy Persuasion and <span image=\"images\/chaotic_offering.webp\">[picture:chaotic_offering]<\/span> Chaotic Offering etc.) are not killed upon losing the ability\n Units with permanent duration (e.g\n <span image=\"images\/summon_familiars.webp\">[picture:summon_familiars]<\/span> Summon Familiars are killed upon losing the ability unless stated otherwise",
         "Stolen channeling abilities usually end prematurely when he loses them during channeling, which has the same effect as being interrupted during channeling\n However, there are a few exceptions as listed here",
-        "Since  Spell Steal can only be cast on heroes, non-hero abilities from neutral creeps (i.e\n  Ensnare) cannot be directly acquired, unless with the following conditions:  Doom casts the gained ability from  Devour\n  Clinkz casts the gained ability from   Death Pact\n The acquired neutral abilities use the original cast point of the neutral creeps they come from\n However, the cast backswing differs depending on the ability acquired (see chart)\n EXPR Cast point: Original Cast Point of Acquired Ability Cast backswing: 1.37 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.37"
+        "Since <span image=\"images\/spell_steal.webp\">[picture:spell_steal]<\/span> Spell Steal can only be cast on heroes, non-hero abilities from neutral creeps (i.e\n <span image=\"images\/ensnare_%28hill_troll%29.png\">[picture:ensnare_%28hill_troll%29]<\/span> Ensnare) cannot be directly acquired, unless with the following conditions: <span image=\"images\/doom_minimap.png\">[picture:doom_minimap]<\/span> Doom casts the gained ability from <span image=\"images\/devour.webp\">[picture:devour]<\/span> Devour\n <span image=\"images\/clinkz_minimap.png\">[picture:clinkz_minimap]<\/span> Clinkz casts the gained ability from <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> <span image=\"images\/death_pact.webp\">[picture:death_pact]<\/span> Death Pact\n The acquired neutral abilities use the original cast point of the neutral creeps they come from\n However, the cast backswing differs depending on the ability acquired (see chart)\n EXPR Cast point: Original Cast Point of Acquired Ability Cast backswing: 1.37 - OriginalCastPoint, 0 when OriginalCastPoint ≥ 1.37"
       ],
       "item_behaviour": [],
       "description": "Spells acquired by Spell Steal will replace this slot.",
@@ -197,8 +197,8 @@
     },
     {
       "notes": [
-        "Sub-abilities from abilities are automatically acquired (e.g\n  Ethereal Jaunt), take up this slot, and cannot be manually stolen\n Linked abilities are not acquired",
-        "For transformation abilities (e.g\n  Shapeshift), Rubick uses the transformation time of the ability and is not transformed instantly\n Multiple transformation abilities can be stolen, and their bonuses and\/or reductions fully stack with each other\n Attack range definitions from their ability notes fully apply\n Items that use different values for  melee and  ranged heroes (e.g\n <span image=\"items\/manta_style\/full.webp\">[Manta Style]<\/span> Manta Style) to now treat Rubick's ranged type based on the ability notes\n If a stolen transformation ability benefits illusions, they will do so when illusions of Rubick are created, no matter how many transformation abilities are stacked\n Visually, Rubick is transformed into a smaller version of the original, and into the form of the last cast transformation ability\n Except for  Metamorphosis, which has priority over every other transformational ability\n This also applies to attack projectiles\n If the ability expires, the previous cast's attack projectiles will be used"
+        "Sub-abilities from abilities are automatically acquired (e.g\n <span image=\"images\/ethereal_jaunt.webp\">[picture:ethereal_jaunt]<\/span> Ethereal Jaunt), take up this slot, and cannot be manually stolen\n Linked abilities are not acquired",
+        "For transformation abilities (e.g\n <span image=\"images\/shapeshift.webp\">[picture:shapeshift]<\/span> Shapeshift), Rubick uses the transformation time of the ability and is not transformed instantly\n Multiple transformation abilities can be stolen, and their bonuses and\/or reductions fully stack with each other\n Attack range definitions from their ability notes fully apply\n Items that use different values for <span image=\"images\/melee.png\">[picture:melee]<\/span> melee and <span image=\"images\/ranged.png\">[picture:ranged]<\/span> ranged heroes (e.g\n <span image=\"items\/manta_style\/full.webp\">[picture:manta_style]<\/span> Manta Style) to now treat Rubick's ranged type based on the ability notes\n If a stolen transformation ability benefits illusions, they will do so when illusions of Rubick are created, no matter how many transformation abilities are stacked\n Visually, Rubick is transformed into a smaller version of the original, and into the form of the last cast transformation ability\n Except for <span image=\"images\/metamorphosis.webp\">[picture:metamorphosis]<\/span> Metamorphosis, which has priority over every other transformational ability\n This also applies to attack projectiles\n If the ability expires, the previous cast's attack projectiles will be used"
       ],
       "item_behaviour": [],
       "description": "Spells acquired by Spell Steal will replace this slot.",
@@ -222,26 +222,26 @@
       "notes": [
         "A full list of unique interactions with Spell Steal can be found here",
         "The stolen ability travels as a projectile toward Rubick at a speed of 1200\n Rubick gains the new ability and loses the previously stolen ability as the projectile reaches him",
-        "Cannot have more than 1 ( 2) stolen ability at a time\n When already having two abilities stolen, stealing a new ability replaces the older ability\n New stolen abilities are always placed in the fourth ability slot\n The previously stolen ability is moved to the fifth slot in the process, while the previous ability in the fifth slot is lost\n All stolen abilities are lost upon death",
-        "Cannot steal passive abilities, item abilities, or active attack modifiers (except  Walrus PUNCH!)\n Cannot steal the following abilities:  Primal Companion,  Stone Remnant,  Quas,  Wex,  Exort,  Invoke,   Divided We Stand,  Mischief,  Morph,  Rearm,  Minefield Sign and  Stone Form\n Can only acquire abilities from heroes and clones\n Cannot acquire abilities from any illusions, despite being able to cast Spell Steal on the   Vengeance Illusion,   Fiend's Grip Illusions or  Decoy illusion\n When cast on the aforementioned illusions above, Spell Steal consumes mana and goes on a cooldown\n If a passive ability gains an active component through an   ability upgrade, Rubick may steal the ability\n Neither acquires innate abilities (e.g\n  Aghanim's Scepter Synth) nor ability traits (e.g\n being able to attack  Nightmared units)",
+        "Cannot have more than 1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2) stolen ability at a time\n When already having two abilities stolen, stealing a new ability replaces the older ability\n New stolen abilities are always placed in the fourth ability slot\n The previously stolen ability is moved to the fifth slot in the process, while the previous ability in the fifth slot is lost\n All stolen abilities are lost upon death",
+        "Cannot steal passive abilities, item abilities, or active attack modifiers (except <span image=\"images\/walrus_punch.png\">[picture:walrus_punch]<\/span> Walrus PUNCH!)\n Cannot steal the following abilities: <span image=\"images\/primal_companion.webp\">[picture:primal_companion]<\/span> Primal Companion, <span image=\"images\/stone_remnant.webp\">[picture:stone_remnant]<\/span> Stone Remnant, <span image=\"images\/quas.webp\">[picture:quas]<\/span> Quas, <span image=\"images\/wex.webp\">[picture:wex]<\/span> Wex, <span image=\"images\/exort.webp\">[picture:exort]<\/span> Exort, <span image=\"images\/invoke.webp\">[picture:invoke]<\/span> Invoke, <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> <span image=\"images\/divided_we_stand.webp\">[picture:divided_we_stand]<\/span> Divided We Stand, <span image=\"images\/mischief.webp\">[picture:mischief]<\/span> Mischief, <span image=\"images\/morph.webp\">[picture:morph]<\/span> Morph, <span image=\"images\/rearm.webp\">[picture:rearm]<\/span> Rearm, <span image=\"images\/minefield_sign.webp\">[picture:minefield_sign]<\/span> Minefield Sign and <span image=\"images\/stone_form_%28familiar%29.png\">[picture:stone_form_%28familiar%29]<\/span> Stone Form\n Can only acquire abilities from heroes and clones\n Cannot acquire abilities from any illusions, despite being able to cast Spell Steal on the <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/vengeance_aura.webp\">[picture:vengeance_aura]<\/span> Vengeance Illusion, <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/fiend's_grip.webp\">[picture:fiend's_grip]<\/span> Fiend's Grip Illusions or <span image=\"images\/decoy.webp\">[picture:decoy]<\/span> Decoy illusion\n When cast on the aforementioned illusions above, Spell Steal consumes mana and goes on a cooldown\n If a passive ability gains an active component through an <span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> ability upgrade, Rubick may steal the ability\n Neither acquires innate abilities (e.g\n <span image=\"images\/aghanim's_scepter_synth.webp\">[picture:aghanim's_scepter_synth]<\/span> Aghanim's Scepter Synth) nor ability traits (e.g\n being able to attack <span image=\"images\/nightmare.webp\">[picture:nightmare]<\/span> Nightmared units)",
         "Cannot steal toggleable abilities while the ability is being toggled Off\n Grants the previous cast ability if the toggled-off ability is the last cast ability",
-        "The stolen ability's level is based on its level on the enemy as it was stolen\n The level only updates upon stealing it again\n The target's <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter and <span image=\"items\/aghanim's_shard\/full.webp\">[Aghanim's Shard]<\/span> Aghanim's Shard are not considered, Rubick always steals the non-upgraded form\n However, if Rubick has Aghanim's Scepter or Aghanim's Shard, the stolen abilities do get upgraded\n  Talent upgrades are not copied and cannot be acquired in any way",
+        "The stolen ability's level is based on its level on the enemy as it was stolen\n The level only updates upon stealing it again\n The target's <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter and <span image=\"items\/aghanim's_shard\/full.webp\">[picture:aghanim's_shard]<\/span> Aghanim's Shard are not considered, Rubick always steals the non-upgraded form\n However, if Rubick has Aghanim's Scepter or Aghanim's Shard, the stolen abilities do get upgraded\n <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Talent upgrades are not copied and cannot be acquired in any way",
         "The debuff duration amplification only affects the duration of debuffs of stolen abilities placed on enemies\n A debuff is identified by the red border on the status icon\n It follows the same rules as status resistance, and stacks multiplicatively with other sources",
-        "Has a cast range of 1100\/1150\/1200\/1250 ( 1500\/1550\/1600\/1650) with  Arcane Supremacy on each level",
-        "TALENT NOTES The spell damage amplification  talent only amplifies the outgoing spell damage of stolen abilities\n The cooldown reduction  talent only affects the cooldown of stolen abilities\n SOULBIND Only can acquire abilities from the primary target"
+        "Has a cast range of 1100\/1150\/1200\/1250 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1500\/1550\/1600\/1650) with <span image=\"images\/arcane_supremacy.webp\">[picture:arcane_supremacy]<\/span> Arcane Supremacy on each level",
+        "TALENT NOTES The spell damage amplification <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent only amplifies the outgoing spell damage of stolen abilities\n The cooldown reduction <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent only affects the cooldown of stolen abilities\n SOULBIND Only can acquire abilities from the primary target"
       ],
       "item_behaviour": [],
       "description": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies.",
       "hot_key": "R",
       "params": [
         "Cast Animation: 0.1+0.93",
-        "Cast Range:  1000 ( 1400)",
-        "Max Stolen Spells: 1 ( 2)",
+        "Cast Range: <span image=\"images\/cast_range_symbol.png\">[picture:cast_range_symbol]<\/span> 1000 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 1400)",
+        "Max Stolen Spells: 1 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 2)",
         "Stolen Spell Cast Time: 0.15",
         "Stolen Spell Debuff Duration Amp: 10%\/20%\/30%",
         "Spell Duration: 180\/240\/300",
-        "Stolen Spell Cooldown Reduction:  25%",
-        "Stolen Spell Damage Amp:  40%"
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Stolen Spell Cooldown Reduction:  25%",
+        "<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> Stolen Spell Damage Amp:  40%"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Rubick_Spell_Steal_1.mp3\/revision\/latest?cb=20191216022733",
       "effects": [

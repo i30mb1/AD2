@@ -2,12 +2,12 @@
   "abilities": [
     {
       "notes": [
-        "Leveling any of the three  Shadowraze abilities levels the others as well",
+        "Leveling any of the three <span image=\"images\/shadowraze_%28medium%29.png\">[picture:shadowraze_%28medium%29]<\/span> Shadowraze abilities levels the others as well",
         "Shadowraze (Near) blasts a 250 radius area 200 range in front of Nevermore upon cast\n This means that it can hit units up to 50 range behind Shadow Fiend, and up to 450 range in front of him",
         "Places one hidden debuff on the enemy\n This debuff counts how many Shadowrazes hit the target within its duration\n Shadowraze first sets its damage based on current stacks, then applies the debuff or increases the stack count, then deals the damage, and then the instant attack\n This means the first stack added by the raze does not affect the ability's damage\n A number on the icon shows how many times the debuff was refreshed, including the first cast\n The debuff has no stack limit and can be increased infinitely",
-        "Hitting all 3 Shadowrazes consecutively can deal up to 370\/600\/830\/1060 damage to a single unit (before reductions), slow its movement speed up to 24%\/26%\/28%\/30% and turn rate up to 60% respectively\n With the base damage increasing  talent, they can deal up to 670\/900\/1130\/1360 damage\n With the stack damage increasing  talent, they can deal up to 420\/650\/880\/1110 damage\n With both  talents, they can deal up to 720\/950\/1180\/1410 damage",
+        "Hitting all 3 Shadowrazes consecutively can deal up to 370\/600\/830\/1060 damage to a single unit (before reductions), slow its movement speed up to 24%\/26%\/28%\/30% and turn rate up to 60% respectively\n With the base damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, they can deal up to 670\/900\/1130\/1360 damage\n With the stack damage increasing <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, they can deal up to 420\/650\/880\/1110 damage\n With both <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talents, they can deal up to 720\/950\/1180\/1410 damage",
         "The hidden debuff is placed on heroes and is used to count successive Shadowraze hits\n It lasts for 3 seconds\n Although only the Demon Eater cosmetic item makes use of it, the counter is always placed",
-        "TALENT NOTES With the Shadowraze using attack damage  talent, Shadowraze causes Shadow Fiend to perform an instant attack on all hit enemies within its effect radius\n These instant attacks can proc any attack modifiers, including   Necromastery, and on-hit effects normally, with cleave being an exception\n They have True Strike, but completely ignore disarms\n Does not affect enemy  Couriers"
+        "TALENT NOTES With the Shadowraze using attack damage <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent, Shadowraze causes Shadow Fiend to perform an instant attack on all hit enemies within its effect radius\n These instant attacks can proc any attack modifiers, including <span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> <span image=\"images\/necromastery.webp\">[picture:necromastery]<\/span> Necromastery, and on-hit effects normally, with cleave being an exception\n They have True Strike, but completely ignore disarms\n Does not affect enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers"
       ],
       "item_behaviour": [],
       "description": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
@@ -16,8 +16,8 @@
         "Cast Animation: 0.55+0",
         "Distance: 200",
         "Radius: 250",
-        "Base Damage: 90\/160\/230\/300 ( 190\/260\/330\/400)",
-        "Damage Increase per Stack: 50\/60\/70\/80 ( 75\/85\/95\/105)",
+        "Base Damage: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 190\/260\/330\/400)",
+        "Damage Increase per Stack: 50\/60\/70\/80 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 75\/85\/95\/105)",
         "Move Speed Slow Increase per Stack: 12%\/13%\/14%\/15%",
         "Turn Rate Slow Increase per Stack: 30%",
         "Stack Duration: 8"
@@ -38,7 +38,7 @@
     {
       "notes": [
         "Shadowraze (Medium) blasts a 250 radius area 450 range in front of Nevermore upon cast\n This means that it can hit units from 200 to 700 range in front of Shadow Fiend",
-        "Other notes from  Shadowraze (Near) fully apply"
+        "Other notes from <span image=\"images\/shadowraze_%28near%29.png\">[picture:shadowraze_%28near%29]<\/span> Shadowraze (Near) fully apply"
       ],
       "item_behaviour": [],
       "description": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
@@ -47,8 +47,8 @@
         "Cast Animation: 0.55+0",
         "Distance: 450",
         "Radius: 250",
-        "Base Damage: 90\/160\/230\/300 ( 190\/260\/330\/400)",
-        "Damage Increase per Stack: 50\/60\/70\/80 ( 75\/85\/95\/105)",
+        "Base Damage: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 190\/260\/330\/400)",
+        "Damage Increase per Stack: 50\/60\/70\/80 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 75\/85\/95\/105)",
         "Move Speed Slow Increase per Stack: 12%\/13%\/14%\/15%",
         "Turn Rate Slow Increase per Stack: 30%",
         "Stack Duration: 8"
@@ -69,7 +69,7 @@
     {
       "notes": [
         "Shadowraze (Far) blasts a 250 radius area 700 range in front of Nevermore upon cast\n This means that it can hit units from 450 to 950 range in front of Shadow Fiend",
-        "Other notes from  Shadowraze (Near) fully apply"
+        "Other notes from <span image=\"images\/shadowraze_%28near%29.png\">[picture:shadowraze_%28near%29]<\/span> Shadowraze (Near) fully apply"
       ],
       "item_behaviour": [],
       "description": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
@@ -78,8 +78,8 @@
         "Cast Animation: 0.55+0",
         "Distance: 700",
         "Radius: 250",
-        "Base Damage: 90\/160\/230\/300 ( 190\/260\/330\/400)",
-        "Damage Increase per Stack: 50\/60\/70\/80 ( 75\/85\/95\/105)",
+        "Base Damage: 90\/160\/230\/300 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 190\/260\/330\/400)",
+        "Damage Increase per Stack: 50\/60\/70\/80 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 75\/85\/95\/105)",
         "Move Speed Slow Increase per Stack: 12%\/13%\/14%\/15%",
         "Turn Rate Slow Increase per Stack: 30%",
         "Stack Duration: 8"
@@ -99,27 +99,27 @@
     },
     {
       "notes": [
-        "Can get souls from every unit, including ward-type units and allies\n Does not grant souls from denying allied  Observer and Sentry Wards, runes, illusions, the  Tempest Double and buildings\n The number of current souls is visible on the status buff icon",
+        "Can get souls from every unit, including ward-type units and allies\n Does not grant souls from denying allied <span image=\"images\/observer_and_sentry_wards_1.png\">[picture:observer_and_sentry_wards_1]<\/span> Observer and Sentry Wards, runes, illusions, the <span image=\"images\/arc_warden_tempest_double_minimap.png\">[picture:arc_warden_tempest_double_minimap]<\/span> Tempest Double and buildings\n The number of current souls is visible on the status buff icon",
         "If Shadow Fiend has an odd number of souls upon death, the number of lost souls is rounded down\n This means that he can never lose all gathered souls\n He still keeps 1 soul, even when dying while only having 1 soul\n Souls are not lost when having Reincarnation",
         "Despite the visual effects, Shadow Fiend instantly gains the soul and thus the damage of killed units",
         "The more souls Shadow Fiend has, the more red particles fly around his chest area",
-        "Grants a total of 11\/28\/51\/80 ( 44\/70\/102\/140) regular flat bonus attack damage with maximum amount of souls",
-        "SCEPTER NOTES Necromastery grants up to a total of 25\/50\/75\/100 ( 100\/125\/150\/175) attack damage with maximum amount of souls\n These extra souls affect the number of lines created by  Requiem of Souls\n When losing <span image=\"items\/aghanim's_scepter\/full.webp\">[Aghanim's Scepter]<\/span> Aghanim's Scepter, the attack damage bonus adapts immediately and does not account for the extra souls\n Shadow Fiend keeps his gathered souls even when having more than the default allowed amount\n Requiem of Souls still releases more lines in this case",
+        "Grants a total of 11\/28\/51\/80 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 44\/70\/102\/140) regular flat bonus attack damage with maximum amount of souls",
+        "SCEPTER NOTES Necromastery grants up to a total of 25\/50\/75\/100 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 100\/125\/150\/175) attack damage with maximum amount of souls\n These extra souls affect the number of lines created by <span image=\"images\/requiem_of_souls.webp\">[picture:requiem_of_souls]<\/span> Requiem of Souls\n When losing <span image=\"items\/aghanim's_scepter\/full.webp\">[picture:aghanim's_scepter]<\/span> Aghanim's Scepter, the attack damage bonus adapts immediately and does not account for the extra souls\n Shadow Fiend keeps his gathered souls even when having more than the default allowed amount\n Requiem of Souls still releases more lines in this case",
         "SHARD NOTES Necromastery turns into an active attack modifier, with the passive components still present\n Necromastery's cast range can only be further increased by attack range bonuses of the same range type as the caster\n It is not affected by cast range bonuses\n Both Autocast and manually casting it uses Shadow Fiend's current attack range",
-        "SHARD NOTES Upon cast, the attack projectile is replaced with a thicker particle\n The Necromastery attack fears the target, and has an ensured critical strike, crits with a lower value have no effect if they proc since the higher crit value takes priority\n The attack, including instant attacks (e.g\n   Shadowraze), first applies the fear debuff, then its own damage\n Necromastery's fear makes affected enemies run away from the caster, rather than make them run toward their team's fountain\n Consumes a soul and goes on cooldown upon projectile launch, so missing the attack wastes the soul and cooldown\n Cannot be cast without souls, attempting to do so releases a regular attack without triggering the cooldown"
+        "SHARD NOTES Upon cast, the attack projectile is replaced with a thicker particle\n The Necromastery attack fears the target, and has an ensured critical strike, crits with a lower value have no effect if they proc since the higher crit value takes priority\n The attack, including instant attacks (e.g\n <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> <span image=\"images\/shadowraze_%28medium%29.png\">[picture:shadowraze_%28medium%29]<\/span> Shadowraze), first applies the fear debuff, then its own damage\n Necromastery's fear makes affected enemies run away from the caster, rather than make them run toward their team's fountain\n Consumes a soul and goes on cooldown upon projectile launch, so missing the attack wastes the soul and cooldown\n Cannot be cast without souls, attempting to do so releases a regular attack without triggering the cooldown"
       ],
       "item_behaviour": [],
       "description": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases 40% of them from bondage.",
       "hot_key": "D",
       "params": [
-        "Max Stacks: 11\/14\/17\/20 ( 25)",
-        "Stack Gain per Kill: 1 ( 2)",
-        "Attack Damage Bonus per Stack: 1\/2\/3\/4 ( 4\/5\/6\/7)",
+        "Max Stacks: 11\/14\/17\/20 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 25)",
+        "Stack Gain per Kill: 1 (<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> 2)",
+        "Attack Damage Bonus per Stack: 1\/2\/3\/4 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 4\/5\/6\/7)",
         "Stacks Lost on Death: 40%",
-        "Cast Range:  500",
-        "Stacks Consumed per Cast:  1",
-        "Critical Damage:  190%",
-        "Fear Duration:  0.5"
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Cast Range: <span image=\"images\/attack_range_symbol.png\">[picture:attack_range_symbol]<\/span> 500",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Stacks Consumed per Cast:  1",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Critical Damage:  190%",
+        "<span image=\"images\/aghanim's_shard_symbol.webp\">[picture:aghanim's_shard_symbol]<\/span> Fear Duration:  0.5"
       ],
       "audioUrl": "",
       "effects": [
@@ -136,8 +136,8 @@
     {
       "notes": [
         "The armor reduction is provided by an aura and its debuff lingers for 0.5 seconds",
-        "Does not affect enemies who have no vision over Shadow Fiend\n Does not affect invulnerable and hidden units\n Fully affect enemy  Couriers",
-        "TALENT NOTES The aura now affects buildings upon learning the  talent"
+        "Does not affect enemies who have no vision over Shadow Fiend\n Does not affect invulnerable and hidden units\n Fully affect enemy <span image=\"images\/animal_courier_radiant_minimap.png\">[picture:animal_courier_radiant_minimap]<\/span> Couriers",
+        "TALENT NOTES The aura now affects buildings upon learning the <span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> talent"
       ],
       "item_behaviour": [],
       "description": "Shadow Fiend's presence reduces the armor of nearby enemies.",
@@ -162,14 +162,14 @@
     {
       "notes": [
         "Grants Shadow Fiend phased movement during the ability's cast point",
-        "The damage is entirely based on the number of souls gathered with  Necromastery",
-        "The damaging lines have the following mechanics: The area of every single damaging line is shaped like a cone\n The distance between the damaging lines is always even\n One line is always released towards the east and the others adapt accordingly\n Creates a line on every 32.7°th\/25.7°th\/21.2°th\/18°th ( 14.4°th) with the maximum number of souls on each level of Necromastery\n The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance\n With the travel distance and end width, the damaging lines can hit units up to 1350 range away\n Each damaging line cannot hit the same unit more than once per cast upon expanding and returning respectively",
-        "Fears and reduces the movement speed of all enemy units hit by the damaging lines of Requiem of Souls\n The duration increases by 0.9 ( 1.2) per each line hit, but is capped at 2.7 ( 3.6) seconds\n Requiem of Souls' fear makes affected enemies run away from the caster, rather than make them run toward their team's fountain\n Affected creeps do not move",
+        "The damage is entirely based on the number of souls gathered with <span image=\"images\/necromastery.webp\">[picture:necromastery]<\/span> Necromastery",
+        "The damaging lines have the following mechanics: The area of every single damaging line is shaped like a cone\n The distance between the damaging lines is always even\n One line is always released towards the east and the others adapt accordingly\n Creates a line on every 32.7°th\/25.7°th\/21.2°th\/18°th (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 14.4°th) with the maximum number of souls on each level of Necromastery\n The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance\n With the travel distance and end width, the damaging lines can hit units up to 1350 range away\n Each damaging line cannot hit the same unit more than once per cast upon expanding and returning respectively",
+        "Fears and reduces the movement speed of all enemy units hit by the damaging lines of Requiem of Souls\n The duration increases by 0.9 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.2) per each line hit, but is capped at 2.7 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.6) seconds\n Requiem of Souls' fear makes affected enemies run away from the caster, rather than make them run toward their team's fountain\n Affected creeps do not move",
         "The expanding lines can deal up to 1600\/2400\/3200 damage to a single unit (before reductions), if all lines hit",
         "Each line first removes the movement and magic resistance reducing debuff, then applies the damage, then the fear debuff, and then re-apply the removed debuff\n This means the lines' damage does not benefit from the magic resistance reduction at all\n Reduces most heroes' magic resistance to 21%\/18%\/14%",
-        "Upon death, Requiem of Souls is passively cast automatically and instantly, regardless of mana and cooldown\n If the caster does not have Requiem of Souls, it will not be passively cast\n Shadow Fiend first loses 40% of his Necromastery souls before this happens, so this passive cast can only have a maximum of 6\/8\/10\/12 ( 15) lines\n Requiem of Souls cast passively is not upgraded by Aghanim's Scepter, does not apply fear, but does apply the movement speed slow\n Does not trigger with Reincarnation",
+        "Upon death, Requiem of Souls is passively cast automatically and instantly, regardless of mana and cooldown\n If the caster does not have Requiem of Souls, it will not be passively cast\n Shadow Fiend first loses 40% of his Necromastery souls before this happens, so this passive cast can only have a maximum of 6\/8\/10\/12 (<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> 15) lines\n Requiem of Souls cast passively is not upgraded by Aghanim's Scepter, does not apply fear, but does apply the movement speed slow\n Does not trigger with Reincarnation",
         "SCEPTER NOTES After the lines expand to their maximum distance, they return back to Shadow Fiend\n Despite the visual effects, the lines do not \"respawn\" around Shadow Fiend\n They start returning back exactly where they stopped\n The lines return at the same speed to Shadow Fiend's current location, not to the location Requiem of Souls was originally cast from\n The lines do not follow if Shadow Fiend moves\n Once the lines start returning, their path cannot be further altered\n The maximum travel distance also applies to the lines also upon returning, meaning they travel a total distance of 2000, taking 2.86 seconds\n The width of the lines is reversed upon returning \u2014 starting with the maximum width and getting thinner towards the end\n The returning lines deal 40% damage\n They hit all units regularly like the expanding lines and also apply the movement speed slow and fear debuff",
-        "SCEPTER NOTES The returning lines can deal up to 800\/1200\/1600 damage to a single unit, if all lines hit\n Together with the expanding lines, it can deal up to 2800\/4200\/5600 damage to a single unit (before reductions)\n The heal is based on per hero hit by the returning lines, not by the initial expanding lines, and it is applied as soon as the lines stop moving\n Always heals for 32\/48\/64 health per hero hit, regardless of how much damage the lines actually dealt\n Only heals from damage dealt to heroes, including illusions\n SPELL STEAL This ability's cast point is not modified when acquired\n The lines created are based on  Shadow Fiend's current number of souls when acquired"
+        "SCEPTER NOTES The returning lines can deal up to 800\/1200\/1600 damage to a single unit, if all lines hit\n Together with the expanding lines, it can deal up to 2800\/4200\/5600 damage to a single unit (before reductions)\n The heal is based on per hero hit by the returning lines, not by the initial expanding lines, and it is applied as soon as the lines stop moving\n Always heals for 32\/48\/64 health per hero hit, regardless of how much damage the lines actually dealt\n Only heals from damage dealt to heroes, including illusions\n SPELL STEAL This ability's cast point is not modified when acquired\n The lines created are based on <span image=\"images\/shadow_fiend_minimap.png\">[picture:shadow_fiend_minimap]<\/span> Shadow Fiend's current number of souls when acquired"
       ],
       "item_behaviour": [],
       "description": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed and magic resistance reduced for 0.9 seconds for each line hit up to a maximum of 2.7. Lines of energy are created for every soul captured through Necromastery. Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
@@ -183,9 +183,9 @@
         "Damage per Line on Release: 80\/120\/160",
         "Move Speed Slow: 20%\/25%\/30%",
         "Magic Resistance Reduction: 5%\/10%\/15%",
-        "Debuff Duration per Line: 0.9 ( 1.2)",
-        "Max Debuff Duration: 2.7 ( 3.6)",
-        "Damage\/Heal per Line on Return:  32\/48\/64"
+        "Debuff Duration per Line: 0.9 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 1.2)",
+        "Max Debuff Duration: 2.7 (<span image=\"images\/talent_tree_symbol.webp\">[picture:talent_tree_symbol]<\/span> 3.6)",
+        "<span image=\"images\/aghanim's_scepter_symbol.webp\">[picture:aghanim's_scepter_symbol]<\/span> Damage\/Heal per Line on Return:  32\/48\/64"
       ],
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Shadow_Fiend_Requiem_of_Souls_1.mp3\/revision\/latest?cb=20191216022919",
       "effects": [
