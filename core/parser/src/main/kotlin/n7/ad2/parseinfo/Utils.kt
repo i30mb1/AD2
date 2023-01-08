@@ -51,34 +51,50 @@ fun String.toCamelCase(delimiter: String = " "): String {
 }
 
 internal fun getTextFromNodeFormatted(element: Node): String {
-    return getTextFromNode(element).removeSuffix(".").trim().replace(". ", "\n ")
+    val text = try {
+        getTextFromNode(element)
+    } catch (e: DownloadImagePlease) {
+        saveImage(e.url, assetsDatabaseSpells, e.name)
+        getTextFromNode(element)
+    }
+    return text.removeSuffix(".").trim().replace(". ", "\n ")
 }
 
-data class Image(val path: String, val name: String, val formattedName: String)
+data class Image(val path: String, val name: String)
 
 val availableImagesSpells = File(assetsDatabaseSpells).listFiles()?.map {
     val name = it.name.substringBefore(".")
     val formattedName = "[${name.replace("_", " ")}]"
     val path = it.path.substringAfter("assets\\").replace("\\", "/")
-    Image(path, name, formattedName)
+    Image(path, name)
 } ?: emptyList()
 
-val availableImagesItems = File(assetsDatabaseItems).listFiles()?.map {
-    val name = it.name.toCamelCase("_")
+val availableImagesItems = File(assetsDatabaseItems).listFiles()?.map { file ->
+    val name = file.name
     val formattedName = "[${name.replace("_", " ")}]"
-    val path = it.path.substringAfter("assets\\").replace("\\", "/") + "/full.webp"
-    Image(path, name, formattedName)
+    val path = file.path.substringAfter("assets\\").replace("\\", "/") + "/full.webp"
+    Image(path, name)
 } ?: emptyList()
 val availableImages = availableImagesSpells + availableImagesItems
+
+class DownloadImagePlease(
+    val name: String,
+    val url: String,
+) : Exception("не нашли картинку $name, скачай ее и положи в папку! вот ссылка $url")
 
 fun getTextFromNode(element: Node): String {
     if (element is TextNode) {
         return element.text()
     } else {
-        val attr = element.attr("data-image-key").substringBefore(".").removeSuffix("_icon").replace("%27", "'")
-        val item = availableImages.find { it.name == attr }
-        val span = if (item != null) "<span image=\"${item.path}\">${item.formattedName}</span>" else ""
-//        else if (attr.isNotEmpty()) error("не нашли картинку [$attr]")
+        val url = element.attr("data-src")
+        val name = element.attr("data-image-key")
+            .substringBefore(".")
+            .removeSuffix("_icon")
+            .replace("%27", "'")
+            .lowercase()
+        val item = availableImages.find { it.name == name }
+        if (item == null && name.isNotEmpty()) throw DownloadImagePlease(name, url)
+        val span = if (item != null) "<span image=\"${item.path}\">[picture:${item.name}]</span>" else ""
         return element.childNodes().fold(span) { value: String, node: Node ->
             value + getTextFromNode(node)
         }
