@@ -1,5 +1,6 @@
-package n7.ad2.parser
+package n7.ad2.parser.items
 
+import n7.ad2.parser.LOCALE
 import org.jsoup.Jsoup
 
 class HeroItem(val name: String, val formattedName: String, val href: String, val section: String)

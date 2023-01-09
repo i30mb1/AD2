@@ -1,7 +1,12 @@
 @file:Suppress("unused")
 
-package n7.ad2.parser
+package n7.ad2.parser.items
 
+import n7.ad2.parser.LOCALE
+import n7.ad2.parser.assetsDatabase
+import n7.ad2.parser.assetsDatabaseItems
+import n7.ad2.parser.saveFile
+import n7.ad2.parser.saveImage
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.jsoup.Jsoup
