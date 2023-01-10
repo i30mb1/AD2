@@ -3,10 +3,14 @@ package n7.ad2.parser
 import org.jsoup.nodes.Node
 import org.jsoup.nodes.TextNode
 
+var limits = 0
+
 internal fun getTextFromNodeFormatted(element: Node): String {
     val text = try {
         getTextFromNode(element)
     } catch (e: DownloadImagePlease) {
+        if (limits > 1000) throw Exception(e)
+        limits++
         saveImage(e.url, assetsDatabaseSpells, e.name)
         ImageRepository.update()
         getTextFromNodeFormatted(element)

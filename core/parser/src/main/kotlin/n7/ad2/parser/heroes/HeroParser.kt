@@ -22,6 +22,9 @@ fun main() {
     val heroes = getHeroes()
     createFileWithHeroes(heroes)
     for (hero in heroes) {
+        println("check info for ${
+            hero.name
+        }")
         loadHero(hero, LocaleHeroes.RU)
         loadHero(hero, LocaleHeroes.EN)
     }
