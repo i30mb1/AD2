@@ -1,7 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.gradle.BaseExtension
-import gradle.kotlin.dsl.accessors._4b7ad2363fc1fce7c774e054dc9a9300.implementation
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 configure<BaseExtension> {
@@ -23,5 +22,5 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-    implementation(libs.bundles.compose)
+    add("implementation", libs.bundles.compose)
 }
