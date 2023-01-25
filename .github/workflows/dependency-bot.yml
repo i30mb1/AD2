@@ -1,5 +1,3 @@
-name: Check new version dependencies
-
 version: 2
 updates:
   - package-ecosystem: "gradle"
