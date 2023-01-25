@@ -13,12 +13,10 @@ import org.w3c.dom.Attr
 // class that is able to find background attribute in xml files that not start with "?" mark
 @Suppress("UnstableApiUsage")
 class WrongUsingAttrDetector : LayoutDetector() {
-
     override fun getApplicableAttributes(): Collection<String> = listOf(
         "background", "foreground", "src", "textColor", "tint", "color",
         "textColorHighlight", "textColorHint", "textColorLink", "shadowColor", "srcCompat"
     )
-
     override fun visitAttribute(context: XmlContext, attribute: Attr) {
         super.visitAttribute(context, attribute)
         if (attribute.value.startsWith("#") || attribute.value.startsWith("@color/")) {
@@ -29,7 +27,6 @@ class WrongUsingAttrDetector : LayoutDetector() {
             )
         }
     }
-
     companion object {
 
         val ISSUE: Issue = Issue
