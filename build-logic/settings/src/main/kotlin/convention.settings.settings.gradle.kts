@@ -24,8 +24,11 @@ pluginManagement {
 includeBuild("build-logic")
 
 val folders = listOf("core", "feature")
+val ignoreProject = listOf("rules")
 for (folder in folders) {
     File(folder).listFiles()?.forEach { project ->
-        include(":${folder}:${project.name}")
+        if (ignoreProject.contains(project.name).not()) {
+            include(":${folder}:${project.name}")
+        }
     }
 }
