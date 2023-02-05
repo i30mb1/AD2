@@ -1,7 +1,7 @@
 rootProject.name = "AD2"
 
 pluginManagement {
-    includeBuild("build-logic/settings")
+    includeBuild("build-logic/build-settings")
 }
 
 plugins {

@@ -11,6 +11,5 @@ publishing {
             version = "1.0"
             from(components["java"])
         }
-
     }
 }
