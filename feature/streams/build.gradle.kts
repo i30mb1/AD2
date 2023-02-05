@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-//    implementation(libs.exoPlayerUI)
+    implementation(libs.exoPlayerUI)
     implementation(libs.exoPlayerHLS)
     implementation(libs.exoPlayerSession)
     implementation(libs.composePaging)
