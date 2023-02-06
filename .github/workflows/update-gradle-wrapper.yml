@@ -4,8 +4,9 @@ on:
     - cron: "0 0 * * *" # GitHub runs the workflow every day at midnight
 jobs:
   update-gradle-wrapper:
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+
       - name: Update Gradle Wrapper
         uses: gradle-update/update-gradle-wrapper-action@v1
