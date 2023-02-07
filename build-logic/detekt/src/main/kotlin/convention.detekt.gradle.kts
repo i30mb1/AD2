@@ -31,5 +31,6 @@ val detektAll = tasks.register<Detekt>("detektAll") {
 }
 
 dependencies {
+    detektPlugins(libs.detektFormatting)
     detekt("build-logic:detekt")
 }
