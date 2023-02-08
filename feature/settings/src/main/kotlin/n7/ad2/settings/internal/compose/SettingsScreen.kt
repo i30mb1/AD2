@@ -46,7 +46,7 @@ internal fun SimpleItem(
             text = name,
             modifier = Modifier
                 .align(Alignment.CenterVertically)
-                .weight(1f),
+                .weight(1f, false),
             color = AppTheme.color.textColor
         )
         Icon(
