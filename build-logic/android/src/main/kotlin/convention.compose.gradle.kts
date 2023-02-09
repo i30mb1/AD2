@@ -13,10 +13,10 @@ configure<BaseExtension> {
 tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
         freeCompilerArgs = freeCompilerArgs + listOf(
-            "-P",
-            "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" + buildDir.absolutePath + "\\compose_metrics",
-            "-P",
-            "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" + buildDir.absolutePath + "\\compose_metrics",
+//            "-P",
+//            "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" + buildDir.absolutePath + "\\compose_metrics",
+//            "-P",
+//            "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" + buildDir.absolutePath + "\\compose_metrics",
         )
     }
 }
