@@ -32,7 +32,6 @@ fun Project.isCI(): Boolean {
             properties.load(reader)
         }
     } else {
-
         return false
     }
     return properties.getProperty("IS_CI", "false").toBoolean()

@@ -21,10 +21,10 @@ android {
         create("release") {
             val properties = gradleLocalProperties(rootDir)
             if (properties.containsKey("SIGNING_FILE")) {
-                storeFile = file(properties.getProperty("SIGNING_FILE"))
-                storePassword = properties.getProperty("STORE_PASSWORD")
-                keyAlias = properties.getProperty("KEY_ALIAS")
-                keyPassword = properties.getProperty("KEY_PASSWORD")
+                storeFile = file("key.jks")
+                storePassword = if (isCI()) System.getenv("STORE_PASSWORD") else properties.getProperty("STORE_PASSWORD")
+                keyAlias = if (isCI()) System.getenv("KEY_ALIAS") properties . getProperty ("KEY_ALIAS")
+                keyPassword = if (isCI()) System.getenv("KEY_PASSWORD") properties . getProperty ("KEY_PASSWORD")
             }
         }
     }
