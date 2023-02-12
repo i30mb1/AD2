@@ -40,12 +40,13 @@ jobs:
       - name: Generate local.properties file
         shell: cmd
         run: |
-          echo isCI=%IS_CI% > local.properties
-          echo KEY_ALIAS=%KEY_ALIAS% >> local.properties
-          echo KEY_PASSWORD=%KEY_PASSWORD% >> local.properties
-          echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
+          echo isCI="$IS_CI" > local.properties
+          echo KEY_ALIAS="$KEY_ALIAS" >> local.properties
+          echo KEY_PASSWORD="$KEY_PASSWORD" >> local.properties
+          echo STORE_PASSWORD="$STORE_PASSWORD" >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
-          type -e local.properties
+          echo zalypa >> local.properties
+          type local.properties
 
       - name: Build with Gradle
         run: ./gradlew build --no-daemon --no-configuration-cache -q
