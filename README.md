@@ -2,7 +2,7 @@
 
 All you want to know about dota in one app
 
-[![CC0](readme-files/google_play.png)](https://play.google.com/store/apps/details?id=n7.ad2)
+[![CC0](readme-files/google-play.png)](https://play.google.com/store/apps/details?id=n7.ad2)
 
 ## Tech-stack
 
@@ -68,7 +68,7 @@ We have three kinds of modules in the application:
 
 ### Data flow
 
-![app_data_flow](readme-files/data_flow.png)
+![app_data_flow](readme-files/data-flow.png)
 
 ## Getting started with Android Studio
 
