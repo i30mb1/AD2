@@ -40,12 +40,15 @@ jobs:
       - name: Generate local.properties file
         shell: bash
         run: |
-          echo isCI=%IS_CI% > local.properties
-          echo KEY_ALIAS=%KEY_ALIAS% >> local.properties
-          echo KEY_PASSWORD=%KEY_PASSWORD% >> local.properties
-          echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
+          echo isCI="$IS_CI" > local.properties
+          echo KEY_ALIAS="$KEY_ALIAS" >> local.properties
+          echo KEY_PASSWORD="$KEY_PASSWORD" >> local.properties
+          echo STORE_PASSWORD="$STORE_PASSWORD" >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
           cat local.properties
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
       - name: Build with Gradle
         run: ./gradlew build --no-daemon --no-configuration-cache --stacktrace
