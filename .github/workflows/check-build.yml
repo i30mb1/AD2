@@ -47,7 +47,7 @@ jobs:
           cat local.properties
 
       - name: Build with Gradle
-        run: gradle build --no-daemon --no-configuration-cache --stacktrace
+        run: gradle build --no-daemon --no-configuration-cache -q
 
       - name: Copy APK
         uses: actions/upload-artifact@v3
