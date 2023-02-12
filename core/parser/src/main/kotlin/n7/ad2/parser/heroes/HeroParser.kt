@@ -21,11 +21,13 @@ import java.io.File
 fun main() {
     val heroes = getHeroes()
     createFileWithHeroes(heroes)
-    for (hero in heroes) {
+    heroes
+//        .dropWhile { hero -> hero.name != "Undying" }
+        .forEach { hero ->
         println("check info for ${
             hero.name
         }")
-        loadHero(hero, LocaleHeroes.RU)
+//        loadHero(hero, LocaleHeroes.RU)
         loadHero(hero, LocaleHeroes.EN)
     }
 }
@@ -118,7 +120,7 @@ private fun createFileWithHeroes(heroes: List<Hero>) {
         heroObject["main_attribute"] = hero.mainAttribute
         result.add(heroObject)
     }
-    File("$assetsDatabase/heroes.json").writeText(result.toJSONString())
+    saveFile(assetsDatabase, "heroes.json", result.toJSONString())
 }
 
 private fun getHeroes(): List<Hero> {
@@ -255,6 +257,7 @@ private fun JSONObject.loadAbilities(root: Document) {
         val abilityObject = JSONObject()
         val section = spell.getElementsByTag("div").getOrNull(3) ?: continue
         val name = section.childNode(0).toString().trim()
+        if (name.startsWith("<div ")) continue
         abilityObject["name"] = name
 
         loadSpellImage(spell, name)
