@@ -15,7 +15,7 @@ env:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -38,18 +38,17 @@ jobs:
           cache-disabled: true
 
       - name: Generate local.properties file
-        shell: cmd
+        shell: bash
         run: |
           echo isCI=%IS_CI% > local.properties
           echo KEY_ALIAS=%KEY_ALIAS% >> local.properties
           echo KEY_PASSWORD=%KEY_PASSWORD% >> local.properties
           echo STORE_PASSWORD=%STORE_PASSWORD% >> local.properties
           echo SIGNING_FILE=key.jks >> local.properties
-          echo zalypa >> local.properties
-          type local.properties
+          cat local.properties
 
       - name: Build with Gradle
-        run: ./gradlew build --no-daemon --no-configuration-cache -q
+        run: ./gradlew build --no-daemon --no-configuration-cache --stacktrace
 
       - name: Copy APK
         uses: actions/upload-artifact@v3
