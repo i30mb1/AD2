@@ -51,7 +51,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build --no-daemon --no-configuration-cache --stacktrace
+        run: gradle build --no-daemon --no-configuration-cache --stacktrace
 
       - name: Copy APK
         uses: actions/upload-artifact@v3
