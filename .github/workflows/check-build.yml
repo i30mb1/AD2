@@ -48,9 +48,6 @@ jobs:
           echo SIGNING_FILE=key.jks >> local.properties
           cat local.properties
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
-
       - name: Build with Gradle
         run: gradle build --no-daemon --no-configuration-cache --stacktrace
 
