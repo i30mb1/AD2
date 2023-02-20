@@ -9,6 +9,7 @@ interface ErrorMessage {
     suspend fun showError(throwable: Throwable)
 }
 
+// https://elizarov.medium.com/shared-flows-broadcast-channels-899b675e805c
 class AD2ErrorMessage : ErrorMessage {
     private val _error = Channel<String>(Channel.BUFFERED)
     override val error = _error.receiveAsFlow()
