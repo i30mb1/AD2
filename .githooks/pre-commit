@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $(uname -s) == MINGW* ]]; then
+    # Replace forward slashes with backslashes in file paths
+    GRADLEW="./gradlew.bat"
+else
+    GRADLEW="./gradlew"
+fi
+
+$GRADLEW test

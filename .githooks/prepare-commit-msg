@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD):
+HAS_BRANCH_NAME=$(grep -i "$BRANCH_NAME" "$1")
+
+# Add branch name to commit message if:
+if [ ! "$HAS_BRANCH_NAME" ]; then
+   echo "$BRANCH_NAME $(cat "${1}")" >"$1"
+fi
