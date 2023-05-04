@@ -8,6 +8,8 @@ import org.gradle.api.tasks.PathSensitivity
 import org.gradle.api.tasks.TaskAction
 import org.gradle.work.Incremental
 import org.gradle.work.InputChanges
+import java.io.InputStreamReader
+import java.util.Properties
 
 @CacheableTask
 abstract class BumpVersionTask : DefaultTask() {
@@ -22,8 +24,18 @@ abstract class BumpVersionTask : DefaultTask() {
 
     @TaskAction
     open fun prefixFileLine(changes: InputChanges) {
-//        val output = inputFile.get().asFile.readLines().joinToString("\n") { "prefix: $it" }
-//        outPutFile.get().asFile.writeText(output)
+        val properties = Properties()
+        inputFile.get().asFile.inputStream().use { reader ->
+            properties.load(reader)
+        }
+
+        var patch = properties.getProperty("PATCH").toInt()
+        patch++
+        properties.setProperty("PATCH", patch.toString())
+
+        outPutFile.get().asFile.outputStream().use { output ->
+            properties.store(output, null)
+        }
     }
 
 }

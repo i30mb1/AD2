@@ -7,8 +7,8 @@ class BumpVersionPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
         tasks.register("bumpVersion", BumpVersionTask::class) {
             group = "n7"
-            inputFile.set(file("input.txt"))
-            outPutFile.set(file("output.txt"))
+            inputFile.set(file("version.properties"))
+            outPutFile.set(file("version.properties"))
             layout.projectDirectory
         }
         Unit

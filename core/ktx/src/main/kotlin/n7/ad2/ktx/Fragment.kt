@@ -1,4 +1,4 @@
-@file:Suppress("UNCHECKED_CAST", "WRONG_NULLABILITY_FOR_JAVA_OVERRIDE")
+@file:Suppress("UNCHECKED_CAST")
 
 package n7.ad2.ktx
 
@@ -15,8 +15,8 @@ inline fun <reified T : ViewModel> Fragment.viewModel(
     defaultArgs: Bundle? = null,
     crossinline provider: (handle: SavedStateHandle) -> T,
 ) = viewModels<T> {
-    object : AbstractSavedStateViewModelFactory(this, defaultArgs) {
-        override fun <T : ViewModel?> create(key: String, modelClass: Class<T>, handle: SavedStateHandle): T {
+    object : AbstractSavedStateViewModelFactory(this@viewModel, defaultArgs) {
+        override fun <T : ViewModel> create(key: String, modelClass: Class<T>, handle: SavedStateHandle): T {
             return provider.invoke(handle) as T
         }
     }
@@ -26,8 +26,8 @@ inline fun <reified T : ViewModel> ComponentActivity.viewModel(
     defaultArgs: Bundle? = null,
     crossinline provider: (handle: SavedStateHandle) -> T,
 ) = viewModels<T> {
-    object : AbstractSavedStateViewModelFactory(this, defaultArgs) {
-        override fun <T : ViewModel?> create(key: String, modelClass: Class<T>, handle: SavedStateHandle): T {
+    object : AbstractSavedStateViewModelFactory(this@viewModel, defaultArgs) {
+        override fun <T : ViewModel> create(key: String, modelClass: Class<T>, handle: SavedStateHandle): T {
             return provider.invoke(handle) as T
         }
     }

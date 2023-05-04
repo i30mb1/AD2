@@ -13,6 +13,7 @@ tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
     rejectVersionIf {
         isNonStable(candidate.version)
     }
+    group = "n7"
 }
 
 fun isNonStable(version: String): Boolean {

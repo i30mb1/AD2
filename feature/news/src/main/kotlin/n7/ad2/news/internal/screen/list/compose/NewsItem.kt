@@ -5,12 +5,18 @@ package n7.ad2.news.internal.screen.list.compose
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animate
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
@@ -36,6 +42,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import coil.compose.SubcomposeAsyncImage
+import coil.compose.SubcomposeAsyncImageContent
+import coil.compose.SubcomposeAsyncImageScope
+import coil.compose.rememberAsyncImagePainter
 import n7.ad2.news.internal.domain.model.Image
 import n7.ad2.news.internal.domain.model.NewsVO
 import n7.ad2.ui.R
@@ -46,7 +56,9 @@ import n7.ad2.ui.compose.bounceClick
 @Preview
 @Composable
 private fun NewsItemPreview() {
-    NewsItem(item = NewsVO(0, "Title", Image("")), onNewsClicked = {})
+    AppTheme {
+        NewsItem(item = NewsVO(0, "Title", Image("")), onNewsClicked = {})
+    }
 }
 
 @Composable
@@ -56,37 +68,45 @@ internal fun NewsItem(
 ) {
     Surface(
         modifier = Modifier
-            .height(170.dp)
             .bounceClick()
             .clip(RoundedCornerShape(6.dp)),
         color = AppTheme.color.surface,
         elevation = 4.dp,
         onClick = { onNewsClicked(item.id) },
     ) {
-        Box {
-            AsyncImage(
-                model = item.image.origin,
-                contentDescription = item.title,
-                contentScale = ContentScale.Crop,
-                placeholder = painterResource(R.drawable.widht_placeholder),
-            )
-            Text(
-                modifier = Modifier
-                    .background(Color(0x4D000000))
-                    .fillMaxSize()
-                    .padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 32.dp),
-                textAlign = TextAlign.Center,
-                text = item.title,
-                style = AppTheme.style.H5,
-                color = Color.White,
-            )
-            var isLiked by remember { mutableStateOf(false) }
-            FavoriteIcon(
-                isLiked,
-                { isLiked = !isLiked },
-                modifier = Modifier.align(Alignment.TopEnd)
-            )
-        }
+        SubcomposeAsyncImage(
+            modifier = Modifier.fillMaxSize(),
+            model = item.image.origin,
+            contentDescription = item.title,
+            contentScale = ContentScale.Crop,
+//                loading = painterResource(R.drawable.widht_placeholder),
+//                error = painterResource(R.drawable.widht_placeholder),
+            success = {
+                SubcomposeAsyncImageContent()
+                Text(
+                    modifier = Modifier
+                        .fillMaxHeight()
+                        .background(Color(0x4D000000))
+                        .padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 32.dp),
+                    textAlign = TextAlign.Center,
+                    text = item.title,
+                    style = AppTheme.style.H5,
+                    color = Color.White,
+                )
+                var isLiked by remember { mutableStateOf(false) }
+                FavoriteIcon(
+                    isLiked = isLiked,
+                    onLikeClicked = { isLiked = !isLiked },
+                    modifier = Modifier.align(Alignment.TopEnd)
+                )
+                Box(
+                    modifier = Modifier
+                        .width(1.dp)
+                        .fillMaxHeight()
+                        .background(AppTheme.color.primary)
+                )
+            }
+        )
     }
 }
 
