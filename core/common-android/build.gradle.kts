@@ -2,9 +2,9 @@ plugins {
     id("convention.android-library") // возможно стоит заменить на kotlinLibrary() и использовать зависимости compileOnly("com.google.android:android:4.1.1.4")
 }
 
-//android {
-//    namespace = "n7.ad2.android"
-//}
+android {
+    namespace = "n7.ad2.common.android"
+}
 
 dependencies {
     implementation(libs.exif)
