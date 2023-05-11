@@ -9,6 +9,7 @@ class SettingsPlugin: Plugin<Settings> {
         target.plugins.run {
             apply("n7.plugins.include-modules")
             apply("n7.plugins.git-hooks")
+            apply("convention.settings")
         }
     }
 
