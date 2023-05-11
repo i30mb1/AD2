@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.customview.widget.ViewDragHelper
 import androidx.fragment.app.FragmentContainerView
-import n7.ad2.drawer.R
+import n7.ad2.feature.drawer.R
 import n7.ad2.ktx.dpToPx
 import kotlin.math.abs
 

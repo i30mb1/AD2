@@ -20,7 +20,7 @@ class ResponseItemDecorator : RecyclerView.ItemDecoration() {
 
         val position = parent.getChildAdapterPosition(view)
         val type = parent.adapter?.getItemViewType(position) ?: return
-        if (type == n7.ad2.ui.R.layout.item_header) {
+        if (type == n7.ad2.core.ui.R.layout.item_header) {
             if (view is MaterialCardView) {
                 view.shapeAppearanceModel = shapeForHeader
                 // val drawable = MaterialShapeDrawable(shapeForHeader)

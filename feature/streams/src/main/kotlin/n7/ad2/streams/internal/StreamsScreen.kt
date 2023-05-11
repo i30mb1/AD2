@@ -42,7 +42,7 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.items
 import coil.compose.AsyncImage
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.streams.R
+import n7.ad2.feature.streams.R
 import n7.ad2.streams.internal.domain.vo.VOStream
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.view.ErrorScreen

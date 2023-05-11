@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.map
 import n7.ad2.Resources
 import n7.ad2.apppreference.Preference
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.drawer.R
+import n7.ad2.feature.drawer.R
 import n7.ad2.drawer.internal.data.remote.SettingsApi
 import n7.ad2.drawer.internal.data.remote.model.Menu
 import n7.ad2.drawer.internal.data.remote.model.Settings

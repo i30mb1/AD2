@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.ui.databinding.ItemHeaderPlayableBinding
+import n7.ad2.core.ui.databinding.ItemHeaderPlayableBinding
 
 class HeaderPlayableViewHolder private constructor(
     private val binding: ItemHeaderPlayableBinding,

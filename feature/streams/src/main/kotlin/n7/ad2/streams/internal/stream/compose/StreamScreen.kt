@@ -54,7 +54,7 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.hls.HlsMediaSource
 import androidx.media3.ui.PlayerView
 import kotlinx.coroutines.launch
-import n7.ad2.streams.R
+import n7.ad2.feature.streams.R
 
 @UnstableApi
 @Composable

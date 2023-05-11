@@ -15,8 +15,8 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getNavigator
-import n7.ad2.items.R
-import n7.ad2.items.databinding.FragmentItemsBinding
+import n7.ad2.feature.items.R
+import n7.ad2.feature.items.databinding.FragmentItemsBinding
 import n7.ad2.items.internal.adapter.ItemsItemDecorator
 import n7.ad2.items.internal.adapter.ItemsListAdapter
 import n7.ad2.items.internal.di.DaggerItemsComponent
@@ -73,7 +73,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
         val gridLayoutManager = GridLayoutManager(context, spanSizeItemHeader)
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int) = when (itemsAdapter.getItemViewType(position)) {
-                n7.ad2.ui.R.layout.item_header -> spanSizeItemHeader
+                n7.ad2.core.ui.R.layout.item_header -> spanSizeItemHeader
                 else -> spanSizeItem
             }
         }

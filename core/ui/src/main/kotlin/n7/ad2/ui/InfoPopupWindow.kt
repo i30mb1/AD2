@@ -16,7 +16,7 @@ import androidx.core.view.updateLayoutParams
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
-import n7.ad2.ui.databinding.PopupSpellInfoBinding
+import n7.ad2.core.ui.databinding.PopupSpellInfoBinding
 
 class InfoPopupWindow(
     context: Context,

@@ -13,7 +13,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import kotlinx.coroutines.coroutineScope
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.ktx.createNotificationChannel
 import n7.ad2.ktx.isChannelNotCreated
 

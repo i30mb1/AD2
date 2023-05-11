@@ -6,7 +6,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.core.view.isVisible
-import n7.ad2.ui.databinding.ErrorBinding
+import n7.ad2.core.ui.databinding.ErrorBinding
 
 class ErrorView(
     context: Context,

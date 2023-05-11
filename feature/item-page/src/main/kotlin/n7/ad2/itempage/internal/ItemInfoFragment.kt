@@ -15,8 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
-import n7.ad2.itempage.R
-import n7.ad2.itempage.databinding.FragmentItemInfoBinding
+import n7.ad2.feature.itempage.R
+import n7.ad2.feature.itempage.databinding.FragmentItemInfoBinding
 import n7.ad2.itempage.internal.adapter.ItemInfoAdapter
 import n7.ad2.itempage.internal.adapter.ItemInfoItemDecorator
 import n7.ad2.itempage.internal.di.DaggerItemPageComponent

@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
-import n7.ad2.heropage.R
-import n7.ad2.heropage.databinding.FragmentHeroResponsesBinding
+import n7.ad2.feature.heropage.R
+import n7.ad2.feature.heropage.databinding.FragmentHeroResponsesBinding
 import n7.ad2.heropage.internal.di.DaggerHeroPageComponent
 import n7.ad2.heropage.internal.pager.HeroPageFragment
 import n7.ad2.heropage.internal.pager.showDialogError

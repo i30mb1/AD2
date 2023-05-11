@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.heropage.databinding.ItemHeroSpellsBinding
+import n7.ad2.feature.heropage.databinding.ItemHeroSpellsBinding
 import n7.ad2.heropage.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.heropage.internal.info.domain.vo.VOSpell
 

@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.android.extension.clear
 import n7.ad2.android.extension.load
-import n7.ad2.heroes.R
-import n7.ad2.heroes.databinding.ItemHeroBodyBinding
+import n7.ad2.feature.heroes.application.R
+import n7.ad2.feature.heroes.application.databinding.ItemHeroBodyBinding
 import n7.ad2.heroes.internal.domain.vo.VOHero
 
 internal class HeroBodyViewHolder private constructor(
@@ -18,8 +18,8 @@ internal class HeroBodyViewHolder private constructor(
         ivImage.load(hero.imageUrl, R.drawable.stream_placeholder)
         tvTitle.text = hero.name
         ivImage.isSelected = hero.viewedByUser
-        root.setTag(n7.ad2.ui.R.id.ViewHolderBinding, binding)
-        root.setTag(n7.ad2.ui.R.id.ViewHolderModel, hero)
+        root.setTag(n7.ad2.core.ui.R.id.ViewHolderBinding, binding)
+        root.setTag(n7.ad2.core.ui.R.id.ViewHolderModel, hero)
     }
 
     fun clear() = binding.apply {

@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.itempage.R
+import n7.ad2.feature.itempage.R
 import n7.ad2.itempage.internal.domain.model.LocalItemInfo
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 import n7.ad2.itempage.internal.domain.vo.VORecipe
@@ -50,8 +50,8 @@ class GetItemInfoUseCase @Inject constructor(
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
                     if (ability.params != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true))))
                     if (ability.notes != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true))))
-                    if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), n7.ad2.ui.R.drawable.mana)))
-                    if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), n7.ad2.ui.R.drawable.cooldown)))
+                    if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), n7.ad2.core.ui.R.drawable.mana)))
+                    if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), n7.ad2.core.ui.R.drawable.cooldown)))
                 }
             }
 

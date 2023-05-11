@@ -6,6 +6,7 @@ pluginManagement {
 
 plugins {
     id("convention.settings")
+    id("n7.plugins.settings")
 }
 
 include(

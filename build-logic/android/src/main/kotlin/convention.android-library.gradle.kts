@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "$applicationID.${project.name.replace("-", "")}"
+    namespace = "$applicationID.${project.path.replace("-", "").replace(":", ".").drop(1)}"
     androidComponents {
         beforeVariants { variantBuilder ->
             if (variantBuilder.buildType == "debug") variantBuilder.enable = false

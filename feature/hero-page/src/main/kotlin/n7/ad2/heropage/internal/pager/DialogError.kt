@@ -7,7 +7,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import n7.ad2.heropage.databinding.DialogErrorBinding
+import n7.ad2.feature.heropage.databinding.DialogErrorBinding
 
 fun Fragment.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
 

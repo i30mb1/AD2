@@ -15,8 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
-import n7.ad2.heropage.R
-import n7.ad2.heropage.databinding.FragmentHeroInfoBinding
+import n7.ad2.feature.heropage.R
+import n7.ad2.feature.heropage.databinding.FragmentHeroInfoBinding
 import n7.ad2.heropage.internal.di.DaggerHeroPageComponent
 import n7.ad2.heropage.internal.info.adapter.HeroInfoAdapter
 import n7.ad2.heropage.internal.info.adapter.HeroInfoItemDecorator

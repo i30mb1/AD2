@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import n7.ad2.itempage.R
+import n7.ad2.feature.itempage.R
 import n7.ad2.itempage.internal.domain.vo.VORecipe
 
 class RecipeAdapter(

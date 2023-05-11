@@ -11,7 +11,7 @@ import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.heropage.internal.info.HeroStatistics
 import n7.ad2.heropage.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.heropage.internal.info.domain.vo.VOSpell

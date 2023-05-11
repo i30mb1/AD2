@@ -6,8 +6,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.android.extension.clear
 import n7.ad2.android.extension.load
-import n7.ad2.items.R
-import n7.ad2.items.databinding.ItemItemBodyBinding
+import n7.ad2.feature.items.R
+import n7.ad2.feature.items.databinding.ItemItemBodyBinding
 import n7.ad2.items.internal.domain.vo.VOItem
 
 internal class ItemBodyViewHolder private constructor(

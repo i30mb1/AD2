@@ -11,8 +11,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import n7.ad2.android.findDependencies
-import n7.ad2.heropage.R
-import n7.ad2.heropage.databinding.FragmentHeroGuideBinding
+import n7.ad2.feature.heropage.R
+import n7.ad2.feature.heropage.databinding.FragmentHeroGuideBinding
 import n7.ad2.heropage.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.StickyHeaderDecorator

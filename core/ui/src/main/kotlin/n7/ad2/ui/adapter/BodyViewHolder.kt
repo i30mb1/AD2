@@ -8,7 +8,7 @@ import androidx.core.text.getSpans
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.ktx.dpToPx
 import n7.ad2.ktx.lazyUnsafe
-import n7.ad2.ui.databinding.ItemBodyBinding
+import n7.ad2.core.ui.databinding.ItemBodyBinding
 
 class BodyViewHolder private constructor(
     private val binding: ItemBodyBinding,

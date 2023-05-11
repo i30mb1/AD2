@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.itempage.R
+import n7.ad2.feature.itempage.R
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderPlayableViewHolder
@@ -19,20 +19,20 @@ class ItemInfoAdapter(
 ) : ListAdapter<VOItemInfo, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun getItemViewType(position: Int): Int = when (val item = getItem(position)) {
-        is VOItemInfo.Title -> n7.ad2.ui.R.layout.item_header_playable
+        is VOItemInfo.Title -> n7.ad2.core.ui.R.layout.item_header_playable
         is VOItemInfo.TextLine -> R.layout.item_text_line
         is VOItemInfo.Recipe -> R.layout.item_info_recipe
-        is VOItemInfo.Body -> n7.ad2.ui.R.layout.item_body
-        is VOItemInfo.ImageLine -> n7.ad2.ui.R.layout.item_image_line
+        is VOItemInfo.Body -> n7.ad2.core.ui.R.layout.item_body
+        is VOItemInfo.ImageLine -> n7.ad2.core.ui.R.layout.item_image_line
         else -> error("could not getItemViewType for $item")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_text_line -> TextLineViewHolder.from(layoutInflater, parent)
         R.layout.item_info_recipe -> InfoRecipeViewHolder.from(layoutInflater, parent)
-        n7.ad2.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
-        n7.ad2.ui.R.layout.item_header_playable -> HeaderPlayableViewHolder.from(layoutInflater, parent, onPlayIconClick)
-        n7.ad2.ui.R.layout.item_image_line -> ImageLineViewHolder.from(layoutInflater, parent, showPopup)
+        n7.ad2.core.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
+        n7.ad2.core.ui.R.layout.item_header_playable -> HeaderPlayableViewHolder.from(layoutInflater, parent, onPlayIconClick)
+        n7.ad2.core.ui.R.layout.item_image_line -> ImageLineViewHolder.from(layoutInflater, parent, showPopup)
         else -> error("could not get type for $viewType")
     }
 

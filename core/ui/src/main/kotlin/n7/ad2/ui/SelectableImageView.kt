@@ -8,6 +8,7 @@ import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import com.google.android.material.color.MaterialColors
+import n7.ad2.core.ui.R
 import kotlin.math.roundToInt
 
 class SelectableImageView(

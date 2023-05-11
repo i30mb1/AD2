@@ -44,7 +44,7 @@ fun GuessSpellImage(
     val scope = rememberCoroutineScope()
     val model = ImageRequest.Builder(LocalContext.current)
         .data(spellImage)
-        .placeholder(n7.ad2.ui.R.drawable.square_placeholder)
+        .placeholder(n7.ad2.core.ui.R.drawable.square_placeholder)
         .crossfade(true)
         .build()
     AsyncImage(

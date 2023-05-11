@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.heropage.internal.guides.domain.vo.VOGuideEasyToWinHeroes
 import n7.ad2.heropage.internal.guides.domain.vo.VOGuideHardToWinHeroes
 import n7.ad2.heropage.internal.guides.domain.vo.VOGuideHeroItems

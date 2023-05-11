@@ -3,7 +3,7 @@ package n7.ad2.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.ui.databinding.ItemHeaderBinding
+import n7.ad2.core.ui.databinding.ItemHeaderBinding
 
 class HeaderViewHolder private constructor(
     private val binding: ItemHeaderBinding,

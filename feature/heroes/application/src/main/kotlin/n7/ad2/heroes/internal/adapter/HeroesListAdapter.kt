@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.heroes.R
+import n7.ad2.feature.heroes.application.R
 import n7.ad2.heroes.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
 
@@ -16,19 +16,19 @@ internal class HeroesListAdapter(
 ) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener { view ->
-        val hero = view.getTag(n7.ad2.ui.R.id.ViewHolderModel) as VOHero.Body
+        val hero = view.getTag(n7.ad2.core.ui.R.id.ViewHolderModel) as VOHero.Body
         onHeroClick(hero)
     }
 
     override fun getItemViewType(position: Int) = when (getItem(position)) {
         is VOHero.Body -> R.layout.item_hero_body
-        is VOHero.Header -> n7.ad2.ui.R.layout.item_header
+        is VOHero.Header -> n7.ad2.core.ui.R.layout.item_header
         else -> throw UnsupportedOperationException("could not get type for item ${getItem(position)}")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_hero_body -> HeroBodyViewHolder.from(layoutInflater, parent, listener)
-        n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
+        n7.ad2.core.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not get type for $viewType")
     }
 

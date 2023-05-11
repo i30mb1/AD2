@@ -11,7 +11,7 @@ import androidx.core.text.getSpans
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.heropage.internal.info.PopUpClickableSpan
 import n7.ad2.heropage.internal.info.domain.adapter.HeroHeaderPlayableViewHolder
 import n7.ad2.heropage.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
@@ -38,13 +38,13 @@ class HeroInfoAdapter(
 ) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
     StickyHeaderDecorator.StickyHeaderInterface {
 
-    override fun getHeaderLayout(): Int = n7.ad2.ui.R.layout.item_header
+    override fun getHeaderLayout(): Int = n7.ad2.core.ui.R.layout.item_header
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
         is VOHeroInfo.HeaderSound -> R.layout.item_hero_header_playable
         is VOHeroInfo.Attributes -> R.layout.item_hero_attributes
-        is VOHeroInfo.Header -> n7.ad2.ui.R.layout.item_header
-        is VOHeroInfo.Body -> n7.ad2.ui.R.layout.item_body
+        is VOHeroInfo.Header -> n7.ad2.core.ui.R.layout.item_header
+        is VOHeroInfo.Body -> n7.ad2.core.ui.R.layout.item_body
         is VOHeroInfo.Spells -> R.layout.item_hero_spells
 
         is VOBodyLine -> R.layout.item_body_line
@@ -56,8 +56,8 @@ class HeroInfoAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_hero_header_playable -> HeroHeaderPlayableViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
         R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, onHeroInfoCLickListener)
-        n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
-        n7.ad2.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
+        n7.ad2.core.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
+        n7.ad2.core.ui.R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
         R.layout.item_hero_spells -> HeroSpellsViewHolder.from(layoutInflater, parent, onSpellClickListener, onTalentClickListener)
         else -> error("could not find ViewHolder for $viewType")
     }

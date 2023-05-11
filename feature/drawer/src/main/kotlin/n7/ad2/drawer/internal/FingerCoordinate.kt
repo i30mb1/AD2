@@ -19,7 +19,7 @@ import androidx.core.graphics.withTranslation
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.color.MaterialColors
-import n7.ad2.drawer.R
+import n7.ad2.feature.drawer.R
 import n7.ad2.ktx.dpToPx
 import n7.ad2.ktx.spToPx
 

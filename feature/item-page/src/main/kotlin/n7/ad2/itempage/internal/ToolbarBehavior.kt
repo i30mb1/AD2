@@ -6,7 +6,7 @@ import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.ViewCompat
 import com.google.android.material.appbar.AppBarLayout
-import n7.ad2.itempage.R
+import n7.ad2.feature.itempage.R
 
 // https://proandroiddev.com/complex-ui-animation-on-android-8f7a46f4aec4
 class ToolbarBehavior(context: Context, attributeSet: AttributeSet? = null) : CoordinatorLayout.Behavior<AppBarLayout>(context, attributeSet) {

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.ui.databinding.ItemImageLineBinding
+import n7.ad2.core.ui.databinding.ItemImageLineBinding
 
 class ImageLineViewHolder private constructor(
     private val binding: ItemImageLineBinding,

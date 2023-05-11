@@ -3,7 +3,7 @@ package n7.ad2.drawer.internal.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.drawer.databinding.ItemLogBinding
+import n7.ad2.feature.drawer.databinding.ItemLogBinding
 import n7.ad2.drawer.internal.adapter.LoggerAdapter.TextViewHolder
 import n7.ad2.logger.AppLog
 

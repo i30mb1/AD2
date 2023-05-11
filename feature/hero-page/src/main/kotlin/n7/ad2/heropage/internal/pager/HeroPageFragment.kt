@@ -15,8 +15,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.android.findDependencies
-import n7.ad2.heropage.R
-import n7.ad2.heropage.databinding.FragmentHeroPageBinding
+import n7.ad2.feature.heropage.R
+import n7.ad2.feature.heropage.databinding.FragmentHeroPageBinding
 import n7.ad2.heropage.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.lazyUnsafe
 import javax.inject.Inject

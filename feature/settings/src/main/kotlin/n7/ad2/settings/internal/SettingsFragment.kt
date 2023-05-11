@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.play.core.review.ReviewManagerFactory
-import n7.ad2.settings.R
+import n7.ad2.feature.settings.R
 import n7.ad2.settings.internal.compose.SettingsScreen
 import n7.ad2.ui.ComposeView
 

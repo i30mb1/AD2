@@ -25,7 +25,7 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.android.extension.load
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.ktx.dpToPx
 import kotlinx.coroutines.flow.Flow as CoroutineFlow
 
@@ -62,9 +62,9 @@ class HeroFlow(
         cancel()
     }
 
-    fun setHeroesHardToWin(list: List<VOHeroFlowItem>) = setHeroes(list, n7.ad2.ui.R.style.Widget_TextView_HeroDisadvantage)
+    fun setHeroesHardToWin(list: List<VOHeroFlowItem>) = setHeroes(list, n7.ad2.core.ui.R.style.Widget_TextView_HeroDisadvantage)
 
-    fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, n7.ad2.ui.R.style.Widget_TextView_HeroAdvantage)
+    fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, n7.ad2.core.ui.R.style.Widget_TextView_HeroAdvantage)
 
     fun setHeroItems(list: List<VOHeroFlowHeroItem>) = setViews(list) { map(::inflateItemHeroItemFlow) }
 

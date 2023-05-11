@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.heropage.databinding.ItemHeroHeaderPlayableBinding
+import n7.ad2.feature.heropage.databinding.ItemHeroHeaderPlayableBinding
 import n7.ad2.heropage.internal.info.domain.vo.VOHeroInfo
 
 class HeroHeaderPlayableViewHolder(

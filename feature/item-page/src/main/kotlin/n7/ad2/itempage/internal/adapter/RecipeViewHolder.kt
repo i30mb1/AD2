@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.android.extension.load
-import n7.ad2.itempage.R
-import n7.ad2.itempage.databinding.ItemRecipeBinding
+import n7.ad2.feature.itempage.R
+import n7.ad2.feature.itempage.databinding.ItemRecipeBinding
 import n7.ad2.itempage.internal.domain.vo.VORecipe
 
 class RecipeViewHolder private constructor(

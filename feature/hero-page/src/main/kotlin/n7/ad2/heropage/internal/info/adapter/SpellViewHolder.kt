@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.android.extension.load
-import n7.ad2.heropage.databinding.ItemSpellBinding
+import n7.ad2.feature.heropage.databinding.ItemSpellBinding
 import n7.ad2.heropage.internal.info.domain.vo.VOSpell
 
 class SpellViewHolder(
@@ -13,7 +13,7 @@ class SpellViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: VOSpell.Simple) {
-        binding.iv.load(item.urlSpellImage, n7.ad2.ui.R.drawable.square_placeholder, n7.ad2.ui.R.drawable.square_error_placeholder)
+        binding.iv.load(item.urlSpellImage, n7.ad2.core.ui.R.drawable.square_placeholder, n7.ad2.core.ui.R.drawable.square_error_placeholder)
         binding.root.setOnClickListener { onSpellClickListener(item) }
         bind(item.isSelected)
     }

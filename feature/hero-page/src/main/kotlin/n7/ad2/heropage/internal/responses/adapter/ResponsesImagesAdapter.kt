@@ -3,7 +3,7 @@ package n7.ad2.heropage.internal.responses.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.heropage.internal.responses.domain.vo.VOResponseImage
 
 class ResponsesImagesAdapter(

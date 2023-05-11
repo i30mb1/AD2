@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import n7.ad2.ui.R
+import n7.ad2.core.ui.R
 import n7.ad2.ui.compose.AppTheme
 
 @Preview

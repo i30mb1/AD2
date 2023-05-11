@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.heropage.internal.responses.domain.vo.VOResponse
 import n7.ad2.ui.StickyHeaderDecorator
 import n7.ad2.ui.adapter.HeaderViewHolder
@@ -22,7 +22,7 @@ class ResponsesAdapter(
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_response_body -> ResponseBodyViewHolder.from(layoutInflater, viewGroup, showDialogResponse, playSound, showPopup)
-        n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, viewGroup)
+        n7.ad2.core.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, viewGroup)
         else -> error("could not find ViewHolder for $viewGroup")
     }
 
@@ -51,12 +51,12 @@ class ResponsesAdapter(
     }
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
-        is VOResponse.Title -> n7.ad2.ui.R.layout.item_header
+        is VOResponse.Title -> n7.ad2.core.ui.R.layout.item_header
         is VOResponse.Body -> R.layout.item_response_body
         else -> error("could not get type for $position")
     }
 
-    override fun getHeaderLayout() = n7.ad2.ui.R.layout.item_header
+    override fun getHeaderLayout() = n7.ad2.core.ui.R.layout.item_header
 
     fun onUploadProgress(downloadedBytes: Int, totalBytes: Int, downloadID: Long) {
         activeViewHolders.forEach {

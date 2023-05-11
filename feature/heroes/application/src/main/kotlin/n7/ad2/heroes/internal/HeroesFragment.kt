@@ -17,8 +17,8 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getNavigator
-import n7.ad2.heroes.R
-import n7.ad2.heroes.databinding.FragmentHeroesBinding
+import n7.ad2.feature.heroes.application.R
+import n7.ad2.feature.heroes.application.databinding.FragmentHeroesBinding
 import n7.ad2.heroes.internal.adapter.HeroesItemDecorator
 import n7.ad2.heroes.internal.adapter.HeroesListAdapter
 import n7.ad2.heroes.internal.di.DaggerHeroesComponent
@@ -78,7 +78,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         val gridLayoutManager = GridLayoutManager(context, 3)
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int) = when (heroAdapter.getItemViewType(position)) {
-                n7.ad2.ui.R.layout.item_header -> spanSizeItemHeader
+                n7.ad2.core.ui.R.layout.item_header -> spanSizeItemHeader
                 else -> spanSizeItem
             }
         }

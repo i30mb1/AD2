@@ -3,7 +3,7 @@ package n7.ad2.heropage.internal.guides.domain.usecase
 import kotlinx.coroutines.withContext
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.heropage.internal.guides.domain.adapter.toVOEasyToWinHeroes
 import n7.ad2.heropage.internal.guides.domain.adapter.toVOGuideHeroItems
 import n7.ad2.heropage.internal.guides.domain.adapter.toVOGuideSpellBuild
@@ -20,7 +20,6 @@ class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
     private val res: Resources,
 ) {
 
-    @OptIn(ExperimentalStdlibApi::class)
     @Suppress("BlockingMethodInNonBlockingContext")
     suspend operator fun invoke(list: List<LocalGuideJson>): List<VOGuideItem> = withContext(dispatchers.IO) {
         val item = list.getOrNull(list.lastIndex) ?: return@withContext emptyList()

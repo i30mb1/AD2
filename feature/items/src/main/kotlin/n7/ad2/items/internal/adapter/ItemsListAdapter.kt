@@ -6,7 +6,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.items.R
+import n7.ad2.feature.items.R
 import n7.ad2.items.internal.domain.vo.VOItem
 import n7.ad2.ui.adapter.HeaderViewHolder
 
@@ -16,7 +16,7 @@ internal class ItemsListAdapter(
 ) : ListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
-        n7.ad2.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
+        n7.ad2.core.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         R.layout.item_item_body -> ItemBodyViewHolder.from(layoutInflater, parent, itemClickListener)
         else -> super.createViewHolder(parent, viewType)
     }
@@ -40,7 +40,7 @@ internal class ItemsListAdapter(
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
             is VOItem.Body -> R.layout.item_item_body
-            is VOItem.Header -> n7.ad2.ui.R.layout.item_header
+            is VOItem.Header -> n7.ad2.core.ui.R.layout.item_header
             else -> super.getItemViewType(position)
         }
     }

@@ -26,8 +26,8 @@ import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.android.findDependencies
-import n7.ad2.drawer.R
-import n7.ad2.drawer.databinding.FragmentDrawerBinding
+import n7.ad2.feature.drawer.R
+import n7.ad2.feature.drawer.databinding.FragmentDrawerBinding
 import n7.ad2.drawer.internal.adapter.LoggerAdapter
 import n7.ad2.drawer.internal.adapter.MainMenuListAdapter
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType

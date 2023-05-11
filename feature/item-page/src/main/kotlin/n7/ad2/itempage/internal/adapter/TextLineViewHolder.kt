@@ -3,7 +3,7 @@ package n7.ad2.itempage.internal.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.itempage.databinding.ItemTextLineBinding
+import n7.ad2.feature.itempage.databinding.ItemTextLineBinding
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 
 class TextLineViewHolder private constructor(

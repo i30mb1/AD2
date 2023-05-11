@@ -14,7 +14,7 @@ import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.AppLocale
 import n7.ad2.android.extension.load
-import n7.ad2.heropage.R
+import n7.ad2.feature.heropage.R
 import n7.ad2.ktx.dpToPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
@@ -28,10 +28,10 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         contentDescription = context.getString(R.string.desc_hero_mini_avatar)
         addView(this)
     }
-    private val tvLocale: TickerView = TickerView(context, null, n7.ad2.ui.R.style.TextAppearance_B1).apply {
+    private val tvLocale: TickerView = TickerView(context, null, n7.ad2.core.ui.R.style.TextAppearance_B1).apply {
         layoutParams = params.apply { width = 60.dpToPx }
         setCharacterLists(TickerUtils.provideAlphabeticalList())
-        animationDuration = resources.getInteger(n7.ad2.ui.R.integer.animation_long).toLong()
+        animationDuration = resources.getInteger(n7.ad2.core.ui.R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
         addView(this)
@@ -46,7 +46,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
 //    }
     private var oldPage = -1
     private val transition = Slide().apply {
-        duration = resources.getInteger(n7.ad2.ui.R.integer.animation_medium).toLong()
+        duration = resources.getInteger(n7.ad2.core.ui.R.integer.animation_medium).toLong()
         interpolator = AccelerateDecelerateInterpolator()
     }
     private val listener = object : OrientationEventListener(context) {
