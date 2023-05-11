@@ -2,7 +2,7 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 
 plugins {
     id("convention.android-application")
-    kotlin("kapt")
+    id("n7.plugins.kotlin-kapt")
 }
 
 android {

@@ -17,8 +17,5 @@ pluginManagement {
         google()  // com.android.library, com.android.tools.build:gradle
         maven { setUrl("https://jitpack.io") } // detekt
     }
-    plugins {
-        kotlin("kapt") version "1.7.20"
-    }
 }
 includeBuild("build-logic")

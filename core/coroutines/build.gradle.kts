@@ -1,6 +1,6 @@
 plugins {
     id("convention.kotlin-jvm")
-    kotlin("kapt")
+    id("n7.plugins.kotlin-kapt")
 }
 
 dependencies {
