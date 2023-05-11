@@ -14,7 +14,7 @@
 @rem limitations under the License.
 @rem
 
-@if "%DEBUG%" == "" @echo off
+@if "%DEBUG%"=="" @echo off
 @rem ##########################################################################
 @rem
 @rem  gradle-profiler startup script for Windows
@@ -25,7 +25,7 @@
 if "%OS%"=="Windows_NT" setlocal
 
 set DIRNAME=%~dp0
-if "%DIRNAME%" == "" set DIRNAME=.
+if "%DIRNAME%"=="" set DIRNAME=.
 set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%..
 
@@ -40,7 +40,7 @@ if defined JAVA_HOME goto findJavaFromJavaHome
 
 set JAVA_EXE=java.exe
 %JAVA_EXE% -version >NUL 2>&1
-if "%ERRORLEVEL%" == "0" goto execute
+if %ERRORLEVEL% equ 0 goto execute
 
 echo.
 echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\gradle-profiler-0.18.0.jar;%APP_HOME%\lib\gradle-tooling-api-7.2.jar;%APP_HOME%\lib\annotations-3.0.1.jar;%APP_HOME%\lib\guava-27.1-android.jar;%APP_HOME%\lib\jopt-simple-5.0.4.jar;%APP_HOME%\lib\config-1.3.3.jar;%APP_HOME%\lib\commons-math3-3.6.1.jar;%APP_HOME%\lib\javaparser-core-3.18.0.jar;%APP_HOME%\lib\ant-compress-1.5.jar;%APP_HOME%\lib\commons-io-2.6.jar;%APP_HOME%\lib\flightrecorder-8.0.1.jar;%APP_HOME%\lib\dd-plist-1.23.jar;%APP_HOME%\lib\gson-2.8.6.jar;%APP_HOME%\lib\client-protocol-0.18.0.jar;%APP_HOME%\lib\slf4j-simple-1.7.10.jar;%APP_HOME%\lib\slf4j-api-1.7.30.jar;%APP_HOME%\lib\jcip-annotations-1.0.jar;%APP_HOME%\lib\jsr305-3.0.2.jar;%APP_HOME%\lib\failureaccess-1.0.1.jar;%APP_HOME%\lib\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;%APP_HOME%\lib\checker-compat-qual-2.5.2.jar;%APP_HOME%\lib\error_prone_annotations-2.2.0.jar;%APP_HOME%\lib\j2objc-annotations-1.1.jar;%APP_HOME%\lib\animal-sniffer-annotations-1.17.jar;%APP_HOME%\lib\ant-1.10.12.jar;%APP_HOME%\lib\commons-compress-1.14.jar;%APP_HOME%\lib\xz-1.6.jar;%APP_HOME%\lib\dec-0.1.2.jar;%APP_HOME%\lib\common-8.0.1.jar;%APP_HOME%\lib\ant-launcher-1.10.12.jar;%APP_HOME%\lib\encoder-1.2.2.jar;%APP_HOME%\lib\lz4-java-1.7.1.jar
+set CLASSPATH=%APP_HOME%\lib\gradle-profiler-0.19.0.jar;%APP_HOME%\lib\gradle-tooling-api-7.2.jar;%APP_HOME%\lib\annotations-3.0.1.jar;%APP_HOME%\lib\guava-27.1-android.jar;%APP_HOME%\lib\jopt-simple-5.0.4.jar;%APP_HOME%\lib\config-1.3.3.jar;%APP_HOME%\lib\commons-math3-3.6.1.jar;%APP_HOME%\lib\javaparser-core-3.18.0.jar;%APP_HOME%\lib\ant-compress-1.5.jar;%APP_HOME%\lib\commons-io-2.6.jar;%APP_HOME%\lib\flightrecorder-8.0.1.jar;%APP_HOME%\lib\dd-plist-1.23.jar;%APP_HOME%\lib\gson-2.8.6.jar;%APP_HOME%\lib\client-protocol-0.19.0.jar;%APP_HOME%\lib\slf4j-simple-1.7.10.jar;%APP_HOME%\lib\slf4j-api-1.7.30.jar;%APP_HOME%\lib\jcip-annotations-1.0.jar;%APP_HOME%\lib\jsr305-3.0.2.jar;%APP_HOME%\lib\failureaccess-1.0.1.jar;%APP_HOME%\lib\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;%APP_HOME%\lib\checker-compat-qual-2.5.2.jar;%APP_HOME%\lib\error_prone_annotations-2.2.0.jar;%APP_HOME%\lib\j2objc-annotations-1.1.jar;%APP_HOME%\lib\animal-sniffer-annotations-1.17.jar;%APP_HOME%\lib\ant-1.10.12.jar;%APP_HOME%\lib\commons-compress-1.14.jar;%APP_HOME%\lib\xz-1.6.jar;%APP_HOME%\lib\dec-0.1.2.jar;%APP_HOME%\lib\common-8.0.1.jar;%APP_HOME%\lib\ant-launcher-1.10.12.jar;%APP_HOME%\lib\encoder-1.2.2.jar;%APP_HOME%\lib\lz4-java-1.7.1.jar
 
 
 @rem Execute gradle-profiler
@@ -75,13 +75,15 @@ set CLASSPATH=%APP_HOME%\lib\gradle-profiler-0.18.0.jar;%APP_HOME%\lib\gradle-to
 
 :end
 @rem End local scope for the variables with windows NT shell
-if "%ERRORLEVEL%"=="0" goto mainEnd
+if %ERRORLEVEL% equ 0 goto mainEnd
 
 :fail
 rem Set variable GRADLE_PROFILER_EXIT_CONSOLE if you need the _script_ return code instead of
 rem the _cmd.exe /c_ return code!
-if  not "" == "%GRADLE_PROFILER_EXIT_CONSOLE%" exit 1
-exit /b 1
+set EXIT_CODE=%ERRORLEVEL%
+if %EXIT_CODE% equ 0 set EXIT_CODE=1
+if not ""=="%GRADLE_PROFILER_EXIT_CONSOLE%" exit %EXIT_CODE%
+exit /b %EXIT_CODE%
 
 :mainEnd
 if "%OS%"=="Windows_NT" endlocal
