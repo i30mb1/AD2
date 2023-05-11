@@ -14,7 +14,3 @@ include(
     ":micro-benchmark",
     ":macro-benchmark",
 )
-
-exec {
-    commandLine("git", "config", "core.hooksPath", ".githooks")
-}
