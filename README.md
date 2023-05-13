@@ -9,10 +9,10 @@ All you want to know about dota in one app
 <img src="readme-files/app.gif" width="200" align="right" hspace="20">
 
 * Tech-stack
-  * [Kotlin](https://kotlinlang.org/) + [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html)
-  * [Dagger2](https://dagger.dev/)
-  * [Compose](https://developer.android.com/jetpack/compose)
-  * [Room](https://developer.android.com/topic/libraries/architecture/room)
+    * [Kotlin](https://kotlinlang.org/) + [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html)
+    * [Dagger2](https://dagger.dev/)
+    * [Compose](https://developer.android.com/jetpack/compose)
+    * [Room](https://developer.android.com/topic/libraries/architecture/room)
 * Testing
     * [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing) ([JUnit 4](https://junit.org/junit4/)
     * [UT Tests](https://en.wikipedia.org/wiki/Graphical_user_interface_testing) ([Espresso](https://developer.android.com/training/testing/espresso))
@@ -26,13 +26,21 @@ This diagram presents dependencies between project modules (Gradle sub-projects)
 
 ![module_dependencies](readme-files/modules.png)
 
-We have three kinds of modules in the application:
+We have three levels of modules in the application:
 
-- `app` module that contains code that wires multiple modules together.
-- `core/*` modules that some of the features could depend on.
-- `feature/*` modules that containing all code related to a given feature.
+- `app` level that builds an application and wires multiple modules together
+- `feature/*` level that containing business features (ui, business logic)
+- `core/*` level that provide common components to the application
+
+## Clean Architecture
+
+В рамках проекта придерживаемся чистой архитерктуры. Данный подход в рамках многомодульности выражается в виде разделения слоев на модули на
+уровне `feature/*`:
+- `ui модули` содержать presentation слой (MVVM/MVP/MVI)
+- `domain модули` содержат бизнес слой и data слой. Data слой остается закрытым (internal)
 
 ## Directory structure
+
     ├── app                # Mobile app
     ├── build-logic        # Kotlin DSL scripts for project
     ├── features
