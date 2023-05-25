@@ -7,6 +7,6 @@ plugins {
 tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
         freeCompilerArgs = freeCompilerArgs + listOf("-opt-in=kotlin.RequiresOptIn", "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi")
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }

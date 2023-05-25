@@ -17,8 +17,8 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getNavigator
-import n7.ad2.feature.heroes.application.R
-import n7.ad2.feature.heroes.application.databinding.FragmentHeroesBinding
+import n7.ad2.feature.heroes.demo.R
+import n7.ad2.feature.heroes.demo.databinding.FragmentHeroesBinding
 import n7.ad2.heroes.internal.adapter.HeroesItemDecorator
 import n7.ad2.heroes.internal.adapter.HeroesListAdapter
 import n7.ad2.heroes.internal.di.DaggerHeroesComponent

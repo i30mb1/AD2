@@ -22,7 +22,7 @@ object Module {
 
     object Feature {
         const val streams = ":feature:streams"
-        const val heroesApp = ":feature:heroes:application"
+        const val heroesApp = ":feature:heroes:demo"
         const val heroesDomain = ":feature:heroes:domain"
         const val heroesUI = ":feature:heroes:ui"
         const val heroPage = ":feature:hero-page"
