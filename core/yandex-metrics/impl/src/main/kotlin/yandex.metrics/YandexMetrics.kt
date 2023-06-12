@@ -1,10 +1,8 @@
-package yandexmetrics
+package yandex.metrics
 
 import com.yandex.metrica.YandexMetrica
-import n7.ad2.AppMetrics
-import javax.inject.Inject
 
-class YandexMetrics @Inject constructor() : AppMetrics {
+class YandexMetrics : AppMetrics {
 
     override fun logEvent(event: String, params: Map<String, Any>) {
         YandexMetrica.reportEvent(event, params)

@@ -7,6 +7,7 @@ dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.common))
+    implementation(project(Module.Core.YandexMetrics.api))
 
     testImplementation(libs.bundles.test)
     testImplementation(libs.coroutinesDebug)

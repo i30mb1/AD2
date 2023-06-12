@@ -21,7 +21,9 @@ import n7.ad2.init.YandexMetricsInitializer
 import n7.ad2.logger.AppLogger
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
-import yandexmetrics.YandexMetricsInit
+import yandex.metrics.AppMetrics
+import yandex.metrics.YandexMetrics
+import yandex.metrics.YandexMetricsInit
 import java.util.Calendar
 
 @dagger.Module
@@ -39,10 +41,6 @@ interface ApplicationModule {
     @dagger.Binds
     fun provideAppSettings(appSettings: AD2Settings): AppSettings
 
-    @ApplicationScope
-    @dagger.Binds
-    fun provideLogger(logger: AppLogger): Logger
-
     companion object {
 
         @dagger.Provides
@@ -53,18 +51,22 @@ interface ApplicationModule {
 
         @ApplicationScope
         @dagger.Provides
+        fun provideLogger(): Logger = AppLogger(YandexMetrics())
+
+        @ApplicationScope
+        @dagger.Provides
         fun provideCalendar(): Calendar = Calendar.getInstance()
 
         @ElementsIntoSet
         @dagger.Provides
-        fun provideInitializers(yandexMetricsInit: YandexMetricsInit): Set<Initializer> {
+        fun provideInitializers(appInformation: AppInformation): Set<Initializer> {
             return setOf(
                 SystemInfoInitializer(),
                 CrashHandlerInitializer(),
                 HistoricalProcessExitReasonsInitializer(),
                 StrictModeInitializer(),
                 DevicePerformanceInitializer(),
-                YandexMetricsInitializer(yandexMetricsInit),
+                YandexMetricsInitializer(YandexMetricsInit(appInformation)),
             )
         }
 

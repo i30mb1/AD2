@@ -4,11 +4,9 @@ import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import n7.ad2.AppMetrics
-import javax.inject.Inject
+import yandex.metrics.AppMetrics
 
-
-class AppLogger @Inject constructor(
+class AppLogger constructor(
     private val metrics: AppMetrics,
 ) : Logger {
 

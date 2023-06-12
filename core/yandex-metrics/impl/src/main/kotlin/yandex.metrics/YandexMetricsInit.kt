@@ -1,13 +1,12 @@
-package yandexmetrics
+package yandex.metrics
 
 import android.app.Application
 import com.yandex.metrica.YandexMetrica
 import com.yandex.metrica.YandexMetricaConfig
 import n7.ad2.AppInformation
-import javax.inject.Inject
 
 
-class YandexMetricsInit @Inject constructor(
+class YandexMetricsInit constructor(
     private val appInformation: AppInformation,
 ) {
 
