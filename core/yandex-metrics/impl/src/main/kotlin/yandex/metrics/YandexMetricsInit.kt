@@ -5,7 +5,6 @@ import com.yandex.metrica.YandexMetrica
 import com.yandex.metrica.YandexMetricaConfig
 import n7.ad2.AppInformation
 
-
 class YandexMetricsInit constructor(
     private val appInformation: AppInformation,
 ) {
@@ -20,5 +19,4 @@ class YandexMetricsInit constructor(
         YandexMetrica.activate(application, config)
         YandexMetrica.enableActivityAutoTracking(application)
     }
-
 }

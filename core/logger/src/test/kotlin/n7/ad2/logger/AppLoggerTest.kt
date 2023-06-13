@@ -9,6 +9,7 @@ import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import n7.ad2.AppMetrics
 import n7.ad2.coroutines.CoroutineTestRule
+import n7.ad2.logger.internal.AppLogger
 import org.junit.Rule
 import org.junit.Test
 

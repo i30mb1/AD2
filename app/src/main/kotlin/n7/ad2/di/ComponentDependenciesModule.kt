@@ -16,10 +16,10 @@ import n7.ad2.tournaments.api.TournamentsDependencies
 @dagger.Module
 interface ComponentDependenciesModule {
 
-//    @dagger.Binds
-//    @dagger.multibindings.IntoMap
-//    @DependenciesKey(StreamsDependencies::class)
-//    fun provideStreamsDependencies(impl: ApplicationComponent): Dependencies
+    @dagger.Binds
+    @dagger.multibindings.IntoMap
+    @DependenciesKey(StreamsDependencies::class)
+    fun provideStreamsDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap
