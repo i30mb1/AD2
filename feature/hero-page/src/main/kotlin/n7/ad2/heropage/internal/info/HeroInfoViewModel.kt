@@ -40,7 +40,7 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     init {
         load(GetVOHeroDescriptionUseCase.HeroInfo.Main)
-        logger.logEvent("HeroInfoLoaded", mapOf("Hero" to heroName))
+        logger.log("HeroInfoLoaded", mapOf("Hero" to heroName))
     }
 
     fun load(heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) {

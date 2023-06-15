@@ -4,7 +4,7 @@ object Module {
         const val android = ":core:common-android"
         const val rules = ":core:rules"
         const val dagger = ":core:dagger"
-        const val logger = ":core:logger"
+
         const val coroutines = ":core:coroutines"
         const val ktx = ":core:ktx"
         const val database = ":core:database"
@@ -17,9 +17,10 @@ object Module {
         const val retrofit = ":core:retrofit"
         const val common = ":core:common-jvm"
         const val updateManager = ":core:update-manager"
+        const val logger = ":core:logger:app-logger"
         object YandexMetrics {
-            const val api = ":core:yandex-metrics:api"
-            const val impl = ":core:yandex-metrics:impl"
+            const val api = ":core:logger:yandex:api"
+            const val impl = ":core:logger:yandex:impl"
         }
     }
 

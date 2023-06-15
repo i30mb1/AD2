@@ -1,5 +1,5 @@
 package yandex.metrics
 
-interface AppMetrics {
+interface YandexMetrics {
     fun logEvent(event: String, params: Map<String, Any>)
 }

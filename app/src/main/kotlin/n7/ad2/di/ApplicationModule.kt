@@ -20,7 +20,7 @@ import n7.ad2.init.SystemInfoInitializer
 import n7.ad2.init.YandexMetricsInitializer
 import n7.ad2.logger.Logger
 import n7.ad2.provider.Provider
-import yandex.metrics.YandexMetricComponentHolder
+import yandex.metrics.YandexMetrics
 import yandex.metrics.YandexMetricsInit
 import java.util.Calendar
 
@@ -49,7 +49,7 @@ interface ApplicationModule {
 
         @ApplicationScope
         @dagger.Provides
-        fun provideLogger(): Logger = Logger(YandexMetricComponentHolder.get().appMetrics)
+        fun provideLogger(): Logger = Logger(YandexMetrics())
 
         @ApplicationScope
         @dagger.Provides
