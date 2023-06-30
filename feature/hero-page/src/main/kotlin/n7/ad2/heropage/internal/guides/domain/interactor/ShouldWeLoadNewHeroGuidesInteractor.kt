@@ -2,7 +2,7 @@ package n7.ad2.heropage.internal.guides.domain.interactor
 
 import n7.ad2.heropage.internal.guides.domain.usecase.GetLastDayHeroGuidesLoadedUseCase
 import n7.ad2.heropage.internal.guides.domain.usecase.SaveLastDayHeroGuidesLoadedUseCase
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import javax.inject.Inject
 
 class ShouldWeLoadNewHeroGuidesInteractor @Inject constructor(

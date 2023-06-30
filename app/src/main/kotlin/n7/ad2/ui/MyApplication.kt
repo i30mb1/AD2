@@ -9,7 +9,7 @@ import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
 import n7.ad2.init.Initializer
 import n7.ad2.ktx.lazyUnsafe
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import javax.inject.Inject
 
 // https://medium.com/bumble-tech/how-we-achieved-a-6x-reduction-of-anrs-part-2-fixing-anrs-24fedf9a973f

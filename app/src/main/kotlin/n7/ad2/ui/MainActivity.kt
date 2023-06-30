@@ -18,7 +18,7 @@ import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.di.injector
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.provider.Provider
 import n7.ad2.updatemanager.IsNewAppVersionAvailable
 import javax.inject.Inject

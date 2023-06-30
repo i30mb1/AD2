@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.single
 import n7.ad2.apppreference.Preference
 import n7.ad2.database_guides.api.AppDatabase
 import n7.ad2.database_guides.internal.model.NewsLocal
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.news.internal.domain.usecase.GetNewsUseCase
 import javax.inject.Inject
 

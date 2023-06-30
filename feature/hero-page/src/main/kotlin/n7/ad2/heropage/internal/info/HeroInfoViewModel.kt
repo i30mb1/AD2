@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import n7.ad2.AppInformation
 import n7.ad2.heropage.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.heropage.internal.info.domain.vo.VOHeroInfo
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 
 class HeroInfoViewModel @AssistedInject constructor(
     private val appInformation: AppInformation,

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.onStart
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.heroes.internal.domain.vo.VOHero
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject

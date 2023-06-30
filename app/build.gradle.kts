@@ -106,7 +106,7 @@ dependencies {
     implementation(project(Module.Core.retrofit))
     implementation(project(Module.Core.updateManager))
     implementation(project(Module.Core.spanParser))
-    implementation(project(Module.Core.YandexMetrics.impl))
+    implementation(project(Module.Core.yandexMetrics))
 
     implementation(project(Module.Feature.streams))
     implementation(project(Module.Feature.heroesApp))

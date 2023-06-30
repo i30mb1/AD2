@@ -7,7 +7,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.api.dao.ItemsDao
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.provider.Provider
 
 interface HeroesDependencies : Dependencies {

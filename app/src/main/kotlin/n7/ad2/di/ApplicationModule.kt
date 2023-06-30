@@ -18,7 +18,7 @@ import n7.ad2.init.Initializer
 import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
 import n7.ad2.init.YandexMetricsInitializer
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.provider.Provider
 import yandex.metrics.YandexMetrics
 import yandex.metrics.YandexMetricsInit
@@ -49,7 +49,7 @@ interface ApplicationModule {
 
         @ApplicationScope
         @dagger.Provides
-        fun provideLogger(): Logger = Logger(YandexMetrics())
+        fun provideLogger(): Logger = Logger(listOf(YandexMetrics()))
 
         @ApplicationScope
         @dagger.Provides
@@ -59,12 +59,12 @@ interface ApplicationModule {
         @dagger.Provides
         fun provideInitializers(appInformation: AppInformation): Set<Initializer> {
             return setOf(
+                YandexMetricsInitializer(YandexMetricsInit(appInformation)),
                 SystemInfoInitializer(),
                 CrashHandlerInitializer(),
                 HistoricalProcessExitReasonsInitializer(),
                 StrictModeInitializer(),
                 DevicePerformanceInitializer(),
-                YandexMetricsInitializer(YandexMetricsInit(appInformation)),
             )
         }
 

@@ -6,7 +6,7 @@ import android.os.Build
 import android.provider.Settings
 import androidx.core.content.getSystemService
 import n7.ad2.AppInformation
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 
 class SystemInfoInitializer : Initializer {
 

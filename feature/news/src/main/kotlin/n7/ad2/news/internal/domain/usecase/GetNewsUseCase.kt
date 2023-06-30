@@ -8,7 +8,7 @@ import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.NewsLocal
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import org.jsoup.Jsoup
 import javax.inject.Inject
 

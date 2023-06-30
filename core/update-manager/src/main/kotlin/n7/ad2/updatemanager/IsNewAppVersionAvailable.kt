@@ -6,7 +6,7 @@ import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.android.play.core.ktx.requestAppUpdateInfo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import javax.inject.Inject
 
 class IsNewAppVersionAvailable @Inject constructor(

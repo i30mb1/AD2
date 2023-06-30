@@ -4,7 +4,7 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import n7.ad2.database_guides.api.AppDatabase
 import n7.ad2.database_guides.internal.model.NewsLocal
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import javax.inject.Inject
 
 internal class NewsSource @Inject constructor(

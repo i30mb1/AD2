@@ -6,7 +6,7 @@ import n7.ad2.Resources
 import n7.ad2.apppreference.Preference
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.provider.Provider
 import okhttp3.OkHttpClient
 

@@ -2,7 +2,7 @@ package n7.ad2.init
 
 import android.app.Application
 import n7.ad2.AppInformation
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import java.io.PrintWriter
 import java.io.StringWriter
 

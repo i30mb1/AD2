@@ -5,7 +5,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.StrictMode
 import n7.ad2.AppInformation
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 
 class StrictModeInitializer : Initializer {
 

@@ -1,5 +1,5 @@
-package yandex.metrics
+package n7.ad2.app.logger
 
-interface YandexMetrics {
+interface AdditionalLogger {
     fun logEvent(event: String, params: Map<String, Any>)
 }

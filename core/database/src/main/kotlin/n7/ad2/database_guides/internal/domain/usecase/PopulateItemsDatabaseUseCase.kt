@@ -11,7 +11,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.internal.domain.model.AssetsItem
 import n7.ad2.database_guides.internal.model.LocalItem
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import javax.inject.Inject
 
 class PopulateItemsDatabaseUseCase @Inject constructor(

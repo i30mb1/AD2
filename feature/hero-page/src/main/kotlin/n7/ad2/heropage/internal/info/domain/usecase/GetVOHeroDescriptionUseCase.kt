@@ -16,7 +16,7 @@ import n7.ad2.heropage.internal.info.HeroStatistics
 import n7.ad2.heropage.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.heropage.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.toStringList
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.repositories.model.LocalHeroDescription
 import n7.ad2.spanparser.SpanParser

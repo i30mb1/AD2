@@ -1,7 +1,7 @@
 package n7.ad2.retrofit
 
 import n7.ad2.AppSettings
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.Protocol

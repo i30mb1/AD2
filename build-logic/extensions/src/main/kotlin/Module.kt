@@ -18,10 +18,7 @@ object Module {
         const val common = ":core:common-jvm"
         const val updateManager = ":core:update-manager"
         const val logger = ":core:logger:app-logger"
-        object YandexMetrics {
-            const val api = ":core:logger:yandex:api"
-            const val impl = ":core:logger:yandex:impl"
-        }
+        const val yandexMetrics = ":core:logger:yandex"
     }
 
     object Feature {

@@ -3,7 +3,7 @@ package n7.ad2.di
 import dagger.multibindings.IntoSet
 import dagger.multibindings.Multibinds
 import n7.ad2.AppInformation
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.retrofit.MockInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

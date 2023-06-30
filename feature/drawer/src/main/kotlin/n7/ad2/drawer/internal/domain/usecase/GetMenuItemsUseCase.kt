@@ -17,7 +17,7 @@ import n7.ad2.drawer.internal.data.remote.model.Settings
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.ktx.lazyUnsafe
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import javax.inject.Inject
 
 internal class GetMenuItemsUseCase @Inject constructor(

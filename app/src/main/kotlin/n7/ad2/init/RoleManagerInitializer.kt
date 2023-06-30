@@ -5,7 +5,7 @@ import android.app.role.RoleManager
 import android.os.Build
 import androidx.core.content.getSystemService
 import n7.ad2.AppInformation
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 
 class RoleManagerInitializer : Initializer {
 

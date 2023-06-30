@@ -3,7 +3,7 @@ package n7.ad2.init
 import android.app.Application
 import androidx.core.performance.DevicePerformance
 import n7.ad2.AppInformation
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 
 class DevicePerformanceInitializer : Initializer {
 

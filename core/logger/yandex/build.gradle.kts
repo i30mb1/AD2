@@ -3,8 +3,7 @@ plugins {
 }
 
 dependencies {
-    api(project(Module.Core.YandexMetrics.api))
-
+    implementation(project(Module.Core.logger))
     implementation(project(Module.Core.common))
 
     implementation(libs.appMetrics)

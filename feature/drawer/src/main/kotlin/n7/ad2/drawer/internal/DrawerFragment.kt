@@ -35,7 +35,7 @@ import n7.ad2.drawer.internal.di.DaggerDrawerComponent
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
-import n7.ad2.logger.Logger
+import n7.ad2.app.logger.Logger
 import n7.ad2.provider.Provider
 import javax.inject.Inject
 import kotlin.time.Duration.Companion.seconds
