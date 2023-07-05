@@ -109,7 +109,8 @@ dependencies {
     implementation(project(Module.Core.yandexMetrics))
 
     implementation(project(Module.Feature.streams))
-    implementation(project(Module.Feature.heroesApp))
+    implementation(project(Module.Feature.Heroes.demo))
+    implementation(project(Module.Feature.Heroes.impl))
     implementation(project(Module.Feature.items))
     implementation(project(Module.Feature.games))
     implementation(project(Module.Feature.tournaments))

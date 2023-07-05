@@ -19,6 +19,8 @@ import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
 import n7.ad2.init.YandexMetricsInitializer
 import n7.ad2.app.logger.Logger
+import n7.ad2.heroes.domain.di.HeroesDomainComponent
+import n7.ad2.heroes.domain.di.HeroesDomainDependencies
 import n7.ad2.provider.Provider
 import yandex.metrics.YandexMetrics
 import yandex.metrics.YandexMetricsInit

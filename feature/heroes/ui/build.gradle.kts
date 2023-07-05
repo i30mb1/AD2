@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Feature.heroesDomain))
+    implementation(project(Module.Feature.Heroes.api))
 }

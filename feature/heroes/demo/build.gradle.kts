@@ -10,7 +10,10 @@ dependencies {
     implementation(project(Module.Core.repositories))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.provider))
-    
+
+    implementation(project(Module.Feature.Heroes.ui))
+    implementation(project(Module.Feature.Heroes.api))
+
     api(libs.moshi)
 
     kapt(libs.daggerAnnotation)

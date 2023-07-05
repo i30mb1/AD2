@@ -21,7 +21,7 @@ internal class LoggerImpl(
 
     override fun log(text: String, params: Map<String, Any>) {
         _dataFlow.tryEmit(AppLog(text))
-        aditionalLoggers.forEach { logger -> logger.logEvent(text, params) }
+//        aditionalLoggers.forEach { logger -> logger.logEvent(text, params) }
     }
 
     override fun getSubscriptionCount(): Int = _dataFlow.subscriptionCount.value

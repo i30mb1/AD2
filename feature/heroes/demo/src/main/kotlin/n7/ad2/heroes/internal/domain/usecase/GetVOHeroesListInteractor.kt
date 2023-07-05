@@ -1,37 +1,40 @@
 package n7.ad2.heroes.internal.domain.usecase
 
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.flow.onStart
-import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.database_guides.internal.model.LocalHero
-import n7.ad2.heroes.internal.domain.vo.VOHero
+import kotlinx.coroutines.flow.toList
 import n7.ad2.app.logger.Logger
-import n7.ad2.repositories.HeroRepository
+import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.heroes.domain.GetHeroesUseCase
+import n7.ad2.heroes.domain.Hero
+import n7.ad2.heroes.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
 internal class GetVOHeroesListUseCase @Inject constructor(
+    private val getHeroesUseCase: GetHeroesUseCase,
     private val dispatchers: DispatchersProvider,
-    private val heroRepository: HeroRepository,
     private val logger: Logger,
 ) {
 
     operator fun invoke(): Flow<List<VOHero>> {
-        return heroRepository.getAllHeroes()
+        return getHeroesUseCase()
             .onStart { logger.log("heroes loaded") }
             .mapLatest { list ->
-                val result = mutableListOf<VOHero>()
-                list.groupBy { localHero: LocalHero -> localHero.mainAttr }
-                    .forEach { (mainAttr, hero): Map.Entry<String, List<LocalHero>> ->
-                        result.add(VOHero.Header(HeaderViewHolder.Data(mainAttr)))
-                        result.addAll(hero.map { localHero ->
-                            VOHero.Body(localHero.name, HeroRepository.getFullUrlHeroImage(localHero.name), localHero.viewedByUser)
-                        })
-                    }
-                result.toList()
-            }.flowOn(dispatchers.IO)
+                buildList {
+                    list.groupBy { hero: Hero -> hero.mainAttr }
+                        .forEach { (mainAttr, heroList): Map.Entry<String, List<Hero>> ->
+                            add(VOHero.Header(HeaderViewHolder.Data(mainAttr)))
+                            addAll(heroList.map { hero ->
+                                VOHero.Body(hero.name, hero.avatarUrl, hero.viewedByUser)
+                            })
+                        }
+                }
+            }
+            .flowOn(dispatchers.IO)
     }
-
 }

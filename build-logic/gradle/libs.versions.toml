@@ -15,6 +15,7 @@ detekt = "1.22.0"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
+roomCommon = { module = "androidx.room:room-common", version.ref = "room" }
 roomAnnotation = { module = "androidx.room:room-compiler", version.ref = "room" }
 roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
 roomPaging = "androidx.room:room-paging:2.5.0-alpha03"

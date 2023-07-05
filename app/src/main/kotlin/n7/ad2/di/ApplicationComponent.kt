@@ -9,6 +9,7 @@ import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.drawer.api.DrawerDependencies
 import n7.ad2.games.api.GamesDependencies
 import n7.ad2.heroes.api.HeroesDependencies
+import n7.ad2.heroes.domain.di.HeroesDomainDependencies
 import n7.ad2.heropage.api.HeroPageDependencies
 import n7.ad2.itempage.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
@@ -32,6 +33,7 @@ import n7.ad2.updatemanager.UpdateManagerModule
         AppPreferenceModule::class,
         DatabaseModule::class,
         SpanParserModule::class,
+        HeroesModule::class,
     ]
 )
 interface ApplicationComponent : StreamsDependencies,
