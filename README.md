@@ -1,5 +1,6 @@
 # About Dota 2
 ![Downloads badge][downloads badge]  ![Ratings badge][ratings badge]
+
 All you want to know about dota in one app
 
 [![CC0](readme-files/google-play.png)](https://play.google.com/store/apps/details?id=n7.ad2)
