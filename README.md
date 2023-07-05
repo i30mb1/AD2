@@ -1,5 +1,5 @@
 # About Dota 2
-
+![Downloads badge][downloads badge]  ![Ratings badge][ratings badge]
 All you want to know about dota in one app
 
 [![CC0](readme-files/google-play.png)](https://play.google.com/store/apps/details?id=n7.ad2)
@@ -82,3 +82,6 @@ We have three levels of modules in the application:
 
 1. `Android Studio` -> `File` -> `New` -> `From Version control` -> `Git`
 2. Enter `https://github.com/i30mb1/AD2.git` into URL field an press `Clone` button
+
+[downloads badge]: https://PlayBadges.pavi2410.me/badge/downloads?id=n7.ad2
+[ratings badge]: https://PlayBadges.pavi2410.me/badge/ratings?id=n7.ad2
