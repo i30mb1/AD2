@@ -18,6 +18,8 @@ dependencies {
     implementation(project(Module.Core.spanParser))
     implementation(project(Module.Core.mediaPlayer))
 
+    implementation(project(Module.Feature.Heroes.api))
+
     api(libs.moshi)
 
     kapt(libs.moshiCodegen)

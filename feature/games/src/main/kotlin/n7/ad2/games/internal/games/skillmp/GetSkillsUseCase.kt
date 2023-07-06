@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.flow.transform
 import n7.ad2.AppLocale
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.heroes.domain.GetHeroByNameUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.repositories.model.Ability
@@ -20,6 +21,7 @@ internal class GetSkillsUseCase @Inject constructor(
     private val heroRepository: HeroRepository,
     private val getHeroesUseCase: GetHeroesUseCase,
     private val dispatchers: DispatchersProvider,
+    private val getHeroByNameUseCase: GetHeroByNameUseCase,
 ) {
 
     data class Data(
@@ -40,7 +42,7 @@ internal class GetSkillsUseCase @Inject constructor(
         return getHeroesUseCase()
             .transform { list -> emit(list.random()) }
             .map { hero ->
-                val localHero = heroRepository.getHero(hero.name)
+                val localHero = getHeroByNameUseCase(hero.name)
                 val info = heroRepository.getHeroDescription(localHero.name, AppLocale.English).single()
                 val spell: Ability = info.abilities.first { it.mana != null && it.mana != "" }
                 val spellManaList = spell.mana?.split("/") ?: error("spell ${spell.name} mana is ${spell.mana}")

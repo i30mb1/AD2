@@ -9,14 +9,15 @@ import kotlinx.coroutines.flow.single
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.Resources
+import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.feature.heropage.R
+import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.Hero
 import n7.ad2.heropage.internal.info.HeroStatistics
 import n7.ad2.heropage.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.heropage.internal.info.domain.vo.VOSpell
 import n7.ad2.ktx.toStringList
-import n7.ad2.app.logger.Logger
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.repositories.model.LocalHeroDescription
 import n7.ad2.spanparser.SpanParser
@@ -27,6 +28,7 @@ import javax.inject.Inject
 class GetVOHeroDescriptionUseCase @Inject constructor(
     private val res: Resources,
     private val heroRepository: HeroRepository,
+    private val getHeroByNameUseCase: GetHeroByNameUseCase,
     private val spanParser: SpanParser,
     private val logger: Logger,
     private val dispatchers: DispatchersProvider,
@@ -43,7 +45,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         locale: AppLocale,
         heroInfo: HeroInfo,
     ): Flow<List<VOHeroInfo>> = flow {
-        val localHero = heroRepository.getHero(heroName)
+        val localHero = getHeroByNameUseCase(heroName)
         val info = heroRepository.getHeroDescription(localHero.name, locale).single()
         emit(buildList {
             add(getAttributes(localHero, info, heroInfo))
@@ -85,9 +87,9 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         .onStart { logger.log("parse hero info") }
         .flowOn(dispatchers.IO)
 
-    private fun getAttributes(localHero: LocalHero, info: LocalHeroDescription, heroInfo: HeroInfo): VOHeroInfo.Attributes {
+    private fun getAttributes(hero: Hero, info: LocalHeroDescription, heroInfo: HeroInfo): VOHeroInfo.Attributes {
         return VOHeroInfo.Attributes(
-            HeroRepository.getFullUrlHeroImage(localHero.name),
+            hero.avatarUrl,
             HeroStatistics.Statistics(
                 info.mainAttributes.attrStrength,
                 info.mainAttributes.attrAgility,
