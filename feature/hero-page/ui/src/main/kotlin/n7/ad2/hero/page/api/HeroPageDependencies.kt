@@ -10,15 +10,14 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
 import n7.ad2.heroes.domain.GetGuideForHeroUseCase
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
 import n7.ad2.provider.Provider
-import n7.ad2.repositories.HeroRepository
 import n7.ad2.spanparser.SpanParser
 
 interface HeroPageDependencies : Dependencies {
     val application: Application
     val provider: Provider
     val workManager: WorkManager
-    val heroRepository: HeroRepository
     val logger: Logger
     val moshi: Moshi
     val dispatchersProvider: DispatchersProvider
@@ -27,4 +26,5 @@ interface HeroPageDependencies : Dependencies {
     val spanParser: SpanParser
     val getHeroByNameUseCase: GetHeroByNameUseCase
     val getGuideForHeroUseCase: GetGuideForHeroUseCase
+    val getHeroDescriptionUseCase: GetHeroDescriptionUseCase
 }

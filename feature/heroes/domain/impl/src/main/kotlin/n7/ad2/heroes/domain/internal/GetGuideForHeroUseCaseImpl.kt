@@ -28,11 +28,11 @@ internal class GetGuideForHeroUseCaseImpl(
                             localGuide.heroWinrate,
                             localGuide.heroPopularity,
                             localGuide.detailedGuide.guideTime,
-                            localGuide.hardToWinHeroList.map { HeroWithWinrate(it.heroName, it.heroWinrate) },
-                            localGuide.easyToWinHeroList.map { HeroWithWinrate(it.heroName, it.heroWinrate) },
+                            localGuide.hardToWinHeroList.map { HeroWithWinrate(it.heroName, it.heroWinrate, getFullUrlHeroImage(it.heroName)) },
+                            localGuide.easyToWinHeroList.map { HeroWithWinrate(it.heroName, it.heroWinrate, getFullUrlHeroImage(it.heroName)) },
                             localGuide.detailedGuide.heroStartingHeroItemsList.map { HeroItem(it.itemName, it.itemTime) },
                             localGuide.detailedGuide.heroItemsList.map { HeroItem(it.itemName, it.itemTime) },
-                            localGuide.detailedGuide.heroSpellsList.map { Spell(it.spellName, it.spellOrder) },
+                            localGuide.detailedGuide.heroSpellsList.map { Spell(it.spellName, it.spellOrder, getFullUrlHeroSpell(it.spellName)) },
                         )
                     }
             }

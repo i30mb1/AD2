@@ -15,11 +15,13 @@ class Guide(
 class HeroWithWinrate(
     val heroName: String,
     val heroWinrate: Double,
+    val avatarUrl: String,
 )
 
 class Spell(
     val spellName: String,
     val spellOrder: String,
+    val spellImageUrl: String,
 )
 
 class HeroItem(

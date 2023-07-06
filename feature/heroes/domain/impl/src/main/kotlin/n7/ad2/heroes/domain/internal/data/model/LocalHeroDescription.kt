@@ -1,4 +1,4 @@
-package n7.ad2.repositories.model
+package n7.ad2.heroes.domain.internal.data.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

@@ -1,11 +1,13 @@
 package n7.ad2.di
 
 import com.squareup.moshi.Moshi
+import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.heroes.domain.GetGuideForHeroUseCase
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
 import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.heroes.domain.UpdateStateViewedForHeroUseCase
@@ -21,12 +23,14 @@ object HeroesModule {
         heroesDao: HeroesDao,
         moshi: Moshi,
         dispatchers: DispatchersProvider,
+        appInformation: AppInformation,
     ): HeroesDomainComponent = HeroesDomainComponent(
         object : HeroesDomainDependencies {
             override val res: Resources = res
             override val heroesDao: HeroesDao = heroesDao
             override val moshi: Moshi = moshi
             override val dispatcher = dispatchers
+            override val appLocale = appInformation.appLocale
         }
     )
 
@@ -54,4 +58,9 @@ object HeroesModule {
     fun provideGetGuideForHeroUseCase(
         component: HeroesDomainComponent,
     ): GetGuideForHeroUseCase = component.getGuideForHeroUseCase
+
+    @dagger.Provides
+    fun provideGetHeroDescriptionUseCase(
+        component: HeroesDomainComponent,
+    ): GetHeroDescriptionUseCase = component.getHeroDescriptionUseCase
 }

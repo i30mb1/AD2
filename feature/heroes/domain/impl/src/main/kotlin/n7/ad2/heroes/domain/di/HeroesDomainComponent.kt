@@ -2,11 +2,13 @@ package n7.ad2.heroes.domain.di
 
 import n7.ad2.heroes.domain.GetGuideForHeroUseCase
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
 import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.heroes.domain.UpdateStateViewedForHeroUseCase
 import n7.ad2.heroes.domain.internal.GetGuideForHeroUseCaseImpl
 import n7.ad2.heroes.domain.internal.GetHeroByNameUseCaseImpl
+import n7.ad2.heroes.domain.internal.GetHeroDescriptionUseCaseImpl
 import n7.ad2.heroes.domain.internal.GetHeroSpellInputStreamUseCaseImpl
 import n7.ad2.heroes.domain.internal.GetHeroesUseCaseImpl
 import n7.ad2.heroes.domain.internal.UpdateStateViewedForHeroUseCaseImpl
@@ -19,6 +21,7 @@ interface HeroesDomainComponent {
     val getHeroSpellInputStreamUseCase: GetHeroSpellInputStreamUseCase
     val updateStateViewedForHeroUseCase: UpdateStateViewedForHeroUseCase
     val getGuideForHeroUseCase: GetGuideForHeroUseCase
+    val getHeroDescriptionUseCase: GetHeroDescriptionUseCase
 }
 
 fun HeroesDomainComponent(
@@ -29,6 +32,7 @@ fun HeroesDomainComponent(
         dependencies.res,
         dependencies.heroesDao,
         dependencies.moshi,
+        dependencies.appLocale,
     )
 
     override val getHeroesUseCase = GetHeroesUseCaseImpl(heroesRepository)
@@ -40,4 +44,6 @@ fun HeroesDomainComponent(
     override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository, dependencies.dispatcher)
 
     override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(heroesRepository, dependencies.moshi)
+
+    override val getHeroDescriptionUseCase = GetHeroDescriptionUseCaseImpl(heroesRepository)
 }

@@ -8,23 +8,22 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.flow.transform
-import n7.ad2.AppLocale
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.heroes.domain.Ability
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
 import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
-import n7.ad2.repositories.HeroRepository
-import n7.ad2.repositories.model.Ability
 import javax.inject.Inject
 import kotlin.random.Random
 import kotlin.random.nextInt
 
 internal class GetSkillsUseCase @Inject constructor(
-    private val heroRepository: HeroRepository,
     private val getHeroesUseCase: GetHeroesUseCase,
     private val dispatchers: DispatchersProvider,
     private val getHeroByNameUseCase: GetHeroByNameUseCase,
     private val getHeroSpellInputStreamUseCase: GetHeroSpellInputStreamUseCase,
+    private val getHeroDescriptionUseCase: GetHeroDescriptionUseCase,
 ) {
 
     data class Data(
@@ -46,7 +45,7 @@ internal class GetSkillsUseCase @Inject constructor(
             .transform { list -> emit(list.random()) }
             .map { hero ->
                 val localHero = getHeroByNameUseCase(hero.name)
-                val info = heroRepository.getHeroDescription(localHero.name, AppLocale.English).single()
+                val info = getHeroDescriptionUseCase(localHero.name).single()
                 val spell: Ability = info.abilities.first { it.mana != null && it.mana != "" }
                 val spellManaList = spell.mana?.split("/") ?: error("spell ${spell.name} mana is ${spell.mana}")
                 val spellMana = spellManaList.random()
@@ -63,11 +62,10 @@ internal class GetSkillsUseCase @Inject constructor(
                     .map { mana -> Spell(mana, spellMana == mana) }
                     .shuffled()
                 val skillImage = getHeroSpellInputStreamUseCase(spell.name).use { BitmapFactory.decodeStream(it) }
-                val skillImageUrl = HeroRepository.getFullUrlHeroSpell(spell.name)
                 val palette = Palette.from(skillImage).generate()
                 val backgroundColor = palette.vibrantSwatch?.rgb ?: Color.TRANSPARENT
                 Data(
-                    skillImageUrl,
+                    spell.imageUrl,
                     localHero.name,
                     spellMana,
                     backgroundColor,

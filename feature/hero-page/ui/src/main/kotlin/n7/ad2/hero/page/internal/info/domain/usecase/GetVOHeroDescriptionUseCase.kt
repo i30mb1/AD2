@@ -16,10 +16,10 @@ import n7.ad2.hero.page.internal.info.HeroStatistics
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero.page.internal.info.domain.vo.VOSpell
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
 import n7.ad2.heroes.domain.Hero
+import n7.ad2.heroes.domain.HeroDescription
 import n7.ad2.ktx.toStringList
-import n7.ad2.repositories.HeroRepository
-import n7.ad2.repositories.model.LocalHeroDescription
 import n7.ad2.spanparser.SpanParser
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder
@@ -27,7 +27,7 @@ import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
     private val res: Resources,
-    private val heroRepository: HeroRepository,
+    private val getHeroDescriptionUseCase: GetHeroDescriptionUseCase,
     private val getHeroByNameUseCase: GetHeroByNameUseCase,
     private val spanParser: SpanParser,
     private val logger: Logger,
@@ -46,7 +46,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         heroInfo: HeroInfo,
     ): Flow<List<VOHeroInfo>> = flow {
         val localHero = getHeroByNameUseCase(heroName)
-        val info = heroRepository.getHeroDescription(localHero.name, locale).single()
+        val info = getHeroDescriptionUseCase(localHero.name).single()
         emit(buildList {
             add(getAttributes(localHero, info, heroInfo))
             add(getSpells(info, heroInfo))
@@ -88,7 +88,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         .onStart { logger.log("parse hero info") }
         .flowOn(dispatchers.IO)
 
-    private fun getAttributes(hero: Hero, info: LocalHeroDescription, heroInfo: HeroInfo): VOHeroInfo.Attributes {
+    private fun getAttributes(hero: Hero, info: HeroDescription, heroInfo: HeroInfo): VOHeroInfo.Attributes {
         return VOHeroInfo.Attributes(
             hero.avatarUrl,
             HeroStatistics.Statistics(
@@ -100,11 +100,11 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         )
     }
 
-    private fun getSpells(info: LocalHeroDescription, heroInfo: HeroInfo): VOHeroInfo.Spells {
+    private fun getSpells(info: HeroDescription, heroInfo: HeroInfo): VOHeroInfo.Spells {
         val spells = info.abilities.map { ability ->
             val name = ability.name
             val isSelected = (heroInfo as? HeroInfo.Spell)?.name == ability.name
-            val urlSpellImage = HeroRepository.getFullUrlHeroSpell(ability.name)
+            val urlSpellImage = ability.imageUrl
             when (name) {
                 "Talent" -> VOSpell.Talent(name, isSelected)
                 else -> VOSpell.Simple(name, urlSpellImage, isSelected)

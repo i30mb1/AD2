@@ -5,7 +5,6 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.hero.page.internal.responses.domain.model.LocalHeroResponsesItem
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponseImage
-import n7.ad2.repositories.HeroRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
 import java.io.File
 import javax.inject.Inject
@@ -42,11 +41,11 @@ class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
 
                 val icons = response.icons.map { iconPath ->
                     val iconHeroName = iconPath.substringBeforeLast("/").substringAfter("/")
-                    val url = HeroRepository.getFullUrlHeroMinimap(iconHeroName)
+                    val url = "HeroRepository.getFullUrlHeroMinimap(iconHeroName)"
                     VOResponseImage(iconHeroName, url)
                 }
                 if (response.isArcane) {
-                    val arcaneItem = VOResponseImage("Arcane", HeroRepository.getFullUrlHeroArcane(heroName))
+                    val arcaneItem = VOResponseImage("Arcane", "HeroRepository.getFullUrlHeroArcane(heroName)")
                     (icons as MutableList).add(0, arcaneItem)
                 }
 
