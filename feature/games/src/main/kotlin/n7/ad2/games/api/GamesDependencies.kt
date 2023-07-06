@@ -5,6 +5,7 @@ import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
 import n7.ad2.app.logger.Logger
+import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.repositories.HeroRepository
 
 interface GamesDependencies : Dependencies {
@@ -13,4 +14,5 @@ interface GamesDependencies : Dependencies {
     val logger: Logger
     val heroRepository: HeroRepository
     val dispatchersProvider: DispatchersProvider
+    val getHeroesUseCase: GetHeroesUseCase
 }

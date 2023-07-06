@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.flow.transform
 import n7.ad2.AppLocale
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.repositories.model.Ability
 import javax.inject.Inject
@@ -17,6 +18,7 @@ import kotlin.random.nextInt
 
 internal class GetSkillsUseCase @Inject constructor(
     private val heroRepository: HeroRepository,
+    private val getHeroesUseCase: GetHeroesUseCase,
     private val dispatchers: DispatchersProvider,
 ) {
 
@@ -35,7 +37,7 @@ internal class GetSkillsUseCase @Inject constructor(
     )
 
     operator fun invoke(): Flow<Data> {
-        return heroRepository.getAllHeroes()
+        return getHeroesUseCase()
             .transform { list -> emit(list.random()) }
             .map { hero ->
                 val localHero = heroRepository.getHero(hero.name)

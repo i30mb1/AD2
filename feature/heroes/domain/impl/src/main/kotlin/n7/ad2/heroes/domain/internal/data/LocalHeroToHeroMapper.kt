@@ -7,7 +7,7 @@ internal object LocalHeroToHeroMapper : (LocalHero) -> Hero {
 
     override operator fun invoke(from: LocalHero) = Hero(
         from.name,
-        "",
+        "file:///android_asset/heroes/${from.name.lowercase()}/full.png",
         from.viewedByUser,
         from.mainAttr,
     )

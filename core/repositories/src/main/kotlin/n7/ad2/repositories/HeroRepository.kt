@@ -33,10 +33,6 @@ class HeroRepository @Inject constructor(
         return res.getAssets("spell/$spellName.webp").use { BitmapFactory.decodeStream(it) }
     }
 
-    fun getAllHeroes(): Flow<List<LocalHero>> {
-        return heroesDao.getAllHeroes()
-    }
-
     fun updateViewedByUserFieldForName(name: String) {
         heroesDao.updateViewedByUserFieldForName(name)
     }
