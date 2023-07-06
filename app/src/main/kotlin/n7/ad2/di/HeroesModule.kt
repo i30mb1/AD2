@@ -2,6 +2,7 @@ package n7.ad2.di
 
 import com.squareup.moshi.Moshi
 import n7.ad2.Resources
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.heroes.domain.GetGuideForHeroUseCase
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
@@ -19,11 +20,13 @@ object HeroesModule {
         res: Resources,
         heroesDao: HeroesDao,
         moshi: Moshi,
+        dispatchers: DispatchersProvider,
     ): HeroesDomainComponent = HeroesDomainComponent(
         object : HeroesDomainDependencies {
             override val res: Resources = res
             override val heroesDao: HeroesDao = heroesDao
             override val moshi: Moshi = moshi
+            override val dispatcher = dispatchers
         }
     )
 

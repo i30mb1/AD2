@@ -37,7 +37,7 @@ fun HeroesDomainComponent(
 
     override val getHeroSpellInputStreamUseCase = GetHeroSpellInputStreamUseCaseImpl(heroesRepository)
 
-    override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository)
+    override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository, dependencies.dispatcher)
 
     override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(heroesRepository, dependencies.moshi)
 }

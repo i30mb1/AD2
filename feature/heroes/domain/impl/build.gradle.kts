@@ -8,8 +8,8 @@ dependencies {
 
     implementation(project(Module.Core.database))
     implementation(project(Module.Core.common))
+    implementation(project(Module.Core.coroutines))
 
-    implementation(libs.coroutines)
     implementation(libs.moshi)
     
     kapt(libs.moshiCodegen)
