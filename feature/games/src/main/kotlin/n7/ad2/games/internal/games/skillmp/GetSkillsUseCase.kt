@@ -1,5 +1,6 @@
 package n7.ad2.games.internal.games.skillmp
 
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import androidx.palette.graphics.Palette
 import kotlinx.coroutines.flow.Flow
@@ -10,6 +11,7 @@ import kotlinx.coroutines.flow.transform
 import n7.ad2.AppLocale
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.repositories.HeroRepository
 import n7.ad2.repositories.model.Ability
@@ -22,6 +24,7 @@ internal class GetSkillsUseCase @Inject constructor(
     private val getHeroesUseCase: GetHeroesUseCase,
     private val dispatchers: DispatchersProvider,
     private val getHeroByNameUseCase: GetHeroByNameUseCase,
+    private val getHeroSpellInputStreamUseCase: GetHeroSpellInputStreamUseCase,
 ) {
 
     data class Data(
@@ -59,7 +62,7 @@ internal class GetSkillsUseCase @Inject constructor(
                 }
                     .map { mana -> Spell(mana, spellMana == mana) }
                     .shuffled()
-                val skillImage = heroRepository.getSpellBitmap(spell.name)
+                val skillImage = getHeroSpellInputStreamUseCase(spell.name).use { BitmapFactory.decodeStream(it) }
                 val skillImageUrl = HeroRepository.getFullUrlHeroSpell(spell.name)
                 val palette = Palette.from(skillImage).generate()
                 val backgroundColor = palette.vibrantSwatch?.rgb ?: Color.TRANSPARENT

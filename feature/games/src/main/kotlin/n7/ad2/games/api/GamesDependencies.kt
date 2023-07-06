@@ -6,6 +6,7 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.repositories.HeroRepository
 
@@ -17,4 +18,5 @@ interface GamesDependencies : Dependencies {
     val dispatchersProvider: DispatchersProvider
     val getHeroesUseCase: GetHeroesUseCase
     val getHeroByNameUseCase: GetHeroByNameUseCase
+    val getHeroSpellInputStreamUseCase: GetHeroSpellInputStreamUseCase
 }

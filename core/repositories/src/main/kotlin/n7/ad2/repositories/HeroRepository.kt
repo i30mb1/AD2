@@ -2,8 +2,6 @@
 
 package n7.ad2.repositories
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -26,10 +24,6 @@ class HeroRepository @Inject constructor(
         fun getFullUrlHeroImage(heroName: String) = "file:///android_asset/heroes/$heroName/full.png"
         fun getFullUrlHeroArcane(heroName: String) = "file:///android_asset/heroes/$heroName/arcane.webp"
         fun getFullUrlHeroSpell(spellName: String) = "file:///android_asset/images/${spellName.replace(" ", "_")}.webp"
-    }
-
-    suspend fun getSpellBitmap(spellName: String): Bitmap {
-        return res.getAssets("spell/$spellName.webp").use { BitmapFactory.decodeStream(it) }
     }
 
     fun updateViewedByUserFieldForName(name: String) {
