@@ -9,9 +9,9 @@ import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHardToWinHeroes
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHeroItems
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideSpellBuild
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideStartingHeroItems
-import n7.ad2.heroes.domain.HeroItem
-import n7.ad2.heroes.domain.HeroWithWinrate
-import n7.ad2.heroes.domain.Spell
+import n7.ad2.heroes.domain.model.HeroItem
+import n7.ad2.heroes.domain.model.HeroWithWinrate
+import n7.ad2.heroes.domain.model.Spell
 import n7.ad2.repositories.ItemRepository
 
 fun List<HeroWithWinrate>.toVOHardToWinHeroes(): VOGuideHardToWinHeroes = VOGuideHardToWinHeroes(map { it.toVOHeroFlowItem() })

@@ -15,10 +15,10 @@ import n7.ad2.feature.heropage.ui.R
 import n7.ad2.hero.page.internal.info.HeroStatistics
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero.page.internal.info.domain.vo.VOSpell
-import n7.ad2.heroes.domain.GetHeroByNameUseCase
-import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
-import n7.ad2.heroes.domain.Hero
-import n7.ad2.heroes.domain.HeroDescription
+import n7.ad2.heroes.domain.model.Hero
+import n7.ad2.heroes.domain.model.HeroDescription
+import n7.ad2.heroes.domain.usecase.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroDescriptionUseCase
 import n7.ad2.ktx.toStringList
 import n7.ad2.spanparser.SpanParser
 import n7.ad2.ui.adapter.BodyViewHolder

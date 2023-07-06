@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.onStart
 import n7.ad2.hero.page.internal.guides.domain.usecase.ConvertLocalGuideJsonToVOGuideItemsUseCase
 import n7.ad2.hero.page.internal.guides.domain.usecase.LoadNewHeroGuideUseCase
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideItem
-import n7.ad2.heroes.domain.GetGuideForHeroUseCase
+import n7.ad2.heroes.domain.usecase.GetGuideForHeroUseCase
 import javax.inject.Inject
 
 class GetVOHeroGuideItemsUseCase @Inject constructor(

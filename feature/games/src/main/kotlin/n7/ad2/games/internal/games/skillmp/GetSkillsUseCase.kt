@@ -9,11 +9,11 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.flow.transform
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.heroes.domain.Ability
-import n7.ad2.heroes.domain.GetHeroByNameUseCase
-import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
-import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
-import n7.ad2.heroes.domain.GetHeroesUseCase
+import n7.ad2.heroes.domain.model.Ability
+import n7.ad2.heroes.domain.usecase.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroDescriptionUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroSpellInputStreamUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
 import javax.inject.Inject
 import kotlin.random.Random
 import kotlin.random.nextInt

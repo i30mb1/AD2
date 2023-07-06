@@ -1,4 +1,4 @@
-package n7.ad2.heroes.domain
+package n7.ad2.heroes.domain.model
 
 class Guide(
     val heroName: String,

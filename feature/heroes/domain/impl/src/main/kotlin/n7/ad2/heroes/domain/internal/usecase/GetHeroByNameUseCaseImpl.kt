@@ -1,8 +1,9 @@
-package n7.ad2.heroes.domain.internal
+package n7.ad2.heroes.domain.internal.usecase
 
-import n7.ad2.heroes.domain.GetHeroByNameUseCase
-import n7.ad2.heroes.domain.Hero
+import n7.ad2.heroes.domain.internal.HeroesRepository
 import n7.ad2.heroes.domain.internal.data.LocalHeroToHeroMapper
+import n7.ad2.heroes.domain.model.Hero
+import n7.ad2.heroes.domain.usecase.GetHeroByNameUseCase
 
 internal class GetHeroByNameUseCaseImpl(
     private val heroesRepository: HeroesRepository,

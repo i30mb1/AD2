@@ -8,8 +8,8 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.api.dao.ItemsDao
-import n7.ad2.heroes.domain.GetHeroesUseCase
-import n7.ad2.heroes.domain.UpdateStateViewedForHeroUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
+import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
 import n7.ad2.provider.Provider
 
 interface HeroesDependencies : Dependencies {

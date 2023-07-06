@@ -5,10 +5,10 @@ import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
-import n7.ad2.heroes.domain.GetHeroByNameUseCase
-import n7.ad2.heroes.domain.GetHeroDescriptionUseCase
-import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
-import n7.ad2.heroes.domain.GetHeroesUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroByNameUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroDescriptionUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroSpellInputStreamUseCase
+import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
 
 interface GamesDependencies : Dependencies {
     val application: Application

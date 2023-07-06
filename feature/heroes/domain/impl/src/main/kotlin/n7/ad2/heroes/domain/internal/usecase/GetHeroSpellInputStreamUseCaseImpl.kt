@@ -1,6 +1,7 @@
-package n7.ad2.heroes.domain.internal
+package n7.ad2.heroes.domain.internal.usecase
 
-import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
+import n7.ad2.heroes.domain.internal.HeroesRepository
+import n7.ad2.heroes.domain.usecase.GetHeroSpellInputStreamUseCase
 import java.io.InputStream
 
 internal class GetHeroSpellInputStreamUseCaseImpl(

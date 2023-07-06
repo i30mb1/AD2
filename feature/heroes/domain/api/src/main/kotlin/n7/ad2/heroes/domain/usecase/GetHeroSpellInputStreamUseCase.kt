@@ -1,4 +1,4 @@
-package n7.ad2.heroes.domain
+package n7.ad2.heroes.domain.usecase
 
 import java.io.InputStream
 

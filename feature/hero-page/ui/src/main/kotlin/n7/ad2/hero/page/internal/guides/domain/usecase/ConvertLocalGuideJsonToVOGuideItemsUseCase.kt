@@ -12,7 +12,7 @@ import n7.ad2.hero.page.internal.guides.domain.adapter.toVOHardToWinHeroes
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideInfoLine
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideItem
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideTitle
-import n7.ad2.heroes.domain.Guide
+import n7.ad2.heroes.domain.model.Guide
 import javax.inject.Inject
 
 class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
