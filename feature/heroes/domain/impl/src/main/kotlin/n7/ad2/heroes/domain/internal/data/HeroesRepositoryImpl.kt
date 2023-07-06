@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import n7.ad2.Resources
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.internal.model.LocalHero
+import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
 import n7.ad2.heroes.domain.internal.HeroesRepository
 import java.io.InputStream
 
@@ -16,6 +17,10 @@ internal class HeroesRepositoryImpl(
 
     override fun getAllHeroes(): Flow<List<LocalHero>> {
         return heroesDao.getAllHeroes()
+    }
+
+    override fun getHeroWithGuides(name: String): Flow<LocalHeroWithGuides> {
+        return heroesDao.getHeroWithGuides(name)
     }
 
     override suspend fun getHero(name: String): LocalHero {

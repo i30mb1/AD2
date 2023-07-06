@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.flow
 import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.database_guides.api.dao.HeroesDao
-import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
 import n7.ad2.repositories.model.LocalHeroDescription
 import javax.inject.Inject
 
@@ -24,10 +23,6 @@ class HeroRepository @Inject constructor(
         fun getFullUrlHeroImage(heroName: String) = "file:///android_asset/heroes/$heroName/full.png"
         fun getFullUrlHeroArcane(heroName: String) = "file:///android_asset/heroes/$heroName/arcane.webp"
         fun getFullUrlHeroSpell(spellName: String) = "file:///android_asset/images/${spellName.replace(" ", "_")}.webp"
-    }
-
-    fun getHeroWithGuides(heroName: String): Flow<LocalHeroWithGuides> {
-        return heroesDao.getHeroWithGuides(heroName)
     }
 
     fun getHeroDescription(heroName: String, appLocale: AppLocale): Flow<LocalHeroDescription> {

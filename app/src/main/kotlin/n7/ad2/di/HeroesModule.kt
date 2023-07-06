@@ -3,6 +3,7 @@ package n7.ad2.di
 import com.squareup.moshi.Moshi
 import n7.ad2.Resources
 import n7.ad2.database_guides.api.dao.HeroesDao
+import n7.ad2.heroes.domain.GetGuideForHeroUseCase
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
 import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
@@ -45,4 +46,9 @@ object HeroesModule {
     fun provideUpdateStateViewedForHeroUseCase(
         component: HeroesDomainComponent,
     ): UpdateStateViewedForHeroUseCase = component.updateStateViewedForHeroUseCase
+
+    @dagger.Provides
+    fun provideGetGuideForHeroUseCase(
+        component: HeroesDomainComponent,
+    ): GetGuideForHeroUseCase = component.getGuideForHeroUseCase
 }

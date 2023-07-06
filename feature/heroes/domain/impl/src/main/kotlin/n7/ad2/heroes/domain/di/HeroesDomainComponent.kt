@@ -1,9 +1,11 @@
 package n7.ad2.heroes.domain.di
 
+import n7.ad2.heroes.domain.GetGuideForHeroUseCase
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
 import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
 import n7.ad2.heroes.domain.UpdateStateViewedForHeroUseCase
+import n7.ad2.heroes.domain.internal.GetGuideForHeroUseCaseImpl
 import n7.ad2.heroes.domain.internal.GetHeroByNameUseCaseImpl
 import n7.ad2.heroes.domain.internal.GetHeroSpellInputStreamUseCaseImpl
 import n7.ad2.heroes.domain.internal.GetHeroesUseCaseImpl
@@ -16,6 +18,7 @@ interface HeroesDomainComponent {
     val getHeroByNameUseCase: GetHeroByNameUseCase
     val getHeroSpellInputStreamUseCase: GetHeroSpellInputStreamUseCase
     val updateStateViewedForHeroUseCase: UpdateStateViewedForHeroUseCase
+    val getGuideForHeroUseCase: GetGuideForHeroUseCase
 }
 
 fun HeroesDomainComponent(
@@ -35,4 +38,6 @@ fun HeroesDomainComponent(
     override val getHeroSpellInputStreamUseCase = GetHeroSpellInputStreamUseCaseImpl(heroesRepository)
 
     override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository)
+
+    override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(heroesRepository, dependencies.moshi)
 }

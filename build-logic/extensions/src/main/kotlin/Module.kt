@@ -31,7 +31,13 @@ object Module {
             const val ui = ":feature:heroes:ui"
         }
 
-        const val heroPage = ":feature:hero-page"
+        object HeroPage {
+            const val api = ":feature:hero-page:domain:api"
+            const val impl = ":feature:hero-page:domain:impl"
+            const val demo = ":feature:hero-page:demo"
+            const val ui = ":feature:hero-page:ui"
+        }
+
         const val itemPage = ":feature:item-page"
         const val settings = ":feature:settings"
         const val items = ":feature:items"
