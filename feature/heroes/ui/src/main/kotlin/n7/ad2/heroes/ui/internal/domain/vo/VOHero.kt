@@ -1,4 +1,4 @@
-package n7.ad2.heroes.internal.domain.vo
+package n7.ad2.heroes.ui.internal.domain.vo
 
 import n7.ad2.ui.adapter.HeaderViewHolder
 

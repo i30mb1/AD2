@@ -1,4 +1,4 @@
-package n7.ad2.heroes.internal.adapter
+package n7.ad2.heroes.ui.internal.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.feature.heroes.demo.R
-import n7.ad2.heroes.internal.domain.vo.VOHero
+import n7.ad2.feature.heroes.ui.R
+import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
 
 internal class HeroesListAdapter(

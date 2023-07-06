@@ -1,4 +1,4 @@
-package n7.ad2.heroes.internal.domain.usecase
+package n7.ad2.heroes.ui.internal.domain.usecase
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
@@ -8,7 +8,7 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.domain.model.Hero
 import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
-import n7.ad2.heroes.internal.domain.vo.VOHero
+import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 

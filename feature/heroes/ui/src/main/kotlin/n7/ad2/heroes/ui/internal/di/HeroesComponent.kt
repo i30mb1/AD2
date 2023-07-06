@@ -1,8 +1,8 @@
-package n7.ad2.heroes.internal.di
+package n7.ad2.heroes.ui.internal.di
 
-import n7.ad2.heroes.api.HeroesDependencies
-import n7.ad2.heroes.internal.HeroesFragment
-import n7.ad2.heroes.internal.HeroesViewModel
+import n7.ad2.heroes.ui.api.HeroesDependencies
+import n7.ad2.heroes.ui.internal.HeroesFragment
+import n7.ad2.heroes.ui.internal.HeroesViewModel
 
 @dagger.Component(
     dependencies = [

@@ -1,4 +1,4 @@
-package n7.ad2.heroes.internal
+package n7.ad2.heroes.ui.internal
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -12,9 +12,9 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
-import n7.ad2.heroes.internal.domain.usecase.FilterHeroesUseCase
-import n7.ad2.heroes.internal.domain.usecase.GetVOHeroesListUseCase
-import n7.ad2.heroes.internal.domain.vo.VOHero
+import n7.ad2.heroes.ui.internal.domain.usecase.FilterHeroesUseCase
+import n7.ad2.heroes.ui.internal.domain.usecase.GetVOHeroesListUseCase
+import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 
 internal class HeroesViewModel @AssistedInject constructor(
     getVOHeroesListUseCase: GetVOHeroesListUseCase,

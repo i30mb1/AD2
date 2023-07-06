@@ -1,8 +1,8 @@
-package n7.ad2.heroes.internal.domain.usecase
+package n7.ad2.heroes.ui.internal.domain.usecase
 
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.heroes.internal.domain.vo.VOHero
+import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import javax.inject.Inject
 
 internal class FilterHeroesUseCase @Inject constructor(

@@ -1,4 +1,4 @@
-package n7.ad2.heroes.api
+package n7.ad2.heroes.ui.api
 
 import android.app.Application
 import com.squareup.moshi.Moshi

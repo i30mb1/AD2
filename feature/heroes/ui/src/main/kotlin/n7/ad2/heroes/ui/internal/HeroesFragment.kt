@@ -1,4 +1,4 @@
-package n7.ad2.heroes.internal
+package n7.ad2.heroes.ui.internal
 
 import android.content.Context
 import android.os.Bundle
@@ -17,12 +17,12 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getNavigator
-import n7.ad2.feature.heroes.demo.R
-import n7.ad2.feature.heroes.demo.databinding.FragmentHeroesBinding
-import n7.ad2.heroes.internal.adapter.HeroesItemDecorator
-import n7.ad2.heroes.internal.adapter.HeroesListAdapter
-import n7.ad2.heroes.internal.di.DaggerHeroesComponent
-import n7.ad2.heroes.internal.domain.vo.VOHero
+import n7.ad2.feature.heroes.ui.R
+import n7.ad2.feature.heroes.ui.databinding.FragmentHeroesBinding
+import n7.ad2.heroes.ui.internal.adapter.HeroesItemDecorator
+import n7.ad2.heroes.ui.internal.adapter.HeroesListAdapter
+import n7.ad2.heroes.ui.internal.di.DaggerHeroesComponent
+import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.provider.Provider

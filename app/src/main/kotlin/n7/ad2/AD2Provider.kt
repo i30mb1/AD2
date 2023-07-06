@@ -3,7 +3,6 @@ package n7.ad2
 import n7.ad2.drawer.api.DrawerProvider
 import n7.ad2.games.api.GamesProvider
 import n7.ad2.hero.page.api.HeroPageProvider
-import n7.ad2.heroes.api.HeroesProvider
 import n7.ad2.itempage.api.ItemPageProvider
 import n7.ad2.items.api.ItemsProvider
 import n7.ad2.news.api.NewsProvider
@@ -23,7 +22,7 @@ import n7.ad2.tournaments.api.TournamentsProvider
 
 object AD2Provider : Provider {
     override val streamApi: StreamsApi = StreamsProvider()
-    override val heroesApi: HeroesApi = HeroesProvider()
+    override val heroesApi: HeroesApi = n7.ad2.heroes.ui.api.HeroesProvider()
     override val itemsApi: ItemsApi = ItemsProvider()
     override val gamesApi: GamesApi = GamesProvider()
     override val tournamentsApi = TournamentsProvider()
