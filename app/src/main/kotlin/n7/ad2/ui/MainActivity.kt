@@ -12,13 +12,13 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
 import androidx.fragment.app.strictmode.FragmentStrictMode
-import n7.ad2.BuildConfig
+import n7.ad2.AppInformation
 import n7.ad2.android.Navigator
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
+import n7.ad2.app.logger.Logger
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.di.injector
-import n7.ad2.app.logger.Logger
 import n7.ad2.provider.Provider
 import n7.ad2.updatemanager.IsNewAppVersionAvailable
 import javax.inject.Inject
@@ -28,6 +28,7 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
     @Inject lateinit var provider: Provider
     @Inject lateinit var logger: Logger
     @Inject lateinit var isNewAppVersionAvailable: IsNewAppVersionAvailable
+    @Inject lateinit var appInformation: AppInformation
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
     override var shouldKeepOnScreen = true
@@ -65,7 +66,7 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
     }
 
     private fun setupFragmentStrictPolicy() {
-        if (BuildConfig.DEBUG) {
+        if (appInformation.isDebug) {
             supportFragmentManager.strictModePolicy = FragmentStrictMode.Policy.Builder()
                 .penaltyDeath()
                 .detectFragmentReuse()
