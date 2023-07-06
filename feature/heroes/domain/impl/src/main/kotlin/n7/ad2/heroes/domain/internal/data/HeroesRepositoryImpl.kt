@@ -25,4 +25,8 @@ internal class HeroesRepositoryImpl(
     override suspend fun getSpellInputStream(spellName: String): InputStream {
         return res.getAssets("spell/$spellName.webp")
     }
+
+    override fun updateViewedByUserFieldForName(name: String) {
+        heroesDao.updateViewedByUserFieldForName(name)
+    }
 }

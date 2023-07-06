@@ -11,15 +11,15 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import n7.ad2.heroes.domain.UpdateStateViewedForHeroUseCase
 import n7.ad2.heroes.internal.domain.usecase.FilterHeroesUseCase
 import n7.ad2.heroes.internal.domain.usecase.GetVOHeroesListUseCase
-import n7.ad2.heroes.internal.domain.usecase.UpdateViewedByUserFieldUseCase
 import n7.ad2.heroes.internal.domain.vo.VOHero
 
 internal class HeroesViewModel @AssistedInject constructor(
     getVOHeroesListUseCase: GetVOHeroesListUseCase,
     private val filterHeroesUseCase: FilterHeroesUseCase,
-    private val updateViewedByUserFieldUseCase: UpdateViewedByUserFieldUseCase,
+    private val updateStateViewedForHeroUseCase: UpdateStateViewedForHeroUseCase,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -44,7 +44,7 @@ internal class HeroesViewModel @AssistedInject constructor(
     }
 
     fun updateViewedByUserFieldForHero(name: String) = viewModelScope.launch {
-        updateViewedByUserFieldUseCase(name)
+        updateStateViewedForHeroUseCase(name)
     }
 
 }

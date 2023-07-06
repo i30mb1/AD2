@@ -6,6 +6,7 @@ import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.heroes.domain.GetHeroByNameUseCase
 import n7.ad2.heroes.domain.GetHeroSpellInputStreamUseCase
 import n7.ad2.heroes.domain.GetHeroesUseCase
+import n7.ad2.heroes.domain.UpdateStateViewedForHeroUseCase
 import n7.ad2.heroes.domain.di.HeroesDomainComponent
 import n7.ad2.heroes.domain.di.HeroesDomainDependencies
 
@@ -39,4 +40,9 @@ object HeroesModule {
     fun provideGetHeroSpellInputStreamUseCase(
         component: HeroesDomainComponent,
     ): GetHeroSpellInputStreamUseCase = component.getHeroSpellInputStreamUseCase
+
+    @dagger.Provides
+    fun provideUpdateStateViewedForHeroUseCase(
+        component: HeroesDomainComponent,
+    ): UpdateStateViewedForHeroUseCase = component.updateStateViewedForHeroUseCase
 }

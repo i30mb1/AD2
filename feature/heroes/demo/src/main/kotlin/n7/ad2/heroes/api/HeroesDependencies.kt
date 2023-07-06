@@ -3,12 +3,13 @@ package n7.ad2.heroes.api
 import android.app.Application
 import com.squareup.moshi.Moshi
 import n7.ad2.Resources
+import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
-import n7.ad2.app.logger.Logger
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.heroes.domain.GetHeroesUseCase
+import n7.ad2.heroes.domain.UpdateStateViewedForHeroUseCase
 import n7.ad2.provider.Provider
 
 interface HeroesDependencies : Dependencies {
@@ -21,4 +22,5 @@ interface HeroesDependencies : Dependencies {
     val moshi: Moshi
     val getHeroesUseCase: GetHeroesUseCase
     val dispatchersProvider: DispatchersProvider
+    val updateStateViewedForHeroUseCase: UpdateStateViewedForHeroUseCase
 }

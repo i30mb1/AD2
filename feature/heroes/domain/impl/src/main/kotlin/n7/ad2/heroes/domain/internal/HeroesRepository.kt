@@ -9,4 +9,5 @@ internal interface HeroesRepository {
     fun getAllHeroes(): Flow<List<LocalHero>>
     suspend fun getHero(name: String): LocalHero
     suspend fun getSpellInputStream(spellName: String): InputStream
+    fun updateViewedByUserFieldForName(name: String)
 }

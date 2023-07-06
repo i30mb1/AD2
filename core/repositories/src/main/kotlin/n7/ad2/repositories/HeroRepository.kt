@@ -26,14 +26,9 @@ class HeroRepository @Inject constructor(
         fun getFullUrlHeroSpell(spellName: String) = "file:///android_asset/images/${spellName.replace(" ", "_")}.webp"
     }
 
-    fun updateViewedByUserFieldForName(name: String) {
-        heroesDao.updateViewedByUserFieldForName(name)
-    }
-
     fun getHeroWithGuides(heroName: String): Flow<LocalHeroWithGuides> {
         return heroesDao.getHeroWithGuides(heroName)
     }
-
 
     fun getHeroDescription(heroName: String, appLocale: AppLocale): Flow<LocalHeroDescription> {
         return flow {
