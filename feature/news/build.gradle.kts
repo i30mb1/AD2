@@ -14,7 +14,7 @@ dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.provider))
+    implementation(project(Module.Core.navigator))
     implementation(project(Module.Core.database))
     implementation(project(Module.Core.appPreference))
 

@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
-import n7.ad2.android.getNavigator
+import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.feature.items.R
 import n7.ad2.feature.items.databinding.FragmentItemsBinding
 import n7.ad2.items.internal.adapter.ItemsItemDecorator
@@ -22,7 +22,7 @@ import n7.ad2.items.internal.adapter.ItemsListAdapter
 import n7.ad2.items.internal.di.DaggerItemsComponent
 import n7.ad2.items.internal.domain.vo.VOItem
 import n7.ad2.ktx.viewModel
-import n7.ad2.provider.Provider
+import n7.ad2.navigator.Navigator
 import javax.inject.Inject
 
 internal class ItemsFragment : Fragment(R.layout.fragment_items) {
@@ -32,7 +32,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     @Inject lateinit var itemsViewModelFactory: ItemsViewModel.Factory
-    @Inject lateinit var provider: Provider
+    @Inject lateinit var navigator: Navigator
 
     private var _binding: FragmentItemsBinding? = null
     private val binding: FragmentItemsBinding get() = _binding!!
@@ -57,7 +57,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     private fun onItemClick(model: VOItem.Body, view: ImageView) {
-        getNavigator.setMainFragment(provider.itemPageApi.getItemPageFragment(model.name)) {
+        getMainFragmentNavigator.setMainFragment(navigator.itemPageApi.getItemPageFragment(model.name)) {
             setReorderingAllowed(true)
             addSharedElement(view, view.transitionName)
             addToBackStack(null)

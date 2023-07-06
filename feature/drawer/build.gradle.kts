@@ -9,7 +9,7 @@ dependencies {
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.ui))
-    implementation(project(Module.Core.provider))
+    implementation(project(Module.Core.navigator))
     implementation(project(Module.Core.appPreference))
     implementation(project(Module.Core.retrofit))
 

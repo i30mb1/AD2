@@ -16,7 +16,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
-import n7.ad2.android.getNavigator
+import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.feature.heroes.ui.R
 import n7.ad2.feature.heroes.ui.databinding.FragmentHeroesBinding
 import n7.ad2.heroes.ui.internal.adapter.HeroesItemDecorator
@@ -25,7 +25,7 @@ import n7.ad2.heroes.ui.internal.di.DaggerHeroesComponent
 import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
-import n7.ad2.provider.Provider
+import n7.ad2.navigator.Navigator
 import javax.inject.Inject
 
 internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
@@ -34,7 +34,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         fun getInstance(): HeroesFragment = HeroesFragment()
     }
 
-    @Inject lateinit var provider: Provider
+    @Inject lateinit var navigator: Navigator
     @Inject lateinit var heroesViewModelFactory: HeroesViewModel.Factory
 
     private var _binding: FragmentHeroesBinding? = null
@@ -53,7 +53,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     private fun startHeroFragment(model: VOHero.Body) {
-        getNavigator.setMainFragment(provider.heroPageApi.getPagerFragment(model.name)) {
+        getMainFragmentNavigator.setMainFragment(navigator.heroPageApi.getPagerFragment(model.name)) {
             addToBackStack(null)
         }
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)

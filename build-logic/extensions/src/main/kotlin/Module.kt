@@ -10,7 +10,7 @@ object Module {
         const val database = ":core:database"
         const val repositories = ":core:repositories"
         const val ui = ":core:ui"
-        const val provider = ":core:provider"
+        const val navigator = ":core:navigator"
         const val spanParser = ":core:span-parser"
         const val appPreference = ":core:app-preference"
         const val mediaPlayer = ":core:media-player"

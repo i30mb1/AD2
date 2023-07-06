@@ -1,8 +1,8 @@
-package n7.ad2.provider.api
+package n7.ad2.navigator.api
 
 import androidx.fragment.app.Fragment
 
-interface HeroesApi {
+interface StreamsApi {
 
     fun getFragment(): Fragment
 

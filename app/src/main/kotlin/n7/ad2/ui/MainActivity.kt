@@ -13,19 +13,19 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
 import androidx.fragment.app.strictmode.FragmentStrictMode
 import n7.ad2.AppInformation
-import n7.ad2.android.Navigator
+import n7.ad2.android.MainFragmentNavigator
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.app.logger.Logger
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.di.injector
-import n7.ad2.provider.Provider
+import n7.ad2.navigator.Navigator
 import n7.ad2.updatemanager.IsNewAppVersionAvailable
 import javax.inject.Inject
 
-class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
+class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, MainFragmentNavigator {
 
-    @Inject lateinit var provider: Provider
+    @Inject lateinit var navigator: Navigator
     @Inject lateinit var logger: Logger
     @Inject lateinit var isNewAppVersionAvailable: IsNewAppVersionAvailable
     @Inject lateinit var appInformation: AppInformation
@@ -43,7 +43,7 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
         setContentView(binding.root)
         setupInsets()
         setupFragmentStrictPolicy()
-        if (savedInstanceState == null) setMainFragment(provider.drawerApi.getDrawerFragment())
+        if (savedInstanceState == null) setMainFragment(navigator.drawerApi.getDrawerFragment())
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
@@ -67,15 +67,9 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, Navigator {
 
     private fun setupFragmentStrictPolicy() {
         if (appInformation.isDebug) {
-            supportFragmentManager.strictModePolicy = FragmentStrictMode.Policy.Builder()
-                .penaltyDeath()
-                .detectFragmentReuse()
-                .detectFragmentTagUsage()
-                .detectRetainInstanceUsage()
-                .detectSetUserVisibleHint()
-                .detectTargetFragmentUsage()
-                .detectWrongFragmentContainer()
-                .build()
+            supportFragmentManager.strictModePolicy =
+                FragmentStrictMode.Policy.Builder().penaltyDeath().detectFragmentReuse().detectFragmentTagUsage().detectRetainInstanceUsage().detectSetUserVisibleHint()
+                    .detectTargetFragmentUsage().detectWrongFragmentContainer().build()
         }
     }
 

@@ -68,7 +68,7 @@ We have three levels of modules in the application:
     │   ├── update-manager # Google In-app-update
     │   ├── ktx            # Extensions for android modules
     │   ├── logger         # Custom logger for app
-    │   ├── provider       # Module that allows feature modules communicate with other feature modules without direct dependency
+    │   ├── navigator      # Module that allows feature modules communicate with other feature modules without direct dependency
     │   ├── repositories   # All repositories
     │   ├── rules          # Custom lint rules for project
     │   ├── span-parser    # Custom html->Spannable library to simpilify using spans in prepared text

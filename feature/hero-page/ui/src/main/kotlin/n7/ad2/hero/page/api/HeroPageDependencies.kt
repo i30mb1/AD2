@@ -11,12 +11,12 @@ import n7.ad2.dagger.Dependencies
 import n7.ad2.heroes.domain.usecase.GetGuideForHeroUseCase
 import n7.ad2.heroes.domain.usecase.GetHeroByNameUseCase
 import n7.ad2.heroes.domain.usecase.GetHeroDescriptionUseCase
-import n7.ad2.provider.Provider
+import n7.ad2.navigator.Navigator
 import n7.ad2.spanparser.SpanParser
 
 interface HeroPageDependencies : Dependencies {
     val application: Application
-    val provider: Provider
+    val navigator: Navigator
     val workManager: WorkManager
     val logger: Logger
     val moshi: Moshi

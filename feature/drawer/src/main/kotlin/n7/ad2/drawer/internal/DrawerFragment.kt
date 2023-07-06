@@ -26,17 +26,17 @@ import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.android.findDependencies
-import n7.ad2.feature.drawer.R
-import n7.ad2.feature.drawer.databinding.FragmentDrawerBinding
+import n7.ad2.app.logger.Logger
 import n7.ad2.drawer.internal.adapter.LoggerAdapter
 import n7.ad2.drawer.internal.adapter.MainMenuListAdapter
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.di.DaggerDrawerComponent
 import n7.ad2.drawer.internal.domain.vo.VOMenu
+import n7.ad2.feature.drawer.R
+import n7.ad2.feature.drawer.databinding.FragmentDrawerBinding
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
-import n7.ad2.app.logger.Logger
-import n7.ad2.provider.Provider
+import n7.ad2.navigator.Navigator
 import javax.inject.Inject
 import kotlin.time.Duration.Companion.seconds
 
@@ -48,7 +48,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
 
     @Inject lateinit var logger: Logger
     @Inject lateinit var drawerViewModel: DrawerViewModel.Factory
-    @Inject lateinit var provider: Provider
+    @Inject lateinit var navigator: Navigator
 
     private var _binding: FragmentDrawerBinding? = null
     private val binding: FragmentDrawerBinding get() = _binding!!
@@ -140,12 +140,12 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
         val currentTag = childFragmentManager.fragments.lastOrNull()?.tag
         if (currentTag == menuItem.title) return
         val fragment = when (menuItem.type) {
-            VOMenuType.HEROES -> provider.heroesApi.getFragment()
-            VOMenuType.ITEMS -> provider.itemsApi.getFragment()
-            VOMenuType.NEWS -> provider.newsApi.getFragment()
-            VOMenuType.TOURNAMENTS -> provider.tournamentsApi.getFragment()
-            VOMenuType.STREAMS -> provider.streamApi.getFragment()
-            VOMenuType.GAMES -> provider.gamesApi.getFragment()
+            VOMenuType.HEROES -> navigator.heroesApi.getFragment()
+            VOMenuType.ITEMS -> navigator.itemsApi.getFragment()
+            VOMenuType.NEWS -> navigator.newsApi.getFragment()
+            VOMenuType.TOURNAMENTS -> navigator.tournamentsApi.getFragment()
+            VOMenuType.STREAMS -> navigator.streamApi.getFragment()
+            VOMenuType.GAMES -> navigator.gamesApi.getFragment()
             VOMenuType.UNKNOWN -> return
         }
         childFragmentManager.commit {

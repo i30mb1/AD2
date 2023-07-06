@@ -101,7 +101,7 @@ dependencies {
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.repositories))
     implementation(project(Module.Core.database))
-    implementation(project(Module.Core.provider))
+    implementation(project(Module.Core.navigator))
     implementation(project(Module.Core.appPreference))
     implementation(project(Module.Core.retrofit))
     implementation(project(Module.Core.updateManager))

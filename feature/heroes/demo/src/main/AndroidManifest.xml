@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:name=".ui.MyApplication"
+        android:name="n7.ad2.ui.MyApplication"
         android:label="@string/app_name"
         android:theme="@style/AD2Theme">
 

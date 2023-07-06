@@ -10,14 +10,14 @@ import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
 import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
-import n7.ad2.provider.Provider
+import n7.ad2.navigator.Navigator
 
 interface HeroesDependencies : Dependencies {
     val application: Application
     val res: Resources
     val itemsDao: ItemsDao
     val heroesDao: HeroesDao
-    val provider: Provider
+    val navigator: Navigator
     val logger: Logger
     val moshi: Moshi
     val getHeroesUseCase: GetHeroesUseCase

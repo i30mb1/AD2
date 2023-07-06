@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
-import n7.ad2.android.getNavigator
-import n7.ad2.ktx.viewModel
+import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.app.logger.Logger
+import n7.ad2.ktx.viewModel
 import n7.ad2.news.internal.di.DaggerNewsComponent
 import n7.ad2.news.internal.screen.article.ArticleFragment
 import n7.ad2.news.internal.screen.list.compose.NewsScreen
@@ -41,7 +41,7 @@ internal class NewsFragment : Fragment() {
     }
 
     private fun onNewsClicked(newsID: Int) {
-        getNavigator.setMainFragment(ArticleFragment.getInstance(newsID)) {
+        getMainFragmentNavigator.setMainFragment(ArticleFragment.getInstance(newsID)) {
             addToBackStack(null)
         }
     }

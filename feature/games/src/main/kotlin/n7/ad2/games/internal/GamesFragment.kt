@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
-import n7.ad2.android.getNavigator
+import n7.ad2.android.getMainFragmentNavigator
+import n7.ad2.app.logger.Logger
 import n7.ad2.games.internal.compose.GamesScreen
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.ktx.viewModel
-import n7.ad2.app.logger.Logger
 import n7.ad2.ui.ComposeView
 import javax.inject.Inject
 
@@ -45,7 +45,7 @@ internal class GamesFragment : Fragment() {
             is GameVO.CanYouBuyIt -> TODO()
             is GameVO.GuessSkillMana -> SkillGameFragment.getInstance()
         }
-        getNavigator.setMainFragment(fragment) {
+        getMainFragmentNavigator.setMainFragment(fragment) {
             addToBackStack(null)
         }
     }

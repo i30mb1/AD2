@@ -3,9 +3,9 @@ package n7.ad2.android
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 
-val Fragment.getNavigator: Navigator
-    get() = (activity as Navigator)
+val Fragment.getMainFragmentNavigator: MainFragmentNavigator
+    get() = (activity as MainFragmentNavigator)
 
-interface Navigator {
+interface MainFragmentNavigator {
     fun setMainFragment(fragment: Fragment, body: FragmentTransaction.() -> Unit = {})
 }

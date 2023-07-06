@@ -4,12 +4,13 @@ import android.app.Application
 import androidx.work.WorkManager
 import dagger.multibindings.ElementsIntoSet
 import n7.ad2.AD2AppInformation
-import n7.ad2.AD2Provider
+import n7.ad2.AD2Navigator
 import n7.ad2.AD2Resources
 import n7.ad2.AD2Settings
 import n7.ad2.AppInformation
 import n7.ad2.AppSettings
 import n7.ad2.Resources
+import n7.ad2.app.logger.Logger
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.init.CrashHandlerInitializer
 import n7.ad2.init.DevicePerformanceInitializer
@@ -18,10 +19,7 @@ import n7.ad2.init.Initializer
 import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
 import n7.ad2.init.YandexMetricsInitializer
-import n7.ad2.app.logger.Logger
-import n7.ad2.heroes.domain.di.HeroesDomainComponent
-import n7.ad2.heroes.domain.di.HeroesDomainDependencies
-import n7.ad2.provider.Provider
+import n7.ad2.navigator.Navigator
 import yandex.metrics.YandexMetrics
 import yandex.metrics.YandexMetricsInit
 import java.util.Calendar
@@ -44,7 +42,7 @@ interface ApplicationModule {
     companion object {
 
         @dagger.Provides
-        fun provideProvider(): Provider = AD2Provider
+        fun provideProvider(): Navigator = AD2Navigator
 
         @dagger.Provides
         fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
