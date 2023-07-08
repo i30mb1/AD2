@@ -1,11 +1,11 @@
-package n7.ad2
+package n7.ad2.common.application
 
 import android.app.Application
+import n7.ad2.Resources
 import java.io.File
 import java.io.InputStream
-import javax.inject.Inject
 
-class AD2Resources @Inject constructor(
+private class AD2Resources(
     private val application: Application,
 ) : Resources {
     override fun getString(resourceID: Int): String = application.getString(resourceID)
@@ -14,4 +14,8 @@ class AD2Resources @Inject constructor(
     override fun getExternalFilesDir(path: String): File? = application.getExternalFilesDir(path)
     override fun getFilesDir(): File? = application.noBackupFilesDir
     override fun getConfiguration(): Any? = application.resources.configuration
+}
+
+fun resourcesFactory(application: Application): Resources {
+    return AD2Resources(application)
 }

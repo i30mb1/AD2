@@ -26,7 +26,6 @@ import n7.ad2.updatemanager.UpdateManagerModule
         ComponentDependenciesModule::class,
         CoroutineModule::class,
         UpdateManagerModule::class,
-        MoshiModule::class,
         RetrofitModule::class,
         ApplicationModule::class,
         AppPreferenceModule::class,

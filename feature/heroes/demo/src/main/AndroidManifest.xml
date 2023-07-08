@@ -2,15 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:name="n7.ad2.ui.MyApplication"
+        android:name="n7.ad2.heroes.demo.MyApplicationDemo"
         android:label="@string/app_name"
         android:theme="@style/AD2Theme">
 
         <activity
             android:name="n7.ad2.heroes.demo.HeroesActivityDemo"
-            android:autoVerify="true"
-            android:exported="true"
-            android:theme="@style/Theme.AppSplash">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

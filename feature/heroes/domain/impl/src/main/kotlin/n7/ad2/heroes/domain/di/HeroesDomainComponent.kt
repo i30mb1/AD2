@@ -32,7 +32,7 @@ fun HeroesDomainComponent(
         dependencies.res,
         dependencies.heroesDao,
         dependencies.moshi,
-        dependencies.appLocale,
+        dependencies.appInformation.appLocale,
     )
 
     override val getHeroesUseCase = GetHeroesUseCaseImpl(heroesRepository)

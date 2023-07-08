@@ -30,7 +30,7 @@ object HeroesModule {
             override val heroesDao: HeroesDao = heroesDao
             override val moshi: Moshi = moshi
             override val dispatcher = dispatchers
-            override val appLocale = appInformation.appLocale
+            override val appInformation = appInformation
         }
     )
 

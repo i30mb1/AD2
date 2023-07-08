@@ -98,7 +98,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
                 heroesItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
                 insets
             }
-            (parentFragment as DrawerPercentListener).setDrawerPercentListener { percent ->
+            (parentFragment as? DrawerPercentListener)?.setDrawerPercentListener { percent ->
                 heroesItemDecorator.percent = percent
                 invalidateItemDecorations()
             }

@@ -2,15 +2,13 @@ package n7.ad2.di
 
 import android.app.Application
 import androidx.work.WorkManager
+import com.squareup.moshi.Moshi
 import dagger.multibindings.ElementsIntoSet
 import n7.ad2.AD2AppInformation
 import n7.ad2.AD2Navigator
-import n7.ad2.AD2Resources
-import n7.ad2.AD2Settings
 import n7.ad2.AppInformation
-import n7.ad2.AppSettings
-import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
+import n7.ad2.common.application.BaseApplicationModule
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.init.CrashHandlerInitializer
 import n7.ad2.init.DevicePerformanceInitializer
@@ -24,22 +22,20 @@ import yandex.metrics.YandexMetrics
 import yandex.metrics.YandexMetricsInit
 import java.util.Calendar
 
-@dagger.Module
+@dagger.Module(
+    includes = [BaseApplicationModule::class]
+)
 interface ApplicationModule {
 
     @dagger.Reusable
     @dagger.Binds
     fun provideAppInfo(appInformation: AD2AppInformation): AppInformation
 
-    @dagger.Reusable
-    @dagger.Binds
-    fun provideAppResource(appResources: AD2Resources): Resources
-
-    @dagger.Reusable
-    @dagger.Binds
-    fun provideAppSettings(appSettings: AD2Settings): AppSettings
-
     companion object {
+
+        @ApplicationScope
+        @dagger.Provides
+        fun moshi(): Moshi = Moshi.Builder().build()
 
         @dagger.Provides
         fun provideProvider(): Navigator = AD2Navigator

@@ -92,6 +92,7 @@ dependencies {
     implementation(libs.instantApps)
     implementation(libs.workManager)
     implementation(libs.performance)
+    implementation(libs.moshi)
 
     kapt(libs.daggerAnnotation)
 
@@ -107,6 +108,7 @@ dependencies {
     implementation(project(Module.Core.updateManager))
     implementation(project(Module.Core.spanParser))
     implementation(project(Module.Core.yandexMetrics))
+    implementation(project(Module.Core.commonApplication))
 
     implementation(project(Module.Feature.streams))
     implementation(project(Module.Feature.Heroes.ui))

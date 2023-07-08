@@ -35,8 +35,11 @@ dependencies {
     implementation(project(Module.Core.database))
     implementation(project(Module.Core.spanParser))
     implementation(project(Module.Core.updateManager))
+    implementation(project(Module.Core.logger))
+    implementation(project(Module.Core.commonApplication))
 
     implementation(project(Module.Feature.Heroes.ui))
+    implementation(project(Module.Feature.Heroes.impl))
 
     kapt(libs.daggerAnnotation)
 }
