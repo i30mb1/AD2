@@ -2,7 +2,6 @@ package n7.ad2.di
 
 import android.app.Application
 import androidx.work.WorkManager
-import com.squareup.moshi.Moshi
 import dagger.multibindings.ElementsIntoSet
 import n7.ad2.AD2AppInformation
 import n7.ad2.AD2Navigator
@@ -33,10 +32,6 @@ interface ApplicationModule {
 
     companion object {
 
-        @ApplicationScope
-        @dagger.Provides
-        fun moshi(): Moshi = Moshi.Builder().build()
-
         @dagger.Provides
         fun provideProvider(): Navigator = AD2Navigator
 
@@ -63,7 +58,5 @@ interface ApplicationModule {
                 DevicePerformanceInitializer(),
             )
         }
-
     }
-
 }

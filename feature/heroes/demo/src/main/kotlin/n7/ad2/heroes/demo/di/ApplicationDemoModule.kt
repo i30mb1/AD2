@@ -5,6 +5,7 @@ import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
+import n7.ad2.common.application.BaseApplicationModule
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.heroes.domain.di.HeroesDomainComponent
@@ -14,16 +15,17 @@ import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
 import n7.ad2.heroes.ui.api.HeroesDependencies
 import n7.ad2.navigator.Navigator
 
-@dagger.Module
+@dagger.Module(
+    includes = [
+        BaseApplicationModule::class,
+    ]
+)
 interface ApplicationDemoModule {
 
     @dagger.Binds
     fun provideStreamsDependencies(impl: ApplicationComponentDemo): HeroesDependencies
 
     companion object {
-
-        @dagger.Provides
-        fun moshi(): Moshi = Moshi.Builder().build()
 
         @dagger.Provides
         fun navigator(): Navigator = Navigator.empty()
@@ -66,5 +68,4 @@ interface ApplicationDemoModule {
             component: HeroesDomainComponent,
         ): UpdateStateViewedForHeroUseCase = component.updateStateViewedForHeroUseCase
     }
-
 }

@@ -7,6 +7,7 @@ android {
     namespace = "$applicationID.heroes.demo"
 
     buildFeatures {
+        buildConfig = true
         resValues = true
     }
     signingConfigs {
