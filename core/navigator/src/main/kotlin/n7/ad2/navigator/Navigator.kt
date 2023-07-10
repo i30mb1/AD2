@@ -27,25 +27,25 @@ interface Navigator {
         fun empty(): Navigator {
             return object : Navigator {
                 override val settingsApi: SettingsApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val streamApi: StreamsApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val heroesApi: HeroesApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val newsApi: NewsApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val itemsApi: ItemsApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val gamesApi: GamesApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val tournamentsApi: TournamentsApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val drawerApi: DrawerApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val heroPageApi: HeroPageApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
                 override val itemPageApi: ItemPageApi
-                    get() = TODO("Not yet implemented")
+                    get() = error("empty realization for demo app's")
             }
         }
     }
