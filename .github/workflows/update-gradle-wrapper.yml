@@ -1,17 +1,16 @@
-#name: Update Gradle Wrapper
-#on:
-#  schedule:
-#    - cron: "0 0 * * *" # GitHub runs the workflow every day at midnight
-#
-#env:
-#  GRADLE_OPTS: -Dorg.gradle.jvmargs=-Xmx2g
-#
-#jobs:
-#  if: false
-#  update-gradle-wrapper:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#
-#      - name: Update Gradle Wrapper
-#        uses: gradle-update/update-gradle-wrapper-action@v1
+name: Update Gradle Wrapper
+on:
+  schedule:
+    - cron: "0 0 * * *" # GitHub runs the workflow every day at midnight
+
+env:
+  GRADLE_OPTS: -Dorg.gradle.jvmargs=-Xmx2g
+
+jobs:
+  update-gradle-wrapper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Update Gradle Wrapper
+        uses: gradle-update/update-gradle-wrapper-action@v1
