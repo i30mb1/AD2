@@ -20,7 +20,7 @@ import n7.ad2.navigator.Navigator
         BaseApplicationModule::class,
     ]
 )
-interface ApplicationDemoModule {
+internal interface ApplicationDemoModule {
 
     @dagger.Binds
     fun provideStreamsDependencies(impl: ApplicationComponentDemo): HeroesDependencies

@@ -9,7 +9,7 @@ import n7.ad2.heroes.ui.api.HeroesDependencies
 import n7.ad2.ktx.lazyUnsafe
 import javax.inject.Inject
 
-class MyApplicationDemo : Application(), HasDependencies {
+internal class MyApplicationDemo : Application(), HasDependencies {
 
     @Inject lateinit var heroesDependencies: HeroesDependencies
 

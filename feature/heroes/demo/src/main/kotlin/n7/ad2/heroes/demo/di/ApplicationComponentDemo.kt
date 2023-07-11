@@ -17,7 +17,7 @@ import n7.ad2.heroes.ui.api.HeroesDependencies
         DatabaseModule::class,
     ]
 )
-interface ApplicationComponentDemo : HeroesDependencies {
+internal interface ApplicationComponentDemo : HeroesDependencies {
 
     fun inject(myApplicationDemo: MyApplicationDemo)
 
