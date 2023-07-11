@@ -7,8 +7,6 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.metrics.performance.JankStats
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.asExecutor
 import n7.ad2.ktx.lazyUnsafe
 
 class JankStatsFrameCounter(
@@ -30,7 +28,7 @@ class JankStatsFrameCounter(
 
     init {
         lifecycle?.addObserver(this)
-        JankStats.createAndTrack(window, Dispatchers.Default.asExecutor(), listener)
+        JankStats.createAndTrack(window, listener)
     }
 
     override fun onResume(owner: LifecycleOwner) {

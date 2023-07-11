@@ -1,6 +1,6 @@
 plugins {
     id("convention.android-library")
-    id("androidx.benchmark") version "1.1.0"
+    id("androidx.benchmark") version "1.1.1"
 }
 
 android {
