@@ -14,3 +14,4 @@ dependencies {
     kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)
 }
+// gradle app:dependencyInsight --configuration releaseRuntimeClasspath --dependency org.jetbrains.kotlin:kotlin-stdlib
