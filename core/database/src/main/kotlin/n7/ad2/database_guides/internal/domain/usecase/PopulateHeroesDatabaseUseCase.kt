@@ -7,11 +7,11 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.Resources
+import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.internal.domain.model.AssetsHero
-import n7.ad2.database_guides.internal.model.LocalHero
-import n7.ad2.app.logger.Logger
+import n7.ad2.database_guides.internal.model.HeroDb
 import javax.inject.Inject
 
 class PopulateHeroesDatabaseUseCase @Inject constructor(
@@ -30,8 +30,8 @@ class PopulateHeroesDatabaseUseCase @Inject constructor(
         val adapter: JsonAdapter<List<AssetsHero>> = moshi.adapter(typeAssetsHero)
         val listAssetsHero: List<AssetsHero> = adapter.fromJson(json) ?: error("Could not parse assets heroes")
 
-        val result: List<LocalHero> = listAssetsHero.map { assetsItem ->
-            LocalHero(name = assetsItem.name, mainAttr = assetsItem.mainAttribute, viewedByUser = false)
+        val result: List<HeroDb> = listAssetsHero.map { assetsItem ->
+            HeroDb(name = assetsItem.name, mainAttr = assetsItem.mainAttribute, viewedByUser = false)
         }
 
         heroesDao.insert(result)

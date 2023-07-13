@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "LocalHeroes")
-data class LocalHero(
+data class HeroDb(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "rowid")
     val id: Int = 0,

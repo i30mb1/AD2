@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class LocalHeroDescription(
+data class HeroDescriptionJson(
     @Json(name = "abilities")
     val abilities: List<Ability> = listOf(),
     @Json(name = "description")

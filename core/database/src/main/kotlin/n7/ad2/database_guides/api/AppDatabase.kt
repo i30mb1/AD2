@@ -6,8 +6,8 @@ import n7.ad2.database_guides.api.dao.GuidesDao
 import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.api.dao.NewsDao
+import n7.ad2.database_guides.internal.model.HeroDb
 import n7.ad2.database_guides.internal.model.LocalGuide
-import n7.ad2.database_guides.internal.model.LocalHero
 import n7.ad2.database_guides.internal.model.LocalItem
 import n7.ad2.database_guides.internal.model.NewsLocal
 
@@ -15,7 +15,7 @@ private const val DB_VERSION = 1
 
 @Database(
     entities = [
-        LocalHero::class,
+        HeroDb::class,
         LocalItem::class,
         LocalGuide::class,
         NewsLocal::class,

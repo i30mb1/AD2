@@ -1,18 +1,18 @@
 package n7.ad2.heroes.domain.internal
 
 import kotlinx.coroutines.flow.Flow
-import n7.ad2.database_guides.internal.model.LocalHero
-import n7.ad2.database_guides.internal.model.LocalHeroWithGuides
-import n7.ad2.heroes.domain.internal.data.model.LocalHeroDescription
+import n7.ad2.database_guides.internal.model.LocalHeroWithGuidesDb
+import n7.ad2.heroes.domain.model.Hero
+import n7.ad2.heroes.domain.model.HeroDescription
 import java.io.InputStream
 
 internal interface HeroesRepository {
 
-    fun getAllHeroes(): Flow<List<LocalHero>>
-    fun getHeroWithGuides(name: String): Flow<LocalHeroWithGuides>
-    fun getHeroDescription(name: String): Flow<LocalHeroDescription>
+    fun getAllHeroes(): Flow<List<Hero>>
+    fun getHeroWithGuides(name: String): Flow<LocalHeroWithGuidesDb>
+    fun getHeroDescription(name: String): Flow<HeroDescription>
     fun updateViewedByUserFieldForName(name: String)
-    suspend fun getHero(name: String): LocalHero
+    suspend fun getHero(name: String): Flow<Hero>
     suspend fun getSpellInputStream(spellName: String): InputStream
 }
 

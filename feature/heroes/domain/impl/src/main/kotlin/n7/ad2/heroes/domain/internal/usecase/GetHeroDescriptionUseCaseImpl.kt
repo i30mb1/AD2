@@ -1,7 +1,6 @@
 package n7.ad2.heroes.domain.internal.usecase
 
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 import n7.ad2.heroes.domain.internal.HeroesRepository
 import n7.ad2.heroes.domain.model.HeroDescription
 import n7.ad2.heroes.domain.usecase.GetHeroDescriptionUseCase
@@ -12,6 +11,5 @@ internal class GetHeroDescriptionUseCaseImpl(
 
     override fun invoke(name: String): Flow<HeroDescription> {
         return heroesRepository.getHeroDescription(name)
-            .map { HeroDescription() }
     }
 }
