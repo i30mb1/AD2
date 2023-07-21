@@ -6,6 +6,7 @@ import n7.ad2.dagger.ApplicationScope
 import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.di.RetrofitModule
 import n7.ad2.heroes.demo.MyApplicationDemo
+import n7.ad2.heroes.domain.wiring.HeroesModule
 import n7.ad2.heroes.ui.api.HeroesDependencies
 
 @ApplicationScope
@@ -15,6 +16,7 @@ import n7.ad2.heroes.ui.api.HeroesDependencies
         CoroutineModule::class,
         RetrofitModule::class,
         DatabaseModule::class,
+        HeroesModule::class,
     ]
 )
 internal interface ApplicationComponentDemo : HeroesDependencies {

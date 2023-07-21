@@ -28,6 +28,7 @@ object Module {
         object Heroes {
             const val api = ":feature:heroes:domain:api"
             const val impl = ":feature:heroes:domain:impl"
+            const val wiring = ":feature:heroes:domain:wiring"
             const val demo = ":feature:heroes:demo"
             const val ui = ":feature:heroes:ui"
         }

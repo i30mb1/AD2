@@ -41,6 +41,7 @@ dependencies {
 
     implementation(project(Module.Feature.Heroes.ui))
     implementation(project(Module.Feature.Heroes.impl))
+    implementation(project(Module.Feature.Heroes.wiring))
 
     kapt(libs.daggerAnnotation)
 }

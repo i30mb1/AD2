@@ -113,6 +113,7 @@ dependencies {
     implementation(project(Module.Feature.streams))
     implementation(project(Module.Feature.Heroes.ui))
     implementation(project(Module.Feature.Heroes.impl))
+    implementation(project(Module.Feature.Heroes.wiring))
     implementation(project(Module.Feature.items))
     implementation(project(Module.Feature.games))
     implementation(project(Module.Feature.tournaments))

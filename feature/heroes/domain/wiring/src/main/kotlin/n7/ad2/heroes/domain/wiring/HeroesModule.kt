@@ -1,4 +1,4 @@
-package n7.ad2.di
+package n7.ad2.heroes.domain.wiring
 
 import com.squareup.moshi.Moshi
 import n7.ad2.AppInformation

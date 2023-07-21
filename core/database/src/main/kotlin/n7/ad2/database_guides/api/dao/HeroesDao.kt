@@ -21,5 +21,5 @@ interface HeroesDao : BaseDao<HeroDb> {
     fun getAllHeroes(): Flow<List<HeroDb>>
 
     @Query("SELECT * FROM LocalHeroes WHERE name =:name")
-    suspend fun getHero(name: String): Flow<HeroDb>
+    fun getHero(name: String): Flow<HeroDb>
 }

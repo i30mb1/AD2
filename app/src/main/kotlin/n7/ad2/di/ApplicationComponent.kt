@@ -9,6 +9,7 @@ import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.drawer.api.DrawerDependencies
 import n7.ad2.games.api.GamesDependencies
 import n7.ad2.hero.page.api.HeroPageDependencies
+import n7.ad2.heroes.domain.wiring.HeroesModule
 import n7.ad2.heroes.ui.api.HeroesDependencies
 import n7.ad2.itempage.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
