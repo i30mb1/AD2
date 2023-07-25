@@ -16,4 +16,9 @@ dependencies {
     implementation(project(Module.Feature.Heroes.api))
 
     kapt(libs.daggerAnnotation)
+
+    androidTestImplementation(libs.fragmentTesting)
+    androidTestImplementation(libs.testJunit)
+    androidTestImplementation(libs.mockk)
+    androidTestImplementation(libs.espresso)
 }

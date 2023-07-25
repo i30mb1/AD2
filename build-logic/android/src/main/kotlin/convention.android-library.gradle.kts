@@ -16,6 +16,9 @@ android {
             }
         }
     }
+    packaging {
+        resources.excludes.add("META-INF/*")
+    }
 }
 
 configure<LibraryExtension> {
