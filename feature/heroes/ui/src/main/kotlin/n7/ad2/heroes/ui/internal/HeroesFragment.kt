@@ -14,7 +14,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import n7.ad2.android.DependenciesMap
 import n7.ad2.android.DrawerPercentListener
+import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.feature.heroes.ui.R
@@ -29,11 +31,13 @@ import n7.ad2.navigator.Navigator
 import javax.inject.Inject
 import javax.inject.Provider
 
-internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
+internal class HeroesFragment : Fragment(R.layout.fragment_heroes), HasDependencies {
 
     companion object {
         fun getInstance(): HeroesFragment = HeroesFragment()
     }
+
+    override var dependenciesMap: DependenciesMap = emptyMap()
 
     @Inject lateinit var navigator: Navigator
     @Inject lateinit var heroesViewModelFactory: Provider<HeroesViewModel.Factory>

@@ -41,10 +41,16 @@ private val Fragment.allParents: Iterable<Any>
             private var currentParentFragment: Fragment? = parentFragment
             private var parentActivity: Activity? = activity
             private var parentApplication: Application? = parentActivity?.application
+            private var currentFragment: Fragment? = this@allParents
 
-            override fun hasNext() = currentParentFragment != null || parentActivity != null || parentApplication != null
+            override fun hasNext() = currentFragment != null || currentParentFragment != null || parentActivity != null || parentApplication != null
 
             override fun next(): Any {
+                currentFragment?.let { fragment ->
+                    currentFragment = null
+                    return fragment
+                }
+
                 currentParentFragment?.let { parent ->
                     currentParentFragment = parent.parentFragment
                     return parent
