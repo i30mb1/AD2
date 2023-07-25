@@ -27,6 +27,7 @@ import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
 import javax.inject.Inject
+import javax.inject.Provider
 
 internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
@@ -35,12 +36,12 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     @Inject lateinit var navigator: Navigator
-    @Inject lateinit var heroesViewModelFactory: HeroesViewModel.Factory
+    @Inject lateinit var heroesViewModelFactory: Provider<HeroesViewModel.Factory>
 
     private var _binding: FragmentHeroesBinding? = null
     private val binding: FragmentHeroesBinding get() = _binding!!
     private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, ::startHeroFragment) }
-    private val viewModel: HeroesViewModel by viewModel { heroesViewModelFactory.create() }
+    private val viewModel: HeroesViewModel by viewModel { heroesViewModelFactory.get().create() }
     private val heroesItemDecorator = HeroesItemDecorator()
 
     override fun onAttach(context: Context) {
