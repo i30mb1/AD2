@@ -54,3 +54,14 @@ class ResponsesViewModel @AssistedInject constructor(
     }
 
 }
+
+fun main(args: Array<String>) {
+    fun hello() = print("Hello")
+
+    fun world(any: Any) = { any: Any ->
+        print("World")
+    }
+
+    hello()
+    world(".")(".")
+}
