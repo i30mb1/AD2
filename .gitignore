@@ -4,5 +4,6 @@ captures/
 /gradle-user-home/
 **/.idea/*
 /profile-out/
+.obsidian
 
 local.properties
