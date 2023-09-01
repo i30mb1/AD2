@@ -25,6 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/AD2Theme"
         android:usesCleartextTraffic="true"
+        android:appComponentFactory="n7.ad2.AD2AppComponentFactory"
+        tools:replace="android:appComponentFactory"
         tools:ignore="DataExtractionRules,GoogleAppIndexingWarning">
 
         <profileable
