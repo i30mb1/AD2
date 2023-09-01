@@ -10,7 +10,7 @@ configure<BaseExtension> {
     buildFeatures.viewBinding = true
 
     defaultConfig {
-        minSdk = 28
+        minSdk = 30
         targetSdk = 33
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
