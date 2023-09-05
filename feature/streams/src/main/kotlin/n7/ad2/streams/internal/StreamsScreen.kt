@@ -39,7 +39,6 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import androidx.paging.compose.items
 import coil.compose.AsyncImage
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.feature.streams.R
@@ -78,9 +77,9 @@ internal fun StreamsList(
         verticalArrangement = Arrangement.spacedBy(8.dp),
         contentPadding = PaddingValues(top = 4.dp + insetsTop * drawerPercent, start = 4.dp, end = 4.dp),
     ) {
-        items(streams) { stream: VOStream? ->
+        items(streams.itemCount) { index: Int ->
             contentComposed = true
-            when (stream) {
+            when (val stream = streams[index]) {
                 is VOStream.Simple -> SimpleStream(stream, onStreamClicked = onStreamClicked)
                 else -> Unit
             }

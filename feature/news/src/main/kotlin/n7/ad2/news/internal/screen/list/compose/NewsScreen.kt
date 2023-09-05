@@ -20,7 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import androidx.paging.compose.items
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.news.internal.domain.model.NewsVO
 import n7.ad2.news.internal.screen.list.NewsViewModel
@@ -46,7 +45,10 @@ internal fun NewsScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(top = 4.dp + insetsTop * drawerPercent, start = 4.dp, end = 4.dp),
         ) {
-            items(news) { item: NewsVO? -> if (item != null) NewsItem(item, onNewsClicked) }
+            items(news.itemCount) { index: Int ->
+                val item = news[index]
+                if (item != null) NewsItem(item, onNewsClicked)
+            }
         }
         ScrollToTopButton(showScrollToTopButton, state, Modifier.align(Alignment.BottomEnd))
     }
