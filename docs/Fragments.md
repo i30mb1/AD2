@@ -1,3 +1,4 @@
+компонент [[Android]]
 ### При вызове диалога из Fragment
 
 перед вызовом диалога нужно проверить Fragment.isStateSaved для предотвращения ошибки IllegalStateException (Can not perform this action
