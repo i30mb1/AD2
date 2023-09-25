@@ -59,7 +59,9 @@ internal fun NewsItem(
     Surface(
         modifier = Modifier
             .bounceClick()
-            .clip(RoundedCornerShape(6.dp)),
+            .then(
+                Modifier.clip(RoundedCornerShape(6.dp))
+            ),
         color = AppTheme.color.surface,
         elevation = 4.dp,
         onClick = { onNewsClicked(item.id) },
@@ -110,16 +112,16 @@ private fun FavoriteIcon(
     var showEmptyLike by remember { mutableStateOf(false) }
     Box(
         modifier = modifier
-            .clickable {
-                onLikeClicked()
-            }
+            .clickable { onLikeClicked() }
             .padding(8.dp),
     ) {
-        if (isLiked) Icon(
-            imageVector = Icons.Default.Favorite,
-            contentDescription = null,
-        ) else Icon(
-            imageVector = Icons.Default.FavoriteBorder,
+        val image by remember(isLiked) {
+            mutableStateOf(
+                if (isLiked) Icons.Default.Favorite else Icons.Default.FavoriteBorder
+            )
+        }
+        Icon(
+            imageVector = image,
             contentDescription = null,
         )
         if (filledLikeScale > 0f) Icon(
