@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import javax.inject.Provider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -18,8 +19,8 @@ import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 
 internal class HeroesViewModel @AssistedInject constructor(
     getVOHeroesListUseCase: GetVOHeroesListUseCase,
-    private val filterHeroesUseCase: FilterHeroesUseCase,
-    private val updateStateViewedForHeroUseCase: UpdateStateViewedForHeroUseCase,
+    private val filterHeroesUseCase: Provider<FilterHeroesUseCase>,
+    private val updateStateViewedForHeroUseCase: Provider<UpdateStateViewedForHeroUseCase>,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -39,12 +40,12 @@ internal class HeroesViewModel @AssistedInject constructor(
     }
 
     fun filterHeroes(filter: String) {
-        allHeroes.map { list -> filterHeroesUseCase(list, filter) }
+        allHeroes.map { list -> filterHeroesUseCase.get()(list, filter) }
             .onEach { _filteredHeroes.emit(it) }
     }
 
     fun updateViewedByUserFieldForHero(name: String) = viewModelScope.launch {
-        updateStateViewedForHeroUseCase(name)
+        updateStateViewedForHeroUseCase.get()(name)
     }
 
 }

@@ -6,6 +6,6 @@ import n7.ad2.navigator.api.HeroesApi
 
 class HeroesProvider : HeroesApi {
 
-    override fun getFragment(): Fragment = HeroesFragment.getInstance()
+    override fun getFragment(): Class<out Fragment> = HeroesFragment::class.java
 
 }

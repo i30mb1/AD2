@@ -1,5 +1,6 @@
 package n7.ad2.heroes.ui.internal.domain.usecase
 
+import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.mapLatest
@@ -10,7 +11,6 @@ import n7.ad2.heroes.domain.model.Hero
 import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
 import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
-import javax.inject.Inject
 
 internal class GetVOHeroesListUseCase @Inject constructor(
     private val getHeroesUseCase: GetHeroesUseCase,

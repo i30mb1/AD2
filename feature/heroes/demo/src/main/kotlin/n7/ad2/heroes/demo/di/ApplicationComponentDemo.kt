@@ -8,6 +8,7 @@ import n7.ad2.di.RetrofitModule
 import n7.ad2.heroes.demo.MyApplicationDemo
 import n7.ad2.heroes.domain.wiring.HeroesModule
 import n7.ad2.heroes.ui.api.HeroesDependencies
+import n7.ad2.heroes.ui.internal.HeroesFragmentFactory
 
 @ApplicationScope
 @dagger.Component(
@@ -20,6 +21,8 @@ import n7.ad2.heroes.ui.api.HeroesDependencies
     ]
 )
 internal interface ApplicationComponentDemo : HeroesDependencies {
+
+    val heroesFragmentFactory: HeroesFragmentFactory
 
     fun inject(myApplicationDemo: MyApplicationDemo)
 

@@ -12,6 +12,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import dagger.Lazy
+import javax.inject.Inject
+import javax.inject.Provider
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DependenciesMap
@@ -28,18 +31,12 @@ import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
-import javax.inject.Inject
-import javax.inject.Provider
 
-internal class HeroesFragment : Fragment(R.layout.fragment_heroes), HasDependencies {
+internal class HeroesFragment(
+    override var dependenciesMap: DependenciesMap,
+) : Fragment(R.layout.fragment_heroes), HasDependencies {
 
-    companion object {
-        fun getInstance(): HeroesFragment = HeroesFragment()
-    }
-
-    override var dependenciesMap: DependenciesMap = emptyMap()
-
-    @Inject lateinit var navigator: Navigator
+    @Inject lateinit var navigator: Lazy<Navigator>
     @Inject lateinit var heroesViewModelFactory: Provider<HeroesViewModel.Factory>
 
     private var _binding: FragmentHeroesBinding? = null
@@ -58,7 +55,7 @@ internal class HeroesFragment : Fragment(R.layout.fragment_heroes), HasDependenc
     }
 
     private fun startHeroFragment(model: VOHero.Body) {
-        getMainFragmentNavigator.setMainFragment(navigator.heroPageApi.getPagerFragment(model.name)) {
+        getMainFragmentNavigator.setMainFragment(navigator.get().heroPageApi.getPagerFragment(model.name)) {
             addToBackStack(null)
         }
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)

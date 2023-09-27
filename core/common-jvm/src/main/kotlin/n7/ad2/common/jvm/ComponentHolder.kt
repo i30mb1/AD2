@@ -1,6 +1,6 @@
 package n7.ad2.common.jvm
 
-abstract class ComponentHolder<Component: DIComponent>: BaseComponentHolder<Component> {
+abstract class ComponentHolder<Component : DIComponent> : BaseComponentHolder<Component> {
 
     @Volatile
     private var component: Component? = null
@@ -17,4 +17,20 @@ abstract class ComponentHolder<Component: DIComponent>: BaseComponentHolder<Comp
 
     protected abstract fun build(): Component
 
+}
+
+class My private constructor(any: String) {
+
+    companion object : SingletonHolder<My, String>(::My)
+}
+
+open class SingletonHolder<out T, in A>(private val constructor: (A) -> T) {
+
+    @Volatile
+    private var instance: T? = null
+
+    fun getInstance(arg: A): T =
+        instance ?: synchronized(this) {
+            instance ?: constructor(arg).also { instance = it }
+        }
 }

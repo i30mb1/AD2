@@ -4,6 +4,5 @@ import androidx.fragment.app.Fragment
 
 interface HeroesApi {
 
-    fun getFragment(): Fragment
-
+    fun getFragment(): Class<out Fragment>
 }

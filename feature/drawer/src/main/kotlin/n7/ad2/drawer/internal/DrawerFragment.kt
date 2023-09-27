@@ -16,6 +16,8 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import javax.inject.Inject
+import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
@@ -37,8 +39,6 @@ import n7.ad2.feature.drawer.databinding.FragmentDrawerBinding
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
-import javax.inject.Inject
-import kotlin.time.Duration.Companion.seconds
 
 internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
 
@@ -149,7 +149,12 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
             VOMenuType.UNKNOWN -> return
         }
         childFragmentManager.commit {
-            replace(binding.container.id, fragment, menuItem.title)
+            if (fragment is Fragment) {
+                replace(binding.container.id, fragment, menuItem.title)
+            } else {
+                val hehe = fragment as Class<out Fragment>
+                replace(binding.container.id, hehe, null, menuItem.title)
+            }
         }
     }
 
