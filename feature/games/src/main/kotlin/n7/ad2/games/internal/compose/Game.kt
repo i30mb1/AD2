@@ -13,8 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
@@ -38,7 +39,7 @@ internal fun Game(
             .clickable { onGameClick() },
     ) {
         Image(
-            painter = painterResource(id = background),
+            imageVector = ImageVector.vectorResource(id = background),
             contentDescription = title,
             contentScale = ContentScale.Crop,
             alpha = 0.2f,

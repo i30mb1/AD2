@@ -36,10 +36,11 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLifecycleOwner
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
@@ -113,7 +114,7 @@ private fun BottomSheetContent(
             VideoPlayer(uri, onPipLayoutChanged)
             Row(modifier = Modifier.align(Alignment.TopEnd)) {
                 if (isPipIconVisible) Icon(
-                    painterResource(id = R.drawable.pip),
+                    ImageVector.vectorResource(id = R.drawable.pip),
                     null,
                     Modifier
                         .padding(6.dp)
@@ -122,7 +123,7 @@ private fun BottomSheetContent(
                     Color.White,
                 )
                 Icon(
-                    painterResource(R.drawable.ic_settings),
+                    ImageVector.vectorResource(R.drawable.ic_settings),
                     null,
                     Modifier
                         .padding(6.dp)
