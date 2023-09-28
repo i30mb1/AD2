@@ -31,7 +31,5 @@ class HistoricalProcessExitReasonsInitializer : Initializer {
                 if (description != null) logger.log("$reason: $description")
             }
         }
-
     }
-
 }

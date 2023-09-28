@@ -30,5 +30,4 @@ class StrictModeInitializer : Initializer {
             }
         }
     }
-
 }

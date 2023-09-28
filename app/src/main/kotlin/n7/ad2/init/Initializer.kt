@@ -7,5 +7,4 @@ import n7.ad2.app.logger.Logger
 interface Initializer {
 
     fun init(app: Application, logger: Logger, appInformation: AppInformation)
-
 }

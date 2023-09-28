@@ -1,10 +1,10 @@
 package n7.ad2.init
 
 import android.app.Application
-import n7.ad2.AppInformation
-import n7.ad2.app.logger.Logger
 import java.io.PrintWriter
 import java.io.StringWriter
+import n7.ad2.AppInformation
+import n7.ad2.app.logger.Logger
 
 class CrashHandlerInitializer : Initializer {
 
@@ -27,7 +27,5 @@ class CrashHandlerInitializer : Initializer {
 
             defaultEUH?.uncaughtException(thread, exception)
         }
-
     }
-
 }

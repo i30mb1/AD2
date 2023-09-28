@@ -11,5 +11,4 @@ class DevicePerformanceInitializer : Initializer {
         val devicePerf: DevicePerformance = DevicePerformance.create(app)
         logger.log("Device Performance Class = ${devicePerf.mediaPerformanceClass}")
     }
-
 }

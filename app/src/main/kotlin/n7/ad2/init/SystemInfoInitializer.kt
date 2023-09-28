@@ -30,5 +30,4 @@ class SystemInfoInitializer : Initializer {
         activityManager?.getMemoryInfo(memoryInfo)
         return "${memoryInfo.availMem / 1_048_576}/${memoryInfo.totalMem / 1_048_576} mb"
     }
-
 }
