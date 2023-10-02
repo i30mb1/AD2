@@ -16,7 +16,7 @@ import n7.ad2.navigator.api.ItemsApi
 import n7.ad2.navigator.api.NewsApi
 import n7.ad2.navigator.api.SettingsApi
 import n7.ad2.navigator.api.StreamsApi
-import n7.ad2.news.api.NewsProvider
+import n7.ad2.news.ui.api.NewsProvider
 import n7.ad2.settings.api.SettingsProvider
 import n7.ad2.streams.api.StreamsProvider
 import n7.ad2.tournaments.api.TournamentsProvider

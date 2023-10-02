@@ -7,7 +7,6 @@ plugins {
 dependencies {
     implementation(libs.workManager)
     implementation(libs.composePaging)
-    implementation(libs.jsoup)
     implementation(libs.webkit)
 
     implementation(project(Module.Core.android))
@@ -17,6 +16,8 @@ dependencies {
     implementation(project(Module.Core.navigator))
     implementation(project(Module.Core.database))
     implementation(project(Module.Core.appPreference))
+
+    implementation(project(Module.Feature.News.api))
 
     kapt(libs.daggerAnnotation)
 }

@@ -118,6 +118,8 @@ dependencies {
     implementation(project(Module.Feature.games))
     implementation(project(Module.Feature.tournaments))
     implementation(project(Module.Feature.News.ui))
+    implementation(project(Module.Feature.News.impl))
+    implementation(project(Module.Feature.News.wiring))
     implementation(project(Module.Feature.drawer))
     implementation(project(Module.Feature.HeroPage.ui))
     implementation(project(Module.Feature.itemPage))

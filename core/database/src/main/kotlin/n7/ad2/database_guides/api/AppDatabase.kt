@@ -9,7 +9,7 @@ import n7.ad2.database_guides.api.dao.NewsDao
 import n7.ad2.database_guides.internal.model.HeroDb
 import n7.ad2.database_guides.internal.model.LocalGuide
 import n7.ad2.database_guides.internal.model.LocalItem
-import n7.ad2.database_guides.internal.model.NewsLocal
+import n7.ad2.database_guides.internal.model.NewsDB
 
 private const val DB_VERSION = 1
 
@@ -18,7 +18,7 @@ private const val DB_VERSION = 1
         HeroDb::class,
         LocalItem::class,
         LocalGuide::class,
-        NewsLocal::class,
+        NewsDB::class,
     ],
     version = DB_VERSION,
     exportSchema = false,

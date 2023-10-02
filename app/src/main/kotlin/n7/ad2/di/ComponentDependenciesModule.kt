@@ -9,7 +9,7 @@ import n7.ad2.hero.page.api.HeroPageDependencies
 import n7.ad2.heroes.ui.api.HeroesDependencies
 import n7.ad2.itempage.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
-import n7.ad2.news.api.NewsDependencies
+import n7.ad2.news.ui.api.NewsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
 
