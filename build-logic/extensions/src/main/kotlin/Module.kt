@@ -33,6 +33,22 @@ object Module {
             const val ui = ":feature:heroes:ui"
         }
 
+        object Items {
+            const val api = ":feature:items:domain:api"
+            const val impl = ":feature:items:domain:impl"
+            const val wiring = ":feature:items:domain:wiring"
+            const val demo = ":feature:items:demo"
+            const val ui = ":feature:items:ui"
+        }
+
+        object News {
+            const val api = ":feature:news:domain:api"
+            const val impl = ":feature:news:domain:impl"
+            const val wiring = ":feature:news:domain:wiring"
+            const val demo = ":feature:news:demo"
+            const val ui = ":feature:news:ui"
+        }
+
         object HeroPage {
             const val api = ":feature:hero-page:domain:api"
             const val impl = ":feature:hero-page:domain:impl"
@@ -42,11 +58,9 @@ object Module {
 
         const val itemPage = ":feature:item-page"
         const val settings = ":feature:settings"
-        const val items = ":feature:items"
         const val drawer = ":feature:drawer"
         const val games = ":feature:games"
         const val tournaments = ":feature:tournaments"
-        const val news = ":feature:news"
     }
 
 }
