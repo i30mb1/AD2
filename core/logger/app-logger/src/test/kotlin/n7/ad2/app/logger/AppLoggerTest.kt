@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
+import n7.ad2.app.logger.model.AppLog
 import n7.ad2.coroutines.CoroutineTestRule
 import org.junit.Rule
 import org.junit.Test

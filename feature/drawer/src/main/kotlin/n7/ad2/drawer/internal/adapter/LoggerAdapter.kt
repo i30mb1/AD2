@@ -3,9 +3,9 @@ package n7.ad2.drawer.internal.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.feature.drawer.databinding.ItemLogBinding
+import n7.ad2.app.logger.model.AppLog
 import n7.ad2.drawer.internal.adapter.LoggerAdapter.TextViewHolder
-import n7.ad2.app.logger.AppLog
+import n7.ad2.feature.drawer.databinding.ItemLogBinding
 
 internal class LoggerAdapter(
     private val layoutInflater: LayoutInflater,

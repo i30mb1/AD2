@@ -1,7 +1,7 @@
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
-import n7.ad2.app.logger.AppLog
 import n7.ad2.app.logger.Logger
+import n7.ad2.app.logger.model.AppLog
 
 class LoggerFake : Logger {
     override fun log(text: String, params: Map<String, Any>) = Unit

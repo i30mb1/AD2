@@ -10,8 +10,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.flowOf
 import n7.ad2.Resources
-import n7.ad2.app.logger.AppLog
 import n7.ad2.app.logger.Logger
+import n7.ad2.app.logger.model.AppLog
 import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.domain.model.Hero

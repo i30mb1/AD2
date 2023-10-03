@@ -5,8 +5,8 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import n7.ad2.app.logger.AdditionalLogger
-import n7.ad2.app.logger.AppLog
 import n7.ad2.app.logger.Logger
+import n7.ad2.app.logger.model.AppLog
 
 internal class LoggerImpl(
     private val aditionalLoggers: List<AdditionalLogger>,
