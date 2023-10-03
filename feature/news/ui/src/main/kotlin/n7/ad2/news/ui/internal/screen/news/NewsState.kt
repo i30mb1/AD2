@@ -1,6 +1,6 @@
 package n7.ad2.news.ui.internal.screen.news
 
-import n7.ad2.news.ui.internal.screen.NewsVO
+import n7.ad2.news.ui.internal.screen.news.model.NewsVO
 
 data class NewsState(
     val isLoading: Boolean,

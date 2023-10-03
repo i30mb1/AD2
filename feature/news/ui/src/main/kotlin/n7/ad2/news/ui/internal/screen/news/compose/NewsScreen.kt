@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.news.ui.internal.screen.NewsVO
 import n7.ad2.news.ui.internal.screen.news.NewsViewModel
+import n7.ad2.news.ui.internal.screen.news.model.NewsVO
 import n7.ad2.ui.compose.view.ScrollToTopButton
 
 @Composable

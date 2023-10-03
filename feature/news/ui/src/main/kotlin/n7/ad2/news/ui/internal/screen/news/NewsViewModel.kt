@@ -14,8 +14,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map
 import n7.ad2.database_guides.api.AppDatabase
-import n7.ad2.news.ui.internal.screen.Image
-import n7.ad2.news.ui.internal.screen.NewsVO
+import n7.ad2.news.ui.internal.screen.news.model.Image
+import n7.ad2.news.ui.internal.screen.news.model.NewsVO
 
 internal class NewsViewModel @AssistedInject constructor(
     private val database: AppDatabase,

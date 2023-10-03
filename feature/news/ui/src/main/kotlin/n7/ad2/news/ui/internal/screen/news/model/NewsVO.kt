@@ -1,4 +1,4 @@
-package n7.ad2.news.ui.internal.screen
+package n7.ad2.news.ui.internal.screen.news.model
 
 data class NewsVO(
     val id: Int,

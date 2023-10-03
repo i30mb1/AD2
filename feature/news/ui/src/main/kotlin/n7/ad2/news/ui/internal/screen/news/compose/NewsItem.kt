@@ -37,8 +37,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 import coil.compose.SubcomposeAsyncImageContent
-import n7.ad2.news.ui.internal.screen.Image
-import n7.ad2.news.ui.internal.screen.NewsVO
+import n7.ad2.news.ui.internal.screen.news.model.Image
+import n7.ad2.news.ui.internal.screen.news.model.NewsVO
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.bounceClick
 
