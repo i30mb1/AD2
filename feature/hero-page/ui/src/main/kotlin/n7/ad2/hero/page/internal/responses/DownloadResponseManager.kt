@@ -15,6 +15,7 @@ import android.os.Handler
 import android.os.Looper
 import android.provider.MediaStore
 import android.util.LongSparseArray
+import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import androidx.core.database.getIntOrNull
 import androidx.core.database.getStringOrNull
@@ -23,10 +24,10 @@ import androidx.core.util.forEach
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
-import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
-import n7.ad2.repositories.ResponseRepository
 import java.io.File
 import java.net.URL
+import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
+import n7.ad2.repositories.ResponseRepository
 
 sealed class DownloadResult {
     data class InProgress(val downloadedBytes: Int, val totalBytes: Int, val downloadID: Long) : DownloadResult()
@@ -54,7 +55,7 @@ class DownloadResponseManager(
     private val hashMap = LongSparseArray<Pair<Long, ContentObserver>>()
 
     init {
-        application.registerReceiver(downloadEndReceiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
+        ContextCompat.registerReceiver(application, downloadEndReceiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE), ContextCompat.RECEIVER_NOT_EXPORTED)
         lifecycle.addObserver(this)
     }
 
