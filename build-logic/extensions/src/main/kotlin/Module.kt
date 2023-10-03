@@ -52,14 +52,22 @@ object Module {
         object HeroPage {
             const val api = ":feature:hero-page:domain:api"
             const val impl = ":feature:hero-page:domain:impl"
+            const val wiring = ":feature:hero-page:domain:wiring"
             const val demo = ":feature:hero-page:demo"
             const val ui = ":feature:hero-page:ui"
+        }
+
+        object Games {
+            const val api = ":feature:games:domain:api"
+            const val impl = ":feature:games:domain:impl"
+            const val wiring = ":feature:games:domain:wiring"
+            const val demo = ":feature:games:demo"
+            const val ui = ":feature:games:ui"
         }
 
         const val itemPage = ":feature:item-page"
         const val settings = ":feature:settings"
         const val drawer = ":feature:drawer"
-        const val games = ":feature:games"
         const val tournaments = ":feature:tournaments"
     }
 

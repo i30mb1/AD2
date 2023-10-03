@@ -1,5 +1,9 @@
 package n7.ad2.common.jvm
 
+/**
+ * Позволяет получить компонент
+ * Если компонента нет то создает новый
+ */
 abstract class ComponentHolder<Component : DIComponent> : BaseComponentHolder<Component> {
 
     @Volatile

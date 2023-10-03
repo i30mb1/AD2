@@ -115,7 +115,7 @@ dependencies {
     implementation(project(Module.Feature.Heroes.impl))
     implementation(project(Module.Feature.Heroes.wiring))
     implementation(project(Module.Feature.Items.ui))
-    implementation(project(Module.Feature.games))
+    implementation(project(Module.Feature.Games.ui))
     implementation(project(Module.Feature.tournaments))
     implementation(project(Module.Feature.News.ui))
     implementation(project(Module.Feature.News.impl))

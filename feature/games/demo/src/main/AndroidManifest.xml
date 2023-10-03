@@ -2,15 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
-        android:name=".MyApplicationDemo"
-        android:appComponentFactory=".AppComponentFactoryDemo"
+        android:appComponentFactory="n7.ad2.games.demo.AppComponentFactoryDemo"
         android:label="@string/app_name"
         android:theme="@style/AD2Theme"
+        android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
 
         <activity
-            android:name=".HeroesActivityDemo"
+            android:name="n7.ad2.games.demo.GamesActivityDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
