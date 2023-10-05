@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
-import n7.ad2.feature.games.R
+import n7.ad2.feature.games.ui.R
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
