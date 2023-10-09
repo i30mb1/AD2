@@ -20,7 +20,7 @@ class GamesActivityDemo(
     private val logger: (message: String) -> Unit,
 ) : FragmentActivity() {
 
-    private val server = GameServer()
+    private val server = GameServer(logger)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
