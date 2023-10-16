@@ -20,6 +20,7 @@ object Module {
         const val logger = ":core:logger:app-logger"
         const val yandexMetrics = ":core:logger:yandex"
         const val commonApplication = ":core:common-application"
+        const val nativeSecret = ":core:native-secret"
     }
 
     object Feature {

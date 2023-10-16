@@ -39,6 +39,7 @@ dependencies {
     implementation(project(Module.Core.updateManager))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.commonApplication))
+    implementation(project(Module.Core.nativeSecret))
 
     implementation(project(Module.Feature.Games.ui))
     implementation(project(Module.Feature.Games.impl))

@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import n7.ad2.games.demo.server.GameServer
+import n7.ad2.nativesecret.NativeSecretExtractor
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -24,10 +25,11 @@ class GamesActivityDemo(
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val text = NativeSecretExtractor().printHelloWorld()
         setContent {
             Column {
                 Button(onClick = ::runServer) {
-                    Text(text = "Run Server")
+                    Text(text = "Run Server $text")
                 }
                 Button(onClick = ::sendRequest) {
                     Text(text = "Send Request")
