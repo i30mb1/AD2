@@ -5,7 +5,6 @@ plugins {
 
 android {
     namespace = "n7.ad2.macrobenchmark"
-    compileSdk = 32
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -17,9 +16,6 @@ android {
     }
 
     defaultConfig {
-        minSdk = 23
-        targetSdk = 32
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
