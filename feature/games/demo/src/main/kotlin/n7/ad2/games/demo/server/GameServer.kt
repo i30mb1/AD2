@@ -11,12 +11,10 @@ import java.net.ServerSocket
 import java.net.Socket
 import java.security.MessageDigest
 import kotlin.experimental.xor
-import kotlin.random.Random
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import okio.ByteString.Companion.toByteString
 
 internal class GameServer(
     private val logger: (message: String) -> Unit,
@@ -148,16 +146,19 @@ internal class GameServer(
      * [Upgrade: websocket] - подтверждаем что соеднинение будет переключенно на новый протокол
      * [Connection: Upgrade] - подтверждаем что соеднинение будет переключенно на новый протокол
      * [Sec-WebSocket-Accept] - ^
+     *
+     * Клиент в свою очередь генерирует Sec-WebSocket-Key таким образом:
+     * ByteArray(16).apply { Random.nextBytes(this) }.toByteString().base64()
      */
     private fun handshakeWebSocket(headers: Map<String, String>, writer: PrintWriter) {
         val guid = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
         val key = headers["Sec-WebSocket-Key"] + guid
         val hash: ByteArray = MessageDigest.getInstance("SHA-1").digest(key.toByteArray())
         val base64 = Base64Utils.encode(hash)
-        ByteArray(16).apply { Random.nextBytes(this) }.toByteString().base64() // генерация Sec-WebSocket-Key на клиенте
         writer.println("HTTP/1.1 101 Switching Protocols")
         writer.println("Upgrade: websocket")
         writer.println("Connection: Upgrade")
+        writer.println("Sec-WebSocket-Accept: $base64")
         writer.println()
     }
 
