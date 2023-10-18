@@ -5,7 +5,13 @@ import org.gradle.kotlin.dsl.register
 class BumpVersionPlugin : Plugin<Project> {
 
     override fun apply(target: Project) = with(target) {
+        val extension = extensions.create(
+            "bumpVersionConfig",
+            BumpVersionExtension::class.java,
+            this
+        )
         tasks.register("bumpVersion", BumpVersionTask::class) {
+            isEnabled.set(extension.isEnabled)
             group = "n7"
             inputFile.set(file("version.properties"))
             outPutFile.set(file("version.properties"))

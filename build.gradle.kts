@@ -11,3 +11,7 @@ plugins {
 if (!isCI()) {
     apply(plugin = "com.osacky.doctor")
 }
+
+bumpVersionConfig {
+    isEnabled.set(false)
+}

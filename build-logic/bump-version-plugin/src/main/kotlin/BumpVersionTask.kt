@@ -1,5 +1,7 @@
+import java.util.Properties
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.provider.Property
 import org.gradle.api.tasks.CacheableTask
 import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.OutputFile
@@ -8,11 +10,12 @@ import org.gradle.api.tasks.PathSensitivity
 import org.gradle.api.tasks.TaskAction
 import org.gradle.work.Incremental
 import org.gradle.work.InputChanges
-import java.io.InputStreamReader
-import java.util.Properties
 
 @CacheableTask
 abstract class BumpVersionTask : DefaultTask() {
+
+    @get:InputFile
+    abstract val isEnabled: Property<Boolean>
 
     @get:InputFile
     @get:Incremental
@@ -24,6 +27,7 @@ abstract class BumpVersionTask : DefaultTask() {
 
     @TaskAction
     open fun prefixFileLine(changes: InputChanges) {
+        if (isEnabled.get().not()) return
         val properties = Properties()
         inputFile.get().asFile.inputStream().use { reader ->
             properties.load(reader)
