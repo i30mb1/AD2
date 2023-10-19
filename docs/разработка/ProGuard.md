@@ -1,4 +1,4 @@
-open-source Java class file
+инструмент для сокращения, оптимизации, обфускации, верификации [[Java]] byte-кода
 
 - shrinker - removes unused classes, fields, and methods from codebase
 - optimizer - optimizes the bytecode of application
