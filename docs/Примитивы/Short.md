@@ -1,1 +1,0 @@
-Represents a 16-[[bit]] signed integer

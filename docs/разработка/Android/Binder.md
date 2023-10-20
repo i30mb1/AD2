@@ -1,1 +1,0 @@
-механизм межпроцессорного взаимодествия или IPC (Intel Process communication)

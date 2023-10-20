@@ -1,1 +1,0 @@
-Kotlin Annotation Processing Tool - работает внутри javac как часть компилятора

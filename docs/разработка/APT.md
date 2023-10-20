@@ -1,1 +1,0 @@
-Annotation Processing Tool - реализация JSR-269
