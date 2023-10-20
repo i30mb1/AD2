@@ -20,10 +20,3 @@
   Activity. Ядро Android не понимает Activity, Service или любые компоненты, которые мы используем для разработки
 
 Task - стек Activity представляющий и связанных с ними задачами которые работают в одном процессе
-
-# Launch Modes
-
-- **Standard**
-- **SingleTop**
-- **SingleTask**
-- **SingleInstance**

@@ -1,4 +1,41 @@
-в [[Kotlin]]
+в [[Kotlin]] нельзя параметризировывать
+
+- классы наследующие от Throwable
+- анонимные классы
+- Enum
+
+## Heap Pollution
+
+ситуация когда параметризинованый класс ссылкается на класс параметризированный чем-то другим
+
+```Kotlin
+List<Int> = List<String>
+```
+
+## Type Erasure
+
+это процедура стирания информации в дженериках на уровне компиляции c сохранением мета-информация
+До
+
+```Kotlin
+class Holder <T> {
+	private T value
+}
+```
+
+После
+
+```Kotlin
+class Holder {
+	private Object value
+}
+```
+
+При вызове компилятор делает кастование
+
+```Kotlin
+Holder.value as String
+```
 
 <T,N> - при отсутствии логики по умолчанию первое значение это возвращаемое а второе принимаемое
 
@@ -7,7 +44,10 @@
 ## Ковариативность
 
 сохранение иерархии наследования исходных типов в производных типах в том же порядке
-в [[Java]] массивы ковариантными, мы можем присвоить массиву обьектов массив строк, и при попытке добавить туда строку мы упадем
+
+в [[Java]] массивы ковариантны, мы можем присвоить массиву объектов массив строк, и при попытке добавить туда строку мы упадем
+
+[[MutableList]] в [[Kotlin]] инвариантный
 
 ```Kotlin
 open class Animal  
@@ -42,8 +82,6 @@ val stringProducer: Producer<String> = object : Producer<String> {
 val anyProducer: Producer<Any> = stringProducer
 ```
 
-``
-
 ```Kotlin
 interface OutExample<out T> {  
     fun consumer(t: T)
@@ -53,6 +91,8 @@ interface OutExample<out T> {
 ```
 
 ## Инвариативность
+
+[[List]] в [[Kotlin]] инвариантный
 
 ```Kotlin
 interface InExample<T> {

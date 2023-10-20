@@ -12,3 +12,5 @@
 - git push -f origin branch7 - pushing an amended commit
 - git rm --cached path/to/file - remove file from indexing
 
+
+

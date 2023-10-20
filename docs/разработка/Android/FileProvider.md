@@ -1,0 +1,1 @@
+subclass of [[ContentProvider]] that facilitate secure sharing of file

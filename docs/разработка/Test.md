@@ -1,1 +1,0 @@
-ANDROIDX_TEST_ORCHESTRATOR - для каждого ui теста создает стандартные условия (очищает sharedPreference, удаляет все файлы)
