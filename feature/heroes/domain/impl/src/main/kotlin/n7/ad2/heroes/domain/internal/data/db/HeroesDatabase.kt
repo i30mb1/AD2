@@ -16,6 +16,10 @@ private const val DB_NAME = "HeroesDatabase_$DB_VERSION.db"
     version = DB_VERSION,
     exportSchema = false,
 )
+/**
+ * Создаем базу данных из готового heroes.db файла
+ * @see <a href="https://www.youtube.com/watch?v=pe28WeQ0VCc">video tutorial</>
+ */
 abstract class HeroesDatabase : RoomDatabase() {
 
     abstract val heroesDao: HeroesDao
