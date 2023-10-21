@@ -8,27 +8,28 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.items.domain.model.Item
+import n7.ad2.items.domain.usecase.GetItemsUseCase
 import n7.ad2.items.internal.domain.vo.VOItem
-import n7.ad2.repositories.ItemRepository
 import n7.ad2.ui.adapter.HeaderViewHolder
 
 internal class GetVOItemsUseCase @Inject constructor(
+    private val getItemsUseCase: GetItemsUseCase,
     private val logger: Logger,
-    private val itemRepository: ItemRepository,
     private val dispatchers: DispatchersProvider,
 ) {
 
     operator fun invoke(): Flow<List<VOItem>> {
-        return itemRepository.getAllItems()
+        return getItemsUseCase()
             .onStart { logger.log("items loaded") }
-            .flatMapLatest { list ->
+            .flatMapLatest { list: List<Item> ->
                 val result = mutableListOf<VOItem>()
                 flow {
                     list.groupBy { localItem -> localItem.type }
-                        .forEach { map: Map.Entry<String, List<n7.ad2.database_guides.internal.model.LocalItem>> ->
+                        .forEach { map: Map.Entry<String, List<Item>> ->
                             result.add(VOItem.Header(HeaderViewHolder.Data(map.key)))
                             result.addAll(map.value.map { localItem ->
-                                VOItem.Body(localItem.name, ItemRepository.getFullUrlItemImage(localItem.name), localItem.viewedByUser)
+                                VOItem.Body(localItem.name, localItem.imageUrl, localItem.viewedByUser)
                             })
                         }
                     emit(result.toList())

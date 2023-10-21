@@ -19,5 +19,4 @@ internal interface ItemsComponent {
     fun inject(itemsFragment: ItemsFragment)
 
     val itemsViewModel: ItemsViewModel.Factory
-
 }

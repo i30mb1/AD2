@@ -1,11 +1,11 @@
-package n7.ad2.database_guides.internal.model
+package n7.ad2.items.domian.internal.data.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "LocalItems")
-data class LocalItem(
+@Entity(tableName = "ItemsTable")
+data class ItemDatabase(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "rowid")
     val id: Int = 0,

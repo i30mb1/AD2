@@ -13,7 +13,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import n7.ad2.android.DependenciesMap
 import n7.ad2.android.DrawerPercentListener
+import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.feature.items.ui.R
@@ -25,11 +27,9 @@ import n7.ad2.items.internal.domain.vo.VOItem
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
 
-internal class ItemsFragment : Fragment(R.layout.fragment_items) {
-
-    companion object {
-        fun getInstance(): ItemsFragment = ItemsFragment()
-    }
+internal class ItemsFragment(
+    override var dependenciesMap: DependenciesMap,
+) : Fragment(R.layout.fragment_items), HasDependencies {
 
     @Inject lateinit var itemsViewModelFactory: ItemsViewModel.Factory
     @Inject lateinit var navigator: Navigator
@@ -57,7 +57,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     private fun onItemClick(model: VOItem.Body, view: ImageView) {
-        getMainFragmentNavigator.setMainFragment(navigator.itemPageApi.getItemPageFragment(model.name)) {
+        getMainFragmentNavigator?.setMainFragment(navigator.itemPageApi.getItemPageFragment(model.name)) {
             setReorderingAllowed(true)
             addSharedElement(view, view.transitionName)
             addToBackStack(null)
@@ -84,7 +84,7 @@ internal class ItemsFragment : Fragment(R.layout.fragment_items) {
             itemsItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
             insets
         }
-        (parentFragment as DrawerPercentListener).setDrawerPercentListener { percent ->
+        (parentFragment as? DrawerPercentListener)?.setDrawerPercentListener { percent ->
             itemsItemDecorator.percent = percent
             binding.rv.invalidateItemDecorations()
         }

@@ -11,4 +11,3 @@ internal interface HeroesRepository {
 
 fun getFullUrlHeroMinimap(heroName: String) = "file:///android_asset/heroes/$heroName/minimap.png"
 fun getFullUrlHeroArcane(heroName: String) = "file:///android_asset/heroes/$heroName/arcane.webp"
-fun getFullUrlHeroSpell(spellName: String) = "file:///android_asset/images/${spellName.replace(" ", "_")}.webp"

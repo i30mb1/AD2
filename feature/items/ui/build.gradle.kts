@@ -11,5 +11,7 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.navigator))
 
+    implementation(project(Module.Feature.Items.api))
+
     kapt(libs.daggerAnnotation)
 }
