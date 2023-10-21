@@ -8,7 +8,6 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.database_guides.api.dao.GuidesDao
-import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.database_guides.api.dao.ItemsDao
 import n7.ad2.database_guides.api.dao.NewsDao
 import n7.ad2.database_guides.internal.worker.DatabaseWorker
@@ -43,9 +42,6 @@ class DatabaseModule {
 
     @dagger.Provides
     fun provideHeroesDao(database: AppDatabase): GuidesDao = database.guidesDao
-
-    @dagger.Provides
-    fun provideGuidesDao(database: AppDatabase): HeroesDao = database.heroesDao
 
     @dagger.Provides
     fun provideNewsDao(database: AppDatabase): NewsDao = database.newsDao

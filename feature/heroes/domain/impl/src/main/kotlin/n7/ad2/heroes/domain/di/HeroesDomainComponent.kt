@@ -1,6 +1,7 @@
 package n7.ad2.heroes.domain.di
 
 import n7.ad2.heroes.domain.internal.data.HeroesRepositoryImpl
+import n7.ad2.heroes.domain.internal.data.db.HeroesDatabase
 import n7.ad2.heroes.domain.internal.usecase.GetGuideForHeroUseCaseImpl
 import n7.ad2.heroes.domain.internal.usecase.GetHeroByNameUseCaseImpl
 import n7.ad2.heroes.domain.internal.usecase.GetHeroDescriptionUseCaseImpl
@@ -28,12 +29,9 @@ fun HeroesDomainComponent(
     dependencies: HeroesDomainDependencies,
 ): HeroesDomainComponent = object : HeroesDomainComponent {
 
-    private val heroesRepository = HeroesRepositoryImpl(
-        dependencies.res,
-        dependencies.heroesDao,
-        dependencies.moshi,
-        dependencies.appInformation.appLocale,
-    )
+    private val database = HeroesDatabase.getInstance(dependencies.application)
+    private val heroesDao = database.heroesDao
+    private val heroesRepository = HeroesRepositoryImpl(heroesDao)
 
     override val getHeroesUseCase = GetHeroesUseCaseImpl(heroesRepository)
 

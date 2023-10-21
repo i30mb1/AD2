@@ -47,5 +47,4 @@ internal class HeroesViewModel @AssistedInject constructor(
     fun updateViewedByUserFieldForHero(name: String) = viewModelScope.launch {
         updateStateViewedForHeroUseCase.get()(name)
     }
-
 }

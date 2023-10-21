@@ -4,7 +4,6 @@ plugins {
 }
 
 dependencies {
-    api(libs.room)
     api(libs.roomKtx)
 
     implementation(libs.workManager)

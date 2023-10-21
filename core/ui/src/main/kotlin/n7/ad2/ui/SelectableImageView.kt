@@ -2,14 +2,13 @@ package n7.ad2.ui
 
 import android.animation.ValueAnimator
 import android.content.Context
-import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import com.google.android.material.color.MaterialColors
-import n7.ad2.core.ui.R
 import kotlin.math.roundToInt
+import n7.ad2.core.ui.R
 
 class SelectableImageView(
     context: Context,
@@ -52,10 +51,10 @@ class SelectableImageView(
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
-
-        if (currentBorderWidth != 0f) canvas?.drawRect(rect, borderPaint)
-    }
+//    override fun onDraw(canvas: Canvas?) {
+//        super.onDraw(canvas)
+//
+//        if (currentBorderWidth != 0f) canvas?.drawRect(rect, borderPaint)
+//    }
 
 }

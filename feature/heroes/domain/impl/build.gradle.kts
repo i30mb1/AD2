@@ -6,11 +6,13 @@ plugins {
 dependencies {
     api(project(Module.Feature.Heroes.api))
 
-    implementation(project(Module.Core.database))
     implementation(project(Module.Core.common))
     implementation(project(Module.Core.coroutines))
+    implementation(project(Module.Core.logger))
 
     implementation(libs.moshi)
-    
+    implementation(libs.roomKtx)
+
     kapt(libs.moshiCodegen)
+    kapt(libs.roomAnnotation)
 }

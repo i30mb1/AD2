@@ -1,10 +1,11 @@
 package n7.ad2.heroes.domain.wiring
 
+import android.app.Application
 import com.squareup.moshi.Moshi
 import n7.ad2.AppInformation
 import n7.ad2.Resources
+import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.database_guides.api.dao.HeroesDao
 import n7.ad2.heroes.domain.di.HeroesDomainComponent
 import n7.ad2.heroes.domain.di.HeroesDomainDependencies
 import n7.ad2.heroes.domain.usecase.GetGuideForHeroUseCase
@@ -20,14 +21,16 @@ object HeroesModule {
     @dagger.Provides
     fun provideHeroesDomainComponent(
         res: Resources,
-        heroesDao: HeroesDao,
         moshi: Moshi,
         dispatchers: DispatchersProvider,
         appInformation: AppInformation,
+        application: Application,
+        logger: Logger,
     ): HeroesDomainComponent = HeroesDomainComponent(
         object : HeroesDomainDependencies {
+            override val application: Application = application
+            override val logger = logger
             override val res: Resources = res
-            override val heroesDao: HeroesDao = heroesDao
             override val moshi: Moshi = moshi
             override val dispatcher = dispatchers
             override val appInformation = appInformation

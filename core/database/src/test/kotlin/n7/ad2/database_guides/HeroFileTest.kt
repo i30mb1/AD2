@@ -5,10 +5,10 @@ import com.google.common.truth.Truth
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import n7.ad2.database_guides.internal.domain.model.AssetsHero
+import java.io.File
+import n7.ad2.heroes.domain.internal.data.model.AssetsHero
 import org.junit.Ignore
 import org.junit.Test
-import java.io.File
 
 @LargeTest
 class HeroFileTest {
@@ -23,8 +23,8 @@ class HeroFileTest {
 
         val text = fileWithHeroes.readText()
 
-        val typeAssetsHero = Types.newParameterizedType(List::class.java, AssetsHero::class.java)
-        val adapter: JsonAdapter<List<AssetsHero>> = moshi.adapter(typeAssetsHero)
+        val typeAssetsHero = Types.newParameterizedType(List::class.java, n7.ad2.heroes.domain.internal.data.model.AssetsHero::class.java)
+        val adapter: JsonAdapter<List<n7.ad2.heroes.domain.internal.data.model.AssetsHero>> = moshi.adapter(typeAssetsHero)
         val listAssetsHero = adapter.fromJson(text)
 
         Truth.assertThat(listAssetsHero?.size).isGreaterThan(100)
