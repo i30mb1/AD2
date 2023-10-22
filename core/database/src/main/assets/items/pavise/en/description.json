@@ -1,0 +1,35 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Pavise_Protect_1.mp3\/revision\/latest?cb=20230430201909",
+      "effects": [
+        "Barrier Capacity: 300",
+        "Duration: 8"
+      ],
+      "notes": [],
+      "mana": "75",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Protect<\/span>",
+      "cooldown": "18",
+      "description": "When cast on an ally, grants them a barrier that absorbs 300 physical damage. Duration: 8s.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": [
+    "Void Stone",
+    "Ring of Protection",
+    "Fluffy Hat",
+    "Recipe"
+  ],
+  "name": "Pavise",
+  "description": "Support Cost 1400 (275) Sell Value 700 Active Protect Bonus ? +175 Health +2.5 Mana Regeneration +3 Armor Shareable Disassemble Usage Alert ? Recipe",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Usually frail supports, who get targeted often in fights, can make good use of this item.",
+    "Strong in countering physical damage in the early game"
+  ]
+}

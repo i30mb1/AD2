@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "1350",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Claymore",
+  "description": "A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orchid Malevolence",
+    "Battle Fury",
+    "Satanic"
+  ],
+  "tips": null
+}

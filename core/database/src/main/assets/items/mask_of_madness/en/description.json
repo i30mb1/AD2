@@ -1,0 +1,54 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Mask_of_Madness_Berserk.mp3\/revision\/latest?cb=20191227195455",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Attack Speed Bonus: 110",
+        "Move Speed Bonus: 30",
+        "Armor Reduction: 8",
+        "Duration: 6"
+      ],
+      "notes": [],
+      "mana": "25",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Berserk<\/span>",
+      "cooldown": "16",
+      "description": "Gives 110 attack speed and 30 movement speed, but reduces your armor by 8 and silences you. Lasts 6 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Hero Lifesteal: 24%",
+        "Creep Lifesteal: 12%"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Lifesteal<\/span>",
+      "cooldown": null,
+      "description": "Heals the attacker for 24% of attack damage dealt. Lifesteal from creeps is reduced by 50%",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1775",
+  "lore": null,
+  "consistFrom": [
+    "Morbid Mask",
+    "Quarterstaff"
+  ],
+  "name": "Mask of Madness",
+  "description": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Mask of Madness is the most cost-effective DPS and Attack Speed item in the game, costing only 14.79 per point of attack speed. The second best DPS item is the Diffusal Blade for an agility hero.",
+    "Use your abilities before activating the Mask of Madness, particularly if you have a disable such as a stun. The active is extremely useful while farming. Taking more physical damage is negligible when simply running between lanes or hitting lane or jungle creeps, especially when the item itself provides sustain by its lifesteal.",
+    "The active is extremely useful while farming. Taking more physical damage is negligible when simply running between lanes or hitting lane or jungle creeps, especially when the item itself provides sustain by its lifesteal.",
+    "In general, an early Mask of Madness is more useful for farming than fighting. Without other damage and survivability items to back it up, the lifesteal alone will not be enough to sustain you in a teamfight.",
+    "Mask of Madness can be disassembled in later stages of the game to help a hero build a Butterfly, an Echo Sabre or an Bloodthorn from the Quarterstaff and a Vladmir's Offering or a Satanic from the Morbid Mask."
+  ]
+}

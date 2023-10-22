@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance.",
+    "6 main attack damage to heroes.",
+    "4.2 main attack damage to universal heroes."
+  ],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Robe of the Magi",
+  "description": "This robe corrupts the soul of the user, but provides wisdom in return.",
+  "trivia": null,
+  "upgradeIn": [
+    "Power Treads",
+    "Oblivion Staff",
+    "Witch Blade",
+    "Kaya",
+    "Diffusal Blade",
+    "Drum of Endurance"
+  ],
+  "tips": null
+}

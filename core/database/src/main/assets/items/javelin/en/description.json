@@ -1,0 +1,30 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Proc Chance: 30%",
+        "Damage: 70"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Pierce<\/span>",
+      "cooldown": null,
+      "description": "Grants each attack a 30% chance to pierce through evasion and deal 70 bonus magical damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1100",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Javelin",
+  "description": "A rather typical spear that can sometimes pierce through an enemy's armor when used to attack.",
+  "trivia": null,
+  "upgradeIn": [
+    "Monkey King Bar",
+    "Maelstrom"
+  ],
+  "tips": null
+}

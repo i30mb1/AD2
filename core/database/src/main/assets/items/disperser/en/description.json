@@ -1,0 +1,63 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Disperser_Suppress_1.mp3\/revision\/latest?cb=20230430201813",
+      "effects": [
+        "Cast Range: 600",
+        "Effect Radius: 350",
+        "Enemy Move Speed Slow: 100%",
+        "Ally Move Speed Bonus: 100%",
+        "Move Speed Change Intervals: 5",
+        "Move Speed Slow Duration: 4",
+        "Move Speed Bonus Duration: 4"
+      ],
+      "notes": [],
+      "mana": "75",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Suppress<\/span>",
+      "cooldown": "15",
+      "description": "Affects all units in a 350 AoE around the target. All enemies around the target are slowed for 4 seconds. All allies around the target receive a basic dispel, increase their movement speed, and are unslowable for 4 seconds. Both movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Mana Burned per Hit: 40",
+        "Burned Mana as Damage: 100%",
+        "Mana Burned per Hit: 8"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Manabreak<\/span>",
+      "cooldown": null,
+      "description": "Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. Burns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "20 attack speed and 3.33 main armor.",
+    "20 and 10 main attack damage to \/ heroes respectively.",
+    "21 main attack damage to universal heroes."
+  ],
+  "cost": "5700",
+  "lore": null,
+  "consistFrom": [
+    "Diffusal Blade",
+    "Demon Edge",
+    "Recipe"
+  ],
+  "name": "Disperser",
+  "description": "Weapons Cost 5700 (1000) Sell Value 2850 Active Suppress Passive ? Manabreak Bonus ? +20 Agility +10 Intelligence +45 Attack Damage Shareable Disassemble Usage Alert ? Recipe",
+  "trivia": [
+    "The Manabreak passive used to be called Feedback and got changed at some point without notification."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Because of the way Manabreak interacts with illusions, Disperser is most common and most effective on heroes with easy access to them, such as Phantom Lancer."
+  ]
+}

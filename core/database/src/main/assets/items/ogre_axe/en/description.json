@@ -1,0 +1,26 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "220 health and 1 health regeneration.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ogre Axe",
+  "description": "You grow stronger just by holding it.",
+  "trivia": [
+    "In Dota 2, this item was initially named \"Ogre Club\" until it was renamed to \"Ogre Axe\" in version 7.07. Ogre Axe was the item's original name in DotA as well. The reason why it was named differently in Dota 2 is unknown.",
+    "Ogre Axe was the item's original name in DotA as well. The reason why it was named differently in Dota 2 is unknown."
+  ],
+  "upgradeIn": [
+    "Aghanim's Scepter",
+    "Black King Bar",
+    "Echo Sabre",
+    "Eternal Shroud",
+    "Sange"
+  ],
+  "tips": null
+}

@@ -1,0 +1,61 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Pipe_of_Insight_Barrier.mp3\/revision\/latest?cb=20191227195518",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Radius: 1200",
+        "Damage Barrier: 450",
+        "Duration: 12"
+      ],
+      "notes": [],
+      "mana": "150",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Barrier<\/span>",
+      "cooldown": "60",
+      "description": "Gives a shield that blocks 450 magic damage to all nearby allies. Lasts 12 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Health Regen Bonus: 2.5",
+        "Magic Resistance Bonus: 10%",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Insight Aura<\/span>",
+      "cooldown": null,
+      "description": "Gives allied units 2.5 health regeneration and 10% magic resistance.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks multiplicatively with other magic resistance sources."
+  ],
+  "cost": "3375",
+  "lore": null,
+  "consistFrom": [
+    "Cloak",
+    "Headdress",
+    "Ring of Health",
+    "Recipe"
+  ],
+  "name": "Pipe of Insight",
+  "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
+  "trivia": [
+    "In the transition from DotA to Dota 2, Pipe of Insight name was changed from the Khadgar's Pipe of Insight to simply Pipe of Insight. Khadgar was a wizard in Warcraft II.",
+    "Dazzle's cosmetic item Pipe of Dezun is based on the Pipe of Insight."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The Pipe of Insight is useful for frail heroes who can be easily taken down by damages from spells. With its aura, it can slightly increase the magic resistance of a hero.",
+    "It is an ideal for a support heroes to carry a Pipe of Insight in order to protect the nearby allies against the strongest magic spells.",
+    "It is best combined with Crimson Guard and any abilities that grants damage block."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Shadow_Blade_Shadow_Walk.mp3\/revision\/latest?cb=20191227195532",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Fade Time: 0.3",
+        "Damage: 175",
+        "Move Speed Bonus: 20%",
+        "Duration: 14"
+      ],
+      "notes": [],
+      "mana": "75",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Shadow Walk<\/span>",
+      "cooldown": "25",
+      "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell. While Shadow Walk is active, you move 20% faster and can move through units. If attacking to end the invisibility, you gain 175 bonus physical damage on that attack.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "3000",
+  "lore": null,
+  "consistFrom": [
+    "Shadow Amulet",
+    "Blitz Knuckles",
+    "Broadsword"
+  ],
+  "name": "Shadow Blade",
+  "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
+  "trivia": [
+    "In the original DotA, this item was called Lothar's Edge, a reference to Sir Anduin Lothar from the Warcraft universe. It is still commonly referred to as \"Lothar\" or \"Lothar's\" by those who have played the original DotA.",
+    "Kunkka's cosmetic item, Kunkka's Shadow Blade, is based on Shadow Blade."
+  ],
+  "upgradeIn": [
+    "Silver Edge"
+  ],
+  "tips": null
+}

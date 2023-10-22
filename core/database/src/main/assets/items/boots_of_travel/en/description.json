@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Town Portal Scroll Cooldown: 40\/40",
+        "Channel Time Reduction: 0\/1"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Upgrade: Town Portal Scroll<\/span>",
+      "cooldown": null,
+      "description": "Boots of Travel: Upgrades your Town Portal Scroll, allowing it to target units, reduces cooldown and does not consume a charge on usage. Boots of Travel 2: Upgrades your Town Portal Scroll, allowing it to target units and heroes, reduces cooldown, channel time and does not consume a charge on usage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Upgrading the item improves the passive Teleport Upgrade. Can be upgraded only once.",
+    "The total gold cost for each level is 2500\/4500 .",
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
+    "Stacks with all other movement speed bonuses.",
+    "Alt shows your allied heroes' teleport status and cooldowns under their portraits below the top bar of the HUD. The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey. The teleport status display has the following priorities: Boots of Travel 2 ➤ Boots of Travel ➤ Town Portal Scroll. The teleport status does not show other teleport abilities (e.g. Teleportation).",
+    "The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey.",
+    "The teleport status display has the following priorities: Boots of Travel 2 ➤ Boots of Travel ➤ Town Portal Scroll.",
+    "The teleport status does not show other teleport abilities (e.g. Teleportation)."
+  ],
+  "cost": "2500",
+  "lore": null,
+  "consistFrom": [
+    "Boots of Speed",
+    "Recipe"
+  ],
+  "name": "Boots of Travel",
+  "description": "",
+  "trivia": null,
+  "upgradeIn": [
+    "Boots of Travel 2"
+  ],
+  "tips": [
+    "Boots of Travels is useful on all heroes during the late game, where it is needed to make desperate pushes or defenses, especially if one or both teams are dead or away from their bases.",
+    "Consider using Glyph of Fortification to prevent creeps from dying so Boots of Travel can complete channeling of Teleport."
+  ]
+}

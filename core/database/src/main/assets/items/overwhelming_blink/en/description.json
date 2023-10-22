@@ -1,0 +1,54 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Overwhelming_Blink_Overwhelming_Blink_1.mp3\/revision\/latest?cb=20210120233510",
+      "effects": [
+        "Cast Range: Global",
+        "Max Blink Distance: 1200",
+        "Penalty Blink Distance: 960",
+        "Effect Radius: 800",
+        "Impact Damage: 100",
+        "Strength as Impact Damage Bonus: 50%",
+        "Strength as Damage Over Time: 100%",
+        "Move Speed Slow: 50%",
+        "Attack Speed Slow: 50",
+        "Slow Duration: 6",
+        "Damage Mute Duration: 3"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Overwhelming Blink<\/span>",
+      "cooldown": "15",
+      "description": "Teleport to a target point up to 1200 units away. After teleportation, all enemies in a 800 AoE take damage equal to 100 + 50% of your strength and an additional 100% over time, and have 50% movement speed slow and 50 attack speed slow for 6 seconds. Overwhelming Blink cannot be used for 6 seconds after taking damage from an enemy hero or Roshan.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "550 health and 2.5 health regeneration.",
+    "25 main attack damage to heroes.",
+    "17.5 main attack damage to universal heroes."
+  ],
+  "cost": "6800",
+  "lore": null,
+  "consistFrom": [
+    "Blink Dagger",
+    "Reaver",
+    "Recipe"
+  ],
+  "name": "Overwhelming Blink",
+  "description": "A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.",
+  "trivia": [
+    "Overwhelming Blink's slow debuff does not have its own particle system and uses the particle effects of Thunder Clap's slow debuff instead."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Blink requires heroes to face the direction in which they are blinking. This means that heroes facing away from their blink destination will have to turn first, causing a slight delay depending on their turn rate.",
+    "Hood of Defiance's barrier blocks damage over time, meaning that it will prevent items like Radiance from resetting Blink Dagger's cooldown.",
+    "Use Blink to dodge incoming projectile-based spells such as Storm Hammer or Spirit Lance, and from items like Rod of Atos.",
+    "When Blink dagger go into cooldown upon taking damage on an escape, a quick self-cast with Eul's Scepter of Divinity will allow you to wait the short cooldown relatively safely and blink out the moment you land on the ground.",
+    "Blink Dagger can turn into a very strong escape tool if you are affected by False Promise."
+  ]
+}

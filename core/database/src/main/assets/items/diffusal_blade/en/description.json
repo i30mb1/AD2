@@ -1,0 +1,63 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Diffusal_Blade_Inhibit.mp3\/revision\/latest?cb=20230508202322",
+      "effects": [
+        "Cast Range: 600",
+        "Move Speed Slow: 100%",
+        "Slow Decay Intervals: 5",
+        "Slow Duration: 4"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Inhibit<\/span>",
+      "cooldown": "15",
+      "description": "Targets an enemy, slowing it for 4 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Mana Burned per Hit: 40",
+        "Burned Mana as Damage: 100%",
+        "Mana Burned per Hit: 8"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Manabreak<\/span>",
+      "cooldown": null,
+      "description": "Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. Burns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "15 attack speed and 2.5 main armor.",
+    "15 and 10 main attack damage to \/ heroes respectively.",
+    "17.5 main attack damage to universal heroes."
+  ],
+  "cost": "2500",
+  "lore": null,
+  "consistFrom": [
+    "Blade of Alacrity",
+    "Robe of the Magi",
+    "Recipe"
+  ],
+  "name": "Diffusal Blade",
+  "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+  "trivia": [
+    "The Manabreak passive used to be called Feedback and got changed at some point without notification.",
+    "Since version 7.07, Diffusal Blade no longer has a Level 2 variant."
+  ],
+  "upgradeIn": [
+    "Disperser"
+  ],
+  "tips": [
+    "Because of the way Manabreak interacts with illusions, Diffusal Blade is most common and most effective on heroes with easy access to them, such as Phantom Lancer."
+  ]
+}

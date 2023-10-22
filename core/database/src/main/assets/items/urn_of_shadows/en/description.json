@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Urn_of_Shadows_Soul_Release.mp3\/revision\/latest?cb=20191227195544",
+      "effects": [
+        "Charge Replenish on Death: 1",
+        "Cast Range: 750",
+        "Charge Gain Radius: 1400",
+        "Ally Health Regen Bonus: 30",
+        "Enemy Damage per Second: 25",
+        "Duration: 8"
+      ],
+      "notes": [],
+      "mana": "-",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Soul Release<\/span>",
+      "cooldown": "7",
+      "description": "Provides 30 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies. Lasts 8 seconds. Gains charges every time an enemy hero dies within 1400 units. Only the closest Urn to the dying hero will gain a charge.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "44 health and 0.2 health regeneration.",
+    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance.",
+    "2 attack speed and 0.33 main armor.",
+    "2 main attack damage to all \/ \/ heroes.",
+    "4.2 main attack damage to universal heroes."
+  ],
+  "cost": "880",
+  "lore": null,
+  "consistFrom": [
+    "Sage's Mask",
+    "Circlet",
+    "Ring of Protection",
+    "Recipe"
+  ],
+  "name": "Urn of Shadows",
+  "description": "Contains the ashes of powerful demons.",
+  "trivia": null,
+  "upgradeIn": [
+    "Spirit Vessel"
+  ],
+  "tips": [
+    "Urn of Shadows is a great item to have when going for a heavy ganking lineup, as it helps heal any damage taken while finishing off any low health enemies."
+  ]
+}

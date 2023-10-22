@@ -7,7 +7,7 @@ internal object ItemDatabaseToItemMapper : (ItemDatabase) -> Item {
 
     override operator fun invoke(from: ItemDatabase) = Item(
         from.name,
-        "file:///android_asset/images/${from.name.lowercase().replace(" ", "_")}.webp",
+        "file:///android_asset/items/${from.name.lowercase().replace(" ", "_")}/full.webp",
         from.type,
         from.viewedByUser,
     )

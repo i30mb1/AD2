@@ -1,0 +1,30 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Ui_hud_equip_scepter.mp3\/revision\/latest?cb=20201219110041",
+      "effects": [],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Ability Upgrade<\/span>",
+      "cooldown": null,
+      "description": "Upgrades the ultimate, and some abilities, of all heroes.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "On his third death and onwards, Roshan drops the Aghanim's Blessing - Roshan as a third item if he was slain in the Radiant pit. In the Dire pit, he drops a Refresher Shard instead.",
+    "Adds 5800 networth to the hero consuming the item."
+  ],
+  "cost": "-",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Aghanim's Blessing - Roshan",
+  "description": "The scepter of a wizard with demigod-like powers.",
+  "trivia": [
+    "When selecting Roshan, this item can be seen in his inventory."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

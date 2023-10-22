@@ -1,0 +1,42 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Refresher_Shard_Reset_Cooldowns.mp3\/revision\/latest?cb=20191227195521",
+      "effects": [
+        "Cast Animation: 0+0"
+      ],
+      "notes": [],
+      "mana": "200",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Reset Cooldowns<\/span>",
+      "cooldown": "200",
+      "description": "Resets the cooldowns of all your items and abilities. Shares a cooldown with Refresher Orb. This item's cooldown only progresses in your hero's main inventory.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "On his third death and onwards, Roshan drops the Refresher Shard as a third item if he was slain in the Dire pit. In the Radiant pit, he drops an Aghanim's Blessing - Roshan instead.",
+    "Although Refresher Shard cannot be bought, it can be sold for 500 . However, only the hero whose main inventory it enters first can sell it.",
+    "If a Courier is the first unit to pick up the Refresher Shard, it cannot be sold by anyone, even if it remains on the Courier or is given to a hero afterwards.",
+    "If a Refresher Shard directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
+    "Unlike the Aegis of the Immortal, Refresher Shard is not reclaimed by Roshan."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Refresher Shard",
+  "description": "Across an epoch of endless battle, the Immortal's will to triumph never faltered.",
+  "trivia": [
+    "The Refresher Shard's icon and in-game model are based on Refresher Orb. Its active uses the same sound and visual effect as Refresher Orb.",
+    "The pop-up that appears when you hover over the item on the ground shows a buying price of 1000 , but when you pick it up, the pop-up shows the selling price of 500 .",
+    "When selecting Roshan, this item can be seen in his inventory."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The Refresher Shard is basically a Refresher Orb with a single charge, so the same tips apply to it.",
+    "However, due to it having no gold cost, it opens a lot of possibilities for heroes who normally don't or can't buy a Refresher Orb, either due to being unable to farm it up, or it being too ineffective for the item slot.",
+    "",
+    "In some scenarios, it might be worth it to sell the Refresher Shard for its selling price of gold to buy a key item sooner rather than consuming it."
+  ]
+}

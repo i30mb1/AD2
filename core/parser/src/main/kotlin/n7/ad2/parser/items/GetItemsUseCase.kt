@@ -22,7 +22,7 @@ class GetItemsUseCase {
             }
             if (element.tag().toString() == "h3") {
                 val spans = element.getElementsByAttribute("id").map { it.text() }
-                val tryingToFind = listOf("Retired", "Убранные")
+                val tryingToFind = listOf("Collectible Items", "Убранные")
                 if (spans.any { tryingToFind.contains(it) }) findItemSection = false
             }
             if (element.tag().toString() == "h3") {

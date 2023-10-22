@@ -1,0 +1,75 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Abyssal_Blade_Overwhelm.mp3\/revision\/latest?cb=20210414122317",
+      "effects": [
+        "Cast Range: 150",
+        "Stun Duration: 1.6"
+      ],
+      "notes": [],
+      "mana": "75",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Overwhelm<\/span>",
+      "cooldown": "35",
+      "description": "Stuns a target enemy unit for 1.6 seconds. Pierces Spell Immunity.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Abyssal_Blade_Bash.mp3\/revision\/latest?cb=20191227195343",
+      "effects": [
+        "Melee Proc Chance: 25%",
+        "Ranged Proc Chance: 10%",
+        "Damage: 120",
+        "Stun Duration: 1.2"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Bash<\/span>",
+      "cooldown": null,
+      "description": "Grants melee heroes a 25% chance on hit to stun the target for 1.2 seconds and deal 120 bonus physical damage. Bash chance for ranged heroes is 10%.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Proc Chance: 60%",
+        "Blocked Damage (TagAghanimMelee): 70",
+        "Blocked Damage (TagAghanimRanged): 35"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Damage Block<\/span>",
+      "cooldown": null,
+      "description": "Grants a 60% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "220 health and 1 health regeneration.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "6250",
+  "lore": null,
+  "consistFrom": [
+    "Skull Basher",
+    "Vanguard",
+    "Recipe"
+  ],
+  "name": "Abyssal Blade",
+  "description": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Use Overwhelm to interrupt the enemy heroes' channeling such as Town Portal Scroll or any channeled abilities like Freezing Field.",
+    "Although sometimes optional, it is best to buy items that grant attack speed which procs Bash more.",
+    "Since the Bash pierces spell immunity, it is best used when facing heroes with spell immunity (e.g. Juggernaut or Lifestealer). The active ability also has a guaranteed 2-seconds stun that also pierces spell immunity.",
+    "Be careful when facing heroes with skills\/items that applies strong dispel (e.g. Aphotic Shield or Dark Pact), it is best to use abilities with silence or mute to compensate this."
+  ]
+}

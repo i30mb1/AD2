@@ -1,0 +1,65 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Observer_Ward_Plant.mp3\/revision\/latest?cb=20191227195516",
+      "effects": [
+        "Cast Range: 500",
+        "Vision Radius: 1600",
+        "Hero Attacks to Destroy: 2",
+        "Non-Hero Attacks to Destroy: 8",
+        "Gold Bounty Increase per Minute: 4",
+        "Experience Increase per Minute: 8",
+        "Duration: 360"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Plant<\/span>",
+      "cooldown": "1",
+      "description": "Plants an Observer Ward, an invisible watcher that gives ground vision in a 1600 radius to your team. Lasts 6 minutes. Hold Control to give one Observer Ward to an allied hero.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Attacking Accuracy: 100%",
+        "Melee Attack Range Bonus: 150",
+        "Ally Deny Health Threshold: 50"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Planted Ward<\/span>",
+      "cooldown": null,
+      "description": "This unit is permanently invisible and phased.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks with itself and with Sentry Wards in a single inventory slot, there is no stack limit. The sell value adapts based on the number of instances in a stack. Wards from multiple players are combined when given by allies.",
+    "Wards from multiple players are combined when given by allies.",
+    "Observer Wards do not provide True Sight.",
+    "Killing an Observer Ward prints out a chat notification to allies."
+  ],
+  "cost": "0",
+  "lore": [
+    "Knowing how to craft a ward is an important skill for artificers of magical goods. Rylai showed great talent at crafting wards, and once considered becoming an artificer.",
+    "Despite this, the flavor text for this item refers to Observer Wards as plants and states that they are \"often cultivated by apprentice wizards.\" This implies that they are grown as opposed to crafted, directly contradicting the White Sentry's description."
+  ],
+  "consistFrom": null,
+  "name": "Observer Ward",
+  "description": "A form of half-sentient plant, often cultivated by apprentice wizards.",
+  "trivia": null,
+  "upgradeIn": [
+    "Observer and Sentry Wards"
+  ],
+  "tips": [
+    "Essential to victory, Observer Wards allow you to keep watch over areas and spy on your enemies while keeping you and other heroes safe. It is important to keep wards up in key locations, and destroy enemy wards.",
+    "Observer Wards are considered essential to map control, providing vision for runes, watching out for ganks, and blocking neutral creeps from spawning in the jungle.",
+    "Although it is common for the support to purchase wards, mid and offlaners can purchase them to set up ganks or block the enemy team's safe lane jungle camp respectively.",
+    "Avoid placing wards on top of destroyed trees. Trees do not grow back if a unit is obstructing their location, so a ward placed on a destroyed tree prevents it from growing. All destroyed trees re-grow together on a set timer, so if a single tree does not re-grow together with the others indicates that something is blocking it, which could be an enemy ward, or any other invisible enemy.",
+    "All destroyed trees re-grow together on a set timer, so if a single tree does not re-grow together with the others indicates that something is blocking it, which could be an enemy ward, or any other invisible enemy."
+  ]
+}

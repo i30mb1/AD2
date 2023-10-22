@@ -1,0 +1,41 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Spell Damage Reduction: 35%",
+        "Duration: 6"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Mage Slayer<\/span>",
+      "cooldown": null,
+      "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "2500",
+  "lore": null,
+  "consistFrom": [
+    "Cloak",
+    "Oblivion Staff",
+    "Recipe"
+  ],
+  "name": "Mage Slayer",
+  "description": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
+  "trivia": null,
+  "upgradeIn": [
+    "Bloodthorn"
+  ],
+  "tips": [
+    "Generally used against spell based heroes or lineups when playing as a hero reliant on auto-attacks or one that uses skills that use attack modifiers."
+  ]
+}

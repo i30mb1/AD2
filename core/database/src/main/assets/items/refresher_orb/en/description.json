@@ -1,0 +1,32 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Refresher_Orb_Reset_Cooldowns.mp3\/revision\/latest?cb=20191227195520",
+      "effects": [],
+      "notes": [],
+      "mana": "350",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Reset Cooldowns<\/span>",
+      "cooldown": "180",
+      "description": "Resets the cooldowns of all your items and abilities. Shares a cooldown with Refresher Shard. This item's cooldown only progresses in your hero's main inventory.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5000",
+  "lore": null,
+  "consistFrom": [
+    "Cornucopia",
+    "Cornucopia",
+    "Recipe"
+  ],
+  "name": "Refresher Orb",
+  "description": "A powerful artifact created for wizards.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Using Refresher Orb allows some skills to have two instances running simultaneously; for example, Eye of the Storm, Chaotic Offering. Note though that some spells are specifically coded to not be able to run multiple instances at the same time (e.g. Exorcism). Before building Refresher Orb, be sure that the ability you aim to use it with supports multiple instances at the same time or is worth having its duration doubled.",
+    "Note though that some spells are specifically coded to not be able to run multiple instances at the same time (e.g. Exorcism). Before building Refresher Orb, be sure that the ability you aim to use it with supports multiple instances at the same time or is worth having its duration doubled.",
+    "If the game goes on for a very long time and you end up with gold to spare, consider picking up a Refresher Orb to refresh items such as Satanic and Black King Bar."
+  ]
+}

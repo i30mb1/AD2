@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Dust_of_Appearance_Reveal.mp3\/revision\/latest?cb=20191227195411",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Radius: 1050",
+        "Damage: 25",
+        "Move Speed Slow: 20%",
+        "Duration: 12",
+        "Aura Linger Duration: 8"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Reveal<\/span>",
+      "cooldown": "30",
+      "description": "For 12 seconds, creates an area that reveals invisible and slows heroes by 20% in an 1050 radius where the caster was standing. Invisible units revealed by dust take 25 damage. The debuff effect on enemies lingers for 8s after leaving the area of effect.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "80",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Dust of Appearance",
+  "description": "One may hide visage, but never volume.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Dust of Appearance's active ability, Reveal, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The debuff can be easily dispelled by some heroes, such as Weaver.",
+    "Items like Black King Bar, Lotus Orb, Eul's Scepter of Divinity and Manta Style can also remove the debuff, so plan accordingly and consider other detection items, like Sentry Wards or a Gem of True Sight."
+  ]
+}

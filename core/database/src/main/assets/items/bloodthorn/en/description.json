@@ -1,0 +1,57 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Bloodthorn_Soul_Rend.mp3\/revision\/latest?cb=20191227195358",
+      "effects": [
+        "Cast Range: 900",
+        "Damage Dealt as Bonus Damage: 60%",
+        "Accuracy: 100%",
+        "Damage Timer: 5",
+        "Silenced Duration: 5"
+      ],
+      "notes": [],
+      "mana": "100",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Soul Rend<\/span>",
+      "cooldown": "15",
+      "description": "Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage. All attacks on the silenced target will have 100% accuracy.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Spell Damage Reduction: 35%",
+        "Duration: 6"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Mage Slayer<\/span>",
+      "cooldown": null,
+      "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "384 mana, 1.6 mana regeneration and 3.2% flat base magic resistance.",
+    "32 main attack damage to heroes.",
+    "22.4 main attack damage to universal heroes."
+  ],
+  "cost": "6800",
+  "lore": null,
+  "consistFrom": [
+    "Orchid Malevolence",
+    "Mage Slayer",
+    "Recipe"
+  ],
+  "name": "Bloodthorn",
+  "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Bloodthorn's active ability, Soul Rend, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

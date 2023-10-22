@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Spirit_Vessel_Soul_Release_1.mp3\/revision\/latest?cb=20191227195539",
+      "effects": [
+        "Charge Replenish on Death: 1",
+        "Cast Range: 750",
+        "Charge Gain Radius: 1400",
+        "Ally Health Regen Bonus: 40",
+        "Enemy Damage per Second: 35",
+        "Enemy Current Health as Damage per Second: 4%",
+        "Enemy Health Restoration Reduction: 45%",
+        "Duration: 8"
+      ],
+      "notes": [],
+      "mana": "-",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Soul Release<\/span>",
+      "cooldown": "7",
+      "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration and healing by 45%. Deals 35 damage per second. When used on allies, it provides 40 health regeneration per second. Lasts 8 seconds. Gains charges every time an enemy hero dies within 1400 units. Only the closest Spirit Vessel to the dying hero will gain a charge.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "132 health and 0.6 health regeneration.",
+    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance.",
+    "6 attack speed and 1 main armor.",
+    "6 main attack damage to all \/ \/ heroes.",
+    "12.6 main attack damage to universal heroes."
+  ],
+  "cost": "2780",
+  "lore": null,
+  "consistFrom": [
+    "Urn of Shadows",
+    "Crown",
+    "Fluffy Hat",
+    "Recipe"
+  ],
+  "name": "Spirit Vessel",
+  "description": "Forged by a god to entrap the soul of another.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": []
+}

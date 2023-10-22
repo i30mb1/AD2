@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Wraith Band automatically upgrades on the 25th-minute mark. For Turbo Mode, it automatically upgrades on the 12th-minute mark.",
+    "For Turbo Mode, it automatically upgrades on the 12th-minute mark.",
+    "The item's attributes grant the following bonuses: 44\/88 health and 0.2\/0.4 health regeneration. 24\/48 mana and 0.1\/0.2 mana regeneration. 5\/10 attack speed and 0.83\/1.67 main armor. 5\/10 main attack damage to heroes, 2\/4 main attack damage to \/ heroes, and 6\/12 main attack damage to heroes.",
+    "44\/88 health and 0.2\/0.4 health regeneration.",
+    "24\/48 mana and 0.1\/0.2 mana regeneration.",
+    "5\/10 attack speed and 0.83\/1.67 main armor.",
+    "5\/10 main attack damage to heroes, 2\/4 main attack damage to \/ heroes, and 6\/12 main attack damage to heroes."
+  ],
+  "cost": "505",
+  "lore": null,
+  "consistFrom": [
+    "Circlet",
+    "Slippers of Agility",
+    "Recipe"
+  ],
+  "name": "Wraith Band",
+  "description": "A circlet with faint whispers echoing about it.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

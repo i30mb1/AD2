@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "1200",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Cornucopia",
+  "description": "Secret Shop Cost 1200 Sell Value 600 Bonus ? +5 Health Regeneration +2 Mana Regeneration +7 Attack Damage Shareable Usage Alert ? Recipe",
+  "trivia": null,
+  "upgradeIn": [
+    "Battle Fury",
+    "Orchid Malevolence",
+    "Linken's Sphere",
+    "Refresher Orb"
+  ],
+  "tips": null
+}

@@ -1,0 +1,33 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Daedalus_Critical_Strike.mp3\/revision\/latest?cb=20191227195407",
+      "effects": [
+        "Proc Chance: 30%",
+        "Critical Damage: 225%"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Critical Strike<\/span>",
+      "cooldown": null,
+      "description": "Grants each attack a 30% chance to deal 225% damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5100",
+  "lore": null,
+  "consistFrom": [
+    "Crystalys",
+    "Demon Edge",
+    "Recipe"
+  ],
+  "name": "Daedalus",
+  "description": "A weapon of incredible power that is difficult for even the strongest of warriors to control.",
+  "trivia": [
+    "In the original DotA, this item was called the \"Buriza-Do Kyanon\", a reference to a weapon (unique ballista) in Diablo II. \"Buriza-do Kyanon\" is the romaji transliteration of \"Blizzard Cannon\" when written in Japanese katakana."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

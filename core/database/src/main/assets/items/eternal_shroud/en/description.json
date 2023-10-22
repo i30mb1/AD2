@@ -1,0 +1,37 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Eternal_Shroud_Shroud.mp3\/revision\/latest?cb=20210120233507",
+      "effects": [
+        "Damage as Mana Restored: 30%"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Shroud<\/span>",
+      "cooldown": null,
+      "description": "Restores Mana equal to 30% of incoming enemy spell damage",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "308 health and 1.4 health regeneration.",
+    "14 main attack damage to heroes.",
+    "9.8 main attack damage to universal heroes."
+  ],
+  "cost": "3100",
+  "lore": null,
+  "consistFrom": [
+    "Cloak",
+    "Ogre Axe",
+    "Ring of Health",
+    "Recipe"
+  ],
+  "name": "Eternal Shroud",
+  "description": "A pristine hood that feeds upon strife to empower its owner.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

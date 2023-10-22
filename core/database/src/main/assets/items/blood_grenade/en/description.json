@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Blood_Grenade_Throw_Grenade_1.mp3\/revision\/latest?cb=20230430201648",
+      "effects": [
+        "Cast Animation: 0.2+0",
+        "Cast Range: 900",
+        "Radius: 300",
+        "Impact Damage: 50",
+        "Damage per Second: 15",
+        "Move Speed Slow: 15%",
+        "Duration: 5"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Throw Grenade<\/span>",
+      "cooldown": "10",
+      "description": "Throws a grenade at the target area. Enemies in the area will take 50 damage on impact, be slowed by 15% and take 15 damage per second.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "50",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Blood Grenade",
+  "description": "Consumables Cost 50 Sell Value 25 \/ Count Stacks 2 MAX \/ Inventory Slot Stock 1 INIT \/ 2 MAX 180 Active Throw Grenade Charges 1 INIT Bonus ? +50 Health Shareable Usage Alert ? Recipe",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Blood Grenade is usually purchased before the horn, as it allows for easier First Blood attempts, along with other sources of crowd control.",
+    "Later on, this item is usually purchased by slow-moving supports, allowing to make more effective usage of their empty slots to assist in ganks and teamfights.",
+    "Due to its long cast range combined with low cost and damage over time effect, Blood Grenade is also very effective against enemy heroes wielding Blink Dagger, should your team not have any other sources of long range damage."
+  ]
+}

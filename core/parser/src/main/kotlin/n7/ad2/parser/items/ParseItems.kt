@@ -2,6 +2,7 @@
 
 package n7.ad2.parser.items
 
+import java.io.File
 import n7.ad2.parser.LOCALE
 import n7.ad2.parser.assetsDatabase
 import n7.ad2.parser.assetsDatabaseItems
@@ -13,7 +14,6 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
-import java.io.File
 
 private val getItemsUseCase = GetItemsUseCase()
 
@@ -21,15 +21,19 @@ fun main() {
     val itemsEnglish = getItemsUseCase(LOCALE.EN)
     writeItemsInFile(itemsEnglish)
     loadItemsOneByOne(LOCALE.EN)
-    loadItemsOneByOne(LOCALE.RU)
+//    loadItemsOneByOne(LOCALE.RU)
 }
 
 private fun writeItemsInFile(items: List<HeroItem>) {
-    val itemsJson = items.map { hero ->
-        JSONObject(mapOf("name" to hero.name, "section" to hero.section))
+    val text = buildString {
+        append("INSERT INTO ItemsTable (name, type, viewedByUser) VALUES\n")
+        items.forEachIndexed { index, item ->
+            append("(\"${item.name}\",\"${item.section}\", 0)")
+            if (items.lastIndex == index) append(";\n")
+            else append(",\n")
+        }
     }
-        .toString()
-    File("$assetsDatabase/items.json").writeText(itemsJson)
+    File("$assetsDatabase/items.sql").writeText(text)
 }
 
 private fun loadItemsOneByOne(locale: LOCALE) {
@@ -210,7 +214,11 @@ private fun JSONObject.loadAbilities(root: Document) {
                 val description = it.getElementsByTag("div")[12].text()
                 put("description", description)
 
-                val params = it.getElementsByAttributeValue("style", "display:inline-block; vertical-align:top; padding:3px 5px; border:1px solid rgba(0, 0, 0, 0);")[0].children()
+                val params =
+                    it.getElementsByAttributeValue(
+                        "style",
+                        "display:inline-block; vertical-align:top; padding:0px 2px 3px 2px; border:1px solid rgba(0, 0, 0, 0);"
+                    )[0].children()
                 val paramsResult: JSONArray? = params
                     .filter { it.attr("style").isEmpty() }
                     .ifEmpty { null }
@@ -222,7 +230,8 @@ private fun JSONObject.loadAbilities(root: Document) {
                 put("params", paramsResult)
 
                 var cooldown = it.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; max-width:100%; width:240px;").getOrNull(0)
-                if (cooldown == null) cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
+                if (cooldown == null) cooldown =
+                    it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
                 if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                     put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
                 } else {

@@ -1,0 +1,42 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Black_King_Bar_Avatar.mp3\/revision\/latest?cb=20191227195352",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Duration: 9\/8\/7\/6",
+        "Magic Resistance Bonus: 50%"
+      ],
+      "notes": [],
+      "mana": "50",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Avatar<\/span>",
+      "cooldown": "90",
+      "description": "Applies a Basic Dispel. Grants 50% Magic resistance and immunity to pure and reflected damage. For the duration of the effect, any negative effect from enemy spells has no effect.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "220 health and 1 health regeneration.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "4050",
+  "lore": null,
+  "consistFrom": [
+    "Ogre Axe",
+    "Mithril Hammer",
+    "Recipe"
+  ],
+  "name": "Black King Bar",
+  "description": "A powerful staff imbued with the strength of giants.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "When facing a lot of magical damage or many disables, a Black King Bar alone can provide enough survivability, allowing carry heroes to focus on damage items after having Black King Bar. Vice versa, Black King Bar is not effective against physical damage, or spell immunity piercing spells, so other items for survivability should be considered (e.g. armor items against physical damage, or escape items against some spells).",
+    "Vice versa, Black King Bar is not effective against physical damage, or spell immunity piercing spells, so other items for survivability should be considered (e.g. armor items against physical damage, or escape items against some spells).",
+    "Black King Bar applies a basic dispel on cast allowing to clear out most negative status debuffs. Instead of casting it hastily to engage at first sight, a reactive activation against a debuff will be more beneficial."
+  ]
+}

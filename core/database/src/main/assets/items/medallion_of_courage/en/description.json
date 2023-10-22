@@ -1,0 +1,42 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Medallion_of_Courage_Valor.mp3\/revision\/latest?cb=20191227195456",
+      "effects": [
+        "Cast Range: 1000",
+        "Self Armor Reduction: 6",
+        "Enemy Armor Reduction: 6",
+        "Ally Armor Bonus: 6",
+        "Duration: 8"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Valor<\/span>",
+      "cooldown": "16",
+      "description": "If cast on an ally, grants them the 6 armor, and removing it from the caster. If cast on an enemy, reduces 6 armor on both the enemy and the caster. Cannot target spell immune enemies.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Fully stack with Armor Corruption from talents."
+  ],
+  "cost": "1025",
+  "lore": null,
+  "consistFrom": [
+    "Chainmail",
+    "Sage's Mask",
+    "Blight Stone"
+  ],
+  "name": "Medallion of Courage",
+  "description": "The bearer has no fear of combat.",
+  "trivia": null,
+  "upgradeIn": [
+    "Solar Crest"
+  ],
+  "tips": [
+    "Medallion of Courage is a common item on ganking heroes, as it provides additional physical damage through armor reduction, and grants some mana regeneration which helps regaining some mana between ganks.",
+    "The armor reduction of the ability is a great tool to speed up killing Roshan, especially early on."
+  ]
+}

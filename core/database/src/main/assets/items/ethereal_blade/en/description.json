@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/ff\/Ethereal_Blade_Ether_Blast_1.mp3\/revision\/latest?cb=20191227195413",
+      "effects": [
+        "Cast Range: 800",
+        "Base Damage: 50",
+        "Primary Attribute as Damage Bonus: 150%",
+        "Universal Attributes as Damage Bonus: 60%",
+        "Enemy Move Speed Slow: 80%",
+        "Magic Resistance Reduction: 40%",
+        "Duration: 4"
+      ],
+      "notes": [],
+      "mana": "100",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Ether Blast<\/span>",
+      "cooldown": "22",
+      "description": "Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and 40% more vulnerable to magic damage. Enemy targets are also slowed by 80%, and take 1.5x your target's primary attribute + 50 as magical damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "110 health and 0.5 health regeneration.",
+    "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance.",
+    "5 attack speed and 0.83 main armor.",
+    "5, 5 and 25 main attack damage to all \/ \/ heroes respectively.",
+    "24.5 main attack damage to universal heroes."
+  ],
+  "cost": "4650",
+  "lore": null,
+  "consistFrom": [
+    "Kaya",
+    "Ghost Scepter",
+    "Recipe"
+  ],
+  "name": "Ethereal Blade",
+  "description": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Can be used in combination with Dagon for massive amounts of burst damage."
+  ]
+}

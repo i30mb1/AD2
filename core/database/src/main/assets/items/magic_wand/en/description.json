@@ -1,0 +1,49 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Magic_Stick_Energy_Charge.mp3\/revision\/latest?cb=20191227195452",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Radius: 1200",
+        "Charges per Cast Spell: 1",
+        "Max Charges: 20",
+        "Health and Mana Restored per Charge: 15"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Energy Charge<\/span>",
+      "cooldown": "13",
+      "description": "Instantly restores 15 health and mana per charge stored. Max 20 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "66 health and 0.3 health regeneration.",
+    "36 mana, 0.15 mana regeneration and 0.3% flat base magic resistance.",
+    "3 attack speed and 0.5 main armor.",
+    "3 main attack damage to all \/ \/ heroes.",
+    "6.3 main attack damage to universal heroes."
+  ],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": [
+    "Magic Stick",
+    "Iron Branch",
+    "Iron Branch",
+    "Recipe"
+  ],
+  "name": "Magic Wand",
+  "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
+  "trivia": null,
+  "upgradeIn": [
+    "Holy Locket"
+  ],
+  "tips": [
+    "Magic Wand allows you to get a quick burst of healing in dire situations, or to use one last ability in a fight. Even during the midgame, when the boost is less noticeable, a Magic Wand can still save your life if you are in danger.",
+    "The Magic Wand makes an excellent item against heroes that spam abilities while in the lane, as the charges can help to mitigate damage you take, or to cast more of your own abilities.",
+    "The Iron Branches needed to build Magic Wand are common to buy early on in the game, giving a suitable route of making a cost effective build, and emptying up the inventory space without having to sell items."
+  ]
+}

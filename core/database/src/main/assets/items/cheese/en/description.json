@@ -1,0 +1,42 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Cheese_Fondue.mp3\/revision\/latest?cb=20191227195404",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Health Restored: 2500",
+        "Mana Restored: 1500"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Fondue<\/span>",
+      "cooldown": "40",
+      "description": "Instantly restores 2500 health and 1500 mana.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Although Cheese cannot be bought, it can be sold for 500 . However, only the hero whose main inventory it enters first can sell it.",
+    "If a Courier is the first unit to pick up the Cheese, it cannot be sold by anyone, even if it remains on the Courier or is given to a hero afterwards.",
+    "If a Cheese directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
+    "Unlike the Aegis of the Immortal, Cheese is not reclaimed by Roshan."
+  ],
+  "cost": null,
+  "lore": null,
+  "consistFrom": null,
+  "name": "Cheese",
+  "description": "Made from the milk of a long lost Furbolg vendor, it restores the vitality of those who taste it.",
+  "trivia": [
+    "Before Cheese, this item was named \"Hunk of Cheese\" and before that, it was named \"Furbolg Cheese\", which matches the item's current lore.",
+    "When selecting Roshan, this item can be seen in his inventory."
+  ],
+  "upgradeIn": [
+    "Block of Cheese"
+  ],
+  "tips": [
+    "While hard to obtain over the course of most games, Cheese can be an extremely useful item during team fights, as it allows you to cast more spells and survive longer with its incredible restorative effects.",
+    "In some scenarios, it might be worth it to sell the Cheese for its selling price of gold to buy a key item sooner rather than consuming it."
+  ]
+}

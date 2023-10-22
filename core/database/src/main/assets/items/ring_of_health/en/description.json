@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "700",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Ring of Health",
+  "description": "A shiny ring found beneath a fat halfling\u2019s corpse.",
+  "trivia": null,
+  "upgradeIn": [
+    "Eternal Shroud",
+    "Perseverance",
+    "Pipe of Insight",
+    "Vanguard"
+  ],
+  "tips": null
+}

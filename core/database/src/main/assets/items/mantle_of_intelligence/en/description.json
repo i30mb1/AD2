@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "36 mana, 0.15 mana regeneration and 0.3% flat base magic resistance.",
+    "3 main attack damage to heroes.",
+    "2.1 main attack damage to universal heroes."
+  ],
+  "cost": "140",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Mantle of Intelligence",
+  "description": "A beautiful sapphire mantle worn by generations of queens.",
+  "trivia": null,
+  "upgradeIn": [
+    "Null Talisman"
+  ],
+  "tips": null
+}

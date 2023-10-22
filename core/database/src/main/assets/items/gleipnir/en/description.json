@@ -1,0 +1,70 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Gleipnir_Eternal_Chains_1.mp3\/revision\/latest?cb=20210120233503",
+      "effects": [
+        "Cast Range: 1100",
+        "Effect Radius: 375",
+        "Damage: 180",
+        "Duration: 2"
+      ],
+      "notes": [],
+      "mana": "200",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Eternal Chains<\/span>",
+      "cooldown": "18",
+      "description": "Roots all enemies in a target 375 radius for 2 seconds and deals 180 damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Gleipnir_Chain_Lightning_1.mp3\/revision\/latest?cb=20210120233458",
+      "effects": [
+        "Proc Chance: 30%",
+        "Bounce Distance: 650",
+        "Number of Bounces: 4",
+        "Bounce Interval: 0.25",
+        "Damage: 160",
+        "Illusion Damage Multiplier: 1.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Chain Lightning<\/span>",
+      "cooldown": null,
+      "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance.",
+    "25 main attack damage to heroes.",
+    "17.5 main attack damage to universal heroes."
+  ],
+  "cost": "5650",
+  "lore": null,
+  "consistFrom": [
+    "Maelstrom",
+    "Rod of Atos",
+    "Recipe"
+  ],
+  "name": "Gleipnir",
+  "description": "Bindings forged by impossible means to leash an ancient evil.",
+  "trivia": [
+    "In Norse Mythology, Gleipnir is the chain that is used to bind Fenrir, a wolf that is the son of Loki and Angrboda.",
+    "Gleipnir's intern name is \"Gungir\", an incorrect spelling of Gungnir, which is the spear of the Norse Mythology God Odin."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Gleipnir is a very important item to buy for heroes who either have no area-of-effect abilities or strong disables on their own, as it will allow them to gain some advantage over their weaknesses.",
+    "Gleipnir's passive chain lighting is useful against heroes who rely on summons and illusions to be effective: Terrorblade. Phantom Lancer, Chaos Knight, Naga Siren, Broodmother, Visage, Lycan, Wraith King, Warlock, Nature's Prophet.",
+    "Active ability of Gleipnir is very good against heroes who rely on movement-themed abilities to survive: Phantom Assassin, Anti-Mage, Slark, Magnus, Windranger, Lycan, Hoodwink, Phantom Lancer, Void Spirit, Earth Spirit, Ember Spirit, Storm Spirit, Centaur Warrunner, Spirit Breaker.",
+    "If they are struck by it's active ability, invisible heroes will become revealed by Gleipnir, making this item very effective against heroes who rely on invisiblity to gain advantage: Riki, Bounty Hunter, Nyx Assassin, Templar Assassin, Slark, Sand King.",
+    "Gleipnir's ability to root multiple enemy heroes makes this item very good against heroes who rely on Blink Dagger to be effective: Tinker, Rubick, Earthshaker, Enigma, Magnus, Tidehunter, Templar Assassin, Pudge, Tiny, Batrider, Sand King, Meepo, Axe, Centaur Warrunner.",
+    "Like against Blink Dagger, Gleipnir is also useful against heroes who rely on Silver Edge to be effective: Spirit Breaker, Slark, Earthshaker, Kunkka, Drow Ranger, Dragon Knight.",
+    "Gleipnir can be combined with Dust of Appearance to guarantee that invisible heroes will be revealed.",
+    "Remember that Gleipnir can be easily dispelled by many abilities and items, so you should wait for enemy heroes to spend all of their dispels before engaging with Gleipnir."
+  ]
+}

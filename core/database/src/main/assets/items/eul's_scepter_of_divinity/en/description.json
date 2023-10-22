@@ -1,0 +1,53 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Eul%27s_Scepter_of_Divinity_Cyclone.mp3\/revision\/latest?cb=20191227195415",
+      "effects": [
+        "Cast Range: 550",
+        "Cyclone Radius: 24",
+        "Damage: 50",
+        "Duration: 2.5"
+      ],
+      "notes": [],
+      "mana": "175",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Cyclone<\/span>",
+      "cooldown": "23",
+      "description": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can only be cast on enemy units or yourself. Enemy units take 50 magical damage upon landing.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "2625",
+  "lore": null,
+  "consistFrom": [
+    "Staff of Wizardry",
+    "Void Stone",
+    "Wind Lace",
+    "Recipe"
+  ],
+  "name": "Eul's Scepter of Divinity",
+  "description": "A mysterious scepter passed down through the ages, its disruptive winds can be used for good or evil.",
+  "trivia": [
+    "The scepter's name (and flavor text) is a reference to Eul, the creator of the first DotA map back in 2002.",
+    "Crystal Maiden's cosmetic item, Eul's Scepter of Divinity, is based on Eul's Scepter of Divinity and shares its name."
+  ],
+  "upgradeIn": [
+    "Wind Waker"
+  ],
+  "tips": [
+    "Cyclone can be used in the following situations: Offensively by disabling an enemy before a gank, giving you the time to set up your abilities. On fleeing enemies to give your team the time to surround the target. On enemies in teamfights to take them out of the fight for a few seconds. This is especially effective on carries. ↓↓ Double-tapping during teamfights, baiting enemies into using their abilities on you, then becoming invulnerable to interrupt their burst damage. To buy yourself a little more time for abilities and items to come off cooldown, especially items like Blink Dagger or Blade Mail. On an enemy who has activated items like Blade Mail, Mask of Madness or Lotus Orb. Doing so will waste the duration of those items.",
+    "Offensively by disabling an enemy before a gank, giving you the time to set up your abilities.",
+    "On fleeing enemies to give your team the time to surround the target.",
+    "On enemies in teamfights to take them out of the fight for a few seconds. This is especially effective on carries.",
+    "↓↓ Double-tapping during teamfights, baiting enemies into using their abilities on you, then becoming invulnerable to interrupt their burst damage.",
+    "To buy yourself a little more time for abilities and items to come off cooldown, especially items like Blink Dagger or Blade Mail.",
+    "On an enemy who has activated items like Blade Mail, Mask of Madness or Lotus Orb. Doing so will waste the duration of those items."
+  ]
+}

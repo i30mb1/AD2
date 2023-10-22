@@ -1,0 +1,66 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Shiva%27s_Guard_Arctic_Blast.mp3\/revision\/latest?cb=20191227195533",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Radius: 900",
+        "Damage: 200",
+        "Illusion Damage Multiplier: 1.5",
+        "Move Speed Slow: 40%",
+        "Slow Duration: 4"
+      ],
+      "notes": [],
+      "mana": "100",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Arctic Blast<\/span>",
+      "cooldown": "27",
+      "description": "Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by 40% for 4 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Attack Speed Slow: 45",
+        "Health Restoration Reduction: 25%",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Freezing Aura<\/span>",
+      "cooldown": null,
+      "description": "Reduces the attack speed of all enemies by 45 and all heals, regeneration and lifesteal by 25%.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "360 mana, 1.5 mana regeneration and 3% flat base magic resistance.",
+    "30 main attack damage to heroes.",
+    "21 main attack damage to universal heroes."
+  ],
+  "cost": "4850",
+  "lore": null,
+  "consistFrom": [
+    "Platemail",
+    "Mystic Staff",
+    "Recipe"
+  ],
+  "name": "Shiva's Guard",
+  "description": "Said to have belonged to a goddess, today it retains much of its former power.",
+  "trivia": [
+    "The name \"Shiva\" is a reference to the Shiva of the Final Fantasy series, an elemental summon with the power of ice."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Arctic Blast's effect hits every enemy once within its radius, even after its edge has expanded past the target. Because of its slow expansion time (taking about 2 seconds to reach max radius), it can be thought of as a moving area effect, centered on the hero. Use Arctic Blast before blinking or engaging an enemy to instantly deal area damage and movement slow upon initiation. This can be used to instantly disable enemy Blink Daggers by prematurely using Arctic Blast out of vision and then blinking onto an enemy.",
+    "Use Arctic Blast before blinking or engaging an enemy to instantly deal area damage and movement slow upon initiation.",
+    "This can be used to instantly disable enemy Blink Daggers by prematurely using Arctic Blast out of vision and then blinking onto an enemy.",
+    "A useful item against enemies with mana burn. It greatly increases a hero's mana pool, and its aura slows the number of mana burning attacks made against its owner.",
+    "Good against heroes and creeps with low attack speed, causing them to attack even slower."
+  ]
+}

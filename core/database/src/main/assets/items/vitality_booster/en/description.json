@@ -1,0 +1,17 @@
+{
+  "abilities": [],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Vitality Booster",
+  "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
+  "trivia": null,
+  "upgradeIn": [
+    "Aeon Disk",
+    "Heart of Tarrasque",
+    "Rod of Atos",
+    "Soul Booster",
+    "Vanguard"
+  ],
+  "tips": null
+}

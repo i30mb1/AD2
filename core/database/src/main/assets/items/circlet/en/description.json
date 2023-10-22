@@ -1,0 +1,26 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "44 health and 0.2 health regeneration.",
+    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance.",
+    "2 attack speed and 0.33 main armor.",
+    "2 main attack damage to all \/ \/ heroes.",
+    "4.2 main attack damage to universal heroes."
+  ],
+  "cost": "155",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Circlet",
+  "description": "An elegant circlet designed for human princesses.",
+  "trivia": [
+    "In the original DotA, Circlet's full name was \"Circlet of Nobility\"."
+  ],
+  "upgradeIn": [
+    "Bracer",
+    "Wraith Band",
+    "Null Talisman",
+    "Urn of Shadows"
+  ],
+  "tips": null
+}

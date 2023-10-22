@@ -1,0 +1,74 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cast Range: 350"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Chop Tree<\/span>",
+      "cooldown": "4",
+      "description": "Destroy a target tree.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Attack Damage Bonus (TagAghanimMelee): 10",
+        "Attack Damage Bonus (TagAghanimRanged): 5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Quell<\/span>",
+      "cooldown": null,
+      "description": "Increases attack damage against non-hero units by 10 for melee heroes, and 5 for ranged.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Battle_Fury_Cleave.mp3\/revision\/latest?cb=20191227195351",
+      "effects": [
+        "Starting Radius: 150",
+        "Distance: 650",
+        "End Radius: 360",
+        "Cleave Damage (TagAghanimHeroes): 70%",
+        "Cleave Damage (TagAghanimCreeps): 40%"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Cleave<\/span>",
+      "cooldown": null,
+      "description": "Deals 70% of attack damage as physical damage in a cone up to 650 around the target. Deals 40% against creeps. (Melee Only)",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "4100",
+  "lore": null,
+  "consistFrom": [
+    "Broadsword",
+    "Claymore",
+    "Cornucopia",
+    "Quelling Blade",
+    "Recipe"
+  ],
+  "name": "Battle Fury",
+  "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
+  "trivia": [
+    "Faceless Void's cosmetic item, Battlefury, is based on Battle Fury."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The Battle Fury is great tool for farming but a poor choice for mid game skirmishes owing to its lack of primary attributes. Avoid it if the enemy team plays aggressively and your presence is required in team fights early. In such cases, it is better to opt for a Maelstrom instead, which provides both early farming and fighting capability, and can later be upgraded into Gleipnir or Mjollnir.",
+    "Effective against illusions, summoned units, jungle stacks, ancient stacks and mega creeps. A Battle Fury allows a melee hero to farm faster than a Hand of Midas. You can get this item after Boots of Speed, start with a Cornucopia if you are laning or get damage. If you are jungling, then get a mobility item like Blink Dagger to reach camps faster.",
+    "A Battle Fury allows a melee hero to farm faster than a Hand of Midas. You can get this item after Boots of Speed, start with a Cornucopia if you are laning or get damage. If you are jungling, then get a mobility item like Blink Dagger to reach camps faster.",
+    "The cleave benefits from critical hits, including those from items and ignores evasion.",
+    "Having Battle Fury can help greatly against an enemy Nature's Prophet, since some carries have little means to escape his Sprout without it (the most obvious being Juggernaut and Troll Warlord)",
+    "Melee heroes with high attack speed can push far more effectively with Battle Fury, even in late game. Critical hits help too."
+  ]
+}

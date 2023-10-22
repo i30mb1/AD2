@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Self Attack Speed Bonus: 490",
+        "Number of Attacks: 1",
+        "Enemy Move Speed Slow: 100%",
+        "Enemy Slow Duration: 0.8"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Echo Strike<\/span>",
+      "cooldown": null,
+      "description": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.8 seconds on each strike.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "286 health and 1.3 health regeneration.",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "13 and 10 main attack damage to \/ heroes respectively.",
+    "16.1 main attack damage to universal heroes."
+  ],
+  "cost": "2500",
+  "lore": [],
+  "consistFrom": [
+    "Ogre Axe",
+    "Oblivion Staff"
+  ],
+  "name": "Echo Sabre",
+  "description": "A deceptively swift blade imbued with resonant magic.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Echo Sabre's passive ability, Echo Strike, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": [
+    "Harpoon"
+  ],
+  "tips": [
+    "The best items in combination to increase your damage are those which grant critical hit and armor reduction. A Skull Basher is also good to get a chance to bash from the two quick attacks. You can combine the echo sabre with a Daedalus and Satanic's active to instantly restore your HP.",
+    "You can combine the echo sabre with a Daedalus and Satanic's active to instantly restore your HP.",
+    "Echo Sabre's ability is effectively a passive 1-hit-only Overpower. This makes it a great item on heroes whose passive abilities rely on attack speed to be effective, similar to how Ursa's Fury Swipes relies on the attack speed of Overpower.",
+    "The attack speed from the passive proc lasts until a second attack is done. This makes it possible to \"store\" the massive attack speed bonus for a planned strike on an enemy. One just has to attack a creep to proc the passive ability and immediately cancel the second attack. The stored attack speed can come very handy when ganking enemies which have strong attack speed slows like Enchantress with her Untouchable or Phoenix's Fire Spirits."
+  ]
+}

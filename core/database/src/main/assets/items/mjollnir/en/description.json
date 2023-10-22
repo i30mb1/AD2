@@ -1,0 +1,63 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Mjollnir_Static_Charge.mp3\/revision\/latest?cb=20191227195504",
+      "effects": [
+        "Cast Range: 800",
+        "Proc Chance: 20%",
+        "Proc Cooldown: 1",
+        "Search Radius: 900",
+        "Max Number of Targets: 5",
+        "Damage: 225",
+        "Shield Duration: 15"
+      ],
+      "notes": [],
+      "mana": "50",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Static Charge<\/span>",
+      "cooldown": "35",
+      "description": "Places a charged shield on a target unit for 15 seconds which has a 20% chance to release a 225 magical damage shocking bolt at a nearby attacker and 4 additional enemies.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Mjollnir_Chain_Lightning.mp3\/revision\/latest?cb=20191227195502",
+      "effects": [
+        "Proc Chance: 30%",
+        "Bounce Distance: 650",
+        "Number of Bounces: 12",
+        "Bounce Interval: 0.25",
+        "Damage: 180",
+        "Illusion Damage Multiplier: 1.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Chain Lightning<\/span>",
+      "cooldown": null,
+      "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5500",
+  "lore": null,
+  "consistFrom": [
+    "Maelstrom",
+    "Hyperstone",
+    "Recipe"
+  ],
+  "name": "Mjollnir",
+  "description": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
+  "trivia": [
+    "Mjölnir is the name of Thor's hammer in Norse mythology.",
+    "The VFX of Mjollnir's Static Charge is an arc of lightning in the shape of a triquetra, a symbol that is sometimes seen in some of Mjollnir's real-life depictions.",
+    "Mjollnir's item icon used to have a little bit of animations. Random static electricity would appear on the hammer, which briefly illuminated the hammer in a blue light. This animation was removed for unknown reasons."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Mjollnir is very effective against heroes with illusions like Naga Siren, Spectre and particularly Phantom Lancer and Chaos Knight that can surround you because the lightning goes all around you compared to cleave and the Static Charge has more chance to be triggered.",
+    "This item is very good for pushing, you can apply the Static Charge on a creep to push a lane safely while you jungle and get extra gold.",
+    "This is the most effective item to push back mega creeps."
+  ]
+}

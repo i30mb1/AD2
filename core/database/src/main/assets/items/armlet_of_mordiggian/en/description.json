@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Armlet_of_Mordiggian_Unholy_Strength_1.mp3\/revision\/latest?cb=20191227195349",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Attack Damage Bonus: 35",
+        "Strength Bonus: 25",
+        "Armor Bonus: 4",
+        "Slow Resistance Bonus: 35%",
+        "Full Bonuses Delay: 0.6"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Unholy Strength<\/span>",
+      "cooldown": "0",
+      "description": "When active, Unholy Strength grants +35 damage, +25 strength and +4 armor, but drains 45 health per second. You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Attack damage, attack speed, armor, and health regeneration bonuses of multiple Armlets of Mordiggian do not stack."
+  ],
+  "cost": "2500",
+  "lore": null,
+  "consistFrom": [
+    "Helm of Iron Will",
+    "Gloves of Haste",
+    "Blades of Attack",
+    "Recipe"
+  ],
+  "name": "Armlet of Mordiggian",
+  "description": "",
+  "trivia": [
+    "Armlet of Mordiggian is named after Mordiggian, a deity in the Cthulhu Mythos created by Clark Ashton Smith in his story The Charnel God (1934), whose powers consist of sucking away life force and whose cult consists entirely of ghouls.",
+    "Chaos Knight's cosmetic item, Chaos Knight's Armlet of Mordiggian, is based on Armlet of Mordiggian."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The Armlet is the most cost-effective item to build, especially on strength heroes that benefit most from its DPS increase. It is also useful on heroes with illusions or abilities that increase their base damage (like Sven's ultimate).",
+    "When toggled on, Armlet increases maximum and current health by 550. This means when not at full health, it can effectively work as a temporary heal. However, it also has the opposite effect when toggling off, instantly reducing the hero's health by 550 (but not below 1). When toggled properly, this allows heroes at low health to survive and turn fights.",
+    "This item is very good with lifesteal, and if the user's damage output is high enough it can negate the health loss, depending on the amount of lifesteal the user has.",
+    "The Heart of Tarrasque's passive regen vastly overturns the health loss, allowing to have the Armlet constantly active.",
+    "Lone Druid's Spirit Bear is normally affected by the health drain, but does not benefit from the strength bonus."
+  ]
+}

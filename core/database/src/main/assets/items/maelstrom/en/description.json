@@ -1,0 +1,42 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Maelstrom_Chain_Lightning_1.mp3\/revision\/latest?cb=20191227195450",
+      "effects": [
+        "Proc Chance: 30%",
+        "Bounce Distance: 650",
+        "Number of Bounces: 4",
+        "Bounce Interval: 0.25",
+        "Damage: 135",
+        "Illusion Damage Multiplier: 1.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Chain Lightning<\/span>",
+      "cooldown": null,
+      "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 135 magical damage to each. Lightning proc pierces evasion.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "2700",
+  "lore": null,
+  "consistFrom": [
+    "Mithril Hammer",
+    "Javelin"
+  ],
+  "name": "Maelstrom",
+  "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
+  "trivia": null,
+  "upgradeIn": [
+    "Gleipnir",
+    "Mjollnir"
+  ],
+  "tips": [
+    "Maelstrom is a very good item for speeding up farming. If the extra experience is not needed, it is a good alternative to Hand of Midas.",
+    "It is also great to deal with illusions or mass-summons like Broodmother's spiders, Nature's Prophet's treants, etc. Especially useful for ranged heroes that lack area damage, since they cannot make use of cleave.",
+    "The Chain Lightning deals magical damage which ignores armor and Damage Block, making it good against heroes that get a Vanguard, or Tidehunter with his Kraken Shell, and against heroes with high armor like Dragon Knight or Terrorblade.",
+    "Maelstrom is a useful pickup against mega creeps in order to help clear waves."
+  ]
+}

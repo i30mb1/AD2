@@ -1,0 +1,63 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Revenant%27s_Brooch_Phantom_Province_1.mp3\/revision\/latest?cb=20220618225122",
+      "effects": [
+        "Number of Attacks: 5",
+        "Magic Resistance Reduction: 20%",
+        "Magic Resistance Reduction Duration: 3",
+        "Phantom Province Duration: 15"
+      ],
+      "notes": [],
+      "mana": "300",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Phantom Province<\/span>",
+      "cooldown": "25\/0.25",
+      "description": "Your next 5 attacks have True Strike, apply a debuff that reduces their magical defenses by 20% and deal magic damage. Can attack ethereal units.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Revenant%27s_Brooch_Witch_Blade.mp3\/revision\/latest?cb=20220618225124",
+      "effects": [
+        "Intelligence as Damage per Second: 100%",
+        "Move Speed Slow: 25%",
+        "Duration: 4"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Witch Blade<\/span>",
+      "cooldown": null,
+      "description": "Causes your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 1x your intelligence as damage every second. This attack has True Strike.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "540 mana, 2.25 mana regeneration and 4.5% flat base magic resistance.",
+    "45 main attack damage to heroes.",
+    "31.5 main attack damage to universal heroes."
+  ],
+  "cost": "6200",
+  "lore": null,
+  "consistFrom": [
+    "Witch Blade",
+    "Mystic Staff",
+    "Recipe"
+  ],
+  "name": "Revenant's Brooch",
+  "description": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Revenant's Brooch allows its owner to have their next five attacks have true strike, making it useful against heroes who rely on evasion or blinds to survive: Phantom Assassin, Windranger, Hoodwink, Troll Warlord, Tinker.",
+    "Revenant's Brooch's ability to have its owner's attacks deal magical damage and allow them to attack heroes affected by any form of turning ethereal for its duration makes it useful against heroes who rely on Ethereal Blade to defend themselves against physical attacks: Pugna, Morphling, Necrophos, Tinker, Techies, Skywrath Mage, Ogre Magi, Mirana.",
+    "Since attacks from Revenant's Brooch's active ability Phantom Province deal magical type of damage, this item is excellent against heroes who rely on armor to survive and against heroes with abilities that prevent the hero from dealing physical damage onto them: Terrorblade, Omniknight, Morphling, Sven, Axe, Dragon Knight, Winter Wyvern.",
+    "Remember that neither passive nor active ability of Revenant's Brooch cannot damage spell immune enemies, so you should wait for the effect of spell immunity to end before engaging with Revenant's Brooch.",
+    "Attacks from Revenant's Brooch can reduce magic resistance by 20%, therefore this item is very effective on heroes who have any way of dealing of magical damage as it will boost the damage they will deal: Ancient Apparition, Batrider, Broodmother, Dark Willow, Dawnbreaker, Death Prophet, Disruptor, Enigma, Gyrocopter, Huskar, Jakiro, Lina, Luna, Naga Siren, Outworld Destroyer, Puck, Pugna, Queen of Pain, Razor, Rubick, Shadow Demon, Shadow Fiend, Shadow Shaman, Storm Spirit, Silencer, Tinker, Vengeful Spirit, Venomancer, Void Spirit, Visage, Windranger.",
+    "Because Revenant's Brooch's active ability allows it's owner to attack ethereal units, this item can be considered a good alternative to Nullifier, making this item useful for heroes who lack magical damage and struggle against anything that can turn user ethereal: Lycan, Lifestealer, Chaos Knight, Alchemist, Dazzle, Templar Assassin, Broodmother, Naga Siren, Razor, Faceless Void, Terrorblade, Phantom Assassin.",
+    "Melee Heroes can also benefit from attack speed, intelligence, armor provided by Revenant's Brooch, as well as both, it's passive and active ability. However, they will not be able to benefit from the increased projectile speed at all."
+  ]
+}

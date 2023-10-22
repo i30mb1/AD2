@@ -1,0 +1,52 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Meteor_Hammer_Meteor_Hammer_1.mp3\/revision\/latest?cb=20191227195458",
+      "effects": [
+        "Cast Range: 600",
+        "Impact Radius: 400",
+        "Building Impact Damage: 95",
+        "Non-Building Impact Damage: 150",
+        "Damage per Second: 60",
+        "Channel Time: 2",
+        "Landing Time: 0.5",
+        "Move Speed Slow: 20%",
+        "Debuff Duration: 6",
+        "Stun Duration: 0.5"
+      ],
+      "notes": [],
+      "mana": "100",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Meteor Hammer<\/span>",
+      "cooldown": "24",
+      "description": "After a successful channel, summons a meteor that strikes a 400 AoE, stunning enemies for 0.5 seconds and dealing impact damage. Continues to deal damage over time to enemy units and buildings for 6 seconds. Non-building units are also slowed for 20% for the duration of the burn.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "176 health and 0.8 health regeneration.",
+    "96 mana, 0.4 mana regeneration and 0.8% flat base magic resistance.",
+    "8 attack speed and 1.33 main armor.",
+    "8 main attack damage to all \/ \/ heroes.",
+    "16.8 main attack damage to universal heroes."
+  ],
+  "cost": "2400",
+  "lore": null,
+  "consistFrom": [
+    "Perseverance",
+    "Crown",
+    "Recipe"
+  ],
+  "name": "Meteor Hammer",
+  "description": "An enchanted hammer forged of metals discovered in the ruins of a village destroyed by a great star storm.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Meteor Hammer can be hard to aim, as the long and obvious casting allows most opponents to interrupt or dodge the ability. Use the active in conjunction with disables, or after the target has expended their escape abilities.",
+    "If you find yourself vulnerable to disables, you want to invest for a Black King Bar or a Linken's Sphere to prevent your channelling from getting interrupted easily.",
+    "Meteor Hammer can be considered a situational item for teams that require extra siege power, as it deals 375 damage against buildings (about 1\/4 of the HP of a Tier 1 tower).",
+    "Meteor Hammer can be used to quickly clear jungle stacks and creep waves."
+  ]
+}

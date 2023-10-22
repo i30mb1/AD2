@@ -1,0 +1,34 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Ui_hud_equip_scepter.mp3\/revision\/latest?cb=20201219110041",
+      "effects": [],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Ability Upgrade<\/span>",
+      "cooldown": null,
+      "description": "Upgrades the ultimate, and some abilities, of all heroes.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "It upgrades Aghanim's Scepter so that it no longer requires an item slot. Upon upgrading, the passive buff does not provide bonus attributes, health or mana from the item.",
+    "Aghanim's Blessing is also a Kill Reward item which has a chance to be dropped Roshan on his third death, and is guaranteed to drop on his fourth death and onwards.",
+    "A hero may only consume Aghanim's Blessing once. If the hero does not have the upgrade already, Aghanim's Blessing is instantly consumed upon acquiring. If the targeted ally already has Aghanim's Blessing, Aghanim's Scepter Synth from Alchemist refunds the ally 5800 .",
+    "If the hero does not have the upgrade already, Aghanim's Blessing is instantly consumed upon acquiring.",
+    "If the targeted ally already has Aghanim's Blessing, Aghanim's Scepter Synth from Alchemist refunds the ally 5800 ."
+  ],
+  "cost": "5800",
+  "lore": null,
+  "consistFrom": [
+    "Aghanim's Scepter",
+    "Recipe"
+  ],
+  "name": "Aghanim's Blessing",
+  "description": "The scepter of a wizard with demigod-like powers.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

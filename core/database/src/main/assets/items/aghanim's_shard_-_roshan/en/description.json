@@ -1,0 +1,33 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Ui_hud_equip_shard.mp3\/revision\/latest?cb=20201219110042",
+      "effects": [],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Ability Upgrade<\/span>",
+      "cooldown": null,
+      "description": "Upgrades an existing ability or adds a new ability to your hero..",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Granted to one of the two lowest networth heroes within the team upon defeating a Tormentor.",
+    "If all heroes have their Ability Upgrade already, each player gains gold and experience instead.",
+    "The item grants each hero unique enhancements to their abilities, sometimes granting a new ability."
+  ],
+  "cost": "-",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Aghanim's Shard - Roshan",
+  "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
+  "trivia": [
+    "This item was originally dropped by Roshan on its second death as a reward prior to the 7.33 gameply patch. This can still be seen in the item's name, which was not updated once it was changed to be a reward from Tormentors instead.",
+    "This can still be seen in the item's name, which was not updated once it was changed to be a reward from Tormentors instead.",
+    "When selecting a Tormentor, this item can be seen in their inventory."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

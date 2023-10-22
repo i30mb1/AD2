@@ -1,0 +1,70 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Hurricane_Pike_Hurricane_Thrust_1.mp3\/revision\/latest?cb=20191227195440",
+      "effects": [
+        "Ally Cast Range: 650",
+        "Enemy Cast Range: 450",
+        "Ally Push Distance: 600",
+        "Enemy Push Distance: 450",
+        "Ally Push Duration: 0.4",
+        "Enemy Push Duration: 0.2",
+        "Number of Attacks: 5",
+        "Attack Speed Bonus: 100",
+        "Buff Duration: 6"
+      ],
+      "notes": [],
+      "mana": "150",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Hurricane Thrust<\/span>",
+      "cooldown": "19",
+      "description": "Pushes you and target enemy 450 units away from each other, and for 6 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed. Works like Force Staff when used on self or allies.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Attack Range Bonus: 150"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Dragon's Reach<\/span>",
+      "cooldown": null,
+      "description": "Increases attack range of ranged heroes by 150.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "330 health and 1.5 health regeneration.",
+    "180 mana, 0.75 mana regeneration and 1.5% flat base magic resistance.",
+    "20 attack speed and 3.33 main armor.",
+    "15, 20 and 15 main attack damage to all \/ \/ heroes respectively.",
+    "35 main attack damage to universal heroes."
+  ],
+  "cost": "4450",
+  "lore": null,
+  "consistFrom": [
+    "Force Staff",
+    "Dragon Lance",
+    "Recipe"
+  ],
+  "name": "Hurricane Pike",
+  "description": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
+  "trivia": [
+    "Hurricane Pike's icon shows that it is half Force Staff, half Dragon Lance.",
+    "The name may be from the last volume of Kaze no Stigma where the Hurricane Pike, also known as Kokusen, is a divine artifact that greatly enhances the power of a wind mage.",
+    "Prior to the July 14, 2017 Patch, Hurricane Pike's active ability, Hurricane Thrust, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Make sure to have Observer and Sentry Wards, tower or cliff vision or you will lose sight of your target, rendering the unlimited range useless. Alternatively, you either need a spell of your own to give you vision over the enemy (such as Weaver's The Swarm), or work with an ally to keep vision over him ( Bounty Hunter's Track is the obvious choice, Thundergod's Wrath, Corrosive Haze, Thunder Strike, Haunt also work, to name a few).",
+    "Alternatively, you either need a spell of your own to give you vision over the enemy (such as Weaver's The Swarm), or work with an ally to keep vision over him ( Bounty Hunter's Track is the obvious choice, Thundergod's Wrath, Corrosive Haze, Thunder Strike, Haunt also work, to name a few).",
+    "Hurricane Pike can be used as an escape mechanism by pushing away persistent enemies.",
+    "Enemies can be pushed away in mid-air, like during Earthshaker's upgraded Enchant Totem and units Tossed by Tiny.",
+    "It is possible to propel yourself through Disruptor's Kinetic Field by using the active on an enemy with your back toward the rim, pushing yourself backwards through the barrier. Be wary, as this can also accidentally save an enemy from your team's Disruptor as well. This cannot be done with the normal self-push and regular Force Staff, both of which get stopped by the barrier."
+  ]
+}

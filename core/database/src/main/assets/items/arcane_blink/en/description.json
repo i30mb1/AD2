@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Arcane_Blink_Arcane_Blink_1.mp3\/revision\/latest?cb=20210120233519",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Cast Range: Global",
+        "Max Blink Distance: 1400",
+        "Penalty Blink Distance: 1120",
+        "Self Heal: 200",
+        "Self Mana Restore: 100",
+        "Damage Mute Duration: 3"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Arcane Blink<\/span>",
+      "cooldown": "7",
+      "description": "Teleport to a target point up to 1400 units away. Arcane Blink mutes for 3s after taking damage from an enemy hero or Roshan.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance.",
+    "25 main attack damage to heroes.",
+    "17.5 main attack damage to universal heroes."
+  ],
+  "cost": "6800",
+  "lore": null,
+  "consistFrom": [
+    "Blink Dagger",
+    "Mystic Staff",
+    "Recipe"
+  ],
+  "name": "Arcane Blink",
+  "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Blink requires heroes to face the direction in which they are blinking. This means that heroes facing away from their blink destination will have to turn first, causing a slight delay depending on their turn rate.",
+    "Hood of Defiance's barrier blocks damage over time, meaning that it will prevent items like Radiance from resetting Blink Dagger's cooldown.",
+    "Use Blink to dodge incoming projectile-based spells such as Storm Hammer or Spirit Lance, and from items like Rod of Atos.",
+    "When Blink dagger go into cooldown upon taking damage on an escape, a quick self-cast with Eul's Scepter of Divinity will allow you to wait the short cooldown relatively safely and blink out the moment you land on the ground.",
+    "Blink Dagger can turn into a very strong escape tool if you are affected by False Promise."
+  ]
+}

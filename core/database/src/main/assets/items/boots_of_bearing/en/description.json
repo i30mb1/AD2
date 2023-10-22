@@ -1,0 +1,58 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Boots_of_Bearing_Endurance.mp3\/revision\/latest?cb=20220618225121",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Radius: 1200",
+        "Move Speed Bonus: 15%",
+        "Attack Speed Bonus: 50",
+        "Slow Immune Duration: 1.5",
+        "Buff Duration: 6"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Endurance<\/span>",
+      "cooldown": "30",
+      "description": "Gives +50 attack speed, +15% Movement Speed to nearby allies for 6 seconds. For the first 1.5 seconds allies are immune to slows.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Move Speed Bonus: 20",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Swiftness Aura<\/span>",
+      "cooldown": null,
+      "description": "Grants 20 movement speed to allies.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "176 health and 0.8 health regeneration.",
+    "96 mana, 0.4 mana regeneration and 0.8% flat base magic resistance.",
+    "8 main attack damage to \/ heroes.",
+    "11.2 main attack damage to universal heroes."
+  ],
+  "cost": "4275",
+  "lore": null,
+  "consistFrom": [
+    "Tranquil Boots",
+    "Drum of Endurance",
+    "Recipe"
+  ],
+  "name": "Boots of Bearing",
+  "description": "Resplendent footwear fashioned for the ancient herald that first dared spread the glory of Stonehall beyond the original borders of its nascent claim.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

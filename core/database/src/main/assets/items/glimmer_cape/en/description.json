@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Glimmer_Cape_Glimmer.mp3\/revision\/latest?cb=20191227195421",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Cast Range: 600",
+        "Fade Time: 0.5",
+        "Damage Barrier: 300",
+        "Move Speed Bonus: 40",
+        "Duration: 5"
+      ],
+      "notes": [],
+      "mana": "90",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Glimmer<\/span>",
+      "cooldown": "14",
+      "description": "After a 0.5 second delay, grants invisibility, 40 movement speed and a magic damage barrier that absorbs up to 300 damage to you or a target allied unit for 5 seconds. Can be cast while channelling.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks multiplicatively with other magic resistance sources. Increases most heroes' magic resistance to 43.75%. With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.75%. [?]",
+    "Increases most heroes' magic resistance to 43.75%.",
+    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.75%. [?]"
+  ],
+  "cost": "2150",
+  "lore": null,
+  "consistFrom": [
+    "Shadow Amulet",
+    "Cloak",
+    "Recipe"
+  ],
+  "name": "Glimmer Cape",
+  "description": "The stolen cape of a master illusionist.",
+  "trivia": [
+    "The game files contain an unused Glimmer Cape modifier, modifier_item_glimmer_cape_building_limit, which gets placed on buildings that were recently affected by Glimmer Cape.",
+    "The modifier lasts for 180 seconds, is undispelable and prevents buildings from getting targeted by Glimmer Cape, as indicated by an unused HUD error message.",
+    "This suggests that at one point in development, likely for patch 7.23, buildings were once considered to be eligible targets, just like Couriers and creeps were made targetable by Glimmer Cape."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "You can use the Glimmer Cape while teleporting away. This helps the wearer against disables which will interrupt the channeling."
+  ]
+}

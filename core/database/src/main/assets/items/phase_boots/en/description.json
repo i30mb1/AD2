@@ -1,0 +1,38 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Phase_Boots_Phase.mp3\/revision\/latest?cb=20191227195518",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Move Speed Bonus (TagAghanimMelee): 20%",
+        "Move Speed Bonus (TagAghanimRanged): 10%",
+        "Turn Rate (TagAghanimMelee): 1",
+        "Duration: 3"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Phase<\/span>",
+      "cooldown": "8",
+      "description": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
+    "Stacks with all other movement speed bonus."
+  ],
+  "cost": "1500",
+  "lore": null,
+  "consistFrom": [
+    "Boots of Speed",
+    "Chainmail",
+    "Blades of Attack"
+  ],
+  "name": "Phase Boots",
+  "description": "Boots that allow the wearer to travel between the ether.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

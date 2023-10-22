@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "3 attack speed and 0.5 main armor.",
+    "3 main attack damage to heroes.",
+    "2.1 main attack damage to universal heroes."
+  ],
+  "cost": "140",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Slippers of Agility",
+  "description": "Light boots made from spider skin that tingles your senses.",
+  "trivia": null,
+  "upgradeIn": [
+    "Wraith Band"
+  ],
+  "tips": null
+}

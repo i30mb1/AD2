@@ -1,0 +1,76 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Gem_of_True_Sight_Reveal_1.mp3\/revision\/latest?cb=20230430201736",
+      "effects": [
+        "Cast Range: 300",
+        "Radius: 300",
+        "Duration: 4",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Reveal<\/span>",
+      "cooldown": "12",
+      "description": "Gives True Sight over a 300 radius revealing wards and units even in Fog of War.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 900",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">True Sight<\/span>",
+      "cooldown": null,
+      "description": "Grants the ability to see invisible units and wards to any allied vision within 900 range of its carrier.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Vision Radius: 300"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Everlasting<\/span>",
+      "cooldown": null,
+      "description": "Dropped on death, and cannot be destroyed.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Gem of True Sight drops when its wielder dies, unless they have available Reincarnation sources.",
+    "This item cannot be put into the backpack.",
+    "This item can also be used by the enemies of the owner.",
+    "Gem of True Sight doesn't count towards the owner's net worth if it's on the ground. Unlike Divine Rapier, the item doesn't change owner when picked up by someone else, meaning that it can only affect the buyer's net worth.",
+    "Unlike Divine Rapier, the item doesn't change owner when picked up by someone else, meaning that it can only affect the buyer's net worth.",
+    "Both the Tempest Double and Wukong's Command Soldiers do not copy this item."
+  ],
+  "cost": "900",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Gem of True Sight",
+  "description": "Not one thrall creature of the depths, Nor spirit bound in drowning's keep, Nor Maelrawn the Tentacular, Shall rest till seas, gem comes to sleep.",
+  "trivia": [
+    "Windranger Link▶️ response while having the Compass of the Rising Gale equipped upon buying Gem of True Sight suggests that the Gem of True Sight is slippery, possibly explaining its nature of dropping upon death.",
+    "In DOTA: Dragon's Blood. The Gem of True sight is used as a bargaining tool for Mirana, Invoker, and Terrorblade."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Gem of True Sight is a risky investment, due to it dropping on death and potentially giving the enemy a free Gem. Therefore, this item should only be bought when having enough survivability and when other True Sight items are not enough.",
+    "Although often purchased by supports, Gem of True Sight is better carried by more resilient tanks and initiators, who are less likely to die and lose it.",
+    "In the early game, when heroes are more stationary farming the lanes, Sentry Wards are a far more efficient way to avoid being ganked by invisible heroes.",
+    "Due to the True Sight being a passive aura, it constantly reveals nearby invisible enemies, making it the most cost-effective revealing item, hence the heavy drawback.",
+    "Gem of True Sight can still sometimes be a worthwhile investment when the enemy has no invisible heroes. It is ideal to reliably remove enemy Observer and Sentry Wards over a long term, as the only alternative item to do this is Sentry Wards, but they can be easily wasted if the enemy ward locations are unknown.",
+    "Gem of True Sight can be cast on ward spots to reveal and detect Observer Wards and Sentries."
+  ]
+}

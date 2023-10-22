@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Phylactery_Empower_Spell_1.mp3\/revision\/latest?cb=20230430202003",
+      "effects": [
+        "Spell Damage Bonus: 150",
+        "Move Speed Slow: 50%",
+        "Duration: 1.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Empower Spell<\/span>",
+      "cooldown": null,
+      "description": "The next single target spell you cast on an enemy deals a separate 150 bonus damage to the target and slows them by 50% for 1.5 seconds. Cooldown: 6s",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "154 health and 0.7 health regeneration.",
+    "84 mana, 0.35 mana regeneration and 0.7% flat base magic resistance.",
+    "7 attack speed and 1.17 main armor.",
+    "7 main attack damage to all \/ \/ heroes.",
+    "14.7 main attack damage to universal heroes."
+  ],
+  "cost": "2375",
+  "lore": null,
+  "consistFrom": [
+    "Diadem",
+    "Point Booster",
+    "Sage's Mask"
+  ],
+  "name": "Phylactery",
+  "description": "Artifacts Cost 2375 Sell Value 1187.5 Passive ? Empower Spell Bonus ? +7 Strength +7 Agility +7 Intelligence +200 Health +200 Mana +0.7 Mana Regeneration Shareable Disassemble Usage Alert ? Recipe",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

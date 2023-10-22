@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Rod_of_Atos_Cripple_1.mp3\/revision\/latest?cb=20191227195522",
+      "effects": [
+        "Cast Range: 1100",
+        "Root Duration: 2"
+      ],
+      "notes": [],
+      "mana": "50",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Cripple<\/span>",
+      "cooldown": "18",
+      "description": "Roots the target for 2 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "180 mana, 0.75 mana regeneration and 1.5% flat base magic resistance.",
+    "15 main attack damage to heroes.",
+    "10.5 main attack damage to universal heroes."
+  ],
+  "cost": "2250",
+  "lore": null,
+  "consistFrom": [
+    "Staff of Wizardry",
+    "Vitality Booster",
+    "Recipe"
+  ],
+  "name": "Rod of Atos",
+  "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
+  "trivia": [
+    "The particle effects of Cripple include runes resembling the Elvish scripts from The Lord of the Rings, a novel by J.R.R. Tolkien (specifically the alphabet bee or umbar in Tengwar).",
+    "The item is sometimes referred to as the \"Rod of Aui\", after pro player Aui_2000, who popularized buying the item on many heroes."
+  ],
+  "upgradeIn": [
+    "Gleipnir"
+  ],
+  "tips": [
+    "Root is a great disable to make a melee hero unable to reach his target and attack and later to force them to use their Black King Bar while out of position.",
+    "Combine it with an Hurricane Pike to push away your target then root him for preventing your enemy from attacking or escaping.",
+    "The item can be used for ganking, chasing survivors after a team fight, or to escape.",
+    "The very long cast range makes the Rod of Atos an effective item to disable an enemy Linken's Sphere from afar, although it requires the projectile to connect."
+  ]
+}

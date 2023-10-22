@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Aegis_of_the_Immortal_Reincarnation_1.mp3\/revision\/latest?cb=20191227195345",
+      "effects": [
+        "Effect Delay: 5",
+        "Aegis Duration: 300",
+        "Aegis Duration Turbo: 240",
+        "Expire Max Health Restored per Second: 20%",
+        "Expire Max Mana Restored per Second: 20%",
+        "Expire Restore Duration: 5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Reincarnation<\/span>",
+      "cooldown": null,
+      "description": "Brings you to life with full health and mana 5 seconds after you die, at the location where you died. Reincarnation must be used within 5 minutes or Aegis of the Immortal disappears. If it expires, it will heal you over 5 seconds (dispels on damage).",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "-",
+  "lore": [],
+  "consistFrom": null,
+  "name": "Aegis of the Immortal",
+  "description": "The Immortal was said to own a shield that protected him from death itself.",
+  "trivia": [
+    "Aegis was previously an ordinary recipe item that contained three charges. After it was removed, it was then obtainable as a droppable item from Roshan.",
+    "In Greek mythology, an aegis that was described as \"ageless and immortal\" was presented to Zeus.",
+    "When selecting Roshan, this item can be seen in his inventory."
+  ],
+  "upgradeIn": null,
+  "tips": null
+}

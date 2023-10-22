@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "1200",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Point Booster",
+  "description": "A perfectly formed amethyst that nourishes body and mind when held.",
+  "trivia": null,
+  "upgradeIn": [
+    "Aghanim's Scepter",
+    "Soul Booster",
+    "Eye of Skadi",
+    "Phylactery"
+  ],
+  "tips": null
+}

@@ -1,0 +1,50 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Soul_Ring_Sacrifice.mp3\/revision\/latest?cb=20191227195538",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Mana Bonus: 170",
+        "Duration: 10"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Sacrifice<\/span>",
+      "cooldown": "25",
+      "description": "Consume 170 health to temporarily gain 170 mana. Lasts 10 seconds. If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "132 health and 0.6 health regeneration.",
+    "6 main attack damage to heroes.",
+    "4.2 main attack damage to universal heroes."
+  ],
+  "cost": "805",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Protection",
+    "Gauntlets of Strength",
+    "Gauntlets of Strength",
+    "Recipe"
+  ],
+  "name": "Soul Ring",
+  "description": "A ring that feeds on the souls of those who wear it.",
+  "trivia": [
+    "Soul Ring was the only item not allowed in The International 2013 Solo Championship.",
+    "Life Essence's ability sound effect is actually Sacrifice in reverse."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "You can keep the bonus mana for seconds so you can use the item even if you don't cast your abilities immediately to put your item on cooldown. Using the item each time it is ready is equivalent of having 0.4 mana regeneration per second, making it by far the most cost-effective mana regeneration item of the game.",
+    "Using the item each time it is ready is equivalent of having 0.4 mana regeneration per second, making it by far the most cost-effective mana regeneration item of the game.",
+    "Make sure you are safe before using Soul Ring, as the reduced health can make your hero much more vulnerable. If your hero has low health or no means of regenerating health, consider picking up Tranquil Boots too in order to refill health after using the active a lot. By the same token, this item is very good on strength heroes due to their larger health pools and health regeneration rates. Heroes with increased base health regeneration rates may benefit more from this item as well.",
+    "If your hero has low health or no means of regenerating health, consider picking up Tranquil Boots too in order to refill health after using the active a lot.",
+    "By the same token, this item is very good on strength heroes due to their larger health pools and health regeneration rates. Heroes with increased base health regeneration rates may benefit more from this item as well.",
+    "Against heroes with mana burning abilities, Soul Ring can give you enough mana to get an important spell off in a fight.",
+    "Consider dropping items that increase mana capacity before using Soul Ring and picking them back up afterwards. Dropping those items decreases your mana capacity while current mana percentage remains the same, but Soul Ring still gives the full amount of mana. Picking up the items afterwards increases mana capacity while retaining the same percentage, thus resulting in a net gain of mana. As an added bonus, the extra mana gained through this method does not count as having been gained through the Soul Ring, and as such, will not be lost at the end of the duration even if unused."
+  ]
+}

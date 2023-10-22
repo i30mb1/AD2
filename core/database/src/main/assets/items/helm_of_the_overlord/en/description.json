@@ -1,0 +1,72 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Helm_of_the_Dominator_Dominate.mp3\/revision\/latest?cb=20191227195434",
+      "effects": [
+        "Cast Range: 700",
+        "Max Units: 1",
+        "Min Base Health: 1800",
+        "Set Move Speed: 380",
+        "Set Gold Bounty: 250",
+        "Base Attack Damage Bonus: 70",
+        "Health Regen Bonus: 12",
+        "Mana Regen Bonus: 4",
+        "Armor Bonus: 7",
+        "Creep Ability Level Bonus: 1"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Dominate<\/span>",
+      "cooldown": "45",
+      "description": "Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1800. Also provides the unit with +70 base attack damage, +12 health regen, +4 mana regen and +7 armor. Dominated units with a max health of greater than 1800 retain their original max health. Dominated unit's bounty is set to 250 gold.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Radius: 1200",
+        "Hero Lifesteal: 20%",
+        "Creep Lifesteal: 10%",
+        "Mana Regeneration Bonus: 2",
+        "Attack Damage Bonus: 18%",
+        "Armor Bonus: 3",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Vladmir's Aura<\/span>",
+      "cooldown": null,
+      "description": "Grants 20% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 50%",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "154 health and 0.7 health regeneration.",
+    "84 mana, 0.35 mana regeneration and 0.7% flat base magic resistance.",
+    "7 attack speed and 1.17 main armor.",
+    "7 main attack damage to all \/ \/ heroes.",
+    "14.7 main attack damage to universal heroes."
+  ],
+  "cost": "6400",
+  "lore": null,
+  "consistFrom": [
+    "Helm of the Dominator",
+    "Vladmir's Offering",
+    "Recipe"
+  ],
+  "name": "Helm of the Overlord",
+  "description": "The powerful headpiece of a dead necromancer.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Dominated creeps can be used to remotely stack an ancient camp. Some creeps have abilities that are very useful, such as Dark Troll Summoner and Ogre Frostmage.",
+    "You can dominate the Alpha Wolf for the helpful damage aura and have it follow your carry.",
+    "A dominated creep can be used as a scout that can be placed inside Roshan's pit. Just be sure not to place it too close to Roshan, so he does not attack it.",
+    "Dominate always sets the creep's base movement speed to 380. The only units which have more than 425 movement speed are Lycan Wolves at level 3 or higher. This means dominating one of them actually reduces their base speed down to 380. Besides these, all other dominatable creeps have lower movement speed than 380."
+  ]
+}

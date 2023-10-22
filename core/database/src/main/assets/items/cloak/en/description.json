@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Stacks multiplicatively with other magic resistance sources. Increases most heroes' magic resistance to 40%. With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%. [?]",
+    "Increases most heroes' magic resistance to 40%.",
+    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%. [?]"
+  ],
+  "cost": "800",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Cloak",
+  "description": "A cloak made of a magical material that works to dispel any magic cast on it.",
+  "trivia": [
+    "In the original DotA, this item was known as Planewalker's Cloak. Before Planewalker's Cloak, this item was named \"Cloak of the Magus\" and before that, it was named \"Magus' Cloak\".",
+    "Before Planewalker's Cloak, this item was named \"Cloak of the Magus\" and before that, it was named \"Magus' Cloak\"."
+  ],
+  "upgradeIn": [
+    "Eternal Shroud",
+    "Glimmer Cape",
+    "Mage Slayer",
+    "Pipe of Insight"
+  ],
+  "tips": null
+}

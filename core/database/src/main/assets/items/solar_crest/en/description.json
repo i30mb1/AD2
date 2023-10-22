@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Solar_Crest_Shine_1.mp3\/revision\/latest?cb=20191227195536",
+      "effects": [
+        "Cast Range: 1000",
+        "Self Armor Reduction: 7",
+        "Ally Armor Bonus: 7",
+        "Ally Move Speed Bonus: 15%",
+        "Ally Attack Speed Bonus: 70",
+        "Enemy Armor Reduction: 7",
+        "Enemy Move Speed Slow: 15%",
+        "Enemy Attack Speed Slow: 70",
+        "Duration: 8"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Shine<\/span>",
+      "cooldown": "16",
+      "description": "When cast on an ally, grants them 7 armor, 70 attack speed, and 15% movement speed. When cast on an enemy, removes 7 armor, 70 attack speed, and 15% movement speed. Removes the armor from the caster when used. Cannot target spell immune enemies.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "132 health and 0.6 health regeneration.",
+    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance.",
+    "6 attack speed and 1 main armor.",
+    "6 main attack damage to all \/ \/ heroes.",
+    "12.6 main attack damage to universal heroes."
+  ],
+  "cost": "2425",
+  "lore": null,
+  "consistFrom": [
+    "Medallion of Courage",
+    "Crown",
+    "Wind Lace",
+    "Recipe"
+  ],
+  "name": "Solar Crest",
+  "description": "A talisman forged to honor the daytime sky.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

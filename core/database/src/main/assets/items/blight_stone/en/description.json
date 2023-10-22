@@ -1,0 +1,35 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Armor Reduction: 2",
+        "Duration: 8"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Lesser Corruption<\/span>",
+      "cooldown": null,
+      "description": "Your attacks reduce the target's armor by 2 for 8 seconds.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "300",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Blight Stone",
+  "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orb of Corrosion",
+    "Medallion of Courage",
+    "Desolator"
+  ],
+  "tips": [
+    "Blight Stone is ideal for a ranged support or ranged carry to harass lanes during the early game.",
+    "Blight Stone is stronger if you can take advantage of how its armor reduction boosts all physical damage the target receives, such as that of your laning partner, lane creeps, or summoned units. It is less effective in more straightforward 1 vs 1 scenarios.",
+    "Blight Stone is useful for pushing towers early on, especially when used in tandem with the armor aura from Buckler and the assistance of additional allies."
+  ]
+}

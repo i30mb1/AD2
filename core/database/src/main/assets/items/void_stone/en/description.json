@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "700",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Void Stone",
+  "description": "Jewelry that was once used to channel nether realm magic, this ring pulses with energy.",
+  "trivia": null,
+  "upgradeIn": [
+    "Scythe of Vyse",
+    "Perseverance",
+    "Pavise",
+    "Eul's Scepter of Divinity",
+    "Aether Lens",
+    "Octarine Core"
+  ],
+  "tips": null
+}

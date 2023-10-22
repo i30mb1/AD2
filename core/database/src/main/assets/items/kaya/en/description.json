@@ -1,0 +1,27 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance.",
+    "16 main attack damage to heroes.",
+    "11.2 main attack damage to universal heroes."
+  ],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": [
+    "Staff of Wizardry",
+    "Robe of the Magi",
+    "Recipe"
+  ],
+  "name": "Kaya",
+  "description": "The staff of a renowned sorceress, lost for countless millennia.",
+  "trivia": [
+    "The item's internal name was Trident until November 30, 2017 Patch."
+  ],
+  "upgradeIn": [
+    "Yasha and Kaya",
+    "Ethereal Blade",
+    "Kaya and Sange"
+  ],
+  "tips": null
+}

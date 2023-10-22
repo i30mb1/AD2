@@ -1,0 +1,37 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Proc Chance: 30%",
+        "Critical Damage: 160%"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Critical Strike<\/span>",
+      "cooldown": null,
+      "description": "Grants each attack a 30% chance to deal 160% damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1900",
+  "lore": null,
+  "consistFrom": [
+    "Broadsword",
+    "Blades of Attack",
+    "Recipe"
+  ],
+  "name": "Crystalys",
+  "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
+  "trivia": [
+    "Before version 5.40, Crystalys was named \"Crystal Battlegear\" and before 5.31, it was named \"Crystal Defender\".",
+    "Crystalis is the titular sword of the 1990 NES game of the same name."
+  ],
+  "upgradeIn": [
+    "Daedalus",
+    "Silver Edge"
+  ],
+  "tips": null
+}

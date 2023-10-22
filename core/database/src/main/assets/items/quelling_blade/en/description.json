@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cast Range: 350"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Chop Tree<\/span>",
+      "cooldown": "4",
+      "description": "Destroy a target tree.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Attack Damage Bonus (TagAghanimMelee): 8",
+        "Attack Damage Bonus (TagAghanimRanged): 4"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Quell<\/span>",
+      "cooldown": null,
+      "description": "Increases attack damage against non-hero units by 8 for melee heroes, and 4 for ranged.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "100",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Quelling Blade",
+  "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
+  "trivia": null,
+  "upgradeIn": [
+    "Battle Fury"
+  ],
+  "tips": [
+    "As its active can chop down trees. It is a perfect escape plan from Sprout.",
+    "It also can help escape in the woods by carving the player's own paths and juke.",
+    "This item is an absolute must-have vs heroes who rely on trees in their gameplay.",
+    "Support can also use it to provide better vision for their wards."
+  ]
+}

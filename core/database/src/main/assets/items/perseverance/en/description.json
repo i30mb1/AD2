@@ -1,0 +1,17 @@
+{
+  "abilities": [],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Health",
+    "Void Stone"
+  ],
+  "name": "Perseverance",
+  "description": "A gem that grants heart to the bearer.",
+  "trivia": null,
+  "upgradeIn": [
+    "Lotus Orb",
+    "Meteor Hammer"
+  ],
+  "tips": null
+}

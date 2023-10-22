@@ -1,0 +1,43 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Skull_Basher_Bash.mp3\/revision\/latest?cb=20191227195535",
+      "effects": [
+        "Melee Proc Chance: 25%",
+        "Ranged Proc Chance: 10%",
+        "Damage: 100",
+        "Stun Duration: 1.2"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Bash<\/span>",
+      "cooldown": null,
+      "description": "Grants melee heroes a 25% chance on hit to stun the target for 1.2 seconds and deal 100 bonus physical damage. Bash chance for ranged heroes is 10%.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "220 health and 1 health regeneration.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "2875",
+  "lore": null,
+  "consistFrom": [
+    "Mithril Hammer",
+    "Belt of Strength",
+    "Recipe"
+  ],
+  "name": "Skull Basher",
+  "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
+  "trivia": [
+    "In the original DotA, this item was called \"Cranium Basher\", a reference to a unique item in Diablo 2."
+  ],
+  "upgradeIn": [
+    "Abyssal Blade"
+  ],
+  "tips": []
+}

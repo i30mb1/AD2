@@ -1,0 +1,25 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "132 health and 0.6 health regeneration.",
+    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance.",
+    "6 attack speed and 1 main armor.",
+    "6 main attack damage to all \/ \/ heroes.",
+    "12.6 main attack damage to universal heroes."
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Diadem",
+  "description": "Attributes Cost 1000 Sell Value 500 Bonus ? +6 Strength +6 Agility +6 Intelligence Shareable Usage Alert ? Recipe",
+  "trivia": null,
+  "upgradeIn": [
+    "Dagon",
+    "Harpoon",
+    "Helm of the Dominator",
+    "Holy Locket",
+    "Phylactery"
+  ],
+  "tips": null
+}

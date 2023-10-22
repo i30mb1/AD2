@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "1500",
+  "lore": null,
+  "consistFrom": [
+    "Quarterstaff",
+    "Robe of the Magi",
+    "Sage's Mask"
+  ],
+  "name": "Oblivion Staff",
+  "description": "Deceptively hidden as an ordinary quarterstaff, it is actually very powerful, much like the Eldritch who originally possessed it.",
+  "trivia": null,
+  "upgradeIn": [
+    "Echo Sabre",
+    "Mage Slayer"
+  ],
+  "tips": null
+}

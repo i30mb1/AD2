@@ -1,0 +1,35 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Faerie_Fire_Imbue.mp3\/revision\/latest?cb=20191227195415",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Health Restored: 85"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Imbue<\/span>",
+      "cooldown": "5",
+      "description": "Instantly restores 85 health.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "When randoming a hero, the hero starts with a free, unsellable Faerie Fire, except in Turbo Mode.",
+    "The attack damage from multiple instances fully stacks.",
+    "Couriers are able to use Faerie Fire."
+  ],
+  "cost": "65",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Faerie Fire",
+  "description": "The ethereal flames from the ever-burning ruins of Kindertree ignite across realities.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "For the mid-laner, Faerie Fire can create an advantage over the enemy, as well as save them from a gank.",
+    "When diving past a Tier 1 Tower in the laning phase, a Faerie Fire can restore enough health to withstand one more tower hit, which can help you get the kill or retreat if need be."
+  ]
+}

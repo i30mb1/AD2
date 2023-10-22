@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 main attack damage to heroes.",
+    "7 main attack damage to universal heroes."
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Staff of Wizardry",
+  "description": "A staff of magical powers passed down from the eldest mages.",
+  "trivia": null,
+  "upgradeIn": [
+    "Aghanim's Scepter",
+    "Eul's Scepter of Divinity",
+    "Force Staff",
+    "Kaya",
+    "Orchid Malevolence",
+    "Rod of Atos"
+  ],
+  "tips": null
+}

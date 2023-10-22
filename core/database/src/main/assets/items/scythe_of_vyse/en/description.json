@@ -1,0 +1,51 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Scythe_of_Vyse_Hex_1.mp3\/revision\/latest?cb=20191227195526",
+      "effects": [
+        "Cast Range: 800",
+        "Set Move Speed: 140",
+        "Duration: 2.8"
+      ],
+      "notes": [],
+      "mana": "250",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Hex<\/span>",
+      "cooldown": "20",
+      "description": "Turns a target unit into a harmless critter for 2.8 seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed. Instantly destroys illusions.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "220 health and 1 health regeneration.",
+    "420 mana, 1.75 mana regeneration and 3.5% flat base magic resistance.",
+    "10 attack speed and 1.67 main armor.",
+    "10, 10 and 35 main attack damage to all \/ \/ heroes respectively.",
+    "38.5 main attack damage to universal heroes."
+  ],
+  "cost": "5550",
+  "lore": null,
+  "consistFrom": [
+    "Mystic Staff",
+    "Ultimate Orb",
+    "Void Stone"
+  ],
+  "name": "Scythe of Vyse",
+  "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
+  "trivia": [
+    "In the original DotA, this item was known as Guinsoo's Scythe of Vyse, as a tribute to one of the developers of DotA: Allstars, who went on to co-create League of Legends.",
+    "This item is known by many players (and referred to by several in-game Heroes) as \"Sheepstick\" due to turning targeted heroes into sheep in DotA. However, in Dota 2, targeted units turn into a pig. The shop's search bar also accepts sheepstick or just sheep as a search term for Scythe of Vyse.",
+    "The shop's search bar also accepts sheepstick or just sheep as a search term for Scythe of Vyse.",
+    "The item's name may be a reference to the Sega RPG Skies of Arcadia. The main character, Vyse, has been depicted wielding a scythe in early concept art."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Combine it with a blink or invisibility to surprise your target by instantly hexing them.",
+    "Useful against enemies that have items to dispel debuffs like Eul's Scepter of Divinity, Manta Style, Guardian Greaves, and Satanic.",
+    "Extremely powerful against heroes with high DPS, escape abilities, disables, and items like Black King Bar, Blink Dagger, Shadow Blade, and Town Portal Scroll that allow them to escape. Alternatively a Heaven's Halberd or Ethereal Blade can put an enemy carry out of a fight, although they can still use their Black King Bar during it.",
+    "Alternatively a Heaven's Halberd or Ethereal Blade can put an enemy carry out of a fight, although they can still use their Black King Bar during it.",
+    "As a support it can be worth hexing an enemy carry with a Lotus Orb on him."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Smoke_of_Deceit_Disguise.mp3\/revision\/latest?cb=20191227195536",
+      "effects": [
+        "Effect Radius: 1200",
+        "Secondary Smoke Radius: 300",
+        "Dispel Radius: 1025",
+        "Fade Time: 0",
+        "Move Speed Bonus: 15%",
+        "Duration: 45"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Disguise<\/span>",
+      "cooldown": "1",
+      "description": "Turns the caster and all allied player-controlled units in a 1200 radius invisible, and grants 15% bonus movement speed for 45 seconds. While the caster is still disguised, any allies that come within 45 range of them will also get the buff applied to them. Each smoke can only be applied once to allies. Attacking, or moving within 1025 range of an enemy hero or tower, will break the invisibility. Disguise grants invisibility that is immune to True Sight.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Couriers are able to use Smoke of Deceit."
+  ],
+  "cost": "50",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Smoke of Deceit",
+  "description": "The charlatan wizard Myrddin's only true contribution to the arcane arts.",
+  "trivia": [
+    "Smoke of deceit was suggested in the Playdota forums by drgaliza on Dec 18, 2010. It was implemented by Icefrog in the Christmas update."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Though it cannot be used for daring escapes or to gain the upper hand in the middle of combat, Smoke of Deceit plays a cunning role against a well-warded team. The added mobility makes it easy to set up surprise attacks or to slip behind enemies without being spotted. However, if a hero hidden with Smoke of Deceit comes too close to an enemy hero or building, the effect ends, meaning you should keep your distance. Smoke of Deceit is especially useful to get to Roshan undetected as many players ward the surrounding area.",
+    "Since True Sight cannot reveal units affected by Smoke of Deceit, it can be used to dodge certain abilities like Thundergod's Wrath and other spells which require vision in order to hit their targets. This also goes for disjointable projectiles. It is even possible to disjoint Assassinate. The True Sight applied by Assassinate is unable to reveal smoked units and therefore gets disjointed.",
+    "It is even possible to disjoint Assassinate. The True Sight applied by Assassinate is unable to reveal smoked units and therefore gets disjointed."
+  ]
+}

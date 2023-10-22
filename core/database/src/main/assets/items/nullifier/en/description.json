@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Nullifier_Nullify_1.mp3\/revision\/latest?cb=20191227195511",
+      "effects": [
+        "Cast Range: 900",
+        "Duration: 5"
+      ],
+      "notes": [],
+      "mana": "0",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Nullify<\/span>",
+      "cooldown": "10",
+      "description": "Dispels the target and applies a debuff for 5 seconds. Continuously dispels the target.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "4375",
+  "lore": null,
+  "consistFrom": [
+    "Sacred Relic",
+    "Helm of Iron Will"
+  ],
+  "name": "Nullifier",
+  "description": "A dangerous weapon pilfered from an inverse dimension.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "Because this item has a short range and slow projectile speed, it is easier to land from a melee hero with a Blink Dagger, Shadow Blade or ability to close the distance.",
+    "A ranged hero may opt for a Scythe of Vyse especially if they are an Intelligence hero. Note that Hex is dispellable with strong dispels.",
+    "Use Nullifier on heroes with defensive items like Glimmer Cape, Eul's Scepter of Divinity, Ghost Scepter and Aeon Disk.",
+    "Since Force Staff is dispellable, Nullifier will stop enemy heroes after they have been pushed a very short distance. Works on Hurricane Pike's self-casting for the same reason, but not on enemy-casting (both pushes are undispellable).",
+    "Works on Hurricane Pike's self-casting for the same reason, but not on enemy-casting (both pushes are undispellable).",
+    "Use it on heroes that use dispellable Buffs on themselves to escape or deal\/prevent damage like Windrun and Flame Guard.",
+    "Nullify is one of the very few debuffs that cannot be dispelled at all, making it useful against abilities with strong dispels, such as Dark Pact, Press the Attack, and Aphotic Shield.",
+    "Since Nullifier is undispellable, and has a visual effect, it may be useful against illusions in order to visually differentiate the original hero from them."
+  ]
+}

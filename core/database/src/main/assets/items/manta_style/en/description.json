@@ -1,0 +1,49 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Manta_Style_Mirror_Image.mp3\/revision\/latest?cb=20191227195454",
+      "effects": [
+        "Split Time: 0.1",
+        "Number of Illusions: 2",
+        "Damage Dealt (TagAghanimMelee): 33%",
+        "Damage Dealt (TagAghanimRanged): 28%",
+        "Damage Taken: 300%",
+        "Duration: 20"
+      ],
+      "notes": [],
+      "mana": "125",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Mirror Image<\/span>",
+      "cooldown": "30",
+      "description": "Creates 2 images of your hero that last 20 seconds. Melee images deal 33% damage, while Ranged images deal 28%. Illusions take 300% damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "220 health and 1 health regeneration.",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "26 attack speed and 4.33 main armor.",
+    "10, 26 and 10 main attack damage to all \/ \/ heroes respectively.",
+    "32.2 main attack damage to universal heroes."
+  ],
+  "cost": "4600",
+  "lore": null,
+  "consistFrom": [
+    "Yasha",
+    "Ultimate Orb",
+    "Recipe"
+  ],
+  "name": "Manta Style",
+  "description": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": [
+    "The Manta Style is less effective on ranged heroes except with heroes with attack modifiers that works on illusions like Luna Moon Glaives bounce, Drow Ranger's high agility and Morphling which mostly buy stats items that benefits illusions.",
+    "Works with Lone Druid's Spirit Bear.",
+    "The illusions can be used to scout to secure your farming, prepare a gank, or before attacking Roshan. They are useful to deward and destroy Techies' mines but they don't get True Sight from Gem.",
+    "The active of the Manta Style applies a basic dispel, so it can replace a Linken's Sphere against a Bloodthorn or Rod of Atos.",
+    "Illusions inherit effects such as critical strike and Manabreak, albeit diminished.As a result, Daedalus and Diffusal Blade synergise well with Manta."
+  ]
+}

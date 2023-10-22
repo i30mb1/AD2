@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Hand_of_Midas_Transmute.mp3\/revision\/latest?cb=20191227195428",
+      "effects": [
+        "Cast Range: 600",
+        "Set Neutral Gold Bounty: 160",
+        "Experience Bonus Multiplier: 2.1",
+        "Set Neutral Item Drop Rate: 100%",
+        "Initial Charges: 1"
+      ],
+      "notes": [],
+      "mana": "100",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Transmute<\/span>",
+      "cooldown": "0",
+      "description": "Kills a non-hero target for 160 gold and 2.1x experience. Cannot be used on Ancient Creeps.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Transmute fully replaces the targeted unit's gold bounty, so that the target's default gold bounty is not granted. The effective gold gained can be defined as: EXPR160 - UnitGoldBounty. Because of this discrepancy, if it is used on big units, you lose almost half the unit's actual Gold bounty but gain over double the ExperienceXP.",
+    "The effective gold gained can be defined as: EXPR160 - UnitGoldBounty.",
+    "Because of this discrepancy, if it is used on big units, you lose almost half the unit's actual Gold bounty but gain over double the ExperienceXP.",
+    "For more information, see here."
+  ],
+  "cost": "2200",
+  "lore": null,
+  "consistFrom": [
+    "Gloves of Haste",
+    "Recipe"
+  ],
+  "name": "Hand of Midas",
+  "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
+  "trivia": [
+    "Midas is based on Midas, a figure from Greek mythology who turned all he touched to gold.",
+    "Alchemist's cosmetic item, Midas Knuckles, is based on Hand of Midas."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The earlier Hand of Midas is purchased, the earlier it will pay itself off during the match and the earlier you will have an effective net worth gain. Assuming it is always used when off cooldown and used on a unit with a gold bounty of 160, Hand of Midas increases the user's GPM by 96 , meaning it takes a minimum of 21.67 minutes to pay for itself, or 16.67 minutes for the recipe (from the point on it was first used). This means you need to use Transmute 13.75 times to pay for itself, or 10.94 times for just the recipe. Ogre Magi with his Multicast and Arc Warden with the Tempest Double will have their Hand of Midas paid out effectively earlier than other heroes.",
+    "Assuming it is always used when off cooldown and used on a unit with a gold bounty of 160, Hand of Midas increases the user's GPM by 96 , meaning it takes a minimum of 21.67 minutes to pay for itself, or 16.67 minutes for the recipe (from the point on it was first used).",
+    "This means you need to use Transmute 13.75 times to pay for itself, or 10.94 times for just the recipe. Ogre Magi with his Multicast and Arc Warden with the Tempest Double will have their Hand of Midas paid out effectively earlier than other heroes.",
+    "Ogre Magi with his Multicast and Arc Warden with the Tempest Double will have their Hand of Midas paid out effectively earlier than other heroes.",
+    "Hand of Midas is an important item if you want to increase your level quickly and unlock talents, especially if you rely on your talents to counter enemy heroes in the late game."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Hero Lifesteal: 18%",
+        "Creep Lifesteal: 9%"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Lifesteal<\/span>",
+      "cooldown": null,
+      "description": "Heals the attacker for 18% of attack damage dealt. Lifesteal from creeps is reduced by 50%",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "900",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Morbid Mask",
+  "description": "A mask that drains the energy of those caught in its gaze.",
+  "trivia": [
+    "In DotA, this item was called Mask of Death."
+  ],
+  "upgradeIn": [
+    "Satanic",
+    "Mask of Madness",
+    "Vladmir's Offering"
+  ],
+  "tips": null
+}

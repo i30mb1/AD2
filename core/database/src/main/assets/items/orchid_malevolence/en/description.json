@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Orchid_Malevolence_Soul_Burn.mp3\/revision\/latest?cb=20191227195517",
+      "effects": [
+        "Cast Range: 900",
+        "Damage Dealt as Bonus Damage: 30%",
+        "Damage Timer: 5",
+        "Silenced Duration: 5"
+      ],
+      "notes": [],
+      "mana": "100",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Soul Burn<\/span>",
+      "cooldown": "18",
+      "description": "Silences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance.",
+    "12 main attack damage to heroes.",
+    "8.4 main attack damage to universal heroes."
+  ],
+  "cost": "3475",
+  "lore": null,
+  "consistFrom": [
+    "Blitz Knuckles",
+    "Staff of Wizardry",
+    "Cornucopia",
+    "Recipe"
+  ],
+  "name": "Orchid Malevolence",
+  "description": "A garnet rod constructed from the essence of a fire demon.",
+  "trivia": [
+    "The item's name is likely a reference to the weapon of the same name that can be acquired in the 2002 video game Otogi: Myth of Demons."
+  ],
+  "upgradeIn": [
+    "Bloodthorn"
+  ],
+  "tips": [
+    "Orchid is great against Intelligence heroes as they are dependent on their abilities to deal damage, but it is also effective against heroes with escape abilities like Anti-Mage or Weaver and strong initiation like Faceless Void or Enigma.",
+    "Get the item quickly before the enemy team gets items able to dispel the silence."
+  ]
+}

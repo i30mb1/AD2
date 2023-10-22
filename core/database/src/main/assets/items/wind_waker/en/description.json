@@ -1,0 +1,53 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Wind_Waker_Cyclone.mp3\/revision\/latest?cb=20210120233455",
+      "effects": [
+        "Cast Range: 550",
+        "Cyclone Radius: 24",
+        "Damage: 50",
+        "Self Cyclone Speed: 360",
+        "Duration: 2.5"
+      ],
+      "notes": [],
+      "mana": "175",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Cyclone<\/span>",
+      "cooldown": "13",
+      "description": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can be cast on yourself, enemy units or allied units. Enemy units take 50 magical damage upon landing.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "420 mana, 1.75 mana regeneration and 3.5% flat base magic resistance.",
+    "35 main attack damage to heroes.",
+    "24.5 main attack damage to universal heroes."
+  ],
+  "cost": "6825",
+  "lore": null,
+  "consistFrom": [
+    "Eul's Scepter of Divinity",
+    "Mystic Staff",
+    "Recipe"
+  ],
+  "name": "Wind Waker",
+  "description": "Proof enough to some that unseen forces manipulate the happenings of the material plane.",
+  "trivia": [
+    "The item's name may be a reference to The Legend of Zelda: The Wind Waker"
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Cyclone can be used in the following situations: Offensively by disabling an enemy before a gank, giving you the time to set up your abilities. On fleeing enemies to give your team the time to surround the target. On enemies in teamfights to take them out of the fight for a few seconds. This is especially effective on carries. ↓↓ Double-tapping during teamfights, baiting enemies into using their abilities on you, then becoming invulnerable to interrupt their burst damage. To buy yourself a little more time for abilities and items to come off cooldown, especially items like Blink Dagger or Blade Mail. On an enemy who has activated items like Blade Mail, Mask of Madness or Lotus Orb. Doing so will waste the duration of those items.",
+    "Offensively by disabling an enemy before a gank, giving you the time to set up your abilities.",
+    "On fleeing enemies to give your team the time to surround the target.",
+    "On enemies in teamfights to take them out of the fight for a few seconds. This is especially effective on carries.",
+    "↓↓ Double-tapping during teamfights, baiting enemies into using their abilities on you, then becoming invulnerable to interrupt their burst damage.",
+    "To buy yourself a little more time for abilities and items to come off cooldown, especially items like Blink Dagger or Blade Mail.",
+    "On an enemy who has activated items like Blade Mail, Mask of Madness or Lotus Orb. Doing so will waste the duration of those items.",
+    "The item provides a cheap and beneficial dispel for support heroes who are very susceptible to silences. So when facing a lot of silences, or other strong but dispellable effects, Eul's Scepter of Divinity is usually the best option.",
+    "The bonus movement speed works well with other items that increase movement speed, such as Phase Boots.",
+    "Since Wind Waker lets you move for the duration of it's Cyclone, you can use it to save yourself from bad situations."
+  ]
+}

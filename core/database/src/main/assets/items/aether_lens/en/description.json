@@ -1,0 +1,31 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Cast Range Increase: 225"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Aethereal Focus<\/span>",
+      "cooldown": null,
+      "description": "Increases targeted spell and item cast range by 225.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "2275",
+  "lore": null,
+  "consistFrom": [
+    "Energy Booster",
+    "Void Stone",
+    "Recipe"
+  ],
+  "name": "Aether Lens",
+  "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
+  "trivia": null,
+  "upgradeIn": null,
+  "tips": null
+}

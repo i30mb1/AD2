@@ -1,0 +1,16 @@
+{
+  "abilities": [],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Broadsword",
+  "description": "The classic weapon of choice for knights, this blade is sturdy and reliable for slaying enemies.",
+  "trivia": null,
+  "upgradeIn": [
+    "Blade Mail",
+    "Battle Fury",
+    "Crystalys",
+    "Shadow Blade"
+  ],
+  "tips": null
+}

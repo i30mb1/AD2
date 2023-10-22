@@ -1,0 +1,67 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Harpoon_Draw_Forth_1.mp3\/revision\/latest?cb=20230430202042",
+      "effects": [
+        "Cast Range: 700",
+        "Min Pull Distance: 100",
+        "Max Pull Distance: 1000",
+        "Ranged Pull Distance: 35%",
+        "Pull Duration: 0.3"
+      ],
+      "notes": [],
+      "mana": "50",
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Draw Forth<\/span>",
+      "cooldown": "19",
+      "description": "When targeting an enemy, fire a harpoon at them, that pulls you and the target closer together. Ranged heroes pull the target up to 35% of the distance between them. Melee heroes always pull the target to their attack range.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Self Attack Speed Bonus: 490",
+        "Number of Attacks: 1",
+        "Enemy Move Speed Slow: 100%",
+        "Enemy Slow Duration: 1"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Echo Strike<\/span>",
+      "cooldown": null,
+      "description": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 1 seconds on each strike.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "440 health and 2 health regeneration.",
+    "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance.",
+    "10 attack speed and 1.67 main armor.",
+    "20, 10 and 16 main attack damage to all \/ \/ heroes respectively.",
+    "32.2 main attack damage to universal heroes."
+  ],
+  "cost": "4500",
+  "lore": [],
+  "consistFrom": [
+    "Echo Sabre",
+    "Diadem",
+    "Recipe"
+  ],
+  "name": "Harpoon",
+  "description": "Artifacts Cost 4500 (1000) Sell Value 2250 Active Draw Forth Passive ? Echo Strike Bonus ? +20 Strength +10 Agility +16 Intelligence +2 Mana Regeneration +15 Attack Damage +10 Attack Speed Shareable Disassemble Usage Alert ? Recipe",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Harpoon's passive ability, Echo Strike, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "The best items in combination to increase your damage are those which grant critical hit and armor reduction. A Skull Basher is also good to get a chance to bash from the two quick attacks. You can combine the Harpoon with a Daedalus and Satanic's active to instantly restore your HP.",
+    "You can combine the Harpoon with a Daedalus and Satanic's active to instantly restore your HP.",
+    "Harpoon's ability is effectively a passive 1-hit-only Overpower. This makes it a great item on heroes whose passive abilities rely on attack speed to be effective, similar to how Ursa's Fury Swipes relies on the attack speed of Overpower.",
+    "The attack speed from the passive proc lasts until a second attack is done. This makes it possible to \"store\" the massive attack speed bonus for a planned strike on an enemy. One just has to attack a creep to proc the passive ability and immediately cancel the second attack. The stored attack speed can come very handy when ganking enemies which have strong attack speed slows like Enchantress with her Untouchable or Phoenix's Fire Spirits.",
+    "Because of providing a decent amount of all the stats, Harpoon greatly empowers Universal melee carries."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "abilities": [],
+  "cost": "3400",
+  "lore": null,
+  "consistFrom": null,
+  "name": "Sacred Relic",
+  "description": "An ancient weapon that often turns the tides of war.",
+  "trivia": null,
+  "upgradeIn": [
+    "Nullifier",
+    "Divine Rapier",
+    "Radiance"
+  ],
+  "tips": null
+}

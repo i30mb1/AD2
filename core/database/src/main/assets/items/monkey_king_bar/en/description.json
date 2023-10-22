@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Monkey_King_Bar_Pierce.mp3\/revision\/latest?cb=20191227195506",
+      "effects": [
+        "Proc Chance: 80%",
+        "Damage: 70"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Pierce<\/span>",
+      "cooldown": null,
+      "description": "Grants each attack a 80% chance to pierce through evasion and deal 70 bonus magical damage.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "4900",
+  "lore": null,
+  "consistFrom": [
+    "Demon Edge",
+    "Javelin",
+    "Blitz Knuckles",
+    "Recipe"
+  ],
+  "name": "Monkey King Bar",
+  "description": "A powerful staff used by a master warrior.",
+  "trivia": [
+    "The Monkey King, Sun Wukong, is the subject of the Chinese folk novel Journey to the West. His weapon, Ruyi Jingu Bang (如意金箍棒), is a magical iron rod with ends banded with gold. Although it weighs several tons, the Monkey King can change its size at will so he may shrink it and tuck it behind his ear, or grow exponentially and duplicate into an infinite number of individual rods.",
+    "Monkey King's default weapon model is a Monkey King Bar."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Monkey King Bar is a key item to counter heroes (or items) that have intense evasion: e.g. Phantom Assassin, Windranger, Arc Warden, Brewmaster, and Butterfly.",
+    "Similarly, Monkey King Bar can be purchased to counter some abilities that cause blind: e.g. Smoke Screen, Laser, Blinding Light, and Whirling Axes.",
+    "Because Pierce cannot not proc on buildings, Monkey King Bar will not help in solving Uphill Miss when a ranged hero is below the ramp while attacking enemy T3 towers and barracks."
+  ]
+}

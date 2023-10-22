@@ -1,0 +1,28 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The item's attributes grants the following additional bonuses:",
+    "352 health and 1.6 health regeneration.",
+    "16 attack speed and 2.67 main armor.",
+    "16 main attack damage to \/ heroes.",
+    "22.4 main attack damage to universal heroes."
+  ],
+  "cost": "4100",
+  "lore": null,
+  "consistFrom": [
+    "Yasha",
+    "Sange"
+  ],
+  "name": "Sange and Yasha",
+  "description": "Sange and Yasha, when attuned by the moonlight and used together, become a very powerful combination.",
+  "trivia": [
+    "The item is a homage to a pair of twin swords the Phantasy Star game series, notably Phantasy Star Online.",
+    "Night Stalker refers to Sange and Yasha as \"sisters\".[1], also Ember Spirit.",
+    "Riki's cosmetic item bundle, Sange and Yasha, is based on Sange and Yasha and shares its name."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "This item is particularly strong in boosting your midgame. Plenty of stats, movement speed, and status resistance it is very strong on most melee carries.",
+    "If you still have a Sange and Yasha by the time you get to the late-game, it may be wise to disassemble it and build the Yasha into a Manta Style, and the Sange into a Heaven's Halberd. The actives from those items are extremely helpful, and the stat bonuses are great."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Radiance_Burn.mp3\/revision\/latest?cb=20191227195519",
+      "effects": [
+        "Cast Animation: 0+0",
+        "Radius: 700",
+        "Damage per Second: 60",
+        "Illusion Damage Multiplier: 1.5",
+        "Miss Chance: 15%",
+        "Aura Linger Duration: 0.5",
+        "Damage per Second: 35"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "<span style=\"font-weight:bold; color:#fff; text-shadow:1px 1px 2px #000;;\">Burn<\/span>",
+      "cooldown": null,
+      "description": "When active, scorches enemies for 60 magical damage per second, and causes them to miss 15% of their attacks. Illusions deal 35 magical damage per second.",
+      "params": null,
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Evasion uses pseudo-random distribution. Stacks diminishingly with other evasion sources. Increases most heroes against physical attacks by 17.65%.",
+    "Stacks diminishingly with other evasion sources.",
+    "Increases most heroes against physical attacks by 17.65%."
+  ],
+  "cost": "4700",
+  "lore": null,
+  "consistFrom": [
+    "Sacred Relic",
+    "Talisman of Evasion"
+  ],
+  "name": "Radiance",
+  "description": "",
+  "trivia": [
+    "Radiance's item icon used to have a few animations. The glowing on the sword's edges would slowly radiate away from the blade, and the sword had a pulsating glow effect. This animation was removed for unknown reasons.",
+    "Demonic Blade may have inspired the creation of Radiance."
+  ],
+  "upgradeIn": null,
+  "tips": [
+    "Radiance has one of the hardest build-ups in the game, as rushing the 3400 for a Sacred Relic forces you to save up a lot of gold at once rather than ramping up your strength with cheaper items. Early deaths can be especially problematic for a Radiance builder, and may force the player to give up on Radiance and build a different item. Inform your team if you are building a Radiance.",
+    "It is recommended to avoid being visible on the map and avoid uncertain fights when close to the purchase of the Sacred Relic.",
+    "With a Manta Style or an illusion ability, you can farm multiple lanes and wood camps at once and push the lanes safely.",
+    "Radiance's constant area damage is great at disabling enemy Blink Daggers, preventing enemies from initiating or escaping with it. However, they can still initiate with it if they have enough vision, due to the blink's range being higher than the Burn Aura's reach.",
+    "It can be combined with a Shiva's Guard to have an AoE magic damage ability, slow your enemies and protect your team further from physical damage.",
+    "The damage from Radiance procs Spell Lifesteal. Illusions themselves can recover health while dealing damage to enemy creeps and heroes, allowing them to survive longer. Only the first illusion or hero that burns an enemy lifesteals from it.",
+    "It is extremely discouraged to purchase more than one Radiance on the same team, as the auras do not stack."
+  ]
+}
