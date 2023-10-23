@@ -18,8 +18,8 @@ import n7.ad2.heroes.domain.model.Hero
 import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
 import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
 import n7.ad2.heroes.ui.api.HeroesDependencies
+import n7.ad2.heroes.ui.api.HeroesFragmentFactory
 import n7.ad2.heroes.ui.internal.HeroesFragment
-import n7.ad2.heroes.ui.internal.HeroesFragmentFactory
 import n7.ad2.navigator.Navigator
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -43,7 +43,9 @@ class FragmentTest {
         override val moshi: Moshi
             get() = TODO("Not yet implemented")
         override val getHeroesUseCase: GetHeroesUseCase = object : GetHeroesUseCase {
-            override fun invoke(): Flow<List<Hero>> = flowOf(listOf(Hero("Jeka", "", false, "str")))
+            override fun invoke(): Flow<List<Hero>> = flowOf(
+                listOf(Hero("Jeka", "", false, "str"))
+            )
 
         }
         override val dispatchersProvider: DispatchersProvider = rule.dispatchers

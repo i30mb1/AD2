@@ -1,9 +1,9 @@
-package n7.ad2.heroes.ui.internal
+package n7.ad2.heroes.ui.api
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import javax.inject.Inject
-import n7.ad2.heroes.ui.api.HeroesDependencies
+import n7.ad2.heroes.ui.internal.HeroesFragment
 
 class HeroesFragmentFactory @Inject constructor(
     private val deps: HeroesDependencies,

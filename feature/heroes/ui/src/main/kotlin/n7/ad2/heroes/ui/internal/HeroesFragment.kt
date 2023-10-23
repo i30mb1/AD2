@@ -41,7 +41,7 @@ internal class HeroesFragment(
 
     private var _binding: FragmentHeroesBinding? = null
     private val binding: FragmentHeroesBinding get() = _binding!!
-    private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, ::startHeroFragment) }
+    private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, ::onHeroClicked) }
     private val viewModel: HeroesViewModel by viewModel { heroesViewModelFactory.get().create() }
     private val heroesItemDecorator = HeroesItemDecorator()
 
@@ -54,7 +54,7 @@ internal class HeroesFragment(
         // implement search for last queries https://developer.android.com/guide/topics/search/adding-recent-query-suggestions
     }
 
-    private fun startHeroFragment(model: VOHero.Body) {
+    private fun onHeroClicked(model: VOHero.Body) {
         getMainFragmentNavigator?.setMainFragment(navigator.get().heroPageApi.getPagerFragment(model.name)) {
             addToBackStack(null)
         }
@@ -98,6 +98,7 @@ internal class HeroesFragment(
                 val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
                 heroesItemDecorator.statusBarsInsets = statusBarsInsets.top
                 heroesItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
+                invalidateItemDecorations()
                 insets
             }
             (parentFragment as? DrawerPercentListener)?.setDrawerPercentListener { percent ->

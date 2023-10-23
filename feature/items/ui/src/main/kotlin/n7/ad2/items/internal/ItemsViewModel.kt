@@ -12,11 +12,11 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.items.domain.usecase.FilterItemsUseCase
 import n7.ad2.items.domain.usecase.UpdateItemViewedForItemUseCase
-import n7.ad2.items.internal.domain.usecase.GetVOItemsUseCase
-import n7.ad2.items.internal.domain.vo.VOItem
+import n7.ad2.items.internal.model.ItemUI
+import n7.ad2.items.internal.usecase.GetItemsUIUseCase
 
 internal class ItemsViewModel @AssistedInject constructor(
-    getVOItemsUseCase: GetVOItemsUseCase,
+    getItemsUIUseCase: GetItemsUIUseCase,
     private val filterItemsUseCase: FilterItemsUseCase,
     private val updateItemViewedByUserFieldUseCase: UpdateItemViewedForItemUseCase,
 ) : ViewModel() {
@@ -26,12 +26,12 @@ internal class ItemsViewModel @AssistedInject constructor(
         fun create(): ItemsViewModel
     }
 
-    private val allItems: MutableStateFlow<List<VOItem>> = MutableStateFlow(emptyList())
-    private val _filteredItems: MutableStateFlow<List<VOItem>> = MutableStateFlow(emptyList())
-    val filteredItems: StateFlow<List<VOItem>> = _filteredItems.asStateFlow()
+    private val allItems: MutableStateFlow<List<ItemUI>> = MutableStateFlow(emptyList())
+    private val _filteredItems: MutableStateFlow<List<ItemUI>> = MutableStateFlow(emptyList())
+    val filteredItems: StateFlow<List<ItemUI>> = _filteredItems.asStateFlow()
 
     init {
-        getVOItemsUseCase()
+        getItemsUIUseCase()
             .onEach(allItems::emit)
             .onEach(_filteredItems::emit)
             .launchIn(viewModelScope)

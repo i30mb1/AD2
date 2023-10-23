@@ -8,14 +8,14 @@ import n7.ad2.android.extension.clear
 import n7.ad2.android.extension.load
 import n7.ad2.feature.items.ui.R
 import n7.ad2.feature.items.ui.databinding.ItemItemBodyBinding
-import n7.ad2.items.internal.domain.vo.VOItem
+import n7.ad2.items.internal.model.ItemUI
 
 internal class ItemBodyViewHolder private constructor(
     private val binding: ItemItemBodyBinding,
-    private val itemClickListener: (model: VOItem.Body, view: ImageView) -> Unit,
+    private val itemClickListener: (model: ItemUI.Body, view: ImageView) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(model: VOItem.Body) = binding.apply {
+    fun bind(model: ItemUI.Body) = binding.apply {
         ivImage.load(model.imageUrl, R.drawable.item_placeholder)
         tvTitle.text = model.name
         ivImage.isSelected = model.viewedByUser
@@ -31,7 +31,7 @@ internal class ItemBodyViewHolder private constructor(
         fun from(
             layoutInflater: LayoutInflater,
             parent: ViewGroup,
-            clickListener: (model: VOItem.Body, view: ImageView) -> Unit,
+            clickListener: (model: ItemUI.Body, view: ImageView) -> Unit,
         ): ItemBodyViewHolder {
             val binding = ItemItemBodyBinding.inflate(layoutInflater, parent, false)
             return ItemBodyViewHolder(binding, clickListener)

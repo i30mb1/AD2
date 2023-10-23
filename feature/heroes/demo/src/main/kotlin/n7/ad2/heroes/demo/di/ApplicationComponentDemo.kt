@@ -8,7 +8,7 @@ import n7.ad2.di.RetrofitModule
 import n7.ad2.heroes.demo.MyApplicationDemo
 import n7.ad2.heroes.domain.wiring.HeroesModule
 import n7.ad2.heroes.ui.api.HeroesDependencies
-import n7.ad2.heroes.ui.internal.HeroesFragmentFactory
+import n7.ad2.heroes.ui.api.HeroesFragmentFactory
 
 @ApplicationScope
 @dagger.Component(

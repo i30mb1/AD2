@@ -11,6 +11,7 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
@@ -18,7 +19,6 @@ import n7.ad2.feature.heropage.ui.R
 import n7.ad2.feature.heropage.ui.databinding.FragmentHeroResponsesBinding
 import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.hero.page.internal.pager.HeroPageFragment
-import n7.ad2.hero.page.internal.pager.showDialogError
 import n7.ad2.hero.page.internal.responses.adapter.ResponsesAdapter
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.ktx.lazyUnsafe
@@ -26,7 +26,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.mediaplayer.AudioExoPlayer
 import n7.ad2.ui.InfoPopupWindow
 import n7.ad2.ui.StickyHeaderDecorator
-import javax.inject.Inject
+import n7.ad2.ui.showDialogError
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 

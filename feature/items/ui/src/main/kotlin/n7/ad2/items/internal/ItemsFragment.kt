@@ -23,7 +23,7 @@ import n7.ad2.feature.items.ui.databinding.FragmentItemsBinding
 import n7.ad2.items.internal.adapter.ItemsItemDecorator
 import n7.ad2.items.internal.adapter.ItemsListAdapter
 import n7.ad2.items.internal.di.DaggerItemsComponent
-import n7.ad2.items.internal.domain.vo.VOItem
+import n7.ad2.items.internal.model.ItemUI
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
 
@@ -56,7 +56,7 @@ internal class ItemsFragment(
 
     }
 
-    private fun onItemClick(model: VOItem.Body, view: ImageView) {
+    private fun onItemClick(model: ItemUI.Body, view: ImageView) {
         getMainFragmentNavigator?.setMainFragment(navigator.itemPageApi.getItemPageFragment(model.name)) {
             setReorderingAllowed(true)
             addSharedElement(view, view.transitionName)

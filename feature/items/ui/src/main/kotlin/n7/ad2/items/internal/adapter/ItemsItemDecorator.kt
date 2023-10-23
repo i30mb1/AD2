@@ -4,7 +4,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.items.internal.domain.vo.VOItem
+import n7.ad2.items.internal.model.ItemUI
 import n7.ad2.ktx.dpToPx
 
 internal class ItemsItemDecorator : RecyclerView.ItemDecoration() {
@@ -27,7 +27,7 @@ internal class ItemsItemDecorator : RecyclerView.ItemDecoration() {
         val itemsInEnd = when {
             position < childCount - spanCount -> 0
             else -> {
-                val items = (parent.adapter as ItemsListAdapter).currentList.reversed().takeWhile { it is VOItem.Body }.count() % spanCount
+                val items = (parent.adapter as ItemsListAdapter).currentList.reversed().takeWhile { it is ItemUI.Body }.count() % spanCount
                 if (items == 0) spanCount else items
             }
         }

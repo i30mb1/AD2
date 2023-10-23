@@ -7,13 +7,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.feature.items.ui.R
-import n7.ad2.items.internal.domain.vo.VOItem
+import n7.ad2.items.internal.model.ItemUI
 import n7.ad2.ui.adapter.HeaderViewHolder
 
 internal class ItemsListAdapter(
     private val layoutInflater: LayoutInflater,
-    private val itemClickListener: (hero: VOItem.Body, view: ImageView) -> Unit,
-) : ListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
+    private val itemClickListener: (hero: ItemUI.Body, view: ImageView) -> Unit,
+) : ListAdapter<ItemUI, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         n7.ad2.core.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
@@ -24,8 +24,8 @@ internal class ItemsListAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
-            is ItemBodyViewHolder -> if (item != null) holder.bind(item as VOItem.Body) else holder.clear()
-            is HeaderViewHolder -> if (item != null) holder.bind((item as VOItem.Header).data) else holder.clear()
+            is ItemBodyViewHolder -> if (item != null) holder.bind(item as ItemUI.Body) else holder.clear()
+            is HeaderViewHolder -> if (item != null) holder.bind((item as ItemUI.Header).data) else holder.clear()
         }
     }
 
@@ -39,15 +39,15 @@ internal class ItemsListAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
-            is VOItem.Body -> R.layout.item_item_body
-            is VOItem.Header -> n7.ad2.core.ui.R.layout.item_header
+            is ItemUI.Body -> R.layout.item_item_body
+            is ItemUI.Header -> n7.ad2.core.ui.R.layout.item_header
             else -> super.getItemViewType(position)
         }
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<VOItem>() {
-        override fun areItemsTheSame(oldItem: VOItem, newItem: VOItem) = oldItem::class == newItem::class
-        override fun areContentsTheSame(oldItem: VOItem, newItem: VOItem) = oldItem == newItem
+    private class DiffCallback : DiffUtil.ItemCallback<ItemUI>() {
+        override fun areItemsTheSame(oldItem: ItemUI, newItem: ItemUI) = oldItem::class == newItem::class
+        override fun areContentsTheSame(oldItem: ItemUI, newItem: ItemUI) = oldItem == newItem
     }
 
 }

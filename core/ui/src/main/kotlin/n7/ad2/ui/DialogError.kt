@@ -1,4 +1,4 @@
-package n7.ad2.hero.page.internal.pager
+package n7.ad2.ui
 
 import android.app.Dialog
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import n7.ad2.feature.heropage.ui.databinding.DialogErrorBinding
+import n7.ad2.core.ui.databinding.DialogErrorBinding
 
 fun Fragment.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
 
