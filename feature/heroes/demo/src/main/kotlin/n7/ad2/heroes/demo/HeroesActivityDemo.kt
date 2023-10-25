@@ -6,7 +6,7 @@ import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentContainerView
-import androidx.fragment.app.commit
+import androidx.fragment.app.commitNow
 import n7.ad2.heroes.ui.api.HeroesFragmentFactory
 import n7.ad2.heroes.ui.api.HeroesProvider
 
@@ -21,7 +21,7 @@ internal class HeroesActivityDemo(
         val container = FragmentContainerView(this)
         container.id = View.generateViewId()
         setContentView(container)
-        supportFragmentManager.commit {
+        supportFragmentManager.commitNow {
             val fragment: Class<out Fragment> = HeroesProvider().getFragment()
             add(container.id, fragment, null)
         }
