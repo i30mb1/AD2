@@ -45,7 +45,7 @@ internal class GamesFragment : Fragment() {
             is GameVO.CanYouBuyIt -> TODO()
             is GameVO.GuessSkillMana -> SkillGameFragment.getInstance()
         }
-        getMainFragmentNavigator.setMainFragment(fragment) {
+        getMainFragmentNavigator?.setMainFragment(fragment) {
             addToBackStack(null)
         }
     }

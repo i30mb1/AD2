@@ -1,4 +1,4 @@
-package n7.ad2.games.demo.server
+package n7.ad2.games.domain.internal.server
 
 import java.io.InputStream
 import java.net.NetworkInterface

@@ -1,6 +1,6 @@
-package n7.ad2.games.demo.server
+package n7.ad2.games.domain.internal.server
 
-import com.google.android.gms.common.util.Base64Utils
+import android.util.Base64
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -14,7 +14,9 @@ import kotlin.experimental.xor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
+import n7.ad2.games.domain.usecase.GameServer
 
 internal class GameServer(
     private val logger: (message: String) -> Unit,
@@ -25,13 +27,15 @@ internal class GameServer(
     private val scope = CoroutineScope(Job())
 
     companion object {
-        const val host = "192.168.100.8"
-        val ports = intArrayOf(50088, 50001)
         private const val B0_MASK_FIN = 0b10000000
         private const val B1_MASK_MASK = 0b10000000
         private const val B1_MASK_LENGTH = 0b01111111
         private const val PAYLOAD_SHORT = 126L
         private const val PAYLOAD_LONG = 127L
+    }
+
+    suspend fun run2() = flow {
+        emit("")
     }
 
     fun run() = scope.launch(Dispatchers.IO) {
@@ -69,12 +73,24 @@ internal class GameServer(
 
     private fun runWebSocketCommunication(inputStream: InputStream, outputStream: OutputStream) {
         while (true) {
-            val frame = readSocketFrame(inputStream)
+            val receivedFrame = readSocketFrame(inputStream)
+            when (receivedFrame) {
+                FrameType.Close -> return
+                is FrameType.Text -> {
+                    logger("receive: ${receivedFrame.text}")
+                    sendSocketFrame(outputStream)
+                }
+            }
         }
     }
 
-    /**
-     *  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+    private fun sendSocketFrame(outputStream: OutputStream) {
+        val utf8Bytes = "Ok.".toByteArray()
+//        outputStream.write()
+    }
+
+    /**               8               16              24              32 bit
+     *  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7  byte
      * +-+-+-+-+-------+-+-------------+-------------------------------+
      * |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
      * |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
@@ -94,12 +110,13 @@ internal class GameServer(
      *
      * [isMasked] According to RFC-6455#sedtion-5.2 All frames sent from client to server have this bit set to 1
      */
-    private fun readSocketFrame(input: InputStream): String {
+    private fun readSocketFrame(input: InputStream): FrameType {
         val b0: Int = input.read()
         val isFinalFrame = b0 and B0_MASK_FIN
 
         when (getOpCode(b0)) {
-            OpCode.OPCODE_TEXT -> TODO()
+            OpCode.OPCODE_TEXT -> Unit
+            OpCode.OPCODE_CLOSE -> FrameType.Close
         }
 
         val b1 = input.read()
@@ -125,7 +142,7 @@ internal class GameServer(
             unmaskedPayload(payload, maskKey)
         }
 
-        return String(payload)
+        return FrameType.Text(String(payload))
     }
 
     private fun unmaskedPayload(payload: ByteArray, maskKey: ByteArray) {
@@ -154,7 +171,7 @@ internal class GameServer(
         val guid = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
         val key = headers["Sec-WebSocket-Key"] + guid
         val hash: ByteArray = MessageDigest.getInstance("SHA-1").digest(key.toByteArray())
-        val base64 = Base64Utils.encode(hash)
+        val base64 = Base64.encode(hash, Base64.DEFAULT)
         writer.println("HTTP/1.1 101 Switching Protocols")
         writer.println("Upgrade: websocket")
         writer.println("Connection: Upgrade")
@@ -201,9 +218,9 @@ internal class GameServer(
     }
 
     private fun openServer(): ServerSocket {
-        for (port in ports) {
+        for (port in GameServer.ports) {
             try {
-                return ServerSocket(port, 0, InetAddress.getByName(host))
+                return ServerSocket(port, 0, InetAddress.getByName(GameServer.host))
             } catch (e: Exception) {
                 logger("could not open port: [$port]")
             }

@@ -1,6 +1,6 @@
-package n7.ad2.games.demo.server
+package n7.ad2.games.domain.internal.server
 
-import n7.ad2.games.demo.server.OpCode.MASK_OP_CODE
+import n7.ad2.games.domain.internal.server.OpCode.MASK_OP_CODE
 
 /**
  * RFC-6455#sedtion-11.8

@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import n7.ad2.games.demo.server.GameServer
+import n7.ad2.games.domain.usecase.GameServer
 import n7.ad2.nativesecret.NativeSecretExtractor
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -21,7 +21,7 @@ class GamesActivityDemo(
     private val logger: (message: String) -> Unit,
 ) : FragmentActivity() {
 
-    private val server = GameServer(logger)
+//    private val server = GameServer(logger)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +56,6 @@ class GamesActivityDemo(
     }
 
     private fun runServer() {
-        server.run()
+//        server.run()
     }
 }
