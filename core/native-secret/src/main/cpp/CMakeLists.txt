@@ -21,7 +21,7 @@ cmake_minimum_required(VERSION 3.10.2)
 
 # Declares and names the project.
 
-project("Native")
+project("RenderScript Toolkit")
 
 set(can_use_assembler TRUE)
 enable_language(ASM)
@@ -69,7 +69,7 @@ endif ()
 # Gradle automatically packages shared libraries with your APK.
 
 add_library(# Sets the name of the library.
-        native
+        renderscript-toolkit
         # Sets the library as a shared library.
         SHARED
         # Provides a relative path to your source file(s).
@@ -107,7 +107,7 @@ find_library(# Sets the name of the path variable.
 # build script, prebuilt third-party libraries, or system libraries.
 
 target_link_libraries(# Specifies the target library.
-        native
+        renderscript-toolkit
 
         cpufeatures
         jnigraphics

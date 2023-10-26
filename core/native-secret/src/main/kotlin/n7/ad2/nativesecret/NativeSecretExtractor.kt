@@ -7,7 +7,7 @@ class NativeSecretExtractor {
     private var nativeHandle: Long = 0
 
     init {
-        System.loadLibrary("native")
+        System.loadLibrary("renderscript-toolkit")
         nativeHandle = createNative()
     }
 
