@@ -1,15 +1,13 @@
 package n7.ad2.microbenchmark
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.benchmark.junit4.BenchmarkRule
 import androidx.benchmark.junit4.measureRepeated
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
+import androidx.test.platform.app.InstrumentationRegistry
+import n7.ad2.nativesecret.NativeSecretExtractor
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -25,50 +23,23 @@ class ExampleBenchmark {
 
     @get:Rule
     val benchmarkRule = BenchmarkRule()
+    private val context: Context = InstrumentationRegistry.getInstrumentation().context
+    val bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.img800x450b)
+    val extractor = NativeSecretExtractor()
 
     @Test
-    fun testSimple() {
-        val scope = CoroutineScope(Job())
-        val state = MutableStateFlow<List<Int>>(emptyList())
+    fun testBitmap_CreateScaledBitmap() {
+        // 308 007   ns
         benchmarkRule.measureRepeated {
-            scope.launch {
-                massiveRun {
-                    val oldList = state.value
-                    val newList = oldList.toMutableList()
-                    newList.add(it)
-                    state.value = newList
-                }
-            }
+            Bitmap.createScaledBitmap(bitmap, 255, 255, true)
         }
     }
 
     @Test
-    fun testMutex() {
-        val scope = CoroutineScope(Job())
-        val state = MutableStateFlow<List<Int>>(emptyList())
+    fun testBitmap_CreateScaledBitmap_Native() {
+        // 727 475   ns
         benchmarkRule.measureRepeated {
-            scope.launch {
-                val mutex = Mutex()
-                massiveRun {
-                    mutex.withLock {
-                        val oldList = state.value
-                        val newList = oldList.toMutableList()
-                        newList.add(it)
-                        state.value = newList
-                    }
-                }
-            }
+            extractor.resize(bitmap, 255, 255)
         }
     }
-
-    private suspend fun massiveRun(action: suspend (int: Int) -> Unit) {
-        coroutineScope {
-            repeat(1) { int ->
-                launch {
-                    repeat(1) { action(int) }
-                }
-            }
-        }
-    }
-
 }

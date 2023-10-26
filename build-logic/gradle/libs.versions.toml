@@ -123,7 +123,7 @@ espresso = "androidx.test.espresso:espresso-core:3.5.1"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"
 uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
 benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.2.0-alpha06"
-benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.1.1"
+benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.2.0"
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
