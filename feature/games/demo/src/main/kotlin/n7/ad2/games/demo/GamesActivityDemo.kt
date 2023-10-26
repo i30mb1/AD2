@@ -1,18 +1,14 @@
 package n7.ad2.games.demo
 
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.Text
-import androidx.compose.ui.graphics.asImageBitmap
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import n7.ad2.game.demo.R
 import n7.ad2.games.domain.usecase.GameServer
 import n7.ad2.nativesecret.NativeSecretExtractor
 import okhttp3.OkHttpClient
@@ -29,10 +25,7 @@ class GamesActivityDemo(
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val extractor = NativeSecretExtractor()
-        val text = extractor.printHelloWorld()
-        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.img800x450b)
-        val resizeBitmap = extractor.resize(bitmap, 450, 450)
+        val text = NativeSecretExtractor().printHelloWorld()
         setContent {
             Column {
                 Button(onClick = ::runServer) {
@@ -41,14 +34,6 @@ class GamesActivityDemo(
                 Button(onClick = ::sendRequest) {
                     Text(text = "Send Request")
                 }
-                Image(
-                    bitmap = bitmap.asImageBitmap(),
-                    contentDescription = "some useful description",
-                )
-                Image(
-                    bitmap = resizeBitmap.asImageBitmap(),
-                    contentDescription = "some useful description",
-                )
             }
         }
     }
