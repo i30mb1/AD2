@@ -12,6 +12,7 @@ dependencies {
     implementation(project(Module.Core.coroutines))
 
     implementation(libs.moshi)
+    implementation(libs.coroutines)
 
     kapt(libs.moshiCodegen)
 }

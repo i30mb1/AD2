@@ -7,19 +7,21 @@ import java.io.InputStreamReader
 import java.io.OutputStream
 import java.io.PrintWriter
 import java.net.InetAddress
-import java.net.ServerSocket
 import java.net.Socket
 import java.security.MessageDigest
+import java.util.Scanner
 import kotlin.experimental.xor
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
-import n7.ad2.games.domain.usecase.GameServer
+import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.games.domain.internal.server.base.ServerSocketProxy
 
-internal class GameServer(
-    private val logger: (message: String) -> Unit,
+internal class ServerWithWebsocket(
+    private val serverSocketProxy: ServerSocketProxy,
+    private val dispatchers: DispatchersProvider,
+    private val type: ServerType,
+    private val logger: (message: ServerLog) -> Unit = {},
 ) {
 
     private class GameServerError(message: String) : Exception(message)
@@ -34,27 +36,32 @@ internal class GameServer(
         private const val PAYLOAD_LONG = 127L
     }
 
-    suspend fun run2() = flow {
-        emit("")
-    }
-
-    fun run() = scope.launch(Dispatchers.IO) {
+    fun start(
+        host: InetAddress,
+        ports: IntArray,
+    ) = scope.launch {
         try {
-            val server = openServer()
+            val server = serverSocketProxy.getServerSocket(host, ports)
+            logger(ServerLog.ServerStarted)
             val clientSocket = server.accept()
-            logger("Connection accepted")
+            logger(ServerLog.ConnectionAccepted)
             handleClient(clientSocket)
         } catch (e: Exception) {
-            logger(e.toString())
+            logger(ServerLog.UnknownError(e))
         }
     }
+
+//    suspend fun await(): String {
+//       return incomingMessages.receive()
+//    }
 
     private fun handleClient(clientSocket: Socket) {
         val inputStream = clientSocket.getInputStream()
         val inputStreamReader = InputStreamReader(inputStream)
         val bufferedReader = BufferedReader(inputStreamReader)
+        val scanner = Scanner(inputStream)
 
-        val headers = readHeaders(bufferedReader)
+        val headers = readHeaders(scanner)
 
         val outputStream = clientSocket.getOutputStream()
         val writer = PrintWriter(outputStream, true)
@@ -68,6 +75,8 @@ internal class GameServer(
                 handshakeWebSocket(headers, writer)
                 runWebSocketCommunication(inputStream, outputStream)
             }
+
+            else -> Unit
         }
     }
 
@@ -77,7 +86,7 @@ internal class GameServer(
             when (receivedFrame) {
                 FrameType.Close -> return
                 is FrameType.Text -> {
-                    logger("receive: ${receivedFrame.text}")
+                    logger(ServerLog.ReceiveMessage(receivedFrame.text))
                     sendSocketFrame(outputStream)
                 }
             }
@@ -202,9 +211,11 @@ internal class GameServer(
      * Примечание: Функция испоьлзует метод split(":", limit = 2), где параметр [limit] ограничивает разделение строки только двумя частями
      * Согласно RFC-822#section-3.2 это предпологает, что строки имеют формат "name: value"
      */
-    private fun readHeaders(reader: BufferedReader): Map<String, String> = buildMap {
-        var line: String? = reader.readLine()
-        while (!line.isNullOrEmpty()) {
+    private fun readHeaders(reader: Scanner): Map<String, String> = buildMap {
+        var line: String = reader.nextLine()
+        val status = line.split(" ")
+        while (reader.hasNext()) {
+            val line = reader.nextLine()
             val headerParts = line.split(":", limit = 2)
             if (headerParts.size == 2) {
                 val headerName = headerParts[0].trim()
@@ -213,18 +224,6 @@ internal class GameServer(
                     put(headerName, headerValue)
                 }
             }
-            line = reader.readLine()
         }
-    }
-
-    private fun openServer(): ServerSocket {
-        for (port in GameServer.ports) {
-            try {
-                return ServerSocket(port, 0, InetAddress.getByName(GameServer.host))
-            } catch (e: Exception) {
-                logger("could not open port: [$port]")
-            }
-        }
-        throw GameServerError("Open Server failed")
     }
 }

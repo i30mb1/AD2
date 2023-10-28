@@ -12,5 +12,5 @@ fun GamesDomainComponent(
     dependencies: GamesDomainDependencies,
 ): GamesDomainComponent = object : GamesDomainComponent {
     override val gameServer: GameServer
-        get() = GameServerImpl()
+        get() = GameServerImpl(TODO())
 }
