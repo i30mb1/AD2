@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import javax.inject.Inject
+import n7.ad2.android.DependenciesMap
 import n7.ad2.android.DrawerPercentListener
+import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.app.logger.Logger
@@ -19,11 +21,9 @@ import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView
 
-internal class GamesFragment : Fragment() {
-
-    companion object {
-        fun getInstance() = GamesFragment()
-    }
+internal class GamesFragment(
+    override var dependenciesMap: DependenciesMap,
+) : Fragment(), HasDependencies {
 
     @Inject lateinit var gamesViewModelFactory: GamesViewModel.Factory
     @Inject lateinit var logger: Logger
@@ -36,7 +36,9 @@ internal class GamesFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView { GamesScreen(viewModel, parentFragment as DrawerPercentListener, ::onGameClicked) }
+        return ComposeView {
+            GamesScreen(viewModel, parentFragment as DrawerPercentListener, ::onGameClicked)
+        }
     }
 
     private fun onGameClicked(game: GameVO) {
@@ -44,6 +46,7 @@ internal class GamesFragment : Fragment() {
             is GameVO.Apm -> KillCreepFragment.getInstance()
             is GameVO.CanYouBuyIt -> TODO()
             is GameVO.GuessSkillMana -> SkillGameFragment.getInstance()
+            else -> TODO()
         }
         getMainFragmentNavigator?.setMainFragment(fragment) {
             addToBackStack(null)

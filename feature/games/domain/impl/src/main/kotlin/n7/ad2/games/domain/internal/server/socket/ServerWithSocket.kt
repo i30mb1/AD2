@@ -8,17 +8,13 @@ import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.selects.select
-import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.games.domain.internal.server.ClientLog
+import n7.ad2.games.domain.Server
 import n7.ad2.games.domain.internal.server.base.ServerSocketProxy
 
-class ServerWithSocket(
+internal class ServerWithSocket(
     private val serverSocketProxy: ServerSocketProxy,
-    private val dispatcher: DispatchersProvider,
-) {
+) : Server {
     sealed interface ServerWithSocketEvents {
         object Started : ServerWithSocketEvents
         object ClientConnected : ServerWithSocketEvents
@@ -31,22 +27,22 @@ class ServerWithSocket(
     private var server: ServerSocket? = null
     private var socket: Socket? = null
 
-   suspend fun start(
+    override suspend fun start(
         host: InetAddress,
         ports: IntArray,
-    )  {
+    ) {
         server = serverSocketProxy.getServerSocket(host, ports)
         events.send(ServerWithSocketEvents.Started)
     }
 
-    suspend fun awaitClient() {
+    override suspend fun awaitClient() {
         val server = requireNotNull(server)
         socket = serverSocketProxy.getClientSocket(server)
         events.send(ServerWithSocketEvents.ClientConnected)
         handleClient(requireNotNull(socket))
     }
 
-    fun sendMessage(message: String) {
+    override fun sendMessage(message: String) {
         val socket = socket ?: kotlin.run {
             error("")
         }
@@ -64,7 +60,7 @@ class ServerWithSocket(
         events.send(ServerWithSocketEvents.Closed)
     }
 
-    suspend fun awaitMessage(): String {
+    override suspend fun awaitMessage(): String {
         return messages.receive()
     }
 }

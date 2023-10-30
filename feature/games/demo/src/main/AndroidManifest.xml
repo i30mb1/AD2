@@ -8,6 +8,7 @@
     <application
         android:appComponentFactory="n7.ad2.games.demo.AppComponentFactoryDemo"
         android:label="@string/app_name"
+        android:name="n7.ad2.games.demo.MyApplicationDemo"
         android:theme="@style/AD2Theme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">

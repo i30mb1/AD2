@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.commit
 import n7.ad2.items.api.ItemsProvider
-import n7.ad2.items.internal.ItemsFragmentFactory
+import n7.ad2.items.api.ItemsFragmentFactory
 
 internal class ItemsActivityDemo(
     private val fragmentFactory: ItemsFragmentFactory,

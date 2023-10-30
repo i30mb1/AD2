@@ -13,6 +13,9 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.navigator))
     implementation(project(Module.Core.repositories))
+    implementation(project(Module.Core.nativeSecret))
+
+    implementation(project(Module.Feature.Games.api))
     implementation(project(Module.Feature.Heroes.api))
 
     kapt(libs.daggerAnnotation)

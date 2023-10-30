@@ -5,6 +5,7 @@ import n7.ad2.games.internal.GamesFragment
 import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
+import n7.ad2.games.internal.games.xo.XOGameFragment
 
 @dagger.Component(
     dependencies = [
@@ -19,6 +20,7 @@ internal interface GamesComponent {
     }
 
     fun inject(gamesFragment: GamesFragment)
+    fun inject(xoGameFragment: XOGameFragment)
     fun inject(killCreepFragment: KillCreepFragment)
     fun inject(gameGuessTheSkillManaPoint: SkillGameFragment)
 

@@ -1,61 +1,30 @@
 package n7.ad2.games.demo
 
 import android.os.Bundle
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Button
-import androidx.compose.material.Text
+import android.view.View
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import n7.ad2.games.domain.usecase.GameServer
-import n7.ad2.nativesecret.NativeSecretExtractor
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
-import okhttp3.WebSocket
-import okhttp3.WebSocketListener
+import androidx.fragment.app.FragmentContainerView
+import androidx.fragment.app.commitNow
+import n7.ad2.games.api.GamesFragmentFactory
+import n7.ad2.games.api.GamesProvider
 
 class GamesActivityDemo(
+    private val fragmentFactory: GamesFragmentFactory,
     private val logger: (message: String) -> Unit,
 ) : FragmentActivity() {
 
-//    private val server = GameServer(logger)
+    private val fragment by lazy { GamesProvider().getFragment() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportFragmentManager.fragmentFactory = fragmentFactory
         super.onCreate(savedInstanceState)
-        val text = NativeSecretExtractor().printHelloWorld()
-        setContent {
-            Column {
-                Button(onClick = ::runServer) {
-                    Text(text = "Run Server $text")
-                }
-                Button(onClick = ::sendRequest) {
-                    Text(text = "Send Request")
-                }
-            }
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        val container = FragmentContainerView(this)
+        container.id = View.generateViewId()
+        setContentView(container)
+        supportFragmentManager.commitNow {
+            add(container.id, fragment, null)
         }
-    }
-
-    private fun sendRequest() {
-        lifecycleScope.launch(Dispatchers.IO) {
-            val request = Request.Builder()
-                .url("ws://${GameServer.host}:${GameServer.ports.first()}")
-                .build()
-            OkHttpClient().newWebSocket(request, object : WebSocketListener() {
-                override fun onOpen(webSocket: WebSocket, response: Response) {
-                    logger("success")
-                }
-
-                override fun onFailure(webSocket: WebSocket, throwable: Throwable, response: Response?) {
-                    logger("failure:$throwable")
-                }
-            })
-        }
-    }
-
-    private fun runServer() {
-//        server.run()
     }
 }

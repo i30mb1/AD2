@@ -18,7 +18,7 @@ import org.junit.Test
 class ServerWithSocketTest {
 
     @get:Rule val coroutineRule = CoroutineTestRule(StandardTestDispatcher())
-    private val server = ServerWithSocket(ServerSocketProxy(), coroutineRule.dispatchers)
+    private val server = ServerWithSocket(ServerSocketProxy())
     private val client = ClientWithSocket(ClientSocketProxy())
 
     private val host = InetAddress.getLocalHost()

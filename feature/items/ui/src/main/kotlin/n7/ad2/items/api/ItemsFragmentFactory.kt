@@ -1,9 +1,9 @@
-package n7.ad2.items.internal
+package n7.ad2.items.api
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import javax.inject.Inject
-import n7.ad2.items.api.ItemsDependencies
+import n7.ad2.items.internal.ItemsFragment
 
 class ItemsFragmentFactory @Inject constructor(
     private val deps: ItemsDependencies,
