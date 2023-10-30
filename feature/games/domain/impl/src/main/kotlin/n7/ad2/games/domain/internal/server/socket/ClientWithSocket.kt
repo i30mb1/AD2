@@ -8,7 +8,6 @@ import kotlin.coroutines.resume
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.games.domain.internal.server.ClientLog
 import n7.ad2.games.domain.internal.server.base.ClientSocketProxy
@@ -26,7 +25,7 @@ class ClientWithSocket(
 
     private val scope = CoroutineScope(Job())
     private val incomingMessages = Channel<String>()
-    private val events = Channel<ClientWithSocketEvents>()
+    private val events = Channel<ClientWithSocketEvents>(Channel.BUFFERED)
     private var socket: Socket? = null
 
     suspend fun start(
@@ -34,12 +33,7 @@ class ClientWithSocket(
         port: Int,
     ) {
         socket = clientSocketProxy.start(host, port)
-//        events.send(ClientWithSocketEvents.Started)
-    }
-
-    suspend fun awaitServer() {
-        val event = events.receive()
-        event is ClientWithSocketEvents.Started
+        events.send(ClientWithSocketEvents.Started)
     }
 
     fun sendMessage(message: String) {

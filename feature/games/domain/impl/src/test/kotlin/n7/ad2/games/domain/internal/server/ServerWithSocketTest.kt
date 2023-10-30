@@ -2,12 +2,6 @@ package n7.ad2.games.domain.internal.server
 
 import com.google.common.truth.Truth
 import java.net.InetAddress
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import n7.ad2.coroutines.CoroutineTestRule
@@ -28,21 +22,39 @@ class ServerWithSocketTest {
     private val client = ClientWithSocket(ClientSocketProxy())
 
     private val host = InetAddress.getLocalHost()
-    private val port = 8080
-    private val ports = intArrayOf(port)
 
     @Test
     fun `WHEN client send message to server THEN server receive message`() = runTest {
-        server.start(host, ports)
-        server.awaitStart()
+        startServerAndConnectClient(8081)
 
-        client.start(host, port)
-        server.awaitClient()
-
-        val clientMessage = "x:0-0:1"
-        client.sendMessage(clientMessage)
+        val message = "x:0-0:1"
+        client.sendMessage(message)
 
         val clientMessageOnServer = server.awaitMessage()
-        Truth.assertThat(clientMessageOnServer).isEqualTo(clientMessage)
+        Truth.assertThat(clientMessageOnServer).isEqualTo(message)
+    }
+
+    @Test
+    fun `WHEN server send message to client THEN client receive message`() = runTest {
+        startServerAndConnectClient(8082)
+
+        val message = "y:0-0:1"
+        server.sendMessage(message)
+
+        val clientMessageOnServer = client.awaitMessage()
+        Truth.assertThat(clientMessageOnServer).isEqualTo(message)
+    }
+
+    private suspend fun startServerAndConnectClient(port: Int) {
+        server.start(host, intArrayOf(port))
+        client.start(host, port)
+        server.awaitClient()
     }
 }
+
+//produce<String> {
+//    send("")
+//}
+//select<String> {
+//
+//}
