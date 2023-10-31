@@ -8,14 +8,12 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.dagger.Dependencies
 import n7.ad2.navigator.Navigator
-import n7.ad2.repositories.ItemRepository
 
 interface ItemPageDependencies : Dependencies {
     val application: Application
     val res: Resources
     val appInfo: AppInformation
     val navigator: Navigator
-    val itemRepository: ItemRepository
     val logger: Logger
     val moshi: Moshi
     val dispatchersProvider: DispatchersProvider

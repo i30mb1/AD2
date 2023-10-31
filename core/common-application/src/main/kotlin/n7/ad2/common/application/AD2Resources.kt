@@ -1,21 +1,26 @@
 package n7.ad2.common.application
 
-import android.app.Application
-import n7.ad2.Resources
+import android.content.Context
 import java.io.File
 import java.io.InputStream
+import n7.ad2.Resources
+import n7.ad2.common.jvm.ComponentHolder
 
 private class AD2Resources(
-    private val application: Application,
+    private val context: Context,
 ) : Resources {
-    override fun getString(resourceID: Int): String = application.getString(resourceID)
-    override fun getString(resourceID: Int, formatArgs: Any): String = application.getString(resourceID, formatArgs)
-    override fun getAssets(path: String): InputStream = application.assets.open(path)
-    override fun getExternalFilesDir(path: String): File? = application.getExternalFilesDir(path)
-    override fun getFilesDir(): File? = application.noBackupFilesDir
-    override fun getConfiguration(): Any? = application.resources.configuration
+    override fun getString(resourceID: Int): String = context.getString(resourceID)
+    override fun getString(resourceID: Int, formatArgs: Any): String = context.getString(resourceID, formatArgs)
+    override fun getAssets(path: String): InputStream = context.assets.open(path)
+    override fun getExternalFilesDir(path: String): File? = context.getExternalFilesDir(path)
+    override fun getFilesDir(): File? = context.noBackupFilesDir
+    override fun getConfiguration(): Any? = context.resources.configuration
 }
 
-fun resourcesFactory(application: Application): Resources {
-    return AD2Resources(application)
+fun Resources(context: Context): Resources {
+    return AD2Resources(context)
+}
+
+object ResourcesHolder : ComponentHolder<Resources>() {
+    override fun build(): Resources = TODO()
 }

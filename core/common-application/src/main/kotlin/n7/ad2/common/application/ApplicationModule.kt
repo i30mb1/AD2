@@ -11,7 +11,7 @@ class BaseApplicationModule {
 
     @dagger.Reusable
     @dagger.Provides
-    fun provideAppResource(application: Application): Resources = resourcesFactory(application)
+    fun provideAppResource(application: Application): Resources = Resources(application)
 
     @dagger.Reusable
     @dagger.Provides

@@ -112,17 +112,29 @@ dependencies {
     implementation(project(Module.Core.commonApplication))
 
     implementation(project(Module.Feature.streams))
+
     implementation(project(Module.Feature.Heroes.ui))
     implementation(project(Module.Feature.Heroes.impl))
     implementation(project(Module.Feature.Heroes.wiring))
+
     implementation(project(Module.Feature.Items.ui))
+    implementation(project(Module.Feature.Items.impl))
+    implementation(project(Module.Feature.Items.wiring))
+
     implementation(project(Module.Feature.Games.ui))
+    implementation(project(Module.Feature.Games.impl))
+    implementation(project(Module.Feature.Games.wiring))
+
     implementation(project(Module.Feature.tournaments))
+
     implementation(project(Module.Feature.News.ui))
     implementation(project(Module.Feature.News.impl))
     implementation(project(Module.Feature.News.wiring))
+
     implementation(project(Module.Feature.drawer))
+
     implementation(project(Module.Feature.HeroPage.ui))
+
     implementation(project(Module.Feature.itemPage))
     implementation(project(Module.Feature.settings))
 

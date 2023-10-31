@@ -1,6 +1,7 @@
 package n7.ad2.di
 
 import android.app.Application
+import n7.ad.games.domain.wiring.GamesModule
 import n7.ad2.apppreference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
@@ -14,6 +15,7 @@ import n7.ad2.heroes.domain.wiring.HeroesModule
 import n7.ad2.heroes.ui.api.HeroesDependencies
 import n7.ad2.itempage.api.ItemPageDependencies
 import n7.ad2.items.api.ItemsDependencies
+import n7.ad2.items.domain.wiring.ItemsModule
 import n7.ad2.news.ui.api.NewsDependencies
 import n7.ad2.spanparser.di.SpanParserModule
 import n7.ad2.streams.api.StreamsDependencies
@@ -35,6 +37,8 @@ import n7.ad2.updatemanager.UpdateManagerModule
         SpanParserModule::class,
         HeroesModule::class,
         NewsModule::class,
+        ItemsModule::class,
+        GamesModule::class,
     ]
 )
 interface ApplicationComponent : StreamsDependencies,

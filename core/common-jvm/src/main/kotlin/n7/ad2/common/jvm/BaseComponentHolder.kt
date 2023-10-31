@@ -1,6 +1,6 @@
 package n7.ad2.common.jvm
 
-interface BaseComponentHolder<Component : DIComponent> {
+interface BaseComponentHolder<Component> {
 
     fun get(): Component
 

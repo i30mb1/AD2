@@ -16,7 +16,7 @@ interface DrawerDependencies : Dependencies {
     val preference: Preference
     val navigator: Navigator
     val logger: Logger
-    val client: OkHttpClient
+    val okHttpClient: OkHttpClient
     val moshi: Moshi
     val dispatchersProvider: DispatchersProvider
 }

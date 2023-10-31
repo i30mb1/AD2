@@ -1,10 +1,12 @@
 package n7.ad2.common.jvm
 
+import javax.naming.Context
+
 /**
  * Позволяет получить компонент
  * Если компонента нет то создает новый
  */
-abstract class ComponentHolder<Component : DIComponent> : BaseComponentHolder<Component> {
+abstract class ComponentHolder<Component> : BaseComponentHolder<Component> {
 
     @Volatile
     private var component: Component? = null
@@ -23,18 +25,12 @@ abstract class ComponentHolder<Component : DIComponent> : BaseComponentHolder<Co
 
 }
 
-class My private constructor(any: String) {
-
-    companion object : SingletonHolder<My, String>(::My)
-}
-
 open class SingletonHolder<out T, in A>(private val constructor: (A) -> T) {
 
     @Volatile
     private var instance: T? = null
 
-    fun getInstance(arg: A): T =
-        instance ?: synchronized(this) {
-            instance ?: constructor(arg).also { instance = it }
-        }
+    fun getInstance(arg: A): T = instance ?: synchronized(this) {
+        instance ?: constructor(arg).also { instance = it }
+    }
 }

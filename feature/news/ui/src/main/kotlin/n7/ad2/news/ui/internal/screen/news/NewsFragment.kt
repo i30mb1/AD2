@@ -41,7 +41,7 @@ internal class NewsFragment(
     }
 
     private fun onNewsClicked(newsID: Int) {
-        getMainFragmentNavigator.setMainFragment(ArticleFragment.getInstance(newsID)) {
+        getMainFragmentNavigator?.setMainFragment(ArticleFragment.getInstance(newsID)) {
             addToBackStack(null)
         }
     }

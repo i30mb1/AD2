@@ -12,7 +12,6 @@ import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideStartingHeroItems
 import n7.ad2.heroes.domain.model.HeroItem
 import n7.ad2.heroes.domain.model.HeroWithWinrate
 import n7.ad2.heroes.domain.model.Spell
-import n7.ad2.repositories.ItemRepository
 
 fun List<HeroWithWinrate>.toVOHardToWinHeroes(): VOGuideHardToWinHeroes = VOGuideHardToWinHeroes(map { it.toVOHeroFlowItem() })
 
@@ -29,7 +28,8 @@ fun List<Spell>.toVOGuideSpellBuild(): VOGuideSpellBuild = VOGuideSpellBuild(
 )
 
 fun List<HeroItem>.toVOGuideStartingHeroItems(): VOGuideStartingHeroItems = VOGuideStartingHeroItems(
-    map { VOHeroFlowStartingHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName)) }
+//    map { VOHeroFlowStartingHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName)) }
+    TODO()
 )
 
 fun List<HeroItem>.toVOGuideHeroItems(): VOGuideHeroItems {
@@ -37,7 +37,7 @@ fun List<HeroItem>.toVOGuideHeroItems(): VOGuideHeroItems {
     val result = map {
         val itemTime = if (lastItemTime == it.itemTime) null else it.itemTime
         lastItemTime = it.itemTime
-        VOHeroFlowHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName), itemTime)
+        VOHeroFlowHeroItem(it.itemName, TODO(), itemTime)
     }
     return VOGuideHeroItems(result)
 }

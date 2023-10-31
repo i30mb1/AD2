@@ -6,6 +6,8 @@ import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
+import n7.ad2.games.domain.Client
+import n7.ad2.games.domain.Server
 import n7.ad2.games.domain.di.GamesDomainComponent
 import n7.ad2.games.domain.di.GamesDomainDependencies
 
@@ -29,4 +31,14 @@ object GamesModule {
             override val appInformation = appInformation
         }
     )
+
+    @dagger.Provides
+    fun provideServer(
+        component: GamesDomainComponent,
+    ): Server = component.server
+
+    @dagger.Provides
+    fun provideClient(
+        component: GamesDomainComponent,
+    ): Client = component.client
 }

@@ -10,7 +10,7 @@ import okhttp3.OkHttpClient
 interface StreamsDependencies : Dependencies {
     val application: Application
     val logger: Logger
-    val client: OkHttpClient
+    val okHttpClient: OkHttpClient
     val clientBuilder: OkHttpClient.Builder
     val moshi: Moshi
     val dispatchersProvider: DispatchersProvider

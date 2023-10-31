@@ -9,11 +9,10 @@ import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
-import n7.ad2.repositories.ItemRepository
 
 class GetItemInfoUseCase @Inject constructor(
     private val res: Resources,
-    private val itemRepository: ItemRepository,
+//    private val itemRepository: ItemRepository,
     private val moshi: Moshi,
     private val dispatchers: DispatchersProvider,
 ) {
