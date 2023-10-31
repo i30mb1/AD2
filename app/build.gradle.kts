@@ -93,6 +93,7 @@ dependencies {
     implementation(libs.workManager)
     implementation(libs.performance)
     implementation(libs.moshi)
+    implementation(libs.androidStartup)
 
     kapt(libs.daggerAnnotation)
 
