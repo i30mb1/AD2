@@ -4,7 +4,6 @@ import android.app.Activity
 import android.app.AppComponentFactory
 import android.app.Application
 import android.content.Intent
-import android.util.Log
 import n7.ad2.games.api.GamesFragmentFactory
 import n7.ad2.games.demo.di.ApplicationComponentDemo
 import n7.ad2.games.demo.di.DaggerApplicationComponentDemo
@@ -30,8 +29,7 @@ internal class AppComponentFactoryDemo : AppComponentFactory() {
         intent: Intent?,
     ): Activity = when (className) {
         GamesActivityDemo::class.java.name -> GamesActivityDemo(
-            GamesFragmentFactory(component),
-            { message -> Log.d("N7", message) }
+            GamesFragmentFactory(component)
         )
 
         else -> super.instantiateActivity(cl, className, intent)

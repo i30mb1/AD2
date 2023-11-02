@@ -11,7 +11,6 @@ import n7.ad2.games.api.GamesProvider
 
 class GamesActivityDemo(
     private val fragmentFactory: GamesFragmentFactory,
-    private val logger: (message: String) -> Unit,
 ) : FragmentActivity() {
 
     private val fragment by lazy { GamesProvider().getFragment() }

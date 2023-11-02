@@ -6,7 +6,7 @@ import javax.inject.Inject
 import n7.ad2.games.internal.GamesFragment
 import n7.ad2.games.internal.games.xo.XOGameFragment
 
-class GamesFragmentFactory @Inject constructor(
+class GamesFragmentFactory(
     private val deps: GamesDependencies,
 ) : FragmentFactory() {
 
