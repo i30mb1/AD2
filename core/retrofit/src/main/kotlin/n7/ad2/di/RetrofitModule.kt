@@ -63,7 +63,5 @@ interface RetrofitModule {
         fun provideBaseOkHttpClient(baseOkHttpClientBuilder: OkHttpClient.Builder): OkHttpClient {
             return baseOkHttpClientBuilder.build()
         }
-
     }
-
 }
