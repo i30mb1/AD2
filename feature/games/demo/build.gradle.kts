@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "$applicationID.game.demo"
+    namespace = "$applicationID.games.demo"
 
     buildFeatures {
         buildConfig = true
@@ -40,6 +40,7 @@ dependencies {
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.commonApplication))
 
+    implementation(project(Module.Feature.Heroes.impl))
     implementation(project(Module.Feature.Heroes.wiring))
 
     implementation(project(Module.Feature.Games.ui))

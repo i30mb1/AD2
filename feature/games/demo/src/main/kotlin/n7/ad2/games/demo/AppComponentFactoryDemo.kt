@@ -7,6 +7,7 @@ import android.content.Intent
 import android.util.Log
 import n7.ad2.games.api.GamesFragmentFactory
 import n7.ad2.games.demo.di.ApplicationComponentDemo
+import n7.ad2.games.demo.di.DaggerApplicationComponentDemo
 import n7.ad2.ktx.lazyUnsafe
 
 
