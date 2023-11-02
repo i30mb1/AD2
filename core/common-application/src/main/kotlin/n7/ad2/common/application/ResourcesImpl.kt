@@ -6,7 +6,7 @@ import java.io.InputStream
 import n7.ad2.Resources
 import n7.ad2.common.jvm.ComponentHolder
 
-private class AD2Resources(
+private class ResourcesImpl(
     private val context: Context,
 ) : Resources {
     override fun getString(resourceID: Int): String = context.getString(resourceID)
@@ -18,7 +18,7 @@ private class AD2Resources(
 }
 
 fun Resources(context: Context): Resources {
-    return AD2Resources(context)
+    return ResourcesImpl(context)
 }
 
 object ResourcesHolder : ComponentHolder<Resources>() {
