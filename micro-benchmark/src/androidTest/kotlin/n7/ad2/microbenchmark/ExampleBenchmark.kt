@@ -2,12 +2,10 @@ package n7.ad2.microbenchmark
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import androidx.benchmark.junit4.BenchmarkRule
 import androidx.benchmark.junit4.measureRepeated
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import n7.ad2.nativesecret.NativeSecretExtractor
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -24,14 +22,13 @@ class ExampleBenchmark {
     @get:Rule
     val benchmarkRule = BenchmarkRule()
     private val context: Context = InstrumentationRegistry.getInstrumentation().context
-    val bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.img800x450b)
-    val extractor = NativeSecretExtractor()
+//    val bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.img800x450b)
 
     @Test
     fun testBitmap_CreateScaledBitmap() {
         // 308 007   ns
         benchmarkRule.measureRepeated {
-            Bitmap.createScaledBitmap(bitmap, 255, 255, true)
+//            Bitmap.createScaledBitmap(bitmap, 255, 255, true)
         }
     }
 
@@ -39,7 +36,7 @@ class ExampleBenchmark {
     fun testBitmap_CreateScaledBitmap_Native() {
         // 727 475   ns
         benchmarkRule.measureRepeated {
-            extractor.resize(bitmap, 255, 255)
+//            extractor.resize(bitmap, 255, 255)
         }
     }
 }

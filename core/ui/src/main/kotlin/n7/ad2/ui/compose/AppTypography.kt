@@ -2,6 +2,7 @@ package n7.ad2.ui.compose
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 data class AppTypography(
@@ -27,3 +28,9 @@ val appTypography = AppTypography(
 )
 
 val LocalAppTypography = staticCompositionLocalOf { appTypography }
+
+fun TextStyle.bold(): TextStyle {
+    return copy(
+        fontWeight = FontWeight.Bold
+    )
+}

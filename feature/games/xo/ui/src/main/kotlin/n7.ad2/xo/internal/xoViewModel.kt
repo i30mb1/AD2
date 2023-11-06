@@ -20,8 +20,8 @@ internal class XoViewModel @AssistedInject constructor(
     private val client: Client,
 ) : ViewModel() {
 
-    private val _state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
-    val state: StateFlow<State> = _state.asStateFlow()
+    private val _state: MutableStateFlow<XoState> = MutableStateFlow(XoState.init())
+    val state: StateFlow<XoState> = _state.asStateFlow()
 
     @AssistedFactory
     interface Factory {
@@ -30,7 +30,7 @@ internal class XoViewModel @AssistedInject constructor(
 
     init {
         viewModelScope.launch(dispatchers.IO) {
-            _state.value = State.Data(getIPAddress())
+//            _state.value = XoState.Data(getIPAddress())
         }
     }
 
@@ -44,7 +44,7 @@ internal class XoViewModel @AssistedInject constructor(
     }
 
     fun runServer() = viewModelScope.launch(dispatchers.IO) {
-        val ip = InetAddress.getByName((state.value as State.Data).ip)
+        val ip = InetAddress.getByName(state.value.deviceIP)
         server.start(ip, intArrayOf(8080))
         server.awaitClient()
 //        text = "Client Connected\n"
@@ -60,11 +60,6 @@ internal class XoViewModel @AssistedInject constructor(
 
     fun sendPing() {
         server.sendMessage("ping")
-    }
-
-    sealed interface State {
-        object Loading : State
-        data class Data(val ip: String) : State
     }
 }
 
