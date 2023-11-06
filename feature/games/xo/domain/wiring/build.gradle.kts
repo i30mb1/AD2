@@ -4,11 +4,12 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Feature.Xo.impl))
+    api(project(Module.Feature.Xo.impl))
 
     implementation(project(Module.Core.common))
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.logger))
+    implementation(project(Module.Core.dagger))
 
     kapt(libs.daggerAnnotation)
 }

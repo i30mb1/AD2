@@ -14,6 +14,7 @@ dependencies {
     implementation(project(Module.Core.navigator))
 
     implementation(project(Module.Feature.Xo.api))
+    implementation(project(Module.Feature.Xo.wiring))
 
     kapt(libs.daggerAnnotation)
 }

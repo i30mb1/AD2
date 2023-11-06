@@ -1,13 +1,17 @@
 package n7.ad2.xo.internal.di
 
+import n7.ad2.feature.games.xo.wiring.XoModule
 import n7.ad2.xo.api.XoDependencies
 import n7.ad2.xo.internal.XoFragment
 import n7.ad2.xo.internal.XoViewModel
 
 @dagger.Component(
     dependencies = [
-        XoDependencies::class
+        XoDependencies::class,
     ],
+    modules = [
+        XoModule::class,
+    ]
 )
 internal interface XoComponent {
 

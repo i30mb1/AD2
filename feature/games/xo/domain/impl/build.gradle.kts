@@ -11,4 +11,9 @@ dependencies {
     implementation(project(Module.Core.coroutines))
 
     implementation(libs.coroutines)
+
+    testImplementation(libs.bundles.test)
+    testImplementation(libs.coroutinesDebug)
+
+    testFixturesImplementation(libs.coroutines)
 }

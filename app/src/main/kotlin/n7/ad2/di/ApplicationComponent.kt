@@ -1,7 +1,6 @@
 package n7.ad2.di
 
 import android.app.Application
-import n7.ad.games.domain.wiring.GamesModule
 import n7.ad2.apppreference.AppPreferenceModule
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
@@ -38,7 +37,7 @@ import n7.ad2.updatemanager.UpdateManagerModule
         HeroesModule::class,
         NewsModule::class,
         ItemsModule::class,
-        GamesModule::class,
+//        GamesModule::class,
     ]
 )
 interface ApplicationComponent : StreamsDependencies,

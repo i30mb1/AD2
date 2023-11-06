@@ -1,7 +1,6 @@
 package n7.ad2.games.demo.di
 
 import android.app.Application
-import n7.ad.games.domain.wiring.GamesModule
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.database_guides.api.DatabaseModule
@@ -17,7 +16,6 @@ import n7.ad2.heroes.domain.wiring.HeroesModule
         CoroutineModule::class,
         RetrofitModule::class,
         DatabaseModule::class,
-        GamesModule::class,
         HeroesModule::class,
     ]
 )
