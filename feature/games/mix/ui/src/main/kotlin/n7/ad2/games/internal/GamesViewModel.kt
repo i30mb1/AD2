@@ -33,5 +33,4 @@ internal class GamesViewModel @AssistedInject constructor(
         data class Data(val games: List<GameVO>) : State()
         object Loading : State()
     }
-
 }
