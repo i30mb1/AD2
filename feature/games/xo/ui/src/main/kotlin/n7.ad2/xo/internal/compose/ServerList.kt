@@ -1,6 +1,7 @@
 package n7.ad2.xo.internal.compose
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -11,6 +12,7 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -37,42 +39,60 @@ private fun ServerListPreview(
 @Composable
 internal fun ServerList(
     servers: List<Server>,
+    modifier: Modifier = Modifier,
 ) {
-    LazyColumn(
-        modifier = Modifier
-            .clip(AppTheme.shape.medium)
-            .background(AppTheme.color.surface),
-
-    ) {
-        items(servers.size) { index ->
-            val server = servers[index]
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .height(60.dp)
-                    .background(AppTheme.color.surface)
-                    .padding(vertical = 8.dp, horizontal = 16.dp)
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Person,
-                    contentDescription = null,
-                    tint = Color.White,
+    Column(modifier = modifier) {
+        Row(
+            modifier = Modifier.padding(8.dp),
+        ) {
+            Text(
+                text = "Found servers",
+                style = AppTheme.style.body,
+                color = AppTheme.color.textSecondaryColor,
+                modifier = Modifier.weight(1f),
+            )
+            Icon(
+                imageVector = Icons.Default.Refresh,
+                contentDescription = null,
+                tint = Color.White,
+                modifier = Modifier.size(16.dp),
+            )
+        }
+        LazyColumn(
+            modifier = Modifier
+                .clip(AppTheme.shape.medium)
+                .background(AppTheme.color.surface),
+        ) {
+            items(servers.size) { index ->
+                val server = servers[index]
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
-                        .size(30.dp)
-                        .clip(AppTheme.shape.small)
-                        .background(AppTheme.color.background)
-                        .padding(8.dp),
-                )
-                Text(
-                    text = server.serverIP,
-                    style = AppTheme.style.body.bold(),
-                    color = AppTheme.color.textColor,
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(start = 16.dp),
-                )
+                        .height(60.dp)
+                        .background(AppTheme.color.surface)
+                        .padding(vertical = 8.dp, horizontal = 16.dp),
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Person,
+                        contentDescription = null,
+                        tint = Color.White,
+                        modifier = Modifier
+                            .size(30.dp)
+                            .clip(AppTheme.shape.small)
+                            .background(AppTheme.color.background)
+                            .padding(8.dp),
+                    )
+                    Text(
+                        text = server.serverIP,
+                        style = AppTheme.style.body.bold(),
+                        color = AppTheme.color.textColor,
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(start = 16.dp),
+                    )
+                }
+                if (servers.size != index) Divider(color = AppTheme.color.background)
             }
-            if (servers.size != index) Divider(color = AppTheme.color.background)
         }
     }
 }

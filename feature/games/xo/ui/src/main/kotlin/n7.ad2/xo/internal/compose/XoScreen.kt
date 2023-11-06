@@ -28,6 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
+import n7.ad2.xo.internal.Server
 import n7.ad2.xo.internal.XoState
 
 @Preview
@@ -35,7 +36,7 @@ import n7.ad2.xo.internal.XoState
 private fun XoScreenPreview() {
     AppTheme {
         XoScreen(
-            state = XoState("192.168.100.10", emptyList())
+            state = XoState("192.168.100.10", listOf(Server("192.168.100.11")))
         )
     }
 }
@@ -116,23 +117,9 @@ internal fun XoScreen(
                     )
                 }
             }
-            Row(
-                modifier = Modifier.padding(4.dp),
-            ) {
-                Text(
-                    text = "Found servers",
-                    style = AppTheme.style.body,
-                    color = AppTheme.color.textSecondaryColor,
-                    modifier = Modifier.weight(1f),
-                )
-                Icon(
-                    imageVector = Icons.Default.Refresh,
-                    contentDescription = null,
-                    tint = Color.White,
-                    modifier = Modifier.size(16.dp),
-                )
-            }
-            ServerList(state.servers)
+           if (state.servers.isNotEmpty()) {
+               ServerList(state.servers)
+           }
         }
     }
 }
