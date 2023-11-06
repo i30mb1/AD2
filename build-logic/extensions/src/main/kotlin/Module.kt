@@ -59,11 +59,19 @@ object Module {
         }
 
         object Games {
-            const val api = ":feature:games:domain:api"
-            const val impl = ":feature:games:domain:impl"
-            const val wiring = ":feature:games:domain:wiring"
-            const val demo = ":feature:games:demo"
-            const val ui = ":feature:games:ui"
+            const val api = ":feature:games:mix:domain:api"
+            const val impl = ":feature:games:mix:domain:impl"
+            const val wiring = ":feature:games:mix:domain:wiring"
+            const val demo = ":feature:games:mix:demo"
+            const val ui = ":feature:games:mix:ui"
+        }
+
+        object Xo {
+            const val api = ":feature:games:xo:domain:api"
+            const val impl = ":feature:games:xo:domain:impl"
+            const val wiring = ":feature:games:xo:domain:wiring"
+            const val demo = ":feature:games:xo:demo"
+            const val ui = ":feature:games:xo:ui"
         }
 
         const val itemPage = ":feature:item-page"
@@ -71,5 +79,4 @@ object Module {
         const val drawer = ":feature:drawer"
         const val tournaments = ":feature:tournaments"
     }
-
 }

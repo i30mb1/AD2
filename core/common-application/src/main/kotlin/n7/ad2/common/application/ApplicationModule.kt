@@ -17,7 +17,7 @@ class BaseApplicationModule {
     @dagger.Provides
     fun provideAppSettings(): AppSettings = appSettingsFactory()
 
-    @ApplicationScope
-    @dagger.Provides
-    fun moshi(): Moshi = Moshi.Builder().build()
+//    @ApplicationScope
+//    @dagger.Provides
+//    fun moshi(): Moshi = Moshi.Builder().build()
 }
