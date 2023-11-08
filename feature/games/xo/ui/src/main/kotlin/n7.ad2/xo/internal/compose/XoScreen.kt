@@ -9,26 +9,21 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.Button
-import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
-import n7.ad2.xo.internal.Server
+import n7.ad2.xo.internal.ServerUI
 import n7.ad2.xo.internal.XoState
 
 @Preview
@@ -36,7 +31,7 @@ import n7.ad2.xo.internal.XoState
 private fun XoScreenPreview() {
     AppTheme {
         XoScreen(
-            state = XoState("192.168.100.10", listOf(Server("192.168.100.11")))
+            state = XoState("192.168.100.10", listOf(ServerUI("192.168.100.11")))
         )
     }
 }
@@ -118,7 +113,7 @@ internal fun XoScreen(
                 }
             }
            if (state.servers.isNotEmpty()) {
-               ServerList(state.servers)
+               ServerList(state.servers, {})
            }
         }
     }

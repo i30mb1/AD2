@@ -1,5 +1,6 @@
 package n7.ad2.xo.internal
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
@@ -9,10 +10,12 @@ import java.net.NetworkInterface
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.Client
 import n7.ad2.feature.games.xo.domain.Server
+
 
 internal class XoViewModel @AssistedInject constructor(
     private val dispatchers: DispatchersProvider,
@@ -30,12 +33,17 @@ internal class XoViewModel @AssistedInject constructor(
 
     init {
         viewModelScope.launch(dispatchers.IO) {
-//            _state.value = XoState.Data(getIPAddress())
+            _state.update { state ->
+                state.copy(
+                    deviceIP = getIPAddress(),
+                    servers = getAllIpAdress(),
+                )
+            }
         }
     }
 
     fun runClient() = viewModelScope.launch(dispatchers.IO) {
-//        client.start(ip, 8080)
+        client.start(InetAddress.getByName("192.168.100.30"), 8080)
 //        text = "Connected to Server\n"
         while (true) {
             val message = client.awaitMessage()
@@ -76,4 +84,21 @@ internal fun getIPAddress(): String {
         }
     }
     error("Could find ip adress")
+}
+
+internal fun getAllIpAdress(): List<ServerUI> {
+    return buildList {
+        val networkInterfaces = NetworkInterface.getNetworkInterfaces()
+        while (networkInterfaces.hasMoreElements()) {
+            val networkInterface = networkInterfaces.nextElement()
+            val inetAddresses = networkInterface.inetAddresses
+            while (inetAddresses.hasMoreElements()) {
+                val adress = inetAddresses.nextElement()
+                if (adress.isReachable(1)) {
+                    val ip = adress.hostAddress!!
+                    add(ServerUI(ip))
+                }
+            }
+        }
+    }
 }

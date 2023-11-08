@@ -24,13 +24,10 @@ val appTypography = AppTypography(
     ),
     body = TextStyle(
         fontSize = 12.sp,
-    )
+    ),
 )
 
 val LocalAppTypography = staticCompositionLocalOf { appTypography }
 
-fun TextStyle.bold(): TextStyle {
-    return copy(
-        fontWeight = FontWeight.Bold
-    )
-}
+val TextStyle.Bold
+    get() = copy(fontWeight = FontWeight.Bold)

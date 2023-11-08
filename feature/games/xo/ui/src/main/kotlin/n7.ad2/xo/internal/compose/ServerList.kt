@@ -1,6 +1,7 @@
 package n7.ad2.xo.internal.compose
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
@@ -23,22 +24,23 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
-import n7.ad2.ui.compose.bold
-import n7.ad2.xo.internal.Server
+import n7.ad2.ui.compose.Bold
+import n7.ad2.xo.internal.ServerUI
 
 @Preview
 @Composable
 private fun ServerListPreview(
-    @PreviewParameter(PreviewProvider::class) list: List<Server>,
+    @PreviewParameter(PreviewProvider::class) list: List<ServerUI>,
 ) {
     AppTheme {
-        ServerList(list)
+        ServerList(list, {})
     }
 }
 
 @Composable
 internal fun ServerList(
-    servers: List<Server>,
+    servers: List<ServerUI>,
+    onServerClicked: (server: ServerUI) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier) {
@@ -70,6 +72,7 @@ internal fun ServerList(
                     modifier = Modifier
                         .height(60.dp)
                         .background(AppTheme.color.surface)
+                        .clickable { onServerClicked(server) }
                         .padding(vertical = 8.dp, horizontal = 16.dp),
                 ) {
                     Icon(
@@ -84,7 +87,7 @@ internal fun ServerList(
                     )
                     Text(
                         text = server.serverIP,
-                        style = AppTheme.style.body.bold(),
+                        style = AppTheme.style.body.Bold,
                         color = AppTheme.color.textColor,
                         modifier = Modifier
                             .weight(1f)
@@ -97,10 +100,10 @@ internal fun ServerList(
     }
 }
 
-private class PreviewProvider : PreviewParameterProvider<List<Server>> {
-    override val values: Sequence<List<Server>> = sequenceOf(
-        buildList { repeat(1) { add(Server("192.168.100.0$it")) } },
-        buildList { repeat(2) { add(Server("192.168.100.0$it")) } },
-        buildList { repeat(3) { add(Server("192.168.100.0$it")) } },
+private class PreviewProvider : PreviewParameterProvider<List<ServerUI>> {
+    override val values: Sequence<List<ServerUI>> = sequenceOf(
+        buildList { repeat(1) { add(ServerUI("192.168.100.0$it")) } },
+        buildList { repeat(2) { add(ServerUI("192.168.100.0$it")) } },
+        buildList { repeat(3) { add(ServerUI("192.168.100.0$it")) } },
     )
 }

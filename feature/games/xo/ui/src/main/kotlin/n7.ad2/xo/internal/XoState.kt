@@ -5,7 +5,7 @@ import androidx.compose.runtime.Immutable
 @Immutable
 internal data class XoState(
     val deviceIP: String,
-    val servers: List<Server>,
+    val servers: List<ServerUI>,
 ) {
 
     companion object {
@@ -16,7 +16,7 @@ internal data class XoState(
     }
 }
 
-internal data class Server(
+internal data class ServerUI(
     val serverIP: String,
 )
 
