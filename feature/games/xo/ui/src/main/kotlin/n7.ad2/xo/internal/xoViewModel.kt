@@ -1,6 +1,5 @@
 package n7.ad2.xo.internal
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
@@ -15,6 +14,11 @@ import kotlinx.coroutines.launch
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.Client
 import n7.ad2.feature.games.xo.domain.Server
+import n7.ad2.xo.internal.model.ServerUI
+import n7.ad2.xo.internal.model.XoState
+import n7.ad2.xo.internal.model.addLog
+import n7.ad2.xo.internal.model.disableStart
+import n7.ad2.xo.internal.model.startGame
 
 
 internal class XoViewModel @AssistedInject constructor(
@@ -42,23 +46,26 @@ internal class XoViewModel @AssistedInject constructor(
         }
     }
 
-    fun runClient() = viewModelScope.launch(dispatchers.IO) {
-        client.start(InetAddress.getByName("192.168.100.30"), 8080)
-//        text = "Connected to Server\n"
+    fun connectToServer(ip: String) = viewModelScope.launch(dispatchers.IO) {
+        client.start(InetAddress.getByName(ip), 8080)
+        _state.addLog("Connected to Server")
+        _state.startGame()
         while (true) {
             val message = client.awaitMessage()
-//            text += "$message\n"
+            _state.addLog("client: $message")
         }
     }
 
     fun runServer() = viewModelScope.launch(dispatchers.IO) {
         val ip = InetAddress.getByName(state.value.deviceIP)
         server.start(ip, intArrayOf(8080))
+        _state.disableStart()
         server.awaitClient()
-//        text = "Client Connected\n"
+        _state.addLog("Client Connected")
+        _state.startGame()
         while (true) {
             val message = server.awaitMessage()
-//            text += "$message\n"
+            _state.addLog("server: $message")
         }
     }
 

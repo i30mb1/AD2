@@ -14,6 +14,7 @@ import n7.ad2.android.findDependencies
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView
 import n7.ad2.xo.internal.compose.XoScreen
+import n7.ad2.xo.internal.compose.XoScreenEvent
 import n7.ad2.xo.internal.di.DaggerXoComponent
 
 internal class XoFragment(
@@ -31,23 +32,19 @@ internal class XoFragment(
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return ComposeView {
             val state = viewModel.state.collectAsState().value
-            XoScreen(state = state)
+            XoScreen(state = state, events = ::handleState)
         }
     }
 
-    private fun runClient() {
-        viewModel.runClient()
-    }
+    private fun handleState(event: XoScreenEvent) {
+        when (event) {
+            is XoScreenEvent.ConnectToServer -> {
+                viewModel.connectToServer(event.ip)
+            }
 
-    private fun sendPong() {
-        viewModel.sendPong()
-    }
-
-    private fun sendPingToClient() {
-        viewModel.sendPing()
-    }
-
-    private fun runServer() {
-        viewModel.runServer()
+            XoScreenEvent.SendPing -> viewModel.sendPing()
+            XoScreenEvent.SendPong -> viewModel.sendPong()
+            XoScreenEvent.StartServer -> viewModel.runServer()
+        }
     }
 }

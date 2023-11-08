@@ -25,7 +25,7 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.Bold
-import n7.ad2.xo.internal.ServerUI
+import n7.ad2.xo.internal.model.ServerUI
 
 @Preview
 @Composable
