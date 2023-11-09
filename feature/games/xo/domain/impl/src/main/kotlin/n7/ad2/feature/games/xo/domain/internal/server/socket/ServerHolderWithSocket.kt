@@ -9,12 +9,15 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
-import n7.ad2.feature.games.xo.domain.Server
+import n7.ad2.feature.games.xo.domain.ServerHolder
+import n7.ad2.feature.games.xo.domain.internal.registrator.RegisterServiceInNetworkUseCaseImpl
 import n7.ad2.feature.games.xo.domain.internal.server.base.ServerSocketProxy
+import n7.ad2.feature.games.xo.domain.model.Server
 
-internal class ServerWithSocket(
+internal class ServerHolderWithSocket(
     private val serverSocketProxy: ServerSocketProxy,
-) : Server {
+    private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCaseImpl,
+) : ServerHolder {
     sealed interface ServerWithSocketEvents {
         object Started : ServerWithSocketEvents
         object ClientConnected : ServerWithSocketEvents
@@ -29,9 +32,11 @@ internal class ServerWithSocket(
 
     override suspend fun start(
         host: InetAddress,
-        ports: IntArray,
+        name: String,
     ) {
-        server = serverSocketProxy.getServerSocket(host, ports)
+        server = serverSocketProxy.getServerSocket(host, intArrayOf(0)).also { server ->
+            registerServerInDNSUseCase(Server(name, server.inetAddress.hostAddress!!, server.localPort))
+        }
         events.send(ServerWithSocketEvents.Started)
     }
 

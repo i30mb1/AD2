@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import n7.ad2.ui.compose.AppTheme
-import n7.ad2.xo.internal.model.AvailableServer
+import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.model.XoState
 
 @Preview
@@ -20,7 +20,7 @@ private fun XoScreenPreview() {
         XoScreen(
             state = XoState.init().copy(
                 deviceIP = "192.168.100.10",
-                servers = listOf(AvailableServer("192.168.100.11")),
+                servers = listOf(ServerUI()),
             )
         )
     }
@@ -36,7 +36,7 @@ internal fun XoScreen(
     val insetsBottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     Box(modifier = modifier.padding(top = insetsTop, bottom = insetsBottom)) {
         when {
-            state.isGameStarted -> GameScreen(logs = state.logs)
+            state.isGameStarted -> GameScreen(logs = state.logs, events)
             else -> StaringScreen(state, events)
         }
     }

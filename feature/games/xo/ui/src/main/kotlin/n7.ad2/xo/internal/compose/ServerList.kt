@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -23,14 +24,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
+import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.ui.TextWithDotsSuffix
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.Bold
-import n7.ad2.xo.internal.model.AvailableServer
+import n7.ad2.xo.internal.compose.model.ServerUI
 
 @Preview
 @Composable
 private fun ServerListPreview(
-    @PreviewParameter(PreviewProvider::class) list: List<AvailableServer>,
+    @PreviewParameter(PreviewProvider::class) list: List<ServerUI>,
 ) {
     AppTheme {
         ServerList(list, {})
@@ -39,18 +42,16 @@ private fun ServerListPreview(
 
 @Composable
 internal fun ServerList(
-    servers: List<AvailableServer>,
-    onServerClicked: (server: AvailableServer) -> Unit,
+    servers: List<ServerUI>,
+    onServerClicked: (server: ServerUI) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier) {
         Row(
             modifier = Modifier.padding(8.dp),
         ) {
-            Text(
-                text = "Found servers",
-                style = AppTheme.style.body,
-                color = AppTheme.color.textSecondaryColor,
+            TextWithDotsSuffix(
+                text = "Searching servers",
                 modifier = Modifier.weight(1f),
             )
             Icon(
@@ -67,43 +68,62 @@ internal fun ServerList(
         ) {
             items(servers.size) { index ->
                 val server = servers[index]
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .height(60.dp)
-                        .background(AppTheme.color.surface)
-                        .clickable { onServerClicked(server) }
-                        .padding(vertical = 8.dp, horizontal = 16.dp),
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Person,
-                        contentDescription = null,
-                        tint = Color.White,
-                        modifier = Modifier
-                            .size(30.dp)
-                            .clip(AppTheme.shape.small)
-                            .background(AppTheme.color.background)
-                            .padding(8.dp),
-                    )
-                    Text(
-                        text = server.serverIP,
-                        style = AppTheme.style.body.Bold,
-                        color = AppTheme.color.textColor,
-                        modifier = Modifier
-                            .weight(1f)
-                            .padding(start = 16.dp),
-                    )
-                }
+                ServerItem(onServerClicked, server)
                 if (servers.size != index) Divider(color = AppTheme.color.background)
             }
         }
     }
 }
 
-private class PreviewProvider : PreviewParameterProvider<List<AvailableServer>> {
-    override val values: Sequence<List<AvailableServer>> = sequenceOf(
-        buildList { repeat(1) { add(AvailableServer("192.168.100.0$it")) } },
-        buildList { repeat(2) { add(AvailableServer("192.168.100.0$it")) } },
-        buildList { repeat(3) { add(AvailableServer("192.168.100.0$it")) } },
+@Composable
+private fun ServerItem(onServerClicked: (server: ServerUI) -> Unit, server: ServerUI) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .heightIn(min = 60.dp)
+            .background(AppTheme.color.surface)
+            .clickable { onServerClicked(server) }
+            .padding(vertical = 8.dp, horizontal = 16.dp),
+    ) {
+        Icon(
+            imageVector = Icons.Default.Person,
+            contentDescription = null,
+            tint = Color.White,
+            modifier = Modifier
+                .size(30.dp)
+                .clip(AppTheme.shape.small)
+                .background(AppTheme.color.background)
+                .padding(8.dp),
+        )
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(start = 16.dp),
+        ) {
+            Text(
+                text = "name: ${server.name}",
+                style = AppTheme.style.body.Bold,
+                color = AppTheme.color.textColor,
+            )
+            Text(
+                text = "ip: ${server.serverIP}",
+                style = AppTheme.style.body.Bold,
+                color = AppTheme.color.textColor,
+            )
+            Text(
+                text = "port: ${server.port}",
+                style = AppTheme.style.body.Bold,
+                color = AppTheme.color.textColor,
+            )
+        }
+    }
+}
+
+private class PreviewProvider : PreviewParameterProvider<List<ServerUI>> {
+    override val values: Sequence<List<ServerUI>> = sequenceOf(
+        buildList { repeat(0) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },
+        buildList { repeat(1) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },
+        buildList { repeat(2) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },
+        buildList { repeat(3) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },
     )
 }

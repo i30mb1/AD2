@@ -1,25 +1,24 @@
 import com.google.common.truth.Truth
 import java.net.InetAddress
-import kotlinx.coroutines.debug.junit4.CoroutinesTimeout
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.feature.games.xo.domain.internal.server.base.ClientSocketProxy
 import n7.ad2.feature.games.xo.domain.internal.server.base.ServerSocketProxy
-import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientWithSocket
-import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerWithSocket
+import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientHolderWithSocket
+import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerHolderWithSocket
 import org.junit.Rule
 import org.junit.Test
 
 /**
  * Проверяем поведение ServerSocket с общением по Socket
  */
-internal class ServerWithSocketTest {
+internal class ServerHolderWithSocketTest {
 
 //    @get:Rule val timeout = CoroutinesTimeout.seconds(5)
     @get:Rule val coroutineRule = CoroutineTestRule(StandardTestDispatcher())
-    private val server = ServerWithSocket(ServerSocketProxy())
-    private val client = ClientWithSocket(ClientSocketProxy())
+    private val serverHolder = ServerHolderWithSocket(ServerSocketProxy())
+    private val client = ClientHolderWithSocket(ClientSocketProxy())
 
     private val host = InetAddress.getLocalHost()
 
@@ -30,7 +29,7 @@ internal class ServerWithSocketTest {
         val message = "x:0-0:1"
         client.sendMessage(message)
 
-        val clientMessageOnServer = server.awaitMessage()
+        val clientMessageOnServer = serverHolder.awaitMessage()
         Truth.assertThat(clientMessageOnServer).isEqualTo(message)
     }
 
@@ -39,16 +38,16 @@ internal class ServerWithSocketTest {
         startServerAndConnectClient(8082)
 
         val message = "y:0-0:1"
-        server.sendMessage(message)
+        serverHolder.sendMessage(message)
 
         val clientMessageOnServer = client.awaitMessage()
         Truth.assertThat(clientMessageOnServer).isEqualTo(message)
     }
 
     private suspend fun startServerAndConnectClient(port: Int) {
-        server.start(host, intArrayOf(port))
+        serverHolder.start(host, intArrayOf(port))
         client.start(host, port)
-        server.awaitClient()
+        serverHolder.awaitClient()
     }
 }
 

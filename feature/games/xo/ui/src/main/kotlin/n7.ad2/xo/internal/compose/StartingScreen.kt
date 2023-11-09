@@ -27,7 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
-import n7.ad2.xo.internal.model.AvailableServer
+import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.model.XoState
 
 @Preview
@@ -37,7 +37,7 @@ private fun XoScreenPreview() {
         StaringScreen(
             XoState.init().copy(
                 deviceIP = "192.168.100.10",
-                servers = listOf(AvailableServer("192.168.100.11")),
+                servers = listOf(ServerUI()),
             ),
             { }
         )
@@ -47,7 +47,7 @@ private fun XoScreenPreview() {
 @Composable
 internal fun StaringScreen(
     state: XoState,
-    onClicked: (event: XoScreenEvent) -> Unit,
+    event: (event: XoScreenEvent) -> Unit,
 ) {
     Box(
         modifier = Modifier
@@ -79,55 +79,54 @@ internal fun StaringScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.align(Alignment.Center),
         ) {
-            Button(
-                shape = AppTheme.shape.medium,
-                onClick = { onClicked(XoScreenEvent.StartServer) },
-                modifier = Modifier.height(48.dp),
-                enabled = state.isStartEnabled,
-            ) {
-                Text(
-                    modifier = Modifier.padding(horizontal = 24.dp),
-                    text = "Start",
-                    textAlign = TextAlign.Center,
-                )
-            }
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .height(48.dp)
-                    .clip(AppTheme.shape.medium),
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxHeight()
-                        .widthIn(min = 200.dp)
-                        .background(AppTheme.color.surface),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    BasicTextField(
-                        value = textField,
-                        singleLine = true,
-                        textStyle = LocalTextStyle.current.copy(
-                            color = AppTheme.color.textColor,
-                            textAlign = TextAlign.End,
-                        ),
-                        onValueChange = { textField = it },
-                    )
-                }
-                Button(
-                    shape = RoundedCornerShape(0.dp),
-                    onClick = { onClicked(XoScreenEvent.ConnectToServer(textField)) },
-                    modifier = Modifier.fillMaxHeight(),
-                ) {
-                    Text(
-                        text = "Connect",
-                        modifier = Modifier.padding(horizontal = 8.dp),
-                    )
-                }
-            }
-            if (state.servers.isNotEmpty()) {
-                ServerList(state.servers, {})
-            }
+            EditTextWithButton("Player1", "Start", state.isStartEnabled) { name -> event(XoScreenEvent.StartServer(name)) }
+//            EditTextWithButton(textField, "Connect", true) { ip -> event(XoScreenEvent.ConnectToServer(ip)) }
+            ServerList(state.servers, { server -> event(XoScreenEvent.ConnectToServer(server)) })
+        }
+    }
+}
+
+@Composable
+private fun EditTextWithButton(
+    defaultValue: String,
+    text: String,
+    isEnabled: Boolean,
+    onButtonClicked: (value: String) -> Unit,
+) {
+    var textField by remember(defaultValue) { mutableStateOf(defaultValue) }
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .height(48.dp)
+            .clip(AppTheme.shape.medium),
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxHeight()
+                .widthIn(min = 200.dp)
+                .background(AppTheme.color.surface),
+            contentAlignment = Alignment.Center,
+        ) {
+            BasicTextField(
+                value = textField,
+                singleLine = true,
+                textStyle = LocalTextStyle.current.copy(
+                    color = AppTheme.color.textColor,
+                    textAlign = TextAlign.End,
+                ),
+                onValueChange = { textField = it },
+            )
+        }
+        Button(
+            shape = RoundedCornerShape(0.dp),
+            onClick = { onButtonClicked(textField) },
+            modifier = Modifier.fillMaxHeight(),
+            enabled = isEnabled,
+        ) {
+            Text(
+                text = text,
+                modifier = Modifier.padding(horizontal = 8.dp),
+            )
         }
     }
 }

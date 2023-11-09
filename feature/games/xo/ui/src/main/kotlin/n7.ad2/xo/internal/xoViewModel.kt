@@ -1,8 +1,6 @@
 package n7.ad2.xo.internal
 
 import android.app.Application
-import android.net.nsd.NsdManager
-import androidx.core.content.getSystemService
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
@@ -15,12 +13,14 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.games.xo.domain.Client
-import n7.ad2.feature.games.xo.domain.Server
-import n7.ad2.xo.internal.model.AvailableServer
+import n7.ad2.feature.games.xo.domain.ClientHolder
+import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.ServerHolder
+import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.xo.internal.compose.model.ServerUI
+import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
 import n7.ad2.xo.internal.model.XoState
 import n7.ad2.xo.internal.model.addLog
 import n7.ad2.xo.internal.model.disableStart
@@ -32,13 +32,11 @@ import n7.ad2.xo.internal.model.startGame
 internal class XoViewModel @AssistedInject constructor(
     private val context: Application,
     private val dispatchers: DispatchersProvider,
-    private val server: Server,
-    private val client: Client,
-    private val discoverServer: DiscoverServer,
-    private val registerServer: RegisterServer,
+    private val serverHolder: ServerHolder,
+    private val clientHolder: ClientHolder,
+    private val discoverServer: DiscoverServicesInNetworkUseCase,
 ) : ViewModel() {
 
-    private val manager: NsdManager by lazy { context.getSystemService()!! }
     private val _state: MutableStateFlow<XoState> = MutableStateFlow(XoState.init())
     val state: StateFlow<XoState> = _state.asStateFlow()
 
@@ -51,42 +49,45 @@ internal class XoViewModel @AssistedInject constructor(
         viewModelScope.launch(dispatchers.IO) {
             _state.setDeviceIP(getIPAddress())
         }
-        discoverServer.discover(manager)
-            .onEach { servers: List<AvailableServer> -> _state.setServers(servers) }
+        discoverServer()
+            .onEach { servers: List<Server> ->
+                _state.setServers(
+                    servers.map(ServerToServerUIMapper)
+                )
+            }
             .flowOn(dispatchers.IO)
             .launchIn(viewModelScope)
     }
 
-    fun connectToServer(ip: String) = viewModelScope.launch(dispatchers.IO) {
-        client.start(InetAddress.getByName(ip), 8080)
+    fun connectToServer(server: ServerUI) = viewModelScope.launch(dispatchers.IO) {
+        clientHolder.start(InetAddress.getByName(server.serverIP), server.port.toInt())
         _state.addLog("Connected to Server")
         _state.startGame()
         while (true) {
-            val message = client.awaitMessage()
+            val message = clientHolder.awaitMessage()
             _state.addLog("client: $message")
         }
     }
 
-    fun runServer() = viewModelScope.launch(dispatchers.IO) {
+    fun runServer(name: String) = viewModelScope.launch(dispatchers.IO) {
         val ip = InetAddress.getByName(state.value.deviceIP)
-        server.start(ip, intArrayOf(8080))
+        serverHolder.start(ip, name)
         _state.disableStart()
-        registerServer.register(manager)
-        server.awaitClient()
+        serverHolder.awaitClient()
         _state.addLog("Client Connected")
         _state.startGame()
         while (true) {
-            val message = server.awaitMessage()
+            val message = serverHolder.awaitMessage()
             _state.addLog("server: $message")
         }
     }
 
-    fun sendPong() {
-        client.sendMessage("pong")
+    fun sendPong() = viewModelScope.launch(dispatchers.IO) {
+        clientHolder.sendMessage("pong")
     }
 
-    fun sendPing() {
-        server.sendMessage("ping")
+    fun sendPing() = viewModelScope.launch(dispatchers.IO) {
+        serverHolder.sendMessage("ping")
     }
 }
 
@@ -105,19 +106,3 @@ internal fun getIPAddress(): String {
     error("Could find ip adress")
 }
 
-internal fun getAllIpAdress(): List<AvailableServer> {
-    return buildList {
-        val networkInterfaces = NetworkInterface.getNetworkInterfaces()
-        while (networkInterfaces.hasMoreElements()) {
-            val networkInterface = networkInterfaces.nextElement()
-            val inetAddresses = networkInterface.inetAddresses
-            while (inetAddresses.hasMoreElements()) {
-                val adress = inetAddresses.nextElement()
-                if (adress.isReachable(1)) {
-                    val ip = adress.hostAddress!!
-                    add(AvailableServer(ip))
-                }
-            }
-        }
-    }
-}

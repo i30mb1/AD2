@@ -1,20 +1,33 @@
 package n7.ad2.feature.games.xo.domain.di
 
-import n7.ad2.feature.games.xo.domain.Client
-import n7.ad2.feature.games.xo.domain.Server
+import android.net.nsd.NsdManager
+import n7.ad2.feature.games.xo.domain.ClientHolder
+import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.ServerHolder
+import n7.ad2.feature.games.xo.domain.internal.registrator.CommonSettings
+import n7.ad2.feature.games.xo.domain.internal.registrator.DiscoverServicesInNetworkUseCaseImpl
+import n7.ad2.feature.games.xo.domain.internal.registrator.GetInfoAboutServerUseCase
+import n7.ad2.feature.games.xo.domain.internal.registrator.RegisterServiceInNetworkUseCaseImpl
 import n7.ad2.feature.games.xo.domain.internal.server.base.ClientSocketProxy
 import n7.ad2.feature.games.xo.domain.internal.server.base.ServerSocketProxy
-import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientWithSocket
-import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerWithSocket
+import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientHolderWithSocket
+import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerHolderWithSocket
 
 interface XoDomainComponent {
-    val server: Server
-    val client: Client
+    val serverHolder: ServerHolder
+    val clientHolder: ClientHolder
+    val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase
+    val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase
 }
 
 fun XoDomainComponent(
     dependencies: XoDomainDependencies,
 ): XoDomainComponent = object : XoDomainComponent {
-    override val server: Server = ServerWithSocket(ServerSocketProxy())
-    override val client: Client = ClientWithSocket(ClientSocketProxy())
+    private val manager: NsdManager = dependencies.application.getSystemService(NsdManager::class.java)!!
+    private val commonSettings = CommonSettings()
+    override val registerServerInDNSUseCase = RegisterServiceInNetworkUseCaseImpl(manager, commonSettings)
+    override val discoverServicesInNetworkUseCase = DiscoverServicesInNetworkUseCaseImpl(manager, commonSettings, GetInfoAboutServerUseCase(dependencies.dispatcher))
+    override val serverHolder: ServerHolder = ServerHolderWithSocket(ServerSocketProxy(), registerServerInDNSUseCase)
+    override val clientHolder: ClientHolder = ClientHolderWithSocket(ClientSocketProxy())
 }

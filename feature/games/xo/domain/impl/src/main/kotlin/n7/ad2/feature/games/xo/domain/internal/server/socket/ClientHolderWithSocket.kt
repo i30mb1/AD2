@@ -9,13 +9,13 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.suspendCancellableCoroutine
-import n7.ad2.feature.games.xo.domain.Client
+import n7.ad2.feature.games.xo.domain.ClientHolder
 import n7.ad2.feature.games.xo.domain.internal.server.ClientLog
 import n7.ad2.feature.games.xo.domain.internal.server.base.ClientSocketProxy
 
-internal class ClientWithSocket(
+internal class ClientHolderWithSocket(
     private val clientSocketProxy: ClientSocketProxy,
-) : Client {
+) : ClientHolder {
 
     val logger: (message: ClientLog) -> Unit = { }
 
