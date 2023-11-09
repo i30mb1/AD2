@@ -13,27 +13,17 @@ import n7.ad2.xo.internal.model.AvailableServer
 
 internal class DiscoverServer @Inject constructor(
     private val discoverSettings: DiscoverSettings,
+    private val resolveDiscoveredServer: ResolveDiscoveredServer,
 ) {
 
     fun discover(manager: NsdManager): Flow<AvailableServer> = callbackFlow {
-        val list = mutableListOf<AvailableServer>()
+        val list = mutableSetOf<AvailableServer>()
+
         val listener = object : NsdManager.DiscoveryListener {
             override fun onDiscoveryStarted(regType: String) = Unit
 
             override fun onServiceFound(service: NsdServiceInfo) {
-                Log.d("N7", "Service discovery success$service")
-
-//                manager.registerServiceInfoCallback(service, Executors.newSingleThreadExecutor(), serviceInfo)
-                val resolveListener = object : NsdManager.ResolveListener {
-                    override fun onResolveFailed(p0: NsdServiceInfo, p1: Int) {
-                        println("")
-                    }
-
-                    override fun onServiceResolved(service: NsdServiceInfo) {
-                        list.add(AvailableServer(service.host.hostAddress, service.port, service.serviceName))
-                    }
-                }
-                manager.resolveService(service, resolveListener)
+                val server = resolveDiscoveredServer.resolve(service)
             }
 
             override fun onServiceLost(service: NsdServiceInfo) = Unit
@@ -51,28 +41,5 @@ internal class DiscoverServer @Inject constructor(
 
         manager.discoverServices(discoverSettings.serviceType, NsdManager.PROTOCOL_DNS_SD, listener)
         awaitClose { manager.stopServiceDiscovery(listener) }
-    }
-}
-
-internal suspend fun getServerInfo(manager: NsdManager) = suspendCancellableCoroutine<AvailableServer> {
-//    manager.resolveService()
-}
-
-@RequiresApi(34)
-val serviceInfo =  object : NsdManager.ServiceInfoCallback {
-    override fun onServiceInfoCallbackRegistrationFailed(p0: Int) {
-        Log.d("N7", "$p0")
-    }
-
-    override fun onServiceUpdated(p0: NsdServiceInfo) {
-        Log.d("N7", "$p0")
-    }
-
-    override fun onServiceLost() {
-        Log.d("N7", "onServiceLost")
-    }
-
-    override fun onServiceInfoCallbackUnregistered() {
-        Log.d("N7", "onServiceInfoCallbackUnregistered")
     }
 }
