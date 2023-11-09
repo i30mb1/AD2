@@ -40,8 +40,6 @@ internal class ClientWithSocket(
     override suspend fun awaitMessage(): String = suspendCancellableCoroutine { continuation ->
         val input = requireNotNull(socket).getInputStream()
         val scanner = Scanner(input)
-        if (scanner.hasNext()) {
-            continuation.resume(scanner.nextLine())
-        }
+        continuation.resume(scanner.nextLine())
     }
 }

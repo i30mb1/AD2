@@ -9,14 +9,14 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.suspendCancellableCoroutine
-import n7.ad2.xo.internal.model.ServerUI
+import n7.ad2.xo.internal.model.AvailableServer
 
 internal class DiscoverServer @Inject constructor(
     private val discoverSettings: DiscoverSettings,
 ) {
 
-    fun discover(manager: NsdManager): Flow<ServerUI> = callbackFlow {
-        val list = mutableListOf<ServerUI>()
+    fun discover(manager: NsdManager): Flow<AvailableServer> = callbackFlow {
+        val list = mutableListOf<AvailableServer>()
         val listener = object : NsdManager.DiscoveryListener {
             override fun onDiscoveryStarted(regType: String) = Unit
 
@@ -30,7 +30,7 @@ internal class DiscoverServer @Inject constructor(
                     }
 
                     override fun onServiceResolved(service: NsdServiceInfo) {
-                        list.add(ServerUI(service.host.hostAddress, service.port, service.serviceName))
+                        list.add(AvailableServer(service.host.hostAddress, service.port, service.serviceName))
                     }
                 }
                 manager.resolveService(service, resolveListener)
@@ -54,7 +54,7 @@ internal class DiscoverServer @Inject constructor(
     }
 }
 
-internal suspend fun getServerInfo(manager: NsdManager) = suspendCancellableCoroutine<ServerUI> {
+internal suspend fun getServerInfo(manager: NsdManager) = suspendCancellableCoroutine<AvailableServer> {
 //    manager.resolveService()
 }
 

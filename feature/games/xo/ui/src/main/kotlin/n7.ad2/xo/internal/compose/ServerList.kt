@@ -25,12 +25,12 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.Bold
-import n7.ad2.xo.internal.model.ServerUI
+import n7.ad2.xo.internal.model.AvailableServer
 
 @Preview
 @Composable
 private fun ServerListPreview(
-    @PreviewParameter(PreviewProvider::class) list: List<ServerUI>,
+    @PreviewParameter(PreviewProvider::class) list: List<AvailableServer>,
 ) {
     AppTheme {
         ServerList(list, {})
@@ -39,8 +39,8 @@ private fun ServerListPreview(
 
 @Composable
 internal fun ServerList(
-    servers: List<ServerUI>,
-    onServerClicked: (server: ServerUI) -> Unit,
+    servers: List<AvailableServer>,
+    onServerClicked: (server: AvailableServer) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier) {
@@ -100,10 +100,10 @@ internal fun ServerList(
     }
 }
 
-private class PreviewProvider : PreviewParameterProvider<List<ServerUI>> {
-    override val values: Sequence<List<ServerUI>> = sequenceOf(
-        buildList { repeat(1) { add(ServerUI("192.168.100.0$it")) } },
-        buildList { repeat(2) { add(ServerUI("192.168.100.0$it")) } },
-        buildList { repeat(3) { add(ServerUI("192.168.100.0$it")) } },
+private class PreviewProvider : PreviewParameterProvider<List<AvailableServer>> {
+    override val values: Sequence<List<AvailableServer>> = sequenceOf(
+        buildList { repeat(1) { add(AvailableServer("192.168.100.0$it")) } },
+        buildList { repeat(2) { add(AvailableServer("192.168.100.0$it")) } },
+        buildList { repeat(3) { add(AvailableServer("192.168.100.0$it")) } },
     )
 }

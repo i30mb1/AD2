@@ -7,7 +7,8 @@ import kotlinx.coroutines.flow.update
 @Immutable
 internal data class XoState(
     val deviceIP: String,
-    val servers: List<ServerUI>,
+    val port: String,
+    val servers: List<AvailableServer>,
     val isGameStarted: Boolean = false,
     val isStartEnabled: Boolean = true,
     val logs: List<String> = emptyList(),
@@ -15,6 +16,7 @@ internal data class XoState(
 
     companion object {
         fun init() = XoState(
+            "",
             "",
             emptyList(),
         )

@@ -27,7 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
-import n7.ad2.xo.internal.model.ServerUI
+import n7.ad2.xo.internal.model.AvailableServer
 import n7.ad2.xo.internal.model.XoState
 
 @Preview
@@ -35,7 +35,11 @@ import n7.ad2.xo.internal.model.XoState
 private fun XoScreenPreview() {
     AppTheme {
         StaringScreen(
-            XoState("192.168.100.10", listOf(ServerUI("192.168.100.11"))), { }
+            XoState.init().copy(
+                deviceIP = "192.168.100.10",
+                servers = listOf(AvailableServer("192.168.100.11")),
+            ),
+            { }
         )
     }
 }
