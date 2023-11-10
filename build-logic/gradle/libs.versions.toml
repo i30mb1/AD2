@@ -1,6 +1,6 @@
 [versions]
 room = "2.6.0"
-coroutines = "1.6.4"
+coroutines = "1.7.1"
 moshi = "1.14.0"
 dagger = "2.46.1"
 workManager = "2.7.1"

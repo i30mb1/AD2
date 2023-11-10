@@ -22,7 +22,6 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
     override fun invoke(): Flow<List<Server>> = callbackFlow {
         val set = mutableSetOf<Server>()
 
-
         val listener = object : NsdManager.DiscoveryListener {
             override fun onDiscoveryStarted(regType: String) = Unit
 
