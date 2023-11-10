@@ -11,6 +11,7 @@ import androidx.core.view.updateLayoutParams
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import androidx.fragment.app.commitNow
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -139,22 +140,17 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     private fun setFragment(menuItem: VOMenu) {
         val currentTag = childFragmentManager.fragments.lastOrNull()?.tag
         if (currentTag == menuItem.title) return
-        val fragment = when (menuItem.type) {
+        val fragment: Class<out Fragment> = when (menuItem.type) {
             VOMenuType.HEROES -> navigator.heroesApi.getFragment()
             VOMenuType.ITEMS -> navigator.itemsApi.getFragment()
             VOMenuType.NEWS -> navigator.newsApi.getFragment()
-            VOMenuType.TOURNAMENTS -> navigator.tournamentsApi.getFragment()
-            VOMenuType.STREAMS -> navigator.streamApi.getFragment()
+//            VOMenuType.TOURNAMENTS -> navigator.tournamentsApi.getFragment()
+//            VOMenuType.STREAMS -> navigator.streamApi.getFragment()
             VOMenuType.GAMES -> navigator.gamesApi.getFragment()
-            VOMenuType.UNKNOWN -> return
+            else -> return
         }
-        childFragmentManager.commit {
-            if (fragment is Fragment) {
-                replace(binding.container.id, fragment, menuItem.title)
-            } else {
-                val hehe = fragment as Class<out Fragment>
-                replace(binding.container.id, hehe, null, menuItem.title)
-            }
+        childFragmentManager.commitNow {
+            replace(binding.container.id, fragment, null)
         }
     }
 

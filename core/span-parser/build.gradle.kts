@@ -14,7 +14,7 @@ dependencies {
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.android))
 
-    testImplementation(libs.testTruth2)
+    testImplementation(libs.testTruth)
     testImplementation(libs.mockitokotlin)
     testImplementation(testFixtures(project(Module.Core.common)))
 

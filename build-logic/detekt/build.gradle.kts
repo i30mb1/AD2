@@ -12,5 +12,5 @@ dependencies {
     implementation(project(":extensions"))
 
     testImplementation(libs.detektTest)
-    testImplementation(libs.bundles.test)
+    testImplementation(libs.testTruthJvm)
 }

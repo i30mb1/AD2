@@ -7,8 +7,9 @@ dependencies {
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.common))
 
-    testImplementation(libs.bundles.test)
     testImplementation(libs.coroutinesDebug)
+    testImplementation(libs.testTruthJvm)
+    testImplementation(libs.coroutinesTest)
 
     testFixturesImplementation(libs.coroutines)
 }

@@ -95,6 +95,7 @@ dependencies {
     implementation(libs.instantApps)
     implementation(libs.workManager)
     implementation(libs.performance)
+    implementation(libs.performancePlayServices)
     implementation(libs.moshi)
     implementation(libs.androidStartup)
 
