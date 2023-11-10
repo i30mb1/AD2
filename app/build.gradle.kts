@@ -6,6 +6,9 @@ plugins {
 }
 
 android {
+    lint {
+        abortOnError = true
+    }
     namespace = applicationID
     defaultConfig {
         applicationId = applicationID

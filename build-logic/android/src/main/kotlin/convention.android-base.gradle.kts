@@ -1,3 +1,4 @@
+import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.gradle.BaseExtension
 
 plugins {
@@ -18,11 +19,6 @@ configure<BaseExtension> {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    lintOptions {
-        isAbortOnError = false
-        disable("UseCompoundDrawables")
     }
 }
 

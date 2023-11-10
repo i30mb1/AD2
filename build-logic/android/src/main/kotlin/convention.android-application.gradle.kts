@@ -1,4 +1,4 @@
-import com.android.build.gradle.AppExtension
+import com.android.build.api.dsl.ApplicationExtension
 
 plugins {
     id("com.android.application")
@@ -6,10 +6,14 @@ plugins {
     id("convention.kotlin-base")
 }
 
-configure<AppExtension> {
+configure<ApplicationExtension> {
     buildTypes {
         getByName("debug") {
-            setMatchingFallbacks("release")
+            matchingFallbacks += "release"
         }
+    }
+    lint {
+        abortOnError = false
+        disable += "UseCompoundDrawables"
     }
 }

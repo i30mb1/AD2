@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 
 inline fun Modifier.bounceClick() = composed {
     var isPressed by remember { mutableStateOf(false) }
-    val scale by animateFloatAsState(if (isPressed) 0.98f else 1f)
+    val scale by animateFloatAsState(if (isPressed) 0.98f else 1f, label = "scale")
     graphicsLayer {
         scaleX = scale
         scaleY = scale
