@@ -45,14 +45,14 @@ fun setupAndroidReporting() {
                     dependsOn(testTaskName)
                     group = "verification"
                     val dirs = listOf("src/main/kotlin")
-                    val kotlinTree = fileTree("$buildDir/tmp/kotlin-classes/$name")
+                    val kotlinTree = fileTree("${layout.buildDirectory}/tmp/kotlin-classes/$name")
                     classDirectories.setFrom(kotlinTree)
-                    executionData.setFrom("$buildDir/jacoco/$testTaskName.exec")
+                    executionData.setFrom("${layout.buildDirectory}/jacoco/$testTaskName.exec")
                     sourceDirectories.setFrom(dirs)
                     additionalSourceDirs.setFrom(dirs)
                     reports {
                         html.required.set(true)
-                        html.outputLocation.set(file("${buildDir}/reports/jacoco"))
+                        html.outputLocation.set(file("${layout.buildDirectory}/reports/jacoco"))
                     }
                 }
             }
@@ -65,15 +65,15 @@ fun setupKotlinReporting() {
         dependsOn(tasks.getByName("test"))
         reports {
             html.required.set(true)
-            html.outputLocation.set(file("${buildDir}/reports/jacoco"))
+            html.outputLocation.set(file("${layout.buildDirectory}/reports/jacoco"))
         }
-        sourceDirectories.setFrom(fileTree(project.buildDir) {
+        sourceDirectories.setFrom(fileTree(project.layout.buildDirectory) {
             exclude("src/main/kotlin/**/*")
         })
-        classDirectories.setFrom(fileTree(project.buildDir) {
+        classDirectories.setFrom(fileTree(project.layout.buildDirectory) {
 //            exclude(listOf("**/*"))
         })
-        executionData.setFrom(fileTree(project.buildDir) {
+        executionData.setFrom(fileTree(project.layout.buildDirectory) {
             include("jacoco/test.exec")
         })
 
