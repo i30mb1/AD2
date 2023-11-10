@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.moshi)
+    api(libs.moshi)
 
     implementation(project(Module.Core.common))
     implementation(project(Module.Core.android))

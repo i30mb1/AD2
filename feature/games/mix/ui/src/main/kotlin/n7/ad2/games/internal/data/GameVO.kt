@@ -1,7 +1,7 @@
 package n7.ad2.games.internal.data
 
 import n7.ad2.Resources
-import n7.ad2.feature.games.ui.R
+import n7.ad2.feature.games.mix.ui.R
 
 internal sealed class Players {
     object One : Players()
