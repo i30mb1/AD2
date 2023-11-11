@@ -12,8 +12,10 @@ dependencies {
 
     implementation(libs.coroutines)
 
-    testImplementation(libs.bundles.test)
     testImplementation(libs.coroutinesDebug)
+    testImplementation(libs.mockk)
+    testImplementation(libs.testTruthJvm)
+    testImplementation(libs.coroutinesTest)
 
     testFixturesImplementation(libs.coroutines)
 }

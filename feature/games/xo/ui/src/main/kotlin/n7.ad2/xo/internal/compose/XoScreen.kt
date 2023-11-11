@@ -10,8 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import n7.ad2.ui.compose.AppTheme
+import n7.ad2.xo.internal.XoState
 import n7.ad2.xo.internal.compose.model.ServerUI
-import n7.ad2.xo.internal.model.XoState
+import n7.ad2.xo.internal.game.GameState
 
 @Preview
 @Composable

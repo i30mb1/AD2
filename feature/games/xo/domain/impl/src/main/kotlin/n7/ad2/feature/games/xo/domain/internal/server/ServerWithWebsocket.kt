@@ -15,10 +15,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.games.xo.domain.internal.server.base.ServerSocketProxy
 
 internal class ServerWithWebsocket(
-    private val serverSocketProxy: ServerSocketProxy,
     private val dispatchers: DispatchersProvider,
     private val type: ServerType,
     private val logger: (message: ServerLog) -> Unit = {},
@@ -41,11 +39,11 @@ internal class ServerWithWebsocket(
         ports: IntArray,
     ) = scope.launch {
         try {
-            val server = serverSocketProxy.getServerSocket(host, ports)
-            logger(ServerLog.ServerStarted)
-            val clientSocket = server.accept()
-            logger(ServerLog.ConnectionAccepted)
-            handleClient(clientSocket)
+//            val server = serverSocketProxy.getServerSocket(host, ports)
+//            logger(ServerLog.ServerStarted)
+//            val clientSocket = server.accept()
+//            logger(ServerLog.ConnectionAccepted)
+//            handleClient(clientSocket)
         } catch (e: Exception) {
             logger(ServerLog.UnknownError(e))
         }
