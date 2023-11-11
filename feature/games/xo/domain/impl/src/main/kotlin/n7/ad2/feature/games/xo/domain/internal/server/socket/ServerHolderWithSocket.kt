@@ -9,15 +9,16 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
+import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
-import n7.ad2.feature.games.xo.domain.internal.registrator.RegisterServiceInNetworkUseCaseImpl
 import n7.ad2.feature.games.xo.domain.internal.server.base.ServerSocketProxy
 import n7.ad2.feature.games.xo.domain.model.Server
 
 internal class ServerHolderWithSocket(
     private val serverSocketProxy: ServerSocketProxy,
-    private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCaseImpl,
+    private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
 ) : ServerHolder {
+
     sealed interface ServerWithSocketEvents {
         object Started : ServerWithSocketEvents
         object ClientConnected : ServerWithSocketEvents

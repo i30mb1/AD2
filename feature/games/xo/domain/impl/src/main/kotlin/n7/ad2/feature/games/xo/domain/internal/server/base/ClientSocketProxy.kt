@@ -17,7 +17,7 @@ class ClientSocketProxy {
     suspend fun start(
         host: InetAddress?,
         port: Int,
-    ) = suspendCancellableCoroutine { continuation ->
+    ): Socket = suspendCancellableCoroutine { continuation ->
         try {
             val socket = Socket(host, port)
             continuation.resume(socket)
