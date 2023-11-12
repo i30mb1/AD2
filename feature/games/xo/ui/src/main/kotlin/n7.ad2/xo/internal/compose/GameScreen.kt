@@ -3,11 +3,12 @@ package n7.ad2.xo.internal.compose
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.Button
 import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -51,10 +52,11 @@ internal fun GameScreen(
             }
         }
         Row {
-            Button(onClick = { event(XoScreenEvent.SendPing) }) {
+            TextButton(onClick = { event(XoScreenEvent.SendPing) }) {
                 Text(text = "Ping")
             }
-            Button(onClick = { event(XoScreenEvent.SendPong) }) {
+            Spacer(modifier = Modifier.weight(1f))
+            TextButton(onClick = { event(XoScreenEvent.SendPong) }) {
                 Text(text = "Pong")
             }
         }

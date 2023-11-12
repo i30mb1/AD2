@@ -6,6 +6,7 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
@@ -19,7 +20,7 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
 
     private val dispatcher = newSingleThreadContext("DiscoverServer")
 
-    override fun invoke(): Flow<List<Server>> = callbackFlow {
+    override fun invoke(): Flow<List<Server>> = callbackFlow<List<Server>> {
         val set = mutableSetOf<Server>()
 
         val listener = object : NsdManager.DiscoveryListener {
@@ -53,5 +54,6 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
         manager.discoverServices(commonSettings.serviceType, NsdManager.PROTOCOL_DNS_SD, listener)
         awaitClose { manager.stopServiceDiscovery(listener) }
     }
+        .onStart { emit(emptyList()) }
         .flowOn(dispatcher)
 }

@@ -7,8 +7,10 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.ClientHolder
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
+import n7.ad2.feature.games.xo.domain.SocketHolder
 import n7.ad2.feature.games.xo.domain.di.XoDomainComponent
 import n7.ad2.feature.games.xo.domain.di.XoDomainDependencies
 
@@ -41,6 +43,16 @@ object XoModule {
     fun provideClient(
         component: XoDomainComponent,
     ): ClientHolder = component.clientHolder
+
+    @dagger.Provides
+    fun provideSocketHolder(
+        component: XoDomainComponent,
+    ): SocketHolder = component.socketHolder
+
+    @dagger.Provides
+    fun provideGetNetworkStateUseCase(
+        component: XoDomainComponent,
+    ): GetNetworkStateUseCase = component.getNetworkStateUseCase
 
     @dagger.Provides
     fun provideRegisterServiceInNetworkUseCase(
