@@ -5,6 +5,6 @@ import n7.ad2.xo.internal.compose.model.ServerUI
 internal sealed interface XoScreenEvent {
     class StartServer(val name: String): XoScreenEvent
     class ConnectToServer(val server: ServerUI): XoScreenEvent
-    object SendPing: XoScreenEvent
-    object SendPong: XoScreenEvent
+    data object SendPing: XoScreenEvent
+    data object SendPong: XoScreenEvent
 }

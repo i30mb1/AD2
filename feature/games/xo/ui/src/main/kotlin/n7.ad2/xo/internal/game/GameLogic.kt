@@ -3,15 +3,21 @@ package n7.ad2.xo.internal.game
 import java.net.InetAddress
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.ClientHolder
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.SocketHolder
@@ -26,6 +32,7 @@ internal class GameLogic @Inject constructor(
     private val clientHolder: ClientHolder,
     private val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase,
     private val getNetworkStateUseCase: GetNetworkStateUseCase,
+    private val getDeviceNameUseCase: GetDeviceNameUseCase,
     private val dispatchers: DispatchersProvider,
     private val socketHolder: SocketHolder,
 ) {
@@ -41,6 +48,7 @@ internal class GameLogic @Inject constructor(
             _state.setServers(servers.map(ServerToServerUIMapper))
             _state.setDeviceIP(NetworkToIPMapper(state))
         }
+            .onStart { _state.setDeviceName(getDeviceNameUseCase()) }
             .flowOn(dispatchers.IO)
     }
 
@@ -62,10 +70,29 @@ internal class GameLogic @Inject constructor(
         collectMessages()
     }
 
-    private fun CoroutineScope.collectMessages() = launch {
-        while (true) {
+    private fun CoroutineScope.collectMessages() = launch(Job()) {
+        while (socketHolder.socket?.isConnected == true) {
             val message = socketHolder.awaitMessage()
             _state.addLog("client: $message")
         }
     }
+}
+
+suspend fun main() {
+    CoroutineScope(Job()).launch {
+        println("1")
+        withContext(Dispatchers.IO) {
+            launch {
+                while (true) {
+                    delay(1_000)
+                    println("2")
+                }
+            }
+        }
+        print3()
+    }.join()
+}
+
+fun CoroutineScope.print3() = launch {
+    println("3")
 }

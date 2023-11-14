@@ -1,6 +1,7 @@
 package n7.ad2
 
 import android.content.res.Configuration
+import android.os.Build
 import n7.ad2.common.jvm.LazyComponentHolder
 
 private class AD2AppInformation(
@@ -16,6 +17,7 @@ private class AD2AppInformation(
 }
 
 fun AppInformation(res: Resources): AppInformation {
+    "${Build.MANUFACTURER} ${Build.MODEL}"
     return AD2AppInformation(res)
 }
 

@@ -3,6 +3,7 @@ package n7.ad2.feature.games.xo.domain.di
 import android.net.nsd.NsdManager
 import n7.ad2.feature.games.xo.domain.ClientHolder
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
@@ -15,6 +16,7 @@ import n7.ad2.feature.games.xo.domain.internal.registrator.RegisterServiceInNetw
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientHolderWithSocket
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerHolderWithSocket
 import n7.ad2.feature.games.xo.domain.internal.server.socket.SocketHolderImpl
+import n7.ad2.feature.games.xo.domain.internal.usecase.GetDeviceNameUseCaseImpl
 
 interface XoDomainComponent {
     val serverHolder: ServerHolder
@@ -23,6 +25,7 @@ interface XoDomainComponent {
     val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase
     val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase
     val getNetworkStateUseCase: GetNetworkStateUseCase
+    val getDeviceNameUseCase: GetDeviceNameUseCase
 }
 
 fun XoDomainComponent(
@@ -36,4 +39,5 @@ fun XoDomainComponent(
     override val clientHolder: ClientHolder = ClientHolderWithSocket()
     override val socketHolder: SocketHolder = SocketHolderImpl()
     override val getNetworkStateUseCase: GetNetworkStateUseCase = GetNetworkStateUseCaseImpl(dependencies.application)
+    override val getDeviceNameUseCase: GetDeviceNameUseCase = GetDeviceNameUseCaseImpl()
 }

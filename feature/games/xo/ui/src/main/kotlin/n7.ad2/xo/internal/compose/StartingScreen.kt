@@ -78,7 +78,7 @@ internal fun StaringScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.align(Alignment.Center),
         ) {
-            EditTextWithButton("Player1", "Start", state.isStartEnabled) { name -> event(XoScreenEvent.StartServer(name)) }
+            EditTextWithButton(state.deviceName, "Start", state.isStartEnabled) { name -> event(XoScreenEvent.StartServer(name)) }
 //            EditTextWithButton(textField, "Connect", true) { ip -> event(XoScreenEvent.ConnectToServer(ip)) }
             ServerList(state.servers, { server -> event(XoScreenEvent.ConnectToServer(server)) })
         }

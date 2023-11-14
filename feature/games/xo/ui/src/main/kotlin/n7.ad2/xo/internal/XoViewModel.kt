@@ -27,6 +27,7 @@ internal class XoViewModel @AssistedInject constructor(
             deviceIP = gameState.deviceIP,
             servers = gameState.servers,
             logs = gameState.logs,
+            deviceName = gameState.deviceName,
         )
     }.stateIn(viewModelScope, SharingStarted.Lazily, XoState.init())
 
@@ -41,6 +42,7 @@ internal class XoViewModel @AssistedInject constructor(
 
     fun connectToServer(server: ServerUI) = viewModelScope.launch {
         gameLogic.connectToServer(InetAddress.getByName(server.serverIP), server.port.toInt())
+        //TODO() хуле не вызывается
         _state.startGame()
     }
 

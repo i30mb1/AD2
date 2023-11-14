@@ -6,6 +6,7 @@ import n7.ad2.xo.internal.compose.model.ServerUI
 
 internal data class XoState(
     val deviceIP: String,
+    val deviceName: String,
     val servers: List<ServerUI>,
     val isGameStarted: Boolean,
     val isStartEnabled: Boolean,
@@ -15,6 +16,7 @@ internal data class XoState(
     companion object {
         fun init() = XoState(
             deviceIP = "",
+            deviceName = "",
             servers = emptyList(),
             isGameStarted = false,
             isStartEnabled = true,
@@ -23,6 +25,10 @@ internal data class XoState(
     }
 }
 
-internal fun MutableStateFlow<XoState>.disableStart() = update { it.copy(isStartEnabled = false) }
+internal fun MutableStateFlow<XoState>.disableStart() = update {
+    it.copy(isStartEnabled = false)
+}
 
-internal fun MutableStateFlow<XoState>.startGame() = update { it.copy(isGameStarted = true) }
+internal fun MutableStateFlow<XoState>.startGame() = update {
+    it.copy(isGameStarted = true)
+}

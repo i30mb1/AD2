@@ -38,13 +38,10 @@ internal class XoFragment(
 
     private fun handleState(event: XoScreenEvent) {
         when (event) {
-            is XoScreenEvent.ConnectToServer -> {
-                viewModel.connectToServer(event.server)
-            }
-
+            is XoScreenEvent.ConnectToServer -> viewModel.connectToServer(event.server)
+            is XoScreenEvent.StartServer -> viewModel.runServer(event.name)
             XoScreenEvent.SendPing -> viewModel.sendPing()
             XoScreenEvent.SendPong -> viewModel.sendPong()
-            is XoScreenEvent.StartServer -> viewModel.runServer(event.name)
         }
     }
 }
