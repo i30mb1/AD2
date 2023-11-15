@@ -4,9 +4,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Feature.Heroes.impl))
+    api(project(Module.Feature.Heroes.impl))
 
-    implementation(project(Module.Core.database))
     implementation(project(Module.Core.common))
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.dagger))

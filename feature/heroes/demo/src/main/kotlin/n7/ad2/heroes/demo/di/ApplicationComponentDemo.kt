@@ -3,7 +3,6 @@ package n7.ad2.heroes.demo.di
 import android.app.Application
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
-import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.di.RetrofitModule
 import n7.ad2.heroes.demo.MyApplicationDemo
 import n7.ad2.heroes.domain.wiring.HeroesModule
@@ -16,7 +15,6 @@ import n7.ad2.heroes.ui.api.HeroesFragmentFactory
         ApplicationDemoModule::class,
         CoroutineModule::class,
         RetrofitModule::class,
-        DatabaseModule::class,
         HeroesModule::class,
     ]
 )

@@ -1,7 +1,7 @@
 [versions]
 room = "2.6.0"
 coroutines = "1.7.1"
-moshi = "1.14.0"
+moshi = "1.15.0"
 dagger = "2.46.1"
 workManager = "2.8.1"
 lifecycle = "2.6.2"

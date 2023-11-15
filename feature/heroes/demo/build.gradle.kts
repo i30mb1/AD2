@@ -33,9 +33,6 @@ dependencies {
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.retrofit))
     implementation(project(Module.Core.appPreference))
-    implementation(project(Module.Core.database))
-    implementation(project(Module.Core.spanParser))
-    implementation(project(Module.Core.updateManager))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.commonApplication))
 
