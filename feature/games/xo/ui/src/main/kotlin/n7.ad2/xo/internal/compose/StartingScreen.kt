@@ -50,8 +50,7 @@ internal fun StaringScreen(
 ) {
     Box(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
+            .fillMaxSize(),
     ) {
         var textField by remember(state.deviceIP) { mutableStateOf(state.deviceIP) }
         if (state.deviceIP.isNotBlank()) {

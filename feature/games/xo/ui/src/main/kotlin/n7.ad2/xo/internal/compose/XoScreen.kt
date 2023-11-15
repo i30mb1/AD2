@@ -4,15 +4,14 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.navigationBars
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.xo.internal.XoState
 import n7.ad2.xo.internal.compose.model.ServerUI
-import n7.ad2.xo.internal.game.GameState
 
 @Preview
 @Composable
@@ -35,7 +34,10 @@ internal fun XoScreen(
 ) {
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     val insetsBottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
-    Box(modifier = modifier.padding(top = insetsTop, bottom = insetsBottom)) {
+    Box(
+        modifier = modifier
+            .systemBarsPadding(),
+    ) {
         when {
             state.isGameStarted -> GameScreen(logs = state.logs, events)
             else -> StaringScreen(state, events)

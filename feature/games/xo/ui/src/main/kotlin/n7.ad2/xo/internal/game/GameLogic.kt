@@ -5,7 +5,6 @@ import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,7 +24,6 @@ import n7.ad2.feature.games.xo.domain.model.Network
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
 import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
-
 
 internal class GameLogic @Inject constructor(
     private val serverHolder: ServerHolder,
