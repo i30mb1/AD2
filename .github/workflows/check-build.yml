@@ -1,6 +1,8 @@
 name: Check Build And Assemble
 
 on:
+  push:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
