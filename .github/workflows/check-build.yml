@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 17
-          distribution: 'temurin'
+          distribution: 'oracle'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
@@ -65,7 +65,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'temurin'
+          distribution: 'oracle'
           cache: gradle
       - name: Generate local.properties file
         shell: cmd
