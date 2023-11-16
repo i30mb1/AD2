@@ -11,6 +11,7 @@ dependencies {
     implementation(project(Module.Core.coroutines))
 
     implementation(libs.coroutines)
+    implementation(libs.coreKtx)
 
     testImplementation(libs.coroutinesDebug)
     testImplementation(libs.mockk)

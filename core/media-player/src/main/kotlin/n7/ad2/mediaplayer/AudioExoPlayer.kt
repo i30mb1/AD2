@@ -22,7 +22,6 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 
-@UnstableApi
 class AudioExoPlayer @AssistedInject constructor(
     private val context: Application,
     @Assisted private val lifecycle: Lifecycle,

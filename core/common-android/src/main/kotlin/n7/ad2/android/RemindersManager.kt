@@ -46,8 +46,8 @@ class RemindersManager(
         reminderId: Int = REQUEST_CODE,
     ) {
         val intent = Intent(context, AlarmReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(context, reminderId, intent, 0)
-        alarmManager.cancel(pendingIntent)
+//        val pendingIntent = PendingIntent.getBroadcast(context, reminderId, intent, 0)
+//        alarmManager.cancel(pendingIntent)
     }
 
 }

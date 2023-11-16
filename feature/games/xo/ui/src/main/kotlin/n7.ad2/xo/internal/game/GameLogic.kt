@@ -16,6 +16,7 @@ import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.ClientHolder
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
@@ -29,6 +30,7 @@ internal class GameLogic @Inject constructor(
     private val serverHolder: ServerHolder,
     private val clientHolder: ClientHolder,
     private val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase,
+    private val discoverServicesInWifiDirectUseCase: DiscoverServicesInWifiDirectUseCase,
     private val getNetworkStateUseCase: GetNetworkStateUseCase,
     private val getDeviceNameUseCase: GetDeviceNameUseCase,
     private val dispatchers: DispatchersProvider,
@@ -42,8 +44,10 @@ internal class GameLogic @Inject constructor(
         return combine(
             discoverServicesInNetworkUseCase(),
             getNetworkStateUseCase(),
-        ) { servers: List<Server>, state: Network ->
+            discoverServicesInWifiDirectUseCase(),
+        ) { servers: List<Server>, state: Network, serversDirect: List<Server> ->
             _state.setServers(servers.map(ServerToServerUIMapper))
+            _state.setServers(serversDirect.map(ServerToServerUIMapper))
             _state.setDeviceIP(NetworkToIPMapper(state))
         }
             .onStart { _state.setDeviceName(getDeviceNameUseCase()) }

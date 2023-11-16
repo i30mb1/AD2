@@ -4,4 +4,5 @@ class Server(
     val name: String,
     val serverIP: String,
     val port: Int,
+    val isWifiDirect: Boolean = false,
 )

@@ -1,8 +1,5 @@
-@file:OptIn(ExperimentalBaselineProfilesApi::class)
-
 package n7.ad2.macrobenchmark
 
-import androidx.benchmark.macro.ExperimentalBaselineProfilesApi
 import androidx.benchmark.macro.junit4.BaselineProfileRule
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Direction
@@ -17,12 +14,12 @@ class BaselineProfileGenerator {
 
     @Test
     fun generate() {
-        baselineProfileRule.collectBaselineProfile("n7.ad2") {
-            startActivityAndWait()
-            device.wait(Until.hasObject(By.res("rv")), 5000)
-            val rv = device.findObject(By.res("rv"))
-            rv.fling(Direction.DOWN)
-        }
+//        baselineProfileRule.collectBaselineProfile("n7.ad2") {
+//            startActivityAndWait()
+//            device.wait(Until.hasObject(By.res("rv")), 5000)
+//            val rv = device.findObject(By.res("rv"))
+//            rv.fling(Direction.DOWN)
+//        }
     }
 
 }

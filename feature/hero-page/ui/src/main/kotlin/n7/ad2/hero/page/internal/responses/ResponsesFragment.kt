@@ -84,6 +84,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
                         binding.error.isVisible = false
                         responseAdapter.submitList(state.list)
                     }
+
                     is ResponsesViewModel.State.Error -> binding.error.setError(state.error.message)
                     ResponsesViewModel.State.Loading -> Unit
                 }
@@ -112,6 +113,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
                     val downloadID = downloadResponseManager.download(item)
                     item.downloadID = downloadID
                 }
+
                 else -> error("cannot handle unknown result key")
             }
         }
