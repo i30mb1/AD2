@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.net.wifi.p2p.WifiP2pDevice
 import android.net.wifi.p2p.WifiP2pDeviceList
 import android.net.wifi.p2p.WifiP2pManager
 import android.os.Looper
@@ -31,12 +32,13 @@ class DiscoverServicesInWifiDirectUseCaseImpl(
             addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION)
             addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION)
         }
-        val peers = mutableListOf<Server>()
+        val peers = mutableListOf<WifiP2pDevice>()
         val peerListListener = WifiP2pManager.PeerListListener { peerList: WifiP2pDeviceList ->
             val refreshedPeers = peerList.deviceList
             if (refreshedPeers != peers) {
                 peers.clear()
-                peers.addAll(refreshedPeers.map { device ->
+                peers.addAll(refreshedPeers)
+                trySend(refreshedPeers.map { device ->
                     Server(
                         device.deviceName,
                         device.deviceAddress,
@@ -44,7 +46,6 @@ class DiscoverServicesInWifiDirectUseCaseImpl(
                         true
                     )
                 })
-                trySend(peers)
             }
         }
         val receiver = object : BroadcastReceiver() {
