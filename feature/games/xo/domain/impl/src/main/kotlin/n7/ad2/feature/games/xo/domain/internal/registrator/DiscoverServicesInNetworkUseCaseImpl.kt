@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
+import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.model.Server
 
@@ -16,6 +17,7 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
     private val manager: NsdManager,
     private val commonSettings: CommonSettings,
     private val getInfoAboutServerUseCase: GetInfoAboutServerUseCase,
+    private val logger: Logger,
 ) : DiscoverServicesInNetworkUseCase {
 
     private val dispatcher = newSingleThreadContext("DiscoverServer")
@@ -24,29 +26,37 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
         val set = mutableSetOf<Server>()
 
         val listener = object : NsdManager.DiscoveryListener {
-            override fun onDiscoveryStarted(regType: String) = Unit
+            override fun onDiscoveryStarted(regType: String) { logger.log("onDiscoveryStarted") }
 
             override fun onServiceFound(service: NsdServiceInfo) {
                 launch(dispatcher) {
                     val server = getInfoAboutServerUseCase.resolve(manager, service)
-
+                    logger.log("onServiceFound ${server.name}")
                     set.add(server)
                     send(set.toList())
                 }
             }
 
             override fun onServiceLost(service: NsdServiceInfo) {
-                set.removeIf { server -> server.port == service.port }
-                trySend(set.toList())
+                launch {
+                    logger.log("onServiceLost ${service.serviceName}")
+
+                    set.removeIf { server -> server.name == service.serviceName }
+                    trySend(set.toList())
+                }
             }
 
-            override fun onDiscoveryStopped(serviceType: String) = Unit
+            override fun onDiscoveryStopped(serviceType: String) {
+                logger.log("onDiscoveryStopped")
+            }
 
             override fun onStartDiscoveryFailed(serviceType: String, errorCode: Int) {
+                logger.log("onStartDiscoveryFailed")
                 manager.stopServiceDiscovery(this)
             }
 
             override fun onStopDiscoveryFailed(serviceType: String, errorCode: Int) {
+                logger.log("onStopDiscoveryFailed")
                 manager.stopServiceDiscovery(this)
             }
         }

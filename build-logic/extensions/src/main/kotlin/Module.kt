@@ -18,6 +18,7 @@ object Module {
         const val common = ":core:common-jvm"
         const val updateManager = ":core:update-manager"
         const val logger = ":core:logger:app-logger"
+        const val loggerUI = ":core:logger:ui"
         const val yandexMetrics = ":core:logger:yandex"
         const val commonApplication = ":core:common-application"
         const val nativeSecret = ":core:native-secret"

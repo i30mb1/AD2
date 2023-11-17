@@ -11,6 +11,7 @@ import javax.inject.Inject
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
+import n7.ad2.app.logger.Logger
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView
 import n7.ad2.xo.internal.compose.XoScreen

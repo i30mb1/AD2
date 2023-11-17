@@ -9,11 +9,13 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.suspendCancellableCoroutine
+import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.model.Server
 
 internal class GetInfoAboutServerUseCase(
     private val dispatchers: DispatchersProvider,
+    private val logger: Logger,
 ) {
 
     suspend fun resolve(
@@ -24,20 +26,26 @@ internal class GetInfoAboutServerUseCase(
             Build.VERSION.SDK_INT >= 34 -> {
                 val callback = object : NsdManager.ServiceInfoCallback {
                     override fun onServiceInfoCallbackRegistrationFailed(p0: Int) {
+                        logger.log("onServiceInfoCallbackRegistrationFailed")
                         continuation.resumeWithException(Exception("onServiceInfoCallbackRegistrationFailed"))
                     }
 
                     override fun onServiceUpdated(info: NsdServiceInfo) {
+                        val serverIP = info.hostAddresses.firstOrNull()?.hostAddress ?: info.host.hostAddress
                         val server = Server(
                             info.serviceName,
-                            info.hostAddresses.firstOrNull()?.hostAddress ?: info.host.hostAddress,
+                            serverIP,
                             info.port,
                         )
                         continuation.resume(server)
                     }
 
-                    override fun onServiceLost() = Unit
-                    override fun onServiceInfoCallbackUnregistered() = Unit
+                    override fun onServiceLost() {
+                        logger.log("onServiceLost")
+                    }
+                    override fun onServiceInfoCallbackUnregistered() {
+                        logger.log("onServiceInfoCallbackUnregistered")
+                    }
                 }
                 manager.registerServiceInfoCallback(service, dispatchers.Default.asExecutor(), callback)
                 continuation.invokeOnCancellation { manager.unregisterServiceInfoCallback(callback) }

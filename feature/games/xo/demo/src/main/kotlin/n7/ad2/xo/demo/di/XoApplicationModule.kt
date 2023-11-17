@@ -16,12 +16,15 @@ internal interface XoApplicationModule {
     companion object {
 
         @dagger.Provides
+        @dagger.Reusable
         fun navigator(): Navigator = Navigator.empty()
 
         @dagger.Provides
+        @dagger.Reusable
         fun provideLogger(): Logger = Logger()
 
         @dagger.Provides
+        @dagger.Reusable
         fun provideAppInformation(): AppInformation = object : AppInformation {
             override val isDebug: Boolean = true
             override val appLocale: AppLocale = AppLocale.English

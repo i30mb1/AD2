@@ -2,6 +2,7 @@ package n7.ad2.xo.internal
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
+import n7.ad2.app.logger.model.AppLog
 import n7.ad2.xo.internal.compose.model.ServerUI
 
 internal data class XoState(
@@ -10,7 +11,8 @@ internal data class XoState(
     val servers: List<ServerUI>,
     val isGameStarted: Boolean,
     val isStartEnabled: Boolean,
-    val logs: List<String>,
+    val messages: List<String>,
+    val logs: List<AppLog>,
 ) {
 
     companion object {
@@ -20,7 +22,8 @@ internal data class XoState(
             servers = emptyList(),
             isGameStarted = false,
             isStartEnabled = true,
-            logs = emptyList()
+            messages = emptyList(),
+            logs = emptyList(),
         )
     }
 }

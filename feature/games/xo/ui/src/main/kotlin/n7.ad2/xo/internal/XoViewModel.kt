@@ -10,24 +10,35 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.scan
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.launch
+import n7.ad2.app.logger.Logger
+import n7.ad2.app.logger.model.AppLog
 import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.game.GameLogic
 import n7.ad2.xo.internal.game.GameState
 
 internal class XoViewModel @AssistedInject constructor(
     private val gameLogic: GameLogic,
+    private val logger: Logger,
 ) : ViewModel() {
 
     private val _state: MutableStateFlow<XoState> = MutableStateFlow(XoState.init())
-    val state: StateFlow<XoState> = combine(_state, gameLogic.state) { xoState: XoState, gameState: GameState ->
+    val state: StateFlow<XoState> = combine(
+        _state,
+        gameLogic.state,
+        logger.getLogFlow().scan(emptyList()) { accumulator, value -> accumulator + value },
+    ) { xoState: XoState, gameState: GameState, logs: List<AppLog> ->
         xoState.copy(
             deviceIP = gameState.deviceIP,
             servers = gameState.servers,
-            logs = gameState.logs,
+            messages = gameState.logs,
             deviceName = gameState.deviceName,
+            logs = logs,
         )
     }.stateIn(viewModelScope, SharingStarted.Lazily, XoState.init())
 

@@ -17,7 +17,11 @@ internal class LoggerImpl(
         extraBufferCapacity = 0,
         onBufferOverflow = BufferOverflow.DROP_OLDEST,
     )
-    private val dataFlow = _dataFlow.asSharedFlow()
+    private val dataFlow: SharedFlow<AppLog> = _dataFlow.asSharedFlow()
+
+    init {
+        log("enable logger")
+    }
 
     override fun log(text: String, params: Map<String, Any>) {
         _dataFlow.tryEmit(AppLog(text))

@@ -38,7 +38,12 @@ fun XoDomainComponent(
     private val manager: NsdManager = dependencies.application.getSystemService(NsdManager::class.java)!!
     private val commonSettings = CommonSettings()
     override val registerServerInDNSUseCase = RegisterServiceInNetworkUseCaseImpl(manager, commonSettings)
-    override val discoverServicesInNetworkUseCase = DiscoverServicesInNetworkUseCaseImpl(manager, commonSettings, GetInfoAboutServerUseCase(dependencies.dispatcher))
+    override val discoverServicesInNetworkUseCase = DiscoverServicesInNetworkUseCaseImpl(
+        manager,
+        commonSettings,
+        GetInfoAboutServerUseCase(dependencies.dispatcher, dependencies.logger),
+        dependencies.logger,
+    )
     override val serverHolder: ServerHolder = ServerHolderWithSocket(registerServerInDNSUseCase)
     override val clientHolder: ClientHolder = ClientHolderWithSocket()
     override val socketHolder: SocketHolder = SocketHolderImpl()

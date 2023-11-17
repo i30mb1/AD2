@@ -12,6 +12,7 @@ dependencies {
     implementation(project(Module.Core.coroutines))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.navigator))
+    implementation(project(Module.Core.loggerUI))
 
     implementation(project(Module.Feature.Xo.api))
     implementation(project(Module.Feature.Xo.wiring))
