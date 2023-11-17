@@ -1,6 +1,5 @@
 package n7.ad2.feature.games.xo.domain.internal.registrator
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -9,40 +8,33 @@ import java.net.NetworkInterface
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.onStart
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
-import n7.ad2.feature.games.xo.domain.model.Network
+import n7.ad2.feature.games.xo.domain.model.NetworkState
 
-@SuppressLint("MissingPermission")
 class GetNetworkStateUseCaseImpl(
     context: Context,
 ) : GetNetworkStateUseCase {
 
     private val connectivityManager: ConnectivityManager = context.getSystemService(ConnectivityManager::class.java)!!
 
-    override fun invoke(): Flow<Network> = callbackFlow {
-        val networkCallback = object : ConnectivityManager.NetworkCallback() {
+    override fun invoke(): Flow<NetworkState> = callbackFlow {
+        val networkStateCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: android.net.Network) {
-                trySend(Network.Available(getIPAddress()))
-            }
-
-            override fun onUnavailable() {
-                trySend(Network.Unavailable)
+                trySend(NetworkState(getIPAddress()))
             }
 
             override fun onLost(network: android.net.Network) {
-                trySend(Network.Unavailable)
-            }
-
-            override fun onCapabilitiesChanged(network: android.net.Network, networkCapabilities: NetworkCapabilities) {
-                super.onCapabilitiesChanged(network, networkCapabilities)
+                trySend(NetworkState(null))
             }
         }
         val request = NetworkRequest.Builder()
             .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
             .build()
-        connectivityManager.registerNetworkCallback(request, networkCallback)
-        awaitClose { connectivityManager.unregisterNetworkCallback(networkCallback) }
+        connectivityManager.registerNetworkCallback(request, networkStateCallback)
+        awaitClose { connectivityManager.unregisterNetworkCallback(networkStateCallback) }
     }
+        .onStart { emit(NetworkState(null)) }
 
     private fun getIPAddress(): String {
         val networkInterfaces = NetworkInterface.getNetworkInterfaces()

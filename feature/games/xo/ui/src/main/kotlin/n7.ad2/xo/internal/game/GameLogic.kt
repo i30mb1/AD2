@@ -21,7 +21,7 @@ import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.SocketHolder
-import n7.ad2.feature.games.xo.domain.model.Network
+import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
 import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
@@ -45,9 +45,8 @@ internal class GameLogic @Inject constructor(
             discoverServicesInNetworkUseCase(),
             getNetworkStateUseCase(),
             discoverServicesInWifiDirectUseCase(),
-        ) { servers: List<Server>, state: Network, serversDirect: List<Server> ->
-            _state.setServers(servers.map(ServerToServerUIMapper))
-            _state.setServers(serversDirect.map(ServerToServerUIMapper))
+        ) { servers: List<Server>, state: NetworkState, serversDirect: List<Server> ->
+            _state.setServers(servers.map(ServerToServerUIMapper) + serversDirect.map(ServerToServerUIMapper))
             _state.setDeviceIP(NetworkToIPMapper(state))
         }
             .onStart { _state.setDeviceName(getDeviceNameUseCase()) }
