@@ -13,5 +13,5 @@ plugins {
 //}
 
 bumpVersionConfig {
-    isEnabled.set(false)
+    isEnabled = false
 }

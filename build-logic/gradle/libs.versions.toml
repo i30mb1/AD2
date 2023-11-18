@@ -5,12 +5,12 @@ moshi = "1.15.0"
 dagger = "2.46.1"
 workManager = "2.8.1"
 lifecycle = "2.6.2"
-androidGradlePlugin = "8.1.3"
-lint = "31.1.3" # androidGradlePlugin + 23
+androidGradlePlugin = "8.1.4"
+lint = "31.1.4" # androidGradlePlugin + 23
 kotlin = "1.9.20"
 compose = "1.5.4"
 composeCompiler = "1.5.4"
-media3 = "1.2.0-rc01"
+media3 = "1.2.0"
 detekt = "1.22.0"
 
 [libraries]
@@ -50,7 +50,7 @@ viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref
 lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" } # flowWithLifecycle
 
 fragmentKtx = "androidx.fragment:fragment-ktx:1.6.2" # easy fragment transaction + by viewModels()
-activityKtx = "androidx.activity:activity-ktx:1.8.0" # onBackPress support for Fragment
+activityKtx = "androidx.activity:activity-ktx:1.8.1" # onBackPress support for Fragment
 
 lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
@@ -59,7 +59,7 @@ androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref =
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
-composeActivity = "androidx.activity:activity-compose:1.8.0"
+composeActivity = "androidx.activity:activity-compose:1.8.1"
 composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2"
 composeCoil = "io.coil-kt:coil-compose:2.4.0"
 composeFoundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
@@ -124,8 +124,8 @@ mockk = "io.mockk:mockk-android:1.13.8"
 espresso = "androidx.test.espresso:espresso-core:3.5.1"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.5.1"
 uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
-benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.2.0"
-benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.2.0"
+benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.2.1"
+benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.2.1"
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
