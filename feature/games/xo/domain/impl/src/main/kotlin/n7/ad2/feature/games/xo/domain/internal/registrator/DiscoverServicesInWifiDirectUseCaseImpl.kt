@@ -5,27 +5,28 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.net.NetworkInfo
 import android.net.wifi.p2p.WifiP2pDevice
 import android.net.wifi.p2p.WifiP2pDeviceList
 import android.net.wifi.p2p.WifiP2pManager
-import android.os.Looper
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.RECEIVER_EXPORTED
-import androidx.core.content.getSystemService
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.onStart
+import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.model.Server
 
-class DiscoverServicesInWifiDirectUseCaseImpl(
+internal class DiscoverServicesInWifiDirectUseCaseImpl(
     private val context: Context,
+    private val wifiP2pManager: WifiP2pManager,
+    private val wifiP2pManagerChannel: WifiP2pManager.Channel,
+    private val logger: Logger,
 ) : DiscoverServicesInWifiDirectUseCase {
 
     @SuppressLint("MissingPermission")
-    override operator fun invoke() = callbackFlow<List<Server>> {
-        val manager: WifiP2pManager = context.getSystemService()!!
-        val managerChannel = manager.initialize(context, Looper.getMainLooper(), null)
+    override operator fun invoke() = callbackFlow {
         val intentFilter = IntentFilter().apply {
             addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION)
             addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION)
@@ -34,6 +35,7 @@ class DiscoverServicesInWifiDirectUseCaseImpl(
         }
         val peers = mutableListOf<WifiP2pDevice>()
         val peerListListener = WifiP2pManager.PeerListListener { peerList: WifiP2pDeviceList ->
+            logger.log("WifiDrect receive devices: ${peerList.deviceList.size}")
             val refreshedPeers = peerList.deviceList
             if (refreshedPeers != peers) {
                 peers.clear()
@@ -51,26 +53,38 @@ class DiscoverServicesInWifiDirectUseCaseImpl(
         val receiver = object : BroadcastReceiver() {
             @SuppressLint("MissingPermission")
             override fun onReceive(context: Context, intent: Intent) {
+                logger.log("WifiDirect onReceive: ${intent.action}")
                 when (intent.action) {
                     WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION -> {
                         val state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1)
                         val isWifiP2pEnabled = state == WifiP2pManager.WIFI_P2P_STATE_ENABLED
                     }
 
+                    WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION -> {
+                        val networkInfo: NetworkInfo = intent
+                            .getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO, NetworkInfo::class.java) as NetworkInfo
+                        logger.log("net")
+                    }
+
                     else -> Unit
                 }
-                manager.requestPeers(managerChannel, peerListListener)
+                wifiP2pManager.requestPeers(wifiP2pManagerChannel, peerListListener)
             }
         }
         ContextCompat.registerReceiver(context, receiver, intentFilter, RECEIVER_EXPORTED)
         val actionListener = object : WifiP2pManager.ActionListener {
-            override fun onSuccess() = Unit
-            override fun onFailure(reasonCode: Int) = Unit
+            override fun onSuccess() {
+                logger.log("WifiDirect onSuccess")
+            }
+
+            override fun onFailure(reasonCode: Int) {
+                logger.log("WifiDirect onFailure")
+            }
         }
-        manager.discoverPeers(managerChannel, actionListener)
+        wifiP2pManager.discoverPeers(wifiP2pManagerChannel, actionListener)
         awaitClose {
             context.unregisterReceiver(receiver)
-            manager.stopPeerDiscovery(managerChannel, actionListener)
+            wifiP2pManager.stopPeerDiscovery(wifiP2pManagerChannel, actionListener)
         }
     }
         .onStart { emit(emptyList()) }

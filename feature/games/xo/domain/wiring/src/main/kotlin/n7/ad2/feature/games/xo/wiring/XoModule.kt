@@ -6,6 +6,7 @@ import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.ClientHolder
+import n7.ad2.feature.games.xo.domain.ConnectToWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
@@ -55,6 +56,11 @@ object XoModule {
     fun provideGetNetworkStateUseCase(
         component: XoDomainComponent,
     ): GetNetworkStateUseCase = component.getNetworkStateUseCase
+
+    @dagger.Provides
+    fun provideConnectToWifiDirectUseCase(
+        component: XoDomainComponent,
+    ): ConnectToWifiDirectUseCase = component.connectToWifiDirectUseCase
 
     @dagger.Provides
     fun provideGetDeviceNameUseCase(

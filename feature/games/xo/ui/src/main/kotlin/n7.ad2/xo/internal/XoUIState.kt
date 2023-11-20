@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.update
 import n7.ad2.app.logger.model.AppLog
 import n7.ad2.xo.internal.compose.model.ServerUI
 
-internal data class XoState(
+internal data class XoUIState(
     val deviceIP: String,
     val deviceName: String,
     val servers: List<ServerUI>,
@@ -16,7 +16,7 @@ internal data class XoState(
 ) {
 
     companion object {
-        fun init() = XoState(
+        fun init() = XoUIState(
             deviceIP = "",
             deviceName = "",
             servers = emptyList(),
@@ -28,10 +28,10 @@ internal data class XoState(
     }
 }
 
-internal fun MutableStateFlow<XoState>.disableStart() = update {
+internal fun MutableStateFlow<XoUIState>.disableStart() = update {
     it.copy(isStartEnabled = false)
 }
 
-internal fun MutableStateFlow<XoState>.startGame() = update {
+internal fun MutableStateFlow<XoUIState>.startGame() = update {
     it.copy(isGameStarted = true)
 }

@@ -26,7 +26,9 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
         val set = mutableSetOf<Server>()
 
         val listener = object : NsdManager.DiscoveryListener {
-            override fun onDiscoveryStarted(regType: String) { logger.log("onDiscoveryStarted") }
+            override fun onDiscoveryStarted(regType: String) {
+                logger.log("onDiscoveryStarted")
+            }
 
             override fun onServiceFound(service: NsdServiceInfo) {
                 launch(dispatcher) {

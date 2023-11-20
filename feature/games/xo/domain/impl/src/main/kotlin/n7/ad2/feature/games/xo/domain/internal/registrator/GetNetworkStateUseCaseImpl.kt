@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.onStart
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 
-class GetNetworkStateUseCaseImpl(
+internal class GetNetworkStateUseCaseImpl(
     context: Context,
 ) : GetNetworkStateUseCase {
 
@@ -36,7 +36,7 @@ class GetNetworkStateUseCaseImpl(
     }
         .onStart { emit(NetworkState(null)) }
 
-    private fun getIPAddress(): String {
+    private fun getIPAddress(): String? {
         val networkInterfaces = NetworkInterface.getNetworkInterfaces()
         while (networkInterfaces.hasMoreElements()) {
             val networkInterface = networkInterfaces.nextElement()
@@ -48,6 +48,6 @@ class GetNetworkStateUseCaseImpl(
                 }
             }
         }
-        error("Could find ip adress")
+        return null
     }
 }

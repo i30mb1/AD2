@@ -32,7 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.feature.games.xo.ui.R
 import n7.ad2.ui.compose.AppTheme
-import n7.ad2.xo.internal.XoState
+import n7.ad2.xo.internal.XoUIState
 import n7.ad2.xo.internal.compose.model.ServerUI
 
 @Preview
@@ -40,7 +40,7 @@ import n7.ad2.xo.internal.compose.model.ServerUI
 private fun XoScreenPreview() {
     AppTheme {
         StaringScreen(
-            XoState.init().copy(
+            XoUIState.init().copy(
                 deviceIP = "192.168.100.10",
                 servers = listOf(ServerUI()),
             )
@@ -50,7 +50,7 @@ private fun XoScreenPreview() {
 
 @Composable
 internal fun StaringScreen(
-    state: XoState,
+    state: XoUIState,
     event: (event: XoScreenEvent) -> Unit,
 ) {
     Box(
