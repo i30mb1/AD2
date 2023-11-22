@@ -159,10 +159,4 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val cost: String,
         val isRightAnswer: Boolean,
     )
-
-    class OneShotValue<T : Any>(value: T) {
-        private val value = AtomicReference(value)
-        fun get(): T? = value.getAndSet(null)
-    }
-
 }
