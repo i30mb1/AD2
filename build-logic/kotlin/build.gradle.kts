@@ -5,7 +5,7 @@ plugins {
 dependencies {
     implementation(libs.androidGradlePlugin)
     implementation(libs.kotlinGradlePlugin)
-    implementation("org.jacoco:org.jacoco.core:0.8.8")
+    implementation("org.jetbrains.kotlinx:kover-gradle-plugin:0.7.4")
     implementation(project(":extensions"))
 }
 
