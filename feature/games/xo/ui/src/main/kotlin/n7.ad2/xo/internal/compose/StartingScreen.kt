@@ -12,21 +12,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.text2.BasicTextField2
+import androidx.compose.foundation.text2.input.TextFieldLineLimits
+import androidx.compose.foundation.text2.input.TextFieldState
 import androidx.compose.material.Button
 import androidx.compose.material.Icon
 import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -81,22 +81,18 @@ internal fun StaringScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.align(Alignment.Center),
         ) {
-            var name by remember(state.deviceName) { mutableStateOf(state.deviceName) }
-            var ip by remember(state.deviceIP) { mutableStateOf(state.deviceIP.substringBeforeLast(".") + ".") }
+            val name = TextFieldState(state.deviceName)
+            val ip = TextFieldState(state.deviceIP)
             EditTextWithButton(
                 name,
                 "Start",
                 state.isStartEnabled,
-                { name = it },
-                { event(XoScreenEvent.StartServer(name)) },
-            )
+            ) { event(XoScreenEvent.StartServer(name.text.toString())) }
             EditTextWithButton(
                 ip,
                 "Connect",
                 true,
-                { ip = it },
-                { event(XoScreenEvent.ConnectToServer(ServerUI(name, ip))) },
-            )
+            ) { event(XoScreenEvent.ConnectToServer(ServerUI(name.text.toString(), ip.text.toString()))) }
             ServerList(state.servers, { server ->
                 event(XoScreenEvent.ConnectToServer(server))
             })
@@ -106,10 +102,9 @@ internal fun StaringScreen(
 
 @Composable
 private fun EditTextWithButton(
-    editTextHint: String,
-    text: String,
+    state: TextFieldState,
+    buttonText: String,
     isEnabled: Boolean,
-    onTextChanged: (text: String) -> Unit,
     onButtonClicked: () -> Unit,
 ) {
     Row(
@@ -125,14 +120,14 @@ private fun EditTextWithButton(
                 .background(AppTheme.color.surface),
             contentAlignment = Alignment.Center,
         ) {
-            BasicTextField(
-                value = editTextHint,
-                singleLine = true,
+            BasicTextField2(
+                state = state,
+                lineLimits = TextFieldLineLimits.SingleLine,
                 textStyle = LocalTextStyle.current.copy(
                     color = AppTheme.color.textColor,
                     textAlign = TextAlign.End,
                 ),
-                onValueChange = { onTextChanged(it) },
+                keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             )
         }
         Button(
@@ -142,7 +137,7 @@ private fun EditTextWithButton(
             enabled = isEnabled,
         ) {
             Text(
-                text = text,
+                text = buttonText,
                 modifier = Modifier.padding(horizontal = 8.dp),
             )
         }

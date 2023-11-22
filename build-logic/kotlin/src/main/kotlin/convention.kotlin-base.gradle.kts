@@ -11,6 +11,7 @@ tasks.withType<KotlinCompile>().configureEach {
             "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
             "-opt-in=kotlinx.coroutines.DelicateCoroutinesApi",
             "-opt-in=androidx.media3.common.util.UnstableApi",
+            "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
         )
         jvmTarget = "17"
     }

@@ -28,8 +28,8 @@ internal class HeroesViewModel @AssistedInject constructor(
         fun create(): HeroesViewModel
     }
 
-    private val allHeroes: MutableStateFlow<List<VOHero>> = MutableStateFlow(emptyList())
-    private val _filteredHeroes: MutableStateFlow<List<VOHero>> = MutableStateFlow(emptyList())
+    val allHeroes: MutableStateFlow<List<VOHero>> = MutableStateFlow(emptyList())
+    val _filteredHeroes: MutableStateFlow<List<VOHero>> = MutableStateFlow(emptyList())
     val filteredHeroes: StateFlow<List<VOHero>> = _filteredHeroes.asStateFlow()
 
     init {

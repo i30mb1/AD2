@@ -8,17 +8,17 @@ lifecycle = "2.6.2"
 androidGradlePlugin = "8.1.4"
 lint = "31.1.4" # androidGradlePlugin + 23
 kotlin = "1.9.20"
-compose = "1.5.4"
+compose = "1.6.0-beta01"
 composeCompiler = "1.5.4"
 media3 = "1.2.0"
 detekt = "1.22.0"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
-roomCommon = { module = "androidx.room:room-common", version.ref = "room" }
-roomAnnotation = { module = "androidx.room:room-compiler", version.ref = "room" }
-roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
-roomPaging = "androidx.room:room-paging:2.6.0"
+room-common = { module = "androidx.room:room-common", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 
 detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 detektApi = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "detekt" }

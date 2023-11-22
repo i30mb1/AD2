@@ -32,7 +32,7 @@ internal class XoFragment(
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return ComposeView {
-            val state = viewModel.state.collectAsState().value
+            val state = viewModel.state.collectAsState(XoUIState.init()).value
             XoScreen(state = state, events = ::handleState)
         }
     }

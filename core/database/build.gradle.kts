@@ -4,11 +4,11 @@ plugins {
 }
 
 dependencies {
-    api(libs.roomKtx)
+    api(libs.room.ktx)
 
     implementation(libs.workManager)
     implementation(libs.moshi)
-    implementation(libs.roomPaging)
+    implementation(libs.room.paging)
 
     implementation(project(Module.Core.android))
     implementation(project(Module.Core.coroutines))
@@ -17,7 +17,7 @@ dependencies {
 
     testImplementation(libs.bundles.test)
 
-    kapt(libs.roomAnnotation)
+    kapt(libs.room.compiler)
     kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)
 }

@@ -11,8 +11,8 @@ dependencies {
     implementation(project(Module.Core.logger))
 
     implementation(libs.moshi)
-    implementation(libs.roomKtx)
+    implementation(libs.room.ktx)
 
     kapt(libs.moshiCodegen)
-    kapt(libs.roomAnnotation)
+    kapt(libs.room.compiler)
 }

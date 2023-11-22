@@ -17,13 +17,15 @@ internal class HeroesActivityDemo(
     override fun onCreate(savedInstanceState: Bundle?) {
         supportFragmentManager.fragmentFactory = fragmentFactory
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        val container = FragmentContainerView(this)
-        container.id = View.generateViewId()
-        setContentView(container)
-        supportFragmentManager.commitNow {
-            val fragment: Class<out Fragment> = HeroesProvider().getFragment()
-            add(container.id, fragment, null)
+        if (savedInstanceState == null) {
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+            val container = FragmentContainerView(this)
+            container.id = View.generateViewId()
+            setContentView(container)
+            supportFragmentManager.commitNow {
+                val fragment: Class<out Fragment> = HeroesProvider().getFragment()
+                add(container.id, fragment, null)
+            }
         }
     }
 }

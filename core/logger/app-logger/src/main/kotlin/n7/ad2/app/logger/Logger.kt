@@ -8,6 +8,7 @@ interface Logger {
     fun log(text: String, params: Map<String, Any> = emptyMap())
     fun getSubscriptionCount(): Int
     fun getLogFlow(): Flow<AppLog>
+    fun getLogsFlow(): Flow<List<AppLog>>
 }
 
 fun Logger(aditionalLoggers: List<AdditionalLogger> = emptyList()): Logger {

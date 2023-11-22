@@ -1,22 +1,17 @@
 package n7.ad2.xo.internal
 
-import android.app.Application
-import android.net.nsd.NsdManager
-import android.net.wifi.WpsInfo
-import android.net.wifi.p2p.WifiP2pConfig
-import android.net.wifi.p2p.WifiP2pManager
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import java.net.InetAddress
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.scan
-import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.merge
+import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.flow.transform
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
@@ -28,32 +23,39 @@ import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
 
 internal class XoViewModel @AssistedInject constructor(
     private val gameLogic: GameLogic,
-    private val logger: Logger,
-    private val application: Application,
+    logger: Logger,
 ) : ViewModel() {
-
-    private val _state: MutableStateFlow<XoUIState> = MutableStateFlow(XoUIState.init())
-    val state: StateFlow<XoUIState> = combine(
-        _state,
-        gameLogic.state,
-        logger.getLogFlow().scan(emptyList()) { accumulator, value -> accumulator + value },
-    ) { xoUIState: XoUIState, gameState: GameState, logs: List<AppLog> ->
-        xoUIState.copy(
-            deviceIP = gameState.deviceIP,
-            servers = gameState.servers.map(ServerToServerUIMapper),
-            messages = gameState.logs,
-            deviceName = gameState.deviceName,
-            logs = logs,
-        )
-    }.stateIn(viewModelScope, SharingStarted.Lazily, XoUIState.init())
 
     @AssistedFactory
     interface Factory {
         fun create(): XoViewModel
     }
 
+    private val _state: MutableStateFlow<XoUIState> = MutableStateFlow(XoUIState.init())
+    val state: StateFlow<XoUIState> = _state.asStateFlow()
+
     init {
-        gameLogic.init().launchIn(viewModelScope)
+        merge(gameLogic.state, logger.getLogsFlow())
+            .onStart { gameLogic.init(viewModelScope) }
+            .transform<Any, Unit> { value: Any ->
+                when (value) {
+                    is GameState -> {
+                        _state.update {
+                            it.copy(
+                                deviceIP = value.deviceIP,
+                                servers = value.servers.map(ServerToServerUIMapper),
+                                messages = value.logs,
+                                deviceName = value.deviceName,
+                            )
+                        }
+                    }
+
+                    is List<*> -> {
+                        _state.updateLogs(value as List<AppLog>)
+                    }
+                }
+            }
+            .launchIn(viewModelScope)
     }
 
     fun connectToServer(serverUI: ServerUI) = viewModelScope.launch {

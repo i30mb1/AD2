@@ -1,9 +1,11 @@
 package n7.ad2.app.logger.internal
 
 import kotlinx.coroutines.channels.BufferOverflow
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.runningFold
 import n7.ad2.app.logger.AdditionalLogger
 import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
@@ -31,4 +33,10 @@ internal class LoggerImpl(
     override fun getSubscriptionCount(): Int = _dataFlow.subscriptionCount.value
 
     override fun getLogFlow(): SharedFlow<AppLog> = dataFlow
+
+    override fun getLogsFlow(): Flow<List<AppLog>> {
+       return dataFlow.runningFold(emptyList()) { list: List<AppLog>, value: AppLog ->
+            list + value
+        }
+    }
 }

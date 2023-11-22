@@ -32,8 +32,8 @@ import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
 
-internal class HeroesFragment @JvmOverloads constructor(
-    override var dependenciesMap: DependenciesMap = emptyMap(),
+internal class HeroesFragment constructor(
+    override var dependenciesMap: DependenciesMap,
 ) : Fragment(R.layout.fragment_heroes), HasDependencies {
 
     @Inject lateinit var navigator: Lazy<Navigator>
@@ -107,7 +107,7 @@ internal class HeroesFragment @JvmOverloads constructor(
             }
         }
 
-        viewModel.filteredHeroes.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+        viewModel.filteredHeroes.flowWithLifecycle(viewLifecycleOwner.lifecycle)
             .onEach(heroAdapter::submitList)
             .launchIn(lifecycleScope)
     }

@@ -4,14 +4,14 @@ import java.net.InetAddress
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
@@ -42,19 +42,26 @@ internal class GameLogic @Inject constructor(
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()
 
-    fun init(): Flow<Unit> {
-        return combine(
-            discoverServicesInNetworkUseCase(),
+    fun init(scope: CoroutineScope) {
+        merge(
+            combine(
+                discoverServicesInNetworkUseCase(),
+                discoverServicesInWifiDirectUseCase(),
+            ) { servers: List<Server>, serversDirect: List<Server> -> servers + serversDirect },
             getNetworkStateUseCase(),
-            discoverServicesInWifiDirectUseCase(),
-        ) { servers: List<Server>, state: NetworkState, serversDirect: List<Server> ->
-            _state.setServers(servers + serversDirect)
-            _state.setDeviceIP(NetworkToIPMapper(state))
-        }.onStart { _state.setDeviceName(getDeviceNameUseCase()) }.flowOn(dispatchers.IO)
+        )
+            .onStart { _state.setDeviceName(getDeviceNameUseCase()) }
+            .transform<Any, Unit> { value ->
+                when (value) {
+                    is NetworkState -> _state.setDeviceIP(NetworkToIPMapper(value))
+                    is List<*> -> _state.setServers(value as List<Server>)
+                }
+            }
+            .launchIn(scope)
     }
 
     suspend fun startServer(name: String) = withContext(dispatchers.IO) {
-        val ip = InetAddress.getByName(state.value.deviceIP)
+        val ip = InetAddress.getByName(_state.value.deviceIP)
         serverHolder.start(ip, name)
         socketHolder.socket = serverHolder.awaitClient()
         _state.addLog("Client Connected")
