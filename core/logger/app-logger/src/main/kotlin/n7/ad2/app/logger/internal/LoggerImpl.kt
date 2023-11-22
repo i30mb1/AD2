@@ -21,10 +21,6 @@ internal class LoggerImpl(
     )
     private val dataFlow: SharedFlow<AppLog> = _dataFlow.asSharedFlow()
 
-    init {
-        log("enable logger")
-    }
-
     override fun log(text: String, params: Map<String, Any>) {
         _dataFlow.tryEmit(AppLog(text))
 //        aditionalLoggers.forEach { logger -> logger.logEvent(text, params) }
