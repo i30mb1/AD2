@@ -5,6 +5,6 @@ plugins {
 dependencies {
     implementation(libs.androidGradlePlugin)
     implementation(libs.kotlinGradlePlugin)
-    implementation(project(":extensions"))
+    implementation(project(":build-extensions"))
     implementation(project(":kotlin"))
 }

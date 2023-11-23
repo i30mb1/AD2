@@ -7,16 +7,16 @@ plugins {
 dependencies {
     implementation(libs.palette)
 
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.navigator))
-    implementation(project(Module.Core.repositories))
-    implementation(project(Module.Core.nativeSecret))
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.dagger)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.navigator)
+    implementation(projects.core.repositories)
+    implementation(projects.core.nativeSecret)
 
-    implementation(project(Module.Feature.Games.api))
-    implementation(project(Module.Feature.Heroes.api))
+    implementation(projects.feature.games.mix.domain.api)
+    implementation(projects.feature.heroes.domain.api)
 
     kapt(libs.daggerAnnotation)
 }

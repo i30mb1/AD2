@@ -43,7 +43,7 @@ fun Project.isCI(): Boolean {
  */
 val Project.libs get() = the<LibrariesForLibs>()
 
-private fun Project.getProperties(fileName: String): Properties {
+fun Project.getProperties(fileName: String): Properties {
     val properties = Properties()
     val file = File(fileName)
     if (!file.exists()) {

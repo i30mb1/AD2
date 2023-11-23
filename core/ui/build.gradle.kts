@@ -10,5 +10,5 @@ dependencies {
     api(libs.splashScreen)
     api(libs.material)
 
-    implementation(project(Module.Core.ktx))
+    implementation(projects.core.ktx)
 }

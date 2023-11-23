@@ -11,12 +11,12 @@ android {
 }
 
 dependencies {
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.android))
+    implementation(projects.core.dagger)
+    implementation(projects.core.commonAndroid)
 
     testImplementation(libs.testTruth)
     testImplementation(libs.mockitokotlin)
-    testImplementation(testFixtures(project(Module.Core.common)))
+    testImplementation(testFixtures(projects.core.commonJvm))
 
     kapt(libs.daggerAnnotation)
 }

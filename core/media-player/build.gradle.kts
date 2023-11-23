@@ -6,7 +6,7 @@ plugins {
 dependencies {
     api(libs.exoPlayer)
 
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.android))
+    implementation(projects.core.dagger)
+    implementation(projects.core.commonAndroid)
     kapt(libs.daggerAnnotation)
 }

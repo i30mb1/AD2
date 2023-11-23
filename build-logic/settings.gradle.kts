@@ -18,7 +18,7 @@ pluginManagement {
 
 include("bump-version-plugin")
 include("measure-build-time")
-include("extensions")
+include("build-extensions")
 include("kotlin")
 include("android")
 include("detekt")

@@ -10,14 +10,14 @@ dependencies {
     implementation(libs.exoPlayerSession)
     implementation(libs.composePaging)
 
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.repositories))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.navigator))
-    implementation(project(Module.Core.retrofit))
-    implementation(project(Module.Core.mediaPlayer))
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.dagger)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.repositories)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.navigator)
+    implementation(projects.core.retrofit)
+    implementation(projects.core.mediaPlayer)
 
     api(libs.moshi)
 

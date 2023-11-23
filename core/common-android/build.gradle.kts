@@ -11,10 +11,10 @@ dependencies {
     api(libs.viewmodel)
     api(libs.lifecycleRuntime)
 
-    api(project(Module.Core.ui))
-    api(project(Module.Core.ktx))
-    api(project(Module.Core.dagger))
-    api(project(Module.Core.common))
+    api(projects.core.ui)
+    api(projects.core.ktx)
+    api(projects.core.dagger)
+    api(projects.core.commonJvm)
 
     implementation(libs.coil)
 }

@@ -6,9 +6,9 @@ plugins {
 dependencies {
     api(libs.coroutines)
 
-    implementation(project(Module.Core.dagger))
+    implementation(projects.core.dagger)
     implementation(libs.testJunit)
-    implementation(libs.coroutinesTest)
+    api(libs.coroutinesTest)
 
     kapt(libs.daggerAnnotation)
 }

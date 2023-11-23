@@ -4,10 +4,10 @@ plugins {
 }
 
 dependencies {
-    api(project(Module.Feature.HeroPage.api))
+    api(projects.feature.heroPage.domain.api)
 
-    implementation(project(Module.Core.database))
-    implementation(project(Module.Core.common))
+    implementation(projects.core.database)
+    implementation(projects.core.commonJvm)
 
     implementation(libs.coroutines)
     implementation(libs.moshi)

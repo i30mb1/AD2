@@ -4,9 +4,9 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.common))
+    implementation(projects.core.dagger)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.commonJvm)
 
     api(libs.retrofit)
     api(libs.retrofitMoshiConverter)

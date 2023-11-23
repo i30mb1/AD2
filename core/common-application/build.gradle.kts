@@ -6,9 +6,9 @@ plugins {
 dependencies {
     api(libs.moshi)
 
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.dagger))
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.dagger)
 
     kapt(libs.daggerAnnotation)
 }

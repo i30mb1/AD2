@@ -6,11 +6,11 @@ plugins {
 dependencies {
     implementation(libs.workManager)
 
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.navigator))
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.dagger)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.navigator)
 
     kapt(libs.daggerAnnotation)
 }

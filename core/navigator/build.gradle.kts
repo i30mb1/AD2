@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.android))
+    implementation(projects.core.commonAndroid)
 }

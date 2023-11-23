@@ -4,8 +4,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.common))
+    implementation(projects.core.coroutines)
+    implementation(projects.core.commonJvm)
 
     testImplementation(libs.coroutinesDebug)
     testImplementation(libs.testTruthJvm)

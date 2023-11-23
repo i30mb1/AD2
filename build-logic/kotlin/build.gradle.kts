@@ -6,7 +6,7 @@ dependencies {
     implementation(libs.androidGradlePlugin)
     implementation(libs.kotlinGradlePlugin)
     implementation("org.jetbrains.kotlinx:kover-gradle-plugin:0.7.4")
-    implementation(project(":extensions"))
+    implementation(project(":build-extensions"))
 }
 
 gradlePlugin {

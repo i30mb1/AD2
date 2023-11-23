@@ -5,9 +5,9 @@ plugins {
 
 
 dependencies {
-    api(project(Module.Core.database))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.android))
+    api(projects.core.database)
+    implementation(projects.core.dagger)
+    implementation(projects.core.commonAndroid)
 
     implementation(libs.moshi)
 

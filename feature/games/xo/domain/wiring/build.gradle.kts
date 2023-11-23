@@ -4,12 +4,12 @@ plugins {
 }
 
 dependencies {
-    api(project(Module.Feature.Xo.impl))
+    api(projects.feature.games.xo.domain.impl)
 
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.dagger))
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.dagger)
 
     kapt(libs.daggerAnnotation)
 }

@@ -4,12 +4,12 @@ plugins {
 }
 
 dependencies {
-    api(project(Module.Feature.Heroes.impl))
+    api(projects.feature.heroes.domain.impl)
 
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.logger))
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.dagger)
+    implementation(projects.core.logger.appLogger)
 
     implementation(libs.moshi)
 

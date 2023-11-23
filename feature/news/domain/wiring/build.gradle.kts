@@ -4,13 +4,13 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Feature.News.impl))
+    implementation(projects.feature.news.domain.impl)
 
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.database))
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.dagger))
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.database)
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.dagger)
 
     implementation(libs.moshi)
 

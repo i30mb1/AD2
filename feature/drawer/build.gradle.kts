@@ -4,14 +4,14 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.ui))
-    implementation(project(Module.Core.navigator))
-    implementation(project(Module.Core.appPreference))
-    implementation(project(Module.Core.retrofit))
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.dagger)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.ui)
+    implementation(projects.core.navigator)
+    implementation(projects.core.appPreference)
+    implementation(projects.core.retrofit)
 
     api(libs.moshi)
 
@@ -19,7 +19,7 @@ dependencies {
     kapt(libs.daggerAnnotation)
 
     testImplementation(libs.bundles.test)
-//    testImplementation(testFixtures(project(Module.Core.appPreference)))
-    testImplementation(testFixtures(project(Module.Core.common)))
-    testImplementation(testFixtures(project(Module.Core.logger)))
+//    testImplementation(testFixtures(projects.core.appPreference)))
+    testImplementation(testFixtures(projects.core.commonJvm))
+    testImplementation(testFixtures(projects.core.logger.appLogger))
 }

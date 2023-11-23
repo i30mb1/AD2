@@ -10,10 +10,10 @@ dependencies {
     implementation(libs.moshi)
     implementation(libs.room.paging)
 
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.logger))
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.dagger)
+    implementation(projects.core.logger.appLogger)
 
     testImplementation(libs.bundles.test)
 

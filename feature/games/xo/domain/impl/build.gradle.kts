@@ -4,11 +4,11 @@ plugins {
 }
 
 dependencies {
-    api(project(Module.Feature.Xo.api))
+    api(projects.feature.games.xo.domain.api)
 
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.coroutines))
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.coroutines)
 
     implementation(libs.coroutines)
     implementation(libs.coreKtx)

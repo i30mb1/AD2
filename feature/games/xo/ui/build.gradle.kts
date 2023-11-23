@@ -7,15 +7,15 @@ plugins {
 dependencies {
     implementation(libs.palette)
 
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.navigator))
-    implementation(project(Module.Core.loggerUI))
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.dagger)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.navigator)
+    implementation(projects.core.logger.ui)
 
-    implementation(project(Module.Feature.Xo.api))
-    implementation(project(Module.Feature.Xo.wiring))
+    implementation(projects.feature.games.xo.domain.api)
+    implementation(projects.feature.games.xo.domain.wiring)
 
     kapt(libs.daggerAnnotation)
 }

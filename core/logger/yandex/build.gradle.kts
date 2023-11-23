@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.common))
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.commonJvm)
 
     implementation(libs.androidStartup)
 

@@ -10,8 +10,8 @@ android {
 dependencies {
     implementation(libs.dataStorePref)
 
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.dagger))
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.dagger)
 
     kapt(libs.daggerAnnotation)
 }

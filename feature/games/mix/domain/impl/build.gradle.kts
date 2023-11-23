@@ -4,12 +4,12 @@ plugins {
 }
 
 dependencies {
-    api(project(Module.Feature.Games.api))
+    api(projects.feature.games.mix.domain.api)
 
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.database))
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.coroutines))
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.database)
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.coroutines)
 
     implementation(libs.moshi)
     implementation(libs.coroutines)

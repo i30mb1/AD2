@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.ui))
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.ui)
 }

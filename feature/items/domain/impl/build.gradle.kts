@@ -4,11 +4,11 @@ plugins {
 }
 
 dependencies {
-    api(project(Module.Feature.Items.api))
+    api(projects.feature.items.domain.api)
 
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.logger))
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.logger.appLogger)
 
     implementation(libs.moshi)
     implementation(libs.room.ktx)

@@ -28,16 +28,16 @@ android {
 }
 
 dependencies {
-    implementation(project(Module.Core.android))
-    implementation(project(Module.Core.dagger))
-    implementation(project(Module.Core.coroutines))
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.commonApplication))
-    implementation(project(Module.Core.navigator))
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.dagger)
+    implementation(projects.core.coroutines)
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.commonApplication)
+    implementation(projects.core.navigator)
 
-    implementation(project(Module.Feature.Xo.ui))
-    implementation(project(Module.Feature.Xo.impl))
-    implementation(project(Module.Feature.Xo.wiring))
+    implementation(projects.feature.games.xo.ui)
+    implementation(projects.feature.games.xo.domain.impl)
+    implementation(projects.feature.games.xo.domain.wiring)
 
     kapt(libs.daggerAnnotation)
 }

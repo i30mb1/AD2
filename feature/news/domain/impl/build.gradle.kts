@@ -6,12 +6,12 @@ plugins {
 dependencies {
     implementation(libs.jsoup)
 
-    api(project(Module.Feature.News.api))
+    api(projects.feature.news.domain.api)
 
-    implementation(project(Module.Core.logger))
-    implementation(project(Module.Core.database))
-    implementation(project(Module.Core.common))
-    implementation(project(Module.Core.coroutines))
+    implementation(projects.core.logger.appLogger)
+    implementation(projects.core.database)
+    implementation(projects.core.commonJvm)
+    implementation(projects.core.coroutines)
 
     implementation(libs.moshi)
 
