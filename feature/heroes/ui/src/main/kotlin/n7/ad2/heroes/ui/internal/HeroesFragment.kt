@@ -32,8 +32,11 @@ import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
 
-internal class HeroesFragment constructor(
-    override var dependenciesMap: DependenciesMap,
+/**
+ * @JvmOverloads - нужен для запуска этого фрагмента когда фарбирка для HeroesFragment не будет предоставлена
+ */
+internal class HeroesFragment @JvmOverloads constructor(
+    override var dependenciesMap: DependenciesMap = emptyMap(),
 ) : Fragment(R.layout.fragment_heroes), HasDependencies {
 
     @Inject lateinit var navigator: Lazy<Navigator>
