@@ -39,6 +39,7 @@ class FragmentTest {
             override fun log(text: String, params: Map<String, Any>) = Unit
             override fun getSubscriptionCount(): Int = 0
             override fun getLogFlow(): Flow<AppLog> = emptyFlow()
+            override fun getLogsFlow(): Flow<List<AppLog>> = emptyFlow()
         }
         override val moshi: Moshi
             get() = TODO("Not yet implemented")
