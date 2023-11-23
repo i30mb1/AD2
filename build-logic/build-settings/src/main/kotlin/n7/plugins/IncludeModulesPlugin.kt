@@ -28,23 +28,32 @@ class IncludeModulesPlugin : Plugin<Settings> {
 
     private fun Settings.includeAllModule(): Int {
         val modules = getAllModules()
-        modules.forEach { include(it.path) }
+        modules.forEach { include(it.module) }
         return modules.size
     }
 
     private fun Settings.getAllModules(): List<ModuleData> {
         return rootDir.walk().maxDepth(5)
-            .onEnter { it.isSuitableFile() }
-            .filter { it.hasBuildGradleFile() && ignoreModules.contains(it.name).not() }
+            .onEnter { it.isSuitableFile() }.filter { it.hasBuildGradleFile() && ignoreModules.contains(it.name).not() }
             .map {
                 ModuleData(
                     it.path.substringAfterLast("AD2").replace("\\", ":"),
-                    it,
-                    it.buildGradleFile(),
+                    getProjects(it),
                 )
-            }
-            .toList()
+            }.toList()
     }
+
+    private fun getProjects(it: File) = it.buildGradleFile()
+        .readLines()
+        .filter {
+            it.contains("(projects.")
+        }
+        .map {
+            ":" + it.substringAfter(".")
+                .dropLast(1)
+                .replace(".", ":")
+                .toSnakeCase()
+        }
 
     private fun File.buildGradleFile(): File {
         val buildGradleFile = File(this, "build.gradle")
@@ -84,6 +93,11 @@ class IncludeModulesPlugin : Plugin<Settings> {
 //        }
 //    }
 
+    /**
+     * Функция которая преобразует camelCase -> camel-case
+     */
+    private fun String.toSnakeCase() = replace("(?<=.)(?=\\p{Upper})".toRegex(), "-").lowercase()
+
     private fun File.hasSettingsGradleFile(): Boolean {
         return File(this, "settings.gradle").isFile || File(this, "settings.gradle.kts").isFile
     }
@@ -97,8 +111,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
     }
 
     private data class ModuleData(
-        val path: String,
-        val directory: File,
-        val buildGradleFile: File,
+        val module: String,
+        val projects: List<String>,
     )
 }
