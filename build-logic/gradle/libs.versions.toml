@@ -59,6 +59,7 @@ androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref =
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
+kover = "org.jetbrains.kotlinx:kover-gradle-plugin:0.7.4"
 composeActivity = "androidx.activity:activity-compose:1.8.1"
 composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2"
 composeCoil = "io.coil-kt:coil-compose:2.4.0"

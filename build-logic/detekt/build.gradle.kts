@@ -7,7 +7,7 @@ dependencies {
     implementation(libs.detektApi)
     implementation(libs.detektCli)
 
-    implementation(project(":build-extensions"))
+    implementation(projects.buildExtensions)
 
     testImplementation(libs.detektTest)
     testImplementation(libs.testTruthJvm)
