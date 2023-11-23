@@ -7,9 +7,3 @@ pluginManagement {
 plugins {
     id("n7.plugins.settings")
 }
-
-include(
-    ":app",
-    ":micro-benchmark",
-    ":macro-benchmark",
-)
