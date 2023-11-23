@@ -101,7 +101,7 @@ dependencies {
 
     kapt(libs.daggerAnnotation)
 
-    implementation(project(Module.Core.android)) { because("!") }
+    implementation(project(Module.Core.android))
     implementation(project(Module.Core.dagger))
     implementation(project(Module.Core.logger))
     implementation(project(Module.Core.coroutines))
