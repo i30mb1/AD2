@@ -1,7 +1,10 @@
+@file:OptIn(UnstableApi::class)
+
 package n7.ad2.mediaplayer
 
 import android.app.Application
 import android.net.Uri
+import androidx.annotation.OptIn
 import androidx.annotation.RawRes
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
