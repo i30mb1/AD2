@@ -2,6 +2,7 @@ package n7.ad2.heroes.demo
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.enableEdgeToEdge
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -18,7 +19,7 @@ internal class HeroesActivityDemo(
         supportFragmentManager.fragmentFactory = fragmentFactory
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null) {
-            WindowCompat.setDecorFitsSystemWindows(window, false)
+            enableEdgeToEdge()
             val container = FragmentContainerView(this)
             container.id = View.generateViewId()
             setContentView(container)

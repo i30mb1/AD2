@@ -2,6 +2,7 @@ package n7.ad2.ui
 
 import android.os.Bundle
 import android.view.MotionEvent
+import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -74,7 +75,7 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, MainFragmentN
     }
 
     private fun setupInsets() {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(binding.tvFps) { view, insets ->
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
             view.updatePadding(top = statusBarsInsets.top)

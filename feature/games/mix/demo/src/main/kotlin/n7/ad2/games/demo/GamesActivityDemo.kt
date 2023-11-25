@@ -2,6 +2,7 @@ package n7.ad2.games.demo
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.enableEdgeToEdge
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentContainerView
@@ -18,7 +19,7 @@ class GamesActivityDemo(
     override fun onCreate(savedInstanceState: Bundle?) {
         supportFragmentManager.fragmentFactory = fragmentFactory
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+       enableEdgeToEdge()
         val container = FragmentContainerView(this)
         container.id = View.generateViewId()
         setContentView(container)

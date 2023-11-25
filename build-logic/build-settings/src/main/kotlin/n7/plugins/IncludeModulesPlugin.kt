@@ -34,26 +34,27 @@ class IncludeModulesPlugin : Plugin<Settings> {
 
     private fun Settings.getAllModules(): List<ModuleData> {
         return rootDir.walk().maxDepth(5)
-            .onEnter { it.isSuitableFile() }.filter { it.hasBuildGradleFile() && ignoreModules.contains(it.name).not() }
+            .onEnter { it.isSuitableFile() }
+            .filter { it.hasBuildGradleFile() && ignoreModules.contains(it.name).not() }
             .map {
                 ModuleData(
                     it.path.substringAfterLast("AD2").replace("\\", ":"),
+                    it,
                     getProjects(it),
                 )
             }.toList()
     }
 
-    private fun getProjects(it: File) = it.buildGradleFile()
-        .readLines()
-        .filter {
+    private fun getProjects(file: File): List<ModuleData> {
+        return file.buildGradleFile().readLines().filter {
             it.contains("(projects.")
+        }.map {
+            ModuleData(
+                ":" + it.substringAfter(".").dropLast(1).replace(".", ":").toSnakeCase(),
+                file,
+            )
         }
-        .map {
-            ":" + it.substringAfter(".")
-                .dropLast(1)
-                .replace(".", ":")
-                .toSnakeCase()
-        }
+    }
 
     private fun File.buildGradleFile(): File {
         val buildGradleFile = File(this, "build.gradle")
@@ -112,6 +113,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
 
     private data class ModuleData(
         val module: String,
-        val projects: List<String>,
+        val path: File,
+        val includedModules: List<ModuleData> = emptyList(),
     )
 }

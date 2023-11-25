@@ -2,7 +2,7 @@ package n7.ad2.xo.demo
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.WindowCompat
+import androidx.activity.enableEdgeToEdge
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.commitNow
@@ -23,7 +23,7 @@ class XoActivity(
     override fun onCreate(savedInstanceState: Bundle?) {
         supportFragmentManager.fragmentFactory = fragmentFactory
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdge()
         val container = FragmentContainerView(this)
         container.id = View.generateViewId()
         setContentView(container)

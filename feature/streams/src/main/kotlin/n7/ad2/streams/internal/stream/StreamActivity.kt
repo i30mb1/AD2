@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Rational
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -48,7 +49,7 @@ class StreamActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         DaggerStreamsComponent.factory().create(findDependencies()).inject(this)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         viewModel.load(streamerName)
         setContent {
