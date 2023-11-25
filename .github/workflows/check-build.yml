@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: check Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1
@@ -26,10 +26,12 @@ jobs:
           distribution: 'oracle'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
+        uses: android-actions/setup-android@v3
 
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 8.4
 
       - name: Generate local.properties file
         shell: bash
