@@ -21,7 +21,6 @@ object HeroesModule {
     @dagger.Provides
     fun provideHeroesDomainComponent(
         res: Resources,
-        moshi: Moshi,
         dispatchers: DispatchersProvider,
         appInformation: AppInformation,
         application: Application,
@@ -31,7 +30,6 @@ object HeroesModule {
             override val application: Application = application
             override val logger = logger
             override val res: Resources = res
-            override val moshi: Moshi = moshi
             override val dispatcher = dispatchers
             override val appInformation = appInformation
         }

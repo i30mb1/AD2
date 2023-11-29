@@ -1,15 +1,14 @@
 package n7.ad2.heroes.domain.internal.usecase
 
-import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.serialization.json.Json
 import n7.ad2.heroes.domain.internal.HeroesRepository
 import n7.ad2.heroes.domain.model.Guide
 import n7.ad2.heroes.domain.usecase.GetGuideForHeroUseCase
 
 internal class GetGuideForHeroUseCaseImpl(
     private val heroesRepository: HeroesRepository,
-    private val moshi: Moshi,
 ) : GetGuideForHeroUseCase {
 
     override fun invoke(name: String): Flow<List<Guide>> {

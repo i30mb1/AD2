@@ -12,6 +12,7 @@ dependencies {
     api(libs.retrofitMoshiConverter)
     api(libs.retrofitInterceptor)
     api(libs.retrofitScalars)
+    api(libs.retrofitSerialization)
 
     kapt(libs.daggerAnnotation)
 }

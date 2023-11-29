@@ -6,6 +6,7 @@ dependencies {
     implementation(libs.androidGradlePlugin)
     implementation(libs.kotlinGradlePlugin)
     implementation(libs.kover)
+    implementation(libs.kotlin.serialization.plugin)
     implementation(projects.buildExtensions)
 }
 

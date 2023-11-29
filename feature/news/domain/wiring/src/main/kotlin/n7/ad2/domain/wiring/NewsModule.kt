@@ -1,6 +1,5 @@
 package n7.ad2.domain.wiring
 
-import com.squareup.moshi.Moshi
 import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
@@ -19,7 +18,6 @@ object NewsModule {
         newsDao: NewsDao,
         logger: Logger,
         res: Resources,
-        moshi: Moshi,
         appInformation: AppInformation,
         dispatcher: DispatchersProvider,
     ): NewsDomainComponent = NewsDomainComponent(
@@ -27,7 +25,6 @@ object NewsModule {
             override val newsDao: NewsDao = newsDao
             override val logger: Logger = logger
             override val res: Resources = res
-            override val moshi: Moshi = moshi
             override val appInformation: AppInformation = appInformation
             override val dispatcher: DispatchersProvider = dispatcher
         }

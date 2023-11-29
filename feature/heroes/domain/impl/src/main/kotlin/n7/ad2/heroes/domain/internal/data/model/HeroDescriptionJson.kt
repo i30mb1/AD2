@@ -1,74 +1,74 @@
 package n7.ad2.heroes.domain.internal.data.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class HeroDescriptionJson(
-    @Json(name = "abilities")
+    @SerialName("abilities")
     val abilities: List<Ability> = listOf(),
-    @Json(name = "description")
+    @SerialName("description")
     val description: String = "",
-    @Json(name = "history")
+    @SerialName("history")
     val history: String = "",
-    @Json(name = "mainAttributes")
+    @SerialName("mainAttributes")
     val mainAttributes: MainAttribute = MainAttribute(),
-    @Json(name = "trivia")
+    @SerialName("trivia")
     val trivia: List<String>? = null,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Ability(
-    @Json(name = "cooldown")
+    @SerialName("cooldown")
     val cooldown: String? = null,
-    @Json(name = "description")
+    @SerialName("description")
     val description: String? = null,
-    @Json(name = "effects")
+    @SerialName("effects")
     val effects: List<String> = listOf(),
-    @Json(name = "hot_key")
+    @SerialName("hot_key")
     val hotKey: String? = null,
-    @Json(name = "item_behaviour")
+    @SerialName("item_behaviour")
     val itemBehaviour: List<String> = listOf(),
-    @Json(name = "legacy_key")
+    @SerialName("legacy_key")
     val legacyKey: String? = null,
-    @Json(name = "mana")
+    @SerialName("mana")
     val mana: String? = null,
-    @Json(name = "notes")
+    @SerialName("notes")
     val notes: List<String>? = null,
-    @Json(name = "params")
+    @SerialName("params")
     val params: List<String>? = null,
-    @Json(name = "audio_url")
+    @SerialName("audio_url")
     val audioUrl: String? = null,
-    @Json(name = "name")
+    @SerialName("name")
     val name: String = "",
-    @Json(name = "story")
+    @SerialName("story")
     val story: String? = null,
-    @Json(name = "talents")
+    @SerialName("talents")
     val talents: List<Talent>? = null,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class MainAttribute(
-    @Json(name = "attrAgility")
+    @SerialName("attrAgility")
     val attrAgility: Double = 0.0,
-    @Json(name = "attrAgilityInc")
+    @SerialName("attrAgilityInc")
     val attrAgilityInc: Double = 0.0,
-    @Json(name = "attrIntelligence")
+    @SerialName("attrIntelligence")
     val attrIntelligence: Double = 0.0,
-    @Json(name = "attrIntelligenceInc")
+    @SerialName("attrIntelligenceInc")
     val attrIntelligenceInc: Double = 0.0,
-    @Json(name = "attrStrength")
+    @SerialName("attrStrength")
     val attrStrength: Double = 0.0,
-    @Json(name = "attrStrengthInc")
+    @SerialName("attrStrengthInc")
     val attrStrengthInc: Double = 0.0,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Talent(
-    @Json(name = "talentLeft")
+    @SerialName("talentLeft")
     val talentLeft: String = "",
-    @Json(name = "talentLvl")
+    @SerialName("talentLvl")
     val talentLvl: String = "",
-    @Json(name = "talentRight")
+    @SerialName("talentRight")
     val talentRight: String = "",
 )

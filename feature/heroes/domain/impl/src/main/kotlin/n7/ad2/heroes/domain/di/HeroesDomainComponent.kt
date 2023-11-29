@@ -41,7 +41,7 @@ fun HeroesDomainComponent(
 
     override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository, dependencies.dispatcher)
 
-    override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(heroesRepository, dependencies.moshi)
+    override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(heroesRepository)
 
     override val getHeroDescriptionUseCase = GetHeroDescriptionUseCaseImpl(heroesRepository)
 }

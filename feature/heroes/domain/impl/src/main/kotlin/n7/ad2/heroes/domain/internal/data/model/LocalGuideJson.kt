@@ -1,56 +1,56 @@
 package n7.ad2.heroes.domain.internal.data.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 class LocalGuideJson(
-    @Json(name = "heroName")
+    @SerialName("heroName")
     val heroName: String,
-    @Json(name = "heroWinrate")
+    @SerialName("heroWinrate")
     val heroWinrate: String,
-    @Json(name = "heroPopularity")
+    @SerialName("heroPopularity")
     val heroPopularity: String,
-    @Json(name = "hardToWinHeroList")
+    @SerialName("hardToWinHeroList")
     val hardToWinHeroList: List<HeroWithWinrate>,
-    @Json(name = "easyToWinHeroList")
+    @SerialName("easyToWinHeroList")
     val easyToWinHeroList: List<HeroWithWinrate>,
-    @Json(name = "detailedGuide")
+    @SerialName("detailedGuide")
     val detailedGuide: DetailedGuide,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 class HeroWithWinrate(
-    @Json(name = "heroName")
+    @SerialName("heroName")
     val heroName: String,
-    @Json(name = "heroWinrate")
+    @SerialName("heroWinrate")
     val heroWinrate: Double,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 class DetailedGuide(
-    @Json(name = "guideTime")
+    @SerialName("guideTime")
     val guideTime: String,
-    @Json(name = "heroStartingHeroItemsList")
+    @SerialName("heroStartingHeroItemsList")
     val heroStartingHeroItemsList: List<HeroItem>,
-    @Json(name = "heroItemsList")
+    @SerialName("heroItemsList")
     val heroItemsList: List<HeroItem>,
-    @Json(name = "heroSpellsList")
+    @SerialName("heroSpellsList")
     val heroSpellsList: List<Spell>,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 class Spell(
-    @Json(name = "spellName")
+    @SerialName("spellName")
     val spellName: String,
-    @Json(name = "spellOrder")
+    @SerialName("spellOrder")
     val spellOrder: String,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 class HeroItem(
-    @Json(name = "itemName")
+    @SerialName("itemName")
     val itemName: String,
-    @Json(name = "itemTime")
+    @SerialName("itemTime")
     val itemTime: String,
 )

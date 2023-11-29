@@ -1,6 +1,5 @@
 package n7.ad2.items.domain.di
 
-import com.squareup.moshi.Moshi
 import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
@@ -11,7 +10,6 @@ interface NewsDomainDependencies {
     val newsDao: NewsDao
     val logger: Logger
     val res: Resources
-    val moshi: Moshi
     val appInformation: AppInformation
     val dispatcher: DispatchersProvider
 }

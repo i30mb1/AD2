@@ -1,5 +1,6 @@
 plugins {
     id("convention.android-library")
+    id("convention.kotlin-serialization")
     id("n7.plugins.kotlin-kapt")
 }
 
@@ -10,9 +11,8 @@ dependencies {
     implementation(projects.core.coroutines)
     implementation(projects.core.logger.appLogger)
 
-    implementation(libs.moshi)
+    implementation(libs.kotlinSerialization)
     implementation(libs.room.ktx)
 
-    kapt(libs.moshiCodegen)
     kapt(libs.room.compiler)
 }
