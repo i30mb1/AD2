@@ -4,7 +4,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class CameraLifecycle @Inject constructor(): LifecycleOwner {
 
     private val lifecycleRegister = LifecycleRegistry(this)

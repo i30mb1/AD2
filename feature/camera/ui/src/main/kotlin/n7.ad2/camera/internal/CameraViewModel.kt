@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 internal class CameraViewModel @AssistedInject constructor(
@@ -17,7 +18,7 @@ internal class CameraViewModel @AssistedInject constructor(
     }
 
     fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.Main.immediate) {
             controller.onUIBind(surfaceProvider)
         }
     }

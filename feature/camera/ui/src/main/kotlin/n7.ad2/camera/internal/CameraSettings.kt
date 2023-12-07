@@ -1,7 +1,6 @@
 package n7.ad2.camera.internal
 
 import androidx.camera.core.CameraSelector
-import javax.inject.Inject
 
 val settings = CameraSettings()
 

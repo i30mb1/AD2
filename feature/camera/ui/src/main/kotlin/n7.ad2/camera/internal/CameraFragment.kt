@@ -14,7 +14,6 @@ import android.widget.Toast
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.ImageProxy
-import androidx.camera.core.Preview
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
@@ -30,6 +29,8 @@ import n7.ad2.android.DependenciesMap
 import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
 import n7.ad2.app.logger.Logger
+import n7.ad2.camera.internal.compose.Camera
+import n7.ad2.camera.internal.compose.CameraEvent
 import n7.ad2.camera.internal.di.DaggerCameraComponent
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView

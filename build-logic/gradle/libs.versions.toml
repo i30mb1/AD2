@@ -13,6 +13,7 @@ composeCompiler = "1.5.4"
 media3 = "1.2.0"
 detekt = "1.22.0"
 cameraX = "1.4.0-alpha02"
+kotlinDL = "0.5.2"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -20,6 +21,10 @@ room-common = { module = "androidx.room:room-common", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
+
+kotlin-onnx = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-onnx" , version.ref = "kotlinDL" }
+kotlin-visualization = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-visualization" , version.ref = "kotlinDL" }
+kotlin-tensorflow = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow" , version.ref = "kotlinDL" }
 
 detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 detektApi = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "detekt" }
@@ -142,5 +147,6 @@ benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.2.1"
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
 compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "composeCoil", "composeLivedata", "composeActivity"]
 camera = ["camera", "camera-lifecycle", "camera-video", "camera-view", "camera-ktx"]
+kotlinDL = ["kotlin-onnx", "kotlin-visualization", "kotlin-tensorflow"]
 
 [plugins]
