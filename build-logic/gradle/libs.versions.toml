@@ -12,6 +12,7 @@ compose = "1.6.0-beta01"
 composeCompiler = "1.5.4"
 media3 = "1.2.0"
 detekt = "1.22.0"
+cameraX = "1.4.0-alpha02"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -25,6 +26,12 @@ detektApi = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "
 detektCli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "detekt" }
 detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 detektTest = { module = "io.gitlab.arturbosch.detekt:detekt-test", version.ref = "detekt" }
+
+camera = { module = "androidx.camera:camera-core", version.ref = "cameraX" }
+camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraX" }
+camera-video = { module = "androidx.camera:camera-video", version.ref = "cameraX" }
+camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraX" }
+camera-ktx = { module = "androidx.camera:camera-extensions", version.ref = "cameraX" }
 
 exoPlayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
 exoPlayerHLS = { module = "androidx.media3:media3-exoplayer-hls", version.ref = "media3" }
@@ -134,5 +141,6 @@ benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.2.1"
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
 compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "composeCoil", "composeLivedata", "composeActivity"]
+camera = ["camera", "camera-lifecycle", "camera-video", "camera-view", "camera-ktx"]
 
 [plugins]
