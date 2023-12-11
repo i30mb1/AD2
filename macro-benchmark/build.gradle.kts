@@ -39,7 +39,7 @@ dependencies {
     implementation(libs.espresso)
     implementation(libs.uiautomator)
     implementation(libs.testJunitKtx)
-    implementation("androidx.benchmark:benchmark-macro-junit4:1.2.0")
+    implementation(libs.benchmarkMacro)
 }
 
 androidComponents {

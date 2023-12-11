@@ -14,6 +14,7 @@ media3 = "1.2.0"
 detekt = "1.22.0"
 cameraX = "1.4.0-alpha02"
 kotlinDL = "0.5.2"
+benchmark = "1.2.2"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -22,9 +23,10 @@ room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 
-kotlin-onnx = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-onnx" , version.ref = "kotlinDL" }
-kotlin-visualization = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-visualization" , version.ref = "kotlinDL" }
-kotlin-tensorflow = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow" , version.ref = "kotlinDL" }
+kotlin-dl-onnx = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-onnx", version.ref = "kotlinDL" }
+kotlin-dl-visualization = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-visualization", version.ref = "kotlinDL" }
+kotlin-dl-tensorflow = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow", version.ref = "kotlinDL" }
+kotlin-dl-api = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-api", version.ref = "kotlinDL" }
 
 detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 detektApi = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "detekt" }
@@ -140,13 +142,14 @@ mockk = "io.mockk:mockk-android:1.13.8"
 espresso = "androidx.test.espresso:espresso-core:3.5.1"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.5.1"
 uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
-benchmarkMacro = "androidx.benchmark:benchmark-macro-junit4:1.2.1"
-benchmarkJunit = "androidx.benchmark:benchmark-junit4:1.2.1"
+benchmarkMacro = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "benchmark" }
+benchmarkJunit = { module = "androidx.benchmark:benchmark-junit4", version.ref = "benchmark" }
 
 [bundles]
 test = ["coroutinesTest", "testCore", "testRunner", "testRules", "testJunitKtx", "testTruth"]
 compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "composeCoil", "composeLivedata", "composeActivity"]
 camera = ["camera", "camera-lifecycle", "camera-video", "camera-view", "camera-ktx"]
-kotlinDL = ["kotlin-onnx", "kotlin-visualization", "kotlin-tensorflow"]
+kotlinDL = ["kotlin-dl-onnx", "kotlin-dl-visualization", "kotlin-dl-tensorflow"]
 
 [plugins]
+benchmark = { id = "androidx.benchmark", version.ref = "benchmark" }
