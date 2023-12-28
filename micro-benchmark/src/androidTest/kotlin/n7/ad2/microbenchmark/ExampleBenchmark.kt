@@ -28,7 +28,7 @@ class ExampleBenchmark {
     fun testBitmap_CreateScaledBitmap() {
         // 308 007   ns
         benchmarkRule.measureRepeated {
-//            Bitmap.createScaledBitmap(bitmap, 255, 255, true)
+            Bitmap.createScaledBitmap(Bitmap.createBitmap(1, 1, Bitmap.Config.ALPHA_8), 255, 255, true)
         }
     }
 

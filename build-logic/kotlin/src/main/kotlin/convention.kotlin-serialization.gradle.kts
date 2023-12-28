@@ -1,9 +1,10 @@
-import gradle.kotlin.dsl.accessors._a568f78b412045bc377fc4283b656e34.implementation
+import gradle.kotlin.dsl.accessors._285dcef16d8875fee0ec91e18e07daf9.implementation
+import gradle.kotlin.dsl.accessors._285dcef16d8875fee0ec91e18e07daf9.versionCatalogs
 
 plugins {
     kotlin("plugin.serialization")
 }
 
 dependencies {
-    implementation(libs.kotlinSerialization)
+    implementation(versionCatalogs.named("libs").findLibrary("kotlinSerialization").get())
 }

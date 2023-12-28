@@ -10,5 +10,7 @@ dependencies {
     implementation(projects.core.commonJvm)
     implementation(projects.core.coroutines)
 
+    implementation(libs.bundles.camera)
+    implementation(libs.bundles.kotlinDL)
     implementation(libs.coroutines)
 }

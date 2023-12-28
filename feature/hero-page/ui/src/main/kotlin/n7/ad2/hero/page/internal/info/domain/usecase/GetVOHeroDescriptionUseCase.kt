@@ -1,6 +1,7 @@
 package n7.ad2.hero.page.internal.info.domain.usecase
 
 import androidx.core.text.toSpanned
+import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -11,7 +12,7 @@ import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.heropage.ui.R
+import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.info.HeroStatistics
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero.page.internal.info.domain.vo.VOSpell
@@ -23,7 +24,6 @@ import n7.ad2.ktx.toStringList
 import n7.ad2.spanparser.SpanParser
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderViewHolder
-import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
     private val res: Resources,

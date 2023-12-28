@@ -1,7 +1,8 @@
 package n7.ad2.camera.internal
 
 import androidx.camera.core.Preview
-import androidx.lifecycle.coroutineScope
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.lifecycleScope
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -9,30 +10,34 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
+import n7.ad2.feature.camera.domain.Previewer
+import n7.ad2.feature.camera.domain.Processor
+import n7.ad2.feature.camera.domain.Streamer
+import n7.ad2.feature.camera.domain.model.Image
 import org.jetbrains.kotlinx.dl.api.inference.objectdetection.DetectedObject
 
 class Controller @Inject constructor(
     private val previewer: Previewer,
-    private val processing: Processing,
-    private val streaming: Streaming,
-    private val lifecycle: CameraLifecycle,
+    private val processor: Processor,
+    private val streamer: Streamer,
+    private val lifecycle: LifecycleOwner,
 ) {
 
     private val _state: MutableStateFlow<CameraState> = MutableStateFlow(CameraState.empty())
     val state: Flow<CameraState> = _state.asStateFlow()
 
     init {
-        streaming.stream
-            .onEach { bitmap ->
-                val processorState = processing.analyze(bitmap)
+        streamer.stream
+            .onEach { image: Image ->
+                val processorState = processor.analyze(image)
                 _state.setDetectedObject(processorState.detectedObject)
             }
-            .launchIn(lifecycle.lifecycle.coroutineScope)
+            .launchIn(lifecycle.lifecycleScope)
     }
 
     suspend fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
         previewer.start(surfaceProvider)
-        streaming.start()
+        streamer.start()
     }
 }
 

@@ -4,4 +4,5 @@ plugins {
 
 dependencies {
     implementation(libs.coroutines)
+    implementation(libs.kotlin.dl.api)
 }

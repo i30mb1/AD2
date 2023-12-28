@@ -11,7 +11,7 @@ import androidx.core.text.getSpans
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.feature.heropage.ui.R
+import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.info.PopUpClickableSpan
 import n7.ad2.hero.page.internal.info.domain.adapter.HeroHeaderPlayableViewHolder
 import n7.ad2.hero.page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase

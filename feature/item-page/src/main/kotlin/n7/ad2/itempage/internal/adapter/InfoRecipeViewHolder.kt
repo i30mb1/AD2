@@ -6,8 +6,8 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.android.extension.load
-import n7.ad2.feature.itempage.R
-import n7.ad2.feature.itempage.databinding.ItemInfoRecipeBinding
+import n7.ad2.feature.item.page.R
+import n7.ad2.feature.item.page.databinding.ItemInfoRecipeBinding
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 
 class InfoRecipeViewHolder private constructor(

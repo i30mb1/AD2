@@ -7,7 +7,8 @@ plugins {
 }
 
 android {
-    namespace = "$applicationID.${project.path.replace("-", "").replace(":", ".").drop(1)}"
+    val projectNameFormatted = project.path.drop(1).replace(Regex("[-:]"), ".")
+    namespace = "$applicationID.$projectNameFormatted"
     androidComponents {
         beforeVariants { variantBuilder ->
             if (variantBuilder.buildType == "debug") {

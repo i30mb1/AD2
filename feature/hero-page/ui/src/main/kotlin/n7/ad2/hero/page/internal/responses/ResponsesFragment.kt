@@ -15,8 +15,8 @@ import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
-import n7.ad2.feature.heropage.ui.R
-import n7.ad2.feature.heropage.ui.databinding.FragmentHeroResponsesBinding
+import n7.ad2.feature.hero.page.ui.R
+import n7.ad2.feature.hero.page.ui.databinding.FragmentHeroResponsesBinding
 import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.hero.page.internal.pager.HeroPageFragment
 import n7.ad2.hero.page.internal.responses.adapter.ResponsesAdapter

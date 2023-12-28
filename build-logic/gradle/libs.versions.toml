@@ -1,4 +1,5 @@
 [versions]
+sdkVersion = "34"
 room = "2.6.0"
 coroutines = "1.7.1"
 moshi = "1.15.0"
@@ -59,6 +60,7 @@ daggerAnnotation = { module = "com.google.dagger:dagger-compiler", version.ref =
 workManager = { module = "androidx.work:work-runtime-ktx", version.ref = "workManager" }
 workManagerGCM = { module = "androidx.work:work-gcm", version.ref = "workManager" }
 
+lifecycle-common = { module = "androidx.lifecycle:lifecycle-common", version.ref = "lifecycle" }
 livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" } # liveData (LiveData + coroutines)
 viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" } # viewModelScope + savedStateHandle
 lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" } # flowWithLifecycle
@@ -77,7 +79,7 @@ kotlin-Serialization-Plugin = { module = "org.jetbrains.kotlin:kotlin-serializat
 kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.1"
 kover = "org.jetbrains.kotlinx:kover-gradle-plugin:0.7.4"
 composeActivity = "androidx.activity:activity-compose:1.8.1"
-composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2"
+composeViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 composeCoil = "io.coil-kt:coil-compose:2.4.0"
 composeFoundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 composeLivedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
@@ -122,6 +124,7 @@ splashScreen = "androidx.core:core-splashscreen:1.0.1"
 performance = "androidx.core:core-performance:1.0.0-beta02"
 performancePlayServices = "androidx.core:core-performance-play-services:1.0.0-beta02"
 
+test-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-testing", version.ref = "lifecycle" }
 coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 coroutinesDebug = "org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.7.1"
 testCore = "androidx.test:core:1.5.0" # Core library

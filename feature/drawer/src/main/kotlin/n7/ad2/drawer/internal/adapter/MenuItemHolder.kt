@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.feature.drawer.databinding.ItemMenuBinding
 import n7.ad2.drawer.internal.domain.vo.VOMenu
+import n7.ad2.feature.drawer.databinding.ItemMenuBinding
 
 internal class MenuItemHolder private constructor(
     private val binding: ItemMenuBinding,

@@ -1,4 +1,4 @@
-package n7.ad2.camera.internal
+package n7.ad2.feature.camera.domain.impl
 
 import android.content.Context
 import androidx.camera.lifecycle.ProcessCameraProvider

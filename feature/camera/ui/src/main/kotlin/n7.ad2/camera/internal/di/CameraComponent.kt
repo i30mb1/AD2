@@ -4,12 +4,16 @@ import javax.inject.Singleton
 import n7.ad2.camera.api.CameraDependencies
 import n7.ad2.camera.internal.CameraFragment
 import n7.ad2.camera.internal.CameraViewModel
+import n7.ad2.feature.camera.wiring.di.CameraModule
 
 @Singleton
 @dagger.Component(
     dependencies = [
         CameraDependencies::class
     ],
+    modules = [
+        CameraModule::class,
+    ]
 )
 internal interface CameraComponent {
 

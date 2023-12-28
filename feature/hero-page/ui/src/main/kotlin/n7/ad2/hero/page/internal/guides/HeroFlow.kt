@@ -25,7 +25,7 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.android.extension.load
-import n7.ad2.feature.heropage.ui.R
+import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.ktx.dpToPx
 import kotlinx.coroutines.flow.Flow as CoroutineFlow
 

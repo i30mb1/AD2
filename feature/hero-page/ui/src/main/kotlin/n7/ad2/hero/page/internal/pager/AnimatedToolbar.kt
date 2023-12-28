@@ -13,7 +13,7 @@ import androidx.transition.TransitionManager
 import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.AppLocale
-import n7.ad2.feature.heropage.ui.R
+import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.ktx.dpToPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {

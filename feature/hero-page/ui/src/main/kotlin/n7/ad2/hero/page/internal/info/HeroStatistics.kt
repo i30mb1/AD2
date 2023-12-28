@@ -5,7 +5,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import n7.ad2.feature.heropage.ui.databinding.HeroStatisticsBinding
+import n7.ad2.feature.hero.page.ui.databinding.HeroStatisticsBinding
 
 
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe

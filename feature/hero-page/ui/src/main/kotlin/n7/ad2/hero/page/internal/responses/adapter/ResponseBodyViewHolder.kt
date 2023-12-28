@@ -6,8 +6,8 @@ import androidx.core.math.MathUtils.clamp
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.feature.heropage.ui.R
-import n7.ad2.feature.heropage.ui.databinding.ItemResponseBodyBinding
+import n7.ad2.feature.hero.page.ui.R
+import n7.ad2.feature.hero.page.ui.databinding.ItemResponseBodyBinding
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 
 

@@ -13,7 +13,7 @@ dependencies {
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.navigator)
     implementation(projects.core.repositories)
-    implementation(projects.core.nativeSecret)
+    implementation(projects.core.secret)
 
     implementation(projects.feature.games.mix.domain.api)
     implementation(projects.feature.heroes.domain.api)

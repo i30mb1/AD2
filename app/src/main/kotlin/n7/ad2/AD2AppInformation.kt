@@ -8,7 +8,7 @@ private class AD2AppInformation(
     res: Resources,
 ) : AppInformation {
     override val isDebug = BuildConfig.DEBUG
-    override val appLocale: AppLocale = when (val value = res.getString(n7.ad2.core.commonandroid.R.string.locale)) {
+    override val appLocale: AppLocale = when (val value = res.getString(n7.ad2.core.common.android.R.string.locale)) {
         "RU" -> AppLocale.Russian
         else -> AppLocale.English
     }

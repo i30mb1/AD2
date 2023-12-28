@@ -6,7 +6,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.setFragmentResult
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import n7.ad2.feature.heropage.ui.databinding.DialogResponseBinding
+import n7.ad2.feature.hero.page.ui.databinding.DialogResponseBinding
 
 class DialogResponse : DialogFragment() {
 

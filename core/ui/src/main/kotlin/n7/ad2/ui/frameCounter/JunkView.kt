@@ -15,8 +15,8 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.withTranslation
 import androidx.lifecycle.findViewTreeLifecycleOwner
 import com.google.android.material.color.MaterialColors
-import n7.ad2.ktx.spToPx
 import n7.ad2.core.ui.R
+import n7.ad2.ktx.spToPx
 
 class JunkView(
     context: Context,

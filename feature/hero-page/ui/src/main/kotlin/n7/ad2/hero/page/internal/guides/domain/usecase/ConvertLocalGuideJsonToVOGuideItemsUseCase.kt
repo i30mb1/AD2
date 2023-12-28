@@ -4,7 +4,7 @@ import javax.inject.Inject
 import kotlinx.coroutines.withContext
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.heropage.ui.R
+import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.guides.domain.adapter.toVOEasyToWinHeroes
 import n7.ad2.hero.page.internal.guides.domain.adapter.toVOGuideHeroItems
 import n7.ad2.hero.page.internal.guides.domain.adapter.toVOGuideSpellBuild

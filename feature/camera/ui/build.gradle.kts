@@ -2,7 +2,6 @@ plugins {
     id("convention.android-library")
     id("convention.compose")
     id("n7.plugins.kotlin-kapt")
-    id("org.jetbrains.kotlinx.kotlin-deeplearning-gradle-plugin") version "0.6.0-alpha-1"
 }
 
 dependencies {
@@ -14,12 +13,14 @@ dependencies {
     implementation(projects.core.coroutines)
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.navigator)
+
+    implementation(projects.feature.camera.domain.wiring)
     implementation(projects.feature.camera.domain.api)
 
-    kapt(libs.daggerAnnotation)
-}
+    testImplementation(libs.coroutinesDebug)
+    testImplementation(libs.testTruthJvm)
+    testImplementation(libs.coroutinesTest)
+    testImplementation(libs.test.lifecycle)
 
-downloadKotlinDLModels {
-    models.add("UltraFace320")
-    overwrite = false
+    kapt(libs.daggerAnnotation)
 }

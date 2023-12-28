@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.feature.heropage.ui.R
+import java.lang.ref.WeakReference
+import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.ui.StickyHeaderDecorator
 import n7.ad2.ui.adapter.HeaderViewHolder
-import java.lang.ref.WeakReference
 
 class ResponsesAdapter(
     private val layoutInflater: LayoutInflater,

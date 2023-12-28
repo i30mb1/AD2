@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.feature.itempage.R
+import n7.ad2.feature.item.page.R
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderPlayableViewHolder

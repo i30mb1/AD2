@@ -12,14 +12,14 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
+import javax.inject.Inject
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.android.findDependencies
-import n7.ad2.feature.heropage.ui.R
-import n7.ad2.feature.heropage.ui.databinding.FragmentHeroPageBinding
+import n7.ad2.feature.hero.page.ui.R
+import n7.ad2.feature.hero.page.ui.databinding.FragmentHeroPageBinding
 import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.lazyUnsafe
-import javax.inject.Inject
 
 class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 

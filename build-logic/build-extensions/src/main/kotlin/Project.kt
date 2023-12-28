@@ -1,10 +1,10 @@
-import org.gradle.accessors.dm.LibrariesForLibs
-import org.gradle.api.Project
-import org.gradle.kotlin.dsl.the
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStreamReader
 import java.util.Properties
+import org.gradle.api.Project
+import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.kotlin.dsl.the
 
 const val applicationID = "n7.ad2"
 
@@ -37,14 +37,16 @@ fun Project.isCI(): Boolean {
     return properties.getProperty("IS_CI", "false").toBoolean()
 }
 
-/**
- * workaround to make version catalog accessible in convention plugins
- * https://github.com/gradle/gradle/issues/15383
- */
-val Project.libs get() = the<LibrariesForLibs>()
+///**
+// * workaround to make version catalog accessible in convention plugins
+// * https://github.com/gradle/gradle/issues/15383
+// */
+//val Project.libs get() = the<LibrariesForLibs>()
+val Project.catalog get() = the<VersionCatalogsExtension>().named("libs")
 
 fun Project.getProperties(fileName: String): Properties {
     val properties = Properties()
+
     val file = File(fileName)
     if (!file.exists()) {
         logger.error("File $rootDir\\$fileName not found!")
