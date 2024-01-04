@@ -6,8 +6,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 configure<BaseExtension> {
     buildFeatures.compose = true
     composeOptions {
-//        kotlinCompilerExtensionVersion = catalog.findVersion("composeCompiler").get().strictVersion
-        kotlinCompilerExtensionVersion = "1.5.4"
+        kotlinCompilerExtensionVersion = catalog.findVersion("composeCompiler").get().requiredVersion
     }
 }
 

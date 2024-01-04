@@ -1,4 +1,3 @@
-import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.gradle.BaseExtension
 
 plugins {
@@ -23,5 +22,5 @@ configure<BaseExtension> {
 }
 
 dependencies {
-//    add("lintChecks", projects.core.rules))
+//    add("lintChecks", projects.core.rules)
 }

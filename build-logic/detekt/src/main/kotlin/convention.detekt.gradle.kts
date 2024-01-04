@@ -1,3 +1,5 @@
+import gradle.kotlin.dsl.accessors._caaef686956ef05d8c7d73205bf1c4b7.detekt
+import gradle.kotlin.dsl.accessors._caaef686956ef05d8c7d73205bf1c4b7.detektPlugins
 import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
@@ -31,6 +33,6 @@ val detektAll = tasks.register<Detekt>("detektAll") {
 }
 
 dependencies {
-    detektPlugins(libs.detektFormatting)
+    detektPlugins(catalog.findLibrary("detektFormatting").get())
     detekt("build-logic:detekt")
 }
