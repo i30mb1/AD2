@@ -1,9 +1,8 @@
 package n7.ad2.feature.camera.domain
 
-import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.Flow
 import n7.ad2.feature.camera.domain.model.Image
 
 interface Streamer {
-    val stream: SharedFlow<Image>
-    suspend fun start()
+    val stream: Flow<Image>
 }

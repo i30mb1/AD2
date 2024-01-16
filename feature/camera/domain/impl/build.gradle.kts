@@ -13,4 +13,5 @@ dependencies {
     implementation(libs.bundles.camera)
     implementation(libs.bundles.kotlinDL)
     implementation(libs.coroutines)
+    implementation(libs.lifecycle.common)
 }

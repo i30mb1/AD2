@@ -7,9 +7,10 @@ import androidx.lifecycle.LifecycleRegistry
 class CameraLifecycle : LifecycleOwner {
 
     private val lifecycleRegister = LifecycleRegistry(this)
-    override fun getLifecycle(): Lifecycle = lifecycleRegister
+    override val lifecycle: Lifecycle = lifecycleRegister
 
     init {
+        lifecycleRegister.currentState = Lifecycle.State.STARTED
         lifecycleRegister.currentState = Lifecycle.State.RESUMED
     }
 }

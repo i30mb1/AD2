@@ -1,7 +1,10 @@
 package n7.ad2.camera.internal
 
+import android.graphics.Bitmap
 import androidx.camera.core.Preview
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
@@ -20,7 +23,7 @@ class Controller @Inject constructor(
     private val previewer: Previewer,
     private val processor: Processor,
     private val streamer: Streamer,
-    private val lifecycle: LifecycleOwner,
+    lifecycle: LifecycleOwner,
 ) {
 
     private val _state: MutableStateFlow<CameraState> = MutableStateFlow(CameraState.empty())
@@ -31,22 +34,25 @@ class Controller @Inject constructor(
             .onEach { image: Image ->
                 val processorState = processor.analyze(image)
                 _state.setDetectedObject(processorState.detectedObject)
+                _state.setBitmap(image.source as Bitmap)
             }
+            .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
             .launchIn(lifecycle.lifecycleScope)
     }
 
     suspend fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
         previewer.start(surfaceProvider)
-        streamer.start()
     }
 }
 
 data class CameraState(
     val detectedObject: DetectedObject?,
+    val image: Bitmap?,
 ) {
 
     companion object {
         fun empty() = CameraState(
+            null,
             null,
         )
     }
@@ -55,5 +61,11 @@ data class CameraState(
 internal fun MutableStateFlow<CameraState>.setDetectedObject(detectedObject: DetectedObject?) = update {
     it.copy(
         detectedObject = detectedObject
+    )
+}
+
+internal fun MutableStateFlow<CameraState>.setBitmap(image: Bitmap) = update {
+    it.copy(
+        image = image
     )
 }
