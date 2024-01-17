@@ -1,7 +1,8 @@
 package n7.ad2.feature.camera.domain.impl
 
-import android.app.Application
+import androidx.annotation.VisibleForTesting
 import androidx.camera.core.ImageAnalysis
+import androidx.camera.core.ImageProxy
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import java.util.concurrent.Executors
@@ -12,35 +13,47 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.WhileSubscribed
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.shareIn
-import n7.ad2.feature.camera.domain.CameraSettings
+import kotlinx.coroutines.runBlocking
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.model.Image
 import org.jetbrains.kotlinx.dl.impl.preprocessing.camerax.toBitmap
 
+/**
+ * Сущность отвечающая за раздачу кадров с камеры
+ */
 class StreamerCameraX(
-    private val application: Application,
-    private val cameraSettings: CameraSettings,
-    private val lifecycle: LifecycleOwner,
+    private val cameraProvider: CameraProvider,
+    lifecycle: LifecycleOwner,
 ) : Streamer {
 
-    private val imageAnalysis by lazy {
+    @VisibleForTesting
+    var _imageAnalysis: () -> ImageAnalysis = {
         ImageAnalysis.Builder()
             .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
             .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
             .build()
     }
+    private val imageAnalysis: ImageAnalysis by lazy { _imageAnalysis() }
     private val _stream: SharedFlow<Image> = callbackFlow {
-        imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor()) { image ->
+        imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor()) { image: ImageProxy ->
             val result = image.toBitmap(applyRotation = true)
             trySend(Image(result))
             image.close()
         }
-        application.getCamera().bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), imageAnalysis)
+
+        cameraProvider.bind(imageAnalysis)
         awaitClose {
-            imageAnalysis.clearAnalyzer()
+            runBlocking {
+                cameraProvider.unbind(imageAnalysis)
+                imageAnalysis.clearAnalyzer()
+            }
         }
     }
-        .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed(5.seconds))
+        .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed(SUBSCRIBE_DELAY))
 
     override val stream: SharedFlow<Image> = _stream
+
+    companion object {
+        val SUBSCRIBE_DELAY = 3.seconds
+    }
 }

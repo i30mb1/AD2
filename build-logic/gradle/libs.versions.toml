@@ -136,11 +136,9 @@ testJunitKtx = "androidx.test.ext:junit-ktx:1.1.5" # Assertions
 testTruth = "androidx.test.ext:truth:1.5.0"
 testTruthJvm = "com.google.truth:truth:1.1.5"
 coreTesting = "androidx.arch.core:core-testing:2.2.0"
-mockitoWeb = "com.squareup.okhttp3:mockwebserver:4.4.0"
-mockito = "org.mockito:mockito-core:3.2.4"
-mockitokotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0" # A small library that provides helper functions to work with Mockito in Kotlin.
 fragmentTesting = "androidx.fragment:fragment-testing:1.6.2"
 mockk = "io.mockk:mockk-android:1.13.8"
+test-robolectric = "org.robolectric:robolectric:4.11.1"
 
 espresso = "androidx.test.espresso:espresso-core:3.5.1"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.5.1"

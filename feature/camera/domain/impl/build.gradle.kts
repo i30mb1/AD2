@@ -14,4 +14,9 @@ dependencies {
     implementation(libs.bundles.kotlinDL)
     implementation(libs.coroutines)
     implementation(libs.lifecycle.common)
+
+    testImplementation(libs.mockk)
+    testImplementation(libs.testTruthJvm)
+    testImplementation(libs.test.lifecycle)
+    testImplementation(libs.test.robolectric)
 }

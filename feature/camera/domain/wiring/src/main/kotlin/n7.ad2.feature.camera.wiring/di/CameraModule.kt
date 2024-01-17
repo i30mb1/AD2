@@ -8,6 +8,7 @@ import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.Processor
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.impl.CameraLifecycle
+import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
 import n7.ad2.feature.camera.domain.impl.PreviewerCameraX
 import n7.ad2.feature.camera.domain.impl.ProcessorKotlinDL
@@ -37,28 +38,30 @@ interface CameraModule {
 
         @dagger.Provides
         @Singleton
-        fun providePreviewer(
+        fun provideCameraProvider(
             application: Application,
             cameraSettings: CameraSettings,
-            lifecycle: LifecycleOwner,
+            lifecycleOwner: LifecycleOwner,
+        ): CameraProvider {
+            return CameraProvider(application, cameraSettings, lifecycleOwner)
+        }
+
+        @dagger.Provides
+        @Singleton
+        fun providePreviewer(
+            cameraProvider: CameraProvider,
         ): Previewer {
-            return PreviewerCameraX(
-                application,
-                lifecycle,
-                cameraSettings,
-            )
+            return PreviewerCameraX(cameraProvider)
         }
 
         @dagger.Provides
         @Singleton
         fun provideStreamer(
-            application: Application,
-            cameraSettings: CameraSettings,
+            cameraProvider: CameraProvider,
             lifecycle: LifecycleOwner,
         ): Streamer {
             return StreamerCameraX(
-                application,
-                cameraSettings,
+                cameraProvider,
                 lifecycle,
             )
         }

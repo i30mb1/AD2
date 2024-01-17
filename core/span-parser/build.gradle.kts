@@ -15,7 +15,6 @@ dependencies {
     implementation(projects.core.commonAndroid)
 
     testImplementation(libs.testTruth)
-    testImplementation(libs.mockitokotlin)
     testImplementation(testFixtures(projects.core.commonJvm))
 
     kapt(libs.daggerAnnotation)
