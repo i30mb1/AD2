@@ -12,7 +12,7 @@ android {
 
 dependencies {
     androidTestImplementation(libs.testRunner)
-    androidTestImplementation(libs.testJunitKtx)
+    androidTestImplementation(libs.test.junit.kotlin)
     androidTestImplementation(libs.benchmarkJunit)
     androidTestImplementation(libs.coroutines)
 }

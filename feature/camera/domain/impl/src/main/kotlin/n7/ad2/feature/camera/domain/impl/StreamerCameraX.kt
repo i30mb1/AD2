@@ -1,6 +1,5 @@
 package n7.ad2.feature.camera.domain.impl
 
-import androidx.annotation.VisibleForTesting
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.lifecycle.LifecycleOwner
@@ -26,14 +25,12 @@ class StreamerCameraX(
     lifecycle: LifecycleOwner,
 ) : Streamer {
 
-    @VisibleForTesting
-    var _imageAnalysis: () -> ImageAnalysis = {
+    private val imageAnalysis: ImageAnalysis by lazy {
         ImageAnalysis.Builder()
             .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
             .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
             .build()
     }
-    private val imageAnalysis: ImageAnalysis by lazy { _imageAnalysis() }
     private val _stream: SharedFlow<Image> = callbackFlow {
         imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor()) { image: ImageProxy ->
             val result = image.toBitmap(applyRotation = true)

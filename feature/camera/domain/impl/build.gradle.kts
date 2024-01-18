@@ -19,4 +19,6 @@ dependencies {
     testImplementation(libs.testTruthJvm)
     testImplementation(libs.test.lifecycle)
     testImplementation(libs.test.robolectric)
+    testImplementation(libs.test.junit.kotlin)
+    testImplementation(libs.kotlin.reflection)
 }

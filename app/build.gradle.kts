@@ -147,5 +147,5 @@ dependencies {
     androidTestImplementation(libs.espresso)
     androidTestImplementation(libs.testRunner)
     androidTestImplementation(libs.testRules)
-    androidTestImplementation(libs.testJunitKtx)
+    androidTestImplementation(libs.test.junit.kotlin)
 }
