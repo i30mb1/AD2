@@ -27,7 +27,10 @@ import org.robolectric.annotation.Implements
 import org.robolectric.shadow.api.Shadow
 
 @RunWith(AndroidJUnit4::class)
-@Config(shadows = [ImageAnalysisShadow::class])
+@Config(
+    shadows = [ImageAnalysisShadow::class],
+    manifest = Config.NONE,
+)
 class StreamerCameraXTest {
 
     @get:Rule val coroutineRule = CoroutineTestRule()
