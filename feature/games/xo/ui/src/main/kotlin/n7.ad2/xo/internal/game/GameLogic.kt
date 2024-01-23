@@ -73,7 +73,7 @@ internal class GameLogic @Inject constructor(
     }
 
     suspend fun connectToServer(server: Server) = withContext(dispatchers.IO) {
-        socketHolder.socket = clientHolder.start(InetAddress.getByName(server.serverIP), 0)
+        socketHolder.socket = clientHolder.start(InetAddress.getByName(server.serverIP), server.port)
         _state.addLog("Connected to Server")
         collectMessages()
     }
