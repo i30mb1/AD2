@@ -8,7 +8,6 @@ import android.view.View
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
@@ -34,6 +33,7 @@ import n7.ad2.navigator.Navigator
 
 /**
  * @JvmOverloads - нужен для запуска этого фрагмента когда фарбирка для HeroesFragment не будет предоставлена
+ * обычно она будет предоставлена в тестах, в проде зависимости берутся из Application
  */
 internal class HeroesFragment @JvmOverloads constructor(
     override var dependenciesMap: DependenciesMap = emptyMap(),
