@@ -4,8 +4,8 @@ plugins {
 }
 
 dependencies {
-    implementation(projects.feature.camera.domain.impl)
-    implementation(projects.feature.camera.domain.api)
+    api(projects.feature.camera.domain.impl)
+    api(projects.feature.camera.domain.api)
 
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.commonJvm)

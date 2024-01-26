@@ -16,8 +16,8 @@ dependencies {
 
     kapt(libs.daggerAnnotation)
 
-    androidTestImplementation(libs.fragmentTesting)
+    androidTestImplementation(libs.test.fragment)
     androidTestImplementation(libs.test.junit.kotlin)
     androidTestImplementation(libs.mockk)
-    androidTestImplementation(libs.espresso)
+    androidTestImplementation(libs.test.espresso)
 }

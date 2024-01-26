@@ -11,7 +11,7 @@ android {
 }
 
 dependencies {
-    androidTestImplementation(libs.testRunner)
+    androidTestImplementation(libs.test.runner)
     androidTestImplementation(libs.test.junit.kotlin)
     androidTestImplementation(libs.benchmarkJunit)
     androidTestImplementation(libs.coroutines)

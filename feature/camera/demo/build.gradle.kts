@@ -2,6 +2,7 @@ plugins {
     id("convention.android-application")
     id("convention.compose")
     id("n7.plugins.kotlin-kapt")
+    `maven-publish`
 }
 
 android {
@@ -23,6 +24,16 @@ android {
             isDebuggable = true
             signingConfig = signingConfigs.getByName("debug")
             resValue("string", "app_name", "AD2-Camera")
+        }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            group = "n7.ad2"
+            artifactId = "camera"
+            version = "1.0"
         }
     }
 }

@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.espresso)
+    implementation(libs.test.espresso)
     implementation(libs.uiautomator)
     implementation(libs.test.junit.kotlin)
     implementation(libs.benchmarkMacro)

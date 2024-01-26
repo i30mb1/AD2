@@ -1,6 +1,5 @@
 plugins {
     `kotlin-dsl`
-    `maven-publish`
 }
 
 gradlePlugin {
@@ -19,17 +18,6 @@ gradlePlugin {
             id = "n7.plugins.git-hooks"
             implementationClass = "n7.plugins.GitHooksPlugin"
             displayName = "Git Hooks Plugin"
-        }
-    }
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            group = "n7"
-            artifactId = "convention"
-            version = "1.0"
-            from(components["java"])
         }
     }
 }

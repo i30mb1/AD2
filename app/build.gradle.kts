@@ -144,8 +144,8 @@ dependencies {
     implementation(projects.feature.itemPage)
     implementation(projects.feature.settings)
 
-    androidTestImplementation(libs.espresso)
-    androidTestImplementation(libs.testRunner)
+    androidTestImplementation(libs.test.espresso)
+    androidTestImplementation(libs.test.runner)
     androidTestImplementation(libs.testRules)
     androidTestImplementation(libs.test.junit.kotlin)
 }
