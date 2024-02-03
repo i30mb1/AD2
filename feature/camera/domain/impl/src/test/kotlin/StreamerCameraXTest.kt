@@ -1,3 +1,4 @@
+
 import androidx.camera.core.ImageAnalysis
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.testing.TestLifecycleOwner
@@ -25,7 +26,6 @@ import org.robolectric.annotation.Config
 import org.robolectric.annotation.Implementation
 import org.robolectric.annotation.Implements
 import org.robolectric.shadow.api.Shadow
-import org.robolectric.util.ReflectionHelpers
 
 @RunWith(AndroidJUnit4::class)
 @Config(
@@ -62,9 +62,7 @@ class StreamerCameraXTest {
     private fun getImageAnalysis(streamer: Streamer): ImageAnalysisShadow {
         // TODO do not work with `by lazy` ReflectionHelpers.getField<ImageAnalysis>(streamer,"imageAnalysis")
         val origin: KCallable<*> = streamer.javaClass.kotlin.members.find { it.name == "imageAnalysis" }!!
-        streamer.javaClass.getDeclaredField("imageAnalysis")
         origin.isAccessible = true
-        ReflectionHelpers.getField<Lazy<Any>>(streamer, "imageAnalysis")
         return Shadow.extract(origin.call(streamer) as ImageAnalysis)
     }
 }
