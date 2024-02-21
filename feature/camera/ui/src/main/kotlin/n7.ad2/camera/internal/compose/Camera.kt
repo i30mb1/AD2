@@ -5,13 +5,13 @@ import androidx.camera.core.Preview.SurfaceProvider
 import androidx.camera.view.PreviewView
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -53,8 +53,9 @@ internal fun Camera(
             modifier = Modifier
                 .padding(20.dp)
                 .size(128.dp)
-                .background(Color.Blue)
+                .background(AppTheme.color.primary)
                 .align(Alignment.BottomCenter)
+                .clickable { event(CameraEvent.Click) }
         ) {
             if (cameraStateUI.image != null) {
                 Image(
@@ -71,4 +72,5 @@ sealed interface CameraEvent {
     class PreviewReady(
         val surfaceProvider: SurfaceProvider,
     ) : CameraEvent
+    data object Click : CameraEvent
 }
