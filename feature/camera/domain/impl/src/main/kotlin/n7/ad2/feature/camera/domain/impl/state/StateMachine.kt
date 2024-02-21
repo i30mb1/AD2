@@ -15,7 +15,7 @@ internal class StateMachine(
     private val scope: CoroutineScope,
 ) {
 
-    private var delayJob: Job? = null
+    private lateinit var delayJob: Job
     private val _currentState: MutableStateFlow<State> = MutableStateFlow(State.Tip)
     val currentState: StateFlow<State> = _currentState.asStateFlow()
 
@@ -25,32 +25,33 @@ internal class StateMachine(
     }
 
     fun goToNextState() {
-        delayJob?.cancel()
+        delayJob.cancel()
         nextState()
     }
 
-    private suspend fun updateToState() {
+    private fun updateToState() {
         val delayForCurrentState = getDelayFromState()
         delayJob = scope.launch {
             delay(delayForCurrentState)
             nextState()
         }
-        delayJob?.join()
-        if (_currentState.value != State.Timeout) {
-            updateToState()
-        }
     }
 
     private fun nextState() {
         _currentState.value = when (_currentState.value) {
-            State.Tip -> State.Timeout
+            State.Tip -> State.Dialog
+            State.Dialog -> State.Timeout
             State.Timeout -> error("такого быть не может")
+        }
+        if (_currentState.value != State.Timeout) {
+            updateToState()
         }
     }
 
     private fun getDelayFromState(): Duration {
         return when (_currentState.value) {
             State.Tip -> config.delay
+            State.Dialog -> config.delay
             State.Timeout -> 0.seconds
         }
     }
@@ -62,5 +63,6 @@ internal class StateMachineConfig(
 
 internal sealed interface State {
     data object Tip : State
+    data object Dialog : State
     data object Timeout : State
 }

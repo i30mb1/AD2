@@ -16,7 +16,9 @@ class StateMachineTest {
         Truth.assertThat(machine.currentState.value).isEqualTo(State.Tip)
         advanceTimeBy(1.seconds)
         Truth.assertThat(machine.currentState.value).isEqualTo(State.Tip)
-        advanceTimeBy(5.seconds)
+        advanceTimeBy(6.seconds)
+        Truth.assertThat(machine.currentState.value).isEqualTo(State.Dialog)
+        advanceTimeBy(6.seconds)
         Truth.assertThat(machine.currentState.value).isEqualTo(State.Timeout)
     }
 
@@ -28,6 +30,8 @@ class StateMachineTest {
         advanceTimeBy(1.seconds)
         Truth.assertThat(machine.currentState.value).isEqualTo(State.Tip)
         machine.goToNextState()
+        Truth.assertThat(machine.currentState.value).isEqualTo(State.Dialog)
+        advanceTimeBy(6.seconds)
         Truth.assertThat(machine.currentState.value).isEqualTo(State.Timeout)
     }
 }
