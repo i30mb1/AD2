@@ -50,5 +50,13 @@ dependencies {
     implementation(projects.feature.camera.domain.impl)
     implementation(projects.feature.camera.domain.wiring)
 
+    androidTestImplementation(libs.test.junit.kotlin)
+    androidTestImplementation(libs.test.fragment)
+    androidTestImplementation(libs.test.runner)
+    androidTestImplementation(libs.test.espresso)
+    androidTestImplementation(libs.test.uiautomator)
+    androidTestImplementation(libs.testCoreKtx)
+    androidTestImplementation(libs.testRules)
+
     kapt(libs.daggerAnnotation)
 }

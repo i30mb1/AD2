@@ -140,6 +140,7 @@ coreTesting = "androidx.arch.core:core-testing:2.2.0"
 test-fragment = "androidx.fragment:fragment-testing:1.6.2"
 mockk = "io.mockk:mockk-android:1.13.8"
 test-robolectric = "org.robolectric:robolectric:4.11.1"
+test-uiautomator = "androidx.test.uiautomator:uiautomator:2.3.0-alpha03"
 
 test-espresso = "androidx.test.espresso:espresso-core:3.5.1"
 espressoIntents = "androidx.test.espresso:espresso-intents:3.5.1"

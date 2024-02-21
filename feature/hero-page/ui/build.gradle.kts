@@ -31,4 +31,10 @@ dependencies {
     testImplementation(libs.test.fragment)
     testImplementation(libs.test.runner)
     testImplementation(libs.test.espresso)
+
+    androidTestImplementation(libs.test.junit.kotlin)
+    androidTestImplementation(libs.test.fragment)
+    androidTestImplementation(libs.test.runner)
+    androidTestImplementation(libs.test.espresso)
+    androidTestImplementation(libs.testTruth)
 }
