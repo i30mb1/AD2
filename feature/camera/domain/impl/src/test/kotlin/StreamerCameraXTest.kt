@@ -4,8 +4,8 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.testing.TestLifecycleOwner
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import io.mockk.coVerify
 import io.mockk.mockk
+import io.mockk.verify
 import java.util.concurrent.Executor
 import kotlin.reflect.KCallable
 import kotlin.reflect.jvm.isAccessible
@@ -51,11 +51,11 @@ class StreamerCameraXTest {
         val imageAnalysis = getImageAnalysis(streamer)
         val job = streamer.stream.launchIn(this)
         delay(1.seconds)
-        coVerify(exactly = 1) { cameraProvider.bind(any()) }
+        verify(exactly = 1) { cameraProvider.bind(any()) }
         Truth.assertThat(imageAnalysis.setAnalyzerCalled).isTrue()
         job.cancelAndJoin()
         delay(StreamerCameraX.SUBSCRIBE_DELAY)
-        coVerify(exactly = 1) { cameraProvider.unbind(any()) }
+        verify(exactly = 1) { cameraProvider.unbind(any()) }
         Truth.assertThat(imageAnalysis.clearAnalyzerCalled).isTrue()
     }
 

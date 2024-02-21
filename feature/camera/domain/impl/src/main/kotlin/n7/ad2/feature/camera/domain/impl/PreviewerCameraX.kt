@@ -11,7 +11,7 @@ class PreviewerCameraX(
         Preview.Builder().build()
     }
 
-    override suspend fun start(surface: Any) {
+    override fun start(surface: Any) {
         cameraProvider.bind(preview)
         preview.setSurfaceProvider(surface as Preview.SurfaceProvider)
     }
