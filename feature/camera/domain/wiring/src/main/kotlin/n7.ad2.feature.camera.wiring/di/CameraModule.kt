@@ -10,9 +10,10 @@ import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.impl.CameraLifecycle
 import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
-import n7.ad2.feature.camera.domain.impl.PreviewerCameraX
-import n7.ad2.feature.camera.domain.impl.ProcessorKotlinDL
+import n7.ad2.feature.camera.domain.impl.Controller
 import n7.ad2.feature.camera.domain.impl.StreamerCameraX
+import n7.ad2.feature.camera.domain.impl.preview.PreviewerCameraX
+import n7.ad2.feature.camera.domain.impl.processor.ProcessorKotlinDL
 
 @dagger.Module
 interface CameraModule {
@@ -37,6 +38,22 @@ interface CameraModule {
         }
 
         @dagger.Provides
+        @dagger.Reusable
+        fun provideController(
+            previewer: Previewer,
+            processor: Processor,
+            streamer: Streamer,
+            lifecycleOwner: LifecycleOwner,
+        ): Controller {
+            return Controller(
+                previewer,
+                processor,
+                streamer,
+                lifecycleOwner,
+            )
+        }
+
+        @dagger.Provides
         @Singleton
         fun provideCameraProvider(
             application: Application,
@@ -57,10 +74,12 @@ interface CameraModule {
         @dagger.Provides
         @Singleton
         fun provideStreamer(
+            cameraSettings: CameraSettings,
             cameraProvider: CameraProvider,
             lifecycle: LifecycleOwner,
         ): Streamer {
             return StreamerCameraX(
+                cameraSettings,
                 cameraProvider,
                 lifecycle,
             )

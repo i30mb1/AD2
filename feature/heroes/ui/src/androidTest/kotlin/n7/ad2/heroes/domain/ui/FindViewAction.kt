@@ -18,7 +18,7 @@ class FindViewAction : ViewAction {
         return ViewMatchers.isAssignableFrom(View::class.java)
     }
 
-    override fun perform(uiController: UiController?, view: View?) {
-        targetView = requireNotNull(view)
+    override fun perform(uiController: UiController, view: View) {
+        targetView = view
     }
 }

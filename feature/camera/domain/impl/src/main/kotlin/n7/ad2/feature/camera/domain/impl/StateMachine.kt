@@ -1,4 +1,4 @@
-package n7.ad2.feature.camera.domain.impl.state
+package n7.ad2.feature.camera.domain.impl
 
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds

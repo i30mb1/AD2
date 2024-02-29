@@ -1,4 +1,4 @@
-package n7.ad2.feature.camera.domain.impl
+package n7.ad2.feature.camera.domain.impl.processor
 
 import kotlin.time.TimeSource
 import n7.ad2.app.logger.Logger

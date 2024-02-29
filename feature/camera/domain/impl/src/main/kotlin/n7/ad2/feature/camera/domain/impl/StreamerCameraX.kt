@@ -1,5 +1,6 @@
 package n7.ad2.feature.camera.domain.impl
 
+import android.annotation.SuppressLint
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.lifecycle.LifecycleOwner
@@ -13,18 +14,23 @@ import kotlinx.coroutines.flow.WhileSubscribed
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.runBlocking
+import n7.ad2.feature.camera.domain.CameraSettings
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.model.Image
+import n7.ad2.feature.camera.domain.model.ImageMetadata
 import org.jetbrains.kotlinx.dl.impl.preprocessing.camerax.toBitmap
 
 /**
  * Сущность отвечающая за раздачу кадров с камеры
  */
+@SuppressLint("RestrictedApi")
 class StreamerCameraX(
+    private val settings: CameraSettings,
     private val cameraProvider: CameraProvider,
     lifecycle: LifecycleOwner,
 ) : Streamer {
 
+    private val executor = Executors.newSingleThreadExecutor()
     private val imageAnalysis: ImageAnalysis by lazy {
         ImageAnalysis.Builder()
             .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
@@ -32,9 +38,10 @@ class StreamerCameraX(
             .build()
     }
     private val _stream: SharedFlow<Image> = callbackFlow {
-        imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor()) { image: ImageProxy ->
+        imageAnalysis.setAnalyzer(executor) { image: ImageProxy ->
             val result = image.toBitmap(applyRotation = true)
-            trySend(Image(result))
+            val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
+            trySend(Image(result, metadata))
             image.close()
         }
 

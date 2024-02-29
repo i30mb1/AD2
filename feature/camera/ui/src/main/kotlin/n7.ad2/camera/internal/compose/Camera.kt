@@ -3,22 +3,29 @@ package n7.ad2.camera.internal.compose
 import android.view.ViewGroup
 import androidx.camera.core.Preview.SurfaceProvider
 import androidx.camera.view.PreviewView
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import n7.ad2.camera.internal.model.CameraStateUI
+import n7.ad2.camera.internal.model.DetectedRect
 import n7.ad2.ui.compose.AppTheme
 
 @Preview
@@ -41,14 +48,38 @@ internal fun Camera(
     Box {
         val context = LocalContext.current
         val lifecycle = LocalLifecycleOwner.current
-        val previewScaleType = PreviewView.ScaleType.FILL_CENTER
+        val previewScaleType: PreviewView.ScaleType = PreviewView.ScaleType.FILL_CENTER
         AndroidView(factory = {
             PreviewView(context).apply {
                 scaleType = previewScaleType
                 layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-                event(CameraEvent.PreviewReady(surfaceProvider))
+                event(CameraEvent.PreviewReady(surfaceProvider, previewScaleType))
             }
         })
+        Canvas(
+            modifier = Modifier
+                .fillMaxSize()
+                .onGloballyPositioned { layoutCoordinates ->
+                    event(
+                        CameraEvent.GloballyPosition(
+                            layoutCoordinates.size.width,
+                            layoutCoordinates.size.height,
+                        )
+                    )
+                },
+            onDraw = {
+                if (cameraStateUI.detectedRect is DetectedRect.Face) {
+                    drawRect(
+                        color = Color.Blue,
+                        topLeft = Offset(cameraStateUI.detectedRect.xMin, cameraStateUI.detectedRect.yMin),
+                        size = Size(
+                            cameraStateUI.detectedRect.xMax - cameraStateUI.detectedRect.xMin,
+                            cameraStateUI.detectedRect.yMax - cameraStateUI.detectedRect.yMin,
+                        ),
+                    )
+                }
+            },
+        )
         Box(
             modifier = Modifier
                 .padding(20.dp)
@@ -71,6 +102,13 @@ internal fun Camera(
 sealed interface CameraEvent {
     class PreviewReady(
         val surfaceProvider: SurfaceProvider,
+        val scaleType: PreviewView.ScaleType,
     ) : CameraEvent
+
+    class GloballyPosition(
+        val viewWidth: Int,
+        val viewHeight: Int,
+    ) : CameraEvent
+
     data object Click : CameraEvent
 }

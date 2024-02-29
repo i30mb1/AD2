@@ -1,7 +1,8 @@
-package n7.ad2.feature.camera.domain.impl
+package n7.ad2.feature.camera.domain.impl.preview
 
 import androidx.camera.core.Preview
 import n7.ad2.feature.camera.domain.Previewer
+import n7.ad2.feature.camera.domain.impl.CameraProvider
 
 class PreviewerCameraX(
     private val cameraProvider: CameraProvider,
