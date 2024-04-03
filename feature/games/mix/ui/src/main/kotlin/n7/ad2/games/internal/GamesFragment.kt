@@ -37,7 +37,7 @@ internal class GamesFragment(
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return ComposeView {
-            GamesScreen(viewModel, parentFragment as DrawerPercentListener, ::onGameClicked)
+            GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked)
         }
     }
 

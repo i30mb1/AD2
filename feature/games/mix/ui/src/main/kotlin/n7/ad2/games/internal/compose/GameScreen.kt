@@ -32,7 +32,7 @@ import n7.ad2.ui.compose.view.LoadingScreen
 @Composable
 internal fun GamesScreen(
     viewModel: GamesViewModel,
-    drawerPercentListener: DrawerPercentListener,
+    drawerPercentListener: DrawerPercentListener?,
     onGameClicked: (game: GameVO) -> Unit,
 ) {
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
@@ -56,8 +56,8 @@ internal fun GamesScreen(
     }
 
     DisposableEffect(key1 = Unit) {
-        drawerPercentListener.setDrawerPercentListener { percent -> drawerPercent = percent }
-        onDispose { drawerPercentListener.setDrawerPercentListener(null) }
+        drawerPercentListener?.setDrawerPercentListener { percent -> drawerPercent = percent }
+        onDispose { drawerPercentListener?.setDrawerPercentListener(null) }
     }
 }
 
