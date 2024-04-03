@@ -1,3 +1,4 @@
+
 import com.google.common.truth.Truth
 import io.mockk.mockk
 import java.net.InetAddress
@@ -10,11 +11,16 @@ import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerHolderWithSoc
 import n7.ad2.feature.games.xo.domain.internal.server.socket.SocketHolderImpl
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.Parameterized
 
 /**
  * Проверяем поведение ServerSocket с общением по Socket
  */
-internal class ServerHolderWithSocketTest {
+@RunWith(Parameterized::class)
+internal class ServerHolderWithSocketTest(
+    private val param: Boolean,
+) {
 
     @get:Rule val timeout = CoroutinesTimeout.seconds(5)
     @get:Rule val coroutineRule = CoroutineTestRule(StandardTestDispatcher())
@@ -51,6 +57,17 @@ internal class ServerHolderWithSocketTest {
         val port = server.localPort
         clientSocket.socket = clientHolder.start(host, port)
         serverSocket.socket = serverHolder.awaitClient()
+    }
+
+    companion object {
+        @JvmStatic
+        @Parameterized.Parameters
+        fun build(): Collection<Array<Boolean>> {
+            return listOf(
+                arrayOf(true),
+                arrayOf(false),
+            )
+        }
     }
 }
 
