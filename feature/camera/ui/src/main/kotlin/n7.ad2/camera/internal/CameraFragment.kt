@@ -18,8 +18,11 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
 import java.io.OutputStream
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
@@ -34,7 +37,6 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.camera.internal.compose.Camera
 import n7.ad2.camera.internal.compose.CameraEvent
 import n7.ad2.camera.internal.di.DaggerCameraComponent
-import n7.ad2.ktx.viewModel
 import n7.ad2.ui.ComposeView
 
 internal class CameraFragment(
@@ -44,12 +46,15 @@ internal class CameraFragment(
     @Inject lateinit var cameraViewModelFactory: CameraViewModel.Factory
     @Inject lateinit var logger: Logger
 
-    private val viewModel: CameraViewModel by viewModel { cameraViewModelFactory.create() }
+    private val viewModel: CameraViewModel by viewModels {
+        viewModelFactory {
+            initializer { cameraViewModelFactory.create() }
+        }
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         DaggerCameraComponent.factory().create(findDependencies()).inject(this)
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -144,5 +149,4 @@ class CameraX(
             }
         }
     }
-
 }
