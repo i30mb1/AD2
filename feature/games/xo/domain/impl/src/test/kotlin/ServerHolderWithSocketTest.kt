@@ -62,10 +62,10 @@ internal class ServerHolderWithSocketTest(
     companion object {
         @JvmStatic
         @Parameterized.Parameters
-        fun build(): Collection<Array<Boolean>> {
+        fun build(): Collection<Boolean> {
             return listOf(
-                arrayOf(true),
-                arrayOf(false),
+                true,
+                false,
             )
         }
     }
