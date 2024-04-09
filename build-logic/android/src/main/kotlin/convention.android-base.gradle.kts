@@ -28,5 +28,5 @@ configure<BaseExtension> {
 }
 
 dependencies {
-//    add("lintChecks", projects.core.rules)
+    add("lintChecks", project(":core:rules"))
 }

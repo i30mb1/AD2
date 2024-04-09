@@ -69,7 +69,6 @@ fragmentKtx = "androidx.fragment:fragment-ktx:1.6.2" # easy fragment transaction
 activityKtx = "androidx.activity:activity-ktx:1.8.1" # onBackPress support for Fragment
 
 lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
-lintChecks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
 
 androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
 

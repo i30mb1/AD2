@@ -4,5 +4,4 @@ plugins {
 
 dependencies {
     compileOnly(libs.lintApi)
-    compileOnly(libs.lintChecks)
 }
