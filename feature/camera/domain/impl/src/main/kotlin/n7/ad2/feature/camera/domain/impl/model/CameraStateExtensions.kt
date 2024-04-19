@@ -6,12 +6,12 @@ import kotlin.math.min
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import n7.ad2.feature.camera.domain.model.CameraState
+import n7.ad2.feature.camera.domain.model.DetectedFace
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.raw
-import org.jetbrains.kotlinx.dl.api.inference.objectdetection.DetectedObject
 
 fun MutableStateFlow<CameraState>.setDetectedObject(
-    detectedObject: DetectedObject?,
+    detectedFace: DetectedFace?,
     scaleType: PreviewView.ScaleType,
     viewWidth: Int,
     viewHeight: Int,
@@ -19,7 +19,7 @@ fun MutableStateFlow<CameraState>.setDetectedObject(
     sourceImageHeight: Int,
     imageFlipped: Boolean,
 ) = update {
-    if (detectedObject == null || viewWidth == 0 || sourceImageWidth == 0) return@update it.copy(null)
+    if (detectedFace == null || viewWidth == 0 || sourceImageWidth == 0) return@update it.copy(null)
     val scale = if (scaleType == PreviewView.ScaleType.FILL_START ||
         scaleType == PreviewView.ScaleType.FILL_END ||
         scaleType == PreviewView.ScaleType.FILL_CENTER
@@ -45,11 +45,11 @@ fun MutableStateFlow<CameraState>.setDetectedObject(
     }
 
     it.copy(
-        detectedObject = DetectedObject(
-            detectedObject.xMin * previewImageWidth + x,
-            detectedObject.xMax * previewImageWidth + x,
-            detectedObject.yMin * previewImageHeight + y,
-            detectedObject.yMax * previewImageHeight + y,
+        detectedFace = DetectedFace(
+            detectedFace.xMin * previewImageWidth + x,
+            detectedFace.xMax * previewImageWidth + x,
+            detectedFace.yMin * previewImageHeight + y,
+            detectedFace.yMax * previewImageHeight + y,
             0f,
         )
     )

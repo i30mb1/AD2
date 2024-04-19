@@ -15,7 +15,6 @@ import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.Processor
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.impl.model.setDetectedObject
-import n7.ad2.feature.camera.domain.impl.model.setImage
 import n7.ad2.feature.camera.domain.model.CameraState
 import n7.ad2.feature.camera.domain.model.Image
 
@@ -37,7 +36,7 @@ class Controller(
             .onEach { image: Image ->
                 val processorState = processor.analyze(image)
                 _state.setDetectedObject(
-                    processorState.detectedObject,
+                    processorState.detectedFace,
                     scaleType,
                     viewWidth,
                     viewHeight,
@@ -45,9 +44,7 @@ class Controller(
                     image.metadata.height,
                     image.metadata.isImageFlipped,
                 )
-                _state.setImage(
-                    image,
-                )
+//                _state.setImage(image)
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
             .launchIn(lifecycle.lifecycleScope)

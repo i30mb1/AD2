@@ -1,7 +1,7 @@
 package n7.ad2.camera.internal.model
 
 import android.graphics.Bitmap
-import org.jetbrains.kotlinx.dl.api.inference.objectdetection.DetectedObject
+import n7.ad2.feature.camera.domain.model.DetectedFace
 
 internal data class CameraStateUI(
     val name: String,
@@ -30,7 +30,7 @@ internal interface DetectedRect {
     data object Nothing : DetectedRect
 }
 
-internal fun DetectedObject?.toDetectedRect(): DetectedRect {
+internal fun DetectedFace?.toDetectedRect(): DetectedRect {
     if (this == null) return DetectedRect.Nothing
     return DetectedRect.Face(xMin, xMax, yMin, yMax)
 }

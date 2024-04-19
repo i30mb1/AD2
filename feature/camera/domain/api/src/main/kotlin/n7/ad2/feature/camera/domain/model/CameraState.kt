@@ -1,9 +1,8 @@
 package n7.ad2.feature.camera.domain.model
 
-import org.jetbrains.kotlinx.dl.api.inference.objectdetection.DetectedObject
 
 data class CameraState(
-    val detectedObject: DetectedObject?,
+    val detectedFace: DetectedFace?,
     val raw: raw?,
 ) {
 
@@ -17,5 +16,5 @@ data class CameraState(
 
 data class raw(
     val image: Image?,
-    val detectedObject: DetectedObject?,
+    val detectedFace: DetectedFace?,
 )

@@ -32,7 +32,7 @@ internal class CameraViewModel @AssistedInject constructor(
                 _state.update {
                     it.copy(
                         image = cameraState.raw?.image?.source as? Bitmap,
-                        detectedRect = cameraState.detectedObject.toDetectedRect(),
+                        detectedRect = cameraState.detectedFace.toDetectedRect(),
                     )
                 }
             }
