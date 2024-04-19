@@ -12,7 +12,7 @@ import org.gradle.api.initialization.Settings
 class IncludeModulesPlugin : Plugin<Settings> {
 
     private val dirsNamesWithoutModules = listOf("build-logic", "build")
-    private val ignoreModules = listOf("AD2", "rules")
+    private val ignoreModules = listOf("AD2")
 
     override fun apply(target: Settings) = with(target) {
         includeAllModules()

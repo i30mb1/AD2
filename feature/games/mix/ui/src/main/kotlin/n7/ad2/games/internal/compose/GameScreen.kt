@@ -78,7 +78,7 @@ private fun GamesList(
             .padding(horizontal = 12.dp, vertical = 4.dp)
     ) {
         games?.forEach { gameData ->
-            Game(gameData.title, gameData.backgroundImage, onGameClick = { onGameClicked(gameData) })
+//            Game(gameData.title, gameData.backgroundImage, onGameClick = { onGameClicked(gameData) })
         }
     }
 }
