@@ -14,8 +14,12 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.withTranslation
 import androidx.lifecycle.findViewTreeLifecycleOwner
 import com.google.android.material.color.MaterialColors
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import n7.ad2.core.ui.R
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.spToPx
+import n7.ad2.ui.performance.FpsExtractor
 
 class FPSView(
     context: Context,
@@ -33,9 +37,17 @@ class FPSView(
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        val lifecycle = findViewTreeLifecycleOwner()?.lifecycle
-        if (lifecycle != null) frameCounter = ChoreographerFrameCounter(lifecycle)
-        frameCounter?.fpsCallback = { fps -> onFps(fps) }
+        val lifecycle = findViewTreeLifecycleOwner()!!.lifecycle
+        frameCounter = FpsExtractor(lifecycle).apply {
+            fpsCallback = { fps -> onFps(fps) }
+        }
+
+        WindowOverlay(
+            context,
+            lifecycle,
+            DispatchersProvider(),
+            CoroutineScope(Job()),
+        ).setEnable(enable = true)
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {

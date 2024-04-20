@@ -2,4 +2,7 @@
 <resources>
     <string name="desc_legion_from_mass_effect_game" translatable="false">legion from mass effect game</string>
     <string name="ui_retry">Retry</string>
+
+    <string name="widget_cpu_format" translatable="false">%1$d%%</string>
+    <string name="widget_ram_format" translatable="false">%1$d MB</string>
 </resources>

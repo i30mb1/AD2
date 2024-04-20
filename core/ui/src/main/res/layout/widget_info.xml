@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/gray_100"
+    tools:layout_height="wrap_content"
+    tools:layout_width="wrap_content"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <TextView
+        android:id="@+id/cpuLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="CPU" />
+
+    <TextView
+        android:id="@+id/cpuInfo"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="888%"
+        android:textColor="#ff0" />
+
+    <TextView
+        android:id="@+id/ramLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="RAM" />
+
+    <TextView
+        android:id="@+id/ramInfo"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="8888 MB"
+        android:textColor="#f00" />
+
+    <TextView
+        android:id="@+id/fpsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="FPS" />
+
+    <TextView
+        android:id="@+id/fpsInfo"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="888"
+        android:textColor="#0f0" />
+
+</merge>

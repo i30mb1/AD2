@@ -22,4 +22,10 @@
     <!--<color name="discordImportantTextUser">#00B0F4</color>-->
     <!--<color name="colorImportant">#ffcb05</color>-->
 
+    <color name="performance_widget_very_bad_color">#FFC50019</color>
+    <color name="performance_widget_poor_color">#FFFF3000</color>
+    <color name="performance_widget_fair_color">#FFFF8700</color>
+    <color name="performance_widget_good_color">#FFFFC900</color>
+    <color name="performance_widget_very_good_color">#FF6ABD23</color>
+    <color name="performance_widget_excellent_color">#FF00953C</color>
 </resources>

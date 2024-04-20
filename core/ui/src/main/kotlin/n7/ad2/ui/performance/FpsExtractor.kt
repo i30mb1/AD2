@@ -1,51 +1,60 @@
-package n7.ad2.ui.frameCounter
+package n7.ad2.ui.performance
 
-import android.os.Handler
-import android.os.Looper
 import android.view.Choreographer
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.ui.frameCounter.FrameCounter
 
-class ChoreographerFrameCounter(
+internal class FpsExtractor(
     lifecycle: Lifecycle?,
 ) : FrameCounter, Choreographer.FrameCallback, DefaultLifecycleObserver {
 
     override var isJunkCallback: ((isJunk: Boolean) -> Unit)? = null
     override var fpsCallback: ((fps: Int) -> Unit)? = null
-    private var count = 0
-    private val mainHandler by lazyUnsafe { Handler(Looper.getMainLooper()) }
+    private var frameCount = 0
+    private var startTime: Long = 0
+    private var endTime: Long = 0
     private val choreographer by lazyUnsafe { Choreographer.getInstance() }
-    private val runnable = Runnable { calculate() }
 
     init {
         lifecycle?.addObserver(this)
     }
 
     override fun doFrame(frameTimeNanos: Long) {
-        count++
+        if (frameCount++ == 0) {
+            startTime = frameTimeNanos
+        }
+        endTime = frameTimeNanos
         choreographer.postFrameCallback(this)
     }
 
     override fun onResume(owner: LifecycleOwner) {
         choreographer.postFrameCallback(this)
-        mainHandler.postDelayed(runnable, FrameCounter.FPS_INTERVAL_TIME)
     }
 
     override fun onPause(owner: LifecycleOwner) {
         choreographer.removeFrameCallback(this)
-        mainHandler.removeCallbacks(runnable)
     }
 
-    override fun onDestroy(owner: LifecycleOwner) {
-        fpsCallback = null
+    // FPS = 1s * frameCount / (end - start)
+    fun get(): Int {
+        val fps = when (frameCount) {
+            0 -> 0
+            else -> {
+                val averageFrameDuration = (endTime - startTime) / frameCount
+                if (averageFrameDuration == 0L) 0 else (NANOS_IN_SECOND / averageFrameDuration).toInt()
+            }
+        }
+        frameCount = 0
+        startTime = 0
+        endTime = 0
+
+        return fps
     }
 
-    private fun calculate() {
-        fpsCallback?.invoke(count)
-        count = 0
-        mainHandler.postDelayed(runnable, FrameCounter.FPS_INTERVAL_TIME)
+    private companion object {
+        const val NANOS_IN_SECOND: Long = 1_000_000_000L
     }
-
 }

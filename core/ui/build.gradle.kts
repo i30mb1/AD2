@@ -5,6 +5,7 @@ plugins {
 
 dependencies {
     implementation(libs.metrics)
+    implementation(projects.core.coroutines)
 
     api(libs.appCompat)
     api(libs.splashScreen)

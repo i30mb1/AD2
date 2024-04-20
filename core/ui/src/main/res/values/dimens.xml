@@ -9,4 +9,7 @@
     <integer name="animation_short">100</integer>
     <integer name="animation_medium">300</integer>
     <integer name="animation_long">600</integer>
+
+    <dimen name="performance_width">280dp</dimen>
+    <dimen name="performance_top_offset">20dp</dimen>
 </resources>
