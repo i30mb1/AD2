@@ -1,7 +1,6 @@
 package n7.ad2.feature.camera.domain.impl
 
 import androidx.camera.core.Preview
-import androidx.camera.view.PreviewView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.flowWithLifecycle
@@ -14,9 +13,9 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.Processor
 import n7.ad2.feature.camera.domain.Streamer
-import n7.ad2.feature.camera.domain.impl.model.setDetectedObject
 import n7.ad2.feature.camera.domain.model.CameraState
 import n7.ad2.feature.camera.domain.model.Image
+import n7.ad2.feature.camera.domain.model.ProcessorState
 
 class Controller(
     private val previewer: Previewer,
@@ -25,41 +24,21 @@ class Controller(
     lifecycle: LifecycleOwner,
 ) {
 
-    private val _state: MutableStateFlow<CameraState> = MutableStateFlow(CameraState.empty())
+    private val _state: MutableStateFlow<CameraState> = MutableStateFlow(CameraState())
     val state: Flow<CameraState> = _state.asStateFlow()
-    private var scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FIT_CENTER
-    private var viewWidth: Int = 0
-    private var viewHeight: Int = 0
 
     init {
         streamer.stream
             .onEach { image: Image ->
-                val processorState = processor.analyze(image)
-                _state.setDetectedObject(
-                    processorState.detectedFace,
-                    scaleType,
-                    viewWidth,
-                    viewHeight,
-                    image.metadata.width,
-                    image.metadata.height,
-                    image.metadata.isImageFlipped,
-                )
-//                _state.setImage(image)
+                val processorState: ProcessorState = processor.analyze(image)
+//                _state.setFace(processorState.detectedFaceNormalized)
+//                _state.setImage(processorState.image)
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
             .launchIn(lifecycle.lifecycleScope)
     }
 
-    fun onUIBind(
-        surfaceProvider: Preview.SurfaceProvider,
-        scaleType: PreviewView.ScaleType,
-    ) {
-        this.scaleType = scaleType
+    fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
         previewer.start(surfaceProvider)
-    }
-
-    fun updatePosition(viewHeight: Int, viewWidth: Int) {
-        this.viewWidth = viewWidth
-        this.viewHeight = viewHeight
     }
 }

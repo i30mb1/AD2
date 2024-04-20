@@ -33,7 +33,7 @@ import n7.ad2.ui.compose.AppTheme
 private fun CameraPreview() {
     AppTheme {
         Camera(
-            CameraStateUI.init(),
+            CameraStateUI(),
             {},
         )
     }

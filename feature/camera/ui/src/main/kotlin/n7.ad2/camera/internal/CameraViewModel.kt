@@ -1,6 +1,5 @@
 package n7.ad2.camera.internal
 
-import android.graphics.Bitmap
 import androidx.camera.core.Preview
 import androidx.camera.view.PreviewView
 import androidx.lifecycle.ViewModel
@@ -13,40 +12,42 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.camera.internal.model.CameraStateUI
-import n7.ad2.camera.internal.model.toDetectedRect
+import n7.ad2.camera.internal.model.setFace
+import n7.ad2.camera.internal.model.setPreviewSizes
+import n7.ad2.camera.internal.model.setScaleType
 import n7.ad2.feature.camera.domain.impl.Controller
+import n7.ad2.feature.camera.domain.model.CameraState
 
 internal class CameraViewModel @AssistedInject constructor(
     private val controller: Controller,
 ) : ViewModel() {
 
-    private val _state: MutableStateFlow<CameraStateUI> = MutableStateFlow(CameraStateUI.init())
+    private val _state: MutableStateFlow<CameraStateUI> = MutableStateFlow(CameraStateUI())
     val state: StateFlow<CameraStateUI> = _state.asStateFlow()
+
 
     init {
         controller.state
-            .onEach { cameraState ->
-                _state.update {
-                    it.copy(
-                        image = cameraState.raw?.image?.source as? Bitmap,
-                        detectedRect = cameraState.detectedFace.toDetectedRect(),
-                    )
-                }
+            .onEach { cameraState: CameraState ->
+                _state.setFace(
+                    cameraState.detectedFaceNormalized,
+                    cameraState.image,
+                )
             }
             .launchIn(viewModelScope)
     }
 
     fun onUIBind(surfaceProvider: Preview.SurfaceProvider, scaleType: PreviewView.ScaleType) {
+        _state.setScaleType(scaleType)
         viewModelScope.launch(Dispatchers.Main.immediate) {
-            controller.onUIBind(surfaceProvider, scaleType)
+            controller.onUIBind(surfaceProvider)
         }
     }
 
     fun onGlobalPosition(viewHeight: Int, viewWidth: Int) {
-        controller.updatePosition(viewHeight, viewWidth)
+        _state.setPreviewSizes(viewHeight, viewWidth)
     }
 
     @AssistedFactory

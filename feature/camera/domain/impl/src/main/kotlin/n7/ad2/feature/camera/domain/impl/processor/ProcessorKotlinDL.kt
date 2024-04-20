@@ -3,7 +3,7 @@ package n7.ad2.feature.camera.domain.impl.processor
 import android.app.Application
 import android.graphics.Bitmap
 import n7.ad2.feature.camera.domain.Processor
-import n7.ad2.feature.camera.domain.model.DetectedFace
+import n7.ad2.feature.camera.domain.model.DetectedFaceNormalized
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ProcessorState
 import org.jetbrains.kotlinx.dl.api.inference.objectdetection.DetectedObject
@@ -36,10 +36,13 @@ class ProcessorKotlinDL(
 //                }
 //            )
 //        }
-        val detectedFace = if (face != null) DetectedFace(
+        val detectedFaceNormalized = if (face != null) DetectedFaceNormalized(
             face.xMin, face.xMax, face.yMin, face.yMax, face.probability
         ) else null
-        return ProcessorState(detectedFace)
+        return ProcessorState(
+            image,
+            detectedFaceNormalized,
+        )
     }
 }
 

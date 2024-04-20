@@ -1,6 +1,7 @@
 package n7.ad2.feature.camera.domain.impl
 
 import android.annotation.SuppressLint
+import android.graphics.Bitmap
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.lifecycle.LifecycleOwner
@@ -39,7 +40,7 @@ class StreamerCameraX(
     }
     private val _stream: SharedFlow<Image> = callbackFlow {
         imageAnalysis.setAnalyzer(executor) { image: ImageProxy ->
-            val result = image.toBitmap(applyRotation = true)
+            val result: Bitmap = image.toBitmap(applyRotation = true)
             val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
             trySend(Image(result, metadata))
             image.close()
