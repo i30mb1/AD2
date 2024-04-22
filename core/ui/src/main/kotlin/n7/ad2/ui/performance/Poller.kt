@@ -26,7 +26,6 @@ internal class PollerImpl(
     private val lifecycle: Lifecycle,
 ) : Poller {
 
-
     private val _usage: MutableSharedFlow<List<ResourceUsage>> = MutableSharedFlow(replay = 1)
     override val usage: SharedFlow<List<ResourceUsage>> = _usage.asSharedFlow()
 
@@ -65,7 +64,7 @@ internal class PollerImpl(
     }
 
     companion object {
-        private const val POLLING_RATE_MS: Long = 1000L
+        private const val POLLING_RATE_MS: Long = 300L
         private const val CACHE_CAPACITY: Int = 100
     }
 }

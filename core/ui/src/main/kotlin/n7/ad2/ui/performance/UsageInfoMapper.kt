@@ -17,11 +17,11 @@ internal class UsageInfoMapper {
         return ResourceUsage.Info(used.toInt(), status)
     }
 
-    fun getFps(currentFps: Int?, maxFps: Float): ResourceUsage.Info {
-        val fps = currentFps ?: maxFps.toInt()
-        val value = fps / maxFps
+    fun getFps(currentFps: Int?, maxFps: Int): ResourceUsage.Info {
+        val fps = currentFps ?: maxFps
+        val value = fps.toFloat() / maxFps
         val status = value.getQuality(0.5f, 0.9f)
-        return ResourceUsage.Info(fps.coerceIn(0, maxFps.toInt()), status)
+        return ResourceUsage.Info(fps.coerceIn(0, maxFps), status)
     }
 
     /**

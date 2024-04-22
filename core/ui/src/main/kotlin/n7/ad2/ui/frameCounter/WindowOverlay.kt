@@ -34,27 +34,34 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.withContext
 import n7.ad2.core.ui.R
 import n7.ad2.core.ui.databinding.WidgetInfoBinding
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.dpToPx
 import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.ui.performance.PollerImpl
 import n7.ad2.ui.performance.ResourceUsage
 
 class WindowOverlay(
     private val context: Context,
-    private val processLifecycle: Lifecycle,
-    private val dispatchersProvider: DispatchersProvider,
+    private val lifecycle: Lifecycle,
+    private val dispatcher: DispatchersProvider,
     private val scope: CoroutineScope,
 ) : DefaultLifecycleObserver {
 
     private val windowManager by lazyUnsafe { context.getSystemService<WindowManager>()!! }
     private var viewOwner: ViewOwner? = null
     private var onDoubleTapListener: (() -> Unit)? = null
+    private val poller = PollerImpl(context, lifecycle)
 
     init {
         setEnable(true)
+        poller.usage
+            .onEach { list -> render(list) }
+            .launchIn(scope)
     }
 
     fun setEnable(enable: Boolean): Boolean {
@@ -65,9 +72,9 @@ class WindowOverlay(
             val viewOwner = createViewOwner()
             this.viewOwner = viewOwner
             windowManager.addView(viewOwner.container, viewOwner.layoutParams)
-            processLifecycle.addObserver(this)
+            lifecycle.addObserver(this)
         } else {
-            processLifecycle.removeObserver(this)
+            lifecycle.removeObserver(this)
             viewOwner?.animate(show = false) {
                 windowManager.removeView(viewOwner?.container)
             }
@@ -108,7 +115,7 @@ class WindowOverlay(
             scope,
             context,
             windowManager,
-            dispatchersProvider,
+            dispatcher,
         )
     }
 }

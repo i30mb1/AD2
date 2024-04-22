@@ -7,6 +7,9 @@ import androidx.lifecycle.LifecycleOwner
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ui.frameCounter.FrameCounter
 
+/**
+ * Считаем сколько кадров было отрисовано за 1 секунду
+ */
 internal class FpsExtractor(
     lifecycle: Lifecycle?,
 ) : FrameCounter, Choreographer.FrameCallback, DefaultLifecycleObserver {

@@ -3,6 +3,9 @@ package n7.ad2.ui.performance
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 
+/**
+ * Информация об использовании оперативной памяти используемой для нашего процесса
+ */
 internal class RAMExtractor(
     private val dispatcher: DispatchersProvider,
 ) {

@@ -1,11 +1,10 @@
 package n7.ad2.ui.performance
 
 import android.content.Context
-import android.view.WindowManager
-import androidx.core.content.getSystemService
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
+import n7.ad2.ktx.lazyUnsafe
 
 interface PerformanceExtractor {
     suspend fun get(): ResourceUsage
@@ -19,6 +18,10 @@ internal class PerformanceExtractorImpl(
     private val ramExtractor: RAMExtractor,
     private val fpsExtractor: FpsExtractor,
 ) : PerformanceExtractor {
+
+    private val maxFps by lazyUnsafe {
+        context.display!!.refreshRate.toInt()
+    }
 
     override suspend fun get(): ResourceUsage {
         val cpu: Deferred<ResourceUsage.Info>
@@ -51,12 +54,7 @@ internal class PerformanceExtractorImpl(
         return infoMapper.getRam(info.usedMemoryMB, info.maxMemoryMB)
     }
 
-    @Suppress("DEPRECATION")
     private fun getFps(): ResourceUsage.Info {
-        val maxFps = context.getSystemService<WindowManager>()!!
-            .defaultDisplay
-            .refreshRate
-
         val currentFps = fpsExtractor.get()
         return infoMapper.getFps(currentFps, maxFps)
     }

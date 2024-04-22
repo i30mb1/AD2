@@ -7,28 +7,23 @@ import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.lazyUnsafe
 
+/**
+ * Информация о загруженности процессора для всего Андройда
+ */
 internal class CPUExtractor(
     private val dispatchers: DispatchersProvider,
 ) {
 
-    private val coresFreq: Array<CoreFreq> by lazyUnsafe {
-        Array(size = getCores()) { CoreFreq(it) }
-    }
+    private val coresFreq: Array<CoreFreq> by lazyUnsafe { Array(size = getCores()) { CoreFreq(it) } }
     private val cpuPatter: Pattern by lazyUnsafe { Pattern.compile("cpu[0-9]+") }
 
-    suspend fun get(): Int {
-        return withContext(dispatchers.IO) {
-            if (coresFreq.isEmpty()) {
-                0
-            } else {
-                coresFreq.sumOf { it.getCurUsage() } / coresFreq.size
-            }
-        }
+    suspend fun get(): Int = withContext(dispatchers.IO) {
+        coresFreq.sumOf { it.getCurUsage() } / coresFreq.size
     }
 
     private fun getCores(): Int {
         return runCatching {
-            File("/sys/device/system/cpu/")
+            File("/sys/devices/system/cpu/")
                 .listFiles { pathname -> cpuPatter.matcher(pathname.name).matches() }!!
                 .size
         }

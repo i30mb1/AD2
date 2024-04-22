@@ -47,7 +47,7 @@ class FPSView(
             lifecycle,
             DispatchersProvider(),
             CoroutineScope(Job()),
-        ).setEnable(enable = true)
+        )
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
