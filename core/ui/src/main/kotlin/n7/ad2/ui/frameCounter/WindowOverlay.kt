@@ -64,7 +64,7 @@ class WindowOverlay(
             .launchIn(scope)
     }
 
-    fun setEnable(enable: Boolean): Boolean {
+    private fun setEnable(enable: Boolean): Boolean {
         if (enable) {
             if (!requestPermission()) {
                 return false
