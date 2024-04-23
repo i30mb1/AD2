@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CPU" />
+
+    <n7.ad2.ui.performance.ChartView
+        android:id="@+id/cpu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RAM" />
+
+    <n7.ad2.ui.performance.ChartView
+        android:id="@+id/ram"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FPS" />
+
+    <n7.ad2.ui.performance.ChartView
+        android:id="@+id/fps"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+</LinearLayout>

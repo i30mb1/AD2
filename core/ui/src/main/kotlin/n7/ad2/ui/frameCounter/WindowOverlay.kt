@@ -42,6 +42,7 @@ import n7.ad2.core.ui.databinding.WidgetInfoBinding
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.dpToPx
 import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.ui.performance.ChartsOwner
 import n7.ad2.ui.performance.PollerImpl
 import n7.ad2.ui.performance.ResourceUsage
 
@@ -69,7 +70,12 @@ class WindowOverlay(
             if (!requestPermission()) {
                 return false
             }
-            val viewOwner = createViewOwner()
+            val viewOwner = ViewOwner(
+                scope,
+                context,
+                windowManager,
+                dispatcher,
+            )
             this.viewOwner = viewOwner
             windowManager.addView(viewOwner.container, viewOwner.layoutParams)
             lifecycle.addObserver(this)
@@ -110,14 +116,6 @@ class WindowOverlay(
         }
     }
 
-    private fun createViewOwner(): ViewOwner {
-        return ViewOwner(
-            scope,
-            context,
-            windowManager,
-            dispatcher,
-        )
-    }
 }
 
 class PanelInfoMapper {
@@ -133,17 +131,17 @@ class PanelInfoMapper {
             )
         }
     }
+}
 
-    @ColorRes
-    private fun ResourceUsage.Status.toColor(): Int {
-        return when (this) {
-            ResourceUsage.Status.VERY_BAD -> R.color.performance_widget_very_bad_color
-            ResourceUsage.Status.POOR -> R.color.performance_widget_poor_color
-            ResourceUsage.Status.FAIR -> R.color.performance_widget_fair_color
-            ResourceUsage.Status.GOOD -> R.color.performance_widget_good_color
-            ResourceUsage.Status.VERY_GOOD -> R.color.performance_widget_very_good_color
-            ResourceUsage.Status.EXCELLENT -> R.color.performance_widget_excellent_color
-        }
+@ColorRes
+fun ResourceUsage.Status.toColor(): Int {
+    return when (this) {
+        ResourceUsage.Status.VERY_BAD -> R.color.performance_widget_very_bad_color
+        ResourceUsage.Status.POOR -> R.color.performance_widget_poor_color
+        ResourceUsage.Status.FAIR -> R.color.performance_widget_fair_color
+        ResourceUsage.Status.GOOD -> R.color.performance_widget_good_color
+        ResourceUsage.Status.VERY_GOOD -> R.color.performance_widget_very_good_color
+        ResourceUsage.Status.EXCELLENT -> R.color.performance_widget_excellent_color
     }
 }
 
@@ -151,13 +149,14 @@ class ViewOwner(
     scope: CoroutineScope,
     private val context: Context,
     private val windowManager: WindowManager,
-    private val dispatchersProvider: DispatchersProvider,
+    private val dispatcher: DispatchersProvider,
 ) {
 
     val layoutParams: LayoutParams = createLayoutParams()
     val container: WidgetContainerView = createContainer()
 
-    private val infoPanelView: InfoPanelView = createInfoPanelView()
+    private val infoPanelView: InfoPanelView = InfoPanelView(context)
+    private val chartsOwner = ChartsOwner(container, dispatcher)
     private val mapper = PanelInfoMapper()
     private val animator = ValueAnimator.ofFloat(0f, 1f).apply {
         interpolator = DecelerateInterpolator()
@@ -169,8 +168,9 @@ class ViewOwner(
     }
 
     suspend fun render(list: List<ResourceUsage>) {
-        withContext(dispatchersProvider.Main) {
+        withContext(dispatcher.Main) {
             infoPanelView.render(mapper.map(list.last()))
+            chartsOwner.render(list)
         }
     }
 
@@ -195,12 +195,11 @@ class ViewOwner(
 
     @Suppress("DEPRECATION")
     private fun createLayoutParams(): LayoutParams {
-        val type = LayoutParams.TYPE_APPLICATION_OVERLAY
         val width = context.resources.getDimensionPixelSize(R.dimen.performance_width)
         return LayoutParams(
             width,
             LayoutParams.WRAP_CONTENT,
-            type,
+            LayoutParams.TYPE_APPLICATION_OVERLAY,
             LayoutParams.FLAG_NOT_FOCUSABLE or LayoutParams.FLAG_NOT_TOUCH_MODAL,
             PixelFormat.TRANSLUCENT,
         ).apply {
@@ -208,10 +207,6 @@ class ViewOwner(
             x = (windowManager.defaultDisplay.width - width) / 2
             y = context.resources.getDimensionPixelSize(R.dimen.performance_top_offset)
         }
-    }
-
-    private fun createInfoPanelView(): InfoPanelView {
-        return InfoPanelView(context)
     }
 
     private fun createContainer(): WidgetContainerView {
@@ -224,9 +219,7 @@ class ViewOwner(
                     windowManager,
                     this@ViewOwner.layoutParams,
                     {},
-                    {
-
-                    }
+                    {},
                 )
             )
         }
