@@ -4,6 +4,6 @@ plugins {
 
 dependencies {
     api(libs.fragmentKtx)
-    api(libs.activityKtx)
+    api(libs.activity)
     api(libs.coreKtx)
 }

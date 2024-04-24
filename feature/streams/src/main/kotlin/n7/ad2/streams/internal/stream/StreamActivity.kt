@@ -18,16 +18,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.core.content.getSystemService
-import androidx.core.view.WindowCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.media3.common.util.UnstableApi
+import javax.inject.Inject
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.stream.compose.StreamScreen
 import n7.ad2.ui.compose.AppTheme
-import javax.inject.Inject
 
 @UnstableApi
 class StreamActivity : FragmentActivity() {
@@ -71,7 +70,7 @@ class StreamActivity : FragmentActivity() {
         }
     }
 
-    override fun onNewIntent(intent: Intent?) {
+    override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         val streamerName = intent?.extras?.getString(STREAMER_NAME) ?: return
         viewModel.load(streamerName)

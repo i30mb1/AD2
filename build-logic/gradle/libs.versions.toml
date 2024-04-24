@@ -66,7 +66,8 @@ viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref
 lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" } # flowWithLifecycle
 
 fragmentKtx = "androidx.fragment:fragment-ktx:1.6.2" # easy fragment transaction + by viewModels()
-activityKtx = "androidx.activity:activity-ktx:1.8.1" # onBackPress support for Fragment
+activity = "androidx.activity:activity:1.9.0" # onBackPress support for Fragment
+composeActivity = "androidx.activity:activity-compose:1.9.0"
 
 lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 
@@ -78,7 +79,6 @@ kotlin-reflection = { module = "org.jetbrains.kotlin:kotlin-reflect", version.re
 kotlin-Serialization-Plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.1"
 kover = "org.jetbrains.kotlinx:kover-gradle-plugin:0.7.4"
-composeActivity = "androidx.activity:activity-compose:1.8.1"
 composeViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 composeCoil = "io.coil-kt:coil-compose:2.4.0"
 composeFoundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }

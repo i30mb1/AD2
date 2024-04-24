@@ -12,7 +12,7 @@ dependencies {
 
     implementation(libs.bundles.camera)
     implementation(libs.bundles.kotlinDL)
-    implementation(libs.activityKtx)
+    implementation(libs.activity)
     implementation(libs.coroutines)
     implementation(libs.lifecycle.common)
 
