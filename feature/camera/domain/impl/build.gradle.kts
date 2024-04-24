@@ -15,6 +15,7 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.coroutines)
     implementation(libs.lifecycle.common)
+    implementation(libs.lifecycleRuntime)
 
     testImplementation(libs.mockk)
     testImplementation(libs.testTruthJvm)

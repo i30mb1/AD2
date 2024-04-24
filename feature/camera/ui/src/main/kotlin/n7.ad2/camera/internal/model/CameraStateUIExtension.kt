@@ -3,6 +3,7 @@ package n7.ad2.camera.internal.model
 import androidx.camera.view.PreviewView
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.time.Duration
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import n7.ad2.feature.camera.domain.model.DetectedFaceNormalized
@@ -12,7 +13,12 @@ internal fun MutableStateFlow<CameraStateUI>.setFace(
     detectedFaceNormalized: DetectedFaceNormalized?,
     image: Image?,
 ) {
-    if (detectedFaceNormalized == null || image == null) return
+    if (detectedFaceNormalized == null || image == null) {
+        update { state ->
+            state.copy(detectedRect = DetectedRect.Nothing)
+        }
+        return
+    }
     update { state ->
 
         val scale = when (state.scaleType) {
@@ -56,4 +62,8 @@ internal fun MutableStateFlow<CameraStateUI>.setScaleType(scaleType: PreviewView
 
 internal fun MutableStateFlow<CameraStateUI>.setPreviewSizes(viewHeight: Int, viewWidth: Int) = update { state ->
     state.copy(viewHeight = viewHeight, viewWidth = viewWidth)
+}
+
+internal fun MutableStateFlow<CameraStateUI>.updateDelayForRecording(duration: Duration) = update { state ->
+    state.copy(timeoutForRecording = duration)
 }

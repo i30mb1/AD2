@@ -13,6 +13,8 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.Processor
 import n7.ad2.feature.camera.domain.Streamer
+import n7.ad2.feature.camera.domain.impl.model.setFace
+import n7.ad2.feature.camera.domain.impl.model.setImage
 import n7.ad2.feature.camera.domain.model.CameraState
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ProcessorState
@@ -31,8 +33,8 @@ class Controller(
         streamer.stream
             .onEach { image: Image ->
                 val processorState: ProcessorState = processor.analyze(image)
-//                _state.setFace(processorState.detectedFaceNormalized)
-//                _state.setImage(processorState.image)
+                _state.setFace(processorState.detectedFaceNormalized)
+                _state.setImage(processorState.image)
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
             .launchIn(lifecycle.lifecycleScope)

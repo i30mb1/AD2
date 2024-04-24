@@ -13,6 +13,7 @@ import n7.ad2.feature.camera.wiring.di.CameraModule
     ],
     modules = [
         CameraModule::class,
+        UIModule::class,
     ]
 )
 internal interface CameraComponent {
