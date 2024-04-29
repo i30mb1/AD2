@@ -11,7 +11,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import n7.ad2.android.OneShotValue
 import n7.ad2.camera.internal.model.CameraStateUI
 import n7.ad2.camera.internal.model.setFace
 import n7.ad2.camera.internal.model.setPreviewSizes
@@ -62,6 +64,17 @@ internal class CameraViewModel @AssistedInject constructor(
 
     fun onGlobalPosition(viewHeight: Int, viewWidth: Int) {
         _state.setPreviewSizes(viewHeight, viewWidth)
+    }
+
+    fun startRecording() {
+        viewModelScope.launch {
+            val file = controller.startRecording()
+            _state.update { state ->
+                state.copy(
+                    recordedFile = OneShotValue(file),
+                )
+            }
+        }
     }
 
     @AssistedFactory

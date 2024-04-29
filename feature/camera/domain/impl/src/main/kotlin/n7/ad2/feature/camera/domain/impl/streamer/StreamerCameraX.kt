@@ -5,6 +5,8 @@ import android.graphics.Bitmap
 import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
+import androidx.camera.core.resolutionselector.AspectRatioStrategy
+import androidx.camera.core.resolutionselector.ResolutionSelector
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import java.util.concurrent.Executors
@@ -15,7 +17,6 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.WhileSubscribed
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.launch
@@ -27,9 +28,6 @@ import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ImageMetadata
 import org.jetbrains.kotlinx.dl.impl.preprocessing.camerax.toBitmap
 
-/**
- * Сущность отвечающая за раздачу кадров с камеры
- */
 @SuppressLint("RestrictedApi")
 class StreamerCameraX(
     private val settings: CameraSettings,
@@ -43,17 +41,20 @@ class StreamerCameraX(
         ImageAnalysis.Builder()
             .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
             .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
+            .setResolutionSelector(
+                ResolutionSelector.Builder()
+                    .setAspectRatioStrategy(AspectRatioStrategy(settings.aspectRatio, AspectRatioStrategy.FALLBACK_RULE_NONE))
+                    .build()
+            )
             .build()
     }
-    private val _stream: SharedFlow<Image> = callbackFlow<Image> {
+    private val _stream: SharedFlow<Image> = callbackFlow {
         imageAnalysis.setAnalyzer(executor) { image: ImageProxy ->
             val result: Bitmap = image.toBitmap(applyRotation = true)
             image.close()
             val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
             trySend(Image(result, metadata))
-
             counter.count++
-
         }
 
         cameraProvider.bind(imageAnalysis)
@@ -64,7 +65,7 @@ class StreamerCameraX(
             }
         }
     }
-        .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed(SUBSCRIBE_DELAY))
+        .shareIn(lifecycle.lifecycleScope, SharingStarted.Lazily)
 
     override val stream: SharedFlow<Image> = _stream
 

@@ -1,6 +1,7 @@
 package n7.ad2.feature.camera.domain.impl.recorder
 
 import android.content.Context
+import android.util.Range
 import androidx.camera.core.MirrorMode
 import androidx.camera.video.FallbackStrategy
 import androidx.camera.video.FileOutputOptions
@@ -16,7 +17,6 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 import kotlin.time.Duration.Companion.seconds
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.withContext
@@ -33,29 +33,31 @@ class RecorderCameraX(
     private val dispatcher: DispatchersProvider,
 ) : Recorder {
 
-    private var videoCapture: VideoCapture<VideoRecorder>? = null
+    private val recorder by lazy {
+        VideoRecorder.Builder()
+            .setQualitySelector(
+                QualitySelector.from(
+                    Quality.HD,
+                    FallbackStrategy.lowerQualityOrHigherThan(Quality.HD),
+                )
+            )
+            .setAspectRatio(settings.aspectRatio)
+            .build()
+    }
+    private val videoCapture: VideoCapture<VideoRecorder> by lazy {
+        VideoCapture.Builder(recorder)
+            .setMirrorMode(MirrorMode.MIRROR_MODE_ON_FRONT_ONLY)
+            .setTargetFrameRate(Range.create(15, 15))
+            .build()
+    }
     private var activeRecording: Recording? = null
 
     override suspend fun init() {
-        withContext(Dispatchers.Main.immediate) {
-            val recorder = VideoRecorder.Builder()
-                .setQualitySelector(
-                    QualitySelector.from(
-                        Quality.HD,
-                        FallbackStrategy.lowerQualityOrHigherThan(Quality.HD),
-                    )
-                )
-                .setAspectRatio(settings.aspectRatio)
-                .build()
-            videoCapture = VideoCapture.Builder(recorder)
-                .setMirrorMode(MirrorMode.MIRROR_MODE_ON_FRONT_ONLY)
-                .build()
-            videoCapture?.let(cameraProvider::bind)
-        }
 
     }
 
-    override suspend fun start(): File = withContext(dispatcher.IO) {
+    override suspend fun start(): File = withContext(dispatcher.Main) {
+        cameraProvider.bind(videoCapture)
         suspendCoroutine { continuation: Continuation<File> ->
             val folder = File(context.filesDir, "temp")
             if (folder.exists().not()) {
@@ -65,7 +67,7 @@ class RecorderCameraX(
             file.deleteOnExit()
 
             val fileOutputOption = FileOutputOptions.Builder(file)
-                .setDurationLimitMillis(5.seconds.inWholeMilliseconds)
+                .setDurationLimitMillis(2.seconds.inWholeMilliseconds)
                 .build()
 
             activeRecording = videoCapture!!.output
@@ -75,6 +77,7 @@ class RecorderCameraX(
                         is VideoRecordEvent.Start -> {
                             println("start")
                         }
+
                         is Finalize -> {
                             if (isActive.not() || activeRecording == null) {
                                 cancel()

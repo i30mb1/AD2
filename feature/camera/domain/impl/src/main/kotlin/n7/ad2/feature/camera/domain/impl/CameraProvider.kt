@@ -1,5 +1,6 @@
 package n7.ad2.feature.camera.domain.impl
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.camera.core.UseCase
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -16,8 +17,13 @@ class CameraProvider(
         ProcessCameraProvider.getInstance(context).get()
     }
 
+    @SuppressLint("RestrictedApi")
     fun bind(useCase: UseCase) {
-        camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCase)
+        val camera = camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCase)
+
+//        UseCaseGroup.Builder()
+//            .addUseCase(useCase)
+//            .build()
     }
 
     fun unbind(useCase: UseCase) {

@@ -9,7 +9,10 @@ class PreviewerCameraX(
 ) : Previewer {
 
     private val preview: Preview by lazy {
-        Preview.Builder().build()
+        Preview.Builder()
+
+//            .setTargetFrameRate(Range.create(15, 15))
+            .build()
     }
 
     override fun start(surface: Any) {

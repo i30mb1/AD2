@@ -17,12 +17,15 @@ import androidx.camera.core.ImageProxy
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import java.io.File
 import java.io.OutputStream
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
@@ -60,7 +63,17 @@ internal class CameraFragment(
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return ComposeView {
             val state by viewModel.state.collectAsState()
+            val file = state.recordedFile?.get()
+            if (file != null) openVideo(file)
             Camera(state, ::handleEvent)
+        }
+    }
+
+    private fun openVideo(file: File) {
+        val newInstance = VideoFragment.newInstance(file.toUri())
+        parentFragmentManager.commit {
+            add(android.R.id.content, newInstance, null)
+            addToBackStack(null)
         }
     }
 
@@ -70,7 +83,7 @@ internal class CameraFragment(
         }
 
         CameraEvent.Click -> {
-
+            viewModel.startRecording()
         }
 
         is CameraEvent.GloballyPosition -> {
@@ -94,7 +107,7 @@ class CameraX(
     fun capturePhoto() = owner.lifecycleScope.launch {
         val imageCapture = imageCapture ?: return@launch
 
-        imageCapture.takePicture(ContextCompat.getMainExecutor(context), object : ImageCapture.OnImageCapturedCallback(), ImageCapture.OnImageSavedCallback {
+        imageCapture.takePicture(ContextCompat.getMainExecutor(context), object : ImageCapture.OnImageCapturedCallback() {
             override fun onCaptureSuccess(image: ImageProxy) {
                 super.onCaptureSuccess(image)
                 owner.lifecycleScope.launch {
@@ -103,9 +116,6 @@ class CameraX(
                         System.currentTimeMillis().toString()
                     )
                 }
-            }
-
-            override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
             }
 
             override fun onError(exception: ImageCaptureException) {
