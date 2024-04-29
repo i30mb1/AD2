@@ -18,7 +18,7 @@ import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
-import n7.ad2.feature.camera.domain.impl.StreamerCameraX
+import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

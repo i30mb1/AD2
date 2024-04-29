@@ -22,5 +22,14 @@ dependencies {
     testImplementation(libs.coroutinesTest)
     testImplementation(libs.test.lifecycle)
 
+    androidTestImplementation(libs.test.lifecycle)
+    androidTestImplementation(libs.coroutinesTest)
+    androidTestImplementation(libs.test.junit)
+    androidTestImplementation(libs.test.junit.kotlin)
+    androidTestImplementation(libs.test.runner)
+    androidTestImplementation(projects.feature.camera.domain.impl)
+    androidTestImplementation(libs.testCoreKtx)
+    androidTestImplementation(libs.testRules)
+
     kapt(libs.daggerAnnotation)
 }

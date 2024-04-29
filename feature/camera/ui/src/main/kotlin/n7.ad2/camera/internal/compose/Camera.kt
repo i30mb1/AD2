@@ -25,6 +25,7 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import kotlin.time.DurationUnit
 import n7.ad2.camera.internal.model.CameraStateUI
 import n7.ad2.camera.internal.model.DetectedRect
 import n7.ad2.ui.compose.AppTheme
@@ -82,7 +83,7 @@ internal fun Camera(
             },
         )
         Text(
-            text = cameraStateUI.timeoutForRecording.toString(),
+            text = cameraStateUI.timeoutForRecording.toString(DurationUnit.MILLISECONDS),
             style = AppTheme.style.H3,
             color = AppTheme.color.textSecondaryColor,
             modifier = Modifier

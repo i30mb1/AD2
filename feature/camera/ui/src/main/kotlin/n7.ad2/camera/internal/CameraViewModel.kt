@@ -39,7 +39,9 @@ internal class CameraViewModel @AssistedInject constructor(
             }
             .launchIn(viewModelScope)
         recordingDelay.state
-            .onEach(_state::updateDelayForRecording)
+            .onEach {
+                _state.updateDelayForRecording(it)
+            }
             .launchIn(viewModelScope)
     }
 

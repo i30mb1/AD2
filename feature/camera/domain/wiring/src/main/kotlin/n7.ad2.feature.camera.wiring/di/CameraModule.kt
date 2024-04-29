@@ -11,9 +11,9 @@ import n7.ad2.feature.camera.domain.impl.CameraLifecycle
 import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
 import n7.ad2.feature.camera.domain.impl.Controller
-import n7.ad2.feature.camera.domain.impl.StreamerCameraX
 import n7.ad2.feature.camera.domain.impl.preview.PreviewerCameraX
 import n7.ad2.feature.camera.domain.impl.processor.ProcessorKotlinDL
+import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
 
 @dagger.Module
 interface CameraModule {

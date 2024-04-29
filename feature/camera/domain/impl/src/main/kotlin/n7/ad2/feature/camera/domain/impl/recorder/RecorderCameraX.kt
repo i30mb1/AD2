@@ -16,6 +16,7 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 import kotlin.time.Duration.Companion.seconds
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.withContext
@@ -36,25 +37,30 @@ class RecorderCameraX(
     private var activeRecording: Recording? = null
 
     override suspend fun init() {
-        val recorder = VideoRecorder.Builder()
-            .setQualitySelector(
-                QualitySelector.from(
-                    Quality.HD,
-                    FallbackStrategy.lowerQualityOrHigherThan(Quality.HD),
+        withContext(Dispatchers.Main.immediate) {
+            val recorder = VideoRecorder.Builder()
+                .setQualitySelector(
+                    QualitySelector.from(
+                        Quality.HD,
+                        FallbackStrategy.lowerQualityOrHigherThan(Quality.HD),
+                    )
                 )
-            )
-            .setAspectRatio(settings.aspectRatio)
-            .build()
-        videoCapture = VideoCapture.Builder(recorder)
-            .setMirrorMode(MirrorMode.MIRROR_MODE_ON_FRONT_ONLY)
-            .build()
-        videoCapture?.let(cameraProvider::bind)
+                .setAspectRatio(settings.aspectRatio)
+                .build()
+            videoCapture = VideoCapture.Builder(recorder)
+                .setMirrorMode(MirrorMode.MIRROR_MODE_ON_FRONT_ONLY)
+                .build()
+            videoCapture?.let(cameraProvider::bind)
+        }
+
     }
 
     override suspend fun start(): File = withContext(dispatcher.IO) {
         suspendCoroutine { continuation: Continuation<File> ->
             val folder = File(context.filesDir, "temp")
-            if (folder.exists().not()) folder.mkdir()
+            if (folder.exists().not()) {
+                folder.mkdir()
+            }
             val file = File(folder, "CameraX-recording.mp4")
             file.deleteOnExit()
 
@@ -66,6 +72,9 @@ class RecorderCameraX(
                 .prepareRecording(context, fileOutputOption)
                 .start(context.mainExecutor) startRecording@{ event: VideoRecordEvent ->
                     when (event) {
+                        is VideoRecordEvent.Start -> {
+                            println("start")
+                        }
                         is Finalize -> {
                             if (isActive.not() || activeRecording == null) {
                                 cancel()
@@ -84,6 +93,9 @@ class RecorderCameraX(
                         }
                     }
                 }
+//            Thread.sleep(2_000)
+//            activeRecording?.stop()
+
         }
     }
 

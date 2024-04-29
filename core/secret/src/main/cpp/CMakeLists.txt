@@ -9,5 +9,7 @@ add_library(
         extractor.cpp
 )
 
+set(CMAKE_CXX_STANDARD 23)
+
 #add_subdirectory(http)
 #target_link_libraries(Native httplib)

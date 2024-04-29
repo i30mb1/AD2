@@ -17,7 +17,7 @@ class ProcessorKotlinDL(
 ) : Processor {
 
     private val hub = ONNXModelHub(application)
-    private val internalModel = hub.loadModel(ONNXModels.FaceDetection.UltraFace320, ExecutionProvider.CPU())
+    private val internalModel = hub.loadModel(ONNXModels.FaceDetection.UltraFace320, ExecutionProvider.NNAPI())
     private val model: FaceDetectionModel = FaceDetectionModel(internalModel)
 
     override fun analyze(image: Image): ProcessorState {

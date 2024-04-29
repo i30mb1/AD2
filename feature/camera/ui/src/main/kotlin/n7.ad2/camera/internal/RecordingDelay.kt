@@ -1,6 +1,7 @@
 package n7.ad2.camera.internal
 
 import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -19,6 +20,7 @@ interface RecordingDelay {
 internal class RecordingDelayImpl(
     private val dispatcher: DispatchersProvider,
     private val initValue: Duration = 5.seconds,
+    private val step: Duration = 100.milliseconds,
 ) : RecordingDelay {
 
     override val state: MutableStateFlow<Duration> = MutableStateFlow(initValue)
@@ -28,8 +30,8 @@ internal class RecordingDelayImpl(
         if (job != null) return
         job = scope.launch(dispatcher.IO) {
             while (state.value.isPositive()) {
-                delay(1.seconds)
-                state.update { curr -> curr.minus(1.seconds) }
+                delay(step)
+                state.update { curr -> curr.minus(step) }
             }
             job = null
         }

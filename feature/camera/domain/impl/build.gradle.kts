@@ -23,4 +23,10 @@ dependencies {
     testImplementation(libs.test.robolectric)
     testImplementation(libs.test.junit.kotlin)
     testImplementation(libs.kotlin.reflection)
+
+    androidTestImplementation(libs.test.lifecycle)
+    androidTestImplementation(libs.coroutinesTest)
+    androidTestImplementation(libs.test.junit)
+    androidTestImplementation(libs.test.junit.kotlin)
+    androidTestImplementation(libs.test.runner)
 }
