@@ -1,5 +1,3 @@
-package n7.ad2.app.logger
-
 import com.google.common.truth.Truth
 import kotlinx.coroutines.debug.junit4.CoroutinesTimeout
 import kotlinx.coroutines.flow.first
@@ -7,6 +5,7 @@ import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
+import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
 import n7.ad2.coroutines.CoroutineTestRule
 import org.junit.Rule
@@ -38,5 +37,4 @@ internal class AppLoggerTest {
         Truth.assertThat(values.last().message).isEqualTo("hello")
         flow.cancel()
     }
-
 }
