@@ -13,10 +13,10 @@ dependencies {
     implementation(libs.coroutines)
     implementation(libs.coreKtx)
 
-    testImplementation(libs.coroutinesDebug)
-    testImplementation(libs.mockk)
-    testImplementation(libs.testTruthJvm)
-    testImplementation(libs.coroutinesTest)
+    testImplementation(libs.test.coroutines)
+    testImplementation(libs.test.coroutines.debug)
+    testImplementation(libs.test.mockk)
+    testImplementation(libs.test.truth.jvm)
 
     testFixturesImplementation(libs.coroutines)
 }

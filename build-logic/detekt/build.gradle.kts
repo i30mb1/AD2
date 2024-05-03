@@ -10,5 +10,5 @@ dependencies {
     implementation(projects.buildExtensions)
 
     testImplementation(libs.detektTest)
-    testImplementation(libs.testTruthJvm)
+    testImplementation(libs.test.truth.jvm)
 }

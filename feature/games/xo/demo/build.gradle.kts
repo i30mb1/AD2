@@ -45,14 +45,14 @@ dependencies {
     androidTestImplementation(libs.test.fragment)
     androidTestImplementation(libs.test.runner)
     androidTestImplementation(libs.test.espresso)
-    androidTestImplementation(libs.testCoreKtx)
-    androidTestImplementation(libs.testRules)
+    androidTestImplementation(libs.test.core)
+    androidTestImplementation(libs.test.rules)
 
     testImplementation(libs.test.junit.kotlin)
     testImplementation(libs.test.fragment)
     testImplementation(libs.test.runner)
     testImplementation(libs.test.espresso)
     testImplementation(libs.test.robolectric)
-    testImplementation(libs.testCoreKtx)
-    testImplementation(libs.testRules)
+    testImplementation(libs.test.core)
+    testImplementation(libs.test.rules)
 }

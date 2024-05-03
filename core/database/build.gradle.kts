@@ -15,8 +15,6 @@ dependencies {
     implementation(projects.core.dagger)
     implementation(projects.core.logger.appLogger)
 
-    testImplementation(libs.bundles.test)
-
     kapt(libs.room.compiler)
     kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)

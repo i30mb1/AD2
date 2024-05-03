@@ -17,19 +17,19 @@ dependencies {
     implementation(projects.feature.camera.domain.wiring)
     implementation(projects.feature.camera.domain.api)
 
-    testImplementation(libs.coroutinesDebug)
-    testImplementation(libs.testTruthJvm)
-    testImplementation(libs.coroutinesTest)
+    testImplementation(libs.test.truth)
+    testImplementation(libs.test.coroutines)
+    testImplementation(libs.test.coroutines.debug)
     testImplementation(libs.test.lifecycle)
 
     androidTestImplementation(libs.test.lifecycle)
-    androidTestImplementation(libs.coroutinesTest)
+    androidTestImplementation(libs.test.coroutines)
     androidTestImplementation(libs.test.junit)
     androidTestImplementation(libs.test.junit.kotlin)
     androidTestImplementation(libs.test.runner)
     androidTestImplementation(projects.feature.camera.domain.impl)
-    androidTestImplementation(libs.testCoreKtx)
-    androidTestImplementation(libs.testRules)
+    androidTestImplementation(libs.test.core)
+    androidTestImplementation(libs.test.rules)
 
     kapt(libs.daggerAnnotation)
 }

@@ -125,30 +125,27 @@ performance = "androidx.core:core-performance:1.0.0-beta02"
 performancePlayServices = "androidx.core:core-performance-play-services:1.0.0-beta02"
 
 test-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-testing", version.ref = "lifecycle" }
-coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
-coroutinesDebug = "org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.7.1"
-testCore = "androidx.test:core:1.5.0" # Core library
-testCoreKtx = "androidx.test:core-ktx:1.5.0"
+test-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+test-coroutines-debug = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-debug", version.ref = "coroutines" }
+test-core = "androidx.test:core-ktx:1.5.0"
 test-runner = "androidx.test:runner:1.5.2" # AndroidJUnitRunner
-testRules = "androidx.test:rules:1.5.0" # JUnit Rules
+test-rules = "androidx.test:rules:1.5.0" # JUnit Rules
 test-junit = "junit:junit:4.13.2" # Assertions and JUnit 4 framework
 test-junit-kotlin = "androidx.test.ext:junit-ktx:1.1.5" # Assertions
-testTruth = "androidx.test.ext:truth:1.5.0"
-testTruthJvm = "com.google.truth:truth:1.1.5"
-coreTesting = "androidx.arch.core:core-testing:2.2.0"
+test-truth = "androidx.test.ext:truth:1.5.0"
+test-truth-jvm = "com.google.truth:truth:1.1.5"
+test-core-tesing = "androidx.arch.core:core-testing:2.2.0"
 test-fragment = "androidx.fragment:fragment-testing:1.6.2"
-mockk = "io.mockk:mockk-android:1.13.8"
+test-mockk = "io.mockk:mockk-android:1.13.8"
 test-robolectric = "org.robolectric:robolectric:4.11.1"
-test-uiautomator = "androidx.test.uiautomator:uiautomator:2.3.0-alpha03"
-
 test-espresso = "androidx.test.espresso:espresso-core:3.5.1"
-espressoIntents = "androidx.test.espresso:espresso-intents:3.5.1"
-uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
+test-espresso-intents = "androidx.test.espresso:espresso-intents:3.5.1"
+test-uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
+
 benchmarkMacro = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "benchmark" }
 benchmarkJunit = { module = "androidx.benchmark:benchmark-junit4", version.ref = "benchmark" }
 
 [bundles]
-test = ["coroutinesTest", "testCore", "test-runner", "testRules", "test-junit-kotlin", "testTruth"]
 compose = ["composeAnimation", "composeMaterial", "composeFoundation", "composeTooling", "composeCoil", "composeLivedata", "composeActivity"]
 camera = ["camera", "camera-lifecycle", "camera-video", "camera-view", "camera-ktx"]
 kotlinDL = ["kotlin-dl-onnx", "kotlin-dl-visualization", "kotlin-dl-tensorflow"]

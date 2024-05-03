@@ -18,6 +18,6 @@ dependencies {
 
     androidTestImplementation(libs.test.fragment)
     androidTestImplementation(libs.test.junit.kotlin)
-    androidTestImplementation(libs.mockk)
+    androidTestImplementation(libs.test.mockk)
     androidTestImplementation(libs.test.espresso)
 }

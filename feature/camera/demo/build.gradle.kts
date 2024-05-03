@@ -55,8 +55,8 @@ dependencies {
     androidTestImplementation(libs.test.runner)
     androidTestImplementation(libs.test.espresso)
     androidTestImplementation(libs.test.uiautomator)
-    androidTestImplementation(libs.testCoreKtx)
-    androidTestImplementation(libs.testRules)
+    androidTestImplementation(libs.test.core)
+    androidTestImplementation(libs.test.rules)
 
     kapt(libs.daggerAnnotation)
 }

@@ -18,7 +18,6 @@ dependencies {
     kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)
 
-    testImplementation(libs.bundles.test)
 //    testImplementation(testFixtures(projects.core.appPreference)))
     testImplementation(testFixtures(projects.core.commonJvm))
     testImplementation(testFixtures(projects.core.logger.appLogger))

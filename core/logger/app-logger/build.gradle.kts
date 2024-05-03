@@ -7,9 +7,9 @@ dependencies {
     implementation(projects.core.coroutines)
     implementation(projects.core.commonJvm)
 
-    testImplementation(libs.coroutinesDebug)
-    testImplementation(libs.testTruthJvm)
-    testImplementation(libs.coroutinesTest)
+    testImplementation(libs.test.coroutines)
+    testImplementation(libs.test.coroutines.debug)
+    testImplementation(libs.test.truth.jvm)
 
     testFixturesImplementation(libs.coroutines)
 }

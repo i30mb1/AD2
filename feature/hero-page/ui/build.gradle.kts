@@ -36,5 +36,5 @@ dependencies {
     androidTestImplementation(libs.test.fragment)
     androidTestImplementation(libs.test.runner)
     androidTestImplementation(libs.test.espresso)
-    androidTestImplementation(libs.testTruth)
+    androidTestImplementation(libs.test.truth)
 }

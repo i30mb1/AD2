@@ -14,7 +14,7 @@ dependencies {
     implementation(projects.core.dagger)
     implementation(projects.core.commonAndroid)
 
-    testImplementation(libs.testTruth)
+    testImplementation(libs.test.truth)
     testImplementation(testFixtures(projects.core.commonJvm))
 
     kapt(libs.daggerAnnotation)

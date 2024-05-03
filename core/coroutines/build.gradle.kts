@@ -8,7 +8,10 @@ dependencies {
 
     implementation(projects.core.dagger)
     implementation(libs.test.junit)
-    api(libs.coroutinesTest)
+    api(libs.test.coroutines)
 
     kapt(libs.daggerAnnotation)
+
+    testImplementation(libs.test.junit)
+    testImplementation(libs.test.coroutines.debug)
 }
