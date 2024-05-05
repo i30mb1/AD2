@@ -14,4 +14,5 @@ dependencies {
 
     testImplementation(libs.test.junit)
     testImplementation(libs.test.coroutines.debug)
+    testImplementation(libs.test.truth.jvm)
 }

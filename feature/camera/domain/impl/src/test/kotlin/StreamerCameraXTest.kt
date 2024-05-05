@@ -1,4 +1,3 @@
-
 import androidx.camera.core.ImageAnalysis
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.testing.TestLifecycleOwner
@@ -9,18 +8,14 @@ import io.mockk.verify
 import java.util.concurrent.Executor
 import kotlin.reflect.KCallable
 import kotlin.reflect.jvm.isAccessible
-import kotlin.time.Duration.Companion.seconds
-import kotlinx.coroutines.cancelAndJoin
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.plus
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
-import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
 import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
-import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
@@ -35,27 +30,17 @@ import org.robolectric.shadow.api.Shadow
 )
 class StreamerCameraXTest {
 
-    @get:Rule val coroutineRule = CoroutineTestRule()
-
     private val cameraProvider: CameraProvider = mockk(relaxed = true)
-    private lateinit var lifecycle: LifecycleOwner
-    private lateinit var streamer: Streamer
-
-    @Before
-    fun before() {
-        lifecycle = TestLifecycleOwner()
-        streamer = StreamerCameraX(CameraSettingsImpl(), cameraProvider, lifecycle)
-    }
+    private val lifecycle: LifecycleOwner = TestLifecycleOwner()
+    private val streamer: Streamer = StreamerCameraX(CameraSettingsImpl(), cameraProvider, lifecycle)
 
     @Test
     fun `WHEN subscribe THEN call bind`() = runTest {
         val imageAnalysis = getImageAnalysis(streamer)
-        val job = streamer.stream.launchIn(this)
-        delay(1.seconds)
+        val job = streamer.stream.launchIn(this + UnconfinedTestDispatcher())
         verify(exactly = 1) { cameraProvider.bind(any()) }
         Truth.assertThat(imageAnalysis.setAnalyzerCalled).isTrue()
-        job.cancelAndJoin()
-        delay(StreamerCameraX.SUBSCRIBE_DELAY)
+        job.cancel()
         verify(exactly = 1) { cameraProvider.unbind(any()) }
         Truth.assertThat(imageAnalysis.clearAnalyzerCalled).isTrue()
     }

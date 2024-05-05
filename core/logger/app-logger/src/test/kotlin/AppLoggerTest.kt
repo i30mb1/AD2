@@ -1,19 +1,19 @@
+
 import com.google.common.truth.Truth
 import kotlinx.coroutines.debug.junit4.CoroutinesTimeout
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.toList
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.plus
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
-import n7.ad2.coroutines.CoroutineTestRule
 import org.junit.Rule
 import org.junit.Test
 
 internal class AppLoggerTest {
 
-    @get:Rule val coroutineRule = CoroutineTestRule()
     @get:Rule val timeout = CoroutinesTimeout.seconds(5)
     private val logger = Logger()
 
@@ -30,11 +30,15 @@ internal class AppLoggerTest {
     @Test
     fun `when send log receive it`() = runTest {
         val values = mutableListOf<AppLog>()
-        val flow = launch(UnconfinedTestDispatcher()) {
-            logger.getLogFlow().toList(values)
-        }
-        logger.log("hello")
-        Truth.assertThat(values.last().message).isEqualTo("hello")
-        flow.cancel()
+        logger.getLogFlow()
+            .onEach { values.add(it) }
+            .launchIn(backgroundScope + UnconfinedTestDispatcher())
+        logger.log("Message1")
+        logger.log("Message2")
+        Truth.assertThat(values)
+            .containsExactly(
+                AppLog("Message1"),
+                AppLog("Message2"),
+            )
     }
 }

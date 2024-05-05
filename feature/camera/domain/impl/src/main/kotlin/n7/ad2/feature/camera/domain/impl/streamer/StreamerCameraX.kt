@@ -65,7 +65,7 @@ class StreamerCameraX(
             }
         }
     }
-        .shareIn(lifecycle.lifecycleScope, SharingStarted.Lazily)
+        .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed())
 
     override val stream: SharedFlow<Image> = _stream
 
