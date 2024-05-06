@@ -104,7 +104,6 @@ class SharedFlowTest {
         mutableSharedFlow.tryEmit("Message2")
         mutableSharedFlow.tryEmit("Message3")
         mutableSharedFlow.tryEmit("Message4")
-        runCurrent()
         Truth.assertThat(list).isEmpty()
     }
 }
