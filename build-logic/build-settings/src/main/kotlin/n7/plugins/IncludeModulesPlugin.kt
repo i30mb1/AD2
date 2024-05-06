@@ -6,6 +6,7 @@ import java.io.InputStreamReader
 import java.util.Properties
 import kotlin.system.measureTimeMillis
 import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.DurationUnit
 import org.gradle.api.Plugin
 import org.gradle.api.initialization.Settings
 
@@ -23,7 +24,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
         val time = measureTimeMillis {
             count = includeAllModule()
         }.milliseconds
-        println("AD2: Included $count modules in $time")
+        println("AD2: Included $count modules in ${time.toString(DurationUnit.SECONDS, 2)}")
     }
 
     private fun Settings.includeAllModule(): Int {
