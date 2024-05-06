@@ -10,9 +10,14 @@ class GitHooksPlugin : Plugin<Settings> {
             val output = providers.exec {
                 commandLine("git", "config", "core.hooksPath", ".githooks")
             }
-            println("AD2: setup core.hooksPath: exitValue=${output.result.orNull?.exitValue}")
+            val result = when (output.result.orNull?.exitValue) {
+                0 -> "success"
+                else -> "failure"
+            }
+
+            println("AD2: Setup git hooks: $result")
         } catch (e: Exception) {
-            println("Error when trying to set git-hooks")
+            println("AD2: Error when trying to set git-hooks")
         }
     }
 }
