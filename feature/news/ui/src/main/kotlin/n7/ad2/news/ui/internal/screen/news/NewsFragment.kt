@@ -16,7 +16,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.news.ui.internal.di.DaggerNewsComponent
 import n7.ad2.news.ui.internal.screen.article.ArticleFragment
 import n7.ad2.news.ui.internal.screen.news.compose.NewsScreen
-import n7.ad2.ui.ComposeView
+import n7.ad2.ui.content
 
 internal class NewsFragment(
     override var dependenciesMap: DependenciesMap,
@@ -37,7 +37,7 @@ internal class NewsFragment(
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        return ComposeView { NewsScreen(viewModel, parentFragment as DrawerPercentListener, ::onNewsClicked) }
+        return content { NewsScreen(viewModel, parentFragment as DrawerPercentListener, ::onNewsClicked) }
     }
 
     private fun onNewsClicked(newsID: Int) {

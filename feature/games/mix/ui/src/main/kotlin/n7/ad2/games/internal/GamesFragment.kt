@@ -19,7 +19,7 @@ import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.ktx.viewModel
-import n7.ad2.ui.ComposeView
+import n7.ad2.ui.content
 
 internal class GamesFragment(
     override var dependenciesMap: DependenciesMap,
@@ -36,7 +36,7 @@ internal class GamesFragment(
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView {
+        return content {
             GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked)
         }
     }

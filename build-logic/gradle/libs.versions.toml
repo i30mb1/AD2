@@ -16,6 +16,7 @@ detekt = "1.22.0"
 cameraX = "1.4.0-alpha02"
 kotlinDL = "0.5.2"
 benchmark = "1.2.2"
+fragment = "1.7.0"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -65,7 +66,8 @@ livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref =
 viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" } # viewModelScope + savedStateHandle
 lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" } # flowWithLifecycle
 
-fragmentKtx = "androidx.fragment:fragment-ktx:1.6.2" # easy fragment transaction + by viewModels()
+fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" } # easy fragment transaction + by viewModels()
+fragment-compose = { module = "androidx.fragment:fragment-compose", version.ref = "fragment" }
 activity = "androidx.activity:activity:1.9.0" # onBackPress support for Fragment
 composeActivity = "androidx.activity:activity-compose:1.9.0"
 

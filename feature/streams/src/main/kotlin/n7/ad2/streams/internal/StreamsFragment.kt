@@ -9,15 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.media3.common.util.UnstableApi
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
+import javax.inject.Inject
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
-import n7.ad2.ktx.viewModel
 import n7.ad2.app.logger.Logger
+import n7.ad2.ktx.viewModel
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.domain.vo.VOStream
 import n7.ad2.streams.internal.stream.StreamActivity
-import n7.ad2.ui.ComposeView
-import javax.inject.Inject
+import n7.ad2.ui.content
 
 @UnstableApi
 internal class StreamsFragment : Fragment() {
@@ -37,7 +37,7 @@ internal class StreamsFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView {
+        return content {
             val streams: LazyPagingItems<VOStream> = viewModel.streams.collectAsLazyPagingItems()
             StreamsScreen(streams, parentFragment as DrawerPercentListener, ::onStreamClicked)
         }

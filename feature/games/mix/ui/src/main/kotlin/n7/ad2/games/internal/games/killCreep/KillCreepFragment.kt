@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import n7.ad2.android.findDependencies
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.killCreep.compose.KillCreepScreen
-import n7.ad2.ui.ComposeView
+import n7.ad2.ui.content
 
 class KillCreepFragment : Fragment() {
 
@@ -23,7 +23,7 @@ class KillCreepFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView {
+        return content {
             KillCreepScreen()
         }
     }

@@ -12,7 +12,7 @@ import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.news.ui.internal.di.DaggerNewsComponent
 import n7.ad2.news.ui.internal.screen.article.compose.ArticleScreen
-import n7.ad2.ui.ComposeView
+import n7.ad2.ui.content
 
 internal class ArticleFragment : Fragment() {
 
@@ -35,7 +35,7 @@ internal class ArticleFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView { ArticleScreen(viewModel) }
+        return content { ArticleScreen(viewModel) }
     }
 
 }

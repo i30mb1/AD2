@@ -40,7 +40,7 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.camera.internal.compose.Camera
 import n7.ad2.camera.internal.compose.CameraEvent
 import n7.ad2.camera.internal.di.DaggerCameraComponent
-import n7.ad2.ui.ComposeView
+import n7.ad2.ui.content
 
 internal class CameraFragment(
     override var dependenciesMap: DependenciesMap,
@@ -61,7 +61,7 @@ internal class CameraFragment(
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView {
+        return content {
             val state by viewModel.state.collectAsState()
             val file = state.recordedFile?.get()
             if (file != null) openVideo(file)

@@ -13,7 +13,7 @@ import n7.ad2.android.findDependencies
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.skillmp.compose.ManaPointScreen
 import n7.ad2.ktx.viewModel
-import n7.ad2.ui.ComposeView
+import n7.ad2.ui.content
 
 internal class SkillGameFragment : Fragment() {
 
@@ -30,7 +30,7 @@ internal class SkillGameFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView {
+        return content {
             val state: State<SkillGameViewModel.State> = viewModel.state.collectAsState()
             ManaPointScreen(state = state.value, ::loadQuestion)
         }
