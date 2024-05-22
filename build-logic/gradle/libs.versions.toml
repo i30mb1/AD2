@@ -3,14 +3,13 @@ sdkVersion = "34"
 room = "2.6.0"
 coroutines = "1.7.1"
 moshi = "1.15.0"
-dagger = "2.46.1"
+dagger = "2.51.1"
 workManager = "2.8.1"
 lifecycle = "2.7.0"
 androidGradlePlugin = "8.1.4"
 lint = "31.1.4" # androidGradlePlugin + 23
-kotlin = "1.9.20"
-compose = "1.6.0-beta01"
-composeCompiler = "1.5.4"
+kotlin = "2.0.0"
+compose = "1.6.7"
 media3 = "1.2.0"
 detekt = "1.22.0"
 cameraX = "1.4.0-alpha02"
@@ -76,6 +75,7 @@ lintApi = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinComposeCompilerPlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 
 kotlin-reflection = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-Serialization-Plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
@@ -154,3 +154,4 @@ kotlinDL = ["kotlin-dl-onnx", "kotlin-dl-visualization", "kotlin-dl-tensorflow"]
 
 [plugins]
 benchmark = { id = "androidx.benchmark", version.ref = "benchmark" }
+kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
