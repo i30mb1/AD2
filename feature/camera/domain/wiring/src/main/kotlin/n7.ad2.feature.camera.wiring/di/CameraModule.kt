@@ -1,7 +1,6 @@
 package n7.ad2.feature.camera.wiring.di
 
 import android.app.Application
-import androidx.lifecycle.LifecycleOwner
 import javax.inject.Singleton
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.camera.domain.CameraSettings
@@ -36,7 +35,7 @@ interface CameraModule {
 
         @dagger.Provides
         @Singleton
-        fun provideLifecycle(): LifecycleOwner {
+        fun provideLifecycle(): CameraLifecycle {
             return CameraLifecycle()
         }
 
@@ -47,7 +46,7 @@ interface CameraModule {
             processor: Processor,
             streamer: Streamer,
             recorder: Recorder,
-            lifecycleOwner: LifecycleOwner,
+            lifecycleOwner: CameraLifecycle,
         ): Controller {
             return Controller(
                 previewer,
@@ -63,7 +62,7 @@ interface CameraModule {
         fun provideCameraProvider(
             application: Application,
             cameraSettings: CameraSettings,
-            lifecycleOwner: LifecycleOwner,
+            lifecycleOwner: CameraLifecycle,
         ): CameraProvider {
             return CameraProvider(application, cameraSettings, lifecycleOwner)
         }
@@ -92,7 +91,7 @@ interface CameraModule {
         fun provideStreamer(
             cameraSettings: CameraSettings,
             cameraProvider: CameraProvider,
-            lifecycle: LifecycleOwner,
+            lifecycle: CameraLifecycle,
         ): Streamer {
             return StreamerCameraX(
                 cameraSettings,

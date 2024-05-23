@@ -2,7 +2,6 @@ package n7.ad2.feature.camera.domain.impl
 
 import androidx.camera.core.Preview
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import java.io.File
@@ -29,7 +28,7 @@ class Controller(
     private val processor: Processor,
     private val recorder: Recorder,
     private val streamer: Streamer,
-    private val lifecycle: LifecycleOwner,
+    private val lifecycle: CameraLifecycle,
 ) {
 
     private val _state: MutableStateFlow<CameraState> = MutableStateFlow(CameraState())
@@ -52,10 +51,15 @@ class Controller(
     fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
         previewer.start(surfaceProvider)
         runStreamer()
+        lifecycle.onUiShown()
     }
 
     suspend fun startRecording(): File {
         streamerJob?.cancelAndJoin()
         return recorder.start()
+    }
+
+    fun onDestroyView() {
+        lifecycle.onUiHidden()
     }
 }

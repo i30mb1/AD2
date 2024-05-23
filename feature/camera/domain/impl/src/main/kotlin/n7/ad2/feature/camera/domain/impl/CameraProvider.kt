@@ -21,6 +21,13 @@ class CameraProvider(
     fun bind(useCase: UseCase) {
         val camera = camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCase)
 
+
+//        val config = CameraXConfig.Builder()
+//            .setCameraOpenRetryMaxTimeoutInMillisWhileResuming(1000)
+//            .build()
+//
+//        ProcessCameraProvider.configureInstance(config)
+
 //        UseCaseGroup.Builder()
 //            .addUseCase(useCase)
 //            .build()

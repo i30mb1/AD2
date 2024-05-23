@@ -77,6 +77,10 @@ internal class CameraViewModel @AssistedInject constructor(
         }
     }
 
+    fun onDestroyView() {
+        controller.onDestroyView()
+    }
+
     @AssistedFactory
     interface Factory {
         fun create(): CameraViewModel

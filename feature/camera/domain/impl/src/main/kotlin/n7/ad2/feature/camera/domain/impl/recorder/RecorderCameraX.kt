@@ -3,10 +3,7 @@ package n7.ad2.feature.camera.domain.impl.recorder
 import android.content.Context
 import android.util.Range
 import androidx.camera.core.MirrorMode
-import androidx.camera.video.FallbackStrategy
 import androidx.camera.video.FileOutputOptions
-import androidx.camera.video.Quality
-import androidx.camera.video.QualitySelector
 import androidx.camera.video.Recording
 import androidx.camera.video.VideoCapture
 import androidx.camera.video.VideoRecordEvent
@@ -17,6 +14,7 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 import kotlin.time.Duration.Companion.seconds
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.withContext
@@ -35,17 +33,19 @@ class RecorderCameraX(
 
     private val recorder by lazy {
         VideoRecorder.Builder()
-            .setQualitySelector(
-                QualitySelector.from(
-                    Quality.HD,
-                    FallbackStrategy.lowerQualityOrHigherThan(Quality.HD),
-                )
-            )
-            .setAspectRatio(settings.aspectRatio)
+//            .setQualitySelector(
+//                QualitySelector.from(
+//                    Quality.HD,
+//                    FallbackStrategy.lowerQualityOrHigherThan(Quality.HD),
+//                )
+//            )
+//            .setAspectRatio(settings.aspectRatio)
             .build()
     }
     private val videoCapture: VideoCapture<VideoRecorder> by lazy {
+        VideoCapture.withOutput(recorder)
         VideoCapture.Builder(recorder)
+            .setVideoStabilizationEnabled(true)
             .setMirrorMode(MirrorMode.MIRROR_MODE_ON_FRONT_ONLY)
             .setTargetFrameRate(Range.create(15, 15))
             .build()
@@ -56,8 +56,10 @@ class RecorderCameraX(
 
     }
 
-    override suspend fun start(): File = withContext(dispatcher.Main) {
-        cameraProvider.bind(videoCapture)
+    override suspend fun start(): File = withContext(dispatcher.IO) {
+        withContext(Dispatchers.Main) { cameraProvider.bind(videoCapture) }
+
+
         suspendCoroutine { continuation: Continuation<File> ->
             val folder = File(context.filesDir, "temp")
             if (folder.exists().not()) {

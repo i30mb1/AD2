@@ -10,7 +10,14 @@ class CameraLifecycle : LifecycleOwner {
     override val lifecycle: Lifecycle = lifecycleRegister
 
     init {
-        lifecycleRegister.currentState = Lifecycle.State.STARTED
+        lifecycleRegister.currentState = Lifecycle.State.INITIALIZED
+    }
+
+    public fun onUiShown() {
         lifecycleRegister.currentState = Lifecycle.State.RESUMED
+    }
+
+    public fun onUiHidden() {
+        lifecycleRegister.currentState = Lifecycle.State.CREATED
     }
 }

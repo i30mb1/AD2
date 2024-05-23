@@ -10,8 +10,7 @@ class PreviewerCameraX(
 
     private val preview: Preview by lazy {
         Preview.Builder()
-
-//            .setTargetFrameRate(Range.create(15, 15))
+//            .setPreviewStabilizationEnabled(true)
             .build()
     }
 

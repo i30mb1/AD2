@@ -95,6 +95,11 @@ internal class CameraFragment(
         super.onViewCreated(view, savedInstanceState)
         CameraPermission(requireActivity()) { }.run()
     }
+
+    override fun onDestroyView() {
+        viewModel.onDestroyView()
+        super.onDestroyView()
+    }
 }
 
 class CameraX(
