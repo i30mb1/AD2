@@ -1,5 +1,6 @@
 package n7.ad2.camera.internal
 
+import android.media.MediaMetadataRetriever
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +10,8 @@ import android.widget.MediaController
 import android.widget.VideoView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
 
 internal class VideoFragment : Fragment() {
 
@@ -36,11 +39,19 @@ internal class VideoFragment : Fragment() {
         mediaController.setAnchorView(videoView.rootView)
     }
 
+    private fun getInfoAboutVideo() {
+        val mr = MediaMetadataRetriever()
+        mr.setDataSource(videoUri.path)
+        val duration = mr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)?.toLongOrNull()?.milliseconds ?: Duration.ZERO
+        val frameCount = mr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_FRAME_COUNT)
+        val width = mr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)
+        val height = mr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT)
+    }
+
     companion object {
         private const val URI = "URI"
         fun newInstance(videoUri: Uri) = VideoFragment().apply {
             arguments = bundleOf(URI to videoUri)
         }
     }
-
 }
