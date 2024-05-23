@@ -2,7 +2,30 @@ plugins {
     id("convention.android-library")
     id("convention.compose")
     id("n7.plugins.kotlin-kapt")
+    `maven-publish`
 }
+
+android {
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+}
+
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                group = project.group
+                artifactId = project.name
+                version = "1.0"
+
+                afterEvaluate {
+                    from(components["release"])
+                }
+            }
+        }
+    }
 
 dependencies {
     implementation(libs.bundles.camera)
