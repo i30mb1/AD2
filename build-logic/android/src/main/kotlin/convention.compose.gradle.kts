@@ -14,12 +14,19 @@ configure<BaseExtension> {
 configure<ComposeCompilerGradlePluginExtension> {
     enableStrongSkippingMode = true
     includeSourceInformation = true
+    enableNonSkippingGroupOptimization = true
+    val file = layout.projectDirectory.file("stability_config.conf")
+    if (file.asFile.exists()) {
+        stabilityConfigurationFile.set(file)
+    }
+    reportsDestination = layout.buildDirectory.dir("compose_compiler")
+
     /**
      * Generate file with info about compose functions
-     * use Gradle task *:compileDebugKotlin
+     * use Gradle task *:compile****Kotlin --rerun-tasks
      */
-    metricsDestination.set(File("${buildDir.absolutePath}\\compose_metrics"))
-    reportsDestination.set(File("${buildDir.absolutePath}\\compose_metrics"))
+    metricsDestination.set(layout.buildDirectory.dir("compose_metrics"))
+    reportsDestination.set(layout.buildDirectory.dir("compose_metrics"))
 }
 
 dependencies {
