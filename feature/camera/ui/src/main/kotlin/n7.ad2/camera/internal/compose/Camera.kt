@@ -17,6 +17,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
@@ -27,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import kotlin.time.DurationUnit
 import n7.ad2.camera.internal.model.CameraStateUI
+import n7.ad2.camera.internal.model.DetectedRect
 import n7.ad2.feature.camera.ui.R
 import n7.ad2.ui.compose.AppTheme
 
@@ -54,8 +58,6 @@ internal fun Camera(
         AndroidView(factory = {
             PreviewView(context).apply {
                 scaleType = previewScaleType
-//                implementationMode = PreviewView.ImplementationMode.COMPATIBLE
-
                 layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
                 event(CameraEvent.PreviewReady(surfaceProvider, previewScaleType))
             }
@@ -72,16 +74,16 @@ internal fun Camera(
                     )
                 },
             onDraw = {
-//                if (state.detectedRect is DetectedRect.Face) {
-//                    drawRect(
-//                        color = Color.Blue,
-//                        topLeft = Offset(state.detectedRect.xMin, state.detectedRect.yMin),
-//                        size = Size(
-//                            state.detectedRect.xMax - state.detectedRect.xMin,
-//                            state.detectedRect.yMax - state.detectedRect.yMin,
-//                        ),
-//                    )
-//                }
+                if (state.detectedRect is DetectedRect.Face) {
+                    drawRect(
+                        color = Color.Blue,
+                        topLeft = Offset(state.detectedRect.xMin, state.detectedRect.yMin),
+                        size = Size(
+                            state.detectedRect.xMax - state.detectedRect.xMin,
+                            state.detectedRect.yMax - state.detectedRect.yMin,
+                        ),
+                    )
+                }
             },
         )
         Column(

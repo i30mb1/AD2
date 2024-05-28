@@ -1,7 +1,7 @@
 package n7.ad2.feature.camera.domain
 
 import kotlinx.coroutines.flow.Flow
-import n7.ad2.feature.camera.domain.model.Image
+import n7.ad2.feature.camera.domain.model.StreamerState
 
 /**
  * Сущность отвечающая за раздачу кадров с камеры
@@ -9,5 +9,5 @@ import n7.ad2.feature.camera.domain.model.Image
  * Для прекращения -> отписаться
  */
 interface Streamer {
-    val stream: Flow<Image>
+    val stream: Flow<StreamerState>
 }

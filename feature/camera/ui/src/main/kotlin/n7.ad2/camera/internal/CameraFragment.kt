@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,6 +32,8 @@ import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.async
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import n7.ad2.android.DependenciesMap
@@ -93,7 +96,12 @@ internal class CameraFragment(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        CameraPermission(requireActivity()) { }.run()
+        logger.getLogFlow()
+            .onEach { Log.d("N7", it.toString()) }
+            .launchIn(lifecycleScope)
+        CameraPermission(requireActivity()) {
+
+        }.run()
     }
 
     override fun onDestroyView() {

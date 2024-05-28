@@ -18,10 +18,8 @@ import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.Processor
 import n7.ad2.feature.camera.domain.Recorder
 import n7.ad2.feature.camera.domain.Streamer
-import n7.ad2.feature.camera.domain.impl.model.setFace
-import n7.ad2.feature.camera.domain.impl.model.setImage
 import n7.ad2.feature.camera.domain.model.CameraState
-import n7.ad2.feature.camera.domain.model.Image
+import n7.ad2.feature.camera.domain.model.StreamerState
 
 class Controller(
     private val previewer: Previewer,
@@ -39,10 +37,12 @@ class Controller(
     private fun runStreamer() {
         if (streamerJob != null) return
         streamerJob = streamer.stream
-            .onEach { image: Image ->
-                val processorState = processor.analyze(image)
-                _state.setFace(processorState.detectedFaceNormalized)
-                _state.setImage(processorState.image)
+            .onEach { state: StreamerState ->
+                val processorState = processor.analyze(state.image)
+                _state.value = CameraState(
+                    processorState.image,
+                    processorState.detectedFaceNormalized,
+                )
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
             .launchIn(lifecycle.lifecycleScope + Dispatchers.IO)
@@ -56,6 +56,7 @@ class Controller(
 
     suspend fun startRecording(): File {
         streamerJob?.cancelAndJoin()
+        streamerJob = null
         return recorder.start()
     }
 

@@ -2,6 +2,7 @@ package n7.ad2.feature.camera.wiring.di
 
 import android.app.Application
 import javax.inject.Singleton
+import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.camera.domain.CameraSettings
 import n7.ad2.feature.camera.domain.Previewer
@@ -16,6 +17,7 @@ import n7.ad2.feature.camera.domain.impl.preview.PreviewerCameraX
 import n7.ad2.feature.camera.domain.impl.processor.ProcessorKotlinDL
 import n7.ad2.feature.camera.domain.impl.recorder.RecorderCameraX
 import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
+import n7.ad2.feature.camera.domain.impl.streamer.StreamerWithLogs
 
 @dagger.Module
 interface CameraModule {
@@ -92,11 +94,15 @@ interface CameraModule {
             cameraSettings: CameraSettings,
             cameraProvider: CameraProvider,
             lifecycle: CameraLifecycle,
+            logger: Logger,
         ): Streamer {
-            return StreamerCameraX(
-                cameraSettings,
-                cameraProvider,
-                lifecycle,
+            return StreamerWithLogs(
+                StreamerCameraX(
+                    cameraSettings,
+                    cameraProvider,
+                    lifecycle,
+                    logger,
+                )
             )
         }
     }

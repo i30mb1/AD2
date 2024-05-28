@@ -20,7 +20,6 @@ internal fun MutableStateFlow<CameraStateUI>.setFace(
         return
     }
     update { state ->
-
         val scale = when (state.scaleType) {
             PreviewView.ScaleType.FILL_START, PreviewView.ScaleType.FILL_END, PreviewView.ScaleType.FILL_CENTER -> {
                 max(state.viewWidth.toFloat() / image.metadata.width, state.viewHeight.toFloat() / image.metadata.height)

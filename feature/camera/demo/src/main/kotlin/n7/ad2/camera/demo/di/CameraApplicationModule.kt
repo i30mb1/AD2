@@ -4,6 +4,7 @@ import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.app.logger.Logger
 import n7.ad2.common.application.BaseApplicationModule
+import n7.ad2.dagger.ApplicationScope
 import n7.ad2.navigator.Navigator
 
 @dagger.Module(
@@ -19,6 +20,7 @@ internal interface CameraApplicationModule {
         fun navigator(): Navigator = Navigator.empty()
 
         @dagger.Provides
+        @ApplicationScope
         fun provideLogger(): Logger = Logger()
 
         @dagger.Provides

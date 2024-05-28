@@ -2,30 +2,31 @@ package n7.ad2.feature.camera.domain.impl.streamer
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
-import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.camera.core.resolutionselector.AspectRatioStrategy
 import androidx.camera.core.resolutionselector.ResolutionSelector
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
-import java.util.concurrent.Executors
 import kotlin.time.Duration.Companion.seconds
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.channels.awaitClose
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.channels.BufferOverflow
+import kotlinx.coroutines.channels.ticker
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.consumeAsFlow
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.shareIn
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.newSingleThreadContext
+import n7.ad2.app.logger.Logger
 import n7.ad2.feature.camera.domain.CameraSettings
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ImageMetadata
+import n7.ad2.feature.camera.domain.model.StreamerState
 import org.jetbrains.kotlinx.dl.impl.preprocessing.camerax.toBitmap
 
 @SuppressLint("RestrictedApi")
@@ -33,58 +34,37 @@ class StreamerCameraX(
     private val settings: CameraSettings,
     private val cameraProvider: CameraProvider,
     lifecycle: LifecycleOwner,
+    logger: Logger,
 ) : Streamer {
 
-    private val counter = Counter()
-    private val executor = Executors.newSingleThreadExecutor()
-    private val imageAnalysis: ImageAnalysis by lazy {
-        ImageAnalysis.Builder()
-            .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
-            .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
-            .setResolutionSelector(
-                ResolutionSelector.Builder()
-                    .setAspectRatioStrategy(AspectRatioStrategy(settings.aspectRatio, AspectRatioStrategy.FALLBACK_RULE_NONE))
-                    .build()
-            )
-            .build()
-    }
-    private val _stream: SharedFlow<Image> = callbackFlow {
-        imageAnalysis.setAnalyzer(executor) { image: ImageProxy ->
-            val result: Bitmap = image.toBitmap(applyRotation = true)
-            image.close()
-            val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
-            trySend(Image(result, metadata))
-            counter.count++
+    private val executor = newSingleThreadContext("streamer").executor
+    private val _stream = MutableSharedFlow<StreamerState>(0, 1, onBufferOverflow = BufferOverflow.DROP_OLDEST)
+    private var count = 0
+    private val timer: Flow<Unit> = ticker(1.seconds.inWholeMilliseconds)
+        .consumeAsFlow()
+        .onEach {
+            logger.log("streamer speed: $count")
+            count = 0
+        }
+    private val imageAnalysis: ImageAnalysis = ImageAnalysis.Builder()
+        .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+        .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
+        .setResolutionSelector(
+            ResolutionSelector.Builder()
+                .setAspectRatioStrategy(AspectRatioStrategy(settings.aspectRatio, AspectRatioStrategy.FALLBACK_RULE_NONE))
+                .build()
+        )
+        .build().apply {
+            setAnalyzer(executor) { image: ImageProxy ->
+                count++
+                val result: Bitmap = image.toBitmap(applyRotation = true)
+                val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
+                _stream.tryEmit(StreamerState(Image(result, metadata)))
+                image.close()
+            }
+            cameraProvider.bind(this)
         }
 
-        cameraProvider.bind(imageAnalysis)
-        awaitClose {
-            runBlocking {
-                cameraProvider.unbind(imageAnalysis)
-                imageAnalysis.clearAnalyzer()
-            }
-        }
-    }
+    override val stream: SharedFlow<StreamerState> = _stream.combine(timer) { state, _ -> state }
         .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed())
-
-    override val stream: SharedFlow<Image> = _stream
-
-    companion object {
-        val SUBSCRIBE_DELAY = 3.seconds
-    }
-}
-
-class Counter {
-    var count = 0
-    val scope = CoroutineScope(Job())
-
-    init {
-        scope.launch {
-            while (true) {
-                delay(1.seconds)
-                Log.d("N7", "streamer speed: $count")
-                count = 0
-            }
-        }
-    }
 }
