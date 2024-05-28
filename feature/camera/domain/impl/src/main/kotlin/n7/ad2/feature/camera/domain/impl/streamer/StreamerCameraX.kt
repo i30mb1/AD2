@@ -40,10 +40,12 @@ class StreamerCameraX(
     private val executor = newSingleThreadContext("streamer").executor
     private val _stream = MutableSharedFlow<StreamerState>(0, 1, onBufferOverflow = BufferOverflow.DROP_OLDEST)
     private var count = 0
+    private var latestFps = 0
     private val timer: Flow<Unit> = ticker(1.seconds.inWholeMilliseconds)
         .consumeAsFlow()
         .onEach {
             logger.log("streamer speed: $count")
+            latestFps = count
             count = 0
         }
     private val imageAnalysis: ImageAnalysis = ImageAnalysis.Builder()
@@ -59,7 +61,7 @@ class StreamerCameraX(
                 count++
                 val result: Bitmap = image.toBitmap(applyRotation = true)
                 val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
-                _stream.tryEmit(StreamerState(Image(result, metadata)))
+                _stream.tryEmit(StreamerState(Image(result, metadata), latestFps))
                 image.close()
             }
             cameraProvider.bind(this)

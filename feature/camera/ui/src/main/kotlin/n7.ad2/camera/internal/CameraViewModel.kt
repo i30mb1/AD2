@@ -1,5 +1,6 @@
 package n7.ad2.camera.internal
 
+import android.graphics.Bitmap
 import androidx.camera.core.Preview
 import androidx.camera.view.PreviewView
 import androidx.lifecycle.ViewModel
@@ -38,6 +39,12 @@ internal class CameraViewModel @AssistedInject constructor(
                     cameraState.detectedFaceNormalized,
                     cameraState.image,
                 )
+                _state.update {
+                    it.copy(
+                        image = cameraState.image?.source as? Bitmap,
+                        streamerFps = cameraState.streamerFps.toString(),
+                    )
+                }
             }
             .launchIn(viewModelScope)
         recordingDelay.state

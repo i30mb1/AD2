@@ -9,6 +9,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -91,6 +92,18 @@ internal fun Camera(
                 .align(Alignment.TopCenter)
                 .padding(top = 50.dp),
         ) {
+            Row {
+                Text(
+                    text = "Streamer FPS: ",
+                    style = AppTheme.style.H3,
+                    color = AppTheme.color.textSecondaryColor,
+                )
+                Text(
+                    text = state.streamerFps,
+                    style = AppTheme.style.H3,
+                    color = AppTheme.color.textSecondaryColor,
+                )
+            }
             Text(
                 text = state.timeoutForRecording.toString(DurationUnit.MILLISECONDS),
                 style = AppTheme.style.H3,

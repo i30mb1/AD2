@@ -42,6 +42,7 @@ class Controller(
                 _state.value = CameraState(
                     processorState.image,
                     processorState.detectedFaceNormalized,
+                    state.fps,
                 )
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)

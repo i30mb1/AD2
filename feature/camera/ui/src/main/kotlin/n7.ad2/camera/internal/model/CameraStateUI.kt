@@ -14,6 +14,7 @@ internal data class CameraStateUI(
     val timeoutForRecording: Duration = 4.seconds,
     val isRecording: Boolean = false,
     val recordedFile: OneShotValue<File>? = null,
+    val streamerFps: String = "0",
 
     // информация об экране для правильного преобразования фото для превью
     val scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FIT_CENTER,
