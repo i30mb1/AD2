@@ -17,7 +17,6 @@ import n7.ad2.feature.camera.domain.impl.preview.PreviewerCameraX
 import n7.ad2.feature.camera.domain.impl.processor.ProcessorKotlinDL
 import n7.ad2.feature.camera.domain.impl.recorder.RecorderCameraX
 import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
-import n7.ad2.feature.camera.domain.impl.streamer.StreamerWithLogs
 
 @dagger.Module
 interface CameraModule {
@@ -96,13 +95,11 @@ interface CameraModule {
             lifecycle: CameraLifecycle,
             logger: Logger,
         ): Streamer {
-            return StreamerWithLogs(
-                StreamerCameraX(
+            return StreamerCameraX(
                     cameraSettings,
                     cameraProvider,
                     lifecycle,
                     logger,
-                )
             )
         }
     }

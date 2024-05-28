@@ -8,9 +8,11 @@ import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelAndJoin
+import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.buffer
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.plus
@@ -37,6 +39,7 @@ class Controller(
     private fun runStreamer() {
         if (streamerJob != null) return
         streamerJob = streamer.stream
+            .buffer(1, BufferOverflow.DROP_OLDEST)
             .onEach { state: StreamerState ->
                 val processorState = processor.analyze(state.image)
                 _state.value = CameraState(
