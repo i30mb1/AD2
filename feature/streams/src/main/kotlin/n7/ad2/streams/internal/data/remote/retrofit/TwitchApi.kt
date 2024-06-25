@@ -1,11 +1,12 @@
 package n7.ad2.streams.internal.data.remote.retrofit
 
-import com.squareup.moshi.Moshi
 import dagger.Lazy
+import kotlinx.serialization.json.Json
 import n7.ad2.streams.internal.data.remote.Streams
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.kotlinx.serialization.asConverterFactory
 import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -29,12 +30,11 @@ internal interface TwitchApi {
 
         fun get(
             client: Lazy<OkHttpClient>,
-            moshi: Moshi,
         ): TwitchApi {
             return Retrofit.Builder()
                 .baseUrl("https://api.twitch.tv/helix/")
                 .callFactory { request -> client.get().newCall(request) }
-                .addConverterFactory(MoshiConverterFactory.create(moshi))
+                .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
                 .build()
                 .create()
         }

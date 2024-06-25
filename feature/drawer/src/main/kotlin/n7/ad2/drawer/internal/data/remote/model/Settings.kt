@@ -1,22 +1,23 @@
 package n7.ad2.drawer.internal.data.remote.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+import n7.ad2.drawer.internal.data.remote.adapter.StringVOMenuTypeAdapter
 
 internal enum class VOMenuType { HEROES, ITEMS, NEWS, TOURNAMENTS, STREAMS, GAMES, UNKNOWN }
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class Settings(
-    @Json(name = "menu")
+    @SerialName("menu")
     val menu: List<Menu>? = emptyList(),
-    @Json(name = "version")
+    @SerialName("version")
     val version: Int? = 0,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable(with = StringVOMenuTypeAdapter::class)
 internal data class Menu(
-    @Json(name = "type")
-    val type: VOMenuType?,
-    @Json(name = "isEnable")
+    @SerialName("type")
+    val type: VOMenuType,
+    @SerialName("isEnable")
     val isEnable: Boolean = true,
 )

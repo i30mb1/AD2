@@ -1,31 +1,29 @@
 package n7.ad2.drawer.internal.domain.usecase
 
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.adapter
+import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import n7.ad2.Resources
+import n7.ad2.app.logger.Logger
 import n7.ad2.apppreference.Preference
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.drawer.R
 import n7.ad2.drawer.internal.data.remote.SettingsApi
 import n7.ad2.drawer.internal.data.remote.model.Menu
 import n7.ad2.drawer.internal.data.remote.model.Settings
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
-import n7.ad2.ktx.lazyUnsafe
-import n7.ad2.app.logger.Logger
-import javax.inject.Inject
+import n7.ad2.feature.drawer.R
 
 internal class GetMenuItemsUseCase @Inject constructor(
     private val res: Resources,
     private val preference: Preference,
     private val settingsApi: SettingsApi,
     private val logger: Logger,
-    moshi: Moshi,
     private val dispatchers: DispatchersProvider,
 ) {
 
@@ -38,17 +36,14 @@ internal class GetMenuItemsUseCase @Inject constructor(
         Menu(VOMenuType.GAMES, false),
     )
 
-    @OptIn(ExperimentalStdlibApi::class)
-    private val settingsAdapter by lazyUnsafe { moshi.adapter<Settings>() }
-
     operator fun invoke(): Flow<List<VOMenu>> = flow {
-        error("use local settings")
+//        error("use local settings")
         if (preference.isNeedToUpdateSettings()) {
             val newSettings = settingsApi.getSettings()
-            preference.saveSettings(settingsAdapter.toJson(newSettings))
+            preference.saveSettings(Json.encodeToString(newSettings))
             emit(newSettings)
         } else {
-            emit(settingsAdapter.fromJson(preference.getSettings()) ?: error("could not convert settings from Json"))
+            emit(Json.decodeFromString(preference.getSettings()) ?: error("could not convert settings from Json"))
         }
     }.catch { error ->
         logger.log("could not load settings (${error.message})")

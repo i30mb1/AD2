@@ -2,7 +2,6 @@
 sdkVersion = "34"
 room = "2.6.0"
 coroutines = "1.7.1"
-moshi = "1.15.0"
 dagger = "2.51.1"
 workManager = "2.8.1"
 lifecycle = "2.7.0"
@@ -48,11 +47,6 @@ exoPlayerSession = { module = "androidx.media3:media3-session", version.ref = "m
 
 coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" } # why
-
-moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" } # It makes it easy to parse JSON into Kotlin objects
-moshiCodegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" } # Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
-moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" } # Add reflection to moshi (better not to use : 2.5 MB) Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-moshiAdapter = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
 
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 daggerAnnotation = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
@@ -103,8 +97,7 @@ dataStorePref = "androidx.datastore:datastore-preferences:1.0.0"
 recyclerView = "androidx.recyclerview:recyclerview:1.3.2"
 ticker = "com.robinhood.ticker:ticker:2.0.4"
 retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
-retrofitSerialization = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0"
-retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:2.9.0"
+retrofitSerialization = "com.squareup.retrofit2:converter-kotlinx-serialization:2.11.0"
 retrofitInterceptor = "com.squareup.okhttp3:logging-interceptor:4.11.0"
 retrofitScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
 paging3 = "androidx.paging:paging-runtime:3.2.1"

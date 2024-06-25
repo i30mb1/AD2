@@ -4,8 +4,6 @@ plugins {
 }
 
 dependencies {
-    api(libs.moshi)
-
     implementation(projects.core.commonJvm)
     implementation(projects.core.commonAndroid)
     implementation(projects.core.dagger)

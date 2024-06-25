@@ -1,105 +1,152 @@
 package n7.ad2.streams.internal.data.remote.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import android.os.Parcel
+import android.os.Parcelable
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class StreamGQL(
-    @Json(name = "stream")
+    @SerialName("stream")
     val stream: StreamInfo = StreamInfo(),
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class StreamInfo(
-    @Json(name = "average_fps")
+    @SerialName("average_fps")
     val averageFps: Int = 0,
-    @Json(name = "broadcast_platform")
+    @SerialName("broadcast_platform")
     val broadcastPlatform: String = "",
-    @Json(name = "channel")
+    @SerialName("channel")
     val channel: Channel = Channel(),
-    @Json(name = "community_id")
+    @SerialName("community_id")
     val communityId: String = "",
-    @Json(name = "community_ids")
-    val communityIds: List<Any> = listOf(),
-    @Json(name = "created_at")
+    @SerialName("community_ids")
+    val communityIds: List<String> = listOf(),
+    @SerialName("created_at")
     val createdAt: String = "",
-    @Json(name = "delay")
+    @SerialName("delay")
     val delay: Int = 0,
-    @Json(name = "game")
+    @SerialName("game")
     val game: String = "",
-    @Json(name = "_id")
+    @SerialName("_id")
     val id: Long = 0,
-    @Json(name = "is_playlist")
+    @SerialName("is_playlist")
     val isPlaylist: Boolean = false,
-    @Json(name = "preview")
+    @SerialName("preview")
     val preview: Preview = Preview(),
-    @Json(name = "stream_type")
+    @SerialName("stream_type")
     val streamType: String = "",
-    @Json(name = "video_height")
+    @SerialName("video_height")
     val videoHeight: Int = 0,
-    @Json(name = "viewers")
+    @SerialName("viewers")
     val viewers: Int = 0,
-)
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readInt(),
+        parcel.readString()!!,
+        TODO("channel"),
+        parcel.readString()!!,
+        TODO("communityIds"),
+        parcel.readString()!!,
+        parcel.readInt(),
+        parcel.readString()!!,
+        parcel.readLong(),
+        parcel.readByte() != 0.toByte(),
+        TODO("preview"),
+        parcel.readString()!!,
+        parcel.readInt(),
+        parcel.readInt()
+    )
 
-@JsonClass(generateAdapter = true)
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(averageFps)
+        parcel.writeString(broadcastPlatform)
+        parcel.writeString(communityId)
+        parcel.writeString(createdAt)
+        parcel.writeInt(delay)
+        parcel.writeString(game)
+        parcel.writeLong(id)
+        parcel.writeByte(if (isPlaylist) 1 else 0)
+        parcel.writeString(streamType)
+        parcel.writeInt(videoHeight)
+        parcel.writeInt(viewers)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<StreamInfo> {
+        override fun createFromParcel(parcel: Parcel): StreamInfo {
+            return StreamInfo(parcel)
+        }
+
+        override fun newArray(size: Int): Array<StreamInfo?> {
+            return arrayOfNulls(size)
+        }
+    }
+}
+
+@Serializable
 data class Channel(
-    @Json(name = "broadcaster_language")
+    @SerialName("broadcaster_language")
     val broadcasterLanguage: String = "",
-    @Json(name = "broadcaster_software")
+    @SerialName("broadcaster_software")
     val broadcasterSoftware: String = "",
-    @Json(name = "broadcaster_type")
+    @SerialName("broadcaster_type")
     val broadcasterType: String = "",
-    @Json(name = "created_at")
+    @SerialName("created_at")
     val createdAt: String = "",
-    @Json(name = "description")
+    @SerialName("description")
     val description: String = "",
-    @Json(name = "display_name")
+    @SerialName("display_name")
     val displayName: String = "",
-    @Json(name = "followers")
+    @SerialName("followers")
     val followers: Int = 0,
-    @Json(name = "game")
+    @SerialName("game")
     val game: String = "",
-    @Json(name = "_id")
+    @SerialName("_id")
     val id: Int = 0,
-    @Json(name = "language")
+    @SerialName("language")
     val language: String = "",
-    @Json(name = "logo")
+    @SerialName("logo")
     val logo: String = "",
-    @Json(name = "mature")
+    @SerialName("mature")
     val mature: Boolean = false,
-    @Json(name = "name")
+    @SerialName("name")
     val name: String = "",
-    @Json(name = "partner")
+    @SerialName("partner")
     val partner: Boolean = false,
-    @Json(name = "privacy_options_enabled")
+    @SerialName("privacy_options_enabled")
     val privacyOptionsEnabled: Boolean = false,
-    @Json(name = "private_video")
+    @SerialName("private_video")
     val privateVideo: Boolean = false,
-    @Json(name = "profile_banner")
-    val profileBanner: Any? = null,
-    @Json(name = "profile_banner_background_color")
+    @SerialName("profile_banner")
+    val profileBanner: String? = null,
+    @SerialName("profile_banner_background_color")
     val profileBannerBackgroundColor: String = "",
-    @Json(name = "status")
+    @SerialName("status")
     val status: String = "",
-    @Json(name = "updated_at")
+    @SerialName("updated_at")
     val updatedAt: String = "",
-    @Json(name = "url")
+    @SerialName("url")
     val url: String = "",
-    @Json(name = "video_banner")
+    @SerialName("video_banner")
     val videoBanner: String = "",
-    @Json(name = "views")
+    @SerialName("views")
     val views: Int = 0,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Preview(
-    @Json(name = "large")
+    @SerialName("large")
     val large: String = "",
-    @Json(name = "medium")
+    @SerialName("medium")
     val medium: String = "",
-    @Json(name = "small")
+    @SerialName("small")
     val small: String = "",
-    @Json(name = "template")
+    @SerialName("template")
     val template: String = "",
 )

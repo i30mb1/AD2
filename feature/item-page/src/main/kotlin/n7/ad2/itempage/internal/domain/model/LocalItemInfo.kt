@@ -1,54 +1,54 @@
 package n7.ad2.itempage.internal.domain.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class LocalItemInfo(
-    @Json(name = "abilities")
+    @SerialName("abilities")
     val abilities: List<Ability>? = null,
-    @Json(name = "additionalInformation")
+    @SerialName("additionalInformation")
     val additionalInformation: List<String>? = null,
-    @Json(name = "description")
+    @SerialName("description")
     val description: String? = null,
-    @Json(name = "lore")
+    @SerialName("lore")
     val lore: List<String>? = null,
-    @Json(name = "name")
+    @SerialName("name")
     val name: String? = null,
-    @Json(name = "cost")
+    @SerialName("cost")
     val cost: String? = null,
-    @Json(name = "boughtFrom")
+    @SerialName("boughtFrom")
     val boughtFrom: String? = null,
-    @Json(name = "tips")
+    @SerialName("tips")
     val tips: List<String>? = null,
-    @Json(name = "consistFrom")
+    @SerialName("consistFrom")
     val consistFrom: List<String>? = null,
-    @Json(name = "trivia")
+    @SerialName("trivia")
     val trivia: List<String>? = null,
-    @Json(name = "bonuses")
+    @SerialName("bonuses")
     val bonuses: List<String>? = null,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Ability(
-    @Json(name = "abilityName")
+    @SerialName("abilityName")
     val abilityName: String? = null,
-    @Json(name = "audioUrl")
+    @SerialName("audioUrl")
     val audioUrl: String? = null,
-    @Json(name = "cooldown")
+    @SerialName("cooldown")
     val cooldown: String? = null,
-    @Json(name = "description")
+    @SerialName("description")
     val description: String? = null,
-    @Json(name = "effects")
+    @SerialName("effects")
     val effects: List<String>? = null,
-    @Json(name = "itemBehaviour")
+    @SerialName("itemBehaviour")
     val itemBehaviour: List<String>? = null,
-    @Json(name = "mana")
+    @SerialName("mana")
     val mana: String? = null,
-    @Json(name = "notes")
+    @SerialName("notes")
     val notes: List<String>? = null,
-    @Json(name = "params")
+    @SerialName("params")
     val params: List<String>? = null,
-    @Json(name = "story")
+    @SerialName("story")
     val story: String? = null,
 )

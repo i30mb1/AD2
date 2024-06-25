@@ -9,7 +9,6 @@ dependencies {
     implementation(projects.core.commonJvm)
 
     api(libs.retrofit)
-    api(libs.retrofitMoshiConverter)
     api(libs.retrofitInterceptor)
     api(libs.retrofitScalars)
     api(libs.retrofitSerialization)

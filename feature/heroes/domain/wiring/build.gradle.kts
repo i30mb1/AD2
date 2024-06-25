@@ -11,7 +11,5 @@ dependencies {
     implementation(projects.core.dagger)
     implementation(projects.core.logger.appLogger)
 
-    implementation(libs.moshi)
-
     kapt(libs.daggerAnnotation)
 }

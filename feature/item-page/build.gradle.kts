@@ -1,5 +1,6 @@
 plugins {
     id("convention.android-library")
+    id("convention.kotlin-serialization")
     id("n7.plugins.kotlin-kapt")
 }
 
@@ -16,8 +17,5 @@ dependencies {
     implementation(projects.core.spanParser)
     implementation(projects.core.mediaPlayer)
 
-    api(libs.moshi)
-
-    kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)
 }

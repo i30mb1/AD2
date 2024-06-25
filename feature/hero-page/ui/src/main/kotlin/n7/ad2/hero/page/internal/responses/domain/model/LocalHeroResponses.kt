@@ -1,24 +1,24 @@
 package n7.ad2.hero.page.internal.responses.domain.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class LocalHeroResponsesItem(
-    @Json(name = "category")
+    @SerialName("category")
     val category: String = "",
-    @Json(name = "responses")
+    @SerialName("responses")
     val responses: List<Response> = listOf(),
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Response(
-    @Json(name = "audioUrl")
+    @SerialName("audioUrl")
     val audioUrl: String = "",
-    @Json(name = "title")
+    @SerialName("title")
     val title: String = "",
-    @Json(name = "icons")
+    @SerialName("icons")
     val icons: List<String> = emptyList(),
-    @Json(name = "isArcane")
+    @SerialName("isArcane")
     val isArcane: Boolean = false,
 )

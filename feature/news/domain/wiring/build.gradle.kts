@@ -12,7 +12,5 @@ dependencies {
     implementation(projects.core.coroutines)
     implementation(projects.core.dagger)
 
-    implementation(libs.moshi)
-
     kapt(libs.daggerAnnotation)
 }

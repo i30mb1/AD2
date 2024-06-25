@@ -11,8 +11,6 @@ dependencies {
     implementation(projects.core.commonJvm)
     implementation(projects.core.coroutines)
 
-    implementation(libs.moshi)
     implementation(libs.coroutines)
 
-    kapt(libs.moshiCodegen)
 }

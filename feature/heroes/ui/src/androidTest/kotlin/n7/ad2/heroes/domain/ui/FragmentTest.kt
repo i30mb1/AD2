@@ -41,8 +41,6 @@ class FragmentTest {
             override fun getLogFlow(): Flow<AppLog> = emptyFlow()
             override fun getLogsFlow(): Flow<List<AppLog>> = emptyFlow()
         }
-        override val moshi: Moshi
-            get() = TODO("Not yet implemented")
         override val getHeroesUseCase: GetHeroesUseCase = object : GetHeroesUseCase {
             override fun invoke(): Flow<List<Hero>> = flowOf(
                 listOf(Hero("Jeka", "", false, "str"))

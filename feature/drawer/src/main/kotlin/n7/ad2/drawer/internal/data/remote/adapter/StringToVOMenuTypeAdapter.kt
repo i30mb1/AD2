@@ -1,26 +1,30 @@
 package n7.ad2.drawer.internal.data.remote.adapter
 
-import com.squareup.moshi.FromJson
-import com.squareup.moshi.JsonQualifier
-import com.squareup.moshi.ToJson
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.descriptors.PrimitiveKind
+import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 
 @Retention(AnnotationRetention.RUNTIME)
-@JsonQualifier
 annotation class StringVoMenuType
 
-internal class StringVOMenuTypeAdapter {
+internal class StringVOMenuTypeAdapter : KSerializer<VOMenuType> {
 
-    @ToJson
-    fun toJson(@StringVoMenuType value: VOMenuType): String {
-        return value.name
+    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("VOMenuType", PrimitiveKind.STRING)
+
+    override fun deserialize(decoder: Decoder): VOMenuType {
+        val string = decoder.decodeString()
+        return try {
+            VOMenuType.valueOf(string)
+        } catch (e: Exception) {
+            VOMenuType.UNKNOWN
+        }
     }
 
-    @FromJson
-    fun fromJson(value: String): VOMenuType = try {
-        VOMenuType.valueOf(value)
-    } catch (e: Exception) {
-        VOMenuType.UNKNOWN
+    override fun serialize(encoder: Encoder, value: VOMenuType) {
+        encoder.encodeString(value.name)
     }
-
 }

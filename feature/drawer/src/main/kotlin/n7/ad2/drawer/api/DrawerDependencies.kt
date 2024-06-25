@@ -1,7 +1,6 @@
 package n7.ad2.drawer.api
 
 import android.app.Application
-import com.squareup.moshi.Moshi
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.apppreference.Preference
@@ -17,6 +16,5 @@ interface DrawerDependencies : Dependencies {
     val navigator: Navigator
     val logger: Logger
     val okHttpClient: OkHttpClient
-    val moshi: Moshi
     val dispatchersProvider: DispatchersProvider
 }

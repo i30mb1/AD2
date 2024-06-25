@@ -10,9 +10,7 @@ dependencies {
     implementation(projects.core.coroutines)
     implementation(projects.core.logger.appLogger)
 
-    implementation(libs.moshi)
     implementation(libs.room.ktx)
 
-    kapt(libs.moshiCodegen)
     kapt(libs.room.compiler)
 }

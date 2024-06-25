@@ -2,7 +2,6 @@ package n7.ad2.hero.page.api
 
 import android.app.Application
 import androidx.work.WorkManager
-import com.squareup.moshi.Moshi
 import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
@@ -19,7 +18,6 @@ interface HeroPageDependencies : Dependencies {
     val navigator: Navigator
     val workManager: WorkManager
     val logger: Logger
-    val moshi: Moshi
     val dispatchersProvider: DispatchersProvider
     val appInformation: AppInformation
     val resources: Resources

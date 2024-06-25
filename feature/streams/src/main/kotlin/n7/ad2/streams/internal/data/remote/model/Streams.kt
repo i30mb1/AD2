@@ -1,50 +1,50 @@
 package n7.ad2.streams.internal.data.remote
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class Streams(
-    @Json(name = "data")
+    @SerialName("data")
     val list: List<Stream> = listOf(),
-    @Json(name = "pagination")
+    @SerialName("pagination")
     val pagination: Pagination = Pagination(),
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class Stream(
-    @Json(name = "game_id")
+    @SerialName("game_id")
     val gameId: String = "",
-    @Json(name = "game_name")
+    @SerialName("game_name")
     val gameName: String = "",
-    @Json(name = "id")
+    @SerialName("id")
     val id: String = "",
-    @Json(name = "is_mature")
+    @SerialName("is_mature")
     val isMature: Boolean = false,
-    @Json(name = "language")
+    @SerialName("language")
     val language: String = "",
-    @Json(name = "started_at")
+    @SerialName("started_at")
     val startedAt: String = "",
-    @Json(name = "tag_ids")
+    @SerialName("tag_ids")
     val tagIds: List<String> = listOf(),
-    @Json(name = "thumbnail_url")
+    @SerialName("thumbnail_url")
     val thumbnailUrl: String = "",
-    @Json(name = "title")
+    @SerialName("title")
     val title: String = "",
-    @Json(name = "type")
+    @SerialName("type")
     val type: String = "",
-    @Json(name = "user_id")
+    @SerialName("user_id")
     val userId: String = "",
-    @Json(name = "user_login")
+    @SerialName("user_login")
     val userLogin: String = "",
-    @Json(name = "user_name")
+    @SerialName("user_name")
     val userName: String = "",
-    @Json(name = "viewer_count")
+    @SerialName("viewer_count")
     val viewerCount: Int = 0,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class Pagination(
-    @Json(name = "cursor")
+    @SerialName("cursor")
     val cursor: String = "",
 )

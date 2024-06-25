@@ -1,5 +1,6 @@
 plugins {
     id("convention.android-library")
+    id("convention.kotlin-serialization")
     id("n7.plugins.kotlin-kapt")
 }
 
@@ -20,10 +21,6 @@ dependencies {
 
     implementation(projects.feature.heroes.domain.api)
     implementation(projects.feature.heroPage.domain.api)
-
-    api(libs.moshi)
-
-    kapt(libs.moshiCodegen)
     kapt(libs.daggerAnnotation)
 
     testImplementation(libs.test.junit.kotlin)

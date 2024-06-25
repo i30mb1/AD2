@@ -1,12 +1,12 @@
 package n7.ad2.database_guides.internal.domain.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class AssetsItem(
-    @Json(name = "name")
+    @SerialName("name")
     val name: String = "",
-    @Json(name = "section")
+    @SerialName("section")
     val section: String = "",
 )

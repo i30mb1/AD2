@@ -1,43 +1,43 @@
 package n7.ad2.streams.internal.data.remote.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class StreamGQLRequest(
-    @Json(name = "extensions")
+    @SerialName("extensions")
     val extensions: Extensions = Extensions(),
-    @Json(name = "operationName")
+    @SerialName("operationName")
     val operationName: String = "PlaybackAccessToken",
-    @Json(name = "variables")
+    @SerialName("variables")
     val variables: Variables,
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Extensions(
-    @Json(name = "persistedQuery")
+    @SerialName("persistedQuery")
     val persistedQuery: PersistedQuery = PersistedQuery(),
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Variables(
-    @Json(name = "isLive")
+    @SerialName("isLive")
     val isLive: Boolean = true,
-    @Json(name = "isVod")
+    @SerialName("isVod")
     val isVod: Boolean = false,
-    @Json(name = "login")
+    @SerialName("login")
     val streamerName: String,
-    @Json(name = "playerType")
+    @SerialName("playerType")
     val playerType: String = "embed",
-    @Json(name = "vodID")
+    @SerialName("vodID")
     val vodID: String = "",
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class PersistedQuery(
-    @Json(name = "sha256Hash")
+    @SerialName("sha256Hash")
     val sha256Hash: String = "0828119ded1c13477966434e15800ff57ddacf13ba1911c129dc2200705b0712",
-    @Json(name = "version")
+    @SerialName("version")
     val version: Int = 1,
 )

@@ -1,6 +1,5 @@
 package n7.ad2.itempage.internal.domain.usecase
 
-import com.squareup.moshi.Moshi
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -13,7 +12,6 @@ import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 class GetItemInfoUseCase @Inject constructor(
     private val res: Resources,
 //    private val itemRepository: ItemRepository,
-    private val moshi: Moshi,
     private val dispatchers: DispatchersProvider,
 ) {
 

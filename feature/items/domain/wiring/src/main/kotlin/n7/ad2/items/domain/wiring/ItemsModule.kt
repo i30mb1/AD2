@@ -1,7 +1,6 @@
 package n7.ad2.items.domain.wiring
 
 import android.app.Application
-import com.squareup.moshi.Moshi
 import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
@@ -18,7 +17,6 @@ object ItemsModule {
     @dagger.Provides
     fun provideHeroesDomainComponent(
         res: Resources,
-        moshi: Moshi,
         dispatchers: DispatchersProvider,
         appInformation: AppInformation,
         application: Application,

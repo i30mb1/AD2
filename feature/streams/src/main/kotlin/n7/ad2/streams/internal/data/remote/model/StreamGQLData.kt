@@ -1,40 +1,39 @@
 package n7.ad2.streams.internal.data.remote.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class StreamGQLData(
-    @Json(name = "data")
+    @SerialName("data")
     val `data`: Data = Data(),
-    @Json(name = "extensions")
+    @SerialName("extensions")
     val extensions: Extensions1 = Extensions1(),
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Data(
-    @Json(name = "streamPlaybackAccessToken")
+    @SerialName("streamPlaybackAccessToken")
     val streamPlaybackAccessToken: StreamPlaybackAccessToken = StreamPlaybackAccessToken(),
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Extensions1(
-    @Json(name = "durationMilliseconds")
+    @SerialName("durationMilliseconds")
     val durationMilliseconds: Int = 0,
-    @Json(name = "operationName")
+    @SerialName("operationName")
     val operationName: String = "",
-    @Json(name = "requestID")
+    @SerialName("requestID")
     val requestID: String = "",
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class StreamPlaybackAccessToken(
-    @Json(name = "signature")
+    @SerialName("signature")
     val signature: String = "",
-    @Json(name = "__typename")
+    @SerialName("__typename")
     val typename: String = "",
-    @Json(name = "value")
+    @SerialName("value")
     val value: String = "",
 )
-
