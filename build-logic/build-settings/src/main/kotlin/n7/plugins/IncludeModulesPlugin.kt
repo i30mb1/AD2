@@ -39,7 +39,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
             .filter { it.hasBuildGradleFile() && ignoreModules.contains(it.name).not() }
             .map {
                 ModuleData(
-                    it.path.substringAfterLast("AD2").replace("\\", ":"),
+                    it.path.substringAfterLast("AD2").replace(File.separator, ":"),
                     it,
                     getProjects(it),
                 )
