@@ -28,7 +28,7 @@ internal class ClientHolderWithSocket : ClientHolder {
             continuation.resume(socket)
             return@suspendCancellableCoroutine
         } catch (e: Exception) {
-            continuation.resumeWithException(e)
+            continuation.resumeWithException(ClientSocketException)
         }
     }
 }

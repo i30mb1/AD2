@@ -5,7 +5,7 @@ sealed interface ServerLog {
     object ConnectionAccepted : ServerLog
     class UnknownError(val exception: Exception) : ServerLog
     class ReceiveMessage(val text: String) : ServerLog
-    object PortsBusy : ServerLog
+    object StartFailed : ServerLog
     class PortBusy(val port: Int) : ServerLog
 }
 

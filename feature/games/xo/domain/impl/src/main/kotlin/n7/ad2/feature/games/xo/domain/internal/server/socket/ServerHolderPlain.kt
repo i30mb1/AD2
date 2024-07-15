@@ -15,7 +15,7 @@ import n7.ad2.feature.games.xo.domain.model.Server
 /**
  * Обертка над вызовами ServerSocket класса в suspend фукнции с логами
  */
-internal class ServerHolderWithSocket(
+internal class ServerHolderPlain(
     private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
 ) : ServerHolder {
 
@@ -71,7 +71,7 @@ internal class ServerHolderWithSocket(
                 logger(ServerLog.PortBusy(port))
             }
         }
-        logger(ServerLog.PortsBusy)
+        logger(ServerLog.StartFailed)
         continuation.resumeWithException(ServerSocketException)
     }
 

@@ -13,7 +13,7 @@ import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
-import n7.ad2.feature.games.xo.domain.SocketHolder
+import n7.ad2.feature.games.xo.domain.SocketMessanger
 import n7.ad2.feature.games.xo.domain.di.XoDomainComponent
 import n7.ad2.feature.games.xo.domain.di.XoDomainDependencies
 
@@ -50,7 +50,7 @@ object XoModule {
     @dagger.Provides
     fun provideSocketHolder(
         component: XoDomainComponent,
-    ): SocketHolder = component.socketHolder
+    ): SocketMessanger = component.socketHolder
 
     @dagger.Provides
     fun provideGetNetworkStateUseCase(
