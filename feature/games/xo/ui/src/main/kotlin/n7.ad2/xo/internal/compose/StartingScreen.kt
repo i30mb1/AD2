@@ -14,8 +14,13 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text2.BasicTextField2
+import androidx.compose.foundation.text2.input.InputTransformation
+import androidx.compose.foundation.text2.input.TextFieldBuffer
+import androidx.compose.foundation.text2.input.TextFieldCharSequence
 import androidx.compose.foundation.text2.input.TextFieldLineLimits
 import androidx.compose.foundation.text2.input.TextFieldState
+import androidx.compose.foundation.text2.input.insert
+import androidx.compose.foundation.text2.input.rememberTextFieldState
 import androidx.compose.material.Button
 import androidx.compose.material.Icon
 import androidx.compose.material.LocalTextStyle
@@ -76,26 +81,38 @@ internal fun StaringScreen(
                 color = AppTheme.color.textSecondaryColor,
             )
         }
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.align(Alignment.Center),
-        ) {
-            val name = TextFieldState(state.deviceName)
-            val ip = TextFieldState(state.deviceIP)
-            EditTextWithButton(
-                name,
-                "Start",
-                state.isStartEnabled,
-            ) { event(XoScreenEvent.StartServer(name.text.toString())) }
-            EditTextWithButton(
-                ip,
-                "Connect",
-                true,
-            ) { event(XoScreenEvent.ConnectToServer(ServerUI(name.text.toString(), ip.text.toString()))) }
-            ServerList(state.servers, { server ->
-                event(XoScreenEvent.ConnectToServer(server))
-            })
+        if (state.deviceName.isNotEmpty() && state.deviceIP.isNotEmpty()) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.align(Alignment.Center),
+            ) {
+                val name = rememberTextFieldState(state.deviceName)
+                val ip = rememberTextFieldState(state.deviceIP)
+                EditTextWithButton(
+                    name,
+                    "Start",
+                    state.isStartEnabled,
+                ) { event(XoScreenEvent.StartServer(name.text.toString())) }
+                EditTextWithButton(
+                    ip,
+                    "Connect",
+                    true,
+                ) {
+                    event(
+                        XoScreenEvent.ConnectToServer(
+                            ServerUI(
+                                name.text.toString(),
+                                ip.text.toString().substringBefore(":"),
+                                ip.text.toString().substringAfter(":"),
+                            )
+                        )
+                    )
+                }
+                ServerList(state.servers, { server ->
+                    event(XoScreenEvent.ConnectToServer(server))
+                })
+            }
         }
     }
 }
@@ -127,7 +144,7 @@ private fun EditTextWithButton(
                     color = AppTheme.color.textColor,
                     textAlign = TextAlign.End,
                 ),
-                keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
+                keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Text),
             )
         }
         Button(
@@ -144,3 +161,20 @@ private fun EditTextWithButton(
     }
 }
 
+object DigitsOnlyTransformation : InputTransformation {
+    override val keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+
+    override fun transformInput(
+        originalValue: TextFieldCharSequence,
+        valueWithChanges: TextFieldBuffer,
+    ) {
+        if (valueWithChanges.length > 15) {
+            valueWithChanges.revertAllChanges()
+            return
+        }
+        valueWithChanges.asCharSequence().forEachIndexed { index, c ->
+            if (index == 0) return@forEachIndexed
+            if (index % 3 == 0 && c != '.') valueWithChanges.insert(index, ".")
+        }
+    }
+}

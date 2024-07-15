@@ -8,12 +8,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.ClientHolder
 import n7.ad2.feature.games.xo.domain.ConnectToWifiDirectUseCase
@@ -23,7 +25,7 @@ import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.SocketMessanger
-import n7.ad2.feature.games.xo.domain.internal.server.socket.SocketMessangerImpl
+import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessanger
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
@@ -37,17 +39,20 @@ internal class GameLogic @Inject constructor(
     private val getNetworkStateUseCase: GetNetworkStateUseCase,
     private val getDeviceNameUseCase: GetDeviceNameUseCase,
     private val dispatchers: DispatchersProvider,
+    private val logger: Logger,
 ) {
 
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()
-    private var serverMessanger: SocketMessanger? = null
+    private val socketMessanger: SocketMessanger = GameSocketMessanger()
 
     fun init(scope: CoroutineScope) {
         merge(
             combine(
                 discoverServicesInNetworkUseCase(),
-                discoverServicesInWifiDirectUseCase(),
+//                emptyFlow(),
+                emptyFlow()
+//                discoverServicesInWifiDirectUseCase(),
             ) { servers: List<Server>, serversDirect: List<Server> -> servers + serversDirect },
             getNetworkStateUseCase(),
         )
@@ -63,26 +68,29 @@ internal class GameLogic @Inject constructor(
 
     suspend fun startServer(name: String) = withContext(dispatchers.IO) {
         val ip = InetAddress.getByName(_state.value.deviceIP)
-        serverHolder.start(ip, name)
+        val server = serverHolder.start(ip, name)
+        logger.log("Start Server $name")
+        logger.log("Await Client on ${server.inetAddress}:${server.localPort}")
         val socket = serverHolder.awaitClient()
-        serverMessanger = SocketMessangerImpl(socket)
-        _state.addLog("Client Connected")
+        socketMessanger.init(socket)
+
+        logger.log("Client Connected")
         collectMessages()
     }
 
     suspend fun sendMessage(message: String) = withContext(dispatchers.IO) {
-        serverMessanger?.sendMessage(message)
+        socketMessanger.sendMessage(message)
     }
 
     suspend fun connectToServer(server: Server) = withContext(dispatchers.IO) {
         val socket = clientHolder.start(InetAddress.getByName(server.serverIP), server.port)
-        serverMessanger = SocketMessangerImpl(socket)
-        _state.addLog("Connected to Server")
+        socketMessanger.init(socket)
+        logger.log("Connected to Server")
         collectMessages()
     }
 
     suspend fun connectToWifiDirect(serverIP: String) = withContext(dispatchers.IO) {
-        connectToWifiDirectUseCase(serverIP)
+//        connectToWifiDirectUseCase(serverIP)
 //        serverHolder.start(InetAddress.getByName(serverIP), "H1")
 //        socketHolder.socket = serverHolder.awaitClient()
 //        _state.addLog("Client Connected")
@@ -90,9 +98,9 @@ internal class GameLogic @Inject constructor(
     }
 
     private fun CoroutineScope.collectMessages() = launch(Job()) {
-        while (serverMessanger?.socket?.isConnected == true) {
-            val message = serverMessanger?.awaitMessage()
-            _state.addLog("client: $message")
+        while (socketMessanger.isConnected()) {
+            val message = socketMessanger.awaitMessage()
+            logger.log("client: $message")
         }
     }
 }

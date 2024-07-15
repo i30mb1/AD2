@@ -59,12 +59,12 @@ internal class XoViewModel @AssistedInject constructor(
     }
 
     fun connectToServer(serverUI: ServerUI) = viewModelScope.launch {
-        val server: Server = gameLogic.state.value.servers.find { server -> server.name == serverUI.name }!!
-        if (server.isWifiDirect) {
-            gameLogic.connectToWifiDirect(server.serverIP)
-        } else {
-            gameLogic.connectToServer(server)
-        }
+//        val server: Server = gameLogic.state.value.servers.find { server -> server.name == serverUI.name }!!
+//        if (server.isWifiDirect) {
+//            gameLogic.connectToWifiDirect(server.serverIP)
+//        } else {
+        gameLogic.connectToServer(Server(serverUI.name, serverUI.serverIP, serverUI.port.toInt()))
+//        }
         _state.startGame()
     }
 

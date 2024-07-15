@@ -19,7 +19,7 @@ import n7.ad2.feature.games.xo.domain.internal.registrator.GetInfoAboutServerUse
 import n7.ad2.feature.games.xo.domain.internal.registrator.GetNetworkStateUseCaseImpl
 import n7.ad2.feature.games.xo.domain.internal.registrator.RegisterServiceInNetworkUseCaseImpl
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientHolderWithSocket
-import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerHolderPlain
+import n7.ad2.feature.games.xo.domain.internal.server.socket.GameServer
 import n7.ad2.feature.games.xo.domain.internal.usecase.GetDeviceNameUseCaseImpl
 
 interface XoDomainComponent {
@@ -47,7 +47,7 @@ fun XoDomainComponent(
         GetInfoAboutServerUseCase(dependencies.dispatcher, dependencies.logger),
         dependencies.logger,
     )
-    override val serverHolder: ServerHolder = ServerHolderPlain(registerServerInDNSUseCase)
+    override val serverHolder: ServerHolder = GameServer(registerServerInDNSUseCase)
     override val clientHolder: ClientHolder = ClientHolderWithSocket()
     override val discoverServicesInWifiDirectUseCase = DiscoverServicesInWifiDirectUseCaseImpl(
         dependencies.application,

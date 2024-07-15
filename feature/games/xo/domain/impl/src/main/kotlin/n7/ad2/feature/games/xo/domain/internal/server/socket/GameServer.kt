@@ -10,12 +10,11 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.internal.server.ServerLog
-import n7.ad2.feature.games.xo.domain.model.Server
 
 /**
  * Обертка над вызовами ServerSocket класса в suspend фукнции с логами
  */
-internal class ServerHolderPlain(
+internal class GameServer(
     private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
 ) : ServerHolder {
 
@@ -38,7 +37,7 @@ internal class ServerHolderPlain(
         name: String,
     ): ServerSocket {
         val server = getServerSocket(host, intArrayOf(0))
-        registerServerInDNSUseCase(Server(name, server.inetAddress.hostAddress!!, server.localPort))
+//        registerServerInDNSUseCase(Server(name, server.inetAddress.hostAddress!!, server.localPort))
         this.server = server
         events.send(ServerWithSocketEvents.Started)
         return server
