@@ -69,6 +69,10 @@ internal class CameraViewModel @AssistedInject constructor(
         }
     }
 
+    fun onUiUnBind() {
+        controller.onUiUnBind()
+    }
+
     fun onGlobalPosition(viewHeight: Int, viewWidth: Int) {
         _state.setPreviewSizes(viewHeight, viewWidth)
     }

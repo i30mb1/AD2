@@ -2,7 +2,7 @@ package n7.ad2.feature.camera.domain.impl
 
 import android.annotation.SuppressLint
 import android.content.Context
-import androidx.camera.core.UseCase
+import androidx.camera.core.UseCaseGroup
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.lifecycle.LifecycleOwner
 import n7.ad2.feature.camera.domain.CameraSettings
@@ -18,22 +18,20 @@ class CameraProvider(
     }
 
     @SuppressLint("RestrictedApi")
-    fun bind(useCase: UseCase) {
-        val camera = camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCase)
-
-
+    fun bind(useCases: UseCaseGroup) {
+        val camera = camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCases)
 //        val config = CameraXConfig.Builder()
 //            .setCameraOpenRetryMaxTimeoutInMillisWhileResuming(1000)
 //            .build()
 //
 //        ProcessCameraProvider.configureInstance(config)
-
-//        UseCaseGroup.Builder()
-//            .addUseCase(useCase)
-//            .build()
     }
 
-    fun unbind(useCase: UseCase) {
-        camera.unbind(useCase)
+    /**
+     * Возможно анбайнд не нужен, юзкейсы сами отпишутся при onDestory
+     * максимум чтобы прекращать работу в onPause, но смысла невижу
+     */
+    fun unbind() {
+        camera.unbindAll()
     }
 }

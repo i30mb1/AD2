@@ -29,6 +29,7 @@ class Controller(
     private val recorder: Recorder,
     private val streamer: Streamer,
     private val lifecycle: CameraLifecycle,
+    private val cameraProvider: CameraProvider,
 ) {
 
     private val _state: MutableStateFlow<CameraState> = MutableStateFlow(CameraState())
@@ -53,15 +54,19 @@ class Controller(
     }
 
     fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
-        previewer.start(surfaceProvider)
+        val previewerUseCase = previewer.start(surfaceProvider)
         runStreamer()
         lifecycle.onUiShown()
+    }
+
+    fun onUiUnBind() {
+        cameraProvider.unbind()
     }
 
     suspend fun startRecording(): File {
         streamerJob?.cancelAndJoin()
         streamerJob = null
-        return recorder.start()
+        return recorder.startOnce()
     }
 
     fun onDestroyView() {

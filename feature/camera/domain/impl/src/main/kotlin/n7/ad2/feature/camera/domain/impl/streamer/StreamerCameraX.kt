@@ -1,6 +1,5 @@
 package n7.ad2.feature.camera.domain.impl.streamer
 
-import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
@@ -19,20 +18,18 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.shareIn
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import n7.ad2.app.logger.Logger
 import n7.ad2.feature.camera.domain.CameraSettings
 import n7.ad2.feature.camera.domain.Streamer
-import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ImageMetadata
 import n7.ad2.feature.camera.domain.model.StreamerState
 import org.jetbrains.kotlinx.dl.impl.preprocessing.camerax.toBitmap
 
-@SuppressLint("RestrictedApi")
 class StreamerCameraX(
     private val settings: CameraSettings,
-    private val cameraProvider: CameraProvider,
     lifecycle: LifecycleOwner,
     logger: Logger,
 ) : Streamer {
@@ -48,7 +45,7 @@ class StreamerCameraX(
             latestFps = count
             count = 0
         }
-    private val imageAnalysis: ImageAnalysis = ImageAnalysis.Builder()
+    val imageAnalysis: ImageAnalysis = ImageAnalysis.Builder()
         .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
         .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
         .setResolutionSelector(
@@ -64,9 +61,12 @@ class StreamerCameraX(
                 _stream.tryEmit(StreamerState(Image(result, metadata), latestFps))
                 image.close()
             }
-            cameraProvider.bind(this)
         }
 
     override val stream: SharedFlow<StreamerState> = _stream.combine(timer) { state, _ -> state }
-        .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed())
+        .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed(SUBSCRIBE_DELAY))
+
+    companion object {
+        val SUBSCRIBE_DELAY = 3.seconds.inWholeMilliseconds
+    }
 }

@@ -1,6 +1,7 @@
 package n7.ad2.feature.camera.domain.impl.preview
 
 import androidx.camera.core.Preview
+import androidx.camera.core.UseCase
 import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.impl.CameraProvider
 
@@ -14,8 +15,8 @@ class PreviewerCameraX(
             .build()
     }
 
-    override fun start(surface: Any) {
-        cameraProvider.bind(preview)
+    override fun start(surface: Any): UseCase {
         preview.setSurfaceProvider(surface as Preview.SurfaceProvider)
+        return preview
     }
 }

@@ -104,6 +104,11 @@ internal class CameraFragment(
         }.run()
     }
 
+    override fun onPause() {
+        viewModel.onUiUnBind()
+        super.onPause()
+    }
+
     override fun onDestroyView() {
         viewModel.onDestroyView()
         super.onDestroyView()
