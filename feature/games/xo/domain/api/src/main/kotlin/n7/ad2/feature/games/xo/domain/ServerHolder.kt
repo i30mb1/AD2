@@ -7,4 +7,5 @@ import java.net.Socket
 interface ServerHolder {
     suspend fun start(host: InetAddress, name: String): ServerSocket
     suspend fun awaitClient(): Socket
+    suspend fun close()
 }

@@ -46,10 +46,10 @@ internal fun XoScreen(
             logs = state.logs,
             modifier = Modifier
                 .align(Alignment.BottomEnd)
-                .padding(bottom = 30.dp)
+                .padding(bottom = 30.dp),
         )
         when {
-            state.isGameStarted -> GameScreen(logs = state.messages, events)
+            state.isGameStarted -> GameScreen(messages = state.messages, events)
             else -> StaringScreen(state, events)
         }
     }

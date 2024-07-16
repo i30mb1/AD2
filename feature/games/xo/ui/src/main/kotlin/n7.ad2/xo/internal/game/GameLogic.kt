@@ -97,10 +97,16 @@ internal class GameLogic @Inject constructor(
 //        collectMessages()
     }
 
+    /**
+     * Запускаем в отдельной Job чтобы закончить suspend функция которая ее вызывает
+     */
     private fun CoroutineScope.collectMessages() = launch(Job()) {
+        _state.setIsConnected(true)
         while (socketMessanger.isConnected()) {
             val message = socketMessanger.awaitMessage()
-            logger.log("client: $message")
+            if (message != null) logger.log("client: $message")
         }
+        serverHolder.close()
+        _state.setIsConnected(false)
     }
 }

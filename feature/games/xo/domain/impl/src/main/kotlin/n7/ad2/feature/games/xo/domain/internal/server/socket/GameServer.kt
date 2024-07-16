@@ -50,6 +50,10 @@ internal class GameServer(
         return socket
     }
 
+    override suspend fun close() {
+        server?.close()
+    }
+
     /**
      * Запускает сервер на ip:порт
      * @param host - ip

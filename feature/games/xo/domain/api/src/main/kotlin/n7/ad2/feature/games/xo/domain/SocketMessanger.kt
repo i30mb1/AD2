@@ -5,6 +5,6 @@ import java.net.Socket
 interface SocketMessanger {
     fun init(socket: Socket)
     fun isConnected(): Boolean
-    suspend fun awaitMessage(): String
+    suspend fun awaitMessage(): String?
     fun sendMessage(message: String)
 }

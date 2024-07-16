@@ -92,7 +92,7 @@ internal fun StaringScreen(
                 EditTextWithButton(
                     name,
                     "Start",
-                    state.isStartEnabled,
+                    state.isButtonStartEnabled,
                 ) { event(XoScreenEvent.StartServer(name.text.toString())) }
                 EditTextWithButton(
                     ip,

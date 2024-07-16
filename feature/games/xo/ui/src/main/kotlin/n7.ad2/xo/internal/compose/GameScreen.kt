@@ -27,7 +27,7 @@ private fun GameScreenPreview() {
 
 @Composable
 internal fun GameScreen(
-    logs: List<String>,
+    messages: List<String>,
     event: (event: XoScreenEvent) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -37,8 +37,8 @@ internal fun GameScreen(
                 .fillMaxSize()
                 .weight(1f),
         ) {
-            items(logs.size) { index ->
-                val log = logs[index]
+            items(messages.size) { index ->
+                val log = messages[index]
                 Text(
                     text = log,
                     style = AppTheme.style.body.Bold,

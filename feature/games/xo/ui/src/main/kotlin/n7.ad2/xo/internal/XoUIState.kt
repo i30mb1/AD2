@@ -1,7 +1,6 @@
 package n7.ad2.xo.internal
 
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.getAndUpdate
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.flow.updateAndGet
 import n7.ad2.app.logger.model.AppLog
@@ -12,7 +11,7 @@ internal data class XoUIState(
     val deviceName: String,
     val servers: List<ServerUI>,
     val isGameStarted: Boolean,
-    val isStartEnabled: Boolean,
+    val isButtonStartEnabled: Boolean,
     val messages: List<String>,
     val logs: List<AppLog>,
 ) {
@@ -23,15 +22,15 @@ internal data class XoUIState(
             deviceName = "",
             servers = emptyList(),
             isGameStarted = false,
-            isStartEnabled = true,
+            isButtonStartEnabled = true,
             messages = emptyList(),
             logs = emptyList(),
         )
     }
 }
 
-internal fun MutableStateFlow<XoUIState>.disableStart(): XoUIState = updateAndGet {
-    it.copy(isStartEnabled = false)
+internal fun MutableStateFlow<XoUIState>.isButtonStartVisible(isVisible: Boolean): XoUIState = updateAndGet {
+    it.copy(isButtonStartEnabled = isVisible)
 }
 
 internal fun MutableStateFlow<XoUIState>.startGame() = update {
