@@ -33,7 +33,7 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
             override fun onServiceFound(service: NsdServiceInfo) {
                 launch(dispatcher) {
                     val server = getInfoAboutServerUseCase.resolve(manager, service)
-                    logger.log("onServiceFound ${server.name}")
+//                    logger.log("onServiceFound ${server.name}")
                     set.add(server)
                     send(set.toList())
                 }

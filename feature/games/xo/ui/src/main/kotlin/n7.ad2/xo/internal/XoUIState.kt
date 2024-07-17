@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.flow.updateAndGet
 import n7.ad2.app.logger.model.AppLog
 import n7.ad2.xo.internal.compose.model.ServerUI
+import n7.ad2.xo.internal.game.Message
 
 internal data class XoUIState(
     val deviceIP: String,
@@ -12,7 +13,7 @@ internal data class XoUIState(
     val servers: List<ServerUI>,
     val isGameStarted: Boolean,
     val isButtonStartEnabled: Boolean,
-    val messages: List<String>,
+    val messages: List<Message>,
     val logs: List<AppLog>,
 ) {
 

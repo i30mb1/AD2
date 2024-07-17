@@ -104,7 +104,7 @@ internal class GameLogic @Inject constructor(
         _state.setIsConnected(true)
         while (socketMessanger.isConnected()) {
             val message = socketMessanger.awaitMessage()
-            if (message != null) logger.log("client: $message")
+            if (message != null) _state.addClientMessage("$message")
         }
         serverHolder.close()
         _state.setIsConnected(false)

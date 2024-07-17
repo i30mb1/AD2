@@ -2,12 +2,12 @@ package n7.ad2.feature.games.xo.domain.internal.registrator
 
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
-import android.os.Build
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 internal class RegisterServiceInNetworkUseCaseImpl(
     private val manager: NsdManager,
@@ -18,7 +18,7 @@ internal class RegisterServiceInNetworkUseCaseImpl(
         val listener = object : NsdManager.RegistrationListener {
             override fun onServiceRegistered(info: NsdServiceInfo) {
                 val finalName = info.serviceName // Android may have change name in order to resolve a conflict
-                continuation.resume(Server(finalName, server.serverIP, server.port))
+                continuation.resume(SimpleServer(finalName, server.serverIP, server.port))
             }
 
             override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {

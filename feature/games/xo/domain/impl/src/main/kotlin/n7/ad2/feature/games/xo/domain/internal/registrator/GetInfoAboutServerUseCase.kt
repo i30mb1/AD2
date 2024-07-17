@@ -12,6 +12,7 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 internal class GetInfoAboutServerUseCase(
     private val dispatchers: DispatchersProvider,
@@ -21,7 +22,7 @@ internal class GetInfoAboutServerUseCase(
     suspend fun resolve(
         manager: NsdManager,
         service: NsdServiceInfo,
-    ) = suspendCancellableCoroutine { continuation ->
+    ): Server = suspendCancellableCoroutine { continuation ->
         when {
             Build.VERSION.SDK_INT >= 34 -> {
                 val callback = object : NsdManager.ServiceInfoCallback {
@@ -32,7 +33,7 @@ internal class GetInfoAboutServerUseCase(
 
                     override fun onServiceUpdated(info: NsdServiceInfo) {
                         val serverIP = info.hostAddresses.firstOrNull()?.hostAddress ?: info.host.hostAddress
-                        val server = Server(
+                        val server = SimpleServer(
                             info.serviceName,
                             serverIP,
                             info.port,
@@ -58,7 +59,7 @@ internal class GetInfoAboutServerUseCase(
                     }
 
                     override fun onServiceResolved(info: NsdServiceInfo) {
-                        val server = Server(
+                        val server = SimpleServer(
                             info.serviceName,
                             info.host.hostAddress!!,
                             info.port,

@@ -21,7 +21,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
-import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.game.GameLogic
 import n7.ad2.xo.internal.game.GameState
@@ -60,7 +60,7 @@ internal class XoViewModel @AssistedInject constructor(
                     it.copy(
                         deviceIP = state.deviceIP,
                         servers = state.servers.map(ServerToServerUIMapper),
-                        messages = state.logs,
+                        messages = state.messages,
                         deviceName = state.deviceName,
                         isGameStarted = state.isConnected,
                     )
@@ -69,14 +69,14 @@ internal class XoViewModel @AssistedInject constructor(
             .launchIn(viewModelScope)
     }
 
-    fun connectToServer(serverUI: ServerUI) = flowOf(Unit)
+    fun connectToServer(serverUI: ServerUI) = flowOf(serverUI)
         .onEach {
 //        val server: Server = gameLogic.state.value.servers.find { server -> server.name == serverUI.name }!!
 //        if (server.isWifiDirect) {
 //            gameLogic.connectToWifiDirect(server.serverIP)
 //        } else {
             val port = serverUI.port.toIntOrNull() ?: error("port is empty")
-            gameLogic.connectToServer(Server(serverUI.name, serverUI.serverIP, port))
+            gameLogic.connectToServer(SimpleServer(serverUI.name, serverUI.serverIP, port))
 //        }
             _state.startGame()
         }

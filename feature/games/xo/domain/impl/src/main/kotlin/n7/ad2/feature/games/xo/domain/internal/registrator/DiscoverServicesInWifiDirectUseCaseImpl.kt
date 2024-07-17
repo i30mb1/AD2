@@ -16,7 +16,7 @@ import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
-import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 internal class DiscoverServicesInWifiDirectUseCaseImpl(
     private val context: Context,
@@ -41,11 +41,10 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
                 peers.clear()
                 peers.addAll(refreshedPeers)
                 trySend(refreshedPeers.map { device ->
-                    Server(
+                    SimpleServer(
                         device.deviceName,
                         device.deviceAddress,
                         0,
-                        true
                     )
                 })
             }
