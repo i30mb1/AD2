@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.ClientHolder
@@ -80,25 +79,25 @@ internal class GameLogic @Inject constructor(
         val socket = serverHolder.awaitClient()
         _state.setServerState(ServerState.Connected(server))
         socketMessanger.init(socket)
-
         logger.log("Client Connected")
+
         collectMessages()
     }
 
-    suspend fun sendMessage(message: String) = withContext(dispatchers.IO) {
+    fun sendMessage(message: String) = requireNotNull(scope).launch(dispatchers.IO) {
         _state.addServerMessage(message)
         socketMessanger.sendMessage(message)
     }
 
-    suspend fun connectToServer(server: Server) = withContext(dispatchers.IO) {
+    fun connectToServer(server: Server) = requireNotNull(scope).launch(dispatchers.IO) {
         val socket = clientHolder.start(InetAddress.getByName(server.ip), server.port)
         socketMessanger.init(socket)
-        logger.log("Connected to Server")
         _state.setServerState(ServerState.Connected(server))
+        logger.log("Connected to Server")
         collectMessages()
     }
 
-    suspend fun connectToWifiDirect(serverIP: String) = withContext(dispatchers.IO) {
+    suspend fun connectToWifiDirect(serverIP: String) = requireNotNull(scope).launch(dispatchers.IO) {
 //        connectToWifiDirectUseCase(serverIP)
 //        serverHolder.start(InetAddress.getByName(serverIP), "H1")
 //        socketHolder.socket = serverHolder.awaitClient()
@@ -115,5 +114,7 @@ internal class GameLogic @Inject constructor(
             if (message != null) _state.addClientMessage("$message")
         }
         serverHolder.close()
+        _state.setServerState(ServerState.Disconected)
+        logger.log("Disconnected from Server")
     }
 }

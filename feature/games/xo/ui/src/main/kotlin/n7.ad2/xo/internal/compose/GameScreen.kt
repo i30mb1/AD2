@@ -4,9 +4,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
@@ -14,7 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.Bold
@@ -34,6 +38,7 @@ internal fun GameScreen(
     event: (event: XoScreenEvent) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val topDensity: Dp = with(LocalDensity.current) { WindowInsets.systemBars.getTop(this).toDp() }
     Column {
         LazyColumn(
             modifier = modifier
@@ -43,7 +48,10 @@ internal fun GameScreen(
             items(messages.size) { index ->
                 val log = messages[index]
                 val isClient = log is Message.Client
-                Column(modifier = Modifier.fillMaxWidth()) {
+                val paddingTop = if (index == 0) topDensity else 0.dp
+                Column(modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = paddingTop)) {
                     Text(
                         text = log.message,
                         style = AppTheme.style.body.Bold,
