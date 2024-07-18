@@ -7,9 +7,9 @@ import n7.ad2.feature.games.xo.domain.model.Server
 internal data class GameState(
     val deviceIP: String,
     val deviceName: String,
-    val isConnected: Boolean,
     val port: String,
-    val servers: List<Server>,
+    val servers: List<Server> = emptyList(),
+    val serverState: ServerState = ServerState.Disconected,
     val messages: List<Message> = emptyList(),
 ) {
 
@@ -17,9 +17,7 @@ internal data class GameState(
         fun init() = GameState(
             "",
             "",
-            false,
             "",
-            emptyList(),
         )
     }
 }
@@ -29,9 +27,15 @@ internal sealed class Message(val message: String) {
     class Server(message: String) : Message(message)
 }
 
+internal sealed interface ServerState {
+    data class Connected(val server: Server) : ServerState
+    data class Connecting(val server: Server) : ServerState
+    data object Disconected : ServerState
+}
+
 internal fun MutableStateFlow<GameState>.setDeviceIP(ip: String) = update { it.copy(deviceIP = ip) }
 
-internal fun MutableStateFlow<GameState>.setIsConnected(isConnected: Boolean) = update { it.copy(isConnected = isConnected) }
+internal fun MutableStateFlow<GameState>.setServerState(state: ServerState) = update { it.copy(serverState = state) }
 
 internal fun MutableStateFlow<GameState>.setDeviceName(name: String) = update { it.copy(deviceName = name) }
 

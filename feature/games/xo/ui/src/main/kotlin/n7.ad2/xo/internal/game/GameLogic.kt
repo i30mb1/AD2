@@ -1,9 +1,9 @@
 package n7.ad2.xo.internal.game
 
 import java.net.InetAddress
+import java.net.ServerSocket
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -28,6 +28,7 @@ import n7.ad2.feature.games.xo.domain.SocketMessanger
 import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessanger
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
 
 internal class GameLogic @Inject constructor(
@@ -45,8 +46,10 @@ internal class GameLogic @Inject constructor(
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()
     private val socketMessanger: SocketMessanger = GameSocketMessanger()
+    private var scope: CoroutineScope? = null
 
     fun init(scope: CoroutineScope) {
+        this.scope = scope
         merge(
             combine(
                 discoverServicesInNetworkUseCase(),
@@ -66,12 +69,16 @@ internal class GameLogic @Inject constructor(
             .launchIn(scope)
     }
 
-    suspend fun startServer(name: String) = withContext(dispatchers.IO) {
+    fun startServer(name: String) = requireNotNull(scope).launch(dispatchers.IO) {
         val ip = InetAddress.getByName(_state.value.deviceIP)
-        val server = serverHolder.start(ip, name)
-        logger.log("Start Server $name")
-        logger.log("Await Client on ${server.inetAddress}:${server.localPort}")
+        val serverSocket: ServerSocket = serverHolder.start(ip, name)
+        val server = SimpleServer(name, serverSocket.inetAddress.hostAddress, serverSocket.localPort)
+        logger.log("Start Server ${server.name}")
+        logger.log("Await Client on ${server.ip}:${server.port}")
+
+        _state.setServerState(ServerState.Connecting(server))
         val socket = serverHolder.awaitClient()
+        _state.setServerState(ServerState.Connected(server))
         socketMessanger.init(socket)
 
         logger.log("Client Connected")
@@ -79,13 +86,15 @@ internal class GameLogic @Inject constructor(
     }
 
     suspend fun sendMessage(message: String) = withContext(dispatchers.IO) {
+        _state.addServerMessage(message)
         socketMessanger.sendMessage(message)
     }
 
     suspend fun connectToServer(server: Server) = withContext(dispatchers.IO) {
-        val socket = clientHolder.start(InetAddress.getByName(server.serverIP), server.port)
+        val socket = clientHolder.start(InetAddress.getByName(server.ip), server.port)
         socketMessanger.init(socket)
         logger.log("Connected to Server")
+        _state.setServerState(ServerState.Connected(server))
         collectMessages()
     }
 
@@ -100,13 +109,11 @@ internal class GameLogic @Inject constructor(
     /**
      * Запускаем в отдельной Job чтобы закончить suspend функция которая ее вызывает
      */
-    private fun CoroutineScope.collectMessages() = launch(Job()) {
-        _state.setIsConnected(true)
+    private fun CoroutineScope.collectMessages() = launch {
         while (socketMessanger.isConnected()) {
             val message = socketMessanger.awaitMessage()
             if (message != null) _state.addClientMessage("$message")
         }
         serverHolder.close()
-        _state.setIsConnected(false)
     }
 }

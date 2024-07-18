@@ -5,26 +5,25 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlin.time.Duration.Companion.seconds
-import kotlinx.coroutines.channels.ticker
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.consumeAsFlow
+import kotlinx.coroutines.flow.flatMapMerge
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.app.logger.Logger
-import n7.ad2.app.logger.model.AppLog
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.game.GameLogic
 import n7.ad2.xo.internal.game.GameState
+import n7.ad2.xo.internal.game.ServerState
 import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
 
 internal class XoViewModel @AssistedInject constructor(
@@ -41,14 +40,12 @@ internal class XoViewModel @AssistedInject constructor(
     val state: StateFlow<XoUIState> = _state.asStateFlow()
 
     init {
-        merge(
-            logger.getLogFlow(),
-            ticker(2.seconds.inWholeMilliseconds).consumeAsFlow()
-        )
-            .transform<Any, Unit> { value: Any ->
-                when (value) {
-                    is AppLog -> _state.updateLogs(_state.value.logs + value)
-                    else -> _state.updateLogs(_state.value.logs.drop(1))
+        logger.getLogFlow()
+            .flatMapMerge { log ->
+                _state.updateLogs(_state.value.logs + log)
+                flow<Unit> {
+                    delay(5.seconds)
+                    _state.updateLogs(_state.value.logs.drop(1))
                 }
             }
             .launchIn(viewModelScope)
@@ -62,7 +59,9 @@ internal class XoViewModel @AssistedInject constructor(
                         servers = state.servers.map(ServerToServerUIMapper),
                         messages = state.messages,
                         deviceName = state.deviceName,
-                        isGameStarted = state.isConnected,
+                        isGameStarted = state.serverState is ServerState.Connected,
+                        isButtonStartEnabled = state.serverState is ServerState.Disconected,
+                        server = (state.serverState as? ServerState.Connecting)?.server,
                     )
                 }
             }
@@ -78,15 +77,12 @@ internal class XoViewModel @AssistedInject constructor(
             val port = serverUI.port.toIntOrNull() ?: error("port is empty")
             gameLogic.connectToServer(SimpleServer(serverUI.name, serverUI.serverIP, port))
 //        }
-            _state.startGame()
         }
         .catch { error -> logger.log("Connect error $error") }
         .launchIn(viewModelScope)
 
-    fun runServer(name: String) = viewModelScope.launch {
-        _state.isButtonStartVisible(false)
+    fun runServer(name: String) {
         gameLogic.startServer(name)
-        _state.isButtonStartVisible(true)
     }
 
     fun sendPong() = viewModelScope.launch {

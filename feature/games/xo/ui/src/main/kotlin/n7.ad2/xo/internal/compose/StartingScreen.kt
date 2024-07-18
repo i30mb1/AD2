@@ -35,6 +35,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.feature.games.xo.ui.R
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.xo.internal.XoUIState
@@ -46,8 +47,10 @@ private fun XoScreenPreview() {
     AppTheme {
         StaringScreen(
             XoUIState.init().copy(
+                deviceName = "Nothing Phone 2",
                 deviceIP = "192.168.100.10",
                 servers = listOf(ServerUI()),
+                server = SimpleServer("Nothing Phone2", "192.168.100.10", 45646)
             )
         ) { }
     }
@@ -61,25 +64,36 @@ internal fun StaringScreen(
     Box(
         modifier = Modifier.fillMaxSize(),
     ) {
-        Row(
+        Column(
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.CenterVertically,
+                .padding(8.dp)
         ) {
-            val icon = if (state.deviceIP.isEmpty()) R.drawable.wifi_off else R.drawable.wifi
-            Icon(
-                modifier = Modifier.size(16.dp),
-                imageVector = ImageVector.vectorResource(icon),
-                tint = AppTheme.color.textSecondaryColor,
-                contentDescription = null,
-            )
-            Text(
-                text = state.deviceIP,
-                style = AppTheme.style.body,
-                color = AppTheme.color.textSecondaryColor,
-            )
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                val icon = if (state.deviceIP.isEmpty()) R.drawable.wifi_off else R.drawable.wifi
+                Icon(
+                    modifier = Modifier.size(16.dp),
+                    imageVector = ImageVector.vectorResource(icon),
+                    tint = AppTheme.color.textSecondaryColor,
+                    contentDescription = null,
+                )
+                Text(
+                    text = state.deviceIP,
+                    style = AppTheme.style.body,
+                    color = AppTheme.color.textSecondaryColor,
+                )
+            }
+            state.server?.let { server ->
+                Text(
+                    text = ":${server.port}",
+                    style = AppTheme.style.body,
+                    color = AppTheme.color.textSecondaryColor,
+                    modifier = Modifier.align(Alignment.End)
+                )
+            }
         }
         if (state.deviceName.isNotEmpty() && state.deviceIP.isNotEmpty()) {
             Column(

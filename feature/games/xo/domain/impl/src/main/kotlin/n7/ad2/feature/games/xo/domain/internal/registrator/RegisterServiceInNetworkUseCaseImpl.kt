@@ -18,7 +18,7 @@ internal class RegisterServiceInNetworkUseCaseImpl(
         val listener = object : NsdManager.RegistrationListener {
             override fun onServiceRegistered(info: NsdServiceInfo) {
                 val finalName = info.serviceName // Android may have change name in order to resolve a conflict
-                continuation.resume(SimpleServer(finalName, server.serverIP, server.port))
+                continuation.resume(SimpleServer(finalName, server.ip, server.port))
             }
 
             override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {
