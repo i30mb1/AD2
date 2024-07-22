@@ -46,7 +46,7 @@ internal class XoViewModel @AssistedInject constructor(
             .flatMapMerge { log ->
                 _state.updateLogs(_state.value.logs + log)
                 flow<Unit> {
-                    delay(5.seconds)
+                    delay(50.seconds)
                     _state.updateLogs(_state.value.logs.drop(1))
                 }
             }
@@ -94,5 +94,10 @@ internal class XoViewModel @AssistedInject constructor(
 
     fun sendPing() = viewModelScope.launch {
         gameLogic.sendMessage("ping")
+    }
+
+    override fun onCleared() {
+        gameLogic.onClear()
+        super.onCleared()
     }
 }

@@ -7,18 +7,14 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.suspendCancellableCoroutine
-import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.internal.server.ServerLog
-import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.feature.games.xo.domain.model.SimpleSocketServer
 
 /**
  * Обертка над вызовами ServerSocket класса в suspend фукнции с логами
  */
-internal class GameServer(
-    private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
-) : ServerHolder {
+internal class GameServer : ServerHolder {
 
     companion object {
         object ServerSocketException : Exception()
@@ -37,9 +33,8 @@ internal class GameServer(
     override suspend fun start(
         host: InetAddress,
         name: String,
-    ): Server {
+    ): SimpleSocketServer {
         val server = getServerSocket(name, host, intArrayOf(0))
-        registerServerInDNSUseCase(server)
         this.server = server
         events.send(ServerWithSocketEvents.Started)
         return server

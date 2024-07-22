@@ -7,5 +7,6 @@ interface RegisterServiceInNetworkUseCase {
      * Возвращает зафиналеную версию обьекта Server
      * т.к. в некоторых случаях имя сервера или порт может быть уже использован
      */
-    suspend operator fun invoke(server: SimpleSocketServer): SimpleSocketServer
+    suspend fun register(server: SimpleSocketServer): SimpleSocketServer
+    fun unregister()
 }

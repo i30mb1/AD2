@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onStart
@@ -21,6 +21,7 @@ import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
+import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.SocketMessanger
 import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessanger
@@ -37,6 +38,7 @@ internal class GameLogic @Inject constructor(
     private val getNetworkStateUseCase: GetNetworkStateUseCase,
     private val getDeviceNameUseCase: GetDeviceNameUseCase,
     private val dispatchers: DispatchersProvider,
+    private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
     private val logger: Logger,
 ) {
 
@@ -50,10 +52,11 @@ internal class GameLogic @Inject constructor(
         merge(
             combine(
                 discoverServicesInNetworkUseCase(),
-//                emptyFlow(),
-                emptyFlow()
+                flowOf(emptyList())
 //                discoverServicesInWifiDirectUseCase(),
-            ) { servers: List<Server>, serversDirect: List<Server> -> servers + serversDirect },
+            ) { servers: List<Server>, serversDirect: List<Server> ->
+                servers + serversDirect
+            },
             getNetworkStateUseCase(),
         )
             .onStart { _state.setDeviceName(getDeviceNameUseCase()) }
@@ -68,9 +71,11 @@ internal class GameLogic @Inject constructor(
 
     fun startServer(name: String) = requireNotNull(scope).launch(dispatchers.IO) {
         val ip = InetAddress.getByName(_state.value.deviceIP)
-        val server: Server = serverHolder.start(ip, name)
+        var server = serverHolder.start(ip, name)
         logger.log("Start Server ${server.name}")
         logger.log("Await Client on ${server.ip}:${server.port}")
+
+        server = registerServerInDNSUseCase.register(server)
 
         _state.setServerState(ServerState.Connecting(server))
         val socket = serverHolder.awaitClient()
@@ -100,6 +105,10 @@ internal class GameLogic @Inject constructor(
 //        socketHolder.socket = serverHolder.awaitClient()
 //        _state.addLog("Client Connected")
 //        collectMessages()
+    }
+
+    fun onClear() {
+        registerServerInDNSUseCase.unregister()
     }
 
     /**

@@ -20,28 +20,28 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
     private val logger: Logger,
 ) : DiscoverServicesInNetworkUseCase {
 
-    private val dispatcher = newSingleThreadContext("DiscoverServer")
+    private val dispatcher = newSingleThreadContext("Discovery Server Thread")
 
     override fun invoke(): Flow<List<Server>> = callbackFlow {
         val set = mutableSetOf<Server>()
 
         val listener = object : NsdManager.DiscoveryListener {
             override fun onDiscoveryStarted(regType: String) {
-                logger.log("onDiscoveryStarted")
+                logger.log("DNS: discovery started")
             }
 
             override fun onServiceFound(service: NsdServiceInfo) {
                 launch(dispatcher) {
                     val server = getInfoAboutServerUseCase.resolve(manager, service)
-//                    logger.log("onServiceFound ${server.name}")
+                    logger.log("DNS: service found: ${service.serviceName}")
                     set.add(server)
                     send(set.toList())
                 }
             }
 
             override fun onServiceLost(service: NsdServiceInfo) {
-                launch {
-                    logger.log("onServiceLost ${service.serviceName}")
+                launch(dispatcher) {
+                    logger.log("DNS: service lost: ${service.serviceName}")
 
                     set.removeIf { server -> server.name == service.serviceName }
                     trySend(set.toList())
@@ -49,22 +49,24 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
             }
 
             override fun onDiscoveryStopped(serviceType: String) {
-                logger.log("onDiscoveryStopped")
+                logger.log("DNS: discovery stopped")
             }
 
             override fun onStartDiscoveryFailed(serviceType: String, errorCode: Int) {
-                logger.log("onStartDiscoveryFailed")
+                logger.log("DNS: discovery start failed")
                 manager.stopServiceDiscovery(this)
             }
 
             override fun onStopDiscoveryFailed(serviceType: String, errorCode: Int) {
-                logger.log("onStopDiscoveryFailed")
+                logger.log("DNS: discovery stop failed")
                 manager.stopServiceDiscovery(this)
             }
         }
 
         manager.discoverServices(commonSettings.serviceType, NsdManager.PROTOCOL_DNS_SD, listener)
-        awaitClose { manager.stopServiceDiscovery(listener) }
+        awaitClose {
+            manager.stopServiceDiscovery(listener)
+        }
     }
         .onStart { emit(emptyList()) }
         .flowOn(dispatcher)

@@ -15,31 +15,71 @@ internal class RegisterServiceInNetworkUseCaseImpl(
     private val logger: Logger,
 ) : RegisterServiceInNetworkUseCase {
 
-    override suspend operator fun invoke(
+    private var listenersMap: MutableSet<NsdManager.RegistrationListener> = mutableSetOf()
+
+    override suspend fun register(
         server: SimpleSocketServer,
     ): SimpleSocketServer = suspendCancellableCoroutine { continuation ->
         val listener = object : NsdManager.RegistrationListener {
             override fun onServiceRegistered(info: NsdServiceInfo) {
                 val finalName = info.serviceName // Android may have change name in order to resolve a conflict
-                logger.log("Registration in DNS success")
+                logger.log("DNS: registration success: $finalName")
                 continuation.resume(server.copy(name = finalName))
             }
 
             override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {
-                val message = "Registration in DNS failed. $serviceInfo"
+                val message = "DNS: registration failed: $errorCode"
                 logger.log(message)
                 continuation.resumeWithException(Exception(message))
             }
 
-            override fun onServiceUnregistered(arg0: NsdServiceInfo) = Unit
+            override fun onServiceUnregistered(info: NsdServiceInfo) {
+                logger.log("DNS: unregistraion success: ${info.serviceName}")
+            }
 
-            override fun onUnregistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) = Unit
+            override fun onUnregistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {
+                val message = "DNS: unregistraion failed: $errorCode"
+                logger.log(message)
+            }
         }
+        listenersMap.add(listener)
         val nsdServiceInfo = NsdServiceInfo()
         nsdServiceInfo.serviceName = server.name
         nsdServiceInfo.serviceType = commonSettings.serviceType
         nsdServiceInfo.port = server.port
         manager.registerService(nsdServiceInfo, NsdManager.PROTOCOL_DNS_SD, listener)
-        continuation.invokeOnCancellation { manager.unregisterService(listener) }
+        continuation.invokeOnCancellation {
+            manager.unregisterService(listener)
+        }
+    }
+
+    override fun unregister() {
+        listenersMap.forEach(manager::unregisterService)
     }
 }
+
+//suspend fun register(
+//    context: Application,
+//    name: String,
+//    port: Int,
+//): String = suspendCancellableCoroutine { continuation ->
+//    val manager = context.getSystemService(NsdManager::class.java)!!
+//    val listener = object : NsdManager.RegistrationListener {
+//        override fun onServiceRegistered(info: NsdServiceInfo) {
+//            val finalName = info.serviceName
+//            continuation.resume(finalName)
+//        }
+//
+//        override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {
+//            continuation.resumeWithException(Exception("Registration Failed $errorCode"))
+//        }
+//    }
+//    val nsdServiceInfo = NsdServiceInfo()
+//    nsdServiceInfo.serviceName = name
+//    nsdServiceInfo.port = port
+//    nsdServiceInfo.serviceType = "_websocket._tcp"
+//    manager.registerService(nsdServiceInfo, NsdManager.PROTOCOL_DNS_SD, listener)
+//    continuation.invokeOnCancellation {
+//        manager.unregisterService(listener)
+//    }
+//}

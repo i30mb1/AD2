@@ -47,7 +47,7 @@ fun XoDomainComponent(
         GetInfoAboutServerUseCase(dependencies.dispatcher, dependencies.logger),
         dependencies.logger,
     )
-    override val serverHolder: ServerHolder = GameServer(registerServerInDNSUseCase)
+    override val serverHolder: ServerHolder = GameServer()
     override val clientHolder: ClientHolder = ClientHolderWithSocket()
     override val discoverServicesInWifiDirectUseCase = DiscoverServicesInWifiDirectUseCaseImpl(
         dependencies.application,
