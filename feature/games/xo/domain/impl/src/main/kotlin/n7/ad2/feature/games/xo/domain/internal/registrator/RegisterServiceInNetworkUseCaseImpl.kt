@@ -6,7 +6,6 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
-import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 internal class RegisterServiceInNetworkUseCaseImpl(
@@ -14,11 +13,11 @@ internal class RegisterServiceInNetworkUseCaseImpl(
     private val commonSettings: CommonSettings,
 ) : RegisterServiceInNetworkUseCase {
 
-    override suspend operator fun invoke(server: Server): Server = suspendCancellableCoroutine { continuation ->
+    override suspend operator fun invoke(server: SimpleServer): SimpleServer = suspendCancellableCoroutine { continuation ->
         val listener = object : NsdManager.RegistrationListener {
             override fun onServiceRegistered(info: NsdServiceInfo) {
                 val finalName = info.serviceName // Android may have change name in order to resolve a conflict
-                continuation.resume(SimpleServer(server.serverSocket, finalName, server.ip, server.port))
+                continuation.resume(server.copy(name = finalName))
             }
 
             override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {

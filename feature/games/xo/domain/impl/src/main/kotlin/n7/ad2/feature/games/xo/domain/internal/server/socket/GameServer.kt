@@ -11,7 +11,7 @@ import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.internal.server.ServerLog
 import n7.ad2.feature.games.xo.domain.model.Server
-import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import n7.ad2.feature.games.xo.domain.model.SimpleSocketServer
 
 /**
  * Обертка над вызовами ServerSocket класса в suspend фукнции с логами
@@ -32,7 +32,7 @@ internal class GameServer(
     val logger: (message: ServerLog) -> Unit = { }
 
     private val events = Channel<ServerWithSocketEvents>(Channel.BUFFERED)
-    private var server: Server? = null
+    private var server: SimpleSocketServer? = null
 
     override suspend fun start(
         host: InetAddress,
@@ -67,11 +67,11 @@ internal class GameServer(
         name: String,
         host: InetAddress,
         ports: IntArray,
-    ): Server = suspendCancellableCoroutine { continuation ->
+    ): SimpleSocketServer = suspendCancellableCoroutine { continuation ->
         for (port in ports) {
             try {
                 val serverSocket = ServerSocket(port, 0, host)
-                val server = SimpleServer(
+                val server = SimpleSocketServer(
                     serverSocket = serverSocket,
                     name = name,
                     ip = serverSocket.inetAddress.hostAddress!!,
@@ -88,7 +88,7 @@ internal class GameServer(
     }
 
     private suspend fun getClientSocket(
-        server: Server,
+        server: SimpleSocketServer,
     ): Socket = suspendCancellableCoroutine { continuation ->
         try {
             val socket = server.serverSocket.accept()

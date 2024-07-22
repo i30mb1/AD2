@@ -12,11 +12,12 @@ import android.net.wifi.p2p.WifiP2pManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.RECEIVER_EXPORTED
 import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
-import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import n7.ad2.feature.games.xo.domain.model.Server
 
 internal class DiscoverServicesInWifiDirectUseCaseImpl(
     private val context: Context,
@@ -26,7 +27,7 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
 ) : DiscoverServicesInWifiDirectUseCase {
 
     @SuppressLint("MissingPermission")
-    override operator fun invoke() = callbackFlow {
+    override operator fun invoke(): Flow<List<Server>> = callbackFlow<List<Server>> {
         val intentFilter = IntentFilter().apply {
             addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION)
             addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION)
@@ -40,13 +41,13 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
             if (refreshedPeers != peers) {
                 peers.clear()
                 peers.addAll(refreshedPeers)
-                trySend(refreshedPeers.map { device ->
-                    SimpleServer(
-                        device.deviceName,
-                        device.deviceAddress,
-                        0,
-                    )
-                })
+//                trySend(refreshedPeers.map { device ->
+//                    SimpleServer(
+//                        device.deviceName,
+//                        device.deviceAddress,
+//                        0,
+//                    )
+//                })
             }
         }
         val receiver = object : BroadcastReceiver() {
