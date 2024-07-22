@@ -211,7 +211,7 @@ internal class ServerWithWebsocket(
      */
     private fun readHeaders(reader: Scanner): Map<String, String> = buildMap {
         var line: String = reader.nextLine()
-        val status = line.split(" ")
+        val status = line.split(" ") // method + resource + httpVersion
         while (reader.hasNext()) {
             val line = reader.nextLine()
             val headerParts = line.split(":", limit = 2)

@@ -21,7 +21,8 @@ internal class GetNetworkStateUseCaseImpl(
     override fun invoke(): Flow<NetworkState> = callbackFlow {
         val networkStateCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: android.net.Network) {
-                trySend(NetworkState(getIPAddress()))
+                val ip = getIPAddress2()
+                trySend(NetworkState(ip))
             }
 
             override fun onLost(network: android.net.Network) {
@@ -49,5 +50,12 @@ internal class GetNetworkStateUseCaseImpl(
             }
         }
         return null
+    }
+
+    private fun getIPAddress2(): String? {
+        val properties = connectivityManager.getLinkProperties(connectivityManager.activeNetwork)
+        return properties?.linkAddresses
+            ?.first { adress -> adress.address.isSiteLocalAddress }
+            ?.address?.hostAddress
     }
 }
