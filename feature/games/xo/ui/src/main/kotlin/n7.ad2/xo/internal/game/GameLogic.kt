@@ -1,7 +1,6 @@
 package n7.ad2.xo.internal.game
 
 import java.net.InetAddress
-import java.net.ServerSocket
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,7 +26,6 @@ import n7.ad2.feature.games.xo.domain.SocketMessanger
 import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessanger
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
-import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
 
 internal class GameLogic @Inject constructor(
@@ -70,8 +68,7 @@ internal class GameLogic @Inject constructor(
 
     fun startServer(name: String) = requireNotNull(scope).launch(dispatchers.IO) {
         val ip = InetAddress.getByName(_state.value.deviceIP)
-        val serverSocket: ServerSocket = serverHolder.start(ip, name)
-        val server = SimpleServer(name, serverSocket.inetAddress.hostAddress, serverSocket.localPort)
+        val server: Server = serverHolder.start(ip, name)
         logger.log("Start Server ${server.name}")
         logger.log("Await Client on ${server.ip}:${server.port}")
 

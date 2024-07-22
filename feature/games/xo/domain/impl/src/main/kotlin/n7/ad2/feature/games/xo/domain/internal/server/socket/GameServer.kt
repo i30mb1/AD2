@@ -10,6 +10,8 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.internal.server.ServerLog
+import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 /**
  * Обертка над вызовами ServerSocket класса в suspend фукнции с логами
@@ -30,28 +32,28 @@ internal class GameServer(
     val logger: (message: ServerLog) -> Unit = { }
 
     private val events = Channel<ServerWithSocketEvents>(Channel.BUFFERED)
-    private var server: ServerSocket? = null
+    private var server: Server? = null
 
     override suspend fun start(
         host: InetAddress,
         name: String,
-    ): ServerSocket {
-        val server = getServerSocket(host, intArrayOf(0))
-//        registerServerInDNSUseCase(Server(name, server.inetAddress.hostAddress!!, server.localPort))
+    ): Server {
+        val server = getServerSocket(name, host, intArrayOf(0))
+        registerServerInDNSUseCase(server)
         this.server = server
         events.send(ServerWithSocketEvents.Started)
         return server
     }
 
     override suspend fun awaitClient(): Socket {
-        val server = requireNotNull(server)
+        val server = requireNotNull(server) { "server should not be null" }
         val socket = getClientSocket(server)
         events.send(ServerWithSocketEvents.ClientConnected)
         return socket
     }
 
     override suspend fun close() {
-        server?.close()
+        server?.serverSocket?.close()
     }
 
     /**
@@ -62,12 +64,19 @@ internal class GameServer(
      * @throws ServerSocketException - когда не удалось запустить сервер
      */
     private suspend fun getServerSocket(
+        name: String,
         host: InetAddress,
         ports: IntArray,
-    ): ServerSocket = suspendCancellableCoroutine { continuation ->
+    ): Server = suspendCancellableCoroutine { continuation ->
         for (port in ports) {
             try {
-                val server = ServerSocket(port, 0, host)
+                val serverSocket = ServerSocket(port, 0, host)
+                val server = SimpleServer(
+                    serverSocket = serverSocket,
+                    name = name,
+                    ip = serverSocket.inetAddress.hostAddress!!,
+                    port = serverSocket.localPort,
+                )
                 continuation.resume(server)
                 return@suspendCancellableCoroutine
             } catch (e: Exception) {
@@ -79,10 +88,10 @@ internal class GameServer(
     }
 
     private suspend fun getClientSocket(
-        serverSocket: ServerSocket,
+        server: Server,
     ): Socket = suspendCancellableCoroutine { continuation ->
         try {
-            val socket = serverSocket.accept()
+            val socket = server.serverSocket.accept()
             continuation.resume(socket)
         } catch (error: Exception) {
             continuation.resumeWithException(error)
