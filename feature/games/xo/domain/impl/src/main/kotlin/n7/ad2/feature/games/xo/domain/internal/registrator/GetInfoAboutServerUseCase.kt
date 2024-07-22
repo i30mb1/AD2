@@ -38,7 +38,7 @@ internal class GetInfoAboutServerUseCase(
                             serverIP,
                             info.port,
                         )
-                        continuation.resume(server)
+//                        continuation.resume(server)
                     }
 
                     override fun onServiceLost() {

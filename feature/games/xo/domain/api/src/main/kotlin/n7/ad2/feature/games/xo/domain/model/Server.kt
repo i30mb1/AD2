@@ -8,7 +8,7 @@ interface Server {
     val port: Int
 }
 
-data class SimpleServer(
+open class SimpleServer(
     override val name: String,
     override val ip: String,
     override val port: Int,
@@ -19,4 +19,4 @@ data class SimpleSocketServer(
     override val name: String,
     override val ip: String,
     override val port: Int,
-) : SimpleServer
+) : SimpleServer(name, ip, port)

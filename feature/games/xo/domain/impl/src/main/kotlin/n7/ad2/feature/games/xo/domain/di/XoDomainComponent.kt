@@ -40,7 +40,7 @@ fun XoDomainComponent(
     private val wifiP2pManager: WifiP2pManager = dependencies.application.getSystemService(WifiP2pManager::class.java)!!
     private val managerChannel: WifiP2pManager.Channel = wifiP2pManager.initialize(dependencies.application, Looper.getMainLooper(), null)
     private val commonSettings = CommonSettings()
-    override val registerServerInDNSUseCase = RegisterServiceInNetworkUseCaseImpl(manager, commonSettings)
+    override val registerServerInDNSUseCase = RegisterServiceInNetworkUseCaseImpl(manager, commonSettings, dependencies.logger)
     override val discoverServicesInNetworkUseCase = DiscoverServicesInNetworkUseCaseImpl(
         manager,
         commonSettings,

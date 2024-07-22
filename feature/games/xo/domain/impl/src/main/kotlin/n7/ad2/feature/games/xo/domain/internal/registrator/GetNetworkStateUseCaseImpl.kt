@@ -5,7 +5,6 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import java.net.InetAddress
-import java.net.NetworkInterface
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
@@ -22,7 +21,7 @@ internal class GetNetworkStateUseCaseImpl(
     override fun invoke(): Flow<NetworkState> = callbackFlow {
         val networkStateCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: android.net.Network) {
-                val inetAddress = getInetAddress2()
+                val inetAddress = getInetAddress()
                 val ip = requireNotNull(inetAddress?.hostAddress) { "inetAddress?.hostAddress is null" }
                 trySend(NetworkState.Connected(ip))
             }
@@ -40,21 +39,6 @@ internal class GetNetworkStateUseCaseImpl(
         .onStart { emit(NetworkState.Disconnected) }
 
     private fun getInetAddress(): InetAddress? {
-        val networkInterfaces = NetworkInterface.getNetworkInterfaces()
-        while (networkInterfaces.hasMoreElements()) {
-            val networkInterface = networkInterfaces.nextElement()
-            val inetAddresses = networkInterface.inetAddresses
-            while (inetAddresses.hasMoreElements()) {
-                val inetAddress: InetAddress = inetAddresses.nextElement()
-                if (!inetAddress.isLoopbackAddress && !inetAddress.isLinkLocalAddress && inetAddress.isSiteLocalAddress) {
-                    return inetAddress
-                }
-            }
-        }
-        return null
-    }
-
-    private fun getInetAddress2(): InetAddress? {
         val properties = connectivityManager.getLinkProperties(connectivityManager.activeNetwork)
         return properties?.linkAddresses
             ?.first { adress -> adress.address.isSiteLocalAddress }
