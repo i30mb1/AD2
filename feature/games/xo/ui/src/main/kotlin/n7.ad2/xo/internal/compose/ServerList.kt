@@ -1,9 +1,11 @@
 package n7.ad2.xo.internal.compose
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -61,8 +63,11 @@ internal fun ServerList(
         }
         LazyColumn(
             modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = 30.dp)
                 .clip(AppTheme.shape.medium)
-                .background(AppTheme.color.surface),
+                .background(AppTheme.color.surface)
+                .animateContentSize(),
         ) {
             items(servers.size) { index ->
                 val server = servers[index]

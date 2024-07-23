@@ -71,7 +71,7 @@ internal fun StaringScreen(
             .fillMaxSize()
             .padding(top = topDensity),
     ) {
-        Column(
+        if (false) Column(
             modifier = Modifier
                 .align(Alignment.TopEnd)
                 .padding(start = 8.dp, end = 8.dp)
@@ -103,11 +103,12 @@ internal fun StaringScreen(
             }
         }
         if (state.deviceName.isNotEmpty() && state.deviceIP.isNotEmpty()) {
+
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp),
-                modifier = Modifier.align(Alignment.Center),
             ) {
+                Box(modifier = Modifier.fillMaxHeight(0.3f))
                 val name = rememberTextFieldState(state.deviceName)
                 val ip = rememberTextFieldState(state.deviceIP)
                 EditTextWithButton(
@@ -115,7 +116,7 @@ internal fun StaringScreen(
                     "Start",
                     state.isButtonStartEnabled,
                 ) { event(XoScreenEvent.StartServer(name.text.toString())) }
-                EditTextWithButton(
+                if (false) EditTextWithButton(
                     ip,
                     "Connect",
                     true,
@@ -143,11 +144,12 @@ private fun EditTextWithButton(
     state: TextFieldState,
     buttonText: String,
     isEnabled: Boolean,
+    modifier: Modifier = Modifier,
     onButtonClicked: () -> Unit,
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
+        modifier = modifier
             .height(48.dp)
             .clip(AppTheme.shape.medium),
     ) {

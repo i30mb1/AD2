@@ -2,16 +2,14 @@ package n7.ad2.xo.internal.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.Button
 import androidx.compose.material.Text
-import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,10 +34,13 @@ private fun GameScreenPreview() {
 internal fun GameScreen(
     messages: List<Message>,
     event: (event: XoScreenEvent) -> Unit,
+    isHost: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     val topDensity: Dp = with(LocalDensity.current) { WindowInsets.systemBars.getTop(this).toDp() }
-    Column {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
         LazyColumn(
             modifier = modifier
                 .fillMaxSize()
@@ -49,9 +50,11 @@ internal fun GameScreen(
                 val log = messages[index]
                 val isClient = log is Message.Client
                 val paddingTop = if (index == 0) topDensity else 0.dp
-                Column(modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = paddingTop)) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = paddingTop)
+                ) {
                     Text(
                         text = log.message,
                         style = AppTheme.style.body.Bold,
@@ -66,15 +69,14 @@ internal fun GameScreen(
                 }
             }
         }
-        Row {
-            TextButton(onClick = { event(XoScreenEvent.SendPing) }) {
+        if (isHost) {
+            Button(onClick = { event(XoScreenEvent.SendPing) }) {
                 Text(text = "Ping")
             }
-            Spacer(modifier = Modifier.weight(1f))
-            TextButton(onClick = { event(XoScreenEvent.SendPong) }) {
+        } else {
+            Button(onClick = { event(XoScreenEvent.SendPong) }) {
                 Text(text = "Pong")
             }
         }
-
     }
 }

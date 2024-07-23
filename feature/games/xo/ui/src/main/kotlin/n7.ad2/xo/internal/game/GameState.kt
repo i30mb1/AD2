@@ -28,7 +28,7 @@ internal sealed class Message(val message: String) {
 }
 
 internal sealed interface ServerState {
-    data class Connected(val server: Server) : ServerState
+    data class Connected(val server: Server, val isHost: Boolean) : ServerState
     data class Connecting(val server: Server) : ServerState
     data object Disconected : ServerState
 }

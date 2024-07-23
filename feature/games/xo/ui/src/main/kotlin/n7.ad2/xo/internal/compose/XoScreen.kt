@@ -43,7 +43,7 @@ internal fun XoScreen(
                 .padding(bottom = 30.dp),
         )
         when {
-            state.isGameStarted -> GameScreen(messages = state.messages, events)
+            state.isGameStarted -> GameScreen(messages = state.messages, events, isHost = state.isHost)
             else -> StaringScreen(state, events)
         }
     }

@@ -16,6 +16,7 @@ internal data class XoUIState(
     val messages: List<Message>,
     val logs: List<AppLog>,
     val server: Server? = null,
+    val isHost: Boolean = false,
 ) {
 
     companion object {

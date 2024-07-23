@@ -46,7 +46,7 @@ internal class XoViewModel @AssistedInject constructor(
             .flatMapMerge { log ->
                 _state.updateLogs(_state.value.logs + log)
                 flow<Unit> {
-                    delay(50.seconds)
+                    delay(5.seconds)
                     _state.updateLogs(_state.value.logs.drop(1))
                 }
             }
@@ -64,6 +64,7 @@ internal class XoViewModel @AssistedInject constructor(
                         isGameStarted = state.serverState is ServerState.Connected,
                         isButtonStartEnabled = state.serverState is ServerState.Disconected,
                         server = (state.serverState as? ServerState.Connecting)?.server,
+                        isHost = (state.serverState as? ServerState.Connected)?.isHost ?: false,
                     )
                 }
             }

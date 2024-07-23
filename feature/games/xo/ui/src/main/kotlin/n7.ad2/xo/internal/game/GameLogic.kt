@@ -79,7 +79,7 @@ internal class GameLogic @Inject constructor(
 
         _state.setServerState(ServerState.Connecting(server))
         val socket = serverHolder.awaitClient()
-        _state.setServerState(ServerState.Connected(server))
+        _state.setServerState(ServerState.Connected(server, true))
         socketMessanger.init(socket)
         logger.log("Client Connected")
 
@@ -94,7 +94,7 @@ internal class GameLogic @Inject constructor(
     fun connectToServer(server: Server) = requireNotNull(scope).launch(dispatchers.IO) {
         val socket = clientHolder.start(InetAddress.getByName(server.ip), server.port)
         socketMessanger.init(socket)
-        _state.setServerState(ServerState.Connected(server))
+        _state.setServerState(ServerState.Connected(server, false))
         logger.log("Connected to Server")
         collectMessages()
     }

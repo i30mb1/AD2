@@ -57,29 +57,3 @@ internal class RegisterServiceInNetworkUseCaseImpl(
         listenersMap.forEach(manager::unregisterService)
     }
 }
-
-//suspend fun register(
-//    context: Application,
-//    name: String,
-//    port: Int,
-//): String = suspendCancellableCoroutine { continuation ->
-//    val manager = context.getSystemService(NsdManager::class.java)!!
-//    val listener = object : NsdManager.RegistrationListener {
-//        override fun onServiceRegistered(info: NsdServiceInfo) {
-//            val finalName = info.serviceName
-//            continuation.resume(finalName)
-//        }
-//
-//        override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {
-//            continuation.resumeWithException(Exception("Registration Failed $errorCode"))
-//        }
-//    }
-//    val nsdServiceInfo = NsdServiceInfo()
-//    nsdServiceInfo.serviceName = name
-//    nsdServiceInfo.port = port
-//    nsdServiceInfo.serviceType = "_websocket._tcp"
-//    manager.registerService(nsdServiceInfo, NsdManager.PROTOCOL_DNS_SD, listener)
-//    continuation.invokeOnCancellation {
-//        manager.unregisterService(listener)
-//    }
-//}
