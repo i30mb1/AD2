@@ -47,6 +47,7 @@ interface CameraModule {
             processor: Processor,
             streamer: Streamer,
             recorder: Recorder,
+            cameraProvider: CameraProvider,
             lifecycleOwner: CameraLifecycle,
         ): Controller {
             return Controller(
@@ -55,6 +56,7 @@ interface CameraModule {
                 recorder,
                 streamer,
                 lifecycleOwner,
+                cameraProvider,
             )
         }
 
@@ -80,24 +82,21 @@ interface CameraModule {
         @Singleton
         fun provideRecorder(
             context: Application,
-            cameraSettings: CameraSettings,
-            cameraProvider: CameraProvider,
+            logger: Logger,
             dispatcher: DispatchersProvider,
         ): Recorder {
-            return RecorderCameraX(context, cameraSettings, cameraProvider, dispatcher)
+            return RecorderCameraX(context, logger, dispatcher)
         }
 
         @dagger.Provides
         @Singleton
         fun provideStreamer(
             cameraSettings: CameraSettings,
-            cameraProvider: CameraProvider,
             lifecycle: CameraLifecycle,
             logger: Logger,
         ): Streamer {
             return StreamerCameraX(
                     cameraSettings,
-                    cameraProvider,
                     lifecycle,
                     logger,
             )

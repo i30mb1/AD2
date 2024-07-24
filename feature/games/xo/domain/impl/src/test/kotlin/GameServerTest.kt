@@ -1,5 +1,4 @@
 import com.google.common.truth.Truth
-import io.mockk.mockk
 import java.net.InetAddress
 import kotlinx.coroutines.debug.junit4.CoroutinesTimeout
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -24,7 +23,7 @@ internal class GameServerTest(
     @get:Rule val timeout = CoroutinesTimeout.seconds(5)
     @get:Rule val coroutineRule = CoroutineTestRule(StandardTestDispatcher())
     private val host = InetAddress.getLoopbackAddress()
-    private val gameServer = GameServer(mockk(relaxed = true))
+    private val gameServer = GameServer()
     private val clientHolder = ClientHolderWithSocket()
     private val client = GameSocketMessanger()
     private val server = GameSocketMessanger()
@@ -35,7 +34,8 @@ internal class GameServerTest(
         val socket = gameServer.start(host, "Test")
 
         // запускаем клиента
-        val clientSocket = clientHolder.start(host, socket.localPort)
+        val port = socket.serverSocket.localPort
+        val clientSocket = clientHolder.start(host, port)
         client.init(clientSocket)
 
         // дожидаемся клиента на сервере
@@ -52,7 +52,8 @@ internal class GameServerTest(
     @Test
     fun `WHEN server send message to client THEN client receive message`() = runTest {
         val socket = gameServer.start(host, "Test")
-        val clientSocket = clientHolder.start(host, socket.localPort)
+        val port = socket.serverSocket.localPort
+        val clientSocket = clientHolder.start(host, port)
         client.init(clientSocket)
         val serverSocket = gameServer.awaitClient()
         server.init(serverSocket)
