@@ -1,12 +1,11 @@
 package n7.ad2.xo.internal.compose
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import n7.ad2.app.logger.model.AppLog
 import n7.ad2.logger.ui.Logger
 import n7.ad2.ui.compose.AppTheme
@@ -40,7 +39,7 @@ internal fun XoScreen(
             logs = state.logs,
             modifier = Modifier
                 .align(Alignment.BottomEnd)
-                .padding(bottom = 30.dp),
+                .safeDrawingPadding(),
         )
         when {
             state.isGameStarted -> GameScreen(messages = state.messages, events, isHost = state.isHost)

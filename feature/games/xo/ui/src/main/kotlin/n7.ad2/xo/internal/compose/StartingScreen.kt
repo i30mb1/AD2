@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -32,12 +33,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.feature.games.xo.ui.R
@@ -65,13 +64,16 @@ internal fun StaringScreen(
     state: XoUIState,
     event: (event: XoScreenEvent) -> Unit,
 ) {
-    val topDensity: Dp = with(LocalDensity.current) { WindowInsets.systemBars.getTop(this).toDp() }
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = topDensity),
+            .padding(
+                top = WindowInsets.systemBars
+                    .asPaddingValues()
+                    .calculateTopPadding()
+            ),
     ) {
-        if (false) Column(
+        if (true) Column(
             modifier = Modifier
                 .align(Alignment.TopEnd)
                 .padding(start = 8.dp, end = 8.dp)

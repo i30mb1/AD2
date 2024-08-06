@@ -10,7 +10,6 @@ import androidx.core.view.marginBottom
 import androidx.core.view.updateLayoutParams
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
 import androidx.fragment.app.commitNow
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
@@ -95,6 +94,7 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
     }
 
     private fun setupSettings() {
+        val animation = binding.ivSettings.animate()
         binding.ivSettings.setOnClickListener { view ->
             val intent = requireContext().packageManager.getLaunchIntentForPackage("by.mev")
             if (intent != null) startActivity(intent)

@@ -17,11 +17,10 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.app.logger.Logger
-import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.game.GameLogic
 import n7.ad2.xo.internal.game.GameState
@@ -42,6 +41,7 @@ internal class XoViewModel @AssistedInject constructor(
     val state: StateFlow<XoUIState> = _state.asStateFlow()
 
     init {
+        viewModelScope.launch { gameLogic.init() }
         logger.getLogFlow()
             .flatMapMerge { log ->
                 _state.updateLogs(_state.value.logs + log)
@@ -53,7 +53,6 @@ internal class XoViewModel @AssistedInject constructor(
             .launchIn(viewModelScope)
 
         gameLogic.state
-            .onStart { gameLogic.init(viewModelScope) }
             .onEach { state: GameState ->
                 _state.update {
                     it.copy(
@@ -73,19 +72,18 @@ internal class XoViewModel @AssistedInject constructor(
 
     fun connectToServer(serverUI: ServerUI) = flowOf(serverUI)
         .onEach {
-//        val server: Server = gameLogic.state.value.servers.find { server -> server.name == serverUI.name }!!
+            val server: Server = gameLogic.state.value.servers.find { server -> server.name == serverUI.name }!!
 //        if (server.isWifiDirect) {
 //            gameLogic.connectToWifiDirect(server.serverIP)
 //        } else {
-            val port = serverUI.port.toIntOrNull() ?: error("port is empty")
-            gameLogic.connectToServer(SimpleServer(serverUI.name, serverUI.serverIP, port))
+            gameLogic.connectToServer(server)
 //        }
         }
         .catch { error -> logger.log("Connect error $error") }
         .flowOn(Dispatchers.IO)
         .launchIn(viewModelScope)
 
-    fun runServer(name: String) {
+    fun runServer(name: String) = viewModelScope.launch {
         gameLogic.startServer(name)
     }
 

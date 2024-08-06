@@ -3,9 +3,11 @@ package n7.ad2.xo.internal.compose
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Button
@@ -14,9 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.Bold
@@ -37,7 +37,6 @@ internal fun GameScreen(
     isHost: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
-    val topDensity: Dp = with(LocalDensity.current) { WindowInsets.systemBars.getTop(this).toDp() }
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -45,15 +44,13 @@ internal fun GameScreen(
             modifier = modifier
                 .fillMaxSize()
                 .weight(1f),
+            contentPadding = WindowInsets.systemBars.asPaddingValues(),
         ) {
             items(messages.size) { index ->
                 val log = messages[index]
                 val isClient = log is Message.Client
-                val paddingTop = if (index == 0) topDensity else 0.dp
                 Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = paddingTop)
+                    modifier = Modifier.fillMaxWidth(),
                 ) {
                     Text(
                         text = log.message,
@@ -69,14 +66,13 @@ internal fun GameScreen(
                 }
             }
         }
-        if (isHost) {
-            Button(onClick = { event(XoScreenEvent.SendPing) }) {
-                Text(text = "Ping")
-            }
-        } else {
-            Button(onClick = { event(XoScreenEvent.SendPong) }) {
-                Text(text = "Pong")
-            }
+
+        Button(
+            onClick = { event(XoScreenEvent.SendPing) },
+            modifier = Modifier.safeContentPadding(),
+        ) {
+            val text = if (isHost) "Ping" else "Pong"
+            Text(text = text)
         }
     }
 }
