@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="message"></p>
+
+<script>
+    function read() {
+        const message = document.getElementById("message");
+
+        fetch("http://192.168.100.29:40263/")
+         .then(response => response.text())
+            .then(responseData => {
+                message.innerHTML = `Server Message: ${responseData}`;
+            })
+    }
+    read()
+</script>
+</body>
+</html>

@@ -27,7 +27,7 @@ import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.SocketMessanger
-import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessenger
+import n7.ad2.feature.games.xo.domain.internal.server.socket.GameHttpSocketMessenger
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
@@ -47,7 +47,7 @@ internal class GameLogic @Inject constructor(
 
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()
-    private val socketMessanger: SocketMessanger = GameSocketMessenger()
+    private val socketMessenger: SocketMessanger = GameHttpSocketMessenger()
 
     suspend fun init() = coroutineScope {
         merge(
@@ -85,7 +85,7 @@ internal class GameLogic @Inject constructor(
         _state.setServerState(ServerState.Connecting(server))
         val socket = serverHolder.awaitClient()
         _state.setServerState(ServerState.Connected(server, true))
-        socketMessanger.init(socket)
+        socketMessenger.init(socket)
         logger.log("Client Connected")
 
         collectMessages()
@@ -93,7 +93,7 @@ internal class GameLogic @Inject constructor(
 
     suspend fun sendMessage(message: String) = withContext(dispatchers.IO) {
         _state.addServerMessage(message)
-        socketMessanger.sendMessage(message)
+        socketMessenger.sendMessage(message)
     }
 
     /**
@@ -101,7 +101,7 @@ internal class GameLogic @Inject constructor(
      */
     suspend fun connectToServer(server: Server) = withContext(dispatchers.IO) {
         val socket = clientHolder.start(InetAddress.getByName(server.ip), server.port)
-        socketMessanger.init(socket)
+        socketMessenger.init(socket)
         _state.setServerState(ServerState.Connected(server, false))
         logger.log("Connected to Server")
         collectMessages()
@@ -123,8 +123,8 @@ internal class GameLogic @Inject constructor(
      * Запускаем в отдельной Job чтобы закончить suspend функцию которая ее вызывает
      */
     private fun CoroutineScope.collectMessages() = launch {
-        while (socketMessanger.isConnected()) {
-            val message = socketMessanger.awaitMessage()
+        while (socketMessenger.isConnected()) {
+            val message = socketMessenger.awaitMessage()
             if (message != null) _state.addClientMessage("$message")
         }
         serverHolder.close()
