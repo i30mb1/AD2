@@ -27,7 +27,7 @@ import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.ServerHolder
 import n7.ad2.feature.games.xo.domain.SocketMessanger
-import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessanger
+import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessenger
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
@@ -47,7 +47,7 @@ internal class GameLogic @Inject constructor(
 
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()
-    private val socketMessanger: SocketMessanger = GameSocketMessanger()
+    private val socketMessanger: SocketMessanger = GameSocketMessenger()
 
     suspend fun init() = coroutineScope {
         merge(

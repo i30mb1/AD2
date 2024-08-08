@@ -1,7 +1,5 @@
 package n7.ad2.feature.games.xo.domain.internal.server
 
-import n7.ad2.feature.games.xo.domain.internal.server.OpCode.MASK_OP_CODE
-
 /**
  * RFC-6455#sedtion-11.8
  *
@@ -21,8 +19,6 @@ import n7.ad2.feature.games.xo.domain.internal.server.OpCode.MASK_OP_CODE
  *     -+--------+-------------------------------------+-----------|
  */
 internal object OpCode {
-    internal const val MASK_OP_CODE = 0b00001111
-
     internal const val OPCODE_CONTINUATION = 0
     internal const val OPCODE_TEXT = 1
     internal const val OPCODE_BINARY = 2
@@ -31,6 +27,3 @@ internal object OpCode {
     internal const val OPCODE_PONG = 10
 }
 
-internal fun getOpCode(byte: Int): Int {
-    return byte and MASK_OP_CODE
-}

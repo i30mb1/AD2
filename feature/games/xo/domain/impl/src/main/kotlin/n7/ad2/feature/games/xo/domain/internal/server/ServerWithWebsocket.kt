@@ -27,8 +27,8 @@ internal class ServerWithWebsocket(
     private val scope = CoroutineScope(Job())
 
     companion object {
-        private const val B0_MASK_FIN = 0b10000000
-        private const val B1_MASK_MASK = 0b10000000
+        private const val B1_MASK_FINAL_RAME = 0b10000000
+        private const val B2_MASK_MASK = 0b10000000
         private const val B1_MASK_LENGTH = 0b01111111
         private const val PAYLOAD_SHORT = 126L
         private const val PAYLOAD_LONG = 127L
@@ -117,18 +117,39 @@ internal class ServerWithWebsocket(
      *
      * [isMasked] According to RFC-6455#sedtion-5.2 All frames sent from client to server have this bit set to 1
      */
-    private fun readSocketFrame(input: InputStream): FrameType {
-        val b0: Int = input.read()
-        val isFinalFrame = b0 and B0_MASK_FIN
 
-        when (getOpCode(b0)) {
+    private fun readSocketFrame(input: InputStream): FrameType {
+        // считываем первый байт (каждый бит несет информацию)
+        val b1: Int = input.read()
+        // первый бит указывает завершено ли текущее сообщение или последующие фреймы будут его продолжением
+        val isFinalFrame = b1 and B1_MASK_FINAL_RAME
+        // три последующий бита зарезервинованы на расширение протокола, и сейчас не используются
+        val rsv1 = b1 and 0b01000000
+        val rsv2 = b1 and 0b00100000
+        val rsv3 = b1 and 0b00010000
+
+        /** 4 последних бита, opCode, определет тип фрейма
+         * 0: Продолжение предыдущего фрейма
+         * 1: Текстовое сообщение (Text Frame)
+         * 2: Бинарное сообщение (Binary Frame)
+         * 8: Команда закрытия (Close Frame)
+         * 9: Ping (Ping Frame)
+         * 10: Pong (Pong Frame)
+         */
+        val opCode = b1 and 0b00001111
+        when (opCode) {
             OpCode.OPCODE_TEXT -> Unit
             OpCode.OPCODE_CLOSE -> FrameType.Close
         }
 
-        val b1 = input.read()
-        val isMasked = b1 and B1_MASK_MASK != 0
-        var frameLength: Long = (b1 and B1_MASK_LENGTH).toLong()
+        // считывает второй байт
+        val b2 = input.read()
+        // Проверяем, установлена ли маскировка данных
+        // Маска применяется только в одном направлении, от клиента к серверу,
+        // базовая защита для предотвращения атак на сервер и обеспечения безопасности
+        val isMasked = b2 and B2_MASK_MASK != 0
+        // Извлекаем длину сообщения
+        var frameLength = (b2 and B1_MASK_LENGTH).toLong()
         when (frameLength) {
             PAYLOAD_SHORT -> {
                 val byte = input.getBytes(2)

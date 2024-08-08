@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.flow
 import n7.ad2.feature.games.xo.domain.SocketMessanger
 
-class GameSocketMessanger : SocketMessanger {
+class GameSocketMessenger : SocketMessanger {
 
     private var socket: Socket? = null
     private var writer: PrintWriter? = null
@@ -40,6 +40,6 @@ class GameSocketMessanger : SocketMessanger {
         }
         scanner.close()
         socket?.close()
-        this@GameSocketMessanger.socket = null
+        this@GameSocketMessenger.socket = null
     }
 }

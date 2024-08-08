@@ -1,7 +1,9 @@
 package n7.ad2.xo.demo
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentContainerView
@@ -23,7 +25,7 @@ class XoActivity(
     override fun onCreate(savedInstanceState: Bundle?) {
         supportFragmentManager.fragmentFactory = fragmentFactory
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT))
         val container = FragmentContainerView(this)
         container.id = View.generateViewId()
         setContentView(container)

@@ -49,9 +49,7 @@
 
         <item name="textAppearance.Signature">@style/TextAppearance.Signature</item>
         <item name="textAppearance.Signature.White">@style/TextAppearance.Signature.White</item>
-        <item name="textAppearance.Signature.White.Bold">
-            @style/TextAppearance.Signature.White.Bold
-        </item>
+        <item name="textAppearance.Signature.White.Bold">@style/TextAppearance.Signature.White.Bold</item>
 
         <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>

@@ -6,7 +6,7 @@ import kotlinx.coroutines.test.runTest
 import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientHolderWithSocket
 import n7.ad2.feature.games.xo.domain.internal.server.socket.GameServer
-import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessanger
+import n7.ad2.feature.games.xo.domain.internal.server.socket.GameSocketMessenger
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -25,8 +25,8 @@ internal class GameServerTest(
     private val host = InetAddress.getLoopbackAddress()
     private val gameServer = GameServer()
     private val clientHolder = ClientHolderWithSocket()
-    private val client = GameSocketMessanger()
-    private val server = GameSocketMessanger()
+    private val client = GameSocketMessenger()
+    private val server = GameSocketMessenger()
 
     @Test
     fun `WHEN client send message to server THEN server receive message`() = runTest {
