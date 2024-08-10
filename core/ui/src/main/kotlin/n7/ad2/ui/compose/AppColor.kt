@@ -10,6 +10,7 @@ data class AppColor(
     val textColor: Color,
     val textSecondaryColor: Color,
     val error: Color,
+    val backgroundMyServer: Color = Color(0xFF8BC34A),
 )
 
 val appColorLight = AppColor(

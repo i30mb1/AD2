@@ -6,18 +6,20 @@ import java.util.Scanner
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.flow
-import n7.ad2.feature.games.xo.domain.SocketMessanger
+import n7.ad2.feature.games.xo.domain.SocketMessenger
+import n7.ad2.feature.games.xo.domain.model.SocketServerModel
 
-class GameSocketMessenger : SocketMessanger {
+class GameSocketMessenger : SocketMessenger {
 
     private var socket: Socket? = null
     private var writer: PrintWriter? = null
     private var scanner: Scanner? = null
 
-    override fun init(socket: Socket) {
-        this.socket = socket
+    override fun init(server: SocketServerModel) {
+        val socket = server.serverSocket.accept()
         writer = PrintWriter(socket.getOutputStream())
         scanner = Scanner(socket.getInputStream())
+        this.socket = socket
     }
 
     override fun isConnected(): Boolean {

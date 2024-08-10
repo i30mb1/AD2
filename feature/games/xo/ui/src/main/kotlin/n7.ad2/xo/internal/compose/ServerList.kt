@@ -84,7 +84,7 @@ private fun ServerItem(onServerClicked: (server: ServerUI) -> Unit, server: Serv
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .heightIn(min = 60.dp)
-            .background(AppTheme.color.surface)
+            .background(if (server.isMe) AppTheme.color.primary else AppTheme.color.surface)
             .clickable { onServerClicked(server) }
             .padding(vertical = 8.dp, horizontal = 16.dp),
     ) {

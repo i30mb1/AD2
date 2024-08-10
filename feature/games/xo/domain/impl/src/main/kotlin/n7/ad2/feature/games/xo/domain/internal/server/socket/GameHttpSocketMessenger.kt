@@ -1,23 +1,22 @@
+@file:Suppress("BlockingMethodInNonBlockingContext")
+
 package n7.ad2.feature.games.xo.domain.internal.server.socket
 
 import java.io.PrintWriter
-import java.net.Socket
+import java.net.ServerSocket
 import java.util.Scanner
 import kotlinx.coroutines.channels.Channel
-import n7.ad2.feature.games.xo.domain.SocketMessanger
+import n7.ad2.feature.games.xo.domain.SocketMessenger
+import n7.ad2.feature.games.xo.domain.model.SocketServerModel
 
-class GameHttpSocketMessenger : SocketMessanger {
+class GameHttpSocketMessenger : SocketMessenger {
 
-    private var socket: Socket? = null
-    private var writer: PrintWriter? = null
-    private var reader: Scanner? = null
+    private var socket: ServerSocket? = null
     private val messagesToSend = Channel<String>()
     private val incomingMessages = Channel<String>()
 
-    override fun init(socket: Socket) {
-        this.socket = socket
-        writer = PrintWriter(socket.getOutputStream())
-        reader = Scanner(socket.getInputStream())
+    override fun init(server: SocketServerModel) {
+        this.socket = server.serverSocket
     }
 
     override fun isConnected(): Boolean {
@@ -25,8 +24,9 @@ class GameHttpSocketMessenger : SocketMessanger {
     }
 
     override suspend fun awaitMessage(): String {
-        val writer = writer ?: error("call init first")
-        val reader = reader ?: error("call init first")
+        val socket = requireNotNull(socket) { "socket is null, call init()" }.accept()
+        val writer = PrintWriter(socket.getOutputStream())
+        val reader = Scanner(socket.getInputStream())
         val request = requestParts(reader)
         // (2.2) Читаем заголовки
         val headers = readHeaders(reader)

@@ -64,18 +64,8 @@ internal class ServerWithWebsocket(
         val outputStream = clientSocket.getOutputStream()
         val writer = PrintWriter(outputStream, true)
 
-        when (prepareHandshake(headers)) {
-            HandshakeType.HTTP -> {
-                TODO()
-            }
-
-            HandshakeType.WEB_SOCKET -> {
-                handshakeWebSocket(headers, writer)
-                runWebSocketCommunication(inputStream, outputStream)
-            }
-
-            else -> Unit
-        }
+        handshakeWebSocket(headers, writer)
+        runWebSocketCommunication(inputStream, outputStream)
     }
 
     private fun runWebSocketCommunication(inputStream: InputStream, outputStream: OutputStream) {
@@ -205,17 +195,6 @@ internal class ServerWithWebsocket(
         writer.println("Connection: Upgrade")
         writer.println("Sec-WebSocket-Accept: $base64")
         writer.println()
-    }
-
-    /**
-     * Значение заголовка [Upgrade] используется для указания на переключение на другой протокол
-     * если такого загловка нет, то переключение не требуется
-     */
-    private fun prepareHandshake(headers: Map<String, String>): HandshakeType {
-        return when (headers["Upgrade"]) {
-            "websocket" -> HandshakeType.WEB_SOCKET
-            else -> HandshakeType.HTTP
-        }
     }
 
     /**

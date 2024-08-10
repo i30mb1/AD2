@@ -18,15 +18,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import n7.ad2.feature.games.xo.domain.internal.server2.data.Message
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.Bold
-import n7.ad2.xo.internal.game.Message
 
 @Preview
 @Composable
 private fun GameScreenPreview() {
     AppTheme {
-        GameScreen(listOf(Message.Server("Hello"), Message.Client("Hello")), { })
+        GameScreen(
+            listOf(Message.Other("Hello"), Message.Me("Hello")), { })
     }
 }
 
@@ -34,7 +35,6 @@ private fun GameScreenPreview() {
 internal fun GameScreen(
     messages: List<Message>,
     event: (event: XoScreenEvent) -> Unit,
-    isHost: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -47,20 +47,20 @@ internal fun GameScreen(
             contentPadding = WindowInsets.systemBars.asPaddingValues(),
         ) {
             items(messages.size) { index ->
-                val log = messages[index]
-                val isClient = log is Message.Client
+                val message = messages[index]
+                val isMe = message is Message.Me
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Text(
-                        text = log.message,
+                        text = message.message,
                         style = AppTheme.style.body.Bold,
                         color = AppTheme.color.textColor,
                         modifier = Modifier
                             .padding(4.dp)
-                            .align(if (isClient) Alignment.Start else Alignment.End)
+                            .align(if (isMe) Alignment.End else Alignment.Start)
                             .clip(AppTheme.shape.medium)
-                            .background(if (isClient) AppTheme.color.surface else AppTheme.color.primary)
+                            .background(if (isMe) AppTheme.color.primary else AppTheme.color.surface)
                             .padding(vertical = 8.dp, horizontal = 8.dp),
                     )
                 }
@@ -71,8 +71,7 @@ internal fun GameScreen(
             onClick = { event(XoScreenEvent.SendPing) },
             modifier = Modifier.safeContentPadding(),
         ) {
-            val text = if (isHost) "Ping" else "Pong"
-            Text(text = text)
+            Text(text = "Ping")
         }
     }
 }

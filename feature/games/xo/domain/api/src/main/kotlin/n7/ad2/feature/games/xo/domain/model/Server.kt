@@ -20,7 +20,7 @@ open class WifiDirectServer(
     override val port: Int,
 ) : Server
 
-data class SimpleSocketServer(
+data class SocketServerModel(
     val serverSocket: ServerSocket,
     override val name: String,
     override val ip: String,

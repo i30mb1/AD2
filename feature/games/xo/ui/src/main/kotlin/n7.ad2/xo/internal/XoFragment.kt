@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.compose.runtime.collectAsState
 import androidx.fragment.app.Fragment
 import javax.inject.Inject
@@ -31,14 +32,20 @@ internal class XoFragment(
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return content {
-            val state = viewModel.state.collectAsState(XoUIState.init()).value
+            val state = viewModel.state.collectAsState(XoUIState()).value
             XoScreen(state = state, events = ::handleState)
         }
     }
 
     private fun handleState(event: XoScreenEvent) {
         when (event) {
-            is XoScreenEvent.ConnectToServer -> viewModel.connectToServer(event.server)
+            is XoScreenEvent.ConnectToServer -> {
+                if (event.server.isMe) {
+                    Toast.makeText(requireContext(), "Not possible to connect own server!", Toast.LENGTH_SHORT).show()
+                } else {
+                    viewModel.connectToServer(event.server)
+                }
+            }
             is XoScreenEvent.StartServer -> viewModel.runServer(event.name)
             XoScreenEvent.SendPing -> viewModel.sendPing()
             XoScreenEvent.SendPong -> viewModel.sendPong()

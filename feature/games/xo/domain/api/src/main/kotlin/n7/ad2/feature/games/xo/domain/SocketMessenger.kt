@@ -1,9 +1,9 @@
 package n7.ad2.feature.games.xo.domain
 
-import java.net.Socket
+import n7.ad2.feature.games.xo.domain.model.SocketServerModel
 
-interface SocketMessanger {
-    fun init(socket: Socket)
+interface SocketMessenger {
+    fun init(server: SocketServerModel)
     fun isConnected(): Boolean
     suspend fun awaitMessage(): String?
     fun sendMessage(message: String)

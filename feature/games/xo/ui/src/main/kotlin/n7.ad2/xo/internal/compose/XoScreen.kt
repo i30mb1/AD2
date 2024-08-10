@@ -17,7 +17,7 @@ import n7.ad2.xo.internal.compose.model.ServerUI
 private fun XoScreenPreview() {
     AppTheme {
         XoScreen(
-            state = XoUIState.init().copy(
+            state = XoUIState(
                 deviceIP = "192.168.100.10",
                 servers = listOf(ServerUI()),
                 logs = listOf(AppLog("Hello")),
@@ -42,7 +42,7 @@ internal fun XoScreen(
                 .safeDrawingPadding(),
         )
         when {
-            state.isGameStarted -> GameScreen(messages = state.messages, events, isHost = state.isHost)
+            state.isGameStarted -> GameScreen(messages = state.messages, events)
             else -> StaringScreen(state, events)
         }
     }

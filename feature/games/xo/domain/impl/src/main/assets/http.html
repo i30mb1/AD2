@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p id="message"></p>
+<font size="7">
+    <div id="messages"></div>
+</font>
 
 <script>
-    function read() {
-        const message = document.getElementById("message");
+    function addMessage(message) {
+       const logDiv = document.getElementById('messages');
+       const p = document.createElement('p');
+       p.textContent = message;
+       logDiv.appendChild(p);
+   }
 
-        fetch("http://192.168.100.29:40263/")
-         .then(response => response.text())
-            .then(responseData => {
-                message.innerHTML = `Server Message: ${responseData}`;
-            })
-    }
-    read()
+   function read() {
+       const messages = document.getElementById("messages");
+
+        fetch("http://192.168.100.29:40263/", {
+           method: "POST"
+       })
+        .then(response => response.text())
+           .then(responseData => {
+               message.innerHTML = `Server Message: ${responseData}`;
+           })
+   }
+   setInterval(read, 5000);
+
+   read()
 </script>
 </body>
 </html>

@@ -49,7 +49,7 @@ import n7.ad2.xo.internal.compose.model.ServerUI
 private fun XoScreenPreview() {
     AppTheme {
         StaringScreen(
-            XoUIState.init().copy(
+            XoUIState(
                 deviceName = "Nothing Phone 2",
                 deviceIP = "192.168.100.10",
                 servers = listOf(ServerUI()),

@@ -4,4 +4,5 @@ class ServerUI(
     val name: String = "Player1",
     val serverIP: String = "192.168.100.29",
     val port: String = "0",
+    val isMe: Boolean = false,
 )

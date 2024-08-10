@@ -3,14 +3,14 @@ package n7.ad2.feature.games.xo.domain.di
 import android.net.nsd.NsdManager
 import android.net.wifi.p2p.WifiP2pManager
 import android.os.Looper
-import n7.ad2.feature.games.xo.domain.ClientHolder
+import n7.ad2.feature.games.xo.domain.ClientCreator
 import n7.ad2.feature.games.xo.domain.ConnectToWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
-import n7.ad2.feature.games.xo.domain.ServerHolder
+import n7.ad2.feature.games.xo.domain.ServerCreator
 import n7.ad2.feature.games.xo.domain.internal.registrator.CommonSettings
 import n7.ad2.feature.games.xo.domain.internal.registrator.ConnectToWifiDirectUseCaseImpl
 import n7.ad2.feature.games.xo.domain.internal.registrator.DiscoverServicesInNetworkUseCaseImpl
@@ -18,13 +18,13 @@ import n7.ad2.feature.games.xo.domain.internal.registrator.DiscoverServicesInWif
 import n7.ad2.feature.games.xo.domain.internal.registrator.GetInfoAboutServerUseCase
 import n7.ad2.feature.games.xo.domain.internal.registrator.GetNetworkStateUseCaseImpl
 import n7.ad2.feature.games.xo.domain.internal.registrator.RegisterServiceInNetworkUseCaseImpl
-import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientHolderWithSocket
-import n7.ad2.feature.games.xo.domain.internal.server.socket.GameServer
+import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientCreatorImpl
+import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerCreatorImpl
 import n7.ad2.feature.games.xo.domain.internal.usecase.GetDeviceNameUseCaseImpl
 
 interface XoDomainComponent {
-    val serverHolder: ServerHolder
-    val clientHolder: ClientHolder
+    val serverCreator: ServerCreator
+    val clientCreator: ClientCreator
     val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase
     val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase
     val connectToWifiDirectUseCase: ConnectToWifiDirectUseCase
@@ -47,8 +47,8 @@ fun XoDomainComponent(
         GetInfoAboutServerUseCase(dependencies.dispatcher, dependencies.logger),
         dependencies.logger,
     )
-    override val serverHolder: ServerHolder = GameServer()
-    override val clientHolder: ClientHolder = ClientHolderWithSocket()
+    override val serverCreator: ServerCreator = ServerCreatorImpl()
+    override val clientCreator: ClientCreator = ClientCreatorImpl()
     override val discoverServicesInWifiDirectUseCase = DiscoverServicesInWifiDirectUseCaseImpl(
         dependencies.application,
         wifiP2pManager,

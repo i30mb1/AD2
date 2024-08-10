@@ -20,7 +20,7 @@ internal class DiscoverServicesInNetworkUseCaseImpl(
     private val logger: Logger,
 ) : DiscoverServicesInNetworkUseCase {
 
-    private val dispatcher = newSingleThreadContext("Discovery Server Thread")
+    private val dispatcher = newSingleThreadContext("Discovery Server")
 
     override fun invoke(): Flow<List<Server>> = callbackFlow {
         val set = mutableSetOf<Server>()

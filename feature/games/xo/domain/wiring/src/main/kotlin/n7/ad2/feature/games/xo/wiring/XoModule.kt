@@ -5,14 +5,14 @@ import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.games.xo.domain.ClientHolder
+import n7.ad2.feature.games.xo.domain.ClientCreator
 import n7.ad2.feature.games.xo.domain.ConnectToWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
-import n7.ad2.feature.games.xo.domain.ServerHolder
+import n7.ad2.feature.games.xo.domain.ServerCreator
 import n7.ad2.feature.games.xo.domain.di.XoDomainComponent
 import n7.ad2.feature.games.xo.domain.di.XoDomainDependencies
 
@@ -39,12 +39,12 @@ object XoModule {
     @dagger.Provides
     fun provideServer(
         component: XoDomainComponent,
-    ): ServerHolder = component.serverHolder
+    ): ServerCreator = component.serverCreator
 
     @dagger.Provides
     fun provideClient(
         component: XoDomainComponent,
-    ): ClientHolder = component.clientHolder
+    ): ClientCreator = component.clientCreator
 
     @dagger.Provides
     fun provideGetNetworkStateUseCase(

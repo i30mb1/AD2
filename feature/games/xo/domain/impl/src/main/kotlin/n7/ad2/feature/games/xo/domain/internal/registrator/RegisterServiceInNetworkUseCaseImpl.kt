@@ -7,7 +7,7 @@ import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
-import n7.ad2.feature.games.xo.domain.model.SimpleSocketServer
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 internal class RegisterServiceInNetworkUseCaseImpl(
     private val manager: NsdManager,
@@ -18,13 +18,16 @@ internal class RegisterServiceInNetworkUseCaseImpl(
     private var listenersMap: MutableSet<NsdManager.RegistrationListener> = mutableSetOf()
 
     override suspend fun register(
-        server: SimpleSocketServer,
-    ): SimpleSocketServer = suspendCancellableCoroutine { continuation ->
+        server: SimpleServer,
+    ): SimpleServer = suspendCancellableCoroutine { continuation ->
         val listener = object : NsdManager.RegistrationListener {
             override fun onServiceRegistered(info: NsdServiceInfo) {
+                listenersMap.add(this)
                 val finalName = info.serviceName // Android may have change name in order to resolve a conflict
                 logger.log("DNS: registration success: $finalName")
-                continuation.resume(server.copy(name = finalName))
+                continuation.resume(
+                    SimpleServer(name = finalName, ip = server.ip, port = server.port)
+                )
             }
 
             override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {
@@ -42,7 +45,6 @@ internal class RegisterServiceInNetworkUseCaseImpl(
                 logger.log(message)
             }
         }
-        listenersMap.add(listener)
         val nsdServiceInfo = NsdServiceInfo()
         nsdServiceInfo.serviceName = server.name
         nsdServiceInfo.serviceType = commonSettings.serviceType
@@ -55,5 +57,6 @@ internal class RegisterServiceInNetworkUseCaseImpl(
 
     override fun unregister() {
         listenersMap.forEach(manager::unregisterService)
+        listenersMap.clear()
     }
 }

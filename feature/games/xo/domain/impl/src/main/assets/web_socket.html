@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p></p>
+<font size="7">
+    <div id="messages"></div>
+</font>
+
+<script>
+    function message(message) {
+        const logDiv = document.getElementById('messages');
+        const p = document.createElement('p');
+        p.textContent = message;
+        logDiv.appendChild(p);
+    }
+    const socket = new WebSocket('ws://localhost:51767');
+    socket.addEventListener('message', function (event) {
+        message('Server Message: ' + event.data);
+    });
+      // Отправка приветственного сообщения серверу
+    socket.addEventListener('open', function (event) {
+        message('WebSocket is open now');
+        socket.send('Hello Server!');
+    });
+      // Обработчик события ошибки
+    socket.addEventListener('error', function (event) {
+        message('WebSocket error: ' + event);
+    });
+
+    // Обработчик события закрытия соединения
+    socket.addEventListener('close', function (event) {
+        message('WebSocket is closed now');
+    });
+</script>
+</body>
+</html>

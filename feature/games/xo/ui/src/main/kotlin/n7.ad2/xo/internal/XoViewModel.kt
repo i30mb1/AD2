@@ -24,7 +24,7 @@ import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.game.GameLogic
 import n7.ad2.xo.internal.game.GameState
-import n7.ad2.xo.internal.game.ServerState
+import n7.ad2.xo.internal.game.GameStatus
 import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
 
 internal class XoViewModel @AssistedInject constructor(
@@ -37,7 +37,7 @@ internal class XoViewModel @AssistedInject constructor(
         fun create(): XoViewModel
     }
 
-    private val _state: MutableStateFlow<XoUIState> = MutableStateFlow(XoUIState.init())
+    private val _state: MutableStateFlow<XoUIState> = MutableStateFlow(XoUIState())
     val state: StateFlow<XoUIState> = _state.asStateFlow()
 
     init {
@@ -57,13 +57,13 @@ internal class XoViewModel @AssistedInject constructor(
                 _state.update {
                     it.copy(
                         deviceIP = state.deviceIP,
-                        servers = state.servers.map(ServerToServerUIMapper),
+                        servers = state.servers.map { server ->
+                            ServerToServerUIMapper(server, state.deviceIP)
+                        },
                         messages = state.messages,
                         deviceName = state.deviceName,
-                        isGameStarted = state.serverState is ServerState.Connected,
-                        isButtonStartEnabled = state.serverState is ServerState.Disconected,
-                        server = (state.serverState as? ServerState.Connecting)?.server,
-                        isHost = (state.serverState as? ServerState.Connected)?.isHost ?: false,
+                        isGameStarted = state.gameStatus is GameStatus.Started,
+                        isButtonStartEnabled = state.gameStatus is GameStatus.Idle,
                     )
                 }
             }
@@ -93,10 +93,5 @@ internal class XoViewModel @AssistedInject constructor(
 
     fun sendPing() = viewModelScope.launch {
         gameLogic.sendMessage("Hello Server!")
-    }
-
-    override fun onCleared() {
-        gameLogic.onClear()
-        super.onCleared()
     }
 }
