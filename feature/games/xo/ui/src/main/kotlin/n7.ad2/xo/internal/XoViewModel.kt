@@ -88,11 +88,7 @@ internal class XoViewModel @AssistedInject constructor(
         gameLogic.startServer(name)
     }
 
-    fun sendPong() = viewModelScope.launch {
-        gameLogic.sendMessage("Hello Client!")
-    }
-
-    fun sendPing() = viewModelScope.launch {
-        gameLogic.sendMessage("Hello Server!")
+    fun sendMessage(message: String) = viewModelScope.launch {
+        gameLogic.sendMessage(message)
     }
 }

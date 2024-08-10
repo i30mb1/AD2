@@ -47,8 +47,7 @@ internal class XoFragment(
                 }
             }
             is XoScreenEvent.StartServer -> viewModel.runServer(event.name)
-            XoScreenEvent.SendPing -> viewModel.sendPing()
-            XoScreenEvent.SendPong -> viewModel.sendPong()
+            is XoScreenEvent.SendMessage -> viewModel.sendMessage(event.message)
         }
     }
 }

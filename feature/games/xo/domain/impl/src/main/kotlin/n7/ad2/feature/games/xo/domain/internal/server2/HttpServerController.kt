@@ -66,7 +66,7 @@ class HttpServerController : ServerController {
                     // Отправляем сообщение когда будет что отправить
 
                     writer.println("HTTP/1.1 200 OK")
-                    writer.println("Content-Type: text/plain")
+                    writer.println("Content-Type: text/plain; charset=UTF-8")
                     writer.println("Access-Control-Allow-Origin: *")
                     writer.println("Content-Length: ${response.length}")
                     writer.println()
@@ -78,11 +78,11 @@ class HttpServerController : ServerController {
                 "POST" -> {
                     val messageLength = headers["Content-Length"]!!.toInt()
                     val requestBody = reader.next()
-                    _state.update { it.copy(messages = it.messages + Message.Me(requestBody.toString())) }
-                    // Ответ сервера
+                    _state.update { it.copy(messages = it.messages + Message.Other(requestBody.toString())) }
+                    // Ответ серверу
                     val response = "POST request received"
                     writer.println("HTTP/1.1 200 OK")
-                    writer.println("Content-Type: text/plain")
+                    writer.println("Content-Type: text/plain; charset=UTF-8")
                     writer.println("Access-Control-Allow-Origin: *")
                     writer.println("Content-Length: ${response.length}")
                     writer.println("Connection: close")

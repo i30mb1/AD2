@@ -105,7 +105,7 @@ internal fun StaringScreen(
 }
 
 @Composable
-private fun EditTextWithButton(
+internal fun EditTextWithButton(
     state: TextFieldState,
     buttonText: String,
     isEnabled: Boolean,
