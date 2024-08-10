@@ -1,3 +1,5 @@
+@file:Suppress("DoubleExclamationUsage")
+
 package n7.ad2.feature.games.xo.domain.internal.server2
 
 import java.io.PrintWriter
@@ -6,6 +8,7 @@ import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -13,6 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import n7.ad2.feature.games.xo.domain.ServerCreator
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerCreatorImpl
+import n7.ad2.feature.games.xo.domain.internal.server2.data.Message
 import n7.ad2.feature.games.xo.domain.internal.server2.data.ServerState
 import n7.ad2.feature.games.xo.domain.internal.server2.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.model.SocketServerModel
@@ -22,47 +26,82 @@ class HttpServerController : ServerController {
     private val _state: MutableStateFlow<ServerState> = MutableStateFlow(ServerState())
     override val state: StateFlow<ServerState> = _state
     private val serverCreator: ServerCreator = ServerCreatorImpl()
-    private val messagesToSend = Channel<String>()
+    private val messagesToSend = Channel<String>(capacity = Channel.BUFFERED)
     private lateinit var server: SocketServerModel
 
     override fun start(name: String, ip: InetAddress, port: Int) {
+        messagesToSend.trySend("Hello Client!")
         scope.launch {
-            server = serverCreator.create(name, ip, port)
+            server = serverCreator.create(name, ip, 42273)
             _state.update { it.copy(status = ServerStatus.Connected(server)) }
+            collectMessages()
         }
     }
 
-    fun collectMessages() = scope.launch {
-        val socket = server.serverSocket.accept()
-        val writer = PrintWriter(socket.getOutputStream())
-        val reader = Scanner(socket.getInputStream())
-        val request = requestParts(reader)
-        // Читаем заголовки
-        val headers = readHeaders(reader)
-
-        when (request["method"]) {
-            "GET" -> {
-                // Отправляем сообщение когда будет что отправить
-                val response = messagesToSend.receive()
-                writer.println("HTTP/1.1 200 OK")
-                writer.println("Content-Type: text/plain")
-                writer.println("Access-Control-Allow-Origin: *")
-                writer.println("Content-Length: ${response.length}")
-                writer.println()
-                writer.println(response)
-
-                writer.flush()
+    private suspend fun collectMessages() = coroutineScope {
+        while (true) {
+            val socket = server.serverSocket.accept()
+            val writer = PrintWriter(socket.getOutputStream())
+            val inputStream = socket.getInputStream()
+            val reader = Scanner(inputStream)
+            if (!reader.hasNext()) {
+                socket.close()
+                writer.close()
+                reader.close()
+                continue
             }
+            val request = requestParts(reader)
+            // Читаем заголовки
+            val headers = readHeaders(reader)
 
-            "POST" -> {
-                val messageLenght = headers[""]
-                reader
+            _state.update { it.copy(messages = it.messages + Message.Info("request: ${request.toList().joinToString("\n")}")) }
+            when (request["method"]) {
+                "GET" -> {
+                    var response: String
+                    when (request["resource"]) {
+                        "/" -> response = messagesToSend.receive()
+                        "/favicon.ico" -> response = "empty"
+                        else -> error("!")
+                    }
+                    // Отправляем сообщение когда будет что отправить
+
+                    writer.println("HTTP/1.1 200 OK")
+                    writer.println("Content-Type: text/plain")
+                    writer.println("Access-Control-Allow-Origin: *")
+                    writer.println("Content-Length: ${response.length}")
+                    writer.println()
+                    writer.println(response)
+
+                    writer.flush()
+                }
+
+                "POST" -> {
+                    val messageLength = headers["Content-Length"]!!.toInt()
+                    val requestBody = reader.next()
+                    _state.update { it.copy(messages = it.messages + Message.Me(requestBody.toString())) }
+                    // Ответ сервера
+                    val response = "POST request received"
+                    writer.println("HTTP/1.1 200 OK")
+                    writer.println("Content-Type: text/plain")
+                    writer.println("Access-Control-Allow-Origin: *")
+                    writer.println("Content-Length: ${response.length}")
+                    writer.println("Connection: close")
+                    writer.println()
+                    writer.println(response)
+                    writer.flush()
+                }
+
+                else -> error("???")
             }
+            writer.close()
+            reader.close()
+            socket.close()
         }
     }
 
     override fun send(text: String) {
-
+        _state.update { it.copy(messages = it.messages + Message.Me(text)) }
+        messagesToSend.trySend(text)
     }
 
     override fun stop() {

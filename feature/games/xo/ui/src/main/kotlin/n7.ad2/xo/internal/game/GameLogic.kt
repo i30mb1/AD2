@@ -24,8 +24,8 @@ import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.internal.server2.HttpServerController
 import n7.ad2.feature.games.xo.domain.internal.server2.SocketClientController
-import n7.ad2.feature.games.xo.domain.internal.server2.SocketServerController
 import n7.ad2.feature.games.xo.domain.internal.server2.data.ClientStatus
 import n7.ad2.feature.games.xo.domain.internal.server2.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.model.NetworkState
@@ -42,7 +42,7 @@ internal class GameLogic @Inject constructor(
     private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
 ) {
 
-    private val socketServerController = SocketServerController()
+    private val socketServerController = HttpServerController()
     private val socketClientController = SocketClientController()
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()
@@ -77,8 +77,8 @@ internal class GameLogic @Inject constructor(
                 _state.update {
                     it.copy(
                         messages = state.messages,
-                        gameStatus = when (state.status) {
-                            is ServerStatus.Connected -> GameStatus.Started(true)
+                        gameStatus = when (val status = state.status) {
+                            is ServerStatus.Connected -> GameStatus.Started(true, status.server)
                             ServerStatus.Closed -> GameStatus.Idle
                             is ServerStatus.Waiting -> GameStatus.Waiting
                         },
@@ -96,8 +96,8 @@ internal class GameLogic @Inject constructor(
                 state.status
                 _state.update {
                     it.copy(
-                        gameStatus = when (state.status) {
-                            is ClientStatus.Connected -> GameStatus.Started(false)
+                        gameStatus = when (val status = state.status) {
+                            is ClientStatus.Connected -> GameStatus.Started(false, status.server)
                             ClientStatus.Disconnected -> GameStatus.Idle
                         },
                         messages = state.messages,

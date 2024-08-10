@@ -48,21 +48,46 @@ internal fun GameScreen(
         ) {
             items(messages.size) { index ->
                 val message = messages[index]
-                val isMe = message is Message.Me
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
-                    Text(
-                        text = message.message,
-                        style = AppTheme.style.body.Bold,
-                        color = AppTheme.color.textColor,
-                        modifier = Modifier
-                            .padding(4.dp)
-                            .align(if (isMe) Alignment.End else Alignment.Start)
-                            .clip(AppTheme.shape.medium)
-                            .background(if (isMe) AppTheme.color.primary else AppTheme.color.surface)
-                            .padding(vertical = 8.dp, horizontal = 8.dp),
-                    )
+                    when (message) {
+                        is Message.Info -> Text(
+                            text = message.message,
+                            style = AppTheme.style.info,
+                            color = AppTheme.color.textColor,
+                            modifier = Modifier
+                                .padding(4.dp)
+                                .align(Alignment.CenterHorizontally)
+                                .clip(AppTheme.shape.small)
+                                .background(AppTheme.color.surface)
+                                .padding(4.dp),
+                        )
+
+                        is Message.Me -> Text(
+                            text = message.message,
+                            style = AppTheme.style.body.Bold,
+                            color = AppTheme.color.textColor,
+                            modifier = Modifier
+                                .padding(4.dp)
+                                .align(Alignment.End)
+                                .clip(AppTheme.shape.medium)
+                                .background(AppTheme.color.primary)
+                                .padding(8.dp),
+                        )
+
+                        is Message.Other -> Text(
+                            text = message.message,
+                            style = AppTheme.style.body.Bold,
+                            color = AppTheme.color.textColor,
+                            modifier = Modifier
+                                .padding(4.dp)
+                                .align(Alignment.Start)
+                                .clip(AppTheme.shape.medium)
+                                .background(AppTheme.color.surface)
+                                .padding(8.dp),
+                        )
+                    }
                 }
             }
         }

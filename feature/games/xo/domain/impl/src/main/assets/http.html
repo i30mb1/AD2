@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-<font size="7">
+<font size="3">
     <div id="messages"></div>
 </font>
+
+<input type="text" id="inputMessage" placeholder="Enter your message">
+<button onclick="sendMessage()">Send</button>
 
 <script>
     function addMessage(message) {
@@ -16,15 +19,35 @@
    function read() {
        const messages = document.getElementById("messages");
 
-        fetch("http://192.168.100.29:40263/", {
-           method: "POST"
+        fetch("http://192.168.100.29:42273/", {
+           method: "GET"
        })
         .then(response => response.text())
-           .then(responseData => {
-               message.innerHTML = `Server Message: ${responseData}`;
+        .then(responseData => {
+               addMessage(`Server: ${responseData}`);
+               read()
            })
    }
-   setInterval(read, 5000);
+
+ function sendMessage() {
+        const inputMessage = document.getElementById("inputMessage").value;
+
+        fetch("http://192.168.100.29:42273/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: inputMessage + " "
+        })
+        .then(response => response.text())
+        .then(responseData => {
+            addMessage(`You: ${inputMessage}`);
+            document.getElementById("inputMessage").value = "";
+        })
+        .catch(error => {
+            console.error("Error sending message:", error);
+        });
+    }
 
    read()
 </script>

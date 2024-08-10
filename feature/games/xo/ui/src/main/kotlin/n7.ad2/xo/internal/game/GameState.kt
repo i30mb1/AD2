@@ -4,6 +4,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import n7.ad2.feature.games.xo.domain.internal.server2.data.Message
 import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 internal data class GameState(
     val deviceIP: String,
@@ -24,7 +25,7 @@ internal data class GameState(
 }
 
 sealed interface GameStatus {
-    data class Started(val isHost: Boolean) : GameStatus
+    data class Started(val isHost: Boolean, val server: SimpleServer) : GameStatus
     data object Waiting : GameStatus
     data object Idle : GameStatus
 }

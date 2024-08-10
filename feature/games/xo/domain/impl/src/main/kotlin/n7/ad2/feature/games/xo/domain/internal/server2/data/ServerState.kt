@@ -16,4 +16,5 @@ sealed interface ServerStatus {
 sealed class Message(val message: String) {
     class Me(message: String) : Message(message)
     class Other(message: String) : Message(message)
+    class Info(message: String) : Message(message)
 }

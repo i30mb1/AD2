@@ -9,5 +9,5 @@ data class ClientState(
 
 sealed interface ClientStatus {
     data object Disconnected : ClientStatus
-    data class Connected(val serverModel: SimpleServer) : ClientStatus
+    data class Connected(val server: SimpleServer) : ClientStatus
 }

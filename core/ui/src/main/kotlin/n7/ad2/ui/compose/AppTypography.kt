@@ -10,6 +10,7 @@ data class AppTypography(
     val H4: TextStyle,
     val H5: TextStyle,
     val body: TextStyle,
+    val info: TextStyle,
 )
 
 val appTypography = AppTypography(
@@ -24,6 +25,9 @@ val appTypography = AppTypography(
     ),
     body = TextStyle(
         fontSize = 12.sp,
+    ),
+    info = TextStyle(
+        fontSize = 8.sp,
     ),
 )
 

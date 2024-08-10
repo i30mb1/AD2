@@ -64,6 +64,7 @@ internal class XoViewModel @AssistedInject constructor(
                         deviceName = state.deviceName,
                         isGameStarted = state.gameStatus is GameStatus.Started,
                         isButtonStartEnabled = state.gameStatus is GameStatus.Idle,
+                        server = (state.gameStatus as? GameStatus.Started)?.server
                     )
                 }
             }
