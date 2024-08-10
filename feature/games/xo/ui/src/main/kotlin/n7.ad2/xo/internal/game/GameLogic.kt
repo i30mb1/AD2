@@ -24,10 +24,10 @@ import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
-import n7.ad2.feature.games.xo.domain.internal.server2.HttpServerController
-import n7.ad2.feature.games.xo.domain.internal.server2.SocketClientController
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ClientStatus
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ServerStatus
+import n7.ad2.feature.games.xo.domain.internal.server.controller.HttpServerController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.SocketClientController
+import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
+import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper

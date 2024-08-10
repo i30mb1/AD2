@@ -1,6 +1,6 @@
 @file:Suppress("RequireNotNullWithoutMessage")
 
-package n7.ad2.feature.games.xo.domain.internal.server2
+package n7.ad2.feature.games.xo.domain.internal.server.controller
 
 import java.io.PrintWriter
 import java.net.InetAddress
@@ -16,10 +16,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
+import n7.ad2.feature.games.xo.domain.internal.server.data.ClientState
+import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
+import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientCreatorImpl
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ClientState
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ClientStatus
-import n7.ad2.feature.games.xo.domain.internal.server2.data.Message
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
 class SocketClientController(

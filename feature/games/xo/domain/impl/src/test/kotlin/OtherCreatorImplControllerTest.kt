@@ -7,10 +7,10 @@ import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import n7.ad2.coroutines.CoroutineTestRule
-import n7.ad2.feature.games.xo.domain.internal.server2.SocketClientController
-import n7.ad2.feature.games.xo.domain.internal.server2.SocketServerController
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ClientStatus
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ServerStatus
+import n7.ad2.feature.games.xo.domain.internal.server.controller.SocketClientController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.SocketServerController
+import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
+import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

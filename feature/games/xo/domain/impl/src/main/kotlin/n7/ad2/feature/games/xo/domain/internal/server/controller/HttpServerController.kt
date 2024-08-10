@@ -1,12 +1,13 @@
 @file:Suppress("DoubleExclamationUsage")
 
-package n7.ad2.feature.games.xo.domain.internal.server2
+package n7.ad2.feature.games.xo.domain.internal.server.controller
 
 import java.io.PrintWriter
 import java.net.InetAddress
 import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancelChildren
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -15,10 +16,10 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import n7.ad2.feature.games.xo.domain.ServerCreator
+import n7.ad2.feature.games.xo.domain.internal.server.data.Message
+import n7.ad2.feature.games.xo.domain.internal.server.data.ServerState
+import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerCreatorImpl
-import n7.ad2.feature.games.xo.domain.internal.server2.data.Message
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ServerState
-import n7.ad2.feature.games.xo.domain.internal.server2.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.model.SocketServerModel
 
 class HttpServerController : ServerController {
@@ -63,16 +64,7 @@ class HttpServerController : ServerController {
                         "/favicon.ico" -> response = "empty"
                         else -> error("!")
                     }
-                    // Отправляем сообщение когда будет что отправить
-
-                    writer.println("HTTP/1.1 200 OK")
-                    writer.println("Content-Type: text/plain; charset=UTF-8")
-                    writer.println("Access-Control-Allow-Origin: *")
-                    writer.println("Content-Length: ${response.length}")
-                    writer.println()
-                    writer.println(response)
-
-                    writer.flush()
+                    sendResponse(writer, response)
                 }
 
                 "POST" -> {
@@ -81,14 +73,7 @@ class HttpServerController : ServerController {
                     _state.update { it.copy(messages = it.messages + Message.Other(requestBody.toString())) }
                     // Ответ серверу
                     val response = "POST request received"
-                    writer.println("HTTP/1.1 200 OK")
-                    writer.println("Content-Type: text/plain; charset=UTF-8")
-                    writer.println("Access-Control-Allow-Origin: *")
-                    writer.println("Content-Length: ${response.length}")
-                    writer.println("Connection: close")
-                    writer.println()
-                    writer.println(response)
-                    writer.flush()
+                    sendResponse(writer, response)
                 }
 
                 else -> error("???")
@@ -99,13 +84,23 @@ class HttpServerController : ServerController {
         }
     }
 
+    private fun sendResponse(writer: PrintWriter, response: String) {
+        writer.println("HTTP/1.1 200 OK")
+        writer.println("Content-Type: text/plain; charset=UTF-8")
+        writer.println("Access-Control-Allow-Origin: *")
+        writer.println("Content-Length: ${response.length}")
+        writer.println()
+        writer.println(response)
+        writer.flush()
+    }
+
     override fun send(text: String) {
         _state.update { it.copy(messages = it.messages + Message.Me(text)) }
         messagesToSend.trySend(text)
     }
 
     override fun stop() {
-
+        scope.coroutineContext.cancelChildren()
     }
 
     private fun requestParts(reader: Scanner): Map<String, String> = buildMap {

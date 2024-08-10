@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import n7.ad2.feature.games.xo.domain.internal.server2.data.Message
+import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.Bold
 

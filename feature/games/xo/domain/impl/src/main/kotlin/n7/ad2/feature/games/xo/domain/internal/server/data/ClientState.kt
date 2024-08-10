@@ -1,4 +1,4 @@
-package n7.ad2.feature.games.xo.domain.internal.server2.data
+package n7.ad2.feature.games.xo.domain.internal.server.data
 
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 

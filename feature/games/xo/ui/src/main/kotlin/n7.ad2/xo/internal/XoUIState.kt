@@ -3,7 +3,7 @@ package n7.ad2.xo.internal
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import n7.ad2.app.logger.model.AppLog
-import n7.ad2.feature.games.xo.domain.internal.server2.data.Message
+import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.compose.model.ServerUI
 
