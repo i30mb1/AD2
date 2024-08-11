@@ -2,35 +2,50 @@
 <html>
 <body>
 <p></p>
-<font size="7">
+<font size="4">
     <div id="messages"></div>
 </font>
+<input type="text" id="inputMessage" placeholder="Enter your message">
+<button onclick="sendMessage()">Send</button>
 
 <script>
-    function message(message) {
-        const logDiv = document.getElementById('messages');
-        const p = document.createElement('p');
-        p.textContent = message;
-        logDiv.appendChild(p);
-    }
-    const socket = new WebSocket('ws://localhost:51767');
-    socket.addEventListener('message', function (event) {
-        message('Server Message: ' + event.data);
-    });
-      // Отправка приветственного сообщения серверу
-    socket.addEventListener('open', function (event) {
-        message('WebSocket is open now');
-        socket.send('Hello Server!');
-    });
-      // Обработчик события ошибки
-    socket.addEventListener('error', function (event) {
-        message('WebSocket error: ' + event);
-    });
+    function addMessage(message) {
+      const logDiv = document.getElementById('messages');
+      const p = document.createElement('p');
+      p.textContent = message;
+      logDiv.appendChild(p);
+  }
+   const socket = new WebSocket('ws://192.168.100.29:51767');
+   socket.addEventListener('message', function (event) {
+       addMessage('Server: ' + event.data);
+   });
+     // Отправка приветственного сообщения серверу
+   socket.addEventListener('open', function (event) {
+       addMessage('WebSocket is open now');
+       socket.send('Hello Server!');
+   });
+     // Обработчик события ошибки
+   socket.addEventListener('error', function (event) {
+       addMessage('WebSocket error: ' + event);
+       console.error('WebSocket error:', event);  // Выводим детали ошибки в консоль
+   });
 
-    // Обработчик события закрытия соединения
-    socket.addEventListener('close', function (event) {
-        message('WebSocket is closed now');
-    });
+   // Обработчик события закрытия соединения
+   socket.addEventListener('close', function (event) {
+       addMessage('WebSocket is closed now');
+   });
+
+   function sendMessage() {
+       const inputMessage = document.getElementById("inputMessage").value;
+
+       if (socket.readyState === WebSocket.OPEN) {
+           socket.send(inputMessage);
+           addMessage('You: ' + inputMessage);
+           document.getElementById("inputMessage").value = "";
+       } else {
+           addMessage('WebSocket is not open. Cannot send message.');
+       }
+   }
 </script>
 </body>
 </html>
