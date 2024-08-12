@@ -22,7 +22,7 @@ android {
     signingConfigs {
         getByName("debug") { /* automatic signs with debug key*/ }
         create("release") {
-            val properties = gradleLocalProperties(rootDir)
+            val properties = gradleLocalProperties(rootDir, providers)
             if (properties.containsKey("SIGNING_FILE")) {
                 storeFile = file("key.jks")
                 storePassword = properties.getProperty("STORE_PASSWORD")
