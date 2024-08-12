@@ -4,6 +4,10 @@ plugins {
     id("n7.plugins.kotlin-kapt")
 }
 
+android {
+    testFixtures.enable = true
+}
+
 dependencies {
     implementation(projects.core.commonAndroid)
     implementation(projects.core.dagger)
@@ -16,7 +20,9 @@ dependencies {
 
     kapt(libs.daggerAnnotation)
 
-//    testImplementation(testFixtures(projects.core.appPreference)))
+    testImplementation(testFixtures(projects.core.appPreference))
     testImplementation(testFixtures(projects.core.commonJvm))
     testImplementation(testFixtures(projects.core.logger.appLogger))
+    testImplementation(libs.test.junit)
+    testImplementation(libs.test.truth)
 }

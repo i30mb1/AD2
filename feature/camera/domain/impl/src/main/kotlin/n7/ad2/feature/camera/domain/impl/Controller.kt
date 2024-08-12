@@ -5,7 +5,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import java.io.File
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
@@ -16,7 +15,6 @@ import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.last
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.plus
 import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.Processor
 import n7.ad2.feature.camera.domain.Recorder
@@ -52,7 +50,7 @@ class Controller(
                 )
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
-            .launchIn(lifecycle.lifecycleScope + Dispatchers.IO)
+            .launchIn(lifecycle.lifecycleScope)
     }
 
     fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {

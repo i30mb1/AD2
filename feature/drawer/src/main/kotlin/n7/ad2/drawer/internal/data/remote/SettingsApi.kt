@@ -2,9 +2,7 @@ package n7.ad2.drawer.internal.data.remote
 
 import dagger.Lazy
 import kotlinx.serialization.json.Json
-import n7.ad2.drawer.internal.data.remote.model.Menu
 import n7.ad2.drawer.internal.data.remote.model.Settings
-import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -27,23 +25,6 @@ internal interface SettingsApi {
                 .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
                 .build()
                 .create()
-        }
-    }
-
-}
-
-internal class SettingsApiFake : SettingsApi {
-    var isError = false
-    override suspend fun getSettings(): Settings {
-        return if (isError) {
-            error("oops!")
-        } else {
-            Settings(
-                menu = listOf(
-                    Menu(VOMenuType.HEROES, true),
-                    Menu(VOMenuType.NEWS, false),
-                )
-            )
         }
     }
 }

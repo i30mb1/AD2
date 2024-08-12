@@ -1,22 +1,23 @@
 package n7.ad2.drawer.internal
 
 import LoggerFake
+import PreferenceFake
 import ResourcesFake
 import com.google.common.truth.Truth
-import com.squareup.moshi.Moshi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
-import n7.ad2.apppreference.Preference
 import n7.ad2.coroutines.CoroutineTestRule
-import n7.ad2.drawer.internal.data.remote.SettingsApiFake
+import n7.ad2.drawer.internal.data.remote.SettingsApi
+import n7.ad2.drawer.internal.data.remote.model.Menu
+import n7.ad2.drawer.internal.data.remote.model.Settings
+import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.usecase.GetMenuItemsUseCase
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-// классы testFixture из android-library модулей не работают!
-// https://issuetracker.google.com/issues/219687418
+
 internal class DrawerViewModelTest {
 
     @get:Rule val coroutineRule = CoroutineTestRule(StandardTestDispatcher())
@@ -32,7 +33,6 @@ internal class DrawerViewModelTest {
                 PreferenceFake(),
                 settingsApi,
                 LoggerFake(),
-                Moshi.Builder().build(),
                 coroutineRule.dispatchers,
             ),
             PreferenceFake(),
@@ -71,18 +71,20 @@ internal class DrawerViewModelTest {
                 VOMenu::class.java,
             )
     }
-
 }
 
-class PreferenceFake : Preference {
-    override suspend fun isNeedToUpdateSettings(): Boolean = true
-    override suspend fun saveUpdateNewsDate() = Unit
-    override suspend fun saveSettings(data: String) = Unit
-    override suspend fun getSettings(): String = ""
-    override suspend fun saveDate(date: Int) = Unit
-    override suspend fun getDate(): Int = 0
-    override suspend fun setFingerCoordinateEnabled(isEnabled: Boolean) = Unit
-    override suspend fun isFingerCoordinateEnabled(): Boolean = true
-    override suspend fun isLogWidgetEnabled(): Boolean = true
-    override suspend fun isNeedToUpdateNews(): Boolean = false
+internal class SettingsApiFake : SettingsApi {
+    var isError = false
+    override suspend fun getSettings(): Settings {
+        return if (isError) {
+            error("oops!")
+        } else {
+            Settings(
+                menu = listOf(
+                    Menu(VOMenuType.HEROES, true),
+                    Menu(VOMenuType.NEWS, false),
+                )
+            )
+        }
+    }
 }
