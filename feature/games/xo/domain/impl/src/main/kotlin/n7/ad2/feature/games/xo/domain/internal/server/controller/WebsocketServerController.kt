@@ -10,6 +10,7 @@ import java.net.Socket
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.security.MessageDigest
+import java.util.Base64
 import kotlin.experimental.xor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -50,16 +51,15 @@ class WebsocketServerController(
 
     private fun collectMessages(socket: Socket) {
         val inputStream = socket.getInputStream()
-        val inputStreamReader = InputStreamReader(inputStream)
-        val scanner = BufferedReader(inputStreamReader)
-        val outputStream: OutputStream = socket.getOutputStream()
-        val writer = PrintWriter(outputStream, true)
+        val outputStream = socket.getOutputStream()
+        val reader = BufferedReader(InputStreamReader(inputStream))
+        val writer = PrintWriter(outputStream)
 
-        val headers = readHeaders(scanner)
+        val headers = readHeaders(reader)
         handshakeWebSocket(headers, writer)
         runWebSocketCommunication(inputStream)
 
-        inputStreamReader.close()
+        reader.close()
         writer.close()
         socket.close()
     }
@@ -196,9 +196,8 @@ class WebsocketServerController(
     private fun handshakeWebSocket(headers: Map<String, String>, writer: PrintWriter) {
         val guid = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
         val key = headers["Sec-WebSocket-Key"]!! + guid
-        val sha1 = MessageDigest.getInstance("SHA-1")
-        val hashBytes = sha1.digest(key.toByteArray())
-        val base64 = java.util.Base64.getEncoder().encode(hashBytes)
+        val bytes = MessageDigest.getInstance("SHA-1").digest(key.toByteArray())
+        val base64 = Base64.getEncoder().encode(bytes)
         writer.println("HTTP/1.1 101 Switching Protocols")
         writer.println("Upgrade: websocket")
         writer.println("Connection: Upgrade")
