@@ -5,4 +5,6 @@ import n7.ad2.feature.games.xo.domain.model.Server
 
 interface DiscoverServicesInWifiDirectUseCase {
     operator fun invoke(): Flow<List<Server>>
+    fun startRegistration()
+    fun discover()
 }

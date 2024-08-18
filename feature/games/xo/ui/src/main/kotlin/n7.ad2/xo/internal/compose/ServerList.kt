@@ -124,7 +124,7 @@ private fun ServerItem(onServerClicked: (server: ServerUI) -> Unit, server: Serv
 
 private class PreviewProvider : PreviewParameterProvider<List<ServerUI>> {
     override val values: Sequence<List<ServerUI>> = sequenceOf(
-        buildList { repeat(0) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },
+        buildList { repeat(0) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it", true)) } },
         buildList { repeat(1) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },
         buildList { repeat(2) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },
         buildList { repeat(3) { add(ServerUI("Game$it", "192.168.100.0$it", "808$it")) } },

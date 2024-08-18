@@ -17,6 +17,7 @@ class ConnectToWifiDirectUseCaseImpl(
         val config = WifiP2pConfig()
         config.deviceAddress = serverIP
         config.wps.setup = WpsInfo.PBC
+//        config.groupOwnerIntent = // будем ли мы клиент или севером
         wifiP2pManager.connect(wifiP2pManagerChannel, config, object : WifiP2pManager.ActionListener {
 
             override fun onSuccess() {

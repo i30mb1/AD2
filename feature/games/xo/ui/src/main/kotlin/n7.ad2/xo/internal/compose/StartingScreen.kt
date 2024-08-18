@@ -68,38 +68,36 @@ internal fun StaringScreen(
                     .calculateTopPadding()
             ),
     ) {
-        if (state.deviceName.isNotEmpty() && state.deviceIP.isNotEmpty()) {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(16.dp),
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            Box(modifier = Modifier.fillMaxHeight(0.3f))
+            val name = rememberTextFieldState(state.deviceName)
+            val ip = rememberTextFieldState(state.deviceIP)
+            EditTextWithButton(
+                name,
+                "Start",
+                state.isButtonStartEnabled,
+            ) { event(XoScreenEvent.StartServer(name.text.toString())) }
+            if (false) EditTextWithButton(
+                ip,
+                "Connect",
+                true,
             ) {
-                Box(modifier = Modifier.fillMaxHeight(0.3f))
-                val name = rememberTextFieldState(state.deviceName)
-                val ip = rememberTextFieldState(state.deviceIP)
-                EditTextWithButton(
-                    name,
-                    "Start",
-                    state.isButtonStartEnabled,
-                ) { event(XoScreenEvent.StartServer(name.text.toString())) }
-                if (false) EditTextWithButton(
-                    ip,
-                    "Connect",
-                    true,
-                ) {
-                    event(
-                        XoScreenEvent.ConnectToServer(
-                            ServerUI(
-                                name.text.toString(),
-                                ip.text.toString().substringBefore(":"),
-                                ip.text.toString().substringAfter(":"),
-                            )
+                event(
+                    XoScreenEvent.ConnectToServer(
+                        ServerUI(
+                            name.text.toString(),
+                            ip.text.toString().substringBefore(":"),
+                            ip.text.toString().substringAfter(":"),
                         )
                     )
-                }
-                ServerList(state.servers, { server ->
-                    event(XoScreenEvent.ConnectToServer(server))
-                })
+                )
             }
+            ServerList(state.servers, { server ->
+                event(XoScreenEvent.ConnectToServer(server))
+            })
         }
     }
 }

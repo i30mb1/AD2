@@ -46,7 +46,7 @@ internal class XoViewModel @AssistedInject constructor(
             .flatMapMerge { log ->
                 _state.updateLogs(_state.value.logs + log)
                 flow<Unit> {
-                    delay(5.seconds)
+                    delay(20.seconds)
                     _state.updateLogs(_state.value.logs.drop(1))
                 }
             }
