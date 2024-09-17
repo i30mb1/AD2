@@ -1,6 +1,8 @@
 package n7.ad2.feature.camera.domain.impl
 
 import androidx.camera.core.Preview
+import androidx.camera.core.UseCase
+import androidx.camera.core.UseCaseGroup
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -54,7 +56,13 @@ class Controller(
     }
 
     fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
-        val previewerUseCase = previewer.start(surfaceProvider)
+        val previewerUseCase = previewer.start(surfaceProvider) as UseCase
+        val streamerUseCase = streamer.start() as UseCase
+        val useCaseGroup = UseCaseGroup.Builder()
+            .addUseCase(previewerUseCase)
+            .addUseCase(streamerUseCase)
+            .build()
+        cameraProvider.bind(useCaseGroup)
         runStreamer()
         lifecycle.onUiShown()
     }

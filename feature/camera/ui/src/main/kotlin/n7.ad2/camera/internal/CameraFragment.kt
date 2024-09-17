@@ -3,7 +3,6 @@ package n7.ad2.camera.internal
 import android.content.ContentValues
 import android.content.Context
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
@@ -27,11 +26,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import java.io.File
-import java.io.OutputStream
 import javax.inject.Inject
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -144,37 +140,18 @@ class CameraX(
 
     private suspend fun saveMediaToStorage(bitmap: Bitmap, name: String) {
         withContext(IO) {
-            val filename = "$name.jpg"
-            var fos: OutputStream? = null
-            context.contentResolver?.also { resolver ->
-
-                val contentValues = ContentValues().apply {
-
-                    put(MediaStore.MediaColumns.DISPLAY_NAME, filename)
-                    put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
-                    put(
-                        MediaStore.MediaColumns.RELATIVE_PATH,
-                        Environment.DIRECTORY_DCIM
-                    )
-                }
-                val imageUri: Uri? =
-                    resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
-
-                fos = imageUri?.let { with(resolver) { openOutputStream(it) } }
+            val resolver = context.contentResolver
+            val contentValues = ContentValues().apply {
+                put(MediaStore.MediaColumns.DISPLAY_NAME, "$name.jpg")
+                put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
+                put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DCIM)
             }
+            val imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+            val openOutputStream = resolver.openOutputStream(imageUri!!)!!
 
-            fos?.use {
-                val success = async(IO) {
-                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)
-                }
-                if (success.await()) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(context, "Saved Successfully", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-                }
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, openOutputStream)
 
-            }
+            Toast.makeText(context, "Saved Successfully", Toast.LENGTH_SHORT).show()
         }
     }
 }

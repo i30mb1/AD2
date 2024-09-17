@@ -75,7 +75,7 @@ interface CameraModule {
         fun providePreviewer(
             cameraProvider: CameraProvider,
         ): Previewer {
-            return PreviewerCameraX(cameraProvider)
+            return PreviewerCameraX()
         }
 
         @dagger.Provides

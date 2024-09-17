@@ -3,6 +3,7 @@ package n7.ad2.feature.camera.domain.impl.streamer
 import android.graphics.Bitmap
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
+import androidx.camera.core.UseCase
 import androidx.camera.core.resolutionselector.AspectRatioStrategy
 import androidx.camera.core.resolutionselector.ResolutionSelector
 import androidx.lifecycle.LifecycleOwner
@@ -18,7 +19,6 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.shareIn
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import n7.ad2.app.logger.Logger
 import n7.ad2.feature.camera.domain.CameraSettings
@@ -45,7 +45,7 @@ class StreamerCameraX(
             latestFps = count
             count = 0
         }
-    val imageAnalysis: ImageAnalysis = ImageAnalysis.Builder()
+    private val imageAnalysis: ImageAnalysis = ImageAnalysis.Builder()
         .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
         .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
         .setResolutionSelector(
@@ -65,6 +65,10 @@ class StreamerCameraX(
 
     override val stream: SharedFlow<StreamerState> = _stream.combine(timer) { state, _ -> state }
         .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed(SUBSCRIBE_DELAY))
+
+    override fun start(): UseCase {
+        return imageAnalysis
+    }
 
     companion object {
         val SUBSCRIBE_DELAY = 3.seconds.inWholeMilliseconds

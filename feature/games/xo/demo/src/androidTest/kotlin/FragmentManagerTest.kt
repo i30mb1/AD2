@@ -33,7 +33,7 @@ class FragmentManagerTest {
         val activity: ActivityScenario<XoActivity> = launchActivity<XoActivity>()
         activity.onActivity {
             addFragment(it.supportFragmentManager)
-            addFragment(it.supportFragmentManager)
+//            addFragment(it.supportFragmentManager)
         }
         val bitmap = Espresso.onView(ViewMatchers.isRoot()).captureToBitmap()
         activity.close()

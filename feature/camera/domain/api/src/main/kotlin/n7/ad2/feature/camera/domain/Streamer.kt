@@ -10,4 +10,5 @@ import n7.ad2.feature.camera.domain.model.StreamerState
  */
 interface Streamer {
     val stream: Flow<StreamerState>
+    fun start(): Any
 }

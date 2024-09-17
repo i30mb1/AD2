@@ -70,7 +70,7 @@ class SocketServerController(
 
     override fun stop() {
         scope.coroutineContext.cancelChildren()
-        server.serverSocket.close()
+//        server.serverSocket.close()
         assert(server.serverSocket.isClosed)
         socket = null
         _state.update { it.copy(status = ServerStatus.Closed, messages = emptyList()) }
