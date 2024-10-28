@@ -5,3 +5,9 @@ interface CameraSettings {
     val isDebug: Boolean
     val aspectRatio: Int
 }
+
+enum class AspectRation {
+    RATIO_16_9,
+    RATIO_4_3,
+}
+

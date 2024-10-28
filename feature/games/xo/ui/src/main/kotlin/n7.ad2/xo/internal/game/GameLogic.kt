@@ -25,7 +25,7 @@ import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.internal.server.controller.SocketClientController
-import n7.ad2.feature.games.xo.domain.internal.server.controller.SocketServerController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.WebsocketServerController
 import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
 import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.model.NetworkState
@@ -42,7 +42,7 @@ internal class GameLogic @Inject constructor(
     private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
 ) {
 
-    private val socketServerController = SocketServerController()
+    private val socketServerController = WebsocketServerController()
     private val socketClientController = SocketClientController()
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()

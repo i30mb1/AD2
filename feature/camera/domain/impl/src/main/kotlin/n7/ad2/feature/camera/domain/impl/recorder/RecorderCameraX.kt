@@ -1,8 +1,6 @@
 package n7.ad2.feature.camera.domain.impl.recorder
 
 import android.content.Context
-import android.util.Range
-import androidx.camera.core.MirrorMode
 import androidx.camera.core.UseCase
 import androidx.camera.video.FileOutputOptions
 import androidx.camera.video.Recording
@@ -60,9 +58,9 @@ class RecorderCameraX(
     }
     private val videoCapture: VideoCapture<VideoRecorder> by lazy {
         VideoCapture.Builder(recorder)
-            .setVideoStabilizationEnabled(true)
-            .setMirrorMode(MirrorMode.MIRROR_MODE_ON_FRONT_ONLY)
-            .setTargetFrameRate(Range.create(15, 15))
+//            .setVideoStabilizationEnabled(true)
+//            .setMirrorMode(MirrorMode.MIRROR_MODE_ON_FRONT_ONLY)
+//            .setTargetFrameRate(Range.create(15, 15))
             .build()
     }
     private var activeRecording: Recording? = null

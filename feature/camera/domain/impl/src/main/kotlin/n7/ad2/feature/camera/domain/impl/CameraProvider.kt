@@ -2,6 +2,9 @@ package n7.ad2.feature.camera.domain.impl
 
 import android.annotation.SuppressLint
 import android.content.Context
+import androidx.camera.core.Camera
+import androidx.camera.core.CameraInfo
+import androidx.camera.core.CameraSelector
 import androidx.camera.core.UseCaseGroup
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.lifecycle.LifecycleOwner
@@ -13,18 +16,23 @@ class CameraProvider(
     private val lifecycle: LifecycleOwner,
 ) {
 
-    private val camera by lazy {
+    private val camera: ProcessCameraProvider by lazy {
+// настройки камеры
+//        ProcessCameraProvider.configureInstance(
+//                CameraXConfig.Builder()
+//                    .setCameraOpenRetryMaxTimeoutInMillisWhileResuming(1000)
+//                    .build()
+//            )
+//        ProcessCameraProvider.awaitInstance(context)
         ProcessCameraProvider.getInstance(context).get()
     }
 
     @SuppressLint("RestrictedApi")
     fun bind(useCases: UseCaseGroup) {
-        val camera = camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCases)
-//        val config = CameraXConfig.Builder()
-//            .setCameraOpenRetryMaxTimeoutInMillisWhileResuming(1000)
-//            .build()
-//
-//        ProcessCameraProvider.configureInstance(config)
+        val cameraInfo: CameraInfo = camera.getCameraInfo(CameraSelector.DEFAULT_BACK_CAMERA)
+        val camera: Camera = camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCases)
+        camera.cameraControl
+
     }
 
     /**

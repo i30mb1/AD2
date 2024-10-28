@@ -17,6 +17,7 @@ import androidx.camera.core.ImageProxy
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -27,11 +28,9 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import java.io.File
 import javax.inject.Inject
-import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
@@ -127,7 +126,6 @@ class CameraX(
                 owner.lifecycleScope.launch {
                     saveMediaToStorage(
                         image.toBitmap(),
-                        System.currentTimeMillis().toString()
                     )
                 }
             }
@@ -138,20 +136,54 @@ class CameraX(
         })
     }
 
-    private suspend fun saveMediaToStorage(bitmap: Bitmap, name: String) {
-        withContext(IO) {
-            val resolver = context.contentResolver
-            val contentValues = ContentValues().apply {
-                put(MediaStore.MediaColumns.DISPLAY_NAME, "$name.jpg")
-                put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
-                put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DCIM)
+    private suspend fun saveMediaToStorage(bitmap: Bitmap) {
+        val option = 0
+        val photoName = "photo.jpg"
+        val resolver = context.contentResolver
+        when (option) {
+            0 -> {
+                // Saving to a File
+                val file = File(context.filesDir, photoName)
+                ImageCapture.OutputFileOptions.Builder(file).build()
             }
-            val imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
-            val openOutputStream = resolver.openOutputStream(imageUri!!)!!
 
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, openOutputStream)
+            1 -> {
+                // Saving to MediaStore
+                val contentValues = ContentValues().apply {
+                    put(MediaStore.MediaColumns.DISPLAY_NAME, photoName)
+                    put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
+                    put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES)
+                }
+                ImageCapture.OutputFileOptions.Builder(
+                    context.contentResolver,
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                    contentValues
+                ).build()
+            }
 
-            Toast.makeText(context, "Saved Successfully", Toast.LENGTH_SHORT).show()
+            2 -> {
+                // Saving to a File exposed via FileProvider URI
+                val file = File(context.filesDir, photoName)
+                val uri = FileProvider.getUriForFile(context, "com.example.fileprovider", file)
+                ImageCapture.OutputFileOptions.Builder(file).build()
+            }
+
+            3 -> {
+                // Saving to a Temporary File
+                val file = File.createTempFile("captured_image", ".jpg", context.cacheDir)
+                ImageCapture.OutputFileOptions.Builder(file).build()
+            }
         }
+        val contentValues = ContentValues().apply {
+            put(MediaStore.MediaColumns.DISPLAY_NAME, photoName)
+            put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DCIM)
+        }
+        val imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+        val openOutputStream = resolver.openOutputStream(imageUri!!)!!
+
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, openOutputStream)
+
+        Toast.makeText(context, "Saved Successfully", Toast.LENGTH_SHORT).show()
     }
 }
