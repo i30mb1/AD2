@@ -6,15 +6,15 @@ import kotlinx.coroutines.flow.Flow
 
 interface Recorder {
     val state: Flow<RecorderState>
-    suspend fun init(): Any
-    suspend fun startOnce()
-    suspend fun stop()
+    fun init(): Any
+    fun startOnce()
+    fun stop()
 }
 
 sealed interface RecorderState {
     data object Idle : RecorderState
-    class Canceled(val error: String) : RecorderState
-    class Started(val time: Duration) : RecorderState
-    class Completed(val file: File) : RecorderState
-    class Error(val error: Throwable) : RecorderState
+    data class Canceled(val error: String) : RecorderState
+    data class Started(val time: Duration) : RecorderState
+    data class Completed(val file: File) : RecorderState
+    data class Error(val error: Throwable) : RecorderState
 }

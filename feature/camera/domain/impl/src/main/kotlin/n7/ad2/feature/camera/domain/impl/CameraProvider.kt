@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import androidx.camera.core.Camera
 import androidx.camera.core.CameraInfo
-import androidx.camera.core.CameraSelector
 import androidx.camera.core.UseCaseGroup
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.lifecycle.LifecycleOwner
@@ -29,10 +28,10 @@ class CameraProvider(
 
     @SuppressLint("RestrictedApi")
     fun bind(useCases: UseCaseGroup) {
-        val cameraInfo: CameraInfo = camera.getCameraInfo(CameraSelector.DEFAULT_BACK_CAMERA)
+        val cameraInfo: CameraInfo = camera.getCameraInfo(cameraSettings.cameraSelector())
         val camera: Camera = camera.bindToLifecycle(lifecycle, cameraSettings.cameraSelector(), useCases)
         camera.cameraControl
-
+        cameraInfo.supportedFrameRateRanges
     }
 
     /**

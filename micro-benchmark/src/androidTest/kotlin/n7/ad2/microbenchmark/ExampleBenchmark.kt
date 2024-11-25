@@ -38,6 +38,7 @@ class ExampleBenchmark {
     fun testBitmap_CreateScaledBitmap_Native() {
         // 727 475   ns
         benchmarkRule.measureRepeated {
+            println("1")
 //            extractor.resize(bitmap, 255, 255)
         }
     }

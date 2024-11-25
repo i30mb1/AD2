@@ -1,7 +1,7 @@
 package n7.ad2.feature.camera.domain.model
 
 data class StreamerState(
-    val image: Image,
+    val image: Image?,
     val fps: Int,
 )
 

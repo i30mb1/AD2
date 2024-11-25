@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.buffer
 import kotlinx.coroutines.flow.filterIsInstance
-import kotlinx.coroutines.flow.last
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.feature.camera.domain.Previewer
@@ -44,10 +44,11 @@ class Controller(
         streamerJob = streamer.stream
             .buffer(1, BufferOverflow.DROP_OLDEST)
             .onEach { state: StreamerState ->
-                val processorState = processor.analyze(state.image)
+                val processorState = if (state.image != null) processor.analyze(state.image!!)
+                else null
                 _state.value = CameraState(
-                    processorState.image,
-                    processorState.detectedFaceNormalized,
+                    processorState?.image,
+                    processorState?.detectedFaceNormalized,
                     state.fps,
                 )
             }
@@ -56,15 +57,17 @@ class Controller(
     }
 
     fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
+        lifecycle.onUiShown()
         val previewerUseCase = previewer.start(surfaceProvider) as UseCase
         val streamerUseCase = streamer.start() as UseCase
+        val recorderUseCase = recorder.init() as UseCase
         val useCaseGroup = UseCaseGroup.Builder()
             .addUseCase(previewerUseCase)
             .addUseCase(streamerUseCase)
+            .addUseCase(recorderUseCase)
             .build()
         cameraProvider.bind(useCaseGroup)
         runStreamer()
-        lifecycle.onUiShown()
     }
 
     fun onUiUnBind() {
@@ -75,7 +78,7 @@ class Controller(
         streamerJob?.cancel()
         streamerJob = null
         recorder.startOnce()
-        return recorder.state.filterIsInstance<RecorderState.Completed>().last().file
+        return recorder.state.filterIsInstance<RecorderState.Completed>().first().file
     }
 
     fun onDestroyView() {

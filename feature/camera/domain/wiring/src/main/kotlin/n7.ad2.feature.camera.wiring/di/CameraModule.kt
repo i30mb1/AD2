@@ -1,6 +1,7 @@
 package n7.ad2.feature.camera.wiring.di
 
 import android.app.Application
+import androidx.lifecycle.lifecycleScope
 import javax.inject.Singleton
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
@@ -73,7 +74,6 @@ interface CameraModule {
         @dagger.Provides
         @Singleton
         fun providePreviewer(
-            cameraProvider: CameraProvider,
         ): Previewer {
             return PreviewerCameraX()
         }
@@ -84,8 +84,9 @@ interface CameraModule {
             context: Application,
             logger: Logger,
             dispatcher: DispatchersProvider,
+            lifecycleOwner: CameraLifecycle,
         ): Recorder {
-            return RecorderCameraX(context, logger, dispatcher)
+            return RecorderCameraX(context, logger, dispatcher, lifecycleOwner.lifecycleScope)
         }
 
         @dagger.Provides
@@ -94,11 +95,13 @@ interface CameraModule {
             cameraSettings: CameraSettings,
             lifecycle: CameraLifecycle,
             logger: Logger,
+            dispatcher: DispatchersProvider,
         ): Streamer {
             return StreamerCameraX(
-                    cameraSettings,
-                    lifecycle,
-                    logger,
+                cameraSettings,
+                dispatcher,
+                lifecycle,
+                logger,
             )
         }
     }

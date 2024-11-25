@@ -96,18 +96,18 @@ internal fun Camera(
                 Text(
                     text = "Streamer FPS: ",
                     style = AppTheme.style.H3,
-                    color = AppTheme.color.textSecondaryColor,
+                    color = AppTheme.color.primary,
                 )
                 Text(
                     text = state.streamerFps,
                     style = AppTheme.style.H3,
-                    color = AppTheme.color.textSecondaryColor,
+                    color = AppTheme.color.primary,
                 )
             }
             Text(
                 text = state.timeoutForRecording.toString(DurationUnit.MILLISECONDS),
                 style = AppTheme.style.H3,
-                color = AppTheme.color.textSecondaryColor,
+                color = AppTheme.color.primary,
             )
             Icon(
                 painter = painterResource(

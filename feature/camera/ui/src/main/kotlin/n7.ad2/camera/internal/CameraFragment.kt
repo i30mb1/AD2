@@ -100,7 +100,7 @@ internal class CameraFragment(
     }
 
     override fun onPause() {
-        viewModel.onUiUnBind()
+//        viewModel.onUiUnBind()
         super.onPause()
     }
 

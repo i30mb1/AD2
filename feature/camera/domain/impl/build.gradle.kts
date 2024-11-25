@@ -5,12 +5,12 @@ plugins {
 
 dependencies {
     api(projects.feature.camera.domain.api)
+    api(projects.core.logger.appLogger)
+    api(projects.core.coroutines)
+    api(libs.bundles.camera)
 
-    implementation(projects.core.logger.appLogger)
     implementation(projects.core.commonJvm)
-    implementation(projects.core.coroutines)
 
-    implementation(libs.bundles.camera)
     implementation(libs.bundles.kotlinDL)
     implementation(libs.activity)
     implementation(libs.coroutines)

@@ -22,14 +22,15 @@ import androidx.camera.video.VideoRecordEvent.Finalize.VideoRecordError
 import androidx.camera.video.VideoRecordEvent.Start
 import androidx.camera.video.VideoRecordEvent.Status
 import java.io.File
-import kotlin.coroutines.Continuation
-import kotlin.coroutines.suspendCoroutine
 import kotlin.time.Duration.Companion.nanoseconds
 import kotlin.time.Duration.Companion.seconds
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.launch
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.camera.domain.Recorder
@@ -40,10 +41,12 @@ class RecorderCameraX(
     private val context: Context,
     private val logger: Logger,
     private val dispatcher: DispatchersProvider,
+    private val scope: CoroutineScope,
 ) : Recorder {
 
     private val _state: MutableStateFlow<RecorderState> = MutableStateFlow(RecorderState.Idle)
     override val state: StateFlow<RecorderState> = _state.asStateFlow()
+    private var recordingJob: Job? = null
 
     private val recorder by lazy {
         VideoRecorder.Builder()
@@ -66,13 +69,13 @@ class RecorderCameraX(
     private var activeRecording: Recording? = null
     private var isCancelled: Boolean = false
 
-    override suspend fun init(): UseCase {
+    override fun init(): UseCase {
         return videoCapture
     }
 
-    override suspend fun startOnce(): Unit = withContext(dispatcher.IO) {
-        if (activeRecording != null) return@withContext
-        suspendCoroutine { continuation: Continuation<File> ->
+    override fun startOnce() {
+        recordingJob = scope.launch(dispatcher.IO) {
+            if (activeRecording != null) return@launch
             val folder = File(context.filesDir, "temp")
             folder.mkdir()
             val file = File(folder, "CameraX-recording.mp4")
@@ -85,7 +88,7 @@ class RecorderCameraX(
 
             activeRecording = videoCapture.output
                 .prepareRecording(context, fileOutputOption)
-                .start(context.mainExecutor) startRecording@{ event: VideoRecordEvent ->
+                .start(dispatcher.Default.asExecutor()) { event: VideoRecordEvent ->
                     when (event) {
                         is Start -> {
                             isCancelled = false
@@ -93,7 +96,7 @@ class RecorderCameraX(
                         }
 
                         is Status -> {
-                            val sec: Long = event.recordingStats.recordedDurationNanos + 1
+                            val sec = event.recordingStats.recordedDurationNanos + 1
                             _state.tryEmit(RecorderState.Started(sec.nanoseconds))
                         }
 
@@ -140,7 +143,8 @@ class RecorderCameraX(
         return "Unknown($error)"
     }
 
-    override suspend fun stop() {
+    override fun stop() {
+        recordingJob?.cancel()
         activeRecording?.stop()
         activeRecording = null
     }
