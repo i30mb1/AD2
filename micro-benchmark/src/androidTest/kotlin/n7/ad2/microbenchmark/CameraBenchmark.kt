@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.benchmark.junit4.BenchmarkRule
 import androidx.benchmark.junit4.measureRepeated
 import androidx.camera.core.UseCaseGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.testing.TestLifecycleOwner
 import androidx.test.annotation.UiThreadTest
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -31,7 +32,7 @@ class CameraBenchmark {
     private val lifecycle = TestLifecycleOwner()
     private val context: Context = InstrumentationRegistry.getInstrumentation().context
     private val recorder by lazy {
-        RecorderCameraX(context, Logger(), DispatchersProvider())
+        RecorderCameraX(context, Logger(), DispatchersProvider(), lifecycle.lifecycleScope)
     }
     private val provider = CameraProvider(context, CameraSettingsImpl(isFrontCamera = true), lifecycle)
 

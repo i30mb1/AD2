@@ -17,7 +17,6 @@ dependencies {
     androidTestImplementation(libs.test.coroutines)
     androidTestImplementation(libs.test.lifecycle)
     androidTestImplementation(libs.test.rules)
-    androidTestImplementation(libs.test.coroutines.debug)
 
     androidTestImplementation(projects.feature.camera.domain.impl)
 }

@@ -12,6 +12,7 @@ import kotlinx.coroutines.plus
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import n7.ad2.app.logger.Logger
+import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
 import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
@@ -30,7 +31,7 @@ import org.robolectric.shadow.api.Shadow
 class StreamerCameraXTest {
 
     private val lifecycle: LifecycleOwner = TestLifecycleOwner()
-    private val streamer: Streamer = StreamerCameraX(CameraSettingsImpl(), lifecycle, Logger())
+    private val streamer: Streamer = StreamerCameraX(CameraSettingsImpl(), DispatchersProvider(), lifecycle, Logger())
 
     @Test
     fun `WHEN subscribe THEN call bind`() = runTest {
