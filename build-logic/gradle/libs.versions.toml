@@ -15,6 +15,7 @@ cameraX = "1.5.0-alpha02"
 kotlinDL = "0.5.2"
 benchmark = "1.2.2"
 fragment = "1.7.0"
+litert = "1.0.1"
 
 [libraries]
 room = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -27,6 +28,10 @@ kotlin-dl-onnx = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-onnx", ve
 kotlin-dl-visualization = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-visualization", version.ref = "kotlinDL" }
 kotlin-dl-tensorflow = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow", version.ref = "kotlinDL" }
 kotlin-dl-api = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-api", version.ref = "kotlinDL" }
+
+litert = { group = "com.google.ai.edge.litert", name = "litert", version.ref = "litert" }
+litert-support = { group = "com.google.ai.edge.litert", name = "litert-support", version.ref = "litert" }
+litert-metadata = { group = "com.google.ai.edge.litert", name = "litert-metadata", version.ref = "litert" }
 
 detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 detektApi = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "detekt" }

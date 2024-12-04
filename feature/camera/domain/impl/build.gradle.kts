@@ -16,6 +16,9 @@ dependencies {
     implementation(libs.coroutines)
     implementation(libs.lifecycle.common)
     implementation(libs.lifecycleRuntime)
+    implementation(libs.litert)
+    implementation(libs.litert.support)
+    implementation(libs.litert.metadata)
 
     testImplementation(libs.test.mockk)
     testImplementation(libs.test.truth)
