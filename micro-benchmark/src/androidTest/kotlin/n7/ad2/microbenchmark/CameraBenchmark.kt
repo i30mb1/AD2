@@ -1,6 +1,8 @@
 package n7.ad2.microbenchmark
 
 import android.content.Context
+import androidx.benchmark.BlackHole
+import androidx.benchmark.ExperimentalBlackHoleApi
 import androidx.benchmark.junit4.BenchmarkRule
 import androidx.benchmark.junit4.measureRepeated
 import androidx.camera.core.UseCaseGroup
@@ -36,6 +38,7 @@ class CameraBenchmark {
     }
     private val provider = CameraProvider(context, CameraSettingsImpl(isFrontCamera = true), lifecycle)
 
+    @OptIn(ExperimentalBlackHoleApi::class)
     @Test
     @UiThreadTest
     fun testCamera() = runTest {
@@ -52,7 +55,7 @@ class CameraBenchmark {
                     .filterIsInstance<RecorderState.Completed>()
                     .last()
                     .file
-                file.isFile
+                BlackHole.consume(file)
             }
         }
     }

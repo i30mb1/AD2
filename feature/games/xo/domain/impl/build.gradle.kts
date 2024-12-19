@@ -17,6 +17,4 @@ dependencies {
     testImplementation(libs.test.coroutines.debug)
     testImplementation(libs.test.mockk)
     testImplementation(libs.test.truth.jvm)
-
-    testFixturesImplementation(libs.coroutines)
 }

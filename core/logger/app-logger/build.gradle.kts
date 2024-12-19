@@ -10,6 +10,4 @@ dependencies {
     testImplementation(libs.test.coroutines)
     testImplementation(libs.test.coroutines.debug)
     testImplementation(libs.test.truth.jvm)
-
-    testFixturesImplementation(libs.coroutines)
 }

@@ -31,7 +31,7 @@ internal class BenchmarkBuffer {
     private val floatBufferDirectArray = FloatBufferDirect()
 
     @Test
-    fun benchByteBufferDirect() {
+    fun benchByteBufferDirect() { // BlackHole
         benchmarkRule.measureRepeated {
             byteBufferDirect.get(bitmap)
         }
