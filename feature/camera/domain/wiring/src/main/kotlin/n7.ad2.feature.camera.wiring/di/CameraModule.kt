@@ -50,14 +50,18 @@ interface CameraModule {
             recorder: Recorder,
             cameraProvider: CameraProvider,
             lifecycleOwner: CameraLifecycle,
+            dispatcher: DispatchersProvider,
+            logger: Logger,
         ): Controller {
             return Controller(
                 previewer,
                 processor,
                 recorder,
                 streamer,
+                logger,
                 lifecycleOwner,
                 cameraProvider,
+                dispatcher,
             )
         }
 
@@ -67,8 +71,9 @@ interface CameraModule {
             application: Application,
             cameraSettings: CameraSettings,
             lifecycleOwner: CameraLifecycle,
+            logger: Logger,
         ): CameraProvider {
-            return CameraProvider(application, cameraSettings, lifecycleOwner)
+            return CameraProvider(application, cameraSettings, lifecycleOwner, logger)
         }
 
         @dagger.Provides

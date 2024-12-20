@@ -83,6 +83,7 @@ internal fun Camera(
                             state.detectedRect.xMax - state.detectedRect.xMin,
                             state.detectedRect.yMax - state.detectedRect.yMin,
                         ),
+                        alpha = 0.5f,
                     )
                 }
             },

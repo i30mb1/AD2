@@ -1,4 +1,3 @@
-
 import androidx.camera.core.ImageAnalysis
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.testing.TestLifecycleOwner
@@ -43,7 +42,8 @@ class StreamerCameraXTest {
     }
 
     private fun getImageAnalysis(streamer: Streamer): ImageAnalysisShadow {
-        // TODO do not work with `by lazy` ReflectionHelpers.getField<ImageAnalysis>(streamer,"imageAnalysis")
+        // better use ReflectionHelpers.getField<ImageAnalysis>(streamer,"imageAnalysis")
+        // but it is not working when we need to extract `by lazy`
         val origin: KCallable<*> = streamer.javaClass.kotlin.members.find { it.name == "imageAnalysis" }!!
         origin.isAccessible = true
         return Shadow.extract(origin.call(streamer) as ImageAnalysis)

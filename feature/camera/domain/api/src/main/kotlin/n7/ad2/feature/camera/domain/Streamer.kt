@@ -12,3 +12,8 @@ interface Streamer {
     val stream: Flow<StreamerState>
     fun start(): Any
 }
+
+data class StreamerResolution(
+    val height: Int,
+    val width: Int,
+)
