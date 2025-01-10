@@ -15,5 +15,8 @@ tasks.withType<KotlinJvmCompile>().configureEach {
             "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
         )
         jvmTarget.set(JvmTarget.JVM_17)
+        if (System.getProperty("idea.active") == "true") {
+            freeCompilerArgs.add("-Xdebug")
+        }
     }
 }
