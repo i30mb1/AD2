@@ -6,6 +6,7 @@ import java.io.File
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 import n7.ad2.android.OneShotValue
+import n7.ad2.app.logger.Logger
 
 internal data class CameraStateUI(
     val name: String = "",
@@ -20,6 +21,7 @@ internal data class CameraStateUI(
     val scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FIT_CENTER,
     val viewWidth: Int = 0,
     val viewHeight: Int = 0,
+    val logger: Logger? = null,
 )
 
 internal interface DetectedRect {

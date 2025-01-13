@@ -1,5 +1,6 @@
 package n7.ad2.feature.camera.domain.impl
 
+import android.util.Log
 import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.channels.ticker
 import kotlinx.coroutines.flow.consumeAsFlow
@@ -8,14 +9,17 @@ import n7.ad2.app.logger.Logger
 
 class FPSTimer(
     private val message: String,
-    private val logger: Logger,
+    private val logger: Logger?,
 ) {
     var count = 0
     var latestFps = 0
     val timer = ticker(1.seconds.inWholeMilliseconds)
         .consumeAsFlow()
         .onEach {
-            logger.log("$message: $count")
+            logger?.log("$message: $count")
+            if (logger == null) {
+                Log.d("N7", "$message: $count")
+            }
             latestFps = count
             count = 0
         }

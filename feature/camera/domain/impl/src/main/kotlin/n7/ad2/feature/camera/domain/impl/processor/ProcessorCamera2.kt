@@ -42,7 +42,7 @@ class ProcessorCamera2(
         if (faceDetectMode.contains(CameraCharacteristics.STATISTICS_FACE_DETECT_MODE_OFF)) error("Device do not support face detect")
 
         // отслеживать расширения для камеры
-//        ExtensionsManager.getInstanceAsync(context, camera).get()
+        // ExtensionsManager.getInstanceAsync(context, camera).get()
         // новое апи для получени инфы вместо получения инфы во время bindToLifecycle камеры
         val cameraInfo2: CameraInfo = camera.getCameraInfo(cameraSettings.cameraSelector())
 

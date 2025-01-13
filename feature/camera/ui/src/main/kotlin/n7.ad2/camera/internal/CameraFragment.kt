@@ -61,8 +61,8 @@ internal class CameraFragment(
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return content {
             val state by viewModel.state.collectAsState()
-            val file = state.recordedFile?.get()
-            if (file != null) openVideo(file)
+//            val file = state.recordedFile?.get()
+//            if (file != null) openVideo(file)
             Camera(state, ::handleEvent)
         }
     }

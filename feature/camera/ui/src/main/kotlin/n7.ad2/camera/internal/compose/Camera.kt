@@ -16,6 +16,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -30,8 +33,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import kotlin.time.DurationUnit
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.flow.launchIn
 import n7.ad2.camera.internal.model.CameraStateUI
 import n7.ad2.camera.internal.model.DetectedRect
+import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.ui.R
 import n7.ad2.ui.compose.AppTheme
 
@@ -53,6 +59,7 @@ internal fun Camera(
     modifier: Modifier = Modifier,
 ) {
     Box {
+        val fps by remember { mutableStateOf(FPSTimer("Compose fps:", null)) }
         val context = LocalContext.current
         val lifecycle = LocalLifecycleOwner.current
         val previewScaleType: PreviewView.ScaleType = PreviewView.ScaleType.FILL_CENTER
@@ -61,8 +68,10 @@ internal fun Camera(
                 scaleType = previewScaleType
                 layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
                 event(CameraEvent.PreviewReady(surfaceProvider, previewScaleType))
+                fps.timer.launchIn(GlobalScope)
             }
         })
+
         Canvas(
             modifier = Modifier
                 .fillMaxSize()
@@ -76,6 +85,7 @@ internal fun Camera(
                 },
             onDraw = {
                 if (state.detectedRect is DetectedRect.Face) {
+                    fps.count++
                     drawRect(
                         color = Color.Blue,
                         topLeft = Offset(state.detectedRect.xMin, state.detectedRect.yMin),
