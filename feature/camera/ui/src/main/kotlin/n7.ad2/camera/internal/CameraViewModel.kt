@@ -14,28 +14,23 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.android.OneShotValue
-import n7.ad2.app.logger.Logger
 import n7.ad2.camera.internal.model.CameraStateUI
 import n7.ad2.camera.internal.model.setFace
 import n7.ad2.camera.internal.model.setPreviewSizes
 import n7.ad2.camera.internal.model.setScaleType
 import n7.ad2.camera.internal.model.updateDelayForRecording
 import n7.ad2.feature.camera.domain.impl.Controller
-import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.domain.model.CameraState
 
 internal class CameraViewModel @AssistedInject constructor(
     private val controller: Controller,
     private val recordingDelay: RecordingDelay,
-    private val logger: Logger,
 ) : ViewModel() {
 
-    private val timer = FPSTimer("ViewModel fps:", logger)
     private val _state: MutableStateFlow<CameraStateUI> = MutableStateFlow(CameraStateUI())
     val state: StateFlow<CameraStateUI> = _state.asStateFlow()
 
     init {
-        timer.timer.launchIn(viewModelScope)
         controller.state
             .onEach { cameraState: CameraState ->
                 considerAboutRecording(cameraState)
@@ -49,7 +44,6 @@ internal class CameraViewModel @AssistedInject constructor(
                         streamerFps = cameraState.streamerFps.toString(),
                     )
                 }
-                timer.count++
             }
             .launchIn(viewModelScope)
         recordingDelay.state

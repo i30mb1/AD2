@@ -14,8 +14,10 @@ import n7.ad2.feature.camera.domain.impl.CameraLifecycle
 import n7.ad2.feature.camera.domain.impl.CameraProvider
 import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
 import n7.ad2.feature.camera.domain.impl.Controller
+import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.domain.impl.preview.PreviewerCameraX
 import n7.ad2.feature.camera.domain.impl.processor.ProcessorKotlinDL
+import n7.ad2.feature.camera.domain.impl.processor.ProcessorMetrics
 import n7.ad2.feature.camera.domain.impl.recorder.RecorderCameraX
 import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
 
@@ -25,8 +27,11 @@ interface CameraModule {
     companion object {
         @dagger.Provides
         @Singleton
-        fun provideProcessing(application: Application): Processor {
-            return ProcessorKotlinDL(application)
+        fun provideProcessing(application: Application, fpsTimer: FPSTimer): Processor {
+            return ProcessorMetrics(
+                ProcessorKotlinDL(application),
+                fpsTimer,
+            )
         }
 
         @dagger.Provides
@@ -42,6 +47,12 @@ interface CameraModule {
         }
 
         @dagger.Provides
+        @Singleton
+        fun provideFPSTimer(logger: Logger): FPSTimer {
+            return FPSTimer(logger)
+        }
+
+        @dagger.Provides
         @dagger.Reusable
         fun provideController(
             previewer: Previewer,
@@ -52,16 +63,17 @@ interface CameraModule {
             lifecycleOwner: CameraLifecycle,
             dispatcher: DispatchersProvider,
             logger: Logger,
+            fpsTimer: FPSTimer,
         ): Controller {
             return Controller(
                 previewer,
                 processor,
                 recorder,
                 streamer,
-                logger,
                 lifecycleOwner,
                 cameraProvider,
                 dispatcher,
+                fpsTimer,
             )
         }
 
@@ -99,14 +111,14 @@ interface CameraModule {
         fun provideStreamer(
             cameraSettings: CameraSettings,
             lifecycle: CameraLifecycle,
-            logger: Logger,
+            fpsTimer: FPSTimer,
             dispatcher: DispatchersProvider,
         ): Streamer {
             return StreamerCameraX(
                 cameraSettings,
                 dispatcher,
                 lifecycle,
-                logger,
+                fpsTimer,
             )
         }
     }

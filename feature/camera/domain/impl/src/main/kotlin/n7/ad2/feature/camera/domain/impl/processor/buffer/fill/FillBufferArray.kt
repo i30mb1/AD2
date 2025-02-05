@@ -3,6 +3,9 @@ package n7.ad2.feature.camera.domain.impl.processor.buffer.fill
 import android.graphics.Color
 import java.nio.FloatBuffer
 
+/**
+ * заполняем буффер используя промежуточные коллекции RRRGGGBBB
+ */
 public class FillBufferArray : FillBuffer {
 
     private companion object {

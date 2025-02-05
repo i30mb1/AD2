@@ -10,13 +10,11 @@ import java.io.File
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.camera.domain.Previewer
 import n7.ad2.feature.camera.domain.Processor
@@ -31,20 +29,20 @@ class Controller(
     private val processor: Processor,
     private val recorder: Recorder,
     private val streamer: Streamer,
-    private val logger: Logger,
     private val lifecycle: CameraLifecycle,
     private val cameraProvider: CameraProvider,
     private val dispatchersProvider: DispatchersProvider,
+    private val fpsTimer: FPSTimer,
 ) {
 
-    private val timer = FPSTimer("Controller fps:", logger)
     private val _state: MutableStateFlow<CameraState> = MutableStateFlow(CameraState())
-    val state: Flow<CameraState> = _state.combine(timer.timer) { state, _ -> state }
+    val state: Flow<CameraState> = _state
 
     private var streamerJob: Job? = null
 
     private fun runStreamer() {
         if (streamerJob != null) return
+        fpsTimer.timer.launchIn(lifecycle.lifecycleScope)
         streamerJob = streamer.stream
             .onEach { state: StreamerState ->
                 val processorState = processor.analyze(state.image)
@@ -53,7 +51,6 @@ class Controller(
                     processorState.detectedFaceNormalized,
                     state.fps,
                 )
-                timer.count++
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
             .flowOn(dispatchersProvider.IO)

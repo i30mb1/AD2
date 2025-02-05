@@ -15,10 +15,8 @@ import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.shareIn
-import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.camera.domain.CameraAspectRatio
 import n7.ad2.feature.camera.domain.CameraSettings
@@ -33,10 +31,9 @@ class StreamerCameraX(
     private val settings: CameraSettings,
     dispatchers: DispatchersProvider,
     lifecycle: LifecycleOwner,
-    logger: Logger,
+    private val fps: FPSTimer,
 ) : Streamer {
 
-    private val timer = FPSTimer("Streamer fps:", logger)
     private val dispatcher = dispatchers.Default.limitedParallelism(1).asExecutor()
     private val streamerResolution: MutableSet<StreamerResolution> = mutableSetOf()
     private val _stream = MutableSharedFlow<StreamerState>(0, 1, BufferOverflow.DROP_OLDEST)
@@ -48,7 +45,8 @@ class StreamerCameraX(
             ResolutionSelector.Builder()
                 .setResolutionFilter { sizes: MutableList<Size>, _ ->
                     sizes.sortedBy { size ->
-                        streamerResolution.add(StreamerResolution(size.height, size.width))
+                        // добавляем все возможные разрешения камеры
+                        streamerResolution.add(StreamerResolution(size.width, size.height))
                         size.height * size.width
                     }
                 }
@@ -65,18 +63,19 @@ class StreamerCameraX(
         )
         .build()
 
-    override val stream: SharedFlow<StreamerState> = _stream.combine(timer.timer) { state, _ -> state }
+    override val stream: SharedFlow<StreamerState> = _stream
         .onCompletion { imageAnalysis.clearAnalyzer() }
         .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed(SUBSCRIBE_DELAY))
 
     override fun start(): UseCase {
-        imageAnalysis.setAnalyzer(dispatcher) { image: ImageProxy ->
-            val result = image.toBitmap()
-            val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
-            _stream.tryEmit(StreamerState(Image(result, metadata), timer.latestFps))
-            image.close()
-            timer.count++
-        }
+        imageAnalysis
+            .setAnalyzer(dispatcher) { image: ImageProxy ->
+                val result = image.toBitmap()
+                val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
+                _stream.tryEmit(StreamerState(Image(result, metadata), fps.counter.streamer))
+                image.close()
+                fps.counter.streamer++
+            }
         return imageAnalysis
     }
 

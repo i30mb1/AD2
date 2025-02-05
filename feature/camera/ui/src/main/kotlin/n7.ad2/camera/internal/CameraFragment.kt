@@ -38,6 +38,7 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.camera.internal.compose.Camera
 import n7.ad2.camera.internal.compose.CameraEvent
 import n7.ad2.camera.internal.di.DaggerCameraComponent
+import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.ui.content
 
 internal class CameraFragment(
@@ -46,6 +47,7 @@ internal class CameraFragment(
 
     @Inject lateinit var cameraViewModelFactory: CameraViewModel.Factory
     @Inject lateinit var logger: Logger
+    @Inject lateinit var fpsTimer: FPSTimer
 
     private val viewModel: CameraViewModel by viewModels {
         viewModelFactory {
@@ -63,7 +65,7 @@ internal class CameraFragment(
             val state by viewModel.state.collectAsState()
 //            val file = state.recordedFile?.get()
 //            if (file != null) openVideo(file)
-            Camera(state, ::handleEvent)
+            Camera(state, fpsTimer, ::handleEvent)
         }
     }
 

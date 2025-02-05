@@ -14,6 +14,6 @@ interface Streamer {
 }
 
 data class StreamerResolution(
-    val height: Int,
     val width: Int,
+    val height: Int,
 )

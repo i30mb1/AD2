@@ -12,7 +12,7 @@ android {
     androidComponents {
         beforeVariants { variantBuilder ->
             if (variantBuilder.buildType == "debug") {
-                if (project.name == "demo" || project.name == "ui") return@beforeVariants
+                if (project.name == "demo" || project.name == "ui" || project.name == "impl") return@beforeVariants
                 variantBuilder.enable = false
             }
         }
