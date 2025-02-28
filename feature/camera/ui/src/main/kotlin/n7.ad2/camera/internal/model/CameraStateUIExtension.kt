@@ -35,7 +35,8 @@ internal fun MutableStateFlow<CameraStateUI>.setFace(
             PreviewView.ScaleType.FILL_START, PreviewView.ScaleType.FIT_START -> Pair(0f, 0f)
 
             PreviewView.ScaleType.FILL_END, PreviewView.ScaleType.FIT_END -> Pair(
-                state.viewWidth - previewImageWidth, state.viewHeight - previewImageHeight
+                state.viewWidth - previewImageWidth,
+                state.viewHeight - previewImageHeight,
             )
 
             else -> Pair(

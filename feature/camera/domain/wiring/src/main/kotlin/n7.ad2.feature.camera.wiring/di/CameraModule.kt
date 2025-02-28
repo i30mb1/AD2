@@ -16,7 +16,7 @@ import n7.ad2.feature.camera.domain.impl.CameraSettingsImpl
 import n7.ad2.feature.camera.domain.impl.Controller
 import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.domain.impl.preview.PreviewerCameraX
-import n7.ad2.feature.camera.domain.impl.processor.ProcessorKotlinDL
+import n7.ad2.feature.camera.domain.impl.processor.ProcessorBlazeFace
 import n7.ad2.feature.camera.domain.impl.processor.ProcessorMetrics
 import n7.ad2.feature.camera.domain.impl.recorder.RecorderCameraX
 import n7.ad2.feature.camera.domain.impl.streamer.StreamerCameraX
@@ -29,7 +29,7 @@ interface CameraModule {
         @Singleton
         fun provideProcessing(application: Application, fpsTimer: FPSTimer): Processor {
             return ProcessorMetrics(
-                ProcessorKotlinDL(application),
+                ProcessorBlazeFace(application),
                 fpsTimer,
             )
         }

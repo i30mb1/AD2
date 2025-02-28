@@ -29,7 +29,7 @@ public class GetMLModelChannel(
     private val context: Context,
 ) : GetMLModel {
     override fun get(): Interpreter {
-        val input = context.assets.open("faceshot/bestshot-1.0.0.tflite")
+        val input = context.assets.open("blaze_face.tflite")
         val buffer = ByteBuffer.allocateDirect(input.available())
         buffer.order(ByteOrder.nativeOrder())
         Channels.newChannel(input).read(buffer)
@@ -43,7 +43,7 @@ public class GetMLModelReadBytes(
     private val context: Context,
 ) : GetMLModel {
     override fun get(): Interpreter {
-        val input = context.assets.open("faceshot/bestshot-1.0.0.tflite")
+        val input = context.assets.open("blaze_face.tflite")
         val buffer = ByteBuffer.allocateDirect(input.available())
         buffer.order(ByteOrder.nativeOrder())
         buffer.put(input.readBytes())
@@ -56,7 +56,7 @@ public class GetMLModelReadBytes2(
     private val context: Context,
 ) : GetMLModel {
     override fun get(): Interpreter {
-        val fileDescriptor = context.assets.openFd("faceshot/bestshot-1.0.0.tflite")
+        val fileDescriptor = context.assets.openFd("blaze_face.tflite")
         val inputStream = FileInputStream(fileDescriptor.fileDescriptor)
         val fileChannel = inputStream.channel
         val startOffset = fileDescriptor.startOffset
@@ -71,9 +71,9 @@ public class GetMLModelReadBytes2(
 //    private val context: Context,
 //) : GetMLModel {
 //    override fun get(): Interpreter {
-//        val model: MappedByteBuffer = FileUtil.loadMappedFile(context, "faceshot/bestshot-1.0.0.tflite")
+//        val model: MappedByteBuffer = FileUtil.loadMappedFile(context, "blaze_face.tflite")
 //        // еще такое есть
-////        val model2: Model = Model.createModel(context, "faceshot/bestshot-1.0.0.tflite")
+////        val model2: Model = Model.createModel(context, "blaze_face.tflite")
 //        val interpreter = Interpreter(model)
 //        return interpreter
 //    }
