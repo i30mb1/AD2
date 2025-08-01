@@ -52,7 +52,7 @@ internal fun GameScreen(
                 ) {
                     when (message) {
                         is Message.Info -> Text(
-                            text = message.message,
+                            text = message.text,
                             style = AppTheme.style.info,
                             color = AppTheme.color.textColor,
                             modifier = Modifier
@@ -64,7 +64,7 @@ internal fun GameScreen(
                         )
 
                         is Message.Me -> Text(
-                            text = message.message,
+                            text = message.text,
                             style = AppTheme.style.body.Bold,
                             color = AppTheme.color.textColor,
                             modifier = Modifier
@@ -76,7 +76,7 @@ internal fun GameScreen(
                         )
 
                         is Message.Other -> Text(
-                            text = message.message,
+                            text = message.text,
                             style = AppTheme.style.body.Bold,
                             color = AppTheme.color.textColor,
                             modifier = Modifier

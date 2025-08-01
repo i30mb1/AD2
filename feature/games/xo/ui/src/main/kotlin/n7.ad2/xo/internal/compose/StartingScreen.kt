@@ -27,6 +27,7 @@ import androidx.compose.material.Button
 import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -75,12 +76,21 @@ internal fun StaringScreen(
             Box(modifier = Modifier.fillMaxHeight(0.3f))
             val name = rememberTextFieldState(state.deviceName)
             val ip = rememberTextFieldState(state.deviceIP)
+
+            LaunchedEffect(state) {
+                if (state.deviceIP != ip.text.toString()) {
+                    ip.edit { replace(0, ip.text.length, state.deviceIP) }
+                }
+                if (state.deviceName != name.text.toString()) {
+                    name.edit { replace(0, name.text.length, state.deviceName) }
+                }
+            }
             EditTextWithButton(
                 name,
                 "Start",
                 state.isButtonStartEnabled,
             ) { event(XoScreenEvent.StartServer(name.text.toString())) }
-            if (false) EditTextWithButton(
+            if (true) EditTextWithButton(
                 ip,
                 "Connect",
                 true,

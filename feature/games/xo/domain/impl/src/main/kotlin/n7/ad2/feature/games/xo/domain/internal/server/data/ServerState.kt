@@ -13,8 +13,8 @@ sealed interface ServerStatus {
     data object Closed : ServerStatus
 }
 
-sealed class Message(val message: String) {
-    class Me(message: String) : Message(message)
-    class Other(message: String) : Message(message)
-    class Info(message: String) : Message(message)
+sealed class Message(val text: String) {
+    class Me(text: String) : Message(text)
+    class Other(text: String) : Message(text)
+    class Info(text: String) : Message(text)
 }

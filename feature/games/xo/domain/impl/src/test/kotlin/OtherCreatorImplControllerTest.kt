@@ -46,7 +46,12 @@ internal class OtherCreatorImplControllerTest(
         val message = "x:0-0:1"
         client.send(message)
 
-        val clientMessageOnServer = server.state.filter { it.messages.isNotEmpty() }.first().messages.first().message
+        val clientMessageOnServer = server.state
+            .filter { it.messages.isNotEmpty() }
+            .first()
+            .messages
+            .first()
+            .text
         Truth.assertThat(clientMessageOnServer).isEqualTo(message)
     }
 
@@ -67,7 +72,7 @@ internal class OtherCreatorImplControllerTest(
         val message = "x:0-0:1"
         server.send(message)
 
-        val serverMessageOnClient = client.state.filter { it.messages.isNotEmpty() }.first().messages.first().message
+        val serverMessageOnClient = client.state.filter { it.messages.isNotEmpty() }.first().messages.first().text
         Truth.assertThat(serverMessageOnClient).isEqualTo(message)
     }
 

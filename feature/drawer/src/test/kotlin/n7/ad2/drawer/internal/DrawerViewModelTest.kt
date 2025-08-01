@@ -7,6 +7,7 @@ import com.google.common.truth.Truth
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
+import n7.ad2.apppreference.testFixtures.R
 import n7.ad2.coroutines.CoroutineTestRule
 import n7.ad2.drawer.internal.data.remote.SettingsApi
 import n7.ad2.drawer.internal.data.remote.model.Menu
@@ -27,6 +28,7 @@ internal class DrawerViewModelTest {
 
     @Before
     fun before() {
+        R.drawable.img
         drawerViewModel = DrawerViewModel(
             GetMenuItemsUseCase(
                 ResourcesFake(),

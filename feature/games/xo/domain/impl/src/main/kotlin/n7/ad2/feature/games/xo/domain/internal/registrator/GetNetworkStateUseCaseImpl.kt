@@ -22,8 +22,9 @@ internal class GetNetworkStateUseCaseImpl(
         val networkStateCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: android.net.Network) {
                 val inetAddress = getInetAddress()
-                val ip = requireNotNull(inetAddress?.hostAddress) { "inetAddress?.hostAddress is null" }
-                trySend(NetworkState.Connected(ip))
+                if (inetAddress.isNotEmpty()) {
+                    trySend(NetworkState.Connected(inetAddress.first().hostAddress!!))
+                }
             }
 
             override fun onLost(network: android.net.Network) {
@@ -38,10 +39,8 @@ internal class GetNetworkStateUseCaseImpl(
     }
         .onStart { emit(NetworkState.Disconnected) }
 
-    private fun getInetAddress(): InetAddress? {
-        val properties = connectivityManager.getLinkProperties(connectivityManager.activeNetwork)
-        return properties?.linkAddresses
-            ?.first { adress -> adress.address.isSiteLocalAddress }
-            ?.address
+    private fun getInetAddress(): List<InetAddress> {
+        val properties = connectivityManager.getLinkProperties(connectivityManager.activeNetwork)!!
+        return properties.linkAddresses.map { it.address }
     }
 }
