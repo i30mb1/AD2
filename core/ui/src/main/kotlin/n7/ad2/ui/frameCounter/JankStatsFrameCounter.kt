@@ -16,8 +16,6 @@ class JankStatsFrameCounter(
 
     override var isJunkCallback: ((isJunk: Boolean) -> Unit)? = null
     override var fpsCallback: ((fps: Int) -> Unit)? = null
-
-    //    private var count = 0
     private var isJunk = false
     private val mainHandler by lazyUnsafe { Handler(Looper.getMainLooper()) }
     private val runnable = Runnable { calculate() }

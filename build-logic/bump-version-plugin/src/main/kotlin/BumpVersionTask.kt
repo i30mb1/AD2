@@ -14,7 +14,6 @@ import org.gradle.work.InputChanges
 @CacheableTask
 abstract class BumpVersionTask : DefaultTask() {
 
-    @get:InputFile
     abstract val isEnabled: Property<Boolean>
 
     @get:InputFile

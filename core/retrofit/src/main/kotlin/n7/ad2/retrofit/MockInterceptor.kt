@@ -44,6 +44,5 @@ private fun Request.buildResponse(message: String) = Response.Builder()
     .build()
 
 private fun load(filePath: String): String {
-//    return context.resources.assets.open(filePath).bufferredReader().readText()
-    return TODO()
+    return "{}" // Mock empty JSON response
 }

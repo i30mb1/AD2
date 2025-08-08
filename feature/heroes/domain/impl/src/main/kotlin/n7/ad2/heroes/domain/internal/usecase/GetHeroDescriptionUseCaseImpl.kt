@@ -10,6 +10,6 @@ internal class GetHeroDescriptionUseCaseImpl(
 ) : GetHeroDescriptionUseCase {
 
     override fun invoke(name: String): Flow<HeroDescription> {
-        TODO()
+        TODO("GetHeroDescriptionUseCase not implemented")
     }
 }

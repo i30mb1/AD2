@@ -17,7 +17,6 @@ fun TextWithDotsSuffix(
     text: String,
     modifier: Modifier = Modifier,
 ) {
-//    val resource = stringResource(text)
     var animText by remember { mutableStateOf(text) }
     Text(
         modifier = modifier,

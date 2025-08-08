@@ -2,6 +2,7 @@
 
 package n7.ad2.parser.heroes
 
+import java.io.File
 import n7.ad2.parser.LocaleHeroes
 import n7.ad2.parser.assetsDatabase
 import n7.ad2.parser.assetsDatabaseHeroes
@@ -16,18 +17,12 @@ import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
 import org.jsoup.select.Elements
-import java.io.File
 
 fun main() {
     val heroes = getHeroes()
     createFileWithHeroes(heroes)
-    heroes
-//        .dropWhile { hero -> hero.name != "Undying" }
-        .forEach { hero ->
-        println("check info for ${
-            hero.name
-        }")
-//        loadHero(hero, LocaleHeroes.RU)
+    heroes.forEach { hero ->
+        println("check info for ${hero.name}")
         loadHero(hero, LocaleHeroes.EN)
     }
 }

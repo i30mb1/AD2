@@ -15,6 +15,10 @@ internal class HeroesRepositoryImpl(
             .map { localHeroList -> localHeroList.map(HeroDatabaseToHeroMapper) }
     }
 
+    override fun getHeroByName(): Hero {
+        TODO("Not yet implemented")
+    }
+
     override fun updateViewedByUserFieldForName(name: String) {
         heroesDao.updateViewedByUserFieldForName(name)
     }

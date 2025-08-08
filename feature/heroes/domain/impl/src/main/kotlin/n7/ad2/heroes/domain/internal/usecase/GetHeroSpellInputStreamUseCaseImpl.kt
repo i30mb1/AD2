@@ -9,6 +9,6 @@ internal class GetHeroSpellInputStreamUseCaseImpl(
 ) : GetHeroSpellInputStreamUseCase {
 
     override suspend fun invoke(spellName: String): InputStream {
-        TODO()
+        TODO("GetHeroSpellInputStream not implemented")
     }
 }

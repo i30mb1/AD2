@@ -6,8 +6,8 @@ import android.view.TouchDelegate
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
-import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
+import kotlinx.coroutines.suspendCancellableCoroutine
 
 fun View.setTouchDelegate(rect: Rect) {
     post {
@@ -34,25 +34,6 @@ suspend fun View.awaitNextLayout() = suspendCancellableCoroutine<Unit> { continu
     continuation.invokeOnCancellation { removeOnLayoutChangeListener(listener) }
     addOnLayoutChangeListener(listener)
 }
-
-
-// create or grubbing existing spring animation
-//fun View.spring(property: DynamicAnimation.ViewProperty): SpringAnimation {
-//    val key = getKey(property)
-//    var springAnimation = getTag(key) as? SpringAnimation?
-//    if (springAnimation == null) {
-//        springAnimation = SpringAnimation(this, property)
-//        setTag(key, springAnimation)
-//    }
-//    return springAnimation
-//}
-
-//fun getKey(property: DynamicAnimation.ViewProperty): Int {
-//    return when (property) {
-//        SpringAnimation.TRANSLATION_X -> 1
-//        else -> 0
-//    }
-//}
 
 /**
  * show keyboard without any problems

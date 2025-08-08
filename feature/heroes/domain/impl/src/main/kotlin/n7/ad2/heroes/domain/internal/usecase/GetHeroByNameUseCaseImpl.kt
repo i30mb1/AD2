@@ -9,6 +9,6 @@ internal class GetHeroByNameUseCaseImpl(
 ) : GetHeroByNameUseCase {
 
     override suspend fun invoke(name: String): Hero {
-        return TODO()
+        return heroesRepository.getHeroByName()
     }
 }

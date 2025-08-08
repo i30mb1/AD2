@@ -1,3 +1,5 @@
+@file:Suppress("UnusedVariable")
+
 package n7.ad2.parser.algorithm
 
 import java.text.ParseException

@@ -18,7 +18,7 @@ class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Work
         const val PAGE = "page"
         const val TAG = "tournaments_worker_tag"
         private const val BASE_URL = "https://dota2.ru/esport/matches/?page="
-        const val LOG_ON_RECEIVE = "LOG_ON_RECEIVE" // TODO: Move to proper constant location
+        private const val TOURNAMENT_LOG_ACTION = "n7.ad2.tournaments.LOG_ON_RECEIVE"
     }
 
     override fun doWork(): Result {
@@ -96,7 +96,7 @@ class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Work
             gamesDao.setGames(gamesList)
 
             applicationContext.sendBroadcast(
-                Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_${page}_loaded")
+                Intent(TOURNAMENT_LOG_ACTION).putExtra(TOURNAMENT_LOG_ACTION, "page_${page}_loaded")
             )
 
             Result.success()
@@ -104,7 +104,7 @@ class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Work
             val gamesDao = GamesRoomDatabase.getDatabase(applicationContext).gamesDao()
             gamesDao.deleteAllUnfinished()
             applicationContext.sendBroadcast(
-                Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_${page}_failed")
+                Intent(TOURNAMENT_LOG_ACTION).putExtra(TOURNAMENT_LOG_ACTION, "page_${page}_failed")
             )
             Result.failure()
         }

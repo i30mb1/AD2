@@ -22,5 +22,5 @@ fun Resources(context: Context): Resources {
 }
 
 object ResourcesHolder : ComponentHolder<Resources>() {
-    override fun build(): Resources = TODO()
+    override fun build(): Resources = error("ResourcesHolder.build() should not be called directly")
 }
