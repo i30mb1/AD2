@@ -8,7 +8,8 @@ import android.widget.LinearLayout
 import androidx.core.view.isVisible
 import n7.ad2.core.ui.databinding.ErrorBinding
 
-class ErrorView(
+class
+ErrorView(
     context: Context,
     attributeSet: AttributeSet,
 ) : LinearLayout(context, attributeSet) {

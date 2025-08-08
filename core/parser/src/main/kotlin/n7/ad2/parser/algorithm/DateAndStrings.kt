@@ -1,45 +1,46 @@
-package n7.ad2.parser.algorithm;
+package n7.ad2.parser.algorithm
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
-public class DateAndStrings {
+object DateAndStrings {
 
-    private static Date gameDate;
-    private static String s;
+    private var gameDate: Date? = null
+    private var s: String? = null
 
-    public static void main(String[] args) {
+    @JvmStatic
+    fun main(args: Array<String>) {
 
-        long unixTimeSystem = System.currentTimeMillis() / 1000;
+        val unixTimeSystem = System.currentTimeMillis() / 1000
 
-        //просто для хранения даты
-        Date date = new Date();
-        long unixTimeDate = date.getTime() / 1000;
-        //для работы с датами
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.HOUR, 1);
-        long unixTimeCalendar = calendar.getTimeInMillis() / 1000;
-        //для форматирования в нужную дату
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm dd.MM.yyyy", new Locale("ru", "RU"));
-        //тупо окунаем туда милисикунды и получаем строку которые сформировали
-        String era = simpleDateFormat.format(date);
-        //преобразуем строку в дату
+        // просто для хранения даты
+        val date = Date()
+        val unixTimeDate = date.time / 1000
+        // для работы с датами
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.HOUR, 1)
+        val unixTimeCalendar = calendar.timeInMillis / 1000
+        // для форматирования в нужную дату
+        val simpleDateFormat = SimpleDateFormat("HH:mm dd.MM.yyyy", Locale("ru", "RU"))
+        // тупо окунаем туда милисикунды и получаем строку которые сформировали
+        val era = simpleDateFormat.format(date)
+        // преобразуем строку в дату
         try {
-            //берём тупо известную нам дату и время и прибавляем текущий год
-            gameDate = simpleDateFormat.parse("19:00 16.08" + new SimpleDateFormat(".yyyy", new Locale("ru", "RU")).format(new Date()));
-            s = simpleDateFormat.format(gameDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
+            // берём тупо известную нам дату и время и прибавляем текущий год
+            gameDate = simpleDateFormat.parse("19:00 16.08" + SimpleDateFormat(".yyyy", Locale("ru", "RU")).format(Date()))
+            s = simpleDateFormat.format(gameDate)
+        } catch (e: ParseException) {
+            e.printStackTrace()
         }
 
-        System.out.println("current: " + era + String.format(Locale.US, " = %d", date.getTime()));
-        System.out.println("expect : " + s + " = " + gameDate.getTime());
-        long remain = gameDate.getTime() - date.getTime();
-        long remainSec = remain / 1000;
-        System.out.println("remain : " + String.format(Locale.US, "%02d:%02d:%02d", remainSec / 3600, remainSec / 360, remainSec % 60));
+        println("current: $era${String.format(Locale.US, " = %d", date.time)}")
+        println("expect : $s = ${gameDate?.time}")
+        val remain = (gameDate?.time ?: 0) - date.time
+        val remainSec = remain / 1000
+        println("remain : ${String.format(Locale.US, "%02d:%02d:%02d", remainSec / 3600, remainSec / 360, remainSec % 60)}")
 
         // read it https://medium.com/better-programming/formatting-strings-with-java-2281d40accce
         // %[argument_index$][flag][width][.precision]conversion
@@ -50,6 +51,6 @@ public class DateAndStrings {
         // [.precision] - ограничение количество символов после точки
         // conversion - символ {d - целые числа, s - строки, f - строки с плавающей точкой}
 
-        System.out.println("Assault Cuirass (0)".replaceAll("\\([^)]+\\)", ""));
+        println("Assault Cuirass (0)".replace(Regex("\\([^)]+\\)"), ""))
     }
 }

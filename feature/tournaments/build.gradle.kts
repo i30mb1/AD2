@@ -4,7 +4,9 @@ plugins {
 }
 
 dependencies {
+    api(libs.room.ktx)
     implementation(libs.workManager)
+    implementation(libs.jsoup)
 
     implementation(projects.core.commonAndroid)
     implementation(projects.core.dagger)
@@ -13,4 +15,5 @@ dependencies {
     implementation(projects.core.navigator)
 
     kapt(libs.daggerAnnotation)
+    kapt(libs.room.compiler)
 }

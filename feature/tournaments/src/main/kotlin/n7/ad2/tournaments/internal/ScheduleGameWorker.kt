@@ -1,62 +1,68 @@
-//package n7.ad2.tournaments.internal;
-//
-//import android.app.NotificationManager;
-//import android.app.PendingIntent;
-//import android.content.Context;
-//import android.content.Intent;
-//import android.graphics.Bitmap;
-//import android.graphics.BitmapFactory;
-//import android.net.Uri;
-//
-//import androidx.annotation.NonNull;
-//import androidx.core.app.NotificationCompat;
-//import androidx.work.Worker;
-//import androidx.work.WorkerParameters;
-//
-//import n7.ad2.R;
-//import n7.ad2.ui.MainActivity;
-//
-//import static android.content.Context.NOTIFICATION_SERVICE;
-//
-//public class ScheduleGameWorker extends Worker {
-//    public ScheduleGameWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
-//        super(context, workerParams);
-//    }
-//
-//    @NonNull
-//    @Override
-//    public Result doWork() {
-//        String message = getInputData().getString("message");
-//
-//        Intent notificationIntent = new Intent(getApplicationContext(), MainActivity.class);
-//        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, 0);
-//
-//        BitmapFactory.Options options = new BitmapFactory.Options();
-//        Bitmap largeIcon = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.ic_launcher_red, options);
-//
-////        Vibrator v = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
-////        v.vibrate(1000);
-//
-////        NotificationChannel channel_all = new NotificationChannel("AD2", "AD2", NotificationManager.IMPORTANCE_HIGH);
-////        channel_all.enableVibration(true);
-//        NotificationCompat.Builder b = new NotificationCompat.Builder(getApplicationContext(), "AD2");
-//        b.setAutoCancel(true)
-//                .setContentTitle(getApplicationContext().getString(R.string.notification_game_title))
-//                .setContentText(message)
-//                .setContentIntent(pendingIntent)
-//                .setContentInfo(getApplicationContext().getString(R.string.notification_game_info))
-//                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-//                .setPriority(NotificationCompat.PRIORITY_HIGH)
-//                .setSound(Uri.parse("android.resource://" + getApplicationContext().getPackageName() + "/" + R.raw.does_this_unit_have_a_soul))
-//                .setSmallIcon(R.mipmap.ic_launcher_red)
-//                .setLargeIcon(largeIcon);
-//
-//        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(NOTIFICATION_SERVICE);
-////        NotificationCompat.InboxStyle big = new NotificationCompat.InboxStyle(b);
-////        mgr.notify(0, big.setSummaryText("o").addLine("1").addLine("2").build());
-//        if (notificationManager != null) {
-//            notificationManager.notify(7, b.build());
-//            return Result.success();
-//        } else return Result.failure();
-//    }
-//}
+package n7.ad2.tournaments.internal
+
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
+import androidx.core.app.NotificationCompat
+import androidx.work.Worker
+import androidx.work.WorkerParameters
+
+class ScheduleGameWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
+
+    override fun doWork(): Result {
+        val message = inputData.getString("message")
+
+        // TODO: Replace with proper MainActivity reference
+        val notificationIntent = Intent(applicationContext, Class.forName("n7.ad2.ui.MainActivity"))
+        val pendingIntent = PendingIntent.getActivity(
+            applicationContext,
+            0,
+            notificationIntent,
+            PendingIntent.FLAG_IMMUTABLE
+        )
+
+        val options = BitmapFactory.Options()
+        val largeIcon = BitmapFactory.decodeResource(
+            applicationContext.resources,
+            applicationContext.resources.getIdentifier("ic_launcher_red", "mipmap", applicationContext.packageName),
+            options
+        )
+
+        val builder = NotificationCompat.Builder(applicationContext, "AD2")
+            .setAutoCancel(true)
+            .setContentTitle(
+                applicationContext.getString(
+                    applicationContext.resources.getIdentifier("notification_game_title", "string", applicationContext.packageName)
+                )
+            )
+            .setContentText(message)
+            .setContentIntent(pendingIntent)
+            .setContentInfo(
+                applicationContext.getString(
+                    applicationContext.resources.getIdentifier("notification_game_info", "string", applicationContext.packageName)
+                )
+            )
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setSound(
+                Uri.parse(
+                    "android.resource://${applicationContext.packageName}/${
+                        applicationContext.resources.getIdentifier("does_this_unit_have_a_soul", "raw", applicationContext.packageName)
+                    }"
+                )
+            )
+            .setSmallIcon(applicationContext.resources.getIdentifier("ic_launcher_red", "mipmap", applicationContext.packageName))
+            .setLargeIcon(largeIcon)
+
+        val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager?
+        return if (notificationManager != null) {
+            notificationManager.notify(7, builder.build())
+            Result.success()
+        } else {
+            Result.failure()
+        }
+    }
+}

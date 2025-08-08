@@ -1,105 +1,112 @@
-//package n7.ad2.tournaments.internal;
-//
-//import android.content.Context;
-//import android.content.Intent;
-//import androidx.annotation.NonNull;
-//
-//import org.jsoup.Jsoup;
-//import org.jsoup.nodes.Document;
-//import org.jsoup.nodes.Element;
-//import org.jsoup.select.Elements;
-//
-//import java.text.SimpleDateFormat;
-//import java.util.ArrayList;
-//import java.util.Date;
-//import java.util.List;
-//import java.util.Locale;
-//
-//import androidx.work.Worker;
-//import androidx.work.WorkerParameters;
-//import n7.ad2.tournaments.internal.db.GamesDao;
-//import n7.ad2.tournaments.internal.db.GamesRoomDatabase;
-//import n7.ad2.tournaments.internal.db.TournamentGame;
-//
-//import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
-//
-//public class TournamentsWorker extends Worker {
-//
-//    public static final String DELETE_TABLE = "delete_table";
-//    public static final String PAGE = "page";
-//    public static final String TAG = "tournaments_worker_tag";
-//    private static final String BASE_URL = "https://dota2.ru/esport/matches/?page=";
-//
-//    public TournamentsWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
-//        super(context, workerParams);
-//    }
-//
-//    @NonNull
-//    @Override
-//    public Result doWork() {
-//        boolean deleteTable = getInputData().getBoolean(DELETE_TABLE, false);
-//        int page = getInputData().getInt(PAGE, 0);
-//
-//        List<TournamentGame> gamesList = new ArrayList<>();
-//
-//        try {
-//            String url = BASE_URL + page;
-//            Document doc = Jsoup.connect(url).get();
-//            Elements matchElements = doc.getElementsByClass("esport-match-single");
-//            for (int j = 0; j < matchElements.size(); j++) {
-//                TournamentGame game = new TournamentGame();
-//                game.url = "https://dota2.ru" + matchElements.get(j).child(0).attr("href");
-//                Elements matchElementsChildren = matchElements.get(j).child(1).children();
-//                for (int i = 0; i < matchElementsChildren.size(); i++) {
-//                    matchElementsChildren.get(i);
-//                    if (matchElementsChildren.get(i).attr("class").equals("team team-left")) {
-//                        for (Element element : matchElementsChildren.get(i).children()) {
-//                            if (element.attr("class").equals("name"))
-//                                game.team1Name = element.text();
-//                            if (element.tag().toString().equals("img"))
-//                                game.team1Logo = "https://dota2.ru" + element.attr("src");
-//                        }
-//                    }
-//                    if (matchElementsChildren.get(i).attr("class").equals("status")) {
-//                        for (Element element : matchElementsChildren.get(i).children()) {
-//                            if (element.attr("class").equals("score match-shop-result"))
-//                                game.teamScore = element.attr("data-value");
-//                            if (element.attr("class").equals("time")) {
-//                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm dd.MM.yyyy", new Locale("ru", "RU"));
-//                                Long matchStart = simpleDateFormat.parse(element.text().trim() + new SimpleDateFormat(".yyyy", new Locale("ru", "RU")).format(new Date())).getTime();
-//                                Long currentTime = simpleDateFormat.parse(simpleDateFormat.format(new Date())).getTime();
-//                                Long time = (matchStart - currentTime) / 1000;
-//                                game.teamTimeRemains = time;
-//                                game.teamTime = matchStart;
-////                                String remain = String.format(Locale.US, "%02d:%02d", time / 3600, (time/60)%60);
-//                            }
-//                            if (element.attr("class").equals("live")) {
-//                                game.teamScore = "LIVE";
-//                            }
-//                        }
-//                    }
-//                    if (matchElementsChildren.get(i).attr("class").equals("team team-right")) {
-//                        for (Element element : matchElementsChildren.get(i).children()) {
-//                            if (element.attr("class").equals("name"))
-//                                game.team2Name = element.text();
-//                            if (element.tag().toString().equals("img"))
-//                                game.team2Logo = "https://dota2.ru" + element.attr("src");
-//                        }
-//                    }
-//                }
-//                gamesList.add(game);
-//            }
-//            if (gamesList.size() == 0) throw new Exception();
-//            GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
-//            if (deleteTable && matchElements.size() != 0) gamesDao.deleteAll();
-//            gamesDao.setGames(gamesList);
-//            getApplicationContext().sendBroadcast(new Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "page_" + page + "_loaded"));
-//            return Result.success();
-//        } catch (Throwable e) {
-//            GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
-//            gamesDao.deleteAllUnfinished();
-//            getApplicationContext().sendBroadcast(new Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "page_" + page + "_failed"));
-//        }
-//        return Result.failure();
-//    }
-//}
+package n7.ad2.tournaments.internal
+
+import android.content.Context
+import android.content.Intent
+import androidx.work.Worker
+import androidx.work.WorkerParameters
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import n7.ad2.tournaments.internal.db.GamesRoomDatabase
+import n7.ad2.tournaments.internal.db.TournamentGame
+import org.jsoup.Jsoup
+
+class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
+
+    companion object {
+        const val DELETE_TABLE = "delete_table"
+        const val PAGE = "page"
+        const val TAG = "tournaments_worker_tag"
+        private const val BASE_URL = "https://dota2.ru/esport/matches/?page="
+        const val LOG_ON_RECEIVE = "LOG_ON_RECEIVE" // TODO: Move to proper constant location
+    }
+
+    override fun doWork(): Result {
+        val deleteTable = inputData.getBoolean(DELETE_TABLE, false)
+        val page = inputData.getInt(PAGE, 0)
+
+        val gamesList = mutableListOf<TournamentGame>()
+
+        return try {
+            val url = BASE_URL + page
+            val doc = Jsoup.connect(url).get()
+            val matchElements = doc.getElementsByClass("esport-match-single")
+
+            for (j in matchElements.indices) {
+                val game = TournamentGame()
+                game.url = "https://dota2.ru" + matchElements[j].child(0).attr("href")
+                val matchElementsChildren = matchElements[j].child(1).children()
+
+                for (i in matchElementsChildren.indices) {
+                    val element = matchElementsChildren[i]
+                    when (element.attr("class")) {
+                        "team team-left" -> {
+                            for (childElement in element.children()) {
+                                when (childElement.attr("class")) {
+                                    "name" -> game.team1Name = childElement.text()
+                                }
+                                if (childElement.tagName() == "img") {
+                                    game.team1Logo = "https://dota2.ru" + childElement.attr("src")
+                                }
+                            }
+                        }
+
+                        "status" -> {
+                            for (childElement in element.children()) {
+                                when (childElement.attr("class")) {
+                                    "score match-shop-result" -> game.teamScore = childElement.attr("data-value")
+                                    "time" -> {
+                                        val simpleDateFormat = SimpleDateFormat("HH:mm dd.MM.yyyy", Locale("ru", "RU"))
+                                        val matchStart = simpleDateFormat.parse(
+                                            childElement.text().trim() +
+                                                    SimpleDateFormat(".yyyy", Locale("ru", "RU")).format(Date())
+                                        )?.time ?: 0L
+                                        val currentTime = simpleDateFormat.parse(simpleDateFormat.format(Date()))?.time ?: 0L
+                                        val time = (matchStart - currentTime) / 1000
+                                        game.teamTimeRemains = time
+                                        game.teamTime = matchStart
+                                    }
+
+                                    "live" -> game.teamScore = "LIVE"
+                                }
+                            }
+                        }
+
+                        "team team-right" -> {
+                            for (childElement in element.children()) {
+                                when (childElement.attr("class")) {
+                                    "name" -> game.team2Name = childElement.text()
+                                }
+                                if (childElement.tagName() == "img") {
+                                    game.team2Logo = "https://dota2.ru" + childElement.attr("src")
+                                }
+                            }
+                        }
+                    }
+                }
+                gamesList.add(game)
+            }
+
+            if (gamesList.isEmpty()) throw Exception("No games found")
+
+            val gamesDao = GamesRoomDatabase.getDatabase(applicationContext).gamesDao()
+            if (deleteTable && matchElements.isNotEmpty()) {
+                gamesDao.deleteAll()
+            }
+            gamesDao.setGames(gamesList)
+
+            applicationContext.sendBroadcast(
+                Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_${page}_loaded")
+            )
+
+            Result.success()
+        } catch (e: Throwable) {
+            val gamesDao = GamesRoomDatabase.getDatabase(applicationContext).gamesDao()
+            gamesDao.deleteAllUnfinished()
+            applicationContext.sendBroadcast(
+                Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_${page}_failed")
+            )
+            Result.failure()
+        }
+    }
+}
