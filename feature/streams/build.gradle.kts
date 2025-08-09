@@ -2,7 +2,7 @@ plugins {
     id("convention.android-library")
     id("convention.kotlin-serialization")
     id("convention.compose")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -20,5 +20,5 @@ dependencies {
     implementation(projects.core.retrofit)
     implementation(projects.core.mediaPlayer)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }

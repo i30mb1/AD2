@@ -1,7 +1,7 @@
 plugins {
     id("convention.android-library")
     id("convention.kotlin-serialization")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -17,5 +17,5 @@ dependencies {
     implementation(projects.core.spanParser)
     implementation(projects.core.mediaPlayer)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }

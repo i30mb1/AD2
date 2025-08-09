@@ -1,6 +1,6 @@
 plugins {
     id("convention.android-application")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 android {
@@ -43,5 +43,5 @@ dependencies {
     implementation(projects.feature.news.domain.impl)
     implementation(projects.feature.news.domain.wiring)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }

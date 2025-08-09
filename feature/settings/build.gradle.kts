@@ -1,7 +1,7 @@
 plugins {
     id("convention.android-library")
     id("convention.compose")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -13,5 +13,5 @@ dependencies {
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.navigator)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }

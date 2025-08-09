@@ -1,7 +1,7 @@
 plugins {
     id("convention.android-library")
     id("convention.kotlin-serialization")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -14,5 +14,5 @@ dependencies {
     implementation(libs.kotlinSerialization)
     implementation(libs.room.ktx)
 
-    kapt(libs.room.compiler)
+    ksp(libs.room.compiler)
 }

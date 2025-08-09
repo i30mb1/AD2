@@ -1,21 +1,20 @@
+import javax.inject.Inject
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 
-abstract class MeasureBuildTask : DefaultTask() {
+abstract class MeasureBuildTask @Inject constructor() : DefaultTask() {
 
     @TaskAction
     open fun action() {
-        project.exec {
-            commandLine(
-                "gradle/profiler/bin/gradle-profiler.bat",
-            )
-            args = listOf(
+        project.providers.exec {
+            commandLine("gradle/profiler/bin/gradle-profiler.bat")
+            args(
                 "--benchmark",
                 "--output-dir",
                 "gradle/profiler/last-output",
                 "--scenario-file",
                 "gradle/profiler/profiler.scenarios",
-                "incremental",
+                "incremental"
             )
         }
         val output = project.file("gradle-profiler/last-output/benchmark.csv").readLines()

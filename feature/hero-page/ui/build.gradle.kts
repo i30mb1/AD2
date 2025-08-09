@@ -1,7 +1,7 @@
 plugins {
     id("convention.android-library")
     id("convention.kotlin-serialization")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -21,7 +21,7 @@ dependencies {
 
     implementation(projects.feature.heroes.domain.api)
     implementation(projects.feature.heroPage.domain.api)
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 
     testImplementation(libs.test.junit.kotlin)
     testImplementation(libs.test.robolectric)

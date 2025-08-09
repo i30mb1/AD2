@@ -2,7 +2,11 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 
 plugins {
     id("convention.android-application")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
+}
+
+base {
+    archivesName.set("$applicationID-${getVersionName()}")
 }
 
 android {
@@ -16,7 +20,6 @@ android {
         versionName = getVersionName()
 
         resourceConfigurations.addAll(listOf("ru", "en"))
-        setProperty("archivesBaseName", "$applicationId-$versionName")
     }
 
     signingConfigs {
@@ -101,7 +104,7 @@ dependencies {
     implementation(libs.performancePlayServices)
     implementation(libs.androidStartup)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 
     implementation(projects.core.commonAndroid)
     implementation(projects.core.dagger)

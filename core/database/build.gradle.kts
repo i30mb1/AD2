@@ -1,7 +1,7 @@
 plugins {
     id("convention.android-library")
     id("convention.kotlin-serialization")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -15,6 +15,6 @@ dependencies {
     implementation(projects.core.dagger)
     implementation(projects.core.logger.appLogger)
 
-    kapt(libs.room.compiler)
-    kapt(libs.daggerAnnotation)
+    ksp(libs.room.compiler)
+    ksp(libs.daggerAnnotation)
 }

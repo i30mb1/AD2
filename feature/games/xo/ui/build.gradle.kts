@@ -1,7 +1,7 @@
 plugins {
     id("convention.android-library")
     id("convention.compose")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -17,5 +17,5 @@ dependencies {
     implementation(projects.feature.games.xo.domain.api)
     implementation(projects.feature.games.xo.domain.wiring)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }

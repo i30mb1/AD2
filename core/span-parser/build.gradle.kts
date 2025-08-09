@@ -1,6 +1,6 @@
 plugins {
     id("convention.android-library")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
     id("convention.kover")
 }
 
@@ -17,7 +17,7 @@ dependencies {
     testImplementation(libs.test.truth)
     testImplementation(testFixtures(projects.core.commonJvm))
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }
 
 koverReport {

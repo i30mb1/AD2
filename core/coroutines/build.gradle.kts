@@ -1,6 +1,6 @@
 plugins {
     id("convention.kotlin-jvm")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -10,7 +10,7 @@ dependencies {
     implementation(libs.test.junit)
     api(libs.test.coroutines)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 
     testImplementation(libs.test.junit)
     testImplementation(libs.test.coroutines.debug)

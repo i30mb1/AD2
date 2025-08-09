@@ -1,6 +1,6 @@
 plugins {
     id("convention.kotlin-jvm")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -13,5 +13,5 @@ dependencies {
     api(libs.retrofitScalars)
     api(libs.retrofitSerialization)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }

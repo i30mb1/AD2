@@ -1,6 +1,6 @@
 plugins {
     id("convention.android-library")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {

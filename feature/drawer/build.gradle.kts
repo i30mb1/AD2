@@ -1,7 +1,7 @@
 plugins {
     id("convention.android-library")
     id("convention.kotlin-serialization")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 android {
@@ -18,7 +18,7 @@ dependencies {
     implementation(projects.core.appPreference)
     implementation(projects.core.retrofit)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 
     testImplementation(testFixtures(projects.core.appPreference))
     testImplementation(testFixtures(projects.core.commonJvm))

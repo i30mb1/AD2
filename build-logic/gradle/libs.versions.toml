@@ -2,12 +2,13 @@
 sdkVersion = "34"
 room = "2.6.0"
 coroutines = "1.7.1"
-dagger = "2.51.1"
+dagger = "2.57"
 workManager = "2.8.1"
 lifecycle = "2.7.0"
-androidGradlePlugin = "8.5.2"
-lint = "31.5.2" # androidGradlePlugin + 23
-kotlin = "2.0.0"
+androidGradlePlugin = "8.9.0"
+lint = "31.9.0" # androidGradlePlugin + 23
+kotlin = "2.1.0"
+ksp = "2.1.0-1.0.29"
 compose = "1.6.7"
 media3 = "1.2.0"
 detekt = "1.22.0"
@@ -76,6 +77,7 @@ androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref =
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlinComposeCompilerPlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+kspGradlePlugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 
 kotlin-reflection = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-Serialization-Plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
@@ -155,3 +157,4 @@ kotlinDL = ["kotlin-dl-onnx", "kotlin-dl-visualization", "kotlin-dl-tensorflow"]
 [plugins]
 benchmark = { id = "androidx.benchmark", version.ref = "benchmark" }
 kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

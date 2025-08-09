@@ -1,6 +1,6 @@
 plugins {
     id("convention.android-library")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -12,7 +12,7 @@ dependencies {
 
     implementation(projects.feature.heroes.domain.api)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 
     androidTestImplementation(libs.test.fragment)
     androidTestImplementation(libs.test.junit.kotlin)

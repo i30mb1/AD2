@@ -1,6 +1,6 @@
 plugins {
     id("convention.android-library")
-    id("n7.plugins.kotlin-kapt")
+    id("n7.plugins.kotlin-ksp")
 }
 
 dependencies {
@@ -12,5 +12,5 @@ dependencies {
     implementation(projects.core.coroutines)
     implementation(projects.core.dagger)
 
-    kapt(libs.daggerAnnotation)
+    ksp(libs.daggerAnnotation)
 }
