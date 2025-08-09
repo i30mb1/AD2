@@ -9,3 +9,5 @@ pluginManagement {
 plugins {
     id("n7.plugins.settings")
 }
+
+include(":feature:games:xo:cli-test")
