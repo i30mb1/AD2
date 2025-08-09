@@ -65,7 +65,8 @@ class SocketClientController(
 
     override fun disconnect() {
         scope.coroutineContext.cancelChildren()
-        socket?.close()
+        runCatching { socket?.close() }
         socket = null
+        _state.update { it.copy(status = ClientStatus.Disconnected, messages = emptyList()) }
     }
 }

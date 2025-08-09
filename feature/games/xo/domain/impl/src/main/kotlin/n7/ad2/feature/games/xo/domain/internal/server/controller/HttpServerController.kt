@@ -33,15 +33,22 @@ class HttpServerController : ServerController {
     override fun start(name: String, ip: InetAddress, port: Int) {
         messagesToSend.trySend("Hello Client!")
         scope.launch {
-            server = serverCreator.create(name, ip, 42273)
-            _state.update { it.copy(status = ServerStatus.Connected(server)) }
-            collectMessages()
+            try {
+                server = serverCreator.create(name, ip, port)
+                _state.update { it.copy(status = ServerStatus.Connected(server)) }
+                collectMessages()
+            } catch (e: Exception) {
+                if (::server.isInitialized && !server.serverSocket.isClosed) {
+                    _state.update { it.copy(status = ServerStatus.Closed, messages = emptyList()) }
+                }
+            }
         }
     }
 
     private suspend fun collectMessages() = coroutineScope {
-        while (true) {
-            val socket = server.serverSocket.accept()
+        try {
+            while (true) {
+                val socket = server.serverSocket.accept()
             val writer = PrintWriter(socket.getOutputStream())
             val inputStream = socket.getInputStream()
             val reader = Scanner(inputStream)
@@ -78,9 +85,12 @@ class HttpServerController : ServerController {
 
                 else -> error("???")
             }
-            writer.close()
-            reader.close()
-            socket.close()
+                writer.close()
+                reader.close()
+                socket.close()
+            }
+        } catch (e: Exception) {
+            // Нормальное завершение при закрытии сервера
         }
     }
 
@@ -101,6 +111,8 @@ class HttpServerController : ServerController {
 
     override fun stop() {
         scope.coroutineContext.cancelChildren()
+        runCatching { if (::server.isInitialized) server.serverSocket.close() }
+        _state.update { it.copy(status = ServerStatus.Closed, messages = emptyList()) }
     }
 
     private fun requestParts(reader: Scanner): Map<String, String> = buildMap {

@@ -74,6 +74,41 @@ internal class OtherCreatorImplControllerTest(
 
         val serverMessageOnClient = client.state.filter { it.messages.isNotEmpty() }.first().messages.first().text
         Truth.assertThat(serverMessageOnClient).isEqualTo(message)
+        
+        // Тестируем корректное закрытие соединений
+        server.stop()
+        client.disconnect()
+    }
+
+    @Test
+    fun `WHEN server stops THEN server state becomes Closed`() = runTest {
+        val serverName = "Test"
+        server.start(serverName, host)
+        server.state.first { it.status is ServerStatus.Waiting }
+        
+        server.stop()
+        
+        val finalState = server.state.first { it.status is ServerStatus.Closed }
+        Truth.assertThat(finalState.status).isEqualTo(ServerStatus.Closed)
+        Truth.assertThat(finalState.messages).isEmpty()
+    }
+
+    @Test
+    fun `WHEN client disconnects THEN client state becomes Disconnected`() = runTest {
+        val serverName = "Test"
+        server.start(serverName, host)
+        val state = server.state.first { it.status is ServerStatus.Waiting }.status as ServerStatus.Waiting
+        
+        val port = state.server.port
+        client.connect(serverName, host, port)
+        client.state.mapNotNull { it.status as? ClientStatus.Connected }.first()
+        
+        client.disconnect()
+        
+        val finalState = client.state.first { it.status is ClientStatus.Disconnected }
+        Truth.assertThat(finalState.status).isEqualTo(ClientStatus.Disconnected)
+        
+        server.stop()
     }
 
     companion object {

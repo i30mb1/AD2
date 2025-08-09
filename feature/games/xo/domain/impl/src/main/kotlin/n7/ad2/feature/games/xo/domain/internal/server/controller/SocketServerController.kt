@@ -35,11 +35,18 @@ class SocketServerController(
 
     override fun start(name: String, ip: InetAddress, port: Int) {
         scope.launch {
-            server = serverCreator.create(name, ip, port)
-            _state.update { it.copy(status = ServerStatus.Waiting(server)) }
-            socket = server.serverSocket.accept()
-            _state.update { it.copy(status = ServerStatus.Connected(server)) }
-            collectClientMessages(requireNotNull(socket))
+            try {
+                server = serverCreator.create(name, ip, port)
+                _state.update { it.copy(status = ServerStatus.Waiting(server)) }
+                socket = server.serverSocket.accept()
+                _state.update { it.copy(status = ServerStatus.Connected(server)) }
+                collectClientMessages(requireNotNull(socket))
+            } catch (e: Exception) {
+                if (::server.isInitialized && !server.serverSocket.isClosed) {
+                    // Только если сервер не был явно закрыт
+                    _state.update { it.copy(status = ServerStatus.Closed, messages = emptyList()) }
+                }
+            }
         }
     }
 
@@ -70,8 +77,8 @@ class SocketServerController(
 
     override fun stop() {
         scope.coroutineContext.cancelChildren()
-//        server.serverSocket.close()
-        assert(server.serverSocket.isClosed)
+        runCatching { socket?.close() }
+        runCatching { if (::server.isInitialized) server.serverSocket.close() }
         socket = null
         _state.update { it.copy(status = ServerStatus.Closed, messages = emptyList()) }
     }

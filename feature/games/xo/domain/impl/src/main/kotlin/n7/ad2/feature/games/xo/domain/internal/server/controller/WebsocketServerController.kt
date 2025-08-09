@@ -14,6 +14,7 @@ import java.util.Base64
 import kotlin.experimental.xor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancelChildren
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -41,37 +42,53 @@ class WebsocketServerController(
 
     override fun start(name: String, ip: InetAddress, port: Int) {
         scope.launch {
-            server = serverCreator.create(name, ip, 51767)
-            _state.update { it.copy(status = ServerStatus.Waiting(server)) }
-            socket = server.serverSocket.accept()
-            _state.update { it.copy(status = ServerStatus.Connected(server)) }
-            collectMessages(requireNotNull(socket))
+            try {
+                server = serverCreator.create(name, ip, port)
+                _state.update { it.copy(status = ServerStatus.Waiting(server)) }
+                socket = server.serverSocket.accept()
+                _state.update { it.copy(status = ServerStatus.Connected(server)) }
+                collectMessages(requireNotNull(socket))
+            } catch (e: Exception) {
+                if (::server.isInitialized && !server.serverSocket.isClosed) {
+                    _state.update { it.copy(status = ServerStatus.Closed, messages = emptyList()) }
+                }
+            }
         }
     }
 
     private fun collectMessages(socket: Socket) {
-        val inputStream = socket.getInputStream()
-        val outputStream = socket.getOutputStream()
-        val reader = BufferedReader(InputStreamReader(inputStream))
-        val writer = PrintWriter(outputStream)
+        scope.launch {
+            try {
+                val inputStream = socket.getInputStream()
+                val outputStream = socket.getOutputStream()
+                val reader = BufferedReader(InputStreamReader(inputStream))
+                val writer = PrintWriter(outputStream)
 
-        val headers = readHeaders(reader)
-        handshakeWebSocket(headers, writer)
-        runWebSocketCommunication(inputStream)
+                val headers = readHeaders(reader)
+                handshakeWebSocket(headers, writer)
+                runWebSocketCommunication(inputStream)
 
-        reader.close()
-        writer.close()
-        socket.close()
+                reader.close()
+                writer.close()
+                socket.close()
+            } catch (e: Exception) {
+                stop()
+            }
+        }
     }
 
     override fun send(text: String) {
-        val output = socket?.getOutputStream()
-        sendSocketFrame(output!!, text)
+        val output = socket?.getOutputStream() ?: error("Server closed")
+        sendSocketFrame(output, text)
         _state.update { it.copy(messages = it.messages + Message.Me(text)) }
     }
 
     override fun stop() {
-
+        scope.coroutineContext.cancelChildren()
+        runCatching { socket?.close() }
+        runCatching { if (::server.isInitialized) server.serverSocket.close() }
+        socket = null
+        _state.update { it.copy(status = ServerStatus.Closed, messages = emptyList()) }
     }
 
     private fun runWebSocketCommunication(input: InputStream) {
@@ -120,11 +137,11 @@ class WebsocketServerController(
         // считываем первый байт (каждый бит несет информацию)
         val b1: Int = input.read()
         // первый бит указывает завершено ли текущее сообщение или последующие фреймы будут его продолжением
-        val isFinalFrame = b1 and 0b10000000
-        // три последующий бита зарезервинованы на расширение протокола, и сейчас не используются
-        val rsv1 = b1 and 0b01000000
-        val rsv2 = b1 and 0b00100000
-        val rsv3 = b1 and 0b00010000
+        // val isFinalFrame = b1 and 0b10000000 // Не используется в текущей реализации
+        // три последующий бита зарезервированы на расширение протокола, и сейчас не используются
+        // val rsv1 = b1 and 0b01000000
+        // val rsv2 = b1 and 0b00100000
+        // val rsv3 = b1 and 0b00010000
 
         /** 4 последних бита, opCode, определет тип фрейма
          * 0: Продолжение предыдущего фрейма
@@ -137,7 +154,8 @@ class WebsocketServerController(
         val opCode = b1 and 0b00001111
         when (opCode) {
             OpCode.OPCODE_TEXT -> Unit
-            OpCode.OPCODE_CLOSE -> FrameType.Close
+            OpCode.OPCODE_CLOSE -> return FrameType.Close
+            else -> return FrameType.Close // Неподдерживаемый опкод, закрываем соединение
         }
 
         // считывает второй байт
@@ -233,7 +251,7 @@ class WebsocketServerController(
         val headers = mutableMapOf<String, String>()
         var line = reader.readLine()
         while (line.isNotEmpty()) {
-            val headerParts = line.split(":")
+            val headerParts = line.split(":", limit = 2)
             if (headerParts.size >= 2) {
                 val headerName = headerParts[0].trim()
                 val headerValue = headerParts[1].trim()
