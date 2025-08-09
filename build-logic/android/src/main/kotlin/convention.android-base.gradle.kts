@@ -30,3 +30,9 @@ configure<BaseExtension> {
 dependencies {
     add("lintChecks", project(":core:rules"))
 }
+
+tasks.withType<Test> {
+    testLogging.events("passed", "skipped", "failed", "standardOut", "standardError")
+    systemProperty("junit.platform.output.capture.stdout", "true")
+    systemProperty("junit.platform.output.capture.stderr", "true")
+}

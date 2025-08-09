@@ -17,4 +17,11 @@ dependencies {
 
     ksp(libs.room.compiler)
     ksp(libs.daggerAnnotation)
+
+    testImplementation(libs.test.junit)
+    testImplementation(libs.test.truth)
+    testImplementation(libs.test.core)
+    testImplementation(libs.test.rules)
+    testImplementation("com.squareup.moshi:moshi:1.15.0")
+    androidTestImplementation(libs.test.runner)
 }
