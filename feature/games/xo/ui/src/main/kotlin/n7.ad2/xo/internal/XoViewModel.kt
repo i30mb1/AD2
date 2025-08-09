@@ -26,6 +26,7 @@ import n7.ad2.xo.internal.game.GameLogic
 import n7.ad2.xo.internal.game.GameState
 import n7.ad2.xo.internal.game.GameStatus
 import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
+import n7.ad2.xo.internal.model.SocketType
 
 internal class XoViewModel @AssistedInject constructor(
     private val gameLogic: GameLogic,
@@ -64,7 +65,8 @@ internal class XoViewModel @AssistedInject constructor(
                         deviceName = state.deviceName,
                         isGameStarted = state.gameStatus is GameStatus.Started,
                         isButtonStartEnabled = state.gameStatus is GameStatus.Idle,
-                        server = (state.gameStatus as? GameStatus.Started)?.server
+                        server = (state.gameStatus as? GameStatus.Started)?.server,
+                        selectedSocketType = state.selectedSocketType
                     )
                 }
             }
@@ -90,5 +92,9 @@ internal class XoViewModel @AssistedInject constructor(
 
     fun sendMessage(message: String) = viewModelScope.launch {
         gameLogic.sendMessage(message)
+    }
+
+    fun selectSocketType(socketType: SocketType) = viewModelScope.launch {
+        gameLogic.selectSocketType(socketType)
     }
 }

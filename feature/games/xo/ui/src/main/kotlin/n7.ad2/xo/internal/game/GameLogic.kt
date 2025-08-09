@@ -2,6 +2,7 @@ package n7.ad2.xo.internal.game
 
 import java.net.InetAddress
 import javax.inject.Inject
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,13 +25,20 @@ import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
+import n7.ad2.feature.games.xo.domain.internal.server.controller.ClientController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.HttpClientController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.HttpServerController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.ServerController
 import n7.ad2.feature.games.xo.domain.internal.server.controller.SocketClientController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.SocketServerController
+import n7.ad2.feature.games.xo.domain.internal.server.controller.WebsocketClientController
 import n7.ad2.feature.games.xo.domain.internal.server.controller.WebsocketServerController
 import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
 import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
+import n7.ad2.xo.internal.model.SocketType
 
 internal class GameLogic @Inject constructor(
     private val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase,
@@ -42,10 +50,13 @@ internal class GameLogic @Inject constructor(
     private val registerServerInDNSUseCase: RegisterServiceInNetworkUseCase,
 ) {
 
-    private val socketServerController = WebsocketServerController()
-    private val socketClientController = SocketClientController()
+    private var socketServerController: ServerController = SocketServerController()
+    private var socketClientController: ClientController = SocketClientController()
     private val _state: MutableStateFlow<GameState> = MutableStateFlow(GameState.init())
     val state: StateFlow<GameState> = _state.asStateFlow()
+
+    private var serverJob: Job? = null
+    private var clientJob: Job? = null
 
     suspend fun init() = coroutineScope {
         merge(
@@ -68,46 +79,8 @@ internal class GameLogic @Inject constructor(
             .flowOn(dispatchers.IO)
             .launchIn(this)
 
-        socketServerController.state
-            .onEach { state ->
-                when (val status = state.status) {
-                    is ServerStatus.Waiting -> registerServerInDNSUseCase.register(status.server)
-                    else -> registerServerInDNSUseCase.unregister()
-                }
-                _state.update {
-                    it.copy(
-                        messages = state.messages,
-                        gameStatus = when (val status = state.status) {
-                            is ServerStatus.Connected -> GameStatus.Started(true, status.server)
-                            ServerStatus.Closed -> GameStatus.Idle
-                            is ServerStatus.Waiting -> GameStatus.Waiting
-                        },
-                    )
-                }
-            }
-            .onCompletion {
-                socketServerController.stop()
-                registerServerInDNSUseCase.unregister()
-            }
-            .launchIn(this)
-
-        socketClientController.state
-            .onEach { state ->
-                state.status
-                _state.update {
-                    it.copy(
-                        gameStatus = when (val status = state.status) {
-                            is ClientStatus.Connected -> GameStatus.Started(false, status.server)
-                            ClientStatus.Disconnected -> GameStatus.Idle
-                        },
-                        messages = state.messages,
-                    )
-                }
-            }
-            .onCompletion {
-                socketClientController.disconnect()
-            }
-            .launchIn(this)
+        mainScope = this
+        subscribeToControllers(this)
     }
 
     suspend fun startServer(name: String) = withContext(dispatchers.IO) {
@@ -140,5 +113,87 @@ internal class GameLogic @Inject constructor(
 //        socketHolder.socket = serverHolder.awaitClient()
 //        _state.addLog("Client Connected")
 //        collectMessages()
+    }
+
+    fun selectSocketType(socketType: SocketType) {
+        _state.setSocketType(socketType)
+        updateControllersAndResubscribe(socketType)
+    }
+
+    private var mainScope: kotlinx.coroutines.CoroutineScope? = null
+
+    private fun subscribeToControllers(scope: kotlinx.coroutines.CoroutineScope) {
+        // Отменяем предыдущие подписки
+        serverJob?.cancel()
+        clientJob?.cancel()
+
+        // Подписываемся на server controller
+        serverJob = socketServerController.state
+            .onEach { state ->
+                when (val status = state.status) {
+                    is ServerStatus.Waiting -> registerServerInDNSUseCase.register(status.server)
+                    else -> registerServerInDNSUseCase.unregister()
+                }
+                _state.update {
+                    it.copy(
+                        messages = state.messages,
+                        gameStatus = when (val status = state.status) {
+                            is ServerStatus.Connected -> GameStatus.Started(true, status.server)
+                            ServerStatus.Closed -> GameStatus.Idle
+                            is ServerStatus.Waiting -> GameStatus.Waiting
+                        },
+                    )
+                }
+            }
+            .onCompletion {
+                socketServerController.stop()
+                registerServerInDNSUseCase.unregister()
+            }
+            .launchIn(scope)
+
+        // Подписываемся на client controller
+        clientJob = socketClientController.state
+            .onEach { state ->
+                _state.update {
+                    it.copy(
+                        gameStatus = when (val status = state.status) {
+                            is ClientStatus.Connected -> GameStatus.Started(false, status.server)
+                            ClientStatus.Disconnected -> GameStatus.Idle
+                        },
+                        messages = state.messages,
+                    )
+                }
+            }
+            .onCompletion {
+                socketClientController.disconnect()
+            }
+            .launchIn(scope)
+    }
+
+    private fun updateControllersAndResubscribe(socketType: SocketType) {
+        // Останавливаем текущие контроллеры
+        socketServerController.stop()
+        socketClientController.disconnect()
+
+        // Создаем новые контроллеры в зависимости от типа
+        when (socketType) {
+            SocketType.RAW -> {
+                socketServerController = SocketServerController()
+                socketClientController = SocketClientController()
+            }
+
+            SocketType.HTTP -> {
+                socketServerController = HttpServerController()
+                socketClientController = HttpClientController()
+            }
+
+            SocketType.WEBSOCKET -> {
+                socketServerController = WebsocketServerController()
+                socketClientController = WebsocketClientController()
+            }
+        }
+
+        // Переподписываемся на новые контроллеры
+        mainScope?.let { subscribeToControllers(it) }
     }
 }

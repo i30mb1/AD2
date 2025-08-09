@@ -6,6 +6,7 @@ import n7.ad2.app.logger.model.AppLog
 import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.compose.model.ServerUI
+import n7.ad2.xo.internal.model.SocketType
 
 internal data class XoUIState(
     val deviceIP: String = "",
@@ -16,6 +17,7 @@ internal data class XoUIState(
     val messages: List<Message> = emptyList(),
     val logs: List<AppLog> = emptyList(),
     val server: Server? = null,
+    val selectedSocketType: SocketType = SocketType.RAW,
 )
 
 internal fun MutableStateFlow<XoUIState>.updateLogs(logs: List<AppLog>) = update {

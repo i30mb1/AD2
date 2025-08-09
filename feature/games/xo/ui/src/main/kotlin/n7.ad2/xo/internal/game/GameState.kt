@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.update
 import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import n7.ad2.xo.internal.model.SocketType
 
 internal data class GameState(
     val deviceIP: String,
@@ -13,6 +14,7 @@ internal data class GameState(
     val servers: List<Server> = emptyList(),
     val gameStatus: GameStatus = GameStatus.Waiting,
     val messages: List<Message> = emptyList(),
+    val selectedSocketType: SocketType = SocketType.RAW,
 ) {
 
     companion object {
@@ -39,3 +41,5 @@ internal fun MutableStateFlow<GameState>.setServers(servers: List<Server>) = upd
 internal fun MutableStateFlow<GameState>.addClientMessage(message: String) = update { it.copy(messages = it.messages + Message.Me(message)) }
 
 internal fun MutableStateFlow<GameState>.addServerMessage(message: String) = update { it.copy(messages = it.messages + Message.Other(message)) }
+
+internal fun MutableStateFlow<GameState>.setSocketType(socketType: SocketType) = update { it.copy(selectedSocketType = socketType) }

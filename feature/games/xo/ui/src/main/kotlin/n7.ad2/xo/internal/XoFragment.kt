@@ -48,6 +48,7 @@ internal class XoFragment(
             }
             is XoScreenEvent.StartServer -> viewModel.runServer(event.name)
             is XoScreenEvent.SendMessage -> viewModel.sendMessage(event.message)
+            is XoScreenEvent.SelectSocketType -> viewModel.selectSocketType(event.socketType)
         }
     }
 }

@@ -1,6 +1,7 @@
 package n7.ad2.xo.internal.compose
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
@@ -39,6 +41,7 @@ import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.xo.internal.XoUIState
 import n7.ad2.xo.internal.compose.model.ServerUI
+import n7.ad2.xo.internal.model.SocketType
 
 @Preview
 @Composable
@@ -49,7 +52,8 @@ private fun XoScreenPreview() {
                 deviceName = "Nothing Phone 2",
                 deviceIP = "192.168.100.10",
                 servers = listOf(ServerUI()),
-                server = SimpleServer("Nothing Phone2", "192.168.100.10", 45646)
+                server = SimpleServer("Nothing Phone2", "192.168.100.10", 45646),
+                selectedSocketType = SocketType.RAW
             )
         ) { }
     }
@@ -73,7 +77,11 @@ internal fun StaringScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            Box(modifier = Modifier.fillMaxHeight(0.3f))
+            SocketTypeSelector(
+                selectedSocketType = state.selectedSocketType,
+                onSocketTypeSelected = { event(XoScreenEvent.SelectSocketType(it)) }
+            )
+            Box(modifier = Modifier.fillMaxHeight(0.2f))
             val name = rememberTextFieldState(state.deviceName)
             val ip = rememberTextFieldState(state.deviceIP)
 
@@ -153,6 +161,48 @@ internal fun EditTextWithButton(
                 text = buttonText,
                 modifier = Modifier.padding(horizontal = 8.dp),
             )
+        }
+    }
+}
+
+@Composable
+internal fun SocketTypeSelector(
+    selectedSocketType: SocketType,
+    onSocketTypeSelected: (SocketType) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        horizontalArrangement = Arrangement.Center,
+        modifier = modifier
+            .padding(16.dp)
+            .fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier
+                .background(
+                    color = AppTheme.color.surface,
+                    shape = RoundedCornerShape(8.dp)
+                )
+                .padding(4.dp)
+        ) {
+            SocketType.entries.forEach { socketType ->
+                val isSelected = selectedSocketType == socketType
+                Box(
+                    modifier = Modifier
+                        .clickable { onSocketTypeSelected(socketType) }
+                        .background(
+                            color = if (isSelected) AppTheme.color.primary else AppTheme.color.surface,
+                            shape = RoundedCornerShape(6.dp)
+                        )
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = socketType.name,
+                        color = if (isSelected) AppTheme.color.surface else AppTheme.color.textColor.copy(alpha = 0.6f)
+                    )
+                }
+            }
         }
     }
 }
