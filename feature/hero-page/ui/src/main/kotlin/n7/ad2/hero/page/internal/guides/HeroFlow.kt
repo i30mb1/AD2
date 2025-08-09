@@ -119,7 +119,7 @@ class HeroFlow(
         val view = inflater.inflate(R.layout.flow_hero, this, false)
         view.findViewById<ImageView>(R.id.iv).load(item.urlHeroImage)
         view.findViewById<MaterialTextView>(R.id.tv_winrate).apply {
-            setTextAppearance(style)
+            androidx.core.widget.TextViewCompat.setTextAppearance(this, style)
             text = item.heroWinrate
         }
         view.id = generateViewId()

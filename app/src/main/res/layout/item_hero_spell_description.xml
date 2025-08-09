@@ -135,7 +135,7 @@
                     android:id="@+id/tv_item_hero_spell_description_mp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/mana"
+                    app:drawableStartCompat="@drawable/mana"
                     android:textColor="?android:textColorSecondary"
                     android:textSize="12sp"
                     tools:text="300/600/900" />

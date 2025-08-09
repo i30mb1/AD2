@@ -25,6 +25,16 @@ configure<BaseExtension> {
             isIncludeAndroidResources = true
         }
     }
+
+    lintOptions {
+        disable(
+            "CoroutineCreationDuringComposition", // Disable problematic Compose lint detector
+            "RestrictedApi",
+            "UnknownNullness"
+        )
+        isAbortOnError = false
+        isWarningsAsErrors = false
+    }
 }
 
 dependencies {

@@ -187,7 +187,6 @@ class WebSocketClientController : CliClientController {
             val firstByte = input.read()
             if (firstByte == -1) return null
 
-            val fin = (firstByte and 0x80) != 0
             val opcode = firstByte and 0x0F
 
             val secondByte = input.read()

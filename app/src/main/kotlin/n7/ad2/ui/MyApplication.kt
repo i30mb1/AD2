@@ -14,12 +14,14 @@ import n7.ad2.ktx.lazyUnsafe
 // https://medium.com/bumble-tech/how-we-achieved-a-6x-reduction-of-anrs-part-2-fixing-anrs-24fedf9a973f
 // “Code never lies, comments sometimes do” — Ron Jeffries
 class MyApplication(
-    factory: ApplicationComponent.Factory,
+    factory: ApplicationComponent.Factory? = null,
 ) : Application(), DaggerComponentProvider, HasDependencies {
 
     @Inject override lateinit var dependenciesMap: DependenciesMap
 
-    override val component: ApplicationComponent by lazyUnsafe { factory.create(this) }
+    override val component: ApplicationComponent by lazyUnsafe {
+        factory?.create(this) ?: n7.ad2.di.DaggerApplicationComponent.factory().create(this)
+    }
 
     override fun onCreate() {
         component.inject(this)

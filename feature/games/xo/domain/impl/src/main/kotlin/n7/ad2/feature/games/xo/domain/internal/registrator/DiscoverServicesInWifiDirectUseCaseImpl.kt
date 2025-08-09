@@ -158,8 +158,13 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
                     }
 
                     WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION -> {
-                        val networkInfo = intent.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO, NetworkInfo::class.java) as NetworkInfo
-                        if (networkInfo.isConnected()) {
+                        val networkInfo = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+                            intent.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO, NetworkInfo::class.java)
+                        } else {
+                            @Suppress("DEPRECATION")
+                            intent.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO)
+                        } as NetworkInfo
+                        if (networkInfo.isConnected) {
                             // подключились к устройству, узнаем к какому, этим методом можно узнать когда мы уже подключились к устройству
                             wifiP2pManager.requestConnectionInfo(wifiP2pManagerChannel, object : WifiP2pManager.ConnectionInfoListener {
                                 override fun onConnectionInfoAvailable(info: WifiP2pInfo?) {
