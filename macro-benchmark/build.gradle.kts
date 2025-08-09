@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.test") version "7.3.1"
+    id("com.android.test") version libs.versions.androidGradlePlugin.get()
     id("convention.android-base")
 }
 
@@ -7,12 +7,12 @@ android {
     namespace = "n7.ad2.macrobenchmark"
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 
     defaultConfig {
