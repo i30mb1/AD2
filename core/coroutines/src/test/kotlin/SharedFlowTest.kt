@@ -143,6 +143,6 @@ class SharedFlowTest {
             Thread.sleep(300)
         }
             .launchIn(scope)
-        Thread.sleep(500_000)
+        Thread.sleep(500)
     }
 }

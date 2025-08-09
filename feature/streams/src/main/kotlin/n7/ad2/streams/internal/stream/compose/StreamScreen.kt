@@ -67,8 +67,7 @@ internal fun StreamScreen(
     modifier: Modifier = Modifier,
 ) {
     val sheetState = rememberModalBottomSheetState(
-        initialValue = ModalBottomSheetValue.Hidden,
-        confirmStateChange = { it != ModalBottomSheetValue.HalfExpanded }
+        initialValue = ModalBottomSheetValue.Hidden
     )
     val coroutineScope = rememberCoroutineScope()
     BackHandler(sheetState.isVisible) { coroutineScope.launch { sheetState.hide() } }

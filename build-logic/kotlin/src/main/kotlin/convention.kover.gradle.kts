@@ -2,19 +2,39 @@ plugins {
     id("org.jetbrains.kotlinx.kover")
 }
 
-koverReport {
-    filters {
-        // filters for all reports
-    }
+// Kover 0.8.3+ configuration
+kover {
+    reports {
+        // Configure total project coverage reports
+        total {
+            html {
+                onCheck = false
+            }
 
-    verify {
-        // verification rules for all reports
-    }
+            xml {
+                onCheck = false
+            }
 
-    defaults {
-        xml { /* default XML report config */ }
-        html { /* default HTML report config */ }
-        verify { /* default verification config */ }
-        log { /* default logging config */ }
+            verify {
+                onCheck = true
+                rule {
+                    minBound(30) // Lowered threshold for existing code
+                }
+            }
+        }
+
+        // Configure filters for all report types  
+        filters {
+            excludes {
+                classes(
+                    "*Fragment",
+                    "*Fragment\$*",
+                    "*Activity",
+                    "*Activity\$*",
+                    "*.databinding.*",
+                    "*.BuildConfig"
+                )
+            }
+        }
     }
 }

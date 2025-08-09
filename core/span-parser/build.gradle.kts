@@ -20,38 +20,3 @@ dependencies {
     ksp(libs.daggerAnnotation)
 }
 
-koverReport {
-    // filters for all report types of all build variants
-    filters {
-        excludes {
-            classes(
-                "*Fragment",
-                "*Fragment\$*",
-                "*Activity",
-                "*Activity\$*",
-                "*.databinding.*",
-                "*.BuildConfig"
-            )
-        }
-    }
-
-    androidReports("release") {
-        // filters for all report types only of 'release' build type
-        filters {
-            excludes {
-                classes(
-                    "*Fragment",
-                    "*Fragment\$*",
-                    "*Activity",
-                    "*Activity\$*",
-                    "*.databinding.*",
-                    "*.BuildConfig",
-
-                    // excludes debug classes
-                    "*.DebugUtil"
-                )
-            }
-        }
-    }
-
-}

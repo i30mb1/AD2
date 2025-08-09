@@ -16,15 +16,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.text2.BasicTextField2
-import androidx.compose.foundation.text2.input.InputTransformation
-import androidx.compose.foundation.text2.input.TextFieldBuffer
-import androidx.compose.foundation.text2.input.TextFieldCharSequence
-import androidx.compose.foundation.text2.input.TextFieldLineLimits
-import androidx.compose.foundation.text2.input.TextFieldState
-import androidx.compose.foundation.text2.input.insert
-import androidx.compose.foundation.text2.input.rememberTextFieldState
+import androidx.compose.foundation.text.input.InputTransformation
+import androidx.compose.foundation.text.input.TextFieldBuffer
+import androidx.compose.foundation.text.input.TextFieldLineLimits
+import androidx.compose.foundation.text.input.TextFieldState
+import androidx.compose.foundation.text.input.insert
+import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material.Button
 import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.Text
@@ -141,7 +140,7 @@ internal fun EditTextWithButton(
                 .background(AppTheme.color.surface),
             contentAlignment = Alignment.Center,
         ) {
-            BasicTextField2(
+            BasicTextField(
                 state = state,
                 lineLimits = TextFieldLineLimits.SingleLine,
                 textStyle = LocalTextStyle.current.copy(
@@ -210,17 +209,14 @@ internal fun SocketTypeSelector(
 object DigitsOnlyTransformation : InputTransformation {
     override val keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
 
-    override fun transformInput(
-        originalValue: TextFieldCharSequence,
-        valueWithChanges: TextFieldBuffer,
-    ) {
-        if (valueWithChanges.length > 15) {
-            valueWithChanges.revertAllChanges()
+    override fun TextFieldBuffer.transformInput() {
+        if (length > 15) {
+            revertAllChanges()
             return
         }
-        valueWithChanges.asCharSequence().forEachIndexed { index, c ->
+        asCharSequence().forEachIndexed { index, c ->
             if (index == 0) return@forEachIndexed
-            if (index % 3 == 0 && c != '.') valueWithChanges.insert(index, ".")
+            if (index % 3 == 0 && c != '.') insert(index, ".")
         }
     }
 }

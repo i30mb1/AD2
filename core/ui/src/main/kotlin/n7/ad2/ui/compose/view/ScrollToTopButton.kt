@@ -12,13 +12,12 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
@@ -45,9 +44,8 @@ inline fun ScrollToTopButton(
             .clickable { scope.launch { state.animateScrollToItem(0) } }) {
             Icon(
                 modifier = modifier
-                    .rotate(180f)
                     .align(Alignment.Center),
-                imageVector = Icons.Default.ArrowDropDown,
+                imageVector = Icons.Default.KeyboardArrowUp,
                 contentDescription = "scroll to top",
             )
         }

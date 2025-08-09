@@ -5,13 +5,13 @@ plugins {
 }
 
 configure<BaseExtension> {
-    compileSdkVersion(34)
+    compileSdkVersion(35)
 
     buildFeatures.viewBinding = true
 
     defaultConfig {
         minSdk = 31
-        targetSdk = 34
+        targetSdk = 35
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
