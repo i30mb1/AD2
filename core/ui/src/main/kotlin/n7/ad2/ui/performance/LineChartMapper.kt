@@ -3,17 +3,17 @@ package n7.ad2.ui.performance
 import kotlin.math.max
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.ui.frameCounter.toColor
+import n7.ad2.ui.frameCounter.toComposeColor
 
 internal class LineChartMapper(
     private val dispatcher: DispatchersProvider,
 ) {
 
-    suspend fun map(list: List<ResourceUsage>): List<ChartView.State> {
+    suspend fun map(list: List<ResourceUsage>): List<ChartState> {
         return withContext(dispatcher.Default) {
-            val cpu: MutableList<ChartView.State.ColoredValue> = ArrayList(list.size)
-            val ram: MutableList<ChartView.State.ColoredValue> = ArrayList(list.size)
-            val fps: MutableList<ChartView.State.ColoredValue> = ArrayList(list.size)
+            val cpu: MutableList<ChartState.ChartValue> = ArrayList(list.size)
+            val ram: MutableList<ChartState.ChartValue> = ArrayList(list.size)
+            val fps: MutableList<ChartState.ChartValue> = ArrayList(list.size)
 
             var cpuMax = 0
             var ramMax = 0
@@ -24,26 +24,26 @@ internal class LineChartMapper(
                 ramMax = max(ramMax, usage.ram.value)
                 fpsMax = max(fpsMax, usage.fps.value)
 
-                cpu += ChartView.State.ColoredValue(
+                cpu += ChartState.ChartValue(
                     usage.cpu.value,
-                    usage.cpu.status.toColor(),
+                    usage.cpu.status.toComposeColor(),
                 )
 
-                ram += ChartView.State.ColoredValue(
+                ram += ChartState.ChartValue(
                     usage.ram.value,
-                    usage.ram.status.toColor(),
+                    usage.ram.status.toComposeColor(),
                 )
 
-                fps += ChartView.State.ColoredValue(
+                fps += ChartState.ChartValue(
                     usage.fps.value,
-                    usage.fps.status.toColor(),
+                    usage.fps.status.toComposeColor(),
                 )
             }
 
             listOf(
-                ChartView.State(cpu, cpuMax),
-                ChartView.State(ram, ramMax),
-                ChartView.State(fps, fpsMax),
+                ChartState(cpu, cpuMax),
+                ChartState(ram, ramMax),
+                ChartState(fps, fpsMax),
             )
         }
     }

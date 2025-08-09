@@ -145,6 +145,17 @@ fun ResourceUsage.Status.toColor(): Int {
     }
 }
 
+fun ResourceUsage.Status.toComposeColor(): androidx.compose.ui.graphics.Color {
+    return when (this) {
+        ResourceUsage.Status.VERY_BAD -> androidx.compose.ui.graphics.Color.Red
+        ResourceUsage.Status.POOR -> androidx.compose.ui.graphics.Color(0xFFFF6B35) // Orange Red
+        ResourceUsage.Status.FAIR -> androidx.compose.ui.graphics.Color(0xFFFFA500) // Orange
+        ResourceUsage.Status.GOOD -> androidx.compose.ui.graphics.Color(0xFFFFD700) // Gold
+        ResourceUsage.Status.VERY_GOOD -> androidx.compose.ui.graphics.Color(0xFF9ACD32) // Yellow Green
+        ResourceUsage.Status.EXCELLENT -> androidx.compose.ui.graphics.Color.Green
+    }
+}
+
 class ViewOwner(
     scope: CoroutineScope,
     private val context: Context,
@@ -156,7 +167,7 @@ class ViewOwner(
     val container: WidgetContainerView = createContainer()
 
     private val infoPanelView: InfoPanelView = InfoPanelView(context)
-    private val chartsOwner = ChartsOwner(container, dispatcher)
+    private val chartsOwner = ChartsOwner(dispatcher)
     private val mapper = PanelInfoMapper()
     private val animator = ValueAnimator.ofFloat(0f, 1f).apply {
         interpolator = DecelerateInterpolator()
@@ -170,7 +181,8 @@ class ViewOwner(
     suspend fun render(list: List<ResourceUsage>) {
         withContext(dispatcher.Main) {
             infoPanelView.render(mapper.map(list.last()))
-            chartsOwner.render(list)
+            // Charts are now handled by Compose - this method is deprecated
+            // Use PerformanceCharts composable instead
         }
     }
 
