@@ -22,6 +22,6 @@ dependencies {
     testImplementation(libs.test.truth)
     testImplementation(libs.test.core)
     testImplementation(libs.test.rules)
-    testImplementation("com.squareup.moshi:moshi:1.15.0")
+    testImplementation(libs.kotlinSerialization)
     androidTestImplementation(libs.test.runner)
 }

@@ -40,9 +40,9 @@ class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
 }
 
 //override fun getHeroDescription(name: String): Flow<HeroDescription> = flow {
-//    val json = res.getAssets("heroes/$name/${appLocale.value}/description.json")
+//    val jsonString = res.getAssets("heroes/$name/${appLocale.value}/description.json")
 //        .bufferedReader()
 //        .use { it.readText() }
-//    val heroJson = moshi.adapter(HeroDescriptionJson::class.java).fromJson(json) ?: error("could not parse hero($name) description")
+//    val heroJson = Json.decodeFromString<HeroDescriptionJson>(jsonString)
 //    emit(HeroDescription())
 //}

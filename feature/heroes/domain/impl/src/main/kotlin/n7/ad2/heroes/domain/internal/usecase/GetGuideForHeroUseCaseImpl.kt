@@ -11,13 +11,15 @@ internal class GetGuideForHeroUseCaseImpl(
     private val heroesRepository: HeroesRepository,
 ) : GetGuideForHeroUseCase {
 
+    private val json = Json { ignoreUnknownKeys = true }
+
     override fun invoke(name: String): Flow<List<Guide>> {
         return emptyFlow()
 //        return heroesRepository.getHeroWithGuides(name)
 //            .map { heroWithGuides ->
 //                heroWithGuides.guides
 //                    .map {
-//                        moshi.adapter(LocalGuideJson::class.java).fromJson(it.json)!!
+//                        json.decodeFromString<LocalGuideJson>(it.json)
 //                    }
 //                    .map { localGuide ->
 //                        Guide(
