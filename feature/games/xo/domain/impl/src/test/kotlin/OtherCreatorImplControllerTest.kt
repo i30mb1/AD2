@@ -84,10 +84,3 @@ internal class OtherCreatorImplControllerTest(
         }
     }
 }
-
-//produce<String> {
-//    send("")
-//}
-//select<String> {
-//
-//}

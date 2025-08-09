@@ -79,10 +79,26 @@ We have three levels of modules in the application:
 
 ![app_data_flow](readme-files/data-flow.png)
 
+## Development Tools
+
 ## Getting started with Android Studio
 
 1. `Android Studio` -> `File` -> `New` -> `From Version control` -> `Git`
 2. Enter `https://github.com/i30mb1/AD2.git` into URL field an press `Clone` button
+3. (Optional) Configure selective module inclusion in `local.properties` for faster development
+
+
+### Selective Module Inclusion
+For faster development in this large multi-module project, use the [IncludeModulesPlugin](docs/include-modules-plugin.md) to include only the modules you need:
+
+```properties
+# local.properties
+module=":feature:games:xo:demo"  # Include only XO game demo + dependencies (16 modules vs 62)
+module=":app"                    # Include only app + dependencies (43 modules vs 62) 
+module=""                        # Include all modules (default behavior)
+```
+
+This can reduce sync and build time by up to 74%! See [full documentation](docs/include-modules-plugin.md) for details.
 
 [downloads badge]: https://PlayBadges.pavi2410.me/badge/downloads?id=n7.ad2
 [ratings badge]: https://PlayBadges.pavi2410.me/badge/ratings?id=n7.ad2
