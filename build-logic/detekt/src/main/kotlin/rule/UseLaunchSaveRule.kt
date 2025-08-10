@@ -7,13 +7,10 @@ import io.gitlab.arturbosch.detekt.api.Entity
 import io.gitlab.arturbosch.detekt.api.Issue
 import io.gitlab.arturbosch.detekt.api.Rule
 import io.gitlab.arturbosch.detekt.api.Severity
-import org.jetbrains.kotlin.psi.KtNamedFunction
+import org.jetbrains.kotlin.psi.KtCallExpression
 
 class UseLaunchSaveRule(config: Config) : Rule(config) {
 
-    companion object {
-        private const val TRIGGER_VALUE = ".launch {"
-    }
 
     override val issue: Issue = Issue(
         id = "UseLaunchSave",
@@ -22,23 +19,22 @@ class UseLaunchSaveRule(config: Config) : Rule(config) {
         debt = Debt.FIVE_MINS,
     )
 
-    override fun visitNamedFunction(function: KtNamedFunction) {
-        super.visitNamedFunction(function)
-        var offset = 0
-        val lines = function.text.lines()
-        for (line in lines) {
-            offset += line.length
-            if (line.contains(TRIGGER_VALUE)) {
+    override fun visitCallExpression(expression: KtCallExpression) {
+        super.visitCallExpression(expression)
+
+        val callee = expression.calleeExpression?.text
+        if (callee == "launch") {
+            // Check if it's not already using launchSave
+            val fullText = expression.parent?.text ?: expression.text
+            if (!fullText.contains("launchSave")) {
                 report(
                     CodeSmell(
                         issue = issue,
-                        entity = Entity.from(function, offset),
-                        message = "The function ${function.name} using Coroutines." +
-                                "You must use a custom launch extension .launchSave { ... } here!"
+                        entity = Entity.from(expression),
+                        message = "Use .launchSave instead of .launch for better error handling!"
                     )
                 )
             }
-            offset += 1
         }
     }
 

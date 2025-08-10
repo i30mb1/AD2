@@ -6,6 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Essential Commands
 
+- For eaach gradle task modify property "module" in local.properties for task if that task in specific module
 - **Build the project**: `./gradlew build`
 - **Run tests**: `./gradlew test`
 - **Run Android tests**: `./gradlew connectedAndroidTest`
@@ -21,7 +22,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture Overview
 
-This is a **multi-module Android application** following **Clean Architecture** principles with a Dota 2.
+This is a **multi-module Android application** following **Clean Architecture** principles.
 
 ### Module Structure
 
@@ -77,7 +78,7 @@ Each feature follows Clean Architecture:
 - **`ui/`** - Presentation layer (MVVM/MVI patterns)
 - **`domain/api/`** - Public interfaces
 - **`domain/impl/`** - Business logic (data layer is internal)
-- **`domain/wiring/`** - Dependency injection wiring
+- **`domain/wiring/`** - Dependency injection wiring with Dagger2, only here dependency Dagger2 can be used
 - **`demo/`** - Standalone demo apps for development specific feature
 
 ### Build Variants
@@ -85,7 +86,6 @@ Each feature follows Clean Architecture:
 - **debug** - Development with `.debug` suffix
 - **release** - Production with ProGuard/R8
 - **benchmark** - Performance testing
-- **qa** - QA builds
 
 ### Testing Structure
 
@@ -97,3 +97,8 @@ Each feature follows Clean Architecture:
 ### Data Flow
 
 The app follows a repository pattern where features access data through repositories in `core/repositories`, which coordinate between network (Retrofit) and local storage (Room database).
+
+### Основные правила
+
+- Если ты не знаешь ответа просто напиши "Я не знаю". Не ври!
+- За каждую решенную задачу я буду платить 5000$

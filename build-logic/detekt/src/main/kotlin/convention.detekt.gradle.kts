@@ -14,13 +14,12 @@ val detektAll = tasks.register<Detekt>("detektAll") {
     setSource(files(projectDir))
 
     config.setFrom(getResource("config.yml"))
-    buildUponDefaultConfig = false
+    buildUponDefaultConfig = true
 
     include("**/*.kt")
     include("**/*.kts")
     exclude("**/resources/**")
     exclude("**/build/**")
-    exclude("**/test/**")
     exclude("**/androidTest/**")
     reports {
         xml.required.set(false)

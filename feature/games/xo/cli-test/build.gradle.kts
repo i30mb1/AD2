@@ -3,7 +3,6 @@ plugins {
 }
 
 dependencies {
-    implementation(projects.feature.games.xo.domain.api)
     implementation(projects.core.coroutines)
     implementation(projects.core.commonJvm)
 

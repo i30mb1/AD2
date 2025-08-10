@@ -1,7 +1,2 @@
-MyRuleSet:
-  UseLaunchSave:
-    active: true
-
 config:
-  validation: true
-  excludes: "MyRuleSet"
+  validation: false
