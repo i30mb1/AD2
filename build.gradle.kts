@@ -17,8 +17,9 @@ bumpVersionConfig {
 }
 
 branchComparison {
-    baseBranch.set("master")           // базовая ветка для сравнения
-    iterations.set(6)                  // количество итераций
-    targetTasks.set(listOf(":app:assembleDebug")) // задачи для бенчмарка
-    outputDir.set("gradle/profiler/last-output")  // папка с результатами
+    baseBranch.set("master")
+    iterations.set(3)
+    warmupRuns.set(1)
+    targetTasks.set(listOf(":app:help"))
+    outputDir.set("gradle/profiler/last-output")
 }

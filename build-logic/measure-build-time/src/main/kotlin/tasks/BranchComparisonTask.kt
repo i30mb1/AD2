@@ -110,6 +110,7 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
     ) {
         val outputDir = config.outputDir.get()
         val iterations = config.iterations.get().toString()
+        val warmups = config.warmupRuns.get().toString()
 
         println("🚀 Starting professional benchmark...")
         println("📈 Iterations: ${config.iterations.get()}")
@@ -120,6 +121,7 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
             "--output-dir", outputDir,
             "--scenario-file", scenariosFile.absolutePath,
             "--iterations", iterations,
+            "--warmups", warmups,
             "build_current_branch",
             "build_base_branch"
         )
