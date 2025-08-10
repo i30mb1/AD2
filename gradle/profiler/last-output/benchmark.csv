@@ -1,12 +1,13 @@
-scenario,Configuration Time Comparison,Configuration Time (Selective)
+scenario,Build Current Branch (v1),Build Base Branch (master)
 version,Gradle 8.10.2,Gradle 8.10.2
-tasks,help,help
+tasks,:app:assembleDebug,:app:assembleDebug
 value,total execution time,total execution time
-warm-up build #1,3624,2382
-warm-up build #2,3133,2030
-warm-up build #3,2761,2247
-warm-up build #4,2506,1924
-warm-up build #5,3081,1926
-warm-up build #6,2469,1811
-measured build #1,3047,1702
-measured build #2,2588,1785
+warm-up build #1,,63017.37
+warm-up build #2,,29081.16
+warm-up build #3,,28396.84
+warm-up build #4,,31498.80
+warm-up build #5,,35594.73
+warm-up build #6,,46249.86
+measured build #1,,45129.45
+measured build #2,,46739.32
+measured build #3,,49035.12

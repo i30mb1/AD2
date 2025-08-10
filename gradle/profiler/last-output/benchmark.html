@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Benchmark Results</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-beta/chart.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.14/vue.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.1/math.min.js"></script>
     <style type="text/css">
 html {
     position: relative;
@@ -156,7 +156,7 @@ div.controls .btn {
     <div class='container-fluid'>
         <div class='row mt-3'>
             <div class='col'>
-                <canvas id='samples' style="width: 100%; height: 400px;"></canvas>
+                <canvas id='samples' style="width: 100%;"></canvas>
             </div>
         </div>
         <div class="form-row mt-2 controls ml-auto mr-auto">
@@ -219,17 +219,17 @@ div.controls .btn {
                                         <span>{{ sample.name }}</span>
                                     </td>
                                     <td v-for="(operation, index) in operations" class="numeric data" :class="{ dark: index %2 === 0 }">
-                                        <div>{{ sample[operation.name] | numeric }} {{ sample.unit }}</div>
+                                        <div>{{ sample[operation.name] | numeric }}&nbsp;{{ sample.unit }}</div>
                                         <template v-if="baseline && baseline !== scenario && baseline.samples.some(it => it.name === sample.name)">
-                                            <div class="diff">{{ sample[operation.name] - baseline.samples.find(it => it.name === sample.name)[operation.name] | diff }} {{ sample.unit }}</div>
+                                            <div class="diff">{{ sample[operation.name] - baseline.samples.find(it => it.name === sample.name)[operation.name] | diff }}&nbsp;{{ sample.unit }}</div>
                                             <div class="diff">{{ (sample[operation.name] / baseline.samples.find(it => it.name === sample.name)[operation.name]) - 1 | percentDiff }}</div>
                                         </template>
                                     </td>
                                     <template v-for="(iteration, index) in scenario.iterations">
                                         <td class="numeric data" :class="iteration.phase" :title="iteration.phase + ' #' + iteration.iteration">
-                                            <span>{{ iteration.values[sample.name] | numeric }} {{ sample.unit }}</span>
+                                            <span>{{ iteration.values[sample.name] | numeric }}&nbsp;{{ sample.unit }}</span>
                                             <template v-if="baseline && baseline !== scenario && baseline.samples.some(it => it.name === sample.name) && baseline.iterations[index]">
-                                                <div class="diff">{{ iteration.values[sample.name] - baseline.iterations[index].values[sample.name] | diff }} {{ sample.unit }}</div>
+                                                <div class="diff">{{ iteration.values[sample.name] - baseline.iterations[index].values[sample.name] | diff }}&nbsp;{{ sample.unit }}</div>
                                                 <div class="diff">{{ (iteration.values[sample.name] / baseline.iterations[index].values[sample.name]) - 1 | percentDiff }}</div>
                                             </template>
                                         </td>
@@ -282,14 +282,6 @@ div.controls .btn {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <span class="description">System properties:</span>
-                                                <ul>
-                                                    <li v-for="(value, key) in scenario.definition.systemProperties">
-                                                        <span class="data">{{ key }} = {{ value }}</span>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
                                                 <span class="description">JVM arguments:</span>
                                                 <ul>
                                                     <li v-for="arg in scenario.definition.jvmArgs">
@@ -312,6 +304,14 @@ div.controls .btn {
                                                 <span class="data">{{ scenario.definition.tasks }}</span>
                                             </li>
                                         </template>
+                                        <li v-if="scenario.definition.systemProperties">
+                                            <span class="description">System properties:</span>
+                                            <ul>
+                                                <li v-for="(value, key) in scenario.definition.systemProperties">
+                                                    <span class="data">{{ key }} = {{ value }}</span>
+                                                </li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </td>
                             </tr>
@@ -330,29 +330,29 @@ div.controls .btn {
 <script>
 const benchmarkResult =
 {
-  "date": "2025-08-10T14:06:22.730623Z",
+  "date": "2025-08-10T17:07:17.103710Z",
   "environment": {
-    "profilerVersion": "0.19.0",
+    "profilerVersion": "0.22.0",
     "operatingSystem": "mac os x aarch64 15.5"
   },
   "scenarios": [
     {
       "definition": {
-        "name": "config_full_vs_selective",
-        "title": "Configuration Time Comparison",
-        "displayName": "Configuration Time Comparison using Gradle 8.10.2",
+        "name": "build_current_branch",
+        "title": "Build Current Branch (v1)",
+        "displayName": "Build Current Branch (v1) using Gradle 8.10.2",
         "buildTool": "Gradle 8.10.2",
-        "tasks": "help",
+        "tasks": ":app:assembleDebug",
         "version": "8.10.2",
         "gradleHome": "/Users/e.shuvagin/StudioProjects/AD2/gradle-user-home/wrapper/dists/gradle-8.10.2-bin/a04bxjujx95o3nb99gddekhwo/gradle-8.10.2",
         "javaHome": "/Users/e.shuvagin/.sdkman/candidates/java/17.0.10-tem",
         "usesScanPlugin": false,
-        "action": "run tasks help",
+        "action": "run tasks :app:assembleDebug",
         "cleanup": "run tasks clean",
         "invoker": "Tooling API",
         "mutators": [],
         "args": [
-          "-Pmodule\u003d"
+          "--no-build-cache"
         ],
         "jvmArgs": [
           "-XX:+UseParallelGC",
@@ -372,106 +372,35 @@ const benchmarkResult =
           "-Duser.variant",
           "-Dfile.encoding\u003dUTF-8"
         ],
-        "systemProperties": {},
-        "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd"
+        "systemProperties": {}
       },
       "samples": [
         {
-          "name": "total execution time"
+          "name": "total execution time",
+          "unit": "ms"
         }
       ],
-      "iterations": [
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_WARM_UP_1",
-          "phase": "WARM_UP",
-          "iteration": 1,
-          "title": "warm-up build #1",
-          "values": {
-            "total execution time": 3624.122042
-          }
-        },
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_WARM_UP_2",
-          "phase": "WARM_UP",
-          "iteration": 2,
-          "title": "warm-up build #2",
-          "values": {
-            "total execution time": 3133.609458
-          }
-        },
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_WARM_UP_3",
-          "phase": "WARM_UP",
-          "iteration": 3,
-          "title": "warm-up build #3",
-          "values": {
-            "total execution time": 2761.545375
-          }
-        },
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_WARM_UP_4",
-          "phase": "WARM_UP",
-          "iteration": 4,
-          "title": "warm-up build #4",
-          "values": {
-            "total execution time": 2506.616166
-          }
-        },
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_WARM_UP_5",
-          "phase": "WARM_UP",
-          "iteration": 5,
-          "title": "warm-up build #5",
-          "values": {
-            "total execution time": 3081.731334
-          }
-        },
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_WARM_UP_6",
-          "phase": "WARM_UP",
-          "iteration": 6,
-          "title": "warm-up build #6",
-          "values": {
-            "total execution time": 2469.957875
-          }
-        },
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_MEASURE_1",
-          "phase": "MEASURE",
-          "iteration": 1,
-          "title": "measured build #1",
-          "values": {
-            "total execution time": 3047.950875
-          }
-        },
-        {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_full_vs_selective_b268ffcd_MEASURE_2",
-          "phase": "MEASURE",
-          "iteration": 2,
-          "title": "measured build #2",
-          "values": {
-            "total execution time": 2588.010583
-          }
-        }
-      ]
+      "iterations": []
     },
     {
       "definition": {
-        "name": "config_selective",
-        "title": "Configuration Time (Selective)",
-        "displayName": "Configuration Time (Selective) using Gradle 8.10.2",
+        "name": "build_base_branch",
+        "title": "Build Base Branch (master)",
+        "displayName": "Build Base Branch (master) using Gradle 8.10.2",
         "buildTool": "Gradle 8.10.2",
-        "tasks": "help",
+        "tasks": ":app:assembleDebug",
         "version": "8.10.2",
         "gradleHome": "/Users/e.shuvagin/StudioProjects/AD2/gradle-user-home/wrapper/dists/gradle-8.10.2-bin/a04bxjujx95o3nb99gddekhwo/gradle-8.10.2",
         "javaHome": "/Users/e.shuvagin/.sdkman/candidates/java/17.0.10-tem",
         "usesScanPlugin": false,
-        "action": "run tasks help",
+        "action": "run tasks :app:assembleDebug",
         "cleanup": "run tasks clean",
         "invoker": "Tooling API",
-        "mutators": [],
+        "mutators": [
+          "GitCheckoutMutator(cleanup: v1, build: master)"
+        ],
         "args": [
-          "-Pmodule\u003d:app"
+          "--no-build-cache"
         ],
         "jvmArgs": [
           "-XX:+UseParallelGC",
@@ -492,84 +421,94 @@ const benchmarkResult =
           "-Dfile.encoding\u003dUTF-8"
         ],
         "systemProperties": {},
-        "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70"
+        "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8"
       },
       "samples": [
         {
-          "name": "total execution time"
+          "name": "total execution time",
+          "unit": "ms"
         }
       ],
       "iterations": [
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_WARM_UP_1",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_1",
           "phase": "WARM_UP",
           "iteration": 1,
           "title": "warm-up build #1",
           "values": {
-            "total execution time": 2382.878458
+            "total execution time": 63017.374666
           }
         },
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_WARM_UP_2",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_2",
           "phase": "WARM_UP",
           "iteration": 2,
           "title": "warm-up build #2",
           "values": {
-            "total execution time": 2030.905
+            "total execution time": 29081.160292
           }
         },
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_WARM_UP_3",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_3",
           "phase": "WARM_UP",
           "iteration": 3,
           "title": "warm-up build #3",
           "values": {
-            "total execution time": 2247.8875
+            "total execution time": 28396.840541
           }
         },
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_WARM_UP_4",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_4",
           "phase": "WARM_UP",
           "iteration": 4,
           "title": "warm-up build #4",
           "values": {
-            "total execution time": 1924.984042
+            "total execution time": 31498.795375
           }
         },
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_WARM_UP_5",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_5",
           "phase": "WARM_UP",
           "iteration": 5,
           "title": "warm-up build #5",
           "values": {
-            "total execution time": 1926.313209
+            "total execution time": 35594.725167
           }
         },
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_WARM_UP_6",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_6",
           "phase": "WARM_UP",
           "iteration": 6,
           "title": "warm-up build #6",
           "values": {
-            "total execution time": 1811.527833
+            "total execution time": 46249.856875
           }
         },
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_MEASURE_1",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_MEASURE_1",
           "phase": "MEASURE",
           "iteration": 1,
           "title": "measured build #1",
           "values": {
-            "total execution time": 1702.139125
+            "total execution time": 45129.446
           }
         },
         {
-          "id": "_d3000063_3d55_4c9d_a95a_ff0c3776c77d_config_selective_e90d6e70_MEASURE_2",
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_MEASURE_2",
           "phase": "MEASURE",
           "iteration": 2,
           "title": "measured build #2",
           "values": {
-            "total execution time": 1785.065417
+            "total execution time": 46739.322666
+          }
+        },
+        {
+          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_MEASURE_3",
+          "phase": "MEASURE",
+          "iteration": 3,
+          "title": "measured build #3",
+          "values": {
+            "total execution time": 49035.119667
           }
         }
       ]
@@ -799,6 +738,7 @@ Array.prototype.unique = function() {
     return [...new Set(this)];
 }
 const dataFormat = new Intl.NumberFormat(navigator.language, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const labelFormat = new Intl.NumberFormat(navigator.language, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 const dataDiffFormat = new Intl.NumberFormat(navigator.language, { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: "exceptZero" });
 const percentFormat = new Intl.NumberFormat(navigator.language, { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const percentDiffFormat = new Intl.NumberFormat(navigator.language, { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: "exceptZero"  });
@@ -871,7 +811,8 @@ new Vue({
                             pointBackgroundColor: sample.color,
                             borderColor: sample.color,
                             data: data,
-                            sample: sample
+                            sample: sample,
+                            yAxisID: sample.unit
                         };
                     }))
                 .flat();
@@ -927,7 +868,6 @@ new Vue({
                 sample.color = `hsl(${scenarioIndex * 360 / scenarios.length}, ${100 - 80 * sampleIndex / samples.length}%, ${30 + 40 * sampleIndex / samples.length}%)`;
                 sample.thickness = sampleIndex === 0 ? 3 : 2;
                 sample.selected = sampleIndex === 0;
-                sample.unit = "ms";
                 const data = measuredIterations(scenario).map(iteration => iteration.values[sample.name]);
                 OPERATIONS.forEach(operation => sample[operation.name] = operation.apply(data));
             });
@@ -944,6 +884,28 @@ new Vue({
         const maxMeasuredIterations = benchmarkResult.scenarios
             .map(scenario => measuredIterations(scenario).length)
             .max();
+        const scales = benchmarkResult.scenarios
+            .flatMap(scenario => scenario.samples)
+            .map(sample => sample.unit)
+            .unique()
+            .reduce((scales, unit) => {
+                scales[unit] = {
+                    type: "linear",
+                    display: "auto",
+                    beginAtZero: true,
+                    position: Object.keys(scales).length % 2 === 0
+                        ? "left"
+                        : "right",
+                    ticks: {
+                        callback: function(value, index, ticks) {
+                            return labelFormat.format(value) + ' ' + unit;
+                        }
+                    }
+                };
+                return scales;
+            }, {});
+        Chart.defaults.font.family = "Lato";
+        Chart.defaults.font.size = "14";
         const chart = this.chart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -951,43 +913,25 @@ new Vue({
                 datasets: this.chartData
             },
             options: {
-                font: {
-                    family: "Roboto Mono"
-                },
                 plugins: {
-                    crosshair: {
-                        zoom: {
-                            enabled: false
-                        },
-                        snap: {
-                            enabled: false
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        mode: "index",
+                        position: "average",
+                        itemSort: (a, b) => b.yLabel - a.yLabel,
+                        callbacks: {
+                            title: (tooltips, data) => `Build #${tooltips[0].label}`,
+                            label: (context) => dataFormat.format(context.parsed.y) + " " + context.dataset.sample.unit + " – " + context.dataset.label
                         }
                     }
                 },
-                responsive: false,
                 animation: {
                     duration: 0
                 },
-                legend: {
-                    display: false
-                },
-                tooltips: {
-                    mode: "index",
-                    position: "nearest",
-                    itemSort: (a, b) => b.yLabel - a.yLabel,
-                    callbacks: {
-                        title: (tooltips, data) => `Build #${tooltips[0].label}`,
-                        label: (context) => dataFormat.format(context.dataPoint.y) + " " + context.dataset.sample.unit + " – " + context.dataset.label
-                    }
-                },
-                hover: {
-                    intersect: false
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+                aspectRatio: 3,
+                scales: scales
             }
         });
         document.fonts.ready.then(() => chart.update());
