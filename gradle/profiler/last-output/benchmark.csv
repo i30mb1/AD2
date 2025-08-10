@@ -1,20 +1,12 @@
-scenario,configuration,configurationOld
-version,Gradle 7.5.1,Gradle 7.5.1
+scenario,Configuration Time Comparison,Configuration Time (Selective)
+version,Gradle 8.10.2,Gradle 8.10.2
 tasks,help,help
 value,total execution time,total execution time
-warm-up build #1,33163,
-warm-up build #2,6159,
-warm-up build #3,5482,
-warm-up build #4,4514,
-warm-up build #5,4198,
-warm-up build #6,3992,
-measured build #1,3665,
-measured build #2,3360,
-measured build #3,3218,
-measured build #4,3134,
-measured build #5,2942,
-measured build #6,3192,
-measured build #7,3144,
-measured build #8,3076,
-measured build #9,3177,
-measured build #10,3070,
+warm-up build #1,3624,2382
+warm-up build #2,3133,2030
+warm-up build #3,2761,2247
+warm-up build #4,2506,1924
+warm-up build #5,3081,1926
+warm-up build #6,2469,1811
+measured build #1,3047,1702
+measured build #2,2588,1785

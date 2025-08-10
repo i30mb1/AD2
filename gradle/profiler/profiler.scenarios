@@ -1,19 +1,49 @@
-build_pure {
-    tasks       = [":app:assembleDebug"]
-    gradle-args = ["--no-build-cache"]
+# Full project build (all modules included)
+build_full_project {
+    title = "Full Project Build (All Modules)"
+    tasks = [":app:assembleDebug"]
+    gradle-args = ["--no-build-cache", "-Pmodule="]
+    cleanup-tasks = ["clean"]
+    system-properties {
+        "module" = ""
+    }
+}
+
+# Selective module build (only :app and dependencies)
+build_selective_app {
+    title = "Selective Build (:app module only)"
+    tasks = [":app:assembleDebug"]  
+    gradle-args = ["--no-build-cache", "-Pmodule=:app"]
+    cleanup-tasks = ["clean"]
+    system-properties {
+        "module" = ":app"
+    }
+}
+
+# Demo module build (minimal footprint)
+build_selective_demo {
+    title = "Selective Build (Demo Module)"
+    tasks = [":feature:hero-page:demo:assembleDebug"]
+    gradle-args = ["--no-build-cache", "-Pmodule=:feature:hero-page:demo"]
+    cleanup-tasks = ["clean"]
+    system-properties {
+        "module" = ":feature:hero-page:demo"
+    }
+}
+
+# Configuration time comparison
+config_full_vs_selective {
+    title = "Configuration Time Comparison"
+    tasks = ["help"]
+    gradle-args = ["-Pmodule="]
     cleanup-tasks = ["clean"]
 }
 
-incremental {
-    tasks = [":app:assembleDebug"]
-    apply-abi-change-to              = "app/src/main/kotlin/n7/ad2/ui/MainActivity.kt"
-    apply-non-abi-change-to          = "app/src/main/kotlin/n7/ad2/ui/MainActivity.kt"
-    apply-android-resource-change-to = "app/src/main/res/values/strings.xml"
-    apply-android-layout-change-to   = "feature/drawer/src/main/res/layout/fragment_drawer.xml"
-}
-
-configuration {
-    tasks = ["help"]
+config_selective {
+    title = "Configuration Time (Selective)"
+    tasks = ["help"] 
+    gradle-args = ["-Pmodule=:app"]
+    cleanup-tasks = ["clean"]
 }
 
 # https://dev.to/autonomousapps/benchmarking-builds-with-gradle-profiler-oa8
