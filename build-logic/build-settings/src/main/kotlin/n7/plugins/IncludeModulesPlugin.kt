@@ -16,7 +16,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
     private val ignoreModules = listOf("AD2")
 
     override fun apply(target: Settings) = with(target) {
-        val targetModule = readTargetModule(rootDir)
+        val targetModule = readTargetModule(rootDir, target)
         if (targetModule.isNotEmpty()) {
             includeSpecificModule(targetModule)
         } else {
@@ -198,9 +198,51 @@ class IncludeModulesPlugin : Plugin<Settings> {
         }
     }
 
-    private fun readTargetModule(rootDir: File): String {
+    private fun readTargetModule(rootDir: File, settings: Settings): String {
+        // 1. Приоритет: -P параметр из командной строки
+        val moduleFromProperty = settings.providers.gradleProperty("module").orNull
+        if (!moduleFromProperty.isNullOrEmpty()) {
+            return moduleFromProperty.trim().removeSurrounding("\"")
+        }
+
+        // 2. Авто-определение по имени таска 
+        val moduleFromTask = detectModuleFromTask(settings)
+        if (moduleFromTask.isNotEmpty()) {
+            return moduleFromTask
+        }
+
+        // 3. Fallback: читаем из local.properties
         val properties = getLocalProperties(rootDir)
         return properties.getProperty("module", "").trim().removeSurrounding("\"")
+    }
+
+    private fun detectModuleFromTask(settings: Settings): String {
+        try {
+            val startParameter = settings.gradle.startParameter
+            val taskRequests = startParameter.taskRequests
+
+            // Получаем все задачи из всех запросов
+            val allTasks = taskRequests.flatMap { taskRequest ->
+                taskRequest.args
+            }
+
+            for (task in allTasks) {
+                if (task.startsWith(":") && task.count { it == ':' } >= 2) {
+                    // Извлекаем модуль из таска типа ":app:assembleDebug"
+                    val parts = task.split(":").filter { it.isNotEmpty() }
+                    if (parts.size >= 2) {
+                        // Берем все части кроме последней (которая обычно таск)
+                        val moduleParts = parts.dropLast(1)
+                        val detectedModule = ":" + moduleParts.joinToString(":")
+                        return detectedModule
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            // Тихо игнорируем ошибки авто-определения
+        }
+
+        return ""
     }
 
     private fun getLocalProperties(root: File): Properties {
@@ -214,27 +256,10 @@ class IncludeModulesPlugin : Plugin<Settings> {
         return properties
     }
 
-//    private fun findModules(file: File) {
-//        file.walk().count { it.isDirectory && it.hasBuildGradleFile() }
-//        if (file.isSuitableFile()) {
-//            if (file.hasBuildGradleFile()) {
-//                include(":${file.path.replace("\\", ":")}")
-//            } else {
-//                file.listFiles()
-//                    .orEmpty()
-//                    .forEach { subFile -> includeModule(subFile) }
-//            }
-//        }
-//    }
-
     /**
      * Функция которая преобразует camelCase -> camel-case
      */
     private fun String.toSnakeCase() = replace("(?<=.)(?=\\p{Upper})".toRegex(), "-").lowercase()
-
-    private fun File.hasSettingsGradleFile(): Boolean {
-        return File(this, "settings.gradle").isFile || File(this, "settings.gradle.kts").isFile
-    }
 
     private fun File.hasBuildGradleFile(): Boolean {
         return File(this, "build.gradle").isFile || File(this, "build.gradle.kts").isFile

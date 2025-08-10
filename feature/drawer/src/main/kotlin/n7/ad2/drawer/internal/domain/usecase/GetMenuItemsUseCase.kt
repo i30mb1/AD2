@@ -6,7 +6,6 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
@@ -43,7 +42,7 @@ internal class GetMenuItemsUseCase @Inject constructor(
             preference.saveSettings(Json.encodeToString(newSettings))
             emit(newSettings)
         } else {
-            emit(Json.decodeFromString(preference.getSettings()) ?: error("could not convert settings from Json"))
+            emit(Json.decodeFromString<Settings>(preference.getSettings()) ?: error("could not convert settings from Json"))
         }
     }.catch { error ->
         logger.log("could not load settings (${error.message})")
