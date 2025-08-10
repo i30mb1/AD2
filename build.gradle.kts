@@ -17,7 +17,7 @@ bumpVersionConfig {
 }
 
 branchComparison {
-    baseBranch.set("master")
+    baseBranch.set("v1")
     iterations.set(3)
     warmupRuns.set(1)
     targetTasks.set(listOf(":app:help"))

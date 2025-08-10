@@ -25,20 +25,20 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
     @TaskAction
     fun execute() {
         val config = extension.get()
-        val currentBranch = getCurrentBranch()
+        val originalBranch = getCurrentBranch()
         val baseBranch = config.baseBranch.get()
 
         println("🔀 Comparing branch performance...")
-        println("📊 Current branch: $currentBranch")
+        println("📊 Current branch: $originalBranch")
         println("📊 Baseline: $baseBranch")
         println("⚙️ Tasks: ${config.targetTasks.get().joinToString(", ")}")
 
-        if (currentBranch == baseBranch) {
+        if (originalBranch == baseBranch) {
             throw GradleException("⚠️ Cannot compare - already on base branch '$baseBranch'!")
         }
 
         val profilerBin = getProfilerExecutable()
-        val scenariosFile = createDynamicScenarios(currentBranch, baseBranch, config)
+        val scenariosFile = createDynamicScenarios(originalBranch, baseBranch, config)
 
         try {
             runBenchmark(profilerBin, scenariosFile, config)
@@ -48,6 +48,8 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
             println("💡 Make sure gradle-profiler is available and branches exist")
             throw GradleException("Benchmark execution failed", e)
         } finally {
+            // Return to original branch
+            returnToOriginalBranch(originalBranch)
             // Cleanup temporary files
             scenariosFile.delete()
         }
@@ -188,6 +190,22 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
             println("📊 Quick Summary:")
             println("   Open $csvFile for detailed results")
             println("   Or view HTML report for visual analysis")
+        }
+    }
+
+    private fun returnToOriginalBranch(originalBranch: String) {
+        try {
+            val currentBranch = getCurrentBranch()
+            if (currentBranch != originalBranch) {
+                println("🔄 Returning to original branch: $originalBranch")
+                project.exec {
+                    commandLine("git", "checkout", originalBranch)
+                }
+                println("✅ Successfully returned to branch: $originalBranch")
+            }
+        } catch (e: Exception) {
+            println("⚠️ Warning: Failed to return to original branch '$originalBranch': ${e.message}")
+            println("💡 Please manually switch to the desired branch with: git checkout $originalBranch")
         }
     }
 }

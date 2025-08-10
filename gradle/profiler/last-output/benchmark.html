@@ -330,7 +330,7 @@ div.controls .btn {
 <script>
 const benchmarkResult =
 {
-  "date": "2025-08-10T17:07:17.103710Z",
+  "date": "2025-08-10T17:54:24.733298Z",
   "environment": {
     "profilerVersion": "0.22.0",
     "operatingSystem": "mac os x aarch64 15.5"
@@ -339,15 +339,15 @@ const benchmarkResult =
     {
       "definition": {
         "name": "build_current_branch",
-        "title": "Build Current Branch (v1)",
-        "displayName": "Build Current Branch (v1) using Gradle 8.10.2",
+        "title": "Build Current Branch (master)",
+        "displayName": "Build Current Branch (master) using Gradle 8.10.2",
         "buildTool": "Gradle 8.10.2",
-        "tasks": ":app:assembleDebug",
+        "tasks": ":app:help",
         "version": "8.10.2",
         "gradleHome": "/Users/e.shuvagin/StudioProjects/AD2/gradle-user-home/wrapper/dists/gradle-8.10.2-bin/a04bxjujx95o3nb99gddekhwo/gradle-8.10.2",
         "javaHome": "/Users/e.shuvagin/.sdkman/candidates/java/17.0.10-tem",
         "usesScanPlugin": false,
-        "action": "run tasks :app:assembleDebug",
+        "action": "run tasks :app:help",
         "cleanup": "run tasks clean",
         "invoker": "Tooling API",
         "mutators": [],
@@ -372,7 +372,8 @@ const benchmarkResult =
           "-Duser.variant",
           "-Dfile.encoding\u003dUTF-8"
         ],
-        "systemProperties": {}
+        "systemProperties": {},
+        "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_current_branch_6bb60af7"
       },
       "samples": [
         {
@@ -380,24 +381,61 @@ const benchmarkResult =
           "unit": "ms"
         }
       ],
-      "iterations": []
+      "iterations": [
+        {
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_current_branch_6bb60af7_WARM_UP_1",
+          "phase": "WARM_UP",
+          "iteration": 1,
+          "title": "warm-up build #1",
+          "values": {
+            "total execution time": 5873.128541
+          }
+        },
+        {
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_current_branch_6bb60af7_MEASURE_1",
+          "phase": "MEASURE",
+          "iteration": 1,
+          "title": "measured build #1",
+          "values": {
+            "total execution time": 2568.345
+          }
+        },
+        {
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_current_branch_6bb60af7_MEASURE_2",
+          "phase": "MEASURE",
+          "iteration": 2,
+          "title": "measured build #2",
+          "values": {
+            "total execution time": 2128.396375
+          }
+        },
+        {
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_current_branch_6bb60af7_MEASURE_3",
+          "phase": "MEASURE",
+          "iteration": 3,
+          "title": "measured build #3",
+          "values": {
+            "total execution time": 2078.082333
+          }
+        }
+      ]
     },
     {
       "definition": {
         "name": "build_base_branch",
-        "title": "Build Base Branch (master)",
-        "displayName": "Build Base Branch (master) using Gradle 8.10.2",
+        "title": "Build Base Branch (v1)",
+        "displayName": "Build Base Branch (v1) using Gradle 8.10.2",
         "buildTool": "Gradle 8.10.2",
-        "tasks": ":app:assembleDebug",
+        "tasks": ":app:help",
         "version": "8.10.2",
         "gradleHome": "/Users/e.shuvagin/StudioProjects/AD2/gradle-user-home/wrapper/dists/gradle-8.10.2-bin/a04bxjujx95o3nb99gddekhwo/gradle-8.10.2",
         "javaHome": "/Users/e.shuvagin/.sdkman/candidates/java/17.0.10-tem",
         "usesScanPlugin": false,
-        "action": "run tasks :app:assembleDebug",
+        "action": "run tasks :app:help",
         "cleanup": "run tasks clean",
         "invoker": "Tooling API",
         "mutators": [
-          "GitCheckoutMutator(cleanup: v1, build: master)"
+          "GitCheckoutMutator(cleanup: master, build: v1)"
         ],
         "args": [
           "--no-build-cache"
@@ -421,7 +459,7 @@ const benchmarkResult =
           "-Dfile.encoding\u003dUTF-8"
         ],
         "systemProperties": {},
-        "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8"
+        "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_base_branch_b70a39e8"
       },
       "samples": [
         {
@@ -431,84 +469,39 @@ const benchmarkResult =
       ],
       "iterations": [
         {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_1",
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_base_branch_b70a39e8_WARM_UP_1",
           "phase": "WARM_UP",
           "iteration": 1,
           "title": "warm-up build #1",
           "values": {
-            "total execution time": 63017.374666
+            "total execution time": 5713.860083
           }
         },
         {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_2",
-          "phase": "WARM_UP",
-          "iteration": 2,
-          "title": "warm-up build #2",
-          "values": {
-            "total execution time": 29081.160292
-          }
-        },
-        {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_3",
-          "phase": "WARM_UP",
-          "iteration": 3,
-          "title": "warm-up build #3",
-          "values": {
-            "total execution time": 28396.840541
-          }
-        },
-        {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_4",
-          "phase": "WARM_UP",
-          "iteration": 4,
-          "title": "warm-up build #4",
-          "values": {
-            "total execution time": 31498.795375
-          }
-        },
-        {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_5",
-          "phase": "WARM_UP",
-          "iteration": 5,
-          "title": "warm-up build #5",
-          "values": {
-            "total execution time": 35594.725167
-          }
-        },
-        {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_WARM_UP_6",
-          "phase": "WARM_UP",
-          "iteration": 6,
-          "title": "warm-up build #6",
-          "values": {
-            "total execution time": 46249.856875
-          }
-        },
-        {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_MEASURE_1",
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_base_branch_b70a39e8_MEASURE_1",
           "phase": "MEASURE",
           "iteration": 1,
           "title": "measured build #1",
           "values": {
-            "total execution time": 45129.446
+            "total execution time": 3228.1485
           }
         },
         {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_MEASURE_2",
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_base_branch_b70a39e8_MEASURE_2",
           "phase": "MEASURE",
           "iteration": 2,
           "title": "measured build #2",
           "values": {
-            "total execution time": 46739.322666
+            "total execution time": 2895.859
           }
         },
         {
-          "id": "_83b6e097_ea25_4208_ae9c_d33ba315c2fc_build_base_branch_b70a39e8_MEASURE_3",
+          "id": "_a6049bdd_bae4_4ee6_897d_6cee3bed5d95_build_base_branch_b70a39e8_MEASURE_3",
           "phase": "MEASURE",
           "iteration": 3,
           "title": "measured build #3",
           "values": {
-            "total execution time": 49035.119667
+            "total execution time": 3303.435334
           }
         }
       ]
