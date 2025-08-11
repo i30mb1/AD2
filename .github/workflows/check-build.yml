@@ -20,18 +20,29 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: set up Java 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: 'oracle'
+          cache: gradle
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
         with:
-          gradle-version: 8.4
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: ${{ github.ref != 'refs/heads/master' }}
 
       - name: Generate local.properties file
         shell: bash
@@ -49,10 +60,10 @@ jobs:
           cat local.properties
 
       - name: Build with Gradle
-        run: gradle build --no-daemon --no-configuration-cache -q
+        run: ./gradlew build --no-daemon --no-configuration-cache
 
       - name: Copy APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AD2-prod-debug.apk
           path: app/build/outputs/apk/debug/*.apk

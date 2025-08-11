@@ -2,7 +2,7 @@ scenario,Build Current Branch (master),Build Base Branch (v1)
 version,Gradle 8.10.2,Gradle 8.10.2
 tasks,:app:help,:app:help
 value,total execution time,total execution time
-warm-up build #1,5873.13,5713.86
-measured build #1,2568.34,3228.15
-measured build #2,2128.40,2895.86
-measured build #3,2078.08,3303.44
+warm-up build #1,3954.91,6428.32
+measured build #1,2767.58,5773.41
+measured build #2,2322.37,5811.94
+measured build #3,2338.71,5099.12
