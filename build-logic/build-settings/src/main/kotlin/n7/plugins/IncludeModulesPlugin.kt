@@ -109,7 +109,10 @@ class IncludeModulesPlugin : Plugin<Settings> {
                 (trimmedLine.contains("implementation") || 
                  trimmedLine.contains("api") || 
                  trimmedLine.contains("compileOnly") ||
-                 trimmedLine.contains("runtimeOnly"))) {
+                        trimmedLine.contains("runtimeOnly") ||
+                        trimmedLine.contains("testImplementation") ||
+                        trimmedLine.contains("testFixtures"))
+            ) {
                 
                 val projectReference = extractProjectReference(trimmedLine)
                 if (projectReference.isNotEmpty()) {
@@ -123,6 +126,8 @@ class IncludeModulesPlugin : Plugin<Settings> {
                  trimmedLine.contains("api") || 
                  trimmedLine.contains("compileOnly") ||
                  trimmedLine.contains("runtimeOnly") ||
+                        trimmedLine.contains("testImplementation") ||
+                        trimmedLine.contains("testFixtures") ||
                  trimmedLine.contains("add("))) {
                 
                 val projectReference = extractDirectProjectReference(trimmedLine)
@@ -142,9 +147,28 @@ class IncludeModulesPlugin : Plugin<Settings> {
     
     private fun extractDirectProjectReference(line: String): String {
         // Извлекаем ссылку на проект из строки типа "add("lintChecks", project(":core:rules"))"
-        val regex = Regex("project\\(\"([^\"]+)\"\\)")
-        val match = regex.find(line)
-        return match?.groupValues?.get(1) ?: ""
+        // или из testFixtures(projects.core.appPreference)
+        val projectRegex = Regex("project\\(\"([^\"]+)\"\\)")
+        val projectMatch = projectRegex.find(line)
+        if (projectMatch != null) {
+            return projectMatch.groupValues[1]
+        }
+
+        // Проверяем строки типа testFixtures(projects.core.appPreference) или testFixtures(project(":core:app-preference"))
+        val testFixturesRegex = Regex("testFixtures\\(([^)]+)\\)")
+        val testFixturesMatch = testFixturesRegex.find(line)
+        if (testFixturesMatch != null) {
+            val content = testFixturesMatch.groupValues[1]
+            if (content.startsWith("projects.")) {
+                return extractProjectReference(line)
+            } else if (content.contains("project(")) {
+                val innerProjectRegex = Regex("project\\(\"([^\"]+)\"\\)")
+                val innerMatch = innerProjectRegex.find(content)
+                return innerMatch?.groupValues?.get(1) ?: ""
+            }
+        }
+
+        return ""
     }
     
     private fun extractProjectReference(line: String): String {
