@@ -7,6 +7,7 @@ dependencies {
     implementation(libs.kotlinGradlePlugin)
     implementation(libs.kspGradlePlugin)
     implementation(libs.kover)
+    implementation(libs.kotlin.power.assert)
     implementation(libs.kotlin.serialization.plugin)
     implementation(projects.buildExtensions)
 }
