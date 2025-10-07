@@ -53,10 +53,10 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, MainFragmentN
     }
 
     override fun setMainFragment(fragment: Fragment, body: FragmentTransaction.() -> Unit) {
-        supportFragmentManager.commitNow {
+        supportFragmentManager.beginTransaction().apply {
             body()
             replace(binding.container.id, fragment)
-        }
+        }.commit()
     }
 
     private fun checkAppLink() {
