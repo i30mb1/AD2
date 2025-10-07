@@ -89,7 +89,7 @@ Each feature follows Clean Architecture:
 
 ### Testing Structure
 
-- **Unit tests**: JUnit 4 + Truth assertions
+- **Unit tests**: JUnit 4
 - **Android tests**: Espresso + AndroidX Test
 - **Benchmarks**: Macro and micro benchmarks in dedicated modules
 - **Custom rules**: Detekt custom rules with tests

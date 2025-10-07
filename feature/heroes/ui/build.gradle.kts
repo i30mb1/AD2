@@ -18,4 +18,10 @@ dependencies {
     androidTestImplementation(libs.test.junit.kotlin)
     androidTestImplementation(libs.test.mockk)
     androidTestImplementation(libs.test.espresso)
+
+    testImplementation(libs.test.junit)
+    testImplementation(libs.test.coroutines)
+    testImplementation(libs.test.truth.jvm)
+    testImplementation(testFixtures(projects.core.logger.appLogger))
+    testImplementation(testFixtures(projects.feature.heroes.domain.impl))
 }
