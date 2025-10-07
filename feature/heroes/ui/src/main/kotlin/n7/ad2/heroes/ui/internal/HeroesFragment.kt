@@ -110,7 +110,7 @@ internal class HeroesFragment @JvmOverloads constructor(
             }
         }
 
-        viewModel.filteredHeroes.flowWithLifecycle(viewLifecycleOwner.lifecycle)
+        viewModel.heroes.flowWithLifecycle(viewLifecycleOwner.lifecycle)
             .onEach(heroAdapter::submitList)
             .launchIn(lifecycleScope)
     }

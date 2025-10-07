@@ -10,8 +10,13 @@ internal class FilterHeroesUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(list: List<VOHero>, filter: String): List<VOHero> = withContext(dispatchers.IO) {
-//        list.filter { hero -> hero.name.contains(filter, true) }
-        list.filter { true }
+        if (filter.isEmpty()) return@withContext list
+        list.filter { hero ->
+            when (hero) {
+                is VOHero.Body -> hero.name.contains(filter, ignoreCase = true)
+                is VOHero.Header -> false
+            }
+        }
     }
 
 }
