@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
     id("extensions")
-    id("org.jetbrains.kotlin.plugin.power-assert")
+//    id("org.jetbrains.kotlin.plugin.power-assert")
 }
 
 configure<JavaPluginExtension> {
