@@ -25,7 +25,7 @@ class ImagesCompressor {
         val resultWebpLossy = compress(bitmap, Bitmap.CompressFormat.WEBP)
         val resultJpeg = compress(bitmap, Bitmap.CompressFormat.JPEG)
         val resultOrig = compress(origin, Bitmap.CompressFormat.JPEG)
-        val bitmapWebp = BitmapFactory.decodeByteArray(resultWebpLossy, 0, resultWebpLossy.size)
+        val _bitmapWebp = BitmapFactory.decodeByteArray(resultWebpLossy, 0, resultWebpLossy.size)
         File(context.getExternalFilesDir(null), "Jpeg.jpeg").writeBytes(resultJpeg)
         File(context.getExternalFilesDir(null), "original.jpeg").writeBytes(resultOrig)
         File(context.getExternalFilesDir(null), "Webp.webp").writeBytes(resultWebpLossy)

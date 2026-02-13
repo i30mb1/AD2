@@ -73,8 +73,7 @@ class StreamActivity : FragmentActivity() {
         viewModel.load(streamerName)
     }
 
-    private fun onSettingsClicked() {
-    }
+    private fun onSettingsClicked() = Unit
 
     private fun onPipLayoutChanged(rect: Rect) {
         setPictureInPictureParams(

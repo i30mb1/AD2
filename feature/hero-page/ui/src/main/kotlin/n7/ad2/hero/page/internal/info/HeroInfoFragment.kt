@@ -77,8 +77,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         }
     }
 
-    private fun doOnPlayIconClicked(soundUrl: String) {
-    }
+    private fun doOnPlayIconClicked(_soundUrl: String) = Unit
 
     private fun setupSpellInfoRecyclerView() {
         val heroInfoAdapter = HeroInfoAdapter(

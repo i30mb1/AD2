@@ -10,7 +10,7 @@ import n7.ad2.app.logger.AdditionalLogger
 import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
 
-internal class LoggerImpl(private val aditionalLoggers: List<AdditionalLogger>) : Logger {
+internal class LoggerImpl(private val _aditionalLoggers: List<AdditionalLogger>) : Logger {
 
     private val _dataFlow = MutableSharedFlow<AppLog>(
         replay = 100,

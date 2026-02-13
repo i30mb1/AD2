@@ -50,6 +50,7 @@ inline fun ScrollToTopButton(isVisible: Boolean, state: LazyListState, modifier:
     }
 }
 
+@Suppress("UnusedPrivateMember")
 @Preview
 @Composable
 private fun ScrollToTopButtonPreview() {

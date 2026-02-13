@@ -50,7 +50,7 @@ class WindowOverlay(private val context: Context, private val lifecycle: Lifecyc
 
     private val windowManager by lazyUnsafe { context.getSystemService<WindowManager>()!! }
     private var viewOwner: ViewOwner? = null
-    private var onDoubleTapListener: (() -> Unit)? = null
+    private var _onDoubleTapListener: (() -> Unit)? = null
     private val poller = PollerImpl(context, lifecycle)
 
     init {
@@ -148,7 +148,7 @@ class ViewOwner(scope: CoroutineScope, private val context: Context, private val
     val container: WidgetContainerView = createContainer()
 
     private val infoPanelView: InfoPanelView = InfoPanelView(context)
-    private val chartsOwner = ChartsOwner(dispatcher)
+    private val _chartsOwner = ChartsOwner(dispatcher)
     private val mapper = PanelInfoMapper()
     private val animator = ValueAnimator.ofFloat(0f, 1f).apply {
         interpolator = DecelerateInterpolator()

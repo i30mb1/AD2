@@ -15,6 +15,9 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun SettingsBottomSheet(isShowBottomSheet: Boolean) {
+    if (isShowBottomSheet) {
+        BottomSheet()
+    }
 }
 
 @Composable
@@ -35,4 +38,5 @@ fun BottomSheet() {
 @Preview
 @Composable
 fun SettingsBottomSheetPreview() {
+    BottomSheet()
 }

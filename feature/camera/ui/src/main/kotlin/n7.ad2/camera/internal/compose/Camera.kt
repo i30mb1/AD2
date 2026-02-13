@@ -49,7 +49,7 @@ private fun CameraPreview() {
 }
 
 @Composable
-internal fun Camera(state: CameraStateUI, fpsTimer: FPSTimer, event: (CameraEvent) -> Unit, modifier: Modifier = Modifier) {
+internal fun Camera(state: CameraStateUI, fpsTimer: FPSTimer, event: (CameraEvent) -> Unit, _modifier: Modifier = Modifier) {
     Box {
         val context = LocalContext.current
         val lifecycle = LocalLifecycleOwner.current

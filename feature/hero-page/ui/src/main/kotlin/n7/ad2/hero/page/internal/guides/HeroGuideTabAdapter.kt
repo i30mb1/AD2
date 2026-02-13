@@ -23,13 +23,13 @@ class HeroGuideTabAdapter : ListAdapter<VOGuideTab, HeroGuideTabAdapter.HeroGuid
 //        private val binding: ViewDataBinding,
     ) : RecyclerView.ViewHolder(TODO()) {
 
-        fun bind(item: VOGuideTab) {
+        fun bind(_item: VOGuideTab) {
 //            binding.setVariable(BR.item, item)
 //            binding.executePendingBindings()
         }
 
         companion object {
-            fun from(parent: ViewGroup, layoutId: Int): HeroGuideTabHolder {
+            fun from(parent: ViewGroup, _layoutId: Int): HeroGuideTabHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
 //                val binding: ViewDataBinding = DataBindingUtil.inflate(layoutInflater, layoutId, parent, false)
                 return TODO()

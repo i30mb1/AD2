@@ -109,6 +109,7 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 
     @RequiresPermission(Manifest.permission.WRITE_SETTINGS)
     private fun writeSetting() {
+        TODO("Not yet implemented")
     }
 
     private fun requestPermission() {

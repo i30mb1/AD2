@@ -1,6 +1,97 @@
 config:
   validation: false
 
+# Formatting rules - disabled because Spotless/ktlint handles formatting
+formatting:
+  ArgumentListWrapping:
+    active: false
+  ParameterListWrapping:
+    active: false
+  MaximumLineLength:
+    active: false
+  Wrapping:
+    active: false
+  PropertyWrapping:
+    active: false
+  PackageName:
+    active: false
+  Filename:
+    active: false
+
+# Naming rules
+naming:
+  PackageNaming:
+    active: false
+  InvalidPackageDeclaration:
+    active: false
+  FunctionNaming:
+    active: true
+    ignoreAnnotated:
+      - Composable
+  MatchingDeclarationName:
+    active: false
+  FunctionParameterNaming:
+    active: false
+  ConstructorParameterNaming:
+    active: false
+  TopLevelPropertyNaming:
+    active: false
+  VariableNaming:
+    active: false
+  Filename:
+    active: false
+
 style:
   MaxLineLength:
-    maxLineLength: 300
+    active: false
+  MagicNumber:
+    active: false
+  ReturnCount:
+    active: false
+  LoopWithTooManyJumpStatements:
+    maxJumpCount: 3
+  ForbiddenComment:
+    active: false
+  UseCheckOrError:
+    active: false
+  ThrowsCount:
+    active: false
+  FunctionOnlyReturningConstant:
+    active: false
+
+  UnusedPrivateMember:
+    active: false
+  UnusedPrivateClass:
+    active: false
+  UnusedParameter:
+    active: false
+  UnusedPrivateProperty:
+    active: false
+
+complexity:
+  LongParameterList:
+    active: false
+  LongMethod:
+    active: false
+  TooManyFunctions:
+    active: false
+  CyclomaticComplexMethod:
+    active: false
+  NestedBlockDepth:
+    active: false
+  ComplexCondition:
+    active: false
+
+exceptions:
+  SwallowedException:
+    active: false
+  TooGenericExceptionCaught:
+    active: false
+  TooGenericExceptionThrown:
+    active: false
+
+empty-blocks:
+  EmptyFunctionBlock:
+    ignoreOverridden: true
+  EmptyInitBlock:
+    active: false

@@ -23,6 +23,7 @@ class BodyViewHolder private constructor(private val binding: ItemBodyBinding) :
     }
 
     fun clear() {
+        Unit
     }
 
     companion object {

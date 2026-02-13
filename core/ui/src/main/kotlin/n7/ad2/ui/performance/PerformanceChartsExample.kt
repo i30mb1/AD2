@@ -17,6 +17,7 @@ import n7.ad2.ui.compose.AppTheme
 /**
  * Example showing how to use the new PerformanceCharts composable
  */
+@Suppress("UnusedPrivateMember")
 @Preview(showBackground = true)
 @Composable
 private fun PerformanceChartsExample() {
@@ -64,6 +65,7 @@ private fun PerformanceChartsExample() {
 /**
  * Simplified example showing manual Chart usage
  */
+@Suppress("UnusedPrivateMember")
 @Preview(showBackground = true)
 @Composable
 private fun ManualChartsExample() {

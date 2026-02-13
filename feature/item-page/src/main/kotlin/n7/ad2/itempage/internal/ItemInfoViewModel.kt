@@ -32,7 +32,7 @@ class ItemInfoViewModel @AssistedInject constructor(appInfo: AppInformation, pri
         loadItemInfo(itemName, appInfo.appLocale)
     }
 
-    fun onStartPlayingItem(soundUrl: String) {
+    fun onStartPlayingItem(_soundUrl: String) {
         _voItemInfo.value = checkNotNull(_voItemInfo.value).map { item ->
             if (item is VOItemInfo.Title) item.copy(data = item.data.copy(isPlaying = true)) else item
         }

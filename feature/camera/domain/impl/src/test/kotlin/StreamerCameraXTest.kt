@@ -58,7 +58,7 @@ class ImageAnalysisShadow {
     var clearAnalyzerCalled = false
 
     @Implementation
-    fun setAnalyzer(executor: Executor, analyzer: ImageAnalysis.Analyzer) {
+    fun setAnalyzer(_executor: Executor, _analyzer: ImageAnalysis.Analyzer) {
         setAnalyzerCalled = true
     }
 

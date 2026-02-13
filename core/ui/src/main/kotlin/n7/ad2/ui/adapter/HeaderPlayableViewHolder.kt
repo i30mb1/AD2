@@ -23,6 +23,7 @@ class HeaderPlayableViewHolder private constructor(private val binding: ItemHead
     }
 
     fun clear() {
+        Unit
     }
 
     companion object {

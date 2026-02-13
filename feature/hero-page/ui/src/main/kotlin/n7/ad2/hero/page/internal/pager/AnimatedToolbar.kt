@@ -69,7 +69,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         this.onChangeResponseLocaleListener = listener
     }
 
-    fun loadHero(heroName: String, appLocale: AppLocale) {
+    fun loadHero(_heroName: String, appLocale: AppLocale) {
 //        ivHero.load(getFullUrlHeroMinimap(heroName))
         currentLocale = appLocale
         setUpViews()

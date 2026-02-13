@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.dp
 import n7.ad2.app.logger.model.AppLog
 import n7.ad2.ui.compose.AppTheme
 
+@Suppress("UnusedPrivateMember")
 @Preview
 @Composable
 private fun LoggerImpl() {

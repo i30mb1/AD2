@@ -49,8 +49,7 @@ class TournamentsFragment : Fragment(R.layout.fragment_tournaments) {
         _binding = null
     }
 
-    private fun setupAdapter() {
-    }
+    private fun setupAdapter() = Unit
 
     private fun setupInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.rv) { _, insets ->

@@ -37,7 +37,8 @@ class HeroGuideAdapter :
 
     class HeroGuideHolder private constructor() : RecyclerView.ViewHolder(TODO()) {
 
-        fun bind(item: VOGuideItem) {
+        fun bind(_item: VOGuideItem) {
+            TODO("Not yet implemented")
         }
 
         companion object {

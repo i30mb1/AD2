@@ -23,7 +23,7 @@ internal class GameServerImpl(dispatchers: DispatchersProvider) {
         }
     }
 
-    suspend fun sendMessage(myMove: String) {
+    suspend fun sendMessage(_myMove: String) {
         // socketSend
     }
 
@@ -39,6 +39,7 @@ internal class GameServerImpl(dispatchers: DispatchersProvider) {
         }
     }
 
-    private suspend fun processOpponentMove(opponentMove: String) {
+    private suspend fun processOpponentMove(_opponentMove: String) {
+        TODO("Not yet implemented")
     }
 }

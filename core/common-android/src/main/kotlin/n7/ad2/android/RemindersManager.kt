@@ -37,7 +37,7 @@ class RemindersManager(private val context: Application) {
         alarmManager.setAlarmClock(AlarmManager.AlarmClockInfo(calendar.timeInMillis, pendingIntent), pendingIntent)
     }
 
-    fun stopReminder(reminderId: Int = REQUEST_CODE) {
+    fun stopReminder(_reminderId: Int = REQUEST_CODE) {
         val intent = Intent(context, AlarmReceiver::class.java)
 //        val pendingIntent = PendingIntent.getBroadcast(context, reminderId, intent, 0)
 //        alarmManager.cancel(pendingIntent)

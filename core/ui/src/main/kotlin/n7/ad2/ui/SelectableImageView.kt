@@ -15,7 +15,7 @@ class SelectableImageView(context: Context, attributeSet: AttributeSet) : AppCom
     private val borderWidth = resources.getDimension(R.dimen.line_width)
     private var currentBorderWidth = 0f
     private val rect = Rect()
-    private val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+    private val _borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL_AND_STROKE
         strokeWidth = 1f
         color = MaterialColors.getColor(this@SelectableImageView, com.google.android.material.R.attr.colorPrimary)

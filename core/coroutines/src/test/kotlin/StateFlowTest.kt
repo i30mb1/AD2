@@ -8,5 +8,6 @@ class StateFlowTest {
 
     @Test
     fun `simple state flow`() {
+        Unit
     }
 }

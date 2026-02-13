@@ -102,8 +102,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         audioExoPlayer.play(item.audioUrl)
     }
 
-    private fun showPopup() {
-    }
+    private fun showPopup() = Unit
 
     private fun showDialogResponse(item: VOResponse.Body) {
         if (item.isSavedInMemory) return

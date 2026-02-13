@@ -29,7 +29,7 @@ internal class ServerWithWebsocket(private val dispatchers: DispatchersProvider,
         private const val PAYLOAD_LONG = 127L
     }
 
-    fun start(host: InetAddress, ports: IntArray) = scope.launch {
+    fun start(_host: InetAddress, _ports: IntArray) = scope.launch {
         try {
 //            val server = serverSocketProxy.getServerSocket(host, ports)
 //            logger(ServerLog.ServerStarted)
@@ -60,7 +60,7 @@ internal class ServerWithWebsocket(private val dispatchers: DispatchersProvider,
         runWebSocketCommunication(inputStream, outputStream)
     }
 
-    private fun runWebSocketCommunication(inputStream: InputStream, outputStream: OutputStream) {
+    private fun runWebSocketCommunication(inputStream: InputStream, _outputStream: OutputStream) {
         while (true) {
             val receivedFrame = readSocketFrame(inputStream)
             when (receivedFrame) {
@@ -73,7 +73,7 @@ internal class ServerWithWebsocket(private val dispatchers: DispatchersProvider,
         }
     }
 
-    private fun sendSocketFrame(outputStream: OutputStream) {
+    private fun sendSocketFrame(_outputStream: OutputStream) {
         val utf8Bytes = "Ok.".toByteArray()
 //        outputStream.write()
     }

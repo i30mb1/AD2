@@ -15,15 +15,15 @@ object DateAndStrings {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val unixTimeSystem = System.currentTimeMillis() / 1000
+        val _unixTimeSystem = System.currentTimeMillis() / 1000
 
         // просто для хранения даты
         val date = Date()
-        val unixTimeDate = date.time / 1000
+        val _unixTimeDate = date.time / 1000
         // для работы с датами
         val calendar = Calendar.getInstance()
         calendar.add(Calendar.HOUR, 1)
-        val unixTimeCalendar = calendar.timeInMillis / 1000
+        val _unixTimeCalendar = calendar.timeInMillis / 1000
         // для форматирования в нужную дату
         val simpleDateFormat = SimpleDateFormat("HH:mm dd.MM.yyyy", Locale("ru", "RU"))
         // тупо окунаем туда милисикунды и получаем строку которые сформировали
@@ -34,7 +34,8 @@ object DateAndStrings {
             gameDate = simpleDateFormat.parse("19:00 16.08" + SimpleDateFormat(".yyyy", Locale("ru", "RU")).format(Date()))
             s = simpleDateFormat.format(gameDate)
         } catch (e: ParseException) {
-            e.printStackTrace()
+            // TODO replace with logger
+            // e.printStackTrace()
         }
 
         println("current: $era${String.format(Locale.US, " = %d", date.time)}")

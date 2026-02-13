@@ -85,11 +85,12 @@ fun main() {
         println("Total: ${heroes.size} heroes")
     } catch (e: Exception) {
         println("CRITICAL ERROR: ${e.message}")
-        e.printStackTrace()
+        // TODO replace with logger
+        // e.printStackTrace()
     }
 }
 
-private fun loadResponse(hero: Hero, locale: LocaleHeroes) {
+private fun loadResponseLegacy(hero: Hero, locale: LocaleHeroes) {
     val root = Jsoup.connect(locale.soundUrl.format(hero.name)).postDataCharset("UTF-8").get()
     val allResponsesWithCategories = JSONArray()
 

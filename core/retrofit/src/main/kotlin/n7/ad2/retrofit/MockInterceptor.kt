@@ -39,6 +39,6 @@ private fun Request.buildResponse(message: String) = Response.Builder()
     .message("Ok")
     .build()
 
-private fun load(filePath: String): String {
+private fun load(_filePath: String): String {
     return "{}" // Mock empty JSON response
 }

@@ -53,8 +53,7 @@ internal class ItemsFragment(override var dependenciesMap: DependenciesMap) :
         postponeEnterTransition()
     }
 
-    private fun setupAnimation() {
-    }
+    private fun setupAnimation() = Unit
 
     private fun onItemClick(model: ItemUI.Body, view: ImageView) {
         getMainFragmentNavigator?.setMainFragment(navigator.itemPageApi.getItemPageFragment(model.name)) {

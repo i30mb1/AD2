@@ -114,7 +114,7 @@ class DraggableFrameLayout(context: Context, attributeSet: AttributeSet) : Frame
         return super.onInterceptTouchEvent(ev)
     }
 
-    private fun onReleased(child: View, xVel: Float, yVel: Float) {
+    private fun onReleased(child: View, _xVel: Float, _yVel: Float) {
         var (x, y) = getLocation(child)
         x += (child.measuredWidth * currentScale) / 2
         y -= (child.measuredHeight * currentScale) / 2

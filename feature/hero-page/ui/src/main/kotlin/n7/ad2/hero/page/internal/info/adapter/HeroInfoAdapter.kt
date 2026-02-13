@@ -98,7 +98,7 @@ class HeroInfoAdapter(
 
         private var lineHeight = 0
 
-        fun bind(item: VOHeroInfo) {
+        fun bind(_item: VOHeroInfo) {
 //            binding.setVariable(BR.item, item)
 //            bindSetting(binding)
 //            binding.executePendingBindings()
@@ -121,10 +121,10 @@ class HeroInfoAdapter(
         companion object {
             fun from(
                 parent: ViewGroup,
-                viewType: Int,
+                _viewType: Int,
 //                audioExoPlayer: AudioExoPlayer,
                 popupListener: (View, String) -> Unit,
-                descriptionsListener: (List<VOHeroInfo>) -> Unit,
+                _descriptionsListener: (List<VOHeroInfo>) -> Unit,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
 //                val binding: ViewDataBinding = when (viewType) {

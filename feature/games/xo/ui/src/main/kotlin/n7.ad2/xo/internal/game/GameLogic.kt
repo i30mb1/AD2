@@ -107,7 +107,7 @@ internal class GameLogic @Inject constructor(
         socketClientController.connect(server.name, ip, server.port)
     }
 
-    suspend fun connectToWifiDirect(serverIP: String) = withContext(dispatchers.IO) {
+    suspend fun connectToWifiDirect(_serverIP: String) = withContext(dispatchers.IO) {
 //        connectToWifiDirectUseCase(serverIP)
 //        serverHolder.start(InetAddress.getByName(serverIP), "H1")
 //        socketHolder.socket = serverHolder.awaitClient()

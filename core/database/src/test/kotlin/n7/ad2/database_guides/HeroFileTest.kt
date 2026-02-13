@@ -10,7 +10,7 @@ import java.io.File
 @LargeTest
 class HeroFileTest {
 
-    private val json = Json { ignoreUnknownKeys = true }
+    private val _json = Json { ignoreUnknownKeys = true }
 
     @Ignore("github action error")
     @Test
@@ -18,7 +18,7 @@ class HeroFileTest {
         val fileWithHeroes = File("${System.getProperty("user.dir")}\\src\\main\\assets\\heroes.json")
         Truth.assertThat(fileWithHeroes.exists()).isTrue()
 
-        val text = fileWithHeroes.readText()
+        val _text = fileWithHeroes.readText()
 
 //        val listAssetsHero = json.decodeFromString<List<AssetsHero>>(text)
 
