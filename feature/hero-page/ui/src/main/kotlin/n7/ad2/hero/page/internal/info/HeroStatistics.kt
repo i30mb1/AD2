@@ -7,13 +7,9 @@ import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import n7.ad2.feature.hero.page.ui.databinding.HeroStatisticsBinding
 
-
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe
 @SuppressLint("SetTextI18n")
-class HeroStatistics(
-    context: Context,
-    attributeSet: AttributeSet,
-) : ConstraintLayout(context, attributeSet) {
+class HeroStatistics(context: Context, attributeSet: AttributeSet) : ConstraintLayout(context, attributeSet) {
 
     data class Statistics(val strength: Double, val agility: Double, val intelligence: Double)
 
@@ -24,5 +20,4 @@ class HeroStatistics(
         binding.tvStrength.text = "${statistics.strength}"
         binding.tvIntelligence.text = "${statistics.intelligence}"
     }
-
 }

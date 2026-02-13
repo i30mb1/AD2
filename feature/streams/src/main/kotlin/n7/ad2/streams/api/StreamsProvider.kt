@@ -7,5 +7,4 @@ import n7.ad2.streams.internal.StreamsFragment
 class StreamsProvider : StreamsApi {
 
     override fun getFragment(): Fragment = StreamsFragment.getInstance()
-
 }

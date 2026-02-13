@@ -18,10 +18,7 @@ import n7.ad2.feature.drawer.R
 import n7.ad2.ktx.dpToPx
 import kotlin.math.abs
 
-internal class DraggableDrawer(
-    context: Context,
-    attributeSet: AttributeSet,
-) : FrameLayout(context, attributeSet) {
+internal class DraggableDrawer(context: Context, attributeSet: AttributeSet) : FrameLayout(context, attributeSet) {
 
     companion object {
         private val collapsedOffsetX = 130.dpToPx
@@ -48,22 +45,26 @@ internal class DraggableDrawer(
     private var drawerPercent: ((percent: Float) -> Unit)? = null
     private val draggableRect = Rect()
 
-    private val dragHelper = ViewDragHelper.create(this, 1F, object : ViewDragHelper.Callback() {
-        override fun tryCaptureView(child: View, pointerId: Int) = child == draggableView
-        override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int = MathUtils.clamp(left, width - child.width, width - child.width + collapsedOffsetX)
-        override fun clampViewPositionVertical(child: View, top: Int, dy: Int) = 0
-        override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(xvel)
-        override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
-            val percent = 1 - (left.toFloat()) / (collapsedOffsetX)
-            drawerPercent?.invoke(percent)
-            val scale = maxScale - (left.toFloat()) / (collapsedOffsetX) * (maxScale - collapsedScale)
-            draggableView.scaleY = scale
-            draggableView.scaleX = scale
-            offsetX = changedView.left
-            offsetY = changedView.top
-            currentOffsetX = offsetX
-        }
-    })
+    private val dragHelper = ViewDragHelper.create(
+        this,
+        1F,
+        object : ViewDragHelper.Callback() {
+            override fun tryCaptureView(child: View, pointerId: Int) = child == draggableView
+            override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int = MathUtils.clamp(left, width - child.width, width - child.width + collapsedOffsetX)
+            override fun clampViewPositionVertical(child: View, top: Int, dy: Int) = 0
+            override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(xvel)
+            override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
+                val percent = 1 - (left.toFloat()) / (collapsedOffsetX)
+                drawerPercent?.invoke(percent)
+                val scale = maxScale - (left.toFloat()) / (collapsedOffsetX) * (maxScale - collapsedScale)
+                draggableView.scaleY = scale
+                draggableView.scaleX = scale
+                offsetX = changedView.left
+                offsetY = changedView.top
+                currentOffsetX = offsetX
+            }
+        },
+    )
 
     init {
         context.withStyledAttributes(attributeSet, R.styleable.DrawableDrawer) {
@@ -164,5 +165,4 @@ internal class DraggableDrawer(
             }
         }
     }
-
 }

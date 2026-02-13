@@ -5,7 +5,7 @@ fun Any.getResource(filename: String): File? {
 
     val tempFile = File.createTempFile(
         filename.substringBeforeLast('.'),
-        "." + filename.substringAfterLast('.')
+        "." + filename.substringAfterLast('.'),
     )
     tempFile.deleteOnExit()
 

@@ -11,7 +11,6 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
@@ -27,6 +26,7 @@ import n7.ad2.mediaplayer.AudioExoPlayer
 import n7.ad2.ui.InfoPopupWindow
 import n7.ad2.ui.StickyHeaderDecorator
 import n7.ad2.ui.showDialogError
+import javax.inject.Inject
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
@@ -38,6 +38,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     @Inject lateinit var responsesViewModelFactory: ResponsesViewModel.Factory
+
     @Inject lateinit var audioExoPlayerFactory: AudioExoPlayer.Factory
     private val audioExoPlayer by lazyUnsafe { audioExoPlayerFactory.create(lifecycle) }
 
@@ -102,7 +103,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun showPopup() {
-
     }
 
     private fun showDialogResponse(item: VOResponse.Body) {

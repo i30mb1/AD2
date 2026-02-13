@@ -13,19 +13,12 @@ internal class AppComponentFactoryDemo : AppComponentFactory() {
     private val factory by lazyUnsafe { DaggerApplicationComponentDemo.factory() }
     private lateinit var component: ApplicationComponentDemo
 
-    override fun instantiateApplication(
-        classLoader: ClassLoader,
-        className: String,
-    ): Application = when (className) {
+    override fun instantiateApplication(classLoader: ClassLoader, className: String): Application = when (className) {
         MyApplicationDemo::class.java.name -> MyApplicationDemo { application -> component = factory.create(application) }
         else -> super.instantiateApplication(classLoader, className)
     }
 
-    override fun instantiateActivity(
-        classLoader: ClassLoader,
-        className: String,
-        intent: Intent?,
-    ): Activity = when (className) {
+    override fun instantiateActivity(classLoader: ClassLoader, className: String, intent: Intent?): Activity = when (className) {
         HeroesActivityDemo::class.java.name -> HeroesActivityDemo(component.heroesFragmentFactory)
         else -> super.instantiateActivity(classLoader, className, intent)
     }

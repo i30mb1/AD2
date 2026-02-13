@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.media3.common.util.UnstableApi
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import javax.inject.Inject
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
 import n7.ad2.app.logger.Logger
@@ -18,6 +17,7 @@ import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.domain.vo.VOStream
 import n7.ad2.streams.internal.stream.StreamActivity
 import n7.ad2.ui.content
+import javax.inject.Inject
 
 @UnstableApi
 internal class StreamsFragment : Fragment() {
@@ -27,6 +27,7 @@ internal class StreamsFragment : Fragment() {
     }
 
     @Inject lateinit var streamsFactory: StreamsViewModel.Factory
+
     @Inject lateinit var logger: Logger
 
     private val viewModel: StreamsViewModel by viewModel { streamsFactory.create() }
@@ -36,11 +37,9 @@ internal class StreamsFragment : Fragment() {
         DaggerStreamsComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content {
-            val streams: LazyPagingItems<VOStream> = viewModel.streams.collectAsLazyPagingItems()
-            StreamsScreen(streams, parentFragment as DrawerPercentListener, ::onStreamClicked)
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        val streams: LazyPagingItems<VOStream> = viewModel.streams.collectAsLazyPagingItems()
+        StreamsScreen(streams, parentFragment as DrawerPercentListener, ::onStreamClicked)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -54,5 +53,4 @@ internal class StreamsFragment : Fragment() {
             startActivity(streamFragment)
         }
     }
-
 }

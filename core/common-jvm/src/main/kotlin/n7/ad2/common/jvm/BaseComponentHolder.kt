@@ -5,5 +5,4 @@ interface BaseComponentHolder<Component> {
     fun get(): Component
 
     fun set(component: Component)
-
 }

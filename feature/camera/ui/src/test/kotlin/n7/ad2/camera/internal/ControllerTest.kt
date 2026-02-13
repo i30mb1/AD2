@@ -22,9 +22,7 @@ class ControllerTest {
     }
 }
 
-class Test5(
-    private val lifecycleOwner: LifecycleOwner,
-) {
+class Test5(private val lifecycleOwner: LifecycleOwner) {
     init {
         flow {
             repeat(50) {
@@ -39,6 +37,5 @@ object MyLifecycle : LifecycleOwner {
     override val lifecycle: Lifecycle = lifecycleRegistry
 
     init {
-
     }
 }

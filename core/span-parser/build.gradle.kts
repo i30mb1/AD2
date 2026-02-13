@@ -19,4 +19,3 @@ dependencies {
 
     ksp(libs.daggerAnnotation)
 }
-

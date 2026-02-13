@@ -1,18 +1,15 @@
 package n7.ad2.camera.internal.model
 
 import androidx.camera.view.PreviewView
-import kotlin.math.max
-import kotlin.math.min
-import kotlin.time.Duration
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import n7.ad2.feature.camera.domain.model.DetectedFaceNormalized
 import n7.ad2.feature.camera.domain.model.Image
+import kotlin.math.max
+import kotlin.math.min
+import kotlin.time.Duration
 
-internal fun MutableStateFlow<CameraStateUI>.setFace(
-    detectedFaceNormalized: DetectedFaceNormalized?,
-    image: Image?,
-) {
+internal fun MutableStateFlow<CameraStateUI>.setFace(detectedFaceNormalized: DetectedFaceNormalized?, image: Image?) {
     if (detectedFaceNormalized == null || image == null) {
         update { state ->
             state.copy(detectedRect = DetectedRect.Nothing)
@@ -51,7 +48,7 @@ internal fun MutableStateFlow<CameraStateUI>.setFace(
                 detectedFaceNormalized.xMax * previewImageWidth + x,
                 detectedFaceNormalized.yMin * previewImageHeight + y,
                 detectedFaceNormalized.yMax * previewImageHeight + y,
-            )
+            ),
         )
     }
 }

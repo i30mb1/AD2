@@ -6,13 +6,9 @@ import n7.ad2.database_guides.internal.model.LocalGuide
 import n7.ad2.repositories.GuideRepository
 import javax.inject.Inject
 
-class SaveLocalGuideUseCase @Inject constructor(
-    private val repository: GuideRepository,
-    private val dispatchers: DispatchersProvider,
-) {
+class SaveLocalGuideUseCase @Inject constructor(private val repository: GuideRepository, private val dispatchers: DispatchersProvider) {
 
     suspend operator fun invoke(localGuide: List<LocalGuide>) = withContext(dispatchers.Default) {
         repository.insertGuideAndDeleteOldGuides(localGuide)
     }
-
 }

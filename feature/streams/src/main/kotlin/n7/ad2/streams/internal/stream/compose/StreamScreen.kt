@@ -59,15 +59,9 @@ import n7.ad2.feature.streams.R
 
 @UnstableApi
 @Composable
-internal fun StreamScreen(
-    uri: String,
-    isPipIconVisible: Boolean,
-    onPipClicked: () -> Unit,
-    onPipLayoutChanged: (Rect) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun StreamScreen(uri: String, isPipIconVisible: Boolean, onPipClicked: () -> Unit, onPipLayoutChanged: (Rect) -> Unit, modifier: Modifier = Modifier) {
     val sheetState = rememberModalBottomSheetState(
-        initialValue = ModalBottomSheetValue.Hidden
+        initialValue = ModalBottomSheetValue.Hidden,
     )
     val coroutineScope = rememberCoroutineScope()
     BackHandler(sheetState.isVisible) { coroutineScope.launch { sheetState.hide() } }
@@ -76,51 +70,49 @@ internal fun StreamScreen(
         sheetState = sheetState,
         sheetShape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp),
         sheetContent = {
-            Box(modifier = Modifier
-                .height(300.dp)
-                .background(Color.Red))
-
+            Box(
+                modifier = Modifier
+                    .height(300.dp)
+                    .background(Color.Red),
+            )
         },
         modifier = Modifier.fillMaxSize(),
         content = {
             BottomSheetContent(modifier, uri, onPipLayoutChanged, isPipIconVisible, onPipClicked) {
                 coroutineScope.launch {
-                    if (sheetState.isVisible) sheetState.hide()
-                    else sheetState.show()
+                    if (sheetState.isVisible) {
+                        sheetState.hide()
+                    } else {
+                        sheetState.show()
+                    }
                 }
             }
-        }
+        },
     )
-
 }
 
 @Composable
-private fun BottomSheetContent(
-    modifier: Modifier,
-    uri: String,
-    onPipLayoutChanged: (Rect) -> Unit,
-    isPipIconVisible: Boolean,
-    onPipClicked: () -> Unit,
-    onSettingsClicked: () -> Unit,
-) {
+private fun BottomSheetContent(modifier: Modifier, uri: String, onPipLayoutChanged: (Rect) -> Unit, isPipIconVisible: Boolean, onPipClicked: () -> Unit, onSettingsClicked: () -> Unit) {
     Column(
         modifier = modifier
             .statusBarsPadding()
             .fillMaxSize()
-            .background(Color.Black)
+            .background(Color.Black),
     ) {
         Box {
             VideoPlayer(uri, onPipLayoutChanged)
             Row(modifier = Modifier.align(Alignment.TopEnd)) {
-                if (isPipIconVisible) Icon(
-                    ImageVector.vectorResource(id = R.drawable.pip),
-                    null,
-                    Modifier
-                        .padding(6.dp)
-                        .size(24.dp)
-                        .clickable { onPipClicked() },
-                    Color.White,
-                )
+                if (isPipIconVisible) {
+                    Icon(
+                        ImageVector.vectorResource(id = R.drawable.pip),
+                        null,
+                        Modifier
+                            .padding(6.dp)
+                            .size(24.dp)
+                            .clickable { onPipClicked() },
+                        Color.White,
+                    )
+                }
                 Icon(
                     ImageVector.vectorResource(R.drawable.ic_settings),
                     null,
@@ -168,7 +160,8 @@ internal fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
             val mediaSource = HlsMediaSource.Factory(dataSource).createMediaSource(MediaItem.fromUri(uri.toUri()))
             exoPlayer.setMediaSource(mediaSource)
             exoPlayer.prepare()
-        })
+        },
+    )
 
     DisposableEffect(Unit) {
         val observer = LifecycleEventObserver { _, event ->
@@ -192,6 +185,9 @@ internal fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
 @Composable
 private fun StreamScreenPreview() {
     StreamScreen(
-        "", true, {}, {}
+        "",
+        true,
+        {},
+        {},
     )
 }

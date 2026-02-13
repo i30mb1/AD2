@@ -9,9 +9,5 @@ class UIModule {
 
     @dagger.Provides
     @dagger.Reusable
-    fun provideRecordingDelay(
-        dispatchersProvider: DispatchersProvider,
-    ): RecordingDelay {
-        return RecordingDelayImpl(dispatchersProvider)
-    }
+    fun provideRecordingDelay(dispatchersProvider: DispatchersProvider): RecordingDelay = RecordingDelayImpl(dispatchersProvider)
 }

@@ -20,7 +20,7 @@ tasks.withType<KotlinJvmCompile>().configureEach {
             "-opt-in=kotlinx.coroutines.DelicateCoroutinesApi",
             "-opt-in=androidx.media3.common.util.UnstableApi",
             "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
-            "-Xskip-metadata-version-check"
+            "-Xskip-metadata-version-check",
         )
         jvmTarget.set(JvmTarget.JVM_17)
         if (System.getProperty("idea.active") == "true") {

@@ -29,7 +29,7 @@ class ScheduleGameWorker(context: Context, workerParams: WorkerParameters) : Wor
                 applicationContext,
                 0,
                 notificationIntent,
-                PendingIntent.FLAG_IMMUTABLE
+                PendingIntent.FLAG_IMMUTABLE,
             )
 
             val largeIcon = BitmapFactory.decodeResource(resources, iconResourceId, BitmapFactory.Options())

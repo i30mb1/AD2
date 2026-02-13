@@ -22,10 +22,7 @@ class KillCreepFragment : Fragment() {
         DaggerGamesComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content {
-            KillCreepScreen()
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        KillCreepScreen()
     }
-
 }

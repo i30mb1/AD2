@@ -6,17 +6,13 @@ import n7.ad2.coroutines.DispatchersProvider
 /**
  * Информация об использовании оперативной памяти используемой для нашего процесса
  */
-internal class RAMExtractor(
-    private val dispatcher: DispatchersProvider,
-) {
+internal class RAMExtractor(private val dispatcher: DispatchersProvider) {
 
-    suspend fun get(): Info {
-        return withContext(dispatcher.Default) {
-            val runtime = Runtime.getRuntime()
-            val usedMemoryMB = (runtime.totalMemory() - runtime.freeMemory()) / BYTES_IN_MEGABYTE
-            val maxMemoryMB = runtime.maxMemory() / BYTES_IN_MEGABYTE
-            Info(usedMemoryMB, maxMemoryMB)
-        }
+    suspend fun get(): Info = withContext(dispatcher.Default) {
+        val runtime = Runtime.getRuntime()
+        val usedMemoryMB = (runtime.totalMemory() - runtime.freeMemory()) / BYTES_IN_MEGABYTE
+        val maxMemoryMB = runtime.maxMemory() / BYTES_IN_MEGABYTE
+        Info(usedMemoryMB, maxMemoryMB)
     }
 
     class Info(val usedMemoryMB: Long, val maxMemoryMB: Long)

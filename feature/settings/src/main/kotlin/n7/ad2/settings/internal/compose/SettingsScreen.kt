@@ -20,10 +20,7 @@ import n7.ad2.feature.settings.R
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
-internal fun SettingsScreen(
-    onAppReviewButtonClicked: () -> Unit,
-    onTellFriendsButtonClicked: () -> Unit,
-) {
+internal fun SettingsScreen(onAppReviewButtonClicked: () -> Unit, onTellFriendsButtonClicked: () -> Unit) {
     Column {
         SimpleItem(stringResource(R.string.setting_review_app), onAppReviewButtonClicked)
         SimpleItem(stringResource(R.string.setting_tell_friend_about_this_app), onTellFriendsButtonClicked)
@@ -31,10 +28,7 @@ internal fun SettingsScreen(
 }
 
 @Composable
-internal fun SimpleItem(
-    name: String,
-    onSimpleItemClicked: () -> Unit,
-) {
+internal fun SimpleItem(name: String, onSimpleItemClicked: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -47,7 +41,7 @@ internal fun SimpleItem(
             modifier = Modifier
                 .align(Alignment.CenterVertically)
                 .weight(1f, false),
-            color = AppTheme.color.textColor
+            color = AppTheme.color.textColor,
         )
         Icon(
             Icons.Default.Star,

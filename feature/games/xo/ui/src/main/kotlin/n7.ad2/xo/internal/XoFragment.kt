@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.compose.runtime.collectAsState
 import androidx.fragment.app.Fragment
-import javax.inject.Inject
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
@@ -17,10 +16,11 @@ import n7.ad2.ui.content
 import n7.ad2.xo.internal.compose.XoScreen
 import n7.ad2.xo.internal.compose.XoScreenEvent
 import n7.ad2.xo.internal.di.DaggerXoComponent
+import javax.inject.Inject
 
-internal class XoFragment(
-    override var dependenciesMap: DependenciesMap,
-) : Fragment(), HasDependencies {
+internal class XoFragment(override var dependenciesMap: DependenciesMap) :
+    Fragment(),
+    HasDependencies {
 
     @Inject lateinit var skillGameViewModelFactory: XoViewModel.Factory
     private val viewModel: XoViewModel by viewModel { skillGameViewModelFactory.create() }
@@ -30,11 +30,9 @@ internal class XoFragment(
         DaggerXoComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content {
-            val state = viewModel.state.collectAsState(XoUIState()).value
-            XoScreen(state = state, events = ::handleState)
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        val state = viewModel.state.collectAsState(XoUIState()).value
+        XoScreen(state = state, events = ::handleState)
     }
 
     private fun handleState(event: XoScreenEvent) {

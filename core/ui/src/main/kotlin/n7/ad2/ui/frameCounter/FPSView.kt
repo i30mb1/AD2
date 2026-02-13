@@ -21,10 +21,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.spToPx
 import n7.ad2.ui.performance.FpsExtractor
 
-class FPSView(
-    context: Context,
-    attrs: AttributeSet,
-) : View(context, attrs) {
+class FPSView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
     private val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
         typeface = ResourcesCompat.getFont(context, R.font.iceland_normal)
@@ -68,5 +65,4 @@ class FPSView(
         editable.append("$fps fps")
         invalidate()
     }
-
 }

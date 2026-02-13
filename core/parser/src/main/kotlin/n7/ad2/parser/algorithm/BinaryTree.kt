@@ -59,7 +59,6 @@ fun hasPathSum(root: TreeNode?, sum: Int): Boolean {
 fun isSymmetric(root: TreeNode?): Boolean {
     if (root == null) return true
     return isSymmetric(root.left, root.right)
-
 }
 
 fun isSymmetric(left: TreeNode?, right: TreeNode?): Boolean {

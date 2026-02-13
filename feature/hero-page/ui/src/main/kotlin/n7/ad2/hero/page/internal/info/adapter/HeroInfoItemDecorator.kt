@@ -31,7 +31,5 @@ class HeroInfoItemDecorator : RecyclerView.ItemDecoration() {
                 else -> offsetHorizontal
             }
         }
-
     }
-
 }

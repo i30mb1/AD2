@@ -10,9 +10,7 @@ import n7.ad2.app.logger.AdditionalLogger
 import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
 
-internal class LoggerImpl(
-    private val aditionalLoggers: List<AdditionalLogger>,
-) : Logger {
+internal class LoggerImpl(private val aditionalLoggers: List<AdditionalLogger>) : Logger {
 
     private val _dataFlow = MutableSharedFlow<AppLog>(
         replay = 100,
@@ -30,9 +28,7 @@ internal class LoggerImpl(
 
     override fun getLogFlow(): SharedFlow<AppLog> = dataFlow
 
-    override fun getLogsFlow(): Flow<List<AppLog>> {
-       return dataFlow.runningFold(emptyList()) { list: List<AppLog>, value: AppLog ->
-            list + value
-        }
+    override fun getLogsFlow(): Flow<List<AppLog>> = dataFlow.runningFold(emptyList()) { list: List<AppLog>, value: AppLog ->
+        list + value
     }
 }

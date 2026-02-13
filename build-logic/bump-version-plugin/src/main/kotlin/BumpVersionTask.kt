@@ -1,4 +1,3 @@
-import java.util.Properties
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.provider.Property
@@ -11,6 +10,7 @@ import org.gradle.api.tasks.PathSensitivity
 import org.gradle.api.tasks.TaskAction
 import org.gradle.work.Incremental
 import org.gradle.work.InputChanges
+import java.util.Properties
 
 @CacheableTask
 abstract class BumpVersionTask : DefaultTask() {

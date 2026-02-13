@@ -8,5 +8,4 @@ object UpdateManagerModule {
 
     @dagger.Provides
     fun provideUpdateManager(application: Application) = AppUpdateManagerFactory.create(application)
-
 }

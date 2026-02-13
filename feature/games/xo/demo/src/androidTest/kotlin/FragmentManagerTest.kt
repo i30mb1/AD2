@@ -48,7 +48,5 @@ class FragmentManagerTest {
 
 class EmptyFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return TextView(context).apply { text = "Hello World!" }
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = TextView(context).apply { text = "Hello World!" }
 }

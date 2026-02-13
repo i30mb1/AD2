@@ -23,10 +23,9 @@ import n7.ad2.feature.drawer.R
 import n7.ad2.ktx.dpToPx
 import n7.ad2.ktx.spToPx
 
-internal class FingerCoordinate(
-    context: Context,
-    attrs: AttributeSet,
-) : View(context, attrs), DefaultLifecycleObserver {
+internal class FingerCoordinate(context: Context, attrs: AttributeSet) :
+    View(context, attrs),
+    DefaultLifecycleObserver {
 
     companion object {
         private val OFFSET_START = 3.dpToPx
@@ -107,5 +106,4 @@ internal class FingerCoordinate(
             }
         invalidate()
     }
-
 }

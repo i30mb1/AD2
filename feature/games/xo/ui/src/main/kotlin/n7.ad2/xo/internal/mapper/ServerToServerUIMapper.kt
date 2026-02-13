@@ -5,7 +5,5 @@ import n7.ad2.xo.internal.compose.model.ServerUI
 
 internal object ServerToServerUIMapper : (Server, String) -> ServerUI {
 
-    override fun invoke(server: Server, myDeviceIp: String): ServerUI {
-        return ServerUI(server.name, server.ip, server.port.toString(), server.ip == myDeviceIp)
-    }
+    override fun invoke(server: Server, myDeviceIp: String): ServerUI = ServerUI(server.name, server.ip, server.port.toString(), server.ip == myDeviceIp)
 }

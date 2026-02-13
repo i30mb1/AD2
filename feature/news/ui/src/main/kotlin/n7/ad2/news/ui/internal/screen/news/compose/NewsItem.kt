@@ -42,7 +42,6 @@ import n7.ad2.news.ui.internal.screen.news.model.NewsVO
 import n7.ad2.ui.compose.AppTheme
 import n7.ad2.ui.compose.bounceClick
 
-
 @Preview
 @Composable
 private fun NewsItemPreview() {
@@ -52,15 +51,12 @@ private fun NewsItemPreview() {
 }
 
 @Composable
-internal fun NewsItem(
-    item: NewsVO,
-    onNewsClicked: (newsID: Int) -> Unit,
-) {
+internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit) {
     Surface(
         modifier = Modifier
             .bounceClick()
             .then(
-                Modifier.clip(RoundedCornerShape(6.dp))
+                Modifier.clip(RoundedCornerShape(6.dp)),
             ),
         color = AppTheme.color.surface,
         elevation = 4.dp,
@@ -89,25 +85,21 @@ internal fun NewsItem(
                 FavoriteIcon(
                     isLiked = isLiked,
                     onLikeClicked = { isLiked = !isLiked },
-                    modifier = Modifier.align(Alignment.TopEnd)
+                    modifier = Modifier.align(Alignment.TopEnd),
                 )
                 Box(
                     modifier = Modifier
                         .width(1.dp)
                         .fillMaxHeight()
-                        .background(AppTheme.color.primary)
+                        .background(AppTheme.color.primary),
                 )
-            }
+            },
         )
     }
 }
 
 @Composable
-private fun FavoriteIcon(
-    isLiked: Boolean,
-    onLikeClicked: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
+private fun FavoriteIcon(isLiked: Boolean, onLikeClicked: () -> Unit, modifier: Modifier = Modifier) {
     var filledLikeScale by remember { mutableStateOf(0f) }
     var showEmptyLike by remember { mutableStateOf(false) }
     Box(
@@ -117,18 +109,20 @@ private fun FavoriteIcon(
     ) {
         val image by remember(isLiked) {
             mutableStateOf(
-                if (isLiked) Icons.Default.Favorite else Icons.Default.FavoriteBorder
+                if (isLiked) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
             )
         }
         Icon(
             imageVector = image,
             contentDescription = null,
         )
-        if (filledLikeScale > 0f) Icon(
-            modifier = Modifier.scale(filledLikeScale),
-            imageVector = Icons.Default.Favorite,
-            contentDescription = null,
-        )
+        if (filledLikeScale > 0f) {
+            Icon(
+                modifier = Modifier.scale(filledLikeScale),
+                imageVector = Icons.Default.Favorite,
+                contentDescription = null,
+            )
+        }
     }
 
     LaunchedEffect(isLiked) {

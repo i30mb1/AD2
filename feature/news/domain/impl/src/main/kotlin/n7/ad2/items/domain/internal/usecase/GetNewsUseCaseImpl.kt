@@ -12,11 +12,7 @@ import n7.ad2.items.domain.model.News
 import n7.ad2.items.domain.usecase.GetNewsUseCase
 import org.jsoup.Jsoup
 
-internal class GetNewsUseCaseImpl constructor(
-    private val logger: Logger,
-    private val appInformation: AppInformation,
-    private val dispatchers: DispatchersProvider,
-) : GetNewsUseCase {
+internal class GetNewsUseCaseImpl constructor(private val logger: Logger, private val appInformation: AppInformation, private val dispatchers: DispatchersProvider) : GetNewsUseCase {
 
     override suspend operator fun invoke(page: Int): Flow<List<News>> = flow {
         val baseUrl = when (appInformation.appLocale) {
@@ -32,14 +28,16 @@ internal class GetNewsUseCaseImpl constructor(
                 val title = element.getElementsByClass("headline").getOrNull(0)?.text()
                 val style = element.childNode(0).attr("style")
                 val imageUrl = style.substringAfter("url(").substringBefore(")")
-                if (title != null) add(
-                    News(
-                        title = title,
-                        urlImage = imageUrl,
-                        loadedFromPage = page,
-                        articleUrl = "$baseUrl$href",
+                if (title != null) {
+                    add(
+                        News(
+                            title = title,
+                            urlImage = imageUrl,
+                            loadedFromPage = page,
+                            articleUrl = "$baseUrl$href",
+                        ),
                     )
-                )
+                }
             }
         }
         emit(result)
@@ -47,6 +45,4 @@ internal class GetNewsUseCaseImpl constructor(
         logger.log("could not loading news page $page")
         emit(emptyList())
     }.flowOn(dispatchers.IO)
-
-
 }

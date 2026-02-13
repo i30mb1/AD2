@@ -12,7 +12,6 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import javax.inject.Inject
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.android.findDependencies
@@ -20,6 +19,7 @@ import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.feature.hero.page.ui.databinding.FragmentHeroPageBinding
 import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.lazyUnsafe
+import javax.inject.Inject
 
 class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 
@@ -27,7 +27,7 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
         private const val HERO_NAME = "HERO_NAME"
         fun getInstance(heroName: String): HeroPageFragment = HeroPageFragment().apply {
             arguments = bundleOf(
-                HERO_NAME to heroName
+                HERO_NAME to heroName,
             )
         }
     }
@@ -72,7 +72,8 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 //                    supportStartPostponedEnterTransition()
                     return true
                 }
-            })
+            },
+        )
     }
 
     private fun setupInsets() {
@@ -108,7 +109,6 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 
     @RequiresPermission(Manifest.permission.WRITE_SETTINGS)
     private fun writeSetting() {
-
     }
 
     private fun requestPermission() {
@@ -121,5 +121,4 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
 //            else -> registerPermission.launch(Manifest.permission.WRITE_SETTINGS)
 //        }
     }
-
 }

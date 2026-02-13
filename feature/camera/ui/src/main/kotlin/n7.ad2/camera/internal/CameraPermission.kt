@@ -5,14 +5,11 @@ import androidx.activity.result.contract.ActivityResultContracts.RequestMultiple
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 
-internal class CameraPermission(
-    private val activity: FragmentActivity,
-    private val onPermissionGranted: () -> Unit,
-) {
+internal class CameraPermission(private val activity: FragmentActivity, private val onPermissionGranted: () -> Unit) {
 
     private val requiredPermission = arrayOf(
         android.Manifest.permission.CAMERA,
-        android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+        android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
     )
     private val permission = activity.registerForActivityResult(RequestMultiplePermissions()) {
         onPermissionGranted()
@@ -31,5 +28,4 @@ internal class CameraPermission(
     private fun isGranted() = requiredPermission.all { permission ->
         ContextCompat.checkSelfPermission(activity, permission) == PackageManager.PERMISSION_GRANTED
     }
-
 }

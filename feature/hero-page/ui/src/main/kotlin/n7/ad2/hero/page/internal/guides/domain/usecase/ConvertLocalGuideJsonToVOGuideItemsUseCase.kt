@@ -1,6 +1,5 @@
 package n7.ad2.hero.page.internal.guides.domain.usecase
 
-import javax.inject.Inject
 import kotlinx.coroutines.withContext
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
@@ -14,11 +13,9 @@ import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideInfoLine
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideItem
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideTitle
 import n7.ad2.heroes.domain.model.Guide
+import javax.inject.Inject
 
-class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
-    private val dispatchers: DispatchersProvider,
-    private val res: Resources,
-) {
+class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(private val dispatchers: DispatchersProvider, private val res: Resources) {
 
     suspend operator fun invoke(list: List<Guide>): List<VOGuideItem> = withContext(dispatchers.IO) {
         val item = list.getOrNull(list.lastIndex) ?: return@withContext emptyList()
@@ -39,10 +36,10 @@ class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
     }
 }
 
-//override fun getHeroDescription(name: String): Flow<HeroDescription> = flow {
+// override fun getHeroDescription(name: String): Flow<HeroDescription> = flow {
 //    val jsonString = res.getAssets("heroes/$name/${appLocale.value}/description.json")
 //        .bufferedReader()
 //        .use { it.readText() }
 //    val heroJson = Json.decodeFromString<HeroDescriptionJson>(jsonString)
 //    emit(HeroDescription())
-//}
+// }

@@ -24,7 +24,5 @@ class HeroSpellsItemDecorator : RecyclerView.ItemDecoration() {
             left = if (position == 0) leftOffset else offsetVertical
             right = if (position == childCount - 1) rightOffset else offsetVertical
         }
-
     }
-
 }

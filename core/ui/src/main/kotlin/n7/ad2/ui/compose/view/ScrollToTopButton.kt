@@ -24,11 +24,7 @@ import kotlinx.coroutines.launch
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
-inline fun ScrollToTopButton(
-    isVisible: Boolean,
-    state: LazyListState,
-    modifier: Modifier = Modifier,
-) {
+inline fun ScrollToTopButton(isVisible: Boolean, state: LazyListState, modifier: Modifier = Modifier) {
     val scope = rememberCoroutineScope()
     AnimatedVisibility(
         visible = isVisible,
@@ -37,11 +33,13 @@ inline fun ScrollToTopButton(
         modifier = modifier
             .padding(bottom = 60.dp),
     ) {
-        Box(modifier = Modifier
-            .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
-            .background(color = AppTheme.color.primary)
-            .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
-            .clickable { scope.launch { state.animateScrollToItem(0) } }) {
+        Box(
+            modifier = Modifier
+                .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
+                .background(color = AppTheme.color.primary)
+                .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
+                .clickable { scope.launch { state.animateScrollToItem(0) } },
+        ) {
             Icon(
                 modifier = modifier
                     .align(Alignment.Center),

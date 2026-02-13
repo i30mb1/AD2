@@ -6,9 +6,9 @@ import n7.ad2.dagger.ApplicationScope
 import n7.ad2.database_guides.api.DatabaseModule
 import n7.ad2.di.RetrofitModule
 import n7.ad2.items.api.ItemsDependencies
+import n7.ad2.items.api.ItemsFragmentFactory
 import n7.ad2.items.demo.MyApplicationDemo
 import n7.ad2.items.domain.wiring.ItemsModule
-import n7.ad2.items.api.ItemsFragmentFactory
 
 @ApplicationScope
 @dagger.Component(
@@ -18,7 +18,7 @@ import n7.ad2.items.api.ItemsFragmentFactory
         RetrofitModule::class,
         DatabaseModule::class,
         ItemsModule::class,
-    ]
+    ],
 )
 internal interface ApplicationComponentDemo : ItemsDependencies {
 

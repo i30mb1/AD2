@@ -16,15 +16,11 @@ internal interface SettingsApi {
     suspend fun getSettings(): Settings
 
     companion object {
-        fun get(
-            client: Lazy<OkHttpClient>,
-        ): SettingsApi {
-            return Retrofit.Builder()
-                .baseUrl("https://raw.githubusercontent.com/i30mb1/AD2/master/")
-                .callFactory { request -> client.get().newCall(request) }
-                .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
-                .build()
-                .create()
-        }
+        fun get(client: Lazy<OkHttpClient>): SettingsApi = Retrofit.Builder()
+            .baseUrl("https://raw.githubusercontent.com/i30mb1/AD2/master/")
+            .callFactory { request -> client.get().newCall(request) }
+            .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+            .build()
+            .create()
     }
 }

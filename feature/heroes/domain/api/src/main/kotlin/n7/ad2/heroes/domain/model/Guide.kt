@@ -12,19 +12,8 @@ class Guide(
     val heroSpellsList: List<Spell>,
 )
 
-class HeroWithWinrate(
-    val heroName: String,
-    val heroWinrate: Double,
-    val avatarUrl: String,
-)
+class HeroWithWinrate(val heroName: String, val heroWinrate: Double, val avatarUrl: String)
 
-class Spell(
-    val spellName: String,
-    val spellOrder: String,
-    val spellImageUrl: String,
-)
+class Spell(val spellName: String, val spellOrder: String, val spellImageUrl: String)
 
-class HeroItem(
-    val itemName: String,
-    val itemTime: String,
-)
+class HeroItem(val itemName: String, val itemTime: String)

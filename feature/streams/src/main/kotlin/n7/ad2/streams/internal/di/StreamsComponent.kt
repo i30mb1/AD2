@@ -8,10 +8,10 @@ import n7.ad2.streams.internal.stream.StreamActivity
 
 @Component(
     dependencies = [
-        StreamsDependencies::class
+        StreamsDependencies::class,
     ],
     modules = [
-        StreamsModule::class
+        StreamsModule::class,
     ],
 )
 internal interface StreamsComponent {
@@ -25,5 +25,4 @@ internal interface StreamsComponent {
     fun inject(streamActivity: StreamActivity)
 
     val streamsViewModelFactory: StreamsViewModel.Factory
-
 }

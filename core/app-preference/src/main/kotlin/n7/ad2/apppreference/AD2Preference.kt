@@ -13,10 +13,7 @@ import kotlinx.coroutines.flow.first
 import n7.ad2.apppreference.domain.usecase.GetCurrentDayUseCase
 
 // https://proandroiddev.com/kotlin-property-delegates-for-datastore-preferences-library-5d4e1cdb609b
-class AD2Preference constructor(
-    application: Application,
-    getCurrentDayUseCase: GetCurrentDayUseCase,
-) : Preference {
+class AD2Preference constructor(application: Application, getCurrentDayUseCase: GetCurrentDayUseCase) : Preference {
 
     private val dataStore = PreferenceDataStoreFactory.create(
         corruptionHandler = ReplaceFileCorruptionHandler { emptyPreferences() },
@@ -33,9 +30,7 @@ class AD2Preference constructor(
     private val settingsLastDayUpdate = intPreferencesKey("settingsLastDateUpdate")
     private val newsLastDateUpdate = intPreferencesKey("newsLastDateUpdate")
 
-    override suspend fun isNeedToUpdateNews(): Boolean {
-        return dataStore.data.first()[newsLastDateUpdate] != currentDay
-    }
+    override suspend fun isNeedToUpdateNews(): Boolean = dataStore.data.first()[newsLastDateUpdate] != currentDay
 
     override suspend fun saveUpdateNewsDate() {
         dataStore.edit { preference ->
@@ -43,9 +38,7 @@ class AD2Preference constructor(
         }
     }
 
-    override suspend fun isNeedToUpdateSettings(): Boolean {
-        return dataStore.data.first()[settingsLastDayUpdate] != currentDay
-    }
+    override suspend fun isNeedToUpdateSettings(): Boolean = dataStore.data.first()[settingsLastDayUpdate] != currentDay
 
     override suspend fun saveSettings(data: String) {
         dataStore.edit { preferences ->
@@ -54,28 +47,19 @@ class AD2Preference constructor(
         }
     }
 
-    override suspend fun getSettings(): String {
-        return dataStore.data.first()[settings] ?: ""
-    }
+    override suspend fun getSettings(): String = dataStore.data.first()[settings] ?: ""
 
     override suspend fun saveDate(date: Int) {
         dataStore.edit { preferences -> preferences[dateKey] = date }
     }
 
-    override suspend fun getDate(): Int {
-        return dataStore.data.first()[dateKey] ?: 0
-    }
+    override suspend fun getDate(): Int = dataStore.data.first()[dateKey] ?: 0
 
     override suspend fun setFingerCoordinateEnabled(isEnabled: Boolean) {
         dataStore.edit { preferences -> preferences[fingerCoordinateEnabled] = isEnabled }
     }
 
-    override suspend fun isFingerCoordinateEnabled(): Boolean {
-        return dataStore.data.first()[fingerCoordinateEnabled] ?: true
-    }
+    override suspend fun isFingerCoordinateEnabled(): Boolean = dataStore.data.first()[fingerCoordinateEnabled] ?: true
 
-    override suspend fun isLogWidgetEnabled(): Boolean {
-        return dataStore.data.first()[logWidgetEnabled] ?: true
-    }
-
+    override suspend fun isLogWidgetEnabled(): Boolean = dataStore.data.first()[logWidgetEnabled] ?: true
 }

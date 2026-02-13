@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import java.util.concurrent.atomic.AtomicReference
-import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -20,10 +18,9 @@ import kotlinx.coroutines.flow.retryWhen
 import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.seconds
 
-internal class SkillGameViewModel @AssistedInject constructor(
-    private val getSkillsUseCase: GetSkillsUseCase,
-) : ViewModel() {
+internal class SkillGameViewModel @AssistedInject constructor(private val getSkillsUseCase: GetSkillsUseCase) : ViewModel() {
 
     @AssistedFactory
     interface Factory {
@@ -75,8 +72,11 @@ internal class SkillGameViewModel @AssistedInject constructor(
             }
         }
         delay(1.seconds)
-        if (state.value.wrongAttempts == 0) onAction(Action.EndGame)
-        else onAction(Action.LoadQuestion)
+        if (state.value.wrongAttempts == 0) {
+            onAction(Action.EndGame)
+        } else {
+            onAction(Action.LoadQuestion)
+        }
     }
 
     private fun loadQuestion() = getSkillsUseCase()
@@ -131,32 +131,24 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 false,
             )
         }
-
     }
 
-    private fun State.setSkills(data: GetSkillsUseCase.Data): State {
-        return copy(
-            isLoading = false,
-            loadingAttempts = 0,
-            backgroundColor = data.backgroundColor,
-            spellImage = data.skillImage,
-            spellList = SpellList(
-                list = data.suggestsSpellList.map { spell ->
-                    Spell(spell.cost, spell.isRightAnswer)
-                }
-            ),
-            spellLVL = data.spellLVL,
-        )
-    }
-
-    @Immutable
-    internal data class SpellList(
-        val list: List<Spell>,
+    private fun State.setSkills(data: GetSkillsUseCase.Data): State = copy(
+        isLoading = false,
+        loadingAttempts = 0,
+        backgroundColor = data.backgroundColor,
+        spellImage = data.skillImage,
+        spellList = SpellList(
+            list = data.suggestsSpellList.map { spell ->
+                Spell(spell.cost, spell.isRightAnswer)
+            },
+        ),
+        spellLVL = data.spellLVL,
     )
 
     @Immutable
-    internal data class Spell(
-        val cost: String,
-        val isRightAnswer: Boolean,
-    )
+    internal data class SpellList(val list: List<Spell>)
+
+    @Immutable
+    internal data class Spell(val cost: String, val isRightAnswer: Boolean)
 }

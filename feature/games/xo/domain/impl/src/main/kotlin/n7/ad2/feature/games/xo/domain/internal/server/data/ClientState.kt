@@ -2,10 +2,7 @@ package n7.ad2.feature.games.xo.domain.internal.server.data
 
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
-data class ClientState(
-    val status: ClientStatus = ClientStatus.Disconnected,
-    val messages: List<Message> = emptyList(),
-)
+data class ClientState(val status: ClientStatus = ClientStatus.Disconnected, val messages: List<Message> = emptyList())
 
 sealed interface ClientStatus {
     data object Disconnected : ClientStatus

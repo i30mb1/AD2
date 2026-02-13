@@ -38,9 +38,10 @@ import n7.ad2.updatemanager.UpdateManagerModule
         NewsModule::class,
         ItemsModule::class,
 //        GamesModule::class,
-    ]
+    ],
 )
-interface ApplicationComponent : StreamsDependencies,
+interface ApplicationComponent :
+    StreamsDependencies,
     DrawerDependencies,
     HeroesDependencies,
     ItemPageDependencies,

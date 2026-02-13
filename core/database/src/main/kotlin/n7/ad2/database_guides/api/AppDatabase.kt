@@ -25,5 +25,4 @@ abstract class AppDatabase : RoomDatabase() {
     companion object {
         const val DB_NAME = "AD2Database_$DB_VERSION.db"
     }
-
 }

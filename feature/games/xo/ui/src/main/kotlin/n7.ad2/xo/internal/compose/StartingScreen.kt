@@ -52,24 +52,21 @@ private fun XoScreenPreview() {
                 deviceIP = "192.168.100.10",
                 servers = listOf(ServerUI()),
                 server = SimpleServer("Nothing Phone2", "192.168.100.10", 45646),
-                selectedSocketType = SocketType.RAW
-            )
+                selectedSocketType = SocketType.RAW,
+            ),
         ) { }
     }
 }
 
 @Composable
-internal fun StaringScreen(
-    state: XoUIState,
-    event: (event: XoScreenEvent) -> Unit,
-) {
+internal fun StaringScreen(state: XoUIState, event: (event: XoScreenEvent) -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(
                 top = WindowInsets.systemBars
                     .asPaddingValues()
-                    .calculateTopPadding()
+                    .calculateTopPadding(),
             ),
     ) {
         Column(
@@ -78,7 +75,7 @@ internal fun StaringScreen(
         ) {
             SocketTypeSelector(
                 selectedSocketType = state.selectedSocketType,
-                onSocketTypeSelected = { event(XoScreenEvent.SelectSocketType(it)) }
+                onSocketTypeSelected = { event(XoScreenEvent.SelectSocketType(it)) },
             )
             Box(modifier = Modifier.fillMaxHeight(0.2f))
             val name = rememberTextFieldState(state.deviceName)
@@ -97,20 +94,22 @@ internal fun StaringScreen(
                 "Start",
                 state.isButtonStartEnabled,
             ) { event(XoScreenEvent.StartServer(name.text.toString())) }
-            if (true) EditTextWithButton(
-                ip,
-                "Connect",
-                true,
-            ) {
-                event(
-                    XoScreenEvent.ConnectToServer(
-                        ServerUI(
-                            name.text.toString(),
-                            ip.text.toString().substringBefore(":"),
-                            ip.text.toString().substringAfter(":"),
-                        )
+            if (true) {
+                EditTextWithButton(
+                    ip,
+                    "Connect",
+                    true,
+                ) {
+                    event(
+                        XoScreenEvent.ConnectToServer(
+                            ServerUI(
+                                name.text.toString(),
+                                ip.text.toString().substringBefore(":"),
+                                ip.text.toString().substringAfter(":"),
+                            ),
+                        ),
                     )
-                )
+                }
             }
             ServerList(state.servers, { server ->
                 event(XoScreenEvent.ConnectToServer(server))
@@ -120,13 +119,7 @@ internal fun StaringScreen(
 }
 
 @Composable
-internal fun EditTextWithButton(
-    state: TextFieldState,
-    buttonText: String,
-    isEnabled: Boolean,
-    modifier: Modifier = Modifier,
-    onButtonClicked: () -> Unit,
-) {
+internal fun EditTextWithButton(state: TextFieldState, buttonText: String, isEnabled: Boolean, modifier: Modifier = Modifier, onButtonClicked: () -> Unit) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
@@ -165,24 +158,20 @@ internal fun EditTextWithButton(
 }
 
 @Composable
-internal fun SocketTypeSelector(
-    selectedSocketType: SocketType,
-    onSocketTypeSelected: (SocketType) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun SocketTypeSelector(selectedSocketType: SocketType, onSocketTypeSelected: (SocketType) -> Unit, modifier: Modifier = Modifier) {
     Row(
         horizontalArrangement = Arrangement.Center,
         modifier = modifier
             .padding(16.dp)
-            .fillMaxWidth()
+            .fillMaxWidth(),
     ) {
         Row(
             modifier = Modifier
                 .background(
                     color = AppTheme.color.surface,
-                    shape = RoundedCornerShape(8.dp)
+                    shape = RoundedCornerShape(8.dp),
                 )
-                .padding(4.dp)
+                .padding(4.dp),
         ) {
             SocketType.entries.forEach { socketType ->
                 val isSelected = selectedSocketType == socketType
@@ -191,14 +180,14 @@ internal fun SocketTypeSelector(
                         .clickable { onSocketTypeSelected(socketType) }
                         .background(
                             color = if (isSelected) AppTheme.color.primary else AppTheme.color.surface,
-                            shape = RoundedCornerShape(6.dp)
+                            shape = RoundedCornerShape(6.dp),
                         )
                         .padding(horizontal = 16.dp, vertical = 8.dp),
-                    contentAlignment = Alignment.Center
+                    contentAlignment = Alignment.Center,
                 ) {
                     Text(
                         text = socketType.name,
-                        color = if (isSelected) AppTheme.color.surface else AppTheme.color.textColor.copy(alpha = 0.6f)
+                        color = if (isSelected) AppTheme.color.surface else AppTheme.color.textColor.copy(alpha = 0.6f),
                     )
                 }
             }

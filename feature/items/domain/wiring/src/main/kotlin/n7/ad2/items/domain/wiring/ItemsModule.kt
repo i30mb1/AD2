@@ -15,34 +15,22 @@ import n7.ad2.items.domian.di.ItemsDomainDependencies
 object ItemsModule {
 
     @dagger.Provides
-    fun provideHeroesDomainComponent(
-        res: Resources,
-        dispatchers: DispatchersProvider,
-        appInformation: AppInformation,
-        application: Application,
-        logger: Logger,
-    ): ItemsDomainComponent = ItemsDomainComponent(
+    fun provideHeroesDomainComponent(res: Resources, dispatchers: DispatchersProvider, appInformation: AppInformation, application: Application, logger: Logger): ItemsDomainComponent = ItemsDomainComponent(
         object : ItemsDomainDependencies {
             override val application: Application = application
             override val logger = logger
             override val res: Resources = res
             override val dispatcher = dispatchers
             override val appInformation = appInformation
-        }
+        },
     )
 
     @dagger.Provides
-    fun provideFilterItemsUseCase(
-        component: ItemsDomainComponent,
-    ): FilterItemsUseCase = component.filterItemsUseCase
+    fun provideFilterItemsUseCase(component: ItemsDomainComponent): FilterItemsUseCase = component.filterItemsUseCase
 
     @dagger.Provides
-    fun provideGetItemsUseCase(
-        component: ItemsDomainComponent,
-    ): GetItemsUseCase = component.getItemsUseCase
+    fun provideGetItemsUseCase(component: ItemsDomainComponent): GetItemsUseCase = component.getItemsUseCase
 
     @dagger.Provides
-    fun provideUpdateItemViewedForItemUseCase(
-        component: ItemsDomainComponent,
-    ): UpdateItemViewedForItemUseCase = component.updateItemViewedForItemUseCase
+    fun provideUpdateItemViewedForItemUseCase(component: ItemsDomainComponent): UpdateItemViewedForItemUseCase = component.updateItemViewedForItemUseCase
 }

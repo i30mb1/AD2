@@ -76,16 +76,14 @@ internal class DrawerViewModelTest {
 
 internal class SettingsApiFake : SettingsApi {
     var isError = false
-    override suspend fun getSettings(): Settings {
-        return if (isError) {
-            error("oops!")
-        } else {
-            Settings(
-                menu = listOf(
-                    Menu(VOMenuType.HEROES, true),
-                    Menu(VOMenuType.NEWS, false),
-                )
-            )
-        }
+    override suspend fun getSettings(): Settings = if (isError) {
+        error("oops!")
+    } else {
+        Settings(
+            menu = listOf(
+                Menu(VOMenuType.HEROES, true),
+                Menu(VOMenuType.NEWS, false),
+            ),
+        )
     }
 }

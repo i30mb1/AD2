@@ -1,20 +1,17 @@
 package n7.ad2.hero.page.internal.guides.domain.usecase
 
-import java.util.Locale
-import javax.inject.Inject
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.database_guides.internal.model.LocalGuide
+import java.util.Locale
+import javax.inject.Inject
 
 private inline class HeroNameFormatted(val heroName: String)
 
-class GetLocalGuideJsonUseCase @Inject constructor(
-    private val dispatchers: DispatchersProvider,
-) {
+class GetLocalGuideJsonUseCase @Inject constructor(private val dispatchers: DispatchersProvider) {
 
     companion object {
-        private fun getHeroNameFormatted(heroName: String) =
-            HeroNameFormatted(heroName.lowercase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
+        private fun getHeroNameFormatted(heroName: String) = HeroNameFormatted(heroName.lowercase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
 
         private fun getUrlForHeroPage(heroName: HeroNameFormatted) = "https://ru.dotabuff.com/heroes/${heroName.heroName}"
         private fun getUrlForHeroGuides(heroName: HeroNameFormatted) = "https://www.dotabuff.com/heroes/${heroName.heroName}/guides"
@@ -28,7 +25,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         // For now, return a mock guide structure
         val mockGuideJson = """
         {
-            "hero": "${heroName}",
+            "hero": "$heroName",
             "guides": [
                 {
                     "title": "Standard Build",
@@ -43,9 +40,8 @@ class GetLocalGuideJsonUseCase @Inject constructor(
             LocalGuide(
                 name = heroName,
                 json = mockGuideJson,
-                timestamp = System.currentTimeMillis()
-            )
+                timestamp = System.currentTimeMillis(),
+            ),
         )
     }
-
 }

@@ -9,15 +9,9 @@ import n7.ad2.ui.adapter.HeaderViewHolder
 import java.io.File
 import javax.inject.Inject
 
-class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
-    private val dispatchers: DispatchersProvider,
-) {
+class ConvertLocalHeroToVOResponseUseCase @Inject constructor(private val dispatchers: DispatchersProvider) {
 
-    suspend operator fun invoke(
-        heroName: String,
-        localHeroResponses: List<LocalHeroResponsesItem>,
-        savedHeroResponses: List<File>,
-    ): List<VOResponse> = withContext(dispatchers.IO) {
+    suspend operator fun invoke(heroName: String, localHeroResponses: List<LocalHeroResponsesItem>, savedHeroResponses: List<File>): List<VOResponse> = withContext(dispatchers.IO) {
         val result = mutableListOf<VOResponse>()
         val mutableSaveHeroResponses = savedHeroResponses.toMutableList()
 
@@ -55,5 +49,4 @@ class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
 
         result.toList()
     }
-
 }

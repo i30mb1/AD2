@@ -26,17 +26,9 @@ import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.feature.games.xo.domain.model.WifiDirectServer
 
-internal class DiscoverServicesInWifiDirectUseCaseImpl(
-    private val context: Context,
-    private val wifiP2pManager: WifiP2pManager,
-    private val wifiP2pManagerChannel: WifiP2pManager.Channel,
-    private val logger: Logger,
-) : DiscoverServicesInWifiDirectUseCase {
+internal class DiscoverServicesInWifiDirectUseCaseImpl(private val context: Context, private val wifiP2pManager: WifiP2pManager, private val wifiP2pManagerChannel: WifiP2pManager.Channel, private val logger: Logger) : DiscoverServicesInWifiDirectUseCase {
 
-    data class WifiDirectState(
-        val isEnabled: Boolean = false,
-        val devices: List<WifiP2pDevice> = emptyList(),
-    )
+    data class WifiDirectState(val isEnabled: Boolean = false, val devices: List<WifiP2pDevice> = emptyList())
 
     val _state = MutableStateFlow<WifiDirectState>(WifiDirectState())
 
@@ -54,7 +46,8 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
         wifiP2pManager.setDnsSdResponseListeners(wifiP2pManagerChannel, servListener, txtListener)
 
         // регистрируем запрос на поиск служб
-        wifiP2pManager.addServiceRequest(wifiP2pManagerChannel,
+        wifiP2pManager.addServiceRequest(
+            wifiP2pManagerChannel,
             // поиск с конкретными параметрами
             WifiP2pDnsSdServiceRequest.newInstance("_test", CommonSettings().serviceType),
             // сообщает о результатах добавления запроса
@@ -66,21 +59,25 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
                 override fun onFailure(code: Int) {
                     logger.log("listeners onFailure")
                 }
-            })
+            },
+        )
 
         // инициируем процесс поиска служб, указанных в addServiceRequest
-        wifiP2pManager.discoverServices(wifiP2pManagerChannel, object : WifiP2pManager.ActionListener {
-            override fun onSuccess() {
-                logger.log("run searching onSuccess")
-            }
-
-            override fun onFailure(code: Int) {
-                // Command failed. Check for P2P_UNSUPPORTED, ERROR, or BUSY
-                when (code) {
-                    WifiP2pManager.P2P_UNSUPPORTED -> Unit
+        wifiP2pManager.discoverServices(
+            wifiP2pManagerChannel,
+            object : WifiP2pManager.ActionListener {
+                override fun onSuccess() {
+                    logger.log("run searching onSuccess")
                 }
-            }
-        })
+
+                override fun onFailure(code: Int) {
+                    // Command failed. Check for P2P_UNSUPPORTED, ERROR, or BUSY
+                    when (code) {
+                        WifiP2pManager.P2P_UNSUPPORTED -> Unit
+                    }
+                }
+            },
+        )
     }
 
     @SuppressLint("MissingPermission")
@@ -108,15 +105,18 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
         wifiP2pManager.addLocalService(wifiP2pManagerChannel, serviceInfo, listener)
 
         // создаем группу чтобы к нам могли присоединится
-        wifiP2pManager.createGroup(wifiP2pManagerChannel, object : WifiP2pManager.ActionListener {
-            override fun onSuccess() {
-                println("")
-            }
+        wifiP2pManager.createGroup(
+            wifiP2pManagerChannel,
+            object : WifiP2pManager.ActionListener {
+                override fun onSuccess() {
+                    println("")
+                }
 
-            override fun onFailure(reason: Int) {
-                println("")
-            }
-        })
+                override fun onFailure(reason: Int) {
+                    println("")
+                }
+            },
+        )
     }
 
     @SuppressLint("MissingPermission")
@@ -136,9 +136,11 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
             if (refreshedPeers != peers) {
                 peers.clear()
                 peers.addAll(refreshedPeers)
-                trySend(refreshedPeers.map { device ->
-                    WifiDirectServer(device.deviceName, device.deviceAddress, 0)
-                })
+                trySend(
+                    refreshedPeers.map { device ->
+                        WifiDirectServer(device.deviceName, device.deviceAddress, 0)
+                    },
+                )
             }
         }
         val receiver = object : BroadcastReceiver() {
@@ -166,11 +168,14 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
                         } as NetworkInfo
                         if (networkInfo.isConnected) {
                             // подключились к устройству, узнаем к какому, этим методом можно узнать когда мы уже подключились к устройству
-                            wifiP2pManager.requestConnectionInfo(wifiP2pManagerChannel, object : WifiP2pManager.ConnectionInfoListener {
-                                override fun onConnectionInfoAvailable(info: WifiP2pInfo?) {
-                                    println("")
-                                }
-                            })
+                            wifiP2pManager.requestConnectionInfo(
+                                wifiP2pManagerChannel,
+                                object : WifiP2pManager.ConnectionInfoListener {
+                                    override fun onConnectionInfoAvailable(info: WifiP2pInfo?) {
+                                        println("")
+                                    }
+                                },
+                            )
                         } else {
                             // отключились от устройства
                         }
@@ -187,15 +192,18 @@ internal class DiscoverServicesInWifiDirectUseCaseImpl(
         }
         ContextCompat.registerReceiver(context, receiver, intentFilter, RECEIVER_EXPORTED)
         delay(2_000)
-        wifiP2pManager.discoverPeers(wifiP2pManagerChannel, object : WifiP2pManager.ActionListener {
-            override fun onSuccess() {
-                println("asdf")
-            }
+        wifiP2pManager.discoverPeers(
+            wifiP2pManagerChannel,
+            object : WifiP2pManager.ActionListener {
+                override fun onSuccess() {
+                    println("asdf")
+                }
 
-            override fun onFailure(reason: Int) {
-                println("asdf")
-            }
-        })
+                override fun onFailure(reason: Int) {
+                    println("asdf")
+                }
+            },
+        )
         awaitClose {
             context.unregisterReceiver(receiver)
         }

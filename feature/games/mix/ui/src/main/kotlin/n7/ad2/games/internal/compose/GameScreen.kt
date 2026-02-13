@@ -30,11 +30,7 @@ import n7.ad2.games.internal.data.GameVO
 import n7.ad2.ui.compose.view.LoadingScreen
 
 @Composable
-internal fun GamesScreen(
-    viewModel: GamesViewModel,
-    drawerPercentListener: DrawerPercentListener?,
-    onGameClicked: (game: GameVO) -> Unit,
-) {
+internal fun GamesScreen(viewModel: GamesViewModel, drawerPercentListener: DrawerPercentListener?, onGameClicked: (game: GameVO) -> Unit) {
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     var drawerPercent by remember { mutableStateOf(0f) }
 
@@ -47,7 +43,7 @@ internal fun GamesScreen(
                 animationSpec = tween(400),
                 initialOffsetY = { fullHeight -> fullHeight },
             ) with fadeOut(animationSpec = tween(200))
-        }
+        },
     ) { targetState ->
         when (targetState) {
             is GamesViewModel.State.Data -> GamesList(targetState.games, onGameClicked)
@@ -67,15 +63,11 @@ private fun Loading() {
 }
 
 @Composable
-private fun GamesList(
-    games: List<GameVO>?,
-    onGameClicked: (game: GameVO) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+private fun GamesList(games: List<GameVO>?, onGameClicked: (game: GameVO) -> Unit, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = modifier
-            .padding(horizontal = 12.dp, vertical = 4.dp)
+            .padding(horizontal = 12.dp, vertical = 4.dp),
     ) {
         games?.forEach { gameData ->
 //            Game(gameData.title, gameData.backgroundImage, onGameClick = { onGameClicked(gameData) })

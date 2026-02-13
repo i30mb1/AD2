@@ -1,10 +1,5 @@
 package n7.ad2.xo.cli.controller
 
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.ServerSocket
-import java.net.Socket
-import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -18,6 +13,11 @@ import n7.ad2.xo.cli.model.Message
 import n7.ad2.xo.cli.model.ServerState
 import n7.ad2.xo.cli.model.ServerStatus
 import n7.ad2.xo.cli.model.SimpleServer
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.net.ServerSocket
+import java.net.Socket
+import java.util.Scanner
 
 class RawSocketServerController : CliServerController {
     private val scope = CoroutineScope(Job() + Dispatchers.IO)
@@ -43,7 +43,7 @@ class RawSocketServerController : CliServerController {
                     _state.update {
                         it.copy(
                             status = ServerStatus.Connected(server),
-                            messages = it.messages + Message.Info("Client connected")
+                            messages = it.messages + Message.Info("Client connected"),
                         )
                     }
 
@@ -54,7 +54,7 @@ class RawSocketServerController : CliServerController {
                         _state.update {
                             it.copy(
                                 status = ServerStatus.Closed,
-                                messages = it.messages + Message.Info("Server error: ${e.message}")
+                                messages = it.messages + Message.Info("Server error: ${e.message}"),
                             )
                         }
                     }
@@ -64,7 +64,7 @@ class RawSocketServerController : CliServerController {
             _state.update {
                 it.copy(
                     status = ServerStatus.Closed,
-                    messages = it.messages + Message.Info("Failed to start server: ${e.message}")
+                    messages = it.messages + Message.Info("Failed to start server: ${e.message}"),
                 )
             }
         }

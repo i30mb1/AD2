@@ -1,7 +1,7 @@
 dependencyResolutionManagement {
     repositories {
         google()
-        mavenCentral()  // тут лежит kotlin-stdlib-jdk8
+        mavenCentral() // тут лежит kotlin-stdlib-jdk8
     }
     versionCatalogs {
         create("libs") {
@@ -13,7 +13,7 @@ dependencyResolutionManagement {
 pluginManagement {
     includeBuild("build-logic")
     repositories {
-        google()  // com.android.library, com.android.tools.build:gradle
+        google() // com.android.library, com.android.tools.build:gradle
         maven { setUrl("https://jitpack.io") } // detekt
         gradlePluginPortal() // kotlin-dsl, kotlin, jvm, kapt, org.jetbrains.kotlin.android
     }

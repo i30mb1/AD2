@@ -25,10 +25,9 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 
-class AudioExoPlayer @AssistedInject constructor(
-    private val context: Application,
-    @Assisted private val lifecycle: Lifecycle,
-) : Player.Listener, DefaultLifecycleObserver {
+class AudioExoPlayer @AssistedInject constructor(private val context: Application, @Assisted private val lifecycle: Lifecycle) :
+    Player.Listener,
+    DefaultLifecycleObserver {
 
     @AssistedFactory
     interface Factory {
@@ -124,5 +123,4 @@ class AudioExoPlayer @AssistedInject constructor(
         val mediaItem = MediaItem.fromUri(uri)
         return ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(mediaItem)
     }
-
 }

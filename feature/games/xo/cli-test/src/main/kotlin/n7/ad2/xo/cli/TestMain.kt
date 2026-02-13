@@ -1,6 +1,5 @@
 package n7.ad2.xo.cli
 
-import java.net.InetAddress
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,6 +12,7 @@ import n7.ad2.xo.cli.controller.CliServerController
 import n7.ad2.xo.cli.model.ClientStatus
 import n7.ad2.xo.cli.model.ServerStatus
 import n7.ad2.xo.cli.model.SocketType
+import java.net.InetAddress
 
 suspend fun main() {
     println("🚀 XO Socket Connection Tester - Auto Test Mode")
@@ -73,7 +73,6 @@ suspend fun testSocketType(socketType: SocketType) {
 
             // Keep server running for a bit
             delay(5000)
-
         } catch (e: Exception) {
             println("❌ ${socketType.name} Server error: ${e.message}")
         } finally {
@@ -118,7 +117,6 @@ suspend fun testSocketType(socketType: SocketType) {
             finalState.messages.forEach { message ->
                 println("   $message")
             }
-
         } catch (e: Exception) {
             println("❌ ${socketType.name} Client error: ${e.message}")
         } finally {
@@ -130,4 +128,3 @@ suspend fun testSocketType(socketType: SocketType) {
     // Wait for both to complete
     joinAll(serverJob, clientJob)
 }
-

@@ -7,9 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import n7.ad2.feature.item.page.R
 import n7.ad2.itempage.internal.domain.vo.VORecipe
 
-class RecipeAdapter(
-    private val layoutInflater: LayoutInflater,
-) : ListAdapter<VORecipe, RecipeViewHolder>(DiffCallback()) {
+class RecipeAdapter(private val layoutInflater: LayoutInflater) : ListAdapter<VORecipe, RecipeViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder = RecipeViewHolder.from(parent, layoutInflater)
 
@@ -21,5 +19,4 @@ class RecipeAdapter(
         override fun areItemsTheSame(oldItem: VORecipe, newItem: VORecipe): Boolean = oldItem.name == newItem.name
         override fun areContentsTheSame(oldItem: VORecipe, newItem: VORecipe): Boolean = true
     }
-
 }

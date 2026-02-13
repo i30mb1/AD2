@@ -34,28 +34,26 @@ class StartupBenchmark {
         startupMode = StartupMode.COLD,
         setupBlock = {
             pressHome()
-        }
+        },
     ) {
         startActivityAndWait()
     }
-
 }
 
-
-//@Test
-//fun startupNoCompilation() = startup(CompilationMode.None())
+// @Test
+// fun startupNoCompilation() = startup(CompilationMode.None())
 //
-//@Test
-//fun startupBaselineProfile() = startup(CompilationMode.Partial())
+// @Test
+// fun startupBaselineProfile() = startup(CompilationMode.Partial())
 //
-//private fun startup(mode: CompilationMode) = benchmarkRule.measureRepeated(
+// private fun startup(mode: CompilationMode) = benchmarkRule.measureRepeated(
 //    packageName = "n7.ad2",
 //    metrics = listOf(StartupTimingMetric()),
 //    iterations = 5,
 //    compilationMode = mode,
 //    startupMode = StartupMode.COLD,
-//) {
+// ) {
 //    pressHome()
 //    startActivityAndWait()
 //    device.wait(Until.hasObject(By.res("rv")), 5000)
-//}
+// }

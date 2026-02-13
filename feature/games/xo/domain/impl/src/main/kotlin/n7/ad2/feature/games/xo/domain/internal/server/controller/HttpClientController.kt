@@ -1,10 +1,5 @@
 package n7.ad2.feature.games.xo.domain.internal.server.controller
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.Socket
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelChildren
@@ -19,11 +14,13 @@ import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
 import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientCreatorImpl
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.io.PrintWriter
+import java.net.InetAddress
 
-class HttpClientController(
-    private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("HttpClientController")),
-) : ClientController {
-    
+class HttpClientController(private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("HttpClientController"))) : ClientController {
+
     private val _state = MutableStateFlow(ClientState())
     override val state: StateFlow<ClientState> = _state
     private var serverInfo: SimpleServer? = null
@@ -34,7 +31,7 @@ class HttpClientController(
             if (serverInfo != null) error("Already connected")
             serverInfo = SimpleServer(name, ip.hostAddress!!, port)
             _state.update { it.copy(status = ClientStatus.Connected(serverInfo!!)) }
-            
+
             // Для HTTP клиента сразу начинаем polling для получения сообщений
             startPollingMessages()
         }
@@ -76,7 +73,7 @@ class HttpClientController(
     private suspend fun performGetRequest(path: String): String {
         val server = serverInfo ?: error("Not connected")
         val socket = clientCreator.create(InetAddress.getByName(server.ip), server.port)
-        
+
         return try {
             val writer = PrintWriter(socket.getOutputStream())
             val reader = BufferedReader(InputStreamReader(socket.getInputStream()))
@@ -99,7 +96,7 @@ class HttpClientController(
     private suspend fun performPostRequest(body: String) {
         val server = serverInfo ?: error("Not connected")
         val socket = clientCreator.create(InetAddress.getByName(server.ip), server.port)
-        
+
         try {
             val writer = PrintWriter(socket.getOutputStream())
             val reader = BufferedReader(InputStreamReader(socket.getInputStream()))

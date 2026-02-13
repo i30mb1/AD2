@@ -11,7 +11,7 @@ import n7.ad2.xo.internal.XoViewModel
     ],
     modules = [
         XoModule::class,
-    ]
+    ],
 )
 internal interface XoComponent {
 

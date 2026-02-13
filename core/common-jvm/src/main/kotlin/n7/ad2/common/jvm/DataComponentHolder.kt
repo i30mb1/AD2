@@ -11,10 +11,8 @@ abstract class DataComponentHolder<Component : DIComponent, Data : Any> : BaseCo
 
     private var data: Data? = null
 
-    override fun get(): Component {
-        return component ?: synchronized(this) {
-            component ?: build(requireNotNull(data) { "${javaClass.simpleName} - data not found" }).also(::set)
-        }
+    override fun get(): Component = component ?: synchronized(this) {
+        component ?: build(requireNotNull(data) { "${javaClass.simpleName} - data not found" }).also(::set)
     }
 
     fun init(data: Data): DataComponentHolder<Component, Data> {
@@ -27,5 +25,4 @@ abstract class DataComponentHolder<Component : DIComponent, Data : Any> : BaseCo
     }
 
     protected abstract fun build(data: Data): Component
-
 }

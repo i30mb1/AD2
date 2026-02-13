@@ -16,7 +16,7 @@ import n7.ad2.heroes.ui.api.HeroesFragmentFactory
         CoroutineModule::class,
         RetrofitModule::class,
         HeroesModule::class,
-    ]
+    ],
 )
 internal interface ApplicationComponentDemo : HeroesDependencies {
 

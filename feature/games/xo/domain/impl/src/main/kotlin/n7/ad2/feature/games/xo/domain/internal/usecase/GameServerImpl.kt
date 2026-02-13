@@ -5,9 +5,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import n7.ad2.coroutines.DispatchersProvider
 
-internal class GameServerImpl(
-    dispatchers: DispatchersProvider,
-)  {
+internal class GameServerImpl(dispatchers: DispatchersProvider) {
 
     private val scope = CoroutineScope(Job() + dispatchers.IO)
     private val incomingMessages = Channel<String>()
@@ -29,9 +27,7 @@ internal class GameServerImpl(
         // socketSend
     }
 
-    suspend fun awaitOpponent(): String {
-        return incomingMessages.receive()
-    }
+    suspend fun awaitOpponent(): String = incomingMessages.receive()
 
     suspend fun playGame() {
         while (true) {
@@ -44,6 +40,5 @@ internal class GameServerImpl(
     }
 
     private suspend fun processOpponentMove(opponentMove: String) {
-
     }
 }

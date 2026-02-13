@@ -8,10 +8,9 @@ plugins {
     // https://arrow-kt.io/docs/meta/analysis/
 }
 
-
-//if (!isCI()) {
+// if (!isCI()) {
 //    apply(plugin = "com.osacky.doctor")
-//}
+// }
 
 bumpVersionConfig {
     isEnabled = true

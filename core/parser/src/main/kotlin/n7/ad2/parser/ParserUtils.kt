@@ -34,7 +34,4 @@ private fun getTextFromNode(element: Node): String {
     }
 }
 
-internal class DownloadImagePlease(
-    val name: String,
-    val url: String,
-) : Exception("не нашли картинку $name, скачай ее и положи в папку! вот ссылка $url")
+internal class DownloadImagePlease(val name: String, val url: String) : Exception("не нашли картинку $name, скачай ее и положи в папку! вот ссылка $url")

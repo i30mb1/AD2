@@ -8,7 +8,7 @@ import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 
 @dagger.Component(
     dependencies = [
-        GamesDependencies::class
+        GamesDependencies::class,
     ],
 )
 internal interface GamesComponent {
@@ -23,5 +23,4 @@ internal interface GamesComponent {
     fun inject(gameGuessTheSkillManaPoint: SkillGameFragment)
 
     val gamesViewModelFactory: GamesViewModel.Factory
-
 }

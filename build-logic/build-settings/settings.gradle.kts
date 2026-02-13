@@ -6,7 +6,6 @@ dependencyResolutionManagement {
     }
 }
 
-
 pluginManagement {
     repositories {
         gradlePluginPortal() // kotlin-dsl

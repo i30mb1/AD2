@@ -13,19 +13,19 @@ android {
     }
 }
 
-    publishing {
-        publications {
-            create<MavenPublication>("maven") {
-                group = project.group
-                artifactId = project.name
-                version = "1.0"
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            group = project.group
+            artifactId = project.name
+            version = "1.0"
 
-                afterEvaluate {
-                    from(components["release"])
-                }
+            afterEvaluate {
+                from(components["release"])
             }
         }
     }
+}
 
 dependencies {
     implementation(libs.bundles.camera)

@@ -10,8 +10,8 @@ import n7.ad2.drawer.internal.DrawerViewModel
         DrawerDependencies::class,
     ],
     modules = [
-        DrawerModule::class
-    ]
+        DrawerModule::class,
+    ],
 )
 internal interface DrawerComponent {
 
@@ -23,5 +23,4 @@ internal interface DrawerComponent {
     fun inject(drawerFragment: DrawerFragment)
 
     val drawerViewModel: DrawerViewModel.Factory
-
 }

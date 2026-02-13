@@ -32,20 +32,14 @@ import n7.ad2.xo.internal.compose.model.ServerUI
 
 @Preview
 @Composable
-private fun ServerListPreview(
-    @PreviewParameter(PreviewProvider::class) list: List<ServerUI>,
-) {
+private fun ServerListPreview(@PreviewParameter(PreviewProvider::class) list: List<ServerUI>) {
     AppTheme {
         ServerList(list, {})
     }
 }
 
 @Composable
-internal fun ServerList(
-    servers: List<ServerUI>,
-    onServerClicked: (server: ServerUI) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun ServerList(servers: List<ServerUI>, onServerClicked: (server: ServerUI) -> Unit, modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(16.dp)) {
         Row(
             modifier = Modifier.padding(8.dp),

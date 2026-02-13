@@ -34,10 +34,9 @@ data class VOHeroFlowSpell(val skillName: String, val urlImageSkill: String, val
 data class VOHeroFlowStartingHeroItem(val itemName: String, val urlHeroItem: String)
 data class VOHeroFlowHeroItem(val itemName: String, val urlHeroItem: String, val itemTiming: String?)
 
-class HeroFlow(
-    context: Context,
-    attributeSet: AttributeSet,
-) : ConstraintLayout(context, attributeSet), CoroutineScope by MainScope() {
+class HeroFlow(context: Context, attributeSet: AttributeSet) :
+    ConstraintLayout(context, attributeSet),
+    CoroutineScope by MainScope() {
 
     private val inflater = LayoutInflater.from(context)
     private val flow: Flow = Flow(context).apply {
@@ -79,7 +78,10 @@ class HeroFlow(
             .onStart { clearFlowFromViews() }
             .operation()
             .flowOn(Dispatchers.IO)
-            .onCompletion { TransitionManager.beginDelayedTransition(this@HeroFlow); visibility = VISIBLE }
+            .onCompletion {
+                TransitionManager.beginDelayedTransition(this@HeroFlow)
+                visibility = VISIBLE
+            }
             .onEach(::addView)
             .onEach { flow.addView(it) }
             .launchIn(this)
@@ -125,5 +127,4 @@ class HeroFlow(
         view.id = generateViewId()
         return view
     }
-
 }

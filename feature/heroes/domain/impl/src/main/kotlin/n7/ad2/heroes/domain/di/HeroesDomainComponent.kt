@@ -25,9 +25,7 @@ interface HeroesDomainComponent {
     val getHeroDescriptionUseCase: GetHeroDescriptionUseCase
 }
 
-fun HeroesDomainComponent(
-    dependencies: HeroesDomainDependencies,
-): HeroesDomainComponent = object : HeroesDomainComponent {
+fun HeroesDomainComponent(dependencies: HeroesDomainDependencies): HeroesDomainComponent = object : HeroesDomainComponent {
 
     private val database = HeroesDatabase.getInstance(dependencies.application)
     private val heroesDao = database.heroesDao

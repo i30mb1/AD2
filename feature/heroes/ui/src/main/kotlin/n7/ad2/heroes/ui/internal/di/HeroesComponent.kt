@@ -19,5 +19,4 @@ internal interface HeroesComponent {
     fun inject(drawerFragment: HeroesFragment)
 
     val heroesViewModelFactory: HeroesViewModel.Factory
-
 }

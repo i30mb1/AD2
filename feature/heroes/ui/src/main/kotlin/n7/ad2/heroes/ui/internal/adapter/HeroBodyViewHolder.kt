@@ -10,9 +10,7 @@ import n7.ad2.feature.heroes.ui.R
 import n7.ad2.feature.heroes.ui.databinding.ItemHeroBodyBinding
 import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 
-internal class HeroBodyViewHolder private constructor(
-    private val binding: ItemHeroBodyBinding,
-) : RecyclerView.ViewHolder(binding.root) {
+internal class HeroBodyViewHolder private constructor(private val binding: ItemHeroBodyBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(hero: VOHero.Body) = binding.apply {
         ivImage.load(hero.imageUrl, R.drawable.stream_placeholder)
@@ -27,16 +25,11 @@ internal class HeroBodyViewHolder private constructor(
     }
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            listener: View.OnClickListener,
-        ): HeroBodyViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, listener: View.OnClickListener): HeroBodyViewHolder {
             val binding = ItemHeroBodyBinding.inflate(layoutInflater, parent, false).apply {
                 root.setOnClickListener(listener)
             }
             return HeroBodyViewHolder(binding)
         }
     }
-
 }

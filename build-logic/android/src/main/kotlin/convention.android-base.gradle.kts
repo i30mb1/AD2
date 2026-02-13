@@ -24,7 +24,7 @@ pluginManager.withPlugin("com.android.application") {
             disable += setOf(
                 "CoroutineCreationDuringComposition",
                 "RestrictedApi",
-                "UnknownNullness"
+                "UnknownNullness",
             )
             abortOnError = false
             warningsAsErrors = false
@@ -55,7 +55,7 @@ pluginManager.withPlugin("com.android.library") {
             disable += setOf(
                 "CoroutineCreationDuringComposition",
                 "RestrictedApi",
-                "UnknownNullness"
+                "UnknownNullness",
             )
             abortOnError = false
             warningsAsErrors = false

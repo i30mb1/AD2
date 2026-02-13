@@ -1,18 +1,5 @@
 package n7.ad2.feature.games.xo.domain.internal.server.controller
 
-import java.io.BufferedReader
-import java.io.InputStream
-import java.io.InputStreamReader
-import java.io.OutputStream
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.Socket
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
-import java.security.MessageDigest
-import java.util.Base64
-import java.util.UUID
-import kotlin.experimental.xor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelChildren
@@ -31,11 +18,21 @@ import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.internal.server.getBytes
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientCreatorImpl
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.io.OutputStream
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.net.Socket
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
+import java.util.Base64
+import java.util.UUID
+import kotlin.experimental.xor
 
-class WebsocketClientController(
-    private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("WebsocketClientController")),
-) : ClientController {
-    
+class WebsocketClientController(private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("WebsocketClientController"))) : ClientController {
+
     private val _state = MutableStateFlow(ClientState())
     override val state: StateFlow<ClientState> = _state
     private var socket: Socket? = null
@@ -60,7 +57,7 @@ class WebsocketClientController(
 
         // Генерируем случайный ключ для WebSocket handshake
         val webSocketKey = Base64.getEncoder().encodeToString(UUID.randomUUID().toString().toByteArray())
-        
+
         // Отправляем HTTP запрос для upgrade до WebSocket
         writer.println("GET / HTTP/1.1")
         writer.println("Host: ${socket.inetAddress.hostAddress}:${socket.port}")
@@ -76,7 +73,7 @@ class WebsocketClientController(
         while (line.isNotEmpty()) {
             line = reader.readLine()
         }
-        
+
         // В реальном приложении здесь нужно проверить Sec-WebSocket-Accept заголовок
         _state.update { it.copy(messages = it.messages + Message.Info("WebSocket handshake completed")) }
     }
@@ -121,13 +118,13 @@ class WebsocketClientController(
     private fun sendWebSocketFrame(output: OutputStream, text: String) {
         val utf8Bytes = text.toByteArray()
         val maskKey = ByteArray(4) { (Math.random() * 256).toInt().toByte() }
-        
+
         // Маскируем данные (клиент всегда должен маскировать)
         val maskedPayload = ByteArray(utf8Bytes.size)
         for (i in utf8Bytes.indices) {
             maskedPayload[i] = utf8Bytes[i] xor maskKey[i % 4]
         }
-        
+
         // Первый байт: FIN=1, RSV=000, opcode=0001 (text)
         output.write(0b10000001)
         // Второй байт: MASK=1, payload length
@@ -143,7 +140,7 @@ class WebsocketClientController(
         val b1 = input.read()
         val isFinalFrame = b1 and 0b10000000
         val opCode = b1 and 0b00001111
-        
+
         when (opCode) {
             OpCode.OPCODE_TEXT -> Unit
             OpCode.OPCODE_CLOSE -> return FrameType.Close
@@ -153,7 +150,7 @@ class WebsocketClientController(
         val b2 = input.read()
         val isMasked = b2 and 0b10000000 != 0
         var frameLength = (b2 and 0b01111111).toLong()
-        
+
         when (frameLength) {
             126L -> {
                 val bytes = input.getBytes(2)
@@ -167,7 +164,7 @@ class WebsocketClientController(
 
         val maskKey = if (isMasked) input.getBytes(4) else ByteArray(0)
         val payload = input.getBytes(frameLength)
-        
+
         if (isMasked) {
             for (i in payload.indices) {
                 payload[i] = payload[i] xor maskKey[i % 4]

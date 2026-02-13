@@ -1,10 +1,5 @@
 package n7.ad2.xo.cli.controller
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.Socket
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -19,6 +14,11 @@ import n7.ad2.xo.cli.model.ClientState
 import n7.ad2.xo.cli.model.ClientStatus
 import n7.ad2.xo.cli.model.Message
 import n7.ad2.xo.cli.model.SimpleServer
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.net.Socket
 
 class HttpClientController : CliClientController {
     private val scope = CoroutineScope(Job() + Dispatchers.IO)
@@ -27,12 +27,12 @@ class HttpClientController : CliClientController {
 
     private var serverInfo: SimpleServer? = null
 
-    override suspend fun connect(name: String, ip: InetAddress, port: Int): Unit {
+    override suspend fun connect(name: String, ip: InetAddress, port: Int) {
         serverInfo = SimpleServer(name, ip.hostAddress!!, port)
         _state.update {
             it.copy(
                 status = ClientStatus.Connected(serverInfo!!),
-                messages = it.messages + Message.Info("Connected to HTTP server")
+                messages = it.messages + Message.Info("Connected to HTTP server"),
             )
         }
 

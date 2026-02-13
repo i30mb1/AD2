@@ -1,16 +1,15 @@
 package n7.ad2.feature.camera.domain.impl.processor.buffer
 
 import android.graphics.Bitmap
+import n7.ad2.feature.camera.domain.impl.processor.buffer.fill.FillBuffer
+import n7.ad2.feature.camera.domain.impl.processor.buffer.fill.FillBufferArray
 import java.nio.Buffer
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
-import n7.ad2.feature.camera.domain.impl.processor.buffer.fill.FillBuffer
-import n7.ad2.feature.camera.domain.impl.processor.buffer.fill.FillBufferArray
 
-
-public class FloatBufferDirect(
-    fillBuffer: FillBuffer = FillBufferArray(),
-) : InputBuffer, FillBuffer by fillBuffer {
+public class FloatBufferDirect(fillBuffer: FillBuffer = FillBufferArray()) :
+    InputBuffer,
+    FillBuffer by fillBuffer {
 
     override fun get(bitmap: Bitmap): Buffer {
         val colorChannelsCount = 3

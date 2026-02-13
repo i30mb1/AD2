@@ -21,9 +21,6 @@ import androidx.camera.video.VideoRecordEvent.Finalize.ERROR_UNKNOWN
 import androidx.camera.video.VideoRecordEvent.Finalize.VideoRecordError
 import androidx.camera.video.VideoRecordEvent.Start
 import androidx.camera.video.VideoRecordEvent.Status
-import java.io.File
-import kotlin.time.Duration.Companion.nanoseconds
-import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.asExecutor
@@ -35,14 +32,12 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.camera.domain.Recorder
 import n7.ad2.feature.camera.domain.RecorderState
+import java.io.File
+import kotlin.time.Duration.Companion.nanoseconds
+import kotlin.time.Duration.Companion.seconds
 import androidx.camera.video.Recorder as VideoRecorder
 
-class RecorderCameraX(
-    private val context: Context,
-    private val logger: Logger,
-    private val dispatcher: DispatchersProvider,
-    private val scope: CoroutineScope,
-) : Recorder {
+class RecorderCameraX(private val context: Context, private val logger: Logger, private val dispatcher: DispatchersProvider, private val scope: CoroutineScope) : Recorder {
 
     private val _state: MutableStateFlow<RecorderState> = MutableStateFlow(RecorderState.Idle)
     override val state: StateFlow<RecorderState> = _state.asStateFlow()
@@ -69,9 +64,7 @@ class RecorderCameraX(
     private var activeRecording: Recording? = null
     private var isCancelled: Boolean = false
 
-    override fun init(): UseCase {
-        return videoCapture
-    }
+    override fun init(): UseCase = videoCapture
 
     override fun startOnce() {
         recordingJob = scope.launch(dispatcher.IO) {

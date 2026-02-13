@@ -7,10 +7,7 @@ import n7.ad2.android.extension.load
 import n7.ad2.feature.hero.page.ui.databinding.ItemSpellBinding
 import n7.ad2.hero.page.internal.info.domain.vo.VOSpell
 
-class TalentViewHolder(
-    private val binding: ItemSpellBinding,
-    private val onSpellClickListener: (spell: VOSpell.Talent) -> Unit,
-) : RecyclerView.ViewHolder(binding.root) {
+class TalentViewHolder(private val binding: ItemSpellBinding, private val onSpellClickListener: (spell: VOSpell.Talent) -> Unit) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: VOSpell.Talent) {
         binding.iv.load(n7.ad2.core.ui.R.drawable.talent, n7.ad2.core.ui.R.drawable.square_placeholder, n7.ad2.core.ui.R.drawable.square_error_placeholder)
@@ -24,14 +21,9 @@ class TalentViewHolder(
     }
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            onSpellClickListener: (spell: VOSpell.Talent) -> Unit,
-        ): TalentViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, onSpellClickListener: (spell: VOSpell.Talent) -> Unit): TalentViewHolder {
             val binding = ItemSpellBinding.inflate(layoutInflater, parent, false)
             return TalentViewHolder(binding, onSpellClickListener)
         }
     }
-
 }

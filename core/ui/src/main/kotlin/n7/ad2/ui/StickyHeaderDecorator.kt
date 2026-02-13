@@ -12,10 +12,7 @@ import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
 import n7.ad2.ktx.lazyUnsafe
 
 // https://youtu.be/xF1x-Pm6IPw
-class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
-    private val adapter: RecyclerView.Adapter<T>,
-    private val recyclerView: RecyclerView,
-) : ItemDecoration() {
+class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(private val adapter: RecyclerView.Adapter<T>, private val recyclerView: RecyclerView) : ItemDecoration() {
 
     interface StickyHeaderInterface {
         fun getHeaderLayout(): Int
@@ -103,5 +100,4 @@ class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
     }
 
     private fun isHeader(position: Int): Boolean = adapter.getItemViewType(position) == listener.getHeaderLayout()
-
 }

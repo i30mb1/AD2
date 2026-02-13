@@ -10,5 +10,4 @@ class KotlinKspPlugin : Plugin<Project> {
             apply("com.google.devtools.ksp")
         }
     }
-
 }

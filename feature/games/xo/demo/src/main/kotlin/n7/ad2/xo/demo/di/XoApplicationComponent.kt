@@ -10,7 +10,7 @@ import n7.ad2.xo.api.XoDependencies
     modules = [
         CoroutineModule::class,
         XoApplicationModule::class,
-    ]
+    ],
 )
 internal interface XoApplicationComponent : XoDependencies {
 

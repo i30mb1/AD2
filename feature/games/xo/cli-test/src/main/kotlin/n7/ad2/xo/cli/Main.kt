@@ -1,12 +1,12 @@
 package n7.ad2.xo.cli
 
-import java.net.InetAddress
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import n7.ad2.xo.cli.controller.CliClientController
 import n7.ad2.xo.cli.controller.CliServerController
 import n7.ad2.xo.cli.model.SocketType
+import java.net.InetAddress
 
 fun main() = runBlocking {
     println("🚀 XO Socket Connection Tester")
@@ -61,7 +61,6 @@ suspend fun runServerMode() {
 
         // Запускаем обработку сообщений
         runServerMessageLoop(server)
-
     } catch (e: Exception) {
         println("❌ Server error: ${e.message}")
     } finally {
@@ -94,7 +93,6 @@ suspend fun runClientMode() {
 
         // Запускаем обработку сообщений
         runClientMessageLoop(client)
-
     } catch (e: Exception) {
         println("❌ Connection error: ${e.message}")
     } finally {

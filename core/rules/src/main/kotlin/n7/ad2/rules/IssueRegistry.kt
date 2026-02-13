@@ -13,11 +13,11 @@ class IssueRegistry : IssueRegistry() {
     override val vendor: Vendor = Vendor(
         vendorName = "AD2 Project",
         identifier = "n7.ad2.rules",
-        feedbackUrl = "https://github.com/n7/AD2/issues"
+        feedbackUrl = "https://github.com/n7/AD2/issues",
     )
 
     override val issues: List<Issue>
         get() = listOf(
-            WrongUsingAttrDetector.ISSUE
+            WrongUsingAttrDetector.ISSUE,
         )
 }

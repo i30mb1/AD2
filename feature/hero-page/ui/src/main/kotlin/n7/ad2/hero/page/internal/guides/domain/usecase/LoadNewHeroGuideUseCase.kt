@@ -9,9 +9,7 @@ import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
-class LoadNewHeroGuideUseCase @Inject constructor(
-    private val workManager: WorkManager,
-) {
+class LoadNewHeroGuideUseCase @Inject constructor(private val workManager: WorkManager) {
 
     suspend operator fun invoke(heroName: String): Unit = suspendCancellableCoroutine { continuation ->
         val request = HeroGuideWorker.getRequest(heroName)
@@ -30,7 +28,7 @@ class LoadNewHeroGuideUseCase @Inject constructor(
                     continuation.resumeWithException(Exception(failureMessage))
                 }
                 else -> Unit
-                }
+            }
         }
         work.observeForever(observer)
         continuation.invokeOnCancellation { work.removeObserver(observer) }

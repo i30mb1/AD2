@@ -2,10 +2,7 @@ package n7.ad2.feature.games.xo.domain.internal.server.data
 
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 
-data class ServerState(
-    val status: ServerStatus = ServerStatus.Closed,
-    val messages: List<Message> = emptyList(),
-)
+data class ServerState(val status: ServerStatus = ServerStatus.Closed, val messages: List<Message> = emptyList())
 
 sealed interface ServerStatus {
     data class Waiting(val server: SimpleServer) : ServerStatus

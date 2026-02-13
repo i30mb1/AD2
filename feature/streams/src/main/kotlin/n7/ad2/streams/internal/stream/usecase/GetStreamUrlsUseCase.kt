@@ -12,11 +12,7 @@ import java.net.URLEncoder
 import java.util.regex.Pattern
 import javax.inject.Inject
 
-class GetStreamUrlsUseCase @Inject constructor(
-    private val dispatchers: DispatchersProvider,
-    private val twitchGQLApi: TwitchGQLApi,
-    private val twitchHLSApi: TwitchHLSApi,
-) {
+class GetStreamUrlsUseCase @Inject constructor(private val dispatchers: DispatchersProvider, private val twitchGQLApi: TwitchGQLApi, private val twitchHLSApi: TwitchHLSApi) {
 
     operator fun invoke(streamerName: String) = flow {
         val requestObject = StreamGQLRequest(variables = Variables(streamerName = streamerName))
@@ -42,5 +38,4 @@ class GetStreamUrlsUseCase @Inject constructor(
     }
 
     private fun safeEncode(s: String): String = URLEncoder.encode(s, "utf-8")
-
 }

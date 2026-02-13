@@ -1,4 +1,4 @@
-package n7.ad2.hero.page.internal.guides.domain.interactor;
+package n7.ad2.hero.page.internal.guides.domain.interactor
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -17,13 +17,11 @@ class GetVOHeroGuideItemsUseCase @Inject constructor(
     private val convertLocalGuideJsonToVOGuideItemsUseCase: ConvertLocalGuideJsonToVOGuideItemsUseCase,
 ) {
 
-    operator fun invoke(heroName: String): Flow<List<VOGuideItem>> {
-        return getGuideForHeroUseCase(heroName)
-            .onStart {
+    operator fun invoke(heroName: String): Flow<List<VOGuideItem>> = getGuideForHeroUseCase(heroName)
+        .onStart {
 //                if (shouldWeLoadNewHeroGuidesInteractor(heroName))
-                loadNewHeroGuideUseCase(heroName)
-            }
-            .map { convertLocalGuideJsonToVOGuideItemsUseCase(it) }
-            .distinctUntilChanged()
-    }
+            loadNewHeroGuideUseCase(heroName)
+        }
+        .map { convertLocalGuideJsonToVOGuideItemsUseCase(it) }
+        .distinctUntilChanged()
 }

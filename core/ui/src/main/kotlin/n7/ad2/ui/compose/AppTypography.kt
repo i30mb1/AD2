@@ -5,13 +5,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-data class AppTypography(
-    val H3: TextStyle,
-    val H4: TextStyle,
-    val H5: TextStyle,
-    val body: TextStyle,
-    val info: TextStyle,
-)
+data class AppTypography(val H3: TextStyle, val H4: TextStyle, val H5: TextStyle, val body: TextStyle, val info: TextStyle)
 
 val appTypography = AppTypography(
     H3 = TextStyle(

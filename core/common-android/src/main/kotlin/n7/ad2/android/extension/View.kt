@@ -14,9 +14,11 @@ fun View.showSnackbar(snackbarText: String, timeLength: Int = Snackbar.LENGTH_SH
                 // EspressoIdlingResource.decrement()
             }
         })
-        if (actionText != null) setAction(actionText) {
-            action?.invoke()
-            dismiss()
+        if (actionText != null) {
+            setAction(actionText) {
+                action?.invoke()
+                dismiss()
+            }
         }
         show()
     }

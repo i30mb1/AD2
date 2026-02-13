@@ -9,5 +9,4 @@ object SpanParserModule {
 
     @dagger.Provides
     fun provideSpanParser(res: Resources): SpanParser = AD2SpanParser(res)
-
 }

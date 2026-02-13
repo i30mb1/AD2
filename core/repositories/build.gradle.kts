@@ -3,7 +3,6 @@ plugins {
     id("n7.plugins.kotlin-ksp")
 }
 
-
 dependencies {
     api(projects.core.database)
     implementation(projects.core.dagger)

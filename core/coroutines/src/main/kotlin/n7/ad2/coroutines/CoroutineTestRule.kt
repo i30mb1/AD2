@@ -18,9 +18,7 @@ import org.junit.runner.Description
  * @see: <a href="https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-test/MIGRATION.md">more info here</a>
  */
 @ExperimentalCoroutinesApi
-class CoroutineTestRule(
-    private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher(),
-) : TestWatcher() {
+class CoroutineTestRule(private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher()) : TestWatcher() {
     val testScope = TestScope(testDispatcher)
     val dispatchers = object : DispatchersProvider() {
         override val Main: CoroutineDispatcher = UnconfinedTestDispatcher(testDispatcher.scheduler)
@@ -35,5 +33,4 @@ class CoroutineTestRule(
     override fun finished(description: Description) {
         Dispatchers.resetMain()
     }
-
 }

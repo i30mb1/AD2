@@ -10,10 +10,7 @@ class AD2AppComponentFactory : AppComponentFactory() {
 
     private val applicationFactory by lazyUnsafe { DaggerApplicationComponent.factory() }
 
-    override fun instantiateApplication(
-        classLoader: ClassLoader,
-        className: String,
-    ): Application = when (className) {
+    override fun instantiateApplication(classLoader: ClassLoader, className: String): Application = when (className) {
         MyApplication::class.java.name -> MyApplication(applicationFactory)
         else -> super.instantiateApplication(classLoader, className)
     }

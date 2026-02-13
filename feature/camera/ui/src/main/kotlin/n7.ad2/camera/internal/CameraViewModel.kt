@@ -22,10 +22,7 @@ import n7.ad2.camera.internal.model.updateDelayForRecording
 import n7.ad2.feature.camera.domain.impl.Controller
 import n7.ad2.feature.camera.domain.model.CameraState
 
-internal class CameraViewModel @AssistedInject constructor(
-    private val controller: Controller,
-    private val recordingDelay: RecordingDelay,
-) : ViewModel() {
+internal class CameraViewModel @AssistedInject constructor(private val controller: Controller, private val recordingDelay: RecordingDelay) : ViewModel() {
 
     private val _state: MutableStateFlow<CameraStateUI> = MutableStateFlow(CameraStateUI())
     val state: StateFlow<CameraStateUI> = _state.asStateFlow()

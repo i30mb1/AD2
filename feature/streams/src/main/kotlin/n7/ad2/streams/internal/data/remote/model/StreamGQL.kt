@@ -5,7 +5,6 @@ import android.os.Parcelable
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-
 @Serializable
 data class StreamGQL(
     @SerialName("stream")
@@ -57,7 +56,7 @@ data class StreamInfo(
         TODO("preview"),
         parcel.readString()!!,
         parcel.readInt(),
-        parcel.readInt()
+        parcel.readInt(),
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -74,18 +73,12 @@ data class StreamInfo(
         parcel.writeInt(viewers)
     }
 
-    override fun describeContents(): Int {
-        return 0
-    }
+    override fun describeContents(): Int = 0
 
     companion object CREATOR : Parcelable.Creator<StreamInfo> {
-        override fun createFromParcel(parcel: Parcel): StreamInfo {
-            return StreamInfo(parcel)
-        }
+        override fun createFromParcel(parcel: Parcel): StreamInfo = StreamInfo(parcel)
 
-        override fun newArray(size: Int): Array<StreamInfo?> {
-            return arrayOfNulls(size)
-        }
+        override fun newArray(size: Int): Array<StreamInfo?> = arrayOfNulls(size)
     }
 }
 

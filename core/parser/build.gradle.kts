@@ -7,4 +7,3 @@ dependencies {
     implementation(libs.jsoup)
     implementation(libs.coroutines)
 }
-

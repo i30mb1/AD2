@@ -26,12 +26,7 @@ import n7.ad2.news.ui.internal.screen.news.model.NewsVO
 import n7.ad2.ui.compose.view.ScrollToTopButton
 
 @Composable
-internal fun NewsScreen(
-    viewModel: NewsViewModel,
-    drawerPercentListener: DrawerPercentListener,
-    onNewsClicked: (newsID: Int) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun NewsScreen(viewModel: NewsViewModel, drawerPercentListener: DrawerPercentListener, onNewsClicked: (newsID: Int) -> Unit, modifier: Modifier = Modifier) {
     val state = rememberLazyListState()
 
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()

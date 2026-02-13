@@ -5,24 +5,18 @@ package n7.ad2.feature.games.xo.domain.internal.registrator
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
 import android.os.Build
-import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
-internal class GetInfoAboutServerUseCase(
-    private val dispatchers: DispatchersProvider,
-    private val logger: Logger,
-) {
+internal class GetInfoAboutServerUseCase(private val dispatchers: DispatchersProvider, private val logger: Logger) {
 
-    suspend fun resolve(
-        manager: NsdManager,
-        service: NsdServiceInfo,
-    ): Server = suspendCancellableCoroutine { continuation ->
+    suspend fun resolve(manager: NsdManager, service: NsdServiceInfo): Server = suspendCancellableCoroutine { continuation ->
         when {
             Build.VERSION.SDK_INT >= 34 -> {
                 val callback = object : NsdManager.ServiceInfoCallback {

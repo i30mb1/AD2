@@ -5,15 +5,12 @@ import android.view.MotionEvent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
-import androidx.fragment.app.commitNow
 import androidx.fragment.app.strictmode.FragmentStrictMode
-import javax.inject.Inject
 import n7.ad2.AppInformation
 import n7.ad2.android.MainFragmentNavigator
 import n7.ad2.android.SplashScreen
@@ -23,12 +20,20 @@ import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.di.injector
 import n7.ad2.navigator.Navigator
 import n7.ad2.updatemanager.IsNewAppVersionAvailable
+import javax.inject.Inject
 
-class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, MainFragmentNavigator {
+class MainActivity :
+    FragmentActivity(),
+    TouchEvent,
+    SplashScreen,
+    MainFragmentNavigator {
 
     @Inject lateinit var navigator: Navigator
+
     @Inject lateinit var logger: Logger
+
     @Inject lateinit var isNewAppVersionAvailable: IsNewAppVersionAvailable
+
     @Inject lateinit var appInformation: AppInformation
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
@@ -82,5 +87,4 @@ class MainActivity : FragmentActivity(), TouchEvent, SplashScreen, MainFragmentN
             insets
         }
     }
-
 }

@@ -16,25 +16,17 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import n7.ad2.coroutines.DispatchersProvider
 
-class ChartsOwner(
-    private val dispatcher: DispatchersProvider,
-) {
+class ChartsOwner(private val dispatcher: DispatchersProvider) {
     private val mapper = LineChartMapper(dispatcher)
 
-    suspend fun mapData(list: List<ResourceUsage>): List<ChartState> {
-        return mapper.map(list)
-    }
+    suspend fun mapData(list: List<ResourceUsage>): List<ChartState> = mapper.map(list)
 }
 
 /**
  * Compose version of performance charts
  */
 @Composable
-fun PerformanceCharts(
-    usageFlow: Flow<List<ResourceUsage>>,
-    chartsOwner: ChartsOwner,
-    modifier: Modifier = Modifier,
-) {
+fun PerformanceCharts(usageFlow: Flow<List<ResourceUsage>>, chartsOwner: ChartsOwner, modifier: Modifier = Modifier) {
     val chartStatesFlow = usageFlow.map { chartsOwner.mapData(it) }
     val chartStates by chartStatesFlow.collectAsState(initial = emptyList())
 
@@ -47,7 +39,7 @@ fun PerformanceCharts(
                 text = "CPU",
                 fontSize = 14.sp,
                 color = Color.White,
-                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
             )
             Chart(
                 state = cpuState,
@@ -57,7 +49,7 @@ fun PerformanceCharts(
                     .padding(horizontal = 8.dp),
                 lineColor = Color.Red,
                 textColor = Color.White,
-                gridColor = Color.Gray.copy(alpha = 0.3f)
+                gridColor = Color.Gray.copy(alpha = 0.3f),
             )
 
             // RAM Chart
@@ -65,7 +57,7 @@ fun PerformanceCharts(
                 text = "RAM",
                 fontSize = 14.sp,
                 color = Color.White,
-                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
             )
             Chart(
                 state = ramState,
@@ -75,7 +67,7 @@ fun PerformanceCharts(
                     .padding(horizontal = 8.dp),
                 lineColor = Color.Blue,
                 textColor = Color.White,
-                gridColor = Color.Gray.copy(alpha = 0.3f)
+                gridColor = Color.Gray.copy(alpha = 0.3f),
             )
 
             // FPS Chart
@@ -83,7 +75,7 @@ fun PerformanceCharts(
                 text = "FPS",
                 fontSize = 14.sp,
                 color = Color.White,
-                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
             )
             Chart(
                 state = fpsState,
@@ -93,7 +85,7 @@ fun PerformanceCharts(
                     .padding(horizontal = 8.dp),
                 lineColor = Color.Green,
                 textColor = Color.White,
-                gridColor = Color.Gray.copy(alpha = 0.3f)
+                gridColor = Color.Gray.copy(alpha = 0.3f),
             )
         }
     }

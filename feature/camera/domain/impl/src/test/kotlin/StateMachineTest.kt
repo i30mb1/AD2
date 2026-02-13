@@ -1,11 +1,11 @@
 import com.google.common.truth.Truth
-import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.test.advanceTimeBy
 import kotlinx.coroutines.test.runTest
 import n7.ad2.feature.camera.domain.impl.State
 import n7.ad2.feature.camera.domain.impl.StateMachine
 import n7.ad2.feature.camera.domain.impl.StateMachineConfig
 import org.junit.Test
+import kotlin.time.Duration.Companion.seconds
 
 class StateMachineTest {
 

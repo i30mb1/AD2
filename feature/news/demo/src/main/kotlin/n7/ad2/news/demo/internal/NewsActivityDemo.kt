@@ -9,9 +9,7 @@ import androidx.fragment.app.commit
 import n7.ad2.news.ui.api.NewsProvider
 import n7.ad2.news.ui.internal.screen.news.NewsFragmentFactory
 
-internal class NewsActivityDemo(
-    private val fragmentFactory: NewsFragmentFactory,
-) : FragmentActivity() {
+internal class NewsActivityDemo(private val fragmentFactory: NewsFragmentFactory) : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         supportFragmentManager.fragmentFactory = fragmentFactory

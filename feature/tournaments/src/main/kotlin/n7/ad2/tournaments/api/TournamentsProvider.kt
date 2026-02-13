@@ -7,5 +7,4 @@ import n7.ad2.tournaments.internal.TournamentsFragment
 class TournamentsProvider : TournamentsApi {
 
     override fun getFragment(): Fragment = TournamentsFragment.getInstance()
-
 }

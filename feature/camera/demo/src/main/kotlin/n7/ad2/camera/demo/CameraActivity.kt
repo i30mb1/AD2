@@ -9,9 +9,7 @@ import androidx.fragment.app.commitNow
 import n7.ad2.camera.api.CameraFragmentFactory
 import n7.ad2.camera.api.CameraProvider
 
-class CameraActivity(
-    private val fragmentFactory: CameraFragmentFactory,
-) : FragmentActivity() {
+class CameraActivity(private val fragmentFactory: CameraFragmentFactory) : FragmentActivity() {
 
     private val fragment by lazy { CameraProvider().getFragment() }
 

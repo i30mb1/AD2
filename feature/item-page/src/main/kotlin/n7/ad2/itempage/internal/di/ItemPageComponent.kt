@@ -19,5 +19,4 @@ interface ItemPageComponent {
     fun inject(drawerFragment: ItemInfoFragment)
 
     val itemInfoViewModelFactory: ItemInfoViewModel.Factory
-
 }

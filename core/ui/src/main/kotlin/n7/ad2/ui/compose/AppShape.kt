@@ -5,11 +5,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.dp
 
-data class AppShape(
-    val small: CornerBasedShape,
-    val medium: CornerBasedShape,
-    val large: CornerBasedShape,
-)
+data class AppShape(val small: CornerBasedShape, val medium: CornerBasedShape, val large: CornerBasedShape)
 
 val appShape = AppShape(
     small = RoundedCornerShape(4.dp),

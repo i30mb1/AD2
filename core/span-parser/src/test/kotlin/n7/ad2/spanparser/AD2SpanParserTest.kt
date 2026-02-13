@@ -42,7 +42,7 @@ class AD2SpanParserTest {
         fillFields(raw)
         Truth.assertThat(resultText.toString()).isEqualTo("если сдашься, тебе конец")
         Truth.assertThat(resultAnalyzer).containsExactly(
-            RemainingText("если сдашься, тебе конец")
+            RemainingText("если сдашься, тебе конец"),
         )
     }
 
@@ -56,7 +56,7 @@ class AD2SpanParserTest {
         Truth.assertThat(resultAnalyzer).containsExactly(
             StartSpanTag("не жми на ", listOf(AttributeAndValue("link", "kufar.by/promo?site=kufar"))),
             EndSpanTag("эту"),
-            RemainingText(" ссылку")
+            RemainingText(" ссылку"),
         )
     }
 
@@ -70,7 +70,7 @@ class AD2SpanParserTest {
         Truth.assertThat(resultAnalyzer).containsExactly(
             StartSpanTag("если стоять на месте, ", listOf(AttributeAndValue("color", "#FF9C27B0"))),
             EndSpanTag("вперед"),
-            RemainingText(" не продвинишься")
+            RemainingText(" не продвинишься"),
         )
     }
 
@@ -84,7 +84,7 @@ class AD2SpanParserTest {
             .isEqualTo("adb shell am start -d \"app://n7.ad2\"")
         Truth.assertThat(resultAnalyzer).containsExactly(
             StartSpanTag("adb shell am start -d \"app://n7.ad2\"", listOf(AttributeAndValue("image", "Cringe"))),
-            EndSpanTag("")
+            EndSpanTag(""),
         )
     }
 
@@ -113,7 +113,7 @@ class AD2SpanParserTest {
             StartSpanTag(" проблемы", listOf(AttributeAndValue("color", "#FF0000"))),
             EndSpanTag(" одну за одной,"),
             EndSpanTag(" вы решите"),
-            RemainingText(" их все")
+            RemainingText(" их все"),
         )
     }
 
@@ -141,5 +141,4 @@ class AD2SpanParserTest {
             EndSpanTag(" получилось"),
         )
     }
-
 }

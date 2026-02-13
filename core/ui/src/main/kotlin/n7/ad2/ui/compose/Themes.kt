@@ -20,10 +20,7 @@ object AppTheme {
 }
 
 @Composable
-fun AppTheme(
-    isDarkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit,
-) {
+fun AppTheme(isDarkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val appColor = if (isDarkTheme) appColorDark else appColorLight
     val appTypography = appTypography
     val appShape = appShape
@@ -45,16 +42,14 @@ fun AppTheme(
                 onBackground = appColor.textColor,
                 onSurface = appColor.textColor,
                 onError = appColor.textColor,
-                !isDarkTheme
+                !isDarkTheme,
             ),
-            typography = Typography(
-
-            ),
+            typography = Typography(),
             shapes = Shapes(
                 small = appShape.small,
                 medium = appShape.medium,
                 large = appShape.large,
-            )
+            ),
         ) {
             content()
         }

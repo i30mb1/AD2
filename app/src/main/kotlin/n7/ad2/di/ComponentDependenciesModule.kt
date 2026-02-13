@@ -65,5 +65,4 @@ interface ComponentDependenciesModule {
     @dagger.multibindings.IntoMap
     @DependenciesKey(ItemPageDependencies::class)
     fun provideItemPageDependencies(impl: ApplicationComponent): Dependencies
-
 }

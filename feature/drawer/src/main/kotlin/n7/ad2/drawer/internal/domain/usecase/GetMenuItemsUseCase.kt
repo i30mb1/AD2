@@ -1,6 +1,5 @@
 package n7.ad2.drawer.internal.domain.usecase
 
-import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
@@ -17,14 +16,9 @@ import n7.ad2.drawer.internal.data.remote.model.Settings
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.feature.drawer.R
+import javax.inject.Inject
 
-internal class GetMenuItemsUseCase @Inject constructor(
-    private val res: Resources,
-    private val preference: Preference,
-    private val settingsApi: SettingsApi,
-    private val logger: Logger,
-    private val dispatchers: DispatchersProvider,
-) {
+internal class GetMenuItemsUseCase @Inject constructor(private val res: Resources, private val preference: Preference, private val settingsApi: SettingsApi, private val logger: Logger, private val dispatchers: DispatchersProvider) {
 
     private val defaultMenu = listOf(
         Menu(VOMenuType.HEROES),
@@ -61,5 +55,4 @@ internal class GetMenuItemsUseCase @Inject constructor(
             }
         } ?: error("sorry we fucked up...")
     }.flowOn(dispatchers.Default)
-
 }

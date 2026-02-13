@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,11 +26,9 @@ import n7.ad2.xo.internal.game.GameState
 import n7.ad2.xo.internal.game.GameStatus
 import n7.ad2.xo.internal.mapper.ServerToServerUIMapper
 import n7.ad2.xo.internal.model.SocketType
+import kotlin.time.Duration.Companion.seconds
 
-internal class XoViewModel @AssistedInject constructor(
-    private val gameLogic: GameLogic,
-    private val logger: Logger,
-) : ViewModel() {
+internal class XoViewModel @AssistedInject constructor(private val gameLogic: GameLogic, private val logger: Logger) : ViewModel() {
 
     @AssistedFactory
     interface Factory {
@@ -66,7 +63,7 @@ internal class XoViewModel @AssistedInject constructor(
                         isGameStarted = state.gameStatus is GameStatus.Started,
                         isButtonStartEnabled = state.gameStatus is GameStatus.Idle,
                         server = (state.gameStatus as? GameStatus.Started)?.server,
-                        selectedSocketType = state.selectedSocketType
+                        selectedSocketType = state.selectedSocketType,
                     )
                 }
             }

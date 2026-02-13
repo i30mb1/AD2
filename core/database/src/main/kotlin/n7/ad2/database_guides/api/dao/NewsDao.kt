@@ -19,5 +19,4 @@ interface NewsDao : BaseDao<NewsDB> {
 
     @Query("SELECT * FROM NewsDB WHERE rowId =:id")
     suspend fun getSingleNews(id: Int): NewsDB
-
 }

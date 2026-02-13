@@ -9,10 +9,9 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.metrics.performance.JankStats
 import n7.ad2.ktx.lazyUnsafe
 
-class JankStatsFrameCounter(
-    lifecycle: Lifecycle?,
-    window: Window,
-) : FrameCounter, DefaultLifecycleObserver {
+class JankStatsFrameCounter(lifecycle: Lifecycle?, window: Window) :
+    FrameCounter,
+    DefaultLifecycleObserver {
 
     override var isJunkCallback: ((isJunk: Boolean) -> Unit)? = null
     override var fpsCallback: ((fps: Int) -> Unit)? = null
@@ -43,5 +42,4 @@ class JankStatsFrameCounter(
 //        count = 0
         mainHandler.postDelayed(runnable, FrameCounter.FPS_INTERVAL_TIME)
     }
-
 }

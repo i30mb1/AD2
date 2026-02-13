@@ -21,7 +21,7 @@ internal class HeroesViewModelTest {
     private fun createViewModel() = HeroesViewModel(
         getVOHeroesListUseCase = GetVOHeroesListUseCase(GetHeroesUseCaseFake(), coroutineRule.dispatchers, LoggerFake()),
         filterHeroesUseCase = { FilterHeroesUseCase(coroutineRule.dispatchers) },
-        updateStateViewedForHeroUseCase = { UpdateStateViewedForHeroUseCaseFake() }
+        updateStateViewedForHeroUseCase = { UpdateStateViewedForHeroUseCaseFake() },
     )
 
     @Test
@@ -81,5 +81,4 @@ internal class HeroesViewModelTest {
         val heroesAfter = heroesViewModel.heroes.value
         assertThat(heroesAfter.size).isEqualTo(1)
     }
-
 }

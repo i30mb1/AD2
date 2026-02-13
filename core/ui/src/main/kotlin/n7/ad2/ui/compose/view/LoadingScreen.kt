@@ -35,10 +35,7 @@ fun LoadingScreen() {
 }
 
 @Composable
-fun LoadingAnimation(
-    circleColor: Color = AppTheme.color.primary,
-    animationDelay: Int = 3000,
-) {
+fun LoadingAnimation(circleColor: Color = AppTheme.color.primary, animationDelay: Int = 3000) {
     val circles = listOf(
         remember { Animatable(initialValue = 0f) },
         remember { Animatable(initialValue = 0f) },
@@ -52,14 +49,15 @@ fun LoadingAnimation(
                 infiniteRepeatable(
                     tween(durationMillis = animationDelay, easing = LinearEasing),
                     RepeatMode.Restart,
-                )
+                ),
             )
         }
     }
 
-    Box(modifier = Modifier
-        .size(200.dp)
-        .background(color = Color.Transparent)
+    Box(
+        modifier = Modifier
+            .size(200.dp)
+            .background(color = Color.Transparent),
     ) {
         circles.forEach { animatable ->
             Box(
@@ -67,9 +65,8 @@ fun LoadingAnimation(
                     .scale(scale = animatable.value)
                     .size(200.dp)
                     .clip(CircleShape)
-                    .background(circleColor.copy((1 - animatable.value)))
+                    .background(circleColor.copy((1 - animatable.value))),
             )
         }
     }
-
 }

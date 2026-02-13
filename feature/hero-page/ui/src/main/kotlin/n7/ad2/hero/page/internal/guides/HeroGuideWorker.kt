@@ -17,11 +17,7 @@ import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.ktx.createNotificationChannel
 import n7.ad2.ktx.isChannelNotCreated
 
-
-class HeroGuideWorker(
-    val context: Context,
-    workerParameters: WorkerParameters,
-) : CoroutineWorker(context, workerParameters) {
+class HeroGuideWorker(val context: Context, workerParameters: WorkerParameters) : CoroutineWorker(context, workerParameters) {
 
     companion object {
         private const val HERO_NAME = "HERO_NAME"

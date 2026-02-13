@@ -19,6 +19,5 @@ class RecipeItemDecorator : RecyclerView.ItemDecoration() {
             top = offsetHorizontal
             bottom = offsetHorizontal
         }
-
     }
 }

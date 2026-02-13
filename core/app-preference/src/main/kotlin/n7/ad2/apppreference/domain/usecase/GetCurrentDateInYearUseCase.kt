@@ -6,16 +6,10 @@ import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
 
-class GetCurrentDayUseCase @Inject constructor(
-    private val calendar: Calendar,
-) {
+class GetCurrentDayUseCase @Inject constructor(private val calendar: Calendar) {
 
-    operator fun invoke(
-        date: Date = calendar.time,
-        locale: Locale = Locale.getDefault(),
-    ): Int {
+    operator fun invoke(date: Date = calendar.time, locale: Locale = Locale.getDefault()): Int {
         val currentDayInString = SimpleDateFormat("DDD", locale).format(date)
         return currentDayInString.toInt()
     }
-
 }

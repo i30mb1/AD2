@@ -7,9 +7,7 @@ import n7.ad2.heroes.domain.internal.HeroesRepository
 import n7.ad2.heroes.domain.model.Guide
 import n7.ad2.heroes.domain.usecase.GetGuideForHeroUseCase
 
-internal class GetGuideForHeroUseCaseImpl(
-    private val heroesRepository: HeroesRepository,
-) : GetGuideForHeroUseCase {
+internal class GetGuideForHeroUseCaseImpl(private val heroesRepository: HeroesRepository) : GetGuideForHeroUseCase {
 
     private val json = Json { ignoreUnknownKeys = true }
 

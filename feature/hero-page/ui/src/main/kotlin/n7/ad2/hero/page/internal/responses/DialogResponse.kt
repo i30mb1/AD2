@@ -30,5 +30,4 @@ class DialogResponse : DialogFragment() {
 
         return dialogBuilder.create()
     }
-
 }

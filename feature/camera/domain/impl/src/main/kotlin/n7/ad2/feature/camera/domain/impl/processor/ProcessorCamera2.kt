@@ -19,10 +19,7 @@ import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ProcessorState
 
 @SuppressLint("UnsafeOptInUsageError")
-class ProcessorCamera2(
-    private val context: Context,
-    private val cameraSettings: CameraSettings,
-) : Processor {
+class ProcessorCamera2(private val context: Context, private val cameraSettings: CameraSettings) : Processor {
 
     val callback = object : CameraCaptureSession.CaptureCallback() {
         override fun onCaptureCompleted(session: CameraCaptureSession, request: CaptureRequest, result: TotalCaptureResult) {
@@ -57,14 +54,12 @@ class ProcessorCamera2(
         return TODO()
     }
 
-    private fun mapCameraHardwareLevel(level: Int): String {
-        return when (level) {
-            CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY -> "INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY"
-            CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_EXTERNAL -> "INFO_SUPPORTED_HARDWARE_LEVEL_EXTERNAL"
-            CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED -> "INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"
-            CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_FULL -> "INFO_SUPPORTED_HARDWARE_LEVEL_FULL"
-            CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_3 -> "INFO_SUPPORTED_HARDWARE_LEVEL_3"
-            else -> "Unknown level :$level"
-        }
+    private fun mapCameraHardwareLevel(level: Int): String = when (level) {
+        CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY -> "INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY"
+        CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_EXTERNAL -> "INFO_SUPPORTED_HARDWARE_LEVEL_EXTERNAL"
+        CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED -> "INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"
+        CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_FULL -> "INFO_SUPPORTED_HARDWARE_LEVEL_FULL"
+        CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_3 -> "INFO_SUPPORTED_HARDWARE_LEVEL_3"
+        else -> "Unknown level :$level"
     }
 }

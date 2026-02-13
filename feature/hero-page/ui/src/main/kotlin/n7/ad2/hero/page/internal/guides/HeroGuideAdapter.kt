@@ -15,8 +15,9 @@ import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideStartingHeroItems
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideTitle
 import n7.ad2.ui.StickyHeaderDecorator
 
-class HeroGuideAdapter
-    : ListAdapter<VOGuideItem, HeroGuideAdapter.HeroGuideHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
+class HeroGuideAdapter :
+    ListAdapter<VOGuideItem, HeroGuideAdapter.HeroGuideHolder>(DiffCallback()),
+    StickyHeaderDecorator.StickyHeaderInterface {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = TODO()
 
@@ -34,12 +35,9 @@ class HeroGuideAdapter
 
     override fun getHeaderLayout() = R.layout.item_guide_title
 
-    class HeroGuideHolder private constructor(
-
-    ) : RecyclerView.ViewHolder(TODO()) {
+    class HeroGuideHolder private constructor() : RecyclerView.ViewHolder(TODO()) {
 
         fun bind(item: VOGuideItem) {
-
         }
 
         companion object {
@@ -55,5 +53,4 @@ class HeroGuideAdapter
         override fun areItemsTheSame(oldItem: VOGuideItem, newItem: VOGuideItem): Boolean = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOGuideItem, newItem: VOGuideItem): Boolean = oldItem == newItem
     }
-
 }

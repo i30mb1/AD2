@@ -37,15 +37,13 @@ abstract class HeroesDatabase : RoomDatabase() {
             INSTANCE = database
         }
 
-        private fun buildDatabase(context: Context): HeroesDatabase {
-            return Room.databaseBuilder(
-                context,
-                HeroesDatabase::class.java,
-                DB_NAME,
-            )
-                .createFromAsset("heroes.db")
-                .fallbackToDestructiveMigration()
-                .build()
-        }
+        private fun buildDatabase(context: Context): HeroesDatabase = Room.databaseBuilder(
+            context,
+            HeroesDatabase::class.java,
+            DB_NAME,
+        )
+            .createFromAsset("heroes.db")
+            .fallbackToDestructiveMigration()
+            .build()
     }
 }

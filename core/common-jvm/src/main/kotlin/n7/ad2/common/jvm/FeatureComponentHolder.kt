@@ -16,10 +16,8 @@ abstract class FeatureComponentHolder<Component : DIComponent> : BaseComponentHo
     @Volatile
     private var component: WeakReference<Component>? = null
 
-    override fun get(): Component {
-        return component?.get() ?: synchronized(this) {
-            component?.get() ?: build().also(::set)
-        }
+    override fun get(): Component = component?.get() ?: synchronized(this) {
+        component?.get() ?: build().also(::set)
     }
 
     /**
@@ -30,5 +28,4 @@ abstract class FeatureComponentHolder<Component : DIComponent> : BaseComponentHo
     }
 
     protected abstract fun build(): Component
-
 }

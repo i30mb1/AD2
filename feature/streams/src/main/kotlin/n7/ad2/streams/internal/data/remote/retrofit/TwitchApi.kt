@@ -15,30 +15,18 @@ import retrofit2.http.Query
 internal interface TwitchApi {
 
     @GET("streams?game_id=29595")
-    suspend fun getStreams(
-        @Query("first") first: Int = 100,
-        @Query("after") after: String = "",
-        @Query("before") before: String = "",
-    ): Streams
+    suspend fun getStreams(@Query("first") first: Int = 100, @Query("after") after: String = "", @Query("before") before: String = ""): Streams
 
     @GET("streams?game_id=29595")
-    suspend fun getStream(
-        @Path("user_id") userId: String,
-    ): Streams
+    suspend fun getStream(@Path("user_id") userId: String): Streams
 
     companion object {
 
-        fun get(
-            client: Lazy<OkHttpClient>,
-        ): TwitchApi {
-            return Retrofit.Builder()
-                .baseUrl("https://api.twitch.tv/helix/")
-                .callFactory { request -> client.get().newCall(request) }
-                .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
-                .build()
-                .create()
-        }
-
+        fun get(client: Lazy<OkHttpClient>): TwitchApi = Retrofit.Builder()
+            .baseUrl("https://api.twitch.tv/helix/")
+            .callFactory { request -> client.get().newCall(request) }
+            .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+            .build()
+            .create()
     }
-
 }

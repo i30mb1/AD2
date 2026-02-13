@@ -10,7 +10,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DependenciesMap
@@ -26,12 +25,14 @@ import n7.ad2.items.internal.di.DaggerItemsComponent
 import n7.ad2.items.internal.model.ItemUI
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
+import javax.inject.Inject
 
-internal class ItemsFragment(
-    override var dependenciesMap: DependenciesMap,
-) : Fragment(R.layout.fragment_items), HasDependencies {
+internal class ItemsFragment(override var dependenciesMap: DependenciesMap) :
+    Fragment(R.layout.fragment_items),
+    HasDependencies {
 
     @Inject lateinit var itemsViewModelFactory: ItemsViewModel.Factory
+
     @Inject lateinit var navigator: Navigator
 
     private var _binding: FragmentItemsBinding? = null
@@ -53,7 +54,6 @@ internal class ItemsFragment(
     }
 
     private fun setupAnimation() {
-
     }
 
     private fun onItemClick(model: ItemUI.Body, view: ImageView) {
@@ -100,5 +100,4 @@ internal class ItemsFragment(
             .onEach { list -> itemsAdapter.submitList(list) { startPostponedEnterTransition() } }
             .launchIn(lifecycleScope)
     }
-
 }

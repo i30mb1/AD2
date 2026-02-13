@@ -24,13 +24,7 @@ import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
-internal fun VariantBlocks(
-    spellList: SkillGameViewModel.SpellList,
-    showRightAnswer: Boolean,
-    selectedSpell: SkillGameViewModel.Spell?,
-    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun VariantBlocks(spellList: SkillGameViewModel.SpellList, showRightAnswer: Boolean, selectedSpell: SkillGameViewModel.Spell?, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit, modifier: Modifier = Modifier) {
     Row(modifier) {
         for (spell in spellList.list) {
             Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
@@ -48,7 +42,7 @@ private fun VariantBlocksPreview() {
                 SkillGameViewModel.Spell("20", false),
                 SkillGameViewModel.Spell("30", true),
                 SkillGameViewModel.Spell("40", false),
-            )
+            ),
         ),
         showRightAnswer = false,
         selectedSpell = null,
@@ -56,15 +50,8 @@ private fun VariantBlocksPreview() {
     )
 }
 
-
 @Composable
-private fun Block(
-    spell: SkillGameViewModel.Spell,
-    showRightAnswer: Boolean,
-    isSelected: Boolean,
-    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+private fun Block(spell: SkillGameViewModel.Spell, showRightAnswer: Boolean, isSelected: Boolean, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit, modifier: Modifier = Modifier) {
     var isSmall by remember { mutableStateOf(false) }
     isSmall = isSelected
     val backgroundColor = if (showRightAnswer && spell.isRightAnswer) AppTheme.color.primary else AppTheme.color.surface
@@ -99,6 +86,6 @@ private fun BlockPreview() {
         spell = SkillGameViewModel.Spell("10", false),
         showRightAnswer = false,
         isSelected = false,
-        onVariantClick = {}
+        onVariantClick = {},
     )
 }

@@ -8,11 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.info.domain.vo.VOSpell
 
-class SpellsListAdapter(
-    private val layoutInflater: LayoutInflater,
-    private val onSpellClickListener: (spell: VOSpell.Simple) -> Unit,
-    private val onTalentClickListener: (spell: VOSpell.Talent) -> Unit,
-) : ListAdapter<VOSpell, RecyclerView.ViewHolder>(DiffCallback()) {
+class SpellsListAdapter(private val layoutInflater: LayoutInflater, private val onSpellClickListener: (spell: VOSpell.Simple) -> Unit, private val onTalentClickListener: (spell: VOSpell.Talent) -> Unit) : ListAdapter<VOSpell, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_spell -> SpellViewHolder.from(layoutInflater, parent, onSpellClickListener)
@@ -53,7 +49,4 @@ class SpellsListAdapter(
             return super.getChangePayload(oldItem, newItem)
         }
     }
-
 }
-
-

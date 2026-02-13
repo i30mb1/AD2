@@ -2,9 +2,6 @@
 
 package n7.ad2.feature.games.xo.domain.internal.server.controller
 
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelChildren
@@ -21,6 +18,9 @@ import n7.ad2.feature.games.xo.domain.internal.server.data.ServerState
 import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerCreatorImpl
 import n7.ad2.feature.games.xo.domain.model.SocketServerModel
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.util.Scanner
 
 class HttpServerController : ServerController {
     private val scope = CoroutineScope(Job() + newSingleThreadContext("SocketServerController"))
@@ -49,42 +49,42 @@ class HttpServerController : ServerController {
         try {
             while (true) {
                 val socket = server.serverSocket.accept()
-            val writer = PrintWriter(socket.getOutputStream())
-            val inputStream = socket.getInputStream()
-            val reader = Scanner(inputStream)
-            if (!reader.hasNext()) {
-                socket.close()
-                writer.close()
-                reader.close()
-                continue
-            }
-            val request = requestParts(reader)
-            // Читаем заголовки
-            val headers = readHeaders(reader)
+                val writer = PrintWriter(socket.getOutputStream())
+                val inputStream = socket.getInputStream()
+                val reader = Scanner(inputStream)
+                if (!reader.hasNext()) {
+                    socket.close()
+                    writer.close()
+                    reader.close()
+                    continue
+                }
+                val request = requestParts(reader)
+                // Читаем заголовки
+                val headers = readHeaders(reader)
 
-            _state.update { it.copy(messages = it.messages + Message.Info("request: ${request.toList().joinToString("\n")}")) }
-            when (request["method"]) {
-                "GET" -> {
-                    var response: String
-                    when (request["resource"]) {
-                        "/" -> response = messagesToSend.receive()
-                        "/favicon.ico" -> response = "empty"
-                        else -> error("!")
+                _state.update { it.copy(messages = it.messages + Message.Info("request: ${request.toList().joinToString("\n")}")) }
+                when (request["method"]) {
+                    "GET" -> {
+                        var response: String
+                        when (request["resource"]) {
+                            "/" -> response = messagesToSend.receive()
+                            "/favicon.ico" -> response = "empty"
+                            else -> error("!")
+                        }
+                        sendResponse(writer, response)
                     }
-                    sendResponse(writer, response)
-                }
 
-                "POST" -> {
-                    val messageLength = headers["Content-Length"]!!.toInt()
-                    val requestBody = reader.next()
-                    _state.update { it.copy(messages = it.messages + Message.Other(requestBody.toString())) }
-                    // Ответ серверу
-                    val response = "POST request received"
-                    sendResponse(writer, response)
-                }
+                    "POST" -> {
+                        val messageLength = headers["Content-Length"]!!.toInt()
+                        val requestBody = reader.next()
+                        _state.update { it.copy(messages = it.messages + Message.Other(requestBody.toString())) }
+                        // Ответ серверу
+                        val response = "POST request received"
+                        sendResponse(writer, response)
+                    }
 
-                else -> error("???")
-            }
+                    else -> error("???")
+                }
                 writer.close()
                 reader.close()
                 socket.close()

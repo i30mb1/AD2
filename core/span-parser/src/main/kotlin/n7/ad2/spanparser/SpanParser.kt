@@ -7,7 +7,5 @@ interface SpanParser {
 }
 
 class SpanParserFake : SpanParser {
-    override fun toSpannable(string: String, isNightTheme: Boolean): Spannable? {
-        return null
-    }
+    override fun toSpannable(string: String, isNightTheme: Boolean): Spannable? = null
 }

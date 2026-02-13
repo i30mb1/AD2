@@ -20,9 +20,7 @@ import javax.inject.Inject
 
 internal data class AttributeAndValue(val attribute: String, val value: String)
 
-internal class AD2SpanParser @Inject constructor(
-    private val res: Resources,
-) : SpanParser {
+internal class AD2SpanParser @Inject constructor(private val res: Resources) : SpanParser {
 
     companion object {
         private const val START_TAG_SPAN_OPEN = "<span "
@@ -75,48 +73,44 @@ internal class AD2SpanParser @Inject constructor(
         if (bufferText.isNotEmpty()) callback(RemainingText(bufferText.toString()))
     }
 
-    private fun applyAttributesToText(
-        bufferText: String,
-        attributeAndValueList: List<AttributeAndValue>,
-        isNightTheme: Boolean,
-    ): Spannable {
+    private fun applyAttributesToText(bufferText: String, attributeAndValueList: List<AttributeAndValue>, isNightTheme: Boolean): Spannable {
         val result = bufferText.toSpannable()
         val uniqueAttributeAndValueList = attributeAndValueList.distinctBy { it.attribute }
-        for ((attribute, value) in uniqueAttributeAndValueList) when (attribute) {
-            "color" -> if (!isNightTheme) result[0, result.length] = setForegroundColorSpan(value, result)
-            "colorNight" -> if (isNightTheme) result[0, result.length] = setForegroundColorSpan(value, result)
-            "background" -> if (!isNightTheme) result[0, result.length] = setBackgroundColorSpan(value, result)
-            "backgroundNight" -> if (isNightTheme) result[0, result.length] = setBackgroundColorSpan(value, result)
-            "linearGradient" -> result[0, result.length] = setLinearGradient(value, result)
-            "underline" -> result[0, result.length] = UnderlineSpan()
-            "image" -> {
-                try {
-                    val parts = value.split(".")
-                    val path = parts[0] + ".${parts[1]}"
-                    val pathNight = (if (isNightTheme) "${parts[0]}-night" else parts[0]) + ".${parts[1]}"
-                    val drawable = runCatching { Drawable.createFromStream(res.getAssets(pathNight), null) }.getOrNull()
-                        ?: runCatching { Drawable.createFromStream(res.getAssets(path), null) }.getOrNull()
-                    if (drawable != null) result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
-                } catch (e: Exception) {
-                    println("fff")
+        for ((attribute, value) in uniqueAttributeAndValueList) {
+            when (attribute) {
+                "color" -> if (!isNightTheme) result[0, result.length] = setForegroundColorSpan(value, result)
+                "colorNight" -> if (isNightTheme) result[0, result.length] = setForegroundColorSpan(value, result)
+                "background" -> if (!isNightTheme) result[0, result.length] = setBackgroundColorSpan(value, result)
+                "backgroundNight" -> if (isNightTheme) result[0, result.length] = setBackgroundColorSpan(value, result)
+                "linearGradient" -> result[0, result.length] = setLinearGradient(value, result)
+                "underline" -> result[0, result.length] = UnderlineSpan()
+                "image" -> {
+                    try {
+                        val parts = value.split(".")
+                        val path = parts[0] + ".${parts[1]}"
+                        val pathNight = (if (isNightTheme) "${parts[0]}-night" else parts[0]) + ".${parts[1]}"
+                        val drawable = runCatching { Drawable.createFromStream(res.getAssets(pathNight), null) }.getOrNull()
+                            ?: runCatching { Drawable.createFromStream(res.getAssets(path), null) }.getOrNull()
+                        if (drawable != null) result[0, result.length] = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BOTTOM)
+                    } catch (e: Exception) {
+                        println("fff")
+                    }
                 }
-            }
-            "click" -> result[0, result.length] = AD2ClickableSpan(AD2ClickableSpan.Data(value, bufferText))
-            "style" -> when (value) {
-                "strike" -> result[0, result.length] = StrikethroughSpan()
-                "bold" -> result[0, result.length] = StyleSpan(Typeface.BOLD)
-                "italic" -> result[0, result.length] = StyleSpan(Typeface.ITALIC)
+                "click" -> result[0, result.length] = AD2ClickableSpan(AD2ClickableSpan.Data(value, bufferText))
+                "style" -> when (value) {
+                    "strike" -> result[0, result.length] = StrikethroughSpan()
+                    "bold" -> result[0, result.length] = StyleSpan(Typeface.BOLD)
+                    "italic" -> result[0, result.length] = StyleSpan(Typeface.ITALIC)
+                }
             }
         }
         return result
     }
 
-    private fun parseColor(color: String): Int? {
-        return try {
-            Color.parseColor(color)
-        } catch (e: Exception) {
-            null
-        }
+    private fun parseColor(color: String): Int? = try {
+        Color.parseColor(color)
+    } catch (e: Exception) {
+        null
     }
 
     private fun setBackgroundColorSpan(value: String, result: Spannable) {
@@ -149,12 +143,13 @@ internal class AD2SpanParser @Inject constructor(
                         val value = attributeAndValue[1]
                         if (value.isEmpty() || attribute.isEmpty()) return@mapNotNull null
                         AttributeAndValue(attribute, value)
-                    } else null
+                    } else {
+                        null
+                    }
                 }
             }
             if (char != SKIP_ATTRS_SIGN) bufferText.append(char)
         }
         return emptyList()
     }
-
 }

@@ -48,10 +48,10 @@ private fun testHeroesList() {
             .filter { link ->
                 val title = link.attr("title")
                 title.isNotEmpty() &&
-                        !title.contains("Category:") &&
-                        !title.contains("File:") &&
-                        !title.contains("Heroes") &&
-                        title.length < 50 // Reasonable hero name length
+                    !title.contains("Category:") &&
+                    !title.contains("File:") &&
+                    !title.contains("Heroes") &&
+                    title.length < 50 // Reasonable hero name length
             }
 
         println("Total hero links found: ${allHeroLinks.size}")
@@ -60,7 +60,6 @@ private fun testHeroesList() {
         allHeroLinks.take(10).forEach { hero ->
             println("  - ${hero.attr("title")}")
         }
-
     } catch (e: Exception) {
         println("Error testing heroes list: ${e.message}")
     }
@@ -100,7 +99,6 @@ private fun testSpecificHero(heroName: String) {
         // Test for Facets
         val facetMentions = document.select("*:contains(Facet)").size
         println("Facet mentions: $facetMentions")
-
     } catch (e: Exception) {
         println("Error testing $heroName: ${e.message}")
     }

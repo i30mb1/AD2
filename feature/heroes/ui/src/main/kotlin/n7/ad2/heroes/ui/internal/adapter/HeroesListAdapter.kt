@@ -10,10 +10,7 @@ import n7.ad2.feature.heroes.ui.R
 import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
 
-internal class HeroesListAdapter(
-    private val layoutInflater: LayoutInflater,
-    onHeroClick: (hero: VOHero.Body) -> Unit,
-) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
+internal class HeroesListAdapter(private val layoutInflater: LayoutInflater, onHeroClick: (hero: VOHero.Body) -> Unit) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener { view ->
         val hero = view.getTag(n7.ad2.core.ui.R.id.ViewHolderModel) as VOHero.Body
@@ -52,6 +49,4 @@ internal class HeroesListAdapter(
         override fun areItemsTheSame(oldItem: VOHero, newItem: VOHero) = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOHero, newItem: VOHero) = oldItem == newItem
     }
-
 }
-

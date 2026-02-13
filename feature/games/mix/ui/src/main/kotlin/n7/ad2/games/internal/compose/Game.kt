@@ -24,12 +24,7 @@ import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
-internal fun Game(
-    title: String,
-    background: Int,
-    onGameClick: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun Game(title: String, background: Int, onGameClick: () -> Unit, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .height(150.dp)
@@ -43,7 +38,7 @@ internal fun Game(
             contentDescription = title,
             contentScale = ContentScale.Crop,
             alpha = 0.2f,
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize(),
         )
         Text(
             text = title,
@@ -57,9 +52,7 @@ internal fun Game(
 
 @Preview
 @Composable
-private fun GamePreview(
-    @PreviewParameter(PreviewGameTitleProvider::class) title: String,
-) {
+private fun GamePreview(@PreviewParameter(PreviewGameTitleProvider::class) title: String) {
     Game(title = title, background = 0, onGameClick = { })
 }
 
@@ -71,6 +64,6 @@ private class PreviewGameTitleProvider : PreviewParameterProvider<String> {
 
 private class PreviewGameBackgroundProvider : PreviewParameterProvider<Int> {
     override val values: Sequence<Int> = sequenceOf(
-        R.drawable.background_guess_skill
+        R.drawable.background_guess_skill,
     )
 }

@@ -8,7 +8,7 @@ class BumpVersionPlugin : Plugin<Project> {
         val extension = extensions.create(
             "bumpVersionConfig",
             BumpVersionExtension::class.java,
-            this
+            this,
         )
         tasks.register("bumpVersion", BumpVersionTask::class) {
             bumpEnabled.set(extension.isEnabled)
@@ -19,5 +19,4 @@ class BumpVersionPlugin : Plugin<Project> {
         }
         Unit
     }
-
 }

@@ -11,10 +11,7 @@ import n7.ad2.apppreference.Preference
 import n7.ad2.drawer.internal.domain.usecase.GetMenuItemsUseCase
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 
-internal class DrawerViewModel @AssistedInject constructor(
-    private val getMenuItemsUseCase: GetMenuItemsUseCase,
-    private val preferences: Preference,
-) : ViewModel() {
+internal class DrawerViewModel @AssistedInject constructor(private val getMenuItemsUseCase: GetMenuItemsUseCase, private val preferences: Preference) : ViewModel() {
 
     @AssistedFactory
     interface Factory {
@@ -30,12 +27,9 @@ internal class DrawerViewModel @AssistedInject constructor(
         }
     }
 
-    suspend fun isLogWidgetEnabled(): Boolean {
-        return preferences.isLogWidgetEnabled()
-    }
+    suspend fun isLogWidgetEnabled(): Boolean = preferences.isLogWidgetEnabled()
 
     fun updateMenu(selectedMenu: VOMenu) {
         menu.value = menu.value.map { menu -> menu.copy(isSelected = menu.type == selectedMenu.type) }
     }
-
 }

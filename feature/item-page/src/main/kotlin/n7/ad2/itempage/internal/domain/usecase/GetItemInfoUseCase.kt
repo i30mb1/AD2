@@ -1,7 +1,6 @@
 package n7.ad2.itempage.internal.domain.usecase
 
 import androidx.core.text.toSpanned
-import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -17,22 +16,16 @@ import n7.ad2.ktx.toStringList
 import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderPlayableViewHolder
 import n7.ad2.ui.adapter.ImageLineViewHolder
+import javax.inject.Inject
 
-class GetItemInfoUseCase @Inject constructor(
-    private val res: Resources,
-    private val dispatchers: DispatchersProvider,
-) {
+class GetItemInfoUseCase @Inject constructor(private val res: Resources, private val dispatchers: DispatchersProvider) {
 
-    private fun getItem(itemName: String, appLocale: AppLocale): String {
-        return res.getAssets("items/$itemName/${appLocale.value}/description.json")
-            .bufferedReader().use {
-                it.readText()
-            }
-    }
+    private fun getItem(itemName: String, appLocale: AppLocale): String = res.getAssets("items/$itemName/${appLocale.value}/description.json")
+        .bufferedReader().use {
+            it.readText()
+        }
 
-    private fun getFullUrlItemImage(itemName: String): String {
-        return "https://cdn.dota2.com/apps/dota2/images/items/${itemName}_lg.png"
-    }
+    private fun getFullUrlItemImage(itemName: String): String = "https://cdn.dota2.com/apps/dota2/images/items/${itemName}_lg.png"
 
     operator fun invoke(itemName: String, appLocale: AppLocale): Flow<List<VOItemInfo>> = flow {
         val jsonString = getItem(itemName, appLocale)
@@ -93,5 +86,4 @@ class GetItemInfoUseCase @Inject constructor(
         }
         emit(result)
     }.flowOn(dispatchers.IO)
-
 }

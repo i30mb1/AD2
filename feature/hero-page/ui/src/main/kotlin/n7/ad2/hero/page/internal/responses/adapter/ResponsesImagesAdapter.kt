@@ -6,10 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponseImage
 
-class ResponsesImagesAdapter(
-    private val layoutInflater: LayoutInflater,
-    private val showPopup: () -> Unit,
-) : RecyclerView.Adapter<ImageViewHolder>() {
+class ResponsesImagesAdapter(private val layoutInflater: LayoutInflater, private val showPopup: () -> Unit) : RecyclerView.Adapter<ImageViewHolder>() {
 
     var list = emptyList<VOResponseImage>()
         set(value) {
@@ -24,5 +21,4 @@ class ResponsesImagesAdapter(
     override fun getItemViewType(position: Int): Int = R.layout.item_response_image
 
     override fun getItemCount(): Int = list.size
-
 }

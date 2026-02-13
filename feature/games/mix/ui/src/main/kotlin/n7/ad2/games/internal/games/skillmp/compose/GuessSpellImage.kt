@@ -25,8 +25,8 @@ import androidx.compose.ui.unit.dp
 import androidx.core.math.MathUtils
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import kotlin.math.roundToInt
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 @Preview
 @Composable
@@ -35,10 +35,7 @@ private fun GuessSpellImagePreview() {
 }
 
 @Composable
-fun GuessSpellImage(
-    spellImage: String?,
-    onSpellClick: () -> Unit,
-) {
+fun GuessSpellImage(spellImage: String?, onSpellClick: () -> Unit) {
     val offsetY = remember { Animatable(0f) }
     val offsetX = remember { Animatable(0f) }
     val scope = rememberCoroutineScope()

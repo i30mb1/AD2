@@ -1,7 +1,6 @@
 package tasks
 
 import BranchComparisonExtension
-import javax.inject.Inject
 import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
 import org.gradle.api.provider.Property
@@ -9,6 +8,7 @@ import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 import org.gradle.process.ExecOperations
+import javax.inject.Inject
 
 /**
  * Advanced branch comparison task using gradle-profiler.
@@ -61,11 +61,9 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
         }
     }
 
-    private fun getCurrentBranch(): String {
-        return project.providers.exec {
-            commandLine("git", "rev-parse", "--abbrev-ref", "HEAD")
-        }.standardOutput.asText.get().trim()
-    }
+    private fun getCurrentBranch(): String = project.providers.exec {
+        commandLine("git", "rev-parse", "--abbrev-ref", "HEAD")
+    }.standardOutput.asText.get().trim()
 
     private fun getProfilerExecutable(): String {
         val isWindows = System.getProperty("os.name").lowercase().contains("windows")
@@ -79,11 +77,7 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
         return executablePath.absolutePath
     }
 
-    private fun createDynamicScenarios(
-        currentBranch: String,
-        baseBranch: String,
-        config: BranchComparisonExtension,
-    ): java.io.File {
+    private fun createDynamicScenarios(currentBranch: String, baseBranch: String, config: BranchComparisonExtension): java.io.File {
         val scenariosContent = """
             # Current branch build
             build_current_branch {
@@ -111,11 +105,7 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
         return scenariosFile
     }
 
-    private fun runBenchmark(
-        profilerBin: String,
-        scenariosFile: java.io.File,
-        config: BranchComparisonExtension,
-    ) {
+    private fun runBenchmark(profilerBin: String, scenariosFile: java.io.File, config: BranchComparisonExtension) {
         val outputDir = config.outputDir.get()
         val iterations = config.iterations.get().toString()
         val warmups = config.warmupRuns.get().toString()
@@ -131,7 +121,7 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
             "--iterations", iterations,
             "--warmups", warmups,
             "build_current_branch",
-            "build_base_branch"
+            "build_base_branch",
         )
 
         processBuilder.directory(project.projectDir)

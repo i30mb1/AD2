@@ -17,8 +17,7 @@ internal class ConvertStreamToVOStreamUseCase @Inject constructor() {
         return VOStream.Simple(
             title,
             streamerName,
-            streamImage
+            streamImage,
         )
     }
-
 }

@@ -20,10 +20,7 @@ import kotlin.math.abs
 
 private data class Point(val x: Float, val y: Float)
 
-class DraggableFrameLayout(
-    context: Context,
-    attributeSet: AttributeSet,
-) : FrameLayout(context, attributeSet) {
+class DraggableFrameLayout(context: Context, attributeSet: AttributeSet) : FrameLayout(context, attributeSet) {
 
     companion object {
         const val MAX_SCALE = 1F
@@ -42,16 +39,20 @@ class DraggableFrameLayout(
     private var finalY = 0
     private var currentScale = MAX_SCALE
     private var closeCallBack = { }
-    private val dragHelper = ViewDragHelper.create(this, 1F, object : ViewDragHelper.Callback() {
-        override fun tryCaptureView(child: View, pointerId: Int) = child == draggableView
-        override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int = left
-        override fun clampViewPositionVertical(child: View, top: Int, dy: Int): Int = top
-        override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(releasedChild, xvel, yvel)
-        override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
-            offsetX = changedView.left - changedView.marginLeft
-            offsetY = changedView.top - changedView.marginTop
-        }
-    })
+    private val dragHelper = ViewDragHelper.create(
+        this,
+        1F,
+        object : ViewDragHelper.Callback() {
+            override fun tryCaptureView(child: View, pointerId: Int) = child == draggableView
+            override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int = left
+            override fun clampViewPositionVertical(child: View, top: Int, dy: Int): Int = top
+            override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(releasedChild, xvel, yvel)
+            override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
+                offsetX = changedView.left - changedView.marginLeft
+                offsetY = changedView.top - changedView.marginTop
+            }
+        },
+    )
     private val scaleListener = object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
         override fun onScale(detector: ScaleGestureDetector): Boolean {
             currentScale *= detector.scaleFactor
@@ -134,31 +135,19 @@ class DraggableFrameLayout(
         return Point(location[0].toFloat(), location[1].toFloat())
     }
 
-    private fun stickToBottom(child: View): Int {
-        return height - child.marginBottom - child.measuredHeight + getHeightDifference(child)
+    private fun stickToBottom(child: View): Int = height - child.marginBottom - child.measuredHeight + getHeightDifference(child)
+
+    private fun stickToTop(child: View): Int = child.marginTop - getHeightDifference(child)
+
+    private fun stickToEnd(child: View): Int = (width - child.marginEnd - child.measuredWidth + getWidthDifference(child)).let {
+        if (it < child.marginStart) child.marginStart else it // reset to leftmost position if out of bound
     }
 
-    private fun stickToTop(child: View): Int {
-        return child.marginTop - getHeightDifference(child)
-    }
+    private fun stickToStart(child: View): Int = child.marginStart - getWidthDifference(child)
 
-    private fun stickToEnd(child: View): Int {
-        return (width - child.marginEnd - child.measuredWidth + getWidthDifference(child)).let {
-            if (it < child.marginStart) child.marginStart else it // reset to leftmost position if out of bound
-        }
-    }
+    private fun getHeightDifference(child: View): Int = (child.measuredHeight - child.measuredHeight * currentScale).toInt() / 2
 
-    private fun stickToStart(child: View): Int {
-        return child.marginStart - getWidthDifference(child)
-    }
-
-    private fun getHeightDifference(child: View): Int {
-        return (child.measuredHeight - child.measuredHeight * currentScale).toInt() / 2
-    }
-
-    private fun getWidthDifference(child: View): Int {
-        return (child.measuredWidth - child.measuredWidth * currentScale).toInt() / 2
-    }
+    private fun getWidthDifference(child: View): Int = (child.measuredWidth - child.measuredWidth * currentScale).toInt() / 2
 
     private inner class SettleRunnable(private val view: View, private val onAnimationEnd: (() -> Unit)? = null) : Runnable {
         override fun run() {
@@ -169,5 +158,4 @@ class DraggableFrameLayout(
             }
         }
     }
-
 }

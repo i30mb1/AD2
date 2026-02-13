@@ -3,7 +3,7 @@ package n7.plugins
 import org.gradle.api.Plugin
 import org.gradle.api.initialization.Settings
 
-class SettingsPlugin: Plugin<Settings> {
+class SettingsPlugin : Plugin<Settings> {
 
     override fun apply(target: Settings) {
         target.plugins.run {
@@ -12,5 +12,4 @@ class SettingsPlugin: Plugin<Settings> {
             apply("convention.settings")
         }
     }
-
 }

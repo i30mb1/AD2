@@ -25,7 +25,5 @@ internal class ItemInfoItemDecorator : RecyclerView.ItemDecoration() {
             top = if (position == 0) offsetHorizontal + statusBarsInsets else offsetHorizontal
             bottom = if (position == childCount - 1) offsetHorizontal + navigationBarsInsets else offsetHorizontal
         }
-
     }
-
 }

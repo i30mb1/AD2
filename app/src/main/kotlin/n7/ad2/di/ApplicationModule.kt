@@ -1,10 +1,8 @@
 package n7.ad2.di
 
 import android.app.Application
-import android.content.Context
 import androidx.work.WorkManager
 import dagger.multibindings.ElementsIntoSet
-import java.util.Calendar
 import n7.ad2.AD2Navigator
 import n7.ad2.AppInformation
 import n7.ad2.Resources
@@ -21,9 +19,10 @@ import n7.ad2.init.SystemInfoInitializer
 import n7.ad2.init.YandexMetricsInitializer
 import n7.ad2.navigator.Navigator
 import yandex.metrics.YandexMetrics
+import java.util.Calendar
 
 @dagger.Module(
-    includes = [BaseApplicationModule::class]
+    includes = [BaseApplicationModule::class],
 )
 interface ApplicationModule {
 
@@ -51,15 +50,13 @@ interface ApplicationModule {
 
         @ElementsIntoSet
         @dagger.Provides
-        fun provideInitializers(): Set<Initializer> {
-            return setOf(
-                YandexMetricsInitializer(),
-                SystemInfoInitializer(),
-                CrashHandlerInitializer(),
-                HistoricalProcessExitReasonsInitializer(),
-                StrictModeInitializer(),
-                DevicePerformanceInitializer(),
-            )
-        }
+        fun provideInitializers(): Set<Initializer> = setOf(
+            YandexMetricsInitializer(),
+            SystemInfoInitializer(),
+            CrashHandlerInitializer(),
+            HistoricalProcessExitReasonsInitializer(),
+            StrictModeInitializer(),
+            DevicePerformanceInitializer(),
+        )
     }
 }

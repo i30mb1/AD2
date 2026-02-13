@@ -2,31 +2,25 @@ package n7.ad2.feature.games.xo.domain.internal.registrator
 
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
-import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.suspendCancellableCoroutine
 import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
-internal class RegisterServiceInNetworkUseCaseImpl(
-    private val manager: NsdManager,
-    private val commonSettings: CommonSettings,
-    private val logger: Logger,
-) : RegisterServiceInNetworkUseCase {
+internal class RegisterServiceInNetworkUseCaseImpl(private val manager: NsdManager, private val commonSettings: CommonSettings, private val logger: Logger) : RegisterServiceInNetworkUseCase {
 
     private var listenersMap: MutableSet<NsdManager.RegistrationListener> = mutableSetOf()
 
-    override suspend fun register(
-        server: SimpleServer,
-    ): SimpleServer = suspendCancellableCoroutine { continuation ->
+    override suspend fun register(server: SimpleServer): SimpleServer = suspendCancellableCoroutine { continuation ->
         val listener = object : NsdManager.RegistrationListener {
             override fun onServiceRegistered(info: NsdServiceInfo) {
                 listenersMap.add(this)
                 val finalName = info.serviceName // Android may have change name in order to resolve a conflict
                 logger.log("DNS: registration success: $finalName")
                 continuation.resume(
-                    SimpleServer(name = finalName, ip = server.ip, port = server.port)
+                    SimpleServer(name = finalName, ip = server.ip, port = server.port),
                 )
             }
 

@@ -17,5 +17,4 @@ class TwitchInterceptor : Interceptor {
             .build()
         return chain.proceed(request)
     }
-
 }

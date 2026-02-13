@@ -50,11 +50,7 @@ import n7.ad2.ui.compose.view.ErrorScreen
 import n7.ad2.ui.compose.view.LoadingScreen
 
 @Composable
-internal fun StreamsScreen(
-    streams: LazyPagingItems<VOStream>,
-    drawerPercentListener: DrawerPercentListener,
-    onStreamClicked: (stream: VOStream) -> Unit,
-) {
+internal fun StreamsScreen(streams: LazyPagingItems<VOStream>, drawerPercentListener: DrawerPercentListener, onStreamClicked: (stream: VOStream) -> Unit) {
     Crossfade(targetState = streams.loadState.refresh) { state ->
         when (state) {
             is LoadState.Loading -> LoadingScreen()
@@ -65,12 +61,7 @@ internal fun StreamsScreen(
 }
 
 @Composable
-internal fun StreamsList(
-    streams: LazyPagingItems<VOStream>,
-    onStreamClicked: (stream: VOStream) -> Unit,
-    drawerPercentListener: DrawerPercentListener,
-    modifier: Modifier = Modifier,
-) {
+internal fun StreamsList(streams: LazyPagingItems<VOStream>, onStreamClicked: (stream: VOStream) -> Unit, drawerPercentListener: DrawerPercentListener, modifier: Modifier = Modifier) {
     var contentComposed by remember { mutableStateOf(false) }
     var drawerPercent: Float by remember { mutableStateOf(0f) }
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
@@ -88,9 +79,11 @@ internal fun StreamsList(
         }
         if (streams.loadState.append is LoadState.Loading) {
             item {
-                Box(modifier = Modifier
-                    .size(100.dp)
-                    .background(Color.Red)) {}
+                Box(
+                    modifier = Modifier
+                        .size(100.dp)
+                        .background(Color.Red),
+                ) {}
             }
         }
     }
@@ -102,17 +95,13 @@ internal fun StreamsList(
 }
 
 @Composable
-internal fun SimpleStream(
-    stream: VOStream.Simple,
-    onStreamClicked: (stream: VOStream) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun SimpleStream(stream: VOStream.Simple, onStreamClicked: (stream: VOStream) -> Unit, modifier: Modifier = Modifier) {
     Surface(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(4.dp))
             .clickable { onStreamClicked(stream) }
-            .background(AppTheme.color.surface)
+            .background(AppTheme.color.surface),
     ) {
         Row {
             Box {
@@ -157,16 +146,16 @@ internal fun SimpleStream(
 
 @Preview
 @Composable
-internal fun SimpleStreamPreview(
-    @PreviewParameter(PreviewStreamProvider::class) stream: VOStream.Simple,
-) {
+internal fun SimpleStreamPreview(@PreviewParameter(PreviewStreamProvider::class) stream: VOStream.Simple) {
     SimpleStream(stream, {})
 }
 
 internal class PreviewStreamProvider : PreviewParameterProvider<VOStream> {
-    override val values: Sequence<VOStream> = sequenceOf(VOStream.Simple(
-        "N7 vs Navi",
-        "i30mb1",
-        "empty",
-    ))
+    override val values: Sequence<VOStream> = sequenceOf(
+        VOStream.Simple(
+            "N7 vs Navi",
+            "i30mb1",
+            "empty",
+        ),
+    )
 }

@@ -12,13 +12,14 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@RunWith(AndroidJUnit4::class)
 /**
  * невозможно работать с robolectric если конструктор у активити или конструктор у application с параметрами
  */
+@RunWith(AndroidJUnit4::class)
 class FragmentManagerTestWithUnit {
 
     private val fragment = EmptyFragment()
+
     @get:Rule var activity = activityScenarioRule<XoActivity>()
 
     @Test
@@ -38,7 +39,5 @@ class FragmentManagerTestWithUnit {
 
 class EmptyFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return TextView(context).apply { text = "Hello World!" }
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = TextView(context).apply { text = "Hello World!" }
 }

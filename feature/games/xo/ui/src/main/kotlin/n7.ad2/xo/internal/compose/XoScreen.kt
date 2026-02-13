@@ -33,17 +33,13 @@ private fun XoScreenPreview() {
                 deviceIP = "192.168.100.10",
                 servers = listOf(ServerUI()),
                 logs = listOf(AppLog("Hello")),
-            )
+            ),
         )
     }
 }
 
 @Composable
-internal fun XoScreen(
-    state: XoUIState,
-    modifier: Modifier = Modifier,
-    events: (event: XoScreenEvent) -> Unit = { },
-) {
+internal fun XoScreen(state: XoUIState, modifier: Modifier = Modifier, events: (event: XoScreenEvent) -> Unit = { }) {
     Box(
         modifier = modifier
             .safeDrawingPadding(),
@@ -68,7 +64,7 @@ private fun BoxScope.NetworkInfo(state: XoUIState) {
         modifier = Modifier.Companion
             .align(Alignment.TopEnd)
             .fillMaxWidth()
-            .padding(start = 8.dp, end = 8.dp)
+            .padding(start = 8.dp, end = 8.dp),
     ) {
         Row(
             modifier = Modifier.align(Alignment.End),

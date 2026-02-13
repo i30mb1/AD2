@@ -24,10 +24,10 @@ import androidx.core.util.forEach
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
-import java.io.File
-import java.net.URL
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.repositories.ResponseRepository
+import java.io.File
+import java.net.URL
 
 sealed class DownloadResult {
     data class InProgress(val downloadedBytes: Int, val totalBytes: Int, val downloadID: Long) : DownloadResult()
@@ -38,11 +38,7 @@ sealed class DownloadResult {
 private typealias Result<T> = (T) -> Unit
 
 //  https://youtu.be/-4JqEROeI7U
-class DownloadResponseManager(
-    private val contentResolver: ContentResolver,
-    private val application: Application,
-    private val lifecycle: Lifecycle,
-) : DefaultLifecycleObserver {
+class DownloadResponseManager(private val contentResolver: ContentResolver, private val application: Application, private val lifecycle: Lifecycle) : DefaultLifecycleObserver {
 
     private val downloadManager: DownloadManager = application.getSystemService()!!
     private var downloadListener: ((result: DownloadResult) -> Unit)? = null
@@ -116,7 +112,7 @@ class DownloadResponseManager(
 
         val projection = arrayOf(
             MediaStore.Audio.Media._ID, // получая id сможем построить путь до изображения
-            MediaStore.Audio.Media.DISPLAY_NAME
+            MediaStore.Audio.Media.DISPLAY_NAME,
         )
         val selection = MediaStore.Audio.Media.SIZE + "<=?"
         val selectionArgs = arrayOf("500")
@@ -204,5 +200,4 @@ class DownloadResponseManager(
         application.unregisterReceiver(downloadEndReceiver)
         lifecycle.removeObserver(this)
     }
-
 }

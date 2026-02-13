@@ -9,7 +9,7 @@ import n7.ad2.navigator.Navigator
 @dagger.Module(
     includes = [
         BaseApplicationModule::class,
-    ]
+    ],
 )
 internal interface XoApplicationModule {
 

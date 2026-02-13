@@ -1,9 +1,5 @@
 package n7.ad2.xo.cli.controller
 
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.ServerSocket
-import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -18,6 +14,10 @@ import n7.ad2.xo.cli.model.Message
 import n7.ad2.xo.cli.model.ServerState
 import n7.ad2.xo.cli.model.ServerStatus
 import n7.ad2.xo.cli.model.SimpleServer
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.net.ServerSocket
+import java.util.Scanner
 
 class HttpServerController : CliServerController {
     private val scope = CoroutineScope(Job() + Dispatchers.IO)
@@ -39,7 +39,7 @@ class HttpServerController : CliServerController {
             _state.update {
                 it.copy(
                     status = ServerStatus.Connected(server),
-                    messages = it.messages + Message.Info("HTTP server started")
+                    messages = it.messages + Message.Info("HTTP server started"),
                 )
             }
 
@@ -51,7 +51,7 @@ class HttpServerController : CliServerController {
             _state.update {
                 it.copy(
                     status = ServerStatus.Closed,
-                    messages = it.messages + Message.Info("Failed to start HTTP server: ${e.message}")
+                    messages = it.messages + Message.Info("Failed to start HTTP server: ${e.message}"),
                 )
             }
         }

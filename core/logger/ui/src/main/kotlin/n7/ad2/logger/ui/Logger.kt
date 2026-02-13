@@ -19,16 +19,13 @@ private fun LoggerImpl() {
             listOf(
                 AppLog("Hello"),
                 AppLog("Hello 2"),
-            )
+            ),
         )
     }
 }
 
 @Composable
-fun Logger(
-    logs: List<AppLog>,
-    modifier: Modifier = Modifier,
-) {
+fun Logger(logs: List<AppLog>, modifier: Modifier = Modifier) {
     LazyColumn(
         modifier = modifier.padding(end = 8.dp),
         reverseLayout = false,

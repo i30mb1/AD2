@@ -8,8 +8,5 @@ import okhttp3.OkHttpClient
 internal object DrawerModule {
 
     @dagger.Provides
-    fun provideSettingsApi(client: Lazy<OkHttpClient>): SettingsApi {
-        return SettingsApi.get(client)
-    }
-
+    fun provideSettingsApi(client: Lazy<OkHttpClient>): SettingsApi = SettingsApi.get(client)
 }

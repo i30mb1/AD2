@@ -20,23 +20,20 @@ import androidx.compose.runtime.setValue
 import androidx.core.content.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.media3.common.util.UnstableApi
-import javax.inject.Inject
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.stream.compose.StreamScreen
 import n7.ad2.ui.compose.AppTheme
+import javax.inject.Inject
 
 @UnstableApi
 class StreamActivity : FragmentActivity() {
 
     companion object {
         private const val STREAMER_NAME = "STREAMER_NAME"
-        fun newInstance(
-            context: Context,
-            streamerName: String,
-        ) = Intent(context, StreamActivity::class.java).apply {
+        fun newInstance(context: Context, streamerName: String) = Intent(context, StreamActivity::class.java).apply {
             putExtra(STREAMER_NAME, streamerName)
         }
     }
@@ -77,7 +74,6 @@ class StreamActivity : FragmentActivity() {
     }
 
     private fun onSettingsClicked() {
-
     }
 
     private fun onPipLayoutChanged(rect: Rect) {
@@ -85,7 +81,7 @@ class StreamActivity : FragmentActivity() {
             PictureInPictureParams.Builder()
                 .setSourceRectHint(rect)
                 .setAspectRatio(Rational(rect.right, rect.bottom))
-                .build()
+                .build(),
         )
     }
 
@@ -102,5 +98,4 @@ class StreamActivity : FragmentActivity() {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
         isPipVisible = !isInPictureInPictureMode
     }
-
 }

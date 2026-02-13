@@ -2,15 +2,12 @@ package n7.ad2.news.ui.internal.screen.news
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import javax.inject.Inject
 import n7.ad2.app.logger.Logger
 import n7.ad2.database_guides.api.AppDatabase
 import n7.ad2.database_guides.internal.model.NewsDB
+import javax.inject.Inject
 
-internal class NewsSource @Inject constructor(
-    private val database: AppDatabase,
-    private val logger: Logger,
-) : PagingSource<Int, NewsDB>() {
+internal class NewsSource @Inject constructor(private val database: AppDatabase, private val logger: Logger) : PagingSource<Int, NewsDB>() {
 
     override fun getRefreshKey(state: PagingState<Int, NewsDB>): Int? {
         logger.log("refreshKey = ${state.anchorPosition}")
@@ -31,5 +28,4 @@ internal class NewsSource @Inject constructor(
         logger.log("loading local news error=$error")
         LoadResult.Error(error)
     }
-
 }

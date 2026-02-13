@@ -30,15 +30,11 @@ interface TwitchHLSApi {
 
     companion object {
 
-        fun get(client: Lazy<OkHttpClient>): TwitchHLSApi {
-            return Retrofit.Builder()
-                .baseUrl("http://usher.twitch.tv/api/channel/hls/")
-                .callFactory { request -> client.get().newCall(request) }
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build()
-                .create()
-        }
-
+        fun get(client: Lazy<OkHttpClient>): TwitchHLSApi = Retrofit.Builder()
+            .baseUrl("http://usher.twitch.tv/api/channel/hls/")
+            .callFactory { request -> client.get().newCall(request) }
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .build()
+            .create()
     }
-
 }

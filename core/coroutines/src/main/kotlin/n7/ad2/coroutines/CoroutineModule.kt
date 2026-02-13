@@ -13,5 +13,4 @@ object CoroutineModule {
 
     @dagger.Provides
     fun provideCoroutineScope(): CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
-
 }

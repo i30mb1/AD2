@@ -19,13 +19,11 @@ class SettingsFragment : Fragment() {
         fun getInstance(): SettingsFragment = SettingsFragment()
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content {
-            SettingsScreen(
-                ::onReviewAppButtonClicked,
-                ::onTellFriendsButtonClicked,
-            )
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        SettingsScreen(
+            ::onReviewAppButtonClicked,
+            ::onTellFriendsButtonClicked,
+        )
     }
 
     private fun onReviewAppButtonClicked() {
@@ -35,7 +33,6 @@ class SettingsFragment : Fragment() {
                 val reviewInfo = request.result ?: return@addOnCompleteListener
                 val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
                 flow.addOnCompleteListener {
-
                 }
             }
         }
@@ -63,5 +60,4 @@ class SettingsFragment : Fragment() {
             startActivity(intent)
         }
     }
-
 }

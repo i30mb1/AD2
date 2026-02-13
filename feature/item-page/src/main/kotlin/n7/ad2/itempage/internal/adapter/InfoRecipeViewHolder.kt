@@ -10,10 +10,7 @@ import n7.ad2.feature.item.page.R
 import n7.ad2.feature.item.page.databinding.ItemInfoRecipeBinding
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 
-class InfoRecipeViewHolder private constructor(
-    private val binding: ItemInfoRecipeBinding,
-    private val recipeAdapter: RecipeAdapter,
-) : RecyclerView.ViewHolder(binding.root) {
+class InfoRecipeViewHolder private constructor(private val binding: ItemInfoRecipeBinding, private val recipeAdapter: RecipeAdapter) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: VOItemInfo.Recipe) {
         binding.ivItem.load(item.urlItemImage, R.drawable.item_placeholder)
@@ -23,10 +20,7 @@ class InfoRecipeViewHolder private constructor(
     }
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-        ): InfoRecipeViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup): InfoRecipeViewHolder {
             val binding = ItemInfoRecipeBinding.inflate(layoutInflater, parent, false)
             val recipeAdapter = RecipeAdapter(layoutInflater)
             recipeAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
@@ -36,5 +30,4 @@ class InfoRecipeViewHolder private constructor(
             return InfoRecipeViewHolder(binding, recipeAdapter)
         }
     }
-
 }

@@ -5,11 +5,7 @@ import n7.ad2.items.domain.model.Item
 import n7.ad2.items.domain.usecase.GetItemsUseCase
 import n7.ad2.items.domian.internal.ItemsRepository
 
-internal class GetItemsUseCaseImpl(
-    private val itemRepository: ItemsRepository,
-) : GetItemsUseCase {
+internal class GetItemsUseCaseImpl(private val itemRepository: ItemsRepository) : GetItemsUseCase {
 
-    override operator fun invoke(): Flow<List<Item>> {
-        return itemRepository.getAllItems()
-    }
+    override operator fun invoke(): Flow<List<Item>> = itemRepository.getAllItems()
 }

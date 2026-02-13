@@ -1,17 +1,5 @@
 package n7.ad2.feature.games.xo.domain.internal.server.controller
 
-import java.io.BufferedReader
-import java.io.InputStream
-import java.io.InputStreamReader
-import java.io.OutputStream
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.Socket
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
-import java.security.MessageDigest
-import java.util.Base64
-import kotlin.experimental.xor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelChildren
@@ -29,10 +17,20 @@ import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
 import n7.ad2.feature.games.xo.domain.internal.server.getBytes
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ServerCreatorImpl
 import n7.ad2.feature.games.xo.domain.model.SocketServerModel
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.io.OutputStream
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.net.Socket
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
+import java.security.MessageDigest
+import java.util.Base64
+import kotlin.experimental.xor
 
-class WebsocketServerController(
-    private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("SocketServerController")),
-) : ServerController {
+class WebsocketServerController(private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("SocketServerController"))) : ServerController {
 
     private val _state: MutableStateFlow<ServerState> = MutableStateFlow(ServerState())
     override val state: StateFlow<ServerState> = _state

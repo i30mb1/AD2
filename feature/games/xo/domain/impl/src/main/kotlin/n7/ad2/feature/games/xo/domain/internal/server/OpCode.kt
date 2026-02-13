@@ -26,4 +26,3 @@ internal object OpCode {
     internal const val OPCODE_PING = 9
     internal const val OPCODE_PONG = 10
 }
-

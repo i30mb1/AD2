@@ -55,7 +55,7 @@ private fun Browser(body: String) {
         },
         update = {
             it.loadBody(body, textColor)
-        }
+        },
     )
 }
 

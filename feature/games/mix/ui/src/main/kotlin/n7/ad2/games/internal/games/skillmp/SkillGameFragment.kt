@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.fragment.app.Fragment
-import javax.inject.Inject
 import n7.ad2.android.findDependencies
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.skillmp.compose.ManaPointScreen
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.content
+import javax.inject.Inject
 
 internal class SkillGameFragment : Fragment() {
 
@@ -29,11 +29,9 @@ internal class SkillGameFragment : Fragment() {
         DaggerGamesComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content {
-            val state: State<SkillGameViewModel.State> = viewModel.state.collectAsState()
-            ManaPointScreen(state = state.value, ::loadQuestion)
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        val state: State<SkillGameViewModel.State> = viewModel.state.collectAsState()
+        ManaPointScreen(state = state.value, ::loadQuestion)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,5 +42,4 @@ internal class SkillGameFragment : Fragment() {
     private fun loadQuestion(selectedSpell: SkillGameViewModel.Spell) {
         viewModel.onAction(SkillGameViewModel.Action.ShowAnswer(selectedSpell))
     }
-
 }

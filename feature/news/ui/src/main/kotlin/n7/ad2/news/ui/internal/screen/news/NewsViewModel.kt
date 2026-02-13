@@ -17,11 +17,7 @@ import n7.ad2.database_guides.api.AppDatabase
 import n7.ad2.news.ui.internal.screen.news.model.Image
 import n7.ad2.news.ui.internal.screen.news.model.NewsVO
 
-internal class NewsViewModel @AssistedInject constructor(
-    private val database: AppDatabase,
-    private val newsSource: NewsSource,
-    newsRemoteMediator: NewsRemoteMediator,
-) : ViewModel() {
+internal class NewsViewModel @AssistedInject constructor(private val database: AppDatabase, private val newsSource: NewsSource, newsRemoteMediator: NewsRemoteMediator) : ViewModel() {
 
     @AssistedFactory
     interface Factory {

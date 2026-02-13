@@ -14,18 +14,16 @@ abstract class GamesRoomDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: GamesRoomDatabase? = null
 
-        fun getDatabase(context: Context): GamesRoomDatabase {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    GamesRoomDatabase::class.java,
-                    "tournaments2.db"
-                )
-                    .fallbackToDestructiveMigration()
-                    .build()
-                INSTANCE = instance
-                instance
-            }
+        fun getDatabase(context: Context): GamesRoomDatabase = INSTANCE ?: synchronized(this) {
+            val instance = Room.databaseBuilder(
+                context.applicationContext,
+                GamesRoomDatabase::class.java,
+                "tournaments2.db",
+            )
+                .fallbackToDestructiveMigration()
+                .build()
+            INSTANCE = instance
+            instance
         }
     }
 }

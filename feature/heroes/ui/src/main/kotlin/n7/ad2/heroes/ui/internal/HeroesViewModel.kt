@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import javax.inject.Provider
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -18,12 +17,9 @@ import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
 import n7.ad2.heroes.ui.internal.domain.usecase.FilterHeroesUseCase
 import n7.ad2.heroes.ui.internal.domain.usecase.GetVOHeroesListUseCase
 import n7.ad2.heroes.ui.internal.domain.vo.VOHero
+import javax.inject.Provider
 
-internal class HeroesViewModel @AssistedInject constructor(
-    private val getVOHeroesListUseCase: GetVOHeroesListUseCase,
-    private val filterHeroesUseCase: Provider<FilterHeroesUseCase>,
-    private val updateStateViewedForHeroUseCase: Provider<UpdateStateViewedForHeroUseCase>,
-) : ViewModel() {
+internal class HeroesViewModel @AssistedInject constructor(private val getVOHeroesListUseCase: GetVOHeroesListUseCase, private val filterHeroesUseCase: Provider<FilterHeroesUseCase>, private val updateStateViewedForHeroUseCase: Provider<UpdateStateViewedForHeroUseCase>) : ViewModel() {
 
     @AssistedFactory
     interface Factory {

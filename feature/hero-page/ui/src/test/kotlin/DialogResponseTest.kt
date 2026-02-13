@@ -35,4 +35,3 @@ class DialogResponseTest {
         val bitmap = Screenshot.capture().bitmap
     }
 }
-

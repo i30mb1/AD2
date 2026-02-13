@@ -38,7 +38,5 @@ internal class HeroesItemDecorator : RecyclerView.ItemDecoration() {
             left = offset
             right = offset
         }
-
     }
-
 }

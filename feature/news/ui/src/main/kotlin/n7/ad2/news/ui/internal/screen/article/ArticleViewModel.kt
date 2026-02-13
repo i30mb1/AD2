@@ -12,10 +12,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import n7.ad2.items.domain.usecase.GetArticleUseCase
 
-internal class ArticleViewModel @AssistedInject constructor(
-    @Assisted private val newsID: Int,
-    getArticleUseCase: GetArticleUseCase,
-) : ViewModel() {
+internal class ArticleViewModel @AssistedInject constructor(@Assisted private val newsID: Int, getArticleUseCase: GetArticleUseCase) : ViewModel() {
 
     @AssistedFactory
     interface Factory {
@@ -39,14 +36,9 @@ internal class ArticleViewModel @AssistedInject constructor(
             .launchIn(viewModelScope)
     }
 
-    data class State(
-        val isLoading: Boolean,
-        val isError: Boolean,
-        val body: String,
-    ) {
+    data class State(val isLoading: Boolean, val isError: Boolean, val body: String) {
         companion object {
             fun init() = State(true, false, "")
         }
     }
-
 }

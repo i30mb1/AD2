@@ -13,10 +13,7 @@ import kotlinx.coroutines.delay
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
-fun TextWithDotsSuffix(
-    text: String,
-    modifier: Modifier = Modifier,
-) {
+fun TextWithDotsSuffix(text: String, modifier: Modifier = Modifier) {
     var animText by remember { mutableStateOf(text) }
     Text(
         modifier = modifier,

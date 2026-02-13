@@ -18,10 +18,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import n7.ad2.core.ui.databinding.PopupSpellInfoBinding
 
-class InfoPopupWindow(
-    context: Context,
-    private val lifecycle: Lifecycle,
-) : DefaultLifecycleObserver {
+class InfoPopupWindow(context: Context, private val lifecycle: Lifecycle) : DefaultLifecycleObserver {
 
     private val halfScreenWidth: Int by lazy { Resources.getSystem().displayMetrics.widthPixels / 2 }
     private val binding = PopupSpellInfoBinding.inflate(LayoutInflater.from(context))
@@ -64,5 +61,4 @@ class InfoPopupWindow(
         anchor.getLocationOnScreen(location)
         return Point(location[0] + anchor.pivotX.toInt() - binding.pointer.width / 2, location[1])
     }
-
 }

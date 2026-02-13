@@ -3,9 +3,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.testing.TestLifecycleOwner
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import java.util.concurrent.Executor
-import kotlin.reflect.KCallable
-import kotlin.reflect.jvm.isAccessible
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.plus
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
@@ -22,6 +19,9 @@ import org.robolectric.annotation.Config
 import org.robolectric.annotation.Implementation
 import org.robolectric.annotation.Implements
 import org.robolectric.shadow.api.Shadow
+import java.util.concurrent.Executor
+import kotlin.reflect.KCallable
+import kotlin.reflect.jvm.isAccessible
 
 @RunWith(AndroidJUnit4::class)
 @Config(

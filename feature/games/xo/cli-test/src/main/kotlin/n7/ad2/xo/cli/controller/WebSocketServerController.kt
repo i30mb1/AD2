@@ -1,14 +1,5 @@
 package n7.ad2.xo.cli.controller
 
-import java.io.InputStream
-import java.io.OutputStream
-import java.net.InetAddress
-import java.net.ServerSocket
-import java.net.Socket
-import java.nio.charset.StandardCharsets
-import java.security.MessageDigest
-import java.util.Base64
-import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -22,6 +13,15 @@ import n7.ad2.xo.cli.model.Message
 import n7.ad2.xo.cli.model.ServerState
 import n7.ad2.xo.cli.model.ServerStatus
 import n7.ad2.xo.cli.model.SimpleServer
+import java.io.InputStream
+import java.io.OutputStream
+import java.net.InetAddress
+import java.net.ServerSocket
+import java.net.Socket
+import java.nio.charset.StandardCharsets
+import java.security.MessageDigest
+import java.util.Base64
+import java.util.Scanner
 
 class WebSocketServerController : CliServerController {
     private val scope = CoroutineScope(Job() + Dispatchers.IO)
@@ -42,7 +42,7 @@ class WebSocketServerController : CliServerController {
             _state.update {
                 it.copy(
                     status = ServerStatus.Waiting(server),
-                    messages = it.messages + Message.Info("WebSocket server started")
+                    messages = it.messages + Message.Info("WebSocket server started"),
                 )
             }
 
@@ -57,7 +57,7 @@ class WebSocketServerController : CliServerController {
                         _state.update {
                             it.copy(
                                 status = ServerStatus.Connected(server),
-                                messages = it.messages + Message.Info("WebSocket client connected")
+                                messages = it.messages + Message.Info("WebSocket client connected"),
                             )
                         }
 
@@ -73,7 +73,7 @@ class WebSocketServerController : CliServerController {
                         _state.update {
                             it.copy(
                                 status = ServerStatus.Closed,
-                                messages = it.messages + Message.Info("WebSocket server error: ${e.message}")
+                                messages = it.messages + Message.Info("WebSocket server error: ${e.message}"),
                             )
                         }
                     }
@@ -83,7 +83,7 @@ class WebSocketServerController : CliServerController {
             _state.update {
                 it.copy(
                     status = ServerStatus.Closed,
-                    messages = it.messages + Message.Info("Failed to start WebSocket server: ${e.message}")
+                    messages = it.messages + Message.Info("Failed to start WebSocket server: ${e.message}"),
                 )
             }
         }
@@ -121,10 +121,10 @@ class WebSocketServerController : CliServerController {
 
             // Отправляем ответ
             val response = "HTTP/1.1 101 Switching Protocols\r\n" +
-                    "Upgrade: websocket\r\n" +
-                    "Connection: Upgrade\r\n" +
-                    "Sec-WebSocket-Accept: $acceptKey\r\n" +
-                    "\r\n"
+                "Upgrade: websocket\r\n" +
+                "Connection: Upgrade\r\n" +
+                "Sec-WebSocket-Accept: $acceptKey\r\n" +
+                "\r\n"
 
             output.write(response.toByteArray())
             output.flush()
@@ -222,7 +222,9 @@ class WebSocketServerController : CliServerController {
 
             val mask = if (masked) {
                 ByteArray(4) { input.read().toByte() }
-            } else null
+            } else {
+                null
+            }
 
             val payload = ByteArray(payloadLength.toInt())
             input.read(payload)

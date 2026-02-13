@@ -2,10 +2,6 @@
 
 package n7.ad2.feature.games.xo.domain.internal.server.controller
 
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.Socket
-import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelChildren
@@ -21,10 +17,12 @@ import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
 import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.internal.server.socket.ClientCreatorImpl
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.net.Socket
+import java.util.Scanner
 
-class SocketClientController(
-    private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("SocketServerController")),
-) : ClientController {
+class SocketClientController(private val scope: CoroutineScope = CoroutineScope(Job() + newSingleThreadContext("SocketServerController"))) : ClientController {
     private val _state = MutableStateFlow(ClientState())
     override val state: StateFlow<ClientState> = _state
     private var socket: Socket? = null

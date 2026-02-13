@@ -10,9 +10,10 @@ import n7.ad2.ui.frameCounter.FrameCounter
 /**
  * Считаем сколько кадров было отрисовано за 1 секунду
  */
-internal class FpsExtractor(
-    lifecycle: Lifecycle?,
-) : FrameCounter, Choreographer.FrameCallback, DefaultLifecycleObserver {
+internal class FpsExtractor(lifecycle: Lifecycle?) :
+    FrameCounter,
+    Choreographer.FrameCallback,
+    DefaultLifecycleObserver {
 
     override var isJunkCallback: ((isJunk: Boolean) -> Unit)? = null
     override var fpsCallback: ((fps: Int) -> Unit)? = null

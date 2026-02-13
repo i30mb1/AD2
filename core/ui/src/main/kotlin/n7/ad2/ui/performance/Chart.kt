@@ -26,15 +26,7 @@ import androidx.compose.ui.unit.sp
  * Compose version of ChartView with improved performance and modern architecture
  */
 @Composable
-fun Chart(
-    state: ChartState,
-    modifier: Modifier = Modifier,
-    lineColor: Color = Color.Red,
-    textColor: Color = Color.White,
-    gridColor: Color = Color.Gray,
-    lineWidth: Float = 2f,
-    textSize: Float = 12f,
-) {
+fun Chart(state: ChartState, modifier: Modifier = Modifier, lineColor: Color = Color.Red, textColor: Color = Color.White, gridColor: Color = Color.Gray, lineWidth: Float = 2f, textSize: Float = 12f) {
     val density = LocalDensity.current
     val textMeasurer = rememberTextMeasurer()
 
@@ -47,12 +39,12 @@ fun Chart(
         TextStyle(
             color = textColor,
             fontSize = textSize.sp,
-            fontWeight = FontWeight.Normal
+            fontWeight = FontWeight.Normal,
         )
     }
 
     Canvas(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
     ) {
         if (state.values.isEmpty()) return@Canvas
 
@@ -65,22 +57,12 @@ fun Chart(
             lineWidthPx = lineWidthPx,
             gridWidthPx = gridWidthPx,
             textStyle = textStyle,
-            textMeasurer = textMeasurer
+            textMeasurer = textMeasurer,
         )
     }
 }
 
-private fun DrawScope.drawChart(
-    state: ChartState,
-    lineColor: Color,
-    gridColor: Color,
-    startOffsetPx: Float,
-    textOffsetPx: Float,
-    lineWidthPx: Float,
-    gridWidthPx: Float,
-    textStyle: TextStyle,
-    textMeasurer: TextMeasurer,
-) {
+private fun DrawScope.drawChart(state: ChartState, lineColor: Color, gridColor: Color, startOffsetPx: Float, textOffsetPx: Float, lineWidthPx: Float, gridWidthPx: Float, textStyle: TextStyle, textMeasurer: TextMeasurer) {
     // Calculate drawing area
     val chartWidth = size.width - startOffsetPx
     val chartHeight = size.height
@@ -99,8 +81,8 @@ private fun DrawScope.drawChart(
         style = Stroke(
             width = lineWidthPx,
             cap = StrokeCap.Round,
-            join = StrokeJoin.Round
-        )
+            join = StrokeJoin.Round,
+        ),
     )
 
     // Draw grid
@@ -126,9 +108,12 @@ private fun createLinePath(state: ChartState, chartWidth: Float, chartHeight: Fl
 
         // Create smooth curve using cubic bezier
         path.cubicTo(
-            (x + prevX) / 2, prevY,
-            (x + prevX) / 2, y,
-            x, y
+            (x + prevX) / 2,
+            prevY,
+            (x + prevX) / 2,
+            y,
+            x,
+            y,
         )
         prevX = x
         prevY = y
@@ -149,38 +134,30 @@ private fun createGradientPath(linePath: Path, chartWidth: Float, chartHeight: F
     return gradientPath
 }
 
-private fun DrawScope.drawGradient(
-    gradientPath: Path,
-    state: ChartState,
-    startOffsetPx: Float,
-) {
+private fun DrawScope.drawGradient(gradientPath: Path, state: ChartState, startOffsetPx: Float) {
     val colors = state.values.map { it.color }
 
     val brush = if (colors.size < 2) {
         Brush.linearGradient(
             colors = listOf(colors.first(), colors.first()),
             start = Offset(startOffsetPx, 0f),
-            end = Offset(size.width, 0f)
+            end = Offset(size.width, 0f),
         )
     } else {
         Brush.linearGradient(
             colors = colors,
             start = Offset(startOffsetPx, 0f),
-            end = Offset(size.width, 0f)
+            end = Offset(size.width, 0f),
         )
     }
 
     drawPath(
         path = gradientPath,
-        brush = brush
+        brush = brush,
     )
 }
 
-private fun DrawScope.drawGrid(
-    gridColor: Color,
-    gridWidthPx: Float,
-    startOffsetPx: Float,
-) {
+private fun DrawScope.drawGrid(gridColor: Color, gridWidthPx: Float, startOffsetPx: Float) {
     val scaleCount = 4
     val count = scaleCount - 1
     val widthUnit = size.width / count
@@ -192,7 +169,7 @@ private fun DrawScope.drawGrid(
             color = gridColor,
             start = Offset(startOffsetPx, heightUnit * (index + 1f)),
             end = Offset(size.width, heightUnit * (index + 1f)),
-            strokeWidth = gridWidthPx
+            strokeWidth = gridWidthPx,
         )
     }
 
@@ -202,18 +179,12 @@ private fun DrawScope.drawGrid(
             color = gridColor,
             start = Offset(widthUnit * index + startOffsetPx, 0f),
             end = Offset(widthUnit * index + startOffsetPx, size.height),
-            strokeWidth = gridWidthPx
+            strokeWidth = gridWidthPx,
         )
     }
 }
 
-private fun DrawScope.drawScales(
-    maxValue: Int,
-    startOffsetPx: Float,
-    textOffsetPx: Float,
-    textStyle: TextStyle,
-    textMeasurer: TextMeasurer,
-) {
+private fun DrawScope.drawScales(maxValue: Int, startOffsetPx: Float, textOffsetPx: Float, textStyle: TextStyle, textMeasurer: TextMeasurer) {
     val scaleCount = 4
 
     for (index in 1 until scaleCount) {
@@ -228,26 +199,17 @@ private fun DrawScope.drawScales(
             style = textStyle,
             topLeft = Offset(
                 x = startOffsetPx - textResult.size.width - textOffsetPx,
-                y = y - textResult.size.height / 2
-            )
+                y = y - textResult.size.height / 2,
+            ),
         )
     }
 }
 
-private fun lerp(start: Float, stop: Float, fraction: Float): Float {
-    return start + fraction * (stop - start)
-}
+private fun lerp(start: Float, stop: Float, fraction: Float): Float = start + fraction * (stop - start)
 
 /**
  * State class for Chart composable
  */
-data class ChartState(
-    val values: List<ChartValue>,
-    val maxValue: Int,
-) {
-    data class ChartValue(
-        val value: Int,
-        val color: Color,
-    )
+data class ChartState(val values: List<ChartValue>, val maxValue: Int) {
+    data class ChartValue(val value: Int, val color: Color)
 }
-

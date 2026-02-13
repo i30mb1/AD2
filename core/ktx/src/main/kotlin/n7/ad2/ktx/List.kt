@@ -6,7 +6,6 @@ import android.text.SpannableStringBuilder
 private const val SEPARATOR = "- "
 private const val COLON = ": "
 
-
 fun List<CharSequence>.toStringList(withSeparator: Boolean = false): Spannable {
     val builder = SpannableStringBuilder()
     forEachIndexed { index, text ->

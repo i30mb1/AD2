@@ -10,17 +10,14 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.OutOfQuotaPolicy
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import javax.inject.Inject
 import kotlinx.coroutines.coroutineScope
 import n7.ad2.android.HasDependencies
 import n7.ad2.items.domain.usecase.GetNewsUseCase
 import n7.ad2.news.ui.api.NewsDependencies
 import n7.ad2.news.ui.internal.di.DaggerNewsComponent
+import javax.inject.Inject
 
-internal class NewsWorker(
-    private val context: Context,
-    workerParameters: WorkerParameters,
-) : CoroutineWorker(context, workerParameters) {
+internal class NewsWorker(private val context: Context, workerParameters: WorkerParameters) : CoroutineWorker(context, workerParameters) {
 
     companion object {
         val request: OneTimeWorkRequest = OneTimeWorkRequestBuilder<NewsWorker>()
@@ -38,9 +35,7 @@ internal class NewsWorker(
         Result.failure()
     }
 
-    override suspend fun getForegroundInfo(): ForegroundInfo {
-        return createForegroundInfo()
-    }
+    override suspend fun getForegroundInfo(): ForegroundInfo = createForegroundInfo()
 
     private fun notification(): Notification {
         val intent = WorkManager.getInstance(context)
@@ -50,11 +45,7 @@ internal class NewsWorker(
 //            .setContentText(progress)
             .addAction(android.R.drawable.ic_delete, "cancel", intent)
             .build()
-
     }
 
-    private fun createForegroundInfo(): ForegroundInfo {
-        return ForegroundInfo(7, notification())
-    }
-
+    private fun createForegroundInfo(): ForegroundInfo = ForegroundInfo(7, notification())
 }

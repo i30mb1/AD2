@@ -17,10 +17,7 @@ import n7.ad2.ui.compose.AppTheme
 
 @Preview
 @Composable
-fun ErrorScreen(
-    error: Throwable? = null,
-    onRetryClicked: () -> Unit = {},
-) {
+fun ErrorScreen(error: Throwable? = null, onRetryClicked: () -> Unit = {}) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -31,11 +28,10 @@ fun ErrorScreen(
             style = AppTheme.style.H5,
             color = AppTheme.color.textColor,
             modifier = Modifier
-                .padding(32.dp)
+                .padding(32.dp),
         )
         Button(onClick = onRetryClicked) {
             Text(text = stringResource(id = R.string.ui_retry))
         }
     }
-
 }

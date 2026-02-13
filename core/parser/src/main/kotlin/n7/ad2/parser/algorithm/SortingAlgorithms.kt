@@ -1,6 +1,5 @@
 package n7.ad2.parser.algorithm
 
-
 fun main() {
     insertionSorting(intArrayOf(3, 2, 1, 0, 145, 34, 12)).forEach {
         println(it)

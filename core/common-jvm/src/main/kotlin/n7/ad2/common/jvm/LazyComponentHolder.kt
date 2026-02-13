@@ -6,10 +6,8 @@ abstract class LazyComponentHolder<Component> : BaseComponentHolder<Component> {
     private var component: Component? = null
     private var provider: () -> Component = { error("${javaClass.simpleName} - component provider not found") }
 
-    override fun get(): Component {
-        return component ?: synchronized(this) {
-            component ?: provider().also { set(it) }
-        }
+    override fun get(): Component = component ?: synchronized(this) {
+        component ?: provider().also { set(it) }
     }
 
     /**

@@ -3,7 +3,6 @@ package n7.ad2.hero.page.internal.guides.domain.adapter
 import n7.ad2.hero.page.internal.guides.VOHeroFlowHeroItem
 import n7.ad2.hero.page.internal.guides.VOHeroFlowItem
 import n7.ad2.hero.page.internal.guides.VOHeroFlowSpell
-import n7.ad2.hero.page.internal.guides.VOHeroFlowStartingHeroItem
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideEasyToWinHeroes
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHardToWinHeroes
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHeroItems
@@ -20,16 +19,16 @@ fun List<HeroWithWinrate>.toVOEasyToWinHeroes(): VOGuideEasyToWinHeroes = VOGuid
 private fun HeroWithWinrate.toVOHeroFlowItem(): VOHeroFlowItem = VOHeroFlowItem(
     heroName,
     avatarUrl,
-    "${heroWinrate}%"
+    "$heroWinrate%",
 )
 
 fun List<Spell>.toVOGuideSpellBuild(): VOGuideSpellBuild = VOGuideSpellBuild(
-    map { VOHeroFlowSpell(it.spellName, it.spellImageUrl, it.spellOrder) }
+    map { VOHeroFlowSpell(it.spellName, it.spellImageUrl, it.spellOrder) },
 )
 
 fun List<HeroItem>.toVOGuideStartingHeroItems(): VOGuideStartingHeroItems = VOGuideStartingHeroItems(
 //    map { VOHeroFlowStartingHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName)) }
-    TODO()
+    TODO(),
 )
 
 fun List<HeroItem>.toVOGuideHeroItems(): VOGuideHeroItems {

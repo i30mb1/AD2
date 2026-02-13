@@ -6,7 +6,6 @@ import androidx.camera.core.UseCaseGroup
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
-import java.io.File
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -23,6 +22,7 @@ import n7.ad2.feature.camera.domain.RecorderState
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.model.CameraState
 import n7.ad2.feature.camera.domain.model.StreamerState
+import java.io.File
 
 class Controller(
     private val previewer: Previewer,

@@ -39,17 +39,15 @@ class ImagesCompressor {
         // or MediaStore.Images.Media.getBitmap()
     }
 
-    private fun compress(bitmap: Bitmap, format: Bitmap.CompressFormat): ByteArray {
-        return ByteArrayOutputStream().use { baos ->
-            var quality = 100
+    private fun compress(bitmap: Bitmap, format: Bitmap.CompressFormat): ByteArray = ByteArrayOutputStream().use { baos ->
+        var quality = 100
+        bitmap.compress(format, quality, baos)
+        while (baos.size() > MAX_SIZE) {
+            baos.reset()
+            quality -= 5
             bitmap.compress(format, quality, baos)
-            while (baos.size() > MAX_SIZE) {
-                baos.reset()
-                quality -= 5
-                bitmap.compress(format, quality, baos)
-            }
-            baos.toByteArray()
         }
+        baos.toByteArray()
     }
 
     private fun Uri.getBitmap(context: Context, withSampleSize: Boolean): Bitmap? {
@@ -81,5 +79,4 @@ class ImagesCompressor {
         }
         return 1
     }
-
 }

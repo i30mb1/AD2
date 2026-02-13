@@ -12,9 +12,9 @@ import n7.ad2.android.AD2ErrorMessage
 import n7.ad2.android.ErrorMessage
 import n7.ad2.streams.internal.stream.usecase.GetStreamUrlsUseCase
 
-class StreamViewModel @AssistedInject constructor(
-    private val getStreamUrlsUseCase: GetStreamUrlsUseCase,
-) : ViewModel(), ErrorMessage by AD2ErrorMessage() {
+class StreamViewModel @AssistedInject constructor(private val getStreamUrlsUseCase: GetStreamUrlsUseCase) :
+    ViewModel(),
+    ErrorMessage by AD2ErrorMessage() {
 
     @AssistedFactory
     interface Factory {
@@ -29,5 +29,4 @@ class StreamViewModel @AssistedInject constructor(
             .onEach { url.value = it }
             .launchIn(viewModelScope)
     }
-
 }

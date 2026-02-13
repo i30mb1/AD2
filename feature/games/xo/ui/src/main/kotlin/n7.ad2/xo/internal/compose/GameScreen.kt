@@ -26,16 +26,14 @@ import n7.ad2.ui.compose.Bold
 private fun GameScreenPreview() {
     AppTheme {
         GameScreen(
-            listOf(Message.Other("Hello"), Message.Me("Hello")), { })
+            listOf(Message.Other("Hello"), Message.Me("Hello")),
+            { },
+        )
     }
 }
 
 @Composable
-internal fun GameScreen(
-    messages: List<Message>,
-    event: (event: XoScreenEvent) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun GameScreen(messages: List<Message>, event: (event: XoScreenEvent) -> Unit, modifier: Modifier = Modifier) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {

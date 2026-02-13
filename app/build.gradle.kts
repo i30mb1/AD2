@@ -90,7 +90,6 @@ android {
             isIncludeAndroidResources = true
         }
     }
-
 }
 
 dependencies {

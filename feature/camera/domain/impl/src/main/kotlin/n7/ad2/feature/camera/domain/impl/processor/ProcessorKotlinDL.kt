@@ -15,9 +15,7 @@ import org.jetbrains.kotlinx.dl.onnx.inference.ONNXModels
 import org.jetbrains.kotlinx.dl.onnx.inference.executionproviders.ExecutionProvider
 import org.jetbrains.kotlinx.dl.onnx.inference.facealignment.FaceDetectionModel
 
-class ProcessorKotlinDL(
-    application: Application,
-) : Processor {
+class ProcessorKotlinDL(application: Application) : Processor {
 
     private val hub = ONNXModelHub(application)
     private val internalModel = hub.loadModel(ONNXModels.FaceDetection.UltraFace320, ExecutionProvider.NNAPI())
@@ -40,14 +38,20 @@ class ProcessorKotlinDL(
                 paint,
             )
         }
-        val detectedFaceNormalized = if (face != null) DetectedFaceNormalized(
-            face.xMin, face.xMax, face.yMin, face.yMax, face.probability
-        ) else null
+        val detectedFaceNormalized = if (face != null) {
+            DetectedFaceNormalized(
+                face.xMin,
+                face.xMax,
+                face.yMin,
+                face.yMax,
+                face.probability,
+            )
+        } else {
+            null
+        }
         return ProcessorState(
             image,
             detectedFaceNormalized,
         )
     }
 }
-
-

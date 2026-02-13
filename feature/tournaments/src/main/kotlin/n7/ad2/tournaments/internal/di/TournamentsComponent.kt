@@ -6,7 +6,7 @@ import n7.ad2.tournaments.internal.TournamentsViewModel
 
 @dagger.Component(
     dependencies = [
-        TournamentsDependencies::class
+        TournamentsDependencies::class,
     ],
 )
 internal interface TournamentsComponent {
@@ -19,5 +19,4 @@ internal interface TournamentsComponent {
     fun inject(tournamentsFragment: TournamentsFragment)
 
     val tournamentsViewModelFactory: TournamentsViewModel.Factory
-
 }

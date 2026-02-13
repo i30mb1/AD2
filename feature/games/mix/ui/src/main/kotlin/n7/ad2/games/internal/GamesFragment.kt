@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import javax.inject.Inject
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.HasDependencies
@@ -20,12 +19,14 @@ import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.content
+import javax.inject.Inject
 
-internal class GamesFragment(
-    override var dependenciesMap: DependenciesMap,
-) : Fragment(), HasDependencies {
+internal class GamesFragment(override var dependenciesMap: DependenciesMap) :
+    Fragment(),
+    HasDependencies {
 
     @Inject lateinit var gamesViewModelFactory: GamesViewModel.Factory
+
     @Inject lateinit var logger: Logger
 
     private val viewModel: GamesViewModel by viewModel { gamesViewModelFactory.create() }
@@ -35,10 +36,8 @@ internal class GamesFragment(
         DaggerGamesComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content {
-            GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked)
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked)
     }
 
     private fun onGameClicked(game: GameVO) {

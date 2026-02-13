@@ -38,7 +38,5 @@ internal class ItemsItemDecorator : RecyclerView.ItemDecoration() {
             left = offset
             right = offset
         }
-
     }
-
 }

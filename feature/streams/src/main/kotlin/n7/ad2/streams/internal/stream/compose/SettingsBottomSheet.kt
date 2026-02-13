@@ -14,16 +14,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SettingsBottomSheet(
-    isShowBottomSheet: Boolean,
-) {
-
+fun SettingsBottomSheet(isShowBottomSheet: Boolean) {
 }
 
 @Composable
 fun BottomSheet() {
     Column(
-        modifier = Modifier.padding(32.dp)
+        modifier = Modifier.padding(32.dp),
     ) {
         Text(
             text = "Bottom sheet",
@@ -38,5 +35,4 @@ fun BottomSheet() {
 @Preview
 @Composable
 fun SettingsBottomSheetPreview() {
-
 }

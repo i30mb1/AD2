@@ -16,9 +16,7 @@ interface ItemsDomainComponent {
     val updateItemViewedForItemUseCase: UpdateItemViewedForItemUseCase
 }
 
-fun ItemsDomainComponent(
-    dependencies: ItemsDomainDependencies,
-): ItemsDomainComponent = object : ItemsDomainComponent {
+fun ItemsDomainComponent(dependencies: ItemsDomainDependencies): ItemsDomainComponent = object : ItemsDomainComponent {
 
     private val itemDatabase = ItemsDatabase.getInstance(dependencies.application)
     private val itemDao = itemDatabase.itemsDao

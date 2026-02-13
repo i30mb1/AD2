@@ -11,9 +11,7 @@ import androidx.fragment.app.commitNow
 import n7.ad2.xo.api.XoFragmentFactory
 import n7.ad2.xo.api.XoProvider
 
-class XoActivity(
-    private val fragmentFactory: XoFragmentFactory,
-) : FragmentActivity() {
+class XoActivity(private val fragmentFactory: XoFragmentFactory) : FragmentActivity() {
 
     private val fragment by lazy { XoProvider().getFragment() }
     private val permission by lazy {

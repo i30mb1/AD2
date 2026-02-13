@@ -19,6 +19,7 @@ class CameraActivityTest {
     @get:Rule val permission: GrantPermissionRule = GrantPermissionRule.grant(
         android.Manifest.permission.CAMERA,
     )
+
     @get:Rule val activityScenarioRule = activityScenarioRule<CameraActivity>()
     private val device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
 

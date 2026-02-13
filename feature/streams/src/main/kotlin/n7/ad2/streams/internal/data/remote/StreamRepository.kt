@@ -2,24 +2,17 @@ package n7.ad2.streams.internal.data.remote
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import javax.inject.Inject
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.streams.internal.data.remote.retrofit.TwitchApi
+import javax.inject.Inject
 
-internal class StreamRepository @Inject constructor(
-    private val twitchApi: TwitchApi,
-) {
+internal class StreamRepository @Inject constructor(private val twitchApi: TwitchApi) {
 
-    suspend fun getStreams(loadSize: Int, paginationKey: String): Streams {
-        return twitchApi.getStreams(loadSize, paginationKey)
-    }
+    suspend fun getStreams(loadSize: Int, paginationKey: String): Streams = twitchApi.getStreams(loadSize, paginationKey)
 }
 
-internal class StreamPagingSource @Inject constructor(
-    private val streamRepository: StreamRepository,
-    private val dispatcher: DispatchersProvider,
-) : PagingSource<String, Stream>() {
+internal class StreamPagingSource @Inject constructor(private val streamRepository: StreamRepository, private val dispatcher: DispatchersProvider) : PagingSource<String, Stream>() {
 
     override fun getRefreshKey(state: PagingState<String, Stream>): String? {
         val anchorPosition = state.anchorPosition ?: return null

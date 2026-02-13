@@ -7,15 +7,7 @@ import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.xo.internal.model.SocketType
 
-internal data class GameState(
-    val deviceIP: String,
-    val deviceName: String,
-    val port: String,
-    val servers: List<Server> = emptyList(),
-    val gameStatus: GameStatus = GameStatus.Waiting,
-    val messages: List<Message> = emptyList(),
-    val selectedSocketType: SocketType = SocketType.RAW,
-) {
+internal data class GameState(val deviceIP: String, val deviceName: String, val port: String, val servers: List<Server> = emptyList(), val gameStatus: GameStatus = GameStatus.Waiting, val messages: List<Message> = emptyList(), val selectedSocketType: SocketType = SocketType.RAW) {
 
     companion object {
         fun init() = GameState(

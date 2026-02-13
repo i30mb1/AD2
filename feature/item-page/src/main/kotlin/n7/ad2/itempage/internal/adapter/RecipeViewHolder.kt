@@ -8,9 +8,7 @@ import n7.ad2.feature.item.page.R
 import n7.ad2.feature.item.page.databinding.ItemRecipeBinding
 import n7.ad2.itempage.internal.domain.vo.VORecipe
 
-class RecipeViewHolder private constructor(
-    private val binding: ItemRecipeBinding,
-) : RecyclerView.ViewHolder(binding.root) {
+class RecipeViewHolder private constructor(private val binding: ItemRecipeBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(recipe: VORecipe) {
         binding.iv.load(recipe.urlItemImage, R.drawable.item_placeholder)
@@ -22,5 +20,4 @@ class RecipeViewHolder private constructor(
             return RecipeViewHolder(binding)
         }
     }
-
 }

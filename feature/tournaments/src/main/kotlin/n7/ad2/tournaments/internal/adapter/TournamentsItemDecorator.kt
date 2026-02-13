@@ -26,7 +26,5 @@ internal class TournamentsItemDecorator : RecyclerView.ItemDecoration() {
             top = if (position == 0) offsetHorizontal + (statusBarsInsets * percent).toInt() else offsetHorizontal
             bottom = if (position == childCount - 1) offsetHorizontal + (navigationBarsInsets * percent).toInt() else offsetHorizontal
         }
-
     }
-
 }

@@ -5,5 +5,4 @@ import androidx.fragment.app.Fragment
 interface NewsApi {
 
     fun getFragment(): Class<out Fragment>
-
 }

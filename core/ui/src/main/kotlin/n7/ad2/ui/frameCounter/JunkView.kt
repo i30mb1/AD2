@@ -18,10 +18,7 @@ import com.google.android.material.color.MaterialColors
 import n7.ad2.core.ui.R
 import n7.ad2.ktx.spToPx
 
-class JunkView(
-    context: Context,
-    attrs: AttributeSet,
-) : View(context, attrs) {
+class JunkView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
     private val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
         typeface = ResourcesCompat.getFont(context, R.font.iceland_normal)
@@ -58,5 +55,4 @@ class JunkView(
         editable.append("isJunk = $isJunk")
         invalidate()
     }
-
 }

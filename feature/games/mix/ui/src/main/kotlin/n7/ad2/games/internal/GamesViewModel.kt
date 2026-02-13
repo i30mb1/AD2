@@ -14,9 +14,7 @@ import n7.ad2.Resources
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.nativesecret.NativeSecretExtractor
 
-internal class GamesViewModel @AssistedInject constructor(
-    private val res: Resources,
-) : ViewModel() {
+internal class GamesViewModel @AssistedInject constructor(private val res: Resources) : ViewModel() {
 
     @AssistedFactory
     interface Factory {

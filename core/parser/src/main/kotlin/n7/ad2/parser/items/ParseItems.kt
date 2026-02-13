@@ -2,7 +2,6 @@
 
 package n7.ad2.parser.items
 
-import java.io.File
 import n7.ad2.parser.LOCALE
 import n7.ad2.parser.assetsDatabase
 import n7.ad2.parser.assetsDatabaseItems
@@ -14,6 +13,7 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
+import java.io.File
 
 private val getItemsUseCase = GetItemsUseCase()
 
@@ -29,8 +29,11 @@ private fun writeItemsInFile(items: List<HeroItem>) {
         append("INSERT INTO ItemsTable (name, type, viewedByUser) VALUES\n")
         items.forEachIndexed { index, item ->
             append("(\"${item.name}\",\"${item.section}\", 0)")
-            if (items.lastIndex == index) append(";\n")
-            else append(",\n")
+            if (items.lastIndex == index) {
+                append(";\n")
+            } else {
+                append(",\n")
+            }
         }
     }
     File("$assetsDatabase/items.sql").writeText(text)
@@ -97,8 +100,11 @@ private fun JSONObject.loadRecipe(root: Document) {
             continue
         }
         if (findMatchWithItemName) {
-            if (recipeName == "Рецепт") containsFromList.add("Recipe")
-            else containsFromList.add(recipeName)
+            if (recipeName == "Рецепт") {
+                containsFromList.add("Recipe")
+            } else {
+                containsFromList.add(recipeName)
+            }
         } else {
             upgradeInList.add(recipeName)
         }
@@ -217,7 +223,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                 val params =
                     it.getElementsByAttributeValue(
                         "style",
-                        "display:inline-block; vertical-align:top; padding:0px 2px 3px 2px; border:1px solid rgba(0, 0, 0, 0);"
+                        "display:inline-block; vertical-align:top; padding:0px 2px 3px 2px; border:1px solid rgba(0, 0, 0, 0);",
                     )[0].children()
                 val paramsResult: JSONArray? = params
                     .filter { it.attr("style").isEmpty() }
@@ -230,8 +236,10 @@ private fun JSONObject.loadAbilities(root: Document) {
                 put("params", paramsResult)
 
                 var cooldown = it.getElementsByAttributeValue("style", "display:table-cell; margin:4px 0px 0px 0px; max-width:100%; width:240px;").getOrNull(0)
-                if (cooldown == null) cooldown =
-                    it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
+                if (cooldown == null) {
+                    cooldown =
+                        it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
+                }
                 if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                     put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
                 } else {
@@ -299,7 +307,6 @@ private fun JSONObject.loadAdditionalInformation(root: Document) {
             val spans = child.childNodes().map { (it as Element).text() }
             val tryingToFind = listOf("Additional Information", "Дополнительная информация")
             if (spans.any { tryingToFind.contains(it) }) nextSectionIsAdditionalInformation = true
-
         }
     }
 }
@@ -316,12 +323,9 @@ private fun JSONObject.loadName(root: Document) {
 private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
     if (alt.contains(spellImmunityBlockPartial)) {
         add(
-            "(${spellImmunityBlockPartial.dropLast(4)})^"
-                    + it.getElementsByAttribute("title")[0].attr("title").dropLast(1) + "\n"
-                    + it.text().replace(". ", "\n")
+            "(${spellImmunityBlockPartial.dropLast(4)})^" +
+                it.getElementsByAttribute("title")[0].attr("title").dropLast(1) + "\n" +
+                it.text().replace(". ", "\n"),
         )
     }
 }
-
-
-

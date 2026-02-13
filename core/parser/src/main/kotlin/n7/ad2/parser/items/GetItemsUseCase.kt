@@ -38,12 +38,10 @@ class GetItemsUseCase {
                         val heroItem = HeroItem(itemName, formattedName, itemHref, itemSection)
                         if (!ignoreList.contains(formattedName)) result.add(heroItem)
                     }
-
                 }
             }
         }
         if (result.isEmpty()) error("item list is null")
         return result
     }
-
 }

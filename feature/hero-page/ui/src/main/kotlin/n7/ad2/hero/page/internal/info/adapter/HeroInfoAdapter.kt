@@ -84,10 +84,12 @@ class HeroInfoAdapter(
         }
     }
 
-    private fun setDescriptions(voDescriptions: List<VOHeroInfo>) = submitList(buildList {
-        addAll(currentList.takeWhile { it !is VOHeroInfo.HeaderSound })
-        addAll(voDescriptions)
-    })
+    private fun setDescriptions(voDescriptions: List<VOHeroInfo>) = submitList(
+        buildList {
+            addAll(currentList.takeWhile { it !is VOHeroInfo.HeaderSound })
+            addAll(voDescriptions)
+        },
+    )
 
     class ViewHolder private constructor(
 //        private val binding: ViewDataBinding,
@@ -109,10 +111,7 @@ class HeroInfoAdapter(
 //            }
         }
 
-        private fun setActionsForSpans(
-            tv: TextView,
-            spannableString: SpannableString,
-        ) {
+        private fun setActionsForSpans(tv: TextView, spannableString: SpannableString) {
             if (lineHeight == 0) lineHeight = tv.lineHeight - 2.dpToPx
             spannableString.getSpans<ImageSpan>().forEach { it.drawable.setBounds(0, 0, lineHeight, lineHeight) }
             spannableString.getSpans<PopUpClickableSpan>().forEach { it.popupListener = popupListener }

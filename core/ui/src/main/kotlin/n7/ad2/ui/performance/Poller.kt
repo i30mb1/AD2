@@ -3,7 +3,6 @@ package n7.ad2.ui.performance
 import android.content.Context
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.coroutineScope
-import java.util.LinkedList
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -12,6 +11,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.lazyUnsafe
+import java.util.LinkedList
 
 interface Poller {
     /**
@@ -21,10 +21,7 @@ interface Poller {
     val usage: SharedFlow<List<ResourceUsage>>
 }
 
-internal class PollerImpl(
-    private val context: Context,
-    private val lifecycle: Lifecycle,
-) : Poller {
+internal class PollerImpl(private val context: Context, private val lifecycle: Lifecycle) : Poller {
 
     private val _usage: MutableSharedFlow<List<ResourceUsage>> = MutableSharedFlow(replay = 1)
     override val usage: SharedFlow<List<ResourceUsage>> = _usage.asSharedFlow()

@@ -3,7 +3,6 @@ package n7.ad2.streams.internal.data.remote.model
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-
 @Serializable
 data class StreamGQLRequest(
     @SerialName("extensions")

@@ -1,12 +1,12 @@
 package n7.ad2.microbenchmark.buffer.buffer
 
 import android.graphics.Bitmap
-import java.nio.Buffer
 import n7.ad2.feature.camera.domain.impl.processor.buffer.InputBuffer
 import org.tensorflow.lite.support.common.ops.NormalizeOp
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeWithCropOrPadOp
+import java.nio.Buffer
 
 // используя классы из TFlite-support мы можем получить Buffer только в виде interleaved (RGBRGBRGB)
 public class TFBuffer : InputBuffer {

@@ -10,4 +10,3 @@ enum class CameraAspectRatio {
     RATIO_16_9,
     RATIO_4_3,
 }
-

@@ -11,9 +11,7 @@ interface NewsDomainComponent {
     val getArticleUseCase: GetArticleUseCase
 }
 
-fun NewsDomainComponent(
-    dependencies: NewsDomainDependencies,
-): NewsDomainComponent = object : NewsDomainComponent {
+fun NewsDomainComponent(dependencies: NewsDomainDependencies): NewsDomainComponent = object : NewsDomainComponent {
 
     override val getNewsUseCase = GetNewsUseCaseImpl(
         dependencies.logger,

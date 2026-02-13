@@ -8,7 +8,7 @@ import n7.ad2.news.ui.internal.screen.news.NewsViewModel
 
 @dagger.Component(
     dependencies = [
-        NewsDependencies::class
+        NewsDependencies::class,
     ],
 )
 internal interface NewsComponent {
@@ -23,5 +23,4 @@ internal interface NewsComponent {
     fun inject(newsWorker: NewsWorker)
 
     val newsViewModelFactory: NewsViewModel.Factory
-
 }

@@ -10,10 +10,7 @@ import n7.ad2.feature.items.ui.R
 import n7.ad2.feature.items.ui.databinding.ItemItemBodyBinding
 import n7.ad2.items.internal.model.ItemUI
 
-internal class ItemBodyViewHolder private constructor(
-    private val binding: ItemItemBodyBinding,
-    private val itemClickListener: (model: ItemUI.Body, view: ImageView) -> Unit,
-) : RecyclerView.ViewHolder(binding.root) {
+internal class ItemBodyViewHolder private constructor(private val binding: ItemItemBodyBinding, private val itemClickListener: (model: ItemUI.Body, view: ImageView) -> Unit) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(model: ItemUI.Body) = binding.apply {
         ivImage.load(model.imageUrl, R.drawable.item_placeholder)
@@ -28,14 +25,9 @@ internal class ItemBodyViewHolder private constructor(
     }
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            clickListener: (model: ItemUI.Body, view: ImageView) -> Unit,
-        ): ItemBodyViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, clickListener: (model: ItemUI.Body, view: ImageView) -> Unit): ItemBodyViewHolder {
             val binding = ItemItemBodyBinding.inflate(layoutInflater, parent, false)
             return ItemBodyViewHolder(binding, clickListener)
         }
     }
-
 }

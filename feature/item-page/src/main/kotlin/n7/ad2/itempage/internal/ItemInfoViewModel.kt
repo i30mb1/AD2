@@ -16,11 +16,9 @@ import n7.ad2.android.ErrorMessage
 import n7.ad2.itempage.internal.domain.usecase.GetItemInfoUseCase
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 
-class ItemInfoViewModel @AssistedInject constructor(
-    appInfo: AppInformation,
-    private val getItemInfoUseCase: GetItemInfoUseCase,
-    @Assisted private val itemName: String,
-) : ViewModel(), ErrorMessage by AD2ErrorMessage() {
+class ItemInfoViewModel @AssistedInject constructor(appInfo: AppInformation, private val getItemInfoUseCase: GetItemInfoUseCase, @Assisted private val itemName: String) :
+    ViewModel(),
+    ErrorMessage by AD2ErrorMessage() {
 
     @AssistedFactory
     interface Factory {
@@ -50,5 +48,4 @@ class ItemInfoViewModel @AssistedInject constructor(
 //        .catch { error -> showError(error) }
         .onEach { list -> _voItemInfo.value = list }
         .launchIn(viewModelScope)
-
 }

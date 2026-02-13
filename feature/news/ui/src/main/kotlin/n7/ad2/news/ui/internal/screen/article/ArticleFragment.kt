@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import javax.inject.Inject
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.news.ui.internal.di.DaggerNewsComponent
 import n7.ad2.news.ui.internal.screen.article.compose.ArticleScreen
 import n7.ad2.ui.content
+import javax.inject.Inject
 
 internal class ArticleFragment : Fragment() {
 
@@ -34,8 +34,5 @@ internal class ArticleFragment : Fragment() {
         DaggerNewsComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content { ArticleScreen(viewModel) }
-    }
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content { ArticleScreen(viewModel) }
 }

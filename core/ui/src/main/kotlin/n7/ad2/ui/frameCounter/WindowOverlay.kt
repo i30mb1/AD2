@@ -46,12 +46,7 @@ import n7.ad2.ui.performance.ChartsOwner
 import n7.ad2.ui.performance.PollerImpl
 import n7.ad2.ui.performance.ResourceUsage
 
-class WindowOverlay(
-    private val context: Context,
-    private val lifecycle: Lifecycle,
-    private val dispatcher: DispatchersProvider,
-    private val scope: CoroutineScope,
-) : DefaultLifecycleObserver {
+class WindowOverlay(private val context: Context, private val lifecycle: Lifecycle, private val dispatcher: DispatchersProvider, private val scope: CoroutineScope) : DefaultLifecycleObserver {
 
     private val windowManager by lazyUnsafe { context.getSystemService<WindowManager>()!! }
     private var viewOwner: ViewOwner? = null
@@ -102,66 +97,52 @@ class WindowOverlay(
         viewOwner?.render(resourceUsage)
     }
 
-    private fun requestPermission(): Boolean {
-        return if (Settings.canDrawOverlays(context)) {
-            true
-        } else {
-            val intent = Intent(
-                Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                Uri.parse("package:${context.packageName}")
-            )
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            context.startActivity(intent)
-            false
-        }
+    private fun requestPermission(): Boolean = if (Settings.canDrawOverlays(context)) {
+        true
+    } else {
+        val intent = Intent(
+            Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+            Uri.parse("package:${context.packageName}"),
+        )
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        context.startActivity(intent)
+        false
     }
-
 }
 
 class PanelInfoMapper {
-    fun map(usage: ResourceUsage): InfoPanelView.State {
-        return with(usage) {
-            InfoPanelView.State(
-                cpuColor = cpu.status.toColor(),
-                cpuValue = cpu.value,
-                ramColor = ram.status.toColor(),
-                ramValue = ram.value,
-                fpsColor = fps.status.toColor(),
-                fpsValue = fps.value,
-            )
-        }
+    fun map(usage: ResourceUsage): InfoPanelView.State = with(usage) {
+        InfoPanelView.State(
+            cpuColor = cpu.status.toColor(),
+            cpuValue = cpu.value,
+            ramColor = ram.status.toColor(),
+            ramValue = ram.value,
+            fpsColor = fps.status.toColor(),
+            fpsValue = fps.value,
+        )
     }
 }
 
 @ColorRes
-fun ResourceUsage.Status.toColor(): Int {
-    return when (this) {
-        ResourceUsage.Status.VERY_BAD -> R.color.performance_widget_very_bad_color
-        ResourceUsage.Status.POOR -> R.color.performance_widget_poor_color
-        ResourceUsage.Status.FAIR -> R.color.performance_widget_fair_color
-        ResourceUsage.Status.GOOD -> R.color.performance_widget_good_color
-        ResourceUsage.Status.VERY_GOOD -> R.color.performance_widget_very_good_color
-        ResourceUsage.Status.EXCELLENT -> R.color.performance_widget_excellent_color
-    }
+fun ResourceUsage.Status.toColor(): Int = when (this) {
+    ResourceUsage.Status.VERY_BAD -> R.color.performance_widget_very_bad_color
+    ResourceUsage.Status.POOR -> R.color.performance_widget_poor_color
+    ResourceUsage.Status.FAIR -> R.color.performance_widget_fair_color
+    ResourceUsage.Status.GOOD -> R.color.performance_widget_good_color
+    ResourceUsage.Status.VERY_GOOD -> R.color.performance_widget_very_good_color
+    ResourceUsage.Status.EXCELLENT -> R.color.performance_widget_excellent_color
 }
 
-fun ResourceUsage.Status.toComposeColor(): androidx.compose.ui.graphics.Color {
-    return when (this) {
-        ResourceUsage.Status.VERY_BAD -> androidx.compose.ui.graphics.Color.Red
-        ResourceUsage.Status.POOR -> androidx.compose.ui.graphics.Color(0xFFFF6B35) // Orange Red
-        ResourceUsage.Status.FAIR -> androidx.compose.ui.graphics.Color(0xFFFFA500) // Orange
-        ResourceUsage.Status.GOOD -> androidx.compose.ui.graphics.Color(0xFFFFD700) // Gold
-        ResourceUsage.Status.VERY_GOOD -> androidx.compose.ui.graphics.Color(0xFF9ACD32) // Yellow Green
-        ResourceUsage.Status.EXCELLENT -> androidx.compose.ui.graphics.Color.Green
-    }
+fun ResourceUsage.Status.toComposeColor(): androidx.compose.ui.graphics.Color = when (this) {
+    ResourceUsage.Status.VERY_BAD -> androidx.compose.ui.graphics.Color.Red
+    ResourceUsage.Status.POOR -> androidx.compose.ui.graphics.Color(0xFFFF6B35) // Orange Red
+    ResourceUsage.Status.FAIR -> androidx.compose.ui.graphics.Color(0xFFFFA500) // Orange
+    ResourceUsage.Status.GOOD -> androidx.compose.ui.graphics.Color(0xFFFFD700) // Gold
+    ResourceUsage.Status.VERY_GOOD -> androidx.compose.ui.graphics.Color(0xFF9ACD32) // Yellow Green
+    ResourceUsage.Status.EXCELLENT -> androidx.compose.ui.graphics.Color.Green
 }
 
-class ViewOwner(
-    scope: CoroutineScope,
-    private val context: Context,
-    private val windowManager: WindowManager,
-    private val dispatcher: DispatchersProvider,
-) {
+class ViewOwner(scope: CoroutineScope, private val context: Context, private val windowManager: WindowManager, private val dispatcher: DispatchersProvider) {
 
     val layoutParams: LayoutParams = createLayoutParams()
     val container: WidgetContainerView = createContainer()
@@ -221,20 +202,18 @@ class ViewOwner(
         }
     }
 
-    private fun createContainer(): WidgetContainerView {
-        return WidgetContainerView(context).apply {
-            clipChildren = false
-            isVisible = false
-            setOnTouchListener(
-                WindowTouchListener(
-                    this,
-                    windowManager,
-                    this@ViewOwner.layoutParams,
-                    {},
-                    {},
-                )
-            )
-        }
+    private fun createContainer(): WidgetContainerView = WidgetContainerView(context).apply {
+        clipChildren = false
+        isVisible = false
+        setOnTouchListener(
+            WindowTouchListener(
+                this,
+                windowManager,
+                this@ViewOwner.layoutParams,
+                {},
+                {},
+            ),
+        )
     }
 }
 
@@ -274,10 +253,7 @@ class InfoPanelView(context: Context) : LinearLayout(context) {
     )
 }
 
-class WidgetContainerView @JvmOverloads constructor(
-    context: Context,
-    attrs: AttributeSet? = null,
-) : LinearLayout(context, attrs) {
+class WidgetContainerView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(context, attrs) {
     private val radius: Float = 12f.dpToPx
     private val strokePaint: Paint = Paint().apply {
         style = Paint.Style.STROKE
@@ -305,18 +281,14 @@ class WidgetContainerView @JvmOverloads constructor(
             height.toFloat(),
             radius,
             radius,
-            strokePaint
+            strokePaint,
         )
     }
 }
 
-class WindowTouchListener(
-    private val view: View,
-    private val windowManager: WindowManager,
-    private val layoutParams: LayoutParams,
-    private val onDoubleTap: () -> Unit,
-    private val onTap: () -> Unit,
-) : SimpleOnGestureListener(), View.OnTouchListener {
+class WindowTouchListener(private val view: View, private val windowManager: WindowManager, private val layoutParams: LayoutParams, private val onDoubleTap: () -> Unit, private val onTap: () -> Unit) :
+    SimpleOnGestureListener(),
+    View.OnTouchListener {
 
     private val gestureDetector = GestureDetectorCompat(view.context, this)
     private val rect: Rect = Rect()
@@ -326,24 +298,22 @@ class WindowTouchListener(
     private var diffY: Int = 0
 
     @SuppressLint("ClickableViewAccessibility")
-    override fun onTouch(v: View, event: MotionEvent): Boolean {
-        return when (event.action) {
-            MotionEvent.ACTION_DOWN -> {
-                downX = layoutParams.x - event.rawX
-                downY = layoutParams.y - event.rawY
-                true
-            }
+    override fun onTouch(v: View, event: MotionEvent): Boolean = when (event.action) {
+        MotionEvent.ACTION_DOWN -> {
+            downX = layoutParams.x - event.rawX
+            downY = layoutParams.y - event.rawY
+            true
+        }
 
-            MotionEvent.ACTION_MOVE -> {
-                view.getWindowVisibleDisplayFrame(rect)
-                diffX = (event.rawX + downX).toInt().coerceIn(rect.left, rect.right - view.width)
-                diffY = (event.rawY + downY).toInt().coerceIn(0, rect.bottom - rect.top - view.height)
-                true
-            }
+        MotionEvent.ACTION_MOVE -> {
+            view.getWindowVisibleDisplayFrame(rect)
+            diffX = (event.rawX + downX).toInt().coerceIn(rect.left, rect.right - view.width)
+            diffY = (event.rawY + downY).toInt().coerceIn(0, rect.bottom - rect.top - view.height)
+            true
+        }
 
-            else -> false
-        }.also { gestureDetector.onTouchEvent(event) }
-    }
+        else -> false
+    }.also { gestureDetector.onTouchEvent(event) }
 
     override fun onScroll(e1: MotionEvent?, e2: MotionEvent, distanceX: Float, distanceY: Float): Boolean {
         layoutParams.x = diffX
@@ -352,9 +322,7 @@ class WindowTouchListener(
         return true
     }
 
-    override fun onDown(e: MotionEvent): Boolean {
-        return true
-    }
+    override fun onDown(e: MotionEvent): Boolean = true
 
     override fun onDoubleTap(e: MotionEvent): Boolean {
         onDoubleTap()

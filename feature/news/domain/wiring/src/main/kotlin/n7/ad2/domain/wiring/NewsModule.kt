@@ -14,29 +14,19 @@ import n7.ad2.items.domain.usecase.GetNewsUseCase
 object NewsModule {
 
     @dagger.Provides
-    fun provideNewsDomainComponent(
-        newsDao: NewsDao,
-        logger: Logger,
-        res: Resources,
-        appInformation: AppInformation,
-        dispatcher: DispatchersProvider,
-    ): NewsDomainComponent = NewsDomainComponent(
+    fun provideNewsDomainComponent(newsDao: NewsDao, logger: Logger, res: Resources, appInformation: AppInformation, dispatcher: DispatchersProvider): NewsDomainComponent = NewsDomainComponent(
         object : NewsDomainDependencies {
             override val newsDao: NewsDao = newsDao
             override val logger: Logger = logger
             override val res: Resources = res
             override val appInformation: AppInformation = appInformation
             override val dispatcher: DispatchersProvider = dispatcher
-        }
+        },
     )
 
     @dagger.Provides
-    fun provideGetArticleUseCase(
-        component: NewsDomainComponent,
-    ): GetArticleUseCase = component.getArticleUseCase
+    fun provideGetArticleUseCase(component: NewsDomainComponent): GetArticleUseCase = component.getArticleUseCase
 
     @dagger.Provides
-    fun provideGetNewsUseCase(
-        component: NewsDomainComponent,
-    ): GetNewsUseCase = component.getNewsUseCase
+    fun provideGetNewsUseCase(component: NewsDomainComponent): GetNewsUseCase = component.getNewsUseCase
 }

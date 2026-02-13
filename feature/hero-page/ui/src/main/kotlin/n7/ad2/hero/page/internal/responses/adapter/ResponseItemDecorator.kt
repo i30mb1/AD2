@@ -33,8 +33,5 @@ class ResponseItemDecorator : RecyclerView.ItemDecoration() {
             right = offsetVertical
             bottom = offsetHorizontal
         }
-
-
     }
-
 }

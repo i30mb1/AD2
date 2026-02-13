@@ -5,7 +5,7 @@ rootProject.name = "build-logic"
 dependencyResolutionManagement {
     repositories {
         google()
-        mavenCentral()  // тут лежит kotlin-stdlib-jdk8
+        mavenCentral() // тут лежит kotlin-stdlib-jdk8
         maven { setUrl("https://jitpack.io") } // detekt
     }
 }

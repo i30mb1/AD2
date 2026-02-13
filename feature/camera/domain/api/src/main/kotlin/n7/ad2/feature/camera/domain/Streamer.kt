@@ -13,7 +13,4 @@ interface Streamer {
     fun start(): Any
 }
 
-data class StreamerResolution(
-    val width: Int,
-    val height: Int,
-)
+data class StreamerResolution(val width: Int, val height: Int)

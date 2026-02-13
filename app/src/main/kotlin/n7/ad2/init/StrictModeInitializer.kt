@@ -19,13 +19,13 @@ class StrictModeInitializer : Initializer {
                         .detectCustomSlowCalls()
                         .detectResourceMismatches()
                         .penaltyLog()
-                        .build()
+                        .build(),
                 )
                 StrictMode.setVmPolicy(
                     StrictMode.VmPolicy.Builder()
                         .detectAll()
                         .penaltyLog()
-                        .build()
+                        .build(),
                 )
             }
         }

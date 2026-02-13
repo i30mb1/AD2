@@ -46,7 +46,7 @@ class CameraBenchmark {
         provider.bind(
             UseCaseGroup.Builder()
                 .addUseCase(usecase)
-                .build()
+                .build(),
         )
         benchmarkRule.measureRepeated {
             runBlocking {

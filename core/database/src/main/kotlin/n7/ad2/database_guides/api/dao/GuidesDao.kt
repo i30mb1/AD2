@@ -19,5 +19,4 @@ interface GuidesDao : BaseDao<LocalGuide> {
         deleteGuidesFor(localGuide[0].name)
         insert(localGuide)
     }
-
 }

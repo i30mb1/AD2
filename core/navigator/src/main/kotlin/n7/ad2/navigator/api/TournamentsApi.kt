@@ -5,5 +5,4 @@ import androidx.fragment.app.Fragment
 interface TournamentsApi {
 
     fun getFragment(): Fragment
-
 }

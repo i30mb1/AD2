@@ -4,12 +4,12 @@ import android.content.Context
 import android.content.Intent
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 import n7.ad2.tournaments.internal.db.GamesRoomDatabase
 import n7.ad2.tournaments.internal.db.TournamentGame
 import org.jsoup.Jsoup
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
 
@@ -59,7 +59,7 @@ class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Work
                                         val simpleDateFormat = SimpleDateFormat("HH:mm dd.MM.yyyy", Locale("ru", "RU"))
                                         val matchStart = simpleDateFormat.parse(
                                             childElement.text().trim() +
-                                                    SimpleDateFormat(".yyyy", Locale("ru", "RU")).format(Date())
+                                                SimpleDateFormat(".yyyy", Locale("ru", "RU")).format(Date()),
                                         )?.time ?: 0L
                                         val currentTime = simpleDateFormat.parse(simpleDateFormat.format(Date()))?.time ?: 0L
                                         val time = (matchStart - currentTime) / 1000
@@ -96,7 +96,7 @@ class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Work
             gamesDao.setGames(gamesList)
 
             applicationContext.sendBroadcast(
-                Intent(TOURNAMENT_LOG_ACTION).putExtra(TOURNAMENT_LOG_ACTION, "page_${page}_loaded")
+                Intent(TOURNAMENT_LOG_ACTION).putExtra(TOURNAMENT_LOG_ACTION, "page_${page}_loaded"),
             )
 
             Result.success()
@@ -104,7 +104,7 @@ class TournamentsWorker(context: Context, workerParams: WorkerParameters) : Work
             val gamesDao = GamesRoomDatabase.getDatabase(applicationContext).gamesDao()
             gamesDao.deleteAllUnfinished()
             applicationContext.sendBroadcast(
-                Intent(TOURNAMENT_LOG_ACTION).putExtra(TOURNAMENT_LOG_ACTION, "page_${page}_failed")
+                Intent(TOURNAMENT_LOG_ACTION).putExtra(TOURNAMENT_LOG_ACTION, "page_${page}_failed"),
             )
             Result.failure()
         }

@@ -12,8 +12,6 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import dagger.Lazy
-import javax.inject.Inject
-import javax.inject.Provider
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.DependenciesMap
@@ -30,16 +28,19 @@ import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
+import javax.inject.Inject
+import javax.inject.Provider
 
 /**
  * @JvmOverloads - нужен для запуска этого фрагмента когда фарбирка для HeroesFragment не будет предоставлена
  * обычно она будет предоставлена в тестах, в проде зависимости берутся из Application
  */
-internal class HeroesFragment @JvmOverloads constructor(
-    override var dependenciesMap: DependenciesMap = emptyMap(),
-) : Fragment(R.layout.fragment_heroes), HasDependencies {
+internal class HeroesFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
+    Fragment(R.layout.fragment_heroes),
+    HasDependencies {
 
     @Inject lateinit var navigator: Lazy<Navigator>
+
     @Inject lateinit var heroesViewModelFactory: Provider<HeroesViewModel.Factory>
 
     private var _binding: FragmentHeroesBinding? = null
@@ -114,5 +115,4 @@ internal class HeroesFragment @JvmOverloads constructor(
             .onEach(heroAdapter::submitList)
             .launchIn(lifecycleScope)
     }
-
 }

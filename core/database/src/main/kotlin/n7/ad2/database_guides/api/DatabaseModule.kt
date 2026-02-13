@@ -11,20 +11,17 @@ class DatabaseModule {
 
     @ApplicationScope
     @dagger.Provides
-    fun provideDatabase(application: Application): AppDatabase {
-        return Room.databaseBuilder(
-            application,
-            AppDatabase::class.java,
-            AppDatabase.DB_NAME
-        )
-            .fallbackToDestructiveMigration()
-            .build()
-    }
+    fun provideDatabase(application: Application): AppDatabase = Room.databaseBuilder(
+        application,
+        AppDatabase::class.java,
+        AppDatabase.DB_NAME,
+    )
+        .fallbackToDestructiveMigration()
+        .build()
 
     @dagger.Provides
     fun provideHeroesDao(database: AppDatabase): GuidesDao = database.guidesDao
 
     @dagger.Provides
     fun provideNewsDao(database: AppDatabase): NewsDao = database.newsDao
-
 }

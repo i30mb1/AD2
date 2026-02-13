@@ -7,13 +7,10 @@ import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import com.google.android.material.color.MaterialColors
-import kotlin.math.roundToInt
 import n7.ad2.core.ui.R
+import kotlin.math.roundToInt
 
-class SelectableImageView(
-    context: Context,
-    attributeSet: AttributeSet,
-) : AppCompatImageView(context, attributeSet) {
+class SelectableImageView(context: Context, attributeSet: AttributeSet) : AppCompatImageView(context, attributeSet) {
 
     private val borderWidth = resources.getDimension(R.dimen.line_width)
     private var currentBorderWidth = 0f
@@ -56,5 +53,4 @@ class SelectableImageView(
 //
 //        if (currentBorderWidth != 0f) canvas?.drawRect(rect, borderPaint)
 //    }
-
 }

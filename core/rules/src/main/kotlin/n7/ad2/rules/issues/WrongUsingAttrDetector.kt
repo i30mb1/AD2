@@ -15,7 +15,7 @@ import org.w3c.dom.Attr
 class WrongUsingAttrDetector : LayoutDetector() {
     override fun getApplicableAttributes(): Collection<String> = listOf(
         "background", "foreground", "src", "textColor", "tint", "color",
-        "textColorHighlight", "textColorHint", "textColorLink", "shadowColor", "srcCompat"
+        "textColorHighlight", "textColorHint", "textColorLink", "shadowColor", "srcCompat",
     )
     override fun visitAttribute(context: XmlContext, attribute: Attr) {
         super.visitAttribute(context, attribute)
@@ -23,7 +23,7 @@ class WrongUsingAttrDetector : LayoutDetector() {
             context.report(
                 ISSUE,
                 context.getLocation(attribute),
-                ISSUE.getExplanation(TextFormat.RAW)
+                ISSUE.getExplanation(TextFormat.RAW),
             )
         }
     }
@@ -35,13 +35,12 @@ class WrongUsingAttrDetector : LayoutDetector() {
                 briefDescription = "Direct color used",
                 explanation = """
                  Avoid direct use of colors in XML files. This will cause issues with different theme (eg. night) support
-            """.trimIndent(),
+                """.trimIndent(),
                 category = Category.CORRECTNESS,
                 priority = 9,
                 severity = Severity.ERROR,
                 androidSpecific = true,
-                implementation = Implementation(WrongUsingAttrDetector::class.java, Scope.RESOURCE_FILE_SCOPE)
+                implementation = Implementation(WrongUsingAttrDetector::class.java, Scope.RESOURCE_FILE_SCOPE),
             )
-
     }
 }

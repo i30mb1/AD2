@@ -13,24 +13,16 @@ interface HasDependencies {
     var dependenciesMap: DependenciesMap
 }
 
-inline fun <reified D : Dependencies> Fragment.findDependencies(): D {
-    return findDependenciesByClass(D::class.java)
-}
+inline fun <reified D : Dependencies> Fragment.findDependencies(): D = findDependenciesByClass(D::class.java)
 
-inline fun <reified D : Dependencies> Activity.findDependencies(): D {
-    return findDependenciesByClass(D::class.java)
-}
+inline fun <reified D : Dependencies> Activity.findDependencies(): D = findDependenciesByClass(D::class.java)
 
-fun <D : Dependencies> Fragment.findDependenciesByClass(clazz: Class<D>): D {
-    return parents
-        .mapNotNull { it.dependenciesMap[clazz] }
-        .firstOrNull() as D?
-        ?: throw IllegalStateException("No Dependencies $clazz in ${allParents.joinToString()}")
-}
+fun <D : Dependencies> Fragment.findDependenciesByClass(clazz: Class<D>): D = parents
+    .mapNotNull { it.dependenciesMap[clazz] }
+    .firstOrNull() as D?
+    ?: throw IllegalStateException("No Dependencies $clazz in ${allParents.joinToString()}")
 
-fun <D : Dependencies> Activity.findDependenciesByClass(clazz: Class<D>): D {
-    return (application as HasDependencies).dependenciesMap[clazz] as D
-}
+fun <D : Dependencies> Activity.findDependenciesByClass(clazz: Class<D>): D = (application as HasDependencies).dependenciesMap[clazz] as D
 
 private val Fragment.parents: Iterable<HasDependencies>
     get() = allParents.mapNotNull { it as? HasDependencies }

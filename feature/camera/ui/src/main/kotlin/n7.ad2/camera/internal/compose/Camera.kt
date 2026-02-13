@@ -29,12 +29,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import kotlin.time.DurationUnit
 import n7.ad2.camera.internal.model.CameraStateUI
 import n7.ad2.camera.internal.model.DetectedRect
 import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.ui.R
 import n7.ad2.ui.compose.AppTheme
+import kotlin.time.DurationUnit
 
 @Preview
 @Composable
@@ -49,12 +49,7 @@ private fun CameraPreview() {
 }
 
 @Composable
-internal fun Camera(
-    state: CameraStateUI,
-    fpsTimer: FPSTimer,
-    event: (CameraEvent) -> Unit,
-    modifier: Modifier = Modifier,
-) {
+internal fun Camera(state: CameraStateUI, fpsTimer: FPSTimer, event: (CameraEvent) -> Unit, modifier: Modifier = Modifier) {
     Box {
         val context = LocalContext.current
         val lifecycle = LocalLifecycleOwner.current
@@ -75,7 +70,7 @@ internal fun Camera(
                         CameraEvent.GloballyPosition(
                             layoutCoordinates.size.width,
                             layoutCoordinates.size.height,
-                        )
+                        ),
                     )
                 },
             onDraw = {
@@ -117,7 +112,7 @@ internal fun Camera(
             )
             Icon(
                 painter = painterResource(
-                    id = if (state.isRecording) R.drawable.pause else R.drawable.play
+                    id = if (state.isRecording) R.drawable.pause else R.drawable.play,
                 ),
                 contentDescription = null,
             )
@@ -129,12 +124,12 @@ internal fun Camera(
                 .size(128.dp)
                 .background(AppTheme.color.primary)
                 .align(Alignment.BottomCenter)
-                .clickable { event(CameraEvent.Click) }
+                .clickable { event(CameraEvent.Click) },
         ) {
             if (state.image != null) {
                 Image(
                     bitmap = state.image.asImageBitmap(),
-                    contentDescription = null
+                    contentDescription = null,
                 )
             }
         }
@@ -142,15 +137,9 @@ internal fun Camera(
 }
 
 sealed interface CameraEvent {
-    class PreviewReady(
-        val surfaceProvider: SurfaceProvider,
-        val scaleType: PreviewView.ScaleType,
-    ) : CameraEvent
+    class PreviewReady(val surfaceProvider: SurfaceProvider, val scaleType: PreviewView.ScaleType) : CameraEvent
 
-    class GloballyPosition(
-        val viewWidth: Int,
-        val viewHeight: Int,
-    ) : CameraEvent
+    class GloballyPosition(val viewWidth: Int, val viewHeight: Int) : CameraEvent
 
     data object Click : CameraEvent
 }

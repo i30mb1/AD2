@@ -10,16 +10,12 @@ import androidx.core.content.getSystemService
 import java.net.NetworkInterface
 
 @SuppressLint("MissingPermission")
-class VPNDetector(
-    private val context: Context,
-) {
+class VPNDetector(private val context: Context) {
 
     private val connectivityManager by lazy { context.getSystemService<ConnectivityManager>()!! }
     private val telephonyManager by lazy { context.getSystemService<TelephonyManager>()!! }
 
-    fun isnEnabled(): Boolean {
-        return isEnabledViaConnectivityManager() || isEnabledViaNetworkInterface()
-    }
+    fun isnEnabled(): Boolean = isEnabledViaConnectivityManager() || isEnabledViaNetworkInterface()
 
     private fun isEnabledViaConnectivityManager(): Boolean {
         try {
@@ -31,16 +27,14 @@ class VPNDetector(
         }
     }
 
-    private fun isEnabledViaNetworkInterface(): Boolean {
-        return try {
-            NetworkInterface.getNetworkInterfaces().asSequence()
-                .filter { it.isUp }
-                .any { networkInterface ->
-                    VPN_INTERFACE_KEYWORDS.any { vpnKeyword -> networkInterface.name.contains(vpnKeyword) }
-                }
-        } catch (_: Exception) {
-            false
-        }
+    private fun isEnabledViaNetworkInterface(): Boolean = try {
+        NetworkInterface.getNetworkInterfaces().asSequence()
+            .filter { it.isUp }
+            .any { networkInterface ->
+                VPN_INTERFACE_KEYWORDS.any { vpnKeyword -> networkInterface.name.contains(vpnKeyword) }
+            }
+    } catch (_: Exception) {
+        false
     }
 
     fun getConnectionType(): String {
@@ -58,26 +52,24 @@ class VPNDetector(
         }
     }
 
-    fun getCellularType(): String {
-        return try {
-            when (telephonyManager.dataNetworkType) {
-                TelephonyManager.NETWORK_TYPE_GPRS -> "2G"
-                TelephonyManager.NETWORK_TYPE_EDGE -> "2G"
-                TelephonyManager.NETWORK_TYPE_CDMA -> "2G"
-                TelephonyManager.NETWORK_TYPE_EVDO_0 -> "3G"
-                TelephonyManager.NETWORK_TYPE_EVDO_A -> "3G"
-                TelephonyManager.NETWORK_TYPE_EVDO_B -> "3G"
-                TelephonyManager.NETWORK_TYPE_1xRTT -> "2G"
-                TelephonyManager.NETWORK_TYPE_HSDPA -> "3G"
-                TelephonyManager.NETWORK_TYPE_HSUPA -> "3G"
-                TelephonyManager.NETWORK_TYPE_HSPA -> "3G"
-                TelephonyManager.NETWORK_TYPE_LTE -> "4G"
-                TelephonyManager.NETWORK_TYPE_NR -> "5G"
-                else -> "Unknown"
-            }
-        } catch (_: Exception) {
-            "Unknown"
+    fun getCellularType(): String = try {
+        when (telephonyManager.dataNetworkType) {
+            TelephonyManager.NETWORK_TYPE_GPRS -> "2G"
+            TelephonyManager.NETWORK_TYPE_EDGE -> "2G"
+            TelephonyManager.NETWORK_TYPE_CDMA -> "2G"
+            TelephonyManager.NETWORK_TYPE_EVDO_0 -> "3G"
+            TelephonyManager.NETWORK_TYPE_EVDO_A -> "3G"
+            TelephonyManager.NETWORK_TYPE_EVDO_B -> "3G"
+            TelephonyManager.NETWORK_TYPE_1xRTT -> "2G"
+            TelephonyManager.NETWORK_TYPE_HSDPA -> "3G"
+            TelephonyManager.NETWORK_TYPE_HSUPA -> "3G"
+            TelephonyManager.NETWORK_TYPE_HSPA -> "3G"
+            TelephonyManager.NETWORK_TYPE_LTE -> "4G"
+            TelephonyManager.NETWORK_TYPE_NR -> "5G"
+            else -> "Unknown"
         }
+    } catch (_: Exception) {
+        "Unknown"
     }
 
     private companion object {

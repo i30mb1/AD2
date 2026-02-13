@@ -4,9 +4,7 @@ import android.content.res.Configuration
 import android.os.Build
 import n7.ad2.common.jvm.LazyComponentHolder
 
-private class AD2AppInformation(
-    res: Resources,
-) : AppInformation {
+private class AD2AppInformation(res: Resources) : AppInformation {
     override val isDebug = BuildConfig.DEBUG
     override val appLocale: AppLocale = when (val value = res.getString(n7.ad2.core.common.android.R.string.locale)) {
         "RU" -> AppLocale.Russian

@@ -31,5 +31,4 @@ class UseLaunchSaveRuleTest {
         val findings = UseLaunchSaveRule(Config.empty).compileAndLintWithContext(env, code)
         Truth.assertThat(findings).isEmpty()
     }
-
 }

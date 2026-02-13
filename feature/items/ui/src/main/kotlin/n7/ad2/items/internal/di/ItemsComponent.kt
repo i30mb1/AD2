@@ -6,8 +6,8 @@ import n7.ad2.items.internal.ItemsViewModel
 
 @dagger.Component(
     dependencies = [
-        ItemsDependencies::class
-    ]
+        ItemsDependencies::class,
+    ],
 )
 internal interface ItemsComponent {
 

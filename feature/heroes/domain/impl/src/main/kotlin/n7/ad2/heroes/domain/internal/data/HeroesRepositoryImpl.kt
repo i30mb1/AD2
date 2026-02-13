@@ -6,14 +6,10 @@ import n7.ad2.heroes.domain.internal.HeroesRepository
 import n7.ad2.heroes.domain.internal.data.db.dao.HeroesDao
 import n7.ad2.heroes.domain.model.Hero
 
-internal class HeroesRepositoryImpl(
-    private val heroesDao: HeroesDao,
-) : HeroesRepository {
+internal class HeroesRepositoryImpl(private val heroesDao: HeroesDao) : HeroesRepository {
 
-    override fun getAllHeroes(): Flow<List<Hero>> {
-        return heroesDao.getAllHeroes()
-            .map { localHeroList -> localHeroList.map(HeroDatabaseToHeroMapper) }
-    }
+    override fun getAllHeroes(): Flow<List<Hero>> = heroesDao.getAllHeroes()
+        .map { localHeroList -> localHeroList.map(HeroDatabaseToHeroMapper) }
 
     override fun getHeroByName(): Hero {
         TODO("Not yet implemented")

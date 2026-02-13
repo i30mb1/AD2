@@ -7,12 +7,9 @@ import java.util.TreeSet
 fun main() {
     sortedSquares2(intArrayOf(-4, -1, 0, 3, 10))
 //    println(thirdMax(intArrayOf(2, 2, 3, 5, 4, 1)))
-
 }
 
-fun findDisappearedNumbers(nums: IntArray): List<Int> {
-    return (1..nums.size).filter { it !in nums }
-}
+fun findDisappearedNumbers(nums: IntArray): List<Int> = (1..nums.size).filter { it !in nums }
 
 fun thirdMax(nums: IntArray): Int {
     val set = TreeSet<Int>()
@@ -23,12 +20,10 @@ fun thirdMax(nums: IntArray): Int {
     return if (set.size < 3) set.last() else set.first()
 }
 
-fun heightChecker(heights: IntArray): Int {
-    return heights
-        .sorted()
-        .mapIndexed { index, i -> if (heights[index] != i) 1 else 0 }
-        .sum()
-}
+fun heightChecker(heights: IntArray): Int = heights
+    .sorted()
+    .mapIndexed { index, i -> if (heights[index] != i) 1 else 0 }
+    .sum()
 
 fun sortArrayByParity(A: IntArray): IntArray {
     var left = 0
@@ -93,7 +88,8 @@ fun checkIfNAndItsDoubleExist(arr: IntArray): Boolean {
     for (i in arr.indices) {
         for (j in arr.indices) {
             if (arr[i] * 2 == arr[j]) {
-                isDouble = true; break
+                isDouble = true
+                break
             }
         }
         if (isDouble) break
@@ -104,8 +100,11 @@ fun checkIfNAndItsDoubleExist(arr: IntArray): Boolean {
 fun checkIfNAndItsDoubleExist2(arr: IntArray): Boolean {
     val set = mutableSetOf<Int>()
     for (a in arr) {
-        if (set.contains(a * 2) || (a.rem(2) == 0 && set.contains(a / 2))) return true
-        else set.add(a * 2)
+        if (set.contains(a * 2) || (a.rem(2) == 0 && set.contains(a / 2))) {
+            return true
+        } else {
+            set.add(a * 2)
+        }
     }
     return false
 }
@@ -131,16 +130,16 @@ fun findMaxConsecutiveOnes(nums: IntArray): Int {
         if (number == 1) {
             cur++
             best = maxOf(cur, best)
-        } else cur = 0
+        } else {
+            cur = 0
+        }
     }
     return best
 }
 
-fun findEvenNumbers(nums: IntArray): Int {
-    return nums.map { it.toString() }
-        .filter { it.length % 2 == 0 }
-        .count()
-}
+fun findEvenNumbers(nums: IntArray): Int = nums.map { it.toString() }
+    .filter { it.length % 2 == 0 }
+    .count()
 
 fun findInnerNumberOfNumber(number: Int): Int {
     if (number / 10 == 0) return 1
@@ -177,9 +176,7 @@ fun duplicateEachOccurrenceOfZeroShiftingTheRemainingToRight2(arr: IntArray) {
     }
 }
 
-fun sortedSquares(array: IntArray): IntArray {
-    return array.map { it * it }.sorted().toIntArray()
-}
+fun sortedSquares(array: IntArray): IntArray = array.map { it * it }.sorted().toIntArray()
 
 fun sortedSquares2(array: IntArray) {
     print("initArray = ${array.toList()}")
@@ -203,4 +200,3 @@ fun sortedSquares2(array: IntArray) {
     }
     println(" result = ${result.toList()}")
 }
-

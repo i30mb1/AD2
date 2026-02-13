@@ -13,8 +13,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import kotlin.math.sin
 import n7.ad2.ktx.dpToPx
+import kotlin.math.sin
 
 @Composable
 fun Space() {
@@ -22,7 +22,7 @@ fun Space() {
     val infiniteTransitionFloat = infiniteTransition.animateFloat(
         initialValue = 0f,
         targetValue = 2f * Math.PI.toFloat(),
-        animationSpec = infiniteRepeatable(tween(10_000), RepeatMode.Restart)
+        animationSpec = infiniteRepeatable(tween(10_000), RepeatMode.Restart),
     )
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         val width = maxWidth.value.dpToPx
@@ -50,16 +50,11 @@ fun Space() {
                     alpha = star.alpha,
                 )
             }
-
         }
     }
 }
 
-private class Star(
-    var x: Float,
-    var y: Float,
-    var alpha: Float,
-) {
+private class Star(var x: Float, var y: Float, var alpha: Float) {
     private val initialAlpha = alpha
     fun update(value: Float) {
         val x = (value - initialAlpha).toDouble()

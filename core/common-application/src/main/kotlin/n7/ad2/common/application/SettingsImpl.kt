@@ -6,6 +6,4 @@ private class SettingsImpl : AppSettings {
     override val isMockInterceptorEnabled: Boolean = false
 }
 
-fun appSettingsFactory(): AppSettings {
-    return SettingsImpl()
-}
+fun appSettingsFactory(): AppSettings = SettingsImpl()

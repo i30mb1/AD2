@@ -12,9 +12,7 @@ import androidx.annotation.RequiresPermission
 import androidx.core.content.getSystemService
 import java.util.Calendar
 
-class RemindersManager(
-    private val context: Application,
-) {
+class RemindersManager(private val context: Application) {
 
     companion object {
         const val REQUEST_CODE = 111
@@ -23,10 +21,7 @@ class RemindersManager(
     private val alarmManager = context.getSystemService<AlarmManager>()!!
 
     @RequiresPermission(value = "android.permission.SCHEDULE_EXACT_ALARM")
-    fun startReminder(
-        reminderTime: String = "08:00",
-        reminderId: Int = REQUEST_CODE,
-    ) {
+    fun startReminder(reminderTime: String = "08:00", reminderId: Int = REQUEST_CODE) {
         val (hours, min) = reminderTime.split(":").map { it.toInt() }
         val intent = Intent(context, AlarmReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(context, reminderId, intent, PendingIntent.FLAG_UPDATE_CURRENT)
@@ -42,14 +37,11 @@ class RemindersManager(
         alarmManager.setAlarmClock(AlarmManager.AlarmClockInfo(calendar.timeInMillis, pendingIntent), pendingIntent)
     }
 
-    fun stopReminder(
-        reminderId: Int = REQUEST_CODE,
-    ) {
+    fun stopReminder(reminderId: Int = REQUEST_CODE) {
         val intent = Intent(context, AlarmReceiver::class.java)
 //        val pendingIntent = PendingIntent.getBroadcast(context, reminderId, intent, 0)
 //        alarmManager.cancel(pendingIntent)
     }
-
 }
 
 class AlarmReceiver : BroadcastReceiver() {
@@ -57,7 +49,6 @@ class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         // do something
     }
-
 }
 
 class BootReceiver : BroadcastReceiver() {
@@ -66,5 +57,4 @@ class BootReceiver : BroadcastReceiver() {
         // When a user shuts down his phone all the alarms that you have scheduled before will disappear
         if (intent.action == "android.intent.action.BOOT_COMPLETED") println("")
     }
-
 }

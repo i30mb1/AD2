@@ -8,10 +8,7 @@ import n7.ad2.feature.hero.page.ui.databinding.ItemHeroSpellsBinding
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero.page.internal.info.domain.vo.VOSpell
 
-class HeroSpellsViewHolder private constructor(
-    binding: ItemHeroSpellsBinding,
-    private val spellsListAdapter: SpellsListAdapter,
-) : RecyclerView.ViewHolder(binding.root) {
+class HeroSpellsViewHolder private constructor(binding: ItemHeroSpellsBinding, private val spellsListAdapter: SpellsListAdapter) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(items: VOHeroInfo.Spells) {
         spellsListAdapter.submitList(items.spells)
@@ -20,12 +17,7 @@ class HeroSpellsViewHolder private constructor(
     fun clear() = Unit
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            onSpellClickListener: (spell: VOSpell.Simple) -> Unit,
-            onTalentClickListener: (spell: VOSpell.Talent) -> Unit,
-        ): HeroSpellsViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, onSpellClickListener: (spell: VOSpell.Simple) -> Unit, onTalentClickListener: (spell: VOSpell.Talent) -> Unit): HeroSpellsViewHolder {
             val binding = ItemHeroSpellsBinding.inflate(layoutInflater, parent, false)
             val linearLayoutManager = LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)
             val spellsListAdapter = SpellsListAdapter(layoutInflater, onSpellClickListener, onTalentClickListener)
@@ -36,5 +28,4 @@ class HeroSpellsViewHolder private constructor(
             return HeroSpellsViewHolder(binding, spellsListAdapter)
         }
     }
-
 }

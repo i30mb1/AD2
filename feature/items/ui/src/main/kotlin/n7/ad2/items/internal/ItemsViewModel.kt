@@ -15,11 +15,7 @@ import n7.ad2.items.domain.usecase.UpdateItemViewedForItemUseCase
 import n7.ad2.items.internal.model.ItemUI
 import n7.ad2.items.internal.usecase.GetItemsUIUseCase
 
-internal class ItemsViewModel @AssistedInject constructor(
-    getItemsUIUseCase: GetItemsUIUseCase,
-    private val filterItemsUseCase: FilterItemsUseCase,
-    private val updateItemViewedByUserFieldUseCase: UpdateItemViewedForItemUseCase,
-) : ViewModel() {
+internal class ItemsViewModel @AssistedInject constructor(getItemsUIUseCase: GetItemsUIUseCase, private val filterItemsUseCase: FilterItemsUseCase, private val updateItemViewedByUserFieldUseCase: UpdateItemViewedForItemUseCase) : ViewModel() {
 
     @AssistedFactory
     interface Factory {

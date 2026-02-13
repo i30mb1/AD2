@@ -14,10 +14,7 @@ private fun SimpleCounter() {
 }
 
 @Composable
-internal fun Counter(
-    count: Int,
-    modifier: Modifier = Modifier,
-) {
+internal fun Counter(count: Int, modifier: Modifier = Modifier) {
     Text(
         text = count.toString(),
         style = AppTheme.style.H5.copy(fontSize = 40.sp),

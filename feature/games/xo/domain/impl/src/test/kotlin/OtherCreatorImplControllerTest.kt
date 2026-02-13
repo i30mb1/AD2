@@ -1,5 +1,4 @@
 import com.google.common.truth.Truth
-import java.net.InetAddress
 import kotlinx.coroutines.debug.junit4.CoroutinesTimeout
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.first
@@ -15,16 +14,16 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
+import java.net.InetAddress
 
 /**
  * Проверяем поведение ServerSocket с общением по Socket
  */
 @RunWith(Parameterized::class)
-internal class OtherCreatorImplControllerTest(
-    private val param: Boolean,
-) {
+internal class OtherCreatorImplControllerTest(private val param: Boolean) {
 
     @get:Rule val timeout = CoroutinesTimeout.seconds(5000)
+
     @get:Rule val coroutineRule = CoroutineTestRule(StandardTestDispatcher())
     private val host = InetAddress.getLoopbackAddress()
     private val server = SocketServerController()
@@ -74,7 +73,7 @@ internal class OtherCreatorImplControllerTest(
 
         val serverMessageOnClient = client.state.filter { it.messages.isNotEmpty() }.first().messages.first().text
         Truth.assertThat(serverMessageOnClient).isEqualTo(message)
-        
+
         // Тестируем корректное закрытие соединений
         server.stop()
         client.disconnect()
@@ -85,9 +84,9 @@ internal class OtherCreatorImplControllerTest(
         val serverName = "Test"
         server.start(serverName, host)
         server.state.first { it.status is ServerStatus.Waiting }
-        
+
         server.stop()
-        
+
         val finalState = server.state.first { it.status is ServerStatus.Closed }
         Truth.assertThat(finalState.status).isEqualTo(ServerStatus.Closed)
         Truth.assertThat(finalState.messages).isEmpty()
@@ -98,24 +97,22 @@ internal class OtherCreatorImplControllerTest(
         val serverName = "Test"
         server.start(serverName, host)
         val state = server.state.first { it.status is ServerStatus.Waiting }.status as ServerStatus.Waiting
-        
+
         val port = state.server.port
         client.connect(serverName, host, port)
         client.state.mapNotNull { it.status as? ClientStatus.Connected }.first()
-        
+
         client.disconnect()
-        
+
         val finalState = client.state.first { it.status is ClientStatus.Disconnected }
         Truth.assertThat(finalState.status).isEqualTo(ClientStatus.Disconnected)
-        
+
         server.stop()
     }
 
     companion object {
         @JvmStatic
         @Parameterized.Parameters
-        fun build(): Collection<Boolean> {
-            return listOf(true)
-        }
+        fun build(): Collection<Boolean> = listOf(true)
     }
 }

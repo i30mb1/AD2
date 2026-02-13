@@ -10,13 +10,9 @@ class FindViewAction : ViewAction {
 
     lateinit var targetView: View
 
-    override fun getDescription(): String {
-        return "extract view from activity"
-    }
+    override fun getDescription(): String = "extract view from activity"
 
-    override fun getConstraints(): Matcher<View> {
-        return ViewMatchers.isAssignableFrom(View::class.java)
-    }
+    override fun getConstraints(): Matcher<View> = ViewMatchers.isAssignableFrom(View::class.java)
 
     override fun perform(uiController: UiController, view: View) {
         targetView = view

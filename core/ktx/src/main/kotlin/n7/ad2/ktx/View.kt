@@ -6,8 +6,8 @@ import android.view.TouchDelegate
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
-import kotlin.coroutines.resume
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlin.coroutines.resume
 
 fun View.setTouchDelegate(rect: Rect) {
     post {
@@ -17,7 +17,7 @@ fun View.setTouchDelegate(rect: Rect) {
             delegateArea.left - rect.left.dpToPx,
             delegateArea.top - rect.top.dpToPx,
             delegateArea.right + rect.right.dpToPx,
-            delegateArea.bottom + rect.bottom.dpToPx
+            delegateArea.bottom + rect.bottom.dpToPx,
         )
         (parent as View).touchDelegate = TouchDelegate(delegateArea, this)
     }
@@ -77,6 +77,7 @@ fun View.focusAndShowKeyboard(tryAgain: Boolean = true) {
                         viewTreeObserver.removeOnWindowFocusChangeListener(this)
                     }
                 }
-            })
+            },
+        )
     }
 }

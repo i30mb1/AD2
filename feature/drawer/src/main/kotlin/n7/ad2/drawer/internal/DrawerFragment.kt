@@ -16,8 +16,6 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import javax.inject.Inject
-import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
@@ -39,15 +37,21 @@ import n7.ad2.feature.drawer.databinding.FragmentDrawerBinding
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
+import javax.inject.Inject
+import kotlin.time.Duration.Companion.seconds
 
-internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercentListener {
+internal class DrawerFragment :
+    Fragment(R.layout.fragment_drawer),
+    DrawerPercentListener {
 
     companion object {
         fun getInstance() = DrawerFragment()
     }
 
     @Inject lateinit var logger: Logger
+
     @Inject lateinit var drawerViewModel: DrawerViewModel.Factory
+
     @Inject lateinit var navigator: Navigator
 
     private var _binding: FragmentDrawerBinding? = null
@@ -193,5 +197,4 @@ internal class DrawerFragment : Fragment(R.layout.fragment_drawer), DrawerPercen
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }
             .launchIn(lifecycleScope)
     }
-
 }

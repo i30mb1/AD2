@@ -38,5 +38,4 @@ internal object ImageRepository {
     }
 
     fun getImages(): List<Image> = spells + items + heroes
-
 }

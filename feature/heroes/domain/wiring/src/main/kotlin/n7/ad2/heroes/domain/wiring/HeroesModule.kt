@@ -18,49 +18,31 @@ import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
 object HeroesModule {
 
     @dagger.Provides
-    fun provideHeroesDomainComponent(
-        res: Resources,
-        dispatchers: DispatchersProvider,
-        appInformation: AppInformation,
-        application: Application,
-        logger: Logger,
-    ): HeroesDomainComponent = HeroesDomainComponent(
+    fun provideHeroesDomainComponent(res: Resources, dispatchers: DispatchersProvider, appInformation: AppInformation, application: Application, logger: Logger): HeroesDomainComponent = HeroesDomainComponent(
         object : HeroesDomainDependencies {
             override val application: Application = application
             override val logger = logger
             override val res: Resources = res
             override val dispatcher = dispatchers
             override val appInformation = appInformation
-        }
+        },
     )
 
     @dagger.Provides
-    fun provideGetHeroesUseCase(
-        component: HeroesDomainComponent,
-    ): GetHeroesUseCase = component.getHeroesUseCase
+    fun provideGetHeroesUseCase(component: HeroesDomainComponent): GetHeroesUseCase = component.getHeroesUseCase
 
     @dagger.Provides
-    fun provideGetHeroByNameUseCase(
-        component: HeroesDomainComponent,
-    ): GetHeroByNameUseCase = component.getHeroByNameUseCase
+    fun provideGetHeroByNameUseCase(component: HeroesDomainComponent): GetHeroByNameUseCase = component.getHeroByNameUseCase
 
     @dagger.Provides
-    fun provideGetHeroSpellInputStreamUseCase(
-        component: HeroesDomainComponent,
-    ): GetHeroSpellInputStreamUseCase = component.getHeroSpellInputStreamUseCase
+    fun provideGetHeroSpellInputStreamUseCase(component: HeroesDomainComponent): GetHeroSpellInputStreamUseCase = component.getHeroSpellInputStreamUseCase
 
     @dagger.Provides
-    fun provideUpdateStateViewedForHeroUseCase(
-        component: HeroesDomainComponent,
-    ): UpdateStateViewedForHeroUseCase = component.updateStateViewedForHeroUseCase
+    fun provideUpdateStateViewedForHeroUseCase(component: HeroesDomainComponent): UpdateStateViewedForHeroUseCase = component.updateStateViewedForHeroUseCase
 
     @dagger.Provides
-    fun provideGetGuideForHeroUseCase(
-        component: HeroesDomainComponent,
-    ): GetGuideForHeroUseCase = component.getGuideForHeroUseCase
+    fun provideGetGuideForHeroUseCase(component: HeroesDomainComponent): GetGuideForHeroUseCase = component.getGuideForHeroUseCase
 
     @dagger.Provides
-    fun provideGetHeroDescriptionUseCase(
-        component: HeroesDomainComponent,
-    ): GetHeroDescriptionUseCase = component.getHeroDescriptionUseCase
+    fun provideGetHeroDescriptionUseCase(component: HeroesDomainComponent): GetHeroDescriptionUseCase = component.getHeroDescriptionUseCase
 }

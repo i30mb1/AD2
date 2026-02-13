@@ -23,7 +23,7 @@ kover {
             }
         }
 
-        // Configure filters for all report types  
+        // Configure filters for all report types
         filters {
             excludes {
                 classes(
@@ -32,7 +32,7 @@ kover {
                     "*Activity",
                     "*Activity\$*",
                     "*.databinding.*",
-                    "*.BuildConfig"
+                    "*.BuildConfig",
                 )
             }
         }

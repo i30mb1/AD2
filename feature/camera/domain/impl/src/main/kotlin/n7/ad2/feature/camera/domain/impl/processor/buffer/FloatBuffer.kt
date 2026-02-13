@@ -1,14 +1,14 @@
 package n7.ad2.feature.camera.domain.impl.processor.buffer
 
 import android.graphics.Bitmap
-import java.nio.Buffer
-import java.nio.FloatBuffer
 import n7.ad2.feature.camera.domain.impl.processor.buffer.fill.FillBuffer
 import n7.ad2.feature.camera.domain.impl.processor.buffer.fill.FillBufferArray
+import java.nio.Buffer
+import java.nio.FloatBuffer
 
-public class FloatBuffer(
-    fillBuffer: FillBuffer = FillBufferArray(),
-) : InputBuffer, FillBuffer by fillBuffer {
+public class FloatBuffer(fillBuffer: FillBuffer = FillBufferArray()) :
+    InputBuffer,
+    FillBuffer by fillBuffer {
 
     override fun get(bitmap: Bitmap): Buffer {
         val colorChannelsCount = 3

@@ -19,11 +19,7 @@ import androidx.compose.ui.unit.dp
 // https://tusharpingale.hashnode.dev/building-your-own-custom-layout-with-jetpack-compose
 @Preview(device = Devices.PIXEL)
 @Composable
-fun TextMessage(
-    @PreviewParameter(MessageProvider::class) message: String,
-    time: String = "11:22",
-    modifier: Modifier = Modifier,
-) {
+fun TextMessage(@PreviewParameter(MessageProvider::class) message: String, time: String = "11:22", modifier: Modifier = Modifier) {
     val textMessageDimens = remember { TextMessageDimens() }
     val content = @Composable {
         val onTextLayout: (TextLayoutResult) -> Unit = { textLayoutResult: TextLayoutResult ->
@@ -37,7 +33,7 @@ fun TextMessage(
         Message(
             modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 8.dp, bottom = 8.dp),
             message = message,
-            onTextLayout = onTextLayout
+            onTextLayout = onTextLayout,
         )
         Time(modifier = Modifier.padding(start = 4.dp, end = 8.dp, bottom = 4.dp), time = time)
     }
@@ -45,22 +41,18 @@ fun TextMessage(
 }
 
 @Composable
-internal fun CustomTextMessageLayout(
-    content: @Composable () -> Unit,
-    modifier: Modifier,
-    textMessageDimens: TextMessageDimens,
-) {
+internal fun CustomTextMessageLayout(content: @Composable () -> Unit, modifier: Modifier, textMessageDimens: TextMessageDimens) {
     Layout(content = content, modifier = modifier) { measurables: List<Measurable>, constraints: Constraints ->
         val placeables: List<Placeable> = measurables.map { measurable ->
             measurable.measure(Constraints(0, constraints.maxWidth))
         }
-        //check if the message and time composable are measured, else throw IllegalArgumentException exception
+        // check if the message and time composable are measured, else throw IllegalArgumentException exception
         require(placeables.size == 2)
 
         val message = placeables.first()
         val time = placeables.last()
 
-        //Calculation how big the layout should be {Height and Width of Layout}
+        // Calculation how big the layout should be {Height and Width of Layout}
         textMessageDimens.parentWidth = constraints.maxWidth
         val padding = (message.measuredWidth - textMessageDimens.messageWidth) / 2
 
@@ -77,27 +69,23 @@ internal fun CustomTextMessageLayout(
             textMessageDimens.rowWidth = message.measuredWidth + time.measuredWidth
             textMessageDimens.rowHeight = message.measuredHeight
         }
-        //Setting max width of the layout
+        // Setting max width of the layout
         textMessageDimens.parentWidth = textMessageDimens.rowWidth.coerceAtLeast(minimumValue = constraints.minWidth)
 
         layout(width = textMessageDimens.parentWidth, height = textMessageDimens.rowHeight) {
-            //Place message at (0,0) since we don't need to place it dynamically
+            // Place message at (0,0) since we don't need to place it dynamically
             message.placeRelative(0, 0)
-            //Place time using (maxAvailableWidth - timeWidth, messageHeight - timeHeight)
+            // Place time using (maxAvailableWidth - timeWidth, messageHeight - timeHeight)
             time.placeRelative(
                 textMessageDimens.parentWidth - time.width,
-                textMessageDimens.rowHeight - time.height
+                textMessageDimens.rowHeight - time.height,
             )
         }
     }
 }
 
 @Composable
-fun Message(
-    modifier: Modifier = Modifier,
-    message: String = "ff",
-    onTextLayout: (TextLayoutResult) -> Unit = {},
-) {
+fun Message(modifier: Modifier = Modifier, message: String = "ff", onTextLayout: (TextLayoutResult) -> Unit = {}) {
     Text(
         text = message,
         modifier = modifier,
@@ -106,10 +94,7 @@ fun Message(
 }
 
 @Composable
-fun Time(
-    time: String,
-    modifier: Modifier = Modifier,
-) {
+fun Time(time: String, modifier: Modifier = Modifier) {
     Text(
         text = time,
         modifier = modifier,

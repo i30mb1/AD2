@@ -17,7 +17,7 @@ class DialogTest {
         with(
             launchFragment<DialogResponse>(
                 themeResId = R.style.AD2Theme,
-            )
+            ),
         ) {
             onFragment { fragment ->
                 assertThat(fragment.dialog).isNotNull()

@@ -6,12 +6,10 @@ import rule.UseLaunchSaveRule
 class MyRuleSetProvider : RuleSetProvider {
     override val ruleSetId: String = "MyRuleSet"
 
-    override fun instance(config: Config): RuleSet {
-        return RuleSet(
-            ruleSetId,
-            listOf(
-                UseLaunchSaveRule(config),
-            ),
-        )
-    }
+    override fun instance(config: Config): RuleSet = RuleSet(
+        ruleSetId,
+        listOf(
+            UseLaunchSaveRule(config),
+        ),
+    )
 }

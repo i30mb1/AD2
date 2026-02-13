@@ -98,5 +98,4 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
 //            2 -> ivRefresh.visibility= visibility
         }
     }
-
 }

@@ -5,18 +5,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import java.lang.ref.WeakReference
 import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.ui.StickyHeaderDecorator
 import n7.ad2.ui.adapter.HeaderViewHolder
+import java.lang.ref.WeakReference
 
-class ResponsesAdapter(
-    private val layoutInflater: LayoutInflater,
-    private val showDialogResponse: (VOResponse.Body) -> Unit,
-    private val playSound: (VOResponse.Body) -> Unit,
-    private val showPopup: () -> Unit,
-) : ListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
+class ResponsesAdapter(private val layoutInflater: LayoutInflater, private val showDialogResponse: (VOResponse.Body) -> Unit, private val playSound: (VOResponse.Body) -> Unit, private val showPopup: () -> Unit) :
+    ListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()),
+    StickyHeaderDecorator.StickyHeaderInterface {
 
     private val activeViewHolders = ArrayList<WeakReference<RecyclerView.ViewHolder>>()
 
@@ -75,5 +72,4 @@ class ResponsesAdapter(
             else -> super.getChangePayload(oldItem, newItem)
         }
     }
-
 }

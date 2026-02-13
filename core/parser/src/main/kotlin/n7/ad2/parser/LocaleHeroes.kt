@@ -12,5 +12,5 @@ internal enum class LocaleHeroes(val mainUrl: String, val heroesUrl: String, val
         "https://dota2.fandom.com/wiki/Heroes",
         "https://dota2.fandom.com/wiki/%s/Responses",
         "en",
-    )
+    ),
 }

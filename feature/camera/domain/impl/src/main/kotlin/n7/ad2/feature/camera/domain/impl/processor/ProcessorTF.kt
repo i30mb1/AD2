@@ -4,19 +4,16 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import androidx.annotation.FloatRange
-import kotlin.math.max
-import kotlin.math.min
 import n7.ad2.feature.camera.domain.impl.processor.buffer.InputBuffer
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
+import kotlin.math.max
+import kotlin.math.min
 
 /**
  * @author e.shuvagin
  */
-public class MyTF(
-    private val getMLModel: GetMLModel,
-    private val getInput: InputBuffer,
-) {
+public class MyTF(private val getMLModel: GetMLModel, private val getInput: InputBuffer) {
 
     public fun analyze(originalBitmap: Bitmap): DetectedRect {
         // загружаем модель
@@ -62,13 +59,7 @@ public class MyTF(
     }
 
     /** Нормализованные (0.0 - 1.0) координаты лица переводим в абсолютные (0 - Int.MAX_VALUE) */
-    private fun DetectedRectF.toDetectedRect(
-        detectedRectWidth: Int,
-        detectedRectHeight: Int,
-        toWidth: Int,
-        toHeight: Int,
-        score: Float,
-    ): DetectedRect {
+    private fun DetectedRectF.toDetectedRect(detectedRectWidth: Int, detectedRectHeight: Int, toWidth: Int, toHeight: Int, score: Float): DetectedRect {
         /** Рассчитываем коэффициенты масштабирования для ширины и высоты */
         val scaleX = toWidth.toFloat() / detectedRectWidth.toFloat()
         val scaleY = toHeight.toFloat() / detectedRectHeight.toFloat()
@@ -88,9 +79,7 @@ public class MyTF(
      * выбирая наиболее вероятный или "лучший" для каждого обнаруженного объекта
      * Этот алгоритм удаляет меньшие bounding boxes, которые слишком сильно перекрываются с большей
      */
-    private fun nms(
-        faces: List<DetectedFace>,
-    ): List<DetectedFace> {
+    private fun nms(faces: List<DetectedFace>): List<DetectedFace> {
         if (faces.isEmpty()) return emptyList()
 
         val sortedBoxes = faces.toMutableList()
@@ -121,36 +110,17 @@ public class MyTF(
         return overlap / (box1.area + box2.area - overlap + eps)
     }
 
-
-    private class DetectedFace(
-        val rect: DetectedRectF,
-        val score: Float,
-    )
+    private class DetectedFace(val rect: DetectedRectF, val score: Float)
 
     /** Лицо в нормированных координатах */
-    private data class DetectedRectF(
-        @FloatRange(from = 0.0, to = 1.0) val xMin: Float,
-        @FloatRange(from = 0.0, to = 1.0) val xMax: Float,
-        @FloatRange(from = 0.0, to = 1.0) val yMin: Float,
-        @FloatRange(from = 0.0, to = 1.0) val yMax: Float,
-    ) {
+    private data class DetectedRectF(@FloatRange(from = 0.0, to = 1.0) val xMin: Float, @FloatRange(from = 0.0, to = 1.0) val xMax: Float, @FloatRange(from = 0.0, to = 1.0) val yMin: Float, @FloatRange(from = 0.0, to = 1.0) val yMax: Float) {
         val area = (xMax - xMin) * (yMax - yMin)
     }
 }
 
 /** Лицо в абсолютных координатах привязанные к определенной bitmap */
-public data class DetectedRect(
-    val xMin: Int,
-    val xMax: Int,
-    val yMin: Int,
-    val yMax: Int,
-    val score: Float,
-)
+public data class DetectedRect(val xMin: Int, val xMax: Int, val yMin: Int, val yMax: Int, val score: Float)
 
-public fun DetectedRect.width(): Int {
-    return xMax - xMin
-}
+public fun DetectedRect.width(): Int = xMax - xMin
 
-public fun DetectedRect.height(): Int {
-    return yMax - yMin
-}
+public fun DetectedRect.height(): Int = yMax - yMin

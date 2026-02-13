@@ -1,14 +1,5 @@
 package n7.ad2.xo.cli.controller
 
-import java.io.InputStream
-import java.io.OutputStream
-import java.net.InetAddress
-import java.net.Socket
-import java.nio.charset.StandardCharsets
-import java.security.MessageDigest
-import java.util.Base64
-import java.util.Scanner
-import kotlin.random.Random
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -22,6 +13,15 @@ import n7.ad2.xo.cli.model.ClientState
 import n7.ad2.xo.cli.model.ClientStatus
 import n7.ad2.xo.cli.model.Message
 import n7.ad2.xo.cli.model.SimpleServer
+import java.io.InputStream
+import java.io.OutputStream
+import java.net.InetAddress
+import java.net.Socket
+import java.nio.charset.StandardCharsets
+import java.security.MessageDigest
+import java.util.Base64
+import java.util.Scanner
+import kotlin.random.Random
 
 class WebSocketClientController : CliClientController {
     private val scope = CoroutineScope(Job() + Dispatchers.IO)
@@ -42,7 +42,7 @@ class WebSocketClientController : CliClientController {
                 _state.update {
                     it.copy(
                         status = ClientStatus.Connected(server),
-                        messages = it.messages + Message.Info("Connected to WebSocket server")
+                        messages = it.messages + Message.Info("Connected to WebSocket server"),
                     )
                 }
 
@@ -54,7 +54,7 @@ class WebSocketClientController : CliClientController {
                 _state.update {
                     it.copy(
                         status = ClientStatus.Disconnected,
-                        messages = it.messages + Message.Info("WebSocket handshake failed")
+                        messages = it.messages + Message.Info("WebSocket handshake failed"),
                     )
                 }
             }
@@ -62,7 +62,7 @@ class WebSocketClientController : CliClientController {
             _state.update {
                 it.copy(
                     status = ClientStatus.Disconnected,
-                    messages = it.messages + Message.Info("Failed to connect to WebSocket server: ${e.message}")
+                    messages = it.messages + Message.Info("Failed to connect to WebSocket server: ${e.message}"),
                 )
             }
         }
@@ -78,12 +78,12 @@ class WebSocketClientController : CliClientController {
 
             // Формируем HTTP запрос для handshake
             val request = "GET / HTTP/1.1\r\n" +
-                    "Host: ${socket.inetAddress.hostAddress}:${socket.port}\r\n" +
-                    "Upgrade: websocket\r\n" +
-                    "Connection: Upgrade\r\n" +
-                    "Sec-WebSocket-Key: $websocketKey\r\n" +
-                    "Sec-WebSocket-Version: 13\r\n" +
-                    "\r\n"
+                "Host: ${socket.inetAddress.hostAddress}:${socket.port}\r\n" +
+                "Upgrade: websocket\r\n" +
+                "Connection: Upgrade\r\n" +
+                "Sec-WebSocket-Key: $websocketKey\r\n" +
+                "Sec-WebSocket-Version: 13\r\n" +
+                "\r\n"
 
             output.write(request.toByteArray())
             output.flush()
@@ -143,7 +143,7 @@ class WebSocketClientController : CliClientController {
             _state.update {
                 it.copy(
                     status = ClientStatus.Disconnected,
-                    messages = it.messages + Message.Info("WebSocket connection lost: ${e.message}")
+                    messages = it.messages + Message.Info("WebSocket connection lost: ${e.message}"),
                 )
             }
         }
@@ -213,7 +213,9 @@ class WebSocketClientController : CliClientController {
 
             val mask = if (masked) {
                 ByteArray(4) { input.read().toByte() }
-            } else null
+            } else {
+                null
+            }
 
             val payload = ByteArray(payloadLength.toInt())
             input.read(payload)
@@ -273,7 +275,9 @@ class WebSocketClientController : CliClientController {
             System.arraycopy(maskBytes, 0, frame, offset, 4)
             offset += 4
             maskBytes
-        } else null
+        } else {
+            null
+        }
 
         // Payload (masked if needed)
         if (masked && mask != null) {

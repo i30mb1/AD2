@@ -35,10 +35,7 @@ import n7.ad2.ui.compose.view.ErrorScreen
 import n7.ad2.ui.compose.view.LoadingScreen
 
 @Composable
-internal fun ManaPointScreen(
-    state: SkillGameViewModel.State,
-    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
-) {
+internal fun ManaPointScreen(state: SkillGameViewModel.State, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit) {
     val color by rememberUpdatedState(newValue = Color(state.backgroundColor).copy(alpha = 0.2f))
     val animateColor = animateColorAsState(targetValue = color, animationSpec = tween(2_000))
     val offset = with(LocalDensity.current) { 5.toDp() }
@@ -58,7 +55,7 @@ internal fun ManaPointScreen(
                         Text(
                             text = "${state.loadingAttempts}",
                             color = AppTheme.color.textColor,
-                            modifier = Modifier.align(Alignment.Center)
+                            modifier = Modifier.align(Alignment.Center),
                         )
                     }
                 }
@@ -80,23 +77,17 @@ internal fun ManaPointScreen(
                     onVariantClick,
                 )
             }
-
         }
     }
 }
 
 @Composable
-private fun GuessSpellImage(
-    modifier: Modifier = Modifier,
-    spellImage: String,
-    spellLVL: Int,
-    onSpellClick: () -> Unit,
-) {
+private fun GuessSpellImage(modifier: Modifier = Modifier, spellImage: String, spellLVL: Int, onSpellClick: () -> Unit) {
     val infiniteTransition = rememberInfiniteTransition()
     val scale by infiniteTransition.animateFloat(
         initialValue = 1f,
         targetValue = 1.1f,
-        animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse)
+        animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse),
     )
     Column(
         modifier = modifier
@@ -113,7 +104,7 @@ private fun GuessSpellImage(
 @Composable
 private fun SpellLVL(spellLVL: Int) {
     Row(
-        modifier = Modifier.padding(top = 4.dp)
+        modifier = Modifier.padding(top = 4.dp),
     ) {
         repeat(spellLVL) {
             Box(
@@ -122,9 +113,8 @@ private fun SpellLVL(spellLVL: Int) {
                     .size(20.dp, 10.dp)
                     .background(Color.Black)
                     .padding(0.5.dp)
-                    .background(Color.Yellow)
+                    .background(Color.Yellow),
             ) {
-
             }
         }
     }
@@ -132,9 +122,7 @@ private fun SpellLVL(spellLVL: Int) {
 
 @Preview
 @Composable
-private fun ManaPointScreenPreviewLoading(
-    @PreviewParameter(PreviewStateProvider::class) state: SkillGameViewModel.State,
-) {
+private fun ManaPointScreenPreviewLoading(@PreviewParameter(PreviewStateProvider::class) state: SkillGameViewModel.State) {
     ManaPointScreen(state) {}
 }
 
@@ -153,7 +141,7 @@ private class PreviewStateProvider : PreviewParameterProvider<SkillGameViewModel
                     SkillGameViewModel.Spell("20", false),
                     SkillGameViewModel.Spell("30", true),
                     SkillGameViewModel.Spell("40", false),
-                )
+                ),
             ),
             3,
             false,

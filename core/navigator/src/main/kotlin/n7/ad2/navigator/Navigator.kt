@@ -24,29 +24,27 @@ interface Navigator {
     val itemPageApi: ItemPageApi
 
     companion object {
-        fun empty(): Navigator {
-            return object : Navigator {
-                override val settingsApi: SettingsApi
-                    get() = error("empty realization for demo app's")
-                override val streamApi: StreamsApi
-                    get() = error("empty realization for demo app's")
-                override val heroesApi: HeroesApi
-                    get() = error("empty realization for demo app's")
-                override val newsApi: NewsApi
-                    get() = error("empty realization for demo app's")
-                override val itemsApi: ItemsApi
-                    get() = error("empty realization for demo app's")
-                override val gamesApi: GamesApi
-                    get() = error("empty realization for demo app's")
-                override val tournamentsApi: TournamentsApi
-                    get() = error("empty realization for demo app's")
-                override val drawerApi: DrawerApi
-                    get() = error("empty realization for demo app's")
-                override val heroPageApi: HeroPageApi
-                    get() = error("empty realization for demo app's")
-                override val itemPageApi: ItemPageApi
-                    get() = error("empty realization for demo app's")
-            }
+        fun empty(): Navigator = object : Navigator {
+            override val settingsApi: SettingsApi
+                get() = error("empty realization for demo app's")
+            override val streamApi: StreamsApi
+                get() = error("empty realization for demo app's")
+            override val heroesApi: HeroesApi
+                get() = error("empty realization for demo app's")
+            override val newsApi: NewsApi
+                get() = error("empty realization for demo app's")
+            override val itemsApi: ItemsApi
+                get() = error("empty realization for demo app's")
+            override val gamesApi: GamesApi
+                get() = error("empty realization for demo app's")
+            override val tournamentsApi: TournamentsApi
+                get() = error("empty realization for demo app's")
+            override val drawerApi: DrawerApi
+                get() = error("empty realization for demo app's")
+            override val heroPageApi: HeroPageApi
+                get() = error("empty realization for demo app's")
+            override val itemPageApi: ItemPageApi
+                get() = error("empty realization for demo app's")
         }
     }
 }

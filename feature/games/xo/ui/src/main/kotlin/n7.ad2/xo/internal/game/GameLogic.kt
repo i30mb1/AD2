@@ -1,7 +1,5 @@
 package n7.ad2.xo.internal.game
 
-import java.net.InetAddress
-import javax.inject.Inject
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -39,6 +37,8 @@ import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.xo.internal.mapper.NetworkToIPMapper
 import n7.ad2.xo.internal.model.SocketType
+import java.net.InetAddress
+import javax.inject.Inject
 
 internal class GameLogic @Inject constructor(
     private val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase,
@@ -62,7 +62,7 @@ internal class GameLogic @Inject constructor(
         merge(
             combine(
                 discoverServicesInNetworkUseCase(),
-                flowOf(emptyList())
+                flowOf(emptyList()),
 //                discoverServicesInWifiDirectUseCase(),
             ) { servers: List<Server>, serversDirect: List<Server> ->
                 servers + serversDirect

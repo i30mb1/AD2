@@ -26,20 +26,20 @@ private fun ChartPreview() {
                 ChartState.ChartValue(value = 70, color = Color.Red),
                 ChartState.ChartValue(value = 55, color = Color.Blue),
             ),
-            maxValue = 80
+            maxValue = 80,
         )
 
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp)
+                .padding(16.dp),
         ) {
             Chart(
                 state = sampleData,
                 modifier = Modifier.height(200.dp),
                 lineColor = Color.Red,
                 textColor = Color.Black,
-                gridColor = Color.Gray.copy(alpha = 0.5f)
+                gridColor = Color.Gray.copy(alpha = 0.5f),
             )
         }
     }
@@ -55,7 +55,7 @@ private fun ChartSimplePreview() {
                 ChartState.ChartValue(value = 50, color = Color.Blue),
                 ChartState.ChartValue(value = 30, color = Color.Blue),
             ),
-            maxValue = 60
+            maxValue = 60,
         )
 
         Chart(
@@ -63,7 +63,7 @@ private fun ChartSimplePreview() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)
-                .height(150.dp)
+                .height(150.dp),
         )
     }
 }

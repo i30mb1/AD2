@@ -42,9 +42,8 @@ class FragmentTest {
         }
         override val getHeroesUseCase: GetHeroesUseCase = object : GetHeroesUseCase {
             override fun invoke(): Flow<List<Hero>> = flowOf(
-                listOf(Hero("Jeka", "", false, "str"))
+                listOf(Hero("Jeka", "", false, "str")),
             )
-
         }
         override val dispatchersProvider: DispatchersProvider = rule.dispatchers
         override val updateStateViewedForHeroUseCase: UpdateStateViewedForHeroUseCase

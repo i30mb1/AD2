@@ -9,8 +9,7 @@ import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideTab
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideTabNumber
 
-class HeroGuideTabAdapter
-    : ListAdapter<VOGuideTab, HeroGuideTabAdapter.HeroGuideTabHolder>(DiffCallback()) {
+class HeroGuideTabAdapter : ListAdapter<VOGuideTab, HeroGuideTabAdapter.HeroGuideTabHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = HeroGuideTabHolder.from(parent, viewType)
 
@@ -36,12 +35,10 @@ class HeroGuideTabAdapter
                 return TODO()
             }
         }
-
     }
 
     private class DiffCallback : DiffUtil.ItemCallback<VOGuideTab>() {
         override fun areItemsTheSame(oldItem: VOGuideTab, newItem: VOGuideTab): Boolean = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOGuideTab, newItem: VOGuideTab): Boolean = oldItem == newItem
     }
-
 }

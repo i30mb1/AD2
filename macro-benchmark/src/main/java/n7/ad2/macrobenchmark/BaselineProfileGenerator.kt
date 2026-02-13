@@ -24,7 +24,7 @@ class BaselineProfileGenerator {
             // Start main activity and wait for it to load
             startActivityAndWait()
 
-            // Wait for splash screen to disappear and main content to load  
+            // Wait for splash screen to disappear and main content to load
             device.wait(Until.hasObject(By.pkg("n7.ad2")), 15_000)
 
             // Wait for app to fully initialize
@@ -36,7 +36,7 @@ class BaselineProfileGenerator {
             // Try to find menu recyclerview
             val menuRecyclerView = device.wait(
                 Until.findObject(By.res("rv_menu")),
-                3_000
+                3_000,
             )
 
             if (menuRecyclerView != null) {
@@ -70,17 +70,17 @@ class BaselineProfileGenerator {
                     displayHeight / 2,
                     displayWidth * 3 / 4,
                     displayHeight / 2,
-                    10
+                    10,
                 )
                 device.waitForIdle(1_000)
 
-                // Vertical swipe  
+                // Vertical swipe
                 device.swipe(
                     displayWidth / 2,
                     displayHeight * 3 / 4,
                     displayWidth / 2,
                     displayHeight / 4,
-                    10
+                    10,
                 )
                 device.waitForIdle(1_000)
             }
@@ -105,5 +105,4 @@ class BaselineProfileGenerator {
             device.waitForIdle(2_000)
         }
     }
-
 }

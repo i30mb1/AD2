@@ -9,9 +9,5 @@ object AppPreferenceModule {
 
     @ApplicationScope
     @dagger.Provides
-    fun provideAppPreference(
-        application: Application,
-        getCurrentDayUseCase: GetCurrentDayUseCase,
-    ): Preference = AD2Preference(application, getCurrentDayUseCase)
-
+    fun provideAppPreference(application: Application, getCurrentDayUseCase: GetCurrentDayUseCase): Preference = AD2Preference(application, getCurrentDayUseCase)
 }

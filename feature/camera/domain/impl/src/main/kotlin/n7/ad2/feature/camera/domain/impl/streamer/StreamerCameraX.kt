@@ -9,7 +9,6 @@ import androidx.camera.core.resolutionselector.AspectRatioStrategy
 import androidx.camera.core.resolutionselector.ResolutionSelector
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
-import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -26,13 +25,9 @@ import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ImageMetadata
 import n7.ad2.feature.camera.domain.model.StreamerState
+import kotlin.time.Duration.Companion.seconds
 
-class StreamerCameraX(
-    private val settings: CameraSettings,
-    dispatchers: DispatchersProvider,
-    lifecycle: LifecycleOwner,
-    private val fps: FPSTimer,
-) : Streamer {
+class StreamerCameraX(private val settings: CameraSettings, dispatchers: DispatchersProvider, lifecycle: LifecycleOwner, private val fps: FPSTimer) : Streamer {
 
     private val dispatcher = dispatchers.Default.limitedParallelism(1).asExecutor()
     private val streamerResolution: MutableSet<StreamerResolution> = mutableSetOf()
@@ -57,9 +52,9 @@ class StreamerCameraX(
                             CameraAspectRatio.RATIO_4_3 -> AspectRatio.RATIO_4_3
                         },
                         AspectRatioStrategy.FALLBACK_RULE_AUTO,
-                    )
+                    ),
                 )
-                .build()
+                .build(),
         )
         .build()
 

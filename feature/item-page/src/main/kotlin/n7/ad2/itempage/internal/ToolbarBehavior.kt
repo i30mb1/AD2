@@ -66,5 +66,4 @@ class ToolbarBehavior(context: Context, attributeSet: AttributeSet? = null) : Co
             }
         }
     }
-
 }

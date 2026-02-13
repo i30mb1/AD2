@@ -1,15 +1,11 @@
 package n7.ad2.xo.demo
 
-import android.app.Activity
 import android.content.pm.PackageManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 
-class AppPermission(
-    private val activity: FragmentActivity,
-    private val onPermissionGranted: () -> Unit,
-) {
+class AppPermission(private val activity: FragmentActivity, private val onPermissionGranted: () -> Unit) {
 
     private val requiredPermission = buildList {
         add(android.Manifest.permission.ACCESS_FINE_LOCATION)

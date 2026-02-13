@@ -43,5 +43,4 @@ class DialogError : DialogFragment() {
 
         return dialogBuilder.create()
     }
-
 }

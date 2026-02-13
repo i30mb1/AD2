@@ -7,9 +7,7 @@ import n7.ad2.app.logger.model.AppLog
 import n7.ad2.drawer.internal.adapter.LoggerAdapter.TextViewHolder
 import n7.ad2.feature.drawer.databinding.ItemLogBinding
 
-internal class LoggerAdapter(
-    private val layoutInflater: LayoutInflater,
-) : RecyclerView.Adapter<TextViewHolder>() {
+internal class LoggerAdapter(private val layoutInflater: LayoutInflater) : RecyclerView.Adapter<TextViewHolder>() {
 
     private val list: ArrayList<AppLog> = ArrayList()
 
@@ -29,9 +27,7 @@ internal class LoggerAdapter(
         notifyItemInserted(list.lastIndex)
     }
 
-    class TextViewHolder private constructor(
-        private val binding: ItemLogBinding,
-    ) : RecyclerView.ViewHolder(binding.root) {
+    class TextViewHolder private constructor(private val binding: ItemLogBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: AppLog) {
             binding.tvText.text = item.message

@@ -1,6 +1,10 @@
 package n7.ad2.feature.games.xo.domain.internal.server
 
 import android.util.Base64
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import n7.ad2.coroutines.DispatchersProvider
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -11,16 +15,8 @@ import java.net.Socket
 import java.security.MessageDigest
 import java.util.Scanner
 import kotlin.experimental.xor
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
-import n7.ad2.coroutines.DispatchersProvider
 
-internal class ServerWithWebsocket(
-    private val dispatchers: DispatchersProvider,
-    private val type: ServerType,
-    private val logger: (message: ServerLog) -> Unit = {},
-) {
+internal class ServerWithWebsocket(private val dispatchers: DispatchersProvider, private val type: ServerType, private val logger: (message: ServerLog) -> Unit = {}) {
 
     private class GameServerError(message: String) : Exception(message)
 
@@ -33,10 +29,7 @@ internal class ServerWithWebsocket(
         private const val PAYLOAD_LONG = 127L
     }
 
-    fun start(
-        host: InetAddress,
-        ports: IntArray,
-    ) = scope.launch {
+    fun start(host: InetAddress, ports: IntArray) = scope.launch {
         try {
 //            val server = serverSocketProxy.getServerSocket(host, ports)
 //            logger(ServerLog.ServerStarted)

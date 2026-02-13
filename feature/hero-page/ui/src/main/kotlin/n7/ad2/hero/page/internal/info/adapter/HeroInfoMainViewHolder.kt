@@ -8,9 +8,7 @@ import n7.ad2.feature.hero.page.ui.databinding.ItemHeroAttributesBinding
 import n7.ad2.hero.page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 
-class HeroInfoMainViewHolder private constructor(
-    private val binding: ItemHeroAttributesBinding,
-) : RecyclerView.ViewHolder(binding.root) {
+class HeroInfoMainViewHolder private constructor(private val binding: ItemHeroAttributesBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: VOHeroInfo.Attributes) {
         binding.ivHero.load(item.urlHeroImage, n7.ad2.core.ui.R.drawable.widht_placeholder)
@@ -26,15 +24,10 @@ class HeroInfoMainViewHolder private constructor(
     fun clear() = Unit
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
-        ): HeroInfoMainViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit): HeroInfoMainViewHolder {
             val binding = ItemHeroAttributesBinding.inflate(layoutInflater, parent, false)
             binding.root.setOnClickListener { onHeroInfoCLickListener(GetVOHeroDescriptionUseCase.HeroInfo.Main) }
             return HeroInfoMainViewHolder(binding)
         }
     }
-
 }

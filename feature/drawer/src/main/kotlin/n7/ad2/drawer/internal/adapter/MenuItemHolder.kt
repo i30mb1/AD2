@@ -8,10 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.feature.drawer.databinding.ItemMenuBinding
 
-internal class MenuItemHolder private constructor(
-    private val binding: ItemMenuBinding,
-    private val itemListener: (menuItem: VOMenu) -> Unit,
-) : RecyclerView.ViewHolder(binding.root) {
+internal class MenuItemHolder private constructor(private val binding: ItemMenuBinding, private val itemListener: (menuItem: VOMenu) -> Unit) : RecyclerView.ViewHolder(binding.root) {
 
     private val backgroundRipple = ContextCompat.getDrawable(binding.root.context, n7.ad2.core.ui.R.drawable.background_ripple)
     private val transparent = ContextCompat.getDrawable(binding.root.context, n7.ad2.core.ui.R.color.transparent)
@@ -24,14 +21,9 @@ internal class MenuItemHolder private constructor(
     }
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            itemListener: (menuItem: VOMenu) -> Unit,
-        ): MenuItemHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, itemListener: (menuItem: VOMenu) -> Unit): MenuItemHolder {
             val binding = ItemMenuBinding.inflate(layoutInflater, parent, false)
             return MenuItemHolder(binding, itemListener)
         }
     }
-
 }

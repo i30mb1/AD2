@@ -10,5 +10,5 @@ sealed interface ServerLog {
 }
 
 sealed interface ClientLog {
-    object ClientSendingMessageError: ClientLog
+    object ClientSendingMessageError : ClientLog
 }

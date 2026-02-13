@@ -26,8 +26,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import java.io.File
-import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -40,13 +38,17 @@ import n7.ad2.camera.internal.compose.CameraEvent
 import n7.ad2.camera.internal.di.DaggerCameraComponent
 import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.ui.content
+import java.io.File
+import javax.inject.Inject
 
-internal class CameraFragment(
-    override var dependenciesMap: DependenciesMap,
-) : Fragment(), HasDependencies {
+internal class CameraFragment(override var dependenciesMap: DependenciesMap) :
+    Fragment(),
+    HasDependencies {
 
     @Inject lateinit var cameraViewModelFactory: CameraViewModel.Factory
+
     @Inject lateinit var logger: Logger
+
     @Inject lateinit var fpsTimer: FPSTimer
 
     private val viewModel: CameraViewModel by viewModels {
@@ -60,13 +62,11 @@ internal class CameraFragment(
         DaggerCameraComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return content {
-            val state by viewModel.state.collectAsState()
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        val state by viewModel.state.collectAsState()
 //            val file = state.recordedFile?.get()
 //            if (file != null) openVideo(file)
-            Camera(state, fpsTimer, ::handleEvent)
-        }
+        Camera(state, fpsTimer, ::handleEvent)
     }
 
     private fun openVideo(file: File) {
@@ -97,7 +97,6 @@ internal class CameraFragment(
             .onEach { Log.d("N7", it.toString()) }
             .launchIn(lifecycleScope)
         CameraPermission(requireActivity()) {
-
         }.run()
     }
 
@@ -112,30 +111,29 @@ internal class CameraFragment(
     }
 }
 
-class CameraX(
-    private var context: Context,
-    private var owner: LifecycleOwner,
-) {
+class CameraX(private var context: Context, private var owner: LifecycleOwner) {
     private var imageCapture: ImageCapture? = null
-
 
     fun capturePhoto() = owner.lifecycleScope.launch {
         val imageCapture = imageCapture ?: return@launch
 
-        imageCapture.takePicture(ContextCompat.getMainExecutor(context), object : ImageCapture.OnImageCapturedCallback() {
-            override fun onCaptureSuccess(image: ImageProxy) {
-                super.onCaptureSuccess(image)
-                owner.lifecycleScope.launch {
-                    saveMediaToStorage(
-                        image.toBitmap(),
-                    )
+        imageCapture.takePicture(
+            ContextCompat.getMainExecutor(context),
+            object : ImageCapture.OnImageCapturedCallback() {
+                override fun onCaptureSuccess(image: ImageProxy) {
+                    super.onCaptureSuccess(image)
+                    owner.lifecycleScope.launch {
+                        saveMediaToStorage(
+                            image.toBitmap(),
+                        )
+                    }
                 }
-            }
 
-            override fun onError(exception: ImageCaptureException) {
-                super.onError(exception)
-            }
-        })
+                override fun onError(exception: ImageCaptureException) {
+                    super.onError(exception)
+                }
+            },
+        )
     }
 
     private suspend fun saveMediaToStorage(bitmap: Bitmap) {
@@ -159,7 +157,7 @@ class CameraX(
                 ImageCapture.OutputFileOptions.Builder(
                     context.contentResolver,
                     MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                    contentValues
+                    contentValues,
                 ).build()
             }
 

@@ -1,9 +1,5 @@
 package n7.ad2.xo.cli.controller
 
-import java.io.PrintWriter
-import java.net.InetAddress
-import java.net.Socket
-import java.util.Scanner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -17,6 +13,10 @@ import n7.ad2.xo.cli.model.ClientState
 import n7.ad2.xo.cli.model.ClientStatus
 import n7.ad2.xo.cli.model.Message
 import n7.ad2.xo.cli.model.SimpleServer
+import java.io.PrintWriter
+import java.net.InetAddress
+import java.net.Socket
+import java.util.Scanner
 
 class RawSocketClientController : CliClientController {
     private val scope = CoroutineScope(Job() + Dispatchers.IO)
@@ -32,7 +32,7 @@ class RawSocketClientController : CliClientController {
             _state.update {
                 it.copy(
                     status = ClientStatus.Connected(server),
-                    messages = it.messages + Message.Info("Connected to server")
+                    messages = it.messages + Message.Info("Connected to server"),
                 )
             }
 
@@ -44,7 +44,7 @@ class RawSocketClientController : CliClientController {
             _state.update {
                 it.copy(
                     status = ClientStatus.Disconnected,
-                    messages = it.messages + Message.Info("Failed to connect: ${e.message}")
+                    messages = it.messages + Message.Info("Failed to connect: ${e.message}"),
                 )
             }
         }
@@ -64,7 +64,7 @@ class RawSocketClientController : CliClientController {
             _state.update {
                 it.copy(
                     status = ClientStatus.Disconnected,
-                    messages = it.messages + Message.Info("Connection lost: ${e.message}")
+                    messages = it.messages + Message.Info("Connection lost: ${e.message}"),
                 )
             }
         }

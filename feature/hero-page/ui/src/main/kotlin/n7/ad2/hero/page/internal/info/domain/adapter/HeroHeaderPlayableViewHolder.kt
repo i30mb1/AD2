@@ -7,11 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.feature.hero.page.ui.databinding.ItemHeroHeaderPlayableBinding
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 
-class HeroHeaderPlayableViewHolder(
-    private val binding: ItemHeroHeaderPlayableBinding,
-    private val onPlayIconClick: (soundUrl: String) -> Unit,
-    private val onKeyClickListener: (key: String) -> Unit,
-) : RecyclerView.ViewHolder(binding.root) {
+class HeroHeaderPlayableViewHolder(private val binding: ItemHeroHeaderPlayableBinding, private val onPlayIconClick: (soundUrl: String) -> Unit, private val onKeyClickListener: (key: String) -> Unit) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(data: VOHeroInfo.HeaderSound) {
         binding.tvTitle.text = data.title
@@ -33,15 +29,9 @@ class HeroHeaderPlayableViewHolder(
     }
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            onPlayIconClick: (soundUrl: String) -> Unit,
-            onKeyClickListener: (key: String) -> Unit,
-        ): HeroHeaderPlayableViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, onPlayIconClick: (soundUrl: String) -> Unit, onKeyClickListener: (key: String) -> Unit): HeroHeaderPlayableViewHolder {
             val binding = ItemHeroHeaderPlayableBinding.inflate(layoutInflater, parent, false)
             return HeroHeaderPlayableViewHolder(binding, onPlayIconClick, onKeyClickListener)
         }
     }
-
 }

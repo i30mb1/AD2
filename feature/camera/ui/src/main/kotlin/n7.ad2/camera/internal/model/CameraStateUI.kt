@@ -2,11 +2,11 @@ package n7.ad2.camera.internal.model
 
 import android.graphics.Bitmap
 import androidx.camera.view.PreviewView
+import n7.ad2.android.OneShotValue
+import n7.ad2.app.logger.Logger
 import java.io.File
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
-import n7.ad2.android.OneShotValue
-import n7.ad2.app.logger.Logger
 
 internal data class CameraStateUI(
     val name: String = "",
@@ -25,12 +25,7 @@ internal data class CameraStateUI(
 )
 
 internal interface DetectedRect {
-    data class Face(
-        val xMin: Float,
-        val xMax: Float,
-        val yMin: Float,
-        val yMax: Float,
-    ) : DetectedRect
+    data class Face(val xMin: Float, val xMax: Float, val yMin: Float, val yMax: Float) : DetectedRect
 
     data object Nothing : DetectedRect
 }

@@ -1,5 +1,4 @@
 import com.google.common.truth.Truth
-import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.BufferOverflow
@@ -22,11 +21,13 @@ import kotlinx.coroutines.test.runTest
 import n7.ad2.coroutines.CoroutineTestRule
 import org.junit.Rule
 import org.junit.Test
+import kotlin.time.Duration.Companion.seconds
 
 class SharedFlowTest {
 
     @get:Rule val timeout = CoroutinesTimeout.seconds(5)
     private val list = mutableListOf<String>()
+
     @get:Rule val coroutineRule = CoroutineTestRule()
 
     @Test

@@ -1,9 +1,6 @@
 package n7.ad2.xo.cli.model
 
-data class ServerState(
-    val status: ServerStatus = ServerStatus.Closed,
-    val messages: List<Message> = emptyList(),
-)
+data class ServerState(val status: ServerStatus = ServerStatus.Closed, val messages: List<Message> = emptyList())
 
 sealed interface ServerStatus {
     data class Waiting(val server: SimpleServer) : ServerStatus
@@ -11,10 +8,7 @@ sealed interface ServerStatus {
     data object Closed : ServerStatus
 }
 
-data class ClientState(
-    val status: ClientStatus = ClientStatus.Disconnected,
-    val messages: List<Message> = emptyList(),
-)
+data class ClientState(val status: ClientStatus = ClientStatus.Disconnected, val messages: List<Message> = emptyList())
 
 sealed interface ClientStatus {
     data object Disconnected : ClientStatus
@@ -27,8 +21,4 @@ sealed class Message(val text: String) {
     class Info(text: String) : Message(text)
 }
 
-data class SimpleServer(
-    val name: String,
-    val ip: String,
-    val port: Int,
-)
+data class SimpleServer(val name: String, val ip: String, val port: Int)

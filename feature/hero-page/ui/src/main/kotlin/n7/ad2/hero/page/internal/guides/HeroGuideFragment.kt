@@ -9,7 +9,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import n7.ad2.android.findDependencies
 import n7.ad2.feature.hero.page.ui.R
@@ -17,6 +16,7 @@ import n7.ad2.feature.hero.page.ui.databinding.FragmentHeroGuideBinding
 import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.viewModel
 import n7.ad2.ui.StickyHeaderDecorator
+import javax.inject.Inject
 
 class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
 
@@ -62,5 +62,4 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
 
         viewModel.loadHeroWithGuides(heroName).observe(viewLifecycleOwner, heroGuideAdapter::submitList)
     }
-
 }

@@ -1,13 +1,13 @@
 package n7.ad2.feature.camera.domain.impl.processor
 
 import android.content.Context
+import org.tensorflow.lite.Interpreter
 import java.io.FileInputStream
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.MappedByteBuffer
 import java.nio.channels.Channels
 import java.nio.channels.FileChannel
-import org.tensorflow.lite.Interpreter
 
 public fun interface GetMLModel {
     public fun get(): Interpreter
@@ -25,9 +25,7 @@ private val options = Interpreter.Options().apply {
 }
 
 // быстрее на 10% GetMLModelReadBytes
-public class GetMLModelChannel(
-    private val context: Context,
-) : GetMLModel {
+public class GetMLModelChannel(private val context: Context) : GetMLModel {
     override fun get(): Interpreter {
         val input = context.assets.open("blaze_face.tflite")
         val buffer = ByteBuffer.allocateDirect(input.available())
@@ -39,9 +37,7 @@ public class GetMLModelChannel(
     }
 }
 
-public class GetMLModelReadBytes(
-    private val context: Context,
-) : GetMLModel {
+public class GetMLModelReadBytes(private val context: Context) : GetMLModel {
     override fun get(): Interpreter {
         val input = context.assets.open("blaze_face.tflite")
         val buffer = ByteBuffer.allocateDirect(input.available())
@@ -52,9 +48,7 @@ public class GetMLModelReadBytes(
     }
 }
 
-public class GetMLModelReadBytes2(
-    private val context: Context,
-) : GetMLModel {
+public class GetMLModelReadBytes2(private val context: Context) : GetMLModel {
     override fun get(): Interpreter {
         val fileDescriptor = context.assets.openFd("blaze_face.tflite")
         val inputStream = FileInputStream(fileDescriptor.fileDescriptor)
@@ -67,14 +61,14 @@ public class GetMLModelReadBytes2(
     }
 }
 
-//public class GetMLModelLiteRT(
+// public class GetMLModelLiteRT(
 //    private val context: Context,
-//) : GetMLModel {
+// ) : GetMLModel {
 //    override fun get(): Interpreter {
 //        val model: MappedByteBuffer = FileUtil.loadMappedFile(context, "blaze_face.tflite")
 //        // еще такое есть
-////        val model2: Model = Model.createModel(context, "blaze_face.tflite")
+// //        val model2: Model = Model.createModel(context, "blaze_face.tflite")
 //        val interpreter = Interpreter(model)
 //        return interpreter
 //    }
-//}
+// }

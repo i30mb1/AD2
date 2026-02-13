@@ -1,13 +1,11 @@
 package n7.ad2.heroes.ui.internal.domain.usecase
 
-import javax.inject.Inject
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.ui.internal.domain.vo.VOHero
+import javax.inject.Inject
 
-internal class FilterHeroesUseCase @Inject constructor(
-    private val dispatchers: DispatchersProvider,
-) {
+internal class FilterHeroesUseCase @Inject constructor(private val dispatchers: DispatchersProvider) {
 
     suspend operator fun invoke(list: List<VOHero>, filter: String): List<VOHero> = withContext(dispatchers.IO) {
         if (filter.isEmpty()) return@withContext list
@@ -18,5 +16,4 @@ internal class FilterHeroesUseCase @Inject constructor(
             }
         }
     }
-
 }

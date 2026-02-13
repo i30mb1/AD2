@@ -17,7 +17,7 @@ import n7.ad2.heroes.domain.wiring.HeroesModule
         RetrofitModule::class,
         DatabaseModule::class,
         HeroesModule::class,
-    ]
+    ],
 )
 internal interface ApplicationComponentDemo : GamesDependencies {
 

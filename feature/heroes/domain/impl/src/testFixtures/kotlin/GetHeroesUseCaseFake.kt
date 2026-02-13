@@ -11,20 +11,20 @@ public class GetHeroesUseCaseFake : GetHeroesUseCase {
                 name = "Anti-Mage",
                 avatarUrl = "https://cdn.dota2.com/apps/dota2/images/heroes/antimage_full.png",
                 viewedByUser = false,
-                mainAttr = "Agility"
+                mainAttr = "Agility",
             ),
             Hero(
                 name = "Axe",
                 avatarUrl = "https://cdn.dota2.com/apps/dota2/images/heroes/axe_full.png",
                 viewedByUser = true,
-                mainAttr = "Strength"
+                mainAttr = "Strength",
             ),
             Hero(
                 name = "Crystal Maiden",
                 avatarUrl = "https://cdn.dota2.com/apps/dota2/images/heroes/crystal_maiden_full.png",
                 viewedByUser = false,
-                mainAttr = "Intelligence"
-            )
-        )
+                mainAttr = "Intelligence",
+            ),
+        ),
     )
 }

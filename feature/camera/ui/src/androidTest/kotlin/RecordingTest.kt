@@ -41,7 +41,7 @@ class RecordingTest {
         provider.bind(
             UseCaseGroup.Builder()
                 .addUseCase(usecase)
-                .build()
+                .build(),
         )
         recorder.startOnce()
         val file = recorder.state

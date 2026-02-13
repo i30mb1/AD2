@@ -20,59 +20,37 @@ import n7.ad2.feature.games.xo.domain.di.XoDomainDependencies
 object XoModule {
 
     @dagger.Provides
-    fun provideXiDomainComponent(
-        res: Resources,
-        dispatchers: DispatchersProvider,
-        appInformation: AppInformation,
-        application: Application,
-        logger: Logger,
-    ): XoDomainComponent = XoDomainComponent(
+    fun provideXiDomainComponent(res: Resources, dispatchers: DispatchersProvider, appInformation: AppInformation, application: Application, logger: Logger): XoDomainComponent = XoDomainComponent(
         object : XoDomainDependencies {
             override val application: Application = application
             override val logger = logger
             override val res: Resources = res
             override val dispatcher = dispatchers
             override val appInformation = appInformation
-        }
+        },
     )
 
     @dagger.Provides
-    fun provideServer(
-        component: XoDomainComponent,
-    ): ServerCreator = component.serverCreator
+    fun provideServer(component: XoDomainComponent): ServerCreator = component.serverCreator
 
     @dagger.Provides
-    fun provideClient(
-        component: XoDomainComponent,
-    ): ClientCreator = component.clientCreator
+    fun provideClient(component: XoDomainComponent): ClientCreator = component.clientCreator
 
     @dagger.Provides
-    fun provideGetNetworkStateUseCase(
-        component: XoDomainComponent,
-    ): GetNetworkStateUseCase = component.getNetworkStateUseCase
+    fun provideGetNetworkStateUseCase(component: XoDomainComponent): GetNetworkStateUseCase = component.getNetworkStateUseCase
 
     @dagger.Provides
-    fun provideConnectToWifiDirectUseCase(
-        component: XoDomainComponent,
-    ): ConnectToWifiDirectUseCase = component.connectToWifiDirectUseCase
+    fun provideConnectToWifiDirectUseCase(component: XoDomainComponent): ConnectToWifiDirectUseCase = component.connectToWifiDirectUseCase
 
     @dagger.Provides
-    fun provideGetDeviceNameUseCase(
-        component: XoDomainComponent,
-    ): GetDeviceNameUseCase = component.getDeviceNameUseCase
+    fun provideGetDeviceNameUseCase(component: XoDomainComponent): GetDeviceNameUseCase = component.getDeviceNameUseCase
 
     @dagger.Provides
-    fun provideRegisterServiceInNetworkUseCase(
-        component: XoDomainComponent,
-    ): RegisterServiceInNetworkUseCase = component.registerServerInDNSUseCase
+    fun provideRegisterServiceInNetworkUseCase(component: XoDomainComponent): RegisterServiceInNetworkUseCase = component.registerServerInDNSUseCase
 
     @dagger.Provides
-    fun provideDiscoverServicesInNetworkUseCase(
-        component: XoDomainComponent,
-    ): DiscoverServicesInNetworkUseCase = component.discoverServicesInNetworkUseCase
+    fun provideDiscoverServicesInNetworkUseCase(component: XoDomainComponent): DiscoverServicesInNetworkUseCase = component.discoverServicesInNetworkUseCase
 
     @dagger.Provides
-    fun provideDiscoverServicesInWifiDirectUseCase(
-        component: XoDomainComponent,
-    ): DiscoverServicesInWifiDirectUseCase = component.discoverServicesInWifiDirectUseCase
+    fun provideDiscoverServicesInWifiDirectUseCase(component: XoDomainComponent): DiscoverServicesInWifiDirectUseCase = component.discoverServicesInWifiDirectUseCase
 }

@@ -6,11 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 
-
-internal class MainMenuListAdapter(
-    private val layoutInflater: LayoutInflater,
-    itemListener: (menuItem: VOMenu) -> Unit,
-) : ListAdapter<VOMenu, MenuItemHolder>(DiffCallback()) {
+internal class MainMenuListAdapter(private val layoutInflater: LayoutInflater, itemListener: (menuItem: VOMenu) -> Unit) : ListAdapter<VOMenu, MenuItemHolder>(DiffCallback()) {
 
     private val itemListener: (menuItem: VOMenu) -> Unit = { menuItem -> itemListener(menuItem) }
 
@@ -22,5 +18,4 @@ internal class MainMenuListAdapter(
         override fun areItemsTheSame(oldItem: VOMenu, newItem: VOMenu) = oldItem.type == newItem.type
         override fun areContentsTheSame(oldItem: VOMenu, newItem: VOMenu) = oldItem.isSelected == newItem.isSelected
     }
-
 }

@@ -11,7 +11,6 @@ import org.jetbrains.kotlin.psi.KtCallExpression
 
 class UseLaunchSaveRule(config: Config) : Rule(config) {
 
-
     override val issue: Issue = Issue(
         id = "UseLaunchSave",
         description = "Must use a custom launch extension .launchSave { ... }",
@@ -31,11 +30,10 @@ class UseLaunchSaveRule(config: Config) : Rule(config) {
                     CodeSmell(
                         issue = issue,
                         entity = Entity.from(expression),
-                        message = "Use .launchSave instead of .launch for better error handling!"
-                    )
+                        message = "Use .launchSave instead of .launch for better error handling!",
+                    ),
                 )
             }
         }
     }
-
 }

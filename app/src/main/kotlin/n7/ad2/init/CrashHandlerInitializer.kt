@@ -1,10 +1,10 @@
 package n7.ad2.init
 
 import android.app.Application
-import java.io.PrintWriter
-import java.io.StringWriter
 import n7.ad2.AppInformation
 import n7.ad2.app.logger.Logger
+import java.io.PrintWriter
+import java.io.StringWriter
 
 class CrashHandlerInitializer : Initializer {
 
@@ -14,10 +14,7 @@ class CrashHandlerInitializer : Initializer {
         Thread.setDefaultUncaughtExceptionHandler(customEUH)
     }
 
-    private class CrashHandler(
-        private val defaultEUH: Thread.UncaughtExceptionHandler?,
-        private val logger: Logger,
-    ) : Thread.UncaughtExceptionHandler {
+    private class CrashHandler(private val defaultEUH: Thread.UncaughtExceptionHandler?, private val logger: Logger) : Thread.UncaughtExceptionHandler {
 
         override fun uncaughtException(thread: Thread, exception: Throwable) {
             val stackTrace = StringWriter()

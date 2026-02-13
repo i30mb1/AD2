@@ -26,18 +26,18 @@ private fun PerformanceChartsExample() {
             ResourceUsage(
                 cpu = ResourceUsage.Info(50, ResourceUsage.Status.GOOD),
                 ram = ResourceUsage.Info(70, ResourceUsage.Status.FAIR),
-                fps = ResourceUsage.Info(60, ResourceUsage.Status.VERY_GOOD)
+                fps = ResourceUsage.Info(60, ResourceUsage.Status.VERY_GOOD),
             ),
             ResourceUsage(
                 cpu = ResourceUsage.Info(30, ResourceUsage.Status.VERY_GOOD),
                 ram = ResourceUsage.Info(65, ResourceUsage.Status.GOOD),
-                fps = ResourceUsage.Info(58, ResourceUsage.Status.GOOD)
+                fps = ResourceUsage.Info(58, ResourceUsage.Status.GOOD),
             ),
             ResourceUsage(
                 cpu = ResourceUsage.Info(80, ResourceUsage.Status.POOR),
                 ram = ResourceUsage.Info(90, ResourceUsage.Status.VERY_BAD),
-                fps = ResourceUsage.Info(60, ResourceUsage.Status.EXCELLENT)
-            )
+                fps = ResourceUsage.Info(60, ResourceUsage.Status.EXCELLENT),
+            ),
         )
 
         val mockDispatcher = object : DispatchersProvider() {
@@ -55,7 +55,7 @@ private fun PerformanceChartsExample() {
                 chartsOwner = chartsOwner,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(16.dp)
+                    .padding(16.dp),
             )
         }
     }
@@ -69,7 +69,6 @@ private fun PerformanceChartsExample() {
 private fun ManualChartsExample() {
     AppTheme {
         Column(modifier = Modifier.padding(16.dp)) {
-
             // CPU Chart
             Chart(
                 state = ChartState(
@@ -77,16 +76,16 @@ private fun ManualChartsExample() {
                         ChartState.ChartValue(30, Color.Green),
                         ChartState.ChartValue(50, Color.Yellow),
                         ChartState.ChartValue(80, Color.Red),
-                        ChartState.ChartValue(40, Color.Green)
+                        ChartState.ChartValue(40, Color.Green),
                     ),
-                    maxValue = 100
+                    maxValue = 100,
                 ),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(120.dp),
                 lineColor = Color.Red,
                 textColor = Color.Black,
-                gridColor = Color.Gray.copy(alpha = 0.5f)
+                gridColor = Color.Gray.copy(alpha = 0.5f),
             )
         }
     }

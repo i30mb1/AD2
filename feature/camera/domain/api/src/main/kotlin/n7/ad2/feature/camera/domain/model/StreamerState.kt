@@ -12,8 +12,4 @@ class Image(
     val metadata: ImageMetadata,
 )
 
-data class ImageMetadata(
-    val width: Int,
-    val height: Int,
-    val isImageFlipped: Boolean,
-)
+data class ImageMetadata(val width: Int, val height: Int, val isImageFlipped: Boolean)

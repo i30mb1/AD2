@@ -2,10 +2,10 @@ package n7.ad2.database_guides
 
 import androidx.test.filters.LargeTest
 import com.google.common.truth.Truth
-import java.io.File
 import kotlinx.serialization.json.Json
 import org.junit.Ignore
 import org.junit.Test
+import java.io.File
 
 @LargeTest
 class HeroFileTest {
@@ -24,5 +24,4 @@ class HeroFileTest {
 
 //        Truth.assertThat(listAssetsHero.size).isGreaterThan(100)
     }
-
 }

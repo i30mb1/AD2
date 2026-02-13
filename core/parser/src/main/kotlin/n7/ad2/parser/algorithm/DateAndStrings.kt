@@ -15,7 +15,6 @@ object DateAndStrings {
 
     @JvmStatic
     fun main(args: Array<String>) {
-
         val unixTimeSystem = System.currentTimeMillis() / 1000
 
         // просто для хранения даты

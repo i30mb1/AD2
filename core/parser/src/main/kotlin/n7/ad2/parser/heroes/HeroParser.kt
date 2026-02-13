@@ -2,7 +2,6 @@
 
 package n7.ad2.parser.heroes
 
-import java.io.File
 import n7.ad2.parser.LocaleHeroes
 import n7.ad2.parser.assetsDatabase
 import n7.ad2.parser.assetsDatabaseHeroes
@@ -17,10 +16,11 @@ import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
 import org.jsoup.select.Elements
+import java.io.File
 
 // Configuration
-private const val TEST_MODE = true  // Set to false for full parsing
-private const val TEST_HERO_LIMIT = 3  // Only parse first N heroes in test mode
+private const val TEST_MODE = true // Set to false for full parsing
+private const val TEST_HERO_LIMIT = 3 // Only parse first N heroes in test mode
 
 fun main() {
     println("=== Dota 2 Hero Parser Started ===")
@@ -72,7 +72,6 @@ fun main() {
                 if (index < heroesToProcess.size - 1) {
                     Thread.sleep(if (TEST_MODE) 200 else 500)
                 }
-
             } catch (e: Exception) {
                 errorCount++
                 println("ERROR processing ${hero.name}: ${e.message}")
@@ -84,7 +83,6 @@ fun main() {
         println("Successfully parsed: $successCount heroes")
         println("Errors: $errorCount heroes")
         println("Total: ${heroes.size} heroes")
-
     } catch (e: Exception) {
         println("CRITICAL ERROR: ${e.message}")
         e.printStackTrace()
@@ -211,7 +209,7 @@ private fun getHeroes(): List<Hero> {
             "Strength" to "strength",
             "Agility" to "agility",
             "Intelligence" to "intelligence",
-            "Universal" to "universal"
+            "Universal" to "universal",
         )
 
         attributeSections.forEach { (attributeName, _) ->
@@ -220,7 +218,7 @@ private fun getHeroes(): List<Hero> {
                 val possibleSelectors = listOf(
                     "img[alt*='$attributeName heroes']",
                     "*:contains($attributeName) + * a[title]",
-                    "h2:contains($attributeName) ~ * a[title]"
+                    "h2:contains($attributeName) ~ * a[title]",
                 )
 
                 var heroElements: List<Element> = emptyList()
@@ -241,7 +239,6 @@ private fun getHeroes(): List<Hero> {
                         !heroName.contains("Heroes", ignoreCase = true) &&
                         heroName.length < 50
                     ) {
-
                         val href = element.attr("href")
                         val folderName = heroName.replace(" ", "_").lowercase()
                         result.add(Hero(heroName, folderName, attributeName, href))
@@ -249,7 +246,6 @@ private fun getHeroes(): List<Hero> {
                     }
                 }
                 println("Found $heroCount $attributeName heroes")
-
             } catch (e: Exception) {
                 println("WARNING: Error parsing $attributeName heroes: ${e.message}")
             }
@@ -270,9 +266,11 @@ private fun getHeroes(): List<Hero> {
 
             if (elements.isEmpty()) {
                 // Try alternative selector
-                elements.addAll(document.select("a[title]:has(img)").filter {
-                    it.attr("title").isNotEmpty() && !it.attr("title").contains("File:")
-                })
+                elements.addAll(
+                    document.select("a[title]:has(img)").filter {
+                        it.attr("title").isNotEmpty() && !it.attr("title").contains("File:")
+                    },
+                )
             }
 
             var heroMainAttribute = "Strength"
@@ -413,7 +411,7 @@ private fun loadHeroMinimap(root: Document, hero: Hero) {
         "img[alt*='${hero.name} minimap icon']",
         "img[alt*='minimap']",
         ".minimap img",
-        ".hero-minimap img"
+        ".hero-minimap img",
     )
 
     var heroMinimapUrl = ""
@@ -422,7 +420,7 @@ private fun loadHeroMinimap(root: Document, hero: Hero) {
         if (element != null) {
             heroMinimapUrl = element.attr("data-src").takeIf { it.isNotEmpty() }
                 ?: element.attr("src").takeIf { it.isNotEmpty() }
-                        ?: ""
+                ?: ""
             if (heroMinimapUrl.isNotEmpty()) break
         }
     }
@@ -441,7 +439,7 @@ private fun loadHeroImage(root: Document, hero: Hero) {
         ".portrait img",
         ".hero-image img",
         "img[alt*='${hero.name}']:not([alt*='minimap'])",
-        "img"
+        "img",
     )
 
     var heroImageUrl = ""
@@ -638,12 +636,14 @@ private fun JSONObject.loadAbilities(root: Document) {
 
         val infoBlock = spell.getElementsByAttributeValue("style", "display:inline-block; vertical-align:top; padding:3px 5px; border:1px solid rgba(0, 0, 0, 0);").getOrNull(0)
         val jsonParams = JSONArray()
-        if (infoBlock != null) for (block in infoBlock.children()) {
-            val style = block.attributes()["style"]
-            when (style) {
-                "font-size:98%;" -> {
-                    val result = getTextFromNodeFormatted(block)
-                    jsonParams.add(result)
+        if (infoBlock != null) {
+            for (block in infoBlock.children()) {
+                val style = block.attributes()["style"]
+                when (style) {
+                    "font-size:98%;" -> {
+                        val result = getTextFromNodeFormatted(block)
+                        jsonParams.add(result)
+                    }
                 }
             }
         }
@@ -651,7 +651,7 @@ private fun JSONObject.loadAbilities(root: Document) {
 
         // Check if this is an Innate ability
         val isInnate = spell.select("*:contains(Innate)").isNotEmpty() ||
-                name.contains("Innate", ignoreCase = true)
+            name.contains("Innate", ignoreCase = true)
         abilityObject["is_innate"] = isInnate
 
         // Legacy field for backwards compatibility
@@ -733,7 +733,6 @@ private fun JSONObject.loadBaseStats(root: Document) {
 
         val mana = root.select("tr:contains(Mana) td").text()
         baseStats["mana"] = mana
-
     } catch (e: Exception) {
         println("Error parsing base stats for hero: ${e.message}")
     }

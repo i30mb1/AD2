@@ -9,6 +9,6 @@ internal object NewsToNewsDBMapper : (News) -> NewsDB {
         title = from.title,
         urlImage = from.urlImage,
         loadedFromPage = from.loadedFromPage,
-        href = from.articleUrl
+        href = from.articleUrl,
     )
 }

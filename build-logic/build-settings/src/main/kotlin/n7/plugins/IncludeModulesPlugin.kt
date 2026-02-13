@@ -1,5 +1,7 @@
 package n7.plugins
 
+import org.gradle.api.Plugin
+import org.gradle.api.initialization.Settings
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStreamReader
@@ -7,8 +9,6 @@ import java.util.Properties
 import kotlin.system.measureTimeMillis
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.DurationUnit
-import org.gradle.api.Plugin
-import org.gradle.api.initialization.Settings
 
 class IncludeModulesPlugin : Plugin<Settings> {
 
@@ -31,7 +31,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
         }.milliseconds
         println("AD2: Included $count modules in ${time.toString(DurationUnit.SECONDS, 2)}")
     }
-    
+
     private fun Settings.includeSpecificModule(targetModule: String) {
         val count: Int
         val time = measureTimeMillis {
@@ -49,40 +49,35 @@ class IncludeModulesPlugin : Plugin<Settings> {
     private fun Settings.includeModuleWithDependencies(targetModule: String): Int {
         val allModules = getAllModules()
         val moduleByPath = allModules.associateBy { it.module }
-        
-        
+
         val targetModuleData = moduleByPath[targetModule]
         if (targetModuleData == null) {
             println("AD2: Target module '$targetModule' not found!")
             return 0
         }
-        
+
         val requiredModules = findAllDependencies(targetModuleData, moduleByPath, mutableSetOf())
         requiredModules.add(targetModuleData) // Добавляем сам целевой модуль
-        
+
         requiredModules.forEach { module ->
             include(module.module)
         }
-        
+
         return requiredModules.size
     }
-    
-    private fun findAllDependencies(
-        module: ModuleData,
-        allModules: Map<String, ModuleData>,
-        visited: MutableSet<String>
-    ): MutableSet<ModuleData> {
+
+    private fun findAllDependencies(module: ModuleData, allModules: Map<String, ModuleData>, visited: MutableSet<String>): MutableSet<ModuleData> {
         val dependencies = mutableSetOf<ModuleData>()
-        
+
         if (visited.contains(module.module)) {
             return dependencies
         }
-        
+
         visited.add(module.module)
-        
+
         // Извлекаем зависимости из build.gradle файла
         val moduleDependencies = extractDependenciesFromBuildFile(module.path)
-        
+
         moduleDependencies.forEach { depPath ->
             val depModule = allModules[depPath]
             if (depModule != null) {
@@ -90,61 +85,64 @@ class IncludeModulesPlugin : Plugin<Settings> {
                 dependencies.addAll(findAllDependencies(depModule, allModules, visited))
             }
         }
-        
+
         return dependencies
     }
-    
+
     private fun extractDependenciesFromBuildFile(moduleDir: File): List<String> {
         val buildFile = moduleDir.buildGradleFile()
         if (!buildFile.exists()) return emptyList()
-        
+
         val dependencies = mutableListOf<String>()
         val lines = buildFile.readLines()
-        
+
         lines.forEach { line ->
             val trimmedLine = line.trim()
-            
-            // Ищем строки с projects. 
-            if (trimmedLine.contains("(projects.") && 
-                (trimmedLine.contains("implementation") || 
-                 trimmedLine.contains("api") || 
-                 trimmedLine.contains("compileOnly") ||
+
+            // Ищем строки с projects.
+            if (trimmedLine.contains("(projects.") &&
+                (
+                    trimmedLine.contains("implementation") ||
+                        trimmedLine.contains("api") ||
+                        trimmedLine.contains("compileOnly") ||
                         trimmedLine.contains("runtimeOnly") ||
                         trimmedLine.contains("testImplementation") ||
-                        trimmedLine.contains("testFixtures"))
+                        trimmedLine.contains("testFixtures")
+                    )
             ) {
-                
                 val projectReference = extractProjectReference(trimmedLine)
                 if (projectReference.isNotEmpty()) {
                     dependencies.add(projectReference)
                 }
             }
-            
+
             // Ищем строки с project(...) для обычных зависимостей
-            if (trimmedLine.contains("project(\":") && 
-                (trimmedLine.contains("implementation") || 
-                 trimmedLine.contains("api") || 
-                 trimmedLine.contains("compileOnly") ||
-                 trimmedLine.contains("runtimeOnly") ||
+            if (trimmedLine.contains("project(\":") &&
+                (
+                    trimmedLine.contains("implementation") ||
+                        trimmedLine.contains("api") ||
+                        trimmedLine.contains("compileOnly") ||
+                        trimmedLine.contains("runtimeOnly") ||
                         trimmedLine.contains("testImplementation") ||
                         trimmedLine.contains("testFixtures") ||
-                 trimmedLine.contains("add("))) {
-                
+                        trimmedLine.contains("add(")
+                    )
+            ) {
                 val projectReference = extractDirectProjectReference(trimmedLine)
                 if (projectReference.isNotEmpty()) {
                     dependencies.add(projectReference)
                 }
             }
         }
-        
+
         // Для любого модуля, который использует convention плагины, добавляем core:rules
         if (lines.any { it.contains("convention.android") }) {
             dependencies.add(":core:rules")
         }
-        
+
         return dependencies.distinct()
     }
-    
+
     private fun extractDirectProjectReference(line: String): String {
         // Извлекаем ссылку на проект из строки типа "add("lintChecks", project(":core:rules"))"
         // или из testFixtures(projects.core.appPreference)
@@ -170,7 +168,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
 
         return ""
     }
-    
+
     private fun extractProjectReference(line: String): String {
         // Извлекаем ссылку на проект из строки типа "implementation(projects.core.commonAndroid)"
         val regex = Regex("projects\\.([a-zA-Z0-9_.]+)")
@@ -182,35 +180,29 @@ class IncludeModulesPlugin : Plugin<Settings> {
             ""
         }
     }
-    
-    private fun convertCamelCaseToKebabCase(input: String): String {
-        return input.split(":").joinToString(":") { segment ->
-            segment.replace(Regex("([a-z])([A-Z])"), "$1-$2").lowercase()
-        }
+
+    private fun convertCamelCaseToKebabCase(input: String): String = input.split(":").joinToString(":") { segment ->
+        segment.replace(Regex("([a-z])([A-Z])"), "$1-$2").lowercase()
     }
 
-    private fun Settings.getAllModules(): List<ModuleData> {
-        return rootDir.walk().maxDepth(5)
-            .onEnter { it.isSuitableFile() }
-            .filter { it.hasBuildGradleFile() && ignoreModules.contains(it.name).not() }
-            .map {
-                ModuleData(
-                    it.path.substringAfterLast("AD2").replace(File.separator, ":"),
-                    it,
-                    getProjects(it),
-                )
-            }.toList()
-    }
-
-    private fun getProjects(file: File): List<ModuleData> {
-        return file.buildGradleFile().readLines().filter {
-            it.contains("(projects.")
-        }.map {
+    private fun Settings.getAllModules(): List<ModuleData> = rootDir.walk().maxDepth(5)
+        .onEnter { it.isSuitableFile() }
+        .filter { it.hasBuildGradleFile() && ignoreModules.contains(it.name).not() }
+        .map {
             ModuleData(
-                ":" + it.substringAfter(".").dropLast(1).replace(".", ":").toSnakeCase(),
-                file,
+                it.path.substringAfterLast("AD2").replace(File.separator, ":"),
+                it,
+                getProjects(it),
             )
-        }
+        }.toList()
+
+    private fun getProjects(file: File): List<ModuleData> = file.buildGradleFile().readLines().filter {
+        it.contains("(projects.")
+    }.map {
+        ModuleData(
+            ":" + it.substringAfter(".").dropLast(1).replace(".", ":").toSnakeCase(),
+            file,
+        )
     }
 
     private fun File.buildGradleFile(): File {
@@ -229,7 +221,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
             return moduleFromProperty.trim().removeSurrounding("\"")
         }
 
-        // 2. Авто-определение по имени таска 
+        // 2. Авто-определение по имени таска
         val moduleFromTask = detectModuleFromTask(settings)
         if (moduleFromTask.isNotEmpty()) {
             return moduleFromTask
@@ -285,17 +277,9 @@ class IncludeModulesPlugin : Plugin<Settings> {
      */
     private fun String.toSnakeCase() = replace("(?<=.)(?=\\p{Upper})".toRegex(), "-").lowercase()
 
-    private fun File.hasBuildGradleFile(): Boolean {
-        return File(this, "build.gradle").isFile || File(this, "build.gradle.kts").isFile
-    }
+    private fun File.hasBuildGradleFile(): Boolean = File(this, "build.gradle").isFile || File(this, "build.gradle.kts").isFile
 
-    private fun File.isSuitableFile(): Boolean {
-        return name.startsWith(".").not() && isDirectory && isHidden.not() && dirsNamesWithoutModules.contains(name).not()
-    }
+    private fun File.isSuitableFile(): Boolean = name.startsWith(".").not() && isDirectory && isHidden.not() && dirsNamesWithoutModules.contains(name).not()
 
-    private data class ModuleData(
-        val module: String,
-        val path: File,
-        val includedModules: List<ModuleData> = emptyList(),
-    )
+    private data class ModuleData(val module: String, val path: File, val includedModules: List<ModuleData> = emptyList())
 }

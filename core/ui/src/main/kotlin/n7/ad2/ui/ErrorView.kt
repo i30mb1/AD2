@@ -9,10 +9,7 @@ import androidx.core.view.isVisible
 import n7.ad2.core.ui.databinding.ErrorBinding
 
 class
-ErrorView(
-    context: Context,
-    attributeSet: AttributeSet,
-) : LinearLayout(context, attributeSet) {
+ErrorView(context: Context, attributeSet: AttributeSet) : LinearLayout(context, attributeSet) {
 
     init {
         isVisible = false
@@ -26,5 +23,4 @@ ErrorView(
         binding.root.isVisible = text != null
         binding.tv.text = text
     }
-
 }

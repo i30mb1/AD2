@@ -8,10 +8,7 @@ import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.core.ui.databinding.ItemImageLineBinding
 
-class ImageLineViewHolder private constructor(
-    private val binding: ItemImageLineBinding,
-    private val showPopup: (view: View, text: String) -> Unit,
-) : RecyclerView.ViewHolder(binding.root) {
+class ImageLineViewHolder private constructor(private val binding: ItemImageLineBinding, private val showPopup: (view: View, text: String) -> Unit) : RecyclerView.ViewHolder(binding.root) {
 
     data class Data(val text: Spanned, @DrawableRes val drawable: Int)
 
@@ -24,14 +21,9 @@ class ImageLineViewHolder private constructor(
     fun clear() = Unit
 
     companion object {
-        fun from(
-            layoutInflater: LayoutInflater,
-            parent: ViewGroup,
-            showPopup: (view: View, text: String) -> Unit,
-        ): ImageLineViewHolder {
+        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, showPopup: (view: View, text: String) -> Unit): ImageLineViewHolder {
             val binding = ItemImageLineBinding.inflate(layoutInflater, parent, false)
             return ImageLineViewHolder(binding, showPopup)
         }
     }
-
 }

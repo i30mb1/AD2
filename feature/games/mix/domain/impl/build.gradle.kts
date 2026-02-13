@@ -12,5 +12,4 @@ dependencies {
     implementation(projects.core.coroutines)
 
     implementation(libs.coroutines)
-
 }

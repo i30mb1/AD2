@@ -8,21 +8,19 @@ import android.graphics.Canvas
 import androidx.core.graphics.blue
 import androidx.core.graphics.green
 import androidx.core.graphics.red
-import java.nio.Buffer
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
-import java.nio.FloatBuffer
-import kotlin.math.roundToInt
 import n7.ad2.feature.camera.domain.Processor
 import n7.ad2.feature.camera.domain.model.DetectedFaceNormalized
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ProcessorState
 import org.tensorflow.lite.Interpreter
+import java.nio.Buffer
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
+import java.nio.FloatBuffer
+import kotlin.math.roundToInt
 
 @Suppress("MagicNumber")
-class ProcessorBlazeFace(
-    application: Application,
-) : Processor {
+class ProcessorBlazeFace(application: Application) : Processor {
 
     private val interpreter: Interpreter = GetMLModelChannel(application).get()
     private val outputScores = FloatArray(100)
@@ -78,11 +76,7 @@ class ProcessorBlazeFace(
         return ProcessorState(image, normalizedFaces.firstOrNull())
     }
 
-    private fun convertCoordinates(
-        faceRect: DetectedFaceNormalized,
-        originalHeight: Int,
-        originalWeight: Int,
-    ): DetectedFaceNormalized {
+    private fun convertCoordinates(faceRect: DetectedFaceNormalized, originalHeight: Int, originalWeight: Int): DetectedFaceNormalized {
         val absoluteFace = faceRect.map { x, y -> x * INPUT_WIDTH to y * INPUT_HEIGHT }
         return DetectedFaceNormalized(
             (absoluteFace.xMin - padX / 2) / originalWeight,
@@ -134,9 +128,7 @@ class ProcessorBlazeFace(
         buffer.put(normalizedPixels)
     }
 
-    private fun normalizeValue(value: Int, mean: Float, std: Float): Float {
-        return (value - mean) / std
-    }
+    private fun normalizeValue(value: Int, mean: Float, std: Float): Float = (value - mean) / std
 
     companion object {
         const val INPUT_WIDTH = 128

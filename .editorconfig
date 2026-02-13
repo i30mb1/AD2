@@ -9,7 +9,11 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.{kt,kts}]
-max_line_length = 140
+max_line_length = 200
+ktlint_standard_property-naming = disabled
+ktlint_standard_backing-property-naming = disabled
+ktlint_standard_function-naming = disabled
+ktlint_standard_package-name = disabled
 
 [*.md]
 trim_trailing_whitespace = false

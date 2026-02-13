@@ -33,9 +33,7 @@ interface XoDomainComponent {
     val discoverServicesInWifiDirectUseCase: DiscoverServicesInWifiDirectUseCase
 }
 
-fun XoDomainComponent(
-    dependencies: XoDomainDependencies,
-): XoDomainComponent = object : XoDomainComponent {
+fun XoDomainComponent(dependencies: XoDomainDependencies): XoDomainComponent = object : XoDomainComponent {
     private val manager: NsdManager = dependencies.application.getSystemService(NsdManager::class.java)!!
     private val wifiP2pManager: WifiP2pManager = dependencies.application.getSystemService(WifiP2pManager::class.java)!!
     private val managerChannel: WifiP2pManager.Channel = wifiP2pManager.initialize(dependencies.application, Looper.getMainLooper(), null)

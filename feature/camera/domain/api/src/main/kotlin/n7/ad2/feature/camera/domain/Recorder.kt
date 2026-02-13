@@ -1,8 +1,8 @@
 package n7.ad2.feature.camera.domain
 
+import kotlinx.coroutines.flow.Flow
 import java.io.File
 import kotlin.time.Duration
-import kotlinx.coroutines.flow.Flow
 
 interface Recorder {
     val state: Flow<RecorderState>

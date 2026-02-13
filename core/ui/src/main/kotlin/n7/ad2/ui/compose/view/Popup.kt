@@ -38,11 +38,7 @@ import androidx.compose.ui.window.PopupProperties
 import kotlin.math.roundToInt
 
 @Composable
-fun TooltipPopup(
-    modifier: Modifier = Modifier,
-    requesterView: @Composable (Modifier) -> Unit,
-    tooltipContent: @Composable () -> Unit,
-) {
+fun TooltipPopup(modifier: Modifier = Modifier, requesterView: @Composable (Modifier) -> Unit, tooltipContent: @Composable () -> Unit) {
     var isShowTooltip by remember { mutableStateOf(false) }
     var position by remember { mutableStateOf(TooltipPopupPosition()) }
 
@@ -65,20 +61,12 @@ fun TooltipPopup(
             }
             .onGloballyPositioned { coordinates ->
                 position = calculateTooltipPopupPosition(view, coordinates)
-            }
+            },
     )
 }
 
 @Composable
-fun TooltipPopup(
-    position: TooltipPopupPosition,
-    backgroundShape: Shape = MaterialTheme.shapes.medium,
-    backgroundColor: Color = Color.Black,
-    arrowHeight: Dp = 4.dp,
-    horizontalPadding: Dp = 16.dp,
-    onDismissRequest: (() -> Unit)? = null,
-    content: @Composable () -> Unit,
-) {
+fun TooltipPopup(position: TooltipPopupPosition, backgroundShape: Shape = MaterialTheme.shapes.medium, backgroundColor: Color = Color.Black, arrowHeight: Dp = 4.dp, horizontalPadding: Dp = 16.dp, onDismissRequest: (() -> Unit)? = null, content: @Composable () -> Unit) {
     var alignment = Alignment.TopCenter
     var offset = position.offset
 
@@ -95,14 +83,14 @@ fun TooltipPopup(
             TooltipAlignment.TopCenter -> {
                 alignment = Alignment.TopCenter
                 offset = offset.copy(
-                    y = position.offset.y + arrowPaddingPx
+                    y = position.offset.y + arrowPaddingPx,
                 )
             }
 
             TooltipAlignment.BottomCenter -> {
                 alignment = Alignment.BottomCenter
                 offset = offset.copy(
-                    y = position.offset.y - arrowPaddingPx
+                    y = position.offset.y - arrowPaddingPx,
                 )
             }
         }
@@ -140,33 +128,22 @@ fun TooltipPopup(
     }
 }
 
-internal class TooltipAlignmentOffsetPositionProvider(
-    val alignment: Alignment,
-    val offset: IntOffset,
-    val centerPositionX: Float,
-    val horizontalPaddingInPx: Float,
-    private val onArrowPositionX: (Float) -> Unit,
-) : PopupPositionProvider {
+internal class TooltipAlignmentOffsetPositionProvider(val alignment: Alignment, val offset: IntOffset, val centerPositionX: Float, val horizontalPaddingInPx: Float, private val onArrowPositionX: (Float) -> Unit) : PopupPositionProvider {
 
-    override fun calculatePosition(
-        anchorBounds: IntRect,
-        windowSize: IntSize,
-        layoutDirection: LayoutDirection,
-        popupContentSize: IntSize,
-    ): IntOffset {
+    override fun calculatePosition(anchorBounds: IntRect, windowSize: IntSize, layoutDirection: LayoutDirection, popupContentSize: IntSize): IntOffset {
         var popupPosition = IntOffset(0, 0)
 
         // Get the aligned point inside the parent
         val parentAlignmentPoint = alignment.align(
             IntSize.Zero,
             IntSize(anchorBounds.width, anchorBounds.height),
-            layoutDirection
+            layoutDirection,
         )
         // Get the aligned point inside the child
         val relativePopupPos = alignment.align(
             IntSize.Zero,
             IntSize(popupContentSize.width, popupContentSize.height),
-            layoutDirection
+            layoutDirection,
         )
 
         // Add the position of the parent
@@ -181,7 +158,7 @@ internal class TooltipAlignmentOffsetPositionProvider(
         // Add the user offset
         val resolvedOffset = IntOffset(
             offset.x * (if (layoutDirection == LayoutDirection.Ltr) 1 else -1),
-            offset.y
+            offset.y,
         )
 
         popupPosition += resolvedOffset
@@ -235,14 +212,7 @@ internal class TooltipAlignmentOffsetPositionProvider(
 }
 
 @Composable
-fun BubbleLayout(
-    modifier: Modifier = Modifier,
-    alignment: TooltipAlignment = TooltipAlignment.TopCenter,
-    arrowHeight: Dp,
-    arrowPositionX: Float,
-    content: @Composable () -> Unit,
-) {
-
+fun BubbleLayout(modifier: Modifier = Modifier, alignment: TooltipAlignment = TooltipAlignment.TopCenter, arrowHeight: Dp, arrowPositionX: Float, content: @Composable () -> Unit) {
     val arrowHeightPx = with(LocalDensity.current) {
         arrowHeight.toPx()
     }
@@ -282,23 +252,15 @@ fun BubbleLayout(
                     color = Color.Black,
                 )
                 path.close()
-            }
+            },
     ) {
         content()
     }
 }
 
-data class TooltipPopupPosition(
-    val offset: IntOffset = IntOffset(0, 0),
-    val alignment: TooltipAlignment = TooltipAlignment.TopCenter,
+data class TooltipPopupPosition(val offset: IntOffset = IntOffset(0, 0), val alignment: TooltipAlignment = TooltipAlignment.TopCenter, val centerPositionX: Float = 0f)
 
-    val centerPositionX: Float = 0f,
-)
-
-fun calculateTooltipPopupPosition(
-    view: View,
-    coordinates: LayoutCoordinates?,
-): TooltipPopupPosition {
+fun calculateTooltipPopupPosition(view: View, coordinates: LayoutCoordinates?): TooltipPopupPosition {
     coordinates ?: return TooltipPopupPosition()
 
     val visibleWindowBounds = android.graphics.Rect()
@@ -316,7 +278,7 @@ fun calculateTooltipPopupPosition(
     return if (heightAbove < heightBelow) {
         val offset = IntOffset(
             y = coordinates.size.height,
-            x = offsetX.toInt()
+            x = offsetX.toInt(),
         )
         TooltipPopupPosition(
             offset = offset,
@@ -327,7 +289,7 @@ fun calculateTooltipPopupPosition(
         TooltipPopupPosition(
             offset = IntOffset(
                 y = -coordinates.size.height,
-                x = offsetX.toInt()
+                x = offsetX.toInt(),
             ),
             alignment = TooltipAlignment.BottomCenter,
             centerPositionX = centerPositionX,
@@ -343,7 +305,8 @@ enum class TooltipAlignment {
 fun Modifier.noRippleClickable(onClick: () -> Unit): Modifier = composed {
     clickable(
         indication = null,
-        interactionSource = remember { MutableInteractionSource() }) {
+        interactionSource = remember { MutableInteractionSource() },
+    ) {
         onClick()
     }
 }

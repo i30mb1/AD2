@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.util.UnstableApi
 import androidx.recyclerview.widget.LinearLayoutManager
-import javax.inject.Inject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.android.findDependencies
@@ -25,6 +24,7 @@ import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.mediaplayer.AudioExoPlayer
 import n7.ad2.ui.InfoPopupWindow
+import javax.inject.Inject
 
 @UnstableApi
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
@@ -127,6 +127,4 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
             itemInfoAdapter.submitList(list)
         }
     }
-
-
 }
