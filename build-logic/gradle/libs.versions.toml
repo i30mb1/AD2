@@ -5,16 +5,17 @@ coroutines = "1.10.2"
 dagger = "2.57"
 workManager = "2.9.1"
 lifecycle = "2.8.7"
-androidGradlePlugin = "8.6.1"
-lint = "31.6.1" # androidGradlePlugin + 23
-kotlin = "2.0.21"
-ksp = "2.0.21-1.0.25"
+androidGradlePlugin = "9.0.0"
+lint = "32.0.0" # androidGradlePlugin + 23
+kotlin = "2.1.20"
+ksp = "2.1.20-1.0.32"
 compose = "1.7.6"
 media3 = "1.5.0"
 detekt = "1.23.7"
+spotless = "7.0.2"
 cameraX = "1.5.0-alpha02"
 kotlinDL = "0.5.2"
-benchmark = "1.4.0"
+benchmark = "1.4.0-alpha06"
 fragment = "1.8.5"
 litert = "1.0.1"
 
@@ -35,6 +36,7 @@ litert-support = { group = "com.google.ai.edge.litert", name = "litert-support",
 litert-metadata = { group = "com.google.ai.edge.litert", name = "litert-metadata", version.ref = "litert" }
 
 kotlin-power-assert = { module = "org.jetbrains.kotlin.plugin.power-assert:org.jetbrains.kotlin.plugin.power-assert.gradle.plugin", version.ref = "kotlin" }
+spotlessPlugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
 detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 detektApi = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "detekt" }
 detektCli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "detekt" }

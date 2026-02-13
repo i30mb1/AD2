@@ -1,0 +1,23 @@
+{
+    "permissions": {
+        "allow": [
+            "WebSearch",
+            "Bash(./gradlew :build-logic:measure-build-time:compileKotlin:*)",
+            "Bash(./gradlew compileKotlin:*)",
+            "Bash(gradlew.bat compileKotlin:*)",
+            "Bash(./gradlew help:*)",
+            "Bash(./gradlew app:assembleDebug:*)",
+            "Bash(./gradlew clean:*)",
+            "WebFetch(domain:github.com)",
+            "Bash(./gradlew:*)",
+            "Bash(findstr:*)",
+            "Bash(dir:*)",
+            "Bash(gh run list:*)",
+            "Bash(.\\\\gradlew detektAll:*)",
+            "Bash(.\\\\gradlew.bat detektAll:*)",
+            "Bash(./gradlew.bat:*)"
+        ],
+        "deny": [],
+        "ask": []
+    }
+}

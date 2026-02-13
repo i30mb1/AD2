@@ -1,39 +1,65 @@
-import com.android.build.gradle.BaseExtension
+import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.api.dsl.LibraryExtension
 
-plugins {
-    kotlin("android")
-}
-
-configure<BaseExtension> {
-    compileSdkVersion(35)
-
-    buildFeatures.viewBinding = true
-
-    defaultConfig {
-        minSdk = 31
-        targetSdk = 35
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
+pluginManager.withPlugin("com.android.application") {
+    extensions.configure(ApplicationExtension::class.java) {
+        compileSdk = 35
+        buildFeatures {
+            viewBinding = true
+        }
+        defaultConfig {
+            minSdk = 31
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        }
+        compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_17
+            targetCompatibility = JavaVersion.VERSION_17
+        }
+        testOptions {
+            unitTests {
+                isIncludeAndroidResources = true
+            }
+        }
+        lint {
+            disable += setOf(
+                "CoroutineCreationDuringComposition",
+                "RestrictedApi",
+                "UnknownNullness"
+            )
+            abortOnError = false
+            warningsAsErrors = false
         }
     }
+}
 
-    lintOptions {
-        disable(
-            "CoroutineCreationDuringComposition", // Disable problematic Compose lint detector
-            "RestrictedApi",
-            "UnknownNullness"
-        )
-        isAbortOnError = false
-        isWarningsAsErrors = false
+pluginManager.withPlugin("com.android.library") {
+    extensions.configure(LibraryExtension::class.java) {
+        compileSdk = 35
+        buildFeatures {
+            viewBinding = true
+        }
+        defaultConfig {
+            minSdk = 31
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        }
+        compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_17
+            targetCompatibility = JavaVersion.VERSION_17
+        }
+        testOptions {
+            unitTests {
+                isIncludeAndroidResources = true
+            }
+        }
+        lint {
+            disable += setOf(
+                "CoroutineCreationDuringComposition",
+                "RestrictedApi",
+                "UnknownNullness"
+            )
+            abortOnError = false
+            warningsAsErrors = false
+        }
     }
 }
 

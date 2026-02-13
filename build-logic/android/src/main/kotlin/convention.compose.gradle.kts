@@ -1,14 +1,27 @@
 @file:Suppress("UnstableApiUsage")
 
-import com.android.build.gradle.BaseExtension
+import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.api.dsl.LibraryExtension
 import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
 
 plugins {
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
-configure<BaseExtension> {
-    buildFeatures.compose = true
+pluginManager.withPlugin("com.android.application") {
+    extensions.configure(ApplicationExtension::class.java) {
+        buildFeatures {
+            compose = true
+        }
+    }
+}
+
+pluginManager.withPlugin("com.android.library") {
+    extensions.configure(LibraryExtension::class.java) {
+        buildFeatures {
+            compose = true
+        }
+    }
 }
 
 configure<ComposeCompilerGradlePluginExtension> {

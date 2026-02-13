@@ -8,7 +8,7 @@ kover {
         // Configure total project coverage reports
         total {
             html {
-                onCheck = false
+                onCheck = true
             }
 
             xml {

@@ -13,7 +13,7 @@ import org.gradle.api.initialization.Settings
 class IncludeModulesPlugin : Plugin<Settings> {
 
     private val dirsNamesWithoutModules = listOf("build-logic", "build")
-    private val ignoreModules = listOf("AD2")
+    private val ignoreModules = listOf("AD2", "micro-benchmark", "macro-benchmark")
 
     override fun apply(target: Settings) = with(target) {
         val targetModule = readTargetModule(rootDir, target)

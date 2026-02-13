@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.spotlessPlugin)
     implementation(libs.detektPlugin)
     implementation(libs.detektApi)
     implementation(libs.detektCli)

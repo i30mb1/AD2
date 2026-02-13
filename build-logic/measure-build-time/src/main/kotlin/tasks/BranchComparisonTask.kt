@@ -6,7 +6,9 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
+import org.gradle.process.ExecOperations
 
 /**
  * Advanced branch comparison task using gradle-profiler.
@@ -21,6 +23,10 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
 
     @get:Input
     abstract val extension: Property<BranchComparisonExtension>
+
+    @get:Inject
+    @get:Internal
+    abstract val execOperations: ExecOperations
 
     @TaskAction
     fun execute() {
@@ -198,7 +204,7 @@ abstract class BranchComparisonTask @Inject constructor() : DefaultTask() {
             val currentBranch = getCurrentBranch()
             if (currentBranch != originalBranch) {
                 println("🔄 Returning to original branch: $originalBranch")
-                project.exec {
+                execOperations.exec {
                     commandLine("git", "checkout", originalBranch)
                 }
                 println("✅ Successfully returned to branch: $originalBranch")

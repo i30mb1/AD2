@@ -68,6 +68,13 @@ jobs:
           name: AD2-prod-debug.apk
           path: app/build/outputs/apk/debug/*.apk
 
+      - name: Upload Kover Coverage Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kover-coverage-report
+          path: '**/build/reports/kover/html/**'
+
   measure:
     if: false
     runs-on: windows-2022

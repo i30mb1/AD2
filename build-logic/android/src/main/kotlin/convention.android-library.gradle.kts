@@ -1,5 +1,3 @@
-import com.android.build.gradle.LibraryExtension
-
 plugins {
     id("com.android.library")
     id("convention.android-base")
@@ -20,9 +18,6 @@ android {
     packaging {
         resources.excludes.add("META-INF/*")
     }
-}
-
-configure<LibraryExtension> {
     buildTypes {
         getByName("debug") {
             matchingFallbacks.add("release")

@@ -6,17 +6,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Essential Commands
 
-- For eaach gradle task modify property "module" in local.properties for task if that task in specific module
-- **Build the project**: `./gradlew build`
-- **Run tests**: `./gradlew test`
-- **Run Android tests**: `./gradlew connectedAndroidTest`
-- **Lint check**: `./gradlew lint` (Android lint configured with `abortOnError = true`)
-- **Clean build**: `./gradlew clean`
-- **Build APK**: `./gradlew assembleRelease` or `./gradlew assembleDebug`
+- Set `ROOT_MODULE` in `local.properties` to target a specific module (e.g., `ROOT_MODULE=feature:heroes`)
+- **Build the project**: `.\gradlew build`
+- **Run tests**: `.\gradlew test`
+- **Run Android tests**: `.\gradlew connectedAndroidTest`
+- **Lint check**: `.\gradlew lint` (Android lint configured with `abortOnError = true`)
+- **Clean build**: `.\gradlew clean`
+- **Build APK**: `.\gradlew assembleRelease` or `.\gradlew assembleDebug`
 
 ### Development Workflow
 
-- **Run single test class**: `./gradlew test --tests ClassName`
+- **Run single test class**: `.\gradlew test --tests ClassName`
 - **Build with profiling**: Uses custom `measure-build-plugin` for build time analysis
 - **Detekt static analysis**: Available via `convention.detekt` plugin (currently commented out)
 
@@ -56,11 +56,11 @@ This is a **multi-module Android application** following **Clean Architecture** 
 ### Technology Stack
 
 - **Language**: Kotlin with Coroutines
-- **DI**: Dagger 2 (using kapt)
+- **DI**: Dagger 2 (using KSP2)
 - **UI**: Jetpack Compose + traditional Views
 - **Database**: Room with Paging 3
 - **Networking**: Retrofit + OkHttp
-- **Build**: Gradle with Kotlin DSL and custom build-logic plugins
+- **Build**: Gradle with Kotlin DSL, AGP 9, Kotlin 2.1.20, and custom build-logic plugins
 
 ### Build Logic
 

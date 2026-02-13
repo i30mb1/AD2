@@ -11,7 +11,7 @@ class BumpVersionPlugin : Plugin<Project> {
             this
         )
         tasks.register("bumpVersion", BumpVersionTask::class) {
-            isEnabled.set(extension.isEnabled)
+            bumpEnabled.set(extension.isEnabled)
             group = "n7"
             inputFile.set(file("version.properties"))
             outPutFile.set(file("version.properties"))

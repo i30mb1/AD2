@@ -10,7 +10,7 @@ val detektAll = tasks.register<Detekt>("detektAll") {
     parallel = true
 
     allRules = false
-    ignoreFailures = true
+    ignoreFailures = false
     setSource(files(projectDir))
 
     config.setFrom(getResource("config.yml"))
