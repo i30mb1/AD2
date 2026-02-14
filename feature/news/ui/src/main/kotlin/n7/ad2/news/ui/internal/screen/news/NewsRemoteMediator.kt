@@ -16,7 +16,8 @@ import n7.ad2.items.domain.usecase.GetNewsUseCase
 import javax.inject.Inject
 
 @OptIn(ExperimentalPagingApi::class)
-internal class NewsRemoteMediator @Inject constructor(private val database: AppDatabase, private val preference: Preference, private val logger: Logger, private val getNewsUseCase: GetNewsUseCase) : RemoteMediator<Int, NewsDB>() {
+internal class NewsRemoteMediator @Inject constructor(private val database: AppDatabase, private val preference: Preference, private val logger: Logger, private val getNewsUseCase: GetNewsUseCase) :
+    RemoteMediator<Int, NewsDB>() {
 
     override suspend fun initialize(): InitializeAction {
         val needToUpdateNews = preference.isNeedToUpdateNews()

@@ -62,7 +62,17 @@ fun Chart(state: ChartState, modifier: Modifier = Modifier, lineColor: Color = C
     }
 }
 
-private fun DrawScope.drawChart(state: ChartState, lineColor: Color, gridColor: Color, startOffsetPx: Float, textOffsetPx: Float, lineWidthPx: Float, gridWidthPx: Float, textStyle: TextStyle, textMeasurer: TextMeasurer) {
+private fun DrawScope.drawChart(
+    state: ChartState,
+    lineColor: Color,
+    gridColor: Color,
+    startOffsetPx: Float,
+    textOffsetPx: Float,
+    lineWidthPx: Float,
+    gridWidthPx: Float,
+    textStyle: TextStyle,
+    textMeasurer: TextMeasurer,
+) {
     // Calculate drawing area
     val chartWidth = size.width - startOffsetPx
     val chartHeight = size.height

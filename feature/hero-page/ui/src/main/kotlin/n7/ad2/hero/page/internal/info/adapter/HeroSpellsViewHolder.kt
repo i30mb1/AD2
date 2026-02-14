@@ -17,7 +17,12 @@ class HeroSpellsViewHolder private constructor(binding: ItemHeroSpellsBinding, p
     fun clear() = Unit
 
     companion object {
-        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, onSpellClickListener: (spell: VOSpell.Simple) -> Unit, onTalentClickListener: (spell: VOSpell.Talent) -> Unit): HeroSpellsViewHolder {
+        fun from(
+            layoutInflater: LayoutInflater,
+            parent: ViewGroup,
+            onSpellClickListener: (spell: VOSpell.Simple) -> Unit,
+            onTalentClickListener: (spell: VOSpell.Talent) -> Unit,
+        ): HeroSpellsViewHolder {
             val binding = ItemHeroSpellsBinding.inflate(layoutInflater, parent, false)
             val linearLayoutManager = LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)
             val spellsListAdapter = SpellsListAdapter(layoutInflater, onSpellClickListener, onTalentClickListener)

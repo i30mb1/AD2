@@ -12,7 +12,11 @@ import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.repositories.ResponseRepository
 import javax.inject.Inject
 
-class GetHeroResponsesInteractor @Inject constructor(private val convertLocalHeroToVOResponseUseCase: ConvertLocalHeroToVOResponseUseCase, private val repository: ResponseRepository, private val dispatchers: DispatchersProvider) {
+class GetHeroResponsesInteractor @Inject constructor(
+    private val convertLocalHeroToVOResponseUseCase: ConvertLocalHeroToVOResponseUseCase,
+    private val repository: ResponseRepository,
+    private val dispatchers: DispatchersProvider,
+) {
 
     operator fun invoke(heroName: String, appLocale: AppLocale): Flow<List<VOResponse>> = flow {
         val json = repository.getHeroResponses(heroName, appLocale)

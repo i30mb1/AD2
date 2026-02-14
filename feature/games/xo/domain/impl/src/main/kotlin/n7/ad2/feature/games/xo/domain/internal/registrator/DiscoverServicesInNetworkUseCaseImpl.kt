@@ -13,7 +13,12 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.model.Server
 
-internal class DiscoverServicesInNetworkUseCaseImpl(private val manager: NsdManager, private val commonSettings: CommonSettings, private val getInfoAboutServerUseCase: GetInfoAboutServerUseCase, private val logger: Logger) : DiscoverServicesInNetworkUseCase {
+internal class DiscoverServicesInNetworkUseCaseImpl(
+    private val manager: NsdManager,
+    private val commonSettings: CommonSettings,
+    private val getInfoAboutServerUseCase: GetInfoAboutServerUseCase,
+    private val logger: Logger,
+) : DiscoverServicesInNetworkUseCase {
 
     private val dispatcher = newSingleThreadContext("Discovery Server")
 

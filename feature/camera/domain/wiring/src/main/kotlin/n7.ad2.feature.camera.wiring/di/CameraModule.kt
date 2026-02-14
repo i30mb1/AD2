@@ -46,7 +46,17 @@ interface CameraModule {
 
         @dagger.Provides
         @dagger.Reusable
-        fun provideController(previewer: Previewer, processor: Processor, streamer: Streamer, recorder: Recorder, cameraProvider: CameraProvider, lifecycleOwner: CameraLifecycle, dispatcher: DispatchersProvider, logger: Logger, fpsTimer: FPSTimer): Controller = Controller(
+        fun provideController(
+            previewer: Previewer,
+            processor: Processor,
+            streamer: Streamer,
+            recorder: Recorder,
+            cameraProvider: CameraProvider,
+            lifecycleOwner: CameraLifecycle,
+            dispatcher: DispatchersProvider,
+            logger: Logger,
+            fpsTimer: FPSTimer,
+        ): Controller = Controller(
             previewer,
             processor,
             recorder,
@@ -59,7 +69,8 @@ interface CameraModule {
 
         @dagger.Provides
         @Singleton
-        fun provideCameraProvider(application: Application, cameraSettings: CameraSettings, lifecycleOwner: CameraLifecycle, logger: Logger): CameraProvider = CameraProvider(application, cameraSettings, lifecycleOwner, logger)
+        fun provideCameraProvider(application: Application, cameraSettings: CameraSettings, lifecycleOwner: CameraLifecycle, logger: Logger): CameraProvider =
+            CameraProvider(application, cameraSettings, lifecycleOwner, logger)
 
         @dagger.Provides
         @Singleton
@@ -67,7 +78,8 @@ interface CameraModule {
 
         @dagger.Provides
         @Singleton
-        fun provideRecorder(context: Application, logger: Logger, dispatcher: DispatchersProvider, lifecycleOwner: CameraLifecycle): Recorder = RecorderCameraX(context, logger, dispatcher, lifecycleOwner.lifecycleScope)
+        fun provideRecorder(context: Application, logger: Logger, dispatcher: DispatchersProvider, lifecycleOwner: CameraLifecycle): Recorder =
+            RecorderCameraX(context, logger, dispatcher, lifecycleOwner.lifecycleScope)
 
         @dagger.Provides
         @Singleton

@@ -17,7 +17,12 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.hero.page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 
-class HeroInfoViewModel @AssistedInject constructor(private val appInformation: AppInformation, private val getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase, private val logger: Logger, @Assisted private val heroName: String) : ViewModel() {
+class HeroInfoViewModel @AssistedInject constructor(
+    private val appInformation: AppInformation,
+    private val getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase,
+    private val logger: Logger,
+    @Assisted private val heroName: String,
+) : ViewModel() {
 
     @AssistedFactory
     interface Factory {

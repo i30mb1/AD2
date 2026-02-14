@@ -18,7 +18,13 @@ import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.feature.drawer.R
 import javax.inject.Inject
 
-internal class GetMenuItemsUseCase @Inject constructor(private val res: Resources, private val preference: Preference, private val settingsApi: SettingsApi, private val logger: Logger, private val dispatchers: DispatchersProvider) {
+internal class GetMenuItemsUseCase @Inject constructor(
+    private val res: Resources,
+    private val preference: Preference,
+    private val settingsApi: SettingsApi,
+    private val logger: Logger,
+    private val dispatchers: DispatchersProvider,
+) {
 
     private val defaultMenu = listOf(
         Menu(VOMenuType.HEROES),

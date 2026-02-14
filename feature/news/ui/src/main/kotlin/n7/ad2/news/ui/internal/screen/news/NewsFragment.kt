@@ -33,7 +33,9 @@ internal class NewsFragment(override var dependenciesMap: DependenciesMap) :
         DaggerNewsComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content { NewsScreen(viewModel, parentFragment as DrawerPercentListener, ::onNewsClicked) }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        NewsScreen(viewModel, parentFragment as DrawerPercentListener, ::onNewsClicked)
+    }
 
     private fun onNewsClicked(newsID: Int) {
         getMainFragmentNavigator?.setMainFragment(ArticleFragment.getInstance(newsID)) {

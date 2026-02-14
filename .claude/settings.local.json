@@ -16,7 +16,9 @@
       "Bash(.\\\\gradlew detektAll:*)",
       "Bash(.\\\\gradlew.bat detektAll:*)",
       "Bash(./gradlew.bat:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

@@ -18,8 +18,11 @@ import n7.ad2.android.ErrorMessage
 import n7.ad2.hero.page.internal.responses.domain.interactor.GetHeroResponsesInteractor
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 
-class ResponsesViewModel @AssistedInject constructor(@Assisted private val heroName: String, private val appInformation: AppInformation, private val getHeroResponsesInteractor: GetHeroResponsesInteractor) :
-    ViewModel(),
+class ResponsesViewModel @AssistedInject constructor(
+    @Assisted private val heroName: String,
+    private val appInformation: AppInformation,
+    private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
+) : ViewModel(),
     ErrorMessage by AD2ErrorMessage() {
 
     @AssistedFactory

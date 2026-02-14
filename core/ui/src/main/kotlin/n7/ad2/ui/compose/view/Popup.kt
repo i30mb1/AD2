@@ -66,7 +66,15 @@ fun TooltipPopup(modifier: Modifier = Modifier, requesterView: @Composable (Modi
 }
 
 @Composable
-fun TooltipPopup(position: TooltipPopupPosition, backgroundShape: Shape = MaterialTheme.shapes.medium, backgroundColor: Color = Color.Black, arrowHeight: Dp = 4.dp, horizontalPadding: Dp = 16.dp, onDismissRequest: (() -> Unit)? = null, content: @Composable () -> Unit) {
+fun TooltipPopup(
+    position: TooltipPopupPosition,
+    backgroundShape: Shape = MaterialTheme.shapes.medium,
+    backgroundColor: Color = Color.Black,
+    arrowHeight: Dp = 4.dp,
+    horizontalPadding: Dp = 16.dp,
+    onDismissRequest: (() -> Unit)? = null,
+    content: @Composable () -> Unit,
+) {
     var alignment = Alignment.TopCenter
     var offset = position.offset
 
@@ -128,7 +136,13 @@ fun TooltipPopup(position: TooltipPopupPosition, backgroundShape: Shape = Materi
     }
 }
 
-internal class TooltipAlignmentOffsetPositionProvider(val alignment: Alignment, val offset: IntOffset, val centerPositionX: Float, val horizontalPaddingInPx: Float, private val onArrowPositionX: (Float) -> Unit) : PopupPositionProvider {
+internal class TooltipAlignmentOffsetPositionProvider(
+    val alignment: Alignment,
+    val offset: IntOffset,
+    val centerPositionX: Float,
+    val horizontalPaddingInPx: Float,
+    private val onArrowPositionX: (Float) -> Unit,
+) : PopupPositionProvider {
 
     override fun calculatePosition(anchorBounds: IntRect, windowSize: IntSize, layoutDirection: LayoutDirection, popupContentSize: IntSize): IntOffset {
         var popupPosition = IntOffset(0, 0)

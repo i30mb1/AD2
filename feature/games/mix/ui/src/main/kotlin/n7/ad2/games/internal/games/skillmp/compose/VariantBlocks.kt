@@ -24,7 +24,13 @@ import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.ui.compose.AppTheme
 
 @Composable
-internal fun VariantBlocks(spellList: SkillGameViewModel.SpellList, showRightAnswer: Boolean, selectedSpell: SkillGameViewModel.Spell?, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit, modifier: Modifier = Modifier) {
+internal fun VariantBlocks(
+    spellList: SkillGameViewModel.SpellList,
+    showRightAnswer: Boolean,
+    selectedSpell: SkillGameViewModel.Spell?,
+    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
+    modifier: Modifier = Modifier,
+) {
     Row(modifier) {
         for (spell in spellList.list) {
             Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick)

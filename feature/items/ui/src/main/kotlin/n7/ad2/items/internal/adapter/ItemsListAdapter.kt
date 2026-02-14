@@ -10,7 +10,8 @@ import n7.ad2.feature.items.ui.R
 import n7.ad2.items.internal.model.ItemUI
 import n7.ad2.ui.adapter.HeaderViewHolder
 
-internal class ItemsListAdapter(private val layoutInflater: LayoutInflater, private val itemClickListener: (hero: ItemUI.Body, view: ImageView) -> Unit) : ListAdapter<ItemUI, RecyclerView.ViewHolder>(DiffCallback()) {
+internal class ItemsListAdapter(private val layoutInflater: LayoutInflater, private val itemClickListener: (hero: ItemUI.Body, view: ImageView) -> Unit) :
+    ListAdapter<ItemUI, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         n7.ad2.core.ui.R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)

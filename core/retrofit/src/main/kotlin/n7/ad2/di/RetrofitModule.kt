@@ -40,7 +40,11 @@ interface RetrofitModule {
 
         @dagger.Provides
         @dagger.Reusable
-        fun provideBaseOkHttpClientBuilder(@InternalApi httpLoggingInterceptor: HttpLoggingInterceptor, @InternalApi interceptors: Set<@JvmSuppressWildcards Interceptor>, appInformation: AppInformation): OkHttpClient.Builder {
+        fun provideBaseOkHttpClientBuilder(
+            @InternalApi httpLoggingInterceptor: HttpLoggingInterceptor,
+            @InternalApi interceptors: Set<@JvmSuppressWildcards Interceptor>,
+            appInformation: AppInformation,
+        ): OkHttpClient.Builder {
 //        https://www.droidcon.com/2019/08/07/dagger-party-tricks/
             require(Thread.currentThread().name != "main") { "init should not be on main thread" }
             val builder = OkHttpClient.Builder()

@@ -11,7 +11,13 @@ interface PerformanceExtractor {
     suspend fun release()
 }
 
-internal class PerformanceExtractorImpl(private val context: Context, private val infoMapper: UsageInfoMapper, private val cpuExtractor: CPUExtractor, private val ramExtractor: RAMExtractor, private val fpsExtractor: FpsExtractor) : PerformanceExtractor {
+internal class PerformanceExtractorImpl(
+    private val context: Context,
+    private val infoMapper: UsageInfoMapper,
+    private val cpuExtractor: CPUExtractor,
+    private val ramExtractor: RAMExtractor,
+    private val fpsExtractor: FpsExtractor,
+) : PerformanceExtractor {
 
     private val maxFps by lazyUnsafe {
         context.display!!.refreshRate.toInt()

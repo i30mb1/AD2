@@ -1,6 +1,12 @@
 package n7.ad2.heroes.domain.model
 
-data class HeroDescription(val abilities: List<Ability> = listOf(), val description: String = "", val history: String = "", val mainAttributes: MainAttribute = MainAttribute(), val trivia: List<String>? = null)
+data class HeroDescription(
+    val abilities: List<Ability> = listOf(),
+    val description: String = "",
+    val history: String = "",
+    val mainAttributes: MainAttribute = MainAttribute(),
+    val trivia: List<String>? = null,
+)
 
 data class Ability(
     val imageUrl: String,
@@ -19,6 +25,13 @@ data class Ability(
     val talents: List<Talent>? = null,
 )
 
-data class MainAttribute(val attrAgility: Double = 0.0, val attrAgilityInc: Double = 0.0, val attrIntelligence: Double = 0.0, val attrIntelligenceInc: Double = 0.0, val attrStrength: Double = 0.0, val attrStrengthInc: Double = 0.0)
+data class MainAttribute(
+    val attrAgility: Double = 0.0,
+    val attrAgilityInc: Double = 0.0,
+    val attrIntelligence: Double = 0.0,
+    val attrIntelligenceInc: Double = 0.0,
+    val attrStrength: Double = 0.0,
+    val attrStrengthInc: Double = 0.0,
+)
 
 data class Talent(val talentLeft: String = "", val talentLvl: String = "", val talentRight: String = "")

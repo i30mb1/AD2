@@ -286,8 +286,13 @@ class WidgetContainerView @JvmOverloads constructor(context: Context, attrs: Att
     }
 }
 
-class WindowTouchListener(private val view: View, private val windowManager: WindowManager, private val layoutParams: LayoutParams, private val onDoubleTap: () -> Unit, private val onTap: () -> Unit) :
-    SimpleOnGestureListener(),
+class WindowTouchListener(
+    private val view: View,
+    private val windowManager: WindowManager,
+    private val layoutParams: LayoutParams,
+    private val onDoubleTap: () -> Unit,
+    private val onTap: () -> Unit,
+) : SimpleOnGestureListener(),
     View.OnTouchListener {
 
     private val gestureDetector = GestureDetectorCompat(view.context, this)

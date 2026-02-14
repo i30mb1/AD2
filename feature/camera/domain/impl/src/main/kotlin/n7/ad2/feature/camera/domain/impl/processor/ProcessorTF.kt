@@ -113,7 +113,12 @@ public class MyTF(private val getMLModel: GetMLModel, private val getInput: Inpu
     private class DetectedFace(val rect: DetectedRectF, val score: Float)
 
     /** Лицо в нормированных координатах */
-    private data class DetectedRectF(@FloatRange(from = 0.0, to = 1.0) val xMin: Float, @FloatRange(from = 0.0, to = 1.0) val xMax: Float, @FloatRange(from = 0.0, to = 1.0) val yMin: Float, @FloatRange(from = 0.0, to = 1.0) val yMax: Float) {
+    private data class DetectedRectF(
+        @FloatRange(from = 0.0, to = 1.0) val xMin: Float,
+        @FloatRange(from = 0.0, to = 1.0) val xMax: Float,
+        @FloatRange(from = 0.0, to = 1.0) val yMin: Float,
+        @FloatRange(from = 0.0, to = 1.0) val yMax: Float,
+    ) {
         val area = (xMax - xMin) * (yMax - yMin)
     }
 }

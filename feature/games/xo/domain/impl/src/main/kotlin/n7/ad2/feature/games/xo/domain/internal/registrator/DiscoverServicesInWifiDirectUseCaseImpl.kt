@@ -26,7 +26,12 @@ import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.model.Server
 import n7.ad2.feature.games.xo.domain.model.WifiDirectServer
 
-internal class DiscoverServicesInWifiDirectUseCaseImpl(private val context: Context, private val wifiP2pManager: WifiP2pManager, private val wifiP2pManagerChannel: WifiP2pManager.Channel, private val logger: Logger) : DiscoverServicesInWifiDirectUseCase {
+internal class DiscoverServicesInWifiDirectUseCaseImpl(
+    private val context: Context,
+    private val wifiP2pManager: WifiP2pManager,
+    private val wifiP2pManagerChannel: WifiP2pManager.Channel,
+    private val logger: Logger,
+) : DiscoverServicesInWifiDirectUseCase {
 
     data class WifiDirectState(val isEnabled: Boolean = false, val devices: List<WifiP2pDevice> = emptyList())
 

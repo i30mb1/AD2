@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.feature.hero.page.ui.databinding.ItemHeroHeaderPlayableBinding
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 
-class HeroHeaderPlayableViewHolder(private val binding: ItemHeroHeaderPlayableBinding, private val onPlayIconClick: (soundUrl: String) -> Unit, private val onKeyClickListener: (key: String) -> Unit) : RecyclerView.ViewHolder(binding.root) {
+class HeroHeaderPlayableViewHolder(private val binding: ItemHeroHeaderPlayableBinding, private val onPlayIconClick: (soundUrl: String) -> Unit, private val onKeyClickListener: (key: String) -> Unit) :
+    RecyclerView.ViewHolder(binding.root) {
 
     fun bind(data: VOHeroInfo.HeaderSound) {
         binding.tvTitle.text = data.title

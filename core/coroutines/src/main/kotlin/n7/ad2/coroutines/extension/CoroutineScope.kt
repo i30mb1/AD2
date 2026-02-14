@@ -14,7 +14,12 @@ import kotlin.coroutines.EmptyCoroutineContext
  * @param onError callback that receive error wrapped in Exception to get detailed information about where exception arrised
  * @param onComplete callback called when coroutines job complete
  */
-inline fun CoroutineScope.launchSave(context: CoroutineContext = EmptyCoroutineContext, crossinline onComplete: () -> Unit = { }, crossinline onError: (Throwable) -> Unit, crossinline block: suspend () -> Unit): Job {
+inline fun CoroutineScope.launchSave(
+    context: CoroutineContext = EmptyCoroutineContext,
+    crossinline onComplete: () -> Unit = { },
+    crossinline onError: (Throwable) -> Unit,
+    crossinline block: suspend () -> Unit,
+): Job {
     val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         onError(Exception(throwable))
     }

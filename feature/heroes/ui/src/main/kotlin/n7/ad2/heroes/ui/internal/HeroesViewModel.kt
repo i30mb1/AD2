@@ -19,7 +19,11 @@ import n7.ad2.heroes.ui.internal.domain.usecase.GetVOHeroesListUseCase
 import n7.ad2.heroes.ui.internal.domain.vo.VOHero
 import javax.inject.Provider
 
-internal class HeroesViewModel @AssistedInject constructor(private val getVOHeroesListUseCase: GetVOHeroesListUseCase, private val filterHeroesUseCase: Provider<FilterHeroesUseCase>, private val updateStateViewedForHeroUseCase: Provider<UpdateStateViewedForHeroUseCase>) : ViewModel() {
+internal class HeroesViewModel @AssistedInject constructor(
+    private val getVOHeroesListUseCase: GetVOHeroesListUseCase,
+    private val filterHeroesUseCase: Provider<FilterHeroesUseCase>,
+    private val updateStateViewedForHeroUseCase: Provider<UpdateStateViewedForHeroUseCase>,
+) : ViewModel() {
 
     @AssistedFactory
     interface Factory {

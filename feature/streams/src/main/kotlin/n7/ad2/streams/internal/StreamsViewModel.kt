@@ -17,7 +17,8 @@ import n7.ad2.streams.internal.domain.ConvertStreamToVOStreamUseCase
 import n7.ad2.streams.internal.domain.vo.VOStream
 import javax.inject.Provider
 
-internal class StreamsViewModel @AssistedInject constructor(private val streamPagingSource: Provider<StreamPagingSource>, private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase) : ViewModel() {
+internal class StreamsViewModel @AssistedInject constructor(private val streamPagingSource: Provider<StreamPagingSource>, private val convertStreamToVOStreamUseCase: ConvertStreamToVOStreamUseCase) :
+    ViewModel() {
 
     @AssistedFactory
     interface Factory {

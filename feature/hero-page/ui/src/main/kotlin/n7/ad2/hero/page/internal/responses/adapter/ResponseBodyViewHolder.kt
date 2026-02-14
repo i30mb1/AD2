@@ -10,7 +10,12 @@ import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.feature.hero.page.ui.databinding.ItemResponseBodyBinding
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 
-class ResponseBodyViewHolder private constructor(private val binding: ItemResponseBodyBinding, private val showDialogResponse: (VOResponse.Body) -> Unit, private val playSound: (VOResponse.Body) -> Unit, private val imagesAdapter: ResponsesImagesAdapter) : RecyclerView.ViewHolder(binding.root) {
+class ResponseBodyViewHolder private constructor(
+    private val binding: ItemResponseBodyBinding,
+    private val showDialogResponse: (VOResponse.Body) -> Unit,
+    private val playSound: (VOResponse.Body) -> Unit,
+    private val imagesAdapter: ResponsesImagesAdapter,
+) : RecyclerView.ViewHolder(binding.root) {
 
     private var lastItem: VOResponse.Body? = null
 
@@ -49,7 +54,13 @@ class ResponseBodyViewHolder private constructor(private val binding: ItemRespon
             setMaxRecycledViews(R.layout.item_response_image, MAX_VIEWS_RESPONSE_IMAGE)
         }
 
-        fun from(layoutInflater: LayoutInflater, parent: ViewGroup, showDialogResponse: (VOResponse.Body) -> Unit, playSound: (VOResponse.Body) -> Unit, showPopup: () -> Unit): ResponseBodyViewHolder {
+        fun from(
+            layoutInflater: LayoutInflater,
+            parent: ViewGroup,
+            showDialogResponse: (VOResponse.Body) -> Unit,
+            playSound: (VOResponse.Body) -> Unit,
+            showPopup: () -> Unit,
+        ): ResponseBodyViewHolder {
             val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false)
             val imagesAdapter = ResponsesImagesAdapter(layoutInflater, showPopup)
             val gridLayoutManager = GridLayoutManager(parent.context, MAX_ICONS_IN_ROW).apply {

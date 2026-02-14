@@ -8,6 +8,7 @@ pluginManagement {
 
 plugins {
     id("n7.plugins.settings")
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-include(":feature:games:xo:cli-test")
+// include(":feature:games:xo:cli-test")

@@ -12,7 +12,8 @@ import n7.ad2.ui.adapter.BodyViewHolder
 import n7.ad2.ui.adapter.HeaderPlayableViewHolder
 import n7.ad2.ui.adapter.ImageLineViewHolder
 
-class ItemInfoAdapter(private val layoutInflater: LayoutInflater, private val onPlayIconClick: (soundUrl: String) -> Unit, private val showPopup: (view: View, text: String) -> Unit) : ListAdapter<VOItemInfo, RecyclerView.ViewHolder>(DiffCallback()) {
+class ItemInfoAdapter(private val layoutInflater: LayoutInflater, private val onPlayIconClick: (soundUrl: String) -> Unit, private val showPopup: (view: View, text: String) -> Unit) :
+    ListAdapter<VOItemInfo, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun getItemViewType(position: Int): Int = when (val item = getItem(position)) {
         is VOItemInfo.Title -> n7.ad2.core.ui.R.layout.item_header_playable
