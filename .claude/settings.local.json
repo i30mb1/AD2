@@ -18,7 +18,10 @@
       "Bash(./gradlew.bat:*)",
       "Bash(git checkout:*)",
       "Bash(git commit:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(java -version:*)",
+      "Bash(taskkill:*)"
     ],
     "deny": [],
     "ask": []
