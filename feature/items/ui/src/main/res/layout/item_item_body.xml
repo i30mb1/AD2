@@ -7,7 +7,7 @@
     tools:layout_height="112dp"
     tools:layout_width="160dp">
 
-    <n7.ad2.ui.SelectableImageView
+    <n7.ad2.core.ui.SelectableImageView
         android:id="@+id/iv_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

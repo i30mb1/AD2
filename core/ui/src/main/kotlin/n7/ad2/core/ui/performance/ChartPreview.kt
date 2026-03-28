@@ -1,4 +1,4 @@
-package n7.ad2.ui.performance
+package n7.ad2.core.ui.performance
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

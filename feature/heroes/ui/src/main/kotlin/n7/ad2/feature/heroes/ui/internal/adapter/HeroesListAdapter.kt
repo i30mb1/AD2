@@ -1,4 +1,4 @@
-package n7.ad2.heroes.ui.internal.adapter
+package n7.ad2.feature.heroes.ui.internal.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.feature.heroes.ui.R
-import n7.ad2.heroes.ui.internal.domain.vo.VOHero
+import n7.ad2.feature.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ui.adapter.HeaderViewHolder
 
-internal class HeroesListAdapter(private val layoutInflater: LayoutInflater, onHeroClick: (hero: VOHero.Body) -> Unit) : ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
+internal class HeroesListAdapter(private val layoutInflater: LayoutInflater, onHeroClick: (hero: VOHero.Body) -> Unit) : androidx.recyclerview.widget.ListAdapter<VOHero, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener { view ->
         val hero = view.getTag(n7.ad2.core.ui.R.id.ViewHolderModel) as VOHero.Body

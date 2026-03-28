@@ -1,4 +1,4 @@
-package n7.ad2.ui.frameCounter
+package n7.ad2.core.ui.frameCounter
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
@@ -42,16 +42,16 @@ import n7.ad2.core.ui.databinding.WidgetInfoBinding
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.dpToPx
 import n7.ad2.ktx.lazyUnsafe
-import n7.ad2.ui.performance.ChartsOwner
-import n7.ad2.ui.performance.PollerImpl
-import n7.ad2.ui.performance.ResourceUsage
+import n7.ad2.core.ui.performance.ChartsOwner
+import n7.ad2.core.ui.performance.PollerImpl
+import n7.ad2.core.ui.performance.ResourceUsage
 
 class WindowOverlay(private val context: Context, private val lifecycle: Lifecycle, private val dispatcher: DispatchersProvider, private val scope: CoroutineScope) : DefaultLifecycleObserver {
 
     private val windowManager by lazyUnsafe { context.getSystemService<WindowManager>()!! }
-    private var viewOwner: ViewOwner? = null
+    private var viewOwner: n7.ad2.core.ui.frameCounter.ViewOwner? = null
     private var _onDoubleTapListener: (() -> Unit)? = null
-    private val poller = PollerImpl(context, lifecycle)
+    private val poller = _root_ide_package_.n7.ad2.core.ui.performance.PollerImpl(context, lifecycle)
 
     init {
         setEnable(true)
@@ -65,7 +65,7 @@ class WindowOverlay(private val context: Context, private val lifecycle: Lifecyc
             if (!requestPermission()) {
                 return false
             }
-            val viewOwner = ViewOwner(
+            val viewOwner = _root_ide_package_.n7.ad2.core.ui.frameCounter.ViewOwner(
                 scope,
                 context,
                 windowManager,
@@ -93,7 +93,7 @@ class WindowOverlay(private val context: Context, private val lifecycle: Lifecyc
         viewOwner?.animate(false)
     }
 
-    private suspend fun render(resourceUsage: List<ResourceUsage>) {
+    private suspend fun render(resourceUsage: List<n7.ad2.core.ui.performance.ResourceUsage>) {
         viewOwner?.render(resourceUsage)
     }
 
@@ -111,7 +111,7 @@ class WindowOverlay(private val context: Context, private val lifecycle: Lifecyc
 }
 
 class PanelInfoMapper {
-    fun map(usage: ResourceUsage): InfoPanelView.State = with(usage) {
+    fun map(usage: n7.ad2.core.ui.performance.ResourceUsage): InfoPanelView.State = with(usage) {
         InfoPanelView.State(
             cpuColor = cpu.status.toColor(),
             cpuValue = cpu.value,

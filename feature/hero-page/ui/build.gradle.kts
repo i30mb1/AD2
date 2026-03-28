@@ -4,6 +4,12 @@ plugins {
     id("n7.plugins.kotlin-ksp")
 }
 
+android {
+    buildFeatures {
+        dataBinding = false
+    }
+}
+
 dependencies {
     implementation(libs.workManager)
     implementation(libs.jsoup)
@@ -18,6 +24,7 @@ dependencies {
     implementation(projects.core.navigator)
     implementation(projects.core.spanParser)
     implementation(projects.core.mediaPlayer)
+    implementation(projects.core.ui)
 
     implementation(projects.feature.heroes.domain.api)
     implementation(projects.feature.heroPage.domain.api)

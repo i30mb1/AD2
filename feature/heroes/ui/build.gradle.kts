@@ -1,5 +1,6 @@
 plugins {
     id("convention.android-library")
+    id("convention.compose")
     id("n7.plugins.kotlin-ksp")
 }
 
@@ -9,6 +10,7 @@ dependencies {
     implementation(projects.core.coroutines)
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.navigator)
+    implementation(projects.core.ui)
 
     implementation(projects.feature.heroes.domain.api)
 

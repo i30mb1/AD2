@@ -10,6 +10,7 @@ dependencies {
     implementation(projects.core.repositories)
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.navigator)
+    implementation(projects.core.ui)
 
     implementation(projects.feature.items.domain.api)
 

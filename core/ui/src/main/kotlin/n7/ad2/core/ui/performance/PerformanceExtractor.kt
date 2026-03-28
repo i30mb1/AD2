@@ -1,4 +1,4 @@
-package n7.ad2.ui.performance
+package n7.ad2.core.ui.performance
 
 import android.content.Context
 import kotlinx.coroutines.Deferred

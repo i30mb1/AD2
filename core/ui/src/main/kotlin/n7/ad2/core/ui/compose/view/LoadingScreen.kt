@@ -1,4 +1,4 @@
-package n7.ad2.ui.compose.view
+package n7.ad2.core.ui.compose.view
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
@@ -21,7 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 
 @Preview
 @Composable
@@ -30,12 +30,12 @@ fun LoadingScreen() {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize(),
     ) {
-        LoadingAnimation()
+        _root_ide_package_.n7.ad2.core.ui.compose.view.LoadingAnimation()
     }
 }
 
 @Composable
-fun LoadingAnimation(circleColor: Color = AppTheme.color.primary, animationDelay: Int = 3000) {
+fun LoadingAnimation(circleColor: Color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.primary, animationDelay: Int = 3000) {
     val circles = listOf(
         remember { Animatable(initialValue = 0f) },
         remember { Animatable(initialValue = 0f) },

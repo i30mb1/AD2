@@ -1,4 +1,4 @@
-package n7.ad2.ui.compose
+package n7.ad2.core.ui.compose
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -13,7 +13,7 @@ data class AppColor(
     val backgroundMyServer: Color = Color(0xFF8BC34A),
 )
 
-val appColorLight = AppColor(
+val appColorLight = _root_ide_package_.n7.ad2.core.ui.compose.AppColor(
     primary = Color(0xFF448AFF),
     background = Color(0xFF202225),
     surface = Color(0xFF2F3136),
@@ -22,7 +22,7 @@ val appColorLight = AppColor(
     error = Color(0xFFFF0000),
 )
 
-val appColorDark = AppColor(
+val appColorDark = _root_ide_package_.n7.ad2.core.ui.compose.AppColor(
     primary = Color(0xFFF44336),
     background = Color(0xFF202225),
     surface = Color(0xFF2F3136),
@@ -31,4 +31,4 @@ val appColorDark = AppColor(
     error = Color(0xF0FF0000),
 )
 
-val LocalAppColor = staticCompositionLocalOf { appColorLight }
+val LocalAppColor = staticCompositionLocalOf { _root_ide_package_.n7.ad2.core.ui.compose.appColorLight }

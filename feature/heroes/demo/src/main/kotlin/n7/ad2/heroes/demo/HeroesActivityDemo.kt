@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.commitNow
-import n7.ad2.heroes.ui.api.HeroesFragmentFactory
-import n7.ad2.heroes.ui.api.HeroesProvider
+import n7.ad2.feature.heroes.ui.api.HeroesFragmentFactory
+import n7.ad2.feature.heroes.ui.api.HeroesProvider
 
 internal class HeroesActivityDemo(private val fragmentFactory: HeroesFragmentFactory) : FragmentActivity() {
 

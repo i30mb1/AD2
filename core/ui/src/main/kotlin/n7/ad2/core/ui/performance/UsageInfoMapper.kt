@@ -1,4 +1,4 @@
-package n7.ad2.ui.performance
+package n7.ad2.core.ui.performance
 
 /**
  * Преобразовывает значение в обьект с уровнем качества

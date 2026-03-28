@@ -6,59 +6,61 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
+import org.junit.Assume.assumeTrue
 import org.junit.BeforeClass
 import org.junit.Test
 import java.io.File
 
+/**
+ * Offline unit tests for HeroParser.
+ *
+ * Requires HTML fixtures in core/parser/src/test/resources/:
+ *   - heroes_list.html  (https://dota2.fandom.com/wiki/Heroes)
+ *   - pudge.html        (https://dota2.fandom.com/wiki/Pudge)
+ *
+ * Save each page via your browser ("Save as → Webpage, Complete" or just the HTML source).
+ * If fixtures are missing all tests are skipped (not failed).
+ */
 class HeroParserOfflineTest {
 
     companion object {
-        private lateinit var heroesDoc: Document
-        private lateinit var pudgeDoc: Document
+        private var heroesDoc: Document? = null
+        private var pudgeDoc: Document? = null
+        private var fixturesLoaded = false
 
         @JvmStatic
         @BeforeClass
         fun setup() {
-            heroesDoc = loadFixture(
-                filename = "heroes_list.html",
-                url = "https://dota2.fandom.com/wiki/Heroes",
-            )
-            pudgeDoc = loadFixture(
-                filename = "pudge.html",
-                url = "https://dota2.fandom.com/wiki/Pudge",
-            )
+            heroesDoc = tryLoadFixture("heroes_list.html")
+            pudgeDoc = tryLoadFixture("pudge.html")
+            fixturesLoaded = heroesDoc != null && pudgeDoc != null
+            if (!fixturesLoaded) {
+                println(
+                    "\nSKIPPING offline tests — fixtures not found.\n" +
+                        "To enable: save the wiki pages to core/parser/src/test/resources/\n" +
+                        "  heroes_list.html → https://dota2.fandom.com/wiki/Heroes\n" +
+                        "  pudge.html       → https://dota2.fandom.com/wiki/Pudge\n",
+                )
+            }
         }
 
-        /**
-         * Loads an HTML fixture from disk if it exists, otherwise downloads it via Jsoup
-         * and caches it for offline use on subsequent runs.
-         *
-         * To manually populate fixtures (e.g. if Cloudflare blocks the download),
-         * save the page HTML to core/parser/src/test/resources/<filename> using a browser.
-         */
-        private fun loadFixture(filename: String, url: String): Document {
+        private fun tryLoadFixture(filename: String): Document? {
             val file = File("src/test/resources/$filename")
             if (file.exists() && file.length() > 10_000) {
                 return Jsoup.parse(file, "UTF-8")
             }
-            println("Downloading fixture $filename from $url ...")
-            val doc = Jsoup.connect(url)
-                .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36")
-                .header("Accept-Language", "en-US,en;q=0.9")
-                .timeout(30_000)
-                .get()
-            file.parentFile.mkdirs()
-            file.writeText(doc.outerHtml())
-            println("Saved ${file.length()} bytes to ${file.path}")
-            return doc
+            return null
         }
     }
+
+    private fun requireFixtures() = assumeTrue("HTML fixtures not present — skipping", fixturesLoaded)
 
     // ===== Heroes List Tests =====
 
     @Test
     fun `heroes list has all four attribute groups`() {
-        val heroes = parseHeroesList(heroesDoc)
+        requireFixtures()
+        val heroes = parseHeroesList(heroesDoc!!)
         assertTrue("No Strength heroes", heroes.any { it.mainAttribute == "Strength" })
         assertTrue("No Agility heroes", heroes.any { it.mainAttribute == "Agility" })
         assertTrue("No Intelligence heroes", heroes.any { it.mainAttribute == "Intelligence" })
@@ -67,13 +69,15 @@ class HeroParserOfflineTest {
 
     @Test
     fun `heroes list has at least 100 heroes`() {
-        val heroes = parseHeroesList(heroesDoc)
+        requireFixtures()
+        val heroes = parseHeroesList(heroesDoc!!)
         assertTrue("Got ${heroes.size} heroes", heroes.size >= 100)
     }
 
     @Test
     fun `hero names have no Category or File prefixes`() {
-        parseHeroesList(heroesDoc).forEach { hero ->
+        requireFixtures()
+        parseHeroesList(heroesDoc!!).forEach { hero ->
             assertFalse("Category: in name: ${hero.name}", hero.name.contains("Category:"))
             assertFalse("File: in name: ${hero.name}", hero.name.contains("File:"))
         }
@@ -83,7 +87,8 @@ class HeroParserOfflineTest {
 
     @Test
     fun `pudge basic info`() {
-        val info = parseBasicInfo(pudgeDoc, "Strength")
+        requireFixtures()
+        val info = parseBasicInfo(pudgeDoc!!, "Strength")
         assertEquals("Strength", info.mainAttribute)
         assertEquals("Melee", info.attackType)
         assertTrue("Roles empty", info.roles.isNotEmpty())
@@ -94,7 +99,8 @@ class HeroParserOfflineTest {
 
     @Test
     fun `pudge description not empty`() {
-        val desc = parseDescription(pudgeDoc)
+        requireFixtures()
+        val desc = parseDescription(pudgeDoc!!)
         assertTrue("Description too short: '$desc'", desc.length > 20)
     }
 
@@ -102,7 +108,8 @@ class HeroParserOfflineTest {
 
     @Test
     fun `pudge main attributes positive`() {
-        val a = parseMainAttributes(pudgeDoc)
+        requireFixtures()
+        val a = parseMainAttributes(pudgeDoc!!)
         assertTrue("Strength: ${a.attrStrength}", a.attrStrength > 0)
         assertTrue("StrengthInc: ${a.attrStrengthInc}", a.attrStrengthInc > 0)
         assertTrue("Agility: ${a.attrAgility}", a.attrAgility > 0)
@@ -113,9 +120,9 @@ class HeroParserOfflineTest {
 
     @Test
     fun `pudge base stats`() {
-        val s = parseBaseStats(pudgeDoc)
+        requireFixtures()
+        val s = parseBaseStats(pudgeDoc!!)
         assertTrue("Movement speed: ${s.movementSpeed}", s.movementSpeed > 0)
-        // Pudge has negative armor at base; just check it was parsed (not default 0.0 from empty)
         assertTrue("Damage empty", s.damage.isNotEmpty())
     }
 
@@ -123,14 +130,15 @@ class HeroParserOfflineTest {
 
     @Test
     fun `pudge has at least 5 abilities`() {
-        val abilities = parseAbilities(pudgeDoc)
-        // Pudge: Meat Hook, Rot, Flesh Heap, Eject, Dismember
+        requireFixtures()
+        val abilities = parseAbilities(pudgeDoc!!)
         assertTrue("Got ${abilities.size} abilities", abilities.size >= 5)
     }
 
     @Test
     fun `all pudge abilities have valid names`() {
-        parseAbilities(pudgeDoc).forEach { a ->
+        requireFixtures()
+        parseAbilities(pudgeDoc!!).forEach { a ->
             assertTrue("Empty name", a.name.isNotEmpty())
             assertFalse("HTML in name: ${a.name}", a.name.startsWith("<"))
         }
@@ -138,14 +146,16 @@ class HeroParserOfflineTest {
 
     @Test
     fun `pudge meat hook has effects`() {
-        val hook = parseAbilities(pudgeDoc).firstOrNull { it.name == "Meat Hook" }
+        requireFixtures()
+        val hook = parseAbilities(pudgeDoc!!).firstOrNull { it.name == "Meat Hook" }
         assertNotNull("Meat Hook not found", hook)
         assertTrue("No effects", hook!!.effects.isNotEmpty())
     }
 
     @Test
     fun `pudge has aghanim scepter upgrade on at least one ability`() {
-        val abilities = parseAbilities(pudgeDoc)
+        requireFixtures()
+        val abilities = parseAbilities(pudgeDoc!!)
         val withScepter = abilities.filter { it.aghanimScepter != null }
         assertTrue("No ability has Aghanim Scepter upgrade", withScepter.isNotEmpty())
     }
@@ -154,7 +164,8 @@ class HeroParserOfflineTest {
 
     @Test
     fun `pudge has 4 talent rows`() {
-        val talents = parseTalents(pudgeDoc)
+        requireFixtures()
+        val talents = parseTalents(pudgeDoc!!)
         assertEquals("Got ${talents.size} talent rows", 4, talents.size)
         talents.forEach { t ->
             assertTrue("Talent level empty", t.talentLvl.isNotEmpty())

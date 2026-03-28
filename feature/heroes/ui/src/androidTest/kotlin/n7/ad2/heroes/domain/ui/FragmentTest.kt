@@ -16,9 +16,9 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.domain.model.Hero
 import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
 import n7.ad2.heroes.domain.usecase.UpdateStateViewedForHeroUseCase
-import n7.ad2.heroes.ui.api.HeroesDependencies
-import n7.ad2.heroes.ui.api.HeroesFragmentFactory
-import n7.ad2.heroes.ui.internal.HeroesFragment
+import n7.ad2.feature.heroes.ui.api.HeroesDependencies
+import n7.ad2.feature.heroes.ui.api.HeroesFragmentFactory
+import n7.ad2.feature.heroes.ui.internal.HeroesFragment
 import n7.ad2.navigator.Navigator
 import org.junit.Test
 import org.junit.runner.RunWith

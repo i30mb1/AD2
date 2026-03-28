@@ -1,4 +1,4 @@
-package n7.ad2.ui.frameCounter
+package n7.ad2.core.ui.frameCounter
 
 import android.content.Context
 import android.graphics.Canvas
@@ -19,7 +19,7 @@ import kotlinx.coroutines.Job
 import n7.ad2.core.ui.R
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.spToPx
-import n7.ad2.ui.performance.FpsExtractor
+import n7.ad2.core.ui.performance.FpsExtractor
 
 class FPSView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
@@ -30,16 +30,16 @@ class FPSView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     }
     private var editable: Editable = SpannableStringBuilder()
     private var textLayout: Layout? = null
-    private var frameCounter: FrameCounter? = null
+    private var frameCounter: n7.ad2.core.ui.frameCounter.FrameCounter? = null
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         val lifecycle = findViewTreeLifecycleOwner()!!.lifecycle
-        frameCounter = FpsExtractor(lifecycle).apply {
+        frameCounter = _root_ide_package_.n7.ad2.core.ui.performance.FpsExtractor(lifecycle).apply {
             fpsCallback = { fps -> onFps(fps) }
         }
 
-        WindowOverlay(
+        _root_ide_package_.n7.ad2.core.ui.frameCounter.WindowOverlay(
             context,
             lifecycle,
             DispatchersProvider(),

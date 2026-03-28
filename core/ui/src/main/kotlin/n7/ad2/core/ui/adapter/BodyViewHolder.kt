@@ -1,4 +1,4 @@
-package n7.ad2.ui.adapter
+package n7.ad2.core.ui.adapter
 
 import android.text.Spanned
 import android.text.style.ImageSpan

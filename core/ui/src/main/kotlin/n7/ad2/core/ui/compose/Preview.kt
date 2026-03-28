@@ -1,4 +1,4 @@
-package n7.ad2.ui.compose
+package n7.ad2.core.ui.compose
 
 import android.content.res.Configuration
 import androidx.compose.ui.tooling.preview.Preview

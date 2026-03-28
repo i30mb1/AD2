@@ -1,4 +1,4 @@
-package n7.ad2.ui
+package n7.ad2.core.ui
 
 import android.app.Dialog
 import android.os.Bundle
@@ -8,18 +8,19 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.core.ui.databinding.DialogErrorBinding
+import n7.ad2.core.ui.showDialogError
 
 fun Fragment.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
 
 fun Fragment.showDialogError(title: String) {
-    val dialogError = DialogError.newInstance(title)
+    val dialogError = _root_ide_package_.n7.ad2.core.ui.DialogError.newInstance(title)
     dialogError.show(childFragmentManager, null)
 }
 
 fun FragmentActivity.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
 
 fun FragmentActivity.showDialogError(title: String) {
-    val dialogError = DialogError.newInstance(title)
+    val dialogError = _root_ide_package_.n7.ad2.core.ui.DialogError.newInstance(title)
     dialogError.show(supportFragmentManager, null)
 }
 

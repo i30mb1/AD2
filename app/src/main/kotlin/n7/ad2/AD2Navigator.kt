@@ -3,7 +3,7 @@ package n7.ad2
 import n7.ad2.drawer.api.DrawerProvider
 import n7.ad2.games.api.GamesProvider
 import n7.ad2.hero.page.api.HeroPageProvider
-import n7.ad2.heroes.ui.api.HeroesProvider
+import n7.ad2.feature.heroes.ui.api.HeroesProvider
 import n7.ad2.itempage.api.ItemPageProvider
 import n7.ad2.items.api.ItemsProvider
 import n7.ad2.navigator.Navigator

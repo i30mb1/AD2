@@ -1,4 +1,4 @@
-package n7.ad2.ui
+package n7.ad2.core.ui
 
 import android.content.res.ColorStateList
 import android.content.res.TypedArray
@@ -17,6 +17,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
+import n7.ad2.core.ui.resolveColor
 
 /**
  * Метод можно использовать для запуска некоторой работы внутри CoroutineScope

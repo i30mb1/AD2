@@ -3,6 +3,12 @@ plugins {
     id("convention.compose")
 }
 
+android {
+    buildFeatures {
+        dataBinding = false
+    }
+}
+
 dependencies {
     implementation(libs.metrics)
     implementation(projects.core.coroutines)

@@ -1,4 +1,4 @@
-package n7.ad2.ui.frameCounter
+package n7.ad2.core.ui.frameCounter
 
 interface FrameCounter {
 

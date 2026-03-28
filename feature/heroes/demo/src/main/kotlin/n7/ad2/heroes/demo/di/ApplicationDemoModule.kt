@@ -4,7 +4,7 @@ import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.app.logger.Logger
 import n7.ad2.common.application.BaseApplicationModule
-import n7.ad2.heroes.ui.api.HeroesDependencies
+import n7.ad2.feature.heroes.ui.api.HeroesDependencies
 import n7.ad2.navigator.Navigator
 
 @dagger.Module(

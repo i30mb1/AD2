@@ -1,4 +1,4 @@
-package n7.ad2.ui.compose
+package n7.ad2.core.ui.compose
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.gestures.awaitFirstDown

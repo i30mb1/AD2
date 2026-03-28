@@ -1,4 +1,4 @@
-package n7.ad2.heroes.ui.api
+package n7.ad2.feature.heroes.ui.api
 
 import android.app.Application
 import n7.ad2.Resources

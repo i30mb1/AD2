@@ -1,4 +1,4 @@
-package n7.ad2.ui.frameCounter
+package n7.ad2.core.ui.frameCounter
 
 import android.app.Activity
 import android.content.Context
@@ -27,13 +27,13 @@ class JunkView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     }
     private var editable: Editable = SpannableStringBuilder()
     private var textLayout: Layout? = null
-    private var frameCounter: FrameCounter? = null
+    private var frameCounter: n7.ad2.core.ui.frameCounter.FrameCounter? = null
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         val lifecycle = findViewTreeLifecycleOwner()?.lifecycle
         if (lifecycle != null) {
-            frameCounter = JankStatsFrameCounter(lifecycle, (context as Activity).window)
+            frameCounter = _root_ide_package_.n7.ad2.core.ui.frameCounter.JankStatsFrameCounter(lifecycle, (context as Activity).window)
             frameCounter?.isJunkCallback = { isJunk -> process(isJunk) }
         }
     }

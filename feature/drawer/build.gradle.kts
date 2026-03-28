@@ -6,6 +6,9 @@ plugins {
 
 android {
     testFixtures.enable = true
+    buildFeatures {
+        dataBinding = false
+    }
 }
 
 dependencies {

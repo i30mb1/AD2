@@ -1,4 +1,4 @@
-package n7.ad2.ui
+package n7.ad2.core.ui
 
 import android.content.Context
 import android.util.AttributeSet

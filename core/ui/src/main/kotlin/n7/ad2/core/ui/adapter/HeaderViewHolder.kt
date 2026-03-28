@@ -1,4 +1,4 @@
-package n7.ad2.ui.adapter
+package n7.ad2.core.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

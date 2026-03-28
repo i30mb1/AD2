@@ -1,4 +1,4 @@
-package n7.ad2.ui.performance
+package n7.ad2.core.ui.performance
 
 import android.view.Choreographer
 import androidx.lifecycle.DefaultLifecycleObserver

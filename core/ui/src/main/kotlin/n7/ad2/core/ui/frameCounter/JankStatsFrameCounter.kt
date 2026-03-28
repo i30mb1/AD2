@@ -1,4 +1,4 @@
-package n7.ad2.ui.frameCounter
+package n7.ad2.core.ui.frameCounter
 
 import android.os.Handler
 import android.os.Looper
@@ -10,7 +10,7 @@ import androidx.metrics.performance.JankStats
 import n7.ad2.ktx.lazyUnsafe
 
 class JankStatsFrameCounter(lifecycle: Lifecycle?, window: Window) :
-    FrameCounter,
+    n7.ad2.core.ui.frameCounter.FrameCounter,
     DefaultLifecycleObserver {
 
     override var isJunkCallback: ((isJunk: Boolean) -> Unit)? = null
@@ -29,7 +29,7 @@ class JankStatsFrameCounter(lifecycle: Lifecycle?, window: Window) :
     }
 
     override fun onResume(owner: LifecycleOwner) {
-        mainHandler.postDelayed(runnable, FrameCounter.FPS_INTERVAL_TIME)
+        mainHandler.postDelayed(runnable, _root_ide_package_.n7.ad2.core.ui.frameCounter.FrameCounter.FPS_INTERVAL_TIME)
     }
 
     override fun onPause(owner: LifecycleOwner) {
@@ -40,6 +40,6 @@ class JankStatsFrameCounter(lifecycle: Lifecycle?, window: Window) :
         isJunkCallback?.invoke(isJunk)
 //        fpsCallback?.invoke(count)
 //        count = 0
-        mainHandler.postDelayed(runnable, FrameCounter.FPS_INTERVAL_TIME)
+        mainHandler.postDelayed(runnable, _root_ide_package_.n7.ad2.core.ui.frameCounter.FrameCounter.FPS_INTERVAL_TIME)
     }
 }

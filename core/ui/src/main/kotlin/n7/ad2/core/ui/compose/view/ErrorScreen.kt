@@ -1,4 +1,4 @@
-package n7.ad2.ui.compose.view
+package n7.ad2.core.ui.compose.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,7 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.core.ui.R
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 
 @Preview
 @Composable
@@ -25,8 +25,8 @@ fun ErrorScreen(error: Throwable? = null, onRetryClicked: () -> Unit = {}) {
     ) {
         Text(
             text = error?.message ?: "???",
-            style = AppTheme.style.H5,
-            color = AppTheme.color.textColor,
+            style = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.style.H5,
+            color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.textColor,
             modifier = Modifier
                 .padding(32.dp),
         )

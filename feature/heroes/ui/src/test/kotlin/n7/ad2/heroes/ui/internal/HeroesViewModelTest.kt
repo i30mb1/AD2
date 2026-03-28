@@ -7,9 +7,9 @@ import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import n7.ad2.coroutines.CoroutineTestRule
-import n7.ad2.heroes.ui.internal.domain.usecase.FilterHeroesUseCase
-import n7.ad2.heroes.ui.internal.domain.usecase.GetVOHeroesListUseCase
-import n7.ad2.heroes.ui.internal.domain.vo.VOHero
+import n7.ad2.feature.heroes.ui.internal.domain.usecase.FilterHeroesUseCase
+import n7.ad2.feature.heroes.ui.internal.domain.usecase.GetVOHeroesListUseCase
+import n7.ad2.feature.heroes.ui.internal.domain.vo.VOHero
 import org.junit.Rule
 import org.junit.Test
 
@@ -18,7 +18,7 @@ internal class HeroesViewModelTest {
 
     @get:Rule val coroutineRule = CoroutineTestRule()
 
-    private fun createViewModel() = HeroesViewModel(
+    private fun createViewModel() = _root_ide_package_.n7.ad2.feature.heroes.ui.internal.HeroesViewModel(
         getVOHeroesListUseCase = GetVOHeroesListUseCase(GetHeroesUseCaseFake(), coroutineRule.dispatchers, LoggerFake()),
         filterHeroesUseCase = { FilterHeroesUseCase(coroutineRule.dispatchers) },
         updateStateViewedForHeroUseCase = { UpdateStateViewedForHeroUseCaseFake() },

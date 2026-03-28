@@ -9,13 +9,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.app.logger.model.AppLog
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 
 @Suppress("UnusedPrivateMember")
 @Preview
 @Composable
 private fun LoggerImpl() {
-    AppTheme {
+    _root_ide_package_.n7.ad2.core.ui.compose.AppTheme {
         Logger(
             listOf(
                 AppLog("Hello"),
@@ -36,8 +36,8 @@ fun Logger(logs: List<AppLog>, modifier: Modifier = Modifier) {
             val log = logs[index]
             Text(
                 text = log.message,
-                style = AppTheme.style.body,
-                color = AppTheme.color.textColor,
+                style = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.style.body,
+                color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.textColor,
                 minLines = 1,
             )
         }

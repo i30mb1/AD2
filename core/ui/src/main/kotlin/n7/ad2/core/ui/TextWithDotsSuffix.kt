@@ -1,4 +1,4 @@
-package n7.ad2.ui
+package n7.ad2.core.ui
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -10,7 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.delay
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 
 @Composable
 fun TextWithDotsSuffix(text: String, modifier: Modifier = Modifier) {
@@ -18,8 +18,8 @@ fun TextWithDotsSuffix(text: String, modifier: Modifier = Modifier) {
     Text(
         modifier = modifier,
         text = animText,
-        style = AppTheme.style.body,
-        color = AppTheme.color.textColor,
+        style = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.style.body,
+        color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.textColor,
     )
     LaunchedEffect(Unit) {
         var value: Byte = 0
@@ -39,7 +39,7 @@ fun TextWithDotsSuffix(text: String, modifier: Modifier = Modifier) {
 @Preview
 @Composable
 fun TextWithDotsSuffixPreview() {
-    AppTheme {
-        TextWithDotsSuffix("Hello")
+    _root_ide_package_.n7.ad2.core.ui.compose.AppTheme {
+        _root_ide_package_.n7.ad2.core.ui.TextWithDotsSuffix("Hello")
     }
 }

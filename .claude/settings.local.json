@@ -21,7 +21,21 @@
       "Bash(git add:*)",
       "Bash(git push:*)",
       "Bash(java -version:*)",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "Bash(find:*)",
+      "Bash(curl:*)",
+      "Bash(xargs grep:*)",
+      "WebFetch(domain:developers.googleblog.com)",
+      "WebFetch(domain:developers.google.com)",
+      "Bash(claude mcp:*)",
+      "Bash(cd D:/AndroidProject/AD2 && ./gradlew \":feature:heroes:domain:impl:compileDebugSources\" 2>&1 | grep -v \"^$\" | tail -15)",
+      "mcp__google-dev-knowledge__search_documents",
+      "Bash(attrib -R -H -S \"C:\\\\Users\\\\eug79\\\\.android-sources\\\\framework\\\\android-36_tmp\\\\*\" /S /D)",
+      "Bash(powershell -Command \"Add-MpPreference -ExclusionPath 'C:\\\\Users\\\\eug79\\\\.android-sources'\" 2>&1)",
+      "Bash(where android-source-explorer:*)",
+      "Read(//c/Users/eug79/**)",
+      "Skill(update-config)",
+      "Bash(android-source-explorer serve:*)"
     ],
     "deny": [],
     "ask": []
