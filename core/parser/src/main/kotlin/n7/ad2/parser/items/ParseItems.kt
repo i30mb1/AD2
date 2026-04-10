@@ -5,11 +5,11 @@ package n7.ad2.parser.items
 import n7.ad2.parser.LOCALE
 import n7.ad2.parser.assetsDatabase
 import n7.ad2.parser.assetsDatabaseItems
+import n7.ad2.parser.connectToWiki
 import n7.ad2.parser.saveFile
 import n7.ad2.parser.saveImage
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
-import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
@@ -47,7 +47,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
         for (item in list) {
             val url = locale.baseUrl + item.href
             val root = try {
-                Jsoup.connect(url).get()
+                connectToWiki(url)
             } catch (e: Exception) {
                 println("could parse $url error: $e")
                 continue

@@ -1,14 +1,14 @@
 package n7.ad2.parser.items
 
 import n7.ad2.parser.LOCALE
-import org.jsoup.Jsoup
+import n7.ad2.parser.connectToWiki
 
 class HeroItem(val name: String, val formattedName: String, val href: String, val section: String)
 
 class GetItemsUseCase {
 
     operator fun invoke(locale: LOCALE): List<HeroItem> {
-        val root = Jsoup.connect(locale.urlAllItems).get()
+        val root = connectToWiki(locale.urlAllItems)
         val ignoreList = listOf("Helm of the Dominator 1", "Helm of the Dominator 2")
         val result = mutableListOf<HeroItem>()
         var findItemSection = false

@@ -35,7 +35,11 @@
       "Bash(where android-source-explorer:*)",
       "Read(//c/Users/eug79/**)",
       "Skill(update-config)",
-      "Bash(android-source-explorer serve:*)"
+      "Bash(android-source-explorer serve:*)",
+      "Bash(./gradlew :core:parser:runHeroes -PcfClearance=YUHasJptxde0BLmy.O2BvuZ_gAsbMCRjcyw4wxEcXEM-1775723982-1.2.1.1-eGV9EYy_.BVGCPfb2ClTibB54P6zFszODT8GtsZcIelqDgrZFllkJqoOoPsLIArbCUrmy1h.OFrG_3X5NiVPWDFZ8LszwU4SoQRCucw3m5fJAIjCoROR3U_7ms0tS8z4eTrUQlHDXWYibyY.aDi.U713bNSd4wpITBwXDTMD_i6wqikh3W.4TWIYkGXfqLHjqfHv5PLy_XReN0ZVk.zWCO.otJaJkGUD2TIYflXIDOT_wGq6NUAYWbepo_F8XpoX6zFzO5Rm__32M2Do6DoegVzEXgnHxOnKlI2.PW2.oqDuKHljtaF.pQ9nAvtvEB.ieCC7JH0FxWweeVZ7z1LLTQ -PtestMode=true -PtestLimit=1)",
+      "Bash(echo \"Exit: $?\")",
+      "Read(//tmp/**)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": []

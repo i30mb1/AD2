@@ -13,10 +13,10 @@ private fun saveFileInternal(path: String, fileName: String, text: String): Bool
     directory.mkdirs()
     val file = File(path, fileName)
     file.createNewFile()
-    val newSize = text.length
-    if (newSize <= 0) error("empty file for $path")
-    val oldFileSize = file.readText().length
-    if (oldFileSize == newSize) return false
-    file.writeText(text)
+    if (text.isEmpty()) error("empty file for $path")
+    val newBytes = text.toByteArray(Charsets.UTF_8)
+    val oldBytes = file.readBytes()
+    if (oldBytes.contentEquals(newBytes)) return false
+    file.writeBytes(newBytes)
     return true
 }
