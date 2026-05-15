@@ -12,8 +12,8 @@ import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.feature.hero.page.ui.R
-import n7.ad2.hero.page.internal.info.HeroStatistics
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
+import n7.ad2.hero.page.internal.info.domain.vo.VOHeroStatistics
 import n7.ad2.hero.page.internal.info.domain.vo.VOSpell
 import n7.ad2.heroes.domain.model.Hero
 import n7.ad2.heroes.domain.model.HeroDescription
@@ -88,7 +88,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
     private fun getAttributes(hero: Hero, info: HeroDescription, heroInfo: HeroInfo): VOHeroInfo.Attributes = VOHeroInfo.Attributes(
         hero.avatarUrl,
-        HeroStatistics.Statistics(
+        VOHeroStatistics(
             info.mainAttributes.attrStrength,
             info.mainAttributes.attrAgility,
             info.mainAttributes.attrIntelligence,

@@ -1,13 +1,13 @@
 package n7.ad2.hero.page.internal.guides.domain.adapter
 
-import n7.ad2.hero.page.internal.guides.VOHeroFlowHeroItem
-import n7.ad2.hero.page.internal.guides.VOHeroFlowItem
-import n7.ad2.hero.page.internal.guides.VOHeroFlowSpell
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideEasyToWinHeroes
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHardToWinHeroes
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHeroItems
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideSpellBuild
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideStartingHeroItems
+import n7.ad2.hero.page.internal.guides.domain.vo.VOHeroFlowHeroItem
+import n7.ad2.hero.page.internal.guides.domain.vo.VOHeroFlowItem
+import n7.ad2.hero.page.internal.guides.domain.vo.VOHeroFlowSpell
 import n7.ad2.heroes.domain.model.HeroItem
 import n7.ad2.heroes.domain.model.HeroWithWinrate
 import n7.ad2.heroes.domain.model.Spell

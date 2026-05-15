@@ -1,19 +1,15 @@
 plugins {
     id("convention.android-library")
+    id("convention.compose")
     id("convention.kotlin-serialization")
     id("n7.plugins.kotlin-ksp")
-}
-
-android {
-    buildFeatures {
-        dataBinding = false
-    }
 }
 
 dependencies {
     implementation(libs.workManager)
     implementation(libs.jsoup)
-    implementation(libs.ticker)
+
+    implementation(libs.fragment.compose)
 
     implementation(projects.core.mediaPlayer)
     implementation(projects.core.commonAndroid)
