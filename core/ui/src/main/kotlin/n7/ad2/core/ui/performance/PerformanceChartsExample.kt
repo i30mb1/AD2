@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.flow.flowOf
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 
 /**
  * Example showing how to use the new PerformanceCharts composable

@@ -9,7 +9,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.domain.model.Hero
 import n7.ad2.heroes.domain.usecase.GetHeroesUseCase
 import n7.ad2.feature.heroes.ui.internal.domain.vo.VOHero
-import n7.ad2.ui.adapter.HeaderViewHolder
+import n7.ad2.core.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
 internal class GetVOHeroesListUseCase @Inject constructor(private val getHeroesUseCase: GetHeroesUseCase, private val dispatchers: DispatchersProvider, private val logger: Logger) {

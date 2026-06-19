@@ -23,7 +23,7 @@ import n7.ad2.feature.heroes.ui.R
 import n7.ad2.feature.heroes.ui.databinding.FragmentHeroesBinding
 import n7.ad2.feature.heroes.ui.internal.adapter.HeroesItemDecorator
 import n7.ad2.feature.heroes.ui.internal.adapter.HeroesListAdapter
-import n7.ad2.heroes.ui.internal.di.DaggerHeroesComponent
+import n7.ad2.feature.heroes.ui.internal.di.DaggerHeroesComponent
 import n7.ad2.feature.heroes.ui.internal.domain.vo.VOHero
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel

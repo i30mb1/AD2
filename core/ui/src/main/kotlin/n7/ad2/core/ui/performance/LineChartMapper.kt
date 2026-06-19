@@ -2,7 +2,7 @@ package n7.ad2.core.ui.performance
 
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.ui.frameCounter.toComposeColor
+import n7.ad2.core.ui.frameCounter.toComposeColor
 import kotlin.math.max
 
 internal class LineChartMapper(private val dispatcher: DispatchersProvider) {
