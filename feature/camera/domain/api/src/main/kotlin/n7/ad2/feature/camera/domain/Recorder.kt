@@ -8,6 +8,7 @@ interface Recorder {
     val state: Flow<RecorderState>
     fun init(): Any
     fun startOnce()
+    fun cancelRecording()
     fun stop()
 }
 

@@ -16,7 +16,7 @@ class PreviewerCameraX : Previewer {
     }
 
     override fun start(surface: Any): UseCase {
-        preview.setSurfaceProvider(surface as Preview.SurfaceProvider)
+        preview.surfaceProvider = surface as Preview.SurfaceProvider
         return preview
     }
 }

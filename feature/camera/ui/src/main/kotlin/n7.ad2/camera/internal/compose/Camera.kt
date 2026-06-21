@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import n7.ad2.camera.internal.model.CameraStateUI
 import n7.ad2.camera.internal.model.DetectedRect
+import n7.ad2.feature.camera.domain.FaceDetector
 import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.ui.R
 import n7.ad2.core.ui.compose.AppTheme
@@ -105,6 +106,40 @@ internal fun Camera(state: CameraStateUI, fpsTimer: FPSTimer, event: (CameraEven
                     color = AppTheme.color.primary,
                 )
             }
+            Row {
+                state.detectors.forEach { detector ->
+                    Text(
+                        text = detector.title,
+                        style = AppTheme.style.H3,
+                        color = if (detector == state.currentDetector) AppTheme.color.primary else AppTheme.color.textColor,
+                        modifier = Modifier
+                            .padding(end = 12.dp)
+                            .clickable { event(CameraEvent.SelectDetector(detector)) },
+                    )
+                }
+            }
+            Text(
+                text = "Brightness: ${(state.brightness * 100).toInt()}%",
+                style = AppTheme.style.H3,
+                color = AppTheme.color.primary,
+            )
+            Text(
+                text = "Blurriness: ${(state.blurriness * 100).toInt()}%",
+                style = AppTheme.style.H3,
+                color = AppTheme.color.primary,
+            )
+            Text(
+                text = "Occlusion: ${(state.occlusion * 100).toInt()}%",
+                style = AppTheme.style.H3,
+                color = AppTheme.color.primary,
+            )
+            state.rotation?.let { rotation ->
+                Text(
+                    text = "Head yaw=${rotation.y.toInt()} pitch=${rotation.x.toInt()} roll=${rotation.z.toInt()}",
+                    style = AppTheme.style.H3,
+                    color = AppTheme.color.primary,
+                )
+            }
             Text(
                 text = state.timeoutForRecording.toString(DurationUnit.MILLISECONDS),
                 style = AppTheme.style.H3,
@@ -142,4 +177,6 @@ sealed interface CameraEvent {
     class GloballyPosition(val viewWidth: Int, val viewHeight: Int) : CameraEvent
 
     data object Click : CameraEvent
+
+    class SelectDetector(val detector: FaceDetector) : CameraEvent
 }

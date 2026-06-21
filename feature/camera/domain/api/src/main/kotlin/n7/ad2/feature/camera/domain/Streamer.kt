@@ -1,6 +1,7 @@
 package n7.ad2.feature.camera.domain
 
 import kotlinx.coroutines.flow.Flow
+import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.StreamerState
 
 /**
@@ -10,7 +11,10 @@ import n7.ad2.feature.camera.domain.model.StreamerState
  */
 interface Streamer {
     val stream: Flow<StreamerState>
+    fun init()
     fun start(): Any
+    fun stop()
+    fun getLastFrame(): Image?
 }
 
 data class StreamerResolution(val width: Int, val height: Int)

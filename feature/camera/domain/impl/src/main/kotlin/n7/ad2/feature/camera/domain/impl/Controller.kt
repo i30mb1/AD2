@@ -39,17 +39,23 @@ class Controller(
     val state: Flow<CameraState> = _state
 
     private var streamerJob: Job? = null
+    @Volatile private var isRecording: Boolean = false
 
     private fun runStreamer() {
         if (streamerJob != null) return
         fpsTimer.timer.launchIn(lifecycle.lifecycleScope)
         streamerJob = streamer.stream
             .onEach { state: StreamerState ->
-                val processorState = processor.analyze(state.image)
+                val processorState = processor.analyze(state.image, isRecording)
+                val face = processorState.faces.firstOrNull()
                 _state.value = CameraState(
-                    processorState.image,
-                    processorState.detectedFaceNormalized,
-                    state.fps,
+                    image = processorState.image,
+                    detectedFaceNormalized = face?.rect,
+                    streamerFps = state.fps,
+                    rotation = face?.rotation,
+                    occlusion = face?.occlusionScore ?: 0f,
+                    blurriness = face?.blurriness ?: 0f,
+                    brightness = processorState.illumination.brightness,
                 )
             }
             .flowWithLifecycle(lifecycle.lifecycle, Lifecycle.State.RESUMED)
@@ -58,8 +64,10 @@ class Controller(
             .launchIn(lifecycle.lifecycleScope)
     }
 
-    fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
+    suspend fun onUIBind(surfaceProvider: Preview.SurfaceProvider) {
         lifecycle.onUiShown()
+        processor.init()
+        streamer.init()
         val previewerUseCase = previewer.start(surfaceProvider) as UseCase
         val streamerUseCase = streamer.start() as UseCase
         val recorderUseCase = recorder.init() as UseCase
@@ -77,13 +85,17 @@ class Controller(
     }
 
     suspend fun startRecording(): File {
+        isRecording = true
         streamerJob?.cancel()
         streamerJob = null
         recorder.startOnce()
-        return recorder.state.filterIsInstance<RecorderState.Completed>().first().file
+        val file = recorder.state.filterIsInstance<RecorderState.Completed>().first().file
+        isRecording = false
+        return file
     }
 
     fun onDestroyView() {
+        streamer.stop()
         lifecycle.onUiHidden()
     }
 }

@@ -4,6 +4,9 @@ interface CameraSettings {
     val isFrontCamera: Boolean
     val isDebug: Boolean
     val aspectRatio: CameraAspectRatio
+    val isIlluminationEnabled: Boolean
+    val isHeadPoseEnabled: Boolean
+    val isBlurrinessEnabled: Boolean
 }
 
 enum class CameraAspectRatio {

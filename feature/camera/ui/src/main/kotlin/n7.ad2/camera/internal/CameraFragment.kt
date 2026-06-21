@@ -89,6 +89,10 @@ internal class CameraFragment(override var dependenciesMap: DependenciesMap) :
         is CameraEvent.GloballyPosition -> {
             viewModel.onGlobalPosition(cameraEvent.viewHeight, cameraEvent.viewWidth)
         }
+
+        is CameraEvent.SelectDetector -> {
+            viewModel.selectDetector(cameraEvent.detector)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -136,6 +136,11 @@ class RecorderCameraX(private val context: Context, private val logger: Logger, 
         return "Unknown($error)"
     }
 
+    override fun cancelRecording() {
+        isCancelled = true
+        activeRecording?.stop()
+    }
+
     override fun stop() {
         recordingJob?.cancel()
         activeRecording?.stop()

@@ -1,6 +1,7 @@
 package n7.ad2.feature.camera.domain.impl.streamer
 
 import android.util.Size
+import androidx.camera.camera2.interop.ExperimentalCamera2Interop
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
@@ -22,57 +23,82 @@ import n7.ad2.feature.camera.domain.CameraSettings
 import n7.ad2.feature.camera.domain.Streamer
 import n7.ad2.feature.camera.domain.StreamerResolution
 import n7.ad2.feature.camera.domain.impl.FPSTimer
+import n7.ad2.feature.camera.domain.impl.processor.Camera2FaceSource
 import n7.ad2.feature.camera.domain.model.Image
 import n7.ad2.feature.camera.domain.model.ImageMetadata
 import n7.ad2.feature.camera.domain.model.StreamerState
 import kotlin.time.Duration.Companion.seconds
 
-class StreamerCameraX(private val settings: CameraSettings, dispatchers: DispatchersProvider, lifecycle: LifecycleOwner, private val fps: FPSTimer) : Streamer {
+class StreamerCameraX(
+    private val settings: CameraSettings,
+    dispatchers: DispatchersProvider,
+    lifecycle: LifecycleOwner,
+    private val fps: FPSTimer,
+    private val faceSource: Camera2FaceSource,
+) : Streamer {
 
     private val dispatcher = dispatchers.Default.limitedParallelism(1).asExecutor()
     private val streamerResolution: MutableSet<StreamerResolution> = mutableSetOf()
     private val _stream = MutableSharedFlow<StreamerState>(0, 1, BufferOverflow.DROP_OLDEST)
 
-    private val imageAnalysis: ImageAnalysis = ImageAnalysis.Builder()
-        .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
-        .setOutputImageRotationEnabled(true)
-        .setResolutionSelector(
-            ResolutionSelector.Builder()
-                .setResolutionFilter { sizes: MutableList<Size>, _ ->
-                    sizes.sortedBy { size ->
-                        // добавляем все возможные разрешения камеры
-                        streamerResolution.add(StreamerResolution(size.width, size.height))
-                        size.height * size.width
+    @Volatile private var lastFrame: Image? = null
+
+    private val imageAnalysis: ImageAnalysis = buildImageAnalysis()
+
+    @OptIn(ExperimentalCamera2Interop::class)
+    private fun buildImageAnalysis(): ImageAnalysis {
+        val builder = ImageAnalysis.Builder()
+            .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+            .setOutputImageRotationEnabled(true)
+            .setResolutionSelector(
+                ResolutionSelector.Builder()
+                    .setResolutionFilter { sizes: MutableList<Size>, _ ->
+                        sizes.sortedBy { size ->
+                            // добавляем все возможные разрешения камеры
+                            streamerResolution.add(StreamerResolution(size.width, size.height))
+                            size.height * size.width
+                        }
                     }
-                }
-                .setAspectRatioStrategy(
-                    AspectRatioStrategy(
-                        when (settings.aspectRatio) {
-                            CameraAspectRatio.RATIO_16_9 -> AspectRatio.RATIO_16_9
-                            CameraAspectRatio.RATIO_4_3 -> AspectRatio.RATIO_4_3
-                        },
-                        AspectRatioStrategy.FALLBACK_RULE_AUTO,
-                    ),
-                )
-                .build(),
-        )
-        .build()
+                    .setAspectRatioStrategy(
+                        AspectRatioStrategy(
+                            when (settings.aspectRatio) {
+                                CameraAspectRatio.RATIO_16_9 -> AspectRatio.RATIO_16_9
+                                CameraAspectRatio.RATIO_4_3 -> AspectRatio.RATIO_4_3
+                            },
+                            AspectRatioStrategy.FALLBACK_RULE_AUTO,
+                        ),
+                    )
+                    .build(),
+            )
+        faceSource.attach(builder)
+        return builder.build()
+    }
 
     override val stream: SharedFlow<StreamerState> = _stream
         .onCompletion { imageAnalysis.clearAnalyzer() }
         .shareIn(lifecycle.lifecycleScope, SharingStarted.WhileSubscribed(SUBSCRIBE_DELAY))
+
+    override fun init() = Unit
 
     override fun start(): UseCase {
         imageAnalysis
             .setAnalyzer(dispatcher) { image: ImageProxy ->
                 val result = image.toBitmap()
                 val metadata = ImageMetadata(result.width, result.height, !settings.isFrontCamera)
-                _stream.tryEmit(StreamerState(Image(result, metadata), fps.counter.streamer))
+                val frame = Image(result, metadata)
+                lastFrame = frame
+                _stream.tryEmit(StreamerState(frame, fps.counter.streamer))
                 image.close()
                 fps.counter.streamer++
             }
         return imageAnalysis
     }
+
+    override fun stop() {
+        imageAnalysis.clearAnalyzer()
+    }
+
+    override fun getLastFrame(): Image? = lastFrame
 
     companion object {
         val SUBSCRIBE_DELAY = 3.seconds.inWholeMilliseconds

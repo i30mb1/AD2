@@ -25,9 +25,9 @@ private val options = Interpreter.Options().apply {
 }
 
 // быстрее на 10% GetMLModelReadBytes
-public class GetMLModelChannel(private val context: Context) : GetMLModel {
+public class GetMLModelChannel(private val context: Context, private val assetName: String = "blaze_face.tflite") : GetMLModel {
     override fun get(): Interpreter {
-        val input = context.assets.open("blaze_face.tflite")
+        val input = context.assets.open(assetName)
         val buffer = ByteBuffer.allocateDirect(input.available())
         buffer.order(ByteOrder.nativeOrder())
         Channels.newChannel(input).read(buffer)

@@ -8,10 +8,9 @@ import android.graphics.Canvas
 import androidx.core.graphics.blue
 import androidx.core.graphics.green
 import androidx.core.graphics.red
-import n7.ad2.feature.camera.domain.Processor
+import n7.ad2.feature.camera.domain.FaceDetect
 import n7.ad2.feature.camera.domain.model.DetectedFaceNormalized
 import n7.ad2.feature.camera.domain.model.Image
-import n7.ad2.feature.camera.domain.model.ProcessorState
 import org.tensorflow.lite.Interpreter
 import java.nio.Buffer
 import java.nio.ByteBuffer
@@ -20,7 +19,7 @@ import java.nio.FloatBuffer
 import kotlin.math.roundToInt
 
 @Suppress("MagicNumber")
-class ProcessorBlazeFace(application: Application) : Processor {
+class ProcessorBlazeFace(application: Application) : FaceDetect {
 
     private val interpreter: Interpreter = GetMLModelChannel(application).get()
     private val outputScores = FloatArray(100)
@@ -37,7 +36,7 @@ class ProcessorBlazeFace(application: Application) : Processor {
     private var padX = 0
     private var padY = 0
 
-    override fun analyze(image: Image): ProcessorState {
+    override fun detect(image: Image): List<DetectedFaceNormalized> {
         val bitmap = image.source as Bitmap
         val longestMaxSizeBitmap = longestMaxSize(bitmap)
         val padBitmap = pad(longestMaxSizeBitmap)
@@ -58,22 +57,11 @@ class ProcessorBlazeFace(application: Application) : Processor {
                 normalizedPadFaces.add(faceRect)
             }
         }
-        if (normalizedPadFaces.isEmpty()) return ProcessorState(image, null)
+        if (normalizedPadFaces.isEmpty()) return emptyList()
 
-        val normalizedFaces = normalizedPadFaces.map {
+        return normalizedPadFaces.map {
             convertCoordinates(it, longestMaxSizeBitmap.height, longestMaxSizeBitmap.width)
         }
-        val absoluteFaces = normalizedFaces.map {
-            DetectedFaceNormalized(
-                (it.xMin * bitmap.width),
-                (it.xMax * bitmap.width),
-                (it.yMin * bitmap.height),
-                (it.yMax * bitmap.height),
-                it.probability,
-            )
-        }
-
-        return ProcessorState(image, normalizedFaces.firstOrNull())
     }
 
     private fun convertCoordinates(faceRect: DetectedFaceNormalized, originalHeight: Int, originalWeight: Int): DetectedFaceNormalized {

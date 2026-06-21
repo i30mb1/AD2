@@ -19,15 +19,24 @@ import n7.ad2.camera.internal.model.setFace
 import n7.ad2.camera.internal.model.setPreviewSizes
 import n7.ad2.camera.internal.model.setScaleType
 import n7.ad2.camera.internal.model.updateDelayForRecording
+import n7.ad2.feature.camera.domain.FaceDetector
+import n7.ad2.feature.camera.domain.FaceDetectorSwitcher
 import n7.ad2.feature.camera.domain.impl.Controller
 import n7.ad2.feature.camera.domain.model.CameraState
 
-internal class CameraViewModel @AssistedInject constructor(private val controller: Controller, private val recordingDelay: RecordingDelay) : ViewModel() {
+internal class CameraViewModel @AssistedInject constructor(
+    private val controller: Controller,
+    private val recordingDelay: RecordingDelay,
+    private val switcher: FaceDetectorSwitcher,
+) : ViewModel() {
 
-    private val _state: MutableStateFlow<CameraStateUI> = MutableStateFlow(CameraStateUI())
+    private val _state: MutableStateFlow<CameraStateUI> = MutableStateFlow(CameraStateUI(detectors = switcher.detectors))
     val state: StateFlow<CameraStateUI> = _state.asStateFlow()
 
     init {
+        switcher.current
+            .onEach { detector -> _state.update { it.copy(currentDetector = detector) } }
+            .launchIn(viewModelScope)
         controller.state
             .onEach { cameraState: CameraState ->
                 considerAboutRecording(cameraState)
@@ -39,6 +48,10 @@ internal class CameraViewModel @AssistedInject constructor(private val controlle
                     it.copy(
 //                        image = cameraState.image?.source as? Bitmap,
                         streamerFps = cameraState.streamerFps.toString(),
+                        brightness = cameraState.brightness,
+                        rotation = cameraState.rotation,
+                        occlusion = cameraState.occlusion,
+                        blurriness = cameraState.blurriness,
                     )
                 }
             }
@@ -67,6 +80,10 @@ internal class CameraViewModel @AssistedInject constructor(private val controlle
 
     fun onUiUnBind() {
         controller.onUiUnBind()
+    }
+
+    fun selectDetector(detector: FaceDetector) {
+        switcher.select(detector)
     }
 
     fun onGlobalPosition(viewHeight: Int, viewWidth: Int) {
