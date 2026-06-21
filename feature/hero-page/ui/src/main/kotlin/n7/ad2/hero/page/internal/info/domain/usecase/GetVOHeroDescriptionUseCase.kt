@@ -21,8 +21,8 @@ import n7.ad2.heroes.domain.usecase.GetHeroByNameUseCase
 import n7.ad2.heroes.domain.usecase.GetHeroDescriptionUseCase
 import n7.ad2.ktx.toStringList
 import n7.ad2.spanparser.SpanParser
-import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderViewHolder
+import n7.ad2.core.ui.adapter.BodyViewHolder
+import n7.ad2.core.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(

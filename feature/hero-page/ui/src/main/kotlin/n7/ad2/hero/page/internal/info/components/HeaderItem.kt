@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import n7.ad2.core.ui.compose.AppTheme
-import n7.ad2.ui.adapter.HeaderViewHolder
+import n7.ad2.core.ui.adapter.HeaderViewHolder
 
 @Composable
 internal fun HeaderItem(data: HeaderViewHolder.Data) {

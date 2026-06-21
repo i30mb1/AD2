@@ -13,7 +13,7 @@ data class LocalHeroResponsesItem(
 
 @Serializable
 data class Response(
-    @SerialName("audioUrl")
+    @SerialName("audio_url")
     val audioUrl: String = "",
     @SerialName("title")
     val title: String = "",

@@ -13,7 +13,7 @@ import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.mediaplayer.AudioExoPlayer
-import n7.ad2.ui.showDialogError
+import n7.ad2.core.ui.showDialogError
 import javax.inject.Inject
 
 class ResponsesFragment : Fragment() {

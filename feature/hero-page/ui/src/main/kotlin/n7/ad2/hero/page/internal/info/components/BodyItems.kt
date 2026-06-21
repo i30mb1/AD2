@@ -16,7 +16,7 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.hero.page.internal.info.domain.vo.VOBodyLine
 import n7.ad2.hero.page.internal.info.domain.vo.VOBodySimple
 import n7.ad2.hero.page.internal.info.domain.vo.VOBodyWithImage
-import n7.ad2.ui.adapter.BodyViewHolder
+import n7.ad2.core.ui.adapter.BodyViewHolder
 
 @Composable
 internal fun BodyItem(data: BodyViewHolder.Data) {

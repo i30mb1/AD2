@@ -59,7 +59,11 @@
       "Bash(/c/ProgramData/AndroidCLI/android.exe create *)",
       "Bash(./gradlew :feature:hero-page:ui:assembleDebug)",
       "Bash(echo \"EXIT=$?\")",
-      "Bash(grep -i \"kotlin\\\\|^.*kt$\")"
+      "Bash(grep -i \"kotlin\\\\|^.*kt$\")",
+      "Bash(tee /tmp/heroes_demo_build.log)",
+      "Bash(git config *)",
+      "PowerShell(Tee-Object *)",
+      "Bash(grep -vE \"R\\\\\\\\\\\\$|/R.class\")"
     ],
     "deny": [],
     "ask": []

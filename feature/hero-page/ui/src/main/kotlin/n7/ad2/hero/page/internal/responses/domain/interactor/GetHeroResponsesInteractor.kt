@@ -12,6 +12,8 @@ import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.repositories.ResponseRepository
 import javax.inject.Inject
 
+private val lenientJson = Json { ignoreUnknownKeys = true }
+
 class GetHeroResponsesInteractor @Inject constructor(
     private val convertLocalHeroToVOResponseUseCase: ConvertLocalHeroToVOResponseUseCase,
     private val repository: ResponseRepository,
@@ -21,7 +23,7 @@ class GetHeroResponsesInteractor @Inject constructor(
     operator fun invoke(heroName: String, appLocale: AppLocale): Flow<List<VOResponse>> = flow {
         val json = repository.getHeroResponses(heroName, appLocale)
 
-        val heroResponses = Json.decodeFromString<List<LocalHeroResponsesItem>>(json)
+        val heroResponses = lenientJson.decodeFromString<List<LocalHeroResponsesItem>>(json)
 
         val savedHeroResponses = repository.getSavedHeroResponses(heroName)
 

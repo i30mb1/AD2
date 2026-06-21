@@ -5,7 +5,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.hero.page.internal.responses.domain.model.LocalHeroResponsesItem
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponseImage
-import n7.ad2.ui.adapter.HeaderViewHolder
+import n7.ad2.core.ui.adapter.HeaderViewHolder
 import java.io.File
 import javax.inject.Inject
 
@@ -33,14 +33,14 @@ class ConvertLocalHeroToVOResponseUseCase @Inject constructor(private val dispat
                     }
                 }
 
-                val icons = response.icons.map { iconPath ->
+                val icons = response.icons.mapTo(mutableListOf()) { iconPath ->
                     val iconHeroName = iconPath.substringBeforeLast("/").substringAfter("/")
-                    val url = "HeroRepository.getFullUrlHeroMinimap(iconHeroName)"
+                    val url = "file:///android_asset/heroes/$iconHeroName/minimap.webp"
                     VOResponseImage(iconHeroName, url)
                 }
                 if (response.isArcane) {
-                    val arcaneItem = VOResponseImage("Arcane", "HeroRepository.getFullUrlHeroArcane(heroName)")
-                    (icons as MutableList).add(0, arcaneItem)
+                    val arcaneItem = VOResponseImage("Arcane", "file:///android_asset/heroes/$heroName/arcane.webp")
+                    icons.add(0, arcaneItem)
                 }
 
                 result.add(VOResponse.Body(heroName, response.title, icons, titleForSavedFile, savedInMemory, audioUrl))

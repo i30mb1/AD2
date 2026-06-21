@@ -1,6 +1,6 @@
 [versions]
 sdkVersion = "35"
-room = "2.6.1"
+room = "2.7.2"
 coroutines = "1.10.2"
 dagger = "2.57"
 workManager = "2.9.1"

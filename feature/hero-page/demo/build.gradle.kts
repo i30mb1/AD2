@@ -35,10 +35,13 @@ dependencies {
     implementation(projects.core.appPreference)
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.commonApplication)
+    implementation(projects.core.spanParser)
+    implementation(libs.workManager)
 
     implementation(projects.feature.heroPage.ui)
     implementation(projects.feature.heroPage.domain.impl)
     implementation(projects.feature.heroPage.domain.wiring)
+    implementation(projects.feature.heroes.domain.wiring)
 
     ksp(libs.daggerAnnotation)
 }

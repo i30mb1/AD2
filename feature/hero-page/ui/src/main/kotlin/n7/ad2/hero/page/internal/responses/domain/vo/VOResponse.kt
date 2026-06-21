@@ -1,6 +1,6 @@
 package n7.ad2.hero.page.internal.responses.domain.vo
 
-import n7.ad2.ui.adapter.HeaderViewHolder
+import n7.ad2.core.ui.adapter.HeaderViewHolder
 
 sealed class VOResponse {
     data class Title(val data: HeaderViewHolder.Data) : VOResponse()

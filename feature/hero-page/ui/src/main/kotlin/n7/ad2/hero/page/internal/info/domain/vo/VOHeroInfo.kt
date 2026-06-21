@@ -2,8 +2,8 @@ package n7.ad2.hero.page.internal.info.domain.vo
 
 import android.text.SpannableString
 import androidx.annotation.DrawableRes
-import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderViewHolder
+import n7.ad2.core.ui.adapter.BodyViewHolder
+import n7.ad2.core.ui.adapter.HeaderViewHolder
 
 data class VOHeroStatistics(val strength: Double, val agility: Double, val intelligence: Double)
 

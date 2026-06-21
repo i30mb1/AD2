@@ -10,6 +10,7 @@ dependencies {
     implementation(libs.jsoup)
 
     implementation(libs.fragment.compose)
+    implementation(libs.composeMaterialIconsExtended)
 
     implementation(projects.core.mediaPlayer)
     implementation(projects.core.commonAndroid)
