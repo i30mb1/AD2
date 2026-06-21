@@ -13,15 +13,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import n7.ad2.feature.games.mix.ui.R
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 
 @Composable
 internal fun Game(title: String, background: Int, onGameClick: () -> Unit, modifier: Modifier = Modifier) {
@@ -34,7 +33,7 @@ internal fun Game(title: String, background: Int, onGameClick: () -> Unit, modif
             .clickable { onGameClick() },
     ) {
         Image(
-            imageVector = ImageVector.vectorResource(id = background),
+            painter = painterResource(id = background),
             contentDescription = title,
             contentScale = ContentScale.Crop,
             alpha = 0.2f,

@@ -39,8 +39,8 @@ import coil.compose.SubcomposeAsyncImage
 import coil.compose.SubcomposeAsyncImageContent
 import n7.ad2.news.ui.internal.screen.news.model.Image
 import n7.ad2.news.ui.internal.screen.news.model.NewsVO
-import n7.ad2.ui.compose.AppTheme
-import n7.ad2.ui.compose.bounceClick
+import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.bounceClick
 
 @Preview
 @Composable

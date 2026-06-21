@@ -12,7 +12,7 @@ import n7.ad2.android.DependenciesMap
 import n7.ad2.android.HasDependencies
 import n7.ad2.android.findDependencies
 import n7.ad2.ktx.viewModel
-import n7.ad2.ui.content
+import n7.ad2.core.ui.content
 import n7.ad2.xo.internal.compose.XoScreen
 import n7.ad2.xo.internal.compose.XoScreenEvent
 import n7.ad2.xo.internal.di.DaggerXoComponent

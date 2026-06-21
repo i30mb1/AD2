@@ -25,9 +25,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
-import n7.ad2.ui.TextWithDotsSuffix
-import n7.ad2.ui.compose.AppTheme
-import n7.ad2.ui.compose.Bold
+import n7.ad2.core.ui.TextWithDotsSuffix
+import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.Bold
 import n7.ad2.xo.internal.compose.model.ServerUI
 
 @Preview

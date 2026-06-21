@@ -18,7 +18,7 @@ import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.ktx.viewModel
-import n7.ad2.ui.content
+import n7.ad2.core.ui.content
 import javax.inject.Inject
 
 internal class GamesFragment(override var dependenciesMap: DependenciesMap) :

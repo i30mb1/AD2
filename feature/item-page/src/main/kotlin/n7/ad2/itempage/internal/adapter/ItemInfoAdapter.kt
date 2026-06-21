@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.feature.item.page.R
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
-import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderPlayableViewHolder
-import n7.ad2.ui.adapter.ImageLineViewHolder
+import n7.ad2.core.ui.adapter.BodyViewHolder
+import n7.ad2.core.ui.adapter.HeaderPlayableViewHolder
+import n7.ad2.core.ui.adapter.ImageLineViewHolder
 
 class ItemInfoAdapter(private val layoutInflater: LayoutInflater, private val onPlayIconClick: (soundUrl: String) -> Unit, private val showPopup: (view: View, text: String) -> Unit) :
     ListAdapter<VOItemInfo, RecyclerView.ViewHolder>(DiffCallback()) {

@@ -67,7 +67,7 @@ internal class ServerWithWebsocket(private val dispatchers: DispatchersProvider,
                 FrameType.Close -> return
                 is FrameType.Text -> {
                     logger(ServerLog.ReceiveMessage(receivedFrame.text))
-                    sendSocketFrame(outputStream)
+                    sendSocketFrame(_outputStream)
                 }
             }
         }

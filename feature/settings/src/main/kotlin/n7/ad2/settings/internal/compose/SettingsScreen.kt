@@ -17,7 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.feature.settings.R
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 
 @Composable
 internal fun SettingsScreen(onAppReviewButtonClicked: () -> Unit, onTellFriendsButtonClicked: () -> Unit) {

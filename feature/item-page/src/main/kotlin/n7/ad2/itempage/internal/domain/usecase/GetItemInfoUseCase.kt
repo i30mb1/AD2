@@ -13,9 +13,9 @@ import n7.ad2.itempage.internal.domain.model.LocalItemInfo
 import n7.ad2.itempage.internal.domain.vo.VOItemInfo
 import n7.ad2.itempage.internal.domain.vo.VORecipe
 import n7.ad2.ktx.toStringList
-import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderPlayableViewHolder
-import n7.ad2.ui.adapter.ImageLineViewHolder
+import n7.ad2.core.ui.adapter.BodyViewHolder
+import n7.ad2.core.ui.adapter.HeaderPlayableViewHolder
+import n7.ad2.core.ui.adapter.ImageLineViewHolder
 import javax.inject.Inject
 
 class GetItemInfoUseCase @Inject constructor(private val res: Resources, private val dispatchers: DispatchersProvider) {

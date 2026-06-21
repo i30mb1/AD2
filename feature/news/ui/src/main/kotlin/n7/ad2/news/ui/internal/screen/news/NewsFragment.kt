@@ -15,7 +15,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.news.ui.internal.di.DaggerNewsComponent
 import n7.ad2.news.ui.internal.screen.article.ArticleFragment
 import n7.ad2.news.ui.internal.screen.news.compose.NewsScreen
-import n7.ad2.ui.content
+import n7.ad2.core.ui.content
 import javax.inject.Inject
 
 internal class NewsFragment(override var dependenciesMap: DependenciesMap) :
@@ -34,7 +34,7 @@ internal class NewsFragment(override var dependenciesMap: DependenciesMap) :
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        NewsScreen(viewModel, parentFragment as DrawerPercentListener, ::onNewsClicked)
+        NewsScreen(viewModel, parentFragment as? DrawerPercentListener, ::onNewsClicked)
     }
 
     private fun onNewsClicked(newsID: Int) {

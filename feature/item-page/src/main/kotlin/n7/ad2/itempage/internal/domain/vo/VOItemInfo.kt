@@ -1,8 +1,8 @@
 package n7.ad2.itempage.internal.domain.vo
 
-import n7.ad2.ui.adapter.BodyViewHolder
-import n7.ad2.ui.adapter.HeaderPlayableViewHolder
-import n7.ad2.ui.adapter.ImageLineViewHolder
+import n7.ad2.core.ui.adapter.BodyViewHolder
+import n7.ad2.core.ui.adapter.HeaderPlayableViewHolder
+import n7.ad2.core.ui.adapter.ImageLineViewHolder
 
 sealed class VOItemInfo {
     data class Title(val data: HeaderPlayableViewHolder.Data) : VOItemInfo()

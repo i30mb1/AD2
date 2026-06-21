@@ -106,6 +106,8 @@ dependencies {
     ksp(libs.daggerAnnotation)
 
     implementation(projects.core.commonAndroid)
+    implementation(projects.core.ui)
+    implementation(projects.core.ktx)
     implementation(projects.core.dagger)
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.coroutines)

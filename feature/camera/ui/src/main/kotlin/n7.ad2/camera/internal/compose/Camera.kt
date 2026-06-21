@@ -33,7 +33,7 @@ import n7.ad2.camera.internal.model.CameraStateUI
 import n7.ad2.camera.internal.model.DetectedRect
 import n7.ad2.feature.camera.domain.impl.FPSTimer
 import n7.ad2.feature.camera.ui.R
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 import kotlin.time.DurationUnit
 
 @Preview

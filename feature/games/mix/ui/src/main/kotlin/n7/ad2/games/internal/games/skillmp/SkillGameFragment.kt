@@ -12,7 +12,7 @@ import n7.ad2.android.findDependencies
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.skillmp.compose.ManaPointScreen
 import n7.ad2.ktx.viewModel
-import n7.ad2.ui.content
+import n7.ad2.core.ui.content
 import javax.inject.Inject
 
 internal class SkillGameFragment : Fragment() {

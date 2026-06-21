@@ -16,7 +16,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.domain.vo.VOStream
 import n7.ad2.streams.internal.stream.StreamActivity
-import n7.ad2.ui.content
+import n7.ad2.core.ui.content
 import javax.inject.Inject
 
 @UnstableApi

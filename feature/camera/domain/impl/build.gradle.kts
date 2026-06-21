@@ -17,7 +17,7 @@ dependencies {
     implementation(libs.lifecycle.common)
     implementation(libs.lifecycleRuntime)
     implementation(libs.litert)
-    implementation(libs.litert.support)
+    implementation(libs.litert.support.api)
     implementation(libs.litert.metadata)
 
     testImplementation(libs.test.mockk)

@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import n7.ad2.app.logger.model.AppLog
 import n7.ad2.feature.games.xo.ui.R
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.xo.internal.XoUIState
 import n7.ad2.xo.internal.compose.model.ServerUI
 

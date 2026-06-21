@@ -25,7 +25,7 @@ import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.streams.internal.di.DaggerStreamsComponent
 import n7.ad2.streams.internal.stream.compose.StreamScreen
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 import javax.inject.Inject
 
 @UnstableApi

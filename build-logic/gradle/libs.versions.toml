@@ -32,7 +32,11 @@ kotlin-dl-tensorflow = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-ten
 kotlin-dl-api = { module = "org.jetbrains.kotlinx:kotlin-deeplearning-api", version.ref = "kotlinDL" }
 
 litert = { group = "com.google.ai.edge.litert", name = "litert", version.ref = "litert" }
-litert-support = { group = "com.google.ai.edge.litert", name = "litert-support", version.ref = "litert" }
+# NB: com.google.ai.edge.litert:litert-support:1.0.1 is an empty wrapper AAR (no classes) that only
+# declares the `org.tensorflow.lite.support` namespace and pulls in litert-support-api. Depending on
+# the wrapper makes the manifest merger fail with a duplicate-namespace error, so depend on
+# litert-support-api directly — it carries the actual org.tensorflow.lite.support.* classes.
+litert-support-api = { group = "com.google.ai.edge.litert", name = "litert-support-api", version.ref = "litert" }
 litert-metadata = { group = "com.google.ai.edge.litert", name = "litert-metadata", version.ref = "litert" }
 
 kotlin-power-assert = { module = "org.jetbrains.kotlin.plugin.power-assert:org.jetbrains.kotlin.plugin.power-assert.gradle.plugin", version.ref = "kotlin" }

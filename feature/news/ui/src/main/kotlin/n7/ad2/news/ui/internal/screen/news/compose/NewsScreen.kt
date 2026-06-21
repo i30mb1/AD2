@@ -23,10 +23,10 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.news.ui.internal.screen.news.NewsViewModel
 import n7.ad2.news.ui.internal.screen.news.model.NewsVO
-import n7.ad2.ui.compose.view.ScrollToTopButton
+import n7.ad2.core.ui.compose.view.ScrollToTopButton
 
 @Composable
-internal fun NewsScreen(viewModel: NewsViewModel, drawerPercentListener: DrawerPercentListener, onNewsClicked: (newsID: Int) -> Unit, modifier: Modifier = Modifier) {
+internal fun NewsScreen(viewModel: NewsViewModel, drawerPercentListener: DrawerPercentListener?, onNewsClicked: (newsID: Int) -> Unit, modifier: Modifier = Modifier) {
     val state = rememberLazyListState()
 
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
@@ -48,7 +48,7 @@ internal fun NewsScreen(viewModel: NewsViewModel, drawerPercentListener: DrawerP
         ScrollToTopButton(showScrollToTopButton, state, Modifier.align(Alignment.BottomEnd))
     }
     DisposableEffect(key1 = Unit) {
-        drawerPercentListener.setDrawerPercentListener { percent -> drawerPercent = percent }
-        onDispose { drawerPercentListener.setDrawerPercentListener(null) }
+        drawerPercentListener?.setDrawerPercentListener { percent -> drawerPercent = percent }
+        onDispose { drawerPercentListener?.setDrawerPercentListener(null) }
     }
 }

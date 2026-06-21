@@ -10,7 +10,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.items.domain.model.Item
 import n7.ad2.items.domain.usecase.GetItemsUseCase
 import n7.ad2.items.internal.model.ItemUI
-import n7.ad2.ui.adapter.HeaderViewHolder
+import n7.ad2.core.ui.adapter.HeaderViewHolder
 import javax.inject.Inject
 
 internal class GetItemsUIUseCase @Inject constructor(private val getItemsUseCase: GetItemsUseCase, private val logger: Logger, private val dispatchers: DispatchersProvider) {

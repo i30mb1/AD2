@@ -37,7 +37,7 @@ import n7.ad2.camera.internal.compose.Camera
 import n7.ad2.camera.internal.compose.CameraEvent
 import n7.ad2.camera.internal.di.DaggerCameraComponent
 import n7.ad2.feature.camera.domain.impl.FPSTimer
-import n7.ad2.ui.content
+import n7.ad2.core.ui.content
 import java.io.File
 import javax.inject.Inject
 

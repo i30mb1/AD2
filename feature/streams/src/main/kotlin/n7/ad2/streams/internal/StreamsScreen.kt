@@ -45,9 +45,9 @@ import coil.compose.AsyncImage
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.feature.streams.R
 import n7.ad2.streams.internal.domain.vo.VOStream
-import n7.ad2.ui.compose.AppTheme
-import n7.ad2.ui.compose.view.ErrorScreen
-import n7.ad2.ui.compose.view.LoadingScreen
+import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.view.ErrorScreen
+import n7.ad2.core.ui.compose.view.LoadingScreen
 
 @Composable
 internal fun StreamsScreen(streams: LazyPagingItems<VOStream>, drawerPercentListener: DrawerPercentListener, onStreamClicked: (stream: VOStream) -> Unit) {

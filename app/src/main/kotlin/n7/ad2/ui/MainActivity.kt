@@ -2,6 +2,7 @@ package n7.ad2.ui
 
 import android.os.Bundle
 import android.view.MotionEvent
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat

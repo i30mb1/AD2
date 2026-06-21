@@ -11,7 +11,7 @@ import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.news.ui.internal.di.DaggerNewsComponent
 import n7.ad2.news.ui.internal.screen.article.compose.ArticleScreen
-import n7.ad2.ui.content
+import n7.ad2.core.ui.content
 import javax.inject.Inject
 
 internal class ArticleFragment : Fragment() {

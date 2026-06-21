@@ -23,7 +23,7 @@ import n7.ad2.itempage.internal.di.DaggerItemPageComponent
 import n7.ad2.ktx.lazyUnsafe
 import n7.ad2.ktx.viewModel
 import n7.ad2.mediaplayer.AudioExoPlayer
-import n7.ad2.ui.InfoPopupWindow
+import n7.ad2.core.ui.InfoPopupWindow
 import javax.inject.Inject
 
 @UnstableApi

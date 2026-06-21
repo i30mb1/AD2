@@ -30,9 +30,9 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
-import n7.ad2.ui.compose.AppTheme
-import n7.ad2.ui.compose.view.ErrorScreen
-import n7.ad2.ui.compose.view.LoadingScreen
+import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.view.ErrorScreen
+import n7.ad2.core.ui.compose.view.LoadingScreen
 
 @Composable
 internal fun ManaPointScreen(state: SkillGameViewModel.State, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit) {

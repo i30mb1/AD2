@@ -18,7 +18,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
 import n7.ad2.news.ui.internal.screen.article.ArticleViewModel
-import n7.ad2.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.AppTheme
 import okhttp3.internal.toHexString
 
 @Composable
