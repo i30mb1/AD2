@@ -5,11 +5,9 @@
     <string name="hero_guide">Guides</string>
 
     <string name="dialog_response_download">Download</string>
-    <string name="hero_fragment_description">Description</string>
     <string name="hero_fragment_bio">Bio</string>
     <string name="hero_fragment_trivia">Trivia</string>
     <string name="hero_fragment_notes">Notes</string>
-    <string name="hero_fragment_params">Parameters</string>
 
     <string name="desc_strength" translatable="false">strength</string>
     <string name="desc_intelligence" translatable="false">intellect</string>
@@ -18,8 +16,6 @@
     <string name="notification_title_guide" translatable="false">loading guide...</string>
     <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
 
-    <string name="hotkey" translatable="false">Hot Key</string>
-    <string name="legacykey" translatable="false">Legacy Key</string>
     <string name="hero_popularity" translatable="false">popularity : %s</string>
     <string name="hero_pickrate" translatable="false">pickrate: %s</string>
     <string name="starting_items">Starting items</string>
@@ -30,14 +26,9 @@
     <string name="fragment_guide_skill_builds">Skill builds</string>
 
     <!-- hero info -->
-    <string name="info_attributes">Attributes</string>
     <string name="info_stats">Stats</string>
-    <string name="info_roles">Roles</string>
     <string name="info_abilities">Abilities</string>
     <string name="info_talents">Talents</string>
-    <string name="info_lore">Lore</string>
-    <string name="info_show_more">Show more</string>
-    <string name="info_show_less">Show less</string>
     <string name="info_facets">Facets</string>
 
     <string name="attr_strength">Strength</string>
@@ -116,14 +107,11 @@
     <string name="ability_duration">Duration</string>
     <string name="aghanim_scepter" translatable="false">Aghanim\'s Scepter</string>
     <string name="aghanim_shard" translatable="false">Aghanim\'s Shard</string>
-    <string name="talent_level">Level %d</string>
 
     <!-- hero info: wiki and patches -->
     <string name="info_wiki_source" translatable="false">Dota 2 Wiki</string>
     <string name="info_wiki_hint">Community data, may lag behind the current patch</string>
     <string name="info_lang_en" translatable="false">EN</string>
-    <string name="info_changes">Recent changes</string>
-    <string name="info_changes_hero">Hero</string>
     <string name="info_items">Recommended items</string>
     <string name="info_counters">Matchups</string>
     <string name="info_strategy">Strategy</string>
@@ -132,8 +120,4 @@
     <string name="info_ability_details">Details</string>
     <string name="info_ability_changes">Changes</string>
     <string name="info_show_all">Show all (%d)</string>
-    <string name="stat_attack_animation">Attack animation</string>
-    <string name="stat_collision">Collision size</string>
-    <string name="stat_release_date">Release date</string>
-    <string name="info_quote">“%s”</string>
 </resources>

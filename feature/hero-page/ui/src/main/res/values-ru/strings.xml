@@ -6,11 +6,9 @@
 
 
     <string name="dialog_response_download">Скачать</string>
-    <string name="hero_fragment_description">Описание</string>
     <string name="hero_fragment_bio">Биография</string>
     <string name="hero_fragment_trivia">Факты</string>
     <string name="hero_fragment_notes">Заметки</string>
-    <string name="hero_fragment_params">Параметры</string>
 
     <string name="starting_items">Начальные предметы</string>
     <string name="easy_to_win_heroes">Силён против героев</string>
@@ -21,14 +19,9 @@
     <string name="spell_build">Выбор способностей</string>
 
     <!-- hero info -->
-    <string name="info_attributes">Атрибуты</string>
     <string name="info_stats">Характеристики</string>
-    <string name="info_roles">Роли</string>
     <string name="info_abilities">Способности</string>
     <string name="info_talents">Таланты</string>
-    <string name="info_lore">История</string>
-    <string name="info_show_more">Читать полностью</string>
-    <string name="info_show_less">Свернуть</string>
     <string name="info_facets">Аспекты</string>
 
     <string name="attr_strength">Сила</string>
@@ -105,12 +98,9 @@
     <string name="ability_cast_point">Время применения</string>
     <string name="ability_channel_time">Поддержание</string>
     <string name="ability_duration">Длительность</string>
-    <string name="talent_level">Уровень %d</string>
 
     <!-- hero info: wiki and patches -->
     <string name="info_wiki_hint">Данные сообщества, могут отставать от текущего патча</string>
-    <string name="info_changes">Недавние изменения</string>
-    <string name="info_changes_hero">Герой</string>
     <string name="info_items">Рекомендуемые предметы</string>
     <string name="info_counters">Противостояние</string>
     <string name="info_strategy">Стратегия</string>
@@ -119,8 +109,4 @@
     <string name="info_ability_details">Подробности</string>
     <string name="info_ability_changes">Изменения</string>
     <string name="info_show_all">Показать все (%d)</string>
-    <string name="stat_attack_animation">Анимация атаки</string>
-    <string name="stat_collision">Радиус столкновения</string>
-    <string name="stat_release_date">Дата выхода</string>
-    <string name="info_quote">«%s»</string>
 </resources>

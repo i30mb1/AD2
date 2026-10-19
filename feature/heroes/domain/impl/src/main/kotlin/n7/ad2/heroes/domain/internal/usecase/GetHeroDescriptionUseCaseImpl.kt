@@ -69,7 +69,6 @@ private fun HeroDescriptionJson.toHeroDescription(locale: String): HeroDescripti
     complexity = complexity,
     roles = roles.mapNotNull { role -> role.role.toEnum<Role>()?.let { HeroRole(it, role.level) } },
     short = short,
-    hype = hype,
     bio = bio,
     attributes = HeroAttributes(
         strength = attributes.strength,
@@ -101,10 +100,6 @@ private fun HeroDescriptionJson.toHeroDescription(locale: String): HeroDescripti
     facets = facets.map { facet -> Facet(facet.name, facet.description) },
     trivia = trivia,
     wiki = HeroWiki(
-        quote = wiki.quote,
-        releaseDate = wiki.releaseDate,
-        attackAnimation = wiki.attackAnimation,
-        collisionRadius = wiki.collisionRadius,
         recommendedItems = wiki.recommendedItems?.toArticle(locale),
         counters = wiki.counters?.toArticle(locale),
         playstyle = wiki.guide?.playstyle?.let { Playstyle(it.lang.isFallback(locale), it.text, it.pros, it.cons) },
@@ -144,7 +139,6 @@ private fun AbilityJson.toAbility(locale: String): Ability = Ability(
     imageUrl = if (image.isEmpty()) "" else "file:///android_asset/$image",
     kind = kind.toEnum<AbilityKind>() ?: AbilityKind.BASIC,
     description = description,
-    lore = lore,
     notes = notes,
     scepter = scepter,
     shard = shard,

@@ -1,8 +1,17 @@
 import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+import com.github.triplet.gradle.androidpublisher.ReleaseStatus
 
 plugins {
     id("convention.android-application")
     id("n7.plugins.kotlin-ksp")
+    id("com.github.triplet.play") version "4.1.1"
+}
+
+play {
+    serviceAccountCredentials.set(rootProject.file("play-service-account.json"))
+    defaultToAppBundles.set(true)
+    track.set("internal")
+    releaseStatus.set(ReleaseStatus.DRAFT)
 }
 
 base {

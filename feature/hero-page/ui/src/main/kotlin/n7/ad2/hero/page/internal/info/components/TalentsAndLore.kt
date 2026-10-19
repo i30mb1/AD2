@@ -1,9 +1,7 @@
 package n7.ad2.hero.page.internal.info.components
 
-import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
@@ -15,10 +13,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,7 +29,9 @@ import n7.ad2.heroes.domain.model.TalentLevel
 /** Same layout as the in-game tree: level 25 on top, left and right options around the level. */
 @Composable
 internal fun TalentsCard(talents: List<TalentLevel>) {
-    InfoCard(title = stringResource(R.string.info_talents)) {
+    val top = talents.maxByOrNull { it.level }
+    val summary = top?.let { "${it.level}: ${it.left} / ${it.right}" }
+    CollapsibleCard(title = stringResource(R.string.info_talents), summary = summary) {
         talents.sortedByDescending { it.level }.forEachIndexed { index, talent ->
             if (index > 0) VSpace(8.dp)
             Row(
@@ -78,7 +74,7 @@ private fun TalentOption(text: String, align: TextAlign, modifier: Modifier) {
 
 @Composable
 internal fun FacetsCard(facets: List<Facet>) {
-    InfoCard(title = stringResource(R.string.info_facets)) {
+    CollapsibleCard(title = stringResource(R.string.info_facets), summary = facets.joinToString(" · ") { it.name }) {
         facets.forEachIndexed { index, facet ->
             if (index > 0) InfoDivider(Modifier.padding(vertical = 10.dp))
             Text(facet.name, style = AppTheme.style.H5, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor)
@@ -92,30 +88,14 @@ internal fun FacetsCard(facets: List<Facet>) {
 
 @Composable
 internal fun BioCard(bio: String) {
-    var isExpanded by rememberSaveable { mutableStateOf(false) }
-    InfoCard(title = stringResource(R.string.hero_fragment_bio), modifier = Modifier.animateContentSize()) {
-        RichText(
-            text = bio,
-            color = AppTheme.color.textSecondaryColor,
-            maxLines = if (isExpanded) Int.MAX_VALUE else 6,
-        )
-        VSpace(8.dp)
-        Text(
-            text = stringResource(if (isExpanded) R.string.info_show_less else R.string.info_show_more),
-            style = AppTheme.style.H5,
-            fontWeight = FontWeight.Bold,
-            color = AppTheme.color.primary,
-            modifier = Modifier
-                .clip(AppTheme.shape.small)
-                .clickable { isExpanded = !isExpanded }
-                .padding(vertical = 4.dp),
-        )
+    CollapsibleCard(title = stringResource(R.string.hero_fragment_bio), summary = bio.substringBefore('\n').substringBefore(". ")) {
+        RichText(text = bio, color = AppTheme.color.textSecondaryColor)
     }
 }
 
 @Composable
 internal fun TriviaCard(trivia: List<String>) {
-    InfoCard(title = stringResource(R.string.hero_fragment_trivia)) {
+    CollapsibleCard(title = stringResource(R.string.hero_fragment_trivia), summary = trivia.first()) {
         trivia.forEach { fact -> BulletText(fact, color = AppTheme.color.textColor) }
     }
 }

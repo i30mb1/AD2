@@ -20,14 +20,11 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import n7.ad2.core.ui.compose.view.ErrorScreen
 import n7.ad2.core.ui.compose.view.LoadingAnimation
 import n7.ad2.hero.page.internal.info.components.AbilitiesCard
-import n7.ad2.hero.page.internal.info.components.AttributesCard
 import n7.ad2.hero.page.internal.info.components.BioCard
-import n7.ad2.hero.page.internal.info.components.ChangesCard
 import n7.ad2.hero.page.internal.info.components.CountersCard
 import n7.ad2.hero.page.internal.info.components.FacetsCard
 import n7.ad2.hero.page.internal.info.components.HeroHeader
 import n7.ad2.hero.page.internal.info.components.RecommendedItemsCard
-import n7.ad2.hero.page.internal.info.components.RolesCard
 import n7.ad2.hero.page.internal.info.components.StatsCard
 import n7.ad2.hero.page.internal.info.components.StrategyCard
 import n7.ad2.hero.page.internal.info.components.TalentsCard
@@ -60,12 +57,10 @@ private fun HeroInfoContent(info: VOHeroInfo) {
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     LazyColumn(
         contentPadding = PaddingValues(top = 12.dp, bottom = bottomInset + 16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
+        // the hero card and abilities are always open, everything else is a folded card with a short summary
         item(key = "header") { HeroHeader(info.heroImageUrl, description) }
-        item(key = "attributes") { AttributesCard(description) }
-        item(key = "stats") { StatsCard(description.stats, description.wiki) }
-        if (description.roles.isNotEmpty()) item(key = "roles") { RolesCard(description.roles) }
         if (selectedAbility != null) {
             item(key = "abilities") {
                 AbilitiesCard(
@@ -76,11 +71,9 @@ private fun HeroInfoContent(info: VOHeroInfo) {
                 )
             }
         }
-        if (description.facets.isNotEmpty()) item(key = "facets") { FacetsCard(description.facets) }
+        item(key = "stats") { StatsCard(description.stats) }
         if (description.talents.isNotEmpty()) item(key = "talents") { TalentsCard(description.talents) }
-        if (description.changes.isNotEmpty()) {
-            item(key = "changes") { ChangesCard(description.changes, abilities.associate { it.name to it.imageUrl }) }
-        }
+        if (description.facets.isNotEmpty()) item(key = "facets") { FacetsCard(description.facets) }
         val wiki = description.wiki
         if (wiki.playstyle != null || wiki.tips != null) item(key = "strategy") { StrategyCard(wiki.playstyle, wiki.tips) }
         wiki.counters?.let { counters -> item(key = "counters") { CountersCard(counters) } }

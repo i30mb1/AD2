@@ -32,7 +32,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -346,27 +345,5 @@ internal fun BulletText(text: String, color: Color = AppTheme.color.textSecondar
         )
         HSpace(10.dp)
         RichText(text, color = color)
-    }
-}
-
-@Composable
-internal fun Quote(text: String) {
-    Row(
-        Modifier
-            .fillMaxWidth()
-            .height(IntrinsicSize.Min),
-    ) {
-        Box(
-            Modifier
-                .width(2.dp)
-                .fillMaxHeight()
-                .background(AppTheme.color.textSecondaryColor.copy(alpha = 0.4f)),
-        )
-        HSpace(10.dp)
-        RichText(
-            text = text,
-            style = AppTheme.style.H5.copy(fontStyle = FontStyle.Italic),
-            color = AppTheme.color.textSecondaryColor,
-        )
     }
 }

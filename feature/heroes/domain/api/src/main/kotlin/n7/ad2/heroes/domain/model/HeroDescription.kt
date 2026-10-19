@@ -10,7 +10,6 @@ data class HeroDescription(
     val complexity: Int = 1,
     val roles: List<HeroRole> = listOf(),
     val short: String = "",
-    val hype: String = "",
     val bio: String = "",
     val attributes: HeroAttributes = HeroAttributes(),
     val stats: HeroStats = HeroStats(),
@@ -25,10 +24,6 @@ data class HeroDescription(
 
 /** What only the community wiki has. It lags behind the game, numbers there can be outdated. */
 data class HeroWiki(
-    val quote: String? = null,
-    val releaseDate: String? = null,
-    val attackAnimation: String? = null,
-    val collisionRadius: String? = null,
     val recommendedItems: WikiArticle? = null,
     val counters: WikiArticle? = null,
     val playstyle: Playstyle? = null,
@@ -123,7 +118,6 @@ data class Ability(
     val imageUrl: String = "",
     val kind: AbilityKind = AbilityKind.BASIC,
     val description: String = "",
-    val lore: String = "",
     val notes: List<String> = listOf(),
     val scepter: String? = null,
     val shard: String? = null,

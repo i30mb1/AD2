@@ -13,7 +13,6 @@ internal data class HeroDescriptionJson(
     @SerialName("complexity") val complexity: Int = 1,
     @SerialName("roles") val roles: List<RoleJson> = emptyList(),
     @SerialName("short") val short: String = "",
-    @SerialName("hype") val hype: String = "",
     @SerialName("bio") val bio: String = "",
     @SerialName("attributes") val attributes: AttributesJson = AttributesJson(),
     @SerialName("stats") val stats: StatsJson = StatsJson(),
@@ -27,10 +26,6 @@ internal data class HeroDescriptionJson(
 
 @Serializable
 internal data class WikiJson(
-    @SerialName("quote") val quote: String? = null,
-    @SerialName("releaseDate") val releaseDate: String? = null,
-    @SerialName("attackAnimation") val attackAnimation: String? = null,
-    @SerialName("collisionRadius") val collisionRadius: String? = null,
     @SerialName("recommendedItems") val recommendedItems: WikiArticleJson? = null,
     @SerialName("counters") val counters: WikiArticleJson? = null,
     @SerialName("guide") val guide: GuideJson? = null,
@@ -146,7 +141,6 @@ internal data class AbilityJson(
     @SerialName("image") val image: String = "",
     @SerialName("kind") val kind: String = "",
     @SerialName("description") val description: String = "",
-    @SerialName("lore") val lore: String = "",
     @SerialName("notes") val notes: List<String> = emptyList(),
     @SerialName("scepter") val scepter: String? = null,
     @SerialName("shard") val shard: String? = null,

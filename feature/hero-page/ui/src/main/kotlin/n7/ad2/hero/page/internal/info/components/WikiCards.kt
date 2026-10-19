@@ -37,6 +37,7 @@ import n7.ad2.heroes.domain.model.Playstyle
 import n7.ad2.heroes.domain.model.WikiArticle
 import n7.ad2.heroes.domain.model.WikiEntry
 import n7.ad2.heroes.domain.model.WikiNotes
+import n7.ad2.heroes.domain.model.WikiSection
 
 private val prosColor = Color(0xFF6CC56A)
 private val consColor = Color(0xFFE5655A)
@@ -90,37 +91,6 @@ internal fun <T> ExpandableItems(items: List<T>, visible: Int, item: @Composable
 // ===== patch changes =====
 
 @Composable
-internal fun ChangesCard(changes: List<PatchChange>, abilityIcons: Map<String, String>) {
-    InfoCard(title = stringResource(R.string.info_changes)) {
-        changes.forEachIndexed { index, change ->
-            if (index > 0) InfoDivider(Modifier.padding(vertical = 12.dp))
-            PatchHeader(change)
-            if (change.hero.isNotEmpty()) {
-                VSpace(8.dp)
-                Caption(stringResource(R.string.info_changes_hero))
-                PatchNotes(change.hero)
-            }
-            change.abilities.forEach { ability ->
-                VSpace(8.dp)
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    abilityIcons[ability.abilityName]?.let { icon ->
-                        AsyncImage(model = icon, contentDescription = null, modifier = Modifier.size(18.dp).clip(AppTheme.shape.small))
-                        HSpace(6.dp)
-                    }
-                    Text(ability.abilityName, style = AppTheme.style.H5, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor)
-                }
-                PatchNotes(ability.notes)
-            }
-            if (change.talents.isNotEmpty()) {
-                VSpace(8.dp)
-                Caption(stringResource(R.string.info_talents))
-                PatchNotes(change.talents)
-            }
-        }
-    }
-}
-
-@Composable
 internal fun PatchHeader(change: PatchChange) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
@@ -155,13 +125,34 @@ internal fun PatchNotes(notes: List<PatchNote>) {
 
 @Composable
 internal fun RecommendedItemsCard(article: WikiArticle) {
-    InfoCard(title = stringResource(R.string.info_items)) {
+    val summary = article.sections.flatMap { it.entries }.mapNotNull { it.name }.take(5).joinToString(", ")
+    CollapsibleCard(title = stringResource(R.string.info_items), summary = summary) {
         WikiSourceLabel(article.isFallbackLanguage)
         article.sections.forEach { phase ->
-            VSpace(12.dp)
-            Caption(phase.title, color = AppTheme.color.textColor)
-            VSpace(6.dp)
-            phase.entries.forEach { entry -> EntryRow(entry, iconSize = 34) }
+            CollapsibleSection(
+                title = phase.title,
+                count = null,
+                key = "items-${phase.title}",
+                trailing = { ItemIcons(phase.entries) },
+            ) {
+                phase.entries.forEach { entry -> EntryRow(entry, iconSize = 34) }
+            }
+        }
+    }
+}
+
+/** Icons of the phase are visible while it is folded, the explanations open on tap. */
+@Composable
+private fun ItemIcons(entries: List<WikiEntry>) {
+    Row(horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+        entries.mapNotNull { it.iconUrl }.take(6).forEach { icon ->
+            AsyncImage(
+                model = icon,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(width = 26.dp, height = 19.dp)
+                    .clip(AppTheme.shape.small),
+            )
         }
     }
 }
@@ -170,17 +161,47 @@ internal fun RecommendedItemsCard(article: WikiArticle) {
 
 @Composable
 internal fun CountersCard(article: WikiArticle) {
-    InfoCard(title = stringResource(R.string.info_counters)) {
+    // "Bad against" with its "Others" and "Items" parts form one group
+    val groups = article.sections.fold(mutableListOf<MutableList<WikiSection>>()) { acc, section ->
+        if (section.level <= 2 || acc.isEmpty()) acc.add(mutableListOf(section)) else acc.last().add(section)
+        acc
+    }
+    val summary = groups.joinToString(" · ") { group -> "${group.first().title} ${group.sumOf { s -> s.entries.count { it.name != null } }}" }
+    CollapsibleCard(title = stringResource(R.string.info_counters), summary = summary) {
         WikiSourceLabel(article.isFallbackLanguage)
-        article.sections.forEach { section ->
-            VSpace(if (section.level <= 2) 16.dp else 10.dp)
-            if (section.level <= 2) {
-                Text(section.title, style = AppTheme.style.H4, fontWeight = FontWeight.Bold, color = AppTheme.color.primary)
-            } else {
-                Caption(section.title, color = AppTheme.color.textColor)
+        groups.forEach { group ->
+            val main = group.first()
+            CollapsibleSection(
+                title = main.title,
+                count = group.sumOf { s -> s.entries.count { it.name != null } }.takeIf { it > 0 },
+                key = "counters-${main.title}",
+                titleColor = AppTheme.color.primary,
+                trailing = { HeroIcons(main.entries) },
+            ) {
+                main.entries.forEach { entry -> EntryRow(entry, iconSize = 40) }
+                group.drop(1).forEach { part ->
+                    VSpace(8.dp)
+                    Caption(part.title, color = AppTheme.color.textColor)
+                    VSpace(4.dp)
+                    part.entries.forEach { entry -> EntryRow(entry, iconSize = 32) }
+                }
             }
-            VSpace(6.dp)
-            ExpandableItems(section.entries, visible = 4) { entry -> EntryRow(entry, iconSize = 40) }
+        }
+    }
+}
+
+@Composable
+private fun HeroIcons(entries: List<WikiEntry>) {
+    Row(horizontalArrangement = Arrangement.spacedBy((-6).dp)) {
+        entries.mapNotNull { it.iconUrl }.take(5).forEach { icon ->
+            AsyncImage(
+                model = icon,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(22.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(AppTheme.color.surface),
+            )
         }
     }
 }
@@ -220,7 +241,8 @@ private fun EntryRow(entry: WikiEntry, iconSize: Int) {
 
 @Composable
 internal fun StrategyCard(playstyle: Playstyle?, tips: WikiArticle?) {
-    InfoCard(title = stringResource(R.string.info_strategy)) {
+    val summary = playstyle?.text?.substringBefore(". ")?.plus(".") ?: tips?.sections?.joinToString(" · ") { it.title }
+    CollapsibleCard(title = stringResource(R.string.info_strategy), summary = summary) {
         if (playstyle != null) {
             WikiSourceLabel(playstyle.isFallbackLanguage)
             VSpace(8.dp)
@@ -234,16 +256,13 @@ internal fun StrategyCard(playstyle: Playstyle?, tips: WikiArticle?) {
             }
         }
         if (tips != null) {
-            if (playstyle == null || tips.isFallbackLanguage != playstyle.isFallbackLanguage) {
-                VSpace(if (playstyle == null) 0.dp else 16.dp)
-                WikiSourceLabel(tips.isFallbackLanguage)
-            }
+            VSpace(8.dp)
+            if (playstyle == null || tips.isFallbackLanguage != playstyle.isFallbackLanguage) WikiSourceLabel(tips.isFallbackLanguage)
             tips.sections.forEach { section ->
-                VSpace(14.dp)
-                Text(section.title, style = AppTheme.style.H5, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor)
-                VSpace(4.dp)
                 val lines = section.entries.flatMap { it.lines }
-                ExpandableItems(lines, visible = 3) { line -> BulletText(line) }
+                CollapsibleSection(section.title, lines.size, key = "tips-${section.title}") {
+                    lines.forEach { line -> BulletText(line) }
+                }
             }
         }
     }

@@ -56,7 +56,8 @@ internal fun parseTrivia(doc: Document): List<String> {
     while (el != null && el.tagName() != "h2") {
         val lists = if (el.tagName() == "ul") listOf(el) else el.select("ul")
         lists.forEach { list ->
-            list.children().filter { it.tagName() == "li" }.forEach { item ->
+            // a fact with a value the wiki failed to render reads as a broken sentence, it is skipped
+            list.children().filter { it.tagName() == "li" && it.select(".error, .scribunto-error").isEmpty() }.forEach { item ->
                 val copy = item.clone()
                 copy.select(".ext-audiobutton, audio, sup.reference, .noprint, ul").remove()
                 val text = copy.text()
