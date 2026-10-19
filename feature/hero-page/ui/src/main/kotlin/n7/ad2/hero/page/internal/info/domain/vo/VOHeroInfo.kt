@@ -1,27 +1,18 @@
 package n7.ad2.hero.page.internal.info.domain.vo
 
-import android.text.SpannableString
-import androidx.annotation.DrawableRes
-import n7.ad2.core.ui.adapter.BodyViewHolder
-import n7.ad2.core.ui.adapter.HeaderViewHolder
+import n7.ad2.heroes.domain.model.Ability
+import n7.ad2.heroes.domain.model.HeroDescription
 
-data class VOHeroStatistics(val strength: Double, val agility: Double, val intelligence: Double)
+/**
+ * Everything the "Info" tab shows, blocks without data are simply not drawn.
+ * Abilities are split into groups in the order the game shows them.
+ */
+data class VOHeroInfo(
+    val heroImageUrl: String,
+    val description: HeroDescription,
+    val abilityGroups: List<VOAbilityGroup>,
+)
 
-sealed class VOHeroInfo {
-    data class HeaderSound(val title: String, val hotkey: String?, val legacyKey: String?, val isPlaying: Boolean, val soundUrl: String?) : VOHeroInfo()
-
-    data class Header(val item: HeaderViewHolder.Data) : VOHeroInfo()
-    data class Body(val item: BodyViewHolder.Data) : VOHeroInfo()
-    data class Attributes(val urlHeroImage: String, val heroStatistics: VOHeroStatistics, val isSelected: Boolean) : VOHeroInfo()
-    data class Spells(val spells: List<VOSpell>) : VOHeroInfo()
+data class VOAbilityGroup(val group: Group, val abilities: List<Ability>) {
+    enum class Group { INNATE, MAIN, EXTRA }
 }
-
-sealed class VOSpell {
-    data class Simple(val name: String, val urlSpellImage: String, val isSelected: Boolean) : VOSpell()
-    data class Talent(val name: String, val isSelected: Boolean) : VOSpell()
-}
-
-data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VOHeroInfo()
-data class VOBodySimple(val body: String) : VOHeroInfo()
-data class VOBodyWithImage(val body: SpannableString, @DrawableRes val drawable: Int, val tip: String) : VOHeroInfo()
-data class VOBodyLine(val title: SpannableString) : VOHeroInfo()

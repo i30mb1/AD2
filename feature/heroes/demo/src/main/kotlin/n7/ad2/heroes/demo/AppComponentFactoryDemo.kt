@@ -4,6 +4,8 @@ import android.app.Activity
 import android.app.AppComponentFactory
 import android.app.Application
 import android.content.Intent
+import n7.ad2.feature.heroes.ui.api.HeroesDependencies
+import n7.ad2.hero.page.api.HeroPageDependencies
 import n7.ad2.heroes.demo.di.ApplicationComponentDemo
 import n7.ad2.heroes.demo.di.DaggerApplicationComponentDemo
 import n7.ad2.ktx.lazyUnsafe
@@ -14,7 +16,13 @@ internal class AppComponentFactoryDemo : AppComponentFactory() {
     private lateinit var component: ApplicationComponentDemo
 
     override fun instantiateApplication(classLoader: ClassLoader, className: String): Application = when (className) {
-        MyApplicationDemo::class.java.name -> MyApplicationDemo { application -> component = factory.create(application) }
+        MyApplicationDemo::class.java.name -> MyApplicationDemo { application ->
+            component = factory.create(application)
+            mapOf(
+                HeroesDependencies::class.java to component,
+                HeroPageDependencies::class.java to component,
+            )
+        }
         else -> super.instantiateApplication(classLoader, className)
     }
 

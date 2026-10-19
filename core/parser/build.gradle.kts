@@ -7,9 +7,11 @@ application {
     mainClass.set("n7.ad2.parser.heroes.HeroParserKt")
 }
 
-// ./gradlew :core:parser:runHeroes -PcfClearance=<cookie>  → parse heroes
+// ./gradlew :core:parser:runHeroes -PtestMode=false       → parse heroes (Valve datafeed + wiki trivia)
+// ./gradlew :core:parser:runHeroes -Pheroes=Pudge,Lion    → parse only these heroes
+// ./gradlew :core:parser:runHeroes -PparseResponses=true  → also re-download voice responses from the wiki
 // ./gradlew :core:parser:runItems  -PcfClearance=<cookie>  → parse items
-// Set TEST_MODE=false to parse all heroes (default: true = first 3 only)
+// Default test mode parses the first 3 heroes only
 
 tasks.register<JavaExec>("runHeroes") {
     group = "parser"
@@ -21,10 +23,14 @@ tasks.register<JavaExec>("runHeroes") {
     val htmlDir = findProperty("htmlDir")?.toString() ?: System.getenv("PARSER_HTML_DIR") ?: ""
     val testMode = findProperty("testMode")?.toString() ?: System.getenv("TEST_MODE") ?: "true"
     val testLimit = findProperty("testLimit")?.toString() ?: System.getenv("TEST_LIMIT") ?: "3"
+    val heroes = findProperty("heroes")?.toString() ?: System.getenv("HEROES") ?: ""
+    val parseResponses = findProperty("parseResponses")?.toString() ?: System.getenv("PARSE_RESPONSES") ?: "false"
     if (cfClearance.isNotEmpty()) environment("CF_CLEARANCE", cfClearance)
     if (htmlDir.isNotEmpty()) environment("PARSER_HTML_DIR", htmlDir)
+    if (heroes.isNotEmpty()) environment("HEROES", heroes)
     environment("TEST_MODE", testMode)
     environment("TEST_LIMIT", testLimit)
+    environment("PARSE_RESPONSES", parseResponses)
 }
 
 tasks.register<JavaExec>("runItems") {

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pudge - Dota 2 Wiki</title>
+</head>
+<body>
+<div id="content" class="mw-body">
+<h1 id="firstHeading">Pudge</h1>
+<div id="mw-content-text">
+<div class="mw-parser-output">
+
+<!-- ============================================================
+     HERO INFOBOX — attack type, complexity, roles, description
+     ============================================================ -->
+<table class="infobox wikitable">
+<tbody>
+<tr>
+  <th colspan="2" style="text-align:center; font-size:1.4em; background:#1c2530; color:#fff">Pudge</th>
+</tr>
+<tr>
+  <th>Primary Attribute</th>
+  <td><img alt="Strength attribute symbol" src="strength.png" width="20" height="20"/> Strength</td>
+</tr>
+<tr>
+  <th>Attack Type</th>
+  <td><img alt="Melee" src="melee.png" width="20" height="20"/> Melee</td>
+</tr>
+<tr>
+  <th>Complexity</th>
+  <td>
+    <img alt="Hero Complexity" src="star1.png" width="14" height="14"/>
+    <span style="color:#888; font-size:0.9em">Simple</span>
+  </td>
+</tr>
+<tr>
+  <th>Roles:</th>
+  <td>
+    <a href="/wiki/Disabler" title="Disabler"><img alt="Disabler" src="disabler.png" width="18" height="18"/></a>&#32;Disabler&#160;
+    <a href="/wiki/Initiator" title="Initiator"><img alt="Initiator" src="initiator.png" width="18" height="18"/></a>&#32;Initiator&#160;
+    <a href="/wiki/Durable" title="Durable"><img alt="Durable" src="durable.png" width="18" height="18"/></a>&#32;Durable
+  </td>
+</tr>
+<tr>
+  <td colspan="2" style="font-style: italic; text-align:center; padding:10px 16px; color:#ccc; font-size:0.95em">
+    A rotten mass of flesh and bone, Pudge hungers for the souls of others.
+    The Butcher awaits in the shadows, hook in hand, ready to drag
+    his victims screaming to their grim, gory fate.
+  </td>
+</tr>
+</tbody>
+</table>
+
+<!-- ============================================================
+     MAIN ATTRIBUTES (STR / AGI / INT)
+     selector: [style*='grid-template-columns: auto auto auto']
+     text must contain e.g. "24 + 3.2"
+     ============================================================ -->
+<div style="display:grid; grid-template-columns: auto auto auto; text-align:center; margin:12px 0; background:#1a2433; padding:8px; border-radius:4px">
+  <div>
+    <div style="color:#e84a0c; font-size:0.85em">Strength</div>
+    <div style="font-weight:bold; color:#fff">24 + 3.2</div>
+  </div>
+  <div>
+    <div style="color:#81c832; font-size:0.85em">Agility</div>
+    <div style="font-weight:bold; color:#fff">14 + 1.6</div>
+  </div>
+  <div>
+    <div style="color:#2e9fdf; font-size:0.85em">Intelligence</div>
+    <div style="font-weight:bold; color:#fff">14 + 1.8</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     BASE STATS TABLE
+     selectors: th:has(a[href*='Armor']), th:has(a[href*='Attack_damage']), etc.
+     ============================================================ -->
+<table class="wikitable" style="margin:8px 0; width:100%">
+<tbody>
+<tr>
+  <th><a href="/wiki/Armor">Armor</a></th>
+  <td>1.1</td>
+  <th><a href="/wiki/Attack_damage">Attack damage</a></th>
+  <td>45-51</td>
+</tr>
+<tr>
+  <th><a href="/wiki/Movement_speed">Movement speed</a></th>
+  <td>280</td>
+  <th><a href="/wiki/Attack_speed">Attack speed</a></th>
+  <td>1.7 BAT</td>
+</tr>
+<tr>
+  <th><a href="/wiki/Health">Health</a></th>
+  <td>120</td>
+  <th><a href="/wiki/Mana">Mana</a></th>
+  <td>75</td>
+</tr>
+<tr>
+  <th><a href="/wiki/Vision">Vision range</a></th>
+  <td>1800 / 800</td>
+  <th><a href="/wiki/Sight_range">Sight range</a></th>
+  <td>1800 / 800</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ============================================================
+     ABILITIES SECTION
+     Each panel: div.ability-background
+     Name:    span[style*='color:#fff'][style*='text-shadow']
+     Effects: div.ability-description > div[style*='width:32%'][style*='vertical-align:top']
+     Cooldown: img[alt='Cooldown symbol'] inside div[style*='display:table-cell'], next sibling has value
+     Mana:    img[alt='Mana symbol'] same pattern
+     Aghanim: div[style*='rgba(18, 26, 33'] with text containing "Aghanim" and length > 20
+     ============================================================ -->
+<h2><span class="mw-headline" id="Abilities">Abilities</span></h2>
+
+<!-- ABILITY 1: Meat Hook -->
+<div class="ability-background" style="background:#1c2530; border:1px solid #2e3e50; padding:12px; margin:6px 0; border-radius:3px">
+  <div style="display:flex; align-items:center; margin-bottom:8px">
+    <a class="image" href="https://static.wikia.nocookie.net/dota2_gamepedia/images/meat_hook_full.png">
+      <img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/meat_hook.png" alt="Meat Hook icon" width="64" height="64"/>
+    </a>
+    <div style="margin-left:10px">
+      <div>
+        <span style="color:#fff; text-shadow: 1px 1px 3px #000000; font-size:1.15em; font-weight:bold">Meat Hook</span>
+      </div>
+      <div style="color:#aaa; font-size:0.85em; margin-top:2px">
+        <span class="tooltip" title="Hotkey">Q</span>
+        &#160;|&#160;
+        <span class="tooltip" title="Legacy Key">E</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ability-description" style="background:#232f3d; padding:8px; border-radius:2px">
+    <div style="display:flex; flex-wrap:wrap; margin-bottom:6px">
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Cast Range</b> 1300
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Hook Duration</b> 0.8
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Damage</b> 100 / 200 / 300 / 400
+      </div>
+    </div>
+    <div style="font-size:95%; border-top:1px solid #3a4a5a; padding-top:6px; margin-top:2px; color:#ddd">
+      Launches a bloody hook at a unit or location. The hook will snag the first unit
+      it encounters, dragging the unit back to Pudge and dealing damage if it is an enemy.
+    </div>
+  </div>
+
+  <!-- Cooldown / Mana row -->
+  <div style="display:table; margin-top:8px">
+    <div style="display:table-cell; padding:2px 8px 2px 0; vertical-align:middle; white-space:nowrap">
+      <img alt="Cooldown symbol" src="cooldown.png" width="14" height="14"/>
+    </div>
+    <div style="display:table-cell; padding:2px 12px 2px 0; vertical-align:middle; color:#8ee">13 / 11 / 9 / 7</div>
+    <div style="display:table-cell; padding:2px 8px 2px 0; vertical-align:middle; white-space:nowrap">
+      <img alt="Mana symbol" src="mana.png" width="14" height="14"/>
+    </div>
+    <div style="display:table-cell; padding:2px 8px 2px 0; vertical-align:middle; color:#88f">100 / 110 / 120 / 130</div>
+  </div>
+
+  <!-- Aghanim Scepter -->
+  <div style="background-color: rgba(18, 26, 33, 0.95); border:1px solid #3d5a70; border-radius:3px; margin-top:10px; padding:8px">
+    <div style="color:#ffe277; font-size:0.85em; margin-bottom:4px">&#9670; Aghanim's Scepter Upgrade</div>
+    <div style="color:#ccc; font-size:0.9em">
+      Aghanim's Scepter increases Meat Hook range by 400. The hook can now pass through
+      units and will latch onto the first hero it encounters.
+      Pudge also gains the ability to fire the hook while invisible.
+    </div>
+  </div>
+
+  <div class="ability-lore" style="font-style:italic; color:#999; margin-top:8px; font-size:0.88em; border-top:1px solid #2e3e50; padding-top:6px">
+    "It puts the hook in or it gets the hook again."
+  </div>
+</div>
+
+<!-- ABILITY 2: Rot -->
+<div class="ability-background" style="background:#1c2530; border:1px solid #2e3e50; padding:12px; margin:6px 0; border-radius:3px">
+  <div style="display:flex; align-items:center; margin-bottom:8px">
+    <a class="image" href="https://static.wikia.nocookie.net/dota2_gamepedia/images/rot_full.png">
+      <img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/rot.png" alt="Rot icon" width="64" height="64"/>
+    </a>
+    <div style="margin-left:10px">
+      <div>
+        <span style="color:#fff; text-shadow: 1px 1px 3px #000000; font-size:1.15em; font-weight:bold">Rot</span>
+      </div>
+      <div style="color:#aaa; font-size:0.85em; margin-top:2px">
+        <span class="tooltip" title="Hotkey">W</span>
+        &#160;|&#160;
+        <span class="tooltip" title="Legacy Key">D</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ability-description" style="background:#232f3d; padding:8px; border-radius:2px">
+    <div style="display:flex; flex-wrap:wrap; margin-bottom:6px">
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Radius</b> 250
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Damage per Second</b> 30 / 60 / 90 / 120
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Move Speed Slow</b> 13% / 17% / 21% / 25%
+      </div>
+    </div>
+    <div style="font-size:95%; border-top:1px solid #3a4a5a; padding-top:6px; margin-top:2px; color:#ddd">
+      A toxic cloud that deals damage and slows movement speed to units in the area around
+      Pudge. Pudge is also damaged by Rot. Toggle ability — no cooldown.
+    </div>
+  </div>
+
+  <!-- Aghanim Shard for Rot -->
+  <div style="background-color: rgba(18, 26, 33, 0.95); border:1px solid #3d5a70; border-radius:3px; margin-top:10px; padding:8px">
+    <div style="color:#88aaff; font-size:0.85em; margin-bottom:4px">&#9670; Aghanim's Shard Upgrade</div>
+    <div style="color:#ccc; font-size:0.9em">
+      Aghanim's Shard causes Rot to also apply a 30% movement speed slow
+      and deal bonus pure damage to affected enemies.
+    </div>
+  </div>
+
+  <div class="ability-lore" style="font-style:italic; color:#999; margin-top:8px; font-size:0.88em; border-top:1px solid #2e3e50; padding-top:6px">
+    Pudge's guts are perpetually rotting — and now yours will be too.
+  </div>
+</div>
+
+<!-- ABILITY 3: Flesh Heap -->
+<div class="ability-background" style="background:#1c2530; border:1px solid #2e3e50; padding:12px; margin:6px 0; border-radius:3px">
+  <div style="display:flex; align-items:center; margin-bottom:8px">
+    <a class="image" href="https://static.wikia.nocookie.net/dota2_gamepedia/images/flesh_heap_full.png">
+      <img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/flesh_heap.png" alt="Flesh Heap icon" width="64" height="64"/>
+    </a>
+    <div style="margin-left:10px">
+      <div>
+        <span style="color:#fff; text-shadow: 1px 1px 3px #000000; font-size:1.15em; font-weight:bold">Flesh Heap</span>
+      </div>
+      <div style="color:#aaa; font-size:0.85em; margin-top:2px">
+        <span class="tooltip" title="Hotkey">E</span>
+        &#160;|&#160;
+        <span class="tooltip" title="Legacy Key">V</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ability-description" style="background:#232f3d; padding:8px; border-radius:2px">
+    <div style="display:flex; flex-wrap:wrap; margin-bottom:6px">
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Strength Bonus</b> 1 / 1.4 / 1.8 / 2.2
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Magic Resistance</b> 4% / 8% / 12% / 16%
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Death Radius</b> 450
+      </div>
+    </div>
+    <div style="font-size:95%; border-top:1px solid #3a4a5a; padding-top:6px; margin-top:2px; color:#ddd">
+      Pudge is a meat tank, composed of layers of grisly fat that protect him from
+      magical attacks. He gains Strength and magic resistance from the flesh of fallen
+      enemies nearby on death.
+    </div>
+  </div>
+
+  <div class="ability-lore" style="font-style:italic; color:#999; margin-top:8px; font-size:0.88em; border-top:1px solid #2e3e50; padding-top:6px">
+    Every kill adds another layer to the Butcher's magnificent form.
+  </div>
+</div>
+
+<!-- ABILITY 4: Dismember (Ultimate) -->
+<div class="ability-background" style="background:#1c2530; border:1px solid #2e3e50; padding:12px; margin:6px 0; border-radius:3px">
+  <div style="display:flex; align-items:center; margin-bottom:8px">
+    <a class="image" href="https://static.wikia.nocookie.net/dota2_gamepedia/images/dismember_full.png">
+      <img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/dismember.png" alt="Dismember icon" width="64" height="64"/>
+    </a>
+    <div style="margin-left:10px">
+      <div>
+        <span style="color:#fff; text-shadow: 1px 1px 3px #000000; font-size:1.15em; font-weight:bold">Dismember</span>
+      </div>
+      <div style="color:#aaa; font-size:0.85em; margin-top:2px">
+        <span class="tooltip" title="Hotkey">R</span>
+        &#160;|&#160;
+        <span class="tooltip" title="Legacy Key">R</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ability-description" style="background:#232f3d; padding:8px; border-radius:2px">
+    <div style="display:flex; flex-wrap:wrap; margin-bottom:6px">
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Duration</b> 3
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Damage per Second</b> 100 / 160 / 215
+      </div>
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Heal per Second</b> 40 / 60 / 75
+      </div>
+    </div>
+    <div style="font-size:95%; border-top:1px solid #3a4a5a; padding-top:6px; margin-top:2px; color:#ddd">
+      Pudge chows down on an enemy unit, disabling it and dealing damage while he chews.
+      Pudge is also healed for a portion of the damage dealt. The target cannot move or act.
+    </div>
+  </div>
+
+  <!-- Cooldown / Mana for Dismember -->
+  <div style="display:table; margin-top:8px">
+    <div style="display:table-cell; padding:2px 8px 2px 0; vertical-align:middle; white-space:nowrap">
+      <img alt="Cooldown symbol" src="cooldown.png" width="14" height="14"/>
+    </div>
+    <div style="display:table-cell; padding:2px 12px 2px 0; vertical-align:middle; color:#8ee">30 / 25 / 20</div>
+    <div style="display:table-cell; padding:2px 8px 2px 0; vertical-align:middle; white-space:nowrap">
+      <img alt="Mana symbol" src="mana.png" width="14" height="14"/>
+    </div>
+    <div style="display:table-cell; padding:2px 8px 2px 0; vertical-align:middle; color:#88f">100 / 130 / 160</div>
+  </div>
+
+  <!-- Aghanim Scepter for Dismember -->
+  <div style="background-color: rgba(18, 26, 33, 0.95); border:1px solid #3d5a70; border-radius:3px; margin-top:10px; padding:8px">
+    <div style="color:#ffe277; font-size:0.85em; margin-bottom:4px">&#9670; Aghanim's Scepter Upgrade</div>
+    <div style="color:#ccc; font-size:0.9em">
+      Aghanim's Scepter causes Dismember to target an area around Pudge,
+      affecting all enemy units within 350 range simultaneously.
+    </div>
+  </div>
+
+  <div class="ability-lore" style="font-style:italic; color:#999; margin-top:8px; font-size:0.88em; border-top:1px solid #2e3e50; padding-top:6px">
+    The last sensation many have felt is the Butcher's breath upon their neck.
+  </div>
+</div>
+
+<!-- ABILITY 5: Clinging Form (Innate) -->
+<div class="ability-background" style="background:#1c2530; border:1px solid #2e3e50; padding:12px; margin:6px 0; border-radius:3px">
+  <div style="display:flex; align-items:center; margin-bottom:8px">
+    <a class="image" href="https://static.wikia.nocookie.net/dota2_gamepedia/images/clinging_form_full.png">
+      <img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/clinging_form.png" alt="Clinging Form icon" width="64" height="64"/>
+    </a>
+    <div style="margin-left:10px">
+      <div>
+        <span style="color:#fff; text-shadow: 1px 1px 3px #000000; font-size:1.15em; font-weight:bold">Clinging Form</span>
+      </div>
+      <div style="color:#ffe277; font-size:0.82em; margin-top:2px">Innate Ability</div>
+    </div>
+  </div>
+
+  <div class="ability-description" style="background:#232f3d; padding:8px; border-radius:2px">
+    <div style="display:flex; flex-wrap:wrap; margin-bottom:6px">
+      <div style="width:32%; vertical-align:top; padding:3px 4px; box-sizing:border-box">
+        <b>Strength per 100 Kills</b> 2
+      </div>
+    </div>
+    <div style="font-size:95%; border-top:1px solid #3a4a5a; padding-top:6px; margin-top:2px; color:#ddd">
+      Innate: Pudge gains bonus Strength for every 100 last hits and kills accumulated
+      throughout the game. The bonus persists on death.
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     TALENTS SECTION
+     selector: h2:has(span#Talents)
+     Rows: tr with 3 children where child(1).tagName() == "th"
+     ============================================================ -->
+<h2><span class="mw-headline" id="Talents">Talents</span></h2>
+<table class="wikitable" style="width:100%; text-align:center; border-collapse:collapse">
+<tbody>
+<tr style="background:#1a2433">
+  <td style="text-align:right; padding:6px 10px; width:40%">+250 Health</td>
+  <th style="padding:6px; background:#232f3d; width:20%">10</th>
+  <td style="text-align:left; padding:6px 10px; width:40%">+25 Attack Speed</td>
+</tr>
+<tr style="background:#1a2433">
+  <td style="text-align:right; padding:6px 10px">+350 Meat Hook Damage</td>
+  <th style="padding:6px; background:#232f3d">15</th>
+  <td style="text-align:left; padding:6px 10px">+1.5s Dismember Duration</td>
+</tr>
+<tr style="background:#1a2433">
+  <td style="text-align:right; padding:6px 10px">+3 Flesh Heap Strength</td>
+  <th style="padding:6px; background:#232f3d">20</th>
+  <td style="text-align:left; padding:6px 10px">-6s Meat Hook Cooldown</td>
+</tr>
+<tr style="background:#1a2433">
+  <td style="text-align:right; padding:6px 10px">+400 Health</td>
+  <th style="padding:6px; background:#232f3d">25</th>
+  <td style="text-align:left; padding:6px 10px">+200 Dismember Damage/Heal</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ============================================================
+     TRIVIA SECTION
+     ============================================================ -->
+<h2><span class="mw-headline" id="Trivia">Trivia</span></h2>
+<ul>
+  <li>Pudge was one of the original Dota heroes, adapted from Warcraft III custom maps by Eul.</li>
+  <li>His iconic voice line "Fresh meat!" is one of the most recognized in gaming history.</li>
+  <li>Pudge is statistically one of the most played heroes in Dota 2 history across all skill brackets.</li>
+  <li>The character design is inspired by traditional horror genre butchers and flesh-golems.</li>
+</ul>
+
+<!-- ============================================================
+     BACKGROUND / LORE
+     selector: td[style*='display: table-cell'][style*='font-style: italic']
+     ============================================================ -->
+<h2><span class="mw-headline" id="Background">Background</span></h2>
+<table class="wikitable lore-table">
+<tbody>
+<tr>
+  <td style="display: table-cell; font-style: italic; color:#ccc; padding:12px; line-height:1.6">
+    Among the flesh-piles of the charnel houses of Strygwyr the Bloodseeker lies a horror born
+    of pure carnage. Pudge the Butcher is a being of singular will and singular hunger, his body
+    a shrine to consumption. Each soul he devours feeds the flesh — and the flesh is never sated.
+    He wanders the battlefield not as a servant of chaos but as an independent contractor of death,
+    dragging the freshly fallen back to whatever dark alcove he calls home this particular evening.
+  </td>
+</tr>
+</tbody>
+</table>
+
+</div><!-- /.mw-parser-output -->
+</div>
+</div>
+</body>
+</html>

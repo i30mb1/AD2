@@ -4,10 +4,12 @@ import android.app.Application
 import n7.ad2.coroutines.CoroutineModule
 import n7.ad2.dagger.ApplicationScope
 import n7.ad2.di.RetrofitModule
-import n7.ad2.heroes.demo.MyApplicationDemo
-import n7.ad2.heroes.domain.wiring.HeroesModule
 import n7.ad2.feature.heroes.ui.api.HeroesDependencies
 import n7.ad2.feature.heroes.ui.api.HeroesFragmentFactory
+import n7.ad2.hero.page.api.HeroPageDependencies
+import n7.ad2.heroes.demo.MyApplicationDemo
+import n7.ad2.heroes.domain.wiring.HeroesModule
+import n7.ad2.spanparser.di.SpanParserModule
 
 @ApplicationScope
 @dagger.Component(
@@ -16,9 +18,10 @@ import n7.ad2.feature.heroes.ui.api.HeroesFragmentFactory
         CoroutineModule::class,
         RetrofitModule::class,
         HeroesModule::class,
+        SpanParserModule::class,
     ],
 )
-internal interface ApplicationComponentDemo : HeroesDependencies {
+internal interface ApplicationComponentDemo : HeroesDependencies, HeroPageDependencies {
 
     val heroesFragmentFactory: HeroesFragmentFactory
 

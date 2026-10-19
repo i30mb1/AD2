@@ -34,7 +34,11 @@ internal fun connectToWiki(rawUrl: String): Document {
         if (cached != null) return cached
     }
 
-    // 2. curl (uses Windows Schannel TLS — browser-compatible)
+    // 2. MediaWiki API — not behind the Cloudflare challenge, returns the rendered page body
+    val apiDoc = fetchWithApi(url)
+    if (apiDoc != null) return apiDoc
+
+    // 3. curl (uses Windows Schannel TLS — browser-compatible)
     val curlHtml = fetchWithCurl(url, cfClearance)
     if (curlHtml != null) {
         val doc = Jsoup.parse(curlHtml, url)
@@ -42,11 +46,46 @@ internal fun connectToWiki(rawUrl: String): Document {
         return doc
     }
 
-    // 3. Jsoup direct (likely blocked, but try anyway)
+    // 4. Jsoup direct (likely blocked, but try anyway)
     println("  [WARN] curl not available, falling back to Jsoup")
     val doc = fetchWithJsoup(url, cfClearance)
     checkCloudflare(doc, url)
     return doc
+}
+
+// ─── MediaWiki API ──────────────────────────────────────────────────────────
+
+private val wikiPageUrl = Regex("""^(https://[^/]+(?:/[a-z]{2})?)/wiki/(.+)$""")
+
+/** https://dota2.fandom.com/ru/wiki/Pudge → https://dota2.fandom.com/ru/api.php?action=parse&page=Pudge */
+private fun fetchWithApi(url: String): Document? {
+    val match = wikiPageUrl.find(url) ?: return null
+    val (base, page) = match.destructured
+    val title = java.net.URLDecoder.decode(page, Charsets.UTF_8)
+    val apiUrl = "$base/api.php?action=parse&prop=text&format=json&formatversion=2&redirects=1&page=" +
+        java.net.URLEncoder.encode(title, Charsets.UTF_8)
+    return try {
+        val body = Jsoup.connect(apiUrl)
+            .ignoreContentType(true)
+            .ignoreHttpErrors(true)
+            .timeout(30000)
+            .maxBodySize(0)
+            .execute()
+            .body()
+        val parse = (org.json.simple.parser.JSONParser().parse(body) as? org.json.simple.JSONObject)
+            ?.get("parse") as? org.json.simple.JSONObject
+        val html = parse?.get("text") as? String
+        if (html == null) {
+            println("  [API] no page for $title")
+            null
+        } else {
+            println("  [API] OK — ${html.length} bytes ($title)")
+            Jsoup.parse("<html><body><div id=\"mw-content-text\">$html</div></body></html>", url)
+        }
+    } catch (e: Exception) {
+        println("  [API] failed for $title: ${e.message}")
+        null
+    }
 }
 
 // ─── curl ───────────────────────────────────────────────────────────────────

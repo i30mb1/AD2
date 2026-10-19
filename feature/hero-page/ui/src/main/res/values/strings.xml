@@ -28,4 +28,112 @@
     <string name="guide_items">Items and timings</string>
     <string name="spell_build">Skill build</string>
     <string name="fragment_guide_skill_builds">Skill builds</string>
+
+    <!-- hero info -->
+    <string name="info_attributes">Attributes</string>
+    <string name="info_stats">Stats</string>
+    <string name="info_roles">Roles</string>
+    <string name="info_abilities">Abilities</string>
+    <string name="info_talents">Talents</string>
+    <string name="info_lore">Lore</string>
+    <string name="info_show_more">Show more</string>
+    <string name="info_show_less">Show less</string>
+    <string name="info_facets">Facets</string>
+
+    <string name="attr_strength">Strength</string>
+    <string name="attr_agility">Agility</string>
+    <string name="attr_intelligence">Intelligence</string>
+    <string name="attr_universal">Universal</string>
+    <string name="attack_melee">Melee</string>
+    <string name="attack_ranged">Ranged</string>
+    <string name="complexity">Complexity</string>
+
+    <string name="role_carry">Carry</string>
+    <string name="role_support">Support</string>
+    <string name="role_nuker">Nuker</string>
+    <string name="role_disabler">Disabler</string>
+    <string name="role_jungler">Jungler</string>
+    <string name="role_durable">Durable</string>
+    <string name="role_escape">Escape</string>
+    <string name="role_pusher">Pusher</string>
+    <string name="role_initiator">Initiator</string>
+
+    <string name="stat_health">Health</string>
+    <string name="stat_mana">Mana</string>
+    <string name="stat_damage">Damage</string>
+    <string name="stat_armor">Armor</string>
+    <string name="stat_magic_resist">Magic resistance</string>
+    <string name="stat_attack_range">Attack range</string>
+    <string name="stat_attack_rate">Attack time</string>
+    <string name="stat_projectile_speed">Projectile speed</string>
+    <string name="stat_move_speed">Movement speed</string>
+    <string name="stat_turn_rate">Turn rate</string>
+    <string name="stat_vision">Vision day / night</string>
+    <string name="stat_regen">+%s/s</string>
+
+    <string name="ability_group_innate">Innate</string>
+    <string name="ability_group_main">Abilities</string>
+    <string name="ability_group_extra">Additional</string>
+    <string name="ability_kind_innate">Innate</string>
+    <string name="ability_kind_ultimate">Ultimate</string>
+    <string name="ability_kind_extra">Additional</string>
+    <string name="ability_kind_scepter">From Aghanim\'s Scepter</string>
+    <string name="ability_kind_shard">From Aghanim\'s Shard</string>
+
+    <string name="behavior_passive">Passive</string>
+    <string name="behavior_no_target">No target</string>
+    <string name="behavior_unit_target">Unit target</string>
+    <string name="behavior_point_target">Point target</string>
+    <string name="behavior_aoe">Area</string>
+    <string name="behavior_channelled">Channeled</string>
+    <string name="behavior_toggle">Toggle</string>
+    <string name="behavior_directional">Directional</string>
+    <string name="behavior_autocast">Autocast</string>
+
+    <string name="target_allies">Allies</string>
+    <string name="target_enemies">Enemies</string>
+    <string name="target_both">Allies and enemies</string>
+    <string name="damage_physical">Physical</string>
+    <string name="damage_magical">Magical</string>
+    <string name="damage_pure">Pure</string>
+
+    <string name="ability_affects">Affects</string>
+    <string name="ability_damage_type">Damage type</string>
+    <string name="ability_spell_immunity">Pierces spell immunity</string>
+    <string name="ability_dispellable">Dispellable</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="immunity_allies_only">Allies only</string>
+    <string name="dispellable_strong">Strong dispels only</string>
+
+    <string name="ability_cooldown">Cooldown</string>
+    <string name="ability_mana">Mana</string>
+    <string name="ability_health_cost">Health cost</string>
+    <string name="ability_gold_cost">Gold cost</string>
+    <string name="ability_cast_range">Cast range</string>
+    <string name="ability_cast_point">Cast point</string>
+    <string name="ability_channel_time">Channel time</string>
+    <string name="ability_duration">Duration</string>
+    <string name="aghanim_scepter" translatable="false">Aghanim\'s Scepter</string>
+    <string name="aghanim_shard" translatable="false">Aghanim\'s Shard</string>
+    <string name="talent_level">Level %d</string>
+
+    <!-- hero info: wiki and patches -->
+    <string name="info_wiki_source" translatable="false">Dota 2 Wiki</string>
+    <string name="info_wiki_hint">Community data, may lag behind the current patch</string>
+    <string name="info_lang_en" translatable="false">EN</string>
+    <string name="info_changes">Recent changes</string>
+    <string name="info_changes_hero">Hero</string>
+    <string name="info_items">Recommended items</string>
+    <string name="info_counters">Matchups</string>
+    <string name="info_strategy">Strategy</string>
+    <string name="info_pros">Pros</string>
+    <string name="info_cons">Cons</string>
+    <string name="info_ability_details">Details</string>
+    <string name="info_ability_changes">Changes</string>
+    <string name="info_show_all">Show all (%d)</string>
+    <string name="stat_attack_animation">Attack animation</string>
+    <string name="stat_collision">Collision size</string>
+    <string name="stat_release_date">Release date</string>
+    <string name="info_quote">“%s”</string>
 </resources>

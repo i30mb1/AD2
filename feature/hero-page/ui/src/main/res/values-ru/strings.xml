@@ -19,4 +19,108 @@
     <string name="fragment_guide_skill_builds">Выбор способностей</string>
 
     <string name="spell_build">Выбор способностей</string>
+
+    <!-- hero info -->
+    <string name="info_attributes">Атрибуты</string>
+    <string name="info_stats">Характеристики</string>
+    <string name="info_roles">Роли</string>
+    <string name="info_abilities">Способности</string>
+    <string name="info_talents">Таланты</string>
+    <string name="info_lore">История</string>
+    <string name="info_show_more">Читать полностью</string>
+    <string name="info_show_less">Свернуть</string>
+    <string name="info_facets">Аспекты</string>
+
+    <string name="attr_strength">Сила</string>
+    <string name="attr_agility">Ловкость</string>
+    <string name="attr_intelligence">Интеллект</string>
+    <string name="attr_universal">Универсальный</string>
+    <string name="attack_melee">Ближний бой</string>
+    <string name="attack_ranged">Дальний бой</string>
+    <string name="complexity">Сложность</string>
+
+    <string name="role_carry">Керри</string>
+    <string name="role_support">Поддержка</string>
+    <string name="role_nuker">Нюкер</string>
+    <string name="role_disabler">Контроль</string>
+    <string name="role_jungler">Лесник</string>
+    <string name="role_durable">Живучесть</string>
+    <string name="role_escape">Побег</string>
+    <string name="role_pusher">Пушер</string>
+    <string name="role_initiator">Инициатор</string>
+
+    <string name="stat_health">Здоровье</string>
+    <string name="stat_mana">Мана</string>
+    <string name="stat_damage">Урон</string>
+    <string name="stat_armor">Броня</string>
+    <string name="stat_magic_resist">Сопротивление магии</string>
+    <string name="stat_attack_range">Дальность атаки</string>
+    <string name="stat_attack_rate">Интервал атаки</string>
+    <string name="stat_projectile_speed">Скорость снаряда</string>
+    <string name="stat_move_speed">Скорость передвижения</string>
+    <string name="stat_turn_rate">Скорость поворота</string>
+    <string name="stat_vision">Обзор день / ночь</string>
+    <string name="stat_regen">+%s/с</string>
+
+    <string name="ability_group_innate">Врождённая</string>
+    <string name="ability_group_main">Способности</string>
+    <string name="ability_group_extra">Дополнительные</string>
+    <string name="ability_kind_innate">Врождённая</string>
+    <string name="ability_kind_ultimate">Ультимейт</string>
+    <string name="ability_kind_extra">Дополнительная</string>
+    <string name="ability_kind_scepter">От Aghanim\'s Scepter</string>
+    <string name="ability_kind_shard">От Aghanim\'s Shard</string>
+
+    <string name="behavior_passive">Пассивная</string>
+    <string name="behavior_no_target">Ненаправленная</string>
+    <string name="behavior_unit_target">На существо</string>
+    <string name="behavior_point_target">На точку</string>
+    <string name="behavior_aoe">По области</string>
+    <string name="behavior_channelled">Поддерживаемая</string>
+    <string name="behavior_toggle">Переключаемая</string>
+    <string name="behavior_directional">Направленная</string>
+    <string name="behavior_autocast">Автоприменение</string>
+
+    <string name="target_allies">Союзники</string>
+    <string name="target_enemies">Враги</string>
+    <string name="target_both">Союзники и враги</string>
+    <string name="damage_physical">Физический</string>
+    <string name="damage_magical">Магический</string>
+    <string name="damage_pure">Чистый</string>
+
+    <string name="ability_affects">Действует на</string>
+    <string name="ability_damage_type">Тип урона</string>
+    <string name="ability_spell_immunity">Сквозь невосприимчивость</string>
+    <string name="ability_dispellable">Развеивается</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="immunity_allies_only">Только союзники</string>
+    <string name="dispellable_strong">Только сильным</string>
+
+    <string name="ability_cooldown">Перезарядка</string>
+    <string name="ability_mana">Мана</string>
+    <string name="ability_health_cost">Цена здоровьем</string>
+    <string name="ability_gold_cost">Цена золотом</string>
+    <string name="ability_cast_range">Дальность</string>
+    <string name="ability_cast_point">Время применения</string>
+    <string name="ability_channel_time">Поддержание</string>
+    <string name="ability_duration">Длительность</string>
+    <string name="talent_level">Уровень %d</string>
+
+    <!-- hero info: wiki and patches -->
+    <string name="info_wiki_hint">Данные сообщества, могут отставать от текущего патча</string>
+    <string name="info_changes">Недавние изменения</string>
+    <string name="info_changes_hero">Герой</string>
+    <string name="info_items">Рекомендуемые предметы</string>
+    <string name="info_counters">Противостояние</string>
+    <string name="info_strategy">Стратегия</string>
+    <string name="info_pros">Плюсы</string>
+    <string name="info_cons">Минусы</string>
+    <string name="info_ability_details">Подробности</string>
+    <string name="info_ability_changes">Изменения</string>
+    <string name="info_show_all">Показать все (%d)</string>
+    <string name="stat_attack_animation">Анимация атаки</string>
+    <string name="stat_collision">Радиус столкновения</string>
+    <string name="stat_release_date">Дата выхода</string>
+    <string name="info_quote">«%s»</string>
 </resources>
