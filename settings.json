@@ -15,7 +15,7 @@
     },
     {
       "type": "TOURNAMENTS",
-      "isEnable": false
+      "isEnable": true
     },
     {
       "type": "STREAMS",
