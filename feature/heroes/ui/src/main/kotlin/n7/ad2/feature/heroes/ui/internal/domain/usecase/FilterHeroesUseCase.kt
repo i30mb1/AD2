@@ -7,12 +7,23 @@ import javax.inject.Inject
 
 internal class FilterHeroesUseCase @Inject constructor(private val dispatchers: DispatchersProvider) {
 
+    /**
+     * Оставляет героев, чьё имя содержит [filter], и заголовки только тех атрибутов, в которых кто-то нашёлся
+     */
     suspend operator fun invoke(list: List<VOHero>, filter: String): List<VOHero> = withContext(dispatchers.IO) {
-        if (filter.isEmpty()) return@withContext list
-        list.filter { hero ->
-            when (hero) {
-                is VOHero.Body -> hero.name.contains(filter, ignoreCase = true)
-                is VOHero.Header -> false
+        if (filter.isBlank()) return@withContext list
+        val query = filter.trim()
+        buildList {
+            var header: VOHero.Header? = null
+            list.forEach { hero ->
+                when (hero) {
+                    is VOHero.Header -> header = hero
+                    is VOHero.Body -> if (hero.name.contains(query, ignoreCase = true)) {
+                        header?.let(::add)
+                        header = null
+                        add(hero)
+                    }
+                }
             }
         }
     }

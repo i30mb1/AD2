@@ -15,14 +15,10 @@
     <string name="desc_is_saved" translatable="false">is saved</string>
     <string name="notification_title_guide" translatable="false">loading guide...</string>
     <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
-
-    <string name="hero_popularity" translatable="false">popularity : %s</string>
-    <string name="hero_pickrate" translatable="false">pickrate: %s</string>
     <string name="starting_items">Starting items</string>
     <string name="easy_to_win_heroes">Best versus heroes</string>
     <string name="hard_to_win_heroes">Worst versus heroes</string>
     <string name="guide_items">Items and timings</string>
-    <string name="spell_build">Skill build</string>
     <string name="fragment_guide_skill_builds">Skill builds</string>
 
     <!-- hero info -->
@@ -119,4 +115,33 @@
     <string name="info_ability_details">Details</string>
     <string name="info_ability_changes">Changes</string>
     <string name="info_show_all">Show all (%d)</string>
+    <string name="hero_back">Back</string>
+    <string name="responses_all">All</string>
+    <string name="response_play">Play</string>
+    <string name="response_pause">Pause</string>
+    <string name="response_actions">Download or set as ringtone</string>
+    <string name="response_download">Download</string>
+    <string name="response_downloading">Downloading…</string>
+    <string name="response_downloaded">Downloaded</string>
+    <string name="response_download_hint">Save the mp3 on the phone</string>
+    <string name="response_set_as">Set as</string>
+    <string name="response_target_call">Call</string>
+    <string name="response_target_notification">Notification</string>
+    <string name="response_target_alarm">Alarm</string>
+    <string name="response_write_settings_hint">Android asks once for the “Modify system settings” permission.</string>
+    <string name="response_write_settings_request">Allow AD2 to modify system settings and come back</string>
+    <string name="response_set_call_done">Response is now your ringtone</string>
+    <string name="response_set_notification_done">Response is now your notification sound</string>
+    <string name="response_set_alarm_done">Response is now your alarm sound</string>
+    <string name="response_set_failed">Could not set the response, check the internet and try again</string>
+    <string name="guide_winrate">Win rate</string>
+    <string name="guide_matches">Matches</string>
+    <string name="guide_phase_early">Early</string>
+    <string name="guide_phase_mid">Mid</string>
+    <string name="guide_phase_late">Late</string>
+    <string name="guide_phase_early_time">0–15 min</string>
+    <string name="guide_phase_mid_time">15–30 min</string>
+    <string name="guide_phase_late_time">30+ min</string>
+    <string name="guide_source">Data: OpenDota</string>
+    <string name="guide_empty">The guide is not loaded yet, it needs the internet once</string>
 </resources>

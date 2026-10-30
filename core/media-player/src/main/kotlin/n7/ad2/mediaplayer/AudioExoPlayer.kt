@@ -109,8 +109,16 @@ class AudioExoPlayer @AssistedInject constructor(private val context: Applicatio
         exoPlayer.playWhenReady = true
     }
 
-    private fun stop() {
-        exoPlayer.stop()
+    fun stop() {
+        if (::exoPlayer.isInitialized) exoPlayer.stop()
+    }
+
+    /** Played part of the current track from 0 to 1, 0 while nothing is playing or the length is unknown yet. */
+    fun progress(): Float {
+        if (!::exoPlayer.isInitialized) return 0f
+        val duration = exoPlayer.duration
+        if (duration <= 0) return 0f
+        return (exoPlayer.currentPosition.toFloat() / duration).coerceIn(0f, 1f)
     }
 
     private fun destroy() {

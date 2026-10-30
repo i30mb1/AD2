@@ -1,16 +1,1 @@
-{
-  "abilities": [],
-  "cost": "2200",
-  "lore": null,
-  "consistFrom": null,
-  "name": "Demon Edge",
-  "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
-  "trivia": null,
-  "upgradeIn": [
-    "Divine Rapier",
-    "Monkey King Bar",
-    "Daedalus",
-    "Disperser"
-  ],
-  "tips": null
-}
+{"abilities":[],"additionalInformation":null,"cost":"2200","consistFrom":null,"lore":null,"name":"Demon Edge","description":"One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.","trivia":null,"bonuses":["+40 Damage"],"tips":null}

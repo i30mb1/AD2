@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tournaments_live">Идут сейчас</string>
+    <string name="tournaments_upcoming">Скоро</string>
+    <string name="tournaments_finished">Завершены</string>
+    <string name="tournaments_live_badge">LIVE</string>
+    <string name="tournaments_versus">VS</string>
+    <string name="tournaments_status_finished">Завершён</string>
+    <string name="tournaments_best_of">BO%1$d</string>
+    <string name="tournaments_prize">Призовой фонд %1$s</string>
+    <string name="tournaments_team_rating">#%1$d · %2$d очк.</string>
+    <string name="tournaments_watch">Смотреть трансляцию</string>
+    <string name="tournaments_games">Игры</string>
+    <string name="tournaments_game_number">Игра %1$d</string>
+    <string name="tournaments_game_winner">Победа: %1$s</string>
+    <string name="tournaments_game_in_progress">Идёт</string>
+    <string name="tournaments_draft">Драфт</string>
+    <string name="tournaments_lineups">Составы</string>
+    <string name="tournaments_head_to_head">Прошлые встречи</string>
+    <string name="tournaments_forecast">Прогноз болельщиков</string>
+    <string name="tournaments_draw">Ничья</string>
+    <string name="tournaments_kda">KDA %1$s</string>
+    <string name="tournaments_gpm_xpm">%1$d GPM · %2$d XPM</string>
+</resources>

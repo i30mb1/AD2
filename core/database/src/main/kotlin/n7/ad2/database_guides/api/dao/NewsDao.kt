@@ -8,8 +8,12 @@ import n7.ad2.database_guides.internal.model.NewsDB
 @Dao
 interface NewsDao : BaseDao<NewsDB> {
 
-    @Query("SELECT * FROM NewsDB")
+    @Query("SELECT * FROM NewsDB ORDER BY rowId")
     fun getPagingSourceNews(): PagingSource<Int, NewsDB>
+
+    /** Only Valve's own announcements ([isOfficial] = true) or only the press. */
+    @Query("SELECT * FROM NewsDB WHERE isOfficial = :isOfficial ORDER BY rowId")
+    fun getPagingSourceNews(isOfficial: Boolean): PagingSource<Int, NewsDB>
 
     @Query("SELECT * FROM NewsDB WHERE loadedFromPage =:fromPage")
     suspend fun getNews(fromPage: Int): List<NewsDB>

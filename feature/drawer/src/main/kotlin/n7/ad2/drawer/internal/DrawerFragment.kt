@@ -97,6 +97,10 @@ internal class DrawerFragment :
         binding.draggableDrawer.setDrawerPercentListener(listener)
     }
 
+    override fun removeDrawerPercentListener(listener: (percent: Float) -> Unit) {
+        _binding?.draggableDrawer?.removeDrawerPercentListener(listener)
+    }
+
     private fun setupSettings() {
         val animation = binding.ivSettings.animate()
         binding.ivSettings.setOnClickListener { view ->
@@ -111,12 +115,12 @@ internal class DrawerFragment :
         activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner) {
             val popBack = activity?.supportFragmentManager?.popBackStackImmediate() ?: return@addCallback
             if (popBack) return@addCallback
-            if (doubleBackToExitPressedOnce) {
-                activity?.finishAffinity()
-                return@addCallback
-            }
             if (binding.draggableDrawer.isOpen) {
                 binding.draggableDrawer.close()
+                return@addCallback
+            }
+            if (doubleBackToExitPressedOnce) {
+                activity?.finishAffinity()
                 return@addCallback
             }
             doubleBackToExitPressedOnce = true
@@ -148,8 +152,8 @@ internal class DrawerFragment :
             VOMenuType.HEROES -> navigator.heroesApi.getFragment()
             VOMenuType.ITEMS -> navigator.itemsApi.getFragment()
             VOMenuType.NEWS -> navigator.newsApi.getFragment()
-//            VOMenuType.TOURNAMENTS -> navigator.tournamentsApi.getFragment()
-//            VOMenuType.STREAMS -> navigator.streamApi.getFragment()
+            VOMenuType.TOURNAMENTS -> navigator.tournamentsApi.getFragment()
+            VOMenuType.STREAMS -> navigator.streamApi.getFragment()
             VOMenuType.GAMES -> navigator.gamesApi.getFragment()
             else -> return
         }

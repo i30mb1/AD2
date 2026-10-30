@@ -8,3 +8,9 @@ sealed class VOResponse {
         var downloadID: Long? = null
     }
 }
+
+/**
+ * The same audio file is reused in several categories, so a row is told apart by its text too.
+ * The file name is used instead of [VOResponse.Body.audioUrl], the url turns into a local path after a download.
+ */
+val VOResponse.Body.key: String get() = "$title|$titleForFile"

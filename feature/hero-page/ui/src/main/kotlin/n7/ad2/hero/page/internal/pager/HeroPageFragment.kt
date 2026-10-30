@@ -7,12 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import n7.ad2.AppInformation
 import n7.ad2.android.findDependencies
 import n7.ad2.core.ui.content
 import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.lazyUnsafe
-import javax.inject.Inject
 
 class HeroPageFragment : Fragment() {
 
@@ -23,9 +21,10 @@ class HeroPageFragment : Fragment() {
         }
     }
 
-    @Inject lateinit var appInformation: AppInformation
-
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
+
+    // bundled hero assets are keyed by the lower-cased name, the same way GetHeroByNameUseCase builds them
+    private val heroKey by lazyUnsafe { heroName.lowercase().replace(" ", "_") }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -34,10 +33,6 @@ class HeroPageFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         content {
-            HeroPageScreen(
-                heroName = heroName,
-                appLocale = appInformation.appLocale,
-                onLocaleChange = { /* locale propagation handled via child fragment's own controls */ },
-            )
+            HeroPageScreen(heroName = heroName, avatarUrl = "file:///android_asset/heroes/$heroKey/full.webp")
         }
 }

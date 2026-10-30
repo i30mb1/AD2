@@ -29,7 +29,11 @@ internal class DraggableDrawer(context: Context, attributeSet: AttributeSet) : F
         private const val NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER = -1000
     }
 
-    var isOpen: Boolean = false
+    /**
+     * Открыт ли экран поверх меню. Считается по реальному положению, а не флагом:
+     * жест может прерваться через cancel() и оставить экран посередине без onViewReleased
+     */
+    val isOpen: Boolean get() = currentOffsetX < collapsedOffsetX
     private lateinit var draggableView: FragmentContainerView
     private var touchSlop = 0
     private var initialMotionX = 0F
@@ -124,11 +128,15 @@ internal class DraggableDrawer(context: Context, attributeSet: AttributeSet) : F
     fun close() {
         val startSettling = dragHelper.smoothSlideViewTo(draggableView, collapsedOffsetX, 0)
         if (startSettling) SettleRunnable().run()
-        isOpen = false
     }
 
     fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
         drawerPercent = listener
+        listener?.invoke(1 - currentOffsetX.toFloat() / collapsedOffsetX)
+    }
+
+    fun removeDrawerPercentListener(listener: (percent: Float) -> Unit) {
+        if (drawerPercent === listener) drawerPercent = null
     }
 
     private fun onReleased(xVel: Float) {
@@ -141,13 +149,13 @@ internal class DraggableDrawer(context: Context, attributeSet: AttributeSet) : F
         }
         val startSettling = dragHelper.smoothSlideViewTo(draggableView, finalX, 0)
         if (startSettling) SettleRunnable().run()
-        isOpen = finalX != collapsedOffsetX
     }
 
     private fun initDraggableView() {
         if (isDraggableViewInitiated) return
         if (isCollapsed) {
             offsetX = collapsedOffsetX
+            currentOffsetX = collapsedOffsetX
             draggableView.scaleY = collapsedScale
             draggableView.scaleX = collapsedScale
         }

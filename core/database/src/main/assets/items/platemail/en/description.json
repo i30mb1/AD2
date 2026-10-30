@@ -1,15 +1,1 @@
-{
-  "abilities": [],
-  "cost": "1400",
-  "lore": null,
-  "consistFrom": null,
-  "name": "Platemail",
-  "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
-  "trivia": null,
-  "upgradeIn": [
-    "Assault Cuirass",
-    "Shiva's Guard",
-    "Lotus Orb"
-  ],
-  "tips": null
-}
+{"abilities":[],"additionalInformation":null,"cost":"1400","consistFrom":null,"lore":null,"name":"Platemail","description":"Thick metal plates that protect the entire upper body. Avoid dropping on feet.","trivia":null,"bonuses":["+10 Armor"],"tips":null}

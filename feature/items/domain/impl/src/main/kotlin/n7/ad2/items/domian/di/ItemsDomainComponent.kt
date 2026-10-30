@@ -20,7 +20,7 @@ fun ItemsDomainComponent(dependencies: ItemsDomainDependencies): ItemsDomainComp
 
     private val itemDatabase = ItemsDatabase.getInstance(dependencies.application)
     private val itemDao = itemDatabase.itemsDao
-    private val itemsRepository = ItemsRepositoryImpl(itemDao)
+    private val itemsRepository = ItemsRepositoryImpl(itemDao, dependencies.application)
 
     override val filterItemsUseCase = FilterItemsUseCaseImpl(
         dependencies.dispatcher,

@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.mapLatest
@@ -32,6 +33,7 @@ internal class HeroesViewModel @AssistedInject constructor(
 
     private val refreshTrigger = MutableSharedFlow<Unit>(replay = 1).apply { tryEmit(Unit) }
     private val filterQuery = MutableStateFlow("")
+    val query: StateFlow<String> = filterQuery.asStateFlow()
 
     val heroes: StateFlow<List<VOHero>> = refreshTrigger
         .flatMapLatest { getVOHeroesListUseCase() }

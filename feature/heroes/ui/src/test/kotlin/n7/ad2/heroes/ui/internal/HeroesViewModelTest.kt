@@ -74,11 +74,31 @@ internal class HeroesViewModelTest {
 
         heroesViewModel.filterHeroes("Anti")
         val heroesBefore = heroesViewModel.heroes.value
-        assertThat(heroesBefore.size).isEqualTo(1)
+        assertThat(heroesBefore.filterIsInstance<VOHero.Body>()).hasSize(1)
 
         heroesViewModel.refresh()
 
         val heroesAfter = heroesViewModel.heroes.value
-        assertThat(heroesAfter.size).isEqualTo(1)
+        assertThat(heroesAfter.filterIsInstance<VOHero.Body>()).hasSize(1)
+    }
+
+    @Test
+    fun `должен оставить заголовок атрибута только если в нём нашёлся герой`() = coroutineRule.testScope.runTest {
+        val heroesViewModel = createViewModel()
+
+        heroesViewModel.filterHeroes("Axe")
+
+        val heroes = heroesViewModel.heroes.value
+        assertThat(heroes.first()).isInstanceOf(VOHero.Header::class.java)
+        assertThat(heroes.filterIsInstance<VOHero.Header>()).hasSize(1)
+    }
+
+    @Test
+    fun `должен вернуть пустой список если никто не нашёлся`() = coroutineRule.testScope.runTest {
+        val heroesViewModel = createViewModel()
+
+        heroesViewModel.filterHeroes("zzz")
+
+        assertThat(heroesViewModel.heroes.value).isEmpty()
     }
 }

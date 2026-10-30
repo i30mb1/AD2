@@ -1,5 +1,6 @@
 plugins {
     id("convention.android-library")
+    id("convention.compose")
     id("n7.plugins.kotlin-ksp")
 }
 

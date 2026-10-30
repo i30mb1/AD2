@@ -18,6 +18,7 @@ internal class ConvertStreamToVOStreamUseCase @Inject constructor() {
             title,
             streamerName,
             streamImage,
+            stream.viewerCount,
         )
     }
 }

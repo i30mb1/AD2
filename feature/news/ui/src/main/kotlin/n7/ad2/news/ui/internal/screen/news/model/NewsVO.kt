@@ -1,9 +1,6 @@
 package n7.ad2.news.ui.internal.screen.news.model
 
-data class NewsVO(val id: Int, val title: String, val image: Image)
+/** [date] is already formatted for the list, empty for news saved before dates were stored. */
+data class NewsVO(val id: Int, val title: String, val imageUrl: String, val source: String, val date: String, val isOfficial: Boolean)
 
-@JvmInline
-value class Image(val origin: String) {
-    val icon: String
-        get() = "$origin:1"
-}
+enum class NewsFilter { ALL, OFFICIAL, PRESS }

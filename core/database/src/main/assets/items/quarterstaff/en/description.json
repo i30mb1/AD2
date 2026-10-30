@@ -1,15 +1,1 @@
-{
-  "abilities": [],
-  "cost": "875",
-  "lore": null,
-  "consistFrom": null,
-  "name": "Quarterstaff",
-  "description": "A basic staff that allows you to strike quickly.",
-  "trivia": null,
-  "upgradeIn": [
-    "Oblivion Staff",
-    "Butterfly",
-    "Mask of Madness"
-  ],
-  "tips": null
-}
+{"abilities":[],"additionalInformation":null,"cost":"875","consistFrom":null,"lore":null,"name":"Quarterstaff","description":"A basic staff that allows you to strike quickly.","trivia":null,"bonuses":["+10 Attack Speed","+10 Damage"],"tips":null}

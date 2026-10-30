@@ -5,19 +5,21 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.mapLatest
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import n7.ad2.items.domain.usecase.FilterItemsUseCase
 import n7.ad2.items.domain.usecase.UpdateItemViewedForItemUseCase
 import n7.ad2.items.internal.model.ItemUI
+import n7.ad2.items.internal.usecase.FilterItemsUIUseCase
 import n7.ad2.items.internal.usecase.GetItemsUIUseCase
 
 internal class ItemsViewModel @AssistedInject constructor(
     getItemsUIUseCase: GetItemsUIUseCase,
-    private val filterItemsUseCase: FilterItemsUseCase,
+    private val filterItemsUIUseCase: FilterItemsUIUseCase,
     private val updateItemViewedByUserFieldUseCase: UpdateItemViewedForItemUseCase,
 ) : ViewModel() {
 
@@ -26,21 +28,17 @@ internal class ItemsViewModel @AssistedInject constructor(
         fun create(): ItemsViewModel
     }
 
-    private val allItems: MutableStateFlow<List<ItemUI>> = MutableStateFlow(emptyList())
-    private val _filteredItems: MutableStateFlow<List<ItemUI>> = MutableStateFlow(emptyList())
-    val filteredItems: StateFlow<List<ItemUI>> = _filteredItems.asStateFlow()
+    private val filterQuery = MutableStateFlow("")
+    val query: StateFlow<String> = filterQuery.asStateFlow()
 
-    init {
-        getItemsUIUseCase()
-            .onEach(allItems::emit)
-            .onEach(_filteredItems::emit)
-            .launchIn(viewModelScope)
+    val filteredItems: StateFlow<List<ItemUI>> = getItemsUIUseCase()
+        .combine(filterQuery) { items, query -> Pair(items, query) }
+        .mapLatest { (items, query) -> filterItemsUIUseCase(items, query) }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
+
+    fun filterItems(filter: String) {
+        filterQuery.value = filter
     }
-
-//    fun filterItems(filter: String) = allItems
-//        .map { list -> filterItemsUseCase(list, filter) }
-//        .onEach(_filteredItems::emit)
-//        .launchIn(viewModelScope)
 
     fun updateViewedByUserFieldForItem(name: String) {
         viewModelScope.launch {

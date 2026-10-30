@@ -26,6 +26,7 @@ internal object OpenDotaGuideMapper {
 
     private const val MIN_MATCHUP_GAMES = 100
     private const val COUNTERS_COUNT = 8
+    private const val EVEN_MATCHUP = 50.0
     private const val START_ITEMS_COUNT = 8
     private const val EARLY_ITEMS_COUNT = 4
     private const val PHASE_ITEMS_COUNT = 8
@@ -72,8 +73,9 @@ internal object OpenDotaGuideMapper {
                 HeroWithWinrate(name, round1(percent(matchup.wins.toLong(), matchup.gamesPlayed.toLong())), avatarUrl(name))
             }
         // High win-rate against an enemy => that enemy is easy to win against; low => hard.
-        val easyToWin = counters.sortedByDescending { it.heroWinrate }.take(COUNTERS_COUNT)
-        val hardToWin = counters.sortedBy { it.heroWinrate }.take(COUNTERS_COUNT)
+        // Split at an even matchup so with few matchups the same heroes don't show up in both lists.
+        val easyToWin = counters.filter { it.heroWinrate >= EVEN_MATCHUP }.sortedByDescending { it.heroWinrate }.take(COUNTERS_COUNT)
+        val hardToWin = counters.filter { it.heroWinrate < EVEN_MATCHUP }.sortedBy { it.heroWinrate }.take(COUNTERS_COUNT)
 
         val startingItems = topItems(itemPopularity?.startGameItems, itemIds, START_ITEMS_COUNT)
             .map { HeroItem(it, "") }

@@ -1,18 +1,1 @@
-{
-  "abilities": [],
-  "cost": "175",
-  "lore": null,
-  "consistFrom": null,
-  "name": "Ring of Protection",
-  "description": "A glimmering ring that defends its bearer.",
-  "trivia": [
-    "During pre-4.0beta2, there were two types of Ring of Protection, providing 2 and 4 bonus armor respectively."
-  ],
-  "upgradeIn": [
-    "Buckler",
-    "Pavise",
-    "Soul Ring",
-    "Urn of Shadows"
-  ],
-  "tips": null
-}
+{"abilities":[],"additionalInformation":null,"cost":"175","consistFrom":null,"lore":null,"name":"Ring of Protection","description":"A glimmering ring that defends its bearer.","trivia":["During pre-4.0beta2, there were two types of Ring of Protection, providing 2 and 4 bonus armor respectively."],"bonuses":["+2 Armor"],"tips":null}

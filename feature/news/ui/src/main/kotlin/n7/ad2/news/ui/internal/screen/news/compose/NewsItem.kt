@@ -1,144 +1,156 @@
-@file:OptIn(ExperimentalMaterialApi::class)
-
 package n7.ad2.news.ui.internal.screen.news.compose
 
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animate
-import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Icon
-import androidx.compose.material.Surface
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.SubcomposeAsyncImage
-import coil.compose.SubcomposeAsyncImageContent
-import n7.ad2.news.ui.internal.screen.news.model.Image
-import n7.ad2.news.ui.internal.screen.news.model.NewsVO
+import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import n7.ad2.core.ui.compose.AppTheme
-import n7.ad2.core.ui.compose.bounceClick
+import n7.ad2.news.ui.internal.screen.news.model.NewsVO
+
+private const val IMAGE_RATIO = 16f / 9f
+internal val pressColor = Color(0xFF64B5F6)
+private val pressBadgeColor = Color(0xFF3A5A80)
+
+/** The newest post: big picture, the title under it so long titles stay readable. */
+@Composable
+internal fun FeaturedNewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(AppTheme.shape.medium)
+            .background(AppTheme.color.surface)
+            .clickable { onNewsClicked(item.id) },
+    ) {
+        AsyncImage(
+            model = item.imageUrl,
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .aspectRatio(IMAGE_RATIO)
+                .background(AppTheme.color.background),
+        )
+        Column(
+            modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 12.dp, bottom = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                SourceBadge(item)
+                if (item.date.isNotEmpty()) {
+                    Text(
+                        text = item.date.uppercase(),
+                        style = AppTheme.style.body,
+                        fontWeight = FontWeight.Bold,
+                        color = AppTheme.color.textSecondaryColor,
+                        modifier = Modifier.padding(start = 8.dp),
+                    )
+                }
+            }
+            Text(text = item.title, fontSize = 18.sp, lineHeight = 23.sp, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor)
+        }
+    }
+}
+
+/** Every other post: small picture on the left, two lines of title and where it came from. */
+@Composable
+internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit, modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(AppTheme.shape.medium)
+            .background(AppTheme.color.surface)
+            .clickable { onNewsClicked(item.id) }
+            .padding(8.dp),
+    ) {
+        AsyncImage(
+            model = item.imageUrl,
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .width(112.dp)
+                .aspectRatio(IMAGE_RATIO)
+                .clip(AppTheme.shape.small)
+                .background(AppTheme.color.background),
+        )
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(start = 12.dp)
+                .height(63.dp),
+            verticalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Text(
+                text = item.title,
+                style = AppTheme.style.H5,
+                fontWeight = FontWeight.Medium,
+                color = AppTheme.color.textColor,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(
+                    Modifier
+                        .size(6.dp)
+                        .clip(CircleShape)
+                        .background(if (item.isOfficial) AppTheme.color.primary else pressColor),
+                )
+                Text(
+                    text = if (item.date.isEmpty()) item.source else "${item.source} · ${item.date}",
+                    style = AppTheme.style.body,
+                    color = AppTheme.color.textSecondaryColor,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.padding(start = 6.dp),
+                )
+            }
+        }
+    }
+}
+
+@Composable
+internal fun SourceBadge(item: NewsVO) {
+    if (item.source.isEmpty()) return
+    Text(
+        text = item.source.uppercase(),
+        style = AppTheme.style.body,
+        fontWeight = FontWeight.Bold,
+        color = Color.White,
+        modifier = Modifier
+            .clip(AppTheme.shape.small)
+            .background(if (item.isOfficial) AppTheme.color.primary else pressBadgeColor)
+            .padding(horizontal = 6.dp, vertical = 2.dp),
+    )
+}
 
 @Preview
 @Composable
 private fun NewsItemPreview() {
     AppTheme {
-        NewsItem(item = NewsVO(0, "Title", Image("")), onNewsClicked = {})
-    }
-}
-
-@Composable
-internal fun NewsItem(item: NewsVO, onNewsClicked: (newsID: Int) -> Unit) {
-    Surface(
-        modifier = Modifier
-            .bounceClick()
-            .then(
-                Modifier.clip(RoundedCornerShape(6.dp)),
-            ),
-        color = AppTheme.color.surface,
-        elevation = 4.dp,
-        onClick = { onNewsClicked(item.id) },
-    ) {
-        SubcomposeAsyncImage(
-            modifier = Modifier.fillMaxSize(),
-            model = item.image.origin,
-            contentDescription = item.title,
-            contentScale = ContentScale.Crop,
-//                loading = painterResource(R.drawable.widht_placeholder),
-//                error = painterResource(R.drawable.widht_placeholder),
-            success = {
-                SubcomposeAsyncImageContent()
-                Text(
-                    modifier = Modifier
-                        .fillMaxHeight()
-                        .background(Color(0x4D000000))
-                        .padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 32.dp),
-                    textAlign = TextAlign.Center,
-                    text = item.title,
-                    style = AppTheme.style.H5,
-                    color = Color.White,
-                )
-                var isLiked by remember { mutableStateOf(false) }
-                FavoriteIcon(
-                    isLiked = isLiked,
-                    onLikeClicked = { isLiked = !isLiked },
-                    modifier = Modifier.align(Alignment.TopEnd),
-                )
-                Box(
-                    modifier = Modifier
-                        .width(1.dp)
-                        .fillMaxHeight()
-                        .background(AppTheme.color.primary),
-                )
-            },
-        )
-    }
-}
-
-@Composable
-private fun FavoriteIcon(isLiked: Boolean, onLikeClicked: () -> Unit, modifier: Modifier = Modifier) {
-    var filledLikeScale by remember { mutableStateOf(0f) }
-    var showEmptyLike by remember { mutableStateOf(false) }
-    Box(
-        modifier = modifier
-            .clickable { onLikeClicked() }
-            .padding(8.dp),
-    ) {
-        val image by remember(isLiked) {
-            mutableStateOf(
-                if (isLiked) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
-            )
-        }
-        Icon(
-            imageVector = image,
-            contentDescription = null,
-        )
-        if (filledLikeScale > 0f) {
-            Icon(
-                modifier = Modifier.scale(filledLikeScale),
-                imageVector = Icons.Default.Favorite,
-                contentDescription = null,
-            )
-        }
-    }
-
-    LaunchedEffect(isLiked) {
-        if (isLiked) {
-            animate(
-                0f,
-                1f,
-                animationSpec = spring(
-                    dampingRatio = Spring.DampingRatioHighBouncy,
-                ),
-            ) { value, _ ->
-                filledLikeScale = value
-                if (value >= 1f) {
-                    showEmptyLike = false
-                }
-            }
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            FeaturedNewsItem(NewsVO(0, "7.41f Gameplay Patch", "", "Valve", "15 сен", true), onNewsClicked = {})
+            NewsItem(NewsVO(1, "Dota 2's Dark Carnival has begun", "", "PCGamesN", "26 июн", false), onNewsClicked = {})
         }
     }
 }

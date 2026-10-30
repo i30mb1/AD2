@@ -3,4 +3,5 @@
 
 
     <string name="desc_dota_hero" translatable="false">dota hero</string>
+    <string name="search_hero">Search hero</string>
 </resources>

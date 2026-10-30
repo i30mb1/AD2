@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="news_filter_all">Все</string>
+    <string name="news_filter_official">Valve</string>
+    <string name="news_filter_press">СМИ</string>
+    <string name="news_back">Назад</string>
+    <string name="news_share">Поделиться</string>
+    <string name="news_open_original">Открыть оригинал</string>
+    <string name="news_article_error">Не получилось загрузить статью</string>
+    <string name="news_retry">Повторить</string>
+</resources>

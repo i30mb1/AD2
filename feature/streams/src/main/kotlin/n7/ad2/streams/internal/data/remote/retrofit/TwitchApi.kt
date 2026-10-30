@@ -25,7 +25,7 @@ internal interface TwitchApi {
         fun get(client: Lazy<OkHttpClient>): TwitchApi = Retrofit.Builder()
             .baseUrl("https://api.twitch.tv/helix/")
             .callFactory { request -> client.get().newCall(request) }
-            .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+            .addConverterFactory(Json { ignoreUnknownKeys = true }.asConverterFactory("application/json".toMediaType()))
             .build()
             .create()
     }

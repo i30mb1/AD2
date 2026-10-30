@@ -56,7 +56,7 @@ private fun HeroInfoContent(info: VOHeroInfo) {
 
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     LazyColumn(
-        contentPadding = PaddingValues(top = 12.dp, bottom = bottomInset + 16.dp),
+        contentPadding = PaddingValues(bottom = bottomInset + 16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         // the hero card and abilities are always open, everything else is a folded card with a short summary

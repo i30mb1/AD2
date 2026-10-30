@@ -52,8 +52,9 @@ internal fun GamesScreen(viewModel: GamesViewModel, drawerPercentListener: Drawe
     }
 
     DisposableEffect(key1 = Unit) {
-        drawerPercentListener?.setDrawerPercentListener { percent -> drawerPercent = percent }
-        onDispose { drawerPercentListener?.setDrawerPercentListener(null) }
+        val listener: (Float) -> Unit = { percent -> drawerPercent = percent }
+        drawerPercentListener?.setDrawerPercentListener(listener)
+        onDispose { drawerPercentListener?.removeDrawerPercentListener(listener) }
     }
 }
 

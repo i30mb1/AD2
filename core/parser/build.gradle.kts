@@ -10,7 +10,8 @@ application {
 // ./gradlew :core:parser:runHeroes -PtestMode=false       → parse heroes (Valve datafeed + wiki trivia)
 // ./gradlew :core:parser:runHeroes -Pheroes=Pudge,Lion    → parse only these heroes
 // ./gradlew :core:parser:runHeroes -PparseResponses=true  → also re-download voice responses from the wiki
-// ./gradlew :core:parser:runItems  -PcfClearance=<cookie>  → parse items
+// ./gradlew :core:parser:runItems                         → parse items (Valve datafeed, RU + EN)
+// ./gradlew :core:parser:runItems -Pitems=blink_dagger    → parse only these item folders
 // Default test mode parses the first 3 heroes only
 
 tasks.register<JavaExec>("runHeroes") {
@@ -35,14 +36,12 @@ tasks.register<JavaExec>("runHeroes") {
 
 tasks.register<JavaExec>("runItems") {
     group = "parser"
-    description = "Parse Dota 2 items from the wiki and generate JSON data files"
+    description = "Parse Dota 2 items from the Valve datafeed and generate JSON data files"
     classpath = sourceSets["main"].runtimeClasspath
-    mainClass.set("n7.ad2.parser.items.ParseItemsKt")
+    mainClass.set("n7.ad2.parser.items.ValveItemParserKt")
     workingDir = rootProject.projectDir  // assetsDatabase uses user.dir — must point to repo root
-    val cfClearance = findProperty("cfClearance")?.toString() ?: System.getenv("CF_CLEARANCE") ?: ""
-    val htmlDir = findProperty("htmlDir")?.toString() ?: System.getenv("PARSER_HTML_DIR") ?: ""
-    if (cfClearance.isNotEmpty()) environment("CF_CLEARANCE", cfClearance)
-    if (htmlDir.isNotEmpty()) environment("PARSER_HTML_DIR", htmlDir)
+    val items = findProperty("items")?.toString() ?: System.getenv("ITEMS") ?: ""
+    if (items.isNotEmpty()) environment("ITEMS", items)
 }
 
 dependencies {

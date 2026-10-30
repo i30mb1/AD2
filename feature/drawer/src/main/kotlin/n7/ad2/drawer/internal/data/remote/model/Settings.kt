@@ -14,9 +14,10 @@ internal data class Settings(
     val version: Int? = 0,
 )
 
-@Serializable(with = StringVOMenuTypeAdapter::class)
+@Serializable
 internal data class Menu(
     @SerialName("type")
+    @Serializable(with = StringVOMenuTypeAdapter::class)
     val type: VOMenuType,
     @SerialName("isEnable")
     val isEnable: Boolean = true,

@@ -16,7 +16,7 @@ import retrofit2.http.POST
 interface TwitchGQLApi {
 
     @Headers("Client-ID: kimne78kx3ncx6brgo4mv6wki5h1ko")
-    @POST("gql/")
+    @POST("gql")
     suspend fun getStreamGQL(@Body body: StreamGQLRequest): StreamGQLData
 
     companion object {
@@ -24,7 +24,7 @@ interface TwitchGQLApi {
         fun get(client: Lazy<OkHttpClient>): TwitchGQLApi = Retrofit.Builder()
             .baseUrl("https://gql.twitch.tv/")
             .callFactory { request -> client.get().newCall(request) }
-            .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+            .addConverterFactory(Json { ignoreUnknownKeys = true; encodeDefaults = true }.asConverterFactory("application/json".toMediaType()))
             .build()
             .create()
     }

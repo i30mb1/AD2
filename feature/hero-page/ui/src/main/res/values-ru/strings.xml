@@ -16,8 +16,6 @@
     <string name="guide_items">Предметы и тайминги</string>
     <string name="fragment_guide_skill_builds">Выбор способностей</string>
 
-    <string name="spell_build">Выбор способностей</string>
-
     <!-- hero info -->
     <string name="info_stats">Характеристики</string>
     <string name="info_abilities">Способности</string>
@@ -109,4 +107,33 @@
     <string name="info_ability_details">Подробности</string>
     <string name="info_ability_changes">Изменения</string>
     <string name="info_show_all">Показать все (%d)</string>
+    <string name="hero_back">Назад</string>
+    <string name="responses_all">Все</string>
+    <string name="response_play">Воспроизвести</string>
+    <string name="response_pause">Пауза</string>
+    <string name="response_actions">Скачать или поставить на звонок</string>
+    <string name="response_download">Скачать</string>
+    <string name="response_downloading">Скачивается…</string>
+    <string name="response_downloaded">Скачано</string>
+    <string name="response_download_hint">Сохранить mp3 на телефон</string>
+    <string name="response_set_as">Установить как</string>
+    <string name="response_target_call">Звонок</string>
+    <string name="response_target_notification">Уведомление</string>
+    <string name="response_target_alarm">Будильник</string>
+    <string name="response_write_settings_hint">Android один раз попросит разрешение «Изменение системных настроек».</string>
+    <string name="response_write_settings_request">Разрешите AD2 изменять системные настройки и вернитесь назад</string>
+    <string name="response_set_call_done">Реплика стоит на звонке</string>
+    <string name="response_set_notification_done">Реплика стоит на уведомлениях</string>
+    <string name="response_set_alarm_done">Реплика стоит на будильнике</string>
+    <string name="response_set_failed">Не получилось установить реплику, проверьте интернет и попробуйте ещё раз</string>
+    <string name="guide_winrate">Винрейт</string>
+    <string name="guide_matches">Матчей</string>
+    <string name="guide_phase_early">Начало</string>
+    <string name="guide_phase_mid">Середина</string>
+    <string name="guide_phase_late">Поздняя</string>
+    <string name="guide_phase_early_time">0–15 мин</string>
+    <string name="guide_phase_mid_time">15–30 мин</string>
+    <string name="guide_phase_late_time">30+ мин</string>
+    <string name="guide_source">Данные: OpenDota</string>
+    <string name="guide_empty">Гайд ещё не загружен, для этого один раз нужен интернет</string>
 </resources>

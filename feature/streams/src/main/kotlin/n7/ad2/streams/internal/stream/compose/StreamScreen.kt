@@ -156,6 +156,7 @@ internal fun VideoPlayer(uri: String, onPipLayoutChanged: (Rect) -> Unit) {
             }
         },
         update = {
+            if (uri.isBlank()) return@AndroidView
             val dataSource = DefaultHttpDataSource.Factory()
             val mediaSource = HlsMediaSource.Factory(dataSource).createMediaSource(MediaItem.fromUri(uri.toUri()))
             exoPlayer.setMediaSource(mediaSource)

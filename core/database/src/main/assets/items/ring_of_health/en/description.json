@@ -1,16 +1,1 @@
-{
-  "abilities": [],
-  "cost": "700",
-  "lore": null,
-  "consistFrom": null,
-  "name": "Ring of Health",
-  "description": "A shiny ring found beneath a fat halfling\u2019s corpse.",
-  "trivia": null,
-  "upgradeIn": [
-    "Eternal Shroud",
-    "Perseverance",
-    "Pipe of Insight",
-    "Vanguard"
-  ],
-  "tips": null
-}
+{"abilities":[],"additionalInformation":null,"cost":"700","consistFrom":null,"lore":null,"name":"Ring of Health","description":"A shiny ring found beneath a fat halfling's corpse.","trivia":null,"bonuses":["+4.5 Health Regeneration"],"tips":null}

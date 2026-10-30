@@ -1,0 +1,324 @@
+﻿.\gradlew : WARNING: A restricted method in java.lang.System has been called
+At line:1 char:475
++ ... | Out-Null; .\gradlew :core:parser:runItems --console=plain "-Dorg.gr ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: A rest...has been called:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnam
+ed module (file:/C:/Users/eug79/.gradle/wrapper/dists/gradle-9.1.0-bin/9agqghryom9wkf8r80qlhnts3/gradle-9.1.0/lib/nativ
+e-platform-0.22-milestone-28.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Starting a Gradle Daemon, 7 stopped Daemons could not be reused, use --status for details
+Daemon JVM discovery is an incubating feature.
+Configuration on demand is an incubating feature.
+> Task :build-settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-settings:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-settings:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-settings:compilePluginsBlocks UP-TO-DATE
+> Task :build-settings:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-settings:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-settings:compileKotlin UP-TO-DATE
+> Task :build-settings:compileJava NO-SOURCE
+> Task :build-settings:pluginDescriptors UP-TO-DATE
+> Task :build-settings:processResources UP-TO-DATE
+> Task :build-settings:classes UP-TO-DATE
+> Task :build-settings:jar UP-TO-DATE
+AD2: Included 1 modules for target ':core:parser' in 0,05s
+AD2: Setup git hooks: success
+Type-safe project accessors is an incubating feature.
+> Task :build-logic:measure-build-time:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:bump-version-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:bump-version-plugin:compileKotlin UP-TO-DATE
+> Task :build-logic:measure-build-time:compileKotlin UP-TO-DATE
+> Task :build-logic:bump-version-plugin:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:compileJava NO-SOURCE
+> Task :build-logic:measure-build-time:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:bump-version-plugin:processResources UP-TO-DATE
+> Task :build-logic:measure-build-time:processResources UP-TO-DATE
+> Task :build-logic:bump-version-plugin:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:classes UP-TO-DATE
+> Task :build-logic:measure-build-time:jar UP-TO-DATE
+> Task :build-logic:bump-version-plugin:jar UP-TO-DATE
+> Task :build-logic:build-extensions:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:kotlin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:kotlin:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:kotlin:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:kotlin:pluginDescriptors UP-TO-DATE
+> Task :build-logic:kotlin:processResources UP-TO-DATE
+> Task :build-logic:build-extensions:compileKotlin UP-TO-DATE
+> Task :build-logic:build-extensions:compileJava NO-SOURCE
+> Task :build-logic:build-extensions:pluginDescriptors UP-TO-DATE
+> Task :build-logic:build-extensions:processResources UP-TO-DATE
+> Task :build-logic:build-extensions:classes UP-TO-DATE
+> Task :build-logic:build-extensions:jar UP-TO-DATE
+> Task :build-logic:kotlin:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:kotlin:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:kotlin:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:kotlin:compileKotlin UP-TO-DATE
+> Task :build-logic:kotlin:compileJava NO-SOURCE
+> Task :build-logic:kotlin:classes UP-TO-DATE
+> Task :build-logic:kotlin:jar UP-TO-DATE
+> Task :core:parser:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:parser:processResources NO-SOURCE
+
+> Task :core:parser:compileKotlin
+w: Opt-in requirement marker androidx.media3.common.util.UnstableApi is unresolved. Please make sure it's present in the module dependencies
+w: Opt-in requirement marker androidx.compose.foundation.ExperimentalFoundationApi is unresolved. Please make sure it's present in the module dependencies
+
+> Task :core:parser:compileJava NO-SOURCE
+> Task :core:parser:classes UP-TO-DATE
+
+> Task :core:parser:runItems
+Items added to the list (64): splintmail, shawl, boots_of_travel_2, ring_of_tarrasque, tiara_of_selemene, wizard_hat, khanda, poor_man's_shield, essence_distiller, consecrated_wraps, crella's_crozier, orb_of_blight, orb_of_frost, parasma, stygian_desolator, spider_legs, essence_ring, book_of_the_dead, fallen_sky, minotaur_horn, chipped_vest, cloak_of_flames, possessed_mask, psychic_headband, stormcrafter, witchbane, tumbler's_toy, seeds_of_serenity, occult_bracelet, defiant_shell, dagger_of_ristul, duelist_gloves, dandelion_amulet, rattlecage, unrelenting_eye, mana_draught, crippling_crossbow, gunpowder_gauntlet, searing_signet, serrated_shiv, pollywog_charm, kobold_cup, dormant_curio, jidi_pollen_bag, dezun_bloodrite, giant's_maul, divine_regalia, specialist's_array, hydra's_breath, weighted_dice, ash_legion_shield, riftshadow_prism, metamorphic_mandible, idol_of_scree'auk, flayer's_bota, spellslinger, prophet's_pendulum, stonefeather_satchel, enchanter's_bauble, harmonizer, conjurer's_catalyst, forager's_kit, chasm_stone, partisan's_brand
+ok abyssal_blade
+ok aegis_of_the_immortal
+ok aeon_disk
+ok aether_lens
+ok aghanim's_blessing
+ok aghanim's_blessing_-_roshan
+ok aghanim's_scepter
+ok aghanim's_shard
+ok arcane_blink
+ok arcane_boots
+ok armlet_of_mordiggian
+ok ash_legion_shield
+ok assault_cuirass
+ok band_of_elvenskin
+ok battle_fury
+ok belt_of_strength
+ok black_king_bar
+ok blade_mail
+ok blade_of_alacrity
+ok blades_of_attack
+ok blink_dagger
+ok blitz_knuckles
+ok blood_grenade
+ok bloodstone
+ok bloodthorn
+ok book_of_the_dead
+ok boots_of_bearing
+ok boots_of_speed
+ok boots_of_travel
+ok boots_of_travel_2
+ok bottle
+ok bracer
+ok broadsword
+ok buckler
+ok butterfly
+ok chainmail
+ok chasm_stone
+ok cheese
+ok chipped_vest
+ok circlet
+ok clarity
+ok claymore
+ok cloak
+ok cloak_of_flames
+ok conjurer's_catalyst
+ok consecrated_wraps
+ok cornucopia
+ok crella's_crozier
+ok crimson_guard
+ok crippling_crossbow
+ok crown
+ok crystalys
+ok daedalus
+ok dagger_of_ristul
+ok dagon
+ok dandelion_amulet
+ok defiant_shell
+ok demon_edge
+ok desolator
+ok dezun_bloodrite
+ok diadem
+ok diffusal_blade
+ok disperser
+ok divine_rapier
+ok divine_regalia
+ok dormant_curio
+ok dragon_lance
+ok drum_of_endurance
+ok duelist_gloves
+ok dust_of_appearance
+ok eaglesong
+ok echo_sabre
+ok enchanted_mango
+ok enchanter's_bauble
+ok energy_booster
+ok essence_distiller
+ok essence_ring
+ok eternal_shroud
+ok ethereal_blade
+ok eul's_scepter_of_divinity
+ok eye_of_skadi
+ok faerie_fire
+ok falcon_blade
+ok fallen_sky
+ok flayer's_bota
+ok fluffy_hat
+ok forager's_kit
+ok force_staff
+ok gauntlets_of_strength
+ok gem_of_true_sight
+ok ghost_scepter
+ok giant's_maul
+ok gleipnir
+ok glimmer_cape
+ok gloves_of_haste
+ok guardian_greaves
+ok gunpowder_gauntlet
+ok hand_of_midas
+ok harmonizer
+ok harpoon
+ok headdress
+ok healing_salve
+ok heart_of_tarrasque
+ok heaven's_halberd
+ok helm_of_iron_will
+ok helm_of_the_dominator
+ok helm_of_the_overlord
+ok holy_locket
+ok hurricane_pike
+ok hydra's_breath
+ok hyperstone
+ok idol_of_scree'auk
+ok infused_raindrops
+ok iron_branch
+ok javelin
+ok jidi_pollen_bag
+ok kaya
+ok kaya_and_sange
+ok khanda
+ok kobold_cup
+ok linken's_sphere
+ok lotus_orb
+ok maelstrom
+ok mage_slayer
+ok magic_stick
+ok magic_wand
+ok mana_draught
+ok manta_style
+ok mantle_of_intelligence
+ok mask_of_madness
+ok medallion_of_courage
+ok mekansm
+ok metamorphic_mandible
+ok meteor_hammer
+ok minotaur_horn
+ok mithril_hammer
+ok mjollnir
+ok monkey_king_bar
+ok moon_shard
+ok morbid_mask
+ok mystic_staff
+ok null_talisman
+ok nullifier
+ok oblivion_staff
+ok observer_ward
+ok occult_bracelet
+ok octarine_core
+ok ogre_axe
+ok orb_of_blight
+ok orb_of_corrosion
+ok orb_of_frost
+ok orb_of_venom
+ok orchid_malevolence
+ok overwhelming_blink
+ok parasma
+ok partisan's_brand
+ok pavise
+ok perseverance
+ok phase_boots
+ok phylactery
+ok pipe_of_insight
+ok platemail
+ok point_booster
+ok pollywog_charm
+ok poor_man's_shield
+ok possessed_mask
+ok power_treads
+ok prophet's_pendulum
+ok psychic_headband
+ok quarterstaff
+ok quelling_blade
+ok radiance
+ok rattlecage
+ok reaver
+ok refresher_orb
+ok refresher_shard
+ok revenant's_brooch
+ok riftshadow_prism
+ok ring_of_basilius
+ok ring_of_health
+ok ring_of_protection
+ok ring_of_regen
+ok ring_of_tarrasque
+ok robe_of_the_magi
+ok rod_of_atos
+ok sacred_relic
+ok sage's_mask
+ok sange
+ok sange_and_yasha
+ok satanic
+ok scythe_of_vyse
+ok searing_signet
+ok seeds_of_serenity
+ok sentry_ward
+ok serrated_shiv
+ok shadow_amulet
+ok shadow_blade
+ok shawl
+ok shiva's_guard
+ok silver_edge
+ok skull_basher
+ok slippers_of_agility
+ok smoke_of_deceit
+ok solar_crest
+ok soul_booster
+ok soul_ring
+ok specialist's_array
+ok spellslinger
+ok spider_legs
+ok spirit_vessel
+ok splintmail
+ok staff_of_wizardry
+ok stonefeather_satchel
+ok stormcrafter
+ok stygian_desolator
+ok swift_blink
+ok talisman_of_evasion
+ok tango
+ok tiara_of_selemene
+ok town_portal_scroll
+ok tranquil_boots
+ok tumbler's_toy
+ok ultimate_orb
+ok unrelenting_eye
+ok urn_of_shadows
+ok vanguard
+ok veil_of_discord
+ok vitality_booster
+ok vladmir's_offering
+ok void_stone
+ok voodoo_mask
+ok weighted_dice
+ok wind_lace
+ok wind_waker
+ok witch_blade
+ok witchbane
+ok wizard_hat
+ok wraith_band
+ok yasha
+ok yasha_and_kaya
+
+No Valve item for 2 folders (English file left as is): aghanim's_shard_-_roshan, blight_stone
+
+Unmapped bonus tokens: aoe_bonus, attack_pct, attack_range_melee, max_mana_percentage, restoration_amp
+
+BUILD SUCCESSFUL in 4m 34s
+32 actionable tasks: 2 executed, 30 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

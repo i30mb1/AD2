@@ -1,16 +1,1 @@
-{
-  "abilities": [],
-  "cost": "1200",
-  "lore": null,
-  "consistFrom": null,
-  "name": "Point Booster",
-  "description": "A perfectly formed amethyst that nourishes body and mind when held.",
-  "trivia": null,
-  "upgradeIn": [
-    "Aghanim's Scepter",
-    "Soul Booster",
-    "Eye of Skadi",
-    "Phylactery"
-  ],
-  "tips": null
-}
+{"abilities":[],"additionalInformation":null,"cost":"1200","consistFrom":null,"lore":null,"name":"Point Booster","description":"A perfectly formed amethyst that nourishes body and mind when held.","trivia":null,"bonuses":["+175 Mana","+175 Health"],"tips":null}

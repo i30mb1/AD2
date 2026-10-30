@@ -9,10 +9,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -27,6 +30,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
@@ -40,13 +44,8 @@ import n7.ad2.heroes.domain.model.HeroStats
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun HeroHeader(imageUrl: String, info: HeroDescription) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp)
-            .clip(AppTheme.shape.large)
-            .background(AppTheme.color.surface),
-    ) {
+    // full-bleed art right under the tabs, the details continue on the page background
+    Column(modifier = Modifier.fillMaxWidth()) {
         Box(
             Modifier
                 .fillMaxWidth()
@@ -61,7 +60,7 @@ internal fun HeroHeader(imageUrl: String, info: HeroDescription) {
             Box(
                 Modifier
                     .fillMaxSize()
-                    .background(Brush.verticalGradient(0.45f to Color.Transparent, 1f to AppTheme.color.surface)),
+                    .background(Brush.verticalGradient(0.45f to Color.Transparent, 1f to AppTheme.color.background)),
             )
             Column(
                 Modifier
@@ -187,45 +186,53 @@ internal fun StatsCard(stats: HeroStats) {
         StatRow(R.string.stat_mana, stats.mana.format(), stringResource(regen, stats.manaRegen.format()), InfoColors.mana),
         StatRow(R.string.stat_damage, "${stats.damageMin.format()}–${stats.damageMax.format()}"),
         StatRow(R.string.stat_armor, stats.armor.format()),
-        StatRow(R.string.stat_magic_resist, "${stats.magicResist.format()}%"),
+        StatRow(R.string.stat_move_speed, stats.moveSpeed.format()),
         StatRow(R.string.stat_attack_range, stats.attackRange.format()),
         StatRow(R.string.stat_attack_rate, "${stats.attackRate.format()}s"),
+        StatRow(R.string.stat_magic_resist, "${stats.magicResist.format()}%"),
         StatRow(R.string.stat_projectile_speed, stats.projectileSpeed.format()).takeIf { stats.projectileSpeed > 0 && stats.attackRange > 150 },
-        StatRow(R.string.stat_move_speed, stats.moveSpeed.format()),
         StatRow(R.string.stat_turn_rate, stats.turnRate.format()),
         StatRow(R.string.stat_vision, "${stats.visionDay.format()} / ${stats.visionNight.format()}"),
     ).filterNotNull()
-    // the values people compare heroes by
-    val summary = rows.take(4).map { "${stringResource(it.label)} ${it.value}" }.joinToString(" · ")
 
-    CollapsibleCard(title = stringResource(R.string.info_stats), summary = summary) {
-        rows.forEachIndexed { index, row ->
-            if (index > 0) InfoDivider(Modifier.padding(vertical = 8.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                if (row.accent != null) {
-                    Box(
-                        Modifier
-                            .size(8.dp)
-                            .clip(RoundedCornerShape(50))
-                            .background(row.accent),
-                    )
-                    HSpace(8.dp)
-                }
-                Text(
-                    text = stringResource(row.label),
-                    style = AppTheme.style.H5,
-                    color = AppTheme.color.textSecondaryColor,
-                    modifier = Modifier.weight(1f),
-                )
-                Text(text = row.value, style = AppTheme.style.H5, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor)
-                if (row.extra != null) {
-                    HSpace(6.dp)
-                    Text(text = row.extra, style = AppTheme.style.body, color = row.accent ?: AppTheme.color.textSecondaryColor)
+    // every stat is visible at once as a tile, people compare heroes by these numbers
+    InfoCard(title = stringResource(R.string.info_stats)) {
+        // plain rows instead of FlowRow: FlowRow measures weighted tiles of different heights wrong
+        Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            rows.chunked(STATS_IN_ROW).forEach { line ->
+                Row(
+                    modifier = Modifier.height(IntrinsicSize.Min),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    line.forEach { row ->
+                        Column(
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight()
+                                .clip(AppTheme.shape.small)
+                                .background(InfoColors.chip)
+                                .padding(horizontal = 4.dp, vertical = 8.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
+                            Text(text = row.value, fontSize = 15.sp, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor, maxLines = 1)
+                            if (row.extra != null) Text(text = row.extra, style = AppTheme.style.info, color = row.accent ?: AppTheme.color.textSecondaryColor, maxLines = 1)
+                            Text(
+                                text = stringResource(row.label),
+                                style = AppTheme.style.body,
+                                color = AppTheme.color.textSecondaryColor,
+                                maxLines = 2,
+                                textAlign = TextAlign.Center,
+                            )
+                        }
+                    }
+                    repeat(STATS_IN_ROW - line.size) { Box(Modifier.weight(1f)) }
                 }
             }
         }
     }
 }
+
+private const val STATS_IN_ROW = 4
 
 private class StatRow(val label: Int, val value: String, val extra: String? = null, val accent: Color? = null)
 

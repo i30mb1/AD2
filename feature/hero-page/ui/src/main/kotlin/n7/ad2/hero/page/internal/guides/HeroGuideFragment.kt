@@ -26,7 +26,7 @@ class HeroGuideFragment : Fragment() {
     @Inject lateinit var heroesViewModelFactory: HeroGuideViewModel.Factory
 
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
-    private val viewModel: HeroGuideViewModel by viewModel { heroesViewModelFactory.create() }
+    private val viewModel: HeroGuideViewModel by viewModel { heroesViewModelFactory.create(heroName) }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -34,5 +34,5 @@ class HeroGuideFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
-        content { HeroGuideScreen(viewModel, heroName) }
+        content { HeroGuideScreen(viewModel) }
 }

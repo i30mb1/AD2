@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="news_filter_all">All</string>
+    <string name="news_filter_official">Valve</string>
+    <string name="news_filter_press">Press</string>
+    <string name="news_back">Back</string>
+    <string name="news_share">Share</string>
+    <string name="news_open_original">Open original</string>
+    <string name="news_article_error">Could not load the article</string>
+    <string name="news_retry">Retry</string>
+</resources>

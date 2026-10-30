@@ -31,11 +31,16 @@ internal class GetNewsUseCaseImpl constructor(private val logger: Logger, privat
             .drop((page - 1) * PAGE_SIZE)
             .take(PAGE_SIZE)
             .map { item ->
+                val isOfficial = item.optInt("feed_type") == OFFICIAL_FEED_TYPE
                 News(
                     title = item.optString("title"),
                     urlImage = imageFrom(item.optString("contents")),
                     loadedFromPage = page,
                     articleUrl = item.optString("url"),
+                    date = item.optLong("date"),
+                    source = if (isOfficial) OFFICIAL_SOURCE else sourceFrom(item.optString("feedlabel"), item.optString("feedname")),
+                    author = item.optString("author"),
+                    isOfficial = isOfficial,
                 )
             }
         emit(result)
@@ -59,6 +64,10 @@ internal class GetNewsUseCaseImpl constructor(private val logger: Logger, privat
         }
     }
 
+    // press feeds are labeled like "PlayGround.ru - Компьютерные игры", the site name is enough
+    private fun sourceFrom(feedLabel: String, feedName: String): String =
+        feedLabel.substringBefore(" - ").trim().ifBlank { feedName }
+
     private fun imageFrom(contents: String): String {
         val expanded = contents.replace("{STEAM_CLAN_IMAGE}", STEAM_CLAN_IMAGE)
         return IMAGE_REGEX.find(expanded)?.value ?: DOTA_HEADER_IMAGE
@@ -67,6 +76,10 @@ internal class GetNewsUseCaseImpl constructor(private val logger: Logger, privat
     private companion object {
         const val NEWS_URL = "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=570"
         const val PAGE_SIZE = 15
+
+        // Steam's own announcements are feed_type 1, posts pulled from external sites are 0
+        const val OFFICIAL_FEED_TYPE = 1
+        const val OFFICIAL_SOURCE = "Valve"
         const val CONNECT_TIMEOUT_MS = 10_000
         const val READ_TIMEOUT_MS = 20_000
         const val STEAM_CLAN_IMAGE = "https://clan.cloudflare.steamstatic.com/images"

@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -39,29 +40,25 @@ class ResponsesViewModel @AssistedInject constructor(
     private val _state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
     val state: StateFlow<State> = _state.asStateFlow()
 
+    // responses exist in both languages, the user may want to hear the original ones
+    private val _locale: MutableStateFlow<AppLocale> = MutableStateFlow(appInformation.appLocale)
+    val locale: StateFlow<AppLocale> = _locale.asStateFlow()
+    private var loadJob: Job? = null
+
     init {
-        loadResponses(appInformation.appLocale)
+        loadResponses(_locale.value)
     }
 
     fun loadResponses(appLocale: AppLocale) {
-        getHeroResponsesInteractor(heroName, appLocale)
+        _locale.value = appLocale
+        loadJob?.cancel()
+        loadJob = getHeroResponsesInteractor(heroName, appLocale)
             .onEach { list -> _state.emit(State.Data(list)) }
             .catch { error -> _state.emit(State.Error(error)) }
             .launchIn(viewModelScope)
     }
 
     fun refreshResponses() {
-        loadResponses(appInformation.appLocale)
+        loadResponses(_locale.value)
     }
-}
-
-fun main(args: Array<String>) {
-    fun hello() = print("Hello")
-
-    fun world(any: Any) = { any: Any ->
-        print("World")
-    }
-
-    hello()
-    world(".")(".")
 }

@@ -3,6 +3,7 @@ package n7.ad2.tournaments.internal.di
 import n7.ad2.tournaments.api.TournamentsDependencies
 import n7.ad2.tournaments.internal.TournamentsFragment
 import n7.ad2.tournaments.internal.TournamentsViewModel
+import n7.ad2.tournaments.internal.match.MatchFragment
 
 @dagger.Component(
     dependencies = [
@@ -17,6 +18,7 @@ internal interface TournamentsComponent {
     }
 
     fun inject(tournamentsFragment: TournamentsFragment)
+    fun inject(matchFragment: MatchFragment)
 
     val tournamentsViewModelFactory: TournamentsViewModel.Factory
 }

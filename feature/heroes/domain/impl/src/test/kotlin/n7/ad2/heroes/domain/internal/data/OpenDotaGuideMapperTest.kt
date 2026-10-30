@@ -80,6 +80,14 @@ class OpenDotaGuideMapperTest {
     }
 
     @Test
+    fun `a hero is never both easy and hard to win against`() {
+        val guide = buildGuide("abaddon")!!
+        // with only two matchups the old top/bottom split put both heroes into both lists
+        assertEquals(listOf("Axe"), guide.easyToWinHeroList.map { it.heroName })
+        assertEquals(listOf("Bane"), guide.hardToWinHeroList.map { it.heroName })
+    }
+
+    @Test
     fun `counter avatars point at bundled webp assets`() {
         val guide = buildGuide("abaddon")!!
         assertEquals("file:///android_asset/heroes/axe/full.webp", guide.easyToWinHeroList.first().avatarUrl)

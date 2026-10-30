@@ -25,7 +25,7 @@ internal class GetItemsUIUseCase @Inject constructor(private val getItemsUseCase
                         result.add(ItemUI.Header(HeaderViewHolder.Data(type)))
                         result.addAll(
                             items.map { item ->
-                                ItemUI.Body(item.name, item.imageUrl, item.viewedByUser)
+                                ItemUI.Body(item.name, item.title, item.imageUrl, item.viewedByUser)
                             },
                         )
                     }

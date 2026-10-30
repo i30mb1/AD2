@@ -20,16 +20,20 @@ import javax.inject.Inject
 
 class GetItemInfoUseCase @Inject constructor(private val res: Resources, private val dispatchers: DispatchersProvider) {
 
-    private fun getItem(itemName: String, appLocale: AppLocale): String = res.getAssets("items/$itemName/${appLocale.value}/description.json")
-        .bufferedReader().use {
-            it.readText()
-        }
+    private val json = Json { ignoreUnknownKeys = true }
 
-    private fun getFullUrlItemImage(itemName: String): String = "https://cdn.dota2.com/apps/dota2/images/items/${itemName}_lg.png"
+    /** Falls back to English: wiki-only items and fresh patches may not have a localized file yet. */
+    private fun getItem(itemName: String, appLocale: AppLocale): String {
+        val stream = runCatching { res.getAssets("items/$itemName/${appLocale.value}/description.json") }
+            .getOrElse { res.getAssets("items/$itemName/${AppLocale.English.value}/description.json") }
+        return stream.bufferedReader().use { it.readText() }
+    }
+
+    private fun getFullUrlItemImage(itemName: String): String = "file:///android_asset/items/${itemName.lowercase().replace(" ", "_")}/full.webp"
 
     operator fun invoke(itemName: String, appLocale: AppLocale): Flow<List<VOItemInfo>> = flow {
         val jsonString = getItem(itemName, appLocale)
-        val localItemDescription = Json.decodeFromString<LocalItemInfo>(jsonString)
+        val localItemDescription = json.decodeFromString<LocalItemInfo>(jsonString)
 
         val result = buildList {
             if (localItemDescription.cost != null) add(VOItemInfo.TextLine(res.getString(R.string.cost, localItemDescription.cost)))
@@ -39,7 +43,7 @@ class GetItemInfoUseCase @Inject constructor(private val res: Resources, private
                 val voRecipes = localItemDescription.consistFrom?.map { recipeName ->
                     VORecipe(getFullUrlItemImage(recipeName), recipeName)
                 } ?: emptyList()
-                add(VOItemInfo.Recipe(itemName, getFullUrlItemImage(localItemDescription.name), voRecipes))
+                add(VOItemInfo.Recipe(itemName, getFullUrlItemImage(itemName), voRecipes))
             }
 
             if (localItemDescription.description != null) {
@@ -57,8 +61,8 @@ class GetItemInfoUseCase @Inject constructor(private val res: Resources, private
                     if (ability.effects != null) ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
                     if (ability.description != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
                     if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
-                    if (ability.params != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true))))
-                    if (ability.notes != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true))))
+                    if (!ability.params.isNullOrEmpty()) add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true))))
+                    if (!ability.notes.isNullOrEmpty()) add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true))))
                     if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), n7.ad2.core.ui.R.drawable.mana)))
                     if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), n7.ad2.core.ui.R.drawable.cooldown)))
                 }

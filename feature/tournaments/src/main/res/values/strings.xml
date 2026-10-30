@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tournaments_live">Live now</string>
+    <string name="tournaments_upcoming">Upcoming</string>
+    <string name="tournaments_finished">Finished</string>
+    <string name="tournaments_live_badge">LIVE</string>
+    <string name="tournaments_versus">vs</string>
+    <string name="tournaments_status_finished">Finished</string>
+    <string name="tournaments_best_of">Best of %1$d</string>
+    <string name="tournaments_prize">Prize pool %1$s</string>
+    <string name="tournaments_team_rating">#%1$d · %2$d pts</string>
+    <string name="tournaments_watch">Watch stream</string>
+    <string name="tournaments_games">Games</string>
+    <string name="tournaments_game_number">Game %1$d</string>
+    <string name="tournaments_game_winner">%1$s won</string>
+    <string name="tournaments_game_in_progress">In progress</string>
+    <string name="tournaments_draft">Draft</string>
+    <string name="tournaments_lineups">Lineups</string>
+    <string name="tournaments_head_to_head">Head to head</string>
+    <string name="tournaments_forecast">Fans\' forecast</string>
+    <string name="tournaments_draw">Draw</string>
+    <string name="tournaments_kda">KDA %1$s</string>
+    <string name="tournaments_gpm_xpm">%1$d GPM · %2$d XPM</string>
+</resources>

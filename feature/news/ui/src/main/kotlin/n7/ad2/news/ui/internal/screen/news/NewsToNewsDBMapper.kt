@@ -10,5 +10,9 @@ internal object NewsToNewsDBMapper : (News) -> NewsDB {
         urlImage = from.urlImage,
         loadedFromPage = from.loadedFromPage,
         href = from.articleUrl,
+        date = from.date,
+        source = from.source,
+        author = from.author,
+        isOfficial = from.isOfficial,
     )
 }

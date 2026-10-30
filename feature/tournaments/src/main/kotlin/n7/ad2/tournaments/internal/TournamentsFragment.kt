@@ -2,72 +2,40 @@ package n7.ad2.tournaments.internal
 
 import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.view.ViewGroup
+import androidx.compose.runtime.collectAsState
 import androidx.fragment.app.Fragment
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.findDependencies
-import n7.ad2.feature.tournaments.R
-import n7.ad2.feature.tournaments.databinding.FragmentTournamentsBinding
+import n7.ad2.android.getMainFragmentNavigator
+import n7.ad2.core.ui.content
 import n7.ad2.ktx.viewModel
-import n7.ad2.tournaments.internal.adapter.TournamentsItemDecorator
+import n7.ad2.tournaments.internal.data.TournamentMatch
 import n7.ad2.tournaments.internal.di.DaggerTournamentsComponent
+import n7.ad2.tournaments.internal.match.MatchFragment
 import javax.inject.Inject
 
-class TournamentsFragment : Fragment(R.layout.fragment_tournaments) {
-
-    companion object {
-        fun getInstance() = TournamentsFragment()
-    }
+class TournamentsFragment : Fragment() {
 
     @Inject lateinit var tournamentsViewModelFactory: TournamentsViewModel.Factory
 
-    private var _binding: FragmentTournamentsBinding? = null
-    private val binding: FragmentTournamentsBinding get() = _binding!!
-    private val tournamentsItemDecorator = TournamentsItemDecorator()
     private val viewModel: TournamentsViewModel by viewModel { tournamentsViewModelFactory.create() }
-//    private val onItemClick: (hero: VOItem.Body) -> Unit = { model ->
-//        startItemInfoFragment(model)
-//    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         DaggerTournamentsComponent.factory().create(findDependencies()).inject(this)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentTournamentsBinding.bind(view)
-        setupAdapter()
-        setupInsets()
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
+        val state = viewModel.state.collectAsState().value
+        TournamentsScreen(state, parentFragment as DrawerPercentListener, ::onMatchClicked, viewModel::load)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        binding.rv.adapter = null
-        _binding = null
-    }
-
-    private fun setupAdapter() = Unit
-
-    private fun setupInsets() {
-        ViewCompat.setOnApplyWindowInsetsListener(binding.rv) { _, insets ->
-            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-            tournamentsItemDecorator.statusBarsInsets = statusBarsInsets.top
-            tournamentsItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
-            insets
+    private fun onMatchClicked(match: TournamentMatch) {
+        getMainFragmentNavigator?.setMainFragment(MatchFragment.newInstance(match.url)) {
+            addToBackStack(null)
         }
-        (parentFragment as DrawerPercentListener).setDrawerPercentListener { percent ->
-            tournamentsItemDecorator.percent = percent
-            binding.rv.invalidateItemDecorations()
-        }
-    }
-
-    private fun startGamesWorker() {
-//        val data = Data.Builder().putInt(TournamentsWorker.PAGE, 0).putBoolean(TournamentsWorker.DELETE_TABLE, true).build()
-//        val worker = OneTimeWorkRequest.Builder(TournamentsWorker::class.java).setInputData(data).build()
-//        WorkManager.getInstance(requireContext()).beginUniqueWork(TournamentsWorker.TAG, ExistingWorkPolicy.KEEP, worker).enqueue()
     }
 }

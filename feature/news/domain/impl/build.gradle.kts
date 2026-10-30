@@ -12,4 +12,6 @@ dependencies {
     implementation(projects.core.database)
     implementation(projects.core.commonJvm)
     implementation(projects.core.coroutines)
+
+    testImplementation(libs.test.junit)
 }
