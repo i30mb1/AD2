@@ -19,7 +19,7 @@
     },
     {
       "type": "STREAMS",
-      "isEnable": false
+      "isEnable": true
     },
     {
       "type": "GAMES",
