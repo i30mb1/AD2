@@ -24,10 +24,6 @@ internal object WikiHeroParser {
     data class NoteSection(val title: String?, val notes: List<Note>)
 
     data class HeroPage(
-        val quote: String?,
-        val releaseDate: String?,
-        val attackAnimation: String?,
-        val collisionRadius: String?,
         val recommendedItems: List<Section>,
         /** key is the ability name in lower case, the same on the wiki and in the datafeed */
         val abilityNotes: Map<String, List<NoteSection>>,
@@ -37,10 +33,6 @@ internal object WikiHeroParser {
     private val generalNoteTitles = setOf("ПРИМЕЧАНИЯ", "NOTES")
 
     fun parseHeroPage(doc: Document): HeroPage = HeroPage(
-        quote = parseQuote(doc),
-        releaseDate = infoboxValue(doc, "Release Date", "Дата выпуска"),
-        attackAnimation = infoboxRow(doc, "Attack Animation", "Анимация атаки"),
-        collisionRadius = infoboxRow(doc, "Collision Size", "Радиус столкн."),
         recommendedItems = sections(doc)
             .dropWhile { !it.title.startsWith("Recommended Items") && !it.title.startsWith("Рекомендуемые предметы") }
             .let { list -> if (list.isEmpty()) emptyList() else parseRecommendedItems(list.first().heading, doc) },
@@ -76,37 +68,6 @@ internal object WikiHeroParser {
     /** Empty sections of the RU guide template, e.g. "СТИЛЬ1" or "Способность 2". */
     private val templateHeading = Regex("""^(СТИЛЬ\d+|Способность \d+|STYLE\d+|Ability \d+)$""")
     private val guideItemTitles = setOf("Items", "Предметы")
-
-    // ===== infobox and bio =====
-
-    private fun parseQuote(doc: Document): String? {
-        val bio = doc.getElementById("heroBio") ?: return null
-        val text = bio.text()
-        val quote = Regex("""[«"“]([^»"”]{8,400})[»"”]""").find(text)?.groupValues?.get(1) ?: return null
-        return quote.trim()
-    }
-
-    /** "Дата выпуска : 2010-11-01" — a label followed by its value in the same cell. */
-    private fun infoboxValue(doc: Document, vararg labels: String): String? {
-        val infobox = doc.selectFirst("table.infobox") ?: return null
-        labels.forEach { label ->
-            val match = Regex(Regex.escape(label) + """\s*:\s*(\d{4}-\d{2}-\d{2})""").find(infobox.text())
-            if (match != null) return match.groupValues[1]
-        }
-        return null
-    }
-
-    /** Row of the stats table: the label cell followed by value cells. */
-    private fun infoboxRow(doc: Document, vararg labels: String): String? {
-        val infobox = doc.selectFirst("table.infobox") ?: return null
-        val row = infobox.select("tr").firstOrNull { tr ->
-            val first = tr.children().firstOrNull()?.text()?.trim() ?: return@firstOrNull false
-            labels.any { first.equals(it, ignoreCase = true) }
-        } ?: return null
-        if (row.select(".error").isNotEmpty()) return null
-        return row.children().drop(1).map { it.text().trim() }.filter { it.isNotEmpty() && !it.contains("▶") }
-            .joinToString(" ").trim().ifEmpty { null }
-    }
 
     // ===== recommended items =====
 

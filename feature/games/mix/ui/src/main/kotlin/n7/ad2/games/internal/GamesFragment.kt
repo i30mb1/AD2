@@ -21,7 +21,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.core.ui.content
 import javax.inject.Inject
 
-internal class GamesFragment(override var dependenciesMap: DependenciesMap) :
+internal class GamesFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
     Fragment(),
     HasDependencies {
 

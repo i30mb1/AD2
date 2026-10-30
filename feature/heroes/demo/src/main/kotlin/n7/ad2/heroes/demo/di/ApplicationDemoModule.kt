@@ -38,7 +38,8 @@ internal interface ApplicationDemoModule {
         @dagger.Provides
         fun provideAppInformation(): AppInformation = object : AppInformation {
             override val isDebug: Boolean = true
-            override val appLocale: AppLocale = AppLocale.English
+            // data follows the phone language like the UI strings do, both locales are checked on a device
+            override val appLocale: AppLocale = if (java.util.Locale.getDefault().language == "ru") AppLocale.Russian else AppLocale.English
             override val appVersion: String = "1"
             override val isNightMode: Boolean = false
         }

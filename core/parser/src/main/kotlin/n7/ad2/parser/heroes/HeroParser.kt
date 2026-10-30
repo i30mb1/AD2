@@ -99,8 +99,7 @@ fun main() {
             val data = LocaleHeroes.entries.associateWith { locale -> ValveApi.heroData(hero.id, locale) }
             // icons first, the description refers to the files that really exist
             loadAbilityImages(data.getValue(LocaleHeroes.EN))
-            val wiki = LocaleHeroes.entries.associateWith { locale -> loadWiki(hero, locale) }
-            data.forEach { (locale, heroData) -> loadHero(hero, locale, heroData, wiki) }
+            data.forEach { (locale, heroData) -> loadHero(hero, locale, heroData, loadWiki(hero, locale)) }
             if (PARSE_RESPONSES) LocaleHeroes.entries.forEach { locale -> loadResponses(hero, locale) }
             successCount++
         } catch (e: Exception) {
@@ -150,17 +149,15 @@ private fun loadWiki(hero: ValveApi.HeroListItem, locale: LocaleHeroes): WikiDat
     )
 }
 
-private fun loadHero(hero: ValveApi.HeroListItem, locale: LocaleHeroes, data: JSONObject, wiki: Map<LocaleHeroes, WikiData>) {
+/** [wiki] is the wiki of the same language, blocks it does not have are left out. */
+private fun loadHero(hero: ValveApi.HeroListItem, locale: LocaleHeroes, data: JSONObject, wiki: WikiData) {
     val result = ValveHeroParser.parse(data, ::abilityImagePath)
-    val local = wiki.getValue(locale).pages
-    val english = wiki[LocaleHeroes.EN]?.pages
-    val isEnglish = locale == LocaleHeroes.EN
 
-    result["trivia"] = JSONArray().apply { addAll(wiki.getValue(locale).trivia) }
-    result["wiki"] = WikiJson.build(local, english, isEnglish)
+    result["trivia"] = JSONArray().apply { addAll(wiki.trivia) }
+    result["wiki"] = WikiJson.build(wiki.pages)
     @Suppress("UNCHECKED_CAST")
     (result["abilities"] as List<JSONObject>).forEach { ability ->
-        WikiJson.abilityNotes((ability["name"] as String).lowercase(), local, english, isEnglish)?.let { ability["wikiNotes"] = it }
+        WikiJson.abilityNotes((ability["name"] as String).lowercase(), wiki.pages)?.let { ability["wikiNotes"] = it }
     }
 
     val abilityNames = ValveHeroParser.abilityNamesById(data)

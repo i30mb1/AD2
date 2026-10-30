@@ -43,7 +43,6 @@ class HeroParserOfflineTest {
         val roles = (abaddon["roles"] as JSONArray).filterIsInstance<JSONObject>().associate { it["role"] to it["level"] }
         assertEquals(mapOf("carry" to 1L, "support" to 2L, "durable" to 2L), roles)
         assertTrue((abaddon["bio"] as String).length > 100)
-        assertTrue((abaddon["hype"] as String).contains("<b>"))
     }
 
     @Test

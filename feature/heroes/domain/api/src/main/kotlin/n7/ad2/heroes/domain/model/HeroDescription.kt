@@ -22,18 +22,16 @@ data class HeroDescription(
     val changes: List<PatchChange> = listOf(),
 )
 
-/** What only the community wiki has. It lags behind the game, numbers there can be outdated. */
-data class HeroWiki(
-    val recommendedItems: WikiArticle? = null,
-    val counters: WikiArticle? = null,
-    val playstyle: Playstyle? = null,
-    val tips: WikiArticle? = null,
-)
-
 /**
- * [isFallbackLanguage] is true when the wiki of the app language has no such text and the English one is shown.
+ * What only the community wiki has, in the app language: a block the wiki of that language lacks is empty.
+ * The wiki lags behind the game, numbers there can be outdated.
  */
-data class WikiArticle(val isFallbackLanguage: Boolean, val sections: List<WikiSection>)
+data class HeroWiki(
+    val recommendedItems: List<WikiSection> = listOf(),
+    val counters: List<WikiSection> = listOf(),
+    val playstyle: Playstyle? = null,
+    val tips: List<WikiSection> = listOf(),
+)
 
 /** [level] 2 is a section, 3 and deeper are its parts, e.g. "Bad against" → "Items". */
 data class WikiSection(val title: String, val level: Int, val entries: List<WikiEntry>)
@@ -41,9 +39,7 @@ data class WikiSection(val title: String, val level: Int, val entries: List<Wiki
 /** [name] is the hero or item the lines are about, null for general lines. */
 data class WikiEntry(val name: String?, val iconUrl: String?, val lines: List<String>)
 
-data class Playstyle(val isFallbackLanguage: Boolean, val text: String, val pros: List<String>, val cons: List<String>)
-
-data class WikiNotes(val isFallbackLanguage: Boolean, val notes: List<WikiNote>)
+data class Playstyle(val text: String, val pros: List<String>, val cons: List<String>)
 
 /** [tag] marks notes about talents, Aghanim's upgrades, formulas. [indent] is 1 for a note about the previous one. */
 data class WikiNote(val text: String, val tag: String?, val indent: Int)
@@ -135,7 +131,7 @@ data class Ability(
     val channelTime: String? = null,
     val duration: String? = null,
     val params: List<AbilityParam> = listOf(),
-    val wikiNotes: WikiNotes? = null,
+    val wikiNotes: List<WikiNote> = listOf(),
 )
 
 /** [talent], [shard] and [scepter] are the values with the corresponding upgrade. */

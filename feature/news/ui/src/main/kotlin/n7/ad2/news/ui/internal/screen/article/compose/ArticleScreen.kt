@@ -19,7 +19,6 @@ import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
 import n7.ad2.news.ui.internal.screen.article.ArticleViewModel
 import n7.ad2.core.ui.compose.AppTheme
-import okhttp3.internal.toHexString
 
 @Composable
 internal fun ArticleScreen(viewModel: ArticleViewModel) {
@@ -35,7 +34,7 @@ private fun Browser(body: String) {
     val isDark = isSystemInDarkTheme()
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     val insetsBottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
-    val textColor = AppTheme.color.textColor.toArgb().toHexString()
+    val textColor = "%06X".format(AppTheme.color.textColor.toArgb() and 0xFFFFFF)
     AndroidView(
         modifier = Modifier
             .fillMaxWidth()

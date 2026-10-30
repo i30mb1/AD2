@@ -111,7 +111,6 @@
     <!-- hero info: wiki and patches -->
     <string name="info_wiki_source" translatable="false">Dota 2 Wiki</string>
     <string name="info_wiki_hint">Community data, may lag behind the current patch</string>
-    <string name="info_lang_en" translatable="false">EN</string>
     <string name="info_items">Recommended items</string>
     <string name="info_counters">Matchups</string>
     <string name="info_strategy">Strategy</string>

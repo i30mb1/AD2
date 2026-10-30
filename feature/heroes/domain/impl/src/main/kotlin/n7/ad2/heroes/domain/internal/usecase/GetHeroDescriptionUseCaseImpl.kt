@@ -10,7 +10,7 @@ import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.domain.internal.data.model.AbilityJson
 import n7.ad2.heroes.domain.internal.data.model.HeroDescriptionJson
 import n7.ad2.heroes.domain.internal.data.model.PatchNoteJson
-import n7.ad2.heroes.domain.internal.data.model.WikiArticleJson
+import n7.ad2.heroes.domain.internal.data.model.WikiSectionJson
 import n7.ad2.heroes.domain.model.Ability
 import n7.ad2.heroes.domain.model.AbilityBehavior
 import n7.ad2.heroes.domain.model.AbilityKind
@@ -33,10 +33,8 @@ import n7.ad2.heroes.domain.model.Role
 import n7.ad2.heroes.domain.model.SpellImmunity
 import n7.ad2.heroes.domain.model.TalentLevel
 import n7.ad2.heroes.domain.model.TargetTeam
-import n7.ad2.heroes.domain.model.WikiArticle
 import n7.ad2.heroes.domain.model.WikiEntry
 import n7.ad2.heroes.domain.model.WikiNote
-import n7.ad2.heroes.domain.model.WikiNotes
 import n7.ad2.heroes.domain.model.WikiSection
 import n7.ad2.heroes.domain.usecase.GetHeroDescriptionUseCase
 
@@ -55,14 +53,14 @@ internal class GetHeroDescriptionUseCaseImpl(
             .open("heroes/$key/$locale/description.json")
             .bufferedReader()
             .use { reader -> reader.readText() }
-        emit(json.decodeFromString<HeroDescriptionJson>(text).toHeroDescription(locale))
+        emit(json.decodeFromString<HeroDescriptionJson>(text).toHeroDescription())
     }.flowOn(dispatcher.IO)
 }
 
 /** Keys come from core/parser, unknown ones are skipped so new datafeed values never crash the screen. */
 private inline fun <reified T : Enum<T>> String?.toEnum(): T? = this?.let { key -> enumValues<T>().firstOrNull { it.name.equals(key, ignoreCase = true) } }
 
-private fun HeroDescriptionJson.toHeroDescription(locale: String): HeroDescription = HeroDescription(
+private fun HeroDescriptionJson.toHeroDescription(): HeroDescription = HeroDescription(
     name = name,
     primaryAttribute = primaryAttribute.toEnum<HeroAttribute>() ?: HeroAttribute.UNIVERSAL,
     attackType = attackType.toEnum<AttackType>() ?: AttackType.MELEE,
@@ -95,15 +93,15 @@ private fun HeroDescriptionJson.toHeroDescription(locale: String): HeroDescripti
         visionDay = stats.visionDay,
         visionNight = stats.visionNight,
     ),
-    abilities = abilities.map { ability -> ability.toAbility(locale) },
+    abilities = abilities.map { ability -> ability.toAbility() },
     talents = talents.map { talent -> TalentLevel(talent.level, talent.left, talent.right) },
     facets = facets.map { facet -> Facet(facet.name, facet.description) },
     trivia = trivia,
     wiki = HeroWiki(
-        recommendedItems = wiki.recommendedItems?.toArticle(locale),
-        counters = wiki.counters?.toArticle(locale),
-        playstyle = wiki.guide?.playstyle?.let { Playstyle(it.lang.isFallback(locale), it.text, it.pros, it.cons) },
-        tips = wiki.guide?.tips?.toArticle(locale),
+        recommendedItems = wiki.recommendedItems.toSections(),
+        counters = wiki.counters.toSections(),
+        playstyle = wiki.guide?.playstyle?.let { Playstyle(it.text, it.pros, it.cons) },
+        tips = wiki.guide?.tips.orEmpty().toSections(),
     ),
     changes = changes.map { change ->
         PatchChange(
@@ -116,25 +114,19 @@ private fun HeroDescriptionJson.toHeroDescription(locale: String): HeroDescripti
     },
 )
 
-/** Wiki blocks fall back to English when the wiki of the app language has no such text. */
-private fun String.isFallback(locale: String) = isNotEmpty() && !equals(locale, ignoreCase = true)
-
-private fun WikiArticleJson.toArticle(locale: String) = WikiArticle(
-    isFallbackLanguage = lang.isFallback(locale),
-    sections = sections.map { section ->
-        WikiSection(
-            title = section.title,
-            level = section.level,
-            entries = section.entries.map { entry ->
-                WikiEntry(entry.name, entry.icon?.let { "file:///android_asset/$it" }, entry.lines)
-            },
-        )
-    },
-)
+private fun List<WikiSectionJson>.toSections() = map { section ->
+    WikiSection(
+        title = section.title,
+        level = section.level,
+        entries = section.entries.map { entry ->
+            WikiEntry(entry.name, entry.icon?.let { "file:///android_asset/$it" }, entry.lines)
+        },
+    )
+}
 
 private fun PatchNoteJson.toPatchNote() = PatchNote(text, indent)
 
-private fun AbilityJson.toAbility(locale: String): Ability = Ability(
+private fun AbilityJson.toAbility(): Ability = Ability(
     name = name,
     imageUrl = if (image.isEmpty()) "" else "file:///android_asset/$image",
     kind = kind.toEnum<AbilityKind>() ?: AbilityKind.BASIC,
@@ -156,5 +148,5 @@ private fun AbilityJson.toAbility(locale: String): Ability = Ability(
     channelTime = channelTime,
     duration = duration,
     params = params.map { param -> AbilityParam(param.label, param.value, param.talent, param.shard, param.scepter) },
-    wikiNotes = wikiNotes?.let { wiki -> WikiNotes(wiki.lang.isFallback(locale), wiki.notes.map { WikiNote(it.text, it.tag, it.indent) }) },
+    wikiNotes = wikiNotes.map { WikiNote(it.text, it.tag, it.indent) },
 )

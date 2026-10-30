@@ -18,7 +18,7 @@ import n7.ad2.news.ui.internal.screen.news.compose.NewsScreen
 import n7.ad2.core.ui.content
 import javax.inject.Inject
 
-internal class NewsFragment(override var dependenciesMap: DependenciesMap) :
+internal class NewsFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
     Fragment(),
     HasDependencies {
 

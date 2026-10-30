@@ -34,37 +34,17 @@ import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.heroes.domain.model.PatchChange
 import n7.ad2.heroes.domain.model.PatchNote
 import n7.ad2.heroes.domain.model.Playstyle
-import n7.ad2.heroes.domain.model.WikiArticle
 import n7.ad2.heroes.domain.model.WikiEntry
-import n7.ad2.heroes.domain.model.WikiNotes
+import n7.ad2.heroes.domain.model.WikiNote
 import n7.ad2.heroes.domain.model.WikiSection
 
 private val prosColor = Color(0xFF6CC56A)
 private val consColor = Color(0xFFE5655A)
 
-/** Where the block comes from, with an "EN" mark when the wiki has no text in the app language. */
+/** Where the block comes from: the wiki lags behind the game, unlike the rest of the screen. */
 @Composable
-internal fun WikiSourceLabel(isFallbackLanguage: Boolean, modifier: Modifier = Modifier) {
-    Row(modifier, verticalAlignment = Alignment.CenterVertically) {
-        Caption(stringResource(R.string.info_wiki_source))
-        if (isFallbackLanguage) {
-            HSpace(6.dp)
-            LangBadge()
-        }
-    }
-}
-
-@Composable
-private fun LangBadge() {
-    Text(
-        text = stringResource(R.string.info_lang_en),
-        fontSize = 9.sp,
-        fontWeight = FontWeight.Bold,
-        color = AppTheme.color.textSecondaryColor,
-        modifier = Modifier
-            .border(1.dp, AppTheme.color.textSecondaryColor.copy(alpha = 0.6f), RoundedCornerShape(3.dp))
-            .padding(horizontal = 4.dp, vertical = 1.dp),
-    )
+internal fun WikiSourceLabel(modifier: Modifier = Modifier) {
+    Caption(stringResource(R.string.info_wiki_source), modifier)
 }
 
 /** Shows the first [visible] items and a "Show all (N)" button for the rest. */
@@ -124,11 +104,11 @@ internal fun PatchNotes(notes: List<PatchNote>) {
 // ===== recommended items =====
 
 @Composable
-internal fun RecommendedItemsCard(article: WikiArticle) {
-    val summary = article.sections.flatMap { it.entries }.mapNotNull { it.name }.take(5).joinToString(", ")
+internal fun RecommendedItemsCard(sections: List<WikiSection>) {
+    val summary = sections.flatMap { it.entries }.mapNotNull { it.name }.take(5).joinToString(", ")
     CollapsibleCard(title = stringResource(R.string.info_items), summary = summary) {
-        WikiSourceLabel(article.isFallbackLanguage)
-        article.sections.forEach { phase ->
+        WikiSourceLabel()
+        sections.forEach { phase ->
             CollapsibleSection(
                 title = phase.title,
                 count = null,
@@ -160,20 +140,20 @@ private fun ItemIcons(entries: List<WikiEntry>) {
 // ===== counters =====
 
 @Composable
-internal fun CountersCard(article: WikiArticle) {
+internal fun CountersCard(sections: List<WikiSection>) {
     // "Bad against" with its "Others" and "Items" parts form one group
-    val groups = article.sections.fold(mutableListOf<MutableList<WikiSection>>()) { acc, section ->
+    val groups = sections.fold(mutableListOf<MutableList<WikiSection>>()) { acc, section ->
         if (section.level <= 2 || acc.isEmpty()) acc.add(mutableListOf(section)) else acc.last().add(section)
         acc
     }
-    val summary = groups.joinToString(" · ") { group -> "${group.first().title} ${group.sumOf { s -> s.entries.count { it.name != null } }}" }
+    val summary = groups.joinToString(" · ") { group -> "${group.first().title} ${group.sumOf { it.itemCount }}" }
     CollapsibleCard(title = stringResource(R.string.info_counters), summary = summary) {
-        WikiSourceLabel(article.isFallbackLanguage)
+        WikiSourceLabel()
         groups.forEach { group ->
             val main = group.first()
             CollapsibleSection(
                 title = main.title,
-                count = group.sumOf { s -> s.entries.count { it.name != null } }.takeIf { it > 0 },
+                count = group.sumOf { it.itemCount }.takeIf { it > 0 },
                 key = "counters-${main.title}",
                 titleColor = AppTheme.color.primary,
                 trailing = { HeroIcons(main.entries) },
@@ -189,6 +169,10 @@ internal fun CountersCard(article: WikiArticle) {
         }
     }
 }
+
+/** Heroes, or general lines on pages that do not split the notes by hero (the RU wiki). */
+private val WikiSection.itemCount: Int
+    get() = entries.sumOf { entry -> if (entry.name != null) 1 else entry.lines.size }
 
 @Composable
 private fun HeroIcons(entries: List<WikiEntry>) {
@@ -240,11 +224,11 @@ private fun EntryRow(entry: WikiEntry, iconSize: Int) {
 // ===== strategy =====
 
 @Composable
-internal fun StrategyCard(playstyle: Playstyle?, tips: WikiArticle?) {
-    val summary = playstyle?.text?.substringBefore(". ")?.plus(".") ?: tips?.sections?.joinToString(" · ") { it.title }
+internal fun StrategyCard(playstyle: Playstyle?, tips: List<WikiSection>) {
+    val summary = playstyle?.text?.substringBefore(". ")?.plus(".") ?: tips.joinToString(" · ") { it.title }
     CollapsibleCard(title = stringResource(R.string.info_strategy), summary = summary) {
         if (playstyle != null) {
-            WikiSourceLabel(playstyle.isFallbackLanguage)
+            WikiSourceLabel()
             VSpace(8.dp)
             RichText(playstyle.text)
             if (playstyle.pros.isNotEmpty() || playstyle.cons.isNotEmpty()) {
@@ -255,10 +239,10 @@ internal fun StrategyCard(playstyle: Playstyle?, tips: WikiArticle?) {
                 }
             }
         }
-        if (tips != null) {
+        if (tips.isNotEmpty()) {
             VSpace(8.dp)
-            if (playstyle == null || tips.isFallbackLanguage != playstyle.isFallbackLanguage) WikiSourceLabel(tips.isFallbackLanguage)
-            tips.sections.forEach { section ->
+            if (playstyle == null) WikiSourceLabel()
+            tips.forEach { section ->
                 val lines = section.entries.flatMap { it.lines }
                 CollapsibleSection(section.title, lines.size, key = "tips-${section.title}") {
                     lines.forEach { line -> BulletText(line) }
@@ -291,10 +275,10 @@ private fun ProsCons(title: String, sign: String, items: List<String>, color: Co
 
 /** Wiki notes of the selected ability: mechanics, interactions, upgrade details. */
 @Composable
-internal fun AbilityWikiNotes(notes: WikiNotes) {
+internal fun AbilityWikiNotes(notes: List<WikiNote>) {
     Text(stringResource(R.string.info_wiki_hint), style = AppTheme.style.body, color = AppTheme.color.textSecondaryColor.copy(alpha = 0.7f))
     VSpace(6.dp)
-    ExpandableItems(notes.notes, visible = 5) { note ->
+    ExpandableItems(notes, visible = 5) { note ->
         Column(Modifier.padding(start = (note.indent * 16).dp)) {
             note.tag?.let { tag ->
                 Text(

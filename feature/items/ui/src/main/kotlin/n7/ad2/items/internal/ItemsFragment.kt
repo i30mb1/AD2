@@ -27,7 +27,7 @@ import n7.ad2.ktx.viewModel
 import n7.ad2.navigator.Navigator
 import javax.inject.Inject
 
-internal class ItemsFragment(override var dependenciesMap: DependenciesMap) :
+internal class ItemsFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
     Fragment(R.layout.fragment_items),
     HasDependencies {
 

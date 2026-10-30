@@ -215,7 +215,7 @@ private fun AbilityDetails(ability: Ability, changes: List<Pair<PatchChange, Lis
         }
 
         // secondary parts are folded, the user opens only what is interesting
-        if (ability.notes.isNotEmpty() || ability.wikiNotes != null || changes.isNotEmpty()) {
+        if (ability.notes.isNotEmpty() || ability.wikiNotes.isNotEmpty() || changes.isNotEmpty()) {
             VSpace(12.dp)
             InfoDivider()
         }
@@ -224,13 +224,13 @@ private fun AbilityDetails(ability: Ability, changes: List<Pair<PatchChange, Lis
                 ability.notes.forEach { note -> BulletText(note) }
             }
         }
-        ability.wikiNotes?.let { notes ->
+        if (ability.wikiNotes.isNotEmpty()) {
             CollapsibleSection(
                 title = stringResource(R.string.info_ability_details),
-                count = notes.notes.size,
+                count = ability.wikiNotes.size,
                 key = "${ability.name}-wiki",
-                trailing = { WikiSourceLabel(notes.isFallbackLanguage) },
-            ) { AbilityWikiNotes(notes) }
+                trailing = { WikiSourceLabel() },
+            ) { AbilityWikiNotes(ability.wikiNotes) }
         }
         if (changes.isNotEmpty()) {
             CollapsibleSection(stringResource(R.string.info_ability_changes), changes.size, key = "${ability.name}-changes") {

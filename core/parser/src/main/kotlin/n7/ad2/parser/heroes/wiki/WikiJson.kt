@@ -6,9 +6,8 @@ import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 
 /**
- * Builds the wiki part of `description.json`. The RU wiki is often an empty template where the EN one is full,
- * so every block is taken from the page of the locale when it has content and from the EN page otherwise,
- * such blocks get `"lang": "en"`.
+ * Builds the wiki part of `description.json` from the wiki of the file's language only: a block the wiki of that
+ * language does not have is left out, the app never mixes languages.
  */
 internal object WikiJson {
 
@@ -18,96 +17,63 @@ internal object WikiJson {
         val guide: WikiHeroParser.Guide?,
     )
 
-    /** A localized counters page with fewer heroes than this part of the EN one is a stub ("incomplete article"). */
-    private const val ENOUGH_TRANSLATED = 0.5
-
-    private fun List<WikiHeroParser.Section>.entryCount(): Int = sumOf { section -> section.blocks.count { it.entity != null } }
-
-    fun build(local: Pages, english: Pages?, isEnglish: Boolean): JSONObject = JSONObject().apply {
-        put("quote", local.hero?.quote)
-        put("releaseDate", local.hero?.releaseDate ?: english?.hero?.releaseDate)
-        put("attackAnimation", local.hero?.attackAnimation ?: english?.hero?.attackAnimation)
-        put("collisionRadius", local.hero?.collisionRadius ?: english?.hero?.collisionRadius)
-
-        pick(local.hero?.recommendedItems.orEmpty(), english?.hero?.recommendedItems.orEmpty(), isEnglish) { it.isNotEmpty() }
-            ?.let { (sections, lang) -> put("recommendedItems", sectionsJson(sections, lang, entityIcon = ::itemIcon)) }
-
-        val englishEntries = english?.counters.orEmpty().entryCount()
-        pick(local.counters, english?.counters.orEmpty(), isEnglish) { counters ->
-            counters.entryCount() > 0 && counters.entryCount() >= englishEntries * ENOUGH_TRANSLATED
+    fun build(pages: Pages): JSONObject = JSONObject().apply {
+        pages.hero?.recommendedItems?.takeIf { it.isNotEmpty() }?.let { sections ->
+            put("recommendedItems", sectionsJson(sections, entityIcon = ::itemIcon))
         }
-            ?.let { (sections, lang) -> put("counters", sectionsJson(sections, lang, entityIcon = { heroIcon(it) ?: itemIcon(it) })) }
-
-        val guide = guideJson(local.guide, english?.guide, isEnglish)
-        if (guide != null) put("guide", guide)
+        // the RU counters pages are stubs without heroes, their general notes are still worth showing
+        pages.counters.takeIf { it.isNotEmpty() }?.let { sections ->
+            put("counters", sectionsJson(sections, entityIcon = { heroIcon(it) ?: itemIcon(it) }))
+        }
+        guideJson(pages.guide)?.let { put("guide", it) }
     }
 
     /** Notes of one ability, [name] in lower case. */
-    fun abilityNotes(name: String, local: Pages, english: Pages?, isEnglish: Boolean): JSONObject? {
-        val (notes, lang) = pick(
-            local.hero?.abilityNotes?.get(name).orEmpty(),
-            english?.hero?.abilityNotes?.get(name).orEmpty(),
-            isEnglish,
-        ) { it.isNotEmpty() } ?: return null
-        return JSONObject().apply {
-            put("lang", lang)
-            put("notes", JSONArray().apply {
-                notes.forEach { section ->
-                    section.notes.forEach { note ->
-                        add(JSONObject().apply {
-                            put("text", note.text)
-                            put("tag", note.tag ?: section.title)
-                            put("indent", note.indent)
-                        })
-                    }
+    fun abilityNotes(name: String, pages: Pages): JSONArray? {
+        val sections = pages.hero?.abilityNotes?.get(name)?.takeIf { it.isNotEmpty() } ?: return null
+        return JSONArray().apply {
+            sections.forEach { section ->
+                section.notes.forEach { note ->
+                    add(JSONObject().apply {
+                        put("text", note.text)
+                        put("tag", note.tag ?: section.title)
+                        put("indent", note.indent)
+                    })
                 }
-            })
+            }
         }
     }
 
-    private fun <T> pick(local: T, english: T, isEnglish: Boolean, isEnough: (T) -> Boolean): Pair<T, String>? = when {
-        isEnough(local) -> local to if (isEnglish) "en" else "ru"
-        !isEnglish && isEnough(english) -> english to "en"
-        else -> null
-    }
-
-    private fun guideJson(local: WikiHeroParser.Guide?, english: WikiHeroParser.Guide?, isEnglish: Boolean): JSONObject? {
-        val playstyle = pick(local, english, isEnglish) { it?.playstyle != null }?.let { (guide, lang) -> guide!! to lang }
-        val tips = pick(local?.tips.orEmpty(), english?.tips.orEmpty(), isEnglish) { it.isNotEmpty() }
-        if (playstyle == null && tips == null) return null
+    private fun guideJson(guide: WikiHeroParser.Guide?): JSONObject? {
+        if (guide == null || (guide.playstyle == null && guide.tips.isEmpty())) return null
         return JSONObject().apply {
-            if (playstyle != null) {
-                val (guide, lang) = playstyle
+            guide.playstyle?.let { text ->
                 put("playstyle", JSONObject().apply {
-                    put("lang", lang)
-                    put("text", guide.playstyle)
+                    put("text", text)
                     put("pros", JSONArray().apply { addAll(guide.pros) })
                     put("cons", JSONArray().apply { addAll(guide.cons) })
                 })
             }
-            if (tips != null) put("tips", sectionsJson(tips.first, tips.second, entityIcon = { null }))
+            if (guide.tips.isNotEmpty()) put("tips", sectionsJson(guide.tips, entityIcon = { null }))
         }
     }
 
-    private fun sectionsJson(sections: List<WikiHeroParser.Section>, lang: String, entityIcon: (String) -> String?): JSONObject = JSONObject().apply {
-        put("lang", lang)
-        put("sections", JSONArray().apply {
-            sections.forEach { section ->
-                add(JSONObject().apply {
-                    put("title", section.title.removeSuffix("...").removeSuffix("…").trim())
-                    put("level", section.level)
-                    put("entries", JSONArray().apply {
-                        section.blocks.forEach { block ->
-                            add(JSONObject().apply {
-                                put("name", block.entity)
-                                put("icon", block.entity?.let(entityIcon))
-                                put("lines", JSONArray().apply { addAll(block.lines) })
-                            })
-                        }
-                    })
+    private fun sectionsJson(sections: List<WikiHeroParser.Section>, entityIcon: (String) -> String?): JSONArray = JSONArray().apply {
+        sections.forEach { section ->
+            add(JSONObject().apply {
+                put("title", section.title.removeSuffix("...").removeSuffix("…").trim())
+                put("level", section.level)
+                put("entries", JSONArray().apply {
+                    section.blocks.forEach { block ->
+                        add(JSONObject().apply {
+                            put("name", block.entity)
+                            put("icon", block.entity?.let(entityIcon))
+                            put("lines", JSONArray().apply { addAll(block.lines) })
+                        })
+                    }
                 })
-            }
-        })
+            })
+        }
     }
 
     private fun String.assetKey() = lowercase().replace(" ", "_")

@@ -2,6 +2,7 @@ package n7.ad2.parser.heroes
 
 import java.io.File
 import n7.ad2.parser.heroes.wiki.WikiHeroParser
+import n7.ad2.parser.heroes.wiki.WikiJson
 import org.jsoup.Jsoup
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -22,12 +23,13 @@ class WikiHeroParserTest {
     private val en by lazy { WikiHeroParser.parseHeroPage(doc("wiki_antimage_en.html")) }
 
     @Test
-    fun `infobox and quote`() {
-        assertEquals("Кто с магией к нам придёт, тот от моего клинка и погибнет.", ru.quote)
-        assertEquals("They who live by the wand shall die by my blade.", en.quote)
-        assertEquals("2010-11-01", ru.releaseDate)
-        assertEquals("0,3 + 0,3", ru.attackAnimation)
-        assertEquals("27", en.collisionRadius)
+    fun `a block the RU wiki does not have is left out, never taken from EN`() {
+        val json = WikiJson.build(WikiJson.Pages(ru, counters = emptyList(), guide = null))
+        assertNull(json["recommendedItems"])
+        assertNull(json["counters"])
+        assertNull(json["guide"])
+        val notes = WikiJson.abilityNotes("blink", WikiJson.Pages(ru, emptyList(), null))!!
+        assertEquals("Blink можно использовать для избегания летящих снарядов.", (notes.first() as org.json.simple.JSONObject)["text"])
     }
 
     @Test

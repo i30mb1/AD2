@@ -75,9 +75,10 @@ private fun HeroInfoContent(info: VOHeroInfo) {
         if (description.talents.isNotEmpty()) item(key = "talents") { TalentsCard(description.talents) }
         if (description.facets.isNotEmpty()) item(key = "facets") { FacetsCard(description.facets) }
         val wiki = description.wiki
-        if (wiki.playstyle != null || wiki.tips != null) item(key = "strategy") { StrategyCard(wiki.playstyle, wiki.tips) }
-        wiki.counters?.let { counters -> item(key = "counters") { CountersCard(counters) } }
-        wiki.recommendedItems?.let { items -> item(key = "items") { RecommendedItemsCard(items) } }
+        // wiki blocks exist only when the wiki of the app language has them
+        if (wiki.playstyle != null || wiki.tips.isNotEmpty()) item(key = "strategy") { StrategyCard(wiki.playstyle, wiki.tips) }
+        if (wiki.counters.isNotEmpty()) item(key = "counters") { CountersCard(wiki.counters) }
+        if (wiki.recommendedItems.isNotEmpty()) item(key = "items") { RecommendedItemsCard(wiki.recommendedItems) }
         if (description.bio.isNotEmpty()) item(key = "bio") { BioCard(description.bio) }
         if (description.trivia.isNotEmpty()) item(key = "trivia") { TriviaCard(description.trivia) }
     }

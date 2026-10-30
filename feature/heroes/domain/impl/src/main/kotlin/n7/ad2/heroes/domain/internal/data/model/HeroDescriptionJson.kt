@@ -26,15 +26,9 @@ internal data class HeroDescriptionJson(
 
 @Serializable
 internal data class WikiJson(
-    @SerialName("recommendedItems") val recommendedItems: WikiArticleJson? = null,
-    @SerialName("counters") val counters: WikiArticleJson? = null,
+    @SerialName("recommendedItems") val recommendedItems: List<WikiSectionJson> = emptyList(),
+    @SerialName("counters") val counters: List<WikiSectionJson> = emptyList(),
     @SerialName("guide") val guide: GuideJson? = null,
-)
-
-@Serializable
-internal data class WikiArticleJson(
-    @SerialName("lang") val lang: String = "",
-    @SerialName("sections") val sections: List<WikiSectionJson> = emptyList(),
 )
 
 @Serializable
@@ -54,21 +48,14 @@ internal data class WikiEntryJson(
 @Serializable
 internal data class GuideJson(
     @SerialName("playstyle") val playstyle: PlaystyleJson? = null,
-    @SerialName("tips") val tips: WikiArticleJson? = null,
+    @SerialName("tips") val tips: List<WikiSectionJson> = emptyList(),
 )
 
 @Serializable
 internal data class PlaystyleJson(
-    @SerialName("lang") val lang: String = "",
     @SerialName("text") val text: String = "",
     @SerialName("pros") val pros: List<String> = emptyList(),
     @SerialName("cons") val cons: List<String> = emptyList(),
-)
-
-@Serializable
-internal data class WikiNotesJson(
-    @SerialName("lang") val lang: String = "",
-    @SerialName("notes") val notes: List<WikiNoteJson> = emptyList(),
 )
 
 @Serializable
@@ -158,7 +145,7 @@ internal data class AbilityJson(
     @SerialName("channelTime") val channelTime: String? = null,
     @SerialName("duration") val duration: String? = null,
     @SerialName("params") val params: List<AbilityParamJson> = emptyList(),
-    @SerialName("wikiNotes") val wikiNotes: WikiNotesJson? = null,
+    @SerialName("wikiNotes") val wikiNotes: List<WikiNoteJson> = emptyList(),
 )
 
 @Serializable

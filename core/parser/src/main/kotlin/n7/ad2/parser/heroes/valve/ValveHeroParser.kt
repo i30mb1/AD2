@@ -59,7 +59,6 @@ internal object ValveHeroParser {
                 }
             }.toJsonArray())
             put("short", hero.string("npe_desc_loc").cleanText())
-            put("hype", hero.string("hype_loc").cleanText())
             put("bio", hero.string("bio_loc").cleanText())
             put("attributes", JSONObject().apply {
                 put("str", hero.double("str_base"))
@@ -117,7 +116,6 @@ internal object ValveHeroParser {
             put("image", imagePath(ability.string("name"), isInnate))
             put("kind", kind)
             put("description", ability.string("desc_loc").resolve(values, heroValues, ValueSource.BASE))
-            put("lore", ability.string("lore_loc").cleanText())
             // a note is a standalone fact, without its number it says nothing
             put("notes", ability.array("notes_loc").map { (it as String).resolve(values, heroValues, ValueSource.BASE, unknown = MISSING) }.filter { it.isNotEmpty() && MISSING !in it }.toJsonArray())
             put("scepter", ability.string("scepter_loc").resolve(values, heroValues, ValueSource.SCEPTER).ifEmpty { null })
