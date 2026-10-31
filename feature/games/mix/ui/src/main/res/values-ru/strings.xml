@@ -191,4 +191,18 @@
         <item quantity="many">серия %d дней</item>
         <item quantity="other">серия %d дня</item>
     </plurals>
+    <string name="invoker">Инвокер</string>
+    <string name="games_rules_invoker">Собирай заклинания из сфер на скорость</string>
+    <string name="invoker_assemble">СОБЕРИ</string>
+    <string name="invoker_hint">подсказка · половина очков</string>
+    <string name="invoker_next">дальше</string>
+    <string name="invoker_orbs">сферы сейчас · новая вытесняет самую старую</string>
+    <string name="invoker_need_one">нужна ещё одна %s</string>
+    <string name="invoker_need">нужны ещё: %s</string>
+    <string name="invoker_streak">серия ×%1$d · %2$s</string>
+    <string name="invoker_team">команда · %s</string>
+    <string name="invoker_end_time">Время вышло</string>
+    <string name="invoker_stat_invoked">собрано</string>
+    <string name="invoker_stat_streak">лучшая серия</string>
+    <string name="invoker_stat_mistakes">промахи</string>
 </resources>

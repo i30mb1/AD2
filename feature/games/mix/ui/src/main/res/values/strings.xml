@@ -184,4 +184,18 @@
         <item quantity="one">%d day in a row</item>
         <item quantity="other">%d days in a row</item>
     </plurals>
+    <string name="invoker">Invoker</string>
+    <string name="games_rules_invoker">Invoke spells from orbs against the clock</string>
+    <string name="invoker_assemble">INVOKE</string>
+    <string name="invoker_hint">hint · half the points</string>
+    <string name="invoker_next">next</string>
+    <string name="invoker_orbs">orbs now · a new one pushes out the oldest</string>
+    <string name="invoker_need_one">one more %s is needed</string>
+    <string name="invoker_need">still needed: %s</string>
+    <string name="invoker_streak">streak ×%1$d · %2$s</string>
+    <string name="invoker_team">team · %s</string>
+    <string name="invoker_end_time">Time is up</string>
+    <string name="invoker_stat_invoked">invoked</string>
+    <string name="invoker_stat_streak">best streak</string>
+    <string name="invoker_stat_mistakes">misses</string>
 </resources>

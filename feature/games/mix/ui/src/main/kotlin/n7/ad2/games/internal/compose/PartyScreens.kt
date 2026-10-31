@@ -380,7 +380,7 @@ private fun PartySelectPreview() {
         override fun getFilesDir() = null
         override fun getConfiguration() = null
     }
-    val games = listOf(GameVO.Show(res), GameVO.Mid(res), GameVO.XO(res))
+    val games = listOf(GameVO.Show(res), GameVO.Mid(res), GameVO.Invoker(res), GameVO.XO(res))
     val party = PartyState(
         session = n7.ad2.games.internal.party.Session(n7.ad2.games.room.Player("p", "Pixel 8"), Via.DIRECT),
         myPick = Pick(requireNotNull(games[0].quizId), GameMode.VERSUS),

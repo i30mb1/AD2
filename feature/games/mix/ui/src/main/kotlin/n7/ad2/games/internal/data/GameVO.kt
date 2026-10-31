@@ -2,6 +2,7 @@ package n7.ad2.games.internal.data
 
 import n7.ad2.Resources
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.games.invoker.InvokerViewModel
 import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.show.ShowViewModel
 
@@ -9,5 +10,6 @@ import n7.ad2.games.internal.games.show.ShowViewModel
 internal sealed class GameVO(val title: String, val quizId: String? = null) {
     class Show(resources: Resources) : GameVO(resources.getString(R.string.show), ShowViewModel.GAME_ID)
     class Mid(resources: Resources) : GameVO(resources.getString(R.string.mid), MidViewModel.GAME_ID)
+    class Invoker(resources: Resources) : GameVO(resources.getString(R.string.invoker), InvokerViewModel.GAME_ID)
     class XO(resources: Resources) : GameVO(resources.getString(R.string.xo))
 }

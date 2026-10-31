@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import javax.inject.Inject
 import kotlinx.coroutines.launch
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.DrawerPercentListener
@@ -25,6 +26,8 @@ import n7.ad2.core.ui.content
 import n7.ad2.games.internal.compose.GamesScreen
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
+import n7.ad2.games.internal.games.invoker.InvokerFragment
+import n7.ad2.games.internal.games.invoker.InvokerViewModel
 import n7.ad2.games.internal.games.mid.MidFragment
 import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.show.ShowFragment
@@ -32,7 +35,6 @@ import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
 import n7.ad2.xo.api.XoProvider
-import javax.inject.Inject
 
 internal class GamesFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
     Fragment(),
@@ -89,8 +91,11 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
         if (mode == GameMode.SOLO) open(gameFragment(gameId, mode)) else viewModel.pick(gameId, mode)
     }
 
-    private fun gameFragment(gameId: String, mode: GameMode): Fragment =
-        if (gameId == MidViewModel.GAME_ID) MidFragment.getInstance(mode) else ShowFragment.getInstance(mode)
+    private fun gameFragment(gameId: String, mode: GameMode): Fragment = when (gameId) {
+        MidViewModel.GAME_ID -> MidFragment.getInstance(mode)
+        InvokerViewModel.GAME_ID -> InvokerFragment.getInstance(mode)
+        else -> ShowFragment.getInstance(mode)
+    }
 
     private fun onDailyClicked() = open(ShowFragment.getInstance(GameMode.SOLO, daily = true))
 

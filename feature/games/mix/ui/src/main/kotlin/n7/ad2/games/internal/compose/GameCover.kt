@@ -59,6 +59,7 @@ internal fun GameCover(game: GameVO, size: Dp, modifier: Modifier = Modifier, sh
         when (game) {
             is GameVO.Show -> ShowCover(size)
             is GameVO.Mid -> MidCover(size)
+            is GameVO.Invoker -> InvokerCover(size)
             is GameVO.XO -> XoCover(size)
         }
     }
@@ -112,6 +113,20 @@ private fun BoxScope.MidCover(size: Dp) {
         killable = true,
         modifier = Modifier.align(Alignment.TopEnd).padding(end = size * 0.04f, top = size * 0.04f).size(size * 0.5f).graphicsLayer { scaleX = -1f },
     )
+}
+
+/** Санстрайк, а вокруг три сферы: собери заклинание */
+@Composable
+private fun BoxScope.InvokerCover(size: Dp) {
+    Box(Modifier.fillMaxSize().background(Brush.radialGradient(listOf(Color(0xFF3B2A4A), Color(0xFF15111C)))))
+    val spellShape = RoundedCornerShape(size * 0.08f)
+    Asset("images/abilities/invoker_sun_strike.webp", Modifier.align(Alignment.Center).size(size * 0.46f).clip(spellShape).border(size * 0.015f, PaperEdge, spellShape))
+    listOf("quas" to Alignment.TopStart, "wex" to Alignment.TopEnd, "exort" to Alignment.BottomCenter).forEach { (orb, place) ->
+        Asset(
+            "images/abilities/invoker_$orb.webp",
+            Modifier.align(place).padding(size * 0.05f).size(size * 0.27f).clip(CircleShape).border(size * 0.015f, PaperEdge, CircleShape),
+        )
+    }
 }
 
 /** Крестики-нолики на поле Света и Тьмы */
@@ -173,6 +188,6 @@ private fun GameCoverPreview() {
         override fun getConfiguration() = null
     }
     Row(Modifier.padding(8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        listOf(GameVO.Show(res), GameVO.Mid(res), GameVO.XO(res)).forEach { GameCover(it, 96.dp) }
+        listOf(GameVO.Show(res), GameVO.Mid(res), GameVO.Invoker(res), GameVO.XO(res)).forEach { GameCover(it, 96.dp) }
     }
 }

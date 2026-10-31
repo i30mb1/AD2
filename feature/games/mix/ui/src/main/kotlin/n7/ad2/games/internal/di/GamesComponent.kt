@@ -4,6 +4,7 @@ import n7.ad2.feature.games.xo.wiring.XoModule
 import n7.ad2.games.api.GamesDependencies
 import n7.ad2.games.internal.GamesFragment
 import n7.ad2.games.internal.GamesViewModel
+import n7.ad2.games.internal.games.invoker.InvokerFragment
 import n7.ad2.games.internal.games.mid.MidFragment
 import n7.ad2.games.internal.games.show.ShowFragment
 import n7.ad2.games.internal.leaderboard.LeaderboardFragment
@@ -27,6 +28,7 @@ internal interface GamesComponent {
 
     fun inject(gamesFragment: GamesFragment)
     fun inject(midFragment: MidFragment)
+    fun inject(invokerFragment: InvokerFragment)
     fun inject(showFragment: ShowFragment)
     fun inject(leaderboardFragment: LeaderboardFragment)
 

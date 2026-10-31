@@ -178,5 +178,6 @@ private fun GameRow(game: GameVO, record: Int?, onClick: () -> Unit) {
 private fun GameVO.rules(): Int = when (this) {
     is GameVO.Show -> R.string.games_rules_show
     is GameVO.Mid -> R.string.games_rules_mid
+    is GameVO.Invoker -> R.string.games_rules_invoker
     is GameVO.XO -> R.string.games_rules_xo
 }
