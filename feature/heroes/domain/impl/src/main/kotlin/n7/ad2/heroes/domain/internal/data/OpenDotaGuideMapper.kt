@@ -23,7 +23,8 @@ internal object OpenDotaGuideMapper {
     private const val ITEM_CDN = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items"
     private const val ABILITY_CDN = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities"
 
-    private const val MIN_MATCHUP_GAMES = 100
+    /** OpenDota has few games for most matchups: a list short of heroes takes ones with fewer games, never under the last. */
+    private val MATCHUP_MIN_GAMES = listOf(100, 50, 30)
     private const val COUNTERS_COUNT = 8
     private const val EVEN_MATCHUP = 50.0
     private const val START_ITEMS_COUNT = 8
@@ -60,15 +61,15 @@ internal object OpenDotaGuideMapper {
         val idToName = stats.associate { it.id to it.localizedName }
 
         val counters = matchups
-            .filter { it.gamesPlayed >= MIN_MATCHUP_GAMES && idToName.containsKey(it.heroId) }
+            .filter { idToName.containsKey(it.heroId) }
             .map { matchup ->
                 val name = idToName.getValue(matchup.heroId)
-                HeroWithWinrate(name, round1(percent(matchup.wins.toLong(), matchup.gamesPlayed.toLong())), avatarUrl(name))
+                matchup.gamesPlayed to HeroWithWinrate(name, round1(percent(matchup.wins.toLong(), matchup.gamesPlayed.toLong())), avatarUrl(name))
             }
         // High win-rate against an enemy => that enemy is easy to win against; low => hard.
         // Split at an even matchup so with few matchups the same heroes don't show up in both lists.
-        val easyToWin = counters.filter { it.heroWinrate >= EVEN_MATCHUP }.sortedByDescending { it.heroWinrate }.take(COUNTERS_COUNT)
-        val hardToWin = counters.filter { it.heroWinrate < EVEN_MATCHUP }.sortedBy { it.heroWinrate }.take(COUNTERS_COUNT)
+        val easyToWin = counters.side { it >= EVEN_MATCHUP }.sortedByDescending { it.heroWinrate }.take(COUNTERS_COUNT)
+        val hardToWin = counters.side { it < EVEN_MATCHUP }.sortedBy { it.heroWinrate }.take(COUNTERS_COUNT)
 
         val startingItems = topItems(itemPopularity?.startGameItems, itemIds, START_ITEMS_COUNT)
             .map { HeroItem(it, "") }
@@ -115,10 +116,19 @@ internal object OpenDotaGuideMapper {
             DurationWinrate(from, to, round1(percent(items.sumOf { it.wins.toLong() }, games)))
         }
 
+    /** Heroes on one side of the even matchup, with as many games as the side can afford, see [MATCHUP_MIN_GAMES]. */
+    private fun List<Pair<Int, HeroWithWinrate>>.side(isOnSide: (winrate: Double) -> Boolean): List<HeroWithWinrate> {
+        val onSide = filter { (_, hero) -> isOnSide(hero.heroWinrate) }
+        val minGames = MATCHUP_MIN_GAMES.firstOrNull { min -> onSide.count { (games, _) -> games >= min } >= COUNTERS_COUNT }
+            ?: MATCHUP_MIN_GAMES.last()
+        return onSide.filter { (games, _) -> games >= minGames }.map { (_, hero) -> hero }
+    }
+
     /**
      * Picks one real build out of [sequences] instead of gluing the most popular choice of every level together:
      * a glued build can put five points into a four level ability. The chosen build is the one that agrees with
-     * the majority on the most levels, ties go to the earlier (more recent) match.
+     * the majority on the most levels, ties go to the earlier (more recent) match. A build that never takes an
+     * ability most players take is left out: a pro sometimes skips one for the whole game, it says little about the hero.
      */
     private fun skillBuild(sequences: List<List<String>>): List<SkillUpgrade> {
         val builds = sequences.map { it.take(SKILL_BUILD_LENGTH) }.filter { it.isNotEmpty() }
@@ -127,7 +137,14 @@ internal object OpenDotaGuideMapper {
         val majority = (0 until length).map { level ->
             builds.mapNotNull { it.getOrNull(level) }.groupingBy { it }.eachCount().maxByOrNull { it.value }?.key
         }
-        val best = builds.maxBy { build -> build.indices.count { build[it] == majority[it] } }
+        val usualAbilities = builds
+            .flatMap { build -> build.filterNot { it.startsWith("special_bonus") }.distinct() }
+            .groupingBy { it }
+            .eachCount()
+            .filter { (_, count) -> count * 2 > builds.size }
+            .keys
+        val candidates = builds.filter { it.containsAll(usualAbilities) }.ifEmpty { builds }
+        val best = candidates.maxBy { build -> build.indices.count { build[it] == majority[it] } }
         return best.map { key ->
             val kind = when {
                 key == ATTRIBUTES_KEY -> SkillUpgrade.Kind.ATTRIBUTES

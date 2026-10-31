@@ -54,7 +54,7 @@ private val aghanimTabBorder = Color(0xFF37587A)
 /**
  * Abilities in the order the game shows them, the innate one apart, with their default keys under them, like on the
  * hero page of dota2.com. Abilities that Aghanim's Scepter or Shard changes wear its mark, and the last entry shows
- * what both items give, so nobody has to tap through every ability to find it.
+ * what both items give, so nobody has to tap through every ability to find it. No ripple: the ring already shows the pick.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -113,7 +113,7 @@ private fun AbilityTab(ability: Ability, label: String, badge: String?, isRound:
     Column(
         modifier = Modifier
             .width(ICON_SIZE)
-            .selectable(selected = isSelected, role = Role.Tab, onClick = onClick)
+            .selectable(selected = isSelected, interactionSource = null, indication = null, role = Role.Tab, onClick = onClick)
             .semantics { contentDescription = ability.name },
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -150,7 +150,7 @@ private fun AbilityTab(ability: Ability, label: String, badge: String?, isRound:
 private fun AghanimTab(isSelected: Boolean, onClick: () -> Unit) {
     val shape = RoundedCornerShape(8.dp)
     Column(
-        modifier = Modifier.selectable(selected = isSelected, role = Role.Tab, onClick = onClick),
+        modifier = Modifier.selectable(selected = isSelected, interactionSource = null, indication = null, role = Role.Tab, onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
@@ -163,8 +163,8 @@ private fun AghanimTab(isSelected: Boolean, onClick: () -> Unit) {
             horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            AsyncImage(model = SCEPTER_SYMBOL, contentDescription = null, modifier = Modifier.size(22.dp))
-            AsyncImage(model = SHARD_SYMBOL, contentDescription = null, modifier = Modifier.size(22.dp))
+            AsyncImage(model = SCEPTER_SYMBOL, contentDescription = null, modifier = Modifier.size(28.dp).clip(RoundedCornerShape(6.dp)))
+            AsyncImage(model = SHARD_SYMBOL, contentDescription = null, modifier = Modifier.size(28.dp).clip(RoundedCornerShape(6.dp)))
         }
         TabLabel(stringResource(R.string.aghanim_tab), if (isSelected) AppTheme.color.textColor else InfoColors.aghanim)
     }

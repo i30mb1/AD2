@@ -26,12 +26,12 @@ class OpenDotaGuideMapperTest {
         ]
     """.trimIndent()
 
-    // vs Axe: 600/1000 = 60% (easy). vs Bane: 400/1000 = 40% (hard). vs Anti-Mage: too few games -> filtered out.
+    // vs Axe: 600/1000 = 60% (easy). vs Bane: 400/1000 = 40% (hard). vs Anti-Mage: too few games even for a short list -> filtered out.
     private val matchupsJson = """
         [
           {"hero_id":2,"games_played":1000,"wins":600},
           {"hero_id":3,"games_played":1000,"wins":400},
-          {"hero_id":1,"games_played":50,"wins":40}
+          {"hero_id":1,"games_played":20,"wins":16}
         ]
     """.trimIndent()
 
@@ -95,7 +95,7 @@ class OpenDotaGuideMapperTest {
         assertEquals("Axe", guide.easyToWinHeroList.first().heroName)
         assertEquals(60.0, guide.easyToWinHeroList.first().heroWinrate, 0.001)
         assertEquals("Bane", guide.hardToWinHeroList.first().heroName)
-        // Anti-Mage had only 50 games, below the threshold, so it is excluded entirely.
+        // Anti-Mage had only 20 games, below the lowest threshold, so it is excluded entirely.
         assertTrue(guide.easyToWinHeroList.none { it.heroName == "Anti-Mage" })
         assertTrue(guide.hardToWinHeroList.none { it.heroName == "Anti-Mage" })
     }
@@ -106,6 +106,34 @@ class OpenDotaGuideMapperTest {
         // with only two matchups the old top/bottom split put both heroes into both lists
         assertEquals(listOf("Axe"), guide.easyToWinHeroList.map { it.heroName })
         assertEquals(listOf("Bane"), guide.hardToWinHeroList.map { it.heroName })
+    }
+
+    @Test
+    fun `a short list takes matchups with fewer games, a full one does not`() {
+        // OpenDota has few games for most matchups: Abaddon had 2 heroes under 50% with 100+ games, 21 with 50+
+        val heroes = (1..12).joinToString(",") { id -> """{"id":$id,"name":"npc_dota_hero_h$id","localized_name":"H$id"}""" }
+        val stats = json.decodeFromString<List<OpenDotaHeroStat>>("""[{"id":102,"name":"npc_dota_hero_abaddon","localized_name":"Abaddon"},$heroes]""")
+        val matchups = buildList {
+            (1..8).forEach { id -> add("""{"hero_id":$id,"games_played":200,"wins":120}""") }
+            add("""{"hero_id":9,"games_played":60,"wins":50}""")
+            add("""{"hero_id":10,"games_played":150,"wins":60}""")
+            add("""{"hero_id":11,"games_played":80,"wins":24}""")
+            add("""{"hero_id":12,"games_played":20,"wins":2}""")
+        }
+        val guide = OpenDotaGuideMapper.toGuide(
+            heroName = "abaddon",
+            stats = stats,
+            matchups = json.decodeFromString<List<OpenDotaMatchup>>(matchups.joinToString(",", "[", "]")),
+            itemPopularity = null,
+            itemIds = emptyMap(),
+            durations = emptyList(),
+            upgradeSequences = emptyList(),
+        )!!
+
+        // 8 heroes with 200 games fill the easy list, H9 with 60 games is not needed there
+        assertEquals((1..8).map { "H$it" }.toSet(), guide.easyToWinHeroList.map { it.heroName }.toSet())
+        // the hard list has one hero with 100+ games, so heroes with 50+ join it; 20 games are never enough
+        assertEquals(listOf("H11", "H10"), guide.hardToWinHeroList.map { it.heroName })
     }
 
     @Test
@@ -151,6 +179,18 @@ class OpenDotaGuideMapperTest {
         assertEquals(listOf(q, w, q, w, q, r, t), guide.skillBuild.map { it.abilityKey })
         assertEquals(SkillUpgrade.Kind.TALENT, guide.skillBuild.last().kind)
         assertTrue(guide.skillBuild.first().imageUrl.endsWith("abaddon_death_coil.png"))
+    }
+
+    @Test
+    fun `a build that skips an ability most players take is not shown`() {
+        // the first build agrees with the majority on every level, but never takes Mist Coil, unlike the other two
+        val sequences = listOf(
+            listOf(w, e, w, e, w, e, r, e, w),
+            listOf(w, e, w, e, w, e, r, q, q),
+            listOf(w, q, w, q, w, e, r, e, e),
+        )
+        val guide = buildGuide("abaddon", sequences = sequences)!!
+        assertEquals(listOf(w, e, w, e, w, e, r, q, q), guide.skillBuild.map { it.abilityKey })
     }
 
     @Test

@@ -1,5 +1,14 @@
 package n7.ad2.hero.page.internal.info.components
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.ContentTransform
+import androidx.compose.animation.SizeTransform
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -153,12 +162,13 @@ internal fun AbilityBody(ability: Ability) {
             }
         }
     }
+    // labels of the datafeed come in capitals, the app's own ones are written the same way
     val values = buildList {
         ability.params.forEach { param -> param.value?.let { add(param.label to it) } }
-        ability.castRange?.let { add(stringResource(R.string.ability_cast_range) to it) }
-        ability.castPoint?.let { add(stringResource(R.string.ability_cast_point) to it) }
-        ability.channelTime?.let { add(stringResource(R.string.ability_channel_time) to it) }
-        ability.duration?.let { add(stringResource(R.string.ability_duration) to it) }
+        ability.castRange?.let { add(stringResource(R.string.ability_cast_range).uppercase() to it) }
+        ability.castPoint?.let { add(stringResource(R.string.ability_cast_point).uppercase() to it) }
+        ability.channelTime?.let { add(stringResource(R.string.ability_channel_time).uppercase() to it) }
+        ability.duration?.let { add(stringResource(R.string.ability_duration).uppercase() to it) }
     }
     if (values.isNotEmpty()) {
         InfoDivider()
@@ -239,6 +249,11 @@ internal fun AbilityCosts(ability: Ability, modifier: Modifier = Modifier) {
 
 private class Cost(val label: Int, val value: String, val color: Color)
 
+/** New content fades in while the old one fades out, and the height follows smoothly: nothing jumps on the screen. */
+internal fun <S> AnimatedContentTransitionScope<S>.revealTransition(): ContentTransform =
+    fadeIn(tween(durationMillis = 220, delayMillis = 60)) togetherWith fadeOut(tween(durationMillis = 120)) using
+        SizeTransform(clip = true) { _, _ -> tween(durationMillis = 280, easing = FastOutSlowInEasing) }
+
 private enum class Extra { NOTES, WIKI, CHANGES }
 
 /** Long reference parts of an ability: each button opens its part under the buttons, a second tap closes it. */
@@ -283,10 +298,22 @@ private fun AbilityExtras(ability: Ability, changes: List<Pair<PatchChange, List
             }
         }
     }
-    when (opened) {
-        Extra.NOTES -> Column(Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) { ability.notes.forEach { BulletText(it) } }
-        Extra.WIKI -> Column(Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) { AbilityWikiNotes(ability.wikiNotes) }
-        Extra.CHANGES -> Column(Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) { AbilityChanges(changes) }
-        null -> Unit
+    AnimatedContent(
+        targetState = opened,
+        transitionSpec = { revealTransition() },
+        label = "ability extras",
+    ) { extra ->
+        Column(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = if (extra == null) 0.dp else 8.dp),
+        ) {
+            when (extra) {
+                Extra.NOTES -> ability.notes.forEach { BulletText(it) }
+                Extra.WIKI -> AbilityWikiNotes(ability.wikiNotes)
+                Extra.CHANGES -> AbilityChanges(changes)
+                null -> Unit
+            }
+        }
     }
 }

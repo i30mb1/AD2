@@ -1,6 +1,7 @@
 package n7.ad2.hero.page.internal.info
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -69,6 +70,7 @@ import n7.ad2.hero.page.internal.info.components.KeyItemsCard
 import n7.ad2.hero.page.internal.info.components.LoreSection
 import n7.ad2.hero.page.internal.info.components.MatchupsCards
 import n7.ad2.hero.page.internal.info.components.StrategySection
+import n7.ad2.hero.page.internal.info.components.revealTransition
 import n7.ad2.hero.page.internal.info.components.TalentsSection
 import n7.ad2.hero.page.internal.info.domain.vo.InfoRow
 import n7.ad2.hero.page.internal.info.domain.vo.VOAbilityGroup
@@ -203,11 +205,13 @@ private fun InfoPage(
         Heading(stringResource(R.string.info_abilities))
         AbilityBar(info.abilityGroups, hotkeys, aghanim, selectedTab, onSelectTab)
         Box(Modifier.height(16.dp))
-        if (selectedTab == AGHANIM_TAB) {
-            AghanimPanel(aghanim, hotkeys)
-        } else {
-            info.abilityGroups.flatMap { it.abilities }.firstOrNull { it.name == selectedTab }?.let { ability ->
-                AbilityPanel(ability, description.talents.about(ability), description.changes.of(ability))
+        AnimatedContent(targetState = selectedTab, transitionSpec = { revealTransition() }, label = "ability panel") { tab ->
+            if (tab == AGHANIM_TAB) {
+                AghanimPanel(aghanim, hotkeys)
+            } else {
+                info.abilityGroups.flatMap { it.abilities }.firstOrNull { it.name == tab }?.let { ability ->
+                    AbilityPanel(ability, description.talents.about(ability), description.changes.of(ability))
+                }
             }
         }
 

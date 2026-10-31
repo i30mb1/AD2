@@ -101,7 +101,7 @@ private fun LevelPicker(level: Int, onLevelChange: (Int) -> Unit) {
                     .widthIn(min = 44.dp)
                     .clip(RoundedCornerShape(8.dp))
                     .background(if (isSelected) AppTheme.color.primary else Color.Transparent)
-                    .selectable(selected = isSelected, role = Role.RadioButton) { onLevelChange(option) }
+                    .selectable(selected = isSelected, interactionSource = null, indication = null, role = Role.RadioButton) { onLevelChange(option) }
                     .padding(horizontal = 10.dp),
                 contentAlignment = Alignment.Center,
             ) {
