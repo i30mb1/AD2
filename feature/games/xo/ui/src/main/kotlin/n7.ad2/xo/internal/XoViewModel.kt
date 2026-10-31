@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.app.logger.Logger
 import n7.ad2.feature.games.xo.domain.model.Server
+import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.xo.internal.compose.model.ServerUI
 import n7.ad2.xo.internal.game.GameLogic
 import n7.ad2.xo.internal.game.GameState
@@ -72,7 +73,9 @@ internal class XoViewModel @AssistedInject constructor(private val gameLogic: Ga
 
     fun connectToServer(serverUI: ServerUI) = flowOf(serverUI)
         .onEach {
-            val server: Server = gameLogic.state.value.servers.find { server -> server.name == serverUI.name }!!
+            val port = serverUI.port.toIntOrNull() ?: error("invalid port '${serverUI.port}', expected ip:port")
+            val server: Server = gameLogic.state.value.servers.find { server -> server.ip == serverUI.serverIP && server.port == port }
+                ?: SimpleServer(serverUI.name, serverUI.serverIP, port)
 //        if (server.isWifiDirect) {
 //            gameLogic.connectToWifiDirect(server.serverIP)
 //        } else {

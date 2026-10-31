@@ -41,7 +41,12 @@ class WebsocketClientController(private val scope: CoroutineScope = CoroutineSco
     override fun connect(name: String, ip: InetAddress, port: Int) {
         scope.launch {
             if (socket != null) error("Already connected")
-            socket = clientCreator.create(ip, port)
+            try {
+                socket = clientCreator.create(ip, port)
+            } catch (e: ClientCreatorImpl.Companion.ClientSocketException) {
+                _state.update { it.copy(status = ClientStatus.Disconnected, messages = it.messages + Message.Info("Connect failed: ${ip.hostAddress}:$port")) }
+                return@launch
+            }
             val server = SimpleServer(name, ip.hostAddress!!, port)
             _state.update { it.copy(status = ClientStatus.Connected(server)) }
             performWebSocketHandshake(requireNotNull(socket))
