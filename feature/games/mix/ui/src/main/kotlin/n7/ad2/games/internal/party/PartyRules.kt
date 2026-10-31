@@ -35,8 +35,12 @@ internal object PartyCodec {
     /** Имя NSD-сервиса: по нему отличаем игроков от чужих сервисов того же типа (XO) */
     fun presenceName(name: String, id: String): String = "$name$ID_SEPARATOR$id"
 
+    // NSD при конфликте имен дописывает " (2)": например, своя прошлая регистрация еще не снята
+    private val CONFLICT_SUFFIX = Regex(""" \(\d+\)$""")
+
     /** @return имя и id игрока или null, если сервис не наш */
-    fun parsePresence(serviceName: String): Pair<String, String>? {
+    fun parsePresence(rawServiceName: String): Pair<String, String>? {
+        val serviceName = rawServiceName.replace(CONFLICT_SUFFIX, "")
         val separator = serviceName.lastIndexOf(ID_SEPARATOR)
         if (separator <= 0 || separator == serviceName.lastIndex) return null
         return serviceName.substring(0, separator) to serviceName.substring(separator + 1)

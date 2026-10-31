@@ -16,7 +16,6 @@ internal class RegisterServiceInNetworkUseCaseImpl(private val manager: NsdManag
     override suspend fun register(server: SimpleServer): SimpleServer = suspendCancellableCoroutine { continuation ->
         val listener = object : NsdManager.RegistrationListener {
             override fun onServiceRegistered(info: NsdServiceInfo) {
-                listenersMap.add(this)
                 val finalName = info.serviceName // Android may have change name in order to resolve a conflict
                 logger.log("DNS: registration success: $finalName")
                 continuation.resume(
@@ -25,6 +24,7 @@ internal class RegisterServiceInNetworkUseCaseImpl(private val manager: NsdManag
             }
 
             override fun onRegistrationFailed(serviceInfo: NsdServiceInfo, errorCode: Int) {
+                listenersMap.remove(this)
                 val message = "DNS: registration failed: $errorCode"
                 logger.log(message)
                 continuation.resumeWithException(Exception(message))
@@ -44,8 +44,11 @@ internal class RegisterServiceInNetworkUseCaseImpl(private val manager: NsdManag
         nsdServiceInfo.serviceType = commonSettings.serviceType
         nsdServiceInfo.port = server.port
         manager.registerService(nsdServiceInfo, NsdManager.PROTOCOL_DNS_SD, listener)
+        // запоминаем сразу: unregister() до onServiceRegistered иначе оставит регистрацию висеть,
+        // и следующая станет "имя (2)" - устройство найдет само себя
+        listenersMap.add(listener)
         continuation.invokeOnCancellation {
-            manager.unregisterService(listener)
+            if (listenersMap.remove(listener)) manager.unregisterService(listener)
         }
     }
 

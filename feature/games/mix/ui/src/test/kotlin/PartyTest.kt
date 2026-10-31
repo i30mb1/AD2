@@ -46,6 +46,15 @@ internal class PartyTest {
     }
 
     @Test
+    fun `WHEN NSD renamed the service on a name conflict THEN the id is still recognized`() {
+        // своя старая регистрация еще жива: Android переименовывает новую в "имя (2)", иначе находим сами себя
+        val renamed = PartyCodec.presenceName("Pixel", "me") + " (2)"
+
+        Truth.assertThat(PartyCodec.parsePresence(renamed)).isEqualTo("Pixel" to "me")
+        Truth.assertThat(mergeNearby(listOf(LanPresence(renamed, "192.168.0.2", 4001)), emptyList(), myId = "me")).isEmpty()
+    }
+
+    @Test
     fun `WHEN service is not ours THEN it is not a player`() {
         Truth.assertThat(PartyCodec.parsePresence("XO server")).isNull()
     }
