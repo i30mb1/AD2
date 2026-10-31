@@ -22,6 +22,7 @@ import n7.ad2.tournaments.api.TournamentsDependencies
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MyApplication
 import n7.ad2.updatemanager.UpdateManagerModule
+import n7.ad2.xo.api.XoDependencies
 
 @ApplicationScope
 @dagger.Component(
@@ -46,6 +47,7 @@ interface ApplicationComponent :
     HeroesDependencies,
     ItemPageDependencies,
     GamesDependencies,
+    XoDependencies,
     TournamentsDependencies,
     NewsDependencies,
     HeroPageDependencies,

@@ -22,6 +22,7 @@ internal class GamesViewModel @AssistedInject constructor(private val res: Resou
         val games = listOf(
             GameVO.GuessSkillMana(res),
             GameVO.Apm(res),
+            GameVO.XO(res),
         )
         emit(State.Data(games))
     }

@@ -19,6 +19,7 @@ import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.ktx.viewModel
 import n7.ad2.core.ui.content
+import n7.ad2.xo.api.XoProvider
 import javax.inject.Inject
 
 internal class GamesFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
@@ -45,7 +46,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
             is GameVO.Apm -> KillCreepFragment.getInstance()
             is GameVO.CanYouBuyIt -> TODO()
             is GameVO.GuessSkillMana -> SkillGameFragment.getInstance()
-            else -> TODO()
+            is GameVO.XO -> XoProvider().getFragment().getDeclaredConstructor().newInstance()
         }
         getMainFragmentNavigator?.setMainFragment(fragment) {
             addToBackStack(null)

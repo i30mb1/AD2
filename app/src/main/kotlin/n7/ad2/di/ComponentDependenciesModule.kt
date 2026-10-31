@@ -12,6 +12,7 @@ import n7.ad2.items.api.ItemsDependencies
 import n7.ad2.news.ui.api.NewsDependencies
 import n7.ad2.streams.api.StreamsDependencies
 import n7.ad2.tournaments.api.TournamentsDependencies
+import n7.ad2.xo.api.XoDependencies
 
 @dagger.Module
 interface ComponentDependenciesModule {
@@ -45,6 +46,11 @@ interface ComponentDependenciesModule {
     @dagger.multibindings.IntoMap
     @DependenciesKey(GamesDependencies::class)
     fun provideGamesDependencies(impl: ApplicationComponent): Dependencies
+
+    @dagger.Binds
+    @dagger.multibindings.IntoMap
+    @DependenciesKey(XoDependencies::class)
+    fun provideXoDependencies(impl: ApplicationComponent): Dependencies
 
     @dagger.Binds
     @dagger.multibindings.IntoMap

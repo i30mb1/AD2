@@ -18,7 +18,7 @@ import n7.ad2.xo.internal.compose.XoScreenEvent
 import n7.ad2.xo.internal.di.DaggerXoComponent
 import javax.inject.Inject
 
-internal class XoFragment(override var dependenciesMap: DependenciesMap) :
+internal class XoFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
     Fragment(),
     HasDependencies {
 
