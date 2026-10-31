@@ -10,13 +10,13 @@ internal sealed class Players {
     object Two : Players()
 }
 
-/** [quizId] - id игры в рекордах и комнате для викторин с режимами Solo/Versus/Coop, null у остальных */
-internal sealed class GameVO(val title: String, val backgroundImage: Int, val quizId: String? = null) {
-    class GuessSkillMana(resources: Resources) : GameVO(resources.getString(R.string.spell_cost), R.drawable.background_guess_skill, SkillGameViewModel.GAME_ID)
-    class GuessHero(resources: Resources) : GameVO(resources.getString(R.string.guess_hero), R.drawable.background_apm, SkillGameViewModel.HERO_GAME_ID)
-    class HigherLower(resources: Resources) : GameVO(resources.getString(R.string.higher_lower), R.drawable.background_guess_skill, SkillGameViewModel.COMPARE_GAME_ID)
-    class BuildItem(resources: Resources) : GameVO(resources.getString(R.string.build_item), R.drawable.background_apm, SkillGameViewModel.BUILD_GAME_ID)
-    class Apm(resources: Resources) : GameVO(resources.getString(R.string.kill_creep), R.drawable.background_apm, KillCreepViewModel.GAME_ID)
-    class CanYouBuyIt(resources: Resources) : GameVO(resources.getString(R.string.can_you_buy_it), R.drawable.background_guess_skill)
-    class XO(resources: Resources) : GameVO(resources.getString(R.string.xo), R.drawable.background_guess_skill)
+/** [quizId] - id игры в рекордах и комнате для викторин с режимами Solo/Versus/Coop, null у остальных; обложка рисуется по типу игры в GameCover */
+internal sealed class GameVO(val title: String, val quizId: String? = null) {
+    class GuessSkillMana(resources: Resources) : GameVO(resources.getString(R.string.spell_cost), SkillGameViewModel.GAME_ID)
+    class GuessHero(resources: Resources) : GameVO(resources.getString(R.string.guess_hero), SkillGameViewModel.HERO_GAME_ID)
+    class HigherLower(resources: Resources) : GameVO(resources.getString(R.string.higher_lower), SkillGameViewModel.COMPARE_GAME_ID)
+    class BuildItem(resources: Resources) : GameVO(resources.getString(R.string.build_item), SkillGameViewModel.BUILD_GAME_ID)
+    class Apm(resources: Resources) : GameVO(resources.getString(R.string.kill_creep), KillCreepViewModel.GAME_ID)
+    class CanYouBuyIt(resources: Resources) : GameVO(resources.getString(R.string.can_you_buy_it))
+    class XO(resources: Resources) : GameVO(resources.getString(R.string.xo))
 }
