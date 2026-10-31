@@ -15,7 +15,6 @@
     <string name="guide_items">Предметы и тайминги</string>
 
     <!-- hero info -->
-    <string name="info_stats">Характеристики</string>
     <string name="info_abilities">Способности</string>
     <string name="info_talents">Таланты</string>
     <string name="info_facets">Аспекты</string>
@@ -42,20 +41,18 @@
     <string name="stat_mana">Мана</string>
     <string name="stat_damage">Урон</string>
     <string name="stat_armor">Броня</string>
-    <string name="stat_magic_resist">Сопротивление магии</string>
+    <string name="stat_magic_resist">Сопр. магии</string>
     <string name="stat_attack_range">Дальность атаки</string>
     <string name="stat_attack_rate">Интервал атаки</string>
     <string name="stat_projectile_speed">Скорость снаряда</string>
-    <string name="stat_move_speed">Скорость передвижения</string>
-    <string name="stat_turn_rate">Скорость поворота</string>
-    <string name="stat_vision">Обзор день / ночь</string>
+    <string name="stat_move_speed">Скорость</string>
+    <string name="stat_turn_rate">Поворот</string>
+    <string name="stat_vision">Обзор</string>
     <string name="stat_regen">+%s/с</string>
 
     <string name="ability_kind_innate">Врождённая</string>
     <string name="ability_kind_ultimate">Ультимейт</string>
     <string name="ability_kind_extra">Дополнительная</string>
-    <string name="ability_kind_scepter">От Aghanim\'s Scepter</string>
-    <string name="ability_kind_shard">От Aghanim\'s Shard</string>
 
     <string name="behavior_passive">Пассивная</string>
     <string name="behavior_no_target">Ненаправленная</string>
@@ -75,7 +72,6 @@
     <string name="damage_pure">Чистый</string>
 
     <string name="ability_affects">Действует на</string>
-    <string name="ability_damage_type">Тип урона</string>
     <string name="ability_spell_immunity">Сквозь невосприимчивость</string>
     <string name="ability_dispellable">Развеивается</string>
     <string name="yes">Да</string>
@@ -96,11 +92,9 @@
     <string name="info_wiki_hint">Данные сообщества, могут отставать от текущего патча</string>
     <string name="info_items">Рекомендуемые предметы</string>
     <string name="info_counters">Противостояние</string>
-    <string name="info_strategy">Стратегия</string>
+    <string name="info_strategy">Советы и сильные стороны</string>
     <string name="info_pros">Плюсы</string>
     <string name="info_cons">Минусы</string>
-    <string name="info_ability_details">Подробности</string>
-    <string name="info_ability_changes">Изменения</string>
     <string name="hero_back">Назад</string>
     <string name="response_play">Воспроизвести</string>
     <string name="response_pause">Пауза</string>
@@ -153,8 +147,17 @@
         <item>Тит</item>
     </string-array>
     <string name="info_lore">Лор</string>
-    <string name="info_summary">Коротко</string>
-    <string name="info_threats">Опасайся</string>
-    <string name="info_key_items">Ключевые предметы</string>
     <string name="info_changes">Изменения в патчах</string>
+    <string name="info_hero_level">Уровень героя</string>
+    <string name="info_roles">Роли</string>
+    <string name="ability_innate_short">Врожд.</string>
+    <string name="aghanim_tab">Аганим, шард</string>
+    <string name="aghanim_new_ability">Новая способность</string>
+    <string name="aghanim_change">Улучшение</string>
+    <string name="aghanim_none">Способности не меняет</string>
+    <string name="ability_damage_of_type">%s урон</string>
+    <string name="info_wiki_short">Вики</string>
+    <string name="info_patches_short">Патчи</string>
+    <string name="info_items_title">Предметы</string>
+    <string name="info_items_mid">Чаще всего к середине игры</string>
 </resources>

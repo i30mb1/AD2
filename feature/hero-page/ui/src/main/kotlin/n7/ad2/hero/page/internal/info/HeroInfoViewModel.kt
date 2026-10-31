@@ -18,8 +18,6 @@ import n7.ad2.hero.page.internal.guides.domain.interactor.GetVOHeroGuideUseCase
 import n7.ad2.hero.page.internal.guides.domain.vo.VOGuide
 import n7.ad2.hero.page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
-import n7.ad2.hero.page.internal.info.domain.vo.VOHeroSummary
-import n7.ad2.hero.page.internal.info.domain.vo.heroSummary
 
 class HeroInfoViewModel @AssistedInject constructor(
     getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase,
@@ -34,8 +32,8 @@ class HeroInfoViewModel @AssistedInject constructor(
     }
 
     sealed class State {
-        /** [summary] first has only the wiki part, threats, items and [guide] arrive later from the internet. */
-        data class Data(val info: VOHeroInfo, val summary: VOHeroSummary?, val guide: VOGuide?) : State()
+        /** [guide] arrives later from the internet, without it the page simply has no matchups and items. */
+        data class Data(val info: VOHeroInfo, val guide: VOGuide?) : State()
         data class Error(val error: Throwable) : State()
         object Loading : State()
     }
@@ -49,9 +47,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         val guide = getVOHeroGuideUseCase(heroName)
             .onStart<VOGuide?> { emit(null) }
             .catch { emit(null) }
-        combine(getVOHeroDescriptionUseCase(heroName), guide) { info, loadedGuide ->
-            State.Data(info, heroSummary(info.description.wiki.playstyle, loadedGuide), loadedGuide)
-        }
+        combine(getVOHeroDescriptionUseCase(heroName), guide) { info, loadedGuide -> State.Data(info, loadedGuide) }
             .onEach { _state.emit(it) }
             .catch { error -> _state.emit(State.Error(error)) }
             .launchIn(viewModelScope)

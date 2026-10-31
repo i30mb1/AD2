@@ -51,16 +51,14 @@ internal val Role.label: Int
         Role.INITIATOR -> R.string.role_initiator
     }
 
-/** null for basic abilities, they need no badge. */
+/** null where the place already says it: basic abilities, and the ones of Aghanim's upgrades wearing their badge. */
 @get:StringRes
 internal val AbilityKind.label: Int?
     get() = when (this) {
-        AbilityKind.BASIC -> null
+        AbilityKind.BASIC, AbilityKind.SCEPTER, AbilityKind.SHARD -> null
         AbilityKind.ULTIMATE -> R.string.ability_kind_ultimate
         AbilityKind.INNATE -> R.string.ability_kind_innate
         AbilityKind.EXTRA -> R.string.ability_kind_extra
-        AbilityKind.SCEPTER -> R.string.ability_kind_scepter
-        AbilityKind.SHARD -> R.string.ability_kind_shard
     }
 
 @get:StringRes

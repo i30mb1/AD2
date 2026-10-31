@@ -41,13 +41,21 @@ internal object ValveHeroParser {
         val abilities = hero.array("abilities").objects()
         val talents = hero.array("talents").objects()
         val hasFacets = hero.array("facets").isNotEmpty()
+        val primaryAttribute = attributes.getOrElse(hero.long("primary_attr").toInt()) { "universal" }
+        val intelligence = hero.double("int_base")
+        // the datafeed already adds the primary attribute to the damage of strength, agility and intelligence heroes, not of universal ones
+        val universalDamage = if (primaryAttribute == "universal") {
+            UNIVERSAL_DAMAGE_PER_POINT * (hero.double("str_base") + hero.double("agi_base") + intelligence)
+        } else {
+            0.0
+        }
 
         return JSONObject().apply {
             put("schema", SCHEMA_VERSION)
             put("id", hero.long("id"))
             put("key", hero.string("name"))
             put("name", hero.string("name_loc"))
-            put("primaryAttribute", attributes.getOrElse(hero.long("primary_attr").toInt()) { "universal" })
+            put("primaryAttribute", primaryAttribute)
             put("attackType", if (hero.long("attack_capability") == 2L) "ranged" else "melee")
             put("complexity", hero.long("complexity"))
             put("roles", hero.array("role_levels").mapIndexedNotNull { index, level ->
@@ -74,9 +82,11 @@ internal object ValveHeroParser {
                 put("mana", hero.double("max_mana"))
                 put("manaRegen", hero.double("mana_regen").round(2))
                 put("armor", hero.double("armor").round(1))
-                put("magicResist", hero.double("magic_resistance"))
-                put("damageMin", hero.double("damage_min"))
-                put("damageMax", hero.double("damage_max"))
+                // the datafeed gives the base 25% for everyone, intelligence adds to it
+                put("magicResist", (hero.double("magic_resistance") + MAGIC_RESIST_PER_INTELLIGENCE * intelligence).round(2))
+                // not rounded down here: the app adds the damage of later levels to it first
+                put("damageMin", (hero.double("damage_min") + universalDamage).round(2))
+                put("damageMax", (hero.double("damage_max") + universalDamage).round(2))
                 put("attackRate", hero.double("attack_rate").round(2))
                 put("attackRange", hero.double("attack_range"))
                 put("projectileSpeed", hero.double("projectile_speed"))
@@ -102,6 +112,8 @@ internal object ValveHeroParser {
         val values = ability.array("special_values").objects()
         val behavior = ability.long("behavior")
         val isInnate = ability.bool("ability_is_innate")
+        val hasScepter = ability.bool("ability_has_scepter")
+        val hasShard = ability.bool("ability_has_shard")
         val kind = when {
             isInnate -> "innate"
             ability.bool("ability_is_granted_by_scepter") -> "scepter"
@@ -118,8 +130,9 @@ internal object ValveHeroParser {
             put("description", ability.string("desc_loc").resolve(values, heroValues, ValueSource.BASE))
             // a note is a standalone fact, without its number it says nothing
             put("notes", ability.array("notes_loc").map { (it as String).resolve(values, heroValues, ValueSource.BASE, unknown = MISSING) }.filter { it.isNotEmpty() && MISSING !in it }.toJsonArray())
-            put("scepter", ability.string("scepter_loc").resolve(values, heroValues, ValueSource.SCEPTER).ifEmpty { null })
-            put("shard", ability.string("shard_loc").resolve(values, heroValues, ValueSource.SHARD).ifEmpty { null })
+            // the datafeed keeps texts and values of upgrades the game no longer has, only the flags are current
+            put("scepter", ability.string("scepter_loc").takeIf { hasScepter }?.resolve(values, heroValues, ValueSource.SCEPTER)?.ifEmpty { null })
+            put("shard", ability.string("shard_loc").takeIf { hasShard }?.resolve(values, heroValues, ValueSource.SHARD)?.ifEmpty { null })
             put("behavior", behaviorFlags.filter { (flag, _) -> behavior and flag != 0L }.map { it.second }.toJsonArray())
             put("targetTeam", targetTeam(ability.long("target_team")))
             put("damageType", damageType(ability.long("damage")))
@@ -133,20 +146,20 @@ internal object ValveHeroParser {
             put("castPoint", ability.array("cast_points").formatLevels())
             put("channelTime", ability.array("channel_times").formatLevels())
             put("duration", ability.array("durations").formatLevels())
-            put("params", values.mapNotNull { value -> parseParam(value) }.toJsonArray())
+            put("params", values.mapNotNull { value -> parseParam(value, hasShard, hasScepter) }.toJsonArray())
             if (hasFacets) {
                 put("facets", ability.array("facets_loc").map { (it as String).resolve(values, heroValues, ValueSource.BASE) }.toJsonArray())
             }
         }
     }
 
-    private fun parseParam(value: JSONObject): JSONObject? {
+    private fun parseParam(value: JSONObject, hasShard: Boolean, hasScepter: Boolean): JSONObject? {
         val heading = value.string("heading_loc").trim().removeSuffix(":").trim()
         if (heading.isEmpty() || value.string("name") in headerValueNames) return null
         val isPercentage = value.bool("is_percentage")
         val base = value.array("values_float").formatLevels(isPercentage)
-        val shard = value.array("values_shard").formatLevels(isPercentage)
-        val scepter = value.array("values_scepter").formatLevels(isPercentage)
+        val shard = value.array("values_shard").takeIf { hasShard }?.formatLevels(isPercentage)
+        val scepter = value.array("values_scepter").takeIf { hasScepter }?.formatLevels(isPercentage)
         val talent = value.array("bonuses").objects().firstOrNull()?.let { bonus ->
             val amount = (bonus["value"] as Number).toDouble()
             if (amount == 0.0) return@let null
@@ -246,6 +259,10 @@ internal object ValveHeroParser {
             ?: value.array("bonuses").objects().firstOrNull()?.let { abs((it["value"] as Number).toDouble()).format() }
             ?: unknown
     }.replace("%%", "%").cleanText()
+
+    // what one point of an attribute gives, checked against dota2.com (Abaddon 49-59, Bane 55-61) and the wiki tables
+    private const val UNIVERSAL_DAMAGE_PER_POINT = 0.45
+    private const val MAGIC_RESIST_PER_INTELLIGENCE = 0.1
 
     private const val UNKNOWN_VALUE = "?"
     private const val MISSING = "\u0000"

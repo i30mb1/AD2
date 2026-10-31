@@ -19,7 +19,6 @@
     <string name="guide_items">Items and timings</string>
 
     <!-- hero info -->
-    <string name="info_stats">Stats</string>
     <string name="info_abilities">Abilities</string>
     <string name="info_talents">Talents</string>
     <string name="info_facets">Facets</string>
@@ -46,20 +45,18 @@
     <string name="stat_mana">Mana</string>
     <string name="stat_damage">Damage</string>
     <string name="stat_armor">Armor</string>
-    <string name="stat_magic_resist">Magic resistance</string>
+    <string name="stat_magic_resist">Magic resist</string>
     <string name="stat_attack_range">Attack range</string>
     <string name="stat_attack_rate">Attack time</string>
     <string name="stat_projectile_speed">Projectile speed</string>
-    <string name="stat_move_speed">Movement speed</string>
+    <string name="stat_move_speed">Move speed</string>
     <string name="stat_turn_rate">Turn rate</string>
-    <string name="stat_vision">Vision day / night</string>
+    <string name="stat_vision">Vision</string>
     <string name="stat_regen">+%s/s</string>
 
     <string name="ability_kind_innate">Innate</string>
     <string name="ability_kind_ultimate">Ultimate</string>
     <string name="ability_kind_extra">Additional</string>
-    <string name="ability_kind_scepter">From Aghanim\'s Scepter</string>
-    <string name="ability_kind_shard">From Aghanim\'s Shard</string>
 
     <string name="behavior_passive">Passive</string>
     <string name="behavior_no_target">No target</string>
@@ -79,7 +76,6 @@
     <string name="damage_pure">Pure</string>
 
     <string name="ability_affects">Affects</string>
-    <string name="ability_damage_type">Damage type</string>
     <string name="ability_spell_immunity">Pierces spell immunity</string>
     <string name="ability_dispellable">Dispellable</string>
     <string name="yes">Yes</string>
@@ -103,11 +99,9 @@
     <string name="info_wiki_hint">Community data, may lag behind the current patch</string>
     <string name="info_items">Recommended items</string>
     <string name="info_counters">Matchups</string>
-    <string name="info_strategy">Strategy</string>
+    <string name="info_strategy">Tips, strengths and weaknesses</string>
     <string name="info_pros">Pros</string>
     <string name="info_cons">Cons</string>
-    <string name="info_ability_details">Details</string>
-    <string name="info_ability_changes">Changes</string>
     <string name="hero_back">Back</string>
     <string name="response_play">Play</string>
     <string name="response_pause">Pause</string>
@@ -160,8 +154,17 @@
         <item>Immo</item>
     </string-array>
     <string name="info_lore">Lore</string>
-    <string name="info_summary">In short</string>
-    <string name="info_threats">Watch out for</string>
-    <string name="info_key_items">Key items</string>
     <string name="info_changes">Patch changes</string>
+    <string name="info_hero_level">Hero level</string>
+    <string name="info_roles">Roles</string>
+    <string name="ability_innate_short">Innate</string>
+    <string name="aghanim_tab">Scepter, shard</string>
+    <string name="aghanim_new_ability">New ability</string>
+    <string name="aghanim_change">Upgrade</string>
+    <string name="aghanim_none">Changes no abilities</string>
+    <string name="ability_damage_of_type">%s damage</string>
+    <string name="info_wiki_short">Wiki</string>
+    <string name="info_patches_short">Patches</string>
+    <string name="info_items_title">Items</string>
+    <string name="info_items_mid">Most bought by mid game</string>
 </resources>

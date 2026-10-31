@@ -21,11 +21,13 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     operator fun invoke(heroName: String): Flow<VOHeroInfo> = flow {
         val hero = getHeroByNameUseCase(heroName)
         val description = getHeroDescriptionUseCase(hero.name).single()
+        // abilities Aghanim's Scepter or Shard give are shown with the other upgrades of these items
         val groups = description.abilities.groupBy { ability ->
             when (ability.kind) {
                 AbilityKind.INNATE -> VOAbilityGroup.Group.INNATE
                 AbilityKind.BASIC, AbilityKind.ULTIMATE -> VOAbilityGroup.Group.MAIN
-                AbilityKind.EXTRA, AbilityKind.SCEPTER, AbilityKind.SHARD -> VOAbilityGroup.Group.EXTRA
+                AbilityKind.EXTRA -> VOAbilityGroup.Group.EXTRA
+                AbilityKind.SCEPTER, AbilityKind.SHARD -> null
             }
         }
         emit(

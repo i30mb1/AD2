@@ -15,33 +15,37 @@ class InfoRowTest {
 
     private fun info(description: HeroDescription) = VOHeroInfo(heroImageUrl = "", description = description, abilityGroups = emptyList())
 
+    private val everything = HeroDescription(
+        facets = listOf(Facet("facet", "")),
+        bio = "bio",
+        changes = listOf(PatchChange("7.41d", 0, emptyList(), emptyList(), emptyList())),
+        wiki = HeroWiki(recommendedItems = listOf(section), counters = listOf(section), playstyle = Playstyle("text", emptyList(), emptyList())),
+    )
+
     @Test
     fun `a hero with everything gets every row, rarely needed ones last`() {
-        val description = HeroDescription(
-            facets = listOf(Facet("facet", "")),
-            bio = "bio",
-            changes = listOf(PatchChange("7.41d", 0, emptyList(), emptyList(), emptyList())),
-            wiki = HeroWiki(recommendedItems = listOf(section), counters = listOf(section), playstyle = Playstyle("text", emptyList(), emptyList())),
-        )
         assertEquals(
-            listOf(InfoRow.STATS, InfoRow.FACETS, InfoRow.COUNTERS, InfoRow.ITEMS, InfoRow.TIPS, InfoRow.CHANGES, InfoRow.LORE),
-            info(description).rows(),
+            listOf(InfoRow.FACETS, InfoRow.TIPS, InfoRow.ITEMS, InfoRow.COUNTERS, InfoRow.CHANGES, InfoRow.LORE),
+            info(everything).rows(),
         )
     }
 
     @Test
-    fun `rows without data are not shown, stats always are`() {
-        assertEquals(listOf(InfoRow.STATS), info(HeroDescription()).rows())
+    fun `with OpenDota matchups the counters open from their own section, not from a row`() {
+        assertEquals(
+            listOf(InfoRow.FACETS, InfoRow.TIPS, InfoRow.ITEMS, InfoRow.CHANGES, InfoRow.LORE),
+            info(everything).rows(hasMatchups = true),
+        )
     }
 
     @Test
-    fun `OpenDota matchups alone are enough for the counters row`() {
-        assertEquals(listOf(InfoRow.STATS, InfoRow.COUNTERS), info(HeroDescription()).rows(hasMatchups = true))
+    fun `rows without data are not shown, stats are on the page itself`() {
+        assertEquals(emptyList<InfoRow>(), info(HeroDescription()).rows())
     }
 
     @Test
     fun `tips alone are enough for the tips row and trivia alone for lore`() {
         val description = HeroDescription(trivia = listOf("fact"), wiki = HeroWiki(tips = listOf(section)))
-        assertEquals(listOf(InfoRow.STATS, InfoRow.TIPS, InfoRow.LORE), info(description).rows())
+        assertEquals(listOf(InfoRow.TIPS, InfoRow.LORE), info(description).rows())
     }
 }

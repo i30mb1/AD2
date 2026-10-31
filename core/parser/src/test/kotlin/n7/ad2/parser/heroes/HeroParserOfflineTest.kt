@@ -19,13 +19,17 @@ import org.junit.Test
  */
 class HeroParserOfflineTest {
 
-    private val abaddon: JSONObject by lazy {
+    private val abaddon: JSONObject by lazy { parse(rawAbaddon()) }
+
+    private fun rawAbaddon(): JSONObject {
         val root = JSONParser().parse(File("src/test/resources/valve_abaddon_ru.json").readText()) as JSONObject
         val heroes = ((root["result"] as JSONObject)["data"] as JSONObject)["heroes"] as JSONArray
-        ValveHeroParser.parse(heroes.first() as JSONObject) { key, _ -> "images/abilities/$key.webp" }
+        return heroes.first() as JSONObject
     }
 
-    private fun ability(name: String): JSONObject = (abaddon["abilities"] as JSONArray)
+    private fun parse(hero: JSONObject): JSONObject = ValveHeroParser.parse(hero) { key, _ -> "images/abilities/$key.webp" }
+
+    private fun ability(name: String, hero: JSONObject = abaddon): JSONObject = (hero["abilities"] as JSONArray)
         .filterIsInstance<JSONObject>()
         .first { it["name"] == name }
 
@@ -46,14 +50,38 @@ class HeroParserOfflineTest {
     }
 
     @Test
-    fun `stats are taken as is`() {
+    fun `level 1 stats include what the attributes give`() {
         val stats = abaddon["stats"] as JSONObject
         assertEquals(582.0, stats["health"])
         assertEquals(303.0, stats["mana"])
         assertEquals(2.7, stats["armor"])
-        assertEquals(22.0, stats["damageMin"])
-        assertEquals(32.0, stats["damageMax"])
+        // a universal hero gets 0.45 damage for each point of every attribute: 21 + 22 + 19 = 62 → +27.9, dota2.com shows 49-59
+        assertEquals(49.9, stats["damageMin"])
+        assertEquals(59.9, stats["damageMax"])
+        // every point of intelligence adds 0.1% to the base 25% magic resistance
+        assertEquals(26.9, stats["magicResist"])
         assertEquals(325.0, stats["moveSpeed"])
+    }
+
+    @Test
+    fun `aghanim texts and values come only from abilities the upgrade changes`() {
+        // the datafeed keeps texts of upgrades the game no longer has, e.g. a scepter text on Juggernaut's Blade Fury
+        val hero = rawAbaddon()
+        val coil = (hero["abilities"] as JSONArray).filterIsInstance<JSONObject>().first { it["name_loc"] == "Mist Coil" }
+        coil["scepter_loc"] = "Old scepter text"
+        coil["shard_loc"] = "Old shard text"
+        (coil["special_values"] as JSONArray).filterIsInstance<JSONObject>().forEach { value ->
+            value["values_scepter"] = (JSONArray() as MutableList<Any?>).apply { add(100L) }
+            value["values_shard"] = (JSONArray() as MutableList<Any?>).apply { add(50L) }
+        }
+
+        val parsed = ability("Mist Coil", parse(hero))
+        assertNull(parsed["scepter"])
+        assertNull(parsed["shard"])
+        (parsed["params"] as JSONArray).filterIsInstance<JSONObject>().forEach { param ->
+            assertNull(param.toString(), param["scepter"])
+            assertNull(param.toString(), param["shard"])
+        }
     }
 
     @Test

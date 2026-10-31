@@ -1,10 +1,6 @@
 package n7.ad2.hero.page.internal.info.components
 
-import androidx.compose.animation.animateContentSize
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -16,17 +12,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
-import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -48,9 +38,7 @@ internal object InfoColors {
     val physical = Color(0xFFD9573F)
     val magical = Color(0xFF5B93D1)
     val pure = Color(0xFFD8AF54)
-    val talent = Color(0xFF8FD17F)
     val aghanim = Color(0xFF4FA8E8)
-    val cooldown = Color(0xFFB8BCC4)
     val mana = Color(0xFF3C8FE0)
     val health = Color(0xFF4CAF50)
     val divider = Color(0x1FFFFFFF)
@@ -171,7 +159,25 @@ internal fun String.toAnnotatedString(): AnnotatedString = buildAnnotatedString 
     repeat(openStyles) { pop() }
 }
 
-internal fun Double.format(): String {
-    val rounded = (this * 100).roundToLong() / 100.0
+/** At most [digits] after the point and none for whole numbers: 5.3, 1.68, 560. */
+internal fun Double.format(digits: Int = 2): String {
+    var factor = 1.0
+    repeat(digits) { factor *= 10 }
+    val rounded = (this * factor).roundToLong() / factor
     return if (rounded == rounded.roundToLong().toDouble()) rounded.roundToLong().toString() else rounded.toString()
+}
+
+@Composable
+internal fun BulletText(text: String, color: Color = AppTheme.color.textSecondaryColor) {
+    Row(Modifier.padding(vertical = 3.dp)) {
+        Box(
+            Modifier
+                .padding(top = 7.dp)
+                .size(5.dp)
+                .clip(RoundedCornerShape(50))
+                .background(AppTheme.color.primary),
+        )
+        HSpace(10.dp)
+        RichText(text, color = color)
+    }
 }
