@@ -8,6 +8,7 @@ import n7.ad2.di.RetrofitModule
 import n7.ad2.games.api.GamesDependencies
 import n7.ad2.games.demo.MyApplicationDemo
 import n7.ad2.heroes.domain.wiring.HeroesModule
+import n7.ad2.xo.api.XoDependencies
 
 @ApplicationScope
 @dagger.Component(
@@ -19,7 +20,9 @@ import n7.ad2.heroes.domain.wiring.HeroesModule
         HeroesModule::class,
     ],
 )
-internal interface ApplicationComponentDemo : GamesDependencies {
+internal interface ApplicationComponentDemo :
+    GamesDependencies,
+    XoDependencies {
 
     fun inject(myApplicationDemo: MyApplicationDemo)
 

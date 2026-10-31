@@ -46,6 +46,7 @@ dependencies {
     implementation(projects.feature.games.mix.ui)
     implementation(projects.feature.games.mix.domain.impl)
     implementation(projects.feature.games.mix.domain.wiring)
+    implementation(projects.feature.games.xo.ui)
 
     ksp(libs.daggerAnnotation)
 }

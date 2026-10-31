@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- постоянный id, чтобы FragmentManager восстановил экраны после пересоздания activity -->
+    <item name="games_demo_container" type="id" />
+</resources>
