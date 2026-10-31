@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>AD2 — Kill Creep v2: бегающие крипы, добивание на низком HP, сеть</title>
+<style>
+  body { background:#111; color:#eee; font-family: Roboto, system-ui, sans-serif; margin:0; padding:24px; display:flex; gap:28px; flex-wrap:wrap; }
+  .phone { width:300px; height:640px; background:#212226; border-radius:28px; padding:18px 14px; box-sizing:border-box; position:relative; overflow:hidden; box-shadow:0 0 0 6px #000; }
+  h1 { width:100%; font-size:16px; color:#aaa; margin:8px 0 0; font-weight:500; }
+  h2 { font-size:13px; color:#888; text-transform:uppercase; letter-spacing:.08em; margin:0 0 6px; }
+  .caption { width:300px; font-size:12px; color:#aaa; margin-top:8px; line-height:1.45; }
+  .muted { color:#888; font-size:11px; }
+  .hdr { display:flex; justify-content:space-between; align-items:center; font-weight:700; }
+  .timer { text-align:center; font-size:12px; color:#bbb; margin-top:2px; }
+  .field { position:absolute; left:14px; right:14px; top:84px; bottom:18px; border-radius:16px; background:radial-gradient(ellipse at 50% 40%,#3d4f37,#2a3426 70%); overflow:hidden; }
+  .c { position:absolute; text-align:center; }
+  .c .hp { width:44px; height:6px; background:#111; border-radius:2px; position:relative; overflow:hidden; margin:0 auto 2px; }
+  .c .hp i { position:absolute; left:0; top:0; bottom:0; background:#e53935; }
+  .c .hp em { position:absolute; top:0; bottom:0; width:2px; background:#ffd166; }
+  .c .b { font-size:30px; line-height:1; }
+  .trail { position:absolute; border-top:2px dotted #ffffff33; }
+  .low { animation: pulse .6s infinite alternate; }
+  @keyframes pulse { from { filter:drop-shadow(0 0 0 #ffd166) } to { filter:drop-shadow(0 0 8px #ffd166) } }
+  .float { position:absolute; font-weight:800; font-size:13px; }
+  .legend { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px; }
+  .legend div { background:#2c2d33; border-radius:8px; padding:6px 8px; font-size:11px; }
+  .legend b { font-size:16px; margin-right:4px; }
+  .toast { position:absolute; left:50%; transform:translateX(-50%); bottom:14px; background:#000a; padding:5px 10px; border-radius:10px; font-size:11px; white-space:nowrap; }
+</style>
+</head>
+<body>
+
+<h1>Kill Creep v2 — по полю бегают разные крипы, у каждого падает HP; тапнуть по крипу, когда его HP ниже вашего урона (жёлтая черта)</h1>
+
+<div>
+<h2>Соло</h2>
+<div class="phone">
+  <div class="hdr" style="font-size:18px"><span>🪙 312</span><span style="font-size:13px">🗡️ 9 · ❌ 2/5</span></div>
+  <div class="timer">⏱ 0:41</div>
+  <div class="field">
+    <div class="trail" style="left:30px;top:96px;width:90px;transform:rotate(12deg)"></div>
+    <div class="c low" style="left:110px;top:90px"><div class="hp"><i style="width:18%"></i><em style="left:24%"></em></div><div class="b">👹</div></div>
+    <div class="c" style="left:28px;top:210px"><div class="hp"><i style="width:70%"></i><em style="left:24%"></em></div><div class="b">🏹</div></div>
+    <div class="c" style="left:190px;top:250px"><div class="hp"><i style="width:55%"></i><em style="left:12%"></em></div><div class="b" style="font-size:38px">🛞</div></div>
+    <div class="c" style="left:150px;top:380px"><div class="hp"><i style="width:35%"></i><em style="left:24%"></em></div><div class="b">👹</div></div>
+    <div class="c" style="left:40px;top:400px"><div class="hp"><i style="width:90%"></i><em style="left:9%"></em></div><div class="b" style="font-size:34px">🚩</div></div>
+    <div class="float" style="left:150px;top:60px;color:#ffd166">+38 🪙</div>
+    <div class="float" style="left:60px;top:180px;color:#e57373">рано ❌</div>
+  </div>
+</div>
+<div class="caption">Крипы выходят волнами, бегут по полю и меняют направление — попасть пальцем непросто. Союзники постоянно снимают им HP. Когда HP опустилось ниже вашего урона, крип начинает светиться — тап = добивание и золото. Тап по крипу с высоким HP = промах. Крипа добили свои — тоже промах. 5 промахов или 60 секунд — конец. Счёт в рекордах — золото.</div>
+</div>
+
+<div>
+<h2>Типы крипов</h2>
+<div class="phone">
+  <div class="hdr" style="font-size:16px"><span>Крипы</span></div>
+  <div class="legend" style="grid-template-columns:1fr">
+    <div><b>👹</b> Ближний — 550 HP, средняя скорость, 38 🪙</div>
+    <div><b>🏹</b> Дальний — 300 HP, быстрый, петляет, 45 🪙</div>
+    <div><b>🛞</b> Осадный — 900 HP, медленный, крупный, 70 🪙, черта урона ниже (бронированный)</div>
+    <div><b>🚩</b> Знаменосец — 700 HP, редкий, 100 🪙</div>
+    <div><b>👑</b> Мега-крип — 1200 HP, раз за игру, 200 🪙, быстрый</div>
+  </div>
+  <div class="muted" style="margin-top:14px;line-height:1.5">Чем дальше, тем больше крипов одновременно (3 → 8) и тем быстрее они бегают. Урон игрока фиксированный (≈ как у героя на линии), поэтому у разных крипов жёлтая черта стоит в разном месте полоски.</div>
+</div>
+<div class="caption">Значения HP/золота — ориентир по Dota, точные цифры подберу при игре, чтобы было не слишком легко и не слишком трудно.</div>
+</div>
+
+<div>
+<h2>Против друга</h2>
+<div class="phone">
+  <div class="hdr" style="font-size:18px"><span style="color:#f44336">🪙 240</span><span class="muted" style="font-size:12px;font-weight:400">⏱ 0:33</span><span style="color:#448aff">198 🪙</span></div>
+  <div class="timer">вы · Pixel 8</div>
+  <div class="field">
+    <div class="c low" style="left:120px;top:120px"><div class="hp"><i style="width:15%"></i><em style="left:24%"></em></div><div class="b">🏹</div></div>
+    <div class="c" style="left:30px;top:260px"><div class="hp"><i style="width:60%"></i><em style="left:24%"></em></div><div class="b">👹</div></div>
+    <div class="c" style="left:180px;top:330px"><div class="hp"><i style="width:45%"></i><em style="left:12%"></em></div><div class="b" style="font-size:38px">🛞</div></div>
+    <div class="float" style="left:150px;top:90px;color:#448aff">Pixel 8 забрал +45</div>
+    <div class="toast">крипы одинаковые у обоих — кто первый тапнул, того и золото</div>
+  </div>
+</div>
+<div class="caption">Одно поле на двоих: крипы, их пути и урон союзников одинаковы на обоих телефонах (общий seed). Кто первым тапнул по крипу с низким HP — забирает золото, у второго крип исчезает с подписью «Pixel 8 забрал». Спорные тапы почти одновременно решает хост. 60 секунд, побеждает больше золота.</div>
+</div>
+
+<div>
+<h2>Вместе</h2>
+<div class="phone">
+  <div class="hdr" style="font-size:18px"><span>🪙 455 общие</span><span style="font-size:13px">❌ 3/8</span></div>
+  <div class="timer">⏱ 0:20 · вы + Pixel 8</div>
+  <div class="field">
+    <div class="c low" style="left:60px;top:150px"><div class="hp"><i style="width:20%"></i><em style="left:24%"></em></div><div class="b">👹</div></div>
+    <div class="c low" style="left:180px;top:200px"><div class="hp"><i style="width:10%"></i><em style="left:24%"></em></div><div class="b">🏹</div></div>
+    <div class="c" style="left:110px;top:330px"><div class="hp"><i style="width:80%"></i><em style="left:7%"></em></div><div class="b" style="font-size:36px">👑</div></div>
+    <div class="float" style="left:170px;top:170px;color:#43a047">Pixel 8 +45</div>
+  </div>
+</div>
+<div class="caption">Общее золото и общий лимит промахов (8). Крипов больше, чем в соло, — одному не успеть, вдвоём реально. Добивание любого игрока идёт в общий счёт.</div>
+</div>
+
+</body>
+</html>
