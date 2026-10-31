@@ -48,15 +48,17 @@ internal class WifiDirectImpl(private val context: Context, private val logger: 
     private val manager: WifiP2pManager? by lazy { context.getSystemService(WifiP2pManager::class.java) }
     private val channel: WifiP2pManager.Channel? by lazy { manager?.initialize(context, Looper.getMainLooper(), null) }
 
-    override suspend fun advertise(name: String, port: Int) {
-        val manager = manager ?: return
-        val channel = channel ?: return
+    override suspend fun advertise(name: String, port: Int): Boolean {
+        val manager = manager ?: return false
+        val channel = channel ?: return false
         action { manager.clearLocalServices(channel, it) }
         // старая группа от прошлой комнаты мешает createGroup (BUSY)
         action { manager.removeGroup(channel, it) }
-        if (!action { manager.createGroup(channel, it) }) return
+        if (!action { manager.createGroup(channel, it) }) return false
         val info = WifiP2pDnsSdServiceInfo.newInstance(INSTANCE, SERVICE_TYPE, WifiDirectRecord.encode(name, port))
-        if (action { manager.addLocalService(channel, info, it) }) action { manager.discoverPeers(channel, it) }
+        if (!action { manager.addLocalService(channel, info, it) }) return false
+        action { manager.discoverPeers(channel, it) }
+        return true
     }
 
     override fun discover(): Flow<List<WifiDirectRoom>> {

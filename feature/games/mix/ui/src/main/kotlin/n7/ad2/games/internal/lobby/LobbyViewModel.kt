@@ -66,7 +66,7 @@ internal class LobbyViewModel @AssistedInject constructor(
     }
 
     private val _state = MutableStateFlow(
-        State(Tab.CREATE, localPlayerProvider.localPlayer(), deviceIp = "", wifiDirect = false, direct = DirectStatus.IDLE, roomState = null, isHost = true, servers = emptyList()),
+        State(Tab.CREATE, localPlayerProvider.localPlayer(), deviceIp = "", wifiDirect = false, directVisible = false, direct = DirectStatus.IDLE, roomState = null, isHost = true, servers = emptyList()),
     )
     val state: StateFlow<State> = _state.asStateFlow()
     // игра и режим берутся у хоста: гость мог зайти в лобби другой игры
@@ -199,7 +199,10 @@ internal class LobbyViewModel @AssistedInject constructor(
         }
         if (!directUsed && state.wifiDirect) {
             directUsed = true
-            directJob = viewModelScope.launch { wifiDirect.advertise(waiting.host.name, waiting.port) }
+            directJob = viewModelScope.launch {
+                val visible = wifiDirect.advertise(waiting.host.name, waiting.port)
+                _state.update { it.copy(directVisible = visible) }
+            }
         }
     }
 
@@ -231,7 +234,7 @@ internal class LobbyViewModel @AssistedInject constructor(
         room = null
         if (directUsed) wifiDirect.release()
         directUsed = false
-        _state.update { it.copy(roomState = null, direct = DirectStatus.IDLE) }
+        _state.update { it.copy(roomState = null, directVisible = false, direct = DirectStatus.IDLE) }
     }
 
     private fun unregister() {
@@ -258,6 +261,7 @@ internal class LobbyViewModel @AssistedInject constructor(
         val me: Player,
         val deviceIp: String,
         val wifiDirect: Boolean,
+        val directVisible: Boolean,
         val direct: DirectStatus,
         val roomState: RoomState?,
         val isHost: Boolean,

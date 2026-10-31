@@ -97,7 +97,7 @@ private fun CreateTab(state: LobbyViewModel.State, onStart: () -> Unit, onRecrea
         when (roomState) {
             is RoomState.Waiting -> {
                 if (state.deviceIp.isNotEmpty()) Hint(stringResource(R.string.lobby_visible_as, state.me.name, "${state.deviceIp}:${roomState.port}"))
-                if (state.wifiDirect) Hint(stringResource(R.string.lobby_visible_direct, state.me.name))
+                if (state.directVisible) Hint(stringResource(R.string.lobby_visible_direct, state.me.name))
             }
             is RoomState.Closed -> {
                 Hint(stringResource(roomState.reason.message()))
