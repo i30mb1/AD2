@@ -34,7 +34,11 @@
     <string name="lobby_you">%s (вы)</string>
     <string name="lobby_waiting">ждём игрока…</string>
     <string name="lobby_visible_as">Ваша игра видна в сети как %1$s · %2$s</string>
-    <string name="lobby_no_network">Подключитесь к Wi-Fi, чтобы играть вместе</string>
+    <string name="lobby_visible_direct">Рядом по Wi-Fi Direct игра видна как %s</string>
+    <string name="lobby_no_network">Подключитесь к Wi-Fi или разрешите поиск устройств рядом, чтобы играть вместе</string>
+    <string name="lobby_via_wifi">Wi-Fi</string>
+    <string name="lobby_via_direct">Wi-Fi Direct</string>
+    <string name="lobby_direct_connecting">Подключаемся по Wi-Fi Direct… Если на телефоне хоста появится запрос, примите его</string>
     <string name="lobby_found">Найденные игры</string>
     <string name="lobby_searching">Ищем игры…</string>
     <string name="lobby_join">Войти</string>

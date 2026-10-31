@@ -72,7 +72,7 @@ internal fun LobbyScreen(
             onSelect = { onTab(LobbyViewModel.Tab.entries[it]) },
         )
         Spacer(Modifier.height(16.dp))
-        if (state.deviceIp.isEmpty()) {
+        if (state.deviceIp.isEmpty() && !state.wifiDirect) {
             Hint(stringResource(R.string.lobby_no_network))
             return@Column
         }
@@ -95,7 +95,10 @@ private fun CreateTab(state: LobbyViewModel.State, onStart: () -> Unit, onRecrea
         }
         Spacer(Modifier.height(16.dp))
         when (roomState) {
-            is RoomState.Waiting -> Hint(stringResource(R.string.lobby_visible_as, state.me.name, "${state.deviceIp}:${roomState.port}"))
+            is RoomState.Waiting -> {
+                if (state.deviceIp.isNotEmpty()) Hint(stringResource(R.string.lobby_visible_as, state.me.name, "${state.deviceIp}:${roomState.port}"))
+                if (state.wifiDirect) Hint(stringResource(R.string.lobby_visible_direct, state.me.name))
+            }
             is RoomState.Closed -> {
                 Hint(stringResource(roomState.reason.message()))
                 PrimaryButton(stringResource(R.string.lobby_create), enabled = true, color = AppTheme.color.surface, onClick = onRecreate)
@@ -117,6 +120,11 @@ private fun CreateTab(state: LobbyViewModel.State, onStart: () -> Unit, onRecrea
 private fun FindTab(state: LobbyViewModel.State, onJoin: (LobbyViewModel.FoundGame) -> Unit, onJoinManual: (String) -> Unit, modifier: Modifier) {
     var address by remember { mutableStateOf("") }
     Column(modifier) {
+        when (state.direct) {
+            LobbyViewModel.DirectStatus.CONNECTING -> Hint(stringResource(R.string.lobby_direct_connecting))
+            LobbyViewModel.DirectStatus.FAILED -> Hint(stringResource(R.string.lobby_closed_failed))
+            LobbyViewModel.DirectStatus.IDLE -> Unit
+        }
         when (val roomState = state.roomState) {
             RoomState.Connecting -> Hint(stringResource(R.string.lobby_connecting))
             is RoomState.Ready -> Hint(stringResource(R.string.lobby_wait_host, roomState.host.name))
@@ -130,7 +138,8 @@ private fun FindTab(state: LobbyViewModel.State, onJoin: (LobbyViewModel.FoundGa
             modifier = Modifier.padding(vertical = 8.dp),
         )
         LazyColumn(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            items(state.servers, key = { "${it.ip}:${it.port}" }) { game ->
+            items(state.servers, key = { it.deviceAddress ?: "${it.ip}:${it.port}" }) { game ->
+                val direct = game.deviceAddress != null
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -140,8 +149,9 @@ private fun FindTab(state: LobbyViewModel.State, onJoin: (LobbyViewModel.FoundGa
                         .padding(12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Box(Modifier.size(8.dp).clip(CircleShape).background(Color(0xFF43A047)))
-                    Text("  ${game.name}", color = AppTheme.color.textColor, style = AppTheme.style.body, modifier = Modifier.weight(1f))
+                    Box(Modifier.size(8.dp).clip(CircleShape).background(if (direct) Blue else Color(0xFF43A047)))
+                    val via = stringResource(if (direct) R.string.lobby_via_direct else R.string.lobby_via_wifi)
+                    Text("  ${game.name} · $via", color = AppTheme.color.textColor, style = AppTheme.style.body, modifier = Modifier.weight(1f))
                     Text(stringResource(R.string.lobby_join), color = Blue, style = AppTheme.style.body)
                 }
             }

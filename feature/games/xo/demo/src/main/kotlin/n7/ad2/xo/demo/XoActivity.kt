@@ -15,9 +15,7 @@ class XoActivity(private val fragmentFactory: XoFragmentFactory) : FragmentActiv
 
     private val fragment by lazy { XoProvider().getFragment() }
     private val permission by lazy {
-        AppPermission(this) {
-//            GetWifiDirectServers(this).invoke().launchIn(lifecycleScope)
-        }
+        AppPermission(this) { }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

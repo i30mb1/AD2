@@ -38,7 +38,11 @@
     <string name="lobby_you">%s (you)</string>
     <string name="lobby_waiting">waiting for a player…</string>
     <string name="lobby_visible_as">Your game is visible as %1$s · %2$s</string>
-    <string name="lobby_no_network">Connect to Wi-Fi to play together</string>
+    <string name="lobby_visible_direct">Nearby over Wi-Fi Direct your game is visible as %s</string>
+    <string name="lobby_no_network">Connect to Wi-Fi or allow finding nearby devices to play together</string>
+    <string name="lobby_via_wifi">Wi-Fi</string>
+    <string name="lobby_via_direct">Wi-Fi Direct</string>
+    <string name="lobby_direct_connecting">Connecting over Wi-Fi Direct… If the host\'s phone asks, accept the invitation</string>
     <string name="lobby_found">Games nearby</string>
     <string name="lobby_searching">Searching…</string>
     <string name="lobby_join">Join</string>

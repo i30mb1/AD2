@@ -76,11 +76,7 @@ internal class XoViewModel @AssistedInject constructor(private val gameLogic: Ga
             val port = serverUI.port.toIntOrNull() ?: error("invalid port '${serverUI.port}', expected ip:port")
             val server: Server = gameLogic.state.value.servers.find { server -> server.ip == serverUI.serverIP && server.port == port }
                 ?: SimpleServer(serverUI.name, serverUI.serverIP, port)
-//        if (server.isWifiDirect) {
-//            gameLogic.connectToWifiDirect(server.serverIP)
-//        } else {
             gameLogic.connectToServer(server)
-//        }
         }
         .catch { error -> logger.log("Connect error $error") }
         .flowOn(Dispatchers.IO)

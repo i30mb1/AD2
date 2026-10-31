@@ -7,6 +7,7 @@ dependencies {
     implementation(projects.feature.games.mix.domain.impl)
     api(projects.feature.games.room.impl)
     api(projects.feature.games.leaderboard.impl)
+    implementation(projects.feature.games.xo.domain.impl)
 
     implementation(projects.core.database)
     implementation(projects.core.commonJvm)

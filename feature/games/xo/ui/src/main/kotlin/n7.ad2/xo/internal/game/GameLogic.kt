@@ -5,8 +5,6 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.merge
@@ -17,9 +15,7 @@ import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.withContext
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.games.xo.domain.ConnectToWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.DiscoverServicesInNetworkUseCase
-import n7.ad2.feature.games.xo.domain.DiscoverServicesInWifiDirectUseCase
 import n7.ad2.feature.games.xo.domain.GetDeviceNameUseCase
 import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
@@ -42,8 +38,6 @@ import javax.inject.Inject
 
 internal class GameLogic @Inject constructor(
     private val discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase,
-    private val discoverServicesInWifiDirectUseCase: DiscoverServicesInWifiDirectUseCase,
-    private val connectToWifiDirectUseCase: ConnectToWifiDirectUseCase,
     private val getNetworkStateUseCase: GetNetworkStateUseCase,
     private val getDeviceNameUseCase: GetDeviceNameUseCase,
     private val dispatchers: DispatchersProvider,
@@ -60,13 +54,7 @@ internal class GameLogic @Inject constructor(
 
     suspend fun init() = coroutineScope {
         merge(
-            combine(
-                discoverServicesInNetworkUseCase(),
-                flowOf(emptyList()),
-//                discoverServicesInWifiDirectUseCase(),
-            ) { servers: List<Server>, serversDirect: List<Server> ->
-                servers + serversDirect
-            },
+            discoverServicesInNetworkUseCase(),
             getNetworkStateUseCase(),
         )
             .onStart { _state.setDeviceName(getDeviceNameUseCase()) }
@@ -105,14 +93,6 @@ internal class GameLogic @Inject constructor(
     suspend fun connectToServer(server: Server) = withContext(dispatchers.IO) {
         val ip = InetAddress.getByName(server.ip)
         socketClientController.connect(server.name, ip, server.port)
-    }
-
-    suspend fun connectToWifiDirect(_serverIP: String) = withContext(dispatchers.IO) {
-//        connectToWifiDirectUseCase(serverIP)
-//        serverHolder.start(InetAddress.getByName(serverIP), "H1")
-//        socketHolder.socket = serverHolder.awaitClient()
-//        _state.addLog("Client Connected")
-//        collectMessages()
     }
 
     fun selectSocketType(socketType: SocketType) {

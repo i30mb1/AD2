@@ -4,6 +4,8 @@ import android.app.Application
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import n7.ad2.feature.games.xo.domain.WifiDirect
+import n7.ad2.feature.games.xo.domain.di.XoDomainComponent
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
@@ -20,6 +22,7 @@ object GamesModule {
     private val processScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private var leaderboard: LeaderboardRepository? = null
     private var sync: LeaderboardSync? = null
+    private var wifiDirect: WifiDirect? = null
 
     @dagger.Provides
     fun provideRoomFactory(): RoomFactory = WebsocketRoomFactory(processScope)
@@ -32,6 +35,12 @@ object GamesModule {
     @dagger.Provides
     fun provideLeaderboardSync(repository: LeaderboardRepository): LeaderboardSync = synchronized(this) {
         sync ?: LeaderboardSync(repository, processScope).also { sync = it }
+    }
+
+    // группа Wi-Fi Direct переживает лобби и держится, пока идет игра
+    @dagger.Provides
+    fun provideWifiDirect(component: XoDomainComponent): WifiDirect = synchronized(this) {
+        wifiDirect ?: component.wifiDirect.also { wifiDirect = it }
     }
 
     @dagger.Provides

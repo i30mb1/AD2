@@ -1,11 +1,16 @@
 package n7.ad2.games.internal.lobby
 
+import android.Manifest
 import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.collectAsState
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -34,6 +39,10 @@ internal class LobbyFragment : Fragment() {
     private val mode by lazy { GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.VERSUS.name)) }
     private val viewModel: LobbyViewModel by viewModel { lobbyViewModelFactory.create(mode, requireArguments().getString(ARG_GAME, SkillGameViewModel.GAME_ID)) }
 
+    // Wi-Fi Direct: с Android 13 отдельное разрешение без геолокации, раньше - точная геолокация
+    private val wifiDirectPermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) Manifest.permission.NEARBY_WIFI_DEVICES else Manifest.permission.ACCESS_FINE_LOCATION
+    private val permissionRequest = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted -> viewModel.onWifiDirectPermission(granted) }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         DaggerGamesComponent.factory().create(findDependencies()).inject(this)
@@ -53,6 +62,11 @@ internal class LobbyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (ContextCompat.checkSelfPermission(requireContext(), wifiDirectPermission) == PackageManager.PERMISSION_GRANTED) {
+            viewModel.onWifiDirectPermission(true)
+        } else if (savedInstanceState == null) {
+            permissionRequest.launch(wifiDirectPermission)
+        }
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.openGame.collect { playing ->
                 // лобби больше не нужно: назад из игры ведет в список игр
