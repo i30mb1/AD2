@@ -3,6 +3,14 @@
     <string name="one_player">1 игрок</string>
     <string name="two_players">2 игрока</string>
     <string name="guess_hero">Угадай героя</string>
+    <string name="higher_lower">Больше или меньше</string>
+    <string name="compare_health">У кого больше здоровья?</string>
+    <string name="compare_mana">У кого больше маны?</string>
+    <string name="compare_armor">У кого больше брони?</string>
+    <string name="compare_damage">Кто бьёт сильнее?</string>
+    <string name="compare_move_speed">Кто быстрее бегает?</string>
+    <string name="compare_attack_range">Кто бьёт дальше?</string>
+    <string name="compare_level_hint">на 1 уровне · нажмите на карточку</string>
 
     <string name="games_mode_solo">Соло</string>
     <string name="games_mode_solo_hint">3 жизни, серия на рекорд</string>

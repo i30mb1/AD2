@@ -13,6 +13,7 @@ internal sealed class Players {
 internal sealed class GameVO(val title: String, val backgroundImage: Int, val quizId: String? = null) {
     class GuessSkillMana(resources: Resources) : GameVO(resources.getString(R.string.spell_cost), R.drawable.background_guess_skill, SkillGameViewModel.GAME_ID)
     class GuessHero(resources: Resources) : GameVO(resources.getString(R.string.guess_hero), R.drawable.background_apm, SkillGameViewModel.HERO_GAME_ID)
+    class HigherLower(resources: Resources) : GameVO(resources.getString(R.string.higher_lower), R.drawable.background_guess_skill, SkillGameViewModel.COMPARE_GAME_ID)
     class Apm(resources: Resources) : GameVO(resources.getString(R.string.apm), R.drawable.background_apm)
     class CanYouBuyIt(resources: Resources) : GameVO(resources.getString(R.string.can_you_buy_it), R.drawable.background_guess_skill)
     class XO(resources: Resources) : GameVO(resources.getString(R.string.xo), R.drawable.background_guess_skill)

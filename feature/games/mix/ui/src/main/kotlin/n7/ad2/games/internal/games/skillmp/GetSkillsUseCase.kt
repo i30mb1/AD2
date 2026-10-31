@@ -27,7 +27,20 @@ internal class GetSkillsUseCase @Inject constructor(
     private val getHeroDescriptionUseCase: GetHeroDescriptionUseCase,
 ) {
 
-    data class Data(val skillImage: String, val name: String, val manaCost: String, val backgroundColor: Int, val suggestsSpellList: List<Spell>, val spellLVL: Int)
+    /** [compare] заполнен только у «Больше или меньше»: вместо картинки спелла - две карточки героев */
+    data class Data(
+        val skillImage: String,
+        val name: String,
+        val manaCost: String,
+        val backgroundColor: Int,
+        val suggestsSpellList: List<Spell>,
+        val spellLVL: Int,
+        val compare: Compare? = null,
+    )
+
+    data class Compare(val question: Int, val left: Side, val right: Side)
+
+    data class Side(val name: String, val imageUrl: String, val value: String)
 
     data class Spell(val cost: String, val isRightAnswer: Boolean)
 

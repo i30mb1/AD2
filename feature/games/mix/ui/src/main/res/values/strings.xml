@@ -7,6 +7,14 @@
     <string name="can_you_buy_it" translatable="false">Buy it?</string>
     <string name="xo" translatable="false">XO</string>
     <string name="guess_hero">Guess the Hero</string>
+    <string name="higher_lower">Higher or Lower</string>
+    <string name="compare_health">Who has more health?</string>
+    <string name="compare_mana">Who has more mana?</string>
+    <string name="compare_armor">Who has more armor?</string>
+    <string name="compare_damage">Who hits harder?</string>
+    <string name="compare_move_speed">Who is faster?</string>
+    <string name="compare_attack_range">Who attacks from farther?</string>
+    <string name="compare_level_hint">at level 1 · tap a card</string>
 
     <string name="games_mode_solo">Solo</string>
     <string name="games_mode_solo_hint">3 lives, a streak for the record</string>

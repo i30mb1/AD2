@@ -48,7 +48,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
         val fragment = when (game) {
             is GameVO.Apm -> KillCreepFragment.getInstance()
             is GameVO.CanYouBuyIt -> TODO()
-            is GameVO.GuessSkillMana, is GameVO.GuessHero -> {
+            is GameVO.GuessSkillMana, is GameVO.GuessHero, is GameVO.HigherLower -> {
                 val quizId = requireNotNull(game.quizId)
                 if (mode == GameMode.SOLO) SkillGameFragment.getInstance(mode, quizId) else LobbyFragment.getInstance(mode, quizId)
             }

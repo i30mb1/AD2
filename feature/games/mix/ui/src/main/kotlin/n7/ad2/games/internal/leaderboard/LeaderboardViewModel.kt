@@ -55,7 +55,7 @@ internal class LeaderboardViewModel @AssistedInject constructor(
     @Immutable
     data class State(val gameId: String, val mode: GameMode, val records: List<Record>, val myId: String, val online: Set<String>) {
         companion object {
-            val GAMES = listOf(SkillGameViewModel.GAME_ID, SkillGameViewModel.HERO_GAME_ID)
+            val GAMES = listOf(SkillGameViewModel.GAME_ID, SkillGameViewModel.HERO_GAME_ID, SkillGameViewModel.COMPARE_GAME_ID)
         }
     }
 }

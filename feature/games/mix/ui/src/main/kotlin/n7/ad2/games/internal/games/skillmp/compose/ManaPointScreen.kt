@@ -57,10 +57,15 @@ internal fun ManaPointScreen(state: SkillGameViewModel.State, onVariantClick: (s
             state.isError -> ErrorScreen()
             else -> {
                 MatchHeader(state.match, state.peerName)
+                val compare = state.compare
                 Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
-                    if (state.isLoading) LoadingScreen() else GuessSpellImage(state.spellImage, state.spellLVL)
+                    when {
+                        state.isLoading -> LoadingScreen()
+                        compare != null -> CompareCards(compare, state.spellList, state.showRightAnswer, onVariantClick)
+                        else -> GuessSpellImage(state.spellImage, state.spellLVL)
+                    }
                 }
-                if (!state.isLoading) {
+                if (!state.isLoading && compare == null) {
                     VariantBlocks(state.spellList, state.showRightAnswer, state.selectedSpell, onVariantClick)
                 }
             }

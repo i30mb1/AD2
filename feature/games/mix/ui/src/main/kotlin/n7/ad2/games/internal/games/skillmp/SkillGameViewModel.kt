@@ -31,6 +31,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
     @Assisted private val gameId: String,
     private val getSkillsUseCase: GetSkillsUseCase,
     private val getHeroQuizUseCase: GetHeroQuizUseCase,
+    private val getCompareQuizUseCase: GetCompareQuizUseCase,
     private val leaderboardSync: LeaderboardSync,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
@@ -118,6 +119,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
                     spellImage = data.skillImage,
                     spellList = SpellList(data.suggestsSpellList.map { Spell(it.cost, it.isRightAnswer) }),
                     spellLVL = data.spellLVL,
+                    compare = data.compare,
                 )
             }
             questionShownAt = SystemClock.elapsedRealtime()
@@ -135,7 +137,11 @@ internal class SkillGameViewModel @AssistedInject constructor(
     private suspend fun loadData(round: Int): GetSkillsUseCase.Data? {
         repeat(MAX_ATTEMPTS) { attempt ->
             val random = seed?.let { Random(it + round * MAX_ATTEMPTS + attempt) } ?: Random.Default
-            val question = if (gameId == HERO_GAME_ID) getHeroQuizUseCase(random) else getSkillsUseCase(random)
+            val question = when (gameId) {
+                HERO_GAME_ID -> getHeroQuizUseCase(random)
+                COMPARE_GAME_ID -> getCompareQuizUseCase(random)
+                else -> getSkillsUseCase(random)
+            }
             runCatching { question.first() }.onSuccess { return it }
         }
         return null
@@ -166,6 +172,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val showRightAnswer: Boolean,
         val selectedSpell: Spell?,
         val match: SpellMatch,
+        val compare: GetSkillsUseCase.Compare?,
         val peerName: String?,
         val isEndGame: Boolean,
         val newRecord: Boolean,
@@ -181,6 +188,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 showRightAnswer = false,
                 selectedSpell = null,
                 match = match,
+                compare = null,
                 peerName = peerName,
                 isEndGame = false,
                 newRecord = false,
@@ -197,6 +205,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
     companion object {
         const val GAME_ID = "spell"
         const val HERO_GAME_ID = "hero"
+        const val COMPARE_GAME_ID = "compare"
         private const val MAX_ATTEMPTS = 20
     }
 }
