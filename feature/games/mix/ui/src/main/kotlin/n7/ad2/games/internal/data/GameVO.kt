@@ -2,7 +2,7 @@ package n7.ad2.games.internal.data
 
 import n7.ad2.Resources
 import n7.ad2.feature.games.mix.ui.R
-import n7.ad2.games.internal.games.killCreep.KillCreepViewModel
+import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 
 internal sealed class Players {
@@ -16,7 +16,7 @@ internal sealed class GameVO(val title: String, val quizId: String? = null) {
     class GuessHero(resources: Resources) : GameVO(resources.getString(R.string.guess_hero), SkillGameViewModel.HERO_GAME_ID)
     class HigherLower(resources: Resources) : GameVO(resources.getString(R.string.higher_lower), SkillGameViewModel.COMPARE_GAME_ID)
     class BuildItem(resources: Resources) : GameVO(resources.getString(R.string.build_item), SkillGameViewModel.BUILD_GAME_ID)
-    class Apm(resources: Resources) : GameVO(resources.getString(R.string.kill_creep), KillCreepViewModel.GAME_ID)
+    class Mid(resources: Resources) : GameVO(resources.getString(R.string.mid), MidViewModel.GAME_ID)
     class CanYouBuyIt(resources: Resources) : GameVO(resources.getString(R.string.can_you_buy_it))
     class XO(resources: Resources) : GameVO(resources.getString(R.string.xo))
 }

@@ -29,13 +29,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
-import androidx.compose.ui.graphics.FilterQuality
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.imageResource
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -43,8 +38,12 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.data.GameVO
+import n7.ad2.games.internal.paper.PaperLaneBackground
+import n7.ad2.games.internal.paper.PaperCreep
+import n7.ad2.games.internal.games.mid.Side
+import n7.ad2.games.internal.games.mid.CreepType
+import androidx.compose.ui.graphics.graphicsLayer
 
 private const val ASSETS = "file:///android_asset/"
 private val Gold = Color(0xFFFFD166)
@@ -66,7 +65,7 @@ internal fun GameCover(game: GameVO, size: Dp, modifier: Modifier = Modifier, sh
             is GameVO.GuessHero -> HeroCover(size)
             is GameVO.HigherLower -> CompareCover(size)
             is GameVO.BuildItem -> BuildCover(size)
-            is GameVO.Apm -> CreepCover(size)
+            is GameVO.Mid -> MidCover(size)
             is GameVO.XO -> XoCover(size)
         }
     }
@@ -131,32 +130,21 @@ private fun BuildCover(size: Dp) {
     }
 }
 
-/** Крип на дорожке и золото за добивание */
+/** Бумажная линия у реки: крип Света и крип Тьмы друг напротив друга */
 @Composable
-private fun BoxScope.CreepCover(size: Dp) {
-    Image(
-        painter = painterResource(R.drawable.background_apm),
-        contentDescription = null,
-        contentScale = ContentScale.Crop,
-        alignment = Alignment.BottomStart,
-        colorFilter = ColorFilter.colorMatrix(ColorMatrix().apply { setToScale(0.6f, 0.6f, 0.6f, 1f) }),
-        modifier = Modifier.fillMaxSize(),
+private fun BoxScope.MidCover(size: Dp) {
+    PaperLaneBackground(Modifier.fillMaxSize())
+    PaperCreep(
+        CreepType.MELEE,
+        Side.RADIANT,
+        killable = false,
+        modifier = Modifier.align(Alignment.BottomStart).padding(start = size * 0.04f, bottom = size * 0.06f).size(size * 0.5f),
     )
-    // пиксельный спрайт: без сглаживания при увеличении
-    Image(
-        painter = BitmapPainter(ImageBitmap.imageResource(R.drawable.cover_creep), filterQuality = FilterQuality.None),
-        contentDescription = null,
-        modifier = Modifier.align(Alignment.Center).size(size * 0.64f).offset(y = size * 0.04f),
-    )
-    Badge(
-        text = "+38",
-        modifier = Modifier
-            .align(Alignment.TopEnd)
-            .padding(size * 0.05f)
-            .background(Color(0xBB000000), RoundedCornerShape(size * 0.06f))
-            .padding(horizontal = size * 0.05f),
-        size = size * 0.13f,
-        color = Gold,
+    PaperCreep(
+        CreepType.MELEE,
+        Side.DIRE,
+        killable = true,
+        modifier = Modifier.align(Alignment.TopEnd).padding(end = size * 0.04f, top = size * 0.04f).size(size * 0.5f).graphicsLayer { scaleX = -1f },
     )
 }
 
@@ -220,7 +208,7 @@ private fun GameCoverPreview() {
         override fun getConfiguration() = null
     }
     Row(Modifier.padding(8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.HigherLower(res), GameVO.BuildItem(res), GameVO.Apm(res), GameVO.XO(res))
+        listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.HigherLower(res), GameVO.BuildItem(res), GameVO.Mid(res), GameVO.XO(res))
             .forEach { GameCover(it, 64.dp) }
     }
 }

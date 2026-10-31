@@ -53,7 +53,7 @@ internal class GamesViewModel @AssistedInject constructor(
 
     private val me = localPlayerProvider.localPlayer()
 
-    private val games = listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.HigherLower(res), GameVO.BuildItem(res), GameVO.Apm(res), GameVO.XO(res))
+    private val games = listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.HigherLower(res), GameVO.BuildItem(res), GameVO.Mid(res), GameVO.XO(res))
 
     private val party = Party(
         me,

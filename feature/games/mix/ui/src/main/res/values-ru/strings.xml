@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="one_player">1 игрок</string>
-    <string name="two_players">2 игрока</string>
     <string name="guess_hero">Угадай героя</string>
     <string name="higher_lower">Больше или меньше</string>
     <string name="build_item">Собери предмет</string>
-    <string name="kill_creep">Добей крипа</string>
-    <string name="creep_early">рано ❌</string>
     <string name="build_pick">выберите компонентов: %d</string>
     <string name="build_button">Собрать</string>
     <string name="build_recipe">рецепт</string>
@@ -31,7 +27,6 @@
     <string name="end_win">Победа</string>
     <string name="end_lose">Поражение</string>
     <string name="end_draw">Ничья</string>
-    <string name="end_score">Счёт: %d</string>
     <string name="end_shared_score">Общий счёт: %d</string>
     <string name="end_peer_left">Соперник вышел</string>
     <string name="end_new_record">Новый рекорд!</string>
@@ -50,11 +45,6 @@
     <string name="game_question_mana">Сколько маны стоит?</string>
     <string name="game_question_hero">Кто это?</string>
     <string name="game_spell_level">уровень</string>
-    <string name="creep_gold">%d золота</string>
-    <string name="creep_hint">Нажимай, когда полоска стала жёлтой</string>
-    <string name="game_time_label">время</string>
-    <string name="creep_kills_label">добито крипов</string>
-    <string name="creep_lost_label">упущено союзникам</string>
     <string name="end_again">Ещё раз</string>
     <string name="end_again_with">Ещё раз с %s</string>
     <string name="end_other_game">Другая игра</string>
@@ -65,7 +55,6 @@
     <string name="games_rules_hero">угадай героя по картинке</string>
     <string name="games_rules_compare">у кого больше HP, урона, брони</string>
     <string name="games_rules_build">выбери компоненты рецепта</string>
-    <string name="games_rules_creep">добивай крипов вовремя</string>
     <string name="games_rules_xo">классика на двоих</string>
     <string name="games_rules_buy">хватит ли золота на предмет</string>
     <string name="party_alone">Рядом пока никого</string>
@@ -99,7 +88,6 @@
     <string name="party_no_address">Нет Wi-Fi сети: подключитесь к ней, чтобы играть по адресу</string>
     <string name="party_enter_address">Или введите адрес друга</string>
     <string name="party_connect">Подключиться</string>
-    <string name="party_play_solo">Играть одному</string>
     <string name="game_streak">серия %d</string>
     <string name="end_stat_correct">верно</string>
     <string name="end_stat_accuracy">точность</string>
@@ -108,4 +96,47 @@
     <string name="end_seconds">%.1f с</string>
     <string name="game_starts_in">Старт через</string>
     <string name="party_connecting_plain">Подключаемся…</string>
+    <string name="mid">Мид</string>
+    <string name="games_rules_mid">Дуэль на линии: добивай и денай</string>
+    <string name="mid_pick_hint">У ближнего героя удар приходит сразу после замаха, у дальнего ещё летит снаряд. Бей заранее.</string>
+    <string name="mid_melee">ближний</string>
+    <string name="mid_ranged">дальний</string>
+    <string name="mid_damage">урон</string>
+    <string name="mid_swing">замах</string>
+    <string name="mid_projectile">снаряд</string>
+    <string name="mid_no_projectile">нет</string>
+    <string name="mid_seconds">%s с</string>
+    <string name="mid_vs_bot">Против бота</string>
+    <string name="mid_training">Тренировка</string>
+    <string name="mid_level_easy">лёгкий</string>
+    <string name="mid_level_medium">средний</string>
+    <string name="mid_level_pro">про</string>
+    <string name="mid_rules_line">5 волн, около 2 минут. Счёт: добито + денай.</string>
+    <string name="mid_training_hint">Без соперника: крипы, которых достаёт твой удар, приподнимаются. Учись попадать в момент.</string>
+    <string name="mid_peer_picking">%s выбирает героя</string>
+    <string name="mid_peer_ready">%1$s готов: %2$s</string>
+    <string name="mid_versus_hint">Вы за Свет и Тьму: добивайте чужих крипов и денайте своих.</string>
+    <string name="mid_coop_hint">Вы оба за Свет против бота.</string>
+    <string name="mid_go">На линию</string>
+    <string name="mid_ready">Готов</string>
+    <string name="mid_waiting">Ждём %s</string>
+    <string name="mid_wave">волна %1$d из %2$d</string>
+    <string name="mid_you">Вы</string>
+    <string name="mid_team">Вы и %s</string>
+    <string name="mid_fb_last_hit">Добито: +%d золота</string>
+    <string name="mid_fb_deny">Денай!</string>
+    <string name="mid_fb_early">Рано на %1$s с: у крипа было %2$d HP</string>
+    <string name="mid_fb_late">Поздно на %s с</string>
+    <string name="mid_fb_taken">%s был быстрее</string>
+    <string name="mid_fb_canceled">Замах отменён</string>
+    <string name="mid_hint">тап по крипу — удар · тап по себе — отменить замах</string>
+    <string name="mid_float_deny">денай</string>
+    <string name="mid_float_miss">мимо</string>
+    <string name="mid_float_other_deny">%s: денай</string>
+    <string name="mid_end_training">Тренировка окончена</string>
+    <string name="mid_gold">%d золота</string>
+    <string name="mid_stat_accuracy">точность</string>
+    <string name="mid_stat_early">рано</string>
+    <string name="mid_stat_late">поздно</string>
+    <string name="mid_stat_error">мимо в среднем</string>
 </resources>

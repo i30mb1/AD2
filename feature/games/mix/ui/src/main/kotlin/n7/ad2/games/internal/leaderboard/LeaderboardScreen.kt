@@ -73,7 +73,7 @@ internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onGame: (Strin
         Text(stringResource(R.string.leaderboard_title), color = AppTheme.color.textColor, fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
         Spacer(Modifier.height(14.dp))
         GameChips(
-            items = listOf(stringResource(R.string.spell_cost), stringResource(R.string.guess_hero), stringResource(R.string.higher_lower), stringResource(R.string.build_item), stringResource(R.string.kill_creep)),
+            items = listOf(stringResource(R.string.spell_cost), stringResource(R.string.guess_hero), stringResource(R.string.higher_lower), stringResource(R.string.build_item), stringResource(R.string.mid)),
             selected = LeaderboardViewModel.State.GAMES.indexOf(state.gameId),
             onSelect = { onGame(LeaderboardViewModel.State.GAMES[it]) },
         )

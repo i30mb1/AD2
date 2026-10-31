@@ -1,7 +1,8 @@
-package n7.ad2.games.internal.games.killCreep.compose
+package n7.ad2.games.internal.paper
 
 import androidx.compose.ui.graphics.Color
-import n7.ad2.games.internal.games.killCreep.CreepType
+import n7.ad2.games.internal.games.mid.CreepType
+import n7.ad2.games.internal.games.mid.Side
 
 /** Прямоугольник, в который помещается деталь (в координатах её рамки) */
 internal data class PartBounds(val left: Float, val top: Float, val right: Float, val bottom: Float)
@@ -70,41 +71,58 @@ internal object PaperColors {
     val Ink = Color(0xFF1A1514)
 }
 
-/** Палитра Dire: игрок добивает вражеских крипов. У мега-крипа золотой доспех */
+/** Палитра стороны: Dire - красная броня и рыжие глаза, Radiant - зелёная броня и светлые глаза */
 private class Palette(
-    val armor: Color = Color(0xFF7A2E26),
-    val dark: Color = Color(0xFF3E1A17),
-    val shield: Color = Color(0xFF4A4E54),
-    val rim: Color = Color(0xFFB0352A),
-    val emblem: Color = Color(0xFFE9D8A6),
+    val armor: Color,
+    val dark: Color,
+    val rim: Color,
+    val eye: Color,
+    val robe: Color,
+    val banner: Color,
 ) {
-    val eye = Color(0xFFFF6A3D)
+    val shield = Color(0xFF4A4E54)
+    val emblem = Color(0xFFE9D8A6)
     val bone = Color(0xFFE9D8A6)
     val metal = Color(0xFF9AA0A6)
     val wood = Color(0xFF5A3A22)
-    val banner = Color(0xFF8E2B23)
     val orb = Color(0xFFC77DFF)
-    val robe = Color(0xFF6B2C3A)
 }
 
-/** Бумажные крипы Dire: ближний, дальний, катапульта, знаменосец, мега */
+/** Бумажные крипы обеих сторон: ближний, дальний и катапульта */
 internal object PaperCreeps {
 
-    private val dire = Palette()
-    private val mega = Palette(armor = Color(0xFFD9A441), dark = Color(0xFF7A5A1C), shield = Color(0xFFB8862B), emblem = Color(0xFFB0352A))
-
-    private val figures: Map<CreepType, PaperFigure> = mapOf(
-        CreepType.MELEE to melee(dire, crown = false),
-        CreepType.RANGED to ranged(dire),
-        CreepType.SIEGE to siege(dire),
-        CreepType.FLAG to flag(dire),
-        CreepType.MEGA to melee(mega, crown = true),
+    private val palettes = mapOf(
+        Side.DIRE to Palette(
+            armor = Color(0xFF7A2E26),
+            dark = Color(0xFF3E1A17),
+            rim = Color(0xFFB0352A),
+            eye = Color(0xFFFF6A3D),
+            robe = Color(0xFF6B2C3A),
+            banner = Color(0xFF8E2B23),
+        ),
+        Side.RADIANT to Palette(
+            armor = Color(0xFF2F6B3A),
+            dark = Color(0xFF173A20),
+            rim = Color(0xFF4FA35A),
+            eye = Color(0xFFBFF5FF),
+            robe = Color(0xFF2E5C55),
+            banner = Color(0xFF2E7A3E),
+        ),
     )
 
-    fun figure(type: CreepType): PaperFigure = figures.getValue(type)
+    private val figures: Map<Pair<CreepType, Side>, PaperFigure> = Side.entries.flatMap { side ->
+        val p = palettes.getValue(side)
+        listOf(
+            (CreepType.MELEE to side) to melee(p),
+            (CreepType.RANGED to side) to ranged(p),
+            (CreepType.SIEGE to side) to siege(p),
+        )
+    }.toMap()
 
-    private fun melee(p: Palette, crown: Boolean) = PaperFigure(
-        body = listOfNotNull(
+    fun figure(type: CreepType, side: Side): PaperFigure = figures.getValue(type to side)
+
+    private fun melee(p: Palette) = PaperFigure(
+        body = listOf(
             PaperPath("M72 14 L79 16 L75 64 L69 64 Z", p.metal),
             PaperRect(40f, 72f, 9f, 17f, 2f, p.dark),
             PaperRect(54f, 72f, 9f, 17f, 2f, p.dark),
@@ -112,7 +130,6 @@ internal object PaperCreeps {
             PaperPath("M38 46 Q37 24 51 21 Q65 24 64 46 Z", p.armor),
             PaperPath("M41 32 Q24 26 26 10 Q32 22 45 27 Z", p.bone),
             PaperPath("M61 32 Q78 26 76 10 Q70 22 57 27 Z", p.bone),
-            if (crown) PaperPath("M38 22 L42 10 L47 18 L51 6 L55 18 L60 10 L64 22 Z", PaperColors.Gold) else null,
             PaperCircle(29f, 62f, 17f, p.shield),
         ),
         details = listOf(
@@ -165,28 +182,7 @@ internal object PaperCreeps {
             PaperRect(46f, 48f, 4f, 24f, 0f, p.wood),
             PaperCircle(29f, 76f, 4.5f, p.metal),
             PaperCircle(67f, 76f, 4.5f, p.metal),
-            PaperCircle(65f, 62f, 4f, p.emblem),
-        ),
-    )
-
-    private fun flag(p: Palette) = PaperFigure(
-        body = listOf(
-            PaperPath("M34 10 L82 14 L70 27 L82 41 L34 43 Z", p.banner),
-            PaperRect(28f, 4f, 7f, 86f, 3f, p.wood),
-            PaperRect(46f, 76f, 8f, 14f, 2f, p.dark),
-            PaperRect(58f, 76f, 8f, 14f, 2f, p.dark),
-            PaperPath("M38 82 Q36 60 46 54 L66 54 Q76 60 74 82 Z", p.armor),
-            PaperPath("M45 56 Q44 40 56 38 Q68 40 67 56 Z", p.armor),
-            PaperPath("M47 46 Q36 42 37 32 Q41 40 50 43 Z", p.bone),
-            PaperPath("M65 46 Q76 42 75 32 Q71 40 62 43 Z", p.bone),
-        ),
-        details = listOf(
-            PaperCircle(56f, 27f, 7f, p.emblem),
-            PaperRect(49f, 45f, 14f, 4f, 2f, PaperColors.Ink),
-            PaperCircle(53f, 47f, 1.4f, p.eye),
-            PaperCircle(59f, 47f, 1.4f, p.eye),
-            PaperRect(34f, 62f, 10f, 5f, 2f, p.armor),
-            PaperRect(40f, 68f, 34f, 4f, 1.5f, p.wood),
+            PaperCircle(65f, 62f, 4f, p.banner),
         ),
     )
 }

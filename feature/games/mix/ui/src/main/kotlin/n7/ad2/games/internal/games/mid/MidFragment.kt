@@ -1,4 +1,4 @@
-package n7.ad2.games.internal.games.killCreep
+package n7.ad2.games.internal.games.mid
 
 import android.content.Context
 import android.os.Bundle
@@ -11,26 +11,27 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import javax.inject.Inject
 import kotlinx.coroutines.launch
 import n7.ad2.android.findDependencies
 import n7.ad2.core.ui.content
 import n7.ad2.games.internal.di.DaggerGamesComponent
-import n7.ad2.games.internal.games.killCreep.compose.KillCreepScreen
+import n7.ad2.games.internal.games.mid.compose.MidActions
+import n7.ad2.games.internal.games.mid.compose.MidScreen
 import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
-import javax.inject.Inject
 
-internal class KillCreepFragment : Fragment() {
+internal class MidFragment : Fragment() {
 
     companion object {
         private const val ARG_MODE = "mode"
 
-        fun getInstance(mode: GameMode = GameMode.SOLO) = KillCreepFragment().apply { arguments = bundleOf(ARG_MODE to mode.name) }
+        fun getInstance(mode: GameMode = GameMode.SOLO) = MidFragment().apply { arguments = bundleOf(ARG_MODE to mode.name) }
     }
 
-    @Inject lateinit var killCreepViewModelFactory: KillCreepViewModel.Factory
-    private val viewModel: KillCreepViewModel by viewModel {
-        killCreepViewModelFactory.create(GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)))
+    @Inject lateinit var midViewModelFactory: MidViewModel.Factory
+    private val viewModel: MidViewModel by viewModel {
+        midViewModelFactory.create(GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)))
     }
 
     override fun onAttach(context: Context) {
@@ -39,7 +40,22 @@ internal class KillCreepFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        KillCreepScreen(viewModel.state.collectAsState().value, viewModel.sim, viewModel::elapsedMs, viewModel::countdown, viewModel::onTap, viewModel::again, viewModel::otherGame)
+        MidScreen(
+            state = viewModel.state.collectAsState().value,
+            sim = viewModel.sim,
+            elapsedMs = viewModel::elapsedMs,
+            countdown = viewModel::countdown,
+            actions = MidActions(
+                onPickHero = viewModel::pickHero,
+                onPickLevel = viewModel::pickLevel,
+                onPickTraining = viewModel::pickTraining,
+                onReady = viewModel::ready,
+                onCreepTap = viewModel::onCreepTap,
+                onHeroTap = viewModel::onHeroTap,
+                onAgain = viewModel::again,
+                onOtherGame = viewModel::otherGame,
+            ),
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

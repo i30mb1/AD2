@@ -1,33 +1,38 @@
 import com.google.common.truth.Truth
-import n7.ad2.games.internal.games.killCreep.CreepType
-import n7.ad2.games.internal.games.killCreep.compose.PaperCreeps
-import n7.ad2.games.internal.games.killCreep.compose.PaperLane
-import n7.ad2.games.internal.games.killCreep.compose.PaperLook
-import n7.ad2.games.internal.games.killCreep.compose.PaperPart
+import n7.ad2.games.internal.games.mid.CreepType
+import n7.ad2.games.internal.games.mid.Side
+import n7.ad2.games.internal.paper.PaperCreeps
+import n7.ad2.games.internal.paper.PaperLane
+import n7.ad2.games.internal.paper.PaperLook
+import n7.ad2.games.internal.paper.PaperPart
 import org.junit.Test
 
 internal class PaperArtTest {
 
     @Test
-    fun `every creep type has a paper figure`() {
+    fun `every creep type has a paper figure on both sides`() {
         for (type in CreepType.entries) {
-            val figure = PaperCreeps.figure(type)
-            Truth.assertWithMessage("$type body").that(figure.body).isNotEmpty()
-            Truth.assertWithMessage("$type details").that(figure.details).isNotEmpty()
+            for (side in Side.entries) {
+                val figure = PaperCreeps.figure(type, side)
+                Truth.assertWithMessage("$type $side body").that(figure.body).isNotEmpty()
+                Truth.assertWithMessage("$type $side details").that(figure.details).isNotEmpty()
+            }
         }
     }
 
     @Test
     fun `creep figures fit their 100x100 frame`() {
         for (type in CreepType.entries) {
-            val figure = PaperCreeps.figure(type)
-            (figure.body + figure.details).forEach { part -> assertInside(part, 100f, 100f, "$type") }
+            for (side in Side.entries) {
+                val figure = PaperCreeps.figure(type, side)
+                (figure.body + figure.details).forEach { part -> assertInside(part, 100f, 100f, "$type $side") }
+            }
         }
     }
 
     @Test
-    fun `mega creep is not drawn as a plain melee creep`() {
-        Truth.assertThat(PaperCreeps.figure(CreepType.MEGA)).isNotEqualTo(PaperCreeps.figure(CreepType.MELEE))
+    fun `Radiant and Dire creeps are cut from different paper`() {
+        Truth.assertThat(PaperCreeps.figure(CreepType.MELEE, Side.RADIANT)).isNotEqualTo(PaperCreeps.figure(CreepType.MELEE, Side.DIRE))
     }
 
     @Test
@@ -36,7 +41,7 @@ internal class PaperArtTest {
     }
 
     @Test
-    fun `killable creep gets a gold edge and lifts off the field`() {
+    fun `a creep in reach of a hit gets a gold edge and lifts off the field`() {
         val normal = PaperLook.of(killable = false)
         val killable = PaperLook.of(killable = true)
 

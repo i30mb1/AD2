@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import n7.ad2.games.internal.ActiveRoom
-import n7.ad2.games.internal.games.killCreep.KillCreepViewModel
+import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LocalPlayerProvider
@@ -56,7 +56,7 @@ internal class LeaderboardViewModel @AssistedInject constructor(
     @Immutable
     data class State(val gameId: String, val mode: GameMode, val records: List<Record>, val myId: String, val online: Set<String>) {
         companion object {
-            val GAMES = listOf(SkillGameViewModel.GAME_ID, SkillGameViewModel.HERO_GAME_ID, SkillGameViewModel.COMPARE_GAME_ID, SkillGameViewModel.BUILD_GAME_ID, KillCreepViewModel.GAME_ID)
+            val GAMES = listOf(SkillGameViewModel.GAME_ID, SkillGameViewModel.HERO_GAME_ID, SkillGameViewModel.COMPARE_GAME_ID, SkillGameViewModel.BUILD_GAME_ID, MidViewModel.GAME_ID)
         }
     }
 }

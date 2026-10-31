@@ -25,8 +25,8 @@ import n7.ad2.core.ui.content
 import n7.ad2.games.internal.compose.GamesScreen
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
-import n7.ad2.games.internal.games.killCreep.KillCreepFragment
-import n7.ad2.games.internal.games.killCreep.KillCreepViewModel
+import n7.ad2.games.internal.games.mid.MidFragment
+import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.room.GameMode
@@ -90,7 +90,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
     }
 
     private fun gameFragment(gameId: String, mode: GameMode): Fragment =
-        if (gameId == KillCreepViewModel.GAME_ID) KillCreepFragment.getInstance(mode) else SkillGameFragment.getInstance(mode, gameId)
+        if (gameId == MidViewModel.GAME_ID) MidFragment.getInstance(mode) else SkillGameFragment.getInstance(mode, gameId)
 
     private fun onLeaderboardClicked() = open(LeaderboardFragment())
 

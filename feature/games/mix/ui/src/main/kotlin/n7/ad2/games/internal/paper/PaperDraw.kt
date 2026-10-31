@@ -1,4 +1,4 @@
-package n7.ad2.games.internal.games.killCreep.compose
+package n7.ad2.games.internal.paper
 
 import android.graphics.BlurMaskFilter
 import androidx.compose.animation.animateColorAsState
@@ -31,7 +31,8 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlin.math.max
-import n7.ad2.games.internal.games.killCreep.CreepType
+import n7.ad2.games.internal.games.mid.CreepType
+import n7.ad2.games.internal.games.mid.Side
 
 /** Деталь вместе с готовым контуром: контуры строятся один раз, а рисуются каждый кадр */
 private class Piece(val part: PaperPart, val path: Path)
@@ -91,9 +92,9 @@ private fun shadowPaint() = Paint().apply { color = Color.Black.copy(alpha = 0.5
 
 /** Бумажный крип: когда его можно добить, кромка золотеет, а сам он приподнимается над полем и наклоняется */
 @Composable
-internal fun PaperCreep(type: CreepType, killable: Boolean, modifier: Modifier = Modifier) {
-    val body = remember(type) { PaperCreeps.figure(type).body.toPieces() }
-    val details = remember(type) { PaperCreeps.figure(type).details.toPieces() }
+internal fun PaperCreep(type: CreepType, side: Side, killable: Boolean, modifier: Modifier = Modifier) {
+    val body = remember(type, side) { PaperCreeps.figure(type, side).body.toPieces() }
+    val details = remember(type, side) { PaperCreeps.figure(type, side).details.toPieces() }
     val shadow = remember { shadowPaint() }
     val look = PaperLook.of(killable)
     val edge by animateColorAsState(look.edge)
@@ -136,7 +137,9 @@ internal fun PaperLaneBackground(modifier: Modifier = Modifier) {
 @Composable
 private fun PaperCreepsPreview() {
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        CreepType.entries.forEach { PaperCreep(it, killable = it == CreepType.RANGED, Modifier.size(72.dp)) }
+        Side.entries.forEach { side ->
+            CreepType.entries.forEach { PaperCreep(it, side, killable = it == CreepType.RANGED, Modifier.size(72.dp)) }
+        }
     }
 }
 

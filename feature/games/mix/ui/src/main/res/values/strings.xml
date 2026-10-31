@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="one_player">1 player</string>
-    <string name="two_players">2 players</string>
     <string name="spell_cost" translatable="false">Spell Cost</string>
-    <string name="apm" translatable="false">APM</string>
     <string name="can_you_buy_it" translatable="false">Buy it?</string>
     <string name="xo" translatable="false">XO</string>
     <string name="guess_hero">Guess the Hero</string>
     <string name="higher_lower">Higher or Lower</string>
     <string name="build_item">Build the Item</string>
-    <string name="kill_creep">Last Hit</string>
-    <string name="creep_early">early ❌</string>
     <string name="build_pick">pick %d components</string>
     <string name="build_button">Build</string>
     <string name="build_recipe">recipe</string>
@@ -35,7 +30,6 @@
     <string name="end_win">Victory</string>
     <string name="end_lose">Defeat</string>
     <string name="end_draw">Draw</string>
-    <string name="end_score">Score: %d</string>
     <string name="end_shared_score">Shared score: %d</string>
     <string name="end_peer_left">The opponent left</string>
     <string name="end_new_record">New record!</string>
@@ -52,11 +46,6 @@
     <string name="game_question_mana">How much mana does it cost?</string>
     <string name="game_question_hero">Who is this?</string>
     <string name="game_spell_level">level</string>
-    <string name="creep_gold">%d gold</string>
-    <string name="creep_hint">Tap when the bar turns yellow</string>
-    <string name="game_time_label">time</string>
-    <string name="creep_kills_label">creeps killed</string>
-    <string name="creep_lost_label">lost to allies</string>
     <string name="end_again">Play again</string>
     <string name="end_again_with">Again with %s</string>
     <string name="end_other_game">Another game</string>
@@ -67,7 +56,6 @@
     <string name="games_rules_hero">guess the hero by the picture</string>
     <string name="games_rules_compare">who has more HP, damage, armor</string>
     <string name="games_rules_build">pick the parts of a recipe</string>
-    <string name="games_rules_creep">last-hit creeps in time</string>
     <string name="games_rules_xo">classic for two</string>
     <string name="games_rules_buy">enough gold for the item?</string>
     <string name="party_alone">Nobody nearby yet</string>
@@ -101,7 +89,6 @@
     <string name="party_no_address">No Wi-Fi network: connect to one to play by address</string>
     <string name="party_enter_address">Or enter your friend\'s address</string>
     <string name="party_connect">Connect</string>
-    <string name="party_play_solo">Play alone</string>
     <string name="game_streak">streak %d</string>
     <string name="end_stat_correct">correct</string>
     <string name="end_stat_accuracy">accuracy</string>
@@ -110,4 +97,47 @@
     <string name="end_seconds">%.1f s</string>
     <string name="game_starts_in">Starts in</string>
     <string name="party_connecting_plain">Connecting…</string>
+    <string name="mid">Mid</string>
+    <string name="games_rules_mid">Lane duel: last hit and deny</string>
+    <string name="mid_pick_hint">A melee hero hits right after the swing, for a ranged one the projectile still has to fly. Hit ahead of time.</string>
+    <string name="mid_melee">melee</string>
+    <string name="mid_ranged">ranged</string>
+    <string name="mid_damage">damage</string>
+    <string name="mid_swing">swing</string>
+    <string name="mid_projectile">projectile</string>
+    <string name="mid_no_projectile">none</string>
+    <string name="mid_seconds">%s s</string>
+    <string name="mid_vs_bot">Against a bot</string>
+    <string name="mid_training">Training</string>
+    <string name="mid_level_easy">easy</string>
+    <string name="mid_level_medium">medium</string>
+    <string name="mid_level_pro">pro</string>
+    <string name="mid_rules_line">5 waves, about 2 minutes. Score: last hits + denies.</string>
+    <string name="mid_training_hint">No opponent: creeps in reach of your hit are lifted, learn the timing.</string>
+    <string name="mid_peer_picking">%s is picking a hero</string>
+    <string name="mid_peer_ready">%1$s is ready: %2$s</string>
+    <string name="mid_versus_hint">You are Radiant or Dire, take enemy creeps and deny your own.</string>
+    <string name="mid_coop_hint">Both of you are Radiant against a bot.</string>
+    <string name="mid_go">To the lane</string>
+    <string name="mid_ready">Ready</string>
+    <string name="mid_waiting">Waiting for %s</string>
+    <string name="mid_wave">wave %1$d of %2$d</string>
+    <string name="mid_you">You</string>
+    <string name="mid_team">You and %s</string>
+    <string name="mid_fb_last_hit">Last hit: +%d gold</string>
+    <string name="mid_fb_deny">Denied!</string>
+    <string name="mid_fb_early">Early by %1$s s: the creep had %2$d HP</string>
+    <string name="mid_fb_late">Late by %s s</string>
+    <string name="mid_fb_taken">%s was faster</string>
+    <string name="mid_fb_canceled">Swing canceled</string>
+    <string name="mid_hint">tap a creep to hit · tap yourself to cancel the swing</string>
+    <string name="mid_float_deny">deny</string>
+    <string name="mid_float_miss">miss</string>
+    <string name="mid_float_other_deny">%s: deny</string>
+    <string name="mid_end_training">Training is over</string>
+    <string name="mid_gold">%d gold</string>
+    <string name="mid_stat_accuracy">accuracy</string>
+    <string name="mid_stat_early">early</string>
+    <string name="mid_stat_late">late</string>
+    <string name="mid_stat_error">avg miss</string>
 </resources>
