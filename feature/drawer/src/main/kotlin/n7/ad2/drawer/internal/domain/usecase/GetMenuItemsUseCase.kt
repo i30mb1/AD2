@@ -32,7 +32,7 @@ internal class GetMenuItemsUseCase @Inject constructor(
         Menu(VOMenuType.NEWS),
         Menu(VOMenuType.TOURNAMENTS),
         Menu(VOMenuType.STREAMS),
-        Menu(VOMenuType.GAMES, false),
+        Menu(VOMenuType.GAMES),
     )
 
     operator fun invoke(): Flow<List<VOMenu>> = flow {
