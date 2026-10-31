@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Игры: новые картинки (обложки и крипы)</title>
+<style>
+  :root { --bg:#202227; --surface:#2e3036; --text:#f1f1f1; --muted:#9a9ca3; --gold:#ffd166; --blue:#448aff; --red:#f44336; }
+  body { margin:0; padding:32px; background:#16171b; color:var(--text); font-family: system-ui, Roboto, sans-serif; }
+  h1 { font-size:24px; margin:0 0 4px } h2 { font-size:18px; margin:40px 0 6px } .muted { color:var(--muted); font-size:14px }
+  .row { display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start; margin-top:16px }
+  .phone { width:360px; background:var(--bg); border-radius:28px; padding:18px 14px; box-shadow:0 10px 40px #0008 }
+  .title { font-size:26px; font-weight:700; margin:4px 4px 14px }
+  .card { display:flex; align-items:center; gap:14px; background:var(--surface); border-radius:16px; padding:10px; margin-bottom:10px }
+  .card b { display:block; font-size:16px } .card span { color:var(--muted); font-size:13px }
+  .cover { position:relative; width:76px; height:76px; border-radius:14px; overflow:hidden; flex:none; background:#111 }
+  .cover img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
+  .badge { position:absolute; display:flex; align-items:center; justify-content:center; font-weight:800 }
+  .big .cover { width:150px; height:150px; border-radius:22px }
+  .gallery { display:flex; gap:18px; flex-wrap:wrap }
+  .gallery figure { margin:0; text-align:center; font-size:13px; color:var(--muted) }
+  .gallery figcaption { margin-top:8px }
+  .sprites { display:flex; gap:26px; flex-wrap:wrap; align-items:flex-end }
+  .sprite { text-align:center; font-size:13px; color:var(--muted) }
+  .sprite svg { display:block; margin:0 auto 6px; image-rendering:pixelated }
+  .field { position:relative; width:332px; height:420px; border-radius:16px; overflow:hidden; margin-top:10px }
+  .field > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.55) saturate(.8) }
+  .unit { position:absolute; text-align:center }
+  .hp { width:46px; height:6px; background:#111; margin:0 auto 3px; position:relative }
+  .hp i { position:absolute; left:0; top:0; bottom:0; background:#e53935 } .hp em { position:absolute; top:0; bottom:0; width:2px; background:var(--gold) }
+  .glow { filter: drop-shadow(0 0 6px #ffd166) drop-shadow(0 0 10px #ffd16688) }
+  .note { background:#2a2c33; border-left:3px solid var(--blue); padding:10px 14px; border-radius:6px; font-size:14px; max-width:760px; margin-top:12px; line-height:1.5 }
+  .pixel-old img { width:64px; height:64px; image-rendering:pixelated }
+</style>
+</head>
+<body>
+<h1>Игры: новые картинки</h1>
+<div class="muted">Обложки собраны из картинок самой Доты, которые уже лежат в приложении (портреты героев, иконки способностей и предметов). Крипы нарисованы в том же пиксельном стиле, что и уже существующие спрайты приложения.</div>
+
+<h2>1. Обложки игр в списке</h2>
+<div class="muted">Каждая обложка говорит, о чём игра: способность с маной, размытый портрет героя, двое героев «кто сильнее», рецепт предмета, крип на дорожке, Свет против Тьмы.</div>
+<div class="row">
+  <div class="phone">
+    <div class="title">Игры</div>
+
+    <div class="card"><div class="cover" id="c-spell"></div><div><b>Spell Cost</b><span>сколько маны стоит способность</span></div></div>
+    <div class="card"><div class="cover" id="c-hero"></div><div><b>Угадай героя</b><span>угадай героя по картинке</span></div></div>
+    <div class="card"><div class="cover" id="c-compare"></div><div><b>Больше или меньше</b><span>у кого больше HP, урона, брони</span></div></div>
+    <div class="card"><div class="cover" id="c-build"></div><div><b>Собери предмет</b><span>выбери компоненты рецепта</span></div></div>
+    <div class="card"><div class="cover" id="c-creep"></div><div><b>Добей крипа</b><span>добивай крипов вовремя</span></div></div>
+    <div class="card"><div class="cover" id="c-xo"></div><div><b>XO</b><span>классика на двоих</span></div></div>
+  </div>
+
+  <div>
+    <div class="muted" style="margin-bottom:10px">Крупно (так же они будут на экране выбора игры вдвоём):</div>
+    <div class="gallery big" id="gallery"></div>
+  </div>
+</div>
+
+<h2>2. Крипы в «Добей крипа»</h2>
+<div class="muted">Сейчас крипы — эмодзи (👹 🏹 🛞 🚩 👑). Предлагаю пиксельные спрайты: пять типов, у каждого свой силуэт, чтобы с первого взгляда было ясно, кто сколько стоит.</div>
+<div class="row">
+  <div class="sprites" id="sprites"></div>
+</div>
+<div class="note">Уже есть в приложении и задают стиль: <span class="pixel-old"><img src="../../../app/src/main/res/drawable/creep.webp"> <img src="../../../app/src/main/res/drawable/creep2.webp"> <img src="../../../app/src/main/res/drawable/creep3.webp"></span><br>
+Ближний крип берётся как есть (первый), остальные рисую в его палитре. В приложение спрайты пойдут векторами (VectorDrawable из квадратиков), они не мылятся на любом размере.</div>
+
+<h2>3. Поле «Добей крипа»</h2>
+<div class="muted">Вместо зелёной заливки — затемнённая дорожка Доты; добиваемый крип подсвечен золотом, как сейчас.</div>
+<div class="row">
+  <div class="phone"><div class="field" id="field"><img src="../../../feature/games/mix/ui/src/main/res/drawable/background_apm.webp"></div></div>
+</div>
+
+<h2>Что поменяется в коде</h2>
+<div class="note">
+• Обложки — composable-слои из картинок в ассетах приложения (герои, предметы, способности), а не две общие картинки на все игры.<br>
+• Крипы — 5 векторных пиксельных спрайтов вместо эмодзи; размер и хитбокс остаются прежними.<br>
+• Поле — фон дорожки с затемнением.<br>
+• Новых картинок из интернета не тяну: только то, что уже лежит в репозитории.
+</div>
+
+<script>
+const A = '../../../core/database/src/main/assets/';
+const img = (src, style='') => `<img src="${A}${src}" style="${style}">`;
+
+const covers = {
+  spell: () => `${img('images/black_hole.webp')}
+    <div class="badge" style="right:5px;bottom:5px;width:30%;height:30%;border-radius:50%;background:#1e5bd8;border:2px solid #9cc4ff;font-size:13px;color:#fff;box-shadow:0 0 8px #3d8bff">?</div>`,
+  hero: () => `${img('heroes/invoker/full.webp','filter:blur(3px) brightness(.55) saturate(1.3);transform:scale(1.3)')}
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%, #0000 30%, #0d1420cc 100%)"></div>
+    <div class="badge" style="inset:0;font-size:34px;color:#cfe9ff;text-shadow:0 0 10px #6fd0ff">?</div>`,
+  compare: () => `<img src="${A}heroes/juggernaut/full.webp" style="clip-path:polygon(0 0,60% 0,40% 100%,0 100%);object-position:30% 50%">
+    <img src="${A}heroes/pudge/full.webp" style="clip-path:polygon(60% 0,100% 0,100% 100%,40% 100%);object-position:70% 50%">
+    <div class="badge" style="left:50%;top:50%;transform:translate(-50%,-50%);width:34%;height:24%;border-radius:8px;background:#000c;border:1px solid #ffd166;color:#ffd166;font-size:12px">VS</div>`,
+  build: () => `<div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, #4a3a1a, #15120b 75%)"></div>
+    ${img('items/black_king_bar/full.webp','width:62%;height:auto;left:19%;top:10%;border-radius:6px;box-shadow:0 0 12px #ffd16699')}
+    ${img('items/ogre_axe/full.webp','width:30%;height:auto;left:6%;top:auto;bottom:7%;border-radius:4px')}
+    ${img('items/mithril_hammer/full.webp','width:30%;height:auto;left:auto;right:6%;top:auto;bottom:7%;border-radius:4px')}
+    <div class="badge" style="left:44%;bottom:12%;width:12%;color:#ffd166;font-size:14px">+</div>`,
+  creep: () => `<img src="../../../feature/games/mix/ui/src/main/res/drawable/background_apm.webp" style="object-position:30% 70%;filter:brightness(.6)">
+    <div style="position:absolute;left:18%;top:20%;width:64%;height:64%" class="glow">${sprite('melee', 1, true)}</div>
+    <div class="badge" style="right:4px;top:4px;padding:1px 5px;border-radius:6px;background:#000b;color:#ffd166;font-size:11px">+38</div>`,
+  xo: () => `<div style="position:absolute;inset:0;background:linear-gradient(135deg,#1f4d2b 0 50%,#4d1f1f 50% 100%)"></div>
+    <div style="position:absolute;inset:12%;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">${
+      ['X','O','','','X','O','O','','X'].map(c => `<div style="background:#0006;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:${c==='X'?'#7fe08a':'#ff8a80'}">${c}</div>`).join('')
+    }</div>`,
+};
+
+// пиксельные спрайты 16x16: символ -> цвет, '.' прозрачно
+const PAL = { G:'#3a7d2c', g:'#2a5c20', K:'#1d2b1a', B:'#7ab8ff', S:'#8b5a2b', b:'#2f5fae', W:'#e6c35c', n:'#5b3a1e', O:'#6ff3ff', Y:'#ffffff',
+              s:'#9aa0a6', d:'#6b7178', w:'#8b5a2b', T:'#c9a24a', R:'#5b3a1e', k:'#2a1a0e', F:'#2e8b3e', p:'#6d4321', A:'#d9a627', a:'#a87a12', r:'#ff5252', h:'#e8dcc0' };
+const MAPS = {
+  ranged: [
+    '..........O.....','.........OYO....','..........O.....','....GGGG..S.....','...GGGGGG.S.....','...GKKKKG.S.....','...GKBKBG.S.....','...GKKKKG.S.....',
+    '....GGGG..S.....','...bbbbbbbS.....','..bbbbbbbbS.....','..bbWbbWbbS.....','..bbbbbbbb......','...bbbbbb.......','...nn..nn.......','...nn..nn.......'],
+  siege: [
+    '................','..........ss....','.........sdds...','..........ss....','.........w......','........w.......','.......w........','..wwwwwwwwwwww..',
+    '..wTTTTTTTTTTw..','..wwwwwwwwwwww..','...RR......RR...','..RkkR....RkkR..','..RkkR....RkkR..','...RR......RR...','................','................'],
+  flag: [
+    '..pFFFFFF.......','..pFFWWFF.......','..pFFWWFF.......','..pFFFFFF.......','..p.............','..p..GGGG.......','..p.GGGGGG......','..p.GKKKKG......',
+    '..p.GKBKBG......','..pgGKKKKG......','..p.ggGGgg......','..p.gggggg......','..p.ggWWgg......','..p.gggggg......','..p..nn.nn......','..p..nn.nn......'],
+  mega: [
+    '.....W.WW.W.....','.....WWWWWW.....','..h..AAAAAA..h..','...hAAAAAAAAh...','....AKKKKKKA....','....AKrKKrKA....','....AKKKKKKA....','.....AKKKKA.....',
+    '...aaaAAAAaaa...','..aaaaaWWaaaaa..','..aa.aaaaaa.aa..','..aa.aaaaaa.aa..','.....aaWWaa.....','.....aa..aa.....','.....nn..nn.....','....nnn..nnn....'],
+};
+function sprite(type, scale = 4, fill = false) {
+  if (type === 'melee') return `<img src="../../../app/src/main/res/drawable/creep.webp" style="${fill ? 'position:static;width:100%;height:100%' : `width:${16*scale}px;height:${16*scale}px`};image-rendering:pixelated">`;
+  const rows = MAPS[type];
+  let rects = '';
+  rows.forEach((row, y) => [...row].forEach((c, x) => { if (c !== '.') rects += `<rect x="${x}" y="${y}" width="1" height="1" fill="${PAL[c]}"/>`; }));
+  const size = fill ? 'width="100%" height="100%"' : `width="${16*scale}" height="${16*scale}"`;
+  return `<svg viewBox="0 0 16 16" ${size} shape-rendering="crispEdges">${rects}</svg>`;
+}
+
+for (const [id, html] of Object.entries(covers)) document.getElementById('c-' + id).innerHTML = html();
+const names = { spell:'Spell Cost', hero:'Угадай героя', compare:'Больше или меньше', build:'Собери предмет', creep:'Добей крипа', xo:'XO' };
+document.getElementById('gallery').innerHTML = Object.keys(covers).map(id => `<figure><div class="cover">${covers[id]()}</div><figcaption>${names[id]}</figcaption></figure>`).join('');
+
+const types = [['melee','Ближний · 38 🪙'],['ranged','Дальний · 45 🪙'],['siege','Катапульта · 70 🪙'],['flag','Знаменосец · 100 🪙'],['mega','Мега-крип · 200 🪙']];
+document.getElementById('sprites').innerHTML = types.map(([t, label]) => `<div class="sprite">${sprite(t, t === 'mega' ? 6 : t === 'siege' ? 5 : 4)}${label}</div>`).join('');
+
+const units = [['melee',40,80,.7,false],['ranged',200,60,.4,false],['siege',150,230,.85,false],['flag',60,300,.15,true],['mega',220,330,.9,false]];
+document.getElementById('field').innerHTML += units.map(([t,x,y,hp,glow]) =>
+  `<div class="unit" style="left:${x}px;top:${y}px"><div class="hp"><i style="width:${hp*100}%"></i><em style="left:${t==='siege'?4:11}%"></em></div><div class="${glow?'glow':''}">${sprite(t, t==='mega'?3.6:t==='siege'?3.2:2.8)}</div></div>`).join('');
+</script>
+</body>
+</html>
