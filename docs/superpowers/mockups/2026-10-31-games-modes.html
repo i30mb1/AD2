@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>AD2 — игры: режимы, лобби, рекорды</title>
+<style>
+  body { background:#111; color:#eee; font-family: Roboto, system-ui, sans-serif; margin:0; padding:24px; display:flex; gap:28px; flex-wrap:wrap; }
+  .phone { width:300px; height:640px; background:#212226; border-radius:28px; padding:18px 14px; box-sizing:border-box; position:relative; overflow:hidden; box-shadow:0 0 0 6px #000; }
+  h2 { font-size:13px; color:#888; text-transform:uppercase; letter-spacing:.08em; margin:0 0 6px; }
+  .caption { width:300px; font-size:12px; color:#aaa; margin-top:8px; }
+  .title { font-size:20px; font-weight:600; margin:6px 0 14px; }
+  .card { height:96px; border-radius:12px; background:linear-gradient(135deg,#4b2a2a,#2a3b4b); display:flex; align-items:center; justify-content:center; font-weight:600; margin-bottom:10px; position:relative; }
+  .badge { position:absolute; right:10px; bottom:8px; font-size:10px; background:#0008; padding:2px 6px; border-radius:6px; color:#ffd166; }
+  .sheet { position:absolute; left:0; right:0; bottom:0; background:#2c2d33; border-radius:20px 20px 0 0; padding:16px; }
+  .grip { width:36px; height:4px; background:#555; border-radius:2px; margin:0 auto 12px; }
+  .mode { display:flex; gap:12px; align-items:center; padding:12px; border-radius:12px; background:#35363d; margin-bottom:8px; }
+  .mode .ic { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; }
+  .mode b { display:block; font-size:14px; } .mode small { color:#999; font-size:11px; }
+  .red { background:#f44336; } .blue { background:#448aff; } .green { background:#43a047; }
+  .btn { display:block; text-align:center; padding:12px; border-radius:12px; font-weight:600; margin-top:8px; }
+  .ghost { background:#35363d; color:#ddd; }
+  .tabs { display:flex; background:#35363d; border-radius:10px; padding:3px; margin-bottom:14px; }
+  .tabs span { flex:1; text-align:center; padding:7px; font-size:12px; border-radius:8px; color:#aaa; }
+  .tabs .on { background:#f44336; color:#fff; }
+  .row { display:flex; align-items:center; gap:10px; padding:10px; border-radius:10px; background:#2c2d33; margin-bottom:6px; font-size:13px; }
+  .row .pos { width:20px; color:#888; } .row .sc { margin-left:auto; font-weight:700; }
+  .me { outline:1px solid #f44336; }
+  .dot { width:8px; height:8px; border-radius:50%; background:#43a047; }
+  .muted { color:#777; font-size:11px; }
+  .vs { display:flex; justify-content:space-between; align-items:center; margin:8px 0 16px; }
+  .player { text-align:center; font-size:12px; } .avatar { width:52px; height:52px; border-radius:50%; background:#35363d; margin:0 auto 6px; display:flex; align-items:center; justify-content:center; font-size:22px; }
+  .spell { width:120px; height:120px; border-radius:14px; margin:6px auto 4px; background:radial-gradient(circle at 30% 30%,#9cf,#236); }
+  .lvl { display:flex; gap:4px; justify-content:center; margin-bottom:12px; } .lvl i { width:18px; height:8px; background:#ffd600; }
+  .answers { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; }
+  .answers span { background:#35363d; text-align:center; padding:12px 0; border-radius:8px; font-weight:700; }
+  .score { display:flex; justify-content:space-between; font-size:22px; font-weight:700; }
+  .lives { text-align:center; font-size:18px; letter-spacing:4px; margin:6px 0; }
+</style>
+</head>
+<body>
+
+<div>
+<h2>1 · Список игр</h2>
+<div class="phone">
+  <div class="title">Игры</div>
+  <div class="card">Угадай стоимость спелла<span class="badge">🏆 рекорд 17</span></div>
+  <div class="card" style="background:linear-gradient(135deg,#2f3d2a,#3b2a4b)">APM · Kill Creep<span class="badge">🏆 рекорд 42</span></div>
+  <div class="card" style="background:linear-gradient(135deg,#3b3b2a,#2a2a4b)">Крестики-нолики</div>
+  <div class="btn ghost">🏆 Таблица рекордов</div>
+</div>
+<div class="caption">На карточке — личный рекорд. Внизу вход в общую таблицу.</div>
+</div>
+
+<div>
+<h2>2 · Выбор режима (bottom sheet)</h2>
+<div class="phone">
+  <div class="title" style="opacity:.3">Игры</div>
+  <div class="card" style="opacity:.3">Угадай стоимость спелла</div>
+  <div class="sheet">
+    <div class="grip"></div>
+    <div style="font-weight:600;margin-bottom:10px">Угадай стоимость спелла</div>
+    <div class="mode"><div class="ic red">👤</div><div><b>Соло</b><small>3 жизни, серия на рекорд</small></div></div>
+    <div class="mode"><div class="ic blue">⚔️</div><div><b>Против друга</b><small>одни вопросы, кто быстрее</small></div></div>
+    <div class="mode"><div class="ic green">🤝</div><div><b>Вместе</b><small>общие жизни и общий счёт</small></div></div>
+  </div>
+</div>
+<div class="caption">Сетевые режимы ведут в лобби (экран 3).</div>
+</div>
+
+<div>
+<h2>3 · Лобби</h2>
+<div class="phone">
+  <div class="title">Против друга</div>
+  <div class="tabs"><span class="on">Создать</span><span>Найти</span></div>
+  <div class="vs">
+    <div class="player"><div class="avatar">🙂</div>A024 (вы)</div>
+    <div class="muted">VS</div>
+    <div class="player"><div class="avatar" style="opacity:.4">?</div><span class="muted">ждём игрока…</span></div>
+  </div>
+  <div class="muted" style="margin-bottom:6px">Ваша игра видна в сети как <b style="color:#eee">A024</b> · 192.168.31.189:43905</div>
+  <div class="muted" style="margin:14px 0 6px">Найденные игры (вкладка «Найти»):</div>
+  <div class="row"><span class="dot"></span>Pixel 8 · Wi-Fi<span class="sc" style="font-weight:400;color:#448aff">Войти</span></div>
+  <div class="row"><span class="dot" style="background:#448aff"></span>Galaxy S24 · Wi-Fi Direct<span class="sc" style="font-weight:400;color:#448aff">Войти</span></div>
+  <div class="btn ghost" style="font-size:12px">Ввести адрес вручную</div>
+  <div class="btn red" style="position:absolute;left:14px;right:14px;bottom:18px;opacity:.4">Начать (ждём игрока)</div>
+</div>
+<div class="caption">Хост видит себя и пустой слот; гость выбирает игру из найденных (Wi-Fi и Wi-Fi Direct) или вводит ip:port. «Начать» активна у хоста, когда игрок подключился.</div>
+</div>
+
+<div>
+<h2>4 · Игра: против друга / вместе</h2>
+<div class="phone">
+  <div class="score"><span style="color:#f44336">3</span><span class="muted" style="align-self:center">раунд 5/10</span><span style="color:#448aff">2</span></div>
+  <div class="muted" style="display:flex;justify-content:space-between"><span>вы</span><span>Pixel 8 · ответил ✓</span></div>
+  <div class="spell" style="margin-top:110px"></div>
+  <div class="lvl"><i></i><i></i></div>
+  <div class="answers" style="position:absolute;left:14px;right:14px;bottom:24px"><span>40</span><span>30</span><span>20</span><span>50</span></div>
+</div>
+<div class="caption">Versus: счёт обоих сверху, видно, что соперник уже ответил. Coop: вместо счёта — общие жизни ❤️❤️🖤 и общий счётчик.</div>
+</div>
+
+<div>
+<h2>5 · Таблица рекордов</h2>
+<div class="phone">
+  <div class="title">Рекорды</div>
+  <div class="tabs"><span class="on">Спелл</span><span>APM</span></div>
+  <div class="tabs"><span class="on">Соло</span><span>Против</span><span>Вместе</span></div>
+  <div class="row"><span class="pos">1</span><span class="dot"></span>Pixel 8<span class="sc">24</span></div>
+  <div class="row me"><span class="pos">2</span>A024 (вы)<span class="sc">17</span></div>
+  <div class="row"><span class="pos">3</span><span class="dot" style="background:#555"></span>Galaxy S24<span class="sc">11</span></div>
+  <div class="muted" style="margin-top:12px">🟢 сейчас на связи — рекорды обновляются вживую.<br>Таблица общая для всех, с кем вы когда-либо играли по сети.</div>
+</div>
+<div class="caption">Фильтры: игра × режим. Ваша строка выделена.</div>
+</div>
+
+</body>
+</html>
