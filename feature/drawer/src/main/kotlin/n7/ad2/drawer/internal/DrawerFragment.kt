@@ -205,7 +205,11 @@ internal class DrawerFragment :
     private fun setupLoggerAdapter() = viewLifecycleOwner.lifecycleScope.launch {
         val shouldDisplayLog = viewModel.isLogWidgetEnabled()
         if (!shouldDisplayLog) return@launch
-        binding.rvLog.updateLayoutParams { height = resources.displayMetrics.heightPixels / 2 }
+        // логи живут в правой нижней четверти экрана, чтобы не залезать под карточки меню
+        binding.rvLog.updateLayoutParams {
+            width = resources.displayMetrics.widthPixels / 2
+            height = resources.displayMetrics.heightPixels / 2
+        }
         val logLayoutManager = object : LinearLayoutManager(requireContext()) {
             override fun canScrollVertically(): Boolean = false
 
