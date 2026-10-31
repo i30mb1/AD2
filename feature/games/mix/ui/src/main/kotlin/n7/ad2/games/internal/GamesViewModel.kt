@@ -29,7 +29,7 @@ internal class GamesViewModel @AssistedInject constructor(
 
     private val myId = localPlayerProvider.localPlayer().id
 
-    private val games = listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.HigherLower(res), GameVO.Apm(res), GameVO.XO(res))
+    private val games = listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.HigherLower(res), GameVO.BuildItem(res), GameVO.Apm(res), GameVO.XO(res))
 
     // личный соло-рекорд для значка на карточке каждой викторины
     val state: StateFlow<State> = combine(

@@ -41,7 +41,12 @@ private val MyColor = Color(0xFFF44336)
 private val PeerColor = Color(0xFF448AFF)
 
 @Composable
-internal fun ManaPointScreen(state: SkillGameViewModel.State, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit) {
+internal fun ManaPointScreen(
+    state: SkillGameViewModel.State,
+    onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
+    onToggleTile: (Int) -> Unit = {},
+    onBuild: () -> Unit = {},
+) {
     val color by rememberUpdatedState(newValue = Color(state.backgroundColor).copy(alpha = 0.2f))
     val animateColor = animateColorAsState(targetValue = color, animationSpec = tween(2_000))
     Column(
@@ -58,6 +63,11 @@ internal fun ManaPointScreen(state: SkillGameViewModel.State, onVariantClick: (s
             else -> {
                 MatchHeader(state.match, state.peerName)
                 val compare = state.compare
+                val build = state.build
+                if (!state.isLoading && build != null) {
+                    BuildBoard(build, state.selectedTiles, state.showRightAnswer, onToggleTile, onBuild)
+                    return@Column
+                }
                 Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
                     when {
                         state.isLoading -> LoadingScreen()

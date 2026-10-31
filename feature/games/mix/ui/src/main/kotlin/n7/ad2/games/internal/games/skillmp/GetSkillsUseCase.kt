@@ -36,6 +36,7 @@ internal class GetSkillsUseCase @Inject constructor(
         val suggestsSpellList: List<Spell>,
         val spellLVL: Int,
         val compare: Compare? = null,
+        val build: BuildQuestion? = null,
     )
 
     data class Compare(val question: Int, val left: Side, val right: Side)

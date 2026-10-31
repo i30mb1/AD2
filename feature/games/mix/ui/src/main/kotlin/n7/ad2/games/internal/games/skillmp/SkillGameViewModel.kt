@@ -32,6 +32,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
     private val getSkillsUseCase: GetSkillsUseCase,
     private val getHeroQuizUseCase: GetHeroQuizUseCase,
     private val getCompareQuizUseCase: GetCompareQuizUseCase,
+    private val getBuildQuizUseCase: GetBuildQuizUseCase,
     private val leaderboardSync: LeaderboardSync,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
@@ -61,11 +62,40 @@ internal class SkillGameViewModel @AssistedInject constructor(
     }
 
     fun onAnswer(spell: Spell) {
-        val current = _state.value
-        if (current.isLoading || current.showRightAnswer || current.match.isOver) return
-        val answer = Answer(spell.isRightAnswer, SystemClock.elapsedRealtime() - questionShownAt)
-        _state.update { it.copy(showRightAnswer = true, selectedSpell = spell, match = it.match.answer(mine = true, answer)) }
-        room?.let { runCatching { it.sendEvent(PeerAnswerCodec.encode(current.match.round, answer)) } }
+        if (canAnswer()) {
+            _state.update { it.copy(selectedSpell = spell) }
+            submit(spell.isRightAnswer)
+        }
+    }
+
+    /** «Собери предмет»: тап кладет плитку в слот, повторный - убирает; сверх числа слотов выбрать нельзя */
+    fun onToggleTile(index: Int) {
+        val build = _state.value.build ?: return
+        if (!canAnswer()) return
+        _state.update { state ->
+            val selected = state.selectedTiles
+            when {
+                index in selected -> state.copy(selectedTiles = selected - index)
+                selected.size < build.slots -> state.copy(selectedTiles = selected + index)
+                else -> state
+            }
+        }
+    }
+
+    fun onBuild() {
+        val state = _state.value
+        val build = state.build ?: return
+        if (!canAnswer() || state.selectedTiles.size != build.slots) return
+        submit(state.selectedTiles.all { build.tiles[it].isCorrect })
+    }
+
+    private fun canAnswer(): Boolean = _state.value.let { !it.isLoading && !it.showRightAnswer && !it.match.isOver }
+
+    private fun submit(correct: Boolean) {
+        val round = _state.value.match.round
+        val answer = Answer(correct, SystemClock.elapsedRealtime() - questionShownAt)
+        _state.update { it.copy(showRightAnswer = true, match = it.match.answer(mine = true, answer)) }
+        room?.let { runCatching { it.sendEvent(PeerAnswerCodec.encode(round, answer)) } }
         advanceIfRoundComplete()
     }
 
@@ -109,7 +139,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         questionJob?.cancel()
         val round = _state.value.match.round
         questionJob = viewModelScope.launch {
-            _state.update { it.copy(isLoading = true, showRightAnswer = false, selectedSpell = null) }
+            _state.update { it.copy(isLoading = true, showRightAnswer = false, selectedSpell = null, selectedTiles = emptySet()) }
             delay(0.2.seconds)
             val data = loadData(round) ?: return@launch _state.update { it.copy(isLoading = false, isError = true) }
             _state.update { state ->
@@ -120,6 +150,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
                     spellList = SpellList(data.suggestsSpellList.map { Spell(it.cost, it.isRightAnswer) }),
                     spellLVL = data.spellLVL,
                     compare = data.compare,
+                    build = data.build,
                 )
             }
             questionShownAt = SystemClock.elapsedRealtime()
@@ -137,12 +168,14 @@ internal class SkillGameViewModel @AssistedInject constructor(
     private suspend fun loadData(round: Int): GetSkillsUseCase.Data? {
         repeat(MAX_ATTEMPTS) { attempt ->
             val random = seed?.let { Random(it + round * MAX_ATTEMPTS + attempt) } ?: Random.Default
-            val question = when (gameId) {
-                HERO_GAME_ID -> getHeroQuizUseCase(random)
-                COMPARE_GAME_ID -> getCompareQuizUseCase(random)
-                else -> getSkillsUseCase(random)
-            }
-            runCatching { question.first() }.onSuccess { return it }
+            runCatching {
+                when (gameId) {
+                    HERO_GAME_ID -> getHeroQuizUseCase(random).first()
+                    COMPARE_GAME_ID -> getCompareQuizUseCase(random).first()
+                    BUILD_GAME_ID -> GetSkillsUseCase.Data("", "", "", Color.TRANSPARENT, emptyList(), 0, build = getBuildQuizUseCase(random))
+                    else -> getSkillsUseCase(random).first()
+                }
+            }.onSuccess { return it }
         }
         return null
     }
@@ -173,6 +206,8 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val selectedSpell: Spell?,
         val match: SpellMatch,
         val compare: GetSkillsUseCase.Compare?,
+        val build: BuildQuestion?,
+        val selectedTiles: Set<Int>,
         val peerName: String?,
         val isEndGame: Boolean,
         val newRecord: Boolean,
@@ -189,6 +224,8 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 selectedSpell = null,
                 match = match,
                 compare = null,
+                build = null,
+                selectedTiles = emptySet(),
                 peerName = peerName,
                 isEndGame = false,
                 newRecord = false,
@@ -206,6 +243,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         const val GAME_ID = "spell"
         const val HERO_GAME_ID = "hero"
         const val COMPARE_GAME_ID = "compare"
+        const val BUILD_GAME_ID = "build"
         private const val MAX_ATTEMPTS = 20
     }
 }

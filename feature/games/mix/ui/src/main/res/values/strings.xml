@@ -8,6 +8,10 @@
     <string name="xo" translatable="false">XO</string>
     <string name="guess_hero">Guess the Hero</string>
     <string name="higher_lower">Higher or Lower</string>
+    <string name="build_item">Build the Item</string>
+    <string name="build_pick">pick %d components</string>
+    <string name="build_button">Build</string>
+    <string name="build_recipe">recipe</string>
     <string name="compare_health">Who has more health?</string>
     <string name="compare_mana">Who has more mana?</string>
     <string name="compare_armor">Who has more armor?</string>

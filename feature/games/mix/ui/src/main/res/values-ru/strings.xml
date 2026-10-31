@@ -4,6 +4,10 @@
     <string name="two_players">2 игрока</string>
     <string name="guess_hero">Угадай героя</string>
     <string name="higher_lower">Больше или меньше</string>
+    <string name="build_item">Собери предмет</string>
+    <string name="build_pick">выберите компонентов: %d</string>
+    <string name="build_button">Собрать</string>
+    <string name="build_recipe">рецепт</string>
     <string name="compare_health">У кого больше здоровья?</string>
     <string name="compare_mana">У кого больше маны?</string>
     <string name="compare_armor">У кого больше брони?</string>

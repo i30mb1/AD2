@@ -41,6 +41,6 @@ internal class SkillGameFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
         val state = viewModel.state.collectAsState().value
-        ManaPointScreen(state = state, onVariantClick = viewModel::onAnswer)
+        ManaPointScreen(state = state, onVariantClick = viewModel::onAnswer, onToggleTile = viewModel::onToggleTile, onBuild = viewModel::onBuild)
     }
 }
