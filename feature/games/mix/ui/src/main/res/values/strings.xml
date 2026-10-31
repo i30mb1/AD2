@@ -53,7 +53,6 @@
     <string name="game_question_hero">Who is this?</string>
     <string name="game_spell_level">level</string>
     <string name="creep_gold">%d gold</string>
-    <string name="creep_misses">misses %1$d/%2$d</string>
     <string name="creep_hint">Tap when the bar turns yellow</string>
     <string name="game_time_label">time</string>
     <string name="creep_kills_label">creeps killed</string>

@@ -1,10 +1,5 @@
 package n7.ad2.games.internal.games.killCreep.compose
 
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -27,6 +22,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.remember
@@ -35,13 +31,14 @@ import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
@@ -67,7 +64,7 @@ import n7.ad2.games.internal.games.skillmp.compose.RecordPlate
 import n7.ad2.games.room.GameMode
 
 private val Gold = GoldColor
-private val CreepSize = 46.dp
+private val CreepSize = 60.dp
 
 @Composable
 internal fun KillCreepScreen(
@@ -143,7 +140,19 @@ private fun HintBar(match: KillCreepMatch) {
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(stringResource(R.string.creep_hint), color = AppTheme.color.textSecondaryColor, fontSize = 12.sp, modifier = Modifier.weight(1f))
-        if (limit != null) Text(stringResource(R.string.creep_misses, match.misses, limit), color = MeColor, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+        if (limit != null) MissPips(match.misses, limit)
+    }
+}
+
+/** Промахи ячейками: заполненные - потраченные */
+@Composable
+private fun MissPips(misses: Int, limit: Int) {
+    Row(horizontalArrangement = Arrangement.spacedBy(5.dp)) {
+        repeat(limit) { index ->
+            val shape = RoundedCornerShape(4.dp)
+            val pip = Modifier.size(14.dp).clip(shape)
+            Box(if (index < misses) pip.background(MeColor) else pip.border(2.dp, Color(0xFF3A4249), shape))
+        }
     }
 }
 
@@ -159,57 +168,67 @@ private fun Countdown(seconds: Int) {
 
 @Composable
 private fun Field(creeps: List<VisibleCreep>, floats: List<FloatText>, onTap: (Float, Float, Float) -> Unit, modifier: Modifier) {
-    val glow by rememberInfiniteTransition().animateFloat(0.3f, 1f, infiniteRepeatable(tween(350), RepeatMode.Reverse))
     BoxWithConstraints(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(AppTheme.color.surface)
+            .clip(RoundedCornerShape(20.dp))
             .pointerInput(Unit) {
                 detectTapGestures { offset -> onTap(offset.x / size.width, offset.y / size.height, size.height.toFloat() / size.width) }
             },
     ) {
+        PaperLaneBackground(Modifier.matchParentSize())
         val density = LocalDensity.current
         val width = with(density) { maxWidth.toPx() }
         val height = with(density) { maxHeight.toPx() }
         creeps.forEach { creep ->
             val sizePx = with(density) { (CreepSize * creep.type.size).toPx() }
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.offset { IntOffset((creep.x * width - sizePx / 2).roundToInt(), (creep.y * height - sizePx / 2).roundToInt()) },
-            ) {
-                HpBar(creep, Modifier.size(width = CreepSize * creep.type.size, height = 6.dp))
-                Text(
-                    text = creep.type.emoji,
-                    fontSize = (28 * creep.type.size).sp,
-                    modifier = if (creep.isKillable) Modifier.shadow((12 * glow).dp, RoundedCornerShape(50), ambientColor = Gold, spotColor = Gold) else Modifier,
-                )
+            // key: у каждого крипа свой подъём и наклон, анимация не должна переезжать на соседа
+            key(creep.id) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(2.dp),
+                    modifier = Modifier.offset { IntOffset((creep.x * width - sizePx / 2).roundToInt(), (creep.y * height - sizePx / 2).roundToInt()) },
+                ) {
+                    HpBar(creep, Modifier.size(width = CreepSize * creep.type.size, height = 8.dp))
+                    PaperCreep(creep.type, creep.isKillable, Modifier.size(CreepSize * creep.type.size))
+                }
             }
         }
         floats.forEach { float ->
-            val color = when (float.kind) {
-                FloatText.Kind.GOLD -> Gold
-                FloatText.Kind.MISS -> Color(0xFFE57373)
-                FloatText.Kind.PEER -> PeerColor
+            val offset = Modifier.offset { IntOffset((float.x * width).roundToInt() - 40, (float.y * height).roundToInt() - 90) }
+            if (float.kind == FloatText.Kind.MISS) {
+                Text(
+                    text = stringResource(R.string.creep_early),
+                    color = Color(0xFFFF8A80),
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 12.sp,
+                    modifier = offset.clip(RoundedCornerShape(6.dp)).background(Color(0xFF3A1714)).padding(horizontal = 8.dp, vertical = 3.dp),
+                )
+            } else {
+                Text(
+                    text = float.text,
+                    color = if (float.kind == FloatText.Kind.PEER) PeerColor else Gold,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 18.sp,
+                    style = TextStyle(shadow = Shadow(Color.Black, Offset(0f, 3f))),
+                    modifier = offset,
+                )
             }
-            Text(
-                text = if (float.kind == FloatText.Kind.MISS) stringResource(R.string.creep_early) else float.text,
-                color = color,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 14.sp,
-                modifier = Modifier.offset { IntOffset((float.x * width).roundToInt() - 40, (float.y * height).roundToInt() - 90) },
-            )
         }
     }
 }
 
+/**
+ * Полоска HP: красная - ещё рано, золотая черта - урон игрока, полупрозрачная зона левее черты - туда должно опуститься HP.
+ * Когда HP за чертой, вся полоска золотая.
+ */
 @Composable
 private fun HpBar(creep: VisibleCreep, modifier: Modifier) {
-    Canvas(modifier) {
-        drawRect(Color(0xFF111111))
-        drawRect(if (creep.isKillable) Gold else Color(0xFFE53935), size = Size(size.width * creep.hp / creep.type.hp, size.height))
-        // жёлтая черта - урон игрока: ниже нее крипа можно добить
+    Canvas(modifier.clip(RoundedCornerShape(2.dp))) {
         val threshold = size.width * creep.type.lastHitDamage / creep.type.hp
+        drawRect(Color(0xFF0A0C0E))
+        drawRect(if (creep.isKillable) Gold else Color(0xFFD9483B), size = Size(size.width * creep.hp / creep.type.hp, size.height))
+        if (!creep.isKillable) drawRect(Gold.copy(alpha = 0.28f), size = Size(threshold, size.height))
         drawRect(Gold, topLeft = Offset(threshold, 0f), size = Size(2.dp.toPx(), size.height))
     }
 }

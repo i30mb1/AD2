@@ -7,12 +7,12 @@ import kotlin.random.Random
  * [lastHitDamage] - урон игрока по этому типу: у осадного меньше (броня), поэтому черта на полоске HP у него ниже.
  * [speed] - доля поля в секунду, [size] - множитель размера (и радиуса попадания)
  */
-internal enum class CreepType(val hp: Int, val gold: Int, val speed: Float, val size: Float, val lastHitDamage: Int, val emoji: String) {
-    MELEE(hp = 550, gold = 38, speed = 0.16f, size = 1f, lastHitDamage = 60, emoji = "👹"),
-    RANGED(hp = 300, gold = 45, speed = 0.26f, size = 0.9f, lastHitDamage = 60, emoji = "🏹"),
-    SIEGE(hp = 900, gold = 70, speed = 0.09f, size = 1.3f, lastHitDamage = 36, emoji = "🛞"),
-    FLAG(hp = 700, gold = 100, speed = 0.14f, size = 1.1f, lastHitDamage = 60, emoji = "🚩"),
-    MEGA(hp = 1200, gold = 200, speed = 0.22f, size = 1.4f, lastHitDamage = 60, emoji = "👑"),
+internal enum class CreepType(val hp: Int, val gold: Int, val speed: Float, val size: Float, val lastHitDamage: Int) {
+    MELEE(hp = 550, gold = 38, speed = 0.16f, size = 1f, lastHitDamage = 60),
+    RANGED(hp = 300, gold = 45, speed = 0.26f, size = 0.9f, lastHitDamage = 60),
+    SIEGE(hp = 900, gold = 70, speed = 0.09f, size = 1.3f, lastHitDamage = 36),
+    FLAG(hp = 700, gold = 100, speed = 0.14f, size = 1.1f, lastHitDamage = 60),
+    MEGA(hp = 1200, gold = 200, speed = 0.22f, size = 1.4f, lastHitDamage = 60),
 }
 
 /**
