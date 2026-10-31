@@ -4,7 +4,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /** Увеличивать при несовместимых изменениях протокола: хост отклонит гостя с другой версией */
-const val PROTOCOL_VERSION = 1
+// 2: комната переживает игру (сессия на несколько игр), выбор игры идет sync-сообщениями
+const val PROTOCOL_VERSION = 2
 
 @Serializable
 data class Player(val id: String, val name: String)

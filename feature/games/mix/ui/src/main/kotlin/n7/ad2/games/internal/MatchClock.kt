@@ -1,4 +1,4 @@
-package n7.ad2.games.internal.games.killCreep
+package n7.ad2.games.internal
 
 /**
  * Время матча. [startedAt] берется в лобби, когда комната перешла в Playing (у обоих игроков почти одновременно),

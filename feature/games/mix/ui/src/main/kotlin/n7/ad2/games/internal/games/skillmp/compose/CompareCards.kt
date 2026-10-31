@@ -26,11 +26,10 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.DimColor
+import n7.ad2.games.internal.compose.RightColor
 import n7.ad2.games.internal.games.skillmp.GetSkillsUseCase
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
-
-private val Right = Color(0xFF43A047)
-private val Wrong = Color(0xFFF44336)
 
 /** «Больше или меньше»: вопрос и две карточки героев, значения открываются после ответа */
 @Composable
@@ -42,8 +41,8 @@ internal fun CompareCards(
     modifier: Modifier = Modifier,
 ) {
     Column(modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(stringResource(compare.question), color = AppTheme.color.textColor, fontSize = 20.sp, fontWeight = FontWeight.SemiBold, textAlign = TextAlign.Center)
-        Text(stringResource(R.string.compare_level_hint), color = AppTheme.color.textSecondaryColor, style = AppTheme.style.info, modifier = Modifier.padding(bottom = 16.dp))
+        Text(stringResource(compare.question), color = AppTheme.color.textColor, fontSize = 17.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+        Text(stringResource(R.string.compare_level_hint), color = DimColor, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp, bottom = 16.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             listOf(compare.left, compare.right).forEachIndexed { index, side ->
                 val option = options.list.getOrNull(index) ?: return@forEachIndexed
@@ -55,37 +54,30 @@ internal fun CompareCards(
 
 @Composable
 private fun SideCard(side: GetSkillsUseCase.Side, option: SkillGameViewModel.Spell, showAnswer: Boolean, modifier: Modifier, onClick: () -> Unit) {
-    val outline = when {
-        !showAnswer -> Modifier
-        option.isRightAnswer -> Modifier.border(2.dp, Right, RoundedCornerShape(14.dp))
-        else -> Modifier.border(2.dp, Wrong, RoundedCornerShape(14.dp))
-    }
+    val shape = RoundedCornerShape(16.dp)
+    val isRight = showAnswer && option.isRightAnswer
     Column(
         modifier = modifier
-            .alpha(if (showAnswer && !option.isRightAnswer) 0.7f else 1f)
-            .then(outline)
-            .clip(RoundedCornerShape(14.dp))
+            .alpha(if (showAnswer && !option.isRightAnswer) 0.6f else 1f)
+            .clip(shape)
             .background(AppTheme.color.surface)
-            .clickable(enabled = !showAnswer, onClick = onClick)
-            .padding(10.dp),
+            .border(2.dp, if (isRight) RightColor else Color.Transparent, shape)
+            .clickable(enabled = !showAnswer, onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         AsyncImage(
             model = side.imageUrl,
             contentDescription = side.name,
             contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(0.8f)
-                .clip(RoundedCornerShape(10.dp)),
+            modifier = Modifier.fillMaxWidth().aspectRatio(0.75f),
         )
-        Text(side.name, color = AppTheme.color.textColor, fontWeight = FontWeight.SemiBold, maxLines = 1, modifier = Modifier.padding(top = 8.dp))
+        Text(side.name, color = AppTheme.color.textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold, maxLines = 1, modifier = Modifier.padding(top = 10.dp))
         Text(
-            text = if (showAnswer) side.value + if (option.isRightAnswer) " ✓" else "" else "?",
-            color = if (showAnswer && option.isRightAnswer) Right else AppTheme.color.textColor,
-            fontSize = 20.sp,
+            text = if (showAnswer) side.value else "?",
+            color = if (isRight) RightColor else if (showAnswer) AppTheme.color.textColor else DimColor,
+            fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 4.dp),
+            modifier = Modifier.padding(top = 2.dp, bottom = 12.dp),
         )
     }
 }

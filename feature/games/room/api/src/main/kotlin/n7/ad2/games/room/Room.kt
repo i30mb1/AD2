@@ -24,6 +24,9 @@ interface Room {
     /** Только хост в [RoomState.Ready], иначе [IllegalStateException] */
     fun startGame(gameId: String, mode: GameMode)
 
+    /** Игра закончилась, комната остается: [RoomState.Playing] -> [RoomState.Ready], в других состояниях ничего не делает */
+    fun endGame()
+
     /** Только в [RoomState.Playing], иначе [IllegalStateException] */
     fun sendEvent(payload: String)
 

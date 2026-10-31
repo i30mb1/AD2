@@ -7,21 +7,28 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import kotlin.random.Random
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.games.internal.ActiveRoom
+import n7.ad2.games.internal.MatchClock
+import n7.ad2.games.internal.party.GameChannel
+import n7.ad2.games.internal.party.Pick
+import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
 import n7.ad2.games.leaderboard.Record
 import n7.ad2.games.room.GameMode
 import n7.ad2.games.room.Room
 import n7.ad2.games.room.RoomState
-import kotlin.random.Random
 
 /** Всплывающая подпись над полем: «+38», «рано», «Pixel 8 забрал» */
 internal data class FloatText(val id: Long, val x: Float, val y: Float, val text: String, val kind: Kind) {
@@ -31,6 +38,7 @@ internal data class FloatText(val id: Long, val x: Float, val y: Float, val text
 internal class KillCreepViewModel @AssistedInject constructor(
     @Assisted private val mode: GameMode,
     private val leaderboardSync: LeaderboardSync,
+    private val leaderboardRepository: LeaderboardRepository,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
 
@@ -50,8 +58,12 @@ internal class KillCreepViewModel @AssistedInject constructor(
     private val clock = MatchClock(if (room != null) ActiveRoom.startedAt else SystemClock.elapsedRealtime(), COUNTDOWN_MS)
     private var floatIds = 0L
 
-    private val _state = MutableStateFlow(State(KillCreepMatch.start(mode, isHost), peerName, emptyList(), isEndGame = false, newRecord = false))
+    private val _state = MutableStateFlow(State(KillCreepMatch.start(mode, isHost), peerName, emptyList(), isEndGame = false, newRecord = false, previousBest = null))
     val state: StateFlow<State> = _state.asStateFlow()
+
+    /** Экран итогов закрыт («Ещё раз» или «Другая игра»): вернуться к списку игр */
+    private val _exit = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    val exit: SharedFlow<Unit> = _exit.asSharedFlow()
 
     init {
         viewModelScope.launch { tickAllyKillsAndTime() }
@@ -61,6 +73,16 @@ internal class KillCreepViewModel @AssistedInject constructor(
     fun elapsedMs(): Long = clock.elapsed(SystemClock.elapsedRealtime())
 
     fun countdown(): Int = clock.countdown(SystemClock.elapsedRealtime())
+
+    /** Та же игра и режим: вдвоем список игр выберет ее снова, соло откроет заново */
+    fun again() {
+        ActiveRoom.requestRematch(Pick(GAME_ID, mode))
+        _exit.tryEmit(Unit)
+    }
+
+    fun otherGame() {
+        _exit.tryEmit(Unit)
+    }
 
     /** [x], [y] - доли поля, [aspect] - высота/ширина поля (радиус попадания круглый на экране) */
     fun onTap(x: Float, y: Float, aspect: Float) {
@@ -112,6 +134,10 @@ internal class KillCreepViewModel @AssistedInject constructor(
             room.state.first { it is RoomState.Closed }
             if (!_state.value.match.isOver) update { it.peerLeft() }
         }
+        viewModelScope.launch {
+            room.syncEvents.first(GameChannel::isQuit)
+            if (!_state.value.match.isOver) update { it.peerLeft() }
+        }
     }
 
     private fun update(change: (KillCreepMatch) -> KillCreepMatch) {
@@ -136,14 +162,19 @@ internal class KillCreepViewModel @AssistedInject constructor(
         if (_state.value.isEndGame) return
         _state.update { it.copy(isEndGame = true) }
         val score = _state.value.match.score
+        // комната остается для следующей игры
+        room?.endGame()
         viewModelScope.launch {
+            val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
             val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
-            _state.update { it.copy(newRecord = isRecord && score > 0) }
+            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest) }
         }
     }
 
     override fun onCleared() {
-        if (room != null) ActiveRoom.clear()
+        val room = room ?: return
+        if (!_state.value.isEndGame) GameChannel.quit(room)
+        room.endGame()
     }
 
     @Immutable
@@ -153,6 +184,8 @@ internal class KillCreepViewModel @AssistedInject constructor(
         val floats: List<FloatText>,
         val isEndGame: Boolean,
         val newRecord: Boolean,
+        /** Лучший результат до этой игры, null - первая игра */
+        val previousBest: Int?,
     )
 
     companion object {

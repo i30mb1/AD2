@@ -9,7 +9,10 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.with
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -17,6 +20,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
@@ -36,11 +40,14 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -48,7 +55,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.core.ui.compose.AppTheme
-import n7.ad2.core.ui.compose.view.LoadingScreen
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.data.GameVO
@@ -64,10 +70,11 @@ internal fun GamesScreen(
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     // без drawer (demo-приложение) отступ под статус-бар нужен всегда
     var drawerPercent by remember { mutableStateOf(if (drawerPercentListener == null) 1f else 0f) }
-    // игра, для которой открыт выбор режима
-    var modeSheetFor by remember { mutableStateOf<GameVO?>(null) }
 
     val state = viewModel.state.collectAsState().value
+    // помощь «никого не нашли» открывается поверх списка, назад - закрывает её
+    var showHelp by rememberSaveable { mutableStateOf(false) }
+    BackHandler(enabled = showHelp) { showHelp = false }
     Box(Modifier.fillMaxSize()) {
         AnimatedContent(
             targetState = state,
@@ -81,27 +88,26 @@ internal fun GamesScreen(
             contentKey = { it::class },
         ) { targetState ->
             when (targetState) {
-                is GamesViewModel.State.Data -> GamesList(
-                    games = targetState.games,
-                    bests = (state as? GamesViewModel.State.Data)?.bests.orEmpty(),
-                    onGameClicked = { game ->
-                        if (game.quizId != null) modeSheetFor = game else onGameClicked(game, GameMode.SOLO)
-                    },
-                    onLeaderboardClicked = onLeaderboardClicked,
-                )
-                GamesViewModel.State.Loading -> LoadingScreen()
+                is GamesViewModel.State.Data -> {
+                    val data = state as? GamesViewModel.State.Data ?: targetState
+                    val session = data.party.session
+                    when {
+                        showHelp -> PartyHelp(data.party, onJoinManual = { address ->
+                            showHelp = false
+                            viewModel.joinManual(address)
+                        })
+                        // вдвоём список игр - это общий выбор, игра откроется сама, когда выбор совпадёт
+                        session != null -> PartySelect(data.party, session.peer.name, data.games, onPick = viewModel::pick, onLeave = viewModel::leave)
+                        else -> GamesList(
+                            games = data.games,
+                            bests = data.bests,
+                            onGameClicked = { game -> onGameClicked(game, GameMode.SOLO) },
+                            onLeaderboardClicked = onLeaderboardClicked,
+                            header = { NearbyCard(data.party, onPlay = viewModel::play, onHelp = { showHelp = true }) },
+                        )
+                    }
+                }
             }
-        }
-        modeSheetFor?.let { game ->
-            ModeSheet(
-                title = game.title,
-                isKillCreep = game is GameVO.Apm,
-                onDismiss = { modeSheetFor = null },
-                onMode = { mode ->
-                    modeSheetFor = null
-                    onGameClicked(game, mode)
-                },
-            )
         }
     }
 
@@ -113,82 +119,72 @@ internal fun GamesScreen(
 }
 
 @Composable
-private fun GamesList(games: List<GameVO>, bests: Map<String, Int>, onGameClicked: (game: GameVO) -> Unit, onLeaderboardClicked: () -> Unit, modifier: Modifier = Modifier) {
+private fun GamesList(
+    games: List<GameVO>,
+    bests: Map<String, Int>,
+    onGameClicked: (game: GameVO) -> Unit,
+    onLeaderboardClicked: () -> Unit,
+    header: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
         modifier = modifier
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 12.dp, vertical = 4.dp),
+            .padding(horizontal = 12.dp, vertical = 8.dp),
     ) {
-        games.forEach { gameData ->
-            val badge = bests[gameData.quizId]?.let { stringResource(R.string.games_record_badge, it) }
-            Game(gameData.title, gameData.backgroundImage, badge = badge, onGameClick = { onGameClicked(gameData) })
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(stringResource(R.string.games_title), color = AppTheme.color.textColor, fontSize = 22.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+            Text(
+                text = "🏆 " + stringResource(R.string.games_records),
+                color = AppTheme.color.textSecondaryColor,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(16.dp))
+                    .border(1.dp, LineColor, RoundedCornerShape(16.dp))
+                    .clickable(onClick = onLeaderboardClicked)
+                    .padding(horizontal = 12.dp, vertical = 7.dp),
+            )
         }
-        Text(
-            text = stringResource(R.string.games_leaderboard),
-            color = AppTheme.color.textColor,
-            fontWeight = FontWeight.SemiBold,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(12.dp))
-                .background(AppTheme.color.surface)
-                .clickable(onClick = onLeaderboardClicked)
-                .padding(14.dp),
-        )
+        header()
+        games.forEach { game -> GameRow(game, bests[game.quizId]) { onGameClicked(game) } }
     }
 }
 
 @Composable
-private fun ModeSheet(title: String, isKillCreep: Boolean, onDismiss: () -> Unit, onMode: (GameMode) -> Unit) {
-    Box(
-        Modifier
-            .fillMaxSize()
-            .background(Color(0x99000000))
-            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onDismiss),
-        contentAlignment = Alignment.BottomCenter,
-    ) {
-        Column(
-            Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp))
-                .background(AppTheme.color.surface)
-                .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) { }
-                .navigationBarsPadding()
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Box(Modifier.align(Alignment.CenterHorizontally).size(36.dp, 4.dp).clip(RoundedCornerShape(2.dp)).background(Color(0xFF555555)))
-            Text(title, color = AppTheme.color.textColor, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(vertical = 4.dp))
-            // у Kill Creep правила на время, а не вопросы с жизнями
-            val soloHint = if (isKillCreep) R.string.creep_mode_solo_hint else R.string.games_mode_solo_hint
-            val versusHint = if (isKillCreep) R.string.creep_mode_versus_hint else R.string.games_mode_versus_hint
-            val coopHint = if (isKillCreep) R.string.creep_mode_coop_hint else R.string.games_mode_coop_hint
-            ModeRow("👤", Color(0xFFF44336), stringResource(R.string.games_mode_solo), stringResource(soloHint)) { onMode(GameMode.SOLO) }
-            ModeRow("⚔️", Color(0xFF448AFF), stringResource(R.string.games_mode_versus), stringResource(versusHint)) { onMode(GameMode.VERSUS) }
-            ModeRow("🤝", Color(0xFF43A047), stringResource(R.string.games_mode_coop), stringResource(coopHint)) { onMode(GameMode.COOP) }
-        }
-    }
-}
-
-@Composable
-private fun ModeRow(icon: String, color: Color, title: String, hint: String, onClick: () -> Unit) {
+private fun GameRow(game: GameVO, record: Int?, onClick: () -> Unit) {
     Row(
-        Modifier
+        modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .background(AppTheme.color.background)
+            .background(AppTheme.color.surface)
             .clickable(onClick = onClick)
-            .padding(12.dp),
+            .padding(10.dp),
         verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Box(Modifier.size(36.dp).clip(RoundedCornerShape(10.dp)).background(color), contentAlignment = Alignment.Center) {
-            Text(icon, fontSize = 18.sp)
+        Image(
+            painter = painterResource(game.backgroundImage),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.size(56.dp).clip(RoundedCornerShape(10.dp)),
+        )
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+            Text(game.title, color = AppTheme.color.textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+            Text(stringResource(game.rules()), color = DimColor, fontSize = 12.sp)
+            if (record != null) Text(stringResource(R.string.games_record_badge, record), color = GoldColor, fontSize = 11.sp)
         }
-        Spacer(Modifier.width(12.dp))
-        Column {
-            Text(title, color = AppTheme.color.textColor, fontWeight = FontWeight.SemiBold)
-            Text(hint, color = AppTheme.color.textSecondaryColor, style = AppTheme.style.info)
-        }
+        Text("›", color = DimColor, fontSize = 22.sp)
     }
+}
+
+private fun GameVO.rules(): Int = when (this) {
+    is GameVO.GuessSkillMana -> R.string.games_rules_spell
+    is GameVO.GuessHero -> R.string.games_rules_hero
+    is GameVO.HigherLower -> R.string.games_rules_compare
+    is GameVO.BuildItem -> R.string.games_rules_build
+    is GameVO.Apm -> R.string.games_rules_creep
+    is GameVO.XO -> R.string.games_rules_xo
+    is GameVO.CanYouBuyIt -> R.string.games_rules_buy
 }

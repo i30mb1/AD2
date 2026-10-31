@@ -50,6 +50,12 @@ internal class RoomEngine(
         _state.value = RoomState.Playing(ready.host, ready.guest, gameId, mode, seed)
     }
 
+    // без сообщения: оба телефона заканчивают игру сами, а отставший гость примет следующий StartGame и из Playing
+    override fun endGame() = synchronized(this) {
+        val playing = _state.value as? RoomState.Playing ?: return
+        _state.value = RoomState.Ready(playing.host, playing.guest)
+    }
+
     override fun sendEvent(payload: String) {
         check(_state.value is RoomState.Playing) { "Events can be sent only while Playing, state=${_state.value}" }
         send(RoomMessage.GameEvent(me.id, payload))
@@ -95,8 +101,12 @@ internal class RoomEngine(
             }
             is RoomMessage.Welcome -> if (!isHost) _state.value = RoomState.Ready(message.host, message.guest)
             is RoomMessage.Reject -> if (!isHost) close(CloseReason.VERSION_MISMATCH)
-            is RoomMessage.StartGame -> if (!isHost && current is RoomState.Ready) {
-                _state.value = RoomState.Playing(current.host, current.guest, message.gameId, message.mode, message.seed)
+            is RoomMessage.StartGame -> if (!isHost) {
+                when (current) {
+                    is RoomState.Ready -> _state.value = RoomState.Playing(current.host, current.guest, message.gameId, message.mode, message.seed)
+                    is RoomState.Playing -> _state.value = RoomState.Playing(current.host, current.guest, message.gameId, message.mode, message.seed)
+                    else -> Unit
+                }
             }
             is RoomMessage.GameEvent -> if (message.playerId != me.id) _events.tryEmit(message)
             is RoomMessage.Leave -> close(CloseReason.PEER_LEFT)

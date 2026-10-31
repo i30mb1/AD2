@@ -1,30 +1,36 @@
 package n7.ad2.games.internal.games.skillmp.compose
 
-import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.sizeIn
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
+import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.games.internal.compose.AnswerLook
+import n7.ad2.games.internal.compose.MeColor
+import n7.ad2.games.internal.compose.RightColor
+import n7.ad2.games.internal.compose.answerLook
+import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 
+private val answerShape = RoundedCornerShape(12.dp)
+
+/** Answers as a 2x2 grid: numbers big, hero names a bit smaller so they fit. */
 @Composable
 internal fun VariantBlocks(
     spellList: SkillGameViewModel.SpellList,
@@ -33,82 +39,57 @@ internal fun VariantBlocks(
     onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    // числа помещаются в один ряд, имена героев - сеткой 2x2
-    if (spellList.list.all { it.cost.length <= SHORT_LABEL }) {
-        Row(modifier) {
-            for (spell in spellList.list) {
-                Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
-            }
-        }
-    } else {
-        Column(modifier.fillMaxWidth()) {
-            for (row in spellList.list.chunked(2)) {
-                Row(Modifier.fillMaxWidth()) {
-                    for (spell in row) {
-                        Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick, Modifier.weight(1f))
-                    }
+    Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        for (row in spellList.list.chunked(2)) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                for (spell in row) {
+                    val look = answerLook(isRight = spell.isRightAnswer, isPicked = spell == selectedSpell, reveal = showRightAnswer)
+                    Block(spell.cost, look, enabled = !showRightAnswer, Modifier.weight(1f)) { onVariantClick(spell) }
                 }
             }
         }
     }
 }
 
-private const val SHORT_LABEL = 4
-
-@Preview
 @Composable
-private fun VariantBlocksPreview() {
-    VariantBlocks(
-        spellList = SkillGameViewModel.SpellList(
-            listOf(
-                SkillGameViewModel.Spell("10", false),
-                SkillGameViewModel.Spell("20", false),
-                SkillGameViewModel.Spell("30", true),
-                SkillGameViewModel.Spell("40", false),
-            ),
-        ),
-        showRightAnswer = false,
-        selectedSpell = null,
-        onVariantClick = {},
-    )
-}
-
-@Composable
-private fun Block(spell: SkillGameViewModel.Spell, showRightAnswer: Boolean, isSelected: Boolean, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit, modifier: Modifier = Modifier) {
-    var isSmall by remember { mutableStateOf(false) }
-    isSmall = isSelected
-    val backgroundColor = if (showRightAnswer && spell.isRightAnswer) AppTheme.color.primary else AppTheme.color.surface
-    val scale by animateFloatAsState(targetValue = if (isSmall) 0.7f else 1f)
-
-    Button(
+private fun Block(text: String, look: AnswerLook, enabled: Boolean, modifier: Modifier, onClick: () -> Unit) {
+    val (background, border) = when (look) {
+        AnswerLook.IDLE -> AppTheme.color.surface to Color.Transparent
+        AnswerLook.PICKED -> AppTheme.color.surface to AppTheme.color.textSecondaryColor
+        AnswerLook.RIGHT -> RightColor.copy(alpha = 0.25f) to RightColor
+        AnswerLook.WRONG -> MeColor.copy(alpha = 0.2f) to MeColor
+    }
+    Box(
         modifier = modifier
-            .sizeIn(45.dp, 45.dp)
-            .padding(4.dp, 2.dp)
-            .scale(scale)
-            .clip(AppTheme.shape.small),
-        colors = ButtonDefaults.buttonColors(backgroundColor = backgroundColor),
-        onClick = { onVariantClick(spell) },
+            .height(56.dp)
+            .clip(answerShape)
+            .background(background)
+            .border(1.dp, border, answerShape)
+            .clickable(enabled = enabled, onClick = onClick),
+        contentAlignment = Alignment.Center,
     ) {
-        Box {
-            Text(
-                text = spell.cost,
-                maxLines = 1,
-                fontWeight = FontWeight.Bold,
-                color = AppTheme.color.textColor,
-                modifier = Modifier
-                    .align(Alignment.Center),
-            )
-        }
+        Text(
+            text = text,
+            color = AppTheme.color.textColor,
+            fontSize = if (text.all(Char::isDigit)) 20.sp else 15.sp,
+            fontWeight = FontWeight.Bold,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
     }
 }
 
-@Preview
+@Preview(backgroundColor = 0xFF202225, showBackground = true, widthDp = 360)
 @Composable
-private fun BlockPreview() {
-    Block(
-        spell = SkillGameViewModel.Spell("10", false),
-        showRightAnswer = false,
-        isSelected = false,
-        onVariantClick = {},
-    )
+private fun VariantBlocksPreview() {
+    val right = SkillGameViewModel.Spell("350", true)
+    val wrong = SkillGameViewModel.Spell("500", false)
+    AppTheme(isDarkTheme = true) {
+        VariantBlocks(
+            spellList = SkillGameViewModel.SpellList(listOf(SkillGameViewModel.Spell("200", false), right, wrong, SkillGameViewModel.Spell("700", false))),
+            showRightAnswer = true,
+            selectedSpell = wrong,
+            onVariantClick = {},
+        )
+    }
 }

@@ -48,14 +48,14 @@ internal class WifiDirectImpl(private val context: Context, private val logger: 
     private val manager: WifiP2pManager? by lazy { context.getSystemService(WifiP2pManager::class.java) }
     private val channel: WifiP2pManager.Channel? by lazy { manager?.initialize(context, Looper.getMainLooper(), null) }
 
-    override suspend fun advertise(name: String, port: Int): Boolean {
+    override suspend fun advertise(name: String, port: Int, playerId: String): Boolean {
         val manager = manager ?: return false
         val channel = channel ?: return false
         action { manager.clearLocalServices(channel, it) }
         // старая группа от прошлой комнаты мешает createGroup (BUSY)
         action { manager.removeGroup(channel, it) }
         if (!action { manager.createGroup(channel, it) }) return false
-        val info = WifiP2pDnsSdServiceInfo.newInstance(INSTANCE, SERVICE_TYPE, WifiDirectRecord.encode(name, port))
+        val info = WifiP2pDnsSdServiceInfo.newInstance(INSTANCE, SERVICE_TYPE, WifiDirectRecord.encode(name, port, playerId))
         if (!action { manager.addLocalService(channel, info, it) }) return false
         action { manager.discoverPeers(channel, it) }
         return true
@@ -93,6 +93,9 @@ internal class WifiDirectImpl(private val context: Context, private val logger: 
             wps.setup = WpsInfo.PBC
             groupOwnerIntent = 0 // владелец группы - хост
         }
+        // своя группа (мы тоже объявлялись) не даст войти в чужую
+        action { manager.clearLocalServices(channel, it) }
+        action { manager.removeGroup(channel, it) }
         return withTimeoutOrNull(CONNECT_TIMEOUT_MS) {
             callbackFlow {
                 val receiver = object : BroadcastReceiver() {

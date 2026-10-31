@@ -1,5 +1,5 @@
 import com.google.common.truth.Truth
-import n7.ad2.games.internal.games.killCreep.MatchClock
+import n7.ad2.games.internal.MatchClock
 import org.junit.Test
 
 internal class MatchClockTest {

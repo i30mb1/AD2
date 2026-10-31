@@ -12,12 +12,13 @@ internal object WifiDirectRecord {
 
     private const val APP = "ad2"
 
-    fun encode(name: String, port: Int): Map<String, String> = mapOf("app" to APP, "name" to name.take(MAX_NAME), "port" to port.toString())
+    fun encode(name: String, port: Int, playerId: String): Map<String, String> =
+        mapOf("app" to APP, "name" to name.take(MAX_NAME), "port" to port.toString(), "id" to playerId)
 
     fun decode(record: Map<String, String>, deviceAddress: String): WifiDirectRoom? {
         if (record["app"] != APP) return null
         val port = record["port"]?.toIntOrNull()?.takeIf { it in 1..65535 } ?: return null
         val name = record["name"].orEmpty().ifBlank { deviceAddress }
-        return WifiDirectRoom(name, deviceAddress, port)
+        return WifiDirectRoom(name, deviceAddress, port, record["id"] ?: deviceAddress)
     }
 }

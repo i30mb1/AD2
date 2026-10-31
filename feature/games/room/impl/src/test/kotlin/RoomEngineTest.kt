@@ -9,6 +9,7 @@ import kotlinx.coroutines.test.runCurrent
 import kotlinx.coroutines.test.runTest
 import n7.ad2.games.room.CloseReason
 import n7.ad2.games.room.GameMode
+import n7.ad2.games.room.PROTOCOL_VERSION
 import n7.ad2.games.room.Player
 import n7.ad2.games.room.RoomCodec
 import n7.ad2.games.room.RoomMessage
@@ -46,7 +47,7 @@ internal class RoomEngineTest {
         val room = hostRoom(transport)
         transport.status.value = TransportStatus.Listening(5000)
         runCurrent()
-        transport.receive(RoomMessage.Hello(guest, 1))
+        transport.receive(RoomMessage.Hello(guest, PROTOCOL_VERSION))
         runCurrent()
         return room
     }
@@ -71,7 +72,7 @@ internal class RoomEngineTest {
         runCurrent()
         Truth.assertThat(room.state.now).isEqualTo(RoomState.Waiting(host, 5000))
 
-        transport.receive(RoomMessage.Hello(guest, 1))
+        transport.receive(RoomMessage.Hello(guest, PROTOCOL_VERSION))
         runCurrent()
         Truth.assertThat(transport.sent).containsExactly(RoomMessage.Welcome(host, guest))
         Truth.assertThat(room.state.now).isEqualTo(RoomState.Ready(host, guest))
@@ -84,7 +85,7 @@ internal class RoomEngineTest {
         transport.status.value = TransportStatus.Listening(5000)
         runCurrent()
 
-        transport.receive(RoomMessage.Hello(guest, 2))
+        transport.receive(RoomMessage.Hello(guest, PROTOCOL_VERSION + 1))
         runCurrent()
 
         Truth.assertThat(transport.sent).containsExactly(RoomMessage.Reject("version"))
@@ -110,7 +111,7 @@ internal class RoomEngineTest {
 
         transport.status.value = TransportStatus.Connected
         runCurrent()
-        Truth.assertThat(transport.sent).containsExactly(RoomMessage.Hello(guest, 1))
+        Truth.assertThat(transport.sent).containsExactly(RoomMessage.Hello(guest, PROTOCOL_VERSION))
 
         transport.receive(RoomMessage.Welcome(host, guest))
         runCurrent()
@@ -245,6 +246,44 @@ internal class RoomEngineTest {
 
         assertThrows(IllegalStateException::class.java) { room.sendSync("records", "a") }
         Truth.assertThat(transport.sent).isEmpty()
+    }
+
+    @Test
+    fun `endGame returns both players to Ready and the host can start the next game`() = runTest {
+        val transport = FakeTransport()
+        val room = readyHost(transport)
+        room.startGame("spell", GameMode.VERSUS)
+        runCurrent()
+
+        room.endGame()
+        Truth.assertThat(room.state.now).isEqualTo(RoomState.Ready(host, guest))
+
+        room.startGame("creep", GameMode.COOP)
+        Truth.assertThat(room.state.now).isEqualTo(RoomState.Playing(host, guest, "creep", GameMode.COOP, 42L))
+    }
+
+    @Test
+    fun `endGame outside Playing does nothing`() = runTest {
+        val transport = FakeTransport()
+        val room = readyGuest(transport)
+
+        room.endGame()
+
+        Truth.assertThat(room.state.now).isEqualTo(RoomState.Ready(host, guest))
+    }
+
+    @Test
+    fun `guest still in the previous game accepts the next StartGame`() = runTest {
+        // хост уже вышел из игры и запустил новую, а гость еще на экране итогов
+        val transport = FakeTransport()
+        val room = readyGuest(transport)
+        transport.receive(RoomMessage.StartGame("spell", GameMode.VERSUS, 1L))
+        runCurrent()
+
+        transport.receive(RoomMessage.StartGame("creep", GameMode.COOP, 2L))
+        runCurrent()
+
+        Truth.assertThat(room.state.now).isEqualTo(RoomState.Playing(host, guest, "creep", GameMode.COOP, 2L))
     }
 
     @Test

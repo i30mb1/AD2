@@ -10,13 +10,13 @@ import java.net.InetAddress
  * Все вызовы требуют NEARBY_WIFI_DEVICES (до Android 13 - ACCESS_FINE_LOCATION), без него молча ничего не делают.
  */
 interface WifiDirect {
-    /** Хост: создать группу (мы ее владелец) и объявить комнату [name] на [port]; false - Wi-Fi Direct недоступен (эмулятор, выключен) */
-    suspend fun advertise(name: String, port: Int): Boolean
+    /** Хост: создать группу (мы ее владелец) и объявить комнату игрока [name] ([playerId]) на [port]; false - Wi-Fi Direct недоступен */
+    suspend fun advertise(name: String, port: Int, playerId: String): Boolean
 
     /** Гость: комнаты, объявленные рядом */
     fun discover(): Flow<List<WifiDirectRoom>>
 
-    /** Гость: войти в группу хоста, вернуть адрес хоста в ней или null, если не вышло */
+    /** Гость: выйти из своей группы, войти в группу хоста, вернуть адрес хоста в ней или null, если не вышло */
     suspend fun connect(deviceAddress: String): InetAddress?
 
     /** Снять объявление и выйти из группы (и хосту, и гостю) */

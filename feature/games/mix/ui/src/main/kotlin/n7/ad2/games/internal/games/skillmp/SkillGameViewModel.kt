@@ -8,23 +8,30 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.games.internal.ActiveRoom
+import n7.ad2.games.internal.MatchClock
+import n7.ad2.games.internal.party.GameChannel
+import n7.ad2.games.internal.party.Pick
+import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
 import n7.ad2.games.leaderboard.Record
 import n7.ad2.games.room.GameMode
 import n7.ad2.games.room.Room
 import n7.ad2.games.room.RoomState
-import kotlin.random.Random
-import kotlin.time.Duration.Companion.seconds
 
 internal class SkillGameViewModel @AssistedInject constructor(
     @Assisted private val mode: GameMode,
@@ -34,6 +41,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
     private val getCompareQuizUseCase: GetCompareQuizUseCase,
     private val getBuildQuizUseCase: GetBuildQuizUseCase,
     private val leaderboardSync: LeaderboardSync,
+    private val leaderboardRepository: LeaderboardRepository,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
 
@@ -51,14 +59,46 @@ internal class SkillGameViewModel @AssistedInject constructor(
     private val _state = MutableStateFlow(State.init(SpellMatch.start(mode), peerName))
     val state: StateFlow<State> = _state.asStateFlow()
 
+    /** Экран итогов закрыт («Ещё раз» или «Другая игра»): вернуться к списку игр */
+    private val _exit = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    val exit: SharedFlow<Unit> = _exit.asSharedFlow()
+
+    private var totalAnswerMs = 0L
+
     private val pendingPeerAnswers = mutableMapOf<Int, Answer>()
     private var questionShownAt = 0L
     private var advancingRound = -1
     private var questionJob: Job? = null
 
     init {
+        if (room != null) {
+            observeRoom(room)
+            viewModelScope.launch { countdownThenStart() }
+        } else {
+            loadQuestion()
+        }
+    }
+
+    /** Та же игра и режим: вдвоем список игр выберет ее снова, соло откроет заново */
+    fun again() {
+        ActiveRoom.requestRematch(Pick(gameId, mode))
+        _exit.tryEmit(Unit)
+    }
+
+    fun otherGame() {
+        _exit.tryEmit(Unit)
+    }
+
+    // общий старт: момент перехода комнаты в Playing у обоих почти одновременно, экраны открываются в разное время
+    private suspend fun countdownThenStart() {
+        val clock = MatchClock(ActiveRoom.startedAt, COUNTDOWN_MS)
+        while (true) {
+            val left = clock.countdown(SystemClock.elapsedRealtime())
+            _state.update { it.copy(countdown = left) }
+            if (left == 0) break
+            delay(100)
+        }
         loadQuestion()
-        room?.let(::observeRoom)
     }
 
     fun onAnswer(spell: Spell) {
@@ -94,7 +134,20 @@ internal class SkillGameViewModel @AssistedInject constructor(
     private fun submit(correct: Boolean) {
         val round = _state.value.match.round
         val answer = Answer(correct, SystemClock.elapsedRealtime() - questionShownAt)
-        _state.update { it.copy(showRightAnswer = true, match = it.match.answer(mine = true, answer)) }
+        totalAnswerMs += answer.timeMs
+        _state.update { state ->
+            val streak = if (correct) state.streak + 1 else 0
+            val answered = state.answered + 1
+            state.copy(
+                showRightAnswer = true,
+                match = state.match.answer(mine = true, answer),
+                streak = streak,
+                bestStreak = maxOf(state.bestStreak, streak),
+                correct = state.correct + if (correct) 1 else 0,
+                answered = answered,
+                avgAnswerMs = totalAnswerMs / answered,
+            )
+        }
         room?.let { runCatching { it.sendEvent(PeerAnswerCodec.encode(round, answer)) } }
         advanceIfRoundComplete()
     }
@@ -113,10 +166,18 @@ internal class SkillGameViewModel @AssistedInject constructor(
         }
         viewModelScope.launch {
             room.state.first { it is RoomState.Closed }
-            if (!_state.value.match.isOver) {
-                _state.update { it.copy(match = it.match.peerLeft()) }
-                finish()
-            }
+            onPeerLeft()
+        }
+        viewModelScope.launch {
+            room.syncEvents.first(GameChannel::isQuit)
+            onPeerLeft()
+        }
+    }
+
+    private fun onPeerLeft() {
+        if (!_state.value.match.isOver) {
+            _state.update { it.copy(match = it.match.peerLeft()) }
+            finish()
         }
     }
 
@@ -184,14 +245,19 @@ internal class SkillGameViewModel @AssistedInject constructor(
         if (_state.value.isEndGame) return
         _state.update { it.copy(isEndGame = true) }
         val score = _state.value.match.myScore
+        // комната остается для следующей игры
+        room?.endGame()
         viewModelScope.launch {
+            val previousBest = runCatching { leaderboardRepository.observe(gameId, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
             val isRecord = leaderboardSync.submit(Record(me.id, me.name, gameId, mode, score, System.currentTimeMillis()))
-            _state.update { it.copy(newRecord = isRecord && score > 0) }
+            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest) }
         }
     }
 
     override fun onCleared() {
-        if (room != null) ActiveRoom.clear()
+        val room = room ?: return
+        if (!_state.value.isEndGame) GameChannel.quit(room)
+        room.endGame()
     }
 
     @Immutable
@@ -211,6 +277,15 @@ internal class SkillGameViewModel @AssistedInject constructor(
         val peerName: String?,
         val isEndGame: Boolean,
         val newRecord: Boolean,
+        /** Лучший результат до этой игры, null - первая игра */
+        val previousBest: Int?,
+        /** Секунды общего отсчета перед первым вопросом, 0 - игра идет */
+        val countdown: Int,
+        val streak: Int,
+        val bestStreak: Int,
+        val correct: Int,
+        val answered: Int,
+        val avgAnswerMs: Long?,
     ) {
         companion object {
             fun init(match: SpellMatch, peerName: String?) = State(
@@ -229,6 +304,13 @@ internal class SkillGameViewModel @AssistedInject constructor(
                 peerName = peerName,
                 isEndGame = false,
                 newRecord = false,
+                previousBest = null,
+                countdown = 0,
+                streak = 0,
+                bestStreak = 0,
+                correct = 0,
+                answered = 0,
+                avgAnswerMs = null,
             )
         }
     }
@@ -245,6 +327,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         const val COMPARE_GAME_ID = "compare"
         const val BUILD_GAME_ID = "build"
         private const val MAX_ATTEMPTS = 20
+        private const val COUNTDOWN_MS = 3_000L
     }
 }
 

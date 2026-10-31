@@ -7,7 +7,6 @@ import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.games.internal.leaderboard.LeaderboardFragment
-import n7.ad2.games.internal.lobby.LobbyFragment
 import n7.ad2.games.wiring.GamesModule
 
 @dagger.Component(
@@ -29,7 +28,6 @@ internal interface GamesComponent {
     fun inject(gamesFragment: GamesFragment)
     fun inject(killCreepFragment: KillCreepFragment)
     fun inject(gameGuessTheSkillManaPoint: SkillGameFragment)
-    fun inject(lobbyFragment: LobbyFragment)
     fun inject(leaderboardFragment: LeaderboardFragment)
 
     val gamesViewModelFactory: GamesViewModel.Factory

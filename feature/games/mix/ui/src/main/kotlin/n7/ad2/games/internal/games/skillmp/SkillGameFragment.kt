@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import androidx.compose.runtime.collectAsState
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.launch
 import n7.ad2.android.findDependencies
 import n7.ad2.core.ui.content
 import n7.ad2.games.internal.di.DaggerGamesComponent
@@ -41,6 +45,15 @@ internal class SkillGameFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
         val state = viewModel.state.collectAsState().value
-        ManaPointScreen(state = state, onVariantClick = viewModel::onAnswer, onToggleTile = viewModel::onToggleTile, onBuild = viewModel::onBuild)
+        ManaPointScreen(state = state, onVariantClick = viewModel::onAnswer, onToggleTile = viewModel::onToggleTile, onBuild = viewModel::onBuild, onAgain = viewModel::again, onOtherGame = viewModel::otherGame)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.exit.collect { parentFragmentManager.popBackStack() }
+            }
+        }
     }
 }

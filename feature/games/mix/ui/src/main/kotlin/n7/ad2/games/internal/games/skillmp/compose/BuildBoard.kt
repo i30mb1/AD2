@@ -32,15 +32,15 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.DimColor
+import n7.ad2.games.internal.compose.GoldColor
+import n7.ad2.games.internal.compose.LineColor
+import n7.ad2.games.internal.compose.MeColor
+import n7.ad2.games.internal.compose.RightColor
 import n7.ad2.games.internal.games.skillmp.BuildQuestion
 import n7.ad2.games.internal.games.skillmp.BuildTile
 
-private val Gold = Color(0xFFFFD166)
-private val Selected = Color(0xFF448AFF)
-private val Right = Color(0xFF43A047)
-private val Wrong = Color(0xFFF44336)
-
-/** «Собери предмет»: цель, слоты под выбранные компоненты и сетка вариантов */
+/** «Собери предмет»: карточка с целью и слотами, под ней сетка вариантов и кнопка */
 @Composable
 internal fun ColumnScope.BuildBoard(
     build: BuildQuestion,
@@ -49,38 +49,54 @@ internal fun ColumnScope.BuildBoard(
     onToggle: (Int) -> Unit,
     onBuild: () -> Unit,
 ) {
-    Column(Modifier.weight(1f).fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-        AsyncImage(
-            model = build.target.imageUrl,
-            contentDescription = build.target.title,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.size(width = 112.dp, height = 82.dp).clip(RoundedCornerShape(10.dp)),
-        )
-        Text(build.target.title, color = AppTheme.color.textColor, fontWeight = FontWeight.SemiBold, fontSize = 18.sp, modifier = Modifier.padding(top = 8.dp))
-        Text("🪙 ${build.target.cost}", color = Gold, style = AppTheme.style.info)
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 16.dp, bottom = 6.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .background(AppTheme.color.surface)
+            .padding(14.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            AsyncImage(
+                model = build.target.imageUrl,
+                contentDescription = build.target.title,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.size(64.dp).clip(RoundedCornerShape(12.dp)),
+            )
+            Column {
+                Text(stringResource(R.string.build_pick, build.slots), color = DimColor, fontSize = 12.sp)
+                Text(build.target.title, color = AppTheme.color.textColor, fontWeight = FontWeight.Bold, fontSize = 17.sp)
+                Text(build.target.cost.toString(), color = GoldColor, fontSize = 13.sp)
+            }
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             val chosen = selected.toList()
             repeat(build.slots) { slot ->
                 val tile = chosen.getOrNull(slot)?.let { build.tiles[it] }
+                val shape = RoundedCornerShape(10.dp)
                 Box(
                     modifier = Modifier
-                        .size(width = 56.dp, height = 42.dp)
-                        .clip(RoundedCornerShape(8.dp))
-                        .border(1.5.dp, if (tile != null) Selected else Color(0xFF555555), RoundedCornerShape(8.dp))
-                        .background(if (tile != null) AppTheme.color.surface else Color.Transparent),
+                        .weight(1f)
+                        .height(56.dp)
+                        .clip(shape)
+                        .background(if (tile != null) LineColor else Color.Transparent)
+                        .border(1.dp, if (tile != null) MeColor else DimColor.copy(alpha = 0.5f), shape),
                     contentAlignment = Alignment.Center,
                 ) {
-                    if (tile != null) TileImage(tile) else Text("?", color = AppTheme.color.textSecondaryColor)
+                    if (tile != null) TileImage(tile) else Text("+", color = DimColor, fontSize = 20.sp)
                 }
             }
         }
-        Text(stringResource(R.string.build_pick, build.slots), color = AppTheme.color.textSecondaryColor, style = AppTheme.style.info)
     }
-    build.tiles.chunked(4).forEachIndexed { rowIndex, row ->
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)) {
-            row.forEachIndexed { column, tile ->
-                val index = rowIndex * 4 + column
-                Tile(tile, isSelected = index in selected, showAnswer = showAnswer, modifier = Modifier.weight(1f)) { onToggle(index) }
+    Spacer(Modifier.height(12.dp))
+    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        build.tiles.chunked(4).forEachIndexed { rowIndex, row ->
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                row.forEachIndexed { column, tile ->
+                    val index = rowIndex * 4 + column
+                    Tile(tile, isSelected = index in selected, showAnswer = showAnswer, modifier = Modifier.weight(1f)) { onToggle(index) }
+                }
             }
         }
     }
@@ -88,47 +104,45 @@ internal fun ColumnScope.BuildBoard(
     Text(
         text = stringResource(R.string.build_button),
         color = Color.White,
-        fontWeight = FontWeight.SemiBold,
+        fontSize = 15.sp,
+        fontWeight = FontWeight.Bold,
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 4.dp)
             .alpha(if (ready) 1f else 0.4f)
             .clip(RoundedCornerShape(12.dp))
-            .background(Wrong)
+            .background(MeColor)
             .clickable(enabled = ready, onClick = onBuild)
-            .padding(14.dp),
+            .padding(15.dp),
     )
 }
 
 @Composable
 private fun Tile(tile: BuildTile, isSelected: Boolean, showAnswer: Boolean, modifier: Modifier, onClick: () -> Unit) {
     val border = when {
-        showAnswer && tile.isCorrect -> Right
-        showAnswer && isSelected -> Wrong
-        isSelected -> Selected
+        showAnswer && tile.isCorrect -> RightColor
+        showAnswer && isSelected -> MeColor
+        isSelected -> MeColor
         else -> Color.Transparent
     }
-    val shape = RoundedCornerShape(8.dp)
-    // фон и рамка рисуются по форме без clip, прозрачность выбранной плитки - только у содержимого
+    val shape = RoundedCornerShape(10.dp)
     Column(
         modifier = modifier
-            .aspectRatio(1.1f)
             .background(AppTheme.color.surface, shape)
-            .border(2.dp, border, shape)
+            .border(1.dp, border, shape)
             .clickable(enabled = !showAnswer, onClick = onClick)
-            .padding(4.dp),
+            .padding(vertical = 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        val contentAlpha = if (isSelected && !showAnswer) 0.55f else 1f
-        Box(Modifier.weight(1f).fillMaxWidth().alpha(contentAlpha), contentAlignment = Alignment.Center) { TileImage(tile) }
-        Spacer(Modifier.height(2.dp))
+        // выбранная плитка уже лежит в слоте, здесь она бледнеет
+        val contentAlpha = if (isSelected && !showAnswer) 0.45f else 1f
+        Box(Modifier.size(48.dp, 36.dp).clip(RoundedCornerShape(6.dp)).background(LineColor).alpha(contentAlpha), contentAlignment = Alignment.Center) { TileImage(tile) }
         Text(
             text = tile.item?.cost?.toString() ?: stringResource(R.string.build_recipe),
-            color = Gold,
-            fontSize = 10.sp,
+            color = GoldColor,
+            fontSize = 11.sp,
             maxLines = 1,
-            modifier = Modifier.alpha(contentAlpha),
+            modifier = Modifier.padding(top = 4.dp).alpha(contentAlpha),
         )
     }
 }

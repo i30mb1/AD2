@@ -33,8 +33,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
-import n7.ad2.games.internal.lobby.Accent
-import n7.ad2.games.internal.lobby.Tabs
+import n7.ad2.games.internal.compose.MeColor
+import n7.ad2.games.internal.compose.Tabs
 import n7.ad2.games.room.GameMode
 
 /** Игр больше, чем помещается в строку - вкладки прокручиваются */
@@ -54,7 +54,7 @@ private fun GameChips(items: List<String>, selected: Int, onSelect: (Int) -> Uni
                 maxLines = 1,
                 modifier = Modifier
                     .clip(RoundedCornerShape(10.dp))
-                    .background(if (index == selected) Accent else AppTheme.color.surface)
+                    .background(if (index == selected) MeColor else AppTheme.color.surface)
                     .clickable { onSelect(index) }
                     .padding(horizontal = 14.dp, vertical = 8.dp),
             )
@@ -95,7 +95,7 @@ internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onGame: (Strin
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(10.dp))
                         .background(AppTheme.color.surface)
-                        .then(if (isMe) Modifier.border(1.dp, Accent, RoundedCornerShape(10.dp)) else Modifier)
+                        .then(if (isMe) Modifier.border(1.dp, MeColor, RoundedCornerShape(10.dp)) else Modifier)
                         .padding(12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {

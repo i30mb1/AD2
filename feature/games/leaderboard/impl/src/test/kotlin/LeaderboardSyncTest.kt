@@ -44,6 +44,7 @@ internal class LeaderboardSyncTest {
             sentSync += RoomMessage.Sync(channel, payload)
         }
         override fun startGame(gameId: String, mode: GameMode) = Unit
+        override fun endGame() = Unit
         override fun sendEvent(payload: String) = Unit
         override fun leave() = Unit
     }
