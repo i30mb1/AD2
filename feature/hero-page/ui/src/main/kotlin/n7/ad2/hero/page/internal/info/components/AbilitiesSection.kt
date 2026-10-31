@@ -57,14 +57,21 @@ internal fun AbilitiesSection(
     changes: List<PatchChange>,
 ) {
     SectionBody {
-        groups.forEachIndexed { index, group ->
-            if (index > 0) VSpace(12.dp)
-            Caption(stringResource(group.group.label))
-            VSpace(8.dp)
-            FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
+        // one row in game order, groups are split by a thin line: the kind of the picked ability is named in its details
+        FlowRow(
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            groups.forEachIndexed { index, group ->
+                if (index > 0) {
+                    Box(
+                        Modifier
+                            .align(Alignment.CenterVertically)
+                            .padding(horizontal = 2.dp)
+                            .size(width = 1.dp, height = 32.dp)
+                            .background(InfoColors.divider),
+                    )
+                }
                 group.abilities.forEach { ability ->
                     AbilityIcon(ability, isSelected = ability == selected, onClick = { onSelect(ability) })
                 }
@@ -86,13 +93,6 @@ internal fun AbilitiesSection(
     }
 }
 
-private val VOAbilityGroup.Group.label: Int
-    get() = when (this) {
-        VOAbilityGroup.Group.INNATE -> R.string.ability_group_innate
-        VOAbilityGroup.Group.MAIN -> R.string.ability_group_main
-        VOAbilityGroup.Group.EXTRA -> R.string.ability_group_extra
-    }
-
 @Composable
 private fun AbilityIcon(ability: Ability, isSelected: Boolean, onClick: () -> Unit) {
     val shape = AppTheme.shape.medium
@@ -102,7 +102,7 @@ private fun AbilityIcon(ability: Ability, isSelected: Boolean, onClick: () -> Un
         placeholder = painterResource(n7.ad2.core.ui.R.drawable.square_placeholder),
         error = painterResource(n7.ad2.core.ui.R.drawable.square_error_placeholder),
         modifier = Modifier
-            .size(52.dp)
+            .size(48.dp)
             .alpha(if (isSelected) 1f else 0.55f)
             .clip(shape)
             .border(2.dp, if (isSelected) AppTheme.color.primary else Color.Transparent, shape)

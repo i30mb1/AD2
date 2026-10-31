@@ -20,6 +20,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyColumn
 import n7.ad2.hero.page.internal.pager.foldsHeroBanner
 import n7.ad2.hero.page.internal.common.SectionChip
+import n7.ad2.hero.page.internal.common.keepsSidewaysDrag
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
@@ -218,7 +219,9 @@ private fun Filters(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         LazyRow(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier
+                .weight(1f)
+                .keepsSidewaysDrag(),
             contentPadding = PaddingValues(start = 16.dp, end = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {

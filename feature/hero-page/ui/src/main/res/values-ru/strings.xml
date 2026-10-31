@@ -51,9 +51,6 @@
     <string name="stat_vision">Обзор день / ночь</string>
     <string name="stat_regen">+%s/с</string>
 
-    <string name="ability_group_innate">Врождённая</string>
-    <string name="ability_group_main">Способности</string>
-    <string name="ability_group_extra">Дополнительные</string>
     <string name="ability_kind_innate">Врождённая</string>
     <string name="ability_kind_ultimate">Ультимейт</string>
     <string name="ability_kind_extra">Дополнительная</string>

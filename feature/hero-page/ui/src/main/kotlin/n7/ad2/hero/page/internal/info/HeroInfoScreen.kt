@@ -1,24 +1,23 @@
 package n7.ad2.hero.page.internal.info
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBars
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import n7.ad2.hero.page.internal.pager.foldsHeroBanner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -38,6 +37,7 @@ import n7.ad2.hero.page.internal.info.domain.vo.InfoSection
 import n7.ad2.hero.page.internal.info.domain.vo.VOAbilityGroup
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero.page.internal.info.domain.vo.sections
+import n7.ad2.hero.page.internal.pager.foldsHeroBanner
 
 @Composable
 internal fun HeroInfoScreen(viewModel: HeroInfoViewModel) {
@@ -53,8 +53,10 @@ internal fun HeroInfoScreen(viewModel: HeroInfoViewModel) {
     }
 }
 
-/** One section at a time, picked by the chips: the page stays short and nothing has to be unfolded. */
-@OptIn(ExperimentalFoundationApi::class)
+/**
+ * One section at a time, picked by the chips: the page stays short and nothing has to be unfolded.
+ * The chips stay above the content and every section scrolls on its own, so a new one always opens from its top.
+ */
 @Composable
 private fun HeroInfoContent(info: VOHeroInfo) {
     val description = info.description
@@ -67,40 +69,38 @@ private fun HeroInfoContent(info: VOHeroInfo) {
     var selectedAbilityName by rememberSaveable { mutableStateOf(defaultAbility?.name) }
     val selectedAbility = abilities.firstOrNull { it.name == selectedAbilityName } ?: defaultAbility
 
-    val listState = rememberLazyListState()
-    // a new section starts from its top, not from where the previous one was scrolled to
-    LaunchedEffect(selected) { if (listState.firstVisibleItemIndex > 0) listState.scrollToItem(1) }
-
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
-    LazyColumn(
-        state = listState,
-        modifier = Modifier.foldsHeroBanner(),
-        contentPadding = PaddingValues(bottom = bottomInset + 16.dp),
-    ) {
-        stickyHeader(key = "chips") {
-            SectionChips(
-                titles = sections.map { stringResource(it.title) },
-                selected = sections.indexOf(selected),
-                onSelect = { index -> selectedName = sections[index].name },
-            )
-        }
-        item(key = selected.name) {
-            when (selected) {
-                InfoSection.ABILITIES -> if (selectedAbility != null) {
-                    AbilitiesSection(
-                        groups = info.abilityGroups,
-                        selected = selectedAbility,
-                        onSelect = { ability -> selectedAbilityName = ability.name },
-                        changes = description.changes,
-                    )
+    Column(Modifier.fillMaxSize()) {
+        SectionChips(
+            titles = sections.map { stringResource(it.title) },
+            selected = sections.indexOf(selected),
+            onSelect = { index -> selectedName = sections[index].name },
+        )
+        key(selected) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .foldsHeroBanner()
+                    .verticalScroll(rememberScrollState())
+                    .padding(bottom = bottomInset + 16.dp),
+            ) {
+                when (selected) {
+                    InfoSection.ABILITIES -> if (selectedAbility != null) {
+                        AbilitiesSection(
+                            groups = info.abilityGroups,
+                            selected = selectedAbility,
+                            onSelect = { ability -> selectedAbilityName = ability.name },
+                            changes = description.changes,
+                        )
+                    }
+                    InfoSection.STATS -> StatsSection(description.stats)
+                    InfoSection.TALENTS -> TalentsSection(description.talents)
+                    InfoSection.FACETS -> FacetsSection(description.facets)
+                    InfoSection.STRATEGY -> StrategySection(description.wiki.playstyle, description.wiki.tips)
+                    InfoSection.COUNTERS -> CountersSection(description.wiki.counters)
+                    InfoSection.ITEMS -> ItemsSection(description.wiki.recommendedItems)
+                    InfoSection.LORE -> LoreSection(description.bio, description.trivia)
                 }
-                InfoSection.STATS -> StatsSection(description.stats)
-                InfoSection.TALENTS -> TalentsSection(description.talents)
-                InfoSection.FACETS -> FacetsSection(description.facets)
-                InfoSection.STRATEGY -> StrategySection(description.wiki.playstyle, description.wiki.tips)
-                InfoSection.COUNTERS -> CountersSection(description.wiki.counters)
-                InfoSection.ITEMS -> ItemsSection(description.wiki.recommendedItems)
-                InfoSection.LORE -> LoreSection(description.bio, description.trivia)
             }
         }
     }

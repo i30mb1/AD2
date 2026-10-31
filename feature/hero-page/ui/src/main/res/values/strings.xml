@@ -55,9 +55,6 @@
     <string name="stat_vision">Vision day / night</string>
     <string name="stat_regen">+%s/s</string>
 
-    <string name="ability_group_innate">Innate</string>
-    <string name="ability_group_main">Abilities</string>
-    <string name="ability_group_extra">Additional</string>
     <string name="ability_kind_innate">Innate</string>
     <string name="ability_kind_ultimate">Ultimate</string>
     <string name="ability_kind_extra">Additional</string>
