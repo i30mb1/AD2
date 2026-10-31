@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="guess_hero">Угадай героя</string>
-    <string name="higher_lower">Больше или меньше</string>
-    <string name="build_item">Собери предмет</string>
     <string name="build_pick">выберите компонентов: %d</string>
     <string name="build_button">Собрать</string>
     <string name="build_recipe">рецепт</string>
@@ -12,7 +9,6 @@
     <string name="compare_damage">Кто бьёт сильнее?</string>
     <string name="compare_move_speed">Кто быстрее бегает?</string>
     <string name="compare_attack_range">Кто бьёт дальше?</string>
-    <string name="compare_level_hint">на 1 уровне · нажмите на карточку</string>
 
     <string name="games_mode_solo">Соло</string>
     <string name="games_mode_versus">Против друга</string>
@@ -22,12 +18,9 @@
     <string name="lobby_you">%s (вы)</string>
 
     <string name="game_me_letter">Я</string>
-    <string name="game_you">вы</string>
-    <string name="game_answered">ответил ✓</string>
     <string name="end_win">Победа</string>
     <string name="end_lose">Поражение</string>
     <string name="end_draw">Ничья</string>
-    <string name="end_shared_score">Общий счёт: %d</string>
     <string name="end_peer_left">Соперник вышел</string>
     <string name="end_new_record">Новый рекорд!</string>
 
@@ -40,23 +33,13 @@
         <item quantity="many">%d очков</item>
         <item quantity="other">%d очка</item>
     </plurals>
-    <string name="game_shared_points">вместе %d</string>
-    <string name="game_round_label">раунд</string>
-    <string name="game_question_mana">Сколько маны стоит?</string>
-    <string name="game_question_hero">Кто это?</string>
-    <string name="game_spell_level">уровень</string>
     <string name="end_again">Ещё раз</string>
     <string name="end_again_with">Ещё раз с %s</string>
     <string name="end_other_game">Другая игра</string>
     <string name="end_record_was">было %1$d · теперь %2$d</string>
     <string name="games_title">Игры</string>
     <string name="games_records">Рекорды</string>
-    <string name="games_rules_spell">сколько маны стоит способность</string>
-    <string name="games_rules_hero">угадай героя по картинке</string>
-    <string name="games_rules_compare">у кого больше HP, урона, брони</string>
-    <string name="games_rules_build">выбери компоненты рецепта</string>
     <string name="games_rules_xo">классика на двоих</string>
-    <string name="games_rules_buy">хватит ли золота на предмет</string>
     <string name="party_alone">Рядом пока никого</string>
     <string name="party_alone_hint">Друг появится здесь, когда откроет «Игры»</string>
     <string name="party_help">Помощь</string>
@@ -88,12 +71,6 @@
     <string name="party_no_address">Нет Wi-Fi сети: подключитесь к ней, чтобы играть по адресу</string>
     <string name="party_enter_address">Или введите адрес друга</string>
     <string name="party_connect">Подключиться</string>
-    <string name="game_streak">серия %d</string>
-    <string name="end_stat_correct">верно</string>
-    <string name="end_stat_accuracy">точность</string>
-    <string name="end_stat_answer">средний ответ</string>
-    <string name="end_stat_streak">лучшая серия</string>
-    <string name="end_seconds">%.1f с</string>
     <string name="game_starts_in">Старт через</string>
     <string name="party_connecting_plain">Подключаемся…</string>
     <string name="mid">Мид</string>
@@ -139,4 +116,50 @@
     <string name="mid_stat_early">рано</string>
     <string name="mid_stat_late">поздно</string>
     <string name="mid_stat_error">мимо в среднем</string>
+    <string name="show">Викторина-шоу</string>
+    <string name="games_rules_show">6 раундов: мана, голос, рецепт, у кого больше. Ставки и «Я первый!»</string>
+    <string name="show_round">РАУНД %1$d ИЗ %2$d</string>
+    <string name="show_final">ФИНАЛ</string>
+    <string name="show_bet_chip">СТАВКА ×2</string>
+    <string name="show_kind_mana">Сколько маны?</string>
+    <string name="show_kind_hero">Чей спелл?</string>
+    <string name="show_kind_voice">Кто сказал?</string>
+    <string name="show_kind_compare">У кого больше?</string>
+    <string name="show_kind_build">Рецепт</string>
+    <string name="show_hint_mana_intro">стоимость спелла на одном из уровней</string>
+    <string name="show_hint_mana">стоимость на %d уровне</string>
+    <string name="show_hint_hero">спелл · четыре героя</string>
+    <string name="show_hint_voice">голос героя · можно переслушать 1 раз</string>
+    <string name="show_hint_compare">два героя на 1 уровне</string>
+    <string name="show_hint_build">собери части предмета</string>
+    <string name="show_hint_final">ответы откроются после «Я первый!»</string>
+    <string name="show_final_rules">Ответы лежат рубашкой вверх. Жми «Я первый!», как только знаешь: чем раньше, тем больше очков, до 400. Потом 4 секунды на ответ, ошибка - минус 100.</string>
+    <string name="show_bet">Ставка ×2</string>
+    <string name="show_bet_hint">Верно - очки вдвое, ошибка - минус 100. Одна ставка на шоу: нажми, чтобы поставить на этот раунд.</string>
+    <string name="show_bet_used">Ставка в этом шоу уже сделана</string>
+    <string name="show_buzz">Я первый!</string>
+    <string name="show_fuse">фитиль %d с</string>
+    <string name="show_fuse_frozen">заморожен</string>
+    <string name="show_answer_fuse">ответ: %d с</string>
+    <string name="show_fifty">50 на 50 · %d</string>
+    <string name="show_freeze">Заморозка · %d</string>
+    <string name="show_status_thinking">думает</string>
+    <string name="show_status_answered">ответил</string>
+    <string name="show_status_left">вышел</string>
+    <string name="show_waiting">ждём: %s</string>
+    <string name="show_voice_loading">голос загружается…</string>
+    <string name="show_voice_playing">слушай…</string>
+    <string name="show_voice_replay">переслушать · %d</string>
+    <string name="show_voice_failed">Звука нет. Реплика: «%s»</string>
+    <string name="show_level">%d уровень</string>
+    <string name="show_load_failed">Не получилось собрать вопрос. Попробуй ещё раз.</string>
+    <string name="show_end_title">Шоу окончено</string>
+    <string name="show_points">Очки: %s</string>
+    <string name="show_you">Вы</string>
+    <string name="show_short_mana">мана</string>
+    <string name="show_short_hero">спелл</string>
+    <string name="show_short_voice">голос</string>
+    <string name="show_short_compare">больше</string>
+    <string name="show_short_build">рецепт</string>
+    <string name="show_short_final">финал</string>
 </resources>

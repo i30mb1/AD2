@@ -172,11 +172,7 @@ private fun GameRow(game: GameVO, record: Int?, onClick: () -> Unit) {
 }
 
 private fun GameVO.rules(): Int = when (this) {
-    is GameVO.GuessSkillMana -> R.string.games_rules_spell
-    is GameVO.GuessHero -> R.string.games_rules_hero
-    is GameVO.HigherLower -> R.string.games_rules_compare
-    is GameVO.BuildItem -> R.string.games_rules_build
+    is GameVO.Show -> R.string.games_rules_show
     is GameVO.Mid -> R.string.games_rules_mid
     is GameVO.XO -> R.string.games_rules_xo
-    is GameVO.CanYouBuyIt -> R.string.games_rules_buy
 }

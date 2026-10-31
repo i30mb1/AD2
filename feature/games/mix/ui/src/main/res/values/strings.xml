@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="spell_cost" translatable="false">Spell Cost</string>
-    <string name="can_you_buy_it" translatable="false">Buy it?</string>
     <string name="xo" translatable="false">XO</string>
-    <string name="guess_hero">Guess the Hero</string>
-    <string name="higher_lower">Higher or Lower</string>
-    <string name="build_item">Build the Item</string>
     <string name="build_pick">pick %d components</string>
     <string name="build_button">Build</string>
     <string name="build_recipe">recipe</string>
@@ -15,7 +10,6 @@
     <string name="compare_damage">Who hits harder?</string>
     <string name="compare_move_speed">Who is faster?</string>
     <string name="compare_attack_range">Who attacks from farther?</string>
-    <string name="compare_level_hint">at level 1 · tap a card</string>
 
     <string name="games_mode_solo">Solo</string>
     <string name="games_mode_versus">Versus a friend</string>
@@ -25,12 +19,9 @@
     <string name="lobby_you">%s (you)</string>
 
     <string name="game_me_letter">Me</string>
-    <string name="game_you">you</string>
-    <string name="game_answered">answered ✓</string>
     <string name="end_win">Victory</string>
     <string name="end_lose">Defeat</string>
     <string name="end_draw">Draw</string>
-    <string name="end_shared_score">Shared score: %d</string>
     <string name="end_peer_left">The opponent left</string>
     <string name="end_new_record">New record!</string>
 
@@ -41,23 +32,13 @@
         <item quantity="one">%d point</item>
         <item quantity="other">%d points</item>
     </plurals>
-    <string name="game_shared_points">together %d</string>
-    <string name="game_round_label">round</string>
-    <string name="game_question_mana">How much mana does it cost?</string>
-    <string name="game_question_hero">Who is this?</string>
-    <string name="game_spell_level">level</string>
     <string name="end_again">Play again</string>
     <string name="end_again_with">Again with %s</string>
     <string name="end_other_game">Another game</string>
     <string name="end_record_was">was %1$d · now %2$d</string>
     <string name="games_title">Games</string>
     <string name="games_records">Records</string>
-    <string name="games_rules_spell">how much mana an ability costs</string>
-    <string name="games_rules_hero">guess the hero by the picture</string>
-    <string name="games_rules_compare">who has more HP, damage, armor</string>
-    <string name="games_rules_build">pick the parts of a recipe</string>
     <string name="games_rules_xo">classic for two</string>
-    <string name="games_rules_buy">enough gold for the item?</string>
     <string name="party_alone">Nobody nearby yet</string>
     <string name="party_alone_hint">A friend shows up here once they open Games</string>
     <string name="party_help">Help</string>
@@ -89,12 +70,6 @@
     <string name="party_no_address">No Wi-Fi network: connect to one to play by address</string>
     <string name="party_enter_address">Or enter your friend\'s address</string>
     <string name="party_connect">Connect</string>
-    <string name="game_streak">streak %d</string>
-    <string name="end_stat_correct">correct</string>
-    <string name="end_stat_accuracy">accuracy</string>
-    <string name="end_stat_answer">avg answer</string>
-    <string name="end_stat_streak">best streak</string>
-    <string name="end_seconds">%.1f s</string>
     <string name="game_starts_in">Starts in</string>
     <string name="party_connecting_plain">Connecting…</string>
     <string name="mid">Mid</string>
@@ -140,4 +115,50 @@
     <string name="mid_stat_early">early</string>
     <string name="mid_stat_late">late</string>
     <string name="mid_stat_error">avg miss</string>
+    <string name="show">Quiz Show</string>
+    <string name="games_rules_show">6 rounds: mana, voice, recipe, who has more. Bets and «I\'m first!»</string>
+    <string name="show_round">ROUND %1$d OF %2$d</string>
+    <string name="show_final">FINAL</string>
+    <string name="show_bet_chip">BET ×2</string>
+    <string name="show_kind_mana">How much mana?</string>
+    <string name="show_kind_hero">Whose spell?</string>
+    <string name="show_kind_voice">Who said it?</string>
+    <string name="show_kind_compare">Who has more?</string>
+    <string name="show_kind_build">Recipe</string>
+    <string name="show_hint_mana_intro">the cost of a spell at one of its levels</string>
+    <string name="show_hint_mana">the cost at level %d</string>
+    <string name="show_hint_hero">a spell · four heroes</string>
+    <string name="show_hint_voice">a hero\'s voice · one replay</string>
+    <string name="show_hint_compare">two heroes at level 1</string>
+    <string name="show_hint_build">pick the parts of the item</string>
+    <string name="show_hint_final">the answers open after «I\'m first!»</string>
+    <string name="show_final_rules">The answers lie face down. Press «I\'m first!» as soon as you know: the earlier, the more points, up to 400. Then 4 seconds to answer, a miss takes 100.</string>
+    <string name="show_bet">Bet ×2</string>
+    <string name="show_bet_hint">Right - double points, wrong - minus 100. One bet a show: tap to bet on this round.</string>
+    <string name="show_bet_used">The bet of this show is already made</string>
+    <string name="show_buzz">I\'m first!</string>
+    <string name="show_fuse">fuse %d s</string>
+    <string name="show_fuse_frozen">frozen</string>
+    <string name="show_answer_fuse">answer: %d s</string>
+    <string name="show_fifty">50/50 · %d</string>
+    <string name="show_freeze">Freeze · %d</string>
+    <string name="show_status_thinking">thinking</string>
+    <string name="show_status_answered">answered</string>
+    <string name="show_status_left">left</string>
+    <string name="show_waiting">waiting: %s</string>
+    <string name="show_voice_loading">the voice is loading…</string>
+    <string name="show_voice_playing">listen…</string>
+    <string name="show_voice_replay">replay · %d</string>
+    <string name="show_voice_failed">No sound. The line: «%s»</string>
+    <string name="show_level">level %d</string>
+    <string name="show_load_failed">Could not make a question. Try again.</string>
+    <string name="show_end_title">The show is over</string>
+    <string name="show_points">%s points</string>
+    <string name="show_you">You</string>
+    <string name="show_short_mana">mana</string>
+    <string name="show_short_hero">spell</string>
+    <string name="show_short_voice">voice</string>
+    <string name="show_short_compare">more</string>
+    <string name="show_short_build">recipe</string>
+    <string name="show_short_final">final</string>
 </resources>

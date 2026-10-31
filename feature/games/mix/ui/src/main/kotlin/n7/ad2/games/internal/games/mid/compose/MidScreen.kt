@@ -46,6 +46,10 @@ import n7.ad2.games.internal.games.mid.LaneSim
 import n7.ad2.games.internal.games.mid.MidHero
 import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.mid.Side
+import n7.ad2.games.internal.paper.Ink
+import n7.ad2.games.internal.paper.InkDim
+import n7.ad2.games.internal.paper.InkGood
+import n7.ad2.games.internal.paper.PaperCard
 import n7.ad2.games.room.GameMode
 
 @Immutable
@@ -190,10 +194,6 @@ private fun FeedbackBar(feedback: Feedback?) {
 
 internal fun seconds(ms: Long): String = "%.2f".format(ms / 1000f)
 
-internal val PaperCard = Color(0xFFF1E7D3)
-internal val Ink = Color(0xFF2B2622)
-internal val InkDim = Color(0xFF6B5F53)
-internal val InkGood = Color(0xFF2F6B36)
 internal val RadiantColor = Color(0xFF5FAE5C)
 internal val DireColor = Color(0xFFD9483B)
 

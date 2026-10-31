@@ -1,4 +1,4 @@
-package n7.ad2.games.internal.games.skillmp
+package n7.ad2.games.internal.games.show
 
 import android.content.Context
 import android.os.Bundle
@@ -11,31 +11,27 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import javax.inject.Inject
 import kotlinx.coroutines.launch
 import n7.ad2.android.findDependencies
 import n7.ad2.core.ui.content
 import n7.ad2.games.internal.di.DaggerGamesComponent
-import n7.ad2.games.internal.games.skillmp.compose.ManaPointScreen
+import n7.ad2.games.internal.games.show.compose.ShowActions
+import n7.ad2.games.internal.games.show.compose.ShowScreen
 import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
-import javax.inject.Inject
 
-internal class SkillGameFragment : Fragment() {
+internal class ShowFragment : Fragment() {
 
     companion object {
         private const val ARG_MODE = "mode"
-        private const val ARG_GAME = "game"
 
-        fun getInstance(mode: GameMode = GameMode.SOLO, gameId: String = SkillGameViewModel.GAME_ID) =
-            SkillGameFragment().apply { arguments = bundleOf(ARG_MODE to mode.name, ARG_GAME to gameId) }
+        fun getInstance(mode: GameMode = GameMode.SOLO) = ShowFragment().apply { arguments = bundleOf(ARG_MODE to mode.name) }
     }
 
-    @Inject lateinit var skillGameViewModelFactory: SkillGameViewModel.Factory
-    private val viewModel: SkillGameViewModel by viewModel {
-        skillGameViewModelFactory.create(
-            GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)),
-            requireArguments().getString(ARG_GAME, SkillGameViewModel.GAME_ID),
-        )
+    @Inject lateinit var showViewModelFactory: ShowViewModel.Factory
+    private val viewModel: ShowViewModel by viewModel {
+        showViewModelFactory.create(GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)))
     }
 
     override fun onAttach(context: Context) {
@@ -44,8 +40,21 @@ internal class SkillGameFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        val state = viewModel.state.collectAsState().value
-        ManaPointScreen(state = state, onVariantClick = viewModel::onAnswer, onToggleTile = viewModel::onToggleTile, onBuild = viewModel::onBuild, onAgain = viewModel::again, onOtherGame = viewModel::otherGame)
+        ShowScreen(
+            state = viewModel.state.collectAsState().value,
+            actions = ShowActions(
+                onBet = viewModel::toggleBet,
+                onPick = viewModel::pick,
+                onTile = viewModel::toggleTile,
+                onBuild = viewModel::build,
+                onBuzz = viewModel::buzz,
+                onFifty = viewModel::fiftyFifty,
+                onFreeze = viewModel::freeze,
+                onReplay = viewModel::replayVoice,
+                onAgain = viewModel::again,
+                onOtherGame = viewModel::otherGame,
+            ),
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

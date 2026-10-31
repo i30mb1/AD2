@@ -1,4 +1,4 @@
-package n7.ad2.games.internal.games.skillmp
+package n7.ad2.games.internal.games.show
 
 import android.app.Application
 import org.json.JSONObject

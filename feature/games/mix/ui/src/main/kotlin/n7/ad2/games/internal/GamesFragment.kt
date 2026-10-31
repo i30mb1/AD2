@@ -27,7 +27,7 @@ import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.mid.MidFragment
 import n7.ad2.games.internal.games.mid.MidViewModel
-import n7.ad2.games.internal.games.skillmp.SkillGameFragment
+import n7.ad2.games.internal.games.show.ShowFragment
 import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
@@ -90,7 +90,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
     }
 
     private fun gameFragment(gameId: String, mode: GameMode): Fragment =
-        if (gameId == MidViewModel.GAME_ID) MidFragment.getInstance(mode) else SkillGameFragment.getInstance(mode, gameId)
+        if (gameId == MidViewModel.GAME_ID) MidFragment.getInstance(mode) else ShowFragment.getInstance(mode)
 
     private fun onLeaderboardClicked() = open(LeaderboardFragment())
 

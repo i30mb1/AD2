@@ -1,6 +1,6 @@
 import com.google.common.truth.Truth
-import n7.ad2.games.internal.games.skillmp.RecipeItem
-import n7.ad2.games.internal.games.skillmp.createBuildQuestion
+import n7.ad2.games.internal.games.show.RecipeItem
+import n7.ad2.games.internal.games.show.createBuildQuestion
 import org.junit.Test
 import kotlin.random.Random
 

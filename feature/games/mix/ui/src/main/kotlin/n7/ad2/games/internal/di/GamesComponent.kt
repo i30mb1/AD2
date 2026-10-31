@@ -5,7 +5,7 @@ import n7.ad2.games.api.GamesDependencies
 import n7.ad2.games.internal.GamesFragment
 import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.games.mid.MidFragment
-import n7.ad2.games.internal.games.skillmp.SkillGameFragment
+import n7.ad2.games.internal.games.show.ShowFragment
 import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.wiring.GamesModule
 
@@ -27,7 +27,7 @@ internal interface GamesComponent {
 
     fun inject(gamesFragment: GamesFragment)
     fun inject(midFragment: MidFragment)
-    fun inject(gameGuessTheSkillManaPoint: SkillGameFragment)
+    fun inject(showFragment: ShowFragment)
     fun inject(leaderboardFragment: LeaderboardFragment)
 
     val gamesViewModelFactory: GamesViewModel.Factory

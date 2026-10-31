@@ -38,9 +38,12 @@ import n7.ad2.games.internal.compose.LineColor
 import n7.ad2.games.internal.games.mid.BotLevel
 import n7.ad2.games.internal.games.mid.MidHero
 import n7.ad2.games.internal.games.mid.MidViewModel
+import n7.ad2.games.internal.paper.Ink
+import n7.ad2.games.internal.paper.InkDim
+import n7.ad2.games.internal.paper.PaperCard
+import n7.ad2.games.internal.paper.PaperEdge
 import n7.ad2.games.room.GameMode
 
-private val PaperEdge = Color(0xFFFFF7E8)
 
 /** Before the lane: a hero, and in solo a bot of some level or training; over the network both say they are ready */
 @Composable

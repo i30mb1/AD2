@@ -380,11 +380,11 @@ private fun PartySelectPreview() {
         override fun getFilesDir() = null
         override fun getConfiguration() = null
     }
-    val games = listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.HigherLower(res), GameVO.BuildItem(res), GameVO.Mid(res), GameVO.XO(res))
+    val games = listOf(GameVO.Show(res), GameVO.Mid(res), GameVO.XO(res))
     val party = PartyState(
         session = n7.ad2.games.internal.party.Session(n7.ad2.games.room.Player("p", "Pixel 8"), Via.DIRECT),
         myPick = Pick(requireNotNull(games[0].quizId), GameMode.VERSUS),
-        peerPick = Pick(requireNotNull(games[3].quizId), GameMode.COOP),
+        peerPick = Pick(requireNotNull(games[1].quizId), GameMode.COOP),
     )
     AppTheme(isDarkTheme = true) { PartySelect(party, "Pixel 8", games, onPick = { _, _ -> }, onLeave = {}, modifier = Modifier.padding(top = 40.dp)) }
 }

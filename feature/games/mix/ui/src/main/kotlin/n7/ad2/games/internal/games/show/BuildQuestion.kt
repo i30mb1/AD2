@@ -1,8 +1,5 @@
-package n7.ad2.games.internal.games.skillmp
+package n7.ad2.games.internal.games.show
 
-import kotlinx.coroutines.withContext
-import n7.ad2.coroutines.DispatchersProvider
-import javax.inject.Inject
 import kotlin.math.abs
 import kotlin.random.Random
 
@@ -11,16 +8,6 @@ internal data class BuildTile(val item: RecipeItem?, val isCorrect: Boolean)
 
 /** «Собери предмет»: цель, [slots] = сколько плиток нужно выбрать, [tiles] - варианты (верные + ловушки) */
 internal data class BuildQuestion(val target: RecipeItem, val slots: Int, val tiles: List<BuildTile>)
-
-internal class GetBuildQuizUseCase @Inject constructor(
-    private val itemRecipes: ItemRecipes,
-    private val dispatchers: DispatchersProvider,
-) {
-
-    suspend operator fun invoke(random: Random = Random.Default): BuildQuestion = withContext(dispatchers.IO) {
-        createBuildQuestion(itemRecipes.all(), random)
-    }
-}
 
 private const val TILES = 8
 private const val DECOY_POOL = 20

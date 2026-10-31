@@ -27,8 +27,11 @@ import n7.ad2.games.internal.compose.MeColor
 import n7.ad2.games.internal.compose.PeerColor
 import n7.ad2.games.internal.games.mid.MidHero
 import n7.ad2.games.internal.games.mid.MidViewModel
-import n7.ad2.games.internal.games.skillmp.compose.EndActions
-import n7.ad2.games.internal.games.skillmp.compose.RecordPlate
+import n7.ad2.games.internal.compose.EndActions
+import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.paper.Ink
+import n7.ad2.games.internal.paper.InkDim
+import n7.ad2.games.internal.paper.PaperCard
 import n7.ad2.games.room.GameMode
 
 /** The result: last hits and denies of both sides, how accurate my hits were and how far the misses were */
