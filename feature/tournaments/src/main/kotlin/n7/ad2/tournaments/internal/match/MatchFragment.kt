@@ -39,7 +39,7 @@ internal class MatchFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
         val state = viewModel.state.collectAsState().value
-        MatchScreen(state, viewModel::load, ::onWatchClicked)
+        MatchScreen(state, onBackClicked = { requireActivity().onBackPressedDispatcher.onBackPressed() }, viewModel::load, ::onWatchClicked)
     }
 
     private fun onWatchClicked(details: MatchDetails) {

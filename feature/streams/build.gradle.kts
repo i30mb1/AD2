@@ -5,6 +5,11 @@ plugins {
     id("n7.plugins.kotlin-ksp")
 }
 
+android {
+    // the library convention turns the debug variant off for modules that are not ui/impl/demo, unit tests run on release
+    testBuildType = "release"
+}
+
 dependencies {
     implementation(libs.exoPlayerUI)
     implementation(libs.exoPlayerHLS)
@@ -21,4 +26,6 @@ dependencies {
     implementation(projects.core.mediaPlayer)
 
     ksp(libs.daggerAnnotation)
+
+    testImplementation(libs.test.junit)
 }

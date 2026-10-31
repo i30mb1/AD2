@@ -9,10 +9,17 @@ import javax.inject.Inject
 
 internal class StreamRepository @Inject constructor(private val twitchApi: TwitchApi) {
 
-    suspend fun getStreams(loadSize: Int, paginationKey: String): Streams = twitchApi.getStreams(loadSize, paginationKey)
+    suspend fun getStreams(loadSize: Int, paginationKey: String, language: String?): Streams = twitchApi.getStreams(loadSize, paginationKey, language = language)
+
+    suspend fun getStream(login: String): Stream? = twitchApi.getStream(login).list.firstOrNull()
 }
 
-internal class StreamPagingSource @Inject constructor(private val streamRepository: StreamRepository, private val dispatcher: DispatchersProvider) : PagingSource<String, Stream>() {
+/** [language] is a Twitch language code ("ru", "en"), null loads streams in every language. */
+internal class StreamPagingSource(
+    private val streamRepository: StreamRepository,
+    private val dispatcher: DispatchersProvider,
+    private val language: String?,
+) : PagingSource<String, Stream>() {
 
     override fun getRefreshKey(state: PagingState<String, Stream>): String? {
         val anchorPosition = state.anchorPosition ?: return null
@@ -25,8 +32,9 @@ internal class StreamPagingSource @Inject constructor(private val streamReposito
         val paginationKey: String = params.key ?: ""
 
         try {
-            val streams = streamRepository.getStreams(loadSize, paginationKey)
-            LoadResult.Page(streams.list, null, streams.pagination.cursor)
+            val streams = streamRepository.getStreams(loadSize, paginationKey, language)
+            // the last page comes with an empty cursor, an empty key would load the first page again
+            LoadResult.Page(streams.list, null, streams.pagination.cursor.ifEmpty { null })
         } catch (e: Exception) {
             LoadResult.Error(e)
         }

@@ -1,8 +1,5 @@
 package n7.ad2.news.ui.internal.screen.news.compose
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -10,14 +7,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.derivedStateOf
@@ -28,18 +21,14 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import kotlinx.coroutines.launch
 import n7.ad2.android.DrawerPercentListener
-import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.core.ui.compose.view.FilterChip
 import n7.ad2.core.ui.compose.view.ScrollToTopFab
 import n7.ad2.feature.news.ui.R
 import n7.ad2.news.ui.internal.screen.news.NewsViewModel
@@ -103,29 +92,8 @@ internal fun NewsScreen(viewModel: NewsViewModel, drawerPercentListener: DrawerP
 @Composable
 private fun Filters(selected: NewsFilter, onSelect: (NewsFilter) -> Unit) {
     Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-        FilterChip(stringResource(R.string.news_filter_all), selected == NewsFilter.ALL) { onSelect(NewsFilter.ALL) }
-        FilterChip(stringResource(R.string.news_filter_official), selected == NewsFilter.OFFICIAL) { onSelect(NewsFilter.OFFICIAL) }
-        FilterChip(stringResource(R.string.news_filter_press), selected == NewsFilter.PRESS) { onSelect(NewsFilter.PRESS) }
-    }
-}
-
-@Composable
-private fun FilterChip(text: String, isSelected: Boolean, onClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .height(32.dp)
-            .clip(CircleShape)
-            .background(if (isSelected) AppTheme.color.primary else Color.Transparent)
-            .border(1.dp, if (isSelected) AppTheme.color.primary else AppTheme.color.surface, CircleShape)
-            .clickable(role = Role.Tab, onClick = onClick)
-            .padding(horizontal = 14.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = text,
-            style = AppTheme.style.body,
-            fontWeight = FontWeight.Medium,
-            color = if (isSelected) Color.White else AppTheme.color.textSecondaryColor,
-        )
+        FilterChip(stringResource(R.string.news_filter_all), selected == NewsFilter.ALL, onClick = { onSelect(NewsFilter.ALL) })
+        FilterChip(stringResource(R.string.news_filter_official), selected == NewsFilter.OFFICIAL, onClick = { onSelect(NewsFilter.OFFICIAL) })
+        FilterChip(stringResource(R.string.news_filter_press), selected == NewsFilter.PRESS, onClick = { onSelect(NewsFilter.PRESS) })
     }
 }

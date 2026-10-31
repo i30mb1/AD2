@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="streams_filter_all">Все</string>
+    <string name="streams_filter_russian">Русские</string>
+    <string name="streams_filter_english">Английские</string>
+    <string name="streams_live">LIVE</string>
+    <string name="streams_viewers_thousands">%1$s тыс.</string>
+    <string name="streams_on_air">в эфире %1$s</string>
+    <string name="streams_chat">Чат</string>
+    <string name="streams_chat_off">Выкл</string>
+    <string name="streams_chat_low">Мало</string>
+    <string name="streams_chat_normal">Норм</string>
+    <string name="streams_chat_high">Много</string>
+    <string name="streams_quality">Качество</string>
+    <string name="streams_quality_auto">Авто</string>
+    <string name="desc_back">Назад</string>
+    <string name="desc_picture_in_picture">Картинка в картинке</string>
+</resources>

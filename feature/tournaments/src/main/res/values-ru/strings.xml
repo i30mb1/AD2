@@ -21,4 +21,8 @@
     <string name="tournaments_draw">Ничья</string>
     <string name="tournaments_kda">KDA %1$s</string>
     <string name="tournaments_gpm_xpm">%1$d GPM · %2$d XPM</string>
+    <string name="tournaments_filter_all">Все</string>
+    <string name="tournaments_today">сегодня</string>
+    <string name="tournaments_bo">BO%1$d</string>
+    <string name="desc_back">Назад</string>
 </resources>

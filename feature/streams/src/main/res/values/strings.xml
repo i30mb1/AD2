@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="desc_stream_image" translatable="false">stream image</string>
-    <string name="desc_active_users_icon" translatable="false">active users icon</string>
-
+    <string name="streams_filter_all">All</string>
+    <string name="streams_filter_russian">Russian</string>
+    <string name="streams_filter_english">English</string>
+    <string name="streams_live">LIVE</string>
+    <string name="streams_viewers_thousands">%1$sK</string>
+    <string name="streams_on_air">live for %1$s</string>
+    <string name="streams_chat">Chat</string>
+    <string name="streams_chat_off">Off</string>
+    <string name="streams_chat_low">Low</string>
+    <string name="streams_chat_normal">Normal</string>
+    <string name="streams_chat_high">High</string>
+    <string name="streams_quality">Quality</string>
+    <string name="streams_quality_auto">Auto</string>
+    <string name="desc_back">Back</string>
+    <string name="desc_picture_in_picture">Picture in picture</string>
 </resources>

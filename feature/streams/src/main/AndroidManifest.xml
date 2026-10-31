@@ -6,6 +6,7 @@
             android:name="n7.ad2.streams.internal.stream.StreamActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
             android:supportsPictureInPicture="true" />
     </application>
 

@@ -14,10 +14,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.withTranslation
 import androidx.lifecycle.findViewTreeLifecycleOwner
 import com.google.android.material.color.MaterialColors
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
 import n7.ad2.core.ui.R
-import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.ktx.spToPx
 import n7.ad2.core.ui.performance.FpsExtractor
 
@@ -38,13 +35,6 @@ class FPSView(context: Context, attrs: AttributeSet) : View(context, attrs) {
         frameCounter = _root_ide_package_.n7.ad2.core.ui.performance.FpsExtractor(lifecycle).apply {
             fpsCallback = { fps -> onFps(fps) }
         }
-
-        _root_ide_package_.n7.ad2.core.ui.frameCounter.WindowOverlay(
-            context,
-            lifecycle,
-            DispatchersProvider(),
-            CoroutineScope(Job()),
-        )
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {

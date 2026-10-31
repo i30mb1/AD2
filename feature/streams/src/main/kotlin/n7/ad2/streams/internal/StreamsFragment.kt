@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.runtime.getValue
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.media3.common.util.UnstableApi
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
@@ -39,18 +41,11 @@ internal class StreamsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
         val streams: LazyPagingItems<VOStream> = viewModel.streams.collectAsLazyPagingItems()
-        StreamsScreen(streams, parentFragment as DrawerPercentListener, ::onStreamClicked)
+        val language by viewModel.language.collectAsStateWithLifecycle()
+        StreamsScreen(streams, language, parentFragment as DrawerPercentListener, viewModel::setLanguage, ::onStreamClicked)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        view.keepScreenOn = true
-    }
-
-    private fun onStreamClicked(stream: VOStream) {
-        if (stream is VOStream.Simple) {
-            val streamFragment = StreamActivity.newInstance(requireContext(), stream.streamerName)
-            startActivity(streamFragment)
-        }
+    private fun onStreamClicked(stream: VOStream.Simple) {
+        startActivity(StreamActivity.newInstance(requireContext(), stream.streamerName))
     }
 }
