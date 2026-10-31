@@ -62,6 +62,7 @@ internal fun GamesScreen(
     viewModel: GamesViewModel,
     drawerPercentListener: DrawerPercentListener?,
     onGameClicked: (game: GameVO, mode: GameMode) -> Unit,
+    onDailyClicked: () -> Unit,
     onLeaderboardClicked: () -> Unit,
 ) {
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
@@ -100,7 +101,10 @@ internal fun GamesScreen(
                             bests = data.bests,
                             onGameClicked = { game -> onGameClicked(game, GameMode.SOLO) },
                             onLeaderboardClicked = onLeaderboardClicked,
-                            header = { NearbyCard(data.party, onPlay = viewModel::play, onHelp = { showHelp = true }) },
+                            header = {
+                                NearbyCard(data.party, onPlay = viewModel::play, onHelp = { showHelp = true })
+                                DailyCard(data.daily, onClick = onDailyClicked)
+                            },
                         )
                     }
                 }

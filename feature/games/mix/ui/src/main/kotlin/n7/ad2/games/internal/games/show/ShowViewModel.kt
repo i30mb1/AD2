@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import java.time.LocalDate
 import kotlin.coroutines.cancellation.CancellationException
 import kotlin.random.Random
 import kotlinx.coroutines.Job
@@ -18,6 +19,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
@@ -43,10 +45,13 @@ internal enum class Voice { NONE, LOADING, PLAYING, READY, FAILED }
  * The quiz show: [ShowPlan.ROUNDS] rounds of different kinds, the same for everyone in the room.
  * Each phone counts its own points and tells the others; the next round starts when everyone answered.
  * Versus - who has more, together - one team score.
+ * [daily] - the challenge of the day: [DailyPlan.QUESTIONS] questions from the date, without bets and helps, once a day.
  */
 internal class ShowViewModel @AssistedInject constructor(
     @Assisted private val mode: GameMode,
+    @Assisted private val daily: Boolean,
     private val questions: ShowQuestions,
+    private val dailyStore: DailyStore,
     private val leaderboardSync: LeaderboardSync,
     private val leaderboardRepository: LeaderboardRepository,
     localPlayerProvider: LocalPlayerProvider,
@@ -54,20 +59,22 @@ internal class ShowViewModel @AssistedInject constructor(
 
     @AssistedFactory
     interface Factory {
-        fun create(mode: GameMode): ShowViewModel
+        fun create(mode: GameMode, daily: Boolean): ShowViewModel
     }
 
     private val room: Room? = ActiveRoom.room.takeIf { mode != GameMode.SOLO }
     private val playing = room?.state?.value as? RoomState.Playing
     private val me = room?.me ?: localPlayerProvider.localPlayer()
-    private val seed = playing?.seed ?: Random.nextLong()
+    private val today: LocalDate = LocalDate.now()
+    private val seed = if (daily) DailyPlan.seed(today) else playing?.seed ?: Random.nextLong()
+    private val rounds = if (daily) DailyPlan.create() else ShowPlan.create(seed)
     private val players = listOfNotNull(me, playing?.let { if (it.host.id == me.id) it.guest else it.host }).map { it.toShowPlayer() }
 
     private val voice = VoicePlayer()
     private var tickJob: Job? = null
     private var advancing = -1
 
-    private val _state = MutableStateFlow(State.start(mode, me.id, ShowMatch(players, ShowPlan.create(seed))))
+    private val _state = MutableStateFlow(State.start(mode, me.id, ShowMatch(players, rounds), daily, today))
     val state: StateFlow<State> = _state.asStateFlow()
 
     /** The result screen is closed («Again» or «Another game»): back to the games list */
@@ -76,11 +83,20 @@ internal class ShowViewModel @AssistedInject constructor(
 
     init {
         room?.let(::observeRoom)
-        viewModelScope.launch {
-            if (room != null) countdown()
-            startRound()
+        if (daily) observeNearby()
+        val played = if (daily) dailyStore.result(today) else null
+        if (played != null) {
+            showPlayed(played)
+        } else {
+            viewModelScope.launch {
+                if (room != null) countdown()
+                startRound()
+            }
         }
     }
+
+    /** The result of the day for a chat */
+    fun shareText(title: String): String = dailyShareText(title, dailyResult(_state.value.match))
 
     fun again() {
         ActiveRoom.requestRematch(Pick(GAME_ID, mode))
@@ -94,7 +110,7 @@ internal class ShowViewModel @AssistedInject constructor(
     /** During the intro of a round: points ×2 for a right answer, minus 100 for a wrong one; once a show, not in the final */
     fun toggleBet() {
         val state = _state.value
-        if (state.phase != State.Phase.INTRO || state.betUsed || state.match.current.final) return
+        if (daily || state.phase != State.Phase.INTRO || state.betUsed || state.match.current.final) return
         _state.update { it.copy(bet = !it.bet) }
     }
 
@@ -138,7 +154,7 @@ internal class ShowViewModel @AssistedInject constructor(
     fun fiftyFifty() {
         val state = _state.value
         val question = state.question as? ShowQuestion.Pick ?: return
-        if (!state.canAnswer || state.fiftyUsed) return
+        if (daily || !state.canAnswer || state.fiftyUsed) return
         val right = question.options.indexOfFirst { it.isRight }
         _state.update { it.copy(fiftyUsed = true, hidden = fiftyFifty(right, question.options.size, Random(seed + it.match.round))) }
     }
@@ -146,7 +162,7 @@ internal class ShowViewModel @AssistedInject constructor(
     /** Stops the fuse that is burning now: in the final after the buzz - the one for the answer */
     fun freeze() {
         val state = _state.value
-        if (state.phase != State.Phase.QUESTION || state.freezeUsed || state.myAnswer != null) return
+        if (daily || state.phase != State.Phase.QUESTION || state.freezeUsed || state.myAnswer != null) return
         val now = SystemClock.elapsedRealtime()
         _state.update {
             if (it.answerFuse != null) it.copy(freezeUsed = true, answerFuse = it.answerFuse.freeze(now)) else it.copy(freezeUsed = true, fuse = it.fuse?.freeze(now))
@@ -176,7 +192,7 @@ internal class ShowViewModel @AssistedInject constructor(
         val round = _state.value.match.current
         _state.update { it.forRound() }
         val loading = viewModelScope.async { prepare(round) }
-        delay(INTRO_MS)
+        delay(if (daily) DAILY_INTRO_MS else INTRO_MS)
         val (question, voiceState) = loading.await() ?: return _state.update { it.copy(loadFailed = true) }
         val now = SystemClock.elapsedRealtime()
         _state.update {
@@ -295,6 +311,7 @@ internal class ShowViewModel @AssistedInject constructor(
         // the room stays for the next game
         room?.endGame()
         val match = _state.value.match
+        if (daily) return saveDaily(match)
         val score = if (mode == GameMode.COOP) match.teamScore() else match.score(me.id)
         viewModelScope.launch {
             val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
@@ -302,6 +319,38 @@ internal class ShowViewModel @AssistedInject constructor(
             _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest) }
         }
     }
+
+    /** The day is played: the result and the streak stay on the phone, the record goes to the players nearby */
+    private fun saveDaily(match: ShowMatch) {
+        val result = dailyResult(match)
+        val streak = dailyStore.save(result)
+        _state.update { it.copy(streak = streak.current(today)) }
+        viewModelScope.launch {
+            leaderboardSync.submit(Record(me.id, me.name, DailyPlan.gameId(today), GameMode.SOLO, result.points, System.currentTimeMillis()))
+        }
+    }
+
+    /** Today's challenge is already played: straight to its result */
+    private fun showPlayed(result: DailyResult) {
+        val answers = result.answers.withIndex().associate { (index, answer) -> index to mapOf(me.id to answer) }
+        _state.update {
+            it.copy(
+                phase = State.Phase.END,
+                match = it.match.copy(answers = answers, round = rounds.lastIndex, isOver = true),
+                streak = dailyStore.streak().current(today),
+            )
+        }
+    }
+
+    private fun observeNearby() {
+        viewModelScope.launch {
+            leaderboardRepository.observe(DailyPlan.gameId(today), GameMode.SOLO)
+                .catch { emit(emptyList()) }
+                .collect { records -> _state.update { it.copy(nearby = records) } }
+        }
+    }
+
+    private fun dailyResult(match: ShowMatch) = DailyResult(today, rounds.map { match.answerOf(me.id, it.index) ?: RoundAnswer(correct = false, points = 0) })
 
     override fun onCleared() {
         voice.release()
@@ -348,6 +397,12 @@ internal class ShowViewModel @AssistedInject constructor(
         val newRecord: Boolean,
         /** The best result before this show, null - the first one */
         val previousBest: Int?,
+        val daily: Boolean,
+        val date: LocalDate,
+        /** Days in a row with the daily challenge, with today */
+        val streak: Int,
+        /** Today's results of the daily: mine and of the players met nearby */
+        val nearby: List<Record>,
     ) {
         enum class Phase { INTRO, QUESTION, REVEAL, END }
 
@@ -370,7 +425,7 @@ internal class ShowViewModel @AssistedInject constructor(
         )
 
         companion object {
-            fun start(mode: GameMode, meId: String, match: ShowMatch) = State(
+            fun start(mode: GameMode, meId: String, match: ShowMatch, daily: Boolean = false, date: LocalDate = LocalDate.now()) = State(
                 mode = mode,
                 meId = meId,
                 phase = Phase.INTRO,
@@ -393,6 +448,10 @@ internal class ShowViewModel @AssistedInject constructor(
                 replaysLeft = 1,
                 newRecord = false,
                 previousBest = null,
+                daily = daily,
+                date = date,
+                streak = 0,
+                nearby = emptyList(),
             )
         }
     }
@@ -401,6 +460,7 @@ internal class ShowViewModel @AssistedInject constructor(
         const val GAME_ID = "show"
         private const val COUNTDOWN_MS = 3_000L
         private const val INTRO_MS = 2_400L
+        private const val DAILY_INTRO_MS = 1_200L
         private const val REVEAL_MS = 1_800L
         private const val VOICE_WAIT_MS = 5_000L
         private const val TICK_MS = 100L

@@ -54,7 +54,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked, ::onLeaderboardClicked)
+        GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked, ::onDailyClicked, ::onLeaderboardClicked)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -91,6 +91,8 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
 
     private fun gameFragment(gameId: String, mode: GameMode): Fragment =
         if (gameId == MidViewModel.GAME_ID) MidFragment.getInstance(mode) else ShowFragment.getInstance(mode)
+
+    private fun onDailyClicked() = open(ShowFragment.getInstance(GameMode.SOLO, daily = true))
 
     private fun onLeaderboardClicked() = open(LeaderboardFragment())
 

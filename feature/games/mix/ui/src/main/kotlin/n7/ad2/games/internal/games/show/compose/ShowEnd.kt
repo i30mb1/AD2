@@ -40,6 +40,8 @@ import n7.ad2.games.internal.games.show.ShowPlan
 import n7.ad2.games.internal.games.show.ShowPlayer
 import n7.ad2.games.internal.games.show.ShowRound
 import n7.ad2.games.internal.games.show.ShowViewModel
+import n7.ad2.games.internal.games.show.points
+import n7.ad2.games.internal.games.show.signed
 import n7.ad2.games.internal.paper.Ink
 import n7.ad2.games.internal.paper.InkBad
 import n7.ad2.games.internal.paper.InkGood
@@ -82,28 +84,33 @@ private fun Standings(state: ShowViewModel.State) {
     val match = state.match
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         match.standings().forEachIndexed { place, player ->
-            val isMe = player.id == state.meId
-            val shape = RoundedCornerShape(12.dp)
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(shape)
-                    .background(if (isMe) PaperCard else AppTheme.color.surface)
-                    .then(if (isMe) Modifier.border(3.dp, ShowGold, shape) else Modifier)
-                    .padding(horizontal = 12.dp, vertical = 10.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
-                val textColor = if (isMe) Ink else AppTheme.color.textColor
-                Text("${place + 1}", color = textColor, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
-                val index = match.players.indexOf(player)
-                Box(Modifier.size(28.dp).clip(CircleShape).background(PlayerColors[index % PlayerColors.size]), contentAlignment = Alignment.Center) {
-                    Text(avatarLetter(player.name), color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
-                }
-                Text(if (isMe) stringResource(R.string.show_you) else player.name, color = textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
-                Text(points(match.score(player.id)), color = textColor, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
-            }
+            val color = PlayerColors[match.players.indexOf(player) % PlayerColors.size]
+            StandingRow(place + 1, player.name, match.score(player.id), isMe = player.id == state.meId, color)
         }
+    }
+}
+
+/** A place in a table: mine is a paper card with a gold edge */
+@Composable
+internal fun StandingRow(place: Int, name: String, score: Int, isMe: Boolean, color: Color) {
+    val shape = RoundedCornerShape(12.dp)
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(shape)
+            .background(if (isMe) PaperCard else AppTheme.color.surface)
+            .then(if (isMe) Modifier.border(3.dp, ShowGold, shape) else Modifier)
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        val textColor = if (isMe) Ink else AppTheme.color.textColor
+        Text("$place", color = textColor, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
+        Box(Modifier.size(28.dp).clip(CircleShape).background(color), contentAlignment = Alignment.Center) {
+            Text(avatarLetter(name), color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+        }
+        Text(if (isMe) stringResource(R.string.show_you) else name, color = textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        Text(points(score), color = textColor, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
     }
 }
 
@@ -119,7 +126,7 @@ private fun Rounds(match: ShowMatch, meId: String) {
 }
 
 @Composable
-private fun RoundCell(round: ShowRound, answer: RoundAnswer?, modifier: Modifier) {
+internal fun RoundCell(round: ShowRound, answer: RoundAnswer?, modifier: Modifier) {
     val color = when {
         answer == null -> AppTheme.color.surface
         answer.correct -> InkGood

@@ -162,4 +162,33 @@
     <string name="show_short_compare">больше</string>
     <string name="show_short_build">рецепт</string>
     <string name="show_short_final">финал</string>
+    <string name="daily">Вызов дня</string>
+    <string name="daily_rules">10 вопросов, одинаковых у всех. Сравните счёт с теми, кто рядом в сети.</string>
+    <string name="daily_play">Играть</string>
+    <string name="daily_done">%1$d из %2$d · %3$s</string>
+    <string name="daily_question">ВОПРОС %1$d ИЗ %2$d</string>
+    <string name="daily_of">из %d</string>
+    <string name="daily_nearby">РЯДОМ В СЕТИ СЕГОДНЯ</string>
+    <string name="daily_nearby_empty">Сыграйте рядом с друзьями в одной Wi-Fi сети: их результат дня появится здесь.</string>
+    <string name="daily_share">Поделиться</string>
+    <string name="daily_to_games">К играм</string>
+    <string name="daily_share_title">Вызов дня AD2 · %s</string>
+    <plurals name="daily_points">
+        <item quantity="one">очко</item>
+        <item quantity="few">очка</item>
+        <item quantity="many">очков</item>
+        <item quantity="other">очка</item>
+    </plurals>
+    <plurals name="daily_streak">
+        <item quantity="one">Серия %d день. Завтра новые 10 вопросов.</item>
+        <item quantity="few">Серия %d дня. Завтра новые 10 вопросов.</item>
+        <item quantity="many">Серия %d дней. Завтра новые 10 вопросов.</item>
+        <item quantity="other">Серия %d дня. Завтра новые 10 вопросов.</item>
+    </plurals>
+    <plurals name="daily_streak_chip">
+        <item quantity="one">серия %d день</item>
+        <item quantity="few">серия %d дня</item>
+        <item quantity="many">серия %d дней</item>
+        <item quantity="other">серия %d дня</item>
+    </plurals>
 </resources>

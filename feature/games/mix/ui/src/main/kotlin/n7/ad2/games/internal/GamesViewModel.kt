@@ -4,8 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import java.time.LocalDate
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
@@ -20,6 +22,8 @@ import n7.ad2.feature.games.xo.domain.GetNetworkStateUseCase
 import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.WifiDirect
 import n7.ad2.games.internal.data.GameVO
+import n7.ad2.games.internal.games.show.DailyResult
+import n7.ad2.games.internal.games.show.DailyStore
 import n7.ad2.games.internal.party.NearbyPlayer
 import n7.ad2.games.internal.party.Party
 import n7.ad2.games.internal.party.PartyState
@@ -44,6 +48,7 @@ internal class GamesViewModel @AssistedInject constructor(
     discoverServicesInNetworkUseCase: DiscoverServicesInNetworkUseCase,
     registerServiceInNetworkUseCase: RegisterServiceInNetworkUseCase,
     wifiDirect: WifiDirect,
+    private val dailyStore: DailyStore,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -81,9 +86,12 @@ internal class GamesViewModel @AssistedInject constructor(
         },
     ) { bests -> bests.mapNotNull { (id, score) -> score?.let { id to it } }.toMap() }
 
+    // вызов дня: сыгран ли сегодня и серия; обновляется, когда список снова на экране
+    private val daily = MutableStateFlow(dailyCard())
+
     // список статичный: показываем сразу, рекорды и игроки рядом подтянутся
-    val state: StateFlow<State> = combine(bests, party.state) { bests, party -> State.Data(games, bests, party) }
-        .stateIn(viewModelScope, SharingStarted.Lazily, State.Data(games, emptyMap(), party.state.value))
+    val state: StateFlow<State> = combine(bests, party.state, daily) { bests, party, daily -> State.Data(games, bests, party, daily) }
+        .stateIn(viewModelScope, SharingStarted.Lazily, State.Data(games, emptyMap(), party.state.value, daily.value))
 
     init {
         viewModelScope.launch {
@@ -95,6 +103,7 @@ internal class GamesViewModel @AssistedInject constructor(
     fun setVisible(visible: Boolean) {
         party.setVisible(visible)
         if (!visible) return
+        daily.value = dailyCard()
         val rematch = ActiveRoom.takeRematch() ?: return
         if (rematch.mode == GameMode.SOLO) _openGame.trySend(OpenGame(rematch.gameId, GameMode.SOLO)) else party.pick(rematch)
     }
@@ -115,9 +124,17 @@ internal class GamesViewModel @AssistedInject constructor(
 
     override fun onCleared() = party.release()
 
+    private fun dailyCard(): DailyCard {
+        val today = LocalDate.now()
+        return DailyCard(today, dailyStore.result(today), dailyStore.streak().current(today))
+    }
+
     data class OpenGame(val gameId: String, val mode: GameMode)
 
+    /** [result] null - today's challenge is not played yet */
+    data class DailyCard(val date: LocalDate, val result: DailyResult?, val streak: Int)
+
     sealed class State {
-        data class Data(val games: List<GameVO>, val bests: Map<String, Int>, val party: PartyState) : State()
+        data class Data(val games: List<GameVO>, val bests: Map<String, Int>, val party: PartyState, val daily: DailyCard) : State()
     }
 }

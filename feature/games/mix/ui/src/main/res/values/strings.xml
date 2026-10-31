@@ -161,4 +161,27 @@
     <string name="show_short_compare">more</string>
     <string name="show_short_build">recipe</string>
     <string name="show_short_final">final</string>
+    <string name="daily">Daily challenge</string>
+    <string name="daily_rules">10 questions, the same for everyone today. Compare the score with the players nearby.</string>
+    <string name="daily_play">Play</string>
+    <string name="daily_done">%1$d of %2$d · %3$s</string>
+    <string name="daily_question">QUESTION %1$d OF %2$d</string>
+    <string name="daily_of">of %d</string>
+    <string name="daily_nearby">NEARBY TODAY</string>
+    <string name="daily_nearby_empty">Play next to friends in one Wi-Fi: their result of the day shows up here.</string>
+    <string name="daily_share">Share</string>
+    <string name="daily_to_games">To games</string>
+    <string name="daily_share_title">AD2 daily challenge · %s</string>
+    <plurals name="daily_points">
+        <item quantity="one">point</item>
+        <item quantity="other">points</item>
+    </plurals>
+    <plurals name="daily_streak">
+        <item quantity="one">%d day in a row. Tomorrow - 10 new questions.</item>
+        <item quantity="other">%d days in a row. Tomorrow - 10 new questions.</item>
+    </plurals>
+    <plurals name="daily_streak_chip">
+        <item quantity="one">%d day in a row</item>
+        <item quantity="other">%d days in a row</item>
+    </plurals>
 </resources>

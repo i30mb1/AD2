@@ -52,6 +52,7 @@ import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.LineColor
 import n7.ad2.games.internal.compose.avatarLetter
+import n7.ad2.games.internal.games.show.DailyPlan
 import n7.ad2.games.internal.games.show.Fuse
 import n7.ad2.games.internal.games.show.RoundAnswer
 import n7.ad2.games.internal.games.show.ShowKind
@@ -62,6 +63,8 @@ import n7.ad2.games.internal.games.show.ShowPlayer
 import n7.ad2.games.internal.games.show.ShowQuestion
 import n7.ad2.games.internal.games.show.ShowViewModel
 import n7.ad2.games.internal.games.show.Voice
+import n7.ad2.games.internal.games.show.points
+import n7.ad2.games.internal.games.show.signed
 import n7.ad2.games.internal.paper.Ink
 import n7.ad2.games.internal.paper.InkDim
 import n7.ad2.games.internal.paper.InkGood
@@ -81,6 +84,7 @@ internal class ShowActions(
     val onReplay: () -> Unit = {},
     val onAgain: () -> Unit = {},
     val onOtherGame: () -> Unit = {},
+    val onShare: () -> Unit = {},
 )
 
 internal val ShowGold = Color(0xFFD9A23A)
@@ -105,7 +109,7 @@ internal fun ShowScreen(state: ShowViewModel.State, actions: ShowActions, clock:
             .padding(horizontal = 16.dp, vertical = 12.dp),
     ) {
         if (state.phase == ShowViewModel.State.Phase.END) {
-            ShowEnd(state, actions)
+            if (state.daily) DailyEnd(state, actions) else ShowEnd(state, actions)
         } else {
             ShowPlay(state, now, actions)
         }
@@ -123,15 +127,17 @@ private fun ColumnScope.ShowPlay(state: ShowViewModel.State, now: Long, actions:
         when {
             state.countdown > 0 -> Countdown(state.countdown)
             state.loadFailed -> Text(stringResource(R.string.show_load_failed), color = AppTheme.color.textSecondaryColor, fontSize = 15.sp)
-            question == null -> Intro(state, actions)
+            question == null -> if (!state.daily) Intro(state, actions)
             else -> QuestionView(state, question, now, actions)
         }
     }
     if (state.question != null) {
         Spacer(Modifier.height(10.dp))
         FuseBar(state, now)
-        Spacer(Modifier.height(10.dp))
-        PowerUps(state, actions)
+        if (!state.daily) {
+            Spacer(Modifier.height(10.dp))
+            PowerUps(state, actions)
+        }
     }
 }
 
@@ -147,7 +153,13 @@ private fun PlayersRow(state: ShowViewModel.State) {
         if (match.players.size == 1) {
             Spacer(Modifier.weight(1f))
             Text(
-                stringResource(if (state.mode == GameMode.SOLO) R.string.games_mode_solo else R.string.games_mode_coop),
+                stringResource(
+                    when {
+                        state.daily -> R.string.daily
+                        state.mode == GameMode.SOLO -> R.string.games_mode_solo
+                        else -> R.string.games_mode_coop
+                    },
+                ),
                 color = DimColor,
                 fontSize = 12.sp,
                 modifier = Modifier.align(Alignment.CenterVertically),
@@ -193,7 +205,11 @@ private fun RoundHeader(state: ShowViewModel.State) {
     val round = state.match.current
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(
-            text = if (round.final) stringResource(R.string.show_final) else stringResource(R.string.show_round, round.index + 1, ShowPlan.ROUNDS),
+            text = when {
+                round.final -> stringResource(R.string.show_final)
+                state.daily -> stringResource(R.string.daily_question, round.index + 1, DailyPlan.QUESTIONS)
+                else -> stringResource(R.string.show_round, round.index + 1, ShowPlan.ROUNDS)
+            },
             color = if (round.final) ShowGold else DimColor,
             fontSize = 12.sp,
             fontWeight = FontWeight.Bold,
@@ -367,11 +383,6 @@ private fun ShowKind.hint(): Int = when (this) {
     ShowKind.COMPARE -> R.string.show_hint_compare
     ShowKind.BUILD -> R.string.show_hint_build
 }
-
-/** 1 200 with a thin space between thousands, as the scores of a show */
-internal fun points(value: Int): String = "%,d".format(value).replace(',', ' ')
-
-internal fun signed(value: Int): String = if (value > 0) "+${points(value)}" else if (value < 0) "−${points(-value)}" else "0"
 
 internal fun pointsColor(value: Int): Color = when {
     value > 0 -> Color(0xFF7FD08A)
