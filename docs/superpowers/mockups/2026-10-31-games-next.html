@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>AD2 — новые игры: Собери предмет, Больше или меньше, Kill Creep</title>
+<style>
+  body { background:#111; color:#eee; font-family: Roboto, system-ui, sans-serif; margin:0; padding:24px; display:flex; gap:28px; flex-wrap:wrap; }
+  .phone { width:300px; height:640px; background:#212226; border-radius:28px; padding:18px 14px; box-sizing:border-box; position:relative; overflow:hidden; box-shadow:0 0 0 6px #000; }
+  h1 { width:100%; font-size:16px; color:#aaa; margin:8px 0 0; font-weight:500; }
+  h2 { font-size:13px; color:#888; text-transform:uppercase; letter-spacing:.08em; margin:0 0 6px; }
+  .caption { width:300px; font-size:12px; color:#aaa; margin-top:8px; line-height:1.45; }
+  .muted { color:#888; font-size:11px; }
+  .center { text-align:center; }
+  .hdr { display:flex; justify-content:space-between; align-items:center; font-weight:700; font-size:24px; }
+  .lives { text-align:center; font-size:16px; letter-spacing:3px; margin-top:2px; }
+  .item { width:96px; height:72px; border-radius:10px; margin:0 auto; background:linear-gradient(135deg,#6b3b2a,#2a2f4b); display:flex; align-items:center; justify-content:center; font-size:30px; }
+  .name { text-align:center; font-weight:600; margin-top:8px; }
+  .gold { color:#ffd166; font-size:12px; text-align:center; }
+  .slots { display:flex; gap:8px; justify-content:center; margin:16px 0 10px; }
+  .slot { width:52px; height:40px; border-radius:8px; border:1.5px dashed #555; display:flex; align-items:center; justify-content:center; font-size:20px; }
+  .slot.filled { border:1.5px solid #448aff; background:#2c2d33; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+  .comp { height:48px; border-radius:8px; background:#2c2d33; display:flex; align-items:center; justify-content:center; font-size:20px; position:relative; }
+  .comp.sel { outline:2px solid #448aff; opacity:.45; }
+  .comp small { position:absolute; bottom:2px; font-size:9px; color:#ffd166; }
+  .btn { display:block; text-align:center; padding:12px; border-radius:12px; font-weight:600; margin-top:10px; }
+  .red { background:#f44336; } .blue { background:#448aff; } .ghost { background:#35363d; color:#ddd; }
+  .q { text-align:center; font-weight:600; font-size:16px; margin:18px 0 14px; }
+  .vs { display:flex; gap:10px; }
+  .card { flex:1; border-radius:14px; background:#2c2d33; padding:10px; text-align:center; }
+  .portrait { height:118px; border-radius:10px; background:linear-gradient(160deg,#3b5b8a,#22273a); display:flex; align-items:center; justify-content:center; font-size:40px; }
+  .card b { display:block; margin-top:8px; font-size:13px; }
+  .val { margin-top:6px; font-size:20px; font-weight:700; }
+  .win { outline:2px solid #43a047; } .lose { outline:2px solid #f44336; opacity:.7; }
+  .chips { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; margin-top:16px; }
+  .chip { font-size:10px; background:#35363d; padding:3px 8px; border-radius:10px; color:#bbb; }
+  .lane { height:300px; border-radius:14px; margin-top:12px; background:linear-gradient(180deg,#2f3b2a,#3a4a33 60%,#4a3f2e); position:relative; }
+  .creep { position:absolute; left:50%; top:110px; transform:translateX(-50%); text-align:center; }
+  .creep .body { font-size:54px; }
+  .hp { width:120px; height:12px; background:#111; border-radius:3px; position:relative; margin:0 auto 6px; overflow:hidden; }
+  .hp i { position:absolute; left:0; top:0; bottom:0; width:23%; background:#e53935; }
+  .hp em { position:absolute; top:-3px; bottom:-3px; left:26%; width:2px; background:#ffd166; }
+  .ally { position:absolute; bottom:22px; font-size:26px; }
+  .hit { width:150px; height:150px; border-radius:50%; margin:18px auto 0; background:radial-gradient(circle at 40% 35%,#ff7961,#c62828); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:20px; box-shadow:0 0 0 6px #3b1d1d; }
+  .float { position:absolute; font-weight:800; }
+</style>
+</head>
+<body>
+
+<h1>Собери предмет — 3 режима как у викторин (Соло / Против друга / Вместе), тот же каркас: лобби, сеть, рекорды</h1>
+
+<div>
+<h2>A1 · Собери предмет · соло</h2>
+<div class="phone">
+  <div class="center" style="font-size:30px;font-weight:700">4</div>
+  <div class="lives">❤️❤️🖤</div>
+  <div style="height:22px"></div>
+  <div class="item">🗡️</div>
+  <div class="name">Abyssal Blade</div>
+  <div class="gold">🪙 6250</div>
+  <div class="slots"><div class="slot filled">🔨</div><div class="slot">?</div></div>
+  <div class="muted center" style="margin-bottom:10px">выберите 2 компонента</div>
+  <div class="grid">
+    <div class="comp sel">🔨<small>2875</small></div>
+    <div class="comp">🪓<small>2050</small></div>
+    <div class="comp">⚔️<small>2050</small></div>
+    <div class="comp">💍<small>500</small></div>
+    <div class="comp">🛡️<small>1050</small></div>
+    <div class="comp">🧪<small>450</small></div>
+    <div class="comp">🥾<small>500</small></div>
+    <div class="comp">📜<small>рецепт</small></div>
+  </div>
+  <div class="btn red" style="position:absolute;left:14px;right:14px;bottom:18px;opacity:.45">Собрать</div>
+</div>
+<div class="caption">Цель — большой предмет с ценой. 8 вариантов: настоящие компоненты (из рецепта в данных предмета, «Рецепт» — если он входит) плюс похожие по цене ловушки. Число слотов = число компонентов. Тап по компоненту кладёт его в слот, повторный тап убирает. «Собрать» активна, когда слоты заполнены. Верно — +1, ошибка — минус жизнь, правильный набор подсвечивается.</div>
+</div>
+
+<div>
+<h2>A2 · Собери предмет · против друга</h2>
+<div class="phone">
+  <div class="hdr"><span style="color:#f44336">3</span><span class="muted" style="font-size:12px;font-weight:400">раунд 4/10</span><span style="color:#448aff">2</span></div>
+  <div class="muted" style="display:flex;justify-content:space-between"><span>вы</span><span>Pixel 8 · собрал ✓</span></div>
+  <div style="height:26px"></div>
+  <div class="item" style="background:linear-gradient(135deg,#2a5b3b,#2a2f4b)">🔱</div>
+  <div class="name">Satanic</div>
+  <div class="gold">🪙 5050</div>
+  <div class="slots"><div class="slot filled">🩸</div><div class="slot filled">🪓</div><div class="slot">?</div></div>
+  <div class="grid">
+    <div class="comp sel">🩸<small>1800</small></div><div class="comp">🧤<small>500</small></div><div class="comp sel">🪓<small>1400</small></div><div class="comp">🛡️<small>1050</small></div>
+    <div class="comp">💎<small>1100</small></div><div class="comp">🪄<small>1800</small></div><div class="comp">🥾<small>500</small></div><div class="comp">📜<small>рецепт</small></div>
+  </div>
+  <div class="btn red" style="position:absolute;left:14px;right:14px;bottom:18px;opacity:.45">Собрать</div>
+</div>
+<div class="caption">Шапка как в «Угадай спелл»: счёт обоих, раунд из 10, «соперник собрал ✓». Очки по тем же правилам: верно и быстрее +2, верно медленнее +1. Вместе: общие жизни и общий счёт.</div>
+</div>
+
+<h1>Больше или меньше — сравнить двух героев (или два предмета) по одной характеристике</h1>
+
+<div>
+<h2>B1 · вопрос</h2>
+<div class="phone">
+  <div class="center" style="font-size:30px;font-weight:700">7</div>
+  <div class="lives">❤️❤️❤️</div>
+  <div class="q">У кого больше здоровья<br><span class="muted">на 1 уровне</span></div>
+  <div class="vs">
+    <div class="card"><div class="portrait">🐗</div><b>Abaddon</b><div class="val">?</div></div>
+    <div class="card"><div class="portrait" style="background:linear-gradient(160deg,#8a3b3b,#22273a)">🪓</div><b>Axe</b><div class="val">?</div></div>
+  </div>
+  <div class="chips"><span class="chip">здоровье</span><span class="chip">броня</span><span class="chip">урон</span><span class="chip">скорость</span><span class="chip">цена предмета</span></div>
+  <div class="muted center" style="margin-top:14px">нажмите на карточку</div>
+</div>
+<div class="caption">Характеристика выбирается случайно из списка (чипы снизу — только подсказка, что бывает). Для героев: здоровье, мана, броня, урон, скорость, дальность атаки. Для предметов: цена. Пары с равными значениями не выпадают.</div>
+</div>
+
+<div>
+<h2>B2 · ответ</h2>
+<div class="phone">
+  <div class="center" style="font-size:30px;font-weight:700">8</div>
+  <div class="lives">❤️❤️❤️</div>
+  <div class="q">У кого больше здоровья<br><span class="muted">на 1 уровне</span></div>
+  <div class="vs">
+    <div class="card lose"><div class="portrait">🐗</div><b>Abaddon</b><div class="val">582</div></div>
+    <div class="card win"><div class="portrait" style="background:linear-gradient(160deg,#8a3b3b,#22273a)">🪓</div><b>Axe</b><div class="val" style="color:#43a047">672 ✓</div></div>
+  </div>
+  <div class="muted center" style="margin-top:22px">следующий вопрос через секунду…</div>
+</div>
+<div class="caption">После тапа открываются оба значения, верная карточка — зелёная. Режимы те же: соло (3 жизни), против друга (10 раундов, быстрее +2), вместе (общие жизни).</div>
+</div>
+
+<h1>Kill Creep (вместо заглушки APM) — добивание крипа в нужный момент</h1>
+
+<div>
+<h2>C1 · соло</h2>
+<div class="phone">
+  <div class="hdr" style="font-size:18px"><span>🗡️ 12 <span class="muted" style="font-size:11px;font-weight:400">добито</span></span><span>❌ 2/5</span></div>
+  <div class="lane">
+    <div class="creep">
+      <div class="hp"><i></i><em></em></div>
+      <div class="body">👹</div>
+      <div class="muted">Melee creep · 128 HP</div>
+    </div>
+    <div class="ally" style="left:30px">🗡️</div><div class="ally" style="right:30px">🗡️</div>
+    <div class="float" style="left:60px;top:70px;color:#ffd166">−21</div>
+  </div>
+  <div class="hit">УДАР<br>45</div>
+</div>
+<div class="caption">Союзные крипы бьют врага, его HP падает рывками. Жёлтая черта на полоске = ваш урон (45). Нажмите «Удар», когда HP ниже черты, — добивание, +1. Рано (HP выше урона) — промах, 5 промахов — конец. Не успели (крипа добили свои) — тоже промах. Темп и урон растут со временем.</div>
+</div>
+
+<div>
+<h2>C2 · против друга</h2>
+<div class="phone">
+  <div class="hdr" style="font-size:20px"><span style="color:#f44336">🗡️ 7</span><span class="muted" style="font-size:12px;font-weight:400">крип 9/20</span><span style="color:#448aff">5 🗡️</span></div>
+  <div class="lane">
+    <div class="creep">
+      <div class="hp"><i style="width:40%"></i><em></em></div>
+      <div class="body">👹</div>
+      <div class="muted">Ranged creep · 210 HP</div>
+    </div>
+    <div class="float" style="right:40px;top:60px;color:#448aff">Pixel 8: рано ❌</div>
+  </div>
+  <div class="hit">УДАР<br>45</div>
+</div>
+<div class="caption">Одна и та же волна у обоих (из общего seed). Крипа забирает тот, кто первым ударил в верный момент; ранний удар соперника видно сразу. 20 крипов, у кого больше добиваний — победил. Вместе: общий счётчик добиваний, общие 5 промахов.</div>
+</div>
+
+</body>
+</html>
