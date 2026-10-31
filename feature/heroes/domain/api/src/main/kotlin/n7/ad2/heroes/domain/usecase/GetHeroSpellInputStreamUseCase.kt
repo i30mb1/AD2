@@ -4,5 +4,6 @@ import java.io.InputStream
 
 interface GetHeroSpellInputStreamUseCase {
 
-    suspend operator fun invoke(spellName: String): InputStream
+    /** [spellImageUrl] is [n7.ad2.heroes.domain.model.Ability.imageUrl]. */
+    suspend operator fun invoke(spellImageUrl: String): InputStream
 }

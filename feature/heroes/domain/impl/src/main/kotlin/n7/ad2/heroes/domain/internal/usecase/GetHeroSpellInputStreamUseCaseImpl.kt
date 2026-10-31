@@ -1,12 +1,12 @@
 package n7.ad2.heroes.domain.internal.usecase
 
-import n7.ad2.heroes.domain.internal.HeroesRepository
+import android.content.Context
 import n7.ad2.heroes.domain.usecase.GetHeroSpellInputStreamUseCase
 import java.io.InputStream
 
-internal class GetHeroSpellInputStreamUseCaseImpl(private val heroesRepository: HeroesRepository) : GetHeroSpellInputStreamUseCase {
+private const val ASSET_URL_PREFIX = "file:///android_asset/"
 
-    override suspend fun invoke(spellName: String): InputStream {
-        TODO("GetHeroSpellInputStream not implemented")
-    }
+internal class GetHeroSpellInputStreamUseCaseImpl(private val context: Context) : GetHeroSpellInputStreamUseCase {
+
+    override suspend fun invoke(spellImageUrl: String): InputStream = context.assets.open(spellImageUrl.removePrefix(ASSET_URL_PREFIX))
 }

@@ -35,7 +35,7 @@ internal class GetSkillsUseCase @Inject constructor(
         .map { hero ->
             val localHero = getHeroByNameUseCase(hero.name)
             val info = getHeroDescriptionUseCase(localHero.name).single()
-            val spell: Ability = info.abilities.first { it.mana != null && it.mana != "" }
+            val spell: Ability = info.abilities.first { ability -> ability.hasIntegerManaCost() }
             val spellManaList = spell.mana?.split("/") ?: error("spell ${spell.name} mana is ${spell.mana}")
             val spellMana = spellManaList.random()
             val spellLVL = spellManaList.indexOf(spellMana) + 1
@@ -50,7 +50,7 @@ internal class GetSkillsUseCase @Inject constructor(
             }
                 .map { mana -> Spell(mana, spellMana == mana) }
                 .shuffled()
-            val skillImage = getHeroSpellInputStreamUseCase(spell.name).use { BitmapFactory.decodeStream(it) }
+            val skillImage = getHeroSpellInputStreamUseCase(spell.imageUrl).use { BitmapFactory.decodeStream(it) }
             val palette = Palette.from(skillImage).generate()
             val backgroundColor = palette.vibrantSwatch?.rgb ?: Color.TRANSPARENT
             Data(
@@ -63,4 +63,6 @@ internal class GetSkillsUseCase @Inject constructor(
             )
         }
         .flowOn(dispatchers.IO)
+
+    private fun Ability.hasIntegerManaCost(): Boolean = imageUrl.isNotEmpty() && mana?.split("/")?.all { cost -> cost.toIntOrNull() != null } == true
 }

@@ -35,7 +35,7 @@ fun HeroesDomainComponent(dependencies: HeroesDomainDependencies): HeroesDomainC
 
     override val getHeroByNameUseCase = GetHeroByNameUseCaseImpl()
 
-    override val getHeroSpellInputStreamUseCase = GetHeroSpellInputStreamUseCaseImpl(heroesRepository)
+    override val getHeroSpellInputStreamUseCase = GetHeroSpellInputStreamUseCaseImpl(dependencies.application)
 
     override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository, dependencies.dispatcher)
 
