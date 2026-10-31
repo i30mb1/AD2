@@ -19,9 +19,9 @@ internal class GetNetworkStateUseCaseImpl(context: Context) : GetNetworkStateUse
     override fun invoke(): Flow<NetworkState> = callbackFlow {
         val networkStateCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: android.net.Network) {
-                val inetAddress = getInetAddress()
-                if (inetAddress.isNotEmpty()) {
-                    trySend(NetworkState.Connected(inetAddress.first().hostAddress!!))
+                val inetAddress = pickDeviceAddress(getInetAddress())
+                if (inetAddress != null) {
+                    trySend(NetworkState.Connected(inetAddress.hostAddress!!))
                 }
             }
 
