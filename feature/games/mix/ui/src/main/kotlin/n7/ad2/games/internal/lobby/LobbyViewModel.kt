@@ -25,7 +25,6 @@ import n7.ad2.feature.games.xo.domain.RegisterServiceInNetworkUseCase
 import n7.ad2.feature.games.xo.domain.model.NetworkState
 import n7.ad2.feature.games.xo.domain.model.SimpleServer
 import n7.ad2.games.internal.ActiveRoom
-import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
 import n7.ad2.games.room.GameMode
@@ -41,6 +40,7 @@ import java.net.InetAddress
  */
 internal class LobbyViewModel @AssistedInject constructor(
     @Assisted val mode: GameMode,
+    @Assisted private val gameId: String,
     private val roomFactory: RoomFactory,
     private val leaderboardSync: LeaderboardSync,
     private val getNetworkStateUseCase: GetNetworkStateUseCase,
@@ -51,13 +51,14 @@ internal class LobbyViewModel @AssistedInject constructor(
 
     @AssistedFactory
     interface Factory {
-        fun create(mode: GameMode): LobbyViewModel
+        fun create(mode: GameMode, gameId: String): LobbyViewModel
     }
 
     private val _state = MutableStateFlow(State(Tab.CREATE, localPlayerProvider.localPlayer(), deviceIp = "", roomState = null, isHost = true, servers = emptyList()))
     val state: StateFlow<State> = _state.asStateFlow()
-    private val _openGame = MutableSharedFlow<GameMode>(extraBufferCapacity = 1)
-    val openGame: SharedFlow<GameMode> = _openGame.asSharedFlow()
+    // игра и режим берутся у хоста: гость мог зайти в лобби другой игры
+    private val _openGame = MutableSharedFlow<RoomState.Playing>(extraBufferCapacity = 1)
+    val openGame: SharedFlow<RoomState.Playing> = _openGame.asSharedFlow()
 
     private var room: Room? = null
     private var roomJob: Job? = null
@@ -106,7 +107,7 @@ internal class LobbyViewModel @AssistedInject constructor(
     }
 
     fun start() {
-        runCatching { room?.startGame(SkillGameViewModel.GAME_ID, mode) }
+        runCatching { room?.startGame(gameId, mode) }
     }
 
     private fun host() {
@@ -138,8 +139,8 @@ internal class LobbyViewModel @AssistedInject constructor(
                     is RoomState.Playing -> {
                         unregister()
                         handedOver = true
-                        ActiveRoom.set(room, mode)
-                        _openGame.tryEmit(mode)
+                        ActiveRoom.set(room, roomState.mode)
+                        _openGame.tryEmit(roomState)
                     }
                     else -> if (isHost) unregister()
                 }

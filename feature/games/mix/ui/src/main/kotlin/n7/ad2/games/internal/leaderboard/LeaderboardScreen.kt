@@ -35,7 +35,7 @@ import n7.ad2.games.internal.lobby.Tabs
 import n7.ad2.games.room.GameMode
 
 @Composable
-internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onMode: (GameMode) -> Unit) {
+internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onGame: (String) -> Unit, onMode: (GameMode) -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -44,6 +44,12 @@ internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onMode: (GameM
     ) {
         Text(stringResource(R.string.leaderboard_title), color = AppTheme.color.textColor, fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
         Spacer(Modifier.height(14.dp))
+        Tabs(
+            items = listOf(stringResource(R.string.spell_cost), stringResource(R.string.guess_hero)),
+            selected = LeaderboardViewModel.State.GAMES.indexOf(state.gameId),
+            onSelect = { onGame(LeaderboardViewModel.State.GAMES[it]) },
+        )
+        Spacer(Modifier.height(8.dp))
         Tabs(
             items = listOf(stringResource(R.string.games_mode_solo), stringResource(R.string.games_mode_versus), stringResource(R.string.games_mode_coop)),
             selected = state.mode.ordinal,

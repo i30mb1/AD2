@@ -7,11 +7,11 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import n7.ad2.Resources
 import n7.ad2.games.internal.data.GameVO
-import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LocalPlayerProvider
 import n7.ad2.games.room.GameMode
@@ -29,19 +29,20 @@ internal class GamesViewModel @AssistedInject constructor(
 
     private val myId = localPlayerProvider.localPlayer().id
 
-    val state: StateFlow<State> = leaderboardRepository.observe(SkillGameViewModel.GAME_ID, GameMode.SOLO)
-        .map { records -> records.firstOrNull { it.playerId == myId }?.score }
-        .catch { emit(null) }
-        .map { spellBest ->
-            State.Data(
-                games = listOf(GameVO.GuessSkillMana(res), GameVO.Apm(res), GameVO.XO(res)),
-                spellBest = spellBest,
-            )
-        }
+    private val games = listOf(GameVO.GuessSkillMana(res), GameVO.GuessHero(res), GameVO.Apm(res), GameVO.XO(res))
+
+    // личный соло-рекорд для значка на карточке каждой викторины
+    val state: StateFlow<State> = combine(
+        games.mapNotNull { it.quizId }.map { quizId ->
+            leaderboardRepository.observe(quizId, GameMode.SOLO)
+                .map { records -> quizId to records.firstOrNull { it.playerId == myId }?.score }
+                .catch { emit(quizId to null) }
+        },
+    ) { bests -> State.Data(games, bests.mapNotNull { (id, score) -> score?.let { id to it } }.toMap()) }
         .stateIn(viewModelScope, SharingStarted.Lazily, State.Loading)
 
     sealed class State {
-        data class Data(val games: List<GameVO>, val spellBest: Int?) : State()
+        data class Data(val games: List<GameVO>, val bests: Map<String, Int>) : State()
         object Loading : State()
     }
 }

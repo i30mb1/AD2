@@ -2,6 +2,8 @@ package n7.ad2.games.internal.games.skillmp.compose
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
@@ -31,12 +33,27 @@ internal fun VariantBlocks(
     onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Row(modifier) {
-        for (spell in spellList.list) {
-            Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
+    // числа помещаются в один ряд, имена героев - сеткой 2x2
+    if (spellList.list.all { it.cost.length <= SHORT_LABEL }) {
+        Row(modifier) {
+            for (spell in spellList.list) {
+                Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick)
+            }
+        }
+    } else {
+        Column(modifier.fillMaxWidth()) {
+            for (row in spellList.list.chunked(2)) {
+                Row(Modifier.fillMaxWidth()) {
+                    for (spell in row) {
+                        Block(spell, showRightAnswer, spell == selectedSpell, onVariantClick, Modifier.weight(1f))
+                    }
+                }
+            }
         }
     }
 }
+
+private const val SHORT_LABEL = 4
 
 @Preview
 @Composable

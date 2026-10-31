@@ -20,13 +20,18 @@ internal class SkillGameFragment : Fragment() {
 
     companion object {
         private const val ARG_MODE = "mode"
+        private const val ARG_GAME = "game"
 
-        fun getInstance(mode: GameMode = GameMode.SOLO) = SkillGameFragment().apply { arguments = bundleOf(ARG_MODE to mode.name) }
+        fun getInstance(mode: GameMode = GameMode.SOLO, gameId: String = SkillGameViewModel.GAME_ID) =
+            SkillGameFragment().apply { arguments = bundleOf(ARG_MODE to mode.name, ARG_GAME to gameId) }
     }
 
     @Inject lateinit var skillGameViewModelFactory: SkillGameViewModel.Factory
     private val viewModel: SkillGameViewModel by viewModel {
-        skillGameViewModelFactory.create(GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)))
+        skillGameViewModelFactory.create(
+            GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)),
+            requireArguments().getString(ARG_GAME, SkillGameViewModel.GAME_ID),
+        )
     }
 
     override fun onAttach(context: Context) {

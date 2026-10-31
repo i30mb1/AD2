@@ -6,6 +6,7 @@
     <string name="apm" translatable="false">APM</string>
     <string name="can_you_buy_it" translatable="false">Buy it?</string>
     <string name="xo" translatable="false">XO</string>
+    <string name="guess_hero">Guess the Hero</string>
 
     <string name="games_mode_solo">Solo</string>
     <string name="games_mode_solo_hint">3 lives, a streak for the record</string>
@@ -46,7 +47,7 @@
     <string name="end_peer_left">The opponent left</string>
     <string name="end_new_record">New record!</string>
 
-    <string name="leaderboard_title">Leaderboard · Spell Cost</string>
+    <string name="leaderboard_title">Leaderboard</string>
     <string name="leaderboard_empty">No records yet</string>
     <string name="leaderboard_hint">🟢 online now — records update live. The table is shared with everyone you have played with.</string>
 </resources>

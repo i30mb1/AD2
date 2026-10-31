@@ -2,6 +2,7 @@
 <resources>
     <string name="one_player">1 игрок</string>
     <string name="two_players">2 игрока</string>
+    <string name="guess_hero">Угадай героя</string>
 
     <string name="games_mode_solo">Соло</string>
     <string name="games_mode_solo_hint">3 жизни, серия на рекорд</string>
@@ -42,7 +43,7 @@
     <string name="end_peer_left">Соперник вышел</string>
     <string name="end_new_record">Новый рекорд!</string>
 
-    <string name="leaderboard_title">Рекорды · Угадай стоимость</string>
+    <string name="leaderboard_title">Рекорды</string>
     <string name="leaderboard_empty">Пока нет рекордов</string>
     <string name="leaderboard_hint">🟢 сейчас на связи — рекорды обновляются вживую. Таблица общая для всех, с кем вы играли по сети.</string>
 </resources>

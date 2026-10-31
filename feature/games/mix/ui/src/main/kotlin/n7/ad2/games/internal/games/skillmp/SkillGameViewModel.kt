@@ -28,14 +28,16 @@ import kotlin.time.Duration.Companion.seconds
 
 internal class SkillGameViewModel @AssistedInject constructor(
     @Assisted private val mode: GameMode,
+    @Assisted private val gameId: String,
     private val getSkillsUseCase: GetSkillsUseCase,
+    private val getHeroQuizUseCase: GetHeroQuizUseCase,
     private val leaderboardSync: LeaderboardSync,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
 
     @AssistedFactory
     interface Factory {
-        fun create(mode: GameMode): SkillGameViewModel
+        fun create(mode: GameMode, gameId: String): SkillGameViewModel
     }
 
     private val room: Room? = ActiveRoom.room.takeIf { mode != GameMode.SOLO }
@@ -133,7 +135,8 @@ internal class SkillGameViewModel @AssistedInject constructor(
     private suspend fun loadData(round: Int): GetSkillsUseCase.Data? {
         repeat(MAX_ATTEMPTS) { attempt ->
             val random = seed?.let { Random(it + round * MAX_ATTEMPTS + attempt) } ?: Random.Default
-            runCatching { getSkillsUseCase(random).first() }.onSuccess { return it }
+            val question = if (gameId == HERO_GAME_ID) getHeroQuizUseCase(random) else getSkillsUseCase(random)
+            runCatching { question.first() }.onSuccess { return it }
         }
         return null
     }
@@ -143,7 +146,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
         _state.update { it.copy(isEndGame = true) }
         val score = _state.value.match.myScore
         viewModelScope.launch {
-            val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
+            val isRecord = leaderboardSync.submit(Record(me.id, me.name, gameId, mode, score, System.currentTimeMillis()))
             _state.update { it.copy(newRecord = isRecord && score > 0) }
         }
     }
@@ -193,6 +196,7 @@ internal class SkillGameViewModel @AssistedInject constructor(
 
     companion object {
         const val GAME_ID = "spell"
+        const val HERO_GAME_ID = "hero"
         private const val MAX_ATTEMPTS = 20
     }
 }

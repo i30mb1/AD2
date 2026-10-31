@@ -24,6 +24,6 @@ internal class LeaderboardFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        LeaderboardScreen(viewModel.state.collectAsState().value, viewModel::selectMode)
+        LeaderboardScreen(viewModel.state.collectAsState().value, viewModel::selectGame, viewModel::selectMode)
     }
 }

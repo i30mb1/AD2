@@ -31,15 +31,19 @@ internal class LeaderboardViewModel @AssistedInject constructor(
     }
 
     private val myId = localPlayerProvider.localPlayer().id
-    private val mode = MutableStateFlow(GameMode.SOLO)
+    private val filter = MutableStateFlow(SkillGameViewModel.GAME_ID to GameMode.SOLO)
 
     @OptIn(ExperimentalCoroutinesApi::class)
-    val state: StateFlow<State> = mode
-        .flatMapLatest { selected -> repository.observe(SkillGameViewModel.GAME_ID, selected).map { State(selected, it, myId, onlinePlayerIds()) } }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), State(GameMode.SOLO, emptyList(), myId, emptySet()))
+    val state: StateFlow<State> = filter
+        .flatMapLatest { (game, mode) -> repository.observe(game, mode).map { State(game, mode, it, myId, onlinePlayerIds()) } }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), State(SkillGameViewModel.GAME_ID, GameMode.SOLO, emptyList(), myId, emptySet()))
 
     fun selectMode(selected: GameMode) {
-        mode.value = selected
+        filter.value = filter.value.first to selected
+    }
+
+    fun selectGame(gameId: String) {
+        filter.value = gameId to filter.value.second
     }
 
     private fun onlinePlayerIds(): Set<String> = when (val roomState = ActiveRoom.room?.state?.value) {
@@ -49,5 +53,9 @@ internal class LeaderboardViewModel @AssistedInject constructor(
     } - myId
 
     @Immutable
-    data class State(val mode: GameMode, val records: List<Record>, val myId: String, val online: Set<String>)
+    data class State(val gameId: String, val mode: GameMode, val records: List<Record>, val myId: String, val online: Set<String>) {
+        companion object {
+            val GAMES = listOf(SkillGameViewModel.GAME_ID, SkillGameViewModel.HERO_GAME_ID)
+        }
+    }
 }

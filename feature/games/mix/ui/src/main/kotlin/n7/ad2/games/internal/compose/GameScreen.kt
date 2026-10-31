@@ -11,6 +11,8 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.with
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -60,7 +62,8 @@ internal fun GamesScreen(
     onLeaderboardClicked: () -> Unit,
 ) {
     val insetsTop = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
-    var drawerPercent by remember { mutableStateOf(0f) }
+    // без drawer (demo-приложение) отступ под статус-бар нужен всегда
+    var drawerPercent by remember { mutableStateOf(if (drawerPercentListener == null) 1f else 0f) }
     // игра, для которой открыт выбор режима
     var modeSheetFor by remember { mutableStateOf<GameVO?>(null) }
 
@@ -80,9 +83,9 @@ internal fun GamesScreen(
             when (targetState) {
                 is GamesViewModel.State.Data -> GamesList(
                     games = targetState.games,
-                    spellBest = (state as? GamesViewModel.State.Data)?.spellBest,
+                    bests = (state as? GamesViewModel.State.Data)?.bests.orEmpty(),
                     onGameClicked = { game ->
-                        if (game is GameVO.GuessSkillMana) modeSheetFor = game else onGameClicked(game, GameMode.SOLO)
+                        if (game.quizId != null) modeSheetFor = game else onGameClicked(game, GameMode.SOLO)
                     },
                     onLeaderboardClicked = onLeaderboardClicked,
                 )
@@ -109,13 +112,15 @@ internal fun GamesScreen(
 }
 
 @Composable
-private fun GamesList(games: List<GameVO>, spellBest: Int?, onGameClicked: (game: GameVO) -> Unit, onLeaderboardClicked: () -> Unit, modifier: Modifier = Modifier) {
+private fun GamesList(games: List<GameVO>, bests: Map<String, Int>, onGameClicked: (game: GameVO) -> Unit, onLeaderboardClicked: () -> Unit, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+        modifier = modifier
+            .verticalScroll(rememberScrollState())
+            .padding(horizontal = 12.dp, vertical = 4.dp),
     ) {
         games.forEach { gameData ->
-            val badge = if (gameData is GameVO.GuessSkillMana && spellBest != null) stringResource(R.string.games_record_badge, spellBest) else null
+            val badge = bests[gameData.quizId]?.let { stringResource(R.string.games_record_badge, it) }
             Game(gameData.title, gameData.backgroundImage, badge = badge, onGameClick = { onGameClicked(gameData) })
         }
         Text(
