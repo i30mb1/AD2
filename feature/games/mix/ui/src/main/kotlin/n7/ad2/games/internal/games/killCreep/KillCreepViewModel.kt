@@ -47,7 +47,7 @@ internal class KillCreepViewModel @AssistedInject constructor(
 
     /** Поле одинаковое у обоих игроков: seed комнаты, в соло - случайный */
     val sim = CreepSim(playing?.seed ?: Random.nextLong())
-    private val startedAt = SystemClock.elapsedRealtime()
+    private val clock = MatchClock(if (room != null) ActiveRoom.startedAt else SystemClock.elapsedRealtime(), COUNTDOWN_MS)
     private var floatIds = 0L
 
     private val _state = MutableStateFlow(State(KillCreepMatch.start(mode, isHost), peerName, emptyList(), isEndGame = false, newRecord = false))
@@ -58,7 +58,9 @@ internal class KillCreepViewModel @AssistedInject constructor(
         room?.let(::observeRoom)
     }
 
-    fun elapsedMs(): Long = SystemClock.elapsedRealtime() - startedAt
+    fun elapsedMs(): Long = clock.elapsed(SystemClock.elapsedRealtime())
+
+    fun countdown(): Int = clock.countdown(SystemClock.elapsedRealtime())
 
     /** [x], [y] - доли поля, [aspect] - высота/ширина поля (радиус попадания круглый на экране) */
     fun onTap(x: Float, y: Float, aspect: Float) {
@@ -156,6 +158,7 @@ internal class KillCreepViewModel @AssistedInject constructor(
     companion object {
         const val GAME_ID = "creep"
         const val EARLY = "early"
+        private const val COUNTDOWN_MS = 3_000L
     }
 }
 

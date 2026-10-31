@@ -95,6 +95,7 @@ internal fun GamesScreen(
         modeSheetFor?.let { game ->
             ModeSheet(
                 title = game.title,
+                isKillCreep = game is GameVO.Apm,
                 onDismiss = { modeSheetFor = null },
                 onMode = { mode ->
                     modeSheetFor = null
@@ -139,7 +140,7 @@ private fun GamesList(games: List<GameVO>, bests: Map<String, Int>, onGameClicke
 }
 
 @Composable
-private fun ModeSheet(title: String, onDismiss: () -> Unit, onMode: (GameMode) -> Unit) {
+private fun ModeSheet(title: String, isKillCreep: Boolean, onDismiss: () -> Unit, onMode: (GameMode) -> Unit) {
     Box(
         Modifier
             .fillMaxSize()
@@ -159,9 +160,13 @@ private fun ModeSheet(title: String, onDismiss: () -> Unit, onMode: (GameMode) -
         ) {
             Box(Modifier.align(Alignment.CenterHorizontally).size(36.dp, 4.dp).clip(RoundedCornerShape(2.dp)).background(Color(0xFF555555)))
             Text(title, color = AppTheme.color.textColor, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(vertical = 4.dp))
-            ModeRow("👤", Color(0xFFF44336), stringResource(R.string.games_mode_solo), stringResource(R.string.games_mode_solo_hint)) { onMode(GameMode.SOLO) }
-            ModeRow("⚔️", Color(0xFF448AFF), stringResource(R.string.games_mode_versus), stringResource(R.string.games_mode_versus_hint)) { onMode(GameMode.VERSUS) }
-            ModeRow("🤝", Color(0xFF43A047), stringResource(R.string.games_mode_coop), stringResource(R.string.games_mode_coop_hint)) { onMode(GameMode.COOP) }
+            // у Kill Creep правила на время, а не вопросы с жизнями
+            val soloHint = if (isKillCreep) R.string.creep_mode_solo_hint else R.string.games_mode_solo_hint
+            val versusHint = if (isKillCreep) R.string.creep_mode_versus_hint else R.string.games_mode_versus_hint
+            val coopHint = if (isKillCreep) R.string.creep_mode_coop_hint else R.string.games_mode_coop_hint
+            ModeRow("👤", Color(0xFFF44336), stringResource(R.string.games_mode_solo), stringResource(soloHint)) { onMode(GameMode.SOLO) }
+            ModeRow("⚔️", Color(0xFF448AFF), stringResource(R.string.games_mode_versus), stringResource(versusHint)) { onMode(GameMode.VERSUS) }
+            ModeRow("🤝", Color(0xFF43A047), stringResource(R.string.games_mode_coop), stringResource(coopHint)) { onMode(GameMode.COOP) }
         }
     }
 }

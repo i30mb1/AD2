@@ -26,6 +26,9 @@
     <string name="games_mode_versus_hint">Одни вопросы, кто быстрее</string>
     <string name="games_mode_coop">Вместе</string>
     <string name="games_mode_coop_hint">Общие жизни и общий счёт</string>
+    <string name="creep_mode_solo_hint">Минута и 5 промахов, золото на рекорд</string>
+    <string name="creep_mode_versus_hint">Одни крипы, у кого больше золота</string>
+    <string name="creep_mode_coop_hint">Общее золото и 8 промахов на двоих</string>
     <string name="games_leaderboard">🏆 Таблица рекордов</string>
     <string name="games_record_badge">🏆 рекорд %d</string>
 

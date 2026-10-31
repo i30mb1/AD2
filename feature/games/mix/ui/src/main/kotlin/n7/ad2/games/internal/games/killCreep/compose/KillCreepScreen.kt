@@ -9,6 +9,7 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -23,6 +24,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -58,7 +60,7 @@ private val Gold = Color(0xFFFFD166)
 private val CreepSize = 46.dp
 
 @Composable
-internal fun KillCreepScreen(state: KillCreepViewModel.State, sim: CreepSim, elapsedMs: () -> Long, onTap: (x: Float, y: Float, aspect: Float) -> Unit) {
+internal fun KillCreepScreen(state: KillCreepViewModel.State, sim: CreepSim, elapsedMs: () -> Long, countdown: () -> Int, onTap: (x: Float, y: Float, aspect: Float) -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -71,11 +73,21 @@ internal fun KillCreepScreen(state: KillCreepViewModel.State, sim: CreepSim, ela
         }
         // кадровый таймер: позиции и HP крипов - чистая функция времени
         var now by remember { mutableLongStateOf(elapsedMs()) }
+        var secondsToStart by remember { mutableIntStateOf(countdown()) }
         LaunchedEffect(Unit) {
-            while (true) withFrameMillis { now = elapsedMs() }
+            while (true) {
+                withFrameMillis {
+                    now = elapsedMs()
+                    secondsToStart = countdown()
+                }
+            }
         }
-        Header(state.match, state.peerName, remaining = (CreepSim.DURATION_MS - now).coerceAtLeast(0))
-        Field(sim.visibleAt(now).filterNot { state.match.isTaken(it.id) }, state.floats, onTap, Modifier.weight(1f).padding(top = 10.dp))
+        Header(state.match, state.peerName, remaining = (CreepSim.DURATION_MS - now).coerceIn(0, CreepSim.DURATION_MS))
+        Box(Modifier.weight(1f).padding(top = 10.dp), contentAlignment = Alignment.Center) {
+            Field(sim.visibleAt(now).filterNot { state.match.isTaken(it.id) }, state.floats, onTap, Modifier.fillMaxSize())
+            // общий отсчет: крипы выходят у обоих игроков в один момент
+            if (secondsToStart > 0) Text("$secondsToStart", color = Gold, fontSize = 96.sp, fontWeight = FontWeight.ExtraBold)
+        }
     }
 }
 

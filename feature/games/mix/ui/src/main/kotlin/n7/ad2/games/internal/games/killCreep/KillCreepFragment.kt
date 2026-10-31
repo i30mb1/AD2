@@ -35,6 +35,6 @@ internal class KillCreepFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        KillCreepScreen(viewModel.state.collectAsState().value, viewModel.sim, viewModel::elapsedMs, viewModel::onTap)
+        KillCreepScreen(viewModel.state.collectAsState().value, viewModel.sim, viewModel::elapsedMs, viewModel::countdown, viewModel::onTap)
     }
 }

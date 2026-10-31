@@ -30,6 +30,9 @@
     <string name="games_mode_versus_hint">Same questions, the faster one wins</string>
     <string name="games_mode_coop">Together</string>
     <string name="games_mode_coop_hint">Shared lives and shared score</string>
+    <string name="creep_mode_solo_hint">One minute and 5 misses, gold for the record</string>
+    <string name="creep_mode_versus_hint">Same creeps, the one with more gold wins</string>
+    <string name="creep_mode_coop_hint">Shared gold and 8 misses for both</string>
     <string name="games_leaderboard">🏆 Leaderboard</string>
     <string name="games_record_badge">🏆 record %d</string>
 

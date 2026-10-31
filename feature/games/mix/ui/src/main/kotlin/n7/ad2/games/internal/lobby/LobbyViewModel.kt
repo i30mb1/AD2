@@ -1,5 +1,6 @@
 package n7.ad2.games.internal.lobby
 
+import android.os.SystemClock
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -178,7 +179,7 @@ internal class LobbyViewModel @AssistedInject constructor(
                         unregister()
                         handedOver = true
                         // группа Wi-Fi Direct нужна до конца игры, закроется вместе с комнатой
-                        ActiveRoom.set(room, roomState.mode, onClose = if (directUsed) wifiDirect::release else ({}))
+                        ActiveRoom.set(room, roomState.mode, SystemClock.elapsedRealtime(), onClose = if (directUsed) wifiDirect::release else ({}))
                         _openGame.tryEmit(roomState)
                     }
                     else -> if (isHost) unregister()
