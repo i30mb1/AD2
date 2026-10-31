@@ -64,9 +64,8 @@ class WebsocketServerController(private val scope: CoroutineScope = CoroutineSco
                 val headers = readHeaders(inputStream)
                 handshakeWebSocket(headers, writer)
                 runWebSocketCommunication(inputStream)
-
-                writer.close()
-                socket.close()
+                // клиент закрыл соединение (Close-фрейм или конец потока): сообщаем через статус
+                stop()
             } catch (e: Exception) {
                 stop()
             }
