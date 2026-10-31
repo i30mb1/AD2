@@ -18,6 +18,11 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.derivedStateOf
+import n7.ad2.hero.page.internal.pager.LocalResponsesLanguage
 import n7.ad2.hero.page.internal.pager.foldsHeroBanner
 import n7.ad2.hero.page.internal.common.SectionChip
 import n7.ad2.hero.page.internal.common.keepsSidewaysDrag
@@ -51,7 +56,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import n7.ad2.AppLocale
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.core.ui.compose.view.ErrorScreen
 import n7.ad2.feature.hero.page.ui.R
@@ -61,8 +65,6 @@ import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
 import n7.ad2.hero.page.internal.responses.domain.vo.key
 
 private const val PROGRESS_TICK_MS = 100L
-
-private class ResponseGroup(val title: String, val items: List<VOResponse.Body>)
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -80,7 +82,7 @@ internal fun ResponsesScreen(
     val locale by viewModel.locale.collectAsStateWithLifecycle()
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(ModalBottomSheetValue.Hidden, skipHalfExpanded = true)
-    var selectedCategory by rememberSaveable { mutableStateOf<String?>(null) }
+    val listState = rememberLazyListState()
     // the sheet keeps the row key, so after a download the refreshed item is shown, not the stale one
     var sheetKey by rememberSaveable { mutableStateOf<String?>(null) }
     var playedPart by remember { mutableFloatStateOf(0f) }
@@ -100,6 +102,13 @@ internal fun ResponsesScreen(
     val groups = when (val s = state) {
         is ResponsesViewModel.State.Data -> s.list.toGroups()
         else -> emptyList()
+    }
+    // the language switch is in the banner above the tabs
+    val language = LocalResponsesLanguage.current
+    DisposableEffect(language, locale) {
+        language?.current = locale
+        language?.onPick = viewModel::loadResponses
+        onDispose { }
     }
     val sheetGroup = groups.firstOrNull { group -> group.items.any { it.key == sheetKey } }
     val sheetItem = sheetGroup?.items?.firstOrNull { it.key == sheetKey }
@@ -132,15 +141,10 @@ internal fun ResponsesScreen(
             ResponsesViewModel.State.Loading -> Unit
             is ResponsesViewModel.State.Error -> ErrorScreen(error = s.error)
             is ResponsesViewModel.State.Data -> Column(Modifier.fillMaxSize()) {
-                Filters(
-                    groups = groups,
-                    selected = selectedCategory,
-                    onSelect = { selectedCategory = it },
-                    locale = locale,
-                    onLocaleChange = viewModel::loadResponses,
-                )
+                Categories(groups = groups, listState = listState)
                 ResponsesList(
-                    groups = groups.filter { selectedCategory == null || it.title == selectedCategory },
+                    groups = groups,
+                    listState = listState,
                     playingKey = playingKey,
                     progress = playedPart,
                     onPlay = onPlay,
@@ -158,6 +162,7 @@ internal fun ResponsesScreen(
 @Composable
 private fun ResponsesList(
     groups: List<ResponseGroup>,
+    listState: LazyListState,
     playingKey: String?,
     progress: Float,
     onPlay: (VOResponse.Body) -> Unit,
@@ -165,6 +170,7 @@ private fun ResponsesList(
 ) {
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     LazyColumn(
+        state = listState,
         modifier = Modifier
             .fillMaxSize()
             .foldsHeroBanner(),
@@ -204,86 +210,27 @@ private fun ResponsesList(
     }
 }
 
+/** A chip jumps to its category, the highlighted one follows the scroll so it always names what is on screen. */
 @Composable
-private fun Filters(
-    groups: List<ResponseGroup>,
-    selected: String?,
-    onSelect: (String?) -> Unit,
-    locale: AppLocale,
-    onLocaleChange: (AppLocale) -> Unit,
-) {
-    Row(
+private fun Categories(groups: List<ResponseGroup>, listState: LazyListState) {
+    val scope = rememberCoroutineScope()
+    val sizes = remember(groups) { groups.map { it.items.size } }
+    val current by remember(sizes) { derivedStateOf { groupAt(sizes, listState.firstVisibleItemIndex) } }
+    val chipsState = rememberLazyListState()
+    LaunchedEffect(current) { if (groups.isNotEmpty()) chipsState.animateScrollToItem(current) }
+    LazyRow(
+        state = chipsState,
         modifier = Modifier
             .fillMaxWidth()
+            .keepsSidewaysDrag()
             .padding(vertical = 10.dp),
-        verticalAlignment = Alignment.CenterVertically,
+        contentPadding = PaddingValues(horizontal = 16.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        LazyRow(
-            modifier = Modifier
-                .weight(1f)
-                .keepsSidewaysDrag(),
-            contentPadding = PaddingValues(start = 16.dp, end = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-        ) {
-            item(key = "all") {
-                SectionChip(text = stringResource(R.string.responses_all), count = null, isSelected = selected == null) { onSelect(null) }
-            }
-            itemsIndexed(groups, key = { index, group -> "$index-${group.title}" }) { _, group ->
-                SectionChip(text = group.title, count = group.items.size, isSelected = selected == group.title) { onSelect(group.title) }
-            }
-        }
-        LocaleToggle(locale = locale, onLocaleChange = onLocaleChange, modifier = Modifier.padding(end = 12.dp))
-    }
-}
-
-@Composable
-private fun LocaleToggle(locale: AppLocale, onLocaleChange: (AppLocale) -> Unit, modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier
-            .clip(CircleShape)
-            .background(AppTheme.color.surface)
-            .padding(2.dp),
-    ) {
-        listOf(AppLocale.Russian, AppLocale.English).forEach { option ->
-            val isSelected = option == locale
-            Box(
-                modifier = Modifier
-                    .height(28.dp)
-                    .clip(CircleShape)
-                    .background(if (isSelected) AppTheme.color.primary else Color.Transparent)
-                    .clickable(role = Role.RadioButton) { if (!isSelected) onLocaleChange(option) }
-                    .padding(horizontal = 10.dp),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = option.value.uppercase(),
-                    style = AppTheme.style.body,
-                    fontWeight = FontWeight.Bold,
-                    color = if (isSelected) Color.White else AppTheme.color.textSecondaryColor,
-                )
+        itemsIndexed(groups, key = { index, group -> "$index-${group.title}" }) { index, group ->
+            SectionChip(text = group.title, count = group.items.size, isSelected = index == current) {
+                scope.launch { listState.animateScrollToItem(headerIndex(sizes, index)) }
             }
         }
     }
-}
-
-private fun List<VOResponse>.toGroups(): List<ResponseGroup> {
-    val result = mutableListOf<ResponseGroup>()
-    var title: String? = null
-    val items = mutableListOf<VOResponse.Body>()
-    fun flush() {
-        val current = title ?: return
-        if (items.isNotEmpty()) result.add(ResponseGroup(current, items.toList()))
-        items.clear()
-    }
-    forEach { response ->
-        when (response) {
-            is VOResponse.Title -> {
-                flush()
-                title = response.data.title
-            }
-            is VOResponse.Body -> items.add(response)
-        }
-    }
-    flush()
-    return result
 }

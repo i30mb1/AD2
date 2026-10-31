@@ -79,6 +79,22 @@ class WikiHeroParserTest {
         counters.flatMap { it.blocks }.flatMap { it.lines }.forEach { assertFalse(it, it.contains("▶")) }
     }
 
+    // the RU counters pages are mostly the unfilled template: "Причина"/"Запись" bullets and no hero names
+    @Test
+    fun `template placeholders of the RU counters page are dropped with the sections left empty`() {
+        val html = """
+            <h2><span class="mw-headline">Плох против</span></h2>
+            <ul><li>Juxtapose бьёт по Doom</li><li>Причина</li><li>Причина</li></ul>
+            <h3><span class="mw-headline">Другое</span></h3>
+            <ul><li>Запись</li><li>Запись</li></ul>
+            <h2><span class="mw-headline">Хорош против</span></h2>
+            <ul><li>Reason</li><li>Entry</li></ul>
+        """.trimIndent()
+        val counters = WikiHeroParser.parseCounters(Jsoup.parse(html))
+        assertEquals(listOf("Плох против"), counters.map { it.title })
+        assertEquals(listOf("Juxtapose бьёт по Doom"), counters.single().blocks.single().lines)
+    }
+
     @Test
     fun `guide playstyle and tips`() {
         val en = WikiHeroParser.parseGuide(doc("wiki_antimage_guide_en.html"))

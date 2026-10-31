@@ -65,7 +65,13 @@ private const val ROLES_IN_BANNER = 2
  * toolbar with a small avatar: the banner folds while a tab's list scrolls, so the page keeps its height for content.
  */
 @Composable
-internal fun HeroBanner(heroName: String, artUrl: String, description: HeroDescription?, collapse: Float) {
+internal fun HeroBanner(
+    heroName: String,
+    artUrl: String,
+    description: HeroDescription?,
+    collapse: Float,
+    trailing: (@Composable () -> Unit)? = null,
+) {
     val backDispatcher = LocalOnBackPressedDispatcherOwner.current?.onBackPressedDispatcher
     val height: Dp = lerp(BANNER_HEIGHT, TOOLBAR_HEIGHT, collapse)
     // the details fade out in the first half of the fold, the toolbar avatar fades in during the second half
@@ -132,9 +138,11 @@ internal fun HeroBanner(heroName: String, artUrl: String, description: HeroDescr
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
+                    .weight(1f)
                     .alpha(toolbarAlpha)
                     .padding(start = 10.dp),
             )
+            trailing?.invoke()
         }
         Column(
             modifier = Modifier

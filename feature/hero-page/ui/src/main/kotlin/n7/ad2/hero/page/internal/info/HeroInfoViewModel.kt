@@ -34,8 +34,8 @@ class HeroInfoViewModel @AssistedInject constructor(
     }
 
     sealed class State {
-        /** [summary] first has only the wiki part, threats and items arrive with the guide from the internet. */
-        data class Data(val info: VOHeroInfo, val summary: VOHeroSummary?) : State()
+        /** [summary] first has only the wiki part, threats, items and [guide] arrive later from the internet. */
+        data class Data(val info: VOHeroInfo, val summary: VOHeroSummary?, val guide: VOGuide?) : State()
         data class Error(val error: Throwable) : State()
         object Loading : State()
     }
@@ -50,7 +50,7 @@ class HeroInfoViewModel @AssistedInject constructor(
             .onStart<VOGuide?> { emit(null) }
             .catch { emit(null) }
         combine(getVOHeroDescriptionUseCase(heroName), guide) { info, loadedGuide ->
-            State.Data(info, heroSummary(info.description.wiki.playstyle, loadedGuide))
+            State.Data(info, heroSummary(info.description.wiki.playstyle, loadedGuide), loadedGuide)
         }
             .onEach { _state.emit(it) }
             .catch { error -> _state.emit(State.Error(error)) }

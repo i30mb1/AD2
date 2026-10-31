@@ -32,26 +32,32 @@ internal fun HeroPageScreen(heroName: String, artUrl: String, viewModel: HeroPag
     val args: Bundle = bundleOf("HERO_NAME" to heroName)
     val rangePx = with(LocalDensity.current) { (BANNER_HEIGHT - TOOLBAR_HEIGHT).toPx() }
     val collapse = remember(rangePx) { BannerCollapse(rangePx) }
+    val responsesLanguage = remember { ResponsesLanguage() }
+    val shownLocale = responsesLanguage.current.takeIf { pagerState.currentPage == RESPONSES_PAGE }
 
     Column(
         Modifier
             .fillMaxSize()
             .statusBarsPadding(),
     ) {
-        HeroBanner(heroName = description?.name?.ifEmpty { null } ?: heroName, artUrl = artUrl, description = description, collapse = collapse.fraction)
+        HeroBanner(heroName = description?.name?.ifEmpty { null } ?: heroName, artUrl = artUrl, description = description, collapse = collapse.fraction,
+            trailing = shownLocale?.let { locale -> { LocaleToggle(locale, responsesLanguage.onPick) } },
+        )
         HeroPageTabs(
             titles = tabTitles,
             selected = pagerState.currentPage,
             onSelect = { index -> scope.launch { pagerState.animateScrollToPage(index) } },
         )
-        CompositionLocalProvider(LocalBannerCollapse provides collapse) {
+        CompositionLocalProvider(LocalBannerCollapse provides collapse, LocalResponsesLanguage provides responsesLanguage) {
             HorizontalPager(state = pagerState, modifier = Modifier.fillMaxSize()) { page ->
                 when (page) {
                     0 -> AndroidFragment<HeroInfoFragment>(arguments = args)
-                    1 -> AndroidFragment<ResponsesFragment>(arguments = args)
+                    RESPONSES_PAGE -> AndroidFragment<ResponsesFragment>(arguments = args)
                     2 -> AndroidFragment<HeroGuideFragment>(arguments = args)
                 }
             }
         }
     }
 }
+
+private const val RESPONSES_PAGE = 1

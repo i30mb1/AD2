@@ -41,8 +41,14 @@ internal object WikiHeroParser {
 
     /** Counters subpage: "Bad against", "Good against", "Works well with" with their "Others"/"Items" parts. */
     fun parseCounters(doc: Document): List<Section> = sections(doc).map { section ->
-        Section(section.title, section.level, entityBlocks(section.elements))
+        val blocks = entityBlocks(section.elements)
+            .map { block -> block.copy(lines = block.lines.filterNot { it in templatePlaceholders }) }
+            .filter { it.lines.isNotEmpty() }
+        Section(section.title, section.level, blocks)
     }.filter { it.blocks.isNotEmpty() }
+
+    /** Bullets of the unfilled counters template, almost every RU counters page has nothing but these. */
+    private val templatePlaceholders = setOf("Причина", "Запись", "Reason", "Entry")
 
     data class Guide(val playstyle: String?, val pros: List<String>, val cons: List<String>, val tips: List<Section>)
 

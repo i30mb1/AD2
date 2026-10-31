@@ -35,6 +35,11 @@ class InfoRowTest {
     }
 
     @Test
+    fun `OpenDota matchups alone are enough for the counters row`() {
+        assertEquals(listOf(InfoRow.STATS, InfoRow.COUNTERS), info(HeroDescription()).rows(hasMatchups = true))
+    }
+
+    @Test
     fun `tips alone are enough for the tips row and trivia alone for lore`() {
         val description = HeroDescription(trivia = listOf("fact"), wiki = HeroWiki(tips = listOf(section)))
         assertEquals(listOf(InfoRow.STATS, InfoRow.TIPS, InfoRow.LORE), info(description).rows())

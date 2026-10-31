@@ -3,6 +3,7 @@ package n7.ad2.hero.page.internal.info
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -29,7 +30,6 @@ import androidx.compose.material.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -48,6 +48,10 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.core.ui.compose.view.ErrorScreen
 import n7.ad2.core.ui.compose.view.LoadingAnimation
 import n7.ad2.feature.hero.page.ui.R
+import n7.ad2.hero.page.internal.guides.MatchupColumn
+import n7.ad2.hero.page.internal.guides.domain.vo.VOGuide
+import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHero
+import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideItem
 import n7.ad2.hero.page.internal.info.components.AbilitiesSection
 import n7.ad2.hero.page.internal.info.components.ChangesSection
 import n7.ad2.hero.page.internal.info.components.CountersSection
@@ -65,8 +69,6 @@ import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroSummary
 import n7.ad2.hero.page.internal.info.domain.vo.rows
 import n7.ad2.hero.page.internal.pager.foldsHeroBanner
-import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideHero
-import n7.ad2.hero.page.internal.guides.domain.vo.VOGuideItem
 import n7.ad2.heroes.domain.model.Ability
 import n7.ad2.heroes.domain.model.HeroDescription
 import n7.ad2.heroes.domain.model.PatchChange
@@ -82,7 +84,7 @@ internal fun HeroInfoScreen(viewModel: HeroInfoViewModel) {
         ) { LoadingAnimation() }
 
         is HeroInfoViewModel.State.Error -> ErrorScreen(error = s.error)
-        is HeroInfoViewModel.State.Data -> HeroInfoContent(s.info, s.summary)
+        is HeroInfoViewModel.State.Data -> HeroInfoContent(s.info, s.summary, s.guide)
     }
 }
 
@@ -92,8 +94,8 @@ internal fun HeroInfoScreen(viewModel: HeroInfoViewModel) {
  */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-private fun HeroInfoContent(info: VOHeroInfo, summary: VOHeroSummary?) {
-    val rows = remember(info) { info.rows() }
+private fun HeroInfoContent(info: VOHeroInfo, summary: VOHeroSummary?, guide: VOGuide?) {
+    val rows = info.rows(hasMatchups = guide.hasMatchups())
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(ModalBottomSheetValue.Hidden, skipHalfExpanded = true)
     var openedRowName by rememberSaveable { mutableStateOf<String?>(null) }
@@ -122,7 +124,7 @@ private fun HeroInfoContent(info: VOHeroInfo, summary: VOHeroSummary?) {
             ) {
                 if (openedRow != null) {
                     Heading(stringResource(openedRow.title))
-                    RowContent(openedRow, info)
+                    RowContent(openedRow, info, guide)
                 } else {
                     // the sheet layout needs some content even while hidden
                     Box(Modifier.height(1.dp))
@@ -132,6 +134,7 @@ private fun HeroInfoContent(info: VOHeroInfo, summary: VOHeroSummary?) {
     ) {
         InfoPage(
             info = info,
+            rows = rows,
             summary = summary,
             selectedAbility = selectedAbility,
             onSelectAbility = { ability -> selectedAbilityName = ability.name },
@@ -146,13 +149,13 @@ private fun HeroInfoContent(info: VOHeroInfo, summary: VOHeroSummary?) {
 @Composable
 private fun InfoPage(
     info: VOHeroInfo,
+    rows: List<InfoRow>,
     summary: VOHeroSummary?,
     selectedAbility: Ability?,
     onSelectAbility: (Ability) -> Unit,
     onOpenRow: (InfoRow) -> Unit,
 ) {
     val description = info.description
-    val rows = remember(info) { info.rows() }
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     Column(
         modifier = Modifier
@@ -225,18 +228,35 @@ private fun MoreRow(title: String, hint: String?, onClick: () -> Unit) {
 }
 
 @Composable
-private fun RowContent(row: InfoRow, info: VOHeroInfo) {
+private fun RowContent(row: InfoRow, info: VOHeroInfo, guide: VOGuide?) {
     val description = info.description
     when (row) {
         InfoRow.STATS -> StatsSection(description.stats)
         InfoRow.FACETS -> FacetsSection(description.facets)
-        InfoRow.COUNTERS -> CountersSection(description.wiki.counters)
+        InfoRow.COUNTERS -> {
+            // real matchups first: the RU wiki mostly has an unfilled template there
+            if (guide.hasMatchups()) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                ) {
+                    MatchupColumn(stringResource(R.string.easy_to_win_heroes), guide!!.easyToWin, prosColor, Modifier.weight(1f))
+                    MatchupColumn(stringResource(R.string.hard_to_win_heroes), guide.hardToWin, consColor, Modifier.weight(1f))
+                }
+            }
+            if (description.wiki.counters.isNotEmpty()) CountersSection(description.wiki.counters)
+        }
         InfoRow.ITEMS -> ItemsSection(description.wiki.recommendedItems)
         InfoRow.TIPS -> StrategySection(description.wiki.playstyle, description.wiki.tips)
         InfoRow.CHANGES -> ChangesSection(description.changes)
         InfoRow.LORE -> LoreSection(description.bio, description.trivia)
     }
 }
+
+private fun VOGuide?.hasMatchups(): Boolean = this != null && (easyToWin.isNotEmpty() || hardToWin.isNotEmpty())
+
+private val prosColor = Color(0xFF81C784)
+private val consColor = Color(0xFFFF8A80)
 
 private val InfoRow.title: Int
     get() = when (this) {
@@ -286,7 +306,7 @@ private fun InfoPagePreview() {
     )
     AppTheme(isDarkTheme = true) {
         Box(Modifier.background(AppTheme.color.background)) {
-            InfoPage(info, summary, selectedAbility = ability, onSelectAbility = {}, onOpenRow = {})
+            InfoPage(info, info.rows(), summary, selectedAbility = ability, onSelectAbility = {}, onOpenRow = {})
         }
     }
 }

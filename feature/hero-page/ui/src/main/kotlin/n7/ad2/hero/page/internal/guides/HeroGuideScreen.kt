@@ -316,7 +316,7 @@ private fun PhaseRow(title: String, time: String, color: Color, items: List<VOGu
 }
 
 @Composable
-private fun MatchupColumn(title: String, heroes: List<VOGuideHero>, color: Color, modifier: Modifier) {
+internal fun MatchupColumn(title: String, heroes: List<VOGuideHero>, color: Color, modifier: Modifier) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(text = title.uppercase(), style = captionStyle, fontWeight = FontWeight.Bold, color = color, maxLines = 1, overflow = TextOverflow.Ellipsis)
         heroes.forEach { hero ->
