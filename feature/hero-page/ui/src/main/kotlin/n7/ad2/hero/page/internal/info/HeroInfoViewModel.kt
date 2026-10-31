@@ -9,16 +9,23 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.onStart
 import n7.ad2.app.logger.Logger
+import n7.ad2.hero.page.internal.guides.domain.interactor.GetVOHeroGuideUseCase
+import n7.ad2.hero.page.internal.guides.domain.vo.VOGuide
 import n7.ad2.hero.page.internal.info.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
+import n7.ad2.hero.page.internal.info.domain.vo.VOHeroSummary
+import n7.ad2.hero.page.internal.info.domain.vo.heroSummary
 
 class HeroInfoViewModel @AssistedInject constructor(
-    private val getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase,
-    private val logger: Logger,
-    @Assisted private val heroName: String,
+    getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase,
+    getVOHeroGuideUseCase: GetVOHeroGuideUseCase,
+    logger: Logger,
+    @Assisted heroName: String,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -27,7 +34,8 @@ class HeroInfoViewModel @AssistedInject constructor(
     }
 
     sealed class State {
-        data class Data(val info: VOHeroInfo) : State()
+        /** [summary] first has only the wiki part, threats and items arrive with the guide from the internet. */
+        data class Data(val info: VOHeroInfo, val summary: VOHeroSummary?) : State()
         data class Error(val error: Throwable) : State()
         object Loading : State()
     }
@@ -37,8 +45,14 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     init {
         logger.log("HeroInfoLoaded", mapOf("Hero" to heroName))
-        getVOHeroDescriptionUseCase(heroName)
-            .onEach { info -> _state.emit(State.Data(info)) }
+        // the page does not wait for the guide: without the internet it simply never comes
+        val guide = getVOHeroGuideUseCase(heroName)
+            .onStart<VOGuide?> { emit(null) }
+            .catch { emit(null) }
+        combine(getVOHeroDescriptionUseCase(heroName), guide) { info, loadedGuide ->
+            State.Data(info, heroSummary(info.description.wiki.playstyle, loadedGuide))
+        }
+            .onEach { _state.emit(it) }
             .catch { error -> _state.emit(State.Error(error)) }
             .launchIn(viewModelScope)
     }

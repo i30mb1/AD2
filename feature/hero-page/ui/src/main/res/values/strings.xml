@@ -160,6 +160,9 @@
         <item>Divine</item>
         <item>Immo</item>
     </string-array>
-    <string name="info_items_short">Items</string>
     <string name="info_lore">Lore</string>
+    <string name="info_summary">In short</string>
+    <string name="info_threats">Watch out for</string>
+    <string name="info_key_items">Key items</string>
+    <string name="info_changes">Patch changes</string>
 </resources>

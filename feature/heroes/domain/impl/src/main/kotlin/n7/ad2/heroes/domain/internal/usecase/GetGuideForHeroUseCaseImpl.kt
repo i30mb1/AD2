@@ -6,6 +6,8 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
@@ -33,10 +35,17 @@ internal class GetGuideForHeroUseCaseImpl(
 
     private val json = Json { ignoreUnknownKeys = true }
 
+    // the Info and Guides tabs both need the guide and start together, the second one waits and takes the copy
+    private val cache = mutableMapOf<String, Guide>()
+    private val mutex = Mutex()
+
     override fun invoke(name: String): Flow<List<Guide>> = flow {
-        val guide = runCatching { fetchGuide(name) }
-            .onFailure { logger.log("guide fetch failed for $name: ${it.message}") }
-            .getOrNull()
+        val guide = mutex.withLock {
+            cache[name] ?: runCatching { fetchGuide(name) }
+                .onFailure { logger.log("guide fetch failed for $name: ${it.message}") }
+                .getOrNull()
+                ?.also { cache[name] = it }
+        }
         emit(guide?.let { listOf(it) } ?: emptyList())
     }.flowOn(dispatcher.IO)
 

@@ -47,7 +47,6 @@ internal fun WikiSourceLabel(modifier: Modifier = Modifier) {
     Caption(stringResource(R.string.info_wiki_source), modifier)
 }
 
-/** Shows the first [visible] items and a "Show all (N)" button for the rest. */
 // ===== patch changes =====
 
 @Composable
@@ -78,6 +77,25 @@ internal fun PatchHeader(change: PatchChange) {
 internal fun PatchNotes(notes: List<PatchNote>) {
     notes.forEach { note ->
         Box(Modifier.padding(start = (note.indent * 16).dp)) { BulletText(note.text) }
+    }
+}
+
+/** Every patch that touched the hero: its own notes, talents and abilities, newest first. */
+@Composable
+internal fun ChangesSection(changes: List<PatchChange>) {
+    SectionBody {
+        changes.forEachIndexed { index, change ->
+            if (index > 0) VSpace(16.dp)
+            PatchHeader(change)
+            VSpace(6.dp)
+            PatchNotes(change.hero)
+            if (change.talents.isNotEmpty()) {
+                SubSection(stringResource(R.string.info_talents), count = null) { PatchNotes(change.talents) }
+            }
+            change.abilities.forEach { ability ->
+                SubSection(ability.abilityName, count = null) { PatchNotes(ability.notes) }
+            }
+        }
     }
 }
 
