@@ -1,6 +1,6 @@
 package n7.ad2.hero.page.internal.info
 
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -8,29 +8,36 @@ import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import n7.ad2.hero.page.internal.pager.foldsHeroBanner
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import n7.ad2.core.ui.compose.view.ErrorScreen
 import n7.ad2.core.ui.compose.view.LoadingAnimation
-import n7.ad2.hero.page.internal.info.components.AbilitiesCard
-import n7.ad2.hero.page.internal.info.components.BioCard
-import n7.ad2.hero.page.internal.info.components.CountersCard
-import n7.ad2.hero.page.internal.info.components.FacetsCard
-import n7.ad2.hero.page.internal.info.components.HeroHeader
-import n7.ad2.hero.page.internal.info.components.RecommendedItemsCard
-import n7.ad2.hero.page.internal.info.components.StatsCard
-import n7.ad2.hero.page.internal.info.components.StrategyCard
-import n7.ad2.hero.page.internal.info.components.TalentsCard
-import n7.ad2.hero.page.internal.info.components.TriviaCard
+import n7.ad2.feature.hero.page.ui.R
+import n7.ad2.hero.page.internal.common.SectionChips
+import n7.ad2.hero.page.internal.info.components.AbilitiesSection
+import n7.ad2.hero.page.internal.info.components.CountersSection
+import n7.ad2.hero.page.internal.info.components.FacetsSection
+import n7.ad2.hero.page.internal.info.components.ItemsSection
+import n7.ad2.hero.page.internal.info.components.LoreSection
+import n7.ad2.hero.page.internal.info.components.StatsSection
+import n7.ad2.hero.page.internal.info.components.StrategySection
+import n7.ad2.hero.page.internal.info.components.TalentsSection
+import n7.ad2.hero.page.internal.info.domain.vo.InfoSection
 import n7.ad2.hero.page.internal.info.domain.vo.VOAbilityGroup
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo
+import n7.ad2.hero.page.internal.info.domain.vo.sections
 
 @Composable
 internal fun HeroInfoScreen(viewModel: HeroInfoViewModel) {
@@ -46,40 +53,67 @@ internal fun HeroInfoScreen(viewModel: HeroInfoViewModel) {
     }
 }
 
+/** One section at a time, picked by the chips: the page stays short and nothing has to be unfolded. */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun HeroInfoContent(info: VOHeroInfo) {
     val description = info.description
+    val sections = remember(info) { info.sections() }
+    var selectedName by rememberSaveable { mutableStateOf(sections.first().name) }
+    val selected = sections.firstOrNull { it.name == selectedName } ?: sections.first()
+
     val abilities = info.abilityGroups.flatMap { it.abilities }
     val defaultAbility = info.abilityGroups.firstOrNull { it.group == VOAbilityGroup.Group.MAIN }?.abilities?.firstOrNull() ?: abilities.firstOrNull()
     var selectedAbilityName by rememberSaveable { mutableStateOf(defaultAbility?.name) }
     val selectedAbility = abilities.firstOrNull { it.name == selectedAbilityName } ?: defaultAbility
 
+    val listState = rememberLazyListState()
+    // a new section starts from its top, not from where the previous one was scrolled to
+    LaunchedEffect(selected) { if (listState.firstVisibleItemIndex > 0) listState.scrollToItem(1) }
+
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     LazyColumn(
+        state = listState,
+        modifier = Modifier.foldsHeroBanner(),
         contentPadding = PaddingValues(bottom = bottomInset + 16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        // the hero card and abilities are always open, everything else is a folded card with a short summary
-        item(key = "header") { HeroHeader(info.heroImageUrl, description) }
-        if (selectedAbility != null) {
-            item(key = "abilities") {
-                AbilitiesCard(
-                    groups = info.abilityGroups,
-                    selected = selectedAbility,
-                    onSelect = { ability -> selectedAbilityName = ability.name },
-                    changes = description.changes,
-                )
+        stickyHeader(key = "chips") {
+            SectionChips(
+                titles = sections.map { stringResource(it.title) },
+                selected = sections.indexOf(selected),
+                onSelect = { index -> selectedName = sections[index].name },
+            )
+        }
+        item(key = selected.name) {
+            when (selected) {
+                InfoSection.ABILITIES -> if (selectedAbility != null) {
+                    AbilitiesSection(
+                        groups = info.abilityGroups,
+                        selected = selectedAbility,
+                        onSelect = { ability -> selectedAbilityName = ability.name },
+                        changes = description.changes,
+                    )
+                }
+                InfoSection.STATS -> StatsSection(description.stats)
+                InfoSection.TALENTS -> TalentsSection(description.talents)
+                InfoSection.FACETS -> FacetsSection(description.facets)
+                InfoSection.STRATEGY -> StrategySection(description.wiki.playstyle, description.wiki.tips)
+                InfoSection.COUNTERS -> CountersSection(description.wiki.counters)
+                InfoSection.ITEMS -> ItemsSection(description.wiki.recommendedItems)
+                InfoSection.LORE -> LoreSection(description.bio, description.trivia)
             }
         }
-        item(key = "stats") { StatsCard(description.stats) }
-        if (description.talents.isNotEmpty()) item(key = "talents") { TalentsCard(description.talents) }
-        if (description.facets.isNotEmpty()) item(key = "facets") { FacetsCard(description.facets) }
-        val wiki = description.wiki
-        // wiki blocks exist only when the wiki of the app language has them
-        if (wiki.playstyle != null || wiki.tips.isNotEmpty()) item(key = "strategy") { StrategyCard(wiki.playstyle, wiki.tips) }
-        if (wiki.counters.isNotEmpty()) item(key = "counters") { CountersCard(wiki.counters) }
-        if (wiki.recommendedItems.isNotEmpty()) item(key = "items") { RecommendedItemsCard(wiki.recommendedItems) }
-        if (description.bio.isNotEmpty()) item(key = "bio") { BioCard(description.bio) }
-        if (description.trivia.isNotEmpty()) item(key = "trivia") { TriviaCard(description.trivia) }
     }
 }
+
+private val InfoSection.title: Int
+    get() = when (this) {
+        InfoSection.ABILITIES -> R.string.info_abilities
+        InfoSection.STATS -> R.string.info_stats
+        InfoSection.TALENTS -> R.string.info_talents
+        InfoSection.FACETS -> R.string.info_facets
+        InfoSection.STRATEGY -> R.string.info_strategy
+        InfoSection.COUNTERS -> R.string.info_counters
+        InfoSection.ITEMS -> R.string.info_items_short
+        InfoSection.LORE -> R.string.info_lore
+    }

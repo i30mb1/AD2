@@ -13,13 +13,10 @@
     <string name="desc_intelligence" translatable="false">intellect</string>
     <string name="desc_agility" translatable="false">Agility</string>
     <string name="desc_is_saved" translatable="false">is saved</string>
-    <string name="notification_title_guide" translatable="false">loading guide...</string>
     <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
-    <string name="starting_items">Starting items</string>
     <string name="easy_to_win_heroes">Best versus heroes</string>
     <string name="hard_to_win_heroes">Worst versus heroes</string>
     <string name="guide_items">Items and timings</string>
-    <string name="fragment_guide_skill_builds">Skill builds</string>
 
     <!-- hero info -->
     <string name="info_stats">Stats</string>
@@ -114,7 +111,6 @@
     <string name="info_cons">Cons</string>
     <string name="info_ability_details">Details</string>
     <string name="info_ability_changes">Changes</string>
-    <string name="info_show_all">Show all (%d)</string>
     <string name="hero_back">Back</string>
     <string name="responses_all">All</string>
     <string name="response_play">Play</string>
@@ -144,4 +140,29 @@
     <string name="guide_phase_late_time">30+ min</string>
     <string name="guide_source">Data: OpenDota</string>
     <string name="guide_empty">The guide is not loaded yet, it needs the internet once</string>
+    <string name="guide_pro_picks">Pro picks</string>
+    <string name="guide_bans">Bans</string>
+    <string name="guide_rank_winrate">Win rate by rank</string>
+    <string name="guide_duration_winrate">Win rate by match length</string>
+    <string name="guide_skill_build">Skill build</string>
+    <string name="guide_skill_build_hint">popular in pro matches</string>
+    <string name="guide_matchups">Matchups</string>
+    <string name="guide_phase_start">Start</string>
+    <string name="guide_phase_start_time">0 min</string>
+    <string name="guide_talent_short">T</string>
+    <string name="guide_minutes_up_to">&lt;%d</string>
+    <string name="guide_minutes_from">%d+</string>
+    <string name="guide_minutes_range">%1$d–%2$d</string>
+    <string-array name="guide_ranks_short">
+        <item>Herald</item>
+        <item>Guard</item>
+        <item>Crus</item>
+        <item>Archon</item>
+        <item>Legend</item>
+        <item>Ancient</item>
+        <item>Divine</item>
+        <item>Immo</item>
+    </string-array>
+    <string name="info_items_short">Items</string>
+    <string name="info_lore">Lore</string>
 </resources>

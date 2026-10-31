@@ -41,96 +41,6 @@ import n7.ad2.heroes.domain.model.HeroDescription
 import n7.ad2.heroes.domain.model.HeroRole
 import n7.ad2.heroes.domain.model.HeroStats
 
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-internal fun HeroHeader(imageUrl: String, info: HeroDescription) {
-    // full-bleed art right under the tabs, the details continue on the page background
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Box(
-            Modifier
-                .fillMaxWidth()
-                .aspectRatio(16f / 9f),
-        ) {
-            AsyncImage(
-                model = imageUrl,
-                contentDescription = info.name,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize(),
-            )
-            Box(
-                Modifier
-                    .fillMaxSize()
-                    .background(Brush.verticalGradient(0.45f to Color.Transparent, 1f to AppTheme.color.background)),
-            )
-            Column(
-                Modifier
-                    .align(Alignment.BottomStart)
-                    .padding(horizontal = 16.dp, vertical = 8.dp),
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    AttributeIcon(info.primaryAttribute, Modifier.size(22.dp))
-                    HSpace(8.dp)
-                    Text(
-                        text = info.name,
-                        fontSize = 26.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = AppTheme.color.textColor,
-                    )
-                }
-            }
-        }
-        Column(Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp)) {
-            if (info.short.isNotEmpty()) {
-                RichText(info.short, color = AppTheme.color.textSecondaryColor)
-                VSpace(12.dp)
-            }
-            FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                InfoChip(
-                    text = stringResource(info.primaryAttribute.label),
-                    color = info.primaryAttribute.color,
-                    leading = { AttributeIcon(info.primaryAttribute, Modifier.size(14.dp)) },
-                )
-                InfoChip(text = stringResource(info.attackType.label))
-                ComplexityChip(info.complexity)
-            }
-            if (info.roles.isNotEmpty()) {
-                VSpace(8.dp)
-                Roles(info.roles)
-            }
-            VSpace(14.dp)
-            Attributes(info)
-        }
-    }
-}
-
-@Composable
-private fun ComplexityChip(complexity: Int) {
-    Row(
-        modifier = Modifier
-            .clip(RoundedCornerShape(50))
-            .background(InfoColors.chip)
-            .padding(horizontal = 10.dp, vertical = 5.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(text = stringResource(R.string.complexity), style = AppTheme.style.body, color = AppTheme.color.textColor)
-        HSpace(2.dp)
-        repeat(3) { index ->
-            val isActive = index < complexity
-            Box(
-                Modifier
-                    .size(9.dp)
-                    .clip(RoundedCornerShape(2.dp))
-                    .background(if (isActive) AppTheme.color.primary else Color.Transparent)
-                    .border(1.dp, if (isActive) AppTheme.color.primary else AppTheme.color.textSecondaryColor, RoundedCornerShape(2.dp)),
-            )
-        }
-    }
-}
-
 @Composable
 internal fun AttributeIcon(attribute: HeroAttribute, modifier: Modifier = Modifier) {
     when (attribute) {
@@ -146,40 +56,8 @@ internal fun AttributeIcon(attribute: HeroAttribute, modifier: Modifier = Modifi
     }
 }
 
-/** STR/AGI/INT with their gain per level, the primary one (all three for universal heroes) is highlighted. */
 @Composable
-private fun Attributes(info: HeroDescription) {
-    val attributes = info.attributes
-    val isUniversal = info.primaryAttribute == HeroAttribute.UNIVERSAL
-    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        AttributeTile(R.drawable.strength, HeroAttribute.STRENGTH, attributes.strength, attributes.strengthGain, isUniversal || info.primaryAttribute == HeroAttribute.STRENGTH, Modifier.weight(1f))
-        AttributeTile(R.drawable.agility, HeroAttribute.AGILITY, attributes.agility, attributes.agilityGain, isUniversal || info.primaryAttribute == HeroAttribute.AGILITY, Modifier.weight(1f))
-        AttributeTile(R.drawable.intelligence, HeroAttribute.INTELLIGENCE, attributes.intelligence, attributes.intelligenceGain, isUniversal || info.primaryAttribute == HeroAttribute.INTELLIGENCE, Modifier.weight(1f))
-    }
-}
-
-@Composable
-private fun AttributeTile(@DrawableRes icon: Int, attribute: HeroAttribute, base: Double, gain: Double, isPrimary: Boolean, modifier: Modifier) {
-    val shape = AppTheme.shape.medium
-    Row(
-        modifier = modifier
-            .clip(shape)
-            .background(if (isPrimary) attribute.color.copy(alpha = 0.14f) else InfoColors.chip)
-            .border(1.dp, if (isPrimary) attribute.color.copy(alpha = 0.7f) else Color.Transparent, shape)
-            .padding(horizontal = 8.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center,
-    ) {
-        Image(painterResource(icon), contentDescription = stringResource(attribute.label), modifier = Modifier.size(20.dp))
-        HSpace(6.dp)
-        Text(text = base.format(), fontSize = 16.sp, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor)
-        HSpace(4.dp)
-        Text(text = "+${gain.format()}", style = AppTheme.style.body, color = attribute.color)
-    }
-}
-
-@Composable
-internal fun StatsCard(stats: HeroStats) {
+internal fun StatsSection(stats: HeroStats) {
     val regen = R.string.stat_regen
     val rows = listOf(
         StatRow(R.string.stat_health, stats.health.format(), stringResource(regen, stats.healthRegen.format()), InfoColors.health),
@@ -196,7 +74,7 @@ internal fun StatsCard(stats: HeroStats) {
     ).filterNotNull()
 
     // every stat is visible at once as a tile, people compare heroes by these numbers
-    InfoCard(title = stringResource(R.string.info_stats)) {
+    SectionBody {
         // plain rows instead of FlowRow: FlowRow measures weighted tiles of different heights wrong
         Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
             rows.chunked(STATS_IN_ROW).forEach { line ->
@@ -235,34 +113,3 @@ internal fun StatsCard(stats: HeroStats) {
 private const val STATS_IN_ROW = 4
 
 private class StatRow(val label: Int, val value: String, val extra: String? = null, val accent: Color? = null)
-
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun Roles(roles: List<HeroRole>) {
-    FlowRow(
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        roles.sortedByDescending { it.level }.forEach { role ->
-            Row(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(50))
-                    .background(InfoColors.chip)
-                    .padding(horizontal = 10.dp, vertical = 5.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Text(stringResource(role.role.label), style = AppTheme.style.body, color = AppTheme.color.textColor)
-                HSpace(6.dp)
-                repeat(3) { index ->
-                    Box(
-                        Modifier
-                            .padding(start = if (index == 0) 0.dp else 2.dp)
-                            .size(width = 8.dp, height = 3.dp)
-                            .clip(RoundedCornerShape(2.dp))
-                            .background(if (index < role.level) AppTheme.color.primary else AppTheme.color.textSecondaryColor.copy(alpha = 0.25f)),
-                    )
-                }
-            }
-        }
-    }
-}

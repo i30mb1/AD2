@@ -36,7 +36,6 @@ dependencies {
     implementation(projects.core.logger.appLogger)
     implementation(projects.core.commonApplication)
     implementation(projects.core.spanParser)
-    implementation(libs.workManager)
 
     implementation(projects.feature.heroPage.ui)
     implementation(projects.feature.heroPage.domain.impl)

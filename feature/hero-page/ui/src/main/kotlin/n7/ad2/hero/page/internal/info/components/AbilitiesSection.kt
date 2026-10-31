@@ -50,13 +50,13 @@ private const val SHARD_ICON = "file:///android_asset/images/aghanim's_shard_sym
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-internal fun AbilitiesCard(
+internal fun AbilitiesSection(
     groups: List<VOAbilityGroup>,
     selected: Ability,
     onSelect: (Ability) -> Unit,
     changes: List<PatchChange>,
 ) {
-    InfoCard(title = stringResource(R.string.info_abilities)) {
+    SectionBody {
         groups.forEachIndexed { index, group ->
             if (index > 0) VSpace(12.dp)
             Caption(stringResource(group.group.label))
@@ -220,20 +220,19 @@ private fun AbilityDetails(ability: Ability, changes: List<Pair<PatchChange, Lis
             InfoDivider()
         }
         if (ability.notes.isNotEmpty()) {
-            CollapsibleSection(stringResource(R.string.hero_fragment_notes), ability.notes.size, key = "${ability.name}-notes") {
+            SubSection(stringResource(R.string.hero_fragment_notes), ability.notes.size) {
                 ability.notes.forEach { note -> BulletText(note) }
             }
         }
         if (ability.wikiNotes.isNotEmpty()) {
-            CollapsibleSection(
+            SubSection(
                 title = stringResource(R.string.info_ability_details),
                 count = ability.wikiNotes.size,
-                key = "${ability.name}-wiki",
                 trailing = { WikiSourceLabel() },
             ) { AbilityWikiNotes(ability.wikiNotes) }
         }
         if (changes.isNotEmpty()) {
-            CollapsibleSection(stringResource(R.string.info_ability_changes), changes.size, key = "${ability.name}-changes") {
+            SubSection(stringResource(R.string.info_ability_changes), changes.size) {
                 AbilityChanges(changes)
             }
         }

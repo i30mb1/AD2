@@ -57,97 +57,29 @@ internal object InfoColors {
     val chip = Color(0xFF3A3D44)
 }
 
+/** Body of the section picked by a chip: no card and no title, the chip above already names it. */
 @Composable
-internal fun InfoCard(
-    modifier: Modifier = Modifier,
-    title: String? = null,
-    content: @Composable ColumnScope.() -> Unit,
-) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp)
-            .clip(AppTheme.shape.large)
-            .background(AppTheme.color.surface)
-            .padding(16.dp),
-    ) {
-        if (title != null) {
-            SectionTitle(title)
-            VSpace(12.dp)
-        }
-        content()
-    }
-}
-
-/**
- * Card that shows only its [title] and a one line [summary] until tapped, so the screen stays short and
- * the user opens only what is interesting. The state survives tab switches and rotation.
- */
-@Composable
-internal fun CollapsibleCard(
-    title: String,
-    summary: String?,
-    initiallyExpanded: Boolean = false,
-    content: @Composable ColumnScope.() -> Unit,
-) {
-    var isExpanded by rememberSaveable(title) { mutableStateOf(initiallyExpanded) }
+internal fun SectionBody(content: @Composable ColumnScope.() -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp)
-            .clip(AppTheme.shape.large)
-            .background(AppTheme.color.surface)
-            .animateContentSize(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable { isExpanded = !isExpanded }
-                .padding(horizontal = 16.dp, vertical = 14.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Column(Modifier.weight(1f)) {
-                SectionTitle(title)
-                if (!isExpanded && !summary.isNullOrEmpty()) {
-                    Text(
-                        text = summary,
-                        style = AppTheme.style.body,
-                        color = AppTheme.color.textSecondaryColor,
-                        maxLines = 1,
-                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-                        modifier = Modifier.padding(start = 11.dp, top = 4.dp),
-                    )
-                }
-            }
-            Chevron(isExpanded)
-        }
-        if (isExpanded) {
-            Column(Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp)) { content() }
-        }
-    }
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        content = content,
+    )
 }
 
-/**
- * Collapsed line inside a card, e.g. "Notes (3)" in the ability or "Bad against (20)" in matchups.
- * [key] separates the state of equal titles, e.g. the same subsection of different abilities.
- */
+/** Titled part of a section, e.g. "Notes 3" of an ability or "Bad against 20" in matchups. Always open: one section is on the screen at a time, so there is room. */
 @Composable
-internal fun CollapsibleSection(
+internal fun SubSection(
     title: String,
     count: Int?,
-    key: String,
     titleColor: Color = AppTheme.color.textColor,
     trailing: (@Composable () -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit,
 ) {
-    var isExpanded by rememberSaveable(key) { mutableStateOf(false) }
     Column(Modifier.fillMaxWidth()) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(AppTheme.shape.medium)
-                .clickable { isExpanded = !isExpanded }
-                .padding(vertical = 10.dp),
+            modifier = Modifier.padding(top = 14.dp, bottom = 6.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(title, style = AppTheme.style.H5, fontWeight = FontWeight.Bold, color = titleColor)
@@ -159,43 +91,8 @@ internal fun CollapsibleSection(
                 HSpace(8.dp)
                 trailing()
             }
-            androidx.compose.foundation.layout.Spacer(Modifier.weight(1f))
-            Chevron(isExpanded)
         }
-        if (isExpanded) {
-            Column(Modifier.padding(bottom = 8.dp)) { content() }
-        }
-    }
-}
-
-@Composable
-private fun Chevron(isExpanded: Boolean) {
-    val rotation by animateFloatAsState(if (isExpanded) 180f else 0f, label = "chevron")
-    androidx.compose.material.Icon(
-        imageVector = androidx.compose.material.icons.Icons.Default.KeyboardArrowDown,
-        contentDescription = null,
-        tint = AppTheme.color.textSecondaryColor,
-        modifier = Modifier
-            .size(22.dp)
-            .rotate(rotation),
-    )
-}
-
-@Composable
-internal fun SectionTitle(title: String) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Box(
-            Modifier
-                .size(width = 3.dp, height = 16.dp)
-                .clip(RoundedCornerShape(2.dp))
-                .background(AppTheme.color.primary),
-        )
-        Text(
-            text = title,
-            style = AppTheme.style.H4.copy(fontWeight = FontWeight.Bold),
-            color = AppTheme.color.textColor,
-            modifier = Modifier.padding(start = 8.dp),
-        )
+        content()
     }
 }
 
@@ -208,21 +105,6 @@ internal fun Caption(text: String, modifier: Modifier = Modifier, color: Color =
         color = color,
         modifier = modifier,
     )
-}
-
-@Composable
-internal fun InfoChip(text: String, modifier: Modifier = Modifier, color: Color = AppTheme.color.textColor, leading: (@Composable () -> Unit)? = null) {
-    Row(
-        modifier = modifier
-            .clip(RoundedCornerShape(50))
-            .background(InfoColors.chip)
-            .padding(horizontal = 10.dp, vertical = 5.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        leading?.invoke()
-        Text(text = text, style = AppTheme.style.body, color = color)
-    }
 }
 
 @Composable

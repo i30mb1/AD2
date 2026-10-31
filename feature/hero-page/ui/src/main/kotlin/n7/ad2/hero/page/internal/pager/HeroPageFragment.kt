@@ -11,6 +11,8 @@ import n7.ad2.android.findDependencies
 import n7.ad2.core.ui.content
 import n7.ad2.hero.page.internal.di.DaggerHeroPageComponent
 import n7.ad2.ktx.lazyUnsafe
+import n7.ad2.ktx.viewModel
+import javax.inject.Inject
 
 class HeroPageFragment : Fragment() {
 
@@ -21,7 +23,10 @@ class HeroPageFragment : Fragment() {
         }
     }
 
+    @Inject lateinit var heroPageViewModelFactory: HeroPageViewModel.Factory
+
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
+    private val viewModel: HeroPageViewModel by viewModel { heroPageViewModelFactory.create(heroName) }
 
     // bundled hero assets are keyed by the lower-cased name, the same way GetHeroByNameUseCase builds them
     private val heroKey by lazyUnsafe { heroName.lowercase().replace(" ", "_") }
@@ -33,6 +38,6 @@ class HeroPageFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         content {
-            HeroPageScreen(heroName = heroName, avatarUrl = "file:///android_asset/heroes/$heroKey/full.webp")
+            HeroPageScreen(heroName = heroName, artUrl = "file:///android_asset/heroes/$heroKey/full.webp", viewModel = viewModel)
         }
 }

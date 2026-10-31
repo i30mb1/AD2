@@ -16,7 +16,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyColumn
+import n7.ad2.hero.page.internal.pager.foldsHeroBanner
+import n7.ad2.hero.page.internal.common.SectionChip
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
@@ -50,7 +53,6 @@ import kotlinx.coroutines.launch
 import n7.ad2.AppLocale
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.core.ui.compose.view.ErrorScreen
-import n7.ad2.core.ui.compose.view.GridHeader
 import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.responses.components.ResponseActionsSheet
 import n7.ad2.hero.page.internal.responses.components.ResponseBodyItem
@@ -151,6 +153,7 @@ internal fun ResponsesScreen(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun ResponsesList(
     groups: List<ResponseGroup>,
@@ -161,15 +164,29 @@ private fun ResponsesList(
 ) {
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .foldsHeroBanner(),
         contentPadding = PaddingValues(bottom = bottomInset + 16.dp),
     ) {
         groups.forEachIndexed { groupIndex, group ->
-            item(key = "t-$groupIndex-${group.title}") {
-                GridHeader(
-                    title = group.title,
-                    modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 12.dp, bottom = 4.dp),
-                )
+            // the category stays on top while its lines scroll, so it is clear what is playing
+            stickyHeader(key = "t-$groupIndex-${group.title}") {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(AppTheme.color.surface)
+                        .padding(horizontal = 16.dp, vertical = 6.dp),
+                ) {
+                    Text(
+                        text = group.title.uppercase(),
+                        style = AppTheme.style.body,
+                        fontWeight = FontWeight.Bold,
+                        color = AppTheme.color.textSecondaryColor,
+                        modifier = Modifier.weight(1f),
+                    )
+                    Text(text = group.items.size.toString(), style = AppTheme.style.body, color = AppTheme.color.textSecondaryColor)
+                }
             }
             group.items.forEachIndexed { index, item ->
                 item(key = "b-$groupIndex-$index-${item.titleForFile}") {
@@ -202,40 +219,17 @@ private fun Filters(
     ) {
         LazyRow(
             modifier = Modifier.weight(1f),
-            contentPadding = PaddingValues(start = 12.dp, end = 8.dp),
+            contentPadding = PaddingValues(start = 16.dp, end = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {
             item(key = "all") {
-                FilterChip(text = stringResource(R.string.responses_all), count = null, isSelected = selected == null) { onSelect(null) }
+                SectionChip(text = stringResource(R.string.responses_all), count = null, isSelected = selected == null) { onSelect(null) }
             }
             itemsIndexed(groups, key = { index, group -> "$index-${group.title}" }) { _, group ->
-                FilterChip(text = group.title, count = group.items.size, isSelected = selected == group.title) { onSelect(group.title) }
+                SectionChip(text = group.title, count = group.items.size, isSelected = selected == group.title) { onSelect(group.title) }
             }
         }
         LocaleToggle(locale = locale, onLocaleChange = onLocaleChange, modifier = Modifier.padding(end = 12.dp))
-    }
-}
-
-@Composable
-private fun FilterChip(text: String, count: Int?, isSelected: Boolean, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .height(32.dp)
-            .clip(CircleShape)
-            .background(if (isSelected) AppTheme.color.primary else Color.Transparent)
-            .border(1.dp, if (isSelected) AppTheme.color.primary else AppTheme.color.surface, CircleShape)
-            .clickable(role = Role.Tab, onClick = onClick)
-            .padding(horizontal = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(text = text, style = AppTheme.style.body, color = if (isSelected) Color.White else AppTheme.color.textSecondaryColor)
-        if (count != null) {
-            Text(
-                text = " $count",
-                style = AppTheme.style.body,
-                color = (if (isSelected) Color.White else AppTheme.color.textSecondaryColor).copy(alpha = 0.7f),
-            )
-        }
     }
 }
 

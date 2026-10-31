@@ -6,9 +6,6 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.workManager)
-    implementation(libs.jsoup)
-
     implementation(libs.fragment.compose)
     implementation(libs.composeMaterialIconsExtended)
 

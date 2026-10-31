@@ -10,11 +10,9 @@
     <string name="hero_fragment_trivia">Факты</string>
     <string name="hero_fragment_notes">Заметки</string>
 
-    <string name="starting_items">Начальные предметы</string>
     <string name="easy_to_win_heroes">Силён против героев</string>
     <string name="hard_to_win_heroes">Слаб против героев</string>
     <string name="guide_items">Предметы и тайминги</string>
-    <string name="fragment_guide_skill_builds">Выбор способностей</string>
 
     <!-- hero info -->
     <string name="info_stats">Характеристики</string>
@@ -106,7 +104,6 @@
     <string name="info_cons">Минусы</string>
     <string name="info_ability_details">Подробности</string>
     <string name="info_ability_changes">Изменения</string>
-    <string name="info_show_all">Показать все (%d)</string>
     <string name="hero_back">Назад</string>
     <string name="responses_all">Все</string>
     <string name="response_play">Воспроизвести</string>
@@ -136,4 +133,29 @@
     <string name="guide_phase_late_time">30+ мин</string>
     <string name="guide_source">Данные: OpenDota</string>
     <string name="guide_empty">Гайд ещё не загружен, для этого один раз нужен интернет</string>
+    <string name="guide_pro_picks">Про-пики</string>
+    <string name="guide_bans">Баны</string>
+    <string name="guide_rank_winrate">Винрейт по рангам</string>
+    <string name="guide_duration_winrate">Винрейт по длительности матча</string>
+    <string name="guide_skill_build">Прокачка способностей</string>
+    <string name="guide_skill_build_hint">популярная в про-матчах</string>
+    <string name="guide_matchups">Матчапы</string>
+    <string name="guide_phase_start">Старт</string>
+    <string name="guide_phase_start_time">0 мин</string>
+    <string name="guide_talent_short">Т</string>
+    <string name="guide_minutes_up_to">&lt;%d</string>
+    <string name="guide_minutes_from">%d+</string>
+    <string name="guide_minutes_range">%1$d–%2$d</string>
+    <string-array name="guide_ranks_short">
+        <item>Рек</item>
+        <item>Страж</item>
+        <item>Рыц</item>
+        <item>Гер</item>
+        <item>Лег</item>
+        <item>Влас</item>
+        <item>Бож</item>
+        <item>Тит</item>
+    </string-array>
+    <string name="info_items_short">Предметы</string>
+    <string name="info_lore">Лор</string>
 </resources>

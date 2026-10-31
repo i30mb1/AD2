@@ -1,16 +1,15 @@
 package n7.ad2.heroes.domain.internal.data
 
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonPrimitive
-import kotlinx.serialization.json.jsonArray
-import kotlinx.serialization.json.jsonObject
+import n7.ad2.heroes.domain.internal.data.model.OpenDotaDuration
 import n7.ad2.heroes.domain.internal.data.model.OpenDotaHeroStat
 import n7.ad2.heroes.domain.internal.data.model.OpenDotaItemPopularity
 import n7.ad2.heroes.domain.internal.data.model.OpenDotaMatchup
+import n7.ad2.heroes.domain.model.DurationWinrate
 import n7.ad2.heroes.domain.model.Guide
 import n7.ad2.heroes.domain.model.HeroItem
 import n7.ad2.heroes.domain.model.HeroWithWinrate
-import n7.ad2.heroes.domain.model.Spell
+import n7.ad2.heroes.domain.model.RankWinrate
+import n7.ad2.heroes.domain.model.SkillUpgrade
 import kotlin.math.roundToInt
 
 /**
@@ -30,7 +29,12 @@ internal object OpenDotaGuideMapper {
     private const val START_ITEMS_COUNT = 8
     private const val EARLY_ITEMS_COUNT = 4
     private const val PHASE_ITEMS_COUNT = 8
-    private const val SPELLS_COUNT = 6
+    private const val MIN_DURATION_GAMES = 50
+    private const val DURATION_STEP_MINUTES = 10
+    private const val SHORTEST_DURATION_GROUP_MINUTES = 20
+    private const val LONGEST_DURATION_GROUP_MINUTES = 50
+    private const val SKILL_BUILD_LENGTH = 18
+    private const val ATTRIBUTES_KEY = "special_bonus_attributes"
 
     /** Bundled hero assets are keyed by the lower-cased display name, e.g. "Anti-Mage" -> "anti-mage". */
     fun assetKey(localizedName: String): String = localizedName.lowercase().replace(" ", "_")
@@ -43,25 +47,14 @@ internal object OpenDotaGuideMapper {
 
     private fun normalize(value: String): String = value.lowercase().filter(Char::isLetterOrDigit)
 
-    /**
-     * Extracts a single hero's ability ids from the raw `constants/hero_abilities` body. Lenient on
-     * purpose: only string entries are kept, so quirks like Monkey King nesting an array inside its
-     * `abilities` list don't break extraction — a strict `Map<String, List<String>>` decode of the
-     * whole response throws on that one entry and would otherwise wipe spells for *every* hero.
-     */
-    fun parseAbilities(json: Json, heroAbilitiesBody: String, heroInternalName: String): List<String> =
-        json.parseToJsonElement(heroAbilitiesBody).jsonObject[heroInternalName]
-            ?.jsonObject?.get("abilities")?.jsonArray
-            ?.mapNotNull { (it as? JsonPrimitive)?.takeIf(JsonPrimitive::isString)?.content }
-            .orEmpty()
-
     fun toGuide(
         heroName: String,
         stats: List<OpenDotaHeroStat>,
         matchups: List<OpenDotaMatchup>,
         itemPopularity: OpenDotaItemPopularity?,
         itemIds: Map<String, String>,
-        abilities: List<String>,
+        durations: List<OpenDotaDuration>,
+        upgradeSequences: List<List<String>>,
     ): Guide? {
         val self = stats.firstOrNull { matches(it, heroName) } ?: return null
         val idToName = stats.associate { it.id to it.localizedName }
@@ -85,22 +78,64 @@ internal object OpenDotaGuideMapper {
             topItems(itemPopularity?.lateGameItems, itemIds, PHASE_ITEMS_COUNT).forEach { add(HeroItem(it, "Late")) }
         }
 
-        val spells = abilities
-            .filterNot { it == "generic_hidden" || it.startsWith("special_bonus") }
-            .take(SPELLS_COUNT)
-            .mapIndexed { index, ability -> Spell(prettify(ability), "${index + 1}", "$ABILITY_CDN/$ability.png") }
+        val rankWinrates = self.brackets.mapIndexedNotNull { index, (picks, wins) ->
+            if (picks > 0) RankWinrate(index + 1, round1(percent(wins, picks))) else null
+        }
 
         return Guide(
             heroName = self.localizedName,
             heroWinrate = "${round1(percent(self.totalWin, self.totalPick))}%",
             heroPopularity = formatPicks(self.totalPick),
-            guideTime = "",
+            proPicks = self.proPick,
+            proWins = self.proWin,
+            proBans = self.proBan,
+            rankWinrates = rankWinrates,
+            durationWinrates = durationWinrates(durations),
             hardToWinHeroList = hardToWin,
             easyToWinHeroList = easyToWin,
             heroStartingHeroItemsList = startingItems,
             heroItemsList = mainItems,
-            heroSpellsList = spells,
+            skillBuild = skillBuild(upgradeSequences),
         )
+    }
+
+    /** 10 minute groups, everything shorter than 20 and longer than 50 minutes is merged so the edges have enough games. */
+    private fun durationWinrates(durations: List<OpenDotaDuration>): List<DurationWinrate> = durations
+        .groupBy { duration ->
+            val minutes = duration.durationBin / 60
+            (minutes / DURATION_STEP_MINUTES * DURATION_STEP_MINUTES)
+                .coerceIn(SHORTEST_DURATION_GROUP_MINUTES - DURATION_STEP_MINUTES, LONGEST_DURATION_GROUP_MINUTES)
+        }
+        .toSortedMap()
+        .mapNotNull { (group, items) ->
+            val games = items.sumOf { it.gamesPlayed.toLong() }
+            if (games < MIN_DURATION_GAMES) return@mapNotNull null
+            val from = if (group < SHORTEST_DURATION_GROUP_MINUTES) 0 else group
+            val to = if (group >= LONGEST_DURATION_GROUP_MINUTES) null else group + DURATION_STEP_MINUTES
+            DurationWinrate(from, to, round1(percent(items.sumOf { it.wins.toLong() }, games)))
+        }
+
+    /**
+     * Picks one real build out of [sequences] instead of gluing the most popular choice of every level together:
+     * a glued build can put five points into a four level ability. The chosen build is the one that agrees with
+     * the majority on the most levels, ties go to the earlier (more recent) match.
+     */
+    private fun skillBuild(sequences: List<List<String>>): List<SkillUpgrade> {
+        val builds = sequences.map { it.take(SKILL_BUILD_LENGTH) }.filter { it.isNotEmpty() }
+        if (builds.isEmpty()) return emptyList()
+        val length = builds.maxOf { it.size }
+        val majority = (0 until length).map { level ->
+            builds.mapNotNull { it.getOrNull(level) }.groupingBy { it }.eachCount().maxByOrNull { it.value }?.key
+        }
+        val best = builds.maxBy { build -> build.indices.count { build[it] == majority[it] } }
+        return best.map { key ->
+            val kind = when {
+                key == ATTRIBUTES_KEY -> SkillUpgrade.Kind.ATTRIBUTES
+                key.startsWith("special_bonus") -> SkillUpgrade.Kind.TALENT
+                else -> SkillUpgrade.Kind.ABILITY
+            }
+            SkillUpgrade(key, "$ABILITY_CDN/$key.png", kind)
+        }
     }
 
     private fun topItems(map: Map<String, Int>?, itemIds: Map<String, String>, count: Int): List<String> =
@@ -116,9 +151,6 @@ internal object OpenDotaGuideMapper {
     private fun percent(win: Long, total: Long): Double = if (total > 0) win * 100.0 / total else 0.0
 
     private fun round1(value: Double): Double = (value * 10).roundToInt() / 10.0
-
-    private fun prettify(internalName: String): String =
-        internalName.split("_").joinToString(" ") { it.replaceFirstChar(Char::uppercase) }
 
     private fun formatPicks(total: Long): String = when {
         total >= 1_000_000 -> "${round1(total / 1_000_000.0)}M"

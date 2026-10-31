@@ -28,10 +28,8 @@ import n7.ad2.heroes.domain.model.TalentLevel
 
 /** Same layout as the in-game tree: level 25 on top, left and right options around the level. */
 @Composable
-internal fun TalentsCard(talents: List<TalentLevel>) {
-    val top = talents.maxByOrNull { it.level }
-    val summary = top?.let { "${it.level}: ${it.left} / ${it.right}" }
-    CollapsibleCard(title = stringResource(R.string.info_talents), summary = summary) {
+internal fun TalentsSection(talents: List<TalentLevel>) {
+    SectionBody {
         talents.sortedByDescending { it.level }.forEachIndexed { index, talent ->
             if (index > 0) VSpace(8.dp)
             Row(
@@ -73,8 +71,8 @@ private fun TalentOption(text: String, align: TextAlign, modifier: Modifier) {
 }
 
 @Composable
-internal fun FacetsCard(facets: List<Facet>) {
-    CollapsibleCard(title = stringResource(R.string.info_facets), summary = facets.joinToString(" · ") { it.name }) {
+internal fun FacetsSection(facets: List<Facet>) {
+    SectionBody {
         facets.forEachIndexed { index, facet ->
             if (index > 0) InfoDivider(Modifier.padding(vertical = 10.dp))
             Text(facet.name, style = AppTheme.style.H5, fontWeight = FontWeight.Bold, color = AppTheme.color.textColor)
@@ -87,15 +85,18 @@ internal fun FacetsCard(facets: List<Facet>) {
 }
 
 @Composable
-internal fun BioCard(bio: String) {
-    CollapsibleCard(title = stringResource(R.string.hero_fragment_bio), summary = bio.substringBefore('\n').substringBefore(". ")) {
-        RichText(text = bio, color = AppTheme.color.textSecondaryColor)
-    }
-}
-
-@Composable
-internal fun TriviaCard(trivia: List<String>) {
-    CollapsibleCard(title = stringResource(R.string.hero_fragment_trivia), summary = trivia.first()) {
-        trivia.forEach { fact -> BulletText(fact, color = AppTheme.color.textColor) }
+internal fun LoreSection(bio: String, trivia: List<String>) {
+    SectionBody {
+        if (bio.isNotEmpty()) {
+            Caption(stringResource(R.string.hero_fragment_bio))
+            VSpace(6.dp)
+            RichText(text = bio, color = AppTheme.color.textSecondaryColor)
+        }
+        if (trivia.isNotEmpty()) {
+            if (bio.isNotEmpty()) VSpace(20.dp)
+            Caption(stringResource(R.string.hero_fragment_trivia))
+            VSpace(6.dp)
+            trivia.forEach { fact -> BulletText(fact, color = AppTheme.color.textColor) }
+        }
     }
 }

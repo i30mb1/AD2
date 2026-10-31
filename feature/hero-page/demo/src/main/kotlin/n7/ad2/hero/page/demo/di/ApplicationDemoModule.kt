@@ -1,7 +1,5 @@
 package n7.ad2.hero.page.demo.di
 
-import android.app.Application
-import androidx.work.WorkManager
 import n7.ad2.AppInformation
 import n7.ad2.AppLocale
 import n7.ad2.app.logger.Logger
@@ -22,9 +20,6 @@ internal interface ApplicationDemoModule {
 
         @dagger.Provides
         fun provideLogger(): Logger = Logger()
-
-        @dagger.Provides
-        fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
 
         @dagger.Provides
         fun provideAppInformation(): AppInformation = object : AppInformation {

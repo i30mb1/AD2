@@ -48,26 +48,6 @@ internal fun WikiSourceLabel(modifier: Modifier = Modifier) {
 }
 
 /** Shows the first [visible] items and a "Show all (N)" button for the rest. */
-@Composable
-internal fun <T> ExpandableItems(items: List<T>, visible: Int, item: @Composable (T) -> Unit) {
-    var isExpanded by rememberSaveable(items.size) { mutableStateOf(false) }
-    val shown = if (isExpanded || items.size <= visible + 1) items else items.take(visible)
-    shown.forEach { item(it) }
-    if (shown.size < items.size) {
-        Text(
-            text = stringResource(R.string.info_show_all, items.size),
-            style = AppTheme.style.H5,
-            fontWeight = FontWeight.Bold,
-            color = AppTheme.color.primary,
-            modifier = Modifier
-                .padding(top = 6.dp)
-                .clip(AppTheme.shape.small)
-                .clickable { isExpanded = true }
-                .padding(vertical = 4.dp),
-        )
-    }
-}
-
 // ===== patch changes =====
 
 @Composable
@@ -104,16 +84,13 @@ internal fun PatchNotes(notes: List<PatchNote>) {
 // ===== recommended items =====
 
 @Composable
-internal fun RecommendedItemsCard(sections: List<WikiSection>) {
-    val summary = sections.flatMap { it.entries }.mapNotNull { it.name }.take(5).joinToString(", ")
-    CollapsibleCard(title = stringResource(R.string.info_items), summary = summary) {
+internal fun ItemsSection(sections: List<WikiSection>) {
+    SectionBody {
         WikiSourceLabel()
         sections.forEach { phase ->
-            CollapsibleSection(
+            SubSection(
                 title = phase.title,
                 count = null,
-                key = "items-${phase.title}",
-                trailing = { ItemIcons(phase.entries) },
             ) {
                 phase.entries.forEach { entry -> EntryRow(entry, iconSize = 34) }
             }
@@ -121,42 +98,23 @@ internal fun RecommendedItemsCard(sections: List<WikiSection>) {
     }
 }
 
-/** Icons of the phase are visible while it is folded, the explanations open on tap. */
-@Composable
-private fun ItemIcons(entries: List<WikiEntry>) {
-    Row(horizontalArrangement = Arrangement.spacedBy(3.dp)) {
-        entries.mapNotNull { it.iconUrl }.take(6).forEach { icon ->
-            AsyncImage(
-                model = icon,
-                contentDescription = null,
-                modifier = Modifier
-                    .size(width = 26.dp, height = 19.dp)
-                    .clip(AppTheme.shape.small),
-            )
-        }
-    }
-}
-
 // ===== counters =====
 
 @Composable
-internal fun CountersCard(sections: List<WikiSection>) {
+internal fun CountersSection(sections: List<WikiSection>) {
     // "Bad against" with its "Others" and "Items" parts form one group
     val groups = sections.fold(mutableListOf<MutableList<WikiSection>>()) { acc, section ->
         if (section.level <= 2 || acc.isEmpty()) acc.add(mutableListOf(section)) else acc.last().add(section)
         acc
     }
-    val summary = groups.joinToString(" · ") { group -> "${group.first().title} ${group.sumOf { it.itemCount }}" }
-    CollapsibleCard(title = stringResource(R.string.info_counters), summary = summary) {
+    SectionBody {
         WikiSourceLabel()
         groups.forEach { group ->
             val main = group.first()
-            CollapsibleSection(
+            SubSection(
                 title = main.title,
                 count = group.sumOf { it.itemCount }.takeIf { it > 0 },
-                key = "counters-${main.title}",
                 titleColor = AppTheme.color.primary,
-                trailing = { HeroIcons(main.entries) },
             ) {
                 main.entries.forEach { entry -> EntryRow(entry, iconSize = 40) }
                 group.drop(1).forEach { part ->
@@ -173,22 +131,6 @@ internal fun CountersCard(sections: List<WikiSection>) {
 /** Heroes, or general lines on pages that do not split the notes by hero (the RU wiki). */
 private val WikiSection.itemCount: Int
     get() = entries.sumOf { entry -> if (entry.name != null) 1 else entry.lines.size }
-
-@Composable
-private fun HeroIcons(entries: List<WikiEntry>) {
-    Row(horizontalArrangement = Arrangement.spacedBy((-6).dp)) {
-        entries.mapNotNull { it.iconUrl }.take(5).forEach { icon ->
-            AsyncImage(
-                model = icon,
-                contentDescription = null,
-                modifier = Modifier
-                    .size(22.dp)
-                    .clip(RoundedCornerShape(50))
-                    .background(AppTheme.color.surface),
-            )
-        }
-    }
-}
 
 /** Hero or item icon with its name and the lines about it, or plain bullet lines when there is no name. */
 @Composable
@@ -224,9 +166,8 @@ private fun EntryRow(entry: WikiEntry, iconSize: Int) {
 // ===== strategy =====
 
 @Composable
-internal fun StrategyCard(playstyle: Playstyle?, tips: List<WikiSection>) {
-    val summary = playstyle?.text?.substringBefore(". ")?.plus(".") ?: tips.joinToString(" · ") { it.title }
-    CollapsibleCard(title = stringResource(R.string.info_strategy), summary = summary) {
+internal fun StrategySection(playstyle: Playstyle?, tips: List<WikiSection>) {
+    SectionBody {
         if (playstyle != null) {
             WikiSourceLabel()
             VSpace(8.dp)
@@ -244,7 +185,7 @@ internal fun StrategyCard(playstyle: Playstyle?, tips: List<WikiSection>) {
             if (playstyle == null) WikiSourceLabel()
             tips.forEach { section ->
                 val lines = section.entries.flatMap { it.lines }
-                CollapsibleSection(section.title, lines.size, key = "tips-${section.title}") {
+                SubSection(section.title, lines.size) {
                     lines.forEach { line -> BulletText(line) }
                 }
             }
@@ -278,7 +219,7 @@ private fun ProsCons(title: String, sign: String, items: List<String>, color: Co
 internal fun AbilityWikiNotes(notes: List<WikiNote>) {
     Text(stringResource(R.string.info_wiki_hint), style = AppTheme.style.body, color = AppTheme.color.textSecondaryColor.copy(alpha = 0.7f))
     VSpace(6.dp)
-    ExpandableItems(notes, visible = 5) { note ->
+    notes.forEach { note ->
         Column(Modifier.padding(start = (note.indent * 16).dp)) {
             note.tag?.let { tag ->
                 Text(

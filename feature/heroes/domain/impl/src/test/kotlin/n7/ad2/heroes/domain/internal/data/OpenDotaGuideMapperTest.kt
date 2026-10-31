@@ -1,7 +1,8 @@
 package n7.ad2.heroes.domain.internal.data
 
 import kotlinx.serialization.json.Json
-import n7.ad2.heroes.domain.internal.data.model.OpenDotaHeroAbilities
+import n7.ad2.heroes.domain.internal.data.model.OpenDotaDuration
+import n7.ad2.heroes.domain.model.SkillUpgrade
 import n7.ad2.heroes.domain.internal.data.model.OpenDotaHeroStat
 import n7.ad2.heroes.domain.internal.data.model.OpenDotaItemPopularity
 import n7.ad2.heroes.domain.internal.data.model.OpenDotaMatchup
@@ -15,10 +16,10 @@ class OpenDotaGuideMapperTest {
 
     private val json = Json { ignoreUnknownKeys = true }
 
-    // Abaddon: 1000 picks / 550 wins in bracket 1 -> 55.0%. Axe & Bane only need id + name for the matchup map.
+    // Abaddon: bracket 1 55.0%, bracket 3 40.0%, together 750/1500 -> 50.0%. Axe & Bane only need id + name for the matchup map.
     private val statsJson = """
         [
-          {"id":102,"name":"npc_dota_hero_abaddon","localized_name":"Abaddon","1_pick":1000,"1_win":550},
+          {"id":102,"name":"npc_dota_hero_abaddon","localized_name":"Abaddon","1_pick":1000,"1_win":550,"3_pick":500,"3_win":200,"pro_pick":12,"pro_win":9,"pro_ban":4},
           {"id":2,"name":"npc_dota_hero_axe","localized_name":"Axe"},
           {"id":3,"name":"npc_dota_hero_bane","localized_name":"Bane"},
           {"id":1,"name":"npc_dota_hero_antimage","localized_name":"Anti-Mage"}
@@ -47,25 +48,45 @@ class OpenDotaGuideMapperTest {
         {"44":"tango","16":"branches","63":"power_treads","48":"travel_boots","116":"assault"}
     """.trimIndent()
 
-    private val abilitiesJson = """
-        {"npc_dota_hero_abaddon":{"abilities":["abaddon_death_coil","abaddon_aphotic_shield","abaddon_frostmourne","abaddon_borrowed_time","special_bonus_unique_abaddon"]}}
+    // bins are seconds: 5 and 15 min fall into "up to 20", 25 into 20-30, 45 has too few games and is dropped
+    private val durationsJson = """
+        [
+          {"duration_bin":300,"games_played":40,"wins":20},
+          {"duration_bin":900,"games_played":60,"wins":20},
+          {"duration_bin":1500,"games_played":100,"wins":60},
+          {"duration_bin":2700,"games_played":10,"wins":10}
+        ]
     """.trimIndent()
 
-    private fun buildGuide(heroName: String) = OpenDotaGuideMapper.toGuide(
+    private val q = "abaddon_death_coil"
+    private val w = "abaddon_aphotic_shield"
+    private val e = "abaddon_frostmourne"
+    private val r = "abaddon_borrowed_time"
+    private val t = "special_bonus_unique_abaddon"
+
+    // the second build matches the per-level majority best, so it is the one shown
+    private val upgradeSequences = listOf(
+        listOf(w, w, w, q, q, r, t),
+        listOf(q, w, q, w, q, r, t),
+        listOf(q, w, q, e, q, r, t),
+        listOf(q, e, q, w, q, r, e),
+    )
+
+    private fun buildGuide(heroName: String, sequences: List<List<String>> = upgradeSequences) = OpenDotaGuideMapper.toGuide(
         heroName = heroName,
         stats = json.decodeFromString<List<OpenDotaHeroStat>>(statsJson),
         matchups = json.decodeFromString<List<OpenDotaMatchup>>(matchupsJson),
         itemPopularity = json.decodeFromString<OpenDotaItemPopularity>(itemPopularityJson),
         itemIds = json.decodeFromString<Map<String, String>>(itemIdsJson),
-        abilities = json.decodeFromString<Map<String, OpenDotaHeroAbilities>>(abilitiesJson)
-            .getValue("npc_dota_hero_abaddon").abilities,
+        durations = json.decodeFromString<List<OpenDotaDuration>>(durationsJson),
+        upgradeSequences = sequences,
     )
 
     @Test
     fun `maps winrate from skill-bracket totals`() {
         val guide = buildGuide("abaddon")!!
         assertEquals("Abaddon", guide.heroName)
-        assertEquals("55.0%", guide.heroWinrate)
+        assertEquals("50.0%", guide.heroWinrate)
     }
 
     @Test
@@ -101,12 +122,46 @@ class OpenDotaGuideMapperTest {
     }
 
     @Test
-    fun `spells drop talents and carry an ordered skill index`() {
+    fun `winrate per rank skips brackets without games`() {
         val guide = buildGuide("abaddon")!!
-        assertEquals(4, guide.heroSpellsList.size)
-        assertEquals("1", guide.heroSpellsList.first().spellOrder)
-        assertTrue(guide.heroSpellsList.first().spellImageUrl.endsWith("abaddon_death_coil.png"))
-        assertTrue(guide.heroSpellsList.none { it.spellImageUrl.contains("special_bonus") })
+        assertEquals(listOf(1, 3), guide.rankWinrates.map { it.rank })
+        assertEquals(55.0, guide.rankWinrates[0].winrate, 0.001)
+        assertEquals(40.0, guide.rankWinrates[1].winrate, 0.001)
+    }
+
+    @Test
+    fun `pro picks wins and bans are passed through`() {
+        val guide = buildGuide("abaddon")!!
+        assertEquals(12, guide.proPicks)
+        assertEquals(9, guide.proWins)
+        assertEquals(4, guide.proBans)
+    }
+
+    @Test
+    fun `durations are grouped by ten minutes and thin groups dropped`() {
+        val guide = buildGuide("abaddon")!!
+        assertEquals(listOf(0, 20), guide.durationWinrates.map { it.fromMinute })
+        assertEquals(40.0, guide.durationWinrates[0].winrate, 0.001)
+        assertEquals(60.0, guide.durationWinrates[1].winrate, 0.001)
+    }
+
+    @Test
+    fun `skill build is the real build closest to what most players take`() {
+        val guide = buildGuide("abaddon")!!
+        assertEquals(listOf(q, w, q, w, q, r, t), guide.skillBuild.map { it.abilityKey })
+        assertEquals(SkillUpgrade.Kind.TALENT, guide.skillBuild.last().kind)
+        assertTrue(guide.skillBuild.first().imageUrl.endsWith("abaddon_death_coil.png"))
+    }
+
+    @Test
+    fun `attribute points are not talents`() {
+        val guide = buildGuide("abaddon", sequences = listOf(listOf(q, "special_bonus_attributes", t)))!!
+        assertEquals(listOf(SkillUpgrade.Kind.ABILITY, SkillUpgrade.Kind.ATTRIBUTES, SkillUpgrade.Kind.TALENT), guide.skillBuild.map { it.kind })
+    }
+
+    @Test
+    fun `skill build is empty without parsed matches`() {
+        assertTrue(buildGuide("abaddon", sequences = emptyList())!!.skillBuild.isEmpty())
     }
 
     @Test
@@ -118,37 +173,5 @@ class OpenDotaGuideMapperTest {
     @Test
     fun `unknown hero yields null`() {
         assertNull(buildGuide("not_a_hero"))
-    }
-
-    // Monkey King really ships a nested array inside its `abilities` list in constants/hero_abilities.
-    // A strict Map<String, List<String>> decode throws on it and wipes spells for every hero, so the
-    // extraction must read leniently and keep only string ids.
-    @Test
-    fun `parseAbilities keeps string ids and tolerates a nested-array entry`() {
-        val body = """
-            {
-              "npc_dota_hero_monkey_king": {
-                "abilities": ["monkey_king_boundless_strike","monkey_king_tree_dance",["monkey_king_untransform","monkey_king_transfiguration"]]
-              },
-              "npc_dota_hero_abaddon": {
-                "abilities": ["abaddon_death_coil","abaddon_aphotic_shield"]
-              }
-            }
-        """.trimIndent()
-        // The Monkey King nested array must not prevent reading another hero's abilities.
-        assertEquals(
-            listOf("abaddon_death_coil", "abaddon_aphotic_shield"),
-            OpenDotaGuideMapper.parseAbilities(json, body, "npc_dota_hero_abaddon"),
-        )
-        // For Monkey King itself the nested-array entry is dropped and the string ids are kept.
-        assertEquals(
-            listOf("monkey_king_boundless_strike", "monkey_king_tree_dance"),
-            OpenDotaGuideMapper.parseAbilities(json, body, "npc_dota_hero_monkey_king"),
-        )
-    }
-
-    @Test
-    fun `parseAbilities yields empty list for an unknown hero`() {
-        assertEquals(emptyList<String>(), OpenDotaGuideMapper.parseAbilities(json, "{}", "npc_dota_hero_abaddon"))
     }
 }
