@@ -1,53 +1,44 @@
 package n7.ad2.games.internal.games.skillmp.compose
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.games.skillmp.SpellMatch
+import n7.ad2.games.room.GameMode
 
-@Preview
 @Composable
-fun EndGameScreenPreview() {
-    EndGameScreen(5)
-}
-
-@Composable
-fun EndGameScreen(score: Int, modifier: Modifier = Modifier) {
-    Box(
+internal fun EndGameScreen(match: SpellMatch, peerName: String?, newRecord: Boolean, modifier: Modifier = Modifier) {
+    Column(
         modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
     ) {
-        Counter(score)
+        when (match.mode) {
+            GameMode.SOLO -> Counter(match.myScore)
+            GameMode.VERSUS -> {
+                val title = when {
+                    match.myScore > match.peerScore -> R.string.end_win
+                    match.myScore < match.peerScore -> R.string.end_lose
+                    else -> R.string.end_draw
+                }
+                Text(stringResource(title), color = AppTheme.color.textColor, fontSize = 32.sp, fontWeight = FontWeight.Bold)
+                Text("${match.myScore} : ${match.peerScore}", color = AppTheme.color.textColor, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+                peerName?.let { Text(it, color = AppTheme.color.textSecondaryColor, style = AppTheme.style.body) }
+            }
+            GameMode.COOP -> Text(stringResource(R.string.end_shared_score, match.myScore), color = AppTheme.color.textColor, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        }
+        if (match.peerLeft) Text(stringResource(R.string.end_peer_left), color = AppTheme.color.textSecondaryColor, style = AppTheme.style.body)
+        if (newRecord) Text(stringResource(R.string.end_new_record), color = Color(0xFFFFD166), fontSize = 22.sp, fontWeight = FontWeight.Bold)
     }
-}
-
-private fun getTextForScore(score: Int): String = when (score) {
-    -6 -> "SUCK MY DATA, HUMAN!"
-    -5 -> "If our lives are already written, it would take a courageous man to change the script."
-    -4 -> "Stand in the ashes of a trillion dead souls and ask the ghosts if honor matters. Their silence is your answer."
-    -3 -> "You are great in bed ;) …. You can sleep for days."
-    -2 -> "You didn’t fall. The floor just needed a hug."
-    -1 -> "SKELETON_KING PLAYER DETECTED."
-    0, 1 -> "GG&WP!"
-    2 -> "Are you a boy or a girl?"
-    3 -> "sorry, you lose!"
-    4 -> "you do not get older. you lvl up."
-    5 -> {
-        "DOES THIS UNIT HAVE A SOUL?"
-//                soundPool.play(does_this_unit_have_a_soul, 0.6f, 0.6f, 0, 0, 1f
-    }
-    6 -> "A hero need not speak. When he is gone, the world will speak for him."
-    7 -> {
-        "UGANDA FOREVER!"
-//                soundPool.play(you_are_the_most_successful, 0.6f, 0.6f, 0, 0, 1f
-    }
-    8 -> "You are nobody.. nobody's perfect.. therefore YOU ARE PERFECT!"
-    9 -> "If anything’s possible, then is it possible that nothing’s possible?"
-    10 -> {
-        "YOU SUCCEEDED WHERE OTHER DO NOT."
-//                soundPool.play(you_are_succeeded_where_other_did_not, 0.6f, 0.6f, 0, 0, 1f
-    }
-    else -> "GG&WP!"
 }

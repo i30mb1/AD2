@@ -5,24 +5,29 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import n7.ad2.android.findDependencies
+import n7.ad2.core.ui.content
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.skillmp.compose.ManaPointScreen
+import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
-import n7.ad2.core.ui.content
 import javax.inject.Inject
 
 internal class SkillGameFragment : Fragment() {
 
     companion object {
-        fun getInstance() = SkillGameFragment()
+        private const val ARG_MODE = "mode"
+
+        fun getInstance(mode: GameMode = GameMode.SOLO) = SkillGameFragment().apply { arguments = bundleOf(ARG_MODE to mode.name) }
     }
 
     @Inject lateinit var skillGameViewModelFactory: SkillGameViewModel.Factory
-    private val viewModel: SkillGameViewModel by viewModel { skillGameViewModelFactory.create() }
+    private val viewModel: SkillGameViewModel by viewModel {
+        skillGameViewModelFactory.create(GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)))
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -30,16 +35,7 @@ internal class SkillGameFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        val state: State<SkillGameViewModel.State> = viewModel.state.collectAsState()
-        ManaPointScreen(state = state.value, ::loadQuestion)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        viewModel.onAction(SkillGameViewModel.Action.LoadQuestion)
-    }
-
-    private fun loadQuestion(selectedSpell: SkillGameViewModel.Spell) {
-        viewModel.onAction(SkillGameViewModel.Action.ShowAnswer(selectedSpell))
+        val state = viewModel.state.collectAsState().value
+        ManaPointScreen(state = state, onVariantClick = viewModel::onAnswer)
     }
 }

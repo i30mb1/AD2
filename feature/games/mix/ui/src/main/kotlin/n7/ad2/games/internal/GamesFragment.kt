@@ -17,6 +17,9 @@ import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.killCreep.KillCreepFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
+import n7.ad2.games.internal.leaderboard.LeaderboardFragment
+import n7.ad2.games.internal.lobby.LobbyFragment
+import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
 import n7.ad2.core.ui.content
 import n7.ad2.xo.api.XoProvider
@@ -38,16 +41,22 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked)
+        GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked, ::onLeaderboardClicked)
     }
 
-    private fun onGameClicked(game: GameVO) {
+    private fun onGameClicked(game: GameVO, mode: GameMode) {
         val fragment = when (game) {
             is GameVO.Apm -> KillCreepFragment.getInstance()
             is GameVO.CanYouBuyIt -> TODO()
-            is GameVO.GuessSkillMana -> SkillGameFragment.getInstance()
+            is GameVO.GuessSkillMana -> if (mode == GameMode.SOLO) SkillGameFragment.getInstance(mode) else LobbyFragment.getInstance(mode)
             is GameVO.XO -> XoProvider().getFragment().getDeclaredConstructor().newInstance()
         }
+        open(fragment)
+    }
+
+    private fun onLeaderboardClicked() = open(LeaderboardFragment())
+
+    private fun open(fragment: Fragment) {
         getMainFragmentNavigator?.setMainFragment(fragment) {
             addToBackStack(null)
         }

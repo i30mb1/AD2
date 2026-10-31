@@ -1,6 +1,7 @@
 package n7.ad2.games.api
 
 import android.app.Application
+import n7.ad2.AppInformation
 import n7.ad2.Resources
 import n7.ad2.app.logger.Logger
 import n7.ad2.coroutines.DispatchersProvider
@@ -15,6 +16,7 @@ interface GamesDependencies : Dependencies {
     val res: Resources
     val logger: Logger
     val dispatchersProvider: DispatchersProvider
+    val appInformation: AppInformation
     val getHeroesUseCase: GetHeroesUseCase
     val getHeroByNameUseCase: GetHeroByNameUseCase
     val getHeroSpellInputStreamUseCase: GetHeroSpellInputStreamUseCase

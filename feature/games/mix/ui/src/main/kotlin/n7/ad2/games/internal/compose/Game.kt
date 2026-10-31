@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -23,7 +24,7 @@ import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.core.ui.compose.AppTheme
 
 @Composable
-internal fun Game(title: String, background: Int, onGameClick: () -> Unit, modifier: Modifier = Modifier) {
+internal fun Game(title: String, background: Int, onGameClick: () -> Unit, modifier: Modifier = Modifier, badge: String? = null) {
     Box(
         modifier = modifier
             .height(150.dp)
@@ -46,6 +47,19 @@ internal fun Game(title: String, background: Int, onGameClick: () -> Unit, modif
             modifier = Modifier
                 .align(Alignment.Center),
         )
+        if (badge != null) {
+            Text(
+                text = badge,
+                color = androidx.compose.ui.graphics.Color(0xFFFFD166),
+                style = AppTheme.style.info,
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(10.dp)
+                    .clip(RoundedCornerShape(6.dp))
+                    .background(androidx.compose.ui.graphics.Color(0x88000000))
+                    .padding(horizontal = 6.dp, vertical = 2.dp),
+            )
+        }
     }
 }
 

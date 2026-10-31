@@ -2,4 +2,47 @@
 <resources>
     <string name="one_player">1 игрок</string>
     <string name="two_players">2 игрока</string>
+
+    <string name="games_mode_solo">Соло</string>
+    <string name="games_mode_solo_hint">3 жизни, серия на рекорд</string>
+    <string name="games_mode_versus">Против друга</string>
+    <string name="games_mode_versus_hint">Одни вопросы, кто быстрее</string>
+    <string name="games_mode_coop">Вместе</string>
+    <string name="games_mode_coop_hint">Общие жизни и общий счёт</string>
+    <string name="games_leaderboard">🏆 Таблица рекордов</string>
+    <string name="games_record_badge">🏆 рекорд %d</string>
+
+    <string name="lobby_create">Создать</string>
+    <string name="lobby_find">Найти</string>
+    <string name="lobby_you">%s (вы)</string>
+    <string name="lobby_waiting">ждём игрока…</string>
+    <string name="lobby_visible_as">Ваша игра видна в сети как %1$s · %2$s</string>
+    <string name="lobby_no_network">Подключитесь к Wi-Fi, чтобы играть вместе</string>
+    <string name="lobby_found">Найденные игры</string>
+    <string name="lobby_searching">Ищем игры…</string>
+    <string name="lobby_join">Войти</string>
+    <string name="lobby_manual_hint">ip:порт</string>
+    <string name="lobby_connect">Подключиться</string>
+    <string name="lobby_start">Начать</string>
+    <string name="lobby_start_waiting">Начать (ждём игрока)</string>
+    <string name="lobby_wait_host">Ждём, пока %s начнёт игру</string>
+    <string name="lobby_connecting">Подключаемся…</string>
+    <string name="lobby_closed_failed">Не удалось подключиться</string>
+    <string name="lobby_closed_version">У второго игрока другая версия приложения</string>
+    <string name="lobby_closed_peer">Игрок вышел</string>
+
+    <string name="game_round">раунд %1$d/%2$d</string>
+    <string name="game_you">вы</string>
+    <string name="game_answered">ответил ✓</string>
+    <string name="end_win">Победа</string>
+    <string name="end_lose">Поражение</string>
+    <string name="end_draw">Ничья</string>
+    <string name="end_score">Счёт: %d</string>
+    <string name="end_shared_score">Общий счёт: %d</string>
+    <string name="end_peer_left">Соперник вышел</string>
+    <string name="end_new_record">Новый рекорд!</string>
+
+    <string name="leaderboard_title">Рекорды · Угадай стоимость</string>
+    <string name="leaderboard_empty">Пока нет рекордов</string>
+    <string name="leaderboard_hint">🟢 сейчас на связи — рекорды обновляются вживую. Таблица общая для всех, с кем вы играли по сети.</string>
 </resources>

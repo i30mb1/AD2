@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.single
+import kotlinx.coroutines.flow.take
 import kotlinx.coroutines.flow.transform
 import n7.ad2.coroutines.DispatchersProvider
 import n7.ad2.heroes.domain.model.Ability
@@ -30,26 +31,30 @@ internal class GetSkillsUseCase @Inject constructor(
 
     data class Spell(val cost: String, val isRightAnswer: Boolean)
 
-    operator fun invoke(): Flow<Data> = getHeroesUseCase()
-        .transform { list -> emit(list.random()) }
+    /**
+     * @param random в сетевой игре создается из общего seed, чтобы у обоих игроков был один и тот же вопрос
+     */
+    operator fun invoke(random: Random = Random.Default): Flow<Data> = getHeroesUseCase()
+        .take(1)
+        .transform { list -> emit(list.sortedBy { it.name }.random(random)) }
         .map { hero ->
             val localHero = getHeroByNameUseCase(hero.name)
             val info = getHeroDescriptionUseCase(localHero.name).single()
             val spell: Ability = info.abilities.first { ability -> ability.hasIntegerManaCost() }
             val spellManaList = spell.mana?.split("/") ?: error("spell ${spell.name} mana is ${spell.mana}")
-            val spellMana = spellManaList.random()
+            val spellMana = spellManaList.random(random)
             val spellLVL = spellManaList.indexOf(spellMana) + 1
             val spellCosts = buildSet {
                 add(spellMana)
                 while (size < 4) {
-                    val randomTail = Random.nextInt(-3..3) * 10
+                    val randomTail = random.nextInt(-3..3) * 10
                     val wrongSpellCost = spellMana.toInt() + randomTail
                     if (wrongSpellCost <= 0 || wrongSpellCost == spellMana.toInt()) continue
                     add(wrongSpellCost.toString())
                 }
             }
                 .map { mana -> Spell(mana, spellMana == mana) }
-                .shuffled()
+                .shuffled(random)
             val skillImage = getHeroSpellInputStreamUseCase(spell.imageUrl).use { BitmapFactory.decodeStream(it) }
             val palette = Palette.from(skillImage).generate()
             val backgroundColor = palette.vibrantSwatch?.rgb ?: Color.TRANSPARENT

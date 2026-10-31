@@ -17,7 +17,15 @@ dependencies {
 
     implementation(projects.feature.games.mix.domain.api)
     implementation(projects.feature.games.xo.ui)
+    implementation(projects.feature.games.xo.domain.api)
+    implementation(projects.feature.games.xo.domain.wiring)
+    implementation(projects.feature.games.mix.domain.wiring)
+    implementation(projects.feature.games.room.api)
+    implementation(projects.feature.games.leaderboard.api)
     implementation(projects.feature.heroes.domain.api)
 
     ksp(libs.daggerAnnotation)
+
+    testImplementation(libs.test.junit)
+    testImplementation(libs.test.truth.jvm)
 }

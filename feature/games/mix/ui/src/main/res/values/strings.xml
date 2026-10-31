@@ -6,4 +6,47 @@
     <string name="apm" translatable="false">APM</string>
     <string name="can_you_buy_it" translatable="false">Buy it?</string>
     <string name="xo" translatable="false">XO</string>
+
+    <string name="games_mode_solo">Solo</string>
+    <string name="games_mode_solo_hint">3 lives, a streak for the record</string>
+    <string name="games_mode_versus">Versus a friend</string>
+    <string name="games_mode_versus_hint">Same questions, the faster one wins</string>
+    <string name="games_mode_coop">Together</string>
+    <string name="games_mode_coop_hint">Shared lives and shared score</string>
+    <string name="games_leaderboard">🏆 Leaderboard</string>
+    <string name="games_record_badge">🏆 record %d</string>
+
+    <string name="lobby_create">Create</string>
+    <string name="lobby_find">Find</string>
+    <string name="lobby_you">%s (you)</string>
+    <string name="lobby_waiting">waiting for a player…</string>
+    <string name="lobby_visible_as">Your game is visible as %1$s · %2$s</string>
+    <string name="lobby_no_network">Connect to Wi-Fi to play together</string>
+    <string name="lobby_found">Games nearby</string>
+    <string name="lobby_searching">Searching…</string>
+    <string name="lobby_join">Join</string>
+    <string name="lobby_manual_hint">ip:port</string>
+    <string name="lobby_connect">Connect</string>
+    <string name="lobby_start">Start</string>
+    <string name="lobby_start_waiting">Start (waiting for a player)</string>
+    <string name="lobby_wait_host">Waiting for %s to start</string>
+    <string name="lobby_connecting">Connecting…</string>
+    <string name="lobby_closed_failed">Could not connect</string>
+    <string name="lobby_closed_version">The other player has a different app version</string>
+    <string name="lobby_closed_peer">The player left</string>
+
+    <string name="game_round">round %1$d/%2$d</string>
+    <string name="game_you">you</string>
+    <string name="game_answered">answered ✓</string>
+    <string name="end_win">Victory</string>
+    <string name="end_lose">Defeat</string>
+    <string name="end_draw">Draw</string>
+    <string name="end_score">Score: %d</string>
+    <string name="end_shared_score">Shared score: %d</string>
+    <string name="end_peer_left">The opponent left</string>
+    <string name="end_new_record">New record!</string>
+
+    <string name="leaderboard_title">Leaderboard · Spell Cost</string>
+    <string name="leaderboard_empty">No records yet</string>
+    <string name="leaderboard_hint">🟢 online now — records update live. The table is shared with everyone you have played with.</string>
 </resources>

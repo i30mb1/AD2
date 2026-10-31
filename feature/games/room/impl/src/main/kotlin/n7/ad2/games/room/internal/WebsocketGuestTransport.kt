@@ -29,9 +29,11 @@ internal class WebsocketGuestTransport(private val client: ClientController, sco
 
     override val incoming: Flow<String> = client.state.newOtherMessages { it.messages }
 
+    private val outgoing = OutgoingQueue(scope) { text -> client.send(text) }
+
     fun connect(name: String, host: InetAddress, port: Int) = client.connect(name, host, port)
 
-    override fun send(text: String) = client.send(text)
+    override fun send(text: String) = outgoing.send(text)
 
     override fun close() = client.disconnect()
 

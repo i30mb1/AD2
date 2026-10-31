@@ -27,9 +27,11 @@ internal class WebsocketHostTransport(private val server: ServerController, scop
 
     override val incoming: Flow<String> = server.state.newOtherMessages { it.messages }
 
+    private val outgoing = OutgoingQueue(scope) { text -> server.send(text) }
+
     fun start(name: String, bindAddress: InetAddress) = server.start(name, bindAddress, 0)
 
-    override fun send(text: String) = server.send(text)
+    override fun send(text: String) = outgoing.send(text)
 
     override fun close() = server.stop()
 }

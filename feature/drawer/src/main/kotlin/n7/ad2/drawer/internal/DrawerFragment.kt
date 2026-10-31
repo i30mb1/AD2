@@ -185,7 +185,8 @@ internal class DrawerFragment :
         }
     }
 
-    private fun setupLoggerAdapter() = lifecycleScope.launch {
+    // viewLifecycleOwner: view может быть уничтожена раньше, чем isLogWidgetEnabled() вернется (например popBackStack + новый экран)
+    private fun setupLoggerAdapter() = viewLifecycleOwner.lifecycleScope.launch {
         val shouldDisplayLog = viewModel.isLogWidgetEnabled()
         if (!shouldDisplayLog) return@launch
         val logLayoutManager = object : LinearLayoutManager(requireContext()) {
@@ -199,6 +200,6 @@ internal class DrawerFragment :
             .onStart { loggerAdapter.clear() }
             .onEach(loggerAdapter::add)
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }
-            .launchIn(lifecycleScope)
+            .launchIn(viewLifecycleOwner.lifecycleScope)
     }
 }

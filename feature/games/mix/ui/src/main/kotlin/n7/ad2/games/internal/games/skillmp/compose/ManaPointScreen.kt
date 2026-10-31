@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
@@ -24,21 +25,25 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewParameter
-import androidx.compose.ui.tooling.preview.PreviewParameterProvider
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
+import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.core.ui.compose.view.ErrorScreen
 import n7.ad2.core.ui.compose.view.LoadingScreen
+import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
+import n7.ad2.games.internal.games.skillmp.SpellMatch
+import n7.ad2.games.room.GameMode
+
+private val MyColor = Color(0xFFF44336)
+private val PeerColor = Color(0xFF448AFF)
 
 @Composable
 internal fun ManaPointScreen(state: SkillGameViewModel.State, onVariantClick: (spell: SkillGameViewModel.Spell) -> Unit) {
     val color by rememberUpdatedState(newValue = Color(state.backgroundColor).copy(alpha = 0.2f))
     val animateColor = animateColorAsState(targetValue = color, animationSpec = tween(2_000))
-    val offset = with(LocalDensity.current) { 5.toDp() }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -48,41 +53,70 @@ internal fun ManaPointScreen(state: SkillGameViewModel.State, onVariantClick: (s
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         when {
-            state.isLoading -> {
-                Box {
-                    LoadingScreen()
-                    if (state.loadingAttempts > 0) {
-                        Text(
-                            text = "${state.loadingAttempts}",
-                            color = AppTheme.color.textColor,
-                            modifier = Modifier.align(Alignment.Center),
-                        )
-                    }
-                }
-            }
+            state.isEndGame -> EndGameScreen(state.match, state.peerName, state.newRecord)
             state.isError -> ErrorScreen()
-            state.isEndGame -> EndGameScreen(state.userScore)
             else -> {
-                Counter(state.userScore)
-                GuessSpellImage(
-                    Modifier
-                        .weight(1f),
-                    state.spellImage,
-                    state.spellLVL,
-                ) { }
-                VariantBlocks(
-                    state.spellList,
-                    state.showRightAnswer,
-                    state.selectedSpell,
-                    onVariantClick,
-                )
+                MatchHeader(state.match, state.peerName)
+                Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
+                    if (state.isLoading) LoadingScreen() else GuessSpellImage(state.spellImage, state.spellLVL)
+                }
+                if (!state.isLoading) {
+                    VariantBlocks(state.spellList, state.showRightAnswer, state.selectedSpell, onVariantClick)
+                }
             }
         }
     }
 }
 
 @Composable
-private fun GuessSpellImage(modifier: Modifier = Modifier, spellImage: String, spellLVL: Int, onSpellClick: () -> Unit) {
+private fun MatchHeader(match: SpellMatch, peerName: String?) {
+    when (match.mode) {
+        GameMode.SOLO -> Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Counter(match.myScore)
+            Lives(match.lives)
+        }
+        GameMode.VERSUS -> Column(Modifier.fillMaxWidth()) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Score(match.myScore, MyColor)
+                Text(
+                    text = stringResource(R.string.game_round, match.round + 1, SpellMatch.VERSUS_ROUNDS),
+                    color = AppTheme.color.textSecondaryColor,
+                    style = AppTheme.style.body,
+                )
+                Score(match.peerScore, PeerColor)
+            }
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(stringResource(R.string.game_you), color = AppTheme.color.textSecondaryColor, style = AppTheme.style.info)
+                val answered = if (match.peerAnswer != null) " · " + stringResource(R.string.game_answered) else ""
+                Text(peerName.orEmpty() + answered, color = AppTheme.color.textSecondaryColor, style = AppTheme.style.info)
+            }
+        }
+        GameMode.COOP -> Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Counter(match.myScore)
+            Lives(match.lives)
+            if (match.peerAnswer != null) {
+                Text(peerName.orEmpty() + " · " + stringResource(R.string.game_answered), color = AppTheme.color.textSecondaryColor, style = AppTheme.style.info)
+            }
+        }
+    }
+}
+
+@Composable
+private fun Score(score: Int, color: Color) {
+    Text(text = score.toString(), color = color, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+}
+
+@Composable
+private fun Lives(lives: Int) {
+    Text(
+        text = "❤️".repeat(lives.coerceAtLeast(0)) + "🖤".repeat((3 - lives).coerceAtLeast(0)),
+        fontSize = 18.sp,
+        modifier = Modifier.padding(top = 4.dp),
+    )
+}
+
+@Composable
+private fun GuessSpellImage(spellImage: String, spellLVL: Int) {
     val infiniteTransition = rememberInfiniteTransition()
     val scale by infiniteTransition.animateFloat(
         initialValue = 1f,
@@ -90,66 +124,22 @@ private fun GuessSpellImage(modifier: Modifier = Modifier, spellImage: String, s
         animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse),
     )
     Column(
-        modifier = modifier
-            .fillMaxSize()
-            .scale(scale),
+        modifier = Modifier.scale(scale),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        GuessSpellImage(spellImage, onSpellClick)
-        SpellLVL(spellLVL)
-    }
-}
-
-@Composable
-private fun SpellLVL(spellLVL: Int) {
-    Row(
-        modifier = Modifier.padding(top = 4.dp),
-    ) {
-        repeat(spellLVL) {
-            Box(
-                modifier = Modifier
-                    .padding(2.dp, 0.dp)
-                    .size(20.dp, 10.dp)
-                    .background(Color.Black)
-                    .padding(0.5.dp)
-                    .background(Color.Yellow),
-            ) {
+        GuessSpellImage(spellImage) { }
+        Row(modifier = Modifier.padding(top = 4.dp)) {
+            repeat(spellLVL) {
+                Box(
+                    modifier = Modifier
+                        .padding(2.dp, 0.dp)
+                        .size(20.dp, 10.dp)
+                        .background(Color.Black)
+                        .padding(0.5.dp)
+                        .background(Color.Yellow),
+                )
             }
         }
     }
-}
-
-@Preview
-@Composable
-private fun ManaPointScreenPreviewLoading(@PreviewParameter(PreviewStateProvider::class) state: SkillGameViewModel.State) {
-    ManaPointScreen(state) {}
-}
-
-private class PreviewStateProvider : PreviewParameterProvider<SkillGameViewModel.State> {
-    override val values: Sequence<SkillGameViewModel.State> = sequenceOf(
-        SkillGameViewModel.State.init(),
-        SkillGameViewModel.State(
-            false,
-            0,
-            false,
-            android.R.color.background_dark,
-            "",
-            SkillGameViewModel.SpellList(
-                listOf(
-                    SkillGameViewModel.Spell("10", false),
-                    SkillGameViewModel.Spell("20", false),
-                    SkillGameViewModel.Spell("30", true),
-                    SkillGameViewModel.Spell("40", false),
-                ),
-            ),
-            3,
-            false,
-            null,
-            0,
-            0,
-            false,
-        ),
-        SkillGameViewModel.State.init().copy(isEndGame = true, userScore = 5),
-    )
 }
