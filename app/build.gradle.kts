@@ -59,6 +59,8 @@ android {
             resValue("string", "app_name", "AD2-D")
         }
         create("benchmark") {
+            // ставится рядом с релизом из Play, не трогая его данные
+            applicationIdSuffix = ".benchmark"
             signingConfig = signingConfigs.getByName("debug")
             matchingFallbacks += listOf("release")
             isDebuggable = false

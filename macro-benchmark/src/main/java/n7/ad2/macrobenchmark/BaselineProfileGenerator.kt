@@ -20,12 +20,12 @@ class BaselineProfileGenerator {
 
     @Test
     fun generateMainFlowBaselineProfile() {
-        baselineProfileRule.collect(packageName = "n7.ad2") {
+        baselineProfileRule.collect(packageName = "n7.ad2.benchmark") {
             // Start main activity and wait for it to load
             startActivityAndWait()
 
             // Wait for splash screen to disappear and main content to load
-            device.wait(Until.hasObject(By.pkg("n7.ad2")), 15_000)
+            device.wait(Until.hasObject(By.pkg("n7.ad2.benchmark")), 15_000)
 
             // Wait for app to fully initialize
             device.waitForIdle(3_000)

@@ -20,7 +20,7 @@ class StartupBaselineProfileGenerator {
 
     @Test
     fun generateStartupBaselineProfile() {
-        baselineProfileRule.collect(packageName = "n7.ad2") {
+        baselineProfileRule.collect(packageName = "n7.ad2.benchmark") {
             // This will generate a baseline profile for app startup
             // which is the most important optimization
 
@@ -28,7 +28,7 @@ class StartupBaselineProfileGenerator {
             startActivityAndWait()
 
             // Wait for app to be fully loaded and responsive
-            device.wait(Until.hasObject(By.pkg("n7.ad2")), 20_000)
+            device.wait(Until.hasObject(By.pkg("n7.ad2.benchmark")), 20_000)
 
             // Let the app fully initialize - this captures the critical startup path
             device.waitForIdle(5_000)
@@ -49,7 +49,7 @@ class StartupBaselineProfileGenerator {
 
     @Test
     fun generateColdStartBaselineProfile() {
-        baselineProfileRule.collect(packageName = "n7.ad2") {
+        baselineProfileRule.collect(packageName = "n7.ad2.benchmark") {
             // Multiple cold starts to capture comprehensive startup profile
             repeat(3) {
                 // Kill app to ensure cold start
@@ -60,7 +60,7 @@ class StartupBaselineProfileGenerator {
                 startActivityAndWait()
 
                 // Wait for full initialization
-                device.wait(Until.hasObject(By.pkg("n7.ad2")), 15_000)
+                device.wait(Until.hasObject(By.pkg("n7.ad2.benchmark")), 15_000)
                 device.waitForIdle(3_000)
 
                 // Basic interaction

@@ -35,7 +35,7 @@ class StartupBenchmark {
     fun startupBaselineProfile() = startup(CompilationMode.Partial())
 
     private fun startup(compilationMode: CompilationMode) = benchmarkRule.measureRepeated(
-        packageName = "n7.ad2",
+        packageName = "n7.ad2.benchmark",
         metrics = listOf(StartupTimingMetric()),
         iterations = 10,
         experimentalConfig = ExperimentalConfig(startupInsightsConfig = StartupInsightsConfig(isEnabled = true)),
