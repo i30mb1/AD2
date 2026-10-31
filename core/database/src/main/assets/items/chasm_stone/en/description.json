@@ -1,1 +1,1 @@
-{"abilities":[],"additionalInformation":["AoE bonuses from multiple Chasm Stones or its upgrades do not stack."],"cost":"900","consistFrom":null,"name":"Chasm Stone","description":null,"bonuses":["+40 Aoe bonus"]}
+{"additionalInformation":["AoE bonuses from multiple Chasm Stones or its upgrades do not stack."],"cost":"900","consistFrom":null,"lore":null,"boughtFrom":null,"description":null,"trivia":null,"tips":null,"recommendedFor":null,"abilities":[],"name":"Chasm Stone","upgradeIn":["Gleipnir","Shiva's Guard"],"bonuses":["+40 Aoe bonus"],"properties":null}

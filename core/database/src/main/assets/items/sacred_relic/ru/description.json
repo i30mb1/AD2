@@ -1,1 +1,1 @@
-{"abilities":[],"cost":"3400","consistFrom":null,"name":"Sacred Relic","description":"Древнее оружие, способное изменить ход битвы.","bonuses":["+55 к урону"]}
+{"additionalInformation":["Приоритет сборки Divine Rapier ниже чем у Radiance и Nullifier."],"cost":"3400","consistFrom":null,"lore":null,"boughtFrom":"Секретная лавка","description":"Древнее оружие, способное изменить ход битвы.","trivia":null,"tips":null,"recommendedFor":null,"abilities":[],"name":"Sacred Relic","upgradeIn":["Divine Rapier","Nullifier","Radiance"],"bonuses":["+55 к урону"],"properties":null}

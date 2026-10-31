@@ -1,1 +1,1 @@
-{"abilities":[],"cost":"175","consistFrom":null,"name":"Ring of Regen","description":"Гномы считают, что это кольцо приносит удачу.","bonuses":["+1.25 к восстановлению здоровья"]}
+{"additionalInformation":null,"cost":"175","consistFrom":null,"lore":null,"boughtFrom":null,"description":"Гномы считают, что это кольцо приносит удачу.","trivia":null,"tips":null,"recommendedFor":null,"abilities":[],"name":"Ring of Regen","upgradeIn":["Headdress","Tranquil Boots"],"bonuses":["+1.25 к восстановлению здоровья"],"properties":null}

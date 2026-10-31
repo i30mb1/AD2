@@ -58,7 +58,7 @@ internal fun connectToWiki(rawUrl: String): Document {
 private val wikiPageUrl = Regex("""^(https://[^/]+(?:/[a-z]{2})?)/wiki/(.+)$""")
 
 /** https://dota2.fandom.com/ru/wiki/Pudge → https://dota2.fandom.com/ru/api.php?action=parse&page=Pudge */
-private fun fetchWithApi(url: String): Document? {
+internal fun fetchWithApi(url: String): Document? {
     val match = wikiPageUrl.find(url) ?: return null
     val (base, page) = match.destructured
     val title = java.net.URLDecoder.decode(page, Charsets.UTF_8)

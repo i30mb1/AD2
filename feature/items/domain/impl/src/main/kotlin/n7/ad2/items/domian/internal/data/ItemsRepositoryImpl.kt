@@ -17,7 +17,7 @@ internal class ItemsRepositoryImpl(private val itemsDao: ItemsDao, private val a
     private val mapper by lazy { ItemDatabaseToItemMapper(loadTitles()) }
 
     override fun getAllItems(): Flow<List<Item>> = flow {
-        addNewItemsFromAssets()
+        syncWithAssets()
         emitAll(itemsDao.getAllItems().map { localHeroList -> localHeroList.map(mapper) })
     }
 
@@ -25,15 +25,31 @@ internal class ItemsRepositoryImpl(private val itemsDao: ItemsDao, private val a
         itemsDao.updateItemViewedByUserField(name)
     }
 
-    /** The prepackaged items.db is from 2023; `items/list.json` (core/parser) lists items added since then. Existing rows keep their `viewedByUser` flag. */
-    private fun addNewItemsFromAssets() = runCatching {
-        val known = itemsDao.getAllNames().toSet()
-        val list = JSONArray(readAsset("items/list.json"))
-        val new = (0 until list.length()).map(list::getJSONObject)
-            .filter { it.getString("name") !in known }
-            .map { ItemDatabase(name = it.getString("name"), type = it.getString("type"), viewedByUser = false) }
+    /**
+     * The prepackaged items.db is from 2023. `items/removed.json` (core/parser) lists items that left the game,
+     * `items/list.json` gives the section of items added since then and of items that moved (e.g. into the neutral pool).
+     * Existing rows keep their `viewedByUser` flag.
+     */
+    private fun syncWithAssets() = runCatching {
+        val removed = readArray("items/removed.json").let { array -> (0 until array.length()).map(array::getString) }
+        if (removed.isNotEmpty()) itemsDao.deleteByNames(removed)
+
+        val known = itemsDao.getAllTypes().associate { it.name to it.type }
+        val list = readArray("items/list.json").let { array -> (0 until array.length()).map(array::getJSONObject) }
+        val new = mutableListOf<ItemDatabase>()
+        for (entry in list) {
+            val name = entry.getString("name")
+            val type = entry.getString("type")
+            when (known[name]) {
+                null -> new += ItemDatabase(name = name, type = type, viewedByUser = false)
+                type -> Unit
+                else -> itemsDao.updateType(name, type)
+            }
+        }
         if (new.isNotEmpty()) itemsDao.insertAll(new)
     }
+
+    private fun readArray(path: String): JSONArray = runCatching { JSONArray(readAsset(path)) }.getOrDefault(JSONArray())
 
     private fun loadTitles(): Map<String, String> = runCatching {
         val json = JSONObject(readAsset("items/names.json"))

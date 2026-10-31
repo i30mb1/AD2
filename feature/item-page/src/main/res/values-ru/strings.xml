@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="cost">Стоимость: %s</string>
-    <string name="bought_from">Покупается в: %s</string>
-    <string name="abilities">Способность: %s</string>
     <string name="tips">Советы</string>
     <string name="lore">Лор</string>
     <string name="trivia">Факты</string>
     <string name="additional_information">Дополнительная информация</string>
+    <string name="upgrade_in">Улучшается в</string>
+    <string name="properties">Свойства</string>
+    <string name="recommended_for">Рекомендован героям</string>
 
+    <string name="item_build">Сборка</string>
+    <string name="item_recipe">Рецепт</string>
+    <string name="item_cooldown">%1$s с</string>
+    <string name="item_notes">Заметки (%1$d)</string>
+    <string name="item_hide_notes">Скрыть заметки</string>
+    <string name="desc_back">Назад</string>
+    <string name="desc_play_sound">Прослушать звук</string>
 </resources>

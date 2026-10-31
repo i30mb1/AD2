@@ -1,1 +1,1 @@
-{"abilities":[],"additionalInformation":null,"cost":"500","consistFrom":null,"lore":null,"name":"Chainmail","description":"A medium weave of metal chains.","trivia":null,"bonuses":["+4 Armor"],"tips":null}
+{"additionalInformation":null,"cost":"500","consistFrom":null,"lore":null,"boughtFrom":null,"description":"A medium weave of metal chains.","trivia":null,"tips":null,"recommendedFor":null,"abilities":[],"name":"Chainmail","upgradeIn":["Essence Distiller","Medallion of Courage","Mekansm","Phase Boots","Solar Crest","Witch Blade"],"bonuses":["+4 Armor"],"properties":null}

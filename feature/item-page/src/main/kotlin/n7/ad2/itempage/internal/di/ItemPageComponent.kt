@@ -9,7 +9,7 @@ import n7.ad2.itempage.internal.ItemInfoViewModel
         ItemPageDependencies::class,
     ],
 )
-interface ItemPageComponent {
+internal interface ItemPageComponent {
 
     @dagger.Component.Factory
     interface Factory {

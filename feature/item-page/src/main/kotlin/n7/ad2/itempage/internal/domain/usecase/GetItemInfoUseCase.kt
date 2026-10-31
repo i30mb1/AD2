@@ -1,6 +1,5 @@
 package n7.ad2.itempage.internal.domain.usecase
 
-import androidx.core.text.toSpanned
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -8,86 +7,111 @@ import kotlinx.serialization.json.Json
 import n7.ad2.AppLocale
 import n7.ad2.Resources
 import n7.ad2.coroutines.DispatchersProvider
-import n7.ad2.feature.item.page.R
+import n7.ad2.itempage.internal.domain.model.Ability
 import n7.ad2.itempage.internal.domain.model.LocalItemInfo
-import n7.ad2.itempage.internal.domain.vo.VOItemInfo
+import n7.ad2.itempage.internal.domain.vo.VOAbility
+import n7.ad2.itempage.internal.domain.vo.VOBonus
+import n7.ad2.itempage.internal.domain.vo.VOHero
+import n7.ad2.itempage.internal.domain.vo.VOItemLink
+import n7.ad2.itempage.internal.domain.vo.VOItemPage
 import n7.ad2.itempage.internal.domain.vo.VORecipe
-import n7.ad2.ktx.toStringList
-import n7.ad2.core.ui.adapter.BodyViewHolder
-import n7.ad2.core.ui.adapter.HeaderPlayableViewHolder
-import n7.ad2.core.ui.adapter.ImageLineViewHolder
+import n7.ad2.itempage.internal.domain.vo.VORecommendation
+import n7.ad2.itempage.internal.domain.vo.VOSection
+import n7.ad2.itempage.internal.domain.vo.VOSectionKind
 import javax.inject.Inject
 
-class GetItemInfoUseCase @Inject constructor(private val res: Resources, private val dispatchers: DispatchersProvider) {
+private const val RECIPE_KEY = "recipe"
+
+internal class GetItemInfoUseCase @Inject constructor(private val res: Resources, private val dispatchers: DispatchersProvider) {
 
     private val json = Json { ignoreUnknownKeys = true }
 
-    /** Falls back to English: wiki-only items and fresh patches may not have a localized file yet. */
-    private fun getItem(itemName: String, appLocale: AppLocale): String {
-        val stream = runCatching { res.getAssets("items/$itemName/${appLocale.value}/description.json") }
-            .getOrElse { res.getAssets("items/$itemName/${AppLocale.English.value}/description.json") }
-        return stream.bufferedReader().use { it.readText() }
+    operator fun invoke(itemName: String, appLocale: AppLocale): Flow<VOItemPage> = flow {
+        val item = readItem(itemName, appLocale) ?: error("no description for item $itemName")
+        val cost = ItemTextParser.parseCost(item.cost)
+        val heroes = mutableMapOf<String, Boolean>()
+        val isHero = { name: String -> heroes.getOrPut(name) { hasAsset("heroes/${heroKey(name)}/full.webp") } }
+
+        val page = VOItemPage(
+            title = item.name ?: itemName,
+            imageUrl = imageUrl(itemName),
+            cost = cost,
+            boughtFrom = item.boughtFrom?.let(ItemTextParser::plainText)?.takeIf { it.isNotEmpty() },
+            description = item.description?.let(ItemTextParser::plainText)?.takeIf { it.isNotEmpty() },
+            bonuses = item.bonuses.orEmpty().map(ItemTextParser::plainText).filter { it.isNotEmpty() }.map { bonus ->
+                val (value, text) = ItemTextParser.splitBonus(bonus)
+                VOBonus(value, text)
+            },
+            recipe = recipe(item, cost, appLocale),
+            upgrades = item.upgradeIn.orEmpty().map { name -> link(itemKey(name), appLocale, fallbackName = name) },
+            abilities = item.abilities.orEmpty().mapNotNull(::ability),
+            properties = item.properties.orEmpty().map(ItemTextParser::plainText).mapNotNull(ItemTextParser::toFact),
+            recommendations = item.recommendedFor.orEmpty().map(ItemTextParser::plainText).filter { it.isNotEmpty() }.map { line ->
+                val (text, names) = ItemTextParser.splitRecommendation(line, isHero)
+                VORecommendation(text, names.map { name -> VOHero(name, "file:///android_asset/heroes/${heroKey(name)}/full.webp") })
+            },
+            sections = listOfNotNull(
+                section(VOSectionKind.TIPS, item.tips),
+                section(VOSectionKind.ADDITIONAL, item.additionalInformation),
+                section(VOSectionKind.LORE, item.lore),
+                section(VOSectionKind.TRIVIA, item.trivia),
+            ),
+        )
+        emit(page)
+    }.flowOn(dispatchers.IO)
+
+    /** Components and, when the components cost less than the item, the recipe scroll between them and the result. */
+    private fun recipe(item: LocalItemInfo, cost: Int?, appLocale: AppLocale): VORecipe? {
+        val keys = item.consistFrom.orEmpty()
+        if (keys.isEmpty()) return null
+        val parts = keys.filterNot { it.contains(RECIPE_KEY) }.map { key -> link(key, appLocale, fallbackName = key) }
+        return VORecipe(parts, ItemTextParser.recipeCost(cost, parts.map { it.cost }))
     }
 
-    private fun getFullUrlItemImage(itemName: String): String = "file:///android_asset/items/${itemName.lowercase().replace(" ", "_")}/full.webp"
+    private fun link(key: String, appLocale: AppLocale, fallbackName: String): VOItemLink {
+        val linked = readItem(key, appLocale)
+        return VOItemLink(key, linked?.name ?: fallbackName, imageUrl(key), ItemTextParser.parseCost(linked?.cost))
+    }
 
-    operator fun invoke(itemName: String, appLocale: AppLocale): Flow<List<VOItemInfo>> = flow {
-        val jsonString = getItem(itemName, appLocale)
-        val localItemDescription = json.decodeFromString<LocalItemInfo>(jsonString)
+    private fun ability(ability: Ability): VOAbility? {
+        val fullName = ability.abilityName?.let(ItemTextParser::plainText)?.takeIf { it.isNotEmpty() } ?: return null
+        val (kind, name) = ItemTextParser.splitAbilityName(fullName)
+        val (text, facts) = ItemTextParser.splitDescription(ability.description.orEmpty())
+        return VOAbility(
+            kind = kind,
+            name = name,
+            audioUrl = ability.audioUrl?.takeIf { it.isNotBlank() },
+            cooldown = ability.cooldown?.let(ItemTextParser::plainText)?.takeIf { it.isNotEmpty() },
+            mana = ability.mana?.let(ItemTextParser::plainText)?.takeIf { it.isNotEmpty() },
+            params = ability.params.orEmpty().map(ItemTextParser::plainText).filter { it.isNotEmpty() },
+            text = text + listOfNotNull(ability.story?.let(ItemTextParser::plainText)?.takeIf { it.isNotEmpty() }),
+            facts = facts,
+            effects = ability.effects.orEmpty().map(ItemTextParser::plainText).filter { it.isNotEmpty() },
+            notes = ability.notes.orEmpty().map(ItemTextParser::plainText).filter { it.isNotEmpty() },
+        )
+    }
 
-        val result = buildList {
-            if (localItemDescription.cost != null) add(VOItemInfo.TextLine(res.getString(R.string.cost, localItemDescription.cost)))
-            if (localItemDescription.boughtFrom != null) add(VOItemInfo.TextLine(res.getString(R.string.bought_from, localItemDescription.boughtFrom)))
+    private fun section(kind: VOSectionKind, lines: List<String>?): VOSection? {
+        val items = lines.orEmpty().map(ItemTextParser::plainText).filter { it.isNotEmpty() }
+        return if (items.isEmpty()) null else VOSection(kind, items)
+    }
 
-            if (localItemDescription.name != null) {
-                val voRecipes = localItemDescription.consistFrom?.map { recipeName ->
-                    VORecipe(getFullUrlItemImage(recipeName), recipeName)
-                } ?: emptyList()
-                add(VOItemInfo.Recipe(itemName, getFullUrlItemImage(itemName), voRecipes))
-            }
+    /** Falls back to English: wiki-only items and fresh patches may not have a localized file yet. Null when the item has no file at all. */
+    private fun readItem(key: String, appLocale: AppLocale): LocalItemInfo? {
+        val text = runCatching { readText("items/$key/${appLocale.value}/description.json") }
+            .recoverCatching { readText("items/$key/${AppLocale.English.value}/description.json") }
+            .getOrNull() ?: return null
+        return runCatching { json.decodeFromString<LocalItemInfo>(text) }.getOrNull()
+    }
 
-            if (localItemDescription.description != null) {
-                add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.description.toSpanned())))
-            }
+    private fun readText(path: String): String = res.getAssets(path).bufferedReader().use { it.readText() }
 
-            if (localItemDescription.bonuses != null) {
-                add(VOItemInfo.Body(BodyViewHolder.Data(localItemDescription.bonuses.toStringList())))
-            }
+    private fun hasAsset(path: String): Boolean = runCatching { res.getAssets(path).close() }.isSuccess
 
-            localItemDescription.abilities?.let { list ->
-                for (ability in list) {
-                    if (ability.abilityName == null) continue
-                    add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.abilities, ability.abilityName), false, ability.audioUrl)))
-                    if (ability.effects != null) ability.effects.forEach { effect -> add(VOItemInfo.TextLine(effect)) }
-                    if (ability.description != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.description.toSpanned())))
-                    if (ability.story != null) add(VOItemInfo.Body(BodyViewHolder.Data(ability.story.toSpanned())))
-                    if (!ability.params.isNullOrEmpty()) add(VOItemInfo.Body(BodyViewHolder.Data(ability.params.toStringList(true))))
-                    if (!ability.notes.isNullOrEmpty()) add(VOItemInfo.Body(BodyViewHolder.Data(ability.notes.toStringList(true))))
-                    if (ability.mana != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.mana.toSpanned(), n7.ad2.core.ui.R.drawable.mana)))
-                    if (ability.cooldown != null) add(VOItemInfo.ImageLine(ImageLineViewHolder.Data(ability.cooldown.toSpanned(), n7.ad2.core.ui.R.drawable.cooldown)))
-                }
-            }
+    private fun imageUrl(key: String): String = "file:///android_asset/items/$key/full.webp"
 
-            localItemDescription.tips?.let { tips ->
-                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.tips))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(tips.toStringList(true))))
-            }
+    /** "Arcane Blink" -> "arcane_blink", the folder names of the assets. */
+    private fun itemKey(name: String): String = name.lowercase().replace(" ", "_")
 
-            localItemDescription.lore?.let { lore ->
-                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.lore))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(lore.toStringList(true))))
-            }
-
-            localItemDescription.trivia?.let { trivia ->
-                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.trivia))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(trivia.toStringList(true))))
-            }
-
-            localItemDescription.additionalInformation?.let { additionalInfo ->
-                add(VOItemInfo.Title(HeaderPlayableViewHolder.Data(res.getString(R.string.additional_information))))
-                add(VOItemInfo.Body(BodyViewHolder.Data(additionalInfo.toStringList(true))))
-            }
-        }
-        emit(result)
-    }.flowOn(dispatchers.IO)
+    private fun heroKey(name: String): String = name.lowercase().replace(" ", "_")
 }

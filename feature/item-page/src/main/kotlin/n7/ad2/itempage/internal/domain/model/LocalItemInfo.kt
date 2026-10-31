@@ -27,6 +27,14 @@ data class LocalItemInfo(
     val trivia: List<String>? = null,
     @SerialName("bonuses")
     val bonuses: List<String>? = null,
+    /** Names of the items this one is a component of. */
+    @SerialName("upgradeIn")
+    val upgradeIn: List<String>? = null,
+    /** Shop and inventory facts: neutral tier, charges, stock, share/sell/disassemble rules. */
+    @SerialName("properties")
+    val properties: List<String>? = null,
+    @SerialName("recommendedFor")
+    val recommendedFor: List<String>? = null,
 )
 
 @Serializable
