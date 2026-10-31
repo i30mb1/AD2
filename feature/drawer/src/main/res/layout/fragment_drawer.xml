@@ -30,15 +30,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_log" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_menu"
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/compose_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_menu" />
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/iv_settings"
@@ -49,12 +44,6 @@
         android:contentDescription="@string/desc_settings"
         android:padding="12dp"
         android:src="@drawable/ic_setting" />
-
-    <n7.ad2.core.ui.frameCounter.PerformanceInfoView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="20dp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"

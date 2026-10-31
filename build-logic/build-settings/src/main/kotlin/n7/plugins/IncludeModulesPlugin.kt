@@ -13,7 +13,10 @@ import kotlin.time.DurationUnit
 class IncludeModulesPlugin : Plugin<Settings> {
 
     private val dirsNamesWithoutModules = listOf("build-logic", "build")
-    private val ignoreModules = listOf("AD2", "micro-benchmark", "macro-benchmark")
+    private val ignoreModules = listOf("AD2", "micro-benchmark")
+
+    // included only when targeted explicitly, e.g. `:macro-benchmark:connectedBenchmarkAndroidTest`
+    private val targetOnlyModules = listOf("macro-benchmark")
 
     override fun apply(target: Settings) = with(target) {
         val targetModule = readTargetModule(rootDir, target)
@@ -41,7 +44,7 @@ class IncludeModulesPlugin : Plugin<Settings> {
     }
 
     private fun Settings.includeAllModule(): Int {
-        val modules = getAllModules()
+        val modules = getAllModules().filter { targetOnlyModules.contains(it.path.name).not() }
         modules.forEach { include(it.module) }
         return modules.size
     }
@@ -133,6 +136,11 @@ class IncludeModulesPlugin : Plugin<Settings> {
                     dependencies.add(projectReference)
                 }
             }
+        }
+
+        // com.android.test модуль: targetProjectPath = ":app"
+        lines.forEach { line ->
+            Regex("targetProjectPath\\s*=\\s*\"([^\"]+)\"").find(line)?.let { dependencies.add(it.groupValues[1]) }
         }
 
         // Для любого модуля, который использует convention плагины, добавляем core:rules

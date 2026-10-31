@@ -1,5 +1,10 @@
 package n7.ad2.macrobenchmark
 
+import androidx.benchmark.ExperimentalBenchmarkConfigApi
+import androidx.benchmark.ExperimentalConfig
+import androidx.benchmark.StartupInsightsConfig
+import androidx.benchmark.macro.CompilationMode
+import androidx.benchmark.perfetto.ExperimentalPerfettoCaptureApi
 import androidx.benchmark.macro.StartupMode
 import androidx.benchmark.macro.StartupTimingMetric
 import androidx.benchmark.macro.junit4.MacrobenchmarkRule
@@ -9,17 +14,14 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 /**
- * This is an example startup benchmark.
+ * Cold start of the `benchmark` build of `:app` with App Startup Insights:
+ * after the metrics the report lists startup problems found in the trace
+ * (main thread binder calls, lock contention, JIT, CPU contention, ...).
  *
- * It navigates to the device's home screen, and launches the default activity.
- *
- * Before running this benchmark:
- * 1) switch your app's active build variant in the Studio (affects Studio runs only)
- * 2) add `<profileable android:shell="true" />` to your app's manifest, within the `<application>` tag
- *
- * Run this benchmark from Studio to see startup measurements, and captured system traces
- * for investigating your app's performance.
+ * `startupCompilationNone` - worst case (no AOT, no baseline profile),
+ * `startupBaselineProfile` - what users get after install from Play.
  */
+@OptIn(ExperimentalBenchmarkConfigApi::class, ExperimentalPerfettoCaptureApi::class)
 @RunWith(AndroidJUnit4::class)
 class StartupBenchmark {
 
@@ -27,33 +29,20 @@ class StartupBenchmark {
     val benchmarkRule = MacrobenchmarkRule()
 
     @Test
-    fun startup() = benchmarkRule.measureRepeated(
+    fun startupCompilationNone() = startup(CompilationMode.None())
+
+    @Test
+    fun startupBaselineProfile() = startup(CompilationMode.Partial())
+
+    private fun startup(compilationMode: CompilationMode) = benchmarkRule.measureRepeated(
         packageName = "n7.ad2",
         metrics = listOf(StartupTimingMetric()),
-        iterations = 5,
+        iterations = 10,
+        experimentalConfig = ExperimentalConfig(startupInsightsConfig = StartupInsightsConfig(isEnabled = true)),
+        compilationMode = compilationMode,
         startupMode = StartupMode.COLD,
-        setupBlock = {
-            pressHome()
-        },
+        setupBlock = { pressHome() },
     ) {
         startActivityAndWait()
     }
 }
-
-// @Test
-// fun startupNoCompilation() = startup(CompilationMode.None())
-//
-// @Test
-// fun startupBaselineProfile() = startup(CompilationMode.Partial())
-//
-// private fun startup(mode: CompilationMode) = benchmarkRule.measureRepeated(
-//    packageName = "n7.ad2",
-//    metrics = listOf(StartupTimingMetric()),
-//    iterations = 5,
-//    compilationMode = mode,
-//    startupMode = StartupMode.COLD,
-// ) {
-//    pressHome()
-//    startActivityAndWait()
-//    device.wait(Until.hasObject(By.res("rv")), 5000)
-// }

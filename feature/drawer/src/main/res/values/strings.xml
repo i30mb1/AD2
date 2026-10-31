@@ -6,9 +6,38 @@
     <string name="tournaments">Tournaments</string>
     <string name="games">Games</string>
     <string name="streams">Streams</string>
+    <string name="heroes_subtitle">Abilities and guides</string>
+    <string name="items_subtitle">Builds and recipes</string>
+    <string name="news_subtitle">Patches and events</string>
+    <string name="tournaments_subtitle">Matches and results</string>
+    <string name="streams_subtitle">Live broadcasts</string>
+    <string name="games_subtitle">Quizzes and records</string>
+    <string name="menu_tagline">Dota 2 guide</string>
+    <string name="menu_device">Device</string>
+    <string name="menu_smooth">smooth</string>
+    <string name="menu_jank">jank</string>
+    <string name="menu_disabled">Temporarily unavailable</string>
     <string name="main_press_again_to_exit">press again to exit</string>
     <string name="item_disabled">This item currently disabled!</string>
 
     <string name="desc_background" translatable="false">background</string>
     <string name="desc_settings" translatable="false">settings</string>
+
+    <plurals name="menu_heroes_count">
+        <item quantity="one">%d hero</item>
+        <item quantity="other">%d heroes</item>
+    </plurals>
+    <plurals name="menu_items_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <plurals name="menu_news_unread">
+        <item quantity="one">%d new post</item>
+        <item quantity="other">%d new posts</item>
+    </plurals>
+    <plurals name="menu_live_matches">
+        <item quantity="one">LIVE · %d match</item>
+        <item quantity="other">LIVE · %d matches</item>
+    </plurals>
+    <string name="menu_viewers">LIVE · %s watching</string>
 </resources>

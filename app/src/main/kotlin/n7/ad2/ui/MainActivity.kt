@@ -5,9 +5,6 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
@@ -82,10 +79,5 @@ class MainActivity :
 
     private fun setupInsets() {
         enableEdgeToEdge()
-        ViewCompat.setOnApplyWindowInsetsListener(binding.tvFps) { view, insets ->
-            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            view.updatePadding(top = statusBarsInsets.top)
-            insets
-        }
     }
 }

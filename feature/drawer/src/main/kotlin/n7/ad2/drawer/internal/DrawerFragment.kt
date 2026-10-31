@@ -14,11 +14,16 @@ import androidx.fragment.app.commitNow
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.ViewCompositionStrategy
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
@@ -27,8 +32,12 @@ import n7.ad2.android.SplashScreen
 import n7.ad2.android.TouchEvent
 import n7.ad2.android.findDependencies
 import n7.ad2.app.logger.Logger
+import n7.ad2.core.ui.compose.AppTheme
+import n7.ad2.core.ui.frameCounter.JankStatsFrameCounter
+import n7.ad2.core.ui.performance.Poller
+import n7.ad2.drawer.internal.domain.PerformanceMapper
+import n7.ad2.drawer.internal.compose.DrawerMenu
 import n7.ad2.drawer.internal.adapter.LoggerAdapter
-import n7.ad2.drawer.internal.adapter.MainMenuListAdapter
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.di.DaggerDrawerComponent
 import n7.ad2.drawer.internal.domain.vo.VOMenu
@@ -76,7 +85,7 @@ internal class DrawerFragment :
         _binding = FragmentDrawerBinding.bind(view)
         lifecycle.addObserver(binding.fingerCoordinator)
 
-        setupMenuAdapter()
+        setupMenu()
         setupFingerCoordinator()
         setupLoggerAdapter()
         setupInsets()
@@ -88,7 +97,6 @@ internal class DrawerFragment :
         super.onDestroyView()
         lifecycle.removeObserver(binding.fingerCoordinator)
         binding.rvLog.adapter = null
-        binding.rvMenu.adapter = null
         _binding = null
         (activity as TouchEvent).dispatchTouchEvent = null
     }
@@ -162,17 +170,23 @@ internal class DrawerFragment :
         }
     }
 
-    private fun setupMenuAdapter() {
-        val linearLayoutManager = LinearLayoutManager(requireContext())
-        val mainMenuAdapter = MainMenuListAdapter(layoutInflater, onMenuItemClick)
-        binding.rvMenu.apply {
-            layoutManager = linearLayoutManager
-            adapter = mainMenuAdapter
+    private fun setupMenu() {
+        val performanceFlow = Poller(requireContext(), viewLifecycleOwner.lifecycle).usage.map(PerformanceMapper::map)
+        val jankFlow = MutableStateFlow<Boolean?>(null)
+        JankStatsFrameCounter(viewLifecycleOwner.lifecycle, requireActivity().window).isJunkCallback = { isJank -> jankFlow.value = isJank }
+        val version = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0).versionName.orEmpty()
+        binding.composeMenu.setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
+        binding.composeMenu.setContent {
+            AppTheme {
+                val menu by viewModel.menu.collectAsStateWithLifecycle()
+                val performance by performanceFlow.collectAsStateWithLifecycle(emptyList())
+                val isJank by jankFlow.collectAsStateWithLifecycle()
+                DrawerMenu(menu = menu, performance = performance, isJank = isJank, version = "v$version", onMenuClicked = onMenuItemClick)
+            }
         }
         viewModel.menu.flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
             .filter { list -> list.isNotEmpty() }
             .onEach { list ->
-                mainMenuAdapter.submitList(list)
                 setFragment(list.first { menu -> menu.isSelected })
                 (activity as SplashScreen).shouldKeepOnScreen = false
             }

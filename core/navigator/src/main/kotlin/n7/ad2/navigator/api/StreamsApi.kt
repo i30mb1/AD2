@@ -10,4 +10,7 @@ interface StreamsApi {
 
     /** Opens the in-app player for a Twitch channel. */
     fun getStreamIntent(context: Context, streamerName: String): Intent
+
+    /** Viewers of the top Dota 2 streams on Twitch, loads them from the network. */
+    suspend fun getViewersCount(context: Context): Int
 }

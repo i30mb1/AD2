@@ -21,6 +21,9 @@ interface Poller {
     val usage: SharedFlow<List<ResourceUsage>>
 }
 
+/** Polls CPU / RAM / FPS while [lifecycle] is alive. */
+fun Poller(context: Context, lifecycle: Lifecycle): Poller = PollerImpl(context, lifecycle)
+
 internal class PollerImpl(private val context: Context, private val lifecycle: Lifecycle) : Poller {
 
     private val _usage: MutableSharedFlow<List<ResourceUsage>> = MutableSharedFlow(replay = 1)

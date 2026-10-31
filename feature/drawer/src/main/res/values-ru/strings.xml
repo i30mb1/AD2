@@ -6,6 +6,43 @@
     <string name="news">Новости</string>
     <string name="streams">Стримы</string>
     <string name="games">Игры</string>
+    <string name="heroes_subtitle">Способности и гайды</string>
+    <string name="items_subtitle">Сборки и рецепты</string>
+    <string name="news_subtitle">Патчи и события</string>
+    <string name="tournaments_subtitle">Матчи и результаты</string>
+    <string name="streams_subtitle">Прямые эфиры</string>
+    <string name="games_subtitle">Викторины и рекорды</string>
+    <string name="menu_tagline">справочник Dota 2</string>
+    <string name="menu_device">Устройство</string>
+    <string name="menu_smooth">плавно</string>
+    <string name="menu_jank">рывки</string>
+    <string name="menu_disabled">Временно недоступно</string>
     <string name="main_press_again_to_exit">нажмите снова для выхода</string>
     <string name="item_disabled">Этот пункт меню временно отключен!</string>
+
+    <plurals name="menu_heroes_count">
+        <item quantity="one">%d герой</item>
+        <item quantity="few">%d героя</item>
+        <item quantity="many">%d героев</item>
+        <item quantity="other">%d героя</item>
+    </plurals>
+    <plurals name="menu_items_count">
+        <item quantity="one">%d предмет</item>
+        <item quantity="few">%d предмета</item>
+        <item quantity="many">%d предметов</item>
+        <item quantity="other">%d предмета</item>
+    </plurals>
+    <plurals name="menu_news_unread">
+        <item quantity="one">%d новая</item>
+        <item quantity="few">%d новые</item>
+        <item quantity="many">%d новых</item>
+        <item quantity="other">%d новых</item>
+    </plurals>
+    <plurals name="menu_live_matches">
+        <item quantity="one">LIVE · %d матч</item>
+        <item quantity="few">LIVE · %d матча</item>
+        <item quantity="many">LIVE · %d матчей</item>
+        <item quantity="other">LIVE · %d матча</item>
+    </plurals>
+    <string name="menu_viewers">LIVE · смотрят %s</string>
 </resources>

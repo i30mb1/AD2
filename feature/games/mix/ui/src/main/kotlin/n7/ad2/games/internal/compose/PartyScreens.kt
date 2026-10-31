@@ -5,7 +5,6 @@ import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -37,8 +36,6 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -229,7 +226,7 @@ private fun PickCard(avatarName: String, label: String, color: Color, pick: Pick
         }
         Box(Modifier.size(64.dp).clip(RoundedCornerShape(12.dp)).background(LineColor), contentAlignment = Alignment.Center) {
             if (game != null) {
-                Image(painterResource(game.backgroundImage), contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
+                GameCover(game, 64.dp, shape = RoundedCornerShape(12.dp))
             } else {
                 Text("?", color = DimColor, fontSize = 24.sp)
             }
@@ -285,7 +282,7 @@ private fun GameTile(game: GameVO, mine: Boolean, peers: Boolean, peerName: Stri
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            Image(painterResource(game.backgroundImage), contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.size(48.dp).clip(RoundedCornerShape(10.dp)))
+            GameCover(game, 48.dp, shape = RoundedCornerShape(10.dp))
             Text(game.title, color = AppTheme.color.textSecondaryColor, fontSize = 11.sp, lineHeight = 13.sp, textAlign = TextAlign.Center, maxLines = 2, minLines = 2)
         }
         if (mine) Avatar(stringResource(R.string.game_me_letter), MeColor, 18.dp, Modifier.offset(x = 6.dp).border(2.dp, AppTheme.color.background, CircleShape))

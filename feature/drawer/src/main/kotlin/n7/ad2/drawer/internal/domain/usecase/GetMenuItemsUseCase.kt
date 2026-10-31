@@ -48,17 +48,23 @@ internal class GetMenuItemsUseCase @Inject constructor(
         logger.log("could not load settings (${error.message})")
         emit(Settings(defaultMenu))
     }.map { settings ->
-        settings.menu?.mapNotNull { menu ->
-            when (menu.type) {
-                VOMenuType.HEROES -> VOMenu(menu.type, res.getString(R.string.heroes), menu.isEnable, true)
-                VOMenuType.ITEMS -> VOMenu(menu.type, res.getString(R.string.items), menu.isEnable)
-                VOMenuType.NEWS -> VOMenu(menu.type, res.getString(R.string.news), menu.isEnable)
-                VOMenuType.TOURNAMENTS -> VOMenu(menu.type, res.getString(R.string.tournaments), menu.isEnable)
-                VOMenuType.STREAMS -> VOMenu(menu.type, res.getString(R.string.streams), menu.isEnable)
-                VOMenuType.GAMES -> VOMenu(menu.type, res.getString(R.string.games), menu.isEnable)
-                VOMenuType.UNKNOWN -> VOMenu(menu.type, menu.type.name, false)
-                else -> null
+        settings.menu?.map { menu ->
+            val (title, subtitle) = when (menu.type) {
+                VOMenuType.HEROES -> R.string.heroes to R.string.heroes_subtitle
+                VOMenuType.ITEMS -> R.string.items to R.string.items_subtitle
+                VOMenuType.NEWS -> R.string.news to R.string.news_subtitle
+                VOMenuType.TOURNAMENTS -> R.string.tournaments to R.string.tournaments_subtitle
+                VOMenuType.STREAMS -> R.string.streams to R.string.streams_subtitle
+                VOMenuType.GAMES -> R.string.games to R.string.games_subtitle
+                VOMenuType.UNKNOWN -> return@map VOMenu(menu.type, menu.type.name, R.string.menu_disabled, false)
             }
+            VOMenu(
+                type = menu.type,
+                title = res.getString(title),
+                subtitle = if (menu.isEnable) subtitle else R.string.menu_disabled,
+                isEnable = menu.isEnable,
+                isSelected = menu.type == VOMenuType.HEROES,
+            )
         } ?: error("sorry we fucked up...")
     }.flowOn(dispatchers.Default)
 }
