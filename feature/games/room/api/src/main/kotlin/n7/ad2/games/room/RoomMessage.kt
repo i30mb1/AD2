@@ -43,4 +43,9 @@ sealed interface RoomMessage {
     @Serializable
     @SerialName("leave")
     data class Leave(val playerId: String) : RoomMessage
+
+    /** Данные вне игры (например таблица рекордов), ходят в Ready и Playing; [channel] разделяет получателей */
+    @Serializable
+    @SerialName("sync")
+    data class Sync(val channel: String, val payload: String) : RoomMessage
 }

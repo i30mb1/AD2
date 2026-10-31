@@ -19,6 +19,7 @@ internal class RoomCodecTest {
             RoomMessage.StartGame("spell", GameMode.VERSUS, 42L),
             RoomMessage.GameEvent("g", """{"answer":3}"""),
             RoomMessage.Leave("h"),
+            RoomMessage.Sync("records", "[]"),
         )
 
         messages.forEach { message -> Truth.assertThat(RoomCodec.decode(RoomCodec.encode(message))).isEqualTo(message) }

@@ -26,6 +26,12 @@ interface Room {
 
     /** Только в [RoomState.Playing], иначе [IllegalStateException] */
     fun sendEvent(payload: String)
+
+    /** Sync-сообщения второго игрока */
+    val syncEvents: Flow<RoomMessage.Sync>
+
+    /** В [RoomState.Ready] и [RoomState.Playing], иначе [IllegalStateException] */
+    fun sendSync(channel: String, payload: String)
     fun leave()
 }
 

@@ -34,6 +34,8 @@ internal class RoomEngine(
     override val state: StateFlow<RoomState> = _state.asStateFlow()
     private val _events = MutableSharedFlow<RoomMessage.GameEvent>(extraBufferCapacity = 64)
     override val events: Flow<RoomMessage.GameEvent> = _events.asSharedFlow()
+    private val _syncEvents = MutableSharedFlow<RoomMessage.Sync>(extraBufferCapacity = 64)
+    override val syncEvents: Flow<RoomMessage.Sync> = _syncEvents.asSharedFlow()
 
     init {
         scope.launch { transport.status.collect(::onStatus) }
@@ -51,6 +53,12 @@ internal class RoomEngine(
     override fun sendEvent(payload: String) {
         check(_state.value is RoomState.Playing) { "Events can be sent only while Playing, state=${_state.value}" }
         send(RoomMessage.GameEvent(me.id, payload))
+    }
+
+    override fun sendSync(channel: String, payload: String) {
+        val current = _state.value
+        check(current is RoomState.Ready || current is RoomState.Playing) { "Sync can be sent only in Ready or Playing, state=$current" }
+        send(RoomMessage.Sync(channel, payload))
     }
 
     override fun leave() = synchronized(this) {
@@ -92,6 +100,7 @@ internal class RoomEngine(
             }
             is RoomMessage.GameEvent -> if (message.playerId != me.id) _events.tryEmit(message)
             is RoomMessage.Leave -> close(CloseReason.PEER_LEFT)
+            is RoomMessage.Sync -> if (current is RoomState.Ready || current is RoomState.Playing) _syncEvents.tryEmit(message)
         }
     }
 

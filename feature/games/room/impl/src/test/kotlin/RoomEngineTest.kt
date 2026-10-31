@@ -218,6 +218,36 @@ internal class RoomEngineTest {
     }
 
     @Test
+    fun `sync is delivered in Ready and Playing`() = runTest {
+        val transport = FakeTransport()
+        val room = readyHost(transport)
+        val syncs = mutableListOf<RoomMessage.Sync>()
+        backgroundScope.launch { room.syncEvents.toList(syncs) }
+        runCurrent()
+
+        room.sendSync("records", "a")
+        transport.receive(RoomMessage.Sync("records", "b"))
+        runCurrent()
+        room.startGame("spell", GameMode.SOLO)
+        room.sendSync("records", "c")
+        runCurrent()
+
+        Truth.assertThat(syncs).containsExactly(RoomMessage.Sync("records", "b"))
+        Truth.assertThat(transport.sent.filterIsInstance<RoomMessage.Sync>()).containsExactly(RoomMessage.Sync("records", "a"), RoomMessage.Sync("records", "c")).inOrder()
+    }
+
+    @Test
+    fun `sendSync in Waiting throws and sends nothing`() = runTest {
+        val transport = FakeTransport()
+        val room = hostRoom(transport)
+        transport.status.value = TransportStatus.Listening(5000)
+        runCurrent()
+
+        assertThrows(IllegalStateException::class.java) { room.sendSync("records", "a") }
+        Truth.assertThat(transport.sent).isEmpty()
+    }
+
+    @Test
     fun `garbage on the wire is ignored`() = runTest {
         val transport = FakeTransport()
         val room = readyHost(transport)
