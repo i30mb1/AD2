@@ -18,6 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -37,6 +38,7 @@ import n7.ad2.core.ui.frameCounter.JankStatsFrameCounter
 import n7.ad2.core.ui.performance.Poller
 import n7.ad2.drawer.internal.domain.PerformanceMapper
 import n7.ad2.drawer.internal.compose.DrawerMenu
+import n7.ad2.drawer.internal.adapter.LogFade
 import n7.ad2.drawer.internal.adapter.LoggerAdapter
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.di.DaggerDrawerComponent
@@ -203,8 +205,19 @@ internal class DrawerFragment :
     private fun setupLoggerAdapter() = viewLifecycleOwner.lifecycleScope.launch {
         val shouldDisplayLog = viewModel.isLogWidgetEnabled()
         if (!shouldDisplayLog) return@launch
+        binding.rvLog.updateLayoutParams { height = resources.displayMetrics.heightPixels / 2 }
         val logLayoutManager = object : LinearLayoutManager(requireContext()) {
             override fun canScrollVertically(): Boolean = false
+
+            override fun onLayoutCompleted(state: RecyclerView.State?) {
+                super.onLayoutCompleted(state)
+                val rowHeight = getChildAt(0)?.height ?: return
+                val fadeEnd = height - LogFade.FULLY_VISIBLE_LOGS * rowHeight
+                for (index in 0 until childCount) {
+                    val child = getChildAt(index) ?: continue
+                    child.alpha = LogFade.alpha(child.top, fadeEnd)
+                }
+            }
         }
         logLayoutManager.stackFromEnd = true
         binding.rvLog.layoutManager = logLayoutManager
