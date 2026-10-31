@@ -2,6 +2,9 @@ package n7.ad2.games.internal.leaderboard
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -34,6 +37,31 @@ import n7.ad2.games.internal.lobby.Accent
 import n7.ad2.games.internal.lobby.Tabs
 import n7.ad2.games.room.GameMode
 
+/** Игр больше, чем помещается в строку - вкладки прокручиваются */
+@Composable
+private fun GameChips(items: List<String>, selected: Int, onSelect: (Int) -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        items.forEachIndexed { index, title ->
+            Text(
+                text = title,
+                color = if (index == selected) Color.White else AppTheme.color.textSecondaryColor,
+                style = AppTheme.style.body,
+                maxLines = 1,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(if (index == selected) Accent else AppTheme.color.surface)
+                    .clickable { onSelect(index) }
+                    .padding(horizontal = 14.dp, vertical = 8.dp),
+            )
+        }
+    }
+}
+
 @Composable
 internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onGame: (String) -> Unit, onMode: (GameMode) -> Unit) {
     Column(
@@ -44,8 +72,8 @@ internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onGame: (Strin
     ) {
         Text(stringResource(R.string.leaderboard_title), color = AppTheme.color.textColor, fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
         Spacer(Modifier.height(14.dp))
-        Tabs(
-            items = listOf(stringResource(R.string.spell_cost), stringResource(R.string.guess_hero), stringResource(R.string.higher_lower), stringResource(R.string.build_item)),
+        GameChips(
+            items = listOf(stringResource(R.string.spell_cost), stringResource(R.string.guess_hero), stringResource(R.string.higher_lower), stringResource(R.string.build_item), stringResource(R.string.kill_creep)),
             selected = LeaderboardViewModel.State.GAMES.indexOf(state.gameId),
             onSelect = { onGame(LeaderboardViewModel.State.GAMES[it]) },
         )

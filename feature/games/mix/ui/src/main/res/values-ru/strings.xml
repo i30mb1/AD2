@@ -5,6 +5,10 @@
     <string name="guess_hero">Угадай героя</string>
     <string name="higher_lower">Больше или меньше</string>
     <string name="build_item">Собери предмет</string>
+    <string name="kill_creep">Добей крипа</string>
+    <string name="creep_early">рано ❌</string>
+    <string name="creep_kills">Добито крипов: %d</string>
+    <string name="creep_lost">Упущено союзникам: %d</string>
     <string name="build_pick">выберите компонентов: %d</string>
     <string name="build_button">Собрать</string>
     <string name="build_recipe">рецепт</string>

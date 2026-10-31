@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.text.input.clearText
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -93,6 +94,12 @@ internal fun GameScreen(messages: List<Message>, event: (event: XoScreenEvent) -
             message,
             "Send",
             true,
-        ) { event(XoScreenEvent.SendMessage(message.text.toString())) }
+        ) {
+            val text = message.text.toString()
+            if (text.isNotBlank()) {
+                event(XoScreenEvent.SendMessage(text))
+                message.clearText()
+            }
+        }
     }
 }

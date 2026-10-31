@@ -16,6 +16,7 @@ import n7.ad2.games.internal.compose.GamesScreen
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.killCreep.KillCreepFragment
+import n7.ad2.games.internal.games.killCreep.KillCreepViewModel
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.internal.lobby.LobbyFragment
@@ -46,7 +47,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
 
     private fun onGameClicked(game: GameVO, mode: GameMode) {
         val fragment = when (game) {
-            is GameVO.Apm -> KillCreepFragment.getInstance()
+            is GameVO.Apm -> if (mode == GameMode.SOLO) KillCreepFragment.getInstance(mode) else LobbyFragment.getInstance(mode, KillCreepViewModel.GAME_ID)
             is GameVO.CanYouBuyIt -> TODO()
             is GameVO.GuessSkillMana, is GameVO.GuessHero, is GameVO.HigherLower, is GameVO.BuildItem -> {
                 val quizId = requireNotNull(game.quizId)

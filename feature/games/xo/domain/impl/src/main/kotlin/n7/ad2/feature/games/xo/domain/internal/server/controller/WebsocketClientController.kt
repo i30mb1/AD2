@@ -41,6 +41,8 @@ class WebsocketClientController(private val scope: CoroutineScope = CoroutineSco
     override fun connect(name: String, ip: InetAddress, port: Int) {
         scope.launch {
             if (socket != null) error("Already connected")
+            // новая попытка: старое «Connect failed» не должно висеть в чате после удачного подключения
+            _state.update { it.copy(messages = emptyList()) }
             try {
                 socket = clientCreator.create(ip, port)
             } catch (e: ClientCreatorImpl.Companion.ClientSocketException) {

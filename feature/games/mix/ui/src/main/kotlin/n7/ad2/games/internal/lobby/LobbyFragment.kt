@@ -13,6 +13,8 @@ import n7.ad2.android.findDependencies
 import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.core.ui.content
 import n7.ad2.games.internal.di.DaggerGamesComponent
+import n7.ad2.games.internal.games.killCreep.KillCreepFragment
+import n7.ad2.games.internal.games.killCreep.KillCreepViewModel
 import n7.ad2.games.internal.games.skillmp.SkillGameFragment
 import n7.ad2.games.internal.games.skillmp.SkillGameViewModel
 import n7.ad2.games.room.GameMode
@@ -55,7 +57,12 @@ internal class LobbyFragment : Fragment() {
             viewModel.openGame.collect { playing ->
                 // лобби больше не нужно: назад из игры ведет в список игр
                 parentFragmentManager.popBackStack()
-                getMainFragmentNavigator?.setMainFragment(SkillGameFragment.getInstance(playing.mode, playing.gameId)) { addToBackStack(null) }
+                val game = if (playing.gameId == KillCreepViewModel.GAME_ID) {
+                    KillCreepFragment.getInstance(playing.mode)
+                } else {
+                    SkillGameFragment.getInstance(playing.mode, playing.gameId)
+                }
+                getMainFragmentNavigator?.setMainFragment(game) { addToBackStack(null) }
             }
         }
     }

@@ -9,6 +9,10 @@
     <string name="guess_hero">Guess the Hero</string>
     <string name="higher_lower">Higher or Lower</string>
     <string name="build_item">Build the Item</string>
+    <string name="kill_creep">Last Hit</string>
+    <string name="creep_early">early ❌</string>
+    <string name="creep_kills">Last hits: %d</string>
+    <string name="creep_lost">Lost to allies: %d</string>
     <string name="build_pick">pick %d components</string>
     <string name="build_button">Build</string>
     <string name="build_recipe">recipe</string>

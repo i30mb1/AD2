@@ -5,16 +5,28 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.runtime.collectAsState
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import n7.ad2.android.findDependencies
+import n7.ad2.core.ui.content
 import n7.ad2.games.internal.di.DaggerGamesComponent
 import n7.ad2.games.internal.games.killCreep.compose.KillCreepScreen
-import n7.ad2.core.ui.content
+import n7.ad2.games.room.GameMode
+import n7.ad2.ktx.viewModel
+import javax.inject.Inject
 
-class KillCreepFragment : Fragment() {
+internal class KillCreepFragment : Fragment() {
 
     companion object {
-        fun getInstance() = KillCreepFragment()
+        private const val ARG_MODE = "mode"
+
+        fun getInstance(mode: GameMode = GameMode.SOLO) = KillCreepFragment().apply { arguments = bundleOf(ARG_MODE to mode.name) }
+    }
+
+    @Inject lateinit var killCreepViewModelFactory: KillCreepViewModel.Factory
+    private val viewModel: KillCreepViewModel by viewModel {
+        killCreepViewModelFactory.create(GameMode.valueOf(requireArguments().getString(ARG_MODE, GameMode.SOLO.name)))
     }
 
     override fun onAttach(context: Context) {
@@ -23,6 +35,6 @@ class KillCreepFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        KillCreepScreen()
+        KillCreepScreen(viewModel.state.collectAsState().value, viewModel.sim, viewModel::elapsedMs, viewModel::onTap)
     }
 }
