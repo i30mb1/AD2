@@ -42,7 +42,7 @@ internal fun DeviceTile(performance: List<VOPerformance>, isJank: Boolean?, modi
     Column(
         modifier = modifier
             .clip(tileShape)
-            .background(AppTheme.color.surface.copy(alpha = 0.55f))
+            .background(AppTheme.color.surface.copy(alpha = 0.92f))
             .border(1.dp, Color.White.copy(alpha = 0.04f), tileShape)
             .padding(start = 10.dp, end = 10.dp, top = 8.dp, bottom = 10.dp),
     ) {
@@ -87,6 +87,7 @@ private fun Meter(meter: VOPerformance, modifier: Modifier) {
             fontFamily = icelandFont,
             fontSize = 18.sp,
             lineHeight = 18.sp,
+            letterSpacing = 0.sp,
             color = AppTheme.color.textColor,
             maxLines = 1,
         )

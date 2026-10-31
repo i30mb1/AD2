@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -39,35 +41,50 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.drawer.internal.data.remote.model.VOMenuType
 import n7.ad2.drawer.internal.domain.vo.VOMenu
 import n7.ad2.drawer.internal.domain.vo.VOMenuInfo
+import n7.ad2.drawer.internal.domain.vo.VOPerformance
 import n7.ad2.feature.drawer.R
 
-private val icelandFont = FontFamily(Font(R.font.iceland_normal))
-private val dimColor = Color(0xFF8E9297)
+internal val icelandFont = FontFamily(Font(R.font.iceland_normal))
+internal val dimColor = Color(0xFF8E9297)
 private val cardShape = RoundedCornerShape(10.dp)
 private val iconShape = RoundedCornerShape(8.dp)
 
-/** The menu under the screen: the logo, a card per section and the version next to the settings button that stays in the layout. */
+/**
+ * The menu under the screen: the logo, a card per section, the device tile and the version next to the settings button that stays in the layout.
+ * The parts go in one column with flexible gaps, so on a short screen they come closer instead of overlapping.
+ */
 @Composable
-internal fun DrawerMenu(menu: List<VOMenu>, version: String, onMenuClicked: (VOMenu) -> Unit) {
+internal fun DrawerMenu(
+    menu: List<VOMenu>,
+    performance: List<VOPerformance>,
+    isJank: Boolean?,
+    version: String,
+    onMenuClicked: (VOMenu) -> Unit,
+) {
     Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.statusBarsPadding().padding(start = 16.dp, top = 24.dp)) {
-            Text(text = "AD2", fontFamily = icelandFont, fontSize = 44.sp, lineHeight = 44.sp, letterSpacing = 1.sp, color = AppTheme.color.primary)
-            Text(
-                text = stringResource(R.string.menu_tagline).uppercase(),
-                fontSize = 10.sp,
-                fontWeight = FontWeight.Medium,
-                letterSpacing = 1.6.sp,
-                color = dimColor,
-            )
-        }
         Column(
             modifier = Modifier
-                .align(Alignment.CenterStart)
-                .padding(start = 12.dp)
-                .width(186.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+                .fillMaxSize()
+                .statusBarsPadding()
+                .navigationBarsPadding()
+                .padding(start = 12.dp, top = 24.dp, bottom = 72.dp),
         ) {
-            menu.forEach { item -> MenuCard(item, onClick = { onMenuClicked(item) }) }
+            Column(modifier = Modifier.padding(start = 4.dp)) {
+                Text(text = "AD2", fontFamily = icelandFont, fontSize = 44.sp, lineHeight = 44.sp, letterSpacing = 1.sp, color = AppTheme.color.primary)
+                Text(
+                    text = stringResource(R.string.menu_tagline).uppercase(),
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.Medium,
+                    letterSpacing = 1.6.sp,
+                    color = dimColor,
+                )
+            }
+            Spacer(modifier = Modifier.weight(1f))
+            Column(modifier = Modifier.width(186.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                menu.forEach { item -> MenuCard(item, onClick = { onMenuClicked(item) }) }
+            }
+            Spacer(modifier = Modifier.weight(1f).heightIn(min = 12.dp))
+            if (performance.isNotEmpty()) DeviceTile(performance, isJank, modifier = Modifier.width(186.dp))
         }
         Text(
             text = version,
