@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import n7.ad2.feature.games.xo.domain.ServerCreator
 import n7.ad2.feature.games.xo.domain.internal.server.FrameType
-import n7.ad2.feature.games.xo.domain.internal.server.OpCode
+import n7.ad2.feature.games.xo.domain.internal.server.WebSocketFrames
 import n7.ad2.feature.games.xo.domain.internal.server.data.Message
 import n7.ad2.feature.games.xo.domain.internal.server.data.ServerState
 import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
@@ -59,14 +59,12 @@ class WebsocketServerController(private val scope: CoroutineScope = CoroutineSco
             try {
                 val inputStream = socket.getInputStream()
                 val outputStream = socket.getOutputStream()
-                val reader = BufferedReader(InputStreamReader(inputStream))
                 val writer = PrintWriter(outputStream)
 
-                val headers = readHeaders(reader)
+                val headers = readHeaders(inputStream)
                 handshakeWebSocket(headers, writer)
                 runWebSocketCommunication(inputStream)
 
-                reader.close()
                 writer.close()
                 socket.close()
             } catch (e: Exception) {
@@ -77,7 +75,7 @@ class WebsocketServerController(private val scope: CoroutineScope = CoroutineSco
 
     override fun send(text: String) {
         val output = socket?.getOutputStream() ?: error("Server closed")
-        sendSocketFrame(output, text)
+        WebSocketFrames.writeText(output, text, mask = false)
         _state.update { it.copy(messages = it.messages + Message.Me(text)) }
     }
 
@@ -91,7 +89,7 @@ class WebsocketServerController(private val scope: CoroutineScope = CoroutineSco
 
     private fun runWebSocketCommunication(input: InputStream) {
         while (true) {
-            val receivedFrame = readSocketFrame(input)
+            val receivedFrame = WebSocketFrames.read(input)
             when (receivedFrame) {
                 FrameType.Close -> return
                 is FrameType.Text -> {
@@ -101,97 +99,6 @@ class WebsocketServerController(private val scope: CoroutineScope = CoroutineSco
         }
     }
 
-    private fun sendSocketFrame(output: OutputStream, text: String) {
-        val utf8Bytes = text.toByteArray()
-        output.write(0b10000001)
-        output.write(utf8Bytes.size)
-        output.write(utf8Bytes)
-        output.flush()
-    }
-
-    /**               8               16              24              32 bit
-     *  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7  byte
-     * +-+-+-+-+-------+-+-------------+-------------------------------+
-     * |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-     * |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-     * |N|V|V|V|       |S|             |   (if payload len==126/127)   |
-     * | |1|2|3|       |K|             |                               |
-     * +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-     * |     Extended payload length continued, if payload len == 127  |
-     * + - - - - - - - - - - - - - - - +-------------------------------+
-     * |                               |Masking-key, if MASK set to 1  |
-     * +-------------------------------+-------------------------------+
-     * | Masking-key (continued)       |          Payload Data         |
-     * +-------------------------------- - - - - - - - - - - - - - - - +
-     * :                     Payload Data continued ...                :
-     * + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-     * |                     Payload Data continued ...                |
-     * +---------------------------------------------------------------+
-     *
-     * [isMasked] According to RFC-6455#sedtion-5.2 All frames sent from client to server have this bit set to 1
-     */
-
-    private fun readSocketFrame(input: InputStream): FrameType {
-        // считываем первый байт (каждый бит несет информацию)
-        val b1: Int = input.read()
-        // первый бит указывает завершено ли текущее сообщение или последующие фреймы будут его продолжением
-        // val isFinalFrame = b1 and 0b10000000 // Не используется в текущей реализации
-        // три последующий бита зарезервированы на расширение протокола, и сейчас не используются
-        // val rsv1 = b1 and 0b01000000
-        // val rsv2 = b1 and 0b00100000
-        // val rsv3 = b1 and 0b00010000
-
-        /** 4 последних бита, opCode, определет тип фрейма
-         * 0: Продолжение предыдущего фрейма
-         * 1: Текстовое сообщение (Text Frame)
-         * 2: Бинарное сообщение (Binary Frame)
-         * 8: Команда закрытия (Close Frame)
-         * 9: Ping (Ping Frame)
-         * 10: Pong (Pong Frame)
-         */
-        val opCode = b1 and 0b00001111
-        when (opCode) {
-            OpCode.OPCODE_TEXT -> Unit
-            OpCode.OPCODE_CLOSE -> return FrameType.Close
-            else -> return FrameType.Close // Неподдерживаемый опкод, закрываем соединение
-        }
-
-        // считывает второй байт
-        val b2 = input.read()
-        // Проверяем, установлена ли маскировка данных (базовая зашита шифрования сообщений)
-        val isMasked = b2 and 0b10000000 != 0
-        // Извлекаем длину сообщения, в байтах
-        var frameLength = (b2 and 0b01111111).toLong()
-        when (frameLength) {
-            126L -> {
-                val byte = input.getBytes(2)
-                frameLength = (byte[0].toLong() shl 8) or byte[1].toLong()
-            }
-
-            127L -> {
-                val byte = input.getBytes(8)
-                frameLength = ByteBuffer.wrap(byte).order(ByteOrder.BIG_ENDIAN).long
-            }
-        }
-
-        val maskKey = if (isMasked) {
-            input.getBytes(4)
-        } else {
-            ByteArray(0)
-        }
-        val payload = input.getBytes(frameLength)
-        if (isMasked) {
-            unmaskedPayload(payload, maskKey)
-        }
-
-        return FrameType.Text(String(payload))
-    }
-
-    private fun unmaskedPayload(payload: ByteArray, maskKey: ByteArray) {
-        for (index in payload.indices) {
-            payload[index] = payload[index] xor maskKey[index % 4]
-        }
-    }
 
     /**
      * Согласно RFC-6455#section-1.3 чтобы доказать рукопожатие нужно:
@@ -238,24 +145,22 @@ class WebsocketServerController(private val scope: CoroutineScope = CoroutineSco
     /**
      * Читает HTTP-заголовки из [reader] и возвращает их в виде мапы (ключ - имя, значение - значение)
      *
-     * @param reader [BufferedReader], из которого будут читаться заголовки
+     * @param input поток сокета, из которого заголовки читаются побайтно (см. [WebSocketFrames.readHttpHeaderLines])
      * @return Мапа с заголовками, где ключ - имя заголовка, значение - значение заголовка
      *
      * Примечание: Функция использует метод split(":", limit = 2), где параметр [limit] ограничивает
      * разделение строки только двумя частями. Это предполагает, что строки имеют формат "name: value",
      * и мы разделяем их на две части, игнорируя остальные двоеточия, если они присутствуют в значении
      */
-    private fun readHeaders(reader: BufferedReader): MutableMap<String, String> {
+    private fun readHeaders(input: InputStream): MutableMap<String, String> {
         val headers = mutableMapOf<String, String>()
-        var line = reader.readLine()
-        while (line.isNotEmpty()) {
+        for (line in WebSocketFrames.readHttpHeaderLines(input)) {
             val headerParts = line.split(":", limit = 2)
             if (headerParts.size >= 2) {
                 val headerName = headerParts[0].trim()
                 val headerValue = headerParts[1].trim()
                 headers[headerName] = headerValue
             }
-            line = reader.readLine()
         }
         return headers
     }
