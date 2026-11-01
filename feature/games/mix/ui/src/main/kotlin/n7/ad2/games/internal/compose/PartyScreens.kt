@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.data.GameVO
+import n7.ad2.games.internal.data.modesOf
 import n7.ad2.games.internal.party.NearbyPlayer
 import n7.ad2.games.internal.party.PartyState
 import n7.ad2.games.internal.party.Pick
@@ -169,7 +170,6 @@ internal fun PartySelect(
     onLeave: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val partyGames = games.filter { it.quizId != null }
     var mode by rememberSaveable { mutableStateOf(party.myPick?.mode ?: GameMode.VERSUS) }
     Column(modifier.fillMaxSize().padding(horizontal = 12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -180,23 +180,27 @@ internal fun PartySelect(
             Text(stringResource(R.string.party_leave), color = DimColor, fontSize = 13.sp, modifier = Modifier.clickable(onClick = onLeave).padding(8.dp))
         }
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            PickCard(stringResource(R.string.game_me_letter), stringResource(R.string.party_you), MeColor, party.myPick, partyGames, mirrored = false, Modifier.weight(1f))
-            PickCard(peerName, peerName, PeerColor, party.peerPick, partyGames, mirrored = true, Modifier.weight(1f))
+            PickCard(stringResource(R.string.game_me_letter), stringResource(R.string.party_you), MeColor, party.myPick, games, mirrored = false, Modifier.weight(1f))
+            PickCard(peerName, peerName, PeerColor, party.peerPick, games, mirrored = true, Modifier.weight(1f))
         }
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             listOf(GameMode.VERSUS, GameMode.COOP).forEach { option ->
                 ModeChip(option, selected = option == mode, peerHere = party.peerPick?.mode == option, Modifier.weight(1f)) {
                     mode = option
-                    party.myPick?.let { onPick(it.gameId, option) }
+                    party.myPick?.takeIf { option in modesOf(it.gameId) }?.let { onPick(it.gameId, option) }
                 }
             }
         }
-        partyGames.chunked(3).forEach { row ->
+        games.chunked(3).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 row.forEach { game ->
-                    val id = requireNotNull(game.quizId)
-                    val (mine, peers) = tileMarks(id, party)
-                    GameTile(game, mine, peers, peerName, Modifier.weight(1f)) { onPick(id, mode) }
+                    val (mine, peers) = tileMarks(game.id, party)
+                    // a game without this mode (tic-tac-toe together) is dimmed, a tap on it plays versus
+                    val fits = mode in game.modes
+                    GameTile(game, mine, peers, peerName, Modifier.weight(1f).alpha(if (fits) 1f else 0.45f)) {
+                        if (!fits) mode = GameMode.VERSUS
+                        onPick(game.id, if (fits) mode else GameMode.VERSUS)
+                    }
                 }
                 repeat(3 - row.size) { Spacer(Modifier.weight(1f)) }
             }
@@ -208,7 +212,7 @@ internal fun PartySelect(
 
 @Composable
 private fun PickCard(avatarName: String, label: String, color: Color, pick: Pick?, games: List<GameVO>, mirrored: Boolean, modifier: Modifier) {
-    val game = games.firstOrNull { it.quizId == pick?.gameId }
+    val game = games.firstOrNull { it.id == pick?.gameId }
     val align = if (mirrored) Alignment.End else Alignment.Start
     Column(
         modifier = modifier
@@ -383,8 +387,8 @@ private fun PartySelectPreview() {
     val games = listOf(GameVO.Show(res), GameVO.Mid(res), GameVO.Invoker(res), GameVO.XO(res))
     val party = PartyState(
         session = n7.ad2.games.internal.party.Session(n7.ad2.games.room.Player("p", "Pixel 8"), Via.DIRECT),
-        myPick = Pick(requireNotNull(games[0].quizId), GameMode.VERSUS),
-        peerPick = Pick(requireNotNull(games[1].quizId), GameMode.COOP),
+        myPick = Pick(games[0].id, GameMode.VERSUS),
+        peerPick = Pick(games[1].id, GameMode.COOP),
     )
     AppTheme(isDarkTheme = true) { PartySelect(party, "Pixel 8", games, onPick = { _, _ -> }, onLeave = {}, modifier = Modifier.padding(top = 40.dp)) }
 }

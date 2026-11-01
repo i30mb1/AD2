@@ -13,9 +13,11 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import n7.ad2.games.internal.ActiveRoom
+import n7.ad2.games.internal.data.modesOf
 import n7.ad2.games.internal.games.invoker.InvokerViewModel
 import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.show.ShowViewModel
+import n7.ad2.games.internal.games.xo.XoViewModel
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LocalPlayerProvider
 import n7.ad2.games.leaderboard.Record
@@ -44,8 +46,10 @@ internal class LeaderboardViewModel @AssistedInject constructor(
         filter.value = filter.value.first to selected
     }
 
+    /** A game without the selected mode (tic-tac-toe has no «together») shows its solo records */
     fun selectGame(gameId: String) {
-        filter.value = gameId to filter.value.second
+        val mode = filter.value.second.takeIf { it in modesOf(gameId) } ?: GameMode.SOLO
+        filter.value = gameId to mode
     }
 
     private fun onlinePlayerIds(): Set<String> = when (val roomState = ActiveRoom.room?.state?.value) {
@@ -56,8 +60,10 @@ internal class LeaderboardViewModel @AssistedInject constructor(
 
     @Immutable
     data class State(val gameId: String, val mode: GameMode, val records: List<Record>, val myId: String, val online: Set<String>) {
+        val modes: List<GameMode> get() = modesOf(gameId)
+
         companion object {
-            val GAMES = listOf(ShowViewModel.GAME_ID, MidViewModel.GAME_ID, InvokerViewModel.GAME_ID)
+            val GAMES = listOf(ShowViewModel.GAME_ID, MidViewModel.GAME_ID, InvokerViewModel.GAME_ID, XoViewModel.GAME_ID)
         }
     }
 }

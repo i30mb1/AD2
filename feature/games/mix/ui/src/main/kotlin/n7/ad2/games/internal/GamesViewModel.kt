@@ -77,12 +77,12 @@ internal class GamesViewModel @AssistedInject constructor(
     /** Открыть экран игры: вдвоем - когда комната перешла в Playing, соло - «Ещё раз» */
     val openGame: Flow<OpenGame> = _openGame.receiveAsFlow()
 
-    // личный соло-рекорд для значка на карточке каждой викторины
+    // личный соло-рекорд для значка на карточке каждой игры
     private val bests = combine(
-        games.mapNotNull { it.quizId }.map { quizId ->
-            leaderboardRepository.observe(quizId, GameMode.SOLO)
-                .map { records -> quizId to records.firstOrNull { it.playerId == me.id }?.score }
-                .catch { emit(quizId to null) }
+        games.map { game ->
+            leaderboardRepository.observe(game.id, GameMode.SOLO)
+                .map { records -> game.id to records.firstOrNull { it.playerId == me.id }?.score }
+                .catch { emit(game.id to null) }
         },
     ) { bests -> bests.mapNotNull { (id, score) -> score?.let { id to it } }.toMap() }
 

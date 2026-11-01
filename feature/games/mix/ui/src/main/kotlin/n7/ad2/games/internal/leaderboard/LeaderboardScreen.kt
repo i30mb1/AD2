@@ -73,15 +73,15 @@ internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onGame: (Strin
         Text(stringResource(R.string.leaderboard_title), color = AppTheme.color.textColor, fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
         Spacer(Modifier.height(14.dp))
         GameChips(
-            items = listOf(stringResource(R.string.show), stringResource(R.string.mid), stringResource(R.string.invoker)),
+            items = listOf(stringResource(R.string.show), stringResource(R.string.mid), stringResource(R.string.invoker), stringResource(R.string.xo)),
             selected = LeaderboardViewModel.State.GAMES.indexOf(state.gameId),
             onSelect = { onGame(LeaderboardViewModel.State.GAMES[it]) },
         )
         Spacer(Modifier.height(8.dp))
         Tabs(
-            items = listOf(stringResource(R.string.games_mode_solo), stringResource(R.string.games_mode_versus), stringResource(R.string.games_mode_coop)),
-            selected = state.mode.ordinal,
-            onSelect = { onMode(GameMode.entries[it]) },
+            items = state.modes.map { stringResource(it.title()) },
+            selected = state.modes.indexOf(state.mode),
+            onSelect = { onMode(state.modes[it]) },
         )
         Spacer(Modifier.height(12.dp))
         if (state.records.isEmpty()) {
@@ -116,4 +116,10 @@ internal fun LeaderboardScreen(state: LeaderboardViewModel.State, onGame: (Strin
         }
         Text(stringResource(R.string.leaderboard_hint), color = AppTheme.color.textSecondaryColor, style = AppTheme.style.info)
     }
+}
+
+private fun GameMode.title(): Int = when (this) {
+    GameMode.SOLO -> R.string.games_mode_solo
+    GameMode.VERSUS -> R.string.games_mode_versus
+    GameMode.COOP -> R.string.games_mode_coop
 }

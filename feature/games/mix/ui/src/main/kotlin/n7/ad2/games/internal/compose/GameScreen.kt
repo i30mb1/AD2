@@ -55,13 +55,12 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.data.GameVO
-import n7.ad2.games.room.GameMode
 
 @Composable
 internal fun GamesScreen(
     viewModel: GamesViewModel,
     drawerPercentListener: DrawerPercentListener?,
-    onGameClicked: (game: GameVO, mode: GameMode) -> Unit,
+    onGameClicked: (game: GameVO) -> Unit,
     onDailyClicked: () -> Unit,
     onLeaderboardClicked: () -> Unit,
 ) {
@@ -99,7 +98,7 @@ internal fun GamesScreen(
                         else -> GamesList(
                             games = data.games,
                             bests = data.bests,
-                            onGameClicked = { game -> onGameClicked(game, GameMode.SOLO) },
+                            onGameClicked = onGameClicked,
                             onLeaderboardClicked = onLeaderboardClicked,
                             header = {
                                 NearbyCard(data.party, onPlay = viewModel::play, onHelp = { showHelp = true })
@@ -149,7 +148,7 @@ private fun GamesList(
             )
         }
         header()
-        games.forEach { game -> GameRow(game, bests[game.quizId]) { onGameClicked(game) } }
+        games.forEach { game -> GameRow(game, bests[game.id]) { onGameClicked(game) } }
     }
 }
 

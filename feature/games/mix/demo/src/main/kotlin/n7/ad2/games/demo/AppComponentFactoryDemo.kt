@@ -9,7 +9,6 @@ import n7.ad2.games.api.GamesFragmentFactory
 import n7.ad2.games.demo.di.ApplicationComponentDemo
 import n7.ad2.games.demo.di.DaggerApplicationComponentDemo
 import n7.ad2.ktx.lazyUnsafe
-import n7.ad2.xo.api.XoDependencies
 
 internal class AppComponentFactoryDemo : AppComponentFactory() {
 
@@ -19,7 +18,7 @@ internal class AppComponentFactoryDemo : AppComponentFactory() {
     override fun instantiateApplication(classLoader: ClassLoader, className: String): Application = when (className) {
         MyApplicationDemo::class.java.name -> MyApplicationDemo { application ->
             component = factory.create(application)
-            mapOf(GamesDependencies::class.java to component, XoDependencies::class.java to component)
+            mapOf(GamesDependencies::class.java to component)
         }
         else -> super.instantiateApplication(classLoader, className)
     }

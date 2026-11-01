@@ -31,10 +31,11 @@ import n7.ad2.games.internal.games.invoker.InvokerViewModel
 import n7.ad2.games.internal.games.mid.MidFragment
 import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.show.ShowFragment
+import n7.ad2.games.internal.games.xo.XoFragment
+import n7.ad2.games.internal.games.xo.XoViewModel
 import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
-import n7.ad2.xo.api.XoProvider
 
 internal class GamesFragment @JvmOverloads constructor(override var dependenciesMap: DependenciesMap = emptyMap()) :
     Fragment(),
@@ -84,16 +85,13 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
         super.onStop()
     }
 
-    /** Соло открывается сразу, вдвоем - это выбор в сессии: игра откроется, когда второй выберет то же */
-    private fun onGameClicked(game: GameVO, mode: GameMode) {
-        if (game is GameVO.XO) return open(XoProvider().getFragment().getDeclaredConstructor().newInstance())
-        val gameId = game.quizId ?: return
-        if (mode == GameMode.SOLO) open(gameFragment(gameId, mode)) else viewModel.pick(gameId, mode)
-    }
+    /** Из списка игра открывается соло; вдвоем игру выбирают в сессии, она откроется, когда выбор совпадет */
+    private fun onGameClicked(game: GameVO) = open(gameFragment(game.id, GameMode.SOLO))
 
     private fun gameFragment(gameId: String, mode: GameMode): Fragment = when (gameId) {
         MidViewModel.GAME_ID -> MidFragment.getInstance(mode)
         InvokerViewModel.GAME_ID -> InvokerFragment.getInstance(mode)
+        XoViewModel.GAME_ID -> XoFragment.getInstance(mode)
         else -> ShowFragment.getInstance(mode)
     }
 

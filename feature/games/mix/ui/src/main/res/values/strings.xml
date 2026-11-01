@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xo" translatable="false">XO</string>
+    <string name="xo">Tic-tac-toe 9×9</string>
     <string name="build_pick">pick %d components</string>
     <string name="build_button">Build</string>
     <string name="build_recipe">recipe</string>
@@ -38,7 +38,7 @@
     <string name="end_record_was">was %1$d · now %2$d</string>
     <string name="games_title">Games</string>
     <string name="games_records">Records</string>
-    <string name="games_rules_xo">classic for two</string>
+    <string name="games_rules_xo">Nine boards: your cell picks the opponent\'s board</string>
     <string name="party_alone">Nobody nearby yet</string>
     <string name="party_alone_hint">A friend shows up here once they open Games</string>
     <string name="party_help">Help</string>
@@ -198,4 +198,42 @@
     <string name="invoker_stat_invoked">invoked</string>
     <string name="invoker_stat_streak">best streak</string>
     <string name="invoker_stat_mistakes">misses</string>
+    <string name="xo_sides">Radiant vs Dire</string>
+    <string name="xo_rule">The cell of your move picks the opponent\'s board on the big field. Three boards in a row win.</string>
+    <string name="xo_you_move">Your move</string>
+    <string name="xo_bot">Bot</string>
+    <string name="xo_side_x">X · Radiant</string>
+    <string name="xo_side_o">O · Dire</string>
+    <string name="xo_waiting">Waiting for %s…</string>
+    <string name="xo_your_move_board">Your move · the %s board</string>
+    <string name="xo_your_move_any">Your move · any open board</string>
+    <string name="xo_peer_move">%s is moving</string>
+    <string name="xo_bot_thinking">The bot is thinking…</string>
+    <string name="xo_zoom_hint">tap a board to zoom it in</string>
+    <string name="xo_back_to_field">← Back to the field</string>
+    <string name="xo_any_board">any board</string>
+    <string name="xo_board_0">top left</string>
+    <string name="xo_board_1">top</string>
+    <string name="xo_board_2">top right</string>
+    <string name="xo_board_3">left</string>
+    <string name="xo_board_4">center</string>
+    <string name="xo_board_5">right</string>
+    <string name="xo_board_6">bottom left</string>
+    <string name="xo_board_7">bottom</string>
+    <string name="xo_board_8">bottom right</string>
+    <string name="xo_offer_draw">Offer a draw</string>
+    <string name="xo_draw_sent">Draw offered…</string>
+    <string name="xo_draw_declined">The draw was declined</string>
+    <string name="xo_draw_offered">%s offers a draw</string>
+    <string name="xo_accept">Accept</string>
+    <string name="xo_decline">Decline</string>
+    <string name="xo_resign">Resign</string>
+    <string name="xo_resign_sure">Sure? Tap again</string>
+    <string name="xo_end_line">three boards in a row</string>
+    <string name="xo_end_boards">the field is full, boards %1$d : %2$d</string>
+    <string name="xo_end_full">the field is full, the boards are equal</string>
+    <string name="xo_end_resigned_me">you resigned</string>
+    <string name="xo_end_resigned_peer">the opponent resigned</string>
+    <string name="xo_end_agreed">a draw by agreement</string>
+    <string name="xo_streak">Wins in a row: %d</string>
 </resources>

@@ -1,5 +1,6 @@
 package n7.ad2.games.internal.compose
 
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -8,7 +9,6 @@ import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -19,11 +19,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
@@ -60,7 +66,7 @@ internal fun GameCover(game: GameVO, size: Dp, modifier: Modifier = Modifier, sh
             is GameVO.Show -> ShowCover(size)
             is GameVO.Mid -> MidCover(size)
             is GameVO.Invoker -> InvokerCover(size)
-            is GameVO.XO -> XoCover(size)
+            is GameVO.XO -> XoCover()
         }
     }
 }
@@ -129,31 +135,40 @@ private fun BoxScope.InvokerCover(size: Dp) {
     }
 }
 
-/** Крестики-нолики на поле Света и Тьмы */
+/** Крестики 9×9: девять досок на поле Света и Тьмы, две уже взяты - большой X и большой O */
 @Composable
-private fun XoCover(size: Dp) {
-    val radiant = Color(0xFF1F4D2B)
-    val dire = Color(0xFF4D1F1F)
-    Box(
-        Modifier
-            .fillMaxSize()
-            .drawWithContent {
-                drawRect(radiant)
-                val path = androidx.compose.ui.graphics.Path().apply { moveTo(this@drawWithContent.size.width, 0f); lineTo(this@drawWithContent.size.width, this@drawWithContent.size.height); lineTo(0f, this@drawWithContent.size.height); close() }
-                drawPath(path, dire)
-            },
-    )
-    val cells = listOf("X", "O", "", "", "X", "O", "O", "", "X")
-    Column(Modifier.fillMaxSize().padding(size * 0.12f), verticalArrangement = Arrangement.spacedBy(size * 0.03f)) {
-        cells.chunked(3).forEach { row ->
-            Row(Modifier.weight(1f).fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(size * 0.03f)) {
-                row.forEach { cell ->
-                    Box(Modifier.weight(1f).fillMaxSize().background(Color(0x66000000), RoundedCornerShape(size * 0.04f)), contentAlignment = Alignment.Center) {
-                        if (cell.isNotEmpty()) Badge(cell, Modifier, size = size * 0.14f, color = if (cell == "X") Color(0xFF7FE08A) else Color(0xFFFF8A80))
-                    }
+private fun XoCover() {
+    // доска: ее клетки (x, o, .) или взявший ее (X, O)
+    val boards = listOf("X", "x.o.x.o..", "o..x....x", ".o.x.o...", "O", "..x.o..x.", "x....o...", ".x..o.x..", "o.x.x....")
+    Canvas(Modifier.fillMaxSize()) {
+        drawRect(Color(0xFF1F4D2B))
+        drawPath(Path().apply { moveTo(this@Canvas.size.width, 0f); lineTo(this@Canvas.size.width, this@Canvas.size.height); lineTo(0f, this@Canvas.size.height); close() }, Color(0xFF4D1F1F))
+        val pad = this.size.minDimension * 0.08f
+        val gap = this.size.minDimension * 0.04f
+        val board = (this.size.minDimension - pad * 2 - gap * 2) / 3
+        boards.forEachIndexed { index, cells ->
+            val origin = Offset(pad + index % 3 * (board + gap), pad + index / 3 * (board + gap))
+            drawRoundRect(Color(0x66000000), origin, Size(board, board), CornerRadius(board * 0.16f))
+            when (cells) {
+                "X", "O" -> drawMark(cells == "X", origin + Offset(board * 0.2f, board * 0.2f), board * 0.6f, board * 0.13f)
+                else -> cells.forEachIndexed { cell, mark ->
+                    if (mark == '.') return@forEachIndexed
+                    val step = board / 3
+                    drawMark(mark == 'x', origin + Offset(cell % 3 * step + step * 0.25f, cell / 3 * step + step * 0.25f), step * 0.5f, step * 0.16f)
                 }
             }
         }
+    }
+}
+
+/** Крестик или нолик в квадрате [side] от [topLeft] */
+private fun DrawScope.drawMark(cross: Boolean, topLeft: Offset, side: Float, stroke: Float) {
+    if (cross) {
+        val color = Color(0xFF7FE08A)
+        drawLine(color, topLeft, topLeft + Offset(side, side), stroke, StrokeCap.Round)
+        drawLine(color, topLeft + Offset(side, 0f), topLeft + Offset(0f, side), stroke, StrokeCap.Round)
+    } else {
+        drawCircle(Color(0xFFFF8A80), side / 2, topLeft + Offset(side / 2, side / 2), style = Stroke(stroke))
     }
 }
 

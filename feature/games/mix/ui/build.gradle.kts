@@ -16,7 +16,6 @@ dependencies {
     implementation(projects.core.secret)
 
     implementation(projects.feature.games.mix.domain.api)
-    implementation(projects.feature.games.xo.ui)
     implementation(projects.feature.games.xo.domain.api)
     implementation(projects.feature.games.xo.domain.wiring)
     implementation(projects.feature.games.mix.domain.wiring)
