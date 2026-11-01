@@ -63,8 +63,7 @@ internal fun ColumnScope.ShowEnd(state: ShowViewModel.State, actions: ShowAction
         if (state.newRecord) RecordPlate(state.previousBest, now = total)
     }
     Spacer(Modifier.height(12.dp))
-    val peer = match.players.firstOrNull { it.id != state.meId }?.name
-    EndActions(if (state.mode == GameMode.SOLO) null else peer, actions.onAgain, actions.onOtherGame)
+    EndActions(match.players.filter { it.id != state.meId }.map { it.name }, actions.onAgain, actions.onOtherGame)
 }
 
 private fun title(state: ShowViewModel.State): Int {

@@ -18,7 +18,6 @@
 
     <string name="lobby_you">%s (you)</string>
 
-    <string name="game_me_letter">Me</string>
     <string name="end_win">Victory</string>
     <string name="end_lose">Defeat</string>
     <string name="end_draw">Draw</string>
@@ -49,15 +48,8 @@
     <string name="party_play">Play</string>
     <string name="party_connecting">Connecting to %s…</string>
     <string name="party_failed">Could not connect. Try again or open Help</string>
-    <string name="party_with">You and %s</string>
-    <string name="party_online">connected</string>
     <string name="party_leave">Leave</string>
-    <string name="party_pick_hint">Pick a game — it starts once you both pick the same one</string>
     <string name="party_you">You</string>
-    <string name="party_picking">picking…</string>
-    <string name="party_picked">picked</string>
-    <string name="party_versus">⚔ Versus</string>
-    <string name="party_coop">🤝 Together</string>
     <string name="party_help_title">Nobody found</string>
     <string name="party_help_check">Check on both phones:</string>
     <string name="party_help_wifi">Wi-Fi is on</string>
@@ -236,4 +228,50 @@
     <string name="xo_end_resigned_peer">the opponent resigned</string>
     <string name="xo_end_agreed">a draw by agreement</string>
     <string name="xo_streak">Wins in a row: %d</string>
+    <string name="party_room_title">Playing together</string>
+    <string name="party_room_subtitle">one Wi-Fi network · up to %d players</string>
+    <string name="party_in_room">In the room · %1$d of %2$d</string>
+    <string name="party_status_host">host</string>
+    <string name="party_status_ready">ready</string>
+    <string name="party_status_picking">picking</string>
+    <string name="party_free">free</string>
+    <string name="party_invite">Invite</string>
+    <string name="party_game_you_pick">Game · you pick</string>
+    <string name="party_game_host_picks">Game · %s picks</string>
+    <string name="party_no_game_host">Pick a game below</string>
+    <string name="party_no_game_guest">%s is picking a game…</string>
+    <string name="party_about_show">6 rounds · the same questions for everyone</string>
+    <string name="party_about_invoker">a one-minute race</string>
+    <string name="party_about_mid">a duel on the lane</string>
+    <string name="party_about_xo">nine boards</string>
+    <string name="party_limit_room">up to %1$d · %2$s</string>
+    <string name="party_limit_two">two players only</string>
+    <string name="party_mode_duel">head to head</string>
+    <string name="party_mode_versus">who scores more</string>
+    <string name="party_mode_coop">as a team</string>
+    <string name="party_hint_pick">Pick a game: the others press Ready</string>
+    <string name="party_hint_two_only">%s is for two players only</string>
+    <string name="party_hint_waiting_one">%s is still picking · we start once everyone is ready</string>
+    <string name="party_hint_waiting_many">Still picking: %s · we start once everyone is ready</string>
+    <string name="party_hint_all_ready">Everyone is ready</string>
+    <string name="party_hint_press_ready">Press Ready when you are</string>
+    <string name="party_hint_wait_start">Waiting for %s to start</string>
+    <string name="party_start">Start · %1$d of %2$d ready</string>
+    <string name="party_start_all">Start</string>
+    <string name="party_ready">Ready</string>
+    <string name="party_not_ready">Not ready</string>
+    <string name="party_invite_title">Invite a friend</string>
+    <string name="party_invite_text">Let your friend open Games on the same Wi-Fi network: your room shows up at the top for them.</string>
+    <string name="party_invite_address">Or let them enter your address:</string>
+    <string name="party_invite_ok">Got it</string>
+    <string name="party_failed_full">The room is full: 6 players are in</string>
+    <string name="party_failed_busy">A game is on there: try again once it ends</string>
+    <string name="party_failed_version">Your friend has another version of the app</string>
+    <string name="end_again_all">Again with everyone</string>
+    <string name="invoker_leader">best: %1$s · %2$s</string>
+    <string name="party_both_players">both players</string>
+    <plurals name="party_all_players">
+        <item quantity="one">%d player</item>
+        <item quantity="other">all %d players</item>
+    </plurals>
 </resources>

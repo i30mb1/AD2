@@ -80,7 +80,10 @@ internal class MidViewModel @AssistedInject constructor(
     private val playing = room?.state?.value as? RoomState.Playing
     private val me = room?.me ?: localPlayerProvider.localPlayer()
     private val isHost = playing == null || playing.host.id == me.id
-    private val peerName = playing?.let { if (isHost) it.guest.name else it.host.name }
+
+    /** The lane is for two: the other one in the room */
+    private val peer = playing?.others(me.id)?.firstOrNull()
+    private val peerName = peer?.name
     private val mySide = if (mode == GameMode.VERSUS && !isHost) Side.DIRE else Side.RADIANT
     private val peerSide = if (mode == GameMode.VERSUS) mySide.enemy else mySide
     private val seed = playing?.seed ?: Random.nextLong()
@@ -258,11 +261,7 @@ internal class MidViewModel @AssistedInject constructor(
             }
         }
         viewModelScope.launch {
-            room.state.first { it is RoomState.Closed }
-            if (!_state.value.match.isOver) update { it.peerLeft() }
-        }
-        viewModelScope.launch {
-            room.syncEvents.first(GameChannel::isQuit)
+            GameChannel.departures(room, setOfNotNull(peer?.id)).first()
             if (!_state.value.match.isOver) update { it.peerLeft() }
         }
     }

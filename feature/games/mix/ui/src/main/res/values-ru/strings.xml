@@ -17,7 +17,6 @@
 
     <string name="lobby_you">%s (вы)</string>
 
-    <string name="game_me_letter">Я</string>
     <string name="end_win">Победа</string>
     <string name="end_lose">Поражение</string>
     <string name="end_draw">Ничья</string>
@@ -49,15 +48,8 @@
     <string name="party_play">Сыграть</string>
     <string name="party_connecting">Подключаемся к %s…</string>
     <string name="party_failed">Не удалось подключиться. Попробуйте ещё раз или откройте помощь</string>
-    <string name="party_with">Вы с %s</string>
-    <string name="party_online">на связи</string>
     <string name="party_leave">Выйти</string>
-    <string name="party_pick_hint">Выберите игру — начнём, когда выберете одинаковую</string>
     <string name="party_you">Вы</string>
-    <string name="party_picking">выбирает…</string>
-    <string name="party_picked">выбрал</string>
-    <string name="party_versus">⚔ Против</string>
-    <string name="party_coop">🤝 Вместе</string>
     <string name="party_help_title">Никого не нашли</string>
     <string name="party_help_check">Проверьте на обоих телефонах:</string>
     <string name="party_help_wifi">Wi-Fi включён</string>
@@ -244,4 +236,52 @@
     <string name="xo_end_resigned_peer">соперник сдался</string>
     <string name="xo_end_agreed">ничья по согласию</string>
     <string name="xo_streak">Побед подряд: %d</string>
+    <string name="party_room_title">Игра по сети</string>
+    <string name="party_room_subtitle">одна Wi-Fi сеть · до %d игроков</string>
+    <string name="party_in_room">В комнате · %1$d из %2$d</string>
+    <string name="party_status_host">хост</string>
+    <string name="party_status_ready">готов</string>
+    <string name="party_status_picking">выбирает</string>
+    <string name="party_free">свободно</string>
+    <string name="party_invite">Позвать</string>
+    <string name="party_game_you_pick">Игра · выбираете вы</string>
+    <string name="party_game_host_picks">Игра · выбирает %s</string>
+    <string name="party_no_game_host">Выберите игру ниже</string>
+    <string name="party_no_game_guest">%s выбирает игру…</string>
+    <string name="party_about_show">6 раундов · одни вопросы на всех</string>
+    <string name="party_about_invoker">гонка на минуту</string>
+    <string name="party_about_mid">дуэль на линии</string>
+    <string name="party_about_xo">девять досок</string>
+    <string name="party_limit_room">до %1$d · %2$s</string>
+    <string name="party_limit_two">только вдвоём</string>
+    <string name="party_mode_duel">друг против друга</string>
+    <string name="party_mode_versus">кто больше</string>
+    <string name="party_mode_coop">командой</string>
+    <string name="party_hint_pick">Выберите игру: остальные нажмут «Готов»</string>
+    <string name="party_hint_two_only">%s - только вдвоём</string>
+    <string name="party_hint_waiting_one">%s ещё выбирает · начнём, когда все готовы</string>
+    <string name="party_hint_waiting_many">Ещё выбирают: %s · начнём, когда все готовы</string>
+    <string name="party_hint_all_ready">Все готовы</string>
+    <string name="party_hint_press_ready">Нажмите «Готов», когда будете готовы</string>
+    <string name="party_hint_wait_start">Ждём, когда %s начнёт</string>
+    <string name="party_start">Начать · %1$d из %2$d готовы</string>
+    <string name="party_start_all">Начать</string>
+    <string name="party_ready">Готов</string>
+    <string name="party_not_ready">Не готов</string>
+    <string name="party_invite_title">Позвать друга</string>
+    <string name="party_invite_text">Пусть друг откроет «Игры» в той же Wi-Fi сети: ваша комната появится у него сверху.</string>
+    <string name="party_invite_address">Или пусть введёт ваш адрес:</string>
+    <string name="party_invite_ok">Понятно</string>
+    <string name="party_failed_full">Комната заполнена: там уже 6 игроков</string>
+    <string name="party_failed_busy">Там идёт игра: попробуйте, когда закончат</string>
+    <string name="party_failed_version">У друга другая версия приложения</string>
+    <string name="end_again_all">Ещё раз со всеми</string>
+    <string name="invoker_leader">лучший: %1$s · %2$s</string>
+    <string name="party_both_players">оба игрока</string>
+    <plurals name="party_all_players">
+        <item quantity="one">%d игрок</item>
+        <item quantity="few">все %d игрока</item>
+        <item quantity="many">все %d игроков</item>
+        <item quantity="other">все %d игрока</item>
+    </plurals>
 </resources>

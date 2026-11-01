@@ -85,7 +85,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
         super.onStop()
     }
 
-    /** Из списка игра открывается соло; вдвоем игру выбирают в сессии, она откроется, когда выбор совпадет */
+    /** Из списка игра открывается соло; по сети игру выбирает хост комнаты, она откроется у всех сама */
     private fun onGameClicked(game: GameVO) = open(gameFragment(game.id, GameMode.SOLO))
 
     private fun gameFragment(gameId: String, mode: GameMode): Fragment = when (gameId) {

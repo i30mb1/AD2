@@ -2,43 +2,26 @@ package n7.ad2.games.room.internal
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.stateIn
-import n7.ad2.feature.games.xo.domain.internal.server.controller.ClientController
-import n7.ad2.feature.games.xo.domain.internal.server.data.ClientStatus
-import n7.ad2.feature.games.xo.domain.internal.server.data.Message
+import n7.ad2.feature.games.xo.domain.internal.server.controller.WebsocketClient
 import java.net.InetAddress
 
-internal class WebsocketGuestTransport(private val client: ClientController, scope: CoroutineScope) : Transport {
+internal class WebsocketGuestTransport(private val client: WebsocketClient, scope: CoroutineScope) : Transport {
 
-    // до connect() и во время подключения контроллер в Disconnected - это еще не разрыв
-    private var wasConnected = false
-
-    override val status: StateFlow<TransportStatus> = client.state
-        .map { state ->
-            when {
-                state.status is ClientStatus.Connected -> TransportStatus.Connected.also { wasConnected = true }
-                wasConnected -> TransportStatus.Closed(failed = false)
-                state.messages.any { it is Message.Info && it.text.startsWith(CONNECT_FAILED) } -> TransportStatus.Closed(failed = true)
-                else -> TransportStatus.Connecting
-            }
+    override val events: Flow<TransportEvent> = client.events.map { event ->
+        when (event) {
+            WebsocketClient.Event.Connected -> TransportEvent.Connected
+            is WebsocketClient.Event.Text -> TransportEvent.Text(event.text)
+            is WebsocketClient.Event.Closed -> TransportEvent.Closed(event.failed)
         }
-        .stateIn(scope, SharingStarted.Eagerly, TransportStatus.Connecting)
-
-    override val incoming: Flow<String> = client.state.newOtherMessages { it.messages }
-
-    private val outgoing = OutgoingQueue(scope) { text -> client.send(text) }
-
-    fun connect(name: String, host: InetAddress, port: Int) = client.connect(name, host, port)
-
-    override fun send(text: String) = outgoing.send(text)
-
-    override fun close() = client.disconnect()
-
-    private companion object {
-        /** префикс сообщения, которое пишет WebsocketClientController при неудачном подключении */
-        const val CONNECT_FAILED = "Connect failed"
     }
+
+    private val outgoing = OutgoingQueue(scope)
+
+    fun connect(host: InetAddress, port: Int) = client.connect(host, port)
+
+    override fun send(text: String) = outgoing.post { client.send(text) }
+
+    // после уже поставленного в очередь: Leave дойдет до хоста раньше, чем закроется соединение
+    override fun close() = outgoing.post { client.close() }
 }

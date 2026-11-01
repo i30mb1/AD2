@@ -45,12 +45,16 @@ internal fun RecordPlate(previousBest: Int?, now: Int, modifier: Modifier = Modi
     }
 }
 
-/** «Ещё раз» и «Другая игра» внизу итога; вдвоём кнопка называет соперника */
+/** «Ещё раз» и «Другая игра» внизу итога; по сети кнопка называет соперника, а если их несколько - зовет всех [others] */
 @Composable
-internal fun EndActions(peerName: String?, onAgain: () -> Unit, onOtherGame: () -> Unit, modifier: Modifier = Modifier) {
+internal fun EndActions(others: List<String>, onAgain: () -> Unit, onOtherGame: () -> Unit, modifier: Modifier = Modifier) {
     Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(
-            text = if (peerName != null) stringResource(R.string.end_again_with, peerName) else stringResource(R.string.end_again),
+            text = when (others.size) {
+                0 -> stringResource(R.string.end_again)
+                1 -> stringResource(R.string.end_again_with, others.single())
+                else -> stringResource(R.string.end_again_all)
+            },
             color = Color.White,
             fontSize = 15.sp,
             fontWeight = FontWeight.Bold,

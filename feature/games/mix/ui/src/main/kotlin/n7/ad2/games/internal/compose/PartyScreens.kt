@@ -12,11 +12,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -39,20 +36,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
-import n7.ad2.games.internal.data.GameVO
-import n7.ad2.games.internal.data.modesOf
 import n7.ad2.games.internal.party.NearbyPlayer
+import n7.ad2.games.internal.party.PartyFailure
 import n7.ad2.games.internal.party.PartyState
-import n7.ad2.games.internal.party.Pick
 import n7.ad2.games.internal.party.Via
-import n7.ad2.games.room.GameMode
 
 internal enum class PartyBanner { ALONE, NEARBY, CONNECTING, FAILED, TOGETHER }
 
@@ -60,13 +53,10 @@ internal enum class PartyBanner { ALONE, NEARBY, CONNECTING, FAILED, TOGETHER }
 internal fun partyBanner(party: PartyState): PartyBanner = when {
     party.session != null -> PartyBanner.TOGETHER
     party.connecting -> PartyBanner.CONNECTING
-    party.failed -> PartyBanner.FAILED
+    party.failure != null -> PartyBanner.FAILED
     party.nearby.isNotEmpty() -> PartyBanner.NEARBY
     else -> PartyBanner.ALONE
 }
-
-/** Whether I and the peer picked the game [gameId], for the A / P marks on its tile. */
-internal fun tileMarks(gameId: String, party: PartyState): Pair<Boolean, Boolean> = (party.myPick?.gameId == gameId) to (party.peerPick?.gameId == gameId)
 
 /** Top of the games list while not paired: searching, players to play with, or the connection state. */
 @Composable
@@ -90,7 +80,7 @@ internal fun NearbyCard(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHel
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(12.dp))
                 .background(AppTheme.color.surface)
-                .border(1.dp, if (party.failed) MeColor else PeerColor, RoundedCornerShape(12.dp))
+                .border(1.dp, if (party.failure != null) MeColor else PeerColor, RoundedCornerShape(12.dp))
                 .padding(12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
@@ -102,8 +92,8 @@ internal fun NearbyCard(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHel
                     color = AppTheme.color.textColor,
                     fontSize = 14.sp,
                 )
-                party.failed -> Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(stringResource(R.string.party_failed), color = AppTheme.color.textColor, fontSize = 13.sp, modifier = Modifier.weight(1f))
+                party.failure != null -> Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(stringResource(party.failure.text()), color = AppTheme.color.textColor, fontSize = 13.sp, modifier = Modifier.weight(1f))
                     Text(stringResource(R.string.party_help), color = PeerColor, fontSize = 12.sp, modifier = Modifier.clickable(onClick = onHelp).padding(4.dp))
                 }
             }
@@ -157,141 +147,11 @@ private fun Pulse() {
 @Composable
 private fun Via.label(): String = stringResource(if (this == Via.DIRECT) R.string.party_via_direct else R.string.party_via_wifi)
 
-/**
- * Picking a game together: my pick on the left, the peer's on the right, a mode switch and the games grid.
- * The game starts by itself once both picks are the same.
- */
-@Composable
-internal fun PartySelect(
-    party: PartyState,
-    peerName: String,
-    games: List<GameVO>,
-    onPick: (gameId: String, mode: GameMode) -> Unit,
-    onLeave: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    var mode by rememberSaveable { mutableStateOf(party.myPick?.mode ?: GameMode.VERSUS) }
-    Column(modifier.fillMaxSize().padding(horizontal = 12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Column(Modifier.weight(1f)) {
-                Text(stringResource(R.string.party_with, peerName), color = AppTheme.color.textColor, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-                Text("● " + stringResource(R.string.party_online), color = RightColor, fontSize = 12.sp)
-            }
-            Text(stringResource(R.string.party_leave), color = DimColor, fontSize = 13.sp, modifier = Modifier.clickable(onClick = onLeave).padding(8.dp))
-        }
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            PickCard(stringResource(R.string.game_me_letter), stringResource(R.string.party_you), MeColor, party.myPick, games, mirrored = false, Modifier.weight(1f))
-            PickCard(peerName, peerName, PeerColor, party.peerPick, games, mirrored = true, Modifier.weight(1f))
-        }
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            listOf(GameMode.VERSUS, GameMode.COOP).forEach { option ->
-                ModeChip(option, selected = option == mode, peerHere = party.peerPick?.mode == option, Modifier.weight(1f)) {
-                    mode = option
-                    party.myPick?.takeIf { option in modesOf(it.gameId) }?.let { onPick(it.gameId, option) }
-                }
-            }
-        }
-        games.chunked(3).forEach { row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                row.forEach { game ->
-                    val (mine, peers) = tileMarks(game.id, party)
-                    // a game without this mode (tic-tac-toe together) is dimmed, a tap on it plays versus
-                    val fits = mode in game.modes
-                    GameTile(game, mine, peers, peerName, Modifier.weight(1f).alpha(if (fits) 1f else 0.45f)) {
-                        if (!fits) mode = GameMode.VERSUS
-                        onPick(game.id, if (fits) mode else GameMode.VERSUS)
-                    }
-                }
-                repeat(3 - row.size) { Spacer(Modifier.weight(1f)) }
-            }
-        }
-        Spacer(Modifier.weight(1f))
-        Text(stringResource(R.string.party_pick_hint), color = DimColor, fontSize = 12.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp))
-    }
-}
-
-@Composable
-private fun PickCard(avatarName: String, label: String, color: Color, pick: Pick?, games: List<GameVO>, mirrored: Boolean, modifier: Modifier) {
-    val game = games.firstOrNull { it.id == pick?.gameId }
-    val align = if (mirrored) Alignment.End else Alignment.Start
-    Column(
-        modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(AppTheme.color.surface)
-            .border(1.dp, color, RoundedCornerShape(12.dp))
-            .padding(10.dp),
-        horizontalAlignment = align,
-        verticalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            if (!mirrored) Avatar(avatarName, color, 24.dp)
-            Text(label, color = AppTheme.color.textSecondaryColor, fontSize = 12.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            if (mirrored) Avatar(avatarName, color, 24.dp)
-        }
-        Box(Modifier.size(64.dp).clip(RoundedCornerShape(12.dp)).background(LineColor), contentAlignment = Alignment.Center) {
-            if (game != null) {
-                GameCover(game, 64.dp, shape = RoundedCornerShape(12.dp))
-            } else {
-                Text("?", color = DimColor, fontSize = 24.sp)
-            }
-        }
-        Text(game?.title ?: "—", color = AppTheme.color.textColor, fontSize = 13.sp, fontWeight = FontWeight.Bold, maxLines = 2, textAlign = if (mirrored) TextAlign.End else TextAlign.Start)
-        if (pick != null) Text(stringResource(if (pick.mode == GameMode.COOP) R.string.party_coop else R.string.party_versus), color = DimColor, fontSize = 12.sp)
-        val picked = pick != null
-        Text(
-            text = stringResource(if (picked) R.string.party_picked else R.string.party_picking),
-            color = if (picked) RightColor else AppTheme.color.textSecondaryColor,
-            fontSize = 11.sp,
-            modifier = Modifier.clip(RoundedCornerShape(10.dp)).background(if (picked) RightColor.copy(alpha = 0.2f) else LineColor).padding(horizontal = 8.dp, vertical = 2.dp),
-        )
-    }
-}
-
-@Composable
-private fun ModeChip(mode: GameMode, selected: Boolean, peerHere: Boolean, modifier: Modifier, onClick: () -> Unit) {
-    val shape = RoundedCornerShape(18.dp)
-    Row(
-        modifier = modifier
-            .height(36.dp)
-            .clip(shape)
-            .background(if (selected) MeColor.copy(alpha = 0.15f) else Color.Transparent)
-            .border(1.dp, if (selected) MeColor else LineColor, shape)
-            .clickable(onClick = onClick),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
-    ) {
-        Text(stringResource(if (mode == GameMode.COOP) R.string.party_coop else R.string.party_versus), color = AppTheme.color.textColor, fontSize = 13.sp, fontWeight = FontWeight.Medium)
-        if (peerHere) Box(Modifier.size(8.dp).clip(CircleShape).background(PeerColor))
-    }
-}
-
-@Composable
-private fun GameTile(game: GameVO, mine: Boolean, peers: Boolean, peerName: String, modifier: Modifier, onClick: () -> Unit) {
-    val shape = RoundedCornerShape(12.dp)
-    val border = when {
-        mine -> MeColor
-        peers -> PeerColor
-        else -> Color.Transparent
-    }
-    Box(modifier) {
-        Column(
-            modifier = Modifier
-                .padding(top = 7.dp)
-                .fillMaxWidth()
-                .clip(shape)
-                .background(AppTheme.color.surface)
-                .border(1.dp, border, shape)
-                .clickable(onClick = onClick)
-                .padding(horizontal = 6.dp, vertical = 10.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(6.dp),
-        ) {
-            GameCover(game, 48.dp, shape = RoundedCornerShape(10.dp))
-            Text(game.title, color = AppTheme.color.textSecondaryColor, fontSize = 11.sp, lineHeight = 13.sp, textAlign = TextAlign.Center, maxLines = 2, minLines = 2)
-        }
-        if (mine) Avatar(stringResource(R.string.game_me_letter), MeColor, 18.dp, Modifier.offset(x = 6.dp).border(2.dp, AppTheme.color.background, CircleShape))
-        if (peers) Avatar(peerName, PeerColor, 18.dp, Modifier.align(Alignment.TopEnd).offset(x = (-6).dp).border(2.dp, AppTheme.color.background, CircleShape))
-    }
+private fun PartyFailure.text(): Int = when (this) {
+    PartyFailure.CONNECTION -> R.string.party_failed
+    PartyFailure.FULL -> R.string.party_failed_full
+    PartyFailure.BUSY -> R.string.party_failed_busy
+    PartyFailure.VERSION -> R.string.party_failed_version
 }
 
 /** Nobody found: a checklist, my address to tell a friend and the friend's address to connect to. */
@@ -370,27 +230,6 @@ private fun NearbyCardPreview() {
             NearbyCard(PartyState(nearby = players), onPlay = {}, onHelp = {})
         }
     }
-}
-
-@Preview(backgroundColor = 0xFF202225, showBackground = true, widthDp = 390, heightDp = 844)
-@Composable
-private fun PartySelectPreview() {
-    val context = androidx.compose.ui.platform.LocalContext.current
-    val res = object : n7.ad2.Resources {
-        override fun getString(resourceID: Int): String = context.getString(resourceID)
-        override fun getString(resourceID: Int, formatArgs: Any): String = context.getString(resourceID, formatArgs)
-        override fun getAssets(path: String) = throw UnsupportedOperationException()
-        override fun getExternalFilesDir(path: String) = null
-        override fun getFilesDir() = null
-        override fun getConfiguration() = null
-    }
-    val games = listOf(GameVO.Show(res), GameVO.Mid(res), GameVO.Invoker(res), GameVO.XO(res))
-    val party = PartyState(
-        session = n7.ad2.games.internal.party.Session(n7.ad2.games.room.Player("p", "Pixel 8"), Via.DIRECT),
-        myPick = Pick(games[0].id, GameMode.VERSUS),
-        peerPick = Pick(games[1].id, GameMode.COOP),
-    )
-    AppTheme(isDarkTheme = true) { PartySelect(party, "Pixel 8", games, onPick = { _, _ -> }, onLeave = {}, modifier = Modifier.padding(top = 40.dp)) }
 }
 
 @Preview(backgroundColor = 0xFF202225, showBackground = true, widthDp = 390, heightDp = 760)

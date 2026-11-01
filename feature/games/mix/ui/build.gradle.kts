@@ -27,4 +27,6 @@ dependencies {
 
     testImplementation(libs.test.junit)
     testImplementation(libs.test.truth.jvm)
+    // the rooms over real sockets on the loopback for the party tests
+    testImplementation(projects.feature.games.room.impl)
 }

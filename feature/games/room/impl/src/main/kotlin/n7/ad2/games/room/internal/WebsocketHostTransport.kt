@@ -6,32 +6,36 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import n7.ad2.feature.games.xo.domain.internal.server.controller.ServerController
-import n7.ad2.feature.games.xo.domain.internal.server.data.ServerStatus
+import n7.ad2.feature.games.xo.domain.internal.server.controller.WebsocketHub
 import java.net.InetAddress
 
-internal class WebsocketHostTransport(private val server: ServerController, scope: CoroutineScope) : Transport {
+internal class WebsocketHostTransport(private val hub: WebsocketHub, scope: CoroutineScope) : HostTransport {
 
-    // до start() контроллер в Closed - это не закрытие, а "еще не запущен"
-    private var wasOpen = false
-
-    override val status: StateFlow<TransportStatus> = server.state
-        .map { state ->
-            when (val status = state.status) {
-                is ServerStatus.Waiting -> TransportStatus.Listening(status.server.port).also { wasOpen = true }
-                is ServerStatus.Connected -> TransportStatus.Connected.also { wasOpen = true }
-                ServerStatus.Closed -> if (wasOpen) TransportStatus.Closed(failed = false) else TransportStatus.Connecting
+    override val status: StateFlow<HostStatus> = hub.status
+        .map { status ->
+            when (status) {
+                WebsocketHub.Status.Starting -> HostStatus.Starting
+                is WebsocketHub.Status.Listening -> HostStatus.Listening(status.port)
+                is WebsocketHub.Status.Stopped -> HostStatus.Stopped(status.failed)
             }
         }
-        .stateIn(scope, SharingStarted.Eagerly, TransportStatus.Connecting)
+        .stateIn(scope, SharingStarted.Eagerly, HostStatus.Starting)
 
-    override val incoming: Flow<String> = server.state.newOtherMessages { it.messages }
+    override val events: Flow<HostEvent> = hub.events.map { event ->
+        when (event) {
+            is WebsocketHub.Event.Opened -> HostEvent.Joined(event.client)
+            is WebsocketHub.Event.Text -> HostEvent.Text(event.client, event.text)
+            is WebsocketHub.Event.Closed -> HostEvent.Left(event.client)
+        }
+    }
 
-    private val outgoing = OutgoingQueue(scope) { text -> server.send(text) }
+    private val outgoing = OutgoingQueue(scope)
 
-    fun start(name: String, bindAddress: InetAddress) = server.start(name, bindAddress, 0)
+    fun start(bindAddress: InetAddress) = hub.start(bindAddress)
 
-    override fun send(text: String) = outgoing.send(text)
+    override fun send(client: Int, text: String) = outgoing.post { hub.send(client, text) }
 
-    override fun close() = server.stop()
+    override fun drop(client: Int) = outgoing.post { hub.close(client) }
+
+    override fun close() = outgoing.post { hub.stop() }
 }

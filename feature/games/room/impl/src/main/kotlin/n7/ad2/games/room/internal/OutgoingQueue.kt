@@ -7,20 +7,20 @@ import kotlinx.coroutines.launch
 
 /**
  * Комната вызывается с главного потока (кнопки, ответы), а запись в сокет там запрещена (NetworkOnMainThreadException).
- * Очередь отправляет сообщения по одному на IO, сохраняя порядок; ошибка записи не роняет приложение -
- * разрыв увидит статус транспорта.
+ * Очередь выполняет действия с сокетом по одному на IO, сохраняя порядок: закрытие после отправки уходит после нее;
+ * ошибка записи не роняет приложение - разрыв увидит статус транспорта.
  */
-internal class OutgoingQueue(scope: CoroutineScope, private val write: (String) -> Unit) {
+internal class OutgoingQueue(scope: CoroutineScope) {
 
-    private val channel = Channel<String>(Channel.UNLIMITED)
+    private val channel = Channel<() -> Unit>(Channel.UNLIMITED)
 
     init {
         scope.launch(Dispatchers.IO) {
-            for (text in channel) runCatching { write(text) }
+            for (action in channel) runCatching { action() }
         }
     }
 
-    fun send(text: String) {
-        channel.trySend(text)
+    fun post(action: () -> Unit) {
+        channel.trySend(action)
     }
 }

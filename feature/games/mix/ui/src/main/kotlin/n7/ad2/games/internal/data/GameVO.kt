@@ -7,6 +7,7 @@ import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.show.ShowViewModel
 import n7.ad2.games.internal.games.xo.XoViewModel
 import n7.ad2.games.room.GameMode
+import n7.ad2.games.room.MAX_PLAYERS
 
 /** [id] - id игры в рекордах и комнате, [modes] - в каких режимах в нее играют; обложка рисуется по типу игры в GameCover */
 internal sealed class GameVO(val title: String, val id: String) {
@@ -20,3 +21,6 @@ internal sealed class GameVO(val title: String, val id: String) {
 
 /** Крестики - только соло и друг против друга, остальные игры - во всех режимах */
 internal fun modesOf(gameId: String): List<GameMode> = if (gameId == XoViewModel.GAME_ID) listOf(GameMode.SOLO, GameMode.VERSUS) else GameMode.entries
+
+/** Сколько игроков вмещает игра по сети: мид и крестики - вдвоем, викторина и инвокер - вся комната */
+internal fun maxPlayersOf(gameId: String): Int = if (gameId == MidViewModel.GAME_ID || gameId == XoViewModel.GAME_ID) 2 else MAX_PLAYERS

@@ -93,8 +93,13 @@ internal fun GamesScreen(
                             showHelp = false
                             viewModel.joinManual(address)
                         })
-                        // вдвоём список игр - это общий выбор, игра откроется сама, когда выбор совпадёт
-                        session != null -> PartySelect(data.party, session.peer.name, data.games, onPick = viewModel::pick, onLeave = viewModel::leave)
+                        // в комнате с другими игру выбирает хост, она откроется у всех сама
+                        session != null -> PartyRoom(
+                            session = session,
+                            games = data.games,
+                            myAddress = data.party.myAddress,
+                            actions = RoomActions(onPick = viewModel::pick, onReady = viewModel::setReady, onStart = viewModel::start, onLeave = viewModel::leave),
+                        )
                         else -> GamesList(
                             games = data.games,
                             bests = data.bests,

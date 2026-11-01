@@ -3,10 +3,10 @@ package n7.ad2.games.internal.compose
 import com.google.common.truth.Truth.assertThat
 import n7.ad2.games.internal.party.NearbyPlayer
 import n7.ad2.games.internal.party.PartyState
-import n7.ad2.games.internal.party.Pick
+import n7.ad2.games.internal.party.Lobby
 import n7.ad2.games.internal.party.Session
 import n7.ad2.games.internal.party.Via
-import n7.ad2.games.room.GameMode
+import n7.ad2.games.internal.party.PartyFailure
 import n7.ad2.games.room.Player
 import org.junit.Test
 
@@ -23,20 +23,12 @@ class PartyBannerTest {
     fun `players around are offered, connecting and failure win over the list`() {
         assertThat(partyBanner(PartyState(nearby = listOf(pixel)))).isEqualTo(PartyBanner.NEARBY)
         assertThat(partyBanner(PartyState(nearby = listOf(pixel), connecting = true))).isEqualTo(PartyBanner.CONNECTING)
-        assertThat(partyBanner(PartyState(nearby = listOf(pixel), failed = true))).isEqualTo(PartyBanner.FAILED)
+        assertThat(partyBanner(PartyState(nearby = listOf(pixel), failure = PartyFailure.FULL))).isEqualTo(PartyBanner.FAILED)
     }
 
     @Test
-    fun `a session means picking together`() {
-        val session = Session(Player("p", "Pixel 8"), Via.DIRECT)
+    fun `a session means the room`() {
+        val session = Session(listOf(Player("p", "Pixel 8"), Player("me", "Me")), meId = "me", lobby = Lobby(), via = Via.DIRECT)
         assertThat(partyBanner(PartyState(nearby = listOf(pixel), session = session))).isEqualTo(PartyBanner.TOGETHER)
-    }
-
-    @Test
-    fun `game tile marks show who picked it in the chosen mode`() {
-        val party = PartyState(myPick = Pick("spell", GameMode.VERSUS), peerPick = Pick("build", GameMode.COOP))
-        assertThat(tileMarks("spell", party)).isEqualTo(true to false)
-        assertThat(tileMarks("build", party)).isEqualTo(false to true)
-        assertThat(tileMarks("hero", party)).isEqualTo(false to false)
     }
 }

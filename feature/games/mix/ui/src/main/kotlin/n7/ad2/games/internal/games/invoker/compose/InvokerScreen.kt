@@ -165,16 +165,20 @@ private fun ColumnScope.InvokerPlay(state: InvokerViewModel.State, elapsedMs: ()
     }
 }
 
-/** The title, the score, the streak with the time left; over the network the other player's score */
+/** The title, the score, the streak with the time left; over the network the team score or the best of the others */
 @Composable
 private fun Header(state: InvokerViewModel.State, timeLeftMs: Long) {
     val seconds = ((timeLeftMs + 999) / 1000).toInt()
     Row(verticalAlignment = Alignment.CenterVertically) {
         Column(Modifier.weight(1f)) {
             Text(stringResource(R.string.invoker), color = Light, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
-            val peer = state.peerName
-            if (peer != null) {
-                val label = if (state.mode == GameMode.COOP) stringResource(R.string.invoker_team, points(state.run.score + state.peerScore)) else "$peer · ${points(state.peerScore)}"
+            val leader = state.leader
+            if (leader != null) {
+                val label = when {
+                    state.mode == GameMode.COOP -> stringResource(R.string.invoker_team, points(state.teamScore))
+                    state.rivals.size == 1 -> "${leader.name} · ${points(leader.score)}"
+                    else -> stringResource(R.string.invoker_leader, leader.name, points(leader.score))
+                }
                 Text(label, color = LightDim, fontSize = 12.sp)
             }
         }
@@ -321,7 +325,7 @@ private fun InvokerPlayPreview() {
     val run = InvokerRun(listOf(InvokerSpell.SUN_STRIKE) + spellQueue(3), score = 2_150, streak = 6, lastPoints = 150)
         .press(Orb.EXORT).press(Orb.EXORT).press(Orb.WEX).invoke().hint()
     AppTheme(isDarkTheme = true) {
-        InvokerScreen(InvokerViewModel.State.start(GameMode.SOLO, run, peerName = null), elapsedMs = { 22_000 }, countdown = { 0 }, actions = InvokerActions())
+        InvokerScreen(InvokerViewModel.State.start(GameMode.SOLO, run, rivals = emptyList()), elapsedMs = { 22_000 }, countdown = { 0 }, actions = InvokerActions())
     }
 }
 
@@ -330,6 +334,7 @@ private fun InvokerPlayPreview() {
 private fun InvokerVersusPreview() {
     val run = InvokerRun(spellQueue(4), score = 1_240, streak = 3, lastPoints = 120).press(Orb.QUAS).press(Orb.WEX)
     AppTheme(isDarkTheme = true) {
-        InvokerScreen(InvokerViewModel.State.start(GameMode.VERSUS, run, peerName = "Pixel 8").copy(peerScore = 1_310), elapsedMs = { -1_200 }, countdown = { 2 }, actions = InvokerActions())
+        val rivals = listOf(InvokerViewModel.Rival("p", "Pixel 8", score = 1_310), InvokerViewModel.Rival("g", "Galaxy", score = 880))
+        InvokerScreen(InvokerViewModel.State.start(GameMode.VERSUS, run, rivals), elapsedMs = { -1_200 }, countdown = { 2 }, actions = InvokerActions())
     }
 }

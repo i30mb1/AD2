@@ -37,7 +37,7 @@ internal fun ColumnScope.XoEnd(state: XoViewModel.State, actions: XoActions) {
         if (state.streak > 0) Text(stringResource(R.string.xo_streak, state.streak), color = XoGold, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
         if (state.newRecord) RecordPlate(state.previousBest, now = state.streak)
     }
-    EndActions(if (state.mode == GameMode.SOLO) null else state.peerName, actions.onAgain, actions.onOtherGame)
+    EndActions(listOfNotNull(state.peerName), actions.onAgain, actions.onOtherGame)
 }
 
 @Composable

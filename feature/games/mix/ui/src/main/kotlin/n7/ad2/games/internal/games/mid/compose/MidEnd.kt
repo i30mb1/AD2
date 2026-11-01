@@ -73,7 +73,7 @@ internal fun ColumnScope.MidEnd(state: MidViewModel.State, actions: MidActions) 
         if (state.newRecord) RecordPlate(state.previousBest, now = mine)
     }
     Spacer(Modifier.padding(top = 12.dp))
-    EndActions(if (state.mode == GameMode.SOLO) null else state.peerName, actions.onAgain, actions.onOtherGame)
+    EndActions(listOfNotNull(state.peerName), actions.onAgain, actions.onOtherGame)
 }
 
 @Composable

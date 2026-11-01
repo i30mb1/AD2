@@ -68,7 +68,7 @@ internal class ShowViewModel @AssistedInject constructor(
     private val today: LocalDate = LocalDate.now()
     private val seed = if (daily) DailyPlan.seed(today) else playing?.seed ?: Random.nextLong()
     private val rounds = if (daily) DailyPlan.create() else ShowPlan.create(seed)
-    private val players = listOfNotNull(me, playing?.let { if (it.host.id == me.id) it.guest else it.host }).map { it.toShowPlayer() }
+    private val players = (listOf(me) + playing?.others(me.id).orEmpty()).map { it.toShowPlayer() }
 
     private val voice = VoicePlayer()
     private var tickJob: Job? = null
@@ -278,17 +278,14 @@ internal class ShowViewModel @AssistedInject constructor(
             }
         }
         viewModelScope.launch {
-            room.state.first { it is RoomState.Closed }
-            othersLeft()
-        }
-        viewModelScope.launch {
-            room.syncEvents.first(GameChannel::isQuit)
-            othersLeft()
+            GameChannel.departures(room, players.map { it.id }.toSet() - me.id).collect(::left)
         }
     }
 
-    private fun othersLeft() {
-        _state.update { state -> state.copy(match = players.filter { it.id != me.id }.fold(state.match) { match, player -> match.leave(player.id) }) }
+    /** A player left the show: the rounds do not wait for them any more */
+    private fun left(playerId: String) {
+        if (_state.value.phase == State.Phase.END) return
+        _state.update { state -> state.copy(match = state.match.leave(playerId)) }
         if (_state.value.match.isOver) finish() else advanceIfComplete()
     }
 

@@ -27,7 +27,6 @@ import n7.ad2.games.internal.games.show.DailyStore
 import n7.ad2.games.internal.party.NearbyPlayer
 import n7.ad2.games.internal.party.Party
 import n7.ad2.games.internal.party.PartyState
-import n7.ad2.games.internal.party.Pick
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
@@ -35,8 +34,8 @@ import n7.ad2.games.room.GameMode
 import n7.ad2.games.room.RoomFactory
 
 /**
- * Список игр и игра вдвоем: пока список на экране, телефон виден рядом и видит других ([Party]).
- * Сессия с другим игроком переживает игры: после игры оба возвращаются сюда и выбирают следующую.
+ * Список игр и игра по сети: пока список на экране, телефон виден рядом и видит других ([Party]).
+ * Комната с другими игроками переживает игры: после игры все возвращаются сюда, хост выбирает следующую.
  */
 internal class GamesViewModel @AssistedInject constructor(
     res: Resources,
@@ -74,7 +73,7 @@ internal class GamesViewModel @AssistedInject constructor(
     // Channel, а не SharedFlow: «Ещё раз» приходит в onStart, раньше чем фрагмент начнет собирать события
     private val _openGame = Channel<OpenGame>(Channel.BUFFERED)
 
-    /** Открыть экран игры: вдвоем - когда комната перешла в Playing, соло - «Ещё раз» */
+    /** Открыть экран игры: по сети - когда комната перешла в Playing, соло - «Ещё раз» */
     val openGame: Flow<OpenGame> = _openGame.receiveAsFlow()
 
     // личный соло-рекорд для значка на карточке каждой игры
@@ -105,7 +104,7 @@ internal class GamesViewModel @AssistedInject constructor(
         if (!visible) return
         daily.value = dailyCard()
         val rematch = ActiveRoom.takeRematch() ?: return
-        if (rematch.mode == GameMode.SOLO) _openGame.trySend(OpenGame(rematch.gameId, GameMode.SOLO)) else party.pick(rematch)
+        if (rematch.mode == GameMode.SOLO) _openGame.trySend(OpenGame(rematch.gameId, GameMode.SOLO)) else party.rematch(rematch)
     }
 
     fun onWifiDirectPermission(granted: Boolean) = party.onWifiDirectPermission(granted)
@@ -115,10 +114,14 @@ internal class GamesViewModel @AssistedInject constructor(
     /** @param address "ip:port" */
     fun joinManual(address: String) = party.joinManual(address)
 
-    /** Выбор игры в сессии: одинаковый у обоих - игра стартует */
-    fun pick(gameId: String, mode: GameMode) = party.pick(Pick(gameId, mode))
+    /** Хост выбирает игру комнаты */
+    fun pick(gameId: String, mode: GameMode) = party.pick(gameId, mode)
 
-    fun cancelPick() = party.cancelPick()
+    /** Гость готов или нет к выбранной игре */
+    fun setReady(ready: Boolean) = party.setReady(ready)
+
+    /** Хост запускает игру, когда готовы все */
+    fun start() = party.start()
 
     fun leave() = party.leave()
 

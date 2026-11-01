@@ -32,7 +32,7 @@ import n7.ad2.games.room.Room
 import n7.ad2.games.room.RoomState
 
 /**
- * Invoker: a minute to invoke as many spells as possible. Versus - the same spells on both phones, who scores more;
+ * Invoker: a minute to invoke as many spells as possible. Versus - the same spells on every phone, who scores more;
  * together - one team score. Each phone counts its own score and sends it after every spell.
  */
 internal class InvokerViewModel @AssistedInject constructor(
@@ -50,13 +50,12 @@ internal class InvokerViewModel @AssistedInject constructor(
     private val room: Room? = ActiveRoom.room.takeIf { mode != GameMode.SOLO }
     private val playing = room?.state?.value as? RoomState.Playing
     private val me = room?.me ?: localPlayerProvider.localPlayer()
-    private val peerName = playing?.let { if (it.host.id == me.id) it.guest.name else it.host.name }
     private val seed = playing?.seed ?: Random.nextLong()
 
-    /** Over the network both start at the moment the room started the game, alone - now; 3-2-1 first */
+    /** Over the network everyone starts at the moment the room started the game, alone - now; 3-2-1 first */
     private val clock = MatchClock(if (room != null) ActiveRoom.startedAt else SystemClock.elapsedRealtime(), COUNTDOWN_MS)
 
-    private val _state = MutableStateFlow(State.start(mode, InvokerRun(spellQueue(seed)), peerName))
+    private val _state = MutableStateFlow(State.start(mode, InvokerRun(spellQueue(seed)), playing?.others(me.id).orEmpty().map { Rival(it.id, it.name) }))
     val state: StateFlow<State> = _state.asStateFlow()
 
     private val _exit = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
@@ -109,23 +108,19 @@ internal class InvokerViewModel @AssistedInject constructor(
             room.events.collect { event ->
                 val (score, invoked) = InvokerCodec.decode(event.payload) ?: return@collect
                 // messages may come out of order: the score only grows
-                _state.update { if (invoked > it.peerInvoked) it.copy(peerScore = score, peerInvoked = invoked) else it }
+                _state.update { state -> state.copy(rivals = state.rivals.map { if (it.id == event.playerId && invoked > it.invoked) it.copy(score = score, invoked = invoked) else it }) }
             }
         }
         viewModelScope.launch {
-            room.state.first { it is RoomState.Closed }
-            peerLeft()
-        }
-        viewModelScope.launch {
-            room.syncEvents.first(GameChannel::isQuit)
-            peerLeft()
+            GameChannel.departures(room, _state.value.rivals.map { it.id }.toSet()).collect(::rivalLeft)
         }
     }
 
-    private fun peerLeft() {
+    /** A player left: their score stays; alone the run ends */
+    private fun rivalLeft(playerId: String) {
         if (_state.value.phase == State.Phase.END) return
-        _state.update { it.copy(peerLeft = true) }
-        finish()
+        _state.update { state -> state.copy(rivals = state.rivals.map { if (it.id == playerId) it.copy(left = true) else it }) }
+        if (_state.value.rivals.all { it.left }) finish()
     }
 
     private fun finish() {
@@ -134,7 +129,7 @@ internal class InvokerViewModel @AssistedInject constructor(
         // the room stays for the next game
         room?.endGame()
         val state = _state.value
-        val score = if (mode == GameMode.COOP) state.run.score + state.peerScore else state.run.score
+        val score = if (mode == GameMode.COOP) state.teamScore else state.run.score
         viewModelScope.launch {
             val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
             val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
@@ -148,30 +143,34 @@ internal class InvokerViewModel @AssistedInject constructor(
         room.endGame()
     }
 
+    /** Another player's run as they tell it after every spell; [left] - gone from the game, the score stays */
+    @Immutable
+    internal data class Rival(val id: String, val name: String, val score: Int = 0, val invoked: Int = 0, val left: Boolean = false)
+
+    /** @param rivals the other players in the order of the room, none alone */
     @Immutable
     internal data class State(
         val mode: GameMode,
         val phase: Phase,
         val run: InvokerRun,
-        val peerName: String?,
-        val peerScore: Int,
-        val peerInvoked: Int,
-        val peerLeft: Boolean,
+        val rivals: List<Rival>,
         val newRecord: Boolean,
         /** The best result before this run, null - the first one */
         val previousBest: Int?,
     ) {
         enum class Phase { PLAYING, END }
 
+        val teamScore: Int get() = run.score + rivals.sumOf { it.score }
+
+        /** The best of the others */
+        val leader: Rival? get() = rivals.maxByOrNull { it.score }
+
         companion object {
-            fun start(mode: GameMode, run: InvokerRun, peerName: String?) = State(
+            fun start(mode: GameMode, run: InvokerRun, rivals: List<Rival>) = State(
                 mode = mode,
                 phase = Phase.PLAYING,
                 run = run,
-                peerName = peerName,
-                peerScore = 0,
-                peerInvoked = 0,
-                peerLeft = false,
+                rivals = rivals,
                 newRecord = false,
                 previousBest = null,
             )

@@ -52,6 +52,9 @@ internal class XoViewModel @AssistedInject constructor(
     private val playing = room?.state?.value as? RoomState.Playing
     private val me = room?.me ?: localPlayerProvider.localPlayer()
     private val isHost = playing == null || playing.host.id == me.id
+
+    /** Tic-tac-toe is for two: the other one in the room */
+    private val peer = playing?.others(me.id)?.firstOrNull()
     private val seed = playing?.seed ?: Random.nextLong()
     private val botRandom = Random(seed)
 
@@ -63,7 +66,7 @@ internal class XoViewModel @AssistedInject constructor(
             mode = mode,
             game = XoGame(),
             myMark = myMark,
-            peerName = playing?.let { if (isHost) it.guest.name else it.host.name },
+            peerName = peer?.name,
             peerReady = room == null,
             streak = store.streak(mode).current,
         ),
@@ -165,11 +168,7 @@ internal class XoViewModel @AssistedInject constructor(
             room.events.collect { event -> XoCodec.decode(event.payload)?.let(::onPeer) }
         }
         viewModelScope.launch {
-            room.state.first { it is RoomState.Closed }
-            peerLeft()
-        }
-        viewModelScope.launch {
-            room.syncEvents.first(GameChannel::isQuit)
+            GameChannel.departures(room, setOfNotNull(peer?.id)).first()
             peerLeft()
         }
     }

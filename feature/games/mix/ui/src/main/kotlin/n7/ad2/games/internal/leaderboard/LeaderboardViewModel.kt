@@ -53,8 +53,8 @@ internal class LeaderboardViewModel @AssistedInject constructor(
     }
 
     private fun onlinePlayerIds(): Set<String> = when (val roomState = ActiveRoom.room?.state?.value) {
-        is RoomState.Ready -> setOf(roomState.host.id, roomState.guest.id)
-        is RoomState.Playing -> setOf(roomState.host.id, roomState.guest.id)
+        is RoomState.Ready -> roomState.players.map { it.id }.toSet()
+        is RoomState.Playing -> roomState.players.map { it.id }.toSet()
         else -> emptySet()
     } - myId
 

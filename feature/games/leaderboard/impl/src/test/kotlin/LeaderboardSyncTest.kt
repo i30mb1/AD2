@@ -41,7 +41,7 @@ internal class LeaderboardSyncTest {
         override val syncEvents: Flow<RoomMessage.Sync> = incomingSync
         val sentSync = CopyOnWriteArrayList<RoomMessage.Sync>()
         override fun sendSync(channel: String, payload: String) {
-            sentSync += RoomMessage.Sync(channel, payload)
+            sentSync += RoomMessage.Sync(channel, payload, me.id)
         }
         override fun startGame(gameId: String, mode: GameMode) = Unit
         override fun endGame() = Unit
@@ -73,7 +73,7 @@ internal class LeaderboardSyncTest {
         repository.submit(record("me", 5))
         sync.attach(room)
 
-        room.state.value = RoomState.Ready(host, guest)
+        room.state.value = RoomState.Ready(listOf(host, guest))
 
         eventually { sentRecords() == listOf(record("me", 5)) }
     }
@@ -81,10 +81,10 @@ internal class LeaderboardSyncTest {
     @Test
     fun `merges records received from peer`() = runBlocking<Unit> {
         sync.attach(room)
-        room.state.value = RoomState.Ready(host, guest)
+        room.state.value = RoomState.Ready(listOf(host, guest))
         delay(100)
 
-        room.incomingSync.emit(RoomMessage.Sync("records", Json.encodeToString(recordsJson, listOf(record("peer", 7)))))
+        room.incomingSync.emit(RoomMessage.Sync("records", Json.encodeToString(recordsJson, listOf(record("peer", 7))), guest.id))
 
         eventually { repository.all() == listOf(record("peer", 7)) }
     }
@@ -92,11 +92,11 @@ internal class LeaderboardSyncTest {
     @Test
     fun `garbage payload is ignored`() = runBlocking<Unit> {
         sync.attach(room)
-        room.state.value = RoomState.Ready(host, guest)
+        room.state.value = RoomState.Ready(listOf(host, guest))
         delay(100)
 
-        room.incomingSync.emit(RoomMessage.Sync("records", "not json"))
-        room.incomingSync.emit(RoomMessage.Sync("records", Json.encodeToString(recordsJson, listOf(record("peer", 1)))))
+        room.incomingSync.emit(RoomMessage.Sync("records", "not json", guest.id))
+        room.incomingSync.emit(RoomMessage.Sync("records", Json.encodeToString(recordsJson, listOf(record("peer", 1))), guest.id))
 
         eventually { repository.all() == listOf(record("peer", 1)) }
     }
@@ -104,7 +104,7 @@ internal class LeaderboardSyncTest {
     @Test
     fun `submit while Playing broadcasts`() = runBlocking<Unit> {
         sync.attach(room)
-        room.state.value = RoomState.Playing(host, guest, "spell", GameMode.SOLO, 1L)
+        room.state.value = RoomState.Playing(listOf(host, guest), "spell", GameMode.SOLO, 1L)
         delay(100)
 
         Truth.assertThat(sync.submit(record("me", 9))).isTrue()
@@ -115,7 +115,7 @@ internal class LeaderboardSyncTest {
     @Test
     fun `submit when room closed only stores`() = runBlocking<Unit> {
         sync.attach(room)
-        room.state.value = RoomState.Closed(CloseReason.PEER_LEFT)
+        room.state.value = RoomState.Closed(CloseReason.HOST_LEFT)
         delay(100)
 
         sync.submit(record("me", 9))
@@ -125,12 +125,44 @@ internal class LeaderboardSyncTest {
     }
 
     @Test
+    fun `a newcomer gets all records again, a game or someone leaving do not resend them`() = runBlocking<Unit> {
+        repository.submit(record("me", 5))
+        sync.attach(room)
+        room.state.value = RoomState.Ready(listOf(host, guest))
+        eventually { room.sentSync.size == 1 }
+
+        val third = Player("third", "Third")
+        room.state.value = RoomState.Ready(listOf(host, guest, third))
+        eventually { room.sentSync.size == 2 }
+        room.state.value = RoomState.Playing(listOf(host, guest, third), "show", GameMode.VERSUS, 1L)
+        room.state.value = RoomState.Playing(listOf(host, third), "show", GameMode.VERSUS, 1L)
+        room.state.value = RoomState.Ready(listOf(host, third))
+        delay(200)
+
+        Truth.assertThat(room.sentSync).hasSize(2)
+        Truth.assertThat(sentRecords()).containsExactly(record("me", 5), record("me", 5))
+    }
+
+    @Test
+    fun `alone again the host sends all records to the next one who comes`() = runBlocking<Unit> {
+        sync.attach(room)
+        room.state.value = RoomState.Ready(listOf(host, guest))
+        eventually { room.sentSync.size == 1 }
+
+        room.state.value = RoomState.Waiting(host, 5000)
+        delay(100)
+        room.state.value = RoomState.Ready(listOf(host, guest))
+
+        eventually { room.sentSync.size == 2 }
+    }
+
+    @Test
     fun `50 records round-trip through sync`() = runBlocking<Unit> {
         val many = (1..50).map { record("p$it", it) }
         repository.merge(many)
         sync.attach(room)
 
-        room.state.value = RoomState.Ready(host, guest)
+        room.state.value = RoomState.Ready(listOf(host, guest))
 
         eventually { sentRecords().toSet() == many.toSet() }
     }

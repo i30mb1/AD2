@@ -3,7 +3,6 @@ package n7.ad2.games.leaderboard
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.builtins.ListSerializer
@@ -12,8 +11,8 @@ import n7.ad2.games.room.Room
 import n7.ad2.games.room.RoomState
 
 /**
- * Синхронизирует таблицу рекордов с игроком в комнате: при встрече обмен всеми записями,
- * дальше каждый новый рекорд сразу уходит второму игроку.
+ * Синхронизирует таблицу рекордов с игроками в комнате: каждому новому игроку - все записи (он шлет свои так же),
+ * дальше каждый новый рекорд сразу уходит всем.
  */
 class LeaderboardSync(private val repository: LeaderboardRepository, private val scope: CoroutineScope) {
 
@@ -28,8 +27,12 @@ class LeaderboardSync(private val repository: LeaderboardRepository, private val
         this.room = room
         job = scope.launch {
             launch {
-                room.state.first { it.isTogether() }
-                send(room, repository.all())
+                var known = emptySet<String>()
+                room.state.collect { state ->
+                    val players = state.playerIds()
+                    if ((players - known - room.me.id).isNotEmpty()) send(room, repository.all())
+                    known = players
+                }
             }
             room.syncEvents
                 .filter { it.channel == CHANNEL }
@@ -37,7 +40,7 @@ class LeaderboardSync(private val repository: LeaderboardRepository, private val
         }
     }
 
-    /** Сохраняет результат; если это новый рекорд и второй игрок на связи - отправляет ему */
+    /** Сохраняет результат; если это новый рекорд и в комнате есть кто-то еще - отправляет всем */
     suspend fun submit(record: Record): Boolean {
         val improved = repository.submit(record)
         val current = room
@@ -59,6 +62,13 @@ class LeaderboardSync(private val repository: LeaderboardRepository, private val
     }
 
     private fun RoomState.isTogether() = this is RoomState.Ready || this is RoomState.Playing
+
+    /** Кто в комнате вместе со мной; один или вне комнаты - никого */
+    private fun RoomState.playerIds(): Set<String> = when (this) {
+        is RoomState.Ready -> players.map { it.id }.toSet()
+        is RoomState.Playing -> players.map { it.id }.toSet()
+        else -> emptySet()
+    }
 
     private companion object {
         const val CHANNEL = "records"
