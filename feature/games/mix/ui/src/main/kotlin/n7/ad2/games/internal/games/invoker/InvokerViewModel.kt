@@ -23,6 +23,9 @@ import n7.ad2.games.internal.ActiveRoom
 import n7.ad2.games.internal.MatchClock
 import n7.ad2.games.internal.party.GameChannel
 import n7.ad2.games.internal.party.Pick
+import n7.ad2.games.internal.progress.GameXp
+import n7.ad2.games.internal.progress.ProgressStore
+import n7.ad2.games.internal.progress.XpGain
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
@@ -39,6 +42,7 @@ internal class InvokerViewModel @AssistedInject constructor(
     @Assisted private val mode: GameMode,
     private val leaderboardSync: LeaderboardSync,
     private val leaderboardRepository: LeaderboardRepository,
+    private val progressStore: ProgressStore,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
 
@@ -133,7 +137,9 @@ internal class InvokerViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
             val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
-            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest) }
+            val won = mode == GameMode.VERSUS && state.rivals.all { it.score < state.run.score }
+            val xp = progressStore.add(GameXp.game(won, record = isRecord && score > 0))
+            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest, xp = xp) }
         }
     }
 
@@ -155,6 +161,8 @@ internal class InvokerViewModel @AssistedInject constructor(
         val run: InvokerRun,
         val rivals: List<Rival>,
         val newRecord: Boolean,
+        /** The experience the run gave, null - not yet */
+        val xp: XpGain? = null,
         /** The best result before this run, null - the first one */
         val previousBest: Int?,
     ) {

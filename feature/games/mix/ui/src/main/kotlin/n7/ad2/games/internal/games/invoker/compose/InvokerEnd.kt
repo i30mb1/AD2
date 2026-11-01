@@ -26,6 +26,7 @@ import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.EndActions
 import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.games.invoker.InvokerRun
 import n7.ad2.games.internal.games.invoker.InvokerViewModel
 import n7.ad2.games.internal.games.invoker.spellQueue
@@ -53,6 +54,7 @@ internal fun ColumnScope.InvokerEnd(state: InvokerViewModel.State, actions: Invo
     Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(top = 12.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Text(stringResource(title), color = AppTheme.color.textColor, fontSize = 28.sp, fontWeight = FontWeight.Bold)
         Text(stringResource(R.string.show_points, points(total)), color = ShowGold, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
+        XpLine(state.xp)
         if (state.rivals.isNotEmpty()) {
             val you = stringResource(R.string.show_you)
             // me first in the colors as in the show, then the others in the order of the room

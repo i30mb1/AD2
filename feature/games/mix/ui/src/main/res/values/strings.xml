@@ -41,10 +41,8 @@
     <string name="party_alone">Nobody nearby yet</string>
     <string name="party_alone_hint">A friend shows up here once they open Games</string>
     <string name="party_help">Help</string>
-    <string name="party_nearby">%s is nearby</string>
     <string name="party_via_wifi">Wi-Fi</string>
     <string name="party_via_direct">Wi-Fi Direct</string>
-    <string name="party_in_games">also in Games</string>
     <string name="party_play">Play</string>
     <string name="party_connecting">Connecting to %s…</string>
     <string name="party_failed">Could not connect. Try again or open Help</string>
@@ -274,4 +272,12 @@
         <item quantity="one">%d player</item>
         <item quantity="other">all %d players</item>
     </plurals>
+    <string name="end_xp">+%d XP</string>
+    <string name="end_xp_level">+%1$d XP · level %2$d!</string>
+    <string name="party_nearby_many">Nearby: %s</string>
+    <string name="games_level">level · %1$d/%2$d</string>
+    <string name="games_chip_solo">solo</string>
+    <string name="games_chip_room">up to %d players</string>
+    <string name="games_chip_bot">vs a bot</string>
+    <string name="games_chip_duel">1 on 1 over Wi-Fi</string>
 </resources>

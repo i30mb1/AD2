@@ -32,6 +32,7 @@ import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.EndActions
 import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.compose.avatarLetter
 import n7.ad2.games.internal.games.show.RoundAnswer
 import n7.ad2.games.internal.games.show.ShowKind
@@ -57,6 +58,7 @@ internal fun ColumnScope.ShowEnd(state: ShowViewModel.State, actions: ShowAction
         Text(stringResource(title(state)), color = AppTheme.color.textColor, fontSize = 28.sp, fontWeight = FontWeight.Bold)
         val total = if (state.mode == GameMode.COOP) match.teamScore() else mine
         Text(stringResource(R.string.show_points, points(total)), color = ShowGold, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
+        XpLine(state.xp)
         if (match.players.size > 1) Standings(state)
         Rounds(match, state.meId)
         if (match.peerLeft) Text(stringResource(R.string.end_peer_left), color = DimColor, fontSize = 13.sp)

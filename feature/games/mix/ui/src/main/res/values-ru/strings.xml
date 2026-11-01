@@ -41,10 +41,8 @@
     <string name="party_alone">Рядом пока никого</string>
     <string name="party_alone_hint">Друг появится здесь, когда откроет «Игры»</string>
     <string name="party_help">Помощь</string>
-    <string name="party_nearby">%s рядом</string>
     <string name="party_via_wifi">Wi-Fi</string>
     <string name="party_via_direct">Wi-Fi Direct</string>
-    <string name="party_in_games">тоже в «Играх»</string>
     <string name="party_play">Сыграть</string>
     <string name="party_connecting">Подключаемся к %s…</string>
     <string name="party_failed">Не удалось подключиться. Попробуйте ещё раз или откройте помощь</string>
@@ -284,4 +282,12 @@
         <item quantity="many">все %d игроков</item>
         <item quantity="other">все %d игрока</item>
     </plurals>
+    <string name="end_xp">+%d опыта</string>
+    <string name="end_xp_level">+%1$d опыта · новый уровень %2$d!</string>
+    <string name="party_nearby_many">Рядом в сети: %s</string>
+    <string name="games_level">уровень · %1$d/%2$d</string>
+    <string name="games_chip_solo">соло</string>
+    <string name="games_chip_room">до %d игроков</string>
+    <string name="games_chip_bot">против бота</string>
+    <string name="games_chip_duel">1 на 1 по сети</string>
 </resources>

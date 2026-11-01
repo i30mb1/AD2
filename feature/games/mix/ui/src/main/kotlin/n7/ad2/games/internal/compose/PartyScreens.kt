@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -31,7 +32,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -42,10 +45,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.paper.PaperEdge
 import n7.ad2.games.internal.party.NearbyPlayer
 import n7.ad2.games.internal.party.PartyFailure
 import n7.ad2.games.internal.party.PartyState
 import n7.ad2.games.internal.party.Via
+import n7.ad2.games.room.MAX_PLAYERS
 
 internal enum class PartyBanner { ALONE, NEARBY, CONNECTING, FAILED, TOGETHER }
 
@@ -75,64 +80,89 @@ internal fun NearbyCard(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHel
             Text(stringResource(R.string.party_help), color = PeerColor, fontSize = 12.sp, modifier = Modifier.clickable(onClick = onHelp).padding(4.dp))
         }
         PartyBanner.TOGETHER -> Unit
-        else -> Column(
-            modifier = modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(12.dp))
-                .background(AppTheme.color.surface)
-                .border(1.dp, if (party.failure != null) MeColor else PeerColor, RoundedCornerShape(12.dp))
-                .padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
-        ) {
-            val first = party.nearby.firstOrNull()
-            when {
-                // ручное подключение по адресу идёт без имени
-                party.connecting -> Text(
-                    text = first?.name?.takeIf { it.isNotBlank() }?.let { stringResource(R.string.party_connecting, it) } ?: stringResource(R.string.party_connecting_plain),
-                    color = AppTheme.color.textColor,
-                    fontSize = 14.sp,
-                )
-                party.failure != null -> Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(stringResource(party.failure.text()), color = AppTheme.color.textColor, fontSize = 13.sp, modifier = Modifier.weight(1f))
-                    Text(stringResource(R.string.party_help), color = PeerColor, fontSize = 12.sp, modifier = Modifier.clickable(onClick = onHelp).padding(4.dp))
+        else -> NearbyPaper(party, onPlay, onHelp, modifier)
+    }
+}
+
+private val NearbyGreen = Color(0xFF3F7D45)
+private val NearbyFailed = Color(0xFF8C3A33)
+private val NearbyText = Color(0xFFDDEBD8)
+private val NearbyButtonText = Color(0xFF2B5A31)
+
+/** Players nearby on green paper: one - a button to play, several - a row for each; the connection on top */
+@Composable
+private fun NearbyPaper(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHelp: () -> Unit, modifier: Modifier) {
+    val shape = RoundedCornerShape(14.dp)
+    val failure = party.failure
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .rotate(-0.6f)
+            .shadow(6.dp, shape)
+            .clip(shape)
+            .background(if (failure != null) NearbyFailed else NearbyGreen)
+            .border(3.dp, PaperEdge, shape)
+            .padding(horizontal = 14.dp, vertical = 12.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        val first = party.nearby.firstOrNull()
+        when {
+            // ручное подключение по адресу идёт без имени
+            party.connecting -> Text(
+                text = first?.name?.takeIf { it.isNotBlank() }?.let { stringResource(R.string.party_connecting, it) } ?: stringResource(R.string.party_connecting_plain),
+                color = PaperEdge,
+                fontSize = 14.sp,
+            )
+            failure != null -> Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(stringResource(failure.text()), color = PaperEdge, fontSize = 13.sp, modifier = Modifier.weight(1f))
+                Text(stringResource(R.string.party_help), color = PaperEdge, fontSize = 12.sp, fontWeight = FontWeight.Bold, modifier = Modifier.clickable(onClick = onHelp).padding(4.dp))
+            }
+        }
+        if (first == null) return@Column
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row {
+                party.nearby.take(3).forEachIndexed { index, player ->
+                    Avatar(player.name, PeerColor, 34.dp, Modifier.offset(x = (-10).dp * index).border(2.dp, PaperEdge, CircleShape))
                 }
             }
-            party.nearby.forEachIndexed { index, player ->
-                if (index == 0) MainNearby(player, enabled = !party.connecting) { onPlay(player) } else OtherNearby(player, enabled = !party.connecting) { onPlay(player) }
+            Column(Modifier.weight(1f)) {
+                Text(
+                    stringResource(R.string.party_nearby_many, party.nearby.joinToString { it.name }),
+                    color = PaperEdge,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Text(stringResource(R.string.party_room_subtitle, MAX_PLAYERS), color = NearbyText, fontSize = 12.sp)
+            }
+            if (party.nearby.size == 1) PlayButton(enabled = !party.connecting) { onPlay(first) }
+        }
+        if (party.nearby.size > 1) {
+            party.nearby.forEach { player ->
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text("${player.name} · ${player.via.label()}", color = NearbyText, fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f))
+                    PlayButton(enabled = !party.connecting) { onPlay(player) }
+                }
             }
         }
     }
 }
 
 @Composable
-private fun MainNearby(player: NearbyPlayer, enabled: Boolean, onPlay: () -> Unit) {
-    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-        Box {
-            Avatar(player.name, PeerColor, 40.dp)
-            Box(Modifier.align(Alignment.BottomEnd).size(12.dp).clip(CircleShape).background(RightColor).border(2.dp, AppTheme.color.surface, CircleShape))
-        }
-        Column(Modifier.weight(1f)) {
-            Text(stringResource(R.string.party_nearby, player.name), color = AppTheme.color.textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Text("${player.via.label()} · ${stringResource(R.string.party_in_games)}", color = DimColor, fontSize = 12.sp)
-        }
-        Text(
-            text = stringResource(R.string.party_play),
-            color = Color.White,
-            fontSize = 14.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.alpha(if (enabled) 1f else 0.4f).clip(RoundedCornerShape(18.dp)).background(MeColor).clickable(enabled = enabled, onClick = onPlay)
-                .padding(horizontal = 16.dp, vertical = 9.dp),
-        )
-    }
-}
-
-@Composable
-private fun OtherNearby(player: NearbyPlayer, enabled: Boolean, onPlay: () -> Unit) {
-    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-        Avatar(player.name, RightColor, 24.dp)
-        Text("${player.name} · ${player.via.label()}", color = AppTheme.color.textSecondaryColor, fontSize = 13.sp, modifier = Modifier.weight(1f))
-        Text(stringResource(R.string.party_play), color = PeerColor, fontSize = 13.sp, fontWeight = FontWeight.Medium, modifier = Modifier.clickable(enabled = enabled, onClick = onPlay).padding(4.dp))
-    }
+private fun PlayButton(enabled: Boolean, onClick: () -> Unit) {
+    Text(
+        text = stringResource(R.string.party_play),
+        color = NearbyButtonText,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier
+            .alpha(if (enabled) 1f else 0.5f)
+            .clip(RoundedCornerShape(10.dp))
+            .background(PaperEdge)
+            .clickable(enabled = enabled, onClick = onClick)
+            .padding(horizontal = 14.dp, vertical = 10.dp),
+    )
 }
 
 @Composable

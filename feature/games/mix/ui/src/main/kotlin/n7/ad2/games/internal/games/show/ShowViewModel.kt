@@ -29,6 +29,9 @@ import n7.ad2.games.internal.ActiveRoom
 import n7.ad2.games.internal.MatchClock
 import n7.ad2.games.internal.party.GameChannel
 import n7.ad2.games.internal.party.Pick
+import n7.ad2.games.internal.progress.GameXp
+import n7.ad2.games.internal.progress.ProgressStore
+import n7.ad2.games.internal.progress.XpGain
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
@@ -54,6 +57,7 @@ internal class ShowViewModel @AssistedInject constructor(
     private val dailyStore: DailyStore,
     private val leaderboardSync: LeaderboardSync,
     private val leaderboardRepository: LeaderboardRepository,
+    private val progressStore: ProgressStore,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
 
@@ -313,7 +317,10 @@ internal class ShowViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
             val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
-            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest) }
+            // a win - the most points of everyone in a versus show
+            val won = mode == GameMode.VERSUS && match.players.filter { it.id != me.id }.all { match.score(it.id) < match.score(me.id) }
+            val xp = progressStore.add(GameXp.game(won, record = isRecord && score > 0))
+            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest, xp = xp) }
         }
     }
 
@@ -321,7 +328,7 @@ internal class ShowViewModel @AssistedInject constructor(
     private fun saveDaily(match: ShowMatch) {
         val result = dailyResult(match)
         val streak = dailyStore.save(result)
-        _state.update { it.copy(streak = streak.current(today)) }
+        _state.update { it.copy(streak = streak.current(today), xp = progressStore.add(GameXp.DAILY)) }
         viewModelScope.launch {
             leaderboardSync.submit(Record(me.id, me.name, DailyPlan.gameId(today), GameMode.SOLO, result.points, System.currentTimeMillis()))
         }
@@ -392,6 +399,8 @@ internal class ShowViewModel @AssistedInject constructor(
         val voice: Voice,
         val replaysLeft: Int,
         val newRecord: Boolean,
+        /** The experience the show gave, null - not yet or a day played before */
+        val xp: XpGain? = null,
         /** The best result before this show, null - the first one */
         val previousBest: Int?,
         val daily: Boolean,

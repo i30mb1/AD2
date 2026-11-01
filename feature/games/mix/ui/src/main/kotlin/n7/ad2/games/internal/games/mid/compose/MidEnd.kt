@@ -29,6 +29,7 @@ import n7.ad2.games.internal.games.mid.MidHero
 import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.compose.EndActions
 import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.paper.Ink
 import n7.ad2.games.internal.paper.InkDim
 import n7.ad2.games.internal.paper.PaperCard
@@ -48,6 +49,7 @@ internal fun ColumnScope.MidEnd(state: MidViewModel.State, actions: MidActions) 
     }
     Column(Modifier.weight(1f).padding(top = 20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(title), color = AppTheme.color.textColor, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        XpLine(state.xp)
         Row(
             Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(PaperCard).padding(vertical = 16.dp, horizontal = 12.dp),
             verticalAlignment = Alignment.CenterVertically,

@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.BuzzOnAnswer
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.LineColor
 import n7.ad2.games.internal.compose.avatarLetter
@@ -96,6 +97,7 @@ internal val PlayerColors = listOf(Color(0xFFD9483B), Color(0xFF3F7DD9), Color(0
 
 @Composable
 internal fun ShowScreen(state: ShowViewModel.State, actions: ShowActions, clock: () -> Long = SystemClock::elapsedRealtime) {
+    BuzzOnAnswer(state.myAnswer?.correct)
     // a frame clock for the fuse: it burns between the updates of the state
     var now by remember { mutableLongStateOf(clock()) }
     LaunchedEffect(Unit) {

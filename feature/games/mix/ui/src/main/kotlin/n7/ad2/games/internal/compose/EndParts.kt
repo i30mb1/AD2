@@ -18,10 +18,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.progress.XpGain
 
 /** Gold plate for a new record, with the previous best when there was one. */
 @Composable
@@ -43,6 +45,20 @@ internal fun RecordPlate(previousBest: Int?, now: Int, modifier: Modifier = Modi
             if (previousBest != null) Text(stringResource(R.string.end_record_was, previousBest, now), color = AppTheme.color.textSecondaryColor, fontSize = 12.sp)
         }
     }
+}
+
+/** Что дала игра: «+50 опыта», а с новым уровнем - и его, золотом */
+@Composable
+internal fun XpLine(xp: XpGain?, modifier: Modifier = Modifier) {
+    if (xp == null) return
+    val level = xp.newLevel
+    Text(
+        text = if (level != null) stringResource(R.string.end_xp_level, xp.points, level) else stringResource(R.string.end_xp, xp.points),
+        color = if (level != null) GoldColor else AppTheme.color.textSecondaryColor,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        modifier = modifier,
+    )
 }
 
 /** «Ещё раз» и «Другая игра» внизу итога; по сети кнопка называет соперника, а если их несколько - зовет всех [others] */
@@ -69,5 +85,18 @@ internal fun EndActions(others: List<String>, onAgain: () -> Unit, onOtherGame: 
             modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).border(1.dp, LineColor, RoundedCornerShape(12.dp))
                 .clickable(onClick = onOtherGame).padding(13.dp),
         )
+    }
+}
+
+@Preview(backgroundColor = 0xFF202225, showBackground = true, widthDp = 390)
+@Composable
+private fun EndPartsPreview() {
+    AppTheme(isDarkTheme = true) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            XpLine(XpGain(50, newLevel = null))
+            XpLine(XpGain(50, newLevel = 8))
+            RecordPlate(previousBest = 3, now = 4)
+            EndActions(listOf("Pixel 8", "Galaxy"), onAgain = {}, onOtherGame = {})
+        }
     }
 }

@@ -37,6 +37,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.Buzz
+import n7.ad2.games.internal.compose.BuzzOnIncrease
 import n7.ad2.games.internal.games.xo.Mark
 import n7.ad2.games.internal.games.xo.XoMove
 import n7.ad2.games.internal.games.xo.XoViewModel
@@ -66,6 +68,8 @@ private val Warn = Color(0xFFE58C80)
 
 @Composable
 internal fun XoScreen(state: XoViewModel.State, actions: XoActions) {
+    BuzzOnIncrease(state.game.taken(state.myMark), Buzz.GOOD)
+    BuzzOnIncrease(state.game.taken(state.myMark.other), Buzz.BAD)
     var zoomed by rememberSaveable { mutableStateOf<Int?>(null) }
     // a zoomed board stays only while I can move there
     val zoom = zoomed?.takeIf { state.myTurn && state.game.isPlayable(it) }

@@ -35,6 +35,7 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.LineColor
+import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.games.show.DailyPlan
 import n7.ad2.games.internal.games.show.RoundAnswer
 import n7.ad2.games.internal.games.show.ShowMatch
@@ -73,6 +74,7 @@ internal fun ColumnScope.DailyEnd(state: ShowViewModel.State, actions: ShowActio
             }
         }
         if (state.streak > 0) Text(resources.getQuantityString(R.plurals.daily_streak, state.streak, state.streak), color = AppTheme.color.textColor, fontSize = 14.sp)
+        XpLine(state.xp)
         Text(stringResource(R.string.daily_nearby), color = DimColor, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
         if (state.nearby.none { it.playerId != state.meId }) {
             Text(stringResource(R.string.daily_nearby_empty), color = AppTheme.color.textSecondaryColor, fontSize = 13.sp, lineHeight = 18.sp)

@@ -37,6 +37,8 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.Buzz
+import n7.ad2.games.internal.compose.BuzzOnIncrease
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.MeColor
 import n7.ad2.games.internal.compose.PeerColor
@@ -66,6 +68,8 @@ internal class MidActions(
 
 @Composable
 internal fun MidScreen(state: MidViewModel.State, sim: LaneSim, elapsedMs: () -> Long, countdown: () -> Int, actions: MidActions) {
+    BuzzOnIncrease(state.stats.taken, Buzz.GOOD)
+    BuzzOnIncrease(state.stats.early + state.stats.late, Buzz.BAD)
     Column(
         modifier = Modifier
             .fillMaxSize()

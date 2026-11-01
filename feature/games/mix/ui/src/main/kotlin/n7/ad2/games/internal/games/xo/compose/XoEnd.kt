@@ -17,6 +17,7 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.EndActions
 import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.games.xo.Mark
 import n7.ad2.games.internal.games.xo.XoResult
 import n7.ad2.games.internal.games.xo.XoViewModel
@@ -35,6 +36,7 @@ internal fun ColumnScope.XoEnd(state: XoViewModel.State, actions: XoActions) {
         Text(stringResource(title), color = AppTheme.color.textColor, fontSize = 28.sp, fontWeight = FontWeight.Bold)
         Text(reason(state, result), color = XoLightDim, fontSize = 14.sp)
         if (state.streak > 0) Text(stringResource(R.string.xo_streak, state.streak), color = XoGold, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
+        XpLine(state.xp)
         if (state.newRecord) RecordPlate(state.previousBest, now = state.streak)
     }
     EndActions(listOfNotNull(state.peerName), actions.onAgain, actions.onOtherGame)

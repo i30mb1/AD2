@@ -2,6 +2,7 @@
 
 package n7.ad2.games.internal.compose
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
@@ -9,29 +10,30 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.with
-import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -55,6 +57,7 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.data.GameVO
+import n7.ad2.games.internal.progress.Progress
 
 @Composable
 internal fun GamesScreen(
@@ -103,6 +106,7 @@ internal fun GamesScreen(
                         else -> GamesList(
                             games = data.games,
                             bests = data.bests,
+                            progress = data.progress,
                             onGameClicked = onGameClicked,
                             onLeaderboardClicked = onLeaderboardClicked,
                             header = {
@@ -127,19 +131,25 @@ internal fun GamesScreen(
 private fun GamesList(
     games: List<GameVO>,
     bests: Map<String, Int>,
+    progress: Progress,
     onGameClicked: (game: GameVO) -> Unit,
     onLeaderboardClicked: () -> Unit,
     header: @Composable () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(10.dp),
+        verticalArrangement = Arrangement.spacedBy(18.dp),
         modifier = modifier
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 12.dp, vertical = 8.dp),
+            .padding(horizontal = 16.dp, vertical = 12.dp),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(stringResource(R.string.games_title), color = AppTheme.color.textColor, fontSize = 22.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+            Text(stringResource(R.string.games_title), color = AppTheme.color.textColor, fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.weight(1f))
+            LevelChip(progress)
+        }
+        header()
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(stringResource(R.string.games_title).uppercase(), color = AppTheme.color.textSecondaryColor, fontSize = 14.sp, fontWeight = FontWeight.SemiBold, letterSpacing = 0.5.sp, modifier = Modifier.weight(1f))
             Text(
                 text = "🏆 " + stringResource(R.string.games_records),
                 color = AppTheme.color.textSecondaryColor,
@@ -152,36 +162,14 @@ private fun GamesList(
                     .padding(horizontal = 12.dp, vertical = 7.dp),
             )
         }
-        header()
-        games.forEach { game -> GameRow(game, bests[game.id]) { onGameClicked(game) } }
-    }
-}
-
-@Composable
-private fun GameRow(game: GameVO, record: Int?, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(AppTheme.color.surface)
-            .clickable(onClick = onClick)
-            .padding(10.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        GameCover(game, 56.dp, shape = RoundedCornerShape(10.dp))
-        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-            Text(game.title, color = AppTheme.color.textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold)
-            Text(stringResource(game.rules()), color = DimColor, fontSize = 12.sp)
-            if (record != null) Text(stringResource(R.string.games_record_badge, record), color = GoldColor, fontSize = 11.sp)
+        // the games with a picture first, then two small cards in a row
+        val (big, small) = games.partition { it is GameVO.Show || it is GameVO.Mid }
+        big.forEachIndexed { index, game -> BigGameCard(game, bests[game.id], tilt = if (index % 2 == 0) 0f else -0.4f) { onGameClicked(game) } }
+        small.chunked(2).forEach { row ->
+            Row(Modifier.height(IntrinsicSize.Max), horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                row.forEachIndexed { index, game -> SmallGameCard(game, bests[game.id], tilt = if (index % 2 == 0) 0f else 0.6f, modifier = Modifier.weight(1f).fillMaxHeight()) { onGameClicked(game) } }
+                if (row.size == 1) Spacer(Modifier.weight(1f))
+            }
         }
-        Text("›", color = DimColor, fontSize = 22.sp)
     }
-}
-
-private fun GameVO.rules(): Int = when (this) {
-    is GameVO.Show -> R.string.games_rules_show
-    is GameVO.Mid -> R.string.games_rules_mid
-    is GameVO.Invoker -> R.string.games_rules_invoker
-    is GameVO.XO -> R.string.games_rules_xo
 }

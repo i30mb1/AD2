@@ -23,6 +23,9 @@ import kotlinx.coroutines.withContext
 import n7.ad2.games.internal.ActiveRoom
 import n7.ad2.games.internal.party.GameChannel
 import n7.ad2.games.internal.party.Pick
+import n7.ad2.games.internal.progress.GameXp
+import n7.ad2.games.internal.progress.ProgressStore
+import n7.ad2.games.internal.progress.XpGain
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
@@ -40,6 +43,7 @@ internal class XoViewModel @AssistedInject constructor(
     private val leaderboardSync: LeaderboardSync,
     private val leaderboardRepository: LeaderboardRepository,
     private val store: XoStore,
+    private val progressStore: ProgressStore,
     localPlayerProvider: LocalPlayerProvider,
 ) : ViewModel() {
 
@@ -217,11 +221,15 @@ internal class XoViewModel @AssistedInject constructor(
         val streak = store.streak(mode).let { if (result.winner == myMark) it.won() else it.lost() }
         store.save(mode, streak)
         _state.update { it.copy(result = result, drawOffer = null, confirmResign = false, streak = streak.current) }
-        if (streak.current == 0) return
+        val won = result.winner == myMark
         viewModelScope.launch {
-            val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
-            val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, streak.current, System.currentTimeMillis()))
-            _state.update { it.copy(newRecord = isRecord, previousBest = previousBest) }
+            var isRecord = false
+            if (streak.current > 0) {
+                val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
+                isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, streak.current, System.currentTimeMillis()))
+                _state.update { it.copy(newRecord = isRecord, previousBest = previousBest) }
+            }
+            _state.update { it.copy(xp = progressStore.add(GameXp.game(won, isRecord))) }
         }
     }
 
@@ -259,6 +267,8 @@ internal class XoViewModel @AssistedInject constructor(
         val confirmResign: Boolean = false,
         val streak: Int = 0,
         val newRecord: Boolean = false,
+        /** The experience the game gave, null - not yet */
+        val xp: XpGain? = null,
         /** The best streak before this game, null - the first one */
         val previousBest: Int? = null,
     ) {

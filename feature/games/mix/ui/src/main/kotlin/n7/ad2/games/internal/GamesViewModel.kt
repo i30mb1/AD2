@@ -27,6 +27,8 @@ import n7.ad2.games.internal.games.show.DailyStore
 import n7.ad2.games.internal.party.NearbyPlayer
 import n7.ad2.games.internal.party.Party
 import n7.ad2.games.internal.party.PartyState
+import n7.ad2.games.internal.progress.Progress
+import n7.ad2.games.internal.progress.ProgressStore
 import n7.ad2.games.leaderboard.LeaderboardRepository
 import n7.ad2.games.leaderboard.LeaderboardSync
 import n7.ad2.games.leaderboard.LocalPlayerProvider
@@ -48,6 +50,7 @@ internal class GamesViewModel @AssistedInject constructor(
     registerServiceInNetworkUseCase: RegisterServiceInNetworkUseCase,
     wifiDirect: WifiDirect,
     private val dailyStore: DailyStore,
+    private val progressStore: ProgressStore,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -88,9 +91,12 @@ internal class GamesViewModel @AssistedInject constructor(
     // вызов дня: сыгран ли сегодня и серия; обновляется, когда список снова на экране
     private val daily = MutableStateFlow(dailyCard())
 
+    // уровень игрока растет после игр: обновляется, когда список снова на экране
+    private val progress = MutableStateFlow(progressStore.progress())
+
     // список статичный: показываем сразу, рекорды и игроки рядом подтянутся
-    val state: StateFlow<State> = combine(bests, party.state, daily) { bests, party, daily -> State.Data(games, bests, party, daily) }
-        .stateIn(viewModelScope, SharingStarted.Lazily, State.Data(games, emptyMap(), party.state.value, daily.value))
+    val state: StateFlow<State> = combine(bests, party.state, daily, progress) { bests, party, daily, progress -> State.Data(games, bests, party, daily, progress) }
+        .stateIn(viewModelScope, SharingStarted.Lazily, State.Data(games, emptyMap(), party.state.value, daily.value, progress.value))
 
     init {
         viewModelScope.launch {
@@ -103,6 +109,7 @@ internal class GamesViewModel @AssistedInject constructor(
         party.setVisible(visible)
         if (!visible) return
         daily.value = dailyCard()
+        progress.value = progressStore.progress()
         val rematch = ActiveRoom.takeRematch() ?: return
         if (rematch.mode == GameMode.SOLO) _openGame.trySend(OpenGame(rematch.gameId, GameMode.SOLO)) else party.rematch(rematch)
     }
@@ -138,6 +145,6 @@ internal class GamesViewModel @AssistedInject constructor(
     data class DailyCard(val date: LocalDate, val result: DailyResult?, val streak: Int)
 
     sealed class State {
-        data class Data(val games: List<GameVO>, val bests: Map<String, Int>, val party: PartyState, val daily: DailyCard) : State()
+        data class Data(val games: List<GameVO>, val bests: Map<String, Int>, val party: PartyState, val daily: DailyCard, val progress: Progress) : State()
     }
 }
