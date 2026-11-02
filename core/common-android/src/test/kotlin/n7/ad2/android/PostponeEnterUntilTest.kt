@@ -15,11 +15,13 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowLooper
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
 @RunWith(RobolectricTestRunner::class)
+@Config(sdk = [34])
 internal class PostponeEnterUntilTest {
 
     class OldFragment : Fragment() {
@@ -56,7 +58,7 @@ internal class PostponeEnterUntilTest {
         val new = NewFragment()
         replaceWith(new)
         Truth.assertThat(old.view?.parent).isEqualTo(container)
-        Truth.assertThat(new.view?.parent).isNull()
+        Truth.assertThat(new.view?.alpha ?: 0f).isEqualTo(0f)
     }
 
     @Test
@@ -65,7 +67,7 @@ internal class PostponeEnterUntilTest {
         replaceWith(new)
         new.ready.complete(Unit)
         ShadowLooper.idleMainLooper()
-        Truth.assertThat(new.requireView().parent).isEqualTo(container)
+        Truth.assertThat(new.requireView().alpha).isEqualTo(1f)
         Truth.assertThat(old.view).isNull()
     }
 
@@ -73,7 +75,8 @@ internal class PostponeEnterUntilTest {
     fun `new screen is shown after timeout even without data`() {
         val new = NewFragment().apply { timeout = 300.milliseconds }
         replaceWith(new)
-        ShadowLooper.idleMainLooperFor(java.time.Duration.ofMillis(400))
-        Truth.assertThat(new.requireView().parent).isEqualTo(container)
+        ShadowLooper.idleMainLooper(400, java.util.concurrent.TimeUnit.MILLISECONDS)
+        Truth.assertThat(new.requireView().alpha).isEqualTo(1f)
+        Truth.assertThat(old.view).isNull()
     }
 }

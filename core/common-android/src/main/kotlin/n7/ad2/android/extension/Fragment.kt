@@ -1,6 +1,9 @@
 package n7.ad2.android.extension
 
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeoutOrNull
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
 
@@ -10,4 +13,9 @@ import kotlin.time.Duration.Companion.milliseconds
  * Вызывать в onCreate, транзакция должна быть с setReorderingAllowed(true)
  */
 fun Fragment.postponeEnterUntil(timeout: Duration = 500.milliseconds, isReady: suspend () -> Unit) {
+    postponeEnterTransition()
+    lifecycleScope.launch {
+        withTimeoutOrNull(timeout) { isReady() }
+        startPostponedEnterTransition()
+    }
 }

@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.compose.runtime.getValue
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import kotlinx.coroutines.flow.first
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.HasDependencies
+import n7.ad2.android.extension.postponeEnterUntil
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.core.ui.content
@@ -32,6 +34,7 @@ internal class ItemsFragment @JvmOverloads constructor(override var dependencies
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         DaggerItemsComponent.factory().create(findDependencies()).inject(this)
+        postponeEnterUntil { viewModel.filteredItems.first { items -> items.isNotEmpty() } }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {

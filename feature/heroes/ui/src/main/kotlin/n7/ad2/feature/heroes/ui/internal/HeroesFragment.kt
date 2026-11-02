@@ -9,9 +9,11 @@ import androidx.compose.runtime.getValue
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dagger.Lazy
+import kotlinx.coroutines.flow.first
 import n7.ad2.android.DependenciesMap
 import n7.ad2.android.DrawerPercentListener
 import n7.ad2.android.HasDependencies
+import n7.ad2.android.extension.postponeEnterUntil
 import n7.ad2.android.findDependencies
 import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.core.ui.content
@@ -39,6 +41,11 @@ internal class HeroesFragment @JvmOverloads constructor(override var dependencie
     override fun onAttach(context: Context) {
         super.onAttach(context)
         DaggerHeroesComponent.factory().create(findDependencies()).inject(this)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        postponeEnterUntil { viewModel.heroes.first { heroes -> heroes.isNotEmpty() } }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {

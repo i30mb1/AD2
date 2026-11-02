@@ -168,6 +168,8 @@ internal class DrawerFragment :
             else -> return
         }
         childFragmentManager.commitNow {
+            // нужно для postponeEnterUntil: старый экран остается, пока новый не загрузит данные
+            setReorderingAllowed(true)
             replace(binding.container.id, fragment, null)
         }
     }
