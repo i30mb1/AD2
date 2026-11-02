@@ -3,7 +3,7 @@ import com.android.build.api.dsl.LibraryExtension
 
 pluginManager.withPlugin("com.android.application") {
     extensions.configure(ApplicationExtension::class.java) {
-        compileSdk = 36
+        compileSdk = 37
         buildFeatures {
             viewBinding = true
         }
@@ -36,7 +36,7 @@ pluginManager.withPlugin("com.android.application") {
 
 pluginManager.withPlugin("com.android.library") {
     extensions.configure(LibraryExtension::class.java) {
-        compileSdk = 36
+        compileSdk = 37
         buildFeatures {
             viewBinding = true
         }

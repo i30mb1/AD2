@@ -17,7 +17,7 @@ public class SelectableImageView @JvmOverloads constructor(context: Context, att
     private val _borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL_AND_STROKE
         strokeWidth = 1f
-        color = MaterialColors.getColor(this@SelectableImageView, com.google.android.material.R.attr.colorPrimary)
+        color = MaterialColors.getColor(this@SelectableImageView, android.R.attr.colorPrimary)
     }
     private var canvasHeight = 0f
     private var canvasWidth = 0f

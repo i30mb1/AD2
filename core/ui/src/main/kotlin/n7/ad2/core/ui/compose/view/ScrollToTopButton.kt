@@ -36,7 +36,7 @@ inline fun ScrollToTopButton(isVisible: Boolean, state: LazyListState, modifier:
         Box(
             modifier = Modifier
                 .clip(RoundedCornerShape(topStart = 6.dp, bottomStart = 6.dp))
-                .background(color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.primary)
+                .background(color = AppTheme.color.primary)
                 .padding(start = 8.dp, end = 8.dp, top = 2.dp, bottom = 2.dp)
                 .clickable { scope.launch { state.animateScrollToItem(0) } },
         ) {
@@ -54,7 +54,7 @@ inline fun ScrollToTopButton(isVisible: Boolean, state: LazyListState, modifier:
 @Preview
 @Composable
 private fun ScrollToTopButtonPreview() {
-    _root_ide_package_.n7.ad2.core.ui.compose.view.ScrollToTopButton(
+    ScrollToTopButton(
         true,
         rememberLazyListState(),
     )

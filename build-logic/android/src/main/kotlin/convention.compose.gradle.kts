@@ -3,6 +3,7 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.LibraryExtension
 import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
+import org.jetbrains.kotlin.compose.compiler.gradle.ComposeFeatureFlag
 
 plugins {
     id("org.jetbrains.kotlin.plugin.compose")
@@ -25,12 +26,11 @@ pluginManager.withPlugin("com.android.library") {
 }
 
 configure<ComposeCompilerGradlePluginExtension> {
-    enableStrongSkippingMode = true
     includeSourceInformation = true
-    enableNonSkippingGroupOptimization = true
+    featureFlags.add(ComposeFeatureFlag.OptimizeNonSkippingGroups)
     val file = layout.projectDirectory.file("stability_config.conf")
     if (file.asFile.exists()) {
-        stabilityConfigurationFile.set(file)
+        stabilityConfigurationFiles.add(file)
     }
     reportsDestination = layout.buildDirectory.dir("compose_compiler")
 

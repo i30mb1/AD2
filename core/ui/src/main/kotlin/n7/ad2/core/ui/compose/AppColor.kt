@@ -13,7 +13,7 @@ data class AppColor(
     val backgroundMyServer: Color = Color(0xFF8BC34A),
 )
 
-val appColorLight = _root_ide_package_.n7.ad2.core.ui.compose.AppColor(
+val appColorLight = AppColor(
     primary = Color(0xFF448AFF),
     background = Color(0xFF202225),
     surface = Color(0xFF2F3136),
@@ -22,7 +22,7 @@ val appColorLight = _root_ide_package_.n7.ad2.core.ui.compose.AppColor(
     error = Color(0xFFFF0000),
 )
 
-val appColorDark = _root_ide_package_.n7.ad2.core.ui.compose.AppColor(
+val appColorDark = AppColor(
     primary = Color(0xFFF44336),
     background = Color(0xFF202225),
     surface = Color(0xFF2F3136),
@@ -31,4 +31,4 @@ val appColorDark = _root_ide_package_.n7.ad2.core.ui.compose.AppColor(
     error = Color(0xF0FF0000),
 )
 
-val LocalAppColor = staticCompositionLocalOf { _root_ide_package_.n7.ad2.core.ui.compose.appColorLight }
+val LocalAppColor = staticCompositionLocalOf { appColorLight }

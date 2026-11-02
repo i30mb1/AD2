@@ -36,17 +36,16 @@ import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupPositionProvider
 import androidx.compose.ui.window.PopupProperties
 import kotlin.math.roundToInt
-import n7.ad2.core.ui.compose.view.noRippleClickable
 
 @Composable
 fun TooltipPopup(modifier: Modifier = Modifier, requesterView: @Composable (Modifier) -> Unit, tooltipContent: @Composable () -> Unit) {
     var isShowTooltip by remember { mutableStateOf(false) }
-    var position by remember { mutableStateOf(_root_ide_package_.n7.ad2.core.ui.compose.view.TooltipPopupPosition()) }
+    var position by remember { mutableStateOf(TooltipPopupPosition()) }
 
     val view = LocalView.current.rootView
 
     if (isShowTooltip) {
-        _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipPopup(
+        TooltipPopup(
             onDismissRequest = {
                 isShowTooltip = isShowTooltip.not()
             },
@@ -61,14 +60,14 @@ fun TooltipPopup(modifier: Modifier = Modifier, requesterView: @Composable (Modi
                 isShowTooltip = isShowTooltip.not()
             }
             .onGloballyPositioned { coordinates ->
-                position = _root_ide_package_.n7.ad2.core.ui.compose.view.calculateTooltipPopupPosition(view, coordinates)
+                position = calculateTooltipPopupPosition(view, coordinates)
             },
     )
 }
 
 @Composable
 fun TooltipPopup(
-    position: n7.ad2.core.ui.compose.view.TooltipPopupPosition,
+    position: TooltipPopupPosition,
     backgroundShape: Shape = MaterialTheme.shapes.medium,
     backgroundColor: Color = Color.Black,
     arrowHeight: Dp = 4.dp,
@@ -89,14 +88,14 @@ fun TooltipPopup(
         val arrowPaddingPx = arrowHeight.toPx().roundToInt() * 3
 
         when (position.alignment) {
-            _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignment.TopCenter -> {
+            TooltipAlignment.TopCenter -> {
                 alignment = Alignment.TopCenter
                 offset = offset.copy(
                     y = position.offset.y + arrowPaddingPx,
                 )
             }
 
-            _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignment.BottomCenter -> {
+            TooltipAlignment.BottomCenter -> {
                 alignment = Alignment.BottomCenter
                 offset = offset.copy(
                     y = position.offset.y - arrowPaddingPx,
@@ -106,7 +105,7 @@ fun TooltipPopup(
     }
 
     val popupPositionProvider = remember(alignment, offset) {
-        _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignmentOffsetPositionProvider(
+        TooltipAlignmentOffsetPositionProvider(
             alignment = alignment,
             offset = offset,
             horizontalPaddingInPx = horizontalPaddingInPx,
@@ -121,7 +120,7 @@ fun TooltipPopup(
         onDismissRequest = onDismissRequest,
         properties = PopupProperties(dismissOnBackPress = false),
     ) {
-        _root_ide_package_.n7.ad2.core.ui.compose.view.BubbleLayout(
+        BubbleLayout(
             modifier = Modifier
                 .padding(horizontal = horizontalPadding)
                 .background(
@@ -227,7 +226,7 @@ internal class TooltipAlignmentOffsetPositionProvider(
 }
 
 @Composable
-fun BubbleLayout(modifier: Modifier = Modifier, alignment: n7.ad2.core.ui.compose.view.TooltipAlignment = _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignment.TopCenter, arrowHeight: Dp, arrowPositionX: Float, content: @Composable () -> Unit) {
+fun BubbleLayout(modifier: Modifier = Modifier, alignment: TooltipAlignment = TooltipAlignment.TopCenter, arrowHeight: Dp, arrowPositionX: Float, content: @Composable () -> Unit) {
     val arrowHeightPx = with(LocalDensity.current) {
         arrowHeight.toPx()
     }
@@ -237,7 +236,7 @@ fun BubbleLayout(modifier: Modifier = Modifier, alignment: n7.ad2.core.ui.compos
             .drawBehind {
                 if (arrowPositionX <= 0f) return@drawBehind
 
-                val isTopCenter = alignment == _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignment.TopCenter
+                val isTopCenter = alignment == TooltipAlignment.TopCenter
 
                 val path = Path()
 
@@ -273,10 +272,10 @@ fun BubbleLayout(modifier: Modifier = Modifier, alignment: n7.ad2.core.ui.compos
     }
 }
 
-data class TooltipPopupPosition(val offset: IntOffset = IntOffset(0, 0), val alignment: n7.ad2.core.ui.compose.view.TooltipAlignment = _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignment.TopCenter, val centerPositionX: Float = 0f)
+data class TooltipPopupPosition(val offset: IntOffset = IntOffset(0, 0), val alignment: TooltipAlignment = TooltipAlignment.TopCenter, val centerPositionX: Float = 0f)
 
-fun calculateTooltipPopupPosition(view: View, coordinates: LayoutCoordinates?): n7.ad2.core.ui.compose.view.TooltipPopupPosition {
-    coordinates ?: return _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipPopupPosition()
+fun calculateTooltipPopupPosition(view: View, coordinates: LayoutCoordinates?): TooltipPopupPosition {
+    coordinates ?: return TooltipPopupPosition()
 
     val visibleWindowBounds = android.graphics.Rect()
     view.getWindowVisibleDisplayFrame(visibleWindowBounds)
@@ -295,18 +294,18 @@ fun calculateTooltipPopupPosition(view: View, coordinates: LayoutCoordinates?): 
             y = coordinates.size.height,
             x = offsetX.toInt(),
         )
-        _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipPopupPosition(
+        TooltipPopupPosition(
             offset = offset,
-            alignment = _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignment.TopCenter,
+            alignment = TooltipAlignment.TopCenter,
             centerPositionX = centerPositionX,
         )
     } else {
-        _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipPopupPosition(
+        TooltipPopupPosition(
             offset = IntOffset(
                 y = -coordinates.size.height,
                 x = offsetX.toInt(),
             ),
-            alignment = _root_ide_package_.n7.ad2.core.ui.compose.view.TooltipAlignment.BottomCenter,
+            alignment = TooltipAlignment.BottomCenter,
             centerPositionX = centerPositionX,
         )
     }

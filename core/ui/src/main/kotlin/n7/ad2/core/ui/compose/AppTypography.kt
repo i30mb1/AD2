@@ -7,7 +7,7 @@ import androidx.compose.ui.unit.sp
 
 data class AppTypography(val H3: TextStyle, val H4: TextStyle, val H5: TextStyle, val body: TextStyle, val info: TextStyle)
 
-val appTypography = _root_ide_package_.n7.ad2.core.ui.compose.AppTypography(
+val appTypography = AppTypography(
     H3 = TextStyle(
         fontSize = 18.sp,
     ),
@@ -25,7 +25,7 @@ val appTypography = _root_ide_package_.n7.ad2.core.ui.compose.AppTypography(
     ),
 )
 
-val LocalAppTypography = staticCompositionLocalOf { _root_ide_package_.n7.ad2.core.ui.compose.appTypography }
+val LocalAppTypography = staticCompositionLocalOf { appTypography }
 
 val TextStyle.Bold
     get() = copy(fontWeight = FontWeight.Bold)

@@ -13,14 +13,14 @@ import n7.ad2.core.ui.showDialogError
 fun Fragment.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
 
 fun Fragment.showDialogError(title: String) {
-    val dialogError = _root_ide_package_.n7.ad2.core.ui.DialogError.newInstance(title)
+    val dialogError = DialogError.newInstance(title)
     dialogError.show(childFragmentManager, null)
 }
 
 fun FragmentActivity.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
 
 fun FragmentActivity.showDialogError(title: String) {
-    val dialogError = _root_ide_package_.n7.ad2.core.ui.DialogError.newInstance(title)
+    val dialogError = DialogError.newInstance(title)
     dialogError.show(supportFragmentManager, null)
 }
 

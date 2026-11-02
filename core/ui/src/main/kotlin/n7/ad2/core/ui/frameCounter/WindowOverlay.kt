@@ -49,9 +49,9 @@ import n7.ad2.core.ui.performance.ResourceUsage
 class WindowOverlay(private val context: Context, private val lifecycle: Lifecycle, private val dispatcher: DispatchersProvider, private val scope: CoroutineScope) : DefaultLifecycleObserver {
 
     private val windowManager by lazyUnsafe { context.getSystemService<WindowManager>()!! }
-    private var viewOwner: n7.ad2.core.ui.frameCounter.ViewOwner? = null
+    private var viewOwner: ViewOwner? = null
     private var _onDoubleTapListener: (() -> Unit)? = null
-    private val poller = _root_ide_package_.n7.ad2.core.ui.performance.PollerImpl(context, lifecycle)
+    private val poller = n7.ad2.core.ui.performance.PollerImpl(context, lifecycle)
 
     init {
         setEnable(true)
@@ -65,7 +65,7 @@ class WindowOverlay(private val context: Context, private val lifecycle: Lifecyc
             if (!requestPermission()) {
                 return false
             }
-            val viewOwner = _root_ide_package_.n7.ad2.core.ui.frameCounter.ViewOwner(
+            val viewOwner = ViewOwner(
                 scope,
                 context,
                 windowManager,

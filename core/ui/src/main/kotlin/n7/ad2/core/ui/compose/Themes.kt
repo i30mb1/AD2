@@ -9,24 +9,24 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 
 object AppTheme {
-    val style: n7.ad2.core.ui.compose.AppTypography
-        @Composable get() = _root_ide_package_.n7.ad2.core.ui.compose.LocalAppTypography.current
+    val style: AppTypography
+        @Composable get() = LocalAppTypography.current
 
-    val color: n7.ad2.core.ui.compose.AppColor
-        @Composable get() = _root_ide_package_.n7.ad2.core.ui.compose.LocalAppColor.current
+    val color: AppColor
+        @Composable get() = LocalAppColor.current
 
-    val shape: n7.ad2.core.ui.compose.AppShape
-        @Composable get() = _root_ide_package_.n7.ad2.core.ui.compose.LocalAppShape.current
+    val shape: AppShape
+        @Composable get() = LocalAppShape.current
 }
 
 @Composable
 fun AppTheme(isDarkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val appColor = if (isDarkTheme) _root_ide_package_.n7.ad2.core.ui.compose.appColorDark else _root_ide_package_.n7.ad2.core.ui.compose.appColorLight
-    val appTypography = _root_ide_package_.n7.ad2.core.ui.compose.appTypography
-    val appShape = _root_ide_package_.n7.ad2.core.ui.compose.appShape
+    val appColor = if (isDarkTheme) appColorDark else appColorLight
+    val appTypography = appTypography
+    val appShape = appShape
     CompositionLocalProvider(
-        _root_ide_package_.n7.ad2.core.ui.compose.LocalAppTypography provides appTypography,
-        _root_ide_package_.n7.ad2.core.ui.compose.LocalAppColor provides appColor,
+        LocalAppTypography provides appTypography,
+        LocalAppColor provides appColor,
     ) {
         MaterialTheme(
             colors = Colors(

@@ -30,12 +30,12 @@ fun LoadingScreen() {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize(),
     ) {
-        _root_ide_package_.n7.ad2.core.ui.compose.view.LoadingAnimation()
+        LoadingAnimation()
     }
 }
 
 @Composable
-fun LoadingAnimation(circleColor: Color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.primary, animationDelay: Int = 3000) {
+fun LoadingAnimation(circleColor: Color = AppTheme.color.primary, animationDelay: Int = 3000) {
     val circles = listOf(
         remember { Animatable(initialValue = 0f) },
         remember { Animatable(initialValue = 0f) },

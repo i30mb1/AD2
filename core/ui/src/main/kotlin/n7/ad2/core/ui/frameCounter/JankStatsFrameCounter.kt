@@ -29,7 +29,7 @@ class JankStatsFrameCounter(lifecycle: Lifecycle?, window: Window) :
     }
 
     override fun onResume(owner: LifecycleOwner) {
-        mainHandler.postDelayed(runnable, _root_ide_package_.n7.ad2.core.ui.frameCounter.FrameCounter.FPS_INTERVAL_TIME)
+        mainHandler.postDelayed(runnable, FrameCounter.FPS_INTERVAL_TIME)
     }
 
     override fun onPause(owner: LifecycleOwner) {
@@ -40,6 +40,6 @@ class JankStatsFrameCounter(lifecycle: Lifecycle?, window: Window) :
         isJunkCallback?.invoke(isJunk)
 //        fpsCallback?.invoke(count)
 //        count = 0
-        mainHandler.postDelayed(runnable, _root_ide_package_.n7.ad2.core.ui.frameCounter.FrameCounter.FPS_INTERVAL_TIME)
+        mainHandler.postDelayed(runnable, FrameCounter.FPS_INTERVAL_TIME)
     }
 }

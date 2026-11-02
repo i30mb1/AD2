@@ -25,8 +25,8 @@ fun ErrorScreen(error: Throwable? = null, onRetryClicked: () -> Unit = {}) {
     ) {
         Text(
             text = error?.message ?: "???",
-            style = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.style.H5,
-            color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.textColor,
+            style = AppTheme.style.H5,
+            color = AppTheme.color.textColor,
             modifier = Modifier
                 .padding(32.dp),
         )

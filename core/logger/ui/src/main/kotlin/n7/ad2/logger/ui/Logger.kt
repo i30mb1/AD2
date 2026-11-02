@@ -15,7 +15,7 @@ import n7.ad2.core.ui.compose.AppTheme
 @Preview
 @Composable
 private fun LoggerImpl() {
-    _root_ide_package_.n7.ad2.core.ui.compose.AppTheme {
+    AppTheme {
         Logger(
             listOf(
                 AppLog("Hello"),
@@ -36,8 +36,8 @@ fun Logger(logs: List<AppLog>, modifier: Modifier = Modifier) {
             val log = logs[index]
             Text(
                 text = log.message,
-                style = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.style.body,
-                color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.textColor,
+                style = AppTheme.style.body,
+                color = AppTheme.color.textColor,
                 minLines = 1,
             )
         }

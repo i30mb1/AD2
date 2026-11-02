@@ -18,8 +18,8 @@ fun TextWithDotsSuffix(text: String, modifier: Modifier = Modifier) {
     Text(
         modifier = modifier,
         text = animText,
-        style = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.style.body,
-        color = _root_ide_package_.n7.ad2.core.ui.compose.AppTheme.color.textColor,
+        style = AppTheme.style.body,
+        color = AppTheme.color.textColor,
     )
     LaunchedEffect(Unit) {
         var value: Byte = 0
@@ -39,7 +39,7 @@ fun TextWithDotsSuffix(text: String, modifier: Modifier = Modifier) {
 @Preview
 @Composable
 fun TextWithDotsSuffixPreview() {
-    _root_ide_package_.n7.ad2.core.ui.compose.AppTheme {
-        _root_ide_package_.n7.ad2.core.ui.TextWithDotsSuffix("Hello")
+    AppTheme {
+        TextWithDotsSuffix("Hello")
     }
 }

@@ -18,7 +18,7 @@ internal class HeroesViewModelTest {
 
     @get:Rule val coroutineRule = CoroutineTestRule()
 
-    private fun createViewModel() = _root_ide_package_.n7.ad2.feature.heroes.ui.internal.HeroesViewModel(
+    private fun createViewModel() = n7.ad2.feature.heroes.ui.internal.HeroesViewModel(
         getVOHeroesListUseCase = GetVOHeroesListUseCase(GetHeroesUseCaseFake(), coroutineRule.dispatchers, LoggerFake()),
         filterHeroesUseCase = { FilterHeroesUseCase(coroutineRule.dispatchers) },
         updateStateViewedForHeroUseCase = { UpdateStateViewedForHeroUseCaseFake() },
