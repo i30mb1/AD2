@@ -123,6 +123,7 @@ material = "com.google.android.material:material:1.14.0"
 constraintLayout = "androidx.constraintlayout:constraintlayout:2.2.2"
 coil = "io.coil-kt:coil:2.7.0"
 jsoup = "org.jsoup:jsoup:1.23.2" # Jsoup для разбора html
+jspecify = "org.jspecify:jspecify:1.0.1"
 playCoreKtx = "com.google.android.play:app-update-ktx:2.1.0" # auto update + rateMe
 playReview = "com.google.android.play:review-ktx:2.0.2"
 webkit = "androidx.webkit:webkit:1.18.0"

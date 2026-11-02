@@ -5,6 +5,7 @@ captures/
 **/.idea/*
 /profile-out/
 .obsidian
+.kotlin/
 
 local.properties
 task.txt

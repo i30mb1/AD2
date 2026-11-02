@@ -70,8 +70,8 @@ import n7.ad2.hero.page.internal.info.components.KeyItemsCard
 import n7.ad2.hero.page.internal.info.components.LoreSection
 import n7.ad2.hero.page.internal.info.components.MatchupsCards
 import n7.ad2.hero.page.internal.info.components.StrategySection
-import n7.ad2.hero.page.internal.info.components.revealTransition
 import n7.ad2.hero.page.internal.info.components.TalentsSection
+import n7.ad2.hero.page.internal.info.components.revealTransition
 import n7.ad2.hero.page.internal.info.domain.vo.InfoRow
 import n7.ad2.hero.page.internal.info.domain.vo.VOAbilityGroup
 import n7.ad2.hero.page.internal.info.domain.vo.VOHeroInfo

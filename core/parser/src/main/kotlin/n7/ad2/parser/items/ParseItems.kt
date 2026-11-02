@@ -65,7 +65,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
                 loadRecipe(root)
                 loadBonuses(root)
 
-                val urlImage = root.getElementById("itemmainimage").child(0).attr("href")
+                val urlImage = root.getElementById("itemmainimage")?.child(0)?.attr("href").orEmpty()
                 saveImage(urlImage, "$assetsDatabaseItems/${item.name}", "full")
                 saveFile("$assetsDatabaseItems/${item.name}/${locale.directory}", "description.json", toJSONString())
             }
@@ -129,8 +129,8 @@ private fun JSONObject.loadCostAndBoughtFrom(root: Document, item: HeroItem) {
 }
 
 private fun JSONObject.loadFacts(root: Document) {
-    var children = root.getElementById("mw-content-text").child(0).children()
-    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
+    var children = root.getElementById("mw-content-text")?.child(0)?.children() ?: return
+    if (children.size == 1) children = root.getElementById("mw-content-text")?.child(1)?.children() ?: return
     var nextSectionIsAdditionalInformation = false
     var array: JSONArray? = null
     for (child in children) {
@@ -152,8 +152,8 @@ private fun JSONObject.loadFacts(root: Document) {
 }
 
 private fun JSONObject.loadTips(root: Document) {
-    var children = root.getElementById("mw-content-text").child(0).children()
-    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
+    var children = root.getElementById("mw-content-text")?.child(0)?.children() ?: return
+    if (children.size == 1) children = root.getElementById("mw-content-text")?.child(1)?.children() ?: return
     var nextSectionIsAdditionalInformation = false
     var array: JSONArray? = null
     for (child in children) {
@@ -175,8 +175,8 @@ private fun JSONObject.loadTips(root: Document) {
 }
 
 private fun JSONObject.loadLore(root: Document) {
-    var children = root.getElementById("mw-content-text").child(0).children()
-    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
+    var children = root.getElementById("mw-content-text")?.child(0)?.children() ?: return
+    if (children.size == 1) children = root.getElementById("mw-content-text")?.child(1)?.children() ?: return
     var nextSectionIsAdditionalInformation = false
     var array: JSONArray? = null
     for (child in children) {
@@ -208,8 +208,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                 put("abilityName", abilityName)
 
                 var audioUrl = it.getElementsByTag("source").attr("src")
-                if (audioUrl.isNullOrEmpty()) audioUrl = null
-                put("audioUrl", audioUrl)
+                if (audioUrl.isNullOrEmpty()) put("audioUrl", null as String?) else put("audioUrl", audioUrl)
 
                 val effects = it.getElementsByAttributeValue("style", "font-size:98%;")
                 JSONArray().apply {
@@ -289,8 +288,8 @@ private fun JSONObject.loadAbilities(root: Document) {
 }
 
 private fun JSONObject.loadAdditionalInformation(root: Document) {
-    var children = root.getElementById("mw-content-text").child(0).children()
-    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
+    var children = root.getElementById("mw-content-text")?.child(0)?.children() ?: return
+    if (children.size == 1) children = root.getElementById("mw-content-text")?.child(1)?.children() ?: return
     var nextSectionIsAdditionalInformation = false
     for (child in children) {
         if (nextSectionIsAdditionalInformation) {
@@ -316,7 +315,7 @@ private fun JSONObject.loadDescription(root: Document) {
 }
 
 private fun JSONObject.loadName(root: Document) {
-    val name = root.getElementById("firstHeading").text()
+    val name = root.getElementById("firstHeading")?.text().orEmpty()
     put("name", name)
 }
 

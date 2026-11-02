@@ -56,6 +56,7 @@ tasks.register<JavaExec>("runItems") {
 dependencies {
     implementation(libs.jsonSimple)
     implementation(libs.jsoup)
+    compileOnly(libs.jspecify) // jsoup marks its api with jspecify annotations but doesn't bring them
     implementation(libs.coroutines)
     testImplementation(libs.test.junit)
     testImplementation(libs.jsoup)

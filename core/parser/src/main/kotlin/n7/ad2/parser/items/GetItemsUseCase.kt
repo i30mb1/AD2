@@ -13,7 +13,7 @@ class GetItemsUseCase {
         val result = mutableListOf<HeroItem>()
         var findItemSection = false
         var itemSection = ""
-        val elements = root.getElementById("mw-content-text").getElementsByClass("mw-parser-output")[0].allElements ?: error("could find elements")
+        val elements = root.getElementById("mw-content-text")?.getElementsByClass("mw-parser-output")?.getOrNull(0)?.allElements ?: error("could find elements")
         for (element in elements) {
             if (element.tag().toString() == "h2" && !findItemSection) {
                 val spans = element.getElementsByAttribute("id").map { it.text() }
