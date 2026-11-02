@@ -3,12 +3,14 @@ import com.android.build.api.dsl.LibraryExtension
 
 pluginManager.withPlugin("com.android.application") {
     extensions.configure(ApplicationExtension::class.java) {
-        compileSdk = 35
+        compileSdk = 36
         buildFeatures {
             viewBinding = true
         }
         defaultConfig {
             minSdk = 31
+            // Google Play takes updates for production only with the target of the last year's Android (36 since August 2026)
+            targetSdk = 36
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
         compileOptions {
@@ -34,7 +36,7 @@ pluginManager.withPlugin("com.android.application") {
 
 pluginManager.withPlugin("com.android.library") {
     extensions.configure(LibraryExtension::class.java) {
-        compileSdk = 35
+        compileSdk = 36
         buildFeatures {
             viewBinding = true
         }
