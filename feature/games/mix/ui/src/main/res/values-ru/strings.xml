@@ -296,4 +296,11 @@
     <string name="records_passed">Обогнали %s.</string>
     <string name="records_to_place">До %1$d-го места не хватает %2$s.</string>
     <string name="records_first_among">Первое место среди друзей.</string>
+    <string name="show_verdict_right">ВЕРНО!</string>
+    <string name="show_verdict_miss">МИМО!</string>
+    <string name="show_verdict_late">ВРЕМЯ ВЫШЛО</string>
+    <string name="show_next_in">следующий раунд через %d с</string>
+    <string name="show_question_in">Вопрос через %d с</string>
+    <string name="show_loading_question">Загружаем вопрос…</string>
+    <string name="show_loading_voice">Загружаем голос героя…</string>
 </resources>

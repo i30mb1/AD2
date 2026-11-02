@@ -4,10 +4,19 @@ import android.os.SystemClock
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
+import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -40,6 +49,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
@@ -154,23 +164,146 @@ private fun ColumnScope.ShowPlay(state: ShowViewModel.State, now: Long, actions:
             when {
                 shown.countdown > 0 -> Countdown(shown.countdown)
                 shown.loadFailed -> Text(stringResource(R.string.show_load_failed), color = AppTheme.color.textSecondaryColor, fontSize = 15.sp)
-                question == null -> if (!shown.daily) Intro(shown, actions)
+                question == null -> {
+                    if (!shown.daily) Intro(shown, actions)
+                    NextQuestion(shown, now)
+                }
                 else -> QuestionView(shown, question, now, actions)
             }
         }
     }
-    // the fuse and the helps come with the question and leave with it
+    // the fuse and the helps come with the question; after the answer the verdict is stamped in their place
     AnimatedVisibility(visible = state.question != null, enter = Unfold, exit = Fold, label = "fuse") {
-        Column {
-            Spacer(Modifier.height(10.dp))
-            FuseBar(state, now)
-            if (!state.daily) {
+        AnimatedContent(
+            targetState = state.verdict(),
+            transitionSpec = { (fadeIn(tween(120)) + scaleIn(StampSpring, initialScale = 1.3f)) togetherWith fadeOut(tween(100)) using SizeTransform(clip = false) },
+            label = "verdict",
+        ) { verdict ->
+            Column {
                 Spacer(Modifier.height(10.dp))
-                PowerUps(state, actions)
+                if (verdict == null) {
+                    FuseBar(state, now)
+                    if (!state.daily) {
+                        Spacer(Modifier.height(10.dp))
+                        PowerUps(state, actions)
+                    }
+                } else {
+                    VerdictBanner(verdict, state, now)
+                }
             }
         }
     }
 }
+
+/** What the screen says big after my answer: right, a miss, or the fuse burned before any answer */
+internal enum class Verdict { RIGHT, MISS, LATE }
+
+internal fun ShowViewModel.State.verdict(): Verdict? {
+    val answer = myAnswer ?: return null
+    return when {
+        answer.correct -> Verdict.RIGHT
+        timedOut -> Verdict.LATE
+        else -> Verdict.MISS
+    }
+}
+
+private val StampSpring = spring<Float>(dampingRatio = 0.45f, stiffness = Spring.StiffnessMediumLow)
+private val VerdictGreen = Color(0xFF3F7D45)
+private val VerdictRed = Color(0xFFA33F36)
+private val VerdictLate = Color(0xFF6B5F53)
+
+/** After my answer, in big letters on coloured paper: right, a miss or the time out, the points, and when the next round comes */
+@Composable
+private fun VerdictBanner(verdict: Verdict, state: ShowViewModel.State, now: Long) {
+    val answer = state.myAnswer ?: return
+    val shape = RoundedCornerShape(16.dp)
+    val paper = when (verdict) {
+        Verdict.RIGHT -> VerdictGreen
+        Verdict.MISS -> VerdictRed
+        Verdict.LATE -> VerdictLate
+    }
+    val title = when (verdict) {
+        Verdict.RIGHT -> R.string.show_verdict_right
+        Verdict.MISS -> R.string.show_verdict_miss
+        Verdict.LATE -> R.string.show_verdict_late
+    }
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .rotate(-1f)
+            .shadow(6.dp, shape)
+            .clip(shape)
+            .background(paper)
+            .border(3.dp, PaperEdge, shape)
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(stringResource(title), color = PaperEdge, fontSize = 30.sp, fontWeight = FontWeight.ExtraBold, letterSpacing = 1.sp, modifier = Modifier.weight(1f))
+            Text(signed(answer.points), color = PaperEdge, fontSize = 24.sp, fontWeight = FontWeight.ExtraBold, style = Digits)
+        }
+        val nextAt = state.nextAt
+        val waiting = waitingFor(state)
+        if (nextAt == null && waiting.isNotEmpty()) {
+            Text(stringResource(R.string.show_waiting, waiting.joinToString()), color = PaperEdge.copy(alpha = 0.85f), fontSize = 13.sp, fontWeight = FontWeight.Bold)
+        } else {
+            val left = ((nextAt ?: now) - now).coerceAtLeast(0)
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                PaperBar(left.toFloat() / ShowViewModel.REVEAL_MS, track = Color.Black.copy(alpha = 0.18f), fill = PaperEdge, modifier = Modifier.weight(1f))
+                Text(stringResource(R.string.show_next_in, secondsOf(left)), color = PaperEdge.copy(alpha = 0.85f), fontSize = 12.sp, fontWeight = FontWeight.Bold, style = Digits)
+            }
+        }
+    }
+}
+
+/** The others who have not answered this round yet */
+private fun waitingFor(state: ShowViewModel.State): List<String> =
+    state.match.players.filter { it.id != state.meId && it.id !in state.match.gone && state.match.answerOf(it.id) == null }.map { it.name }
+
+/** Between the rounds: when the question comes, then that it is still on its way */
+@Composable
+private fun NextQuestion(state: ShowViewModel.State, now: Long) {
+    val endsAt = state.introEndsAt ?: return
+    val left = (endsAt - now).coerceAtLeast(0)
+    val total = if (state.daily) ShowViewModel.DAILY_INTRO_MS else ShowViewModel.INTRO_MS
+    val text = when {
+        left > 0 -> stringResource(R.string.show_question_in, secondsOf(left))
+        state.match.current.kind == ShowKind.VOICE -> stringResource(R.string.show_loading_voice)
+        else -> stringResource(R.string.show_loading_question)
+    }
+    Column(
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(AppTheme.color.surface).padding(horizontal = 14.dp, vertical = 12.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(text, color = AppTheme.color.textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold, style = Digits)
+        if (left > 0) PaperBar(1f - left.toFloat() / total, track = LineColor, fill = ShowGold) else LoadingBar()
+    }
+}
+
+/** A thin rounded bar filled to [fraction] */
+@Composable
+private fun PaperBar(fraction: Float, track: Color, fill: Color, modifier: Modifier = Modifier) {
+    Canvas(modifier.fillMaxWidth().height(6.dp)) {
+        val radius = CornerRadius(size.height / 2)
+        drawRoundRect(track, cornerRadius = radius)
+        val width = size.width * fraction.coerceIn(0f, 1f)
+        if (width > 0f) drawRoundRect(fill, size = Size(width, size.height), cornerRadius = radius)
+    }
+}
+
+/** Still loading: a gold piece runs to and fro along the bar */
+@Composable
+private fun LoadingBar() {
+    val run by rememberInfiniteTransition(label = "loading").animateFloat(0f, 1f, infiniteRepeatable(tween(900), RepeatMode.Reverse), label = "loading run")
+    Canvas(Modifier.fillMaxWidth().height(6.dp)) {
+        val radius = CornerRadius(size.height / 2)
+        drawRoundRect(LineColor, cornerRadius = radius)
+        val piece = size.width * 0.3f
+        drawRoundRect(ShowGold, topLeft = Offset((size.width - piece) * run, 0f), size = Size(piece, size.height), cornerRadius = radius)
+    }
+}
+
+private fun secondsOf(ms: Long): Int = ((ms + 999) / 1000).toInt()
 
 /** What the middle of the show is busy with: a new stage fades in, the answers inside one do not */
 internal data class ShowStage(val kind: Kind, val round: Int) {
@@ -357,11 +490,10 @@ private fun Countdown(seconds: Int) {
 /** A burning rope: the fire eats it from the right, a freeze turns it blue; after «Я первый» - the time for the answer */
 @Composable
 private fun FuseBar(state: ShowViewModel.State, now: Long) {
-    val answered = state.myAnswer
     val fuse: Fuse = state.answerFuse ?: state.fuse ?: return
-    val left = if (answered != null) 0L else fuse.left(now)
+    val left = fuse.left(now)
     val share = left.toFloat() / fuse.lengthMs
-    val frozen = answered == null && fuse.isFrozen(now)
+    val frozen = fuse.isFrozen(now)
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         Canvas(Modifier.weight(1f).height(14.dp)) {
             val radius = CornerRadius(size.height / 2)
@@ -376,24 +508,13 @@ private fun FuseBar(state: ShowViewModel.State, now: Long) {
                 drawCircle(if (frozen) Color.White else Color(0xFFFFE08A), radius = size.height * 0.75f, center = Offset(width, size.height / 2))
             }
         }
-        val seconds = ((left + 999) / 1000).toInt()
+        val seconds = secondsOf(left)
         val label = when {
-            answered != null -> resultText(answered, state.match.roundComplete, state)
             frozen -> stringResource(R.string.show_fuse_frozen)
             state.answerFuse != null -> stringResource(R.string.show_answer_fuse, seconds)
             else -> stringResource(R.string.show_fuse, seconds)
         }
-        Text(label, color = if (answered != null) pointsColor(answered.points) else AppTheme.color.textSecondaryColor, fontSize = 13.sp, fontWeight = FontWeight.Bold)
-    }
-}
-
-@Composable
-private fun resultText(answer: RoundAnswer, complete: Boolean, state: ShowViewModel.State): String {
-    val waiting = state.match.players.filter { it.id != state.meId && it.id !in state.match.gone && state.match.answerOf(it.id) == null }
-    return if (!complete && waiting.isNotEmpty()) {
-        stringResource(R.string.show_waiting, waiting.joinToString { it.name })
-    } else {
-        signed(answer.points)
+        Text(label, color = AppTheme.color.textSecondaryColor, fontSize = 13.sp, fontWeight = FontWeight.Bold, style = Digits)
     }
 }
 
@@ -446,12 +567,6 @@ private fun ShowKind.hint(): Int = when (this) {
     ShowKind.BUILD -> R.string.show_hint_build
 }
 
-internal fun pointsColor(value: Int): Color = when {
-    value > 0 -> Color(0xFF7FD08A)
-    value < 0 -> Color(0xFFFF8A80)
-    else -> DimColor
-}
-
 private val previewHeroes = listOf("Pudge", "Axe", "Lion", "Zeus").map { ShowOption(it, "file:///android_asset/heroes/${it.lowercase()}/full.webp", isRight = it == "Axe") }
 
 internal fun previewState(phase: ShowViewModel.State.Phase = ShowViewModel.State.Phase.QUESTION): ShowViewModel.State {
@@ -479,6 +594,19 @@ private fun ShowQuestionPreview() {
 @Composable
 private fun ShowIntroPreview() {
     AppTheme(isDarkTheme = true) {
-        ShowScreen(previewState(ShowViewModel.State.Phase.INTRO).copy(question = null, bet = false), ShowActions(), clock = { 0 })
+        ShowScreen(previewState(ShowViewModel.State.Phase.INTRO).copy(question = null, bet = false, introEndsAt = 1_600), ShowActions(), clock = { 0 })
+    }
+}
+
+@Preview(backgroundColor = 0xFF202225, showBackground = true, widthDp = 390, heightDp = 844)
+@Composable
+private fun ShowRevealPreview() {
+    val state = previewState(ShowViewModel.State.Phase.REVEAL)
+    AppTheme(isDarkTheme = true) {
+        ShowScreen(
+            state.copy(picked = 0, myAnswer = RoundAnswer(correct = false, points = -100), match = state.match.answer("me", 2, RoundAnswer(correct = false, points = -100)), nextAt = 900),
+            ShowActions(),
+            clock = { 0 },
+        )
     }
 }

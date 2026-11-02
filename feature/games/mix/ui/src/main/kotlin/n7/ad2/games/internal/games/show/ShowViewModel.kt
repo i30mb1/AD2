@@ -192,12 +192,13 @@ internal class ShowViewModel @AssistedInject constructor(
         }
     }
 
-    /** The intro shows the kind of the round while its question (and the sound of a voice line) loads */
+    /** The intro shows the kind of the round and when its question comes, while the question (and the sound of a voice line) loads */
     private suspend fun startRound() {
         val round = _state.value.match.current
-        _state.update { it.forRound() }
+        val introMs = if (daily) DAILY_INTRO_MS else INTRO_MS
+        _state.update { it.forRound().copy(introEndsAt = SystemClock.elapsedRealtime() + introMs) }
         val loading = viewModelScope.async { prepare(round) }
-        delay(if (daily) DAILY_INTRO_MS else INTRO_MS)
+        delay(introMs)
         val (question, voiceState) = loading.await() ?: return _state.update { it.copy(loadFailed = true) }
         val now = SystemClock.elapsedRealtime()
         _state.update {
@@ -248,13 +249,14 @@ internal class ShowViewModel @AssistedInject constructor(
                 if (state.phase != State.Phase.QUESTION || state.myAnswer != null) break
                 val now = SystemClock.elapsedRealtime()
                 val burned = state.answerFuse?.let { it.left(now) == 0L } ?: (state.fuse?.left(now) == 0L)
-                if (burned) submit(correct = false)
+                if (burned) submit(correct = false, timedOut = true)
                 delay(TICK_MS)
             }
         }
     }
 
-    private fun submit(correct: Boolean) {
+    /** [timedOut] - the fuse burned before any answer */
+    private fun submit(correct: Boolean, timedOut: Boolean = false) {
         val state = _state.value
         if (state.phase != State.Phase.QUESTION || state.myAnswer != null) return
         val round = state.match.current
@@ -266,6 +268,7 @@ internal class ShowViewModel @AssistedInject constructor(
             it.copy(
                 phase = State.Phase.REVEAL,
                 myAnswer = answer,
+                timedOut = timedOut,
                 voice = if (it.voice == Voice.PLAYING) Voice.READY else it.voice,
                 match = it.match.answer(me.id, round.index, answer),
             )
@@ -298,6 +301,8 @@ internal class ShowViewModel @AssistedInject constructor(
         val match = _state.value.match
         if (!match.roundComplete || advancing == match.round || _state.value.phase == State.Phase.END) return
         advancing = match.round
+        // everyone answered: the screen counts down to the next round
+        _state.update { it.copy(nextAt = SystemClock.elapsedRealtime() + REVEAL_MS) }
         viewModelScope.launch {
             delay(REVEAL_MS)
             _state.update { it.copy(match = it.match.nextRound()) }
@@ -408,6 +413,12 @@ internal class ShowViewModel @AssistedInject constructor(
         val streak: Int,
         /** Today's results of the daily: mine and of the players met nearby */
         val nearby: List<Record>,
+        /** The fuse burned before my answer */
+        val timedOut: Boolean = false,
+        /** When the question of the intro comes, by the elapsed realtime; null - no intro */
+        val introEndsAt: Long? = null,
+        /** When the next round comes after the reveal; null - not everyone has answered yet */
+        val nextAt: Long? = null,
     ) {
         enum class Phase { INTRO, QUESTION, REVEAL, END }
 
@@ -427,6 +438,8 @@ internal class ShowViewModel @AssistedInject constructor(
             myAnswer = null,
             voice = Voice.NONE,
             replaysLeft = 1,
+            timedOut = false,
+            nextAt = null,
         )
 
         companion object {
@@ -462,9 +475,9 @@ internal class ShowViewModel @AssistedInject constructor(
     companion object {
         const val GAME_ID = "show"
         private const val COUNTDOWN_MS = 3_000L
-        private const val INTRO_MS = 2_400L
-        private const val DAILY_INTRO_MS = 1_200L
-        private const val REVEAL_MS = 1_800L
+        const val INTRO_MS = 2_400L
+        const val DAILY_INTRO_MS = 1_200L
+        const val REVEAL_MS = 1_800L
         private const val VOICE_WAIT_MS = 5_000L
         private const val TICK_MS = 100L
         private const val MAX_ATTEMPTS = 20

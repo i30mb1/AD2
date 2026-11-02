@@ -286,4 +286,11 @@
     <string name="records_passed">Passed %s.</string>
     <string name="records_to_place">%2$s short of #%1$d.</string>
     <string name="records_first_among">First among friends.</string>
+    <string name="show_verdict_right">RIGHT!</string>
+    <string name="show_verdict_miss">MISS!</string>
+    <string name="show_verdict_late">TIME\'S UP</string>
+    <string name="show_next_in">next round in %d s</string>
+    <string name="show_question_in">Question in %d s</string>
+    <string name="show_loading_question">Loading the question…</string>
+    <string name="show_loading_voice">Loading the hero\'s voice…</string>
 </resources>

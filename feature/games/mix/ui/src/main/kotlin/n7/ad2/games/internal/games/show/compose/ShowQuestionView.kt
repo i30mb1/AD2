@@ -5,7 +5,9 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
@@ -27,10 +29,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -49,6 +54,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.AnswerLook
+import n7.ad2.games.internal.compose.Appear
 import n7.ad2.games.internal.compose.Fold
 import n7.ad2.games.internal.compose.PopIn
 import n7.ad2.games.internal.compose.Unfold
@@ -165,7 +171,9 @@ private fun Answers(state: ShowViewModel.State, options: List<ShowOption>, actio
 @Composable
 private fun AnswerCard(option: ShowOption, index: Int, state: ShowViewModel.State, modifier: Modifier, onClick: () -> Unit) {
     val hidden = index in state.hidden
-    val look = answerLook(isRight = option.isRight, isPicked = state.picked == index, reveal = state.myAnswer != null)
+    val reveal = state.myAnswer != null
+    val look = answerLook(isRight = option.isRight, isPicked = state.picked == index, reveal = reveal)
+    val marked = look == AnswerLook.RIGHT || look == AnswerLook.WRONG
     val edge by animateColorAsState(
         when (look) {
             AnswerLook.RIGHT -> InkGood
@@ -175,38 +183,81 @@ private fun AnswerCard(option: ShowOption, index: Int, state: ShowViewModel.Stat
         },
         label = "answer edge",
     )
-    // 50 на 50 fades the wrong pair away, the reveal lifts the right answer
-    val shown by animateFloatAsState(if (hidden) 0.25f else 1f, label = "answer hidden")
+    // after the answer the right card turns green and a wrong pick red with a thick edge, the rest step back
+    val tint by animateColorAsState(
+        when (look) {
+            AnswerLook.RIGHT -> InkGood.copy(alpha = 0.25f)
+            AnswerLook.WRONG -> InkBad.copy(alpha = 0.25f)
+            else -> InkGood.copy(alpha = 0f)
+        },
+        label = "answer tint",
+    )
+    val edgeWidth by animateDpAsState(if (marked) 5.dp else 3.dp, label = "answer edge width")
+    // 50 на 50 fades the wrong pair away
+    val shown by animateFloatAsState(
+        when {
+            hidden -> 0.25f
+            reveal && !marked -> 0.5f
+            else -> 1f
+        },
+        label = "answer shown",
+    )
+    // the right answer springs up a little, a wrong pick shakes its head
     val lift by animateFloatAsState(if (look == AnswerLook.RIGHT) 1.04f else 1f, spring(dampingRatio = 0.4f, stiffness = Spring.StiffnessMediumLow), label = "answer lift")
+    val shake = remember { Animatable(0f) }
+    LaunchedEffect(look) {
+        if (look == AnswerLook.WRONG) listOf(12f, -10f, 8f, -6f, 3f, 0f).forEach { shake.animateTo(it, tween(45)) }
+    }
     val shape = RoundedCornerShape(14.dp)
-    Column(
-        modifier = modifier
+    Box(
+        modifier
             .pressClickable(enabled = state.canAnswer && !hidden, onClick = onClick)
             .graphicsLayer {
                 scaleX = lift
                 scaleY = lift
+                translationX = shake.value.dp.toPx()
             }
             .rotate(tilts[index % tilts.size])
-            .alpha(shown)
-            .shadow(5.dp, shape)
-            .clip(shape)
-            .background(PaperCard)
-            .border(3.dp, edge, shape)
-            .padding(8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+            .alpha(shown),
     ) {
-        if (option.imageUrl != null) {
-            AsyncImage(
-                model = fadeInImage(option.imageUrl),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxWidth().aspectRatio(1.6f).clip(RoundedCornerShape(10.dp)),
-            )
-            Text(option.label, color = Ink, fontSize = 15.sp, fontWeight = FontWeight.ExtraBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        } else {
-            Text(option.label, color = Ink, fontSize = 30.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.padding(vertical = 18.dp))
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .shadow(5.dp, shape)
+                .clip(shape)
+                .background(PaperCard)
+                .background(tint)
+                .border(edgeWidth, edge, shape)
+                .padding(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            if (option.imageUrl != null) {
+                AsyncImage(
+                    model = fadeInImage(option.imageUrl),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxWidth().aspectRatio(1.6f).clip(RoundedCornerShape(10.dp)),
+                )
+                Text(option.label, color = Ink, fontSize = 15.sp, fontWeight = FontWeight.ExtraBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            } else {
+                Text(option.label, color = Ink, fontSize = 30.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.padding(vertical = 18.dp))
+            }
         }
+        Appear(visible = marked, modifier = Modifier.align(Alignment.TopEnd).padding(6.dp)) {
+            AnswerMark(right = look == AnswerLook.RIGHT)
+        }
+    }
+}
+
+/** ✓ on the right answer, ✗ on a wrong pick */
+@Composable
+private fun AnswerMark(right: Boolean) {
+    Box(
+        Modifier.size(30.dp).clip(CircleShape).background(if (right) InkGood else InkBad).border(2.dp, PaperEdge, CircleShape),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(if (right) "✓" else "✕", color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
     }
 }
 
