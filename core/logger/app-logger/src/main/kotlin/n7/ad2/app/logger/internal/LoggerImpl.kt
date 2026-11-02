@@ -6,11 +6,10 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.runningFold
-import n7.ad2.app.logger.AdditionalLogger
 import n7.ad2.app.logger.Logger
 import n7.ad2.app.logger.model.AppLog
 
-internal class LoggerImpl(private val _aditionalLoggers: List<AdditionalLogger>) : Logger {
+internal class LoggerImpl : Logger {
 
     private val _dataFlow = MutableSharedFlow<AppLog>(
         replay = 100,
@@ -21,7 +20,6 @@ internal class LoggerImpl(private val _aditionalLoggers: List<AdditionalLogger>)
 
     override fun log(text: String, params: Map<String, Any>) {
         _dataFlow.tryEmit(AppLog(text))
-//        aditionalLoggers.forEach { logger -> logger.logEvent(text, params) }
     }
 
     override fun getSubscriptionCount(): Int = _dataFlow.subscriptionCount.value

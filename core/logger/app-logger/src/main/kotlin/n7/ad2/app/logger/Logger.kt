@@ -11,4 +11,4 @@ interface Logger {
     fun getLogsFlow(): Flow<List<AppLog>>
 }
 
-fun Logger(aditionalLoggers: List<AdditionalLogger> = emptyList()): Logger = LoggerImpl(aditionalLoggers)
+fun Logger(): Logger = LoggerImpl()

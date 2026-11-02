@@ -129,7 +129,6 @@ dependencies {
     implementation(projects.core.retrofit)
     implementation(projects.core.updateManager)
     implementation(projects.core.spanParser)
-    implementation(projects.core.logger.yandex)
     implementation(projects.core.commonApplication)
 
     implementation(projects.feature.streams)

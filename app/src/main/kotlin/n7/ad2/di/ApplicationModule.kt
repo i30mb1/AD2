@@ -10,15 +10,14 @@ import n7.ad2.app.logger.Logger
 import n7.ad2.common.application.BaseApplicationModule
 import n7.ad2.common.application.Resources
 import n7.ad2.dagger.ApplicationScope
+import n7.ad2.init.AppInformationInitializer
 import n7.ad2.init.CrashHandlerInitializer
 import n7.ad2.init.DevicePerformanceInitializer
 import n7.ad2.init.HistoricalProcessExitReasonsInitializer
 import n7.ad2.init.Initializer
 import n7.ad2.init.StrictModeInitializer
 import n7.ad2.init.SystemInfoInitializer
-import n7.ad2.init.YandexMetricsInitializer
 import n7.ad2.navigator.Navigator
-import yandex.metrics.YandexMetrics
 import java.util.Calendar
 
 @dagger.Module(
@@ -46,12 +45,12 @@ interface ApplicationModule {
 
         @ApplicationScope
         @dagger.Provides
-        fun provideLogger(): Logger = Logger(listOf(YandexMetrics()))
+        fun provideLogger(): Logger = Logger()
 
         @ElementsIntoSet
         @dagger.Provides
         fun provideInitializers(): Set<Initializer> = setOf(
-            YandexMetricsInitializer(),
+            AppInformationInitializer(),
             SystemInfoInitializer(),
             CrashHandlerInitializer(),
             HistoricalProcessExitReasonsInitializer(),
