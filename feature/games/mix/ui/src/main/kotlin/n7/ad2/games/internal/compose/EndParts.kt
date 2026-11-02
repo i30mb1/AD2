@@ -23,7 +23,69 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.games.show.compose.PlayerColors
+import n7.ad2.games.internal.games.show.compose.ShowGold
+import n7.ad2.games.internal.games.show.compose.StandingRow
+import n7.ad2.games.internal.games.show.points
+import n7.ad2.games.internal.leaderboard.FriendsRecords
+import n7.ad2.games.internal.leaderboard.SavedRecord
 import n7.ad2.games.internal.progress.XpGain
+import n7.ad2.games.leaderboard.Record
+import n7.ad2.games.room.GameMode
+
+/** The record after a game: a solo game among friends shows their table, otherwise a new record gets the gold plate */
+@Composable
+internal fun EndRecord(record: SavedRecord, mode: GameMode, modifier: Modifier = Modifier) {
+    when {
+        mode == GameMode.SOLO && record.friends.others.isNotEmpty() -> FriendsTable(record, modifier)
+        record.isNew -> RecordPlate(record.previousBest, now = record.score, modifier)
+    }
+}
+
+/** The records of the friends met over the network: the first three and me, my new one marked, who it passed and how far the place above is */
+@Composable
+private fun FriendsTable(record: SavedRecord, modifier: Modifier) {
+    val friends = record.friends
+    Column(modifier.fillMaxWidth().padding(top = 6.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(stringResource(R.string.records_friends), color = DimColor, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp, modifier = Modifier.weight(1f))
+            Text(stringResource(R.string.games_chip_solo), color = DimColor, fontSize = 12.sp)
+        }
+        friends.table.forEach { (index, row) ->
+            val isNew = record.isNew && row.playerId == friends.meId
+            StandingRow(
+                place = index + 1,
+                name = row.playerName,
+                score = row.score,
+                isMe = row.playerId == friends.meId,
+                color = PlayerColors[index % PlayerColors.size],
+                tag = if (isNew) stringResource(R.string.records_new) else null,
+                note = record.previousBest?.takeIf { isNew }?.let { stringResource(R.string.records_was, points(it)) },
+            )
+        }
+        FriendsLine(record)
+    }
+}
+
+/** «Обогнали Pixel 8. До 1-го места не хватает 210.»: who the record passed and the place above, or the first place */
+@Composable
+private fun FriendsLine(record: SavedRecord) {
+    val friends = record.friends
+    val place = friends.place
+    val behind = friends.behind
+    val passed = record.passed.takeIf { it.isNotEmpty() }?.let { players -> stringResource(R.string.records_passed, players.joinToString { it.playerName }) }
+    val above = when {
+        place == 1 -> stringResource(R.string.records_first_among)
+        place != null && behind != null -> stringResource(R.string.records_to_place, place - 1, points(behind))
+        else -> null
+    }
+    val line = listOfNotNull(passed, above).joinToString(" ")
+    if (line.isEmpty()) return
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        if (passed != null) Text("↑", color = ShowGold, fontSize = 14.sp, fontWeight = FontWeight.ExtraBold)
+        Text(line, color = AppTheme.color.textSecondaryColor, fontSize = 13.sp, lineHeight = 18.sp)
+    }
+}
 
 /** Gold plate for a new record, with the previous best when there was one. */
 @Composable
@@ -91,8 +153,18 @@ internal fun EndActions(others: List<String>, onAgain: () -> Unit, onOtherGame: 
 @Preview(backgroundColor = 0xFF202225, showBackground = true, widthDp = 390)
 @Composable
 private fun EndPartsPreview() {
+    val friends = FriendsRecords(
+        listOf(
+            Record("g", "Galaxy", "invoker", GameMode.SOLO, 2_640, 0),
+            Record("me", "Mi A2", "invoker", GameMode.SOLO, 2_430, 0),
+            Record("p", "Pixel 8", "invoker", GameMode.SOLO, 2_100, 0),
+            Record("r", "Redmi", "invoker", GameMode.SOLO, 900, 0),
+        ),
+        meId = "me",
+    )
     AppTheme(isDarkTheme = true) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            EndRecord(SavedRecord(2_430, previousBest = 1_980, isNew = true, friends = friends, passed = listOf(friends.records[2])), GameMode.SOLO)
             XpLine(XpGain(50, newLevel = null))
             XpLine(XpGain(50, newLevel = 8))
             RecordPlate(previousBest = 3, now = 4)

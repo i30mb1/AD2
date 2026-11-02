@@ -16,11 +16,13 @@ import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.EndActions
-import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.compose.EndRecord
 import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.games.xo.Mark
 import n7.ad2.games.internal.games.xo.XoResult
 import n7.ad2.games.internal.games.xo.XoViewModel
+import n7.ad2.games.internal.leaderboard.FriendsRecords
+import n7.ad2.games.internal.leaderboard.SavedRecord
 import n7.ad2.games.room.GameMode
 
 /** The game is over: who won and how, wins in a row and the record */
@@ -37,7 +39,7 @@ internal fun ColumnScope.XoEnd(state: XoViewModel.State, actions: XoActions) {
         Text(reason(state, result), color = XoLightDim, fontSize = 14.sp)
         if (state.streak > 0) Text(stringResource(R.string.xo_streak, state.streak), color = XoGold, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
         XpLine(state.xp)
-        if (state.newRecord) RecordPlate(state.previousBest, now = state.streak)
+        state.record?.let { EndRecord(it, state.mode) }
     }
     EndActions(listOfNotNull(state.peerName), actions.onAgain, actions.onOtherGame)
 }
@@ -83,8 +85,7 @@ private fun XoEndWinPreview() {
                 peerReady = true,
                 result = XoResult(Mark.X, XoResult.Reason.RESIGN),
                 streak = 4,
-                newRecord = true,
-                previousBest = 3,
+                record = SavedRecord(score = 4, previousBest = 3, isNew = true, friends = FriendsRecords(emptyList(), "me"), passed = emptyList()),
             ),
             XoActions(),
         )

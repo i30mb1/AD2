@@ -8,7 +8,6 @@ import n7.ad2.games.internal.games.invoker.InvokerFragment
 import n7.ad2.games.internal.games.mid.MidFragment
 import n7.ad2.games.internal.games.show.ShowFragment
 import n7.ad2.games.internal.games.xo.XoFragment
-import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.wiring.GamesModule
 
 @dagger.Component(
@@ -32,7 +31,6 @@ internal interface GamesComponent {
     fun inject(invokerFragment: InvokerFragment)
     fun inject(showFragment: ShowFragment)
     fun inject(xoFragment: XoFragment)
-    fun inject(leaderboardFragment: LeaderboardFragment)
 
     val gamesViewModelFactory: GamesViewModel.Factory
 }

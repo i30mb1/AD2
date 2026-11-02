@@ -20,13 +20,14 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
 import n7.ad2.games.internal.ActiveRoom
 import n7.ad2.games.internal.MatchClock
+import n7.ad2.games.internal.leaderboard.SavedRecord
+import n7.ad2.games.internal.leaderboard.saveRecord
 import n7.ad2.games.internal.party.GameChannel
 import n7.ad2.games.internal.party.Pick
 import n7.ad2.games.internal.progress.GameXp
@@ -315,12 +316,11 @@ internal class ShowViewModel @AssistedInject constructor(
         if (daily) return saveDaily(match)
         val score = if (mode == GameMode.COOP) match.teamScore() else match.score(me.id)
         viewModelScope.launch {
-            val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
-            val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
+            val record = leaderboardRepository.saveRecord(leaderboardSync, Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
             // a win - the most points of everyone in a versus show
             val won = mode == GameMode.VERSUS && match.players.filter { it.id != me.id }.all { match.score(it.id) < match.score(me.id) }
-            val xp = progressStore.add(GameXp.game(won, record = isRecord && score > 0))
-            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest, xp = xp) }
+            val xp = progressStore.add(GameXp.game(won, record = record.isNew))
+            _state.update { it.copy(record = record, xp = xp) }
         }
     }
 
@@ -398,11 +398,10 @@ internal class ShowViewModel @AssistedInject constructor(
         val myAnswer: RoundAnswer?,
         val voice: Voice,
         val replaysLeft: Int,
-        val newRecord: Boolean,
         /** The experience the show gave, null - not yet or a day played before */
         val xp: XpGain? = null,
-        /** The best result before this show, null - the first one */
-        val previousBest: Int?,
+        /** The show saved as a record, null - not yet or the challenge of the day */
+        val record: SavedRecord? = null,
         val daily: Boolean,
         val date: LocalDate,
         /** Days in a row with the daily challenge, with today */
@@ -452,8 +451,6 @@ internal class ShowViewModel @AssistedInject constructor(
                 myAnswer = null,
                 voice = Voice.NONE,
                 replaysLeft = 1,
-                newRecord = false,
-                previousBest = null,
                 daily = daily,
                 date = date,
                 streak = 0,

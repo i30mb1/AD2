@@ -21,6 +21,8 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import n7.ad2.games.internal.ActiveRoom
+import n7.ad2.games.internal.leaderboard.SavedRecord
+import n7.ad2.games.internal.leaderboard.saveRecord
 import n7.ad2.games.internal.party.GameChannel
 import n7.ad2.games.internal.party.Pick
 import n7.ad2.games.internal.progress.GameXp
@@ -223,13 +225,10 @@ internal class XoViewModel @AssistedInject constructor(
         _state.update { it.copy(result = result, drawOffer = null, confirmResign = false, streak = streak.current) }
         val won = result.winner == myMark
         viewModelScope.launch {
-            var isRecord = false
-            if (streak.current > 0) {
-                val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
-                isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, streak.current, System.currentTimeMillis()))
-                _state.update { it.copy(newRecord = isRecord, previousBest = previousBest) }
-            }
-            _state.update { it.copy(xp = progressStore.add(GameXp.game(won, isRecord))) }
+            // wins in a row are the record: a lost game saves nothing and still shows the friends' table
+            val record = leaderboardRepository.saveRecord(leaderboardSync, Record(me.id, me.name, GAME_ID, mode, streak.current, System.currentTimeMillis()))
+            val xp = progressStore.add(GameXp.game(won, record.isNew))
+            _state.update { it.copy(record = record, xp = xp) }
         }
     }
 
@@ -266,11 +265,10 @@ internal class XoViewModel @AssistedInject constructor(
         val drawOffer: DrawOffer? = null,
         val confirmResign: Boolean = false,
         val streak: Int = 0,
-        val newRecord: Boolean = false,
         /** The experience the game gave, null - not yet */
         val xp: XpGain? = null,
-        /** The best streak before this game, null - the first one */
-        val previousBest: Int? = null,
+        /** The game saved: wins in a row are the record, null - not yet */
+        val record: SavedRecord? = null,
     ) {
         val myTurn: Boolean get() = result == null && peerReady && game.turn == myMark
     }

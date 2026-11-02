@@ -20,6 +20,8 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import n7.ad2.games.internal.ActiveRoom
 import n7.ad2.games.internal.MatchClock
+import n7.ad2.games.internal.leaderboard.SavedRecord
+import n7.ad2.games.internal.leaderboard.saveRecord
 import n7.ad2.games.internal.party.GameChannel
 import n7.ad2.games.internal.party.Pick
 import n7.ad2.games.internal.progress.GameXp
@@ -327,12 +329,11 @@ internal class MidViewModel @AssistedInject constructor(
         if (state.training) return
         val score = state.match.score(mySide)
         viewModelScope.launch {
-            val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
-            val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
+            val record = leaderboardRepository.saveRecord(leaderboardSync, Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
             // against the other player or the bot: more last hits and denies
             val won = score > state.match.score(mySide.enemy)
-            val xp = progressStore.add(GameXp.game(won, record = isRecord && score > 0))
-            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest, xp = xp) }
+            val xp = progressStore.add(GameXp.game(won, record = record.isNew))
+            _state.update { it.copy(record = record, xp = xp) }
         }
     }
 
@@ -363,11 +364,10 @@ internal class MidViewModel @AssistedInject constructor(
         val floats: List<MidFloat>,
         val feedback: Feedback?,
         val stats: MidStats,
-        val newRecord: Boolean,
         /** The experience the lane gave, null - not yet or training */
         val xp: XpGain? = null,
-        /** The best result before this game, null - the first game */
-        val previousBest: Int?,
+        /** The game saved as a record, null - not yet or training */
+        val record: SavedRecord? = null,
     ) {
         val peerHero: MidHero? get() = heroes.firstOrNull { it.key == peerHeroKey }
         val opponentSide: Side get() = mySide.enemy
@@ -398,8 +398,6 @@ internal class MidViewModel @AssistedInject constructor(
                 floats = emptyList(),
                 feedback = null,
                 stats = MidStats(),
-                newRecord = false,
-                previousBest = null,
             )
         }
     }

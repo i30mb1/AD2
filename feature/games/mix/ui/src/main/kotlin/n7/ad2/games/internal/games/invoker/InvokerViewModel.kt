@@ -15,12 +15,13 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import n7.ad2.games.internal.ActiveRoom
 import n7.ad2.games.internal.MatchClock
+import n7.ad2.games.internal.leaderboard.SavedRecord
+import n7.ad2.games.internal.leaderboard.saveRecord
 import n7.ad2.games.internal.party.GameChannel
 import n7.ad2.games.internal.party.Pick
 import n7.ad2.games.internal.progress.GameXp
@@ -135,11 +136,10 @@ internal class InvokerViewModel @AssistedInject constructor(
         val state = _state.value
         val score = if (mode == GameMode.COOP) state.teamScore else state.run.score
         viewModelScope.launch {
-            val previousBest = runCatching { leaderboardRepository.observe(GAME_ID, mode).first().firstOrNull { it.playerId == me.id }?.score }.getOrNull()
-            val isRecord = leaderboardSync.submit(Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
+            val record = leaderboardRepository.saveRecord(leaderboardSync, Record(me.id, me.name, GAME_ID, mode, score, System.currentTimeMillis()))
             val won = mode == GameMode.VERSUS && state.rivals.all { it.score < state.run.score }
-            val xp = progressStore.add(GameXp.game(won, record = isRecord && score > 0))
-            _state.update { it.copy(newRecord = isRecord && score > 0, previousBest = previousBest, xp = xp) }
+            val xp = progressStore.add(GameXp.game(won, record = record.isNew))
+            _state.update { it.copy(record = record, xp = xp) }
         }
     }
 
@@ -160,11 +160,10 @@ internal class InvokerViewModel @AssistedInject constructor(
         val phase: Phase,
         val run: InvokerRun,
         val rivals: List<Rival>,
-        val newRecord: Boolean,
         /** The experience the run gave, null - not yet */
         val xp: XpGain? = null,
-        /** The best result before this run, null - the first one */
-        val previousBest: Int?,
+        /** The run saved as a record, null - not yet */
+        val record: SavedRecord? = null,
     ) {
         enum class Phase { PLAYING, END }
 
@@ -179,8 +178,6 @@ internal class InvokerViewModel @AssistedInject constructor(
                 phase = Phase.PLAYING,
                 run = run,
                 rivals = rivals,
-                newRecord = false,
-                previousBest = null,
             )
         }
     }

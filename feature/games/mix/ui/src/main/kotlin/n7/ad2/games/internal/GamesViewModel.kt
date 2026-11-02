@@ -24,6 +24,7 @@ import n7.ad2.feature.games.xo.domain.WifiDirect
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.games.show.DailyResult
 import n7.ad2.games.internal.games.show.DailyStore
+import n7.ad2.games.internal.leaderboard.FriendsRecords
 import n7.ad2.games.internal.party.NearbyPlayer
 import n7.ad2.games.internal.party.Party
 import n7.ad2.games.internal.party.PartyState
@@ -79,14 +80,14 @@ internal class GamesViewModel @AssistedInject constructor(
     /** Открыть экран игры: по сети - когда комната перешла в Playing, соло - «Ещё раз» */
     val openGame: Flow<OpenGame> = _openGame.receiveAsFlow()
 
-    // личный соло-рекорд для значка на карточке каждой игры
-    private val bests = combine(
+    // соло-рекорды каждой игры для ее карточки: мой и тех, с кем играли по сети
+    private val records = combine(
         games.map { game ->
             leaderboardRepository.observe(game.id, GameMode.SOLO)
-                .map { records -> game.id to records.firstOrNull { it.playerId == me.id }?.score }
-                .catch { emit(game.id to null) }
+                .catch { emit(emptyList()) }
+                .map { records -> game.id to FriendsRecords(records, me.id) }
         },
-    ) { bests -> bests.mapNotNull { (id, score) -> score?.let { id to it } }.toMap() }
+    ) { records -> records.toMap() }
 
     // вызов дня: сыгран ли сегодня и серия; обновляется, когда список снова на экране
     private val daily = MutableStateFlow(dailyCard())
@@ -95,7 +96,7 @@ internal class GamesViewModel @AssistedInject constructor(
     private val progress = MutableStateFlow(progressStore.progress())
 
     // список статичный: показываем сразу, рекорды и игроки рядом подтянутся
-    val state: StateFlow<State> = combine(bests, party.state, daily, progress) { bests, party, daily, progress -> State.Data(games, bests, party, daily, progress) }
+    val state: StateFlow<State> = combine(records, party.state, daily, progress) { records, party, daily, progress -> State.Data(games, records, party, daily, progress) }
         .stateIn(viewModelScope, SharingStarted.Lazily, State.Data(games, emptyMap(), party.state.value, daily.value, progress.value))
 
     init {
@@ -145,6 +146,6 @@ internal class GamesViewModel @AssistedInject constructor(
     data class DailyCard(val date: LocalDate, val result: DailyResult?, val streak: Int)
 
     sealed class State {
-        data class Data(val games: List<GameVO>, val bests: Map<String, Int>, val party: PartyState, val daily: DailyCard, val progress: Progress) : State()
+        data class Data(val games: List<GameVO>, val records: Map<String, FriendsRecords>, val party: PartyState, val daily: DailyCard, val progress: Progress) : State()
     }
 }

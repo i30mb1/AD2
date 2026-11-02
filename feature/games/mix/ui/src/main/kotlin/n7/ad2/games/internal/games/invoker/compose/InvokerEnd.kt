@@ -25,7 +25,7 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.EndActions
-import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.compose.EndRecord
 import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.games.invoker.InvokerRun
 import n7.ad2.games.internal.games.invoker.InvokerViewModel
@@ -34,9 +34,13 @@ import n7.ad2.games.internal.games.show.compose.PlayerColors
 import n7.ad2.games.internal.games.show.compose.ShowGold
 import n7.ad2.games.internal.games.show.compose.StandingRow
 import n7.ad2.games.internal.games.show.points
+import n7.ad2.games.internal.leaderboard.FriendsRecords
+import n7.ad2.games.internal.leaderboard.SavedRecord
 import n7.ad2.games.internal.paper.Ink
 import n7.ad2.games.internal.paper.InkDim
 import n7.ad2.games.internal.paper.PaperCard
+import n7.ad2.games.internal.progress.XpGain
+import n7.ad2.games.leaderboard.Record
 import n7.ad2.games.room.GameMode
 
 /** The minute is over: the score, how many spells, the best streak and the misses; over the network all the players */
@@ -71,7 +75,7 @@ internal fun ColumnScope.InvokerEnd(state: InvokerViewModel.State, actions: Invo
             EndStat(run.mistakes.toString(), stringResource(R.string.invoker_stat_mistakes), Modifier.weight(1f))
         }
         if (state.rivals.any { it.left }) Text(stringResource(R.string.end_peer_left), color = DimColor, fontSize = 13.sp)
-        if (state.newRecord) RecordPlate(state.previousBest, now = total)
+        state.record?.let { EndRecord(it, state.mode) }
     }
     Spacer(Modifier.height(12.dp))
     EndActions(state.rivals.map { it.name }, actions.onAgain, actions.onOtherGame)
@@ -95,7 +99,30 @@ private fun InvokerEndPreview() {
     AppTheme(isDarkTheme = true) {
         InvokerScreen(
             InvokerViewModel.State.start(GameMode.VERSUS, run, listOf(InvokerViewModel.Rival("p", "Pixel 8", score = 2_100), InvokerViewModel.Rival("g", "Galaxy", score = 2_640, left = true)))
-                .copy(phase = InvokerViewModel.State.Phase.END, newRecord = true, previousBest = 1_980),
+                .copy(phase = InvokerViewModel.State.Phase.END, record = SavedRecord(score = 2_430, previousBest = 1_980, isNew = true, friends = FriendsRecords(emptyList(), "me"), passed = emptyList())),
+            elapsedMs = { 60_000 },
+            countdown = { 0 },
+            actions = InvokerActions(),
+        )
+    }
+}
+
+@Preview(backgroundColor = 0xFF202225, showBackground = true, widthDp = 390, heightDp = 844)
+@Composable
+private fun InvokerSoloEndPreview() {
+    val run = InvokerRun(spellQueue(1), score = 2_430, invoked = 19, bestStreak = 11, mistakes = 3)
+    val friends = FriendsRecords(
+        listOf(
+            Record("g", "Galaxy", InvokerViewModel.GAME_ID, GameMode.SOLO, 2_640, 0),
+            Record("me", "Mi A2", InvokerViewModel.GAME_ID, GameMode.SOLO, 2_430, 0),
+            Record("p", "Pixel 8", InvokerViewModel.GAME_ID, GameMode.SOLO, 2_100, 0),
+        ),
+        meId = "me",
+    )
+    val record = SavedRecord(score = 2_430, previousBest = 1_980, isNew = true, friends = friends, passed = listOf(friends.records[2]))
+    AppTheme(isDarkTheme = true) {
+        InvokerScreen(
+            InvokerViewModel.State.start(GameMode.SOLO, run, emptyList()).copy(phase = InvokerViewModel.State.Phase.END, record = record, xp = XpGain(50, newLevel = null)),
             elapsedMs = { 60_000 },
             countdown = { 0 },
             actions = InvokerActions(),

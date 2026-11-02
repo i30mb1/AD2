@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -31,7 +32,7 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.EndActions
-import n7.ad2.games.internal.compose.RecordPlate
+import n7.ad2.games.internal.compose.EndRecord
 import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.compose.avatarLetter
 import n7.ad2.games.internal.games.show.RoundAnswer
@@ -43,8 +44,11 @@ import n7.ad2.games.internal.games.show.ShowRound
 import n7.ad2.games.internal.games.show.ShowViewModel
 import n7.ad2.games.internal.games.show.points
 import n7.ad2.games.internal.games.show.signed
+import n7.ad2.games.internal.leaderboard.FriendsRecords
+import n7.ad2.games.internal.leaderboard.SavedRecord
 import n7.ad2.games.internal.paper.Ink
 import n7.ad2.games.internal.paper.InkBad
+import n7.ad2.games.internal.paper.InkDim
 import n7.ad2.games.internal.paper.InkGood
 import n7.ad2.games.internal.paper.PaperCard
 import n7.ad2.games.room.GameMode
@@ -62,7 +66,7 @@ internal fun ColumnScope.ShowEnd(state: ShowViewModel.State, actions: ShowAction
         if (match.players.size > 1) Standings(state)
         Rounds(match, state.meId)
         if (match.peerLeft) Text(stringResource(R.string.end_peer_left), color = DimColor, fontSize = 13.sp)
-        if (state.newRecord) RecordPlate(state.previousBest, now = total)
+        state.record?.let { EndRecord(it, state.mode) }
     }
     Spacer(Modifier.height(12.dp))
     EndActions(match.players.filter { it.id != state.meId }.map { it.name }, actions.onAgain, actions.onOtherGame)
@@ -91,9 +95,9 @@ private fun Standings(state: ShowViewModel.State) {
     }
 }
 
-/** A place in a table: mine is a paper card with a gold edge */
+/** A place in a table: mine is a paper card with a gold edge; [tag] - a gold mark by the name, [note] - a line under it */
 @Composable
-internal fun StandingRow(place: Int, name: String, score: Int, isMe: Boolean, color: Color) {
+internal fun StandingRow(place: Int, name: String, score: Int, isMe: Boolean, color: Color, tag: String? = null, note: String? = null) {
     val shape = RoundedCornerShape(12.dp)
     Row(
         modifier = Modifier
@@ -110,7 +114,23 @@ internal fun StandingRow(place: Int, name: String, score: Int, isMe: Boolean, co
         Box(Modifier.size(28.dp).clip(CircleShape).background(color), contentAlignment = Alignment.Center) {
             Text(avatarLetter(name), color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
         }
-        Text(if (isMe) stringResource(R.string.show_you) else name, color = textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        Column(Modifier.weight(1f)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(
+                    text = if (isMe) stringResource(R.string.show_you) else name,
+                    color = textColor,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f, fill = false),
+                )
+                if (tag != null) {
+                    Text(tag, color = Ink, fontSize = 10.sp, fontWeight = FontWeight.Bold, modifier = Modifier.clip(RoundedCornerShape(6.dp)).background(ShowGold).padding(horizontal = 6.dp, vertical = 2.dp))
+                }
+            }
+            if (note != null) Text(note, color = if (isMe) InkDim else DimColor, fontSize = 11.sp)
+        }
         Text(points(score), color = textColor, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
     }
 }
@@ -162,6 +182,6 @@ private fun ShowEndPreview() {
     }
     val match = ShowMatch(players, rounds, round = rounds.lastIndex, answers = answers, isOver = true)
     AppTheme(isDarkTheme = true) {
-        ShowScreen(ShowViewModel.State.start(GameMode.VERSUS, "me", match).copy(phase = ShowViewModel.State.Phase.END, newRecord = true, previousBest = 640), ShowActions(), clock = { 0 })
+        ShowScreen(ShowViewModel.State.start(GameMode.VERSUS, "me", match).copy(phase = ShowViewModel.State.Phase.END, record = SavedRecord(score = 500, previousBest = 420, isNew = true, friends = FriendsRecords(emptyList(), "me"), passed = emptyList())), ShowActions(), clock = { 0 })
     }
 }

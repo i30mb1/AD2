@@ -12,11 +12,9 @@
     <string name="compare_attack_range">Who attacks from farther?</string>
 
     <string name="games_mode_solo">Solo</string>
-    <string name="games_mode_versus">Versus a friend</string>
     <string name="games_mode_coop">Together</string>
     <string name="games_record_badge">🏆 record %d</string>
 
-    <string name="lobby_you">%s (you)</string>
 
     <string name="end_win">Victory</string>
     <string name="end_lose">Defeat</string>
@@ -24,9 +22,6 @@
     <string name="end_peer_left">The opponent left</string>
     <string name="end_new_record">New record!</string>
 
-    <string name="leaderboard_title">Leaderboard</string>
-    <string name="leaderboard_empty">No records yet</string>
-    <string name="leaderboard_hint">🟢 online now — records update live. The table is shared with everyone you have played with.</string>
     <plurals name="game_points">
         <item quantity="one">%d point</item>
         <item quantity="other">%d points</item>
@@ -36,7 +31,6 @@
     <string name="end_other_game">Another game</string>
     <string name="end_record_was">was %1$d · now %2$d</string>
     <string name="games_title">Games</string>
-    <string name="games_records">Records</string>
     <string name="games_rules_xo">Nine boards: your cell picks the opponent\'s board</string>
     <string name="party_alone">Nobody nearby yet</string>
     <string name="party_alone_hint">A friend shows up here once they open Games</string>
@@ -280,4 +274,16 @@
     <string name="games_chip_room">up to %d players</string>
     <string name="games_chip_bot">vs a bot</string>
     <string name="games_chip_duel">1 on 1 over Wi-Fi</string>
+    <string name="records_place">#%1$d of %2$d</string>
+    <string name="records_first">#1</string>
+    <string name="records_of">of %d</string>
+    <string name="records_ahead">ahead: %s</string>
+    <string name="records_next">next: %s</string>
+    <string name="records_leader">leader: %s</string>
+    <string name="records_friends">FRIENDS\' RECORDS</string>
+    <string name="records_new">new record</string>
+    <string name="records_was">was %s</string>
+    <string name="records_passed">Passed %s.</string>
+    <string name="records_to_place">%2$s short of #%1$d.</string>
+    <string name="records_first_among">First among friends.</string>
 </resources>

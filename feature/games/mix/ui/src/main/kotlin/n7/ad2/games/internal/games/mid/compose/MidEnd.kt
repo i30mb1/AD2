@@ -8,7 +8,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,13 +24,13 @@ import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
+import n7.ad2.games.internal.compose.EndRecord
 import n7.ad2.games.internal.compose.GoldColor
 import n7.ad2.games.internal.compose.MeColor
 import n7.ad2.games.internal.compose.PeerColor
 import n7.ad2.games.internal.games.mid.MidHero
 import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.compose.EndActions
-import n7.ad2.games.internal.compose.RecordPlate
 import n7.ad2.games.internal.compose.XpLine
 import n7.ad2.games.internal.paper.Ink
 import n7.ad2.games.internal.paper.InkDim
@@ -47,7 +49,7 @@ internal fun ColumnScope.MidEnd(state: MidViewModel.State, actions: MidActions) 
         mine < theirs -> R.string.end_lose
         else -> R.string.end_draw
     }
-    Column(Modifier.weight(1f).padding(top = 20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(top = 20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(title), color = AppTheme.color.textColor, fontSize = 28.sp, fontWeight = FontWeight.Bold)
         XpLine(state.xp)
         Row(
@@ -72,7 +74,7 @@ internal fun ColumnScope.MidEnd(state: MidViewModel.State, actions: MidActions) 
             EndStat(stringResource(R.string.mid_seconds, seconds(stats.averageErrorMs)), stringResource(R.string.mid_stat_error), Modifier.weight(1f))
         }
         if (match.peerLeft) Text(stringResource(R.string.end_peer_left), color = DimColor, fontSize = 13.sp)
-        if (state.newRecord) RecordPlate(state.previousBest, now = mine)
+        state.record?.let { EndRecord(it, state.mode) }
     }
     Spacer(Modifier.padding(top = 12.dp))
     EndActions(listOfNotNull(state.peerName), actions.onAgain, actions.onOtherGame)

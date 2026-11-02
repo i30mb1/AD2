@@ -33,7 +33,6 @@ import n7.ad2.games.internal.games.mid.MidViewModel
 import n7.ad2.games.internal.games.show.ShowFragment
 import n7.ad2.games.internal.games.xo.XoFragment
 import n7.ad2.games.internal.games.xo.XoViewModel
-import n7.ad2.games.internal.leaderboard.LeaderboardFragment
 import n7.ad2.games.room.GameMode
 import n7.ad2.ktx.viewModel
 
@@ -57,7 +56,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = content {
-        GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked, ::onDailyClicked, ::onLeaderboardClicked)
+        GamesScreen(viewModel, parentFragment as? DrawerPercentListener, ::onGameClicked, ::onDailyClicked)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -74,7 +73,7 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
         }
     }
 
-    // виден только список: в игре и в рекордах телефон не объявляется (сессия остается)
+    // виден только список: в игре телефон не объявляется (сессия остается)
     override fun onStart() {
         super.onStart()
         viewModel.setVisible(true)
@@ -96,8 +95,6 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
     }
 
     private fun onDailyClicked() = open(ShowFragment.getInstance(GameMode.SOLO, daily = true))
-
-    private fun onLeaderboardClicked() = open(LeaderboardFragment())
 
     private fun open(fragment: Fragment) {
         getMainFragmentNavigator?.setMainFragment(fragment) {

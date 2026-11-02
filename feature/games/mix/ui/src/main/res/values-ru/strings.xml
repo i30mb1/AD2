@@ -11,11 +11,9 @@
     <string name="compare_attack_range">Кто бьёт дальше?</string>
 
     <string name="games_mode_solo">Соло</string>
-    <string name="games_mode_versus">Против друга</string>
     <string name="games_mode_coop">Вместе</string>
     <string name="games_record_badge">🏆 рекорд %d</string>
 
-    <string name="lobby_you">%s (вы)</string>
 
     <string name="end_win">Победа</string>
     <string name="end_lose">Поражение</string>
@@ -23,9 +21,6 @@
     <string name="end_peer_left">Соперник вышел</string>
     <string name="end_new_record">Новый рекорд!</string>
 
-    <string name="leaderboard_title">Рекорды</string>
-    <string name="leaderboard_empty">Пока нет рекордов</string>
-    <string name="leaderboard_hint">🟢 сейчас на связи — рекорды обновляются вживую. Таблица общая для всех, с кем вы играли по сети.</string>
     <plurals name="game_points">
         <item quantity="one">%d очко</item>
         <item quantity="few">%d очка</item>
@@ -37,7 +32,6 @@
     <string name="end_other_game">Другая игра</string>
     <string name="end_record_was">было %1$d · теперь %2$d</string>
     <string name="games_title">Игры</string>
-    <string name="games_records">Рекорды</string>
     <string name="party_alone">Рядом пока никого</string>
     <string name="party_alone_hint">Друг появится здесь, когда откроет «Игры»</string>
     <string name="party_help">Помощь</string>
@@ -290,4 +284,16 @@
     <string name="games_chip_room">до %d игроков</string>
     <string name="games_chip_bot">против бота</string>
     <string name="games_chip_duel">1 на 1 по сети</string>
+    <string name="records_place">%1$d-е место из %2$d</string>
+    <string name="records_first">1-е место</string>
+    <string name="records_of">из %d</string>
+    <string name="records_ahead">впереди %s</string>
+    <string name="records_next">следом %s</string>
+    <string name="records_leader">лидер: %s</string>
+    <string name="records_friends">РЕКОРДЫ ДРУЗЕЙ</string>
+    <string name="records_new">новый рекорд</string>
+    <string name="records_was">было %s</string>
+    <string name="records_passed">Обогнали %s.</string>
+    <string name="records_to_place">До %1$d-го места не хватает %2$s.</string>
+    <string name="records_first_among">Первое место среди друзей.</string>
 </resources>
