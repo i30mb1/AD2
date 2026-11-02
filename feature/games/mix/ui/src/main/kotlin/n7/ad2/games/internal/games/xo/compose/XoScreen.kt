@@ -1,9 +1,16 @@
 package n7.ad2.games.internal.games.xo.compose
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -39,6 +46,11 @@ import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.Buzz
 import n7.ad2.games.internal.compose.BuzzOnIncrease
+import n7.ad2.games.internal.compose.Fold
+import n7.ad2.games.internal.compose.RollingNumber
+import n7.ad2.games.internal.compose.Unfold
+import n7.ad2.games.internal.compose.pressClickable
+import n7.ad2.games.internal.compose.stageChange
 import n7.ad2.games.internal.games.xo.Mark
 import n7.ad2.games.internal.games.xo.XoMove
 import n7.ad2.games.internal.games.xo.XoViewModel
@@ -85,7 +97,11 @@ internal fun XoScreen(state: XoViewModel.State, actions: XoActions) {
     ) {
         Header()
         Players(state)
-        if (!over) Text(stringResource(R.string.xo_rule), color = XoLightDim, fontSize = 12.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp))
+        AnimatedVisibility(visible = !over, enter = Unfold, exit = Fold, label = "rule") {
+            Text(stringResource(R.string.xo_rule), color = XoLightDim, fontSize = 12.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp))
+        }
+        // at the end the field steps back smoothly to give room to the result
+        val fieldWidth by animateFloatAsState(if (over) 0.72f else 1f, spring(stiffness = Spring.StiffnessLow), label = "field")
         XoField(
             state = state,
             zoom = zoom,
@@ -94,14 +110,18 @@ internal fun XoScreen(state: XoViewModel.State, actions: XoActions) {
                 zoomed = null
                 actions.onMove(move)
             },
-            modifier = Modifier.fillMaxWidth(if (over) 0.72f else 1f).align(Alignment.CenterHorizontally),
+            modifier = Modifier.fillMaxWidth(fieldWidth).align(Alignment.CenterHorizontally),
         )
-        if (over) {
-            XoEnd(state, actions)
-        } else {
-            Status(state, zoomed = zoom != null, onBack = { zoomed = null })
-            Spacer(Modifier.weight(1f))
-            Bottom(state, actions)
+        AnimatedContent(targetState = state, modifier = Modifier.weight(1f), contentKey = { it.result != null }, transitionSpec = { stageChange() }, label = "xo") { shown ->
+            Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                if (shown.result != null) {
+                    XoEnd(shown, actions)
+                } else {
+                    Status(shown, zoomed = zoom != null, onBack = { zoomed = null })
+                    Spacer(Modifier.weight(1f))
+                    Bottom(shown, actions)
+                }
+            }
         }
     }
 }
@@ -127,7 +147,11 @@ private fun Players(state: XoViewModel.State) {
             active = state.result == null && game.turn == state.myMark,
             modifier = Modifier.weight(1f),
         )
-        Text("${game.taken(state.myMark)} : ${game.taken(peerMark)}", color = XoLight, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold)
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            RollingNumber(game.taken(state.myMark), format = Int::toString) { Text(it, color = XoLight, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold) }
+            Text(" : ", color = XoLight, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold)
+            RollingNumber(game.taken(peerMark), format = Int::toString) { Text(it, color = XoLight, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold) }
+        }
         PlayerCard(
             name = state.peerName ?: stringResource(R.string.xo_bot),
             mark = peerMark,
@@ -147,11 +171,13 @@ private fun PlayerCard(name: String, mark: Mark, paper: Boolean, active: Boolean
         mark == Mark.X -> InkGood
         else -> InkBad
     }
+    // the move passes from one card to the other: the gold edge fades over
+    val edge by animateColorAsState(if (active) XoGold else XoGold.copy(alpha = 0f), label = "turn")
     Row(
         modifier = modifier
             .clip(shape)
             .background(if (paper) PaperCard else DarkCard)
-            .then(if (active) Modifier.border(3.dp, XoGold, shape) else Modifier)
+            .border(3.dp, edge, shape)
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp, if (paper) Alignment.Start else Alignment.End),
@@ -183,24 +209,32 @@ private fun Status(state: XoViewModel.State, zoomed: Boolean, onBack: () -> Unit
         peer == null -> stringResource(R.string.xo_bot_thinking)
         else -> stringResource(R.string.xo_peer_move, peer)
     }
-    Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        Text(text, color = XoLight, fontSize = 15.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+    Column(Modifier.fillMaxWidth().animateContentSize(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Crossfade(targetState = text, label = "status") { Text(it, color = XoLight, fontSize = 15.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center) }
         when {
             zoomed -> Text(
                 text = stringResource(R.string.xo_back_to_field),
                 color = XoGold,
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.clip(RoundedCornerShape(10.dp)).clickable(onClick = onBack).padding(horizontal = 12.dp, vertical = 6.dp),
+                modifier = Modifier.pressClickable(onClick = onBack).clip(RoundedCornerShape(10.dp)).padding(horizontal = 12.dp, vertical = 6.dp),
             )
             state.myTurn -> Text(stringResource(R.string.xo_zoom_hint), color = XoLightDim, fontSize = 12.sp)
         }
     }
 }
 
-/** A draw offered to me, or my buttons: offer a draw (over the network) and resign */
+/** A draw offered to me unfolds in place of my buttons and folds back */
 @Composable
 private fun Bottom(state: XoViewModel.State, actions: XoActions) {
+    AnimatedContent(targetState = state, contentKey = { it.drawOffer == DrawOffer.RECEIVED }, transitionSpec = { stageChange() }, label = "offer") { shown ->
+        Controls(shown, actions)
+    }
+}
+
+/** A draw offered to me, or my buttons: offer a draw (over the network) and resign */
+@Composable
+private fun Controls(state: XoViewModel.State, actions: XoActions) {
     if (state.drawOffer == DrawOffer.RECEIVED) {
         Column(
             Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(PaperCard).padding(12.dp),
@@ -233,9 +267,9 @@ private fun XoButton(text: String, filled: Boolean, modifier: Modifier, enabled:
     Box(
         modifier
             .height(48.dp)
+            .pressClickable(enabled = enabled, onClick = onClick)
             .clip(shape)
             .then(if (filled) Modifier.background(DarkCard) else Modifier.border(1.dp, if (warn) Warn else Outline, shape))
-            .clickable(enabled = enabled, onClick = onClick)
             .padding(horizontal = 8.dp),
         contentAlignment = Alignment.Center,
     ) {

@@ -75,7 +75,7 @@ internal fun ColumnScope.InvokerEnd(state: InvokerViewModel.State, actions: Invo
             EndStat(run.mistakes.toString(), stringResource(R.string.invoker_stat_mistakes), Modifier.weight(1f))
         }
         if (state.rivals.any { it.left }) Text(stringResource(R.string.end_peer_left), color = DimColor, fontSize = 13.sp)
-        state.record?.let { EndRecord(it, state.mode) }
+        EndRecord(state.record, state.mode)
     }
     Spacer(Modifier.height(12.dp))
     EndActions(state.rivals.map { it.name }, actions.onAgain, actions.onOtherGame)

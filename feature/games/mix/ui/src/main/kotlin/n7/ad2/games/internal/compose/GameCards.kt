@@ -1,8 +1,9 @@
 package n7.ad2.games.internal.compose
 
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -21,6 +22,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -33,7 +35,6 @@ import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -75,12 +76,14 @@ internal fun LevelChip(progress: Progress, modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Box(Modifier.size(28.dp).clip(CircleShape).background(ShowGold), contentAlignment = Alignment.Center) {
-            Text(progress.level.toString(), color = Ink, fontSize = 12.sp, fontWeight = FontWeight.ExtraBold)
+            RollingNumber(progress.level, format = Int::toString) { Text(it, color = Ink, fontSize = 12.sp, fontWeight = FontWeight.ExtraBold) }
         }
         Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
-            Text(stringResource(R.string.games_level, progress.inLevel, progress.needed), color = AppTheme.color.textSecondaryColor, fontSize = 11.sp)
+            Text(stringResource(R.string.games_level, progress.inLevel, progress.needed), color = AppTheme.color.textSecondaryColor, fontSize = 11.sp, style = Digits)
+            // back from a game the bar fills up to the new points
+            val filled by animateFloatAsState(progress.fraction, tween(700), label = "level")
             Box(Modifier.width(86.dp).height(4.dp).clip(RoundedCornerShape(2.dp)).background(BarTrack)) {
-                Box(Modifier.fillMaxHeight().fillMaxWidth(progress.fraction).clip(RoundedCornerShape(2.dp)).background(ShowGold))
+                Box(Modifier.fillMaxHeight().fillMaxWidth(filled).clip(RoundedCornerShape(2.dp)).background(ShowGold))
             }
         }
     }
@@ -93,12 +96,12 @@ internal fun BigGameCard(game: GameVO, records: FriendsRecords?, tilt: Float, on
     Column(
         Modifier
             .fillMaxWidth()
+            .pressClickable(onClick = onClick)
             .rotate(tilt)
             .shadow(6.dp, shape)
             .clip(shape)
             .background(PaperCard)
-            .border(3.dp, PaperEdge, shape)
-            .clickable(role = Role.Button, onClick = onClick),
+            .border(3.dp, PaperEdge, shape),
     ) {
         GameBanner(game, Modifier.fillMaxWidth().height(116.dp))
         Column(Modifier.padding(start = 14.dp, end = 14.dp, top = 12.dp, bottom = 14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -123,12 +126,12 @@ internal fun SmallGameCard(game: GameVO, records: FriendsRecords?, tilt: Float, 
     val shape = RoundedCornerShape(16.dp)
     Column(
         modifier
+            .pressClickable(onClick = onClick)
             .rotate(tilt)
             .shadow(6.dp, shape)
             .clip(shape)
             .background(PaperCard)
             .border(3.dp, PaperEdge, shape)
-            .clickable(role = Role.Button, onClick = onClick)
             .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
@@ -252,7 +255,7 @@ private fun GameBanner(game: GameVO, modifier: Modifier) {
                 cards.forEach { (path, x, angle) ->
                     val cardShape = RoundedCornerShape(8.dp)
                     AsyncImage(
-                        model = ASSETS + path,
+                        model = fadeInImage(ASSETS + path),
                         contentDescription = null,
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
@@ -278,7 +281,7 @@ private fun GameSign(game: GameVO) {
         is GameVO.Invoker -> Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             listOf("quas", "wex", "exort").forEach { orb ->
                 AsyncImage(
-                    model = "${ASSETS}images/abilities/invoker_$orb.webp",
+                    model = fadeInImage("${ASSETS}images/abilities/invoker_$orb.webp"),
                     contentDescription = null,
                     modifier = Modifier.size(34.dp).clip(CircleShape).border(2.dp, PaperEdge, CircleShape),
                 )

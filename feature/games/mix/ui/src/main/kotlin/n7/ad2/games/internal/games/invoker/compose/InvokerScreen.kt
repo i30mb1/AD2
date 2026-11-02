@@ -1,11 +1,22 @@
 package n7.ad2.games.internal.games.invoker.compose
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.waitForUpOrCancellation
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,6 +38,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
@@ -61,9 +73,17 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.Appear
 import n7.ad2.games.internal.compose.Buzz
 import n7.ad2.games.internal.compose.BuzzOnIncrease
+import n7.ad2.games.internal.compose.Digits
 import n7.ad2.games.internal.compose.DimColor
+import n7.ad2.games.internal.compose.PopIn
+import n7.ad2.games.internal.compose.RollingNumber
+import n7.ad2.games.internal.compose.fadeInImage
+import n7.ad2.games.internal.compose.pressClickable
+import n7.ad2.games.internal.compose.pressScale
+import n7.ad2.games.internal.compose.stageChange
 import n7.ad2.games.internal.games.invoker.INVOKE_IMAGE
 import n7.ad2.games.internal.games.invoker.InvokerRun
 import n7.ad2.games.internal.games.invoker.InvokerSpell
@@ -97,17 +117,24 @@ private val WrongText = Color(0xFFE58C80)
 internal fun InvokerScreen(state: InvokerViewModel.State, elapsedMs: () -> Long, countdown: () -> Int, actions: InvokerActions) {
     BuzzOnIncrease(state.run.invoked, Buzz.GOOD)
     BuzzOnIncrease(state.run.mistakes, Buzz.BAD)
-    Column(
+    // the minute gives way to the result by a fade, not at once
+    AnimatedContent(
+        targetState = state,
         modifier = Modifier
             .fillMaxSize()
             .background(AppTheme.color.background)
             .systemBarsPadding()
             .padding(horizontal = 16.dp, vertical = 12.dp),
-    ) {
-        if (state.phase == InvokerViewModel.State.Phase.END) {
-            InvokerEnd(state, actions)
-        } else {
-            InvokerPlay(state, elapsedMs, countdown, actions)
+        contentKey = { it.phase },
+        transitionSpec = { stageChange() },
+        label = "invoker",
+    ) { shown ->
+        Column(Modifier.fillMaxSize()) {
+            if (shown.phase == InvokerViewModel.State.Phase.END) {
+                InvokerEnd(shown, actions)
+            } else {
+                InvokerPlay(shown, elapsedMs, countdown, actions)
+            }
         }
     }
 }
@@ -151,15 +178,13 @@ private fun ColumnScope.InvokerPlay(state: InvokerViewModel.State, elapsedMs: ()
         Header(state, timeLeftMs = (InvokerViewModel.RUN_MS - now.coerceAtLeast(0)).coerceAtLeast(0))
         Box {
             TargetCard(run, actions)
-            if (secondsToStart > 0) {
-                Text(
-                    "$secondsToStart",
-                    color = Ink,
-                    fontSize = 72.sp,
-                    fontWeight = FontWeight.ExtraBold,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.matchParentSize().clip(RoundedCornerShape(18.dp)).background(PaperCard.copy(alpha = 0.92f)).padding(top = 40.dp),
-                )
+            // the countdown lies over the card and fades away when the minute starts
+            Appear(visible = secondsToStart > 0, modifier = Modifier.matchParentSize(), enter = fadeIn()) {
+                Box(Modifier.fillMaxSize().clip(RoundedCornerShape(18.dp)).background(PaperCard.copy(alpha = 0.92f)).padding(top = 40.dp), contentAlignment = Alignment.TopCenter) {
+                    AnimatedContent(targetState = secondsToStart, transitionSpec = { PopIn togetherWith fadeOut(tween(120)) }, label = "countdown") {
+                        Text("$it", color = Ink, fontSize = 72.sp, fontWeight = FontWeight.ExtraBold, textAlign = TextAlign.Center)
+                    }
+                }
             }
         }
         NextRow(run)
@@ -187,8 +212,8 @@ private fun Header(state: InvokerViewModel.State, timeLeftMs: Long) {
             }
         }
         Column(horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.spacedBy(2.dp)) {
-            Text(points(state.run.score), color = Light, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
-            Text(stringResource(R.string.invoker_streak, state.run.streak, "%d:%02d".format(seconds / 60, seconds % 60)), color = LightDim, fontSize = 11.sp)
+            RollingNumber(state.run.score) { Text(it, color = Light, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold, style = Digits) }
+            Text(stringResource(R.string.invoker_streak, state.run.streak, "%d:%02d".format(seconds / 60, seconds % 60)), color = LightDim, fontSize = 11.sp, style = Digits)
         }
     }
 }
@@ -211,24 +236,38 @@ private fun TargetCard(run: InvokerRun, actions: InvokerActions) {
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         Text(stringResource(R.string.invoker_assemble), color = InkDim, fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
-        AsyncImage(
-            model = spell.imageUrl,
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.size(104.dp).clip(RoundedCornerShape(14.dp)).border(3.dp, PaperEdge, RoundedCornerShape(14.dp)),
-        )
-        Text(spell.title, color = Ink, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
-        if (run.hinted) {
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.alpha(0.7f)) {
-                spell.orbs.forEach { orb -> OrbImage(orb, 22.dp) }
+        // an invoked spell leaves to the left and the next one comes from the right, as cards on a table
+        AnimatedContent(
+            targetState = run.invoked to spell,
+            contentKey = { it.first },
+            transitionSpec = {
+                (slideInHorizontally(tween(200)) { it / 3 } + fadeIn(tween(200))) togetherWith (slideOutHorizontally(tween(160)) { -it / 3 } + fadeOut(tween(160)))
+            },
+            label = "spell",
+        ) { (_, shown) ->
+            Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                AsyncImage(
+                    model = fadeInImage(shown.imageUrl),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.size(104.dp).clip(RoundedCornerShape(14.dp)).border(3.dp, PaperEdge, RoundedCornerShape(14.dp)),
+                )
+                Text(shown.title, color = Ink, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
             }
-        } else {
-            Text(
-                stringResource(R.string.invoker_hint),
-                color = InkDim,
-                fontSize = 12.sp,
-                modifier = Modifier.clip(RoundedCornerShape(8.dp)).clickable(role = Role.Button, onClick = actions.onHint).padding(horizontal = 8.dp, vertical = 4.dp),
-            )
+        }
+        Crossfade(targetState = run.hinted, label = "hint") { hinted ->
+            if (hinted) {
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.alpha(0.7f)) {
+                    spell.orbs.forEach { orb -> OrbImage(orb, 22.dp) }
+                }
+            } else {
+                Text(
+                    stringResource(R.string.invoker_hint),
+                    color = InkDim,
+                    fontSize = 12.sp,
+                    modifier = Modifier.pressClickable(onClick = actions.onHint).clip(RoundedCornerShape(8.dp)).padding(horizontal = 8.dp, vertical = 4.dp),
+                )
+            }
         }
     }
 }
@@ -240,14 +279,20 @@ private fun NextRow(run: InvokerRun) {
         Text(stringResource(R.string.invoker_next), color = LightDim, fontSize = 12.sp)
         run.next.forEachIndexed { index, spell ->
             AsyncImage(
-                model = spell.imageUrl,
+                model = fadeInImage(spell.imageUrl),
                 contentDescription = spell.title,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.size(36.dp - 4.dp * index).alpha(1f - 0.18f * index).clip(RoundedCornerShape(8.dp)),
             )
         }
         Spacer(Modifier.weight(1f))
-        run.lastPoints?.let { Text("+$it", color = Color(0xFFF3C969), fontSize = 16.sp, fontWeight = FontWeight.ExtraBold) }
+        // the points of every spell float up anew
+        AnimatedContent(
+            targetState = run.invoked to run.lastPoints,
+            contentKey = { it.first },
+            transitionSpec = { (slideInVertically { it } + fadeIn()) togetherWith (slideOutVertically { -it } + fadeOut()) },
+            label = "points",
+        ) { (_, gained) -> Text(gained?.let { "+$it" }.orEmpty(), color = Color(0xFFF3C969), fontSize = 16.sp, fontWeight = FontWeight.ExtraBold) }
     }
 }
 
@@ -259,9 +304,19 @@ private fun OrbsNow(run: InvokerRun) {
         Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             repeat(3) { index ->
                 val orb = run.orbs.getOrNull(index)
-                val ring = if (run.wrong?.extra?.contains(index) == true) WrongRing else PaperEdge
-                Box(Modifier.size(58.dp).shadow(4.dp, CircleShape).clip(CircleShape).background(Color(0xFF2F3136)).border(3.dp, if (orb == null) DimColor.copy(alpha = 0.4f) else ring, CircleShape)) {
-                    if (orb != null) OrbImage(orb, 58.dp)
+                val ring by animateColorAsState(
+                    when {
+                        orb == null -> DimColor.copy(alpha = 0.4f)
+                        run.wrong?.extra?.contains(index) == true -> WrongRing
+                        else -> PaperEdge
+                    },
+                    label = "orb ring",
+                )
+                Box(Modifier.size(58.dp).shadow(4.dp, CircleShape).clip(CircleShape).background(Color(0xFF2F3136)).border(3.dp, ring, CircleShape)) {
+                    // a pushed orb pops into its place
+                    AnimatedContent(targetState = orb, transitionSpec = { PopIn togetherWith fadeOut(tween(90)) }, label = "orb") { inPlace ->
+                        if (inPlace != null) OrbImage(inPlace, 58.dp) else Spacer(Modifier.size(58.dp))
+                    }
                 }
             }
         }
@@ -279,7 +334,7 @@ private fun missingText(wrong: OrbsDiff): String = when (wrong.missing.size) {
 
 @Composable
 private fun OrbImage(orb: Orb, size: Dp) {
-    AsyncImage(model = orb.imageUrl, contentDescription = orb.title, contentScale = ContentScale.Crop, modifier = Modifier.size(size).clip(CircleShape))
+    AsyncImage(model = fadeInImage(orb.imageUrl), contentDescription = orb.title, contentScale = ContentScale.Crop, modifier = Modifier.size(size).clip(CircleShape))
 }
 
 /** Q W E add orbs, R invokes; a touch counts at once, without waiting for the finger to go up */
@@ -297,10 +352,12 @@ private fun Buttons(actions: InvokerActions) {
 @Composable
 private fun KeyButton(image: String, key: String, label: String, color: Color, imageShape: androidx.compose.ui.graphics.Shape, modifier: Modifier, onPress: () -> Unit) {
     val press by rememberUpdatedState(onPress)
+    var pressed by remember { mutableStateOf(false) }
     val shape = RoundedCornerShape(16.dp)
     Column(
         modifier = modifier
             .height(92.dp)
+            .pressScale(pressed)
             .shadow(5.dp, shape)
             .clip(shape)
             .background(color)
@@ -312,13 +369,16 @@ private fun KeyButton(image: String, key: String, label: String, color: Color, i
             .pointerInput(Unit) {
                 awaitEachGesture {
                     awaitFirstDown()
+                    pressed = true
                     press()
+                    waitForUpOrCancellation()
+                    pressed = false
                 }
             },
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
     ) {
-        AsyncImage(model = image, contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.size(46.dp).clip(imageShape))
+        AsyncImage(model = fadeInImage(image), contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.size(46.dp).clip(imageShape))
         Text(key, color = Ink, fontSize = 13.sp, fontWeight = FontWeight.ExtraBold)
     }
 }

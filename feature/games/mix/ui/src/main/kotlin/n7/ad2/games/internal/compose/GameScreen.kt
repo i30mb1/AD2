@@ -1,15 +1,7 @@
-@file:OptIn(ExperimentalAnimationApi::class)
-
 package n7.ad2.games.internal.compose
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.with
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -47,6 +39,7 @@ import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.GamesViewModel
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.leaderboard.FriendsRecords
+import n7.ad2.games.internal.party.Session
 import n7.ad2.games.internal.progress.Progress
 
 @Composable
@@ -68,40 +61,40 @@ internal fun GamesScreen(
         AnimatedContent(
             targetState = state,
             modifier = Modifier.padding(top = insetsTop * drawerPercent),
-            transitionSpec = {
-                fadeIn() + slideInVertically(
-                    animationSpec = tween(400),
-                    initialOffsetY = { fullHeight -> fullHeight },
-                ) with fadeOut(animationSpec = tween(200))
-            },
+            // the list comes in once the records are read: the cards do not grow under the finger
+            transitionSpec = { stageChange() },
             contentKey = { it::class },
+            label = "games",
         ) { targetState ->
             when (targetState) {
+                GamesViewModel.State.Loading -> Unit
                 is GamesViewModel.State.Data -> {
                     val data = state as? GamesViewModel.State.Data ?: targetState
-                    val session = data.party.session
-                    when {
-                        showHelp -> PartyHelp(data.party, onJoinManual = { address ->
-                            showHelp = false
-                            viewModel.joinManual(address)
-                        })
-                        // в комнате с другими игру выбирает хост, она откроется у всех сама
-                        session != null -> PartyRoom(
-                            session = session,
-                            games = data.games,
-                            myAddress = data.party.myAddress,
-                            actions = RoomActions(onPick = viewModel::pick, onReady = viewModel::setReady, onStart = viewModel::start, onLeave = viewModel::leave),
-                        )
-                        else -> GamesList(
-                            games = data.games,
-                            records = data.records,
-                            progress = data.progress,
-                            onGameClicked = onGameClicked,
-                            header = {
-                                NearbyCard(data.party, onPlay = viewModel::play, onHelp = { showHelp = true })
-                                DailyCard(data.daily, onClick = onDailyClicked)
-                            },
-                        )
+                    // the list, the room and the help give way to each other by a fade
+                    AnimatedContent(targetState = hubScreen(showHelp, data.party.session), contentKey = { it::class }, transitionSpec = { stageChange() }, label = "hub") { screen ->
+                        when (screen) {
+                            HubScreen.Help -> PartyHelp(data.party, onJoinManual = { address ->
+                                showHelp = false
+                                viewModel.joinManual(address)
+                            })
+                            // в комнате с другими игру выбирает хост, она откроется у всех сама
+                            is HubScreen.Room -> PartyRoom(
+                                session = screen.session,
+                                games = data.games,
+                                myAddress = data.party.myAddress,
+                                actions = RoomActions(onPick = viewModel::pick, onReady = viewModel::setReady, onStart = viewModel::start, onLeave = viewModel::leave),
+                            )
+                            HubScreen.Games -> GamesList(
+                                games = data.games,
+                                records = data.records,
+                                progress = data.progress,
+                                onGameClicked = onGameClicked,
+                                header = {
+                                    NearbyCard(data.party, onPlay = viewModel::play, onHelp = { showHelp = true })
+                                    DailyCard(data.daily, onClick = onDailyClicked)
+                                },
+                            )
+                        }
                     }
                 }
             }
@@ -113,6 +106,19 @@ internal fun GamesScreen(
         drawerPercentListener?.setDrawerPercentListener(listener)
         onDispose { drawerPercentListener?.removeDrawerPercentListener(listener) }
     }
+}
+
+/** What the games tab shows: the games, the room with the players, or the help to find them */
+private sealed interface HubScreen {
+    data object Games : HubScreen
+    data object Help : HubScreen
+    data class Room(val session: Session) : HubScreen
+}
+
+private fun hubScreen(help: Boolean, session: Session?): HubScreen = when {
+    help -> HubScreen.Help
+    session != null -> HubScreen.Room(session)
+    else -> HubScreen.Games
 }
 
 @Composable

@@ -1,13 +1,20 @@
 package n7.ad2.games.internal.compose
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.SizeTransform
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -66,21 +73,31 @@ internal fun partyBanner(party: PartyState): PartyBanner = when {
 /** Top of the games list while not paired: searching, players to play with, or the connection state. */
 @Composable
 internal fun NearbyCard(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHelp: () -> Unit, modifier: Modifier = Modifier) {
-    when (partyBanner(party)) {
-        PartyBanner.ALONE -> Row(
-            modifier = modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(AppTheme.color.surface).padding(12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            Pulse()
-            Column(Modifier.weight(1f)) {
-                Text(stringResource(R.string.party_alone), color = AppTheme.color.textColor, fontSize = 14.sp, fontWeight = FontWeight.Medium)
-                Text(stringResource(R.string.party_alone_hint), color = DimColor, fontSize = 12.sp)
+    // somebody found or gone: the card changes its look and size smoothly and the games below move with it
+    AnimatedContent(
+        targetState = party,
+        modifier = modifier,
+        contentKey = { partyBanner(it) == PartyBanner.ALONE },
+        transitionSpec = { fadeIn(tween(220, delayMillis = 80)) togetherWith fadeOut(tween(120)) using SizeTransform(clip = false) },
+        contentAlignment = Alignment.TopCenter,
+        label = "nearby",
+    ) { shown ->
+        when (partyBanner(shown)) {
+            PartyBanner.ALONE -> Row(
+                modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(AppTheme.color.surface).padding(12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                Pulse()
+                Column(Modifier.weight(1f)) {
+                    Text(stringResource(R.string.party_alone), color = AppTheme.color.textColor, fontSize = 14.sp, fontWeight = FontWeight.Medium)
+                    Text(stringResource(R.string.party_alone_hint), color = DimColor, fontSize = 12.sp)
+                }
+                Text(stringResource(R.string.party_help), color = PeerColor, fontSize = 12.sp, modifier = Modifier.pressClickable(onClick = onHelp).padding(4.dp))
             }
-            Text(stringResource(R.string.party_help), color = PeerColor, fontSize = 12.sp, modifier = Modifier.clickable(onClick = onHelp).padding(4.dp))
+            PartyBanner.TOGETHER -> Unit
+            else -> NearbyPaper(shown, onPlay, onHelp, Modifier)
         }
-        PartyBanner.TOGETHER -> Unit
-        else -> NearbyPaper(party, onPlay, onHelp, modifier)
     }
 }
 
@@ -94,13 +111,15 @@ private val NearbyButtonText = Color(0xFF2B5A31)
 private fun NearbyPaper(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHelp: () -> Unit, modifier: Modifier) {
     val shape = RoundedCornerShape(14.dp)
     val failure = party.failure
+    val paper by animateColorAsState(if (failure != null) NearbyFailed else NearbyGreen, label = "nearby paper")
     Column(
         modifier = modifier
             .fillMaxWidth()
             .rotate(-0.6f)
             .shadow(6.dp, shape)
             .clip(shape)
-            .background(if (failure != null) NearbyFailed else NearbyGreen)
+            .animateContentSize()
+            .background(paper)
             .border(3.dp, PaperEdge, shape)
             .padding(horizontal = 14.dp, vertical = 12.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -115,7 +134,7 @@ private fun NearbyPaper(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHel
             )
             failure != null -> Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(stringResource(failure.text()), color = PaperEdge, fontSize = 13.sp, modifier = Modifier.weight(1f))
-                Text(stringResource(R.string.party_help), color = PaperEdge, fontSize = 12.sp, fontWeight = FontWeight.Bold, modifier = Modifier.clickable(onClick = onHelp).padding(4.dp))
+                Text(stringResource(R.string.party_help), color = PaperEdge, fontSize = 12.sp, fontWeight = FontWeight.Bold, modifier = Modifier.pressClickable(onClick = onHelp).padding(4.dp))
             }
         }
         if (first == null) return@Column
@@ -151,16 +170,17 @@ private fun NearbyPaper(party: PartyState, onPlay: (NearbyPlayer) -> Unit, onHel
 
 @Composable
 private fun PlayButton(enabled: Boolean, onClick: () -> Unit) {
+    val strength by animateFloatAsState(if (enabled) 1f else 0.5f, label = "play")
     Text(
         text = stringResource(R.string.party_play),
         color = NearbyButtonText,
         fontSize = 14.sp,
         fontWeight = FontWeight.Bold,
         modifier = Modifier
-            .alpha(if (enabled) 1f else 0.5f)
+            .pressClickable(enabled = enabled, onClick = onClick)
+            .alpha(strength)
             .clip(RoundedCornerShape(10.dp))
             .background(PaperEdge)
-            .clickable(enabled = enabled, onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 10.dp),
     )
 }
@@ -223,8 +243,8 @@ internal fun PartyHelp(party: PartyState, onJoinManual: (String) -> Unit, modifi
                     color = AppTheme.color.textColor,
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Medium,
-                    modifier = Modifier.alpha(if (ready) 1f else 0.4f).clip(RoundedCornerShape(10.dp)).background(LineColor)
-                        .clickable(enabled = ready) { onJoinManual(address.trim()) }.padding(horizontal = 14.dp, vertical = 12.dp),
+                    modifier = Modifier.pressClickable(enabled = ready) { onJoinManual(address.trim()) }.alpha(if (ready) 1f else 0.4f).clip(RoundedCornerShape(10.dp))
+                        .background(LineColor).padding(horizontal = 14.dp, vertical = 12.dp),
                 )
             }
         }

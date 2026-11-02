@@ -1,6 +1,10 @@
 package n7.ad2.games.internal.games.xo.compose
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -8,7 +12,6 @@ import androidx.compose.animation.scaleIn
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -22,6 +25,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -29,9 +33,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -41,6 +43,9 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.Appear
+import n7.ad2.games.internal.compose.pressClickable
+import n7.ad2.games.internal.compose.rememberLast
 import n7.ad2.games.internal.games.xo.Mark
 import n7.ad2.games.internal.games.xo.XoGame
 import n7.ad2.games.internal.games.xo.XoMove
@@ -124,26 +129,29 @@ private fun SmallBoard(
     val shape = RoundedCornerShape(12.dp)
     val density = LocalDensity.current
     val boardName = stringResource(BOARD_NAMES[board])
+    val paper by animateColorAsState(
+        when {
+            owner == Mark.X -> WonX
+            owner == Mark.O -> WonO
+            open -> ActiveBoard
+            else -> BoardColor
+        },
+        label = "board",
+    )
+    val ring by animateFloatAsState(if (ringed) 1f else 0f, label = "board ring")
     Box(
         modifier
-            .clip(shape)
-            .background(
-                when {
-                    owner == Mark.X -> WonX
-                    owner == Mark.O -> WonO
-                    open -> ActiveBoard
-                    else -> BoardColor
-                },
-            )
             .then(
                 if (mine && !direct) {
                     Modifier
                         .semantics { contentDescription = boardName }
-                        .clickable(role = Role.Button) { onBoard(board) }
+                        .pressClickable { onBoard(board) }
                 } else {
                     Modifier
                 },
-            ),
+            )
+            .clip(shape)
+            .background(paper),
     ) {
         Cells(Modifier.fillMaxSize().padding(BoardPadding), CellGap) { cell, cellModifier ->
             val mark = game.cell(board, cell)
@@ -156,12 +164,16 @@ private fun SmallBoard(
                 onClick = if (playable) ({ onMove(XoMove(board, cell)) }) else null,
             )
         }
-        if (owner != null) {
-            Box(Modifier.matchParentSize().background((if (owner == Mark.X) WonX else WonO).copy(alpha = 0.78f)), contentAlignment = Alignment.Center) {
-                Text(owner.name, color = owner.color(), fontSize = with(density) { (boardSize * 0.62f).toSp() }, fontWeight = FontWeight.ExtraBold)
+        // a won board gets its big mark stamped on top
+        val won = rememberLast(owner)
+        Appear(visible = owner != null, modifier = Modifier.matchParentSize(), enter = Stamp) {
+            if (won != null) {
+                Box(Modifier.fillMaxSize().background((if (won == Mark.X) WonX else WonO).copy(alpha = 0.78f)), contentAlignment = Alignment.Center) {
+                    Text(won.name, color = won.color(), fontSize = with(density) { (boardSize * 0.62f).toSp() }, fontWeight = FontWeight.ExtraBold)
+                }
             }
         }
-        if (ringed) Box(Modifier.matchParentSize().border(3.dp, XoGold, shape))
+        if (ring > 0f) Box(Modifier.matchParentSize().border(3.dp, XoGold.copy(alpha = ring), shape))
     }
 }
 
@@ -186,10 +198,10 @@ private fun Zoomed(state: XoViewModel.State, board: Int, onMove: (XoMove) -> Uni
                 val label = if (sendsTo == null) anyBoard else stringResource(BOARD_NAMES[sendsTo])
                 Box(
                     cellModifier
-                        .clip(RoundedCornerShape(10.dp))
-                        .background(CellColor)
                         .semantics { contentDescription = label }
-                        .clickable(role = Role.Button) { onMove(move) },
+                        .pressClickable { onMove(move) }
+                        .clip(RoundedCornerShape(10.dp))
+                        .background(CellColor),
                     contentAlignment = Alignment.Center,
                 ) {
                     if (sendsTo == null) {
@@ -220,16 +232,24 @@ private fun MiniBoard(game: XoGame, board: Int, modifier: Modifier) {
 
 @Composable
 private fun Cell(mark: Mark?, last: Boolean, fontSize: TextUnit, modifier: Modifier, onClick: (() -> Unit)?, corner: Dp = 5.dp) {
+    val paper by animateColorAsState(if (last) LastMove else CellColor, label = "cell")
     Box(
         modifier
+            .then(if (onClick != null) Modifier.pressClickable(onClick = onClick) else Modifier)
             .clip(RoundedCornerShape(corner))
-            .background(if (last) LastMove else CellColor)
-            .then(if (onClick != null) Modifier.clickable(role = Role.Button, onClick = onClick) else Modifier),
+            .background(paper),
         contentAlignment = Alignment.Center,
     ) {
-        if (mark != null) Text(mark.name, color = mark.color(), fontSize = fontSize, fontWeight = FontWeight.ExtraBold)
+        // a move is drawn with a pop
+        val drawn = rememberLast(mark)
+        Appear(visible = mark != null) {
+            if (drawn != null) Text(drawn.name, color = drawn.color(), fontSize = fontSize, fontWeight = FontWeight.ExtraBold)
+        }
     }
 }
+
+/** A won board: the big mark comes down on it like a stamp */
+private val Stamp = fadeIn(tween(140)) + scaleIn(spring(dampingRatio = 0.45f, stiffness = Spring.StiffnessMediumLow), initialScale = 1.6f)
 
 /** A 3×3 grid of [content] cells with [gap] between them */
 @Composable

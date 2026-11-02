@@ -1,8 +1,9 @@
 package n7.ad2.games.internal.games.mid.compose
 
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -13,19 +14,18 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -33,8 +33,14 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.Appear
+import n7.ad2.games.internal.compose.Fold
 import n7.ad2.games.internal.compose.GoldColor
 import n7.ad2.games.internal.compose.LineColor
+import n7.ad2.games.internal.compose.Unfold
+import n7.ad2.games.internal.compose.fadeInImage
+import n7.ad2.games.internal.compose.pressClickable
+import n7.ad2.games.internal.compose.pressSelectable
 import n7.ad2.games.internal.games.mid.BotLevel
 import n7.ad2.games.internal.games.mid.MidHero
 import n7.ad2.games.internal.games.mid.MidViewModel
@@ -73,17 +79,18 @@ internal fun ColumnScope.MidPick(state: MidViewModel.State, actions: MidActions)
 @Composable
 private fun HeroCard(hero: MidHero, isSelected: Boolean, isEnabled: Boolean, onClick: () -> Unit, modifier: Modifier) {
     val shape = RoundedCornerShape(14.dp)
+    val edge by animateColorAsState(if (isSelected) GoldColor else PaperEdge, label = "hero")
     Column(
         modifier = modifier
+            .pressSelectable(selected = isSelected, enabled = isEnabled, onClick = onClick)
             .clip(shape)
             .background(PaperCard)
-            .border(3.dp, if (isSelected) GoldColor else PaperEdge, shape)
-            .selectable(selected = isSelected, enabled = isEnabled, role = Role.RadioButton, onClick = onClick)
+            .border(3.dp, edge, shape)
             .padding(8.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         AsyncImage(
-            model = hero.imageUrl,
+            model = fadeInImage(hero.imageUrl),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxWidth().height(76.dp).clip(RoundedCornerShape(10.dp)),
@@ -108,18 +115,23 @@ private fun Stat(label: String, value: String) {
 
 @Composable
 private fun SoloOptions(state: MidViewModel.State, actions: MidActions) {
-    Row(Modifier.selectableGroup(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        Choice(stringResource(R.string.mid_vs_bot), isSelected = !state.training, Modifier.weight(1f)) { actions.onPickLevel(state.level) }
-        Choice(stringResource(R.string.mid_training), isSelected = state.training, Modifier.weight(1f), onClick = actions.onPickTraining)
-    }
-    if (!state.training) {
+    // one block: the levels fold away for the training without leaving a gap
+    Column {
         Row(Modifier.selectableGroup(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            BotLevel.entries.forEach { level ->
-                Choice(stringResource(level.label()), isSelected = level == state.level, Modifier.weight(1f), small = true) { actions.onPickLevel(level) }
+            Choice(stringResource(R.string.mid_vs_bot), isSelected = !state.training, Modifier.weight(1f)) { actions.onPickLevel(state.level) }
+            Choice(stringResource(R.string.mid_training), isSelected = state.training, Modifier.weight(1f), onClick = actions.onPickTraining)
+        }
+        Appear(visible = !state.training, enter = Unfold, exit = Fold) {
+            Row(Modifier.selectableGroup().padding(top = 14.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                BotLevel.entries.forEach { level ->
+                    Choice(stringResource(level.label()), isSelected = level == state.level, Modifier.weight(1f), small = true) { actions.onPickLevel(level) }
+                }
             }
         }
+        Crossfade(targetState = state.training, modifier = Modifier.padding(top = 14.dp), label = "mode hint") { training ->
+            Text(stringResource(if (training) R.string.mid_training_hint else R.string.mid_rules_line), color = AppTheme.color.textSecondaryColor, fontSize = 12.sp)
+        }
     }
-    Text(stringResource(if (state.training) R.string.mid_training_hint else R.string.mid_rules_line), color = AppTheme.color.textSecondaryColor, fontSize = 12.sp)
 }
 
 @Composable
@@ -138,18 +150,21 @@ private fun PeerStatus(state: MidViewModel.State) {
 @Composable
 private fun Choice(text: String, isSelected: Boolean, modifier: Modifier, small: Boolean = false, onClick: () -> Unit) {
     val shape = RoundedCornerShape(12.dp)
+    val paper by animateColorAsState(if (isSelected) PaperCard else Color.Transparent, label = "choice")
+    val line by animateColorAsState(if (isSelected) Color.Transparent else LineColor, label = "choice line")
+    val ink by animateColorAsState(if (isSelected) Ink else AppTheme.color.textColor, label = "choice ink")
     Text(
         text = text,
-        color = if (isSelected) Ink else AppTheme.color.textColor,
+        color = ink,
         fontSize = if (small) 12.sp else 14.sp,
         fontWeight = FontWeight.Bold,
         textAlign = TextAlign.Center,
         modifier = modifier
             .heightIn(min = if (small) 40.dp else 48.dp)
+            .pressSelectable(selected = isSelected, onClick = onClick)
             .clip(shape)
-            .background(if (isSelected) PaperCard else Color.Transparent)
-            .border(if (isSelected) 0.dp else 1.dp, LineColor, shape)
-            .selectable(selected = isSelected, role = Role.RadioButton, onClick = onClick)
+            .background(paper)
+            .border(1.dp, line, shape)
             .padding(vertical = if (small) 11.dp else 14.dp),
     )
 }
@@ -163,17 +178,19 @@ private fun GoButton(state: MidViewModel.State, actions: MidActions) {
         else -> stringResource(R.string.mid_ready)
     }
     val enabled = state.heroes.isNotEmpty() && !waiting
+    val paper by animateColorAsState(if (enabled) GoldColor else LineColor, label = "go")
+    val ink by animateColorAsState(if (enabled) Ink else AppTheme.color.textSecondaryColor, label = "go ink")
     Text(
         text = text,
-        color = if (enabled) Ink else AppTheme.color.textSecondaryColor,
+        color = ink,
         fontSize = 16.sp,
         fontWeight = FontWeight.ExtraBold,
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
+            .pressClickable(enabled = enabled, onClick = actions.onReady)
             .clip(RoundedCornerShape(14.dp))
-            .background(if (enabled) GoldColor else LineColor)
-            .clickable(enabled = enabled, role = Role.Button, onClick = actions.onReady)
+            .background(paper)
             .padding(vertical = 16.dp),
     )
 }

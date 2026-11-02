@@ -66,7 +66,7 @@ internal fun ColumnScope.ShowEnd(state: ShowViewModel.State, actions: ShowAction
         if (match.players.size > 1) Standings(state)
         Rounds(match, state.meId)
         if (match.peerLeft) Text(stringResource(R.string.end_peer_left), color = DimColor, fontSize = 13.sp)
-        state.record?.let { EndRecord(it, state.mode) }
+        EndRecord(state.record, state.mode)
     }
     Spacer(Modifier.height(12.dp))
     EndActions(match.players.filter { it.id != state.meId }.map { it.name }, actions.onAgain, actions.onOtherGame)

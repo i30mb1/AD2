@@ -95,9 +95,9 @@ internal class GamesViewModel @AssistedInject constructor(
     // уровень игрока растет после игр: обновляется, когда список снова на экране
     private val progress = MutableStateFlow(progressStore.progress())
 
-    // список статичный: показываем сразу, рекорды и игроки рядом подтянутся
+    // список показываем, когда прочитаны рекорды: карточки не растут на глазах, игроки рядом подтянутся
     val state: StateFlow<State> = combine(records, party.state, daily, progress) { records, party, daily, progress -> State.Data(games, records, party, daily, progress) }
-        .stateIn(viewModelScope, SharingStarted.Lazily, State.Data(games, emptyMap(), party.state.value, daily.value, progress.value))
+        .stateIn(viewModelScope, SharingStarted.Lazily, State.Loading)
 
     init {
         viewModelScope.launch {
@@ -146,6 +146,8 @@ internal class GamesViewModel @AssistedInject constructor(
     data class DailyCard(val date: LocalDate, val result: DailyResult?, val streak: Int)
 
     sealed class State {
+        data object Loading : State()
+
         data class Data(val games: List<GameVO>, val records: Map<String, FriendsRecords>, val party: PartyState, val daily: DailyCard, val progress: Progress) : State()
     }
 }

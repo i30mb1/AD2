@@ -74,7 +74,7 @@ internal fun ColumnScope.MidEnd(state: MidViewModel.State, actions: MidActions) 
             EndStat(stringResource(R.string.mid_seconds, seconds(stats.averageErrorMs)), stringResource(R.string.mid_stat_error), Modifier.weight(1f))
         }
         if (match.peerLeft) Text(stringResource(R.string.end_peer_left), color = DimColor, fontSize = 13.sp)
-        state.record?.let { EndRecord(it, state.mode) }
+        EndRecord(state.record, state.mode)
     }
     Spacer(Modifier.padding(top = 12.dp))
     EndActions(listOfNotNull(state.peerName), actions.onAgain, actions.onOtherGame)

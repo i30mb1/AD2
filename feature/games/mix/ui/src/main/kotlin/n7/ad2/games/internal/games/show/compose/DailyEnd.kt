@@ -1,8 +1,8 @@
 package n7.ad2.games.internal.games.show.compose
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -22,7 +22,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -36,6 +35,7 @@ import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.LineColor
 import n7.ad2.games.internal.compose.XpLine
+import n7.ad2.games.internal.compose.pressClickable
 import n7.ad2.games.internal.games.show.DailyPlan
 import n7.ad2.games.internal.games.show.RoundAnswer
 import n7.ad2.games.internal.games.show.ShowMatch
@@ -79,7 +79,8 @@ internal fun ColumnScope.DailyEnd(state: ShowViewModel.State, actions: ShowActio
         if (state.nearby.none { it.playerId != state.meId }) {
             Text(stringResource(R.string.daily_nearby_empty), color = AppTheme.color.textSecondaryColor, fontSize = 13.sp, lineHeight = 18.sp)
         } else {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            // the result of mine and of the others comes in as they are saved: the table grows smoothly
+            Column(Modifier.animateContentSize(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 state.nearby.forEachIndexed { place, record ->
                     StandingRow(place + 1, record.playerName, record.score, isMe = record.playerId == state.meId, PlayerColors[place % PlayerColors.size])
                 }
@@ -95,14 +96,14 @@ internal fun ColumnScope.DailyEnd(state: ShowViewModel.State, actions: ShowActio
             fontSize = 15.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.weight(1f).clip(shape).background(ShowGold).clickable(role = Role.Button, onClick = actions.onShare).padding(15.dp),
+            modifier = Modifier.weight(1f).pressClickable(onClick = actions.onShare).clip(shape).background(ShowGold).padding(15.dp),
         )
         Text(
             text = stringResource(R.string.daily_to_games),
             color = AppTheme.color.textColor,
             fontSize = 15.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.weight(1f).clip(shape).border(1.dp, LineColor, shape).clickable(role = Role.Button, onClick = actions.onOtherGame).padding(15.dp),
+            modifier = Modifier.weight(1f).pressClickable(onClick = actions.onOtherGame).clip(shape).border(1.dp, LineColor, shape).padding(15.dp),
         )
     }
 }

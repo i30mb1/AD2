@@ -1,10 +1,17 @@
 package n7.ad2.games.internal.games.show.compose
 
 import android.os.SystemClock
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -50,9 +57,16 @@ import androidx.compose.ui.unit.sp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.BuzzOnAnswer
+import n7.ad2.games.internal.compose.Digits
 import n7.ad2.games.internal.compose.DimColor
+import n7.ad2.games.internal.compose.Fold
 import n7.ad2.games.internal.compose.LineColor
+import n7.ad2.games.internal.compose.PopIn
+import n7.ad2.games.internal.compose.RollingNumber
+import n7.ad2.games.internal.compose.Unfold
 import n7.ad2.games.internal.compose.avatarLetter
+import n7.ad2.games.internal.compose.pressClickable
+import n7.ad2.games.internal.compose.stageChange
 import n7.ad2.games.internal.games.show.DailyPlan
 import n7.ad2.games.internal.games.show.Fuse
 import n7.ad2.games.internal.games.show.RoundAnswer
@@ -103,17 +117,24 @@ internal fun ShowScreen(state: ShowViewModel.State, actions: ShowActions, clock:
     LaunchedEffect(Unit) {
         while (true) withFrameMillis { now = clock() }
     }
-    Column(
+    // the play gives way to the result by a fade, not at once
+    AnimatedContent(
+        targetState = state,
         modifier = Modifier
             .fillMaxSize()
             .background(AppTheme.color.background)
             .systemBarsPadding()
             .padding(horizontal = 16.dp, vertical = 12.dp),
-    ) {
-        if (state.phase == ShowViewModel.State.Phase.END) {
-            if (state.daily) DailyEnd(state, actions) else ShowEnd(state, actions)
-        } else {
-            ShowPlay(state, now, actions)
+        contentKey = { it.phase == ShowViewModel.State.Phase.END },
+        transitionSpec = { stageChange() },
+        label = "show",
+    ) { shown ->
+        Column(Modifier.fillMaxSize()) {
+            if (shown.phase == ShowViewModel.State.Phase.END) {
+                if (shown.daily) DailyEnd(shown, actions) else ShowEnd(shown, actions)
+            } else {
+                ShowPlay(shown, now, actions)
+            }
         }
     }
 }
@@ -122,26 +143,49 @@ internal fun ShowScreen(state: ShowViewModel.State, actions: ShowActions, clock:
 private fun ColumnScope.ShowPlay(state: ShowViewModel.State, now: Long, actions: ShowActions) {
     PlayersRow(state)
     Spacer(Modifier.height(16.dp))
-    RoundHeader(state)
+    // a new round comes in with its title; inside a round only the stage changes
+    AnimatedContent(targetState = state, contentKey = { it.match.round }, transitionSpec = { stageChange() }, label = "round") { shown ->
+        Column(Modifier.fillMaxWidth().animateContentSize()) { RoundHeader(shown) }
+    }
     Spacer(Modifier.height(12.dp))
-    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        val question = state.question
-        when {
-            state.countdown > 0 -> Countdown(state.countdown)
-            state.loadFailed -> Text(stringResource(R.string.show_load_failed), color = AppTheme.color.textSecondaryColor, fontSize = 15.sp)
-            question == null -> if (!state.daily) Intro(state, actions)
-            else -> QuestionView(state, question, now, actions)
+    AnimatedContent(targetState = state, modifier = Modifier.weight(1f), contentKey = { it.stage() }, transitionSpec = { stageChange() }, label = "stage") { shown ->
+        Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            val question = shown.question
+            when {
+                shown.countdown > 0 -> Countdown(shown.countdown)
+                shown.loadFailed -> Text(stringResource(R.string.show_load_failed), color = AppTheme.color.textSecondaryColor, fontSize = 15.sp)
+                question == null -> if (!shown.daily) Intro(shown, actions)
+                else -> QuestionView(shown, question, now, actions)
+            }
         }
     }
-    if (state.question != null) {
-        Spacer(Modifier.height(10.dp))
-        FuseBar(state, now)
-        if (!state.daily) {
+    // the fuse and the helps come with the question and leave with it
+    AnimatedVisibility(visible = state.question != null, enter = Unfold, exit = Fold, label = "fuse") {
+        Column {
             Spacer(Modifier.height(10.dp))
-            PowerUps(state, actions)
+            FuseBar(state, now)
+            if (!state.daily) {
+                Spacer(Modifier.height(10.dp))
+                PowerUps(state, actions)
+            }
         }
     }
 }
+
+/** What the middle of the show is busy with: a new stage fades in, the answers inside one do not */
+internal data class ShowStage(val kind: Kind, val round: Int) {
+    enum class Kind { COUNTDOWN, FAILED, INTRO, QUESTION }
+}
+
+internal fun ShowViewModel.State.stage(): ShowStage = ShowStage(
+    kind = when {
+        countdown > 0 -> ShowStage.Kind.COUNTDOWN
+        loadFailed -> ShowStage.Kind.FAILED
+        question == null -> ShowStage.Kind.INTRO
+        else -> ShowStage.Kind.QUESTION
+    },
+    round = match.round,
+)
 
 /** Everyone in the show: the score so far and whether they answered this round */
 @Composable
@@ -196,8 +240,8 @@ private fun PlayerChip(player: ShowPlayer, index: Int, state: ShowViewModel.Stat
             Text(avatarLetter(player.name), color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
         }
         Text(if (isMe) stringResource(R.string.show_you) else player.name, color = InkDim, fontSize = 11.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        Text(points(match.score(player.id)), color = Ink, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
-        Text(status.orEmpty(), color = statusColor, fontSize = 10.sp, maxLines = 1)
+        RollingNumber(match.score(player.id)) { Text(it, color = Ink, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold, style = Digits) }
+        Crossfade(targetState = status.orEmpty() to statusColor, label = "status") { (text, color) -> Text(text, color = color, fontSize = 10.sp, maxLines = 1) }
     }
 }
 
@@ -217,7 +261,7 @@ private fun RoundHeader(state: ShowViewModel.State) {
             fontWeight = FontWeight.Bold,
             letterSpacing = 1.sp,
         )
-        if (state.bet) {
+        AnimatedVisibility(visible = state.bet, enter = PopIn, exit = fadeOut(), label = "bet") {
             Text(
                 stringResource(R.string.show_bet_chip),
                 color = Ink,
@@ -250,23 +294,34 @@ private fun Intro(state: ShowViewModel.State, actions: ShowActions) {
     }
     val enabled = !state.betUsed
     val shape = RoundedCornerShape(16.dp)
+    val paper by animateColorAsState(if (state.bet) ShowGold else PaperCard, label = "bet")
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .pressClickable(enabled = enabled, role = Role.Switch, onClick = actions.onBet)
             .shadow(4.dp, shape)
             .clip(shape)
-            .background(if (state.bet) ShowGold else PaperCard)
+            .background(paper)
             .border(3.dp, PaperEdge, shape)
-            .clickable(enabled = enabled, role = Role.Switch, onClick = actions.onBet)
             .alpha(if (enabled) 1f else 0.5f)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(stringResource(R.string.show_bet), color = Ink, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.weight(1f))
-            Text(if (state.bet) "✓" else "", color = Ink, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
+            BetTick(state.bet)
         }
         Text(stringResource(if (enabled) R.string.show_bet_hint else R.string.show_bet_used), color = Ink.copy(alpha = 0.75f), fontSize = 13.sp, lineHeight = 18.sp)
+    }
+}
+
+/** The tick of the bet pops in; its place is kept so the card does not grow */
+@Composable
+private fun BetTick(visible: Boolean) {
+    Box(Modifier.size(24.dp), contentAlignment = Alignment.Center) {
+        AnimatedVisibility(visible = visible, enter = PopIn, exit = fadeOut(), label = "tick") {
+            Text("✓", color = Ink, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
+        }
     }
 }
 
@@ -292,7 +347,9 @@ private fun Countdown(seconds: Int) {
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(stringResource(R.string.game_starts_in), color = AppTheme.color.textSecondaryColor, fontSize = 14.sp)
-            Text("$seconds", color = AppTheme.color.textColor, fontSize = 72.sp, fontWeight = FontWeight.ExtraBold)
+            AnimatedContent(targetState = seconds, transitionSpec = { PopIn togetherWith fadeOut(tween(120)) }, label = "countdown") {
+                Text("$it", color = AppTheme.color.textColor, fontSize = 72.sp, fontWeight = FontWeight.ExtraBold)
+            }
         }
     }
 }
@@ -355,17 +412,20 @@ private fun PowerUps(state: ShowViewModel.State, actions: ShowActions) {
 @Composable
 private fun PowerUp(text: String, enabled: Boolean, modifier: Modifier, onClick: () -> Unit) {
     val shape = RoundedCornerShape(12.dp)
+    val paper by animateColorAsState(if (enabled) PaperCard else Color.Transparent, label = "power")
+    val edge by animateColorAsState(if (enabled) PaperEdge else LineColor, label = "power edge")
+    val ink by animateColorAsState(if (enabled) Ink else DimColor, label = "power ink")
     Text(
         text = text,
-        color = if (enabled) Ink else DimColor,
+        color = ink,
         fontSize = 14.sp,
         fontWeight = FontWeight.Bold,
         textAlign = TextAlign.Center,
         modifier = modifier
+            .pressClickable(enabled = enabled, onClick = onClick)
             .clip(shape)
-            .background(if (enabled) PaperCard else Color.Transparent)
-            .border(1.dp, if (enabled) PaperEdge else LineColor, shape)
-            .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
+            .background(paper)
+            .border(1.dp, edge, shape)
             .padding(vertical = 12.dp),
     )
 }

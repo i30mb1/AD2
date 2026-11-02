@@ -1,6 +1,16 @@
 package n7.ad2.games.internal.compose
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -90,12 +100,14 @@ internal fun PartyRoom(session: Session, games: List<GameVO>, myAddress: String?
                 SectionLabel(stringResource(R.string.party_in_room, session.players.size, MAX_PLAYERS))
                 Players(session, onInvite = { inviting = true })
                 SectionLabel(if (session.isHost) stringResource(R.string.party_game_you_pick) else stringResource(R.string.party_game_host_picks, session.host.name))
-                if (game != null) PickedGame(game, session, actions.onPick) else NoGame(session)
+                AnimatedContent(targetState = game, contentKey = { it?.id }, transitionSpec = { stageChange() }, label = "picked") { picked ->
+                    if (picked != null) PickedGame(picked, session, actions.onPick) else NoGame(session)
+                }
                 if (session.isHost) OtherGames(games.filter { it != game }, session, actions.onPick)
             }
             Bottom(session, game, actions)
         }
-        if (inviting) Invite(myAddress, onClose = { inviting = false })
+        Appear(visible = inviting, enter = fadeIn(tween(180)), exit = fadeOut(tween(140))) { Invite(myAddress, onClose = { inviting = false }) }
     }
 }
 
@@ -111,7 +123,7 @@ private fun Header(onLeave: () -> Unit) {
             color = AppTheme.color.textSecondaryColor,
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
-            modifier = Modifier.clip(RoundedCornerShape(10.dp)).clickable(onClick = onLeave).padding(horizontal = 12.dp, vertical = 12.dp),
+            modifier = Modifier.pressClickable(onClick = onLeave).clip(RoundedCornerShape(10.dp)).padding(horizontal = 12.dp, vertical = 12.dp),
         )
     }
 }
@@ -129,8 +141,16 @@ private fun Players(session: Session, onInvite: () -> Unit) {
         tiles.chunked(3).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 row.forEach { player ->
-                    val tile = Modifier.weight(1f).height(118.dp)
-                    if (player != null) PlayerTile(player, session, tile) else FreeTile(invite = session.isHost, onInvite, tile)
+                    // a player coming in takes the free place with a pop, one leaving frees it with a fade
+                    AnimatedContent(
+                        targetState = player,
+                        modifier = Modifier.weight(1f).height(118.dp),
+                        contentKey = { it?.id },
+                        transitionSpec = { (fadeIn(tween(200)) + scaleIn(initialScale = 0.85f)) togetherWith fadeOut(tween(120)) },
+                        label = "place",
+                    ) { inPlace ->
+                        if (inPlace != null) PlayerTile(inPlace, session, Modifier.fillMaxSize()) else FreeTile(invite = session.isHost, onInvite, Modifier.fillMaxSize())
+                    }
                 }
             }
         }
@@ -150,22 +170,25 @@ private fun PlayerTile(player: Player, session: Session, modifier: Modifier) {
         Avatar(player.name, PlayerColors[index % PlayerColors.size], 44.dp)
         Text(if (isMe) stringResource(R.string.party_you) else player.name, color = Ink, fontSize = 13.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
         val chip = RoundedCornerShape(8.dp)
-        when {
-            index == 0 -> Text(stringResource(R.string.party_status_host), color = Ink, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.clip(chip).background(ShowGold).padding(horizontal = 8.dp, vertical = 2.dp))
-            session.lobby.isReady(player.id, session.players) -> Text(
-                stringResource(R.string.party_status_ready),
-                color = Color.White,
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.clip(chip).background(InkGood).padding(horizontal = 8.dp, vertical = 2.dp),
-            )
-            else -> Text(
-                stringResource(R.string.party_status_picking),
-                color = InkDim,
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.border(1.dp, InkDim, chip).padding(horizontal = 8.dp, vertical = 2.dp),
-            )
+        val ready = session.lobby.isReady(player.id, session.players)
+        Crossfade(targetState = (index == 0) to ready, label = "status") { (host, isReady) ->
+            when {
+                host -> Text(stringResource(R.string.party_status_host), color = Ink, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.clip(chip).background(ShowGold).padding(horizontal = 8.dp, vertical = 2.dp))
+                isReady -> Text(
+                    stringResource(R.string.party_status_ready),
+                    color = Color.White,
+                    fontSize = 11.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.clip(chip).background(InkGood).padding(horizontal = 8.dp, vertical = 2.dp),
+                )
+                else -> Text(
+                    stringResource(R.string.party_status_picking),
+                    color = InkDim,
+                    fontSize = 11.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.border(1.dp, InkDim, chip).padding(horizontal = 8.dp, vertical = 2.dp),
+                )
+            }
         }
     }
 }
@@ -187,7 +210,7 @@ private fun FreeTile(invite: Boolean, onInvite: () -> Unit, modifier: Modifier) 
                 color = AppTheme.color.textColor,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.clip(RoundedCornerShape(10.dp)).background(AppTheme.color.surface).clickable(onClick = onInvite).padding(horizontal = 12.dp, vertical = 8.dp),
+                modifier = Modifier.pressClickable(onClick = onInvite).clip(RoundedCornerShape(10.dp)).background(AppTheme.color.surface).padding(horizontal = 12.dp, vertical = 8.dp),
             )
         }
     }
@@ -220,15 +243,18 @@ private fun PickedGame(game: GameVO, session: Session, onPick: (String, GameMode
                 game.modes.filter { it != GameMode.SOLO }.forEach { mode ->
                     val selected = mode == session.lobby.mode
                     val chip = RoundedCornerShape(8.dp)
+                    val fill by animateColorAsState(if (selected) ShowGold else ShowGold.copy(alpha = 0f), label = "mode")
+                    val line by animateColorAsState(if (selected) InkDim.copy(alpha = 0f) else InkDim, label = "mode line")
                     Text(
                         text = stringResource(mode.label(session.players.size)),
                         color = Ink,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier
+                            .pressClickable(enabled = session.isHost && !selected) { onPick(game.id, mode) }
                             .clip(chip)
-                            .then(if (selected) Modifier.background(ShowGold) else Modifier.border(1.dp, InkDim, chip))
-                            .clickable(enabled = session.isHost && !selected) { onPick(game.id, mode) }
+                            .background(fill)
+                            .border(1.dp, line, chip)
                             .padding(horizontal = 8.dp, vertical = 4.dp),
                     )
                 }
@@ -253,7 +279,7 @@ private fun NoGame(session: Session) {
 /** The other games for the host to pick; the ones for two are dimmed when more are in the room */
 @Composable
 private fun OtherGames(games: List<GameVO>, session: Session, onPick: (String, GameMode) -> Unit) {
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(Modifier.animateContentSize(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         games.forEach { game ->
             val max = maxPlayersOf(game.id)
             val fits = session.players.size <= max
@@ -262,10 +288,10 @@ private fun OtherGames(games: List<GameVO>, session: Session, onPick: (String, G
                 Modifier
                     .fillMaxWidth()
                     .height(48.dp)
+                    .pressClickable(enabled = fits) { onPick(game.id, mode) }
                     .alpha(if (fits) 1f else 0.45f)
                     .clip(RoundedCornerShape(12.dp))
                     .background(AppTheme.color.surface)
-                    .clickable(enabled = fits) { onPick(game.id, mode) }
                     .padding(horizontal = 14.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
@@ -295,7 +321,7 @@ private fun Bottom(session: Session, game: GameVO?, actions: RoomActions) {
         else -> stringResource(R.string.party_hint_all_ready)
     }
     Column(Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        Text(hint, color = AppTheme.color.textSecondaryColor, fontSize = 12.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
+        Crossfade(targetState = hint, label = "hint") { Text(it, color = AppTheme.color.textSecondaryColor, fontSize = 12.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth()) }
         if (session.isHost) {
             val ready = lobby.readyCount(session.players)
             val canStart = lobby.canStart(session.players)
@@ -319,17 +345,18 @@ private fun Bottom(session: Session, game: GameVO?, actions: RoomActions) {
 @Composable
 private fun BigButton(text: String, filled: Boolean, enabled: Boolean, onClick: () -> Unit) {
     val shape = RoundedCornerShape(16.dp)
+    val strength by animateFloatAsState(if (enabled) 1f else 0.5f, label = "button")
     Box(
         Modifier
             .fillMaxWidth()
             .height(56.dp)
-            .alpha(if (enabled) 1f else 0.5f)
+            .pressClickable(enabled = enabled, onClick = onClick)
+            .alpha(strength)
             .clip(shape)
-            .then(if (filled) Modifier.background(ShowGold).border(3.dp, PaperEdge, shape) else Modifier.border(1.dp, DashColor, shape))
-            .clickable(enabled = enabled, onClick = onClick),
+            .then(if (filled) Modifier.background(ShowGold).border(3.dp, PaperEdge, shape) else Modifier.border(1.dp, DashColor, shape)),
         contentAlignment = Alignment.Center,
     ) {
-        Text(text, color = if (filled) Ink else AppTheme.color.textColor, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
+        Crossfade(targetState = text, label = "button text") { Text(it, color = if (filled) Ink else AppTheme.color.textColor, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold) }
     }
 }
 
@@ -362,7 +389,7 @@ private fun Invite(myAddress: String?, onClose: () -> Unit) {
                 fontSize = 15.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(ShowGold).clickable(onClick = onClose).padding(12.dp),
+                modifier = Modifier.fillMaxWidth().pressClickable(onClick = onClose).clip(RoundedCornerShape(12.dp)).background(ShowGold).padding(12.dp),
             )
         }
     }

@@ -1,5 +1,12 @@
 package n7.ad2.games.internal.games.mid.compose
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -37,11 +44,18 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.games.mix.ui.R
+import n7.ad2.games.internal.compose.Appear
 import n7.ad2.games.internal.compose.Buzz
 import n7.ad2.games.internal.compose.BuzzOnIncrease
+import n7.ad2.games.internal.compose.Digits
 import n7.ad2.games.internal.compose.DimColor
 import n7.ad2.games.internal.compose.MeColor
 import n7.ad2.games.internal.compose.PeerColor
+import n7.ad2.games.internal.compose.PopIn
+import n7.ad2.games.internal.compose.RollingNumber
+import n7.ad2.games.internal.compose.fadeInImage
+import n7.ad2.games.internal.compose.rememberLast
+import n7.ad2.games.internal.compose.stageChange
 import n7.ad2.games.internal.games.mid.BotLevel
 import n7.ad2.games.internal.games.mid.Feedback
 import n7.ad2.games.internal.games.mid.LaneSim
@@ -70,17 +84,24 @@ internal class MidActions(
 internal fun MidScreen(state: MidViewModel.State, sim: LaneSim, elapsedMs: () -> Long, countdown: () -> Int, actions: MidActions) {
     BuzzOnIncrease(state.stats.taken, Buzz.GOOD)
     BuzzOnIncrease(state.stats.early + state.stats.late, Buzz.BAD)
-    Column(
+    // the pick, the lane and the result give way to each other by a fade
+    AnimatedContent(
+        targetState = state,
         modifier = Modifier
             .fillMaxSize()
             .background(AppTheme.color.background)
             .systemBarsPadding()
             .padding(horizontal = 12.dp, vertical = 10.dp),
-    ) {
-        when (state.phase) {
-            MidViewModel.State.Phase.PICK -> MidPick(state, actions)
-            MidViewModel.State.Phase.PLAYING -> MidPlay(state, sim, elapsedMs, countdown, actions)
-            MidViewModel.State.Phase.END -> MidEnd(state, actions)
+        contentKey = { it.phase },
+        transitionSpec = { stageChange() },
+        label = "mid",
+    ) { shown ->
+        Column(Modifier.fillMaxSize()) {
+            when (shown.phase) {
+                MidViewModel.State.Phase.PICK -> MidPick(shown, actions)
+                MidViewModel.State.Phase.PLAYING -> MidPlay(shown, sim, elapsedMs, countdown, actions)
+                MidViewModel.State.Phase.END -> MidEnd(shown, actions)
+            }
         }
     }
 }
@@ -101,7 +122,11 @@ private fun ColumnScope.MidPlay(state: MidViewModel.State, sim: LaneSim, elapsed
     Hud(state, sim, now)
     Box(Modifier.weight(1f).padding(vertical = 10.dp), contentAlignment = Alignment.Center) {
         MidField(state, sim, now, elapsedMs, actions, Modifier.fillMaxSize())
-        if (secondsToStart > 0) Countdown(secondsToStart)
+        // the countdown fades away when the lane starts
+        val shownSeconds = rememberLast(secondsToStart.takeIf { it > 0 })
+        Appear(visible = secondsToStart > 0, enter = fadeIn(), exit = fadeOut() + scaleOut(targetScale = 1.3f)) {
+            if (shownSeconds != null) Countdown(shownSeconds)
+        }
     }
     FeedbackBar(state.feedback)
 }
@@ -124,7 +149,7 @@ private fun Hud(state: MidViewModel.State, sim: LaneSim, now: Long) {
         HudSide(state.myHero, myLabel, match.lastHits(state.mySide), match.denies(state.mySide), MeColor, alignEnd = false, Modifier.weight(1f))
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(stringResource(R.string.mid_wave, wave.coerceAtMost(LaneSim.WAVES), LaneSim.WAVES), color = DimColor, fontSize = 11.sp)
-            Text("%d:%02d".format(seconds / 60, seconds % 60), color = AppTheme.color.textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+            Text("%d:%02d".format(seconds / 60, seconds % 60), color = AppTheme.color.textColor, fontSize = 15.sp, fontWeight = FontWeight.Bold, style = Digits)
         }
         if (state.training) {
             Text(opponentLabel, color = DimColor, fontSize = 13.sp, modifier = Modifier.weight(1f), textAlign = androidx.compose.ui.text.style.TextAlign.End)
@@ -142,8 +167,8 @@ private fun HudSide(hero: MidHero?, label: String, lastHits: Int, denies: Int, c
         Column(horizontalAlignment = if (alignEnd) Alignment.End else Alignment.Start) {
             Text(label, color = DimColor, fontSize = 11.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
             Row(verticalAlignment = Alignment.Bottom) {
-                Text("$lastHits", color = AppTheme.color.textColor, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
-                Text(" / $denies", color = DimColor, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                RollingNumber(lastHits, format = Int::toString) { Text(it, color = AppTheme.color.textColor, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, style = Digits) }
+                Text(" / $denies", color = DimColor, fontSize = 13.sp, fontWeight = FontWeight.Bold, style = Digits)
             }
         }
         if (alignEnd) HeroAvatar(hero, color)
@@ -153,7 +178,7 @@ private fun HudSide(hero: MidHero?, label: String, lastHits: Int, denies: Int, c
 @Composable
 internal fun HeroAvatar(hero: MidHero?, ring: Color, size: Int = 38) {
     AsyncImage(
-        model = hero?.imageUrl,
+        model = fadeInImage(hero?.imageUrl),
         contentDescription = hero?.name,
         contentScale = ContentScale.Crop,
         modifier = Modifier
@@ -170,7 +195,9 @@ private fun Countdown(seconds: Int) {
         Modifier.size(88.dp).clip(CircleShape).background(AppTheme.color.background.copy(alpha = 0.85f)).border(4.dp, MeColor, CircleShape),
         contentAlignment = Alignment.Center,
     ) {
-        Text("$seconds", color = AppTheme.color.textColor, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        AnimatedContent(targetState = seconds, transitionSpec = { PopIn togetherWith fadeOut(tween(120)) }, label = "countdown") {
+            Text("$it", color = AppTheme.color.textColor, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        }
     }
 }
 
@@ -191,7 +218,8 @@ private fun FeedbackBar(feedback: Feedback?) {
         Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(PaperCard).padding(horizontal = 12.dp, vertical = 10.dp),
         verticalArrangement = Arrangement.spacedBy(3.dp),
     ) {
-        if (text != null) Text(text, color = if (good) InkGood else Ink, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+        // the line is there before the first hit too, so the lane above does not shrink when it comes
+        Crossfade(targetState = text.orEmpty() to good, label = "feedback") { (line, isGood) -> Text(line, color = if (isGood) InkGood else Ink, fontSize = 14.sp, fontWeight = FontWeight.Bold) }
         Text(stringResource(R.string.mid_hint), color = InkDim, fontSize = 12.sp)
     }
 }

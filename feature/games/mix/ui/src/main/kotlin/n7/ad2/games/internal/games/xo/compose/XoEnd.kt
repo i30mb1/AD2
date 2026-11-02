@@ -39,7 +39,7 @@ internal fun ColumnScope.XoEnd(state: XoViewModel.State, actions: XoActions) {
         Text(reason(state, result), color = XoLightDim, fontSize = 14.sp)
         if (state.streak > 0) Text(stringResource(R.string.xo_streak, state.streak), color = XoGold, fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
         XpLine(state.xp)
-        state.record?.let { EndRecord(it, state.mode) }
+        EndRecord(state.record, state.mode)
     }
     EndActions(listOfNotNull(state.peerName), actions.onAgain, actions.onOtherGame)
 }

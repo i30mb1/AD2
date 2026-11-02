@@ -1,8 +1,8 @@
 package n7.ad2.games.internal.compose
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,7 +17,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -46,11 +45,12 @@ internal fun DailyCard(daily: GamesViewModel.DailyCard, onClick: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .pressClickable(onClick = onClick)
             .shadow(4.dp, shape)
             .clip(shape)
+            .animateContentSize()
             .background(PaperCard)
             .border(3.dp, PaperEdge, shape)
-            .clickable(role = Role.Button, onClick = onClick)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {

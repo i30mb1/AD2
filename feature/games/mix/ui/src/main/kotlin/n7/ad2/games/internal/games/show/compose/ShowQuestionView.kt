@@ -1,8 +1,20 @@
 package n7.ad2.games.internal.games.show.compose
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.SizeTransform
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,6 +30,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -25,9 +38,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -36,7 +49,12 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.AnswerLook
+import n7.ad2.games.internal.compose.Fold
+import n7.ad2.games.internal.compose.PopIn
+import n7.ad2.games.internal.compose.Unfold
 import n7.ad2.games.internal.compose.answerLook
+import n7.ad2.games.internal.compose.fadeInImage
+import n7.ad2.games.internal.compose.pressClickable
 import n7.ad2.games.internal.games.show.BuildQuestion
 import n7.ad2.games.internal.games.show.BuildTile
 import n7.ad2.games.internal.games.show.ShowKind
@@ -59,11 +77,15 @@ internal fun ColumnScope.QuestionView(state: ShowViewModel.State, question: Show
     when (question) {
         is ShowQuestion.Pick -> {
             if (question.kind == ShowKind.VOICE) VoiceCard(state, question, actions) else SpellCard(question)
-            val final = state.match.current.final
-            if (final && state.buzzShare == null && state.myAnswer == null) {
-                BuzzBoard(state, actions)
-            } else {
-                Answers(state, question.options, actions)
+            val faceDown = state.match.current.final && state.buzzShare == null && state.myAnswer == null
+            AnimatedContent(
+                targetState = faceDown,
+                transitionSpec = { (fadeIn(tween(220)) + scaleIn(initialScale = 0.92f)) togetherWith fadeOut(tween(120)) },
+                label = "buzz",
+            ) { down ->
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    if (down) BuzzBoard(state, actions) else Answers(state, question.options, actions)
+                }
             }
         }
         is ShowQuestion.Compare -> CompareView(state, question, actions)
@@ -76,7 +98,7 @@ internal fun ColumnScope.QuestionView(state: ShowViewModel.State, question: Show
 private fun SpellCard(question: ShowQuestion.Pick) {
     PaperPanel {
         AsyncImage(
-            model = question.spellImage,
+            model = fadeInImage(question.spellImage),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(104.dp).clip(RoundedCornerShape(14.dp)).border(3.dp, Ink.copy(alpha = 0.15f), RoundedCornerShape(14.dp)),
@@ -91,33 +113,35 @@ private fun SpellCard(question: ShowQuestion.Pick) {
 @Composable
 private fun VoiceCard(state: ShowViewModel.State, question: ShowQuestion.Pick, actions: ShowActions) {
     PaperPanel {
-        Text(if (state.voice == Voice.PLAYING) "🔊" else "🔈", fontSize = 40.sp)
-        when (state.voice) {
-            Voice.PLAYING -> Text(stringResource(R.string.show_voice_playing), color = Ink, fontSize = 15.sp, fontWeight = FontWeight.Bold)
-            Voice.FAILED -> Text(
-                stringResource(R.string.show_voice_failed, question.voice?.text.orEmpty()),
-                color = Ink,
-                fontSize = 15.sp,
-                textAlign = TextAlign.Center,
-            )
-            Voice.READY -> {
-                val canReplay = state.replaysLeft > 0 && state.phase == ShowViewModel.State.Phase.QUESTION
-                Text(
-                    stringResource(R.string.show_voice_replay, state.replaysLeft),
-                    color = if (canReplay) Ink else InkDim,
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(10.dp))
-                        .border(1.5.dp, if (canReplay) Ink else InkDim.copy(alpha = 0.4f), RoundedCornerShape(10.dp))
-                        .clickable(enabled = canReplay, role = Role.Button, onClick = actions.onReplay)
-                        .padding(horizontal = 14.dp, vertical = 8.dp),
+        Crossfade(targetState = state.voice == Voice.PLAYING, label = "speaker") { playing -> Text(if (playing) "🔊" else "🔈", fontSize = 40.sp) }
+        AnimatedContent(targetState = state.voice, transitionSpec = { fadeIn() togetherWith fadeOut() using SizeTransform(clip = false) }, label = "voice") { voice ->
+            when (voice) {
+                Voice.PLAYING -> Text(stringResource(R.string.show_voice_playing), color = Ink, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                Voice.FAILED -> Text(
+                    stringResource(R.string.show_voice_failed, question.voice?.text.orEmpty()),
+                    color = Ink,
+                    fontSize = 15.sp,
+                    textAlign = TextAlign.Center,
                 )
+                Voice.READY -> {
+                    val canReplay = state.replaysLeft > 0 && state.phase == ShowViewModel.State.Phase.QUESTION
+                    Text(
+                        stringResource(R.string.show_voice_replay, state.replaysLeft),
+                        color = if (canReplay) Ink else InkDim,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier
+                            .pressClickable(enabled = canReplay, onClick = actions.onReplay)
+                            .clip(RoundedCornerShape(10.dp))
+                            .border(1.5.dp, if (canReplay) Ink else InkDim.copy(alpha = 0.4f), RoundedCornerShape(10.dp))
+                            .padding(horizontal = 14.dp, vertical = 8.dp),
+                    )
+                }
+                Voice.LOADING, Voice.NONE -> Text(stringResource(R.string.show_voice_loading), color = InkDim, fontSize = 14.sp)
             }
-            Voice.LOADING, Voice.NONE -> Text(stringResource(R.string.show_voice_loading), color = InkDim, fontSize = 14.sp)
         }
         // after the answer everyone sees what the line was
-        if (state.myAnswer != null && state.voice != Voice.FAILED) {
+        AnimatedVisibility(visible = state.myAnswer != null && state.voice != Voice.FAILED, enter = Unfold, exit = Fold, label = "line") {
             Text("«${question.voice?.text.orEmpty()}»", color = InkDim, fontSize = 13.sp, textAlign = TextAlign.Center)
         }
     }
@@ -142,29 +166,39 @@ private fun Answers(state: ShowViewModel.State, options: List<ShowOption>, actio
 private fun AnswerCard(option: ShowOption, index: Int, state: ShowViewModel.State, modifier: Modifier, onClick: () -> Unit) {
     val hidden = index in state.hidden
     val look = answerLook(isRight = option.isRight, isPicked = state.picked == index, reveal = state.myAnswer != null)
-    val edge = when (look) {
-        AnswerLook.RIGHT -> InkGood
-        AnswerLook.WRONG -> InkBad
-        AnswerLook.PICKED -> ShowGold
-        AnswerLook.IDLE -> PaperEdge
-    }
+    val edge by animateColorAsState(
+        when (look) {
+            AnswerLook.RIGHT -> InkGood
+            AnswerLook.WRONG -> InkBad
+            AnswerLook.PICKED -> ShowGold
+            AnswerLook.IDLE -> PaperEdge
+        },
+        label = "answer edge",
+    )
+    // 50 на 50 fades the wrong pair away, the reveal lifts the right answer
+    val shown by animateFloatAsState(if (hidden) 0.25f else 1f, label = "answer hidden")
+    val lift by animateFloatAsState(if (look == AnswerLook.RIGHT) 1.04f else 1f, spring(dampingRatio = 0.4f, stiffness = Spring.StiffnessMediumLow), label = "answer lift")
     val shape = RoundedCornerShape(14.dp)
     Column(
         modifier = modifier
+            .pressClickable(enabled = state.canAnswer && !hidden, onClick = onClick)
+            .graphicsLayer {
+                scaleX = lift
+                scaleY = lift
+            }
             .rotate(tilts[index % tilts.size])
-            .alpha(if (hidden) 0.25f else 1f)
+            .alpha(shown)
             .shadow(5.dp, shape)
             .clip(shape)
             .background(PaperCard)
             .border(3.dp, edge, shape)
-            .clickable(enabled = state.canAnswer && !hidden, role = Role.Button, onClick = onClick)
             .padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         if (option.imageUrl != null) {
             AsyncImage(
-                model = option.imageUrl,
+                model = fadeInImage(option.imageUrl),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxWidth().aspectRatio(1.6f).clip(RoundedCornerShape(10.dp)),
@@ -200,11 +234,11 @@ private fun BuzzBoard(state: ShowViewModel.State, actions: ShowActions) {
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
+            .pressClickable(enabled = state.phase == ShowViewModel.State.Phase.QUESTION, onClick = actions.onBuzz)
             .shadow(6.dp, shape)
             .clip(shape)
             .background(ShowGold)
             .border(3.dp, PaperEdge, shape)
-            .clickable(enabled = state.phase == ShowViewModel.State.Phase.QUESTION, role = Role.Button, onClick = actions.onBuzz)
             .padding(vertical = 22.dp),
     )
 }
@@ -220,7 +254,9 @@ private fun CompareView(state: ShowViewModel.State, question: ShowQuestion.Compa
             Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 AnswerCard(option, index, state, Modifier.fillMaxWidth()) { actions.onPick(index) }
                 val value = if (state.myAnswer != null) question.values[index] else "?"
-                Text(value, color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
+                AnimatedContent(targetState = value, transitionSpec = { PopIn togetherWith fadeOut(tween(100)) }, label = "value") {
+                    Text(it, color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
+                }
             }
         }
     }
@@ -233,7 +269,7 @@ private fun ColumnScope.BuildView(state: ShowViewModel.State, build: BuildQuesti
     PaperPanel {
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             AsyncImage(
-                model = build.target.imageUrl,
+                model = fadeInImage(build.target.imageUrl),
                 contentDescription = build.target.title,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.size(width = 72.dp, height = 52.dp).clip(RoundedCornerShape(10.dp)),
@@ -253,7 +289,11 @@ private fun ColumnScope.BuildView(state: ShowViewModel.State, build: BuildQuesti
                     Modifier.weight(1f).height(48.dp).clip(shape).background(Ink.copy(alpha = if (tile != null) 0.12f else 0.05f)).border(1.5.dp, InkDim.copy(alpha = 0.5f), shape),
                     contentAlignment = Alignment.Center,
                 ) {
-                    if (tile != null) TileImage(tile) else Text("+", color = InkDim, fontSize = 20.sp)
+                    AnimatedContent(targetState = tile, transitionSpec = { PopIn togetherWith fadeOut(tween(100)) }, contentAlignment = Alignment.Center, label = "slot") { inSlot ->
+                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            if (inSlot != null) TileImage(inSlot) else Text("+", color = InkDim, fontSize = 20.sp)
+                        }
+                    }
                 }
             }
         }
@@ -270,6 +310,7 @@ private fun ColumnScope.BuildView(state: ShowViewModel.State, build: BuildQuesti
     }
     val ready = state.canAnswer && state.tiles.size == build.slots
     val shape = RoundedCornerShape(14.dp)
+    val strength by animateFloatAsState(if (ready) 1f else 0.4f, label = "build ready")
     Text(
         text = stringResource(R.string.build_button),
         color = Ink,
@@ -278,34 +319,37 @@ private fun ColumnScope.BuildView(state: ShowViewModel.State, build: BuildQuesti
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .alpha(if (ready) 1f else 0.4f)
+            .pressClickable(enabled = ready, onClick = actions.onBuild)
+            .alpha(strength)
             .clip(shape)
             .background(ShowGold)
-            .clickable(enabled = ready, role = Role.Button, onClick = actions.onBuild)
             .padding(14.dp),
     )
 }
 
 @Composable
 private fun BuildTileCard(tile: BuildTile, isSelected: Boolean, reveal: Boolean, enabled: Boolean, modifier: Modifier, onClick: () -> Unit) {
-    val edge = when {
-        reveal && tile.isCorrect -> InkGood
-        reveal && isSelected -> InkBad
-        isSelected -> ShowGold
-        else -> PaperEdge
-    }
+    val edge by animateColorAsState(
+        when {
+            reveal && tile.isCorrect -> InkGood
+            reveal && isSelected -> InkBad
+            isSelected -> ShowGold
+            else -> PaperEdge
+        },
+        label = "tile edge",
+    )
     val shape = RoundedCornerShape(10.dp)
     Column(
         modifier = modifier
+            .pressClickable(enabled = enabled, onClick = onClick)
             .clip(shape)
             .background(PaperCard)
             .border(2.dp, edge, shape)
-            .clickable(enabled = enabled, onClick = onClick)
             .padding(vertical = 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         // a picked tile already lies in a slot, here it fades
-        val contentAlpha = if (isSelected && !reveal) 0.4f else 1f
+        val contentAlpha by animateFloatAsState(if (isSelected && !reveal) 0.4f else 1f, label = "tile picked")
         Box(Modifier.size(48.dp, 36.dp).clip(RoundedCornerShape(6.dp)).alpha(contentAlpha), contentAlignment = Alignment.Center) { TileImage(tile) }
         Text(
             text = tile.item?.cost?.toString() ?: stringResource(R.string.build_recipe),
@@ -325,7 +369,7 @@ private fun TileImage(tile: BuildTile) {
         Text("📜", fontSize = 20.sp)
     } else {
         AsyncImage(
-            model = item.imageUrl,
+            model = fadeInImage(item.imageUrl),
             contentDescription = item.title,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize().clip(RoundedCornerShape(6.dp)),

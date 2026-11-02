@@ -2,7 +2,6 @@ package n7.ad2.games.internal.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -33,12 +32,20 @@ import n7.ad2.games.internal.progress.XpGain
 import n7.ad2.games.leaderboard.Record
 import n7.ad2.games.room.GameMode
 
-/** The record after a game: a solo game among friends shows their table, otherwise a new record gets the gold plate */
+/**
+ * The record after a game, unfolding once it is saved: a solo game among friends shows their table,
+ * otherwise a new record gets the gold plate. [record] null - not saved yet.
+ */
 @Composable
-internal fun EndRecord(record: SavedRecord, mode: GameMode, modifier: Modifier = Modifier) {
-    when {
-        mode == GameMode.SOLO && record.friends.others.isNotEmpty() -> FriendsTable(record, modifier)
-        record.isNew -> RecordPlate(record.previousBest, now = record.score, modifier)
+internal fun EndRecord(record: SavedRecord?, mode: GameMode, modifier: Modifier = Modifier) {
+    val saved = rememberLast(record)
+    val table = saved != null && mode == GameMode.SOLO && saved.friends.others.isNotEmpty()
+    Appear(visible = record != null && (table || record.isNew), modifier = modifier, enter = Unfold, exit = Fold) {
+        when {
+            saved == null -> Unit
+            table -> FriendsTable(saved, Modifier)
+            else -> RecordPlate(saved.previousBest, now = saved.score)
+        }
     }
 }
 
@@ -112,15 +119,18 @@ internal fun RecordPlate(previousBest: Int?, now: Int, modifier: Modifier = Modi
 /** Что дала игра: «+50 опыта», а с новым уровнем - и его, золотом */
 @Composable
 internal fun XpLine(xp: XpGain?, modifier: Modifier = Modifier) {
-    if (xp == null) return
-    val level = xp.newLevel
-    Text(
-        text = if (level != null) stringResource(R.string.end_xp_level, xp.points, level) else stringResource(R.string.end_xp, xp.points),
-        color = if (level != null) GoldColor else AppTheme.color.textSecondaryColor,
-        fontSize = 14.sp,
-        fontWeight = FontWeight.Bold,
-        modifier = modifier,
-    )
+    // the points come a moment after the end: the line unfolds instead of pushing the rest at once
+    val gain = rememberLast(xp)
+    Appear(visible = xp != null, modifier = modifier, enter = Unfold, exit = Fold) {
+        if (gain == null) return@Appear
+        val level = gain.newLevel
+        Text(
+            text = if (level != null) stringResource(R.string.end_xp_level, gain.points, level) else stringResource(R.string.end_xp, gain.points),
+            color = if (level != null) GoldColor else AppTheme.color.textSecondaryColor,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Bold,
+        )
+    }
 }
 
 /** «Ещё раз» и «Другая игра» внизу итога; по сети кнопка называет соперника, а если их несколько - зовет всех [others] */
@@ -137,15 +147,15 @@ internal fun EndActions(others: List<String>, onAgain: () -> Unit, onOtherGame: 
             fontSize = 15.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(MeColor).clickable(onClick = onAgain).padding(15.dp),
+            modifier = Modifier.fillMaxWidth().pressClickable(onClick = onAgain).clip(RoundedCornerShape(12.dp)).background(MeColor).padding(15.dp),
         )
         Text(
             text = stringResource(R.string.end_other_game),
             color = AppTheme.color.textColor,
             fontSize = 14.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).border(1.dp, LineColor, RoundedCornerShape(12.dp))
-                .clickable(onClick = onOtherGame).padding(13.dp),
+            modifier = Modifier.fillMaxWidth().pressClickable(onClick = onOtherGame).clip(RoundedCornerShape(12.dp))
+                .border(1.dp, LineColor, RoundedCornerShape(12.dp)).padding(13.dp),
         )
     }
 }

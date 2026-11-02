@@ -175,7 +175,7 @@ private fun DrawScope.drawMark(cross: Boolean, topLeft: Offset, side: Float, str
 @Composable
 private fun Asset(path: String, modifier: Modifier, alignment: Alignment = Alignment.Center) {
     AsyncImage(
-        model = ASSETS + path,
+        model = fadeInImage(ASSETS + path),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         alignment = alignment,
