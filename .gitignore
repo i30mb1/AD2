@@ -12,3 +12,5 @@ task.txt
 
 # Google Play service account key (Gradle Play Publisher)
 play-service-account.json
+
+.scratch/
