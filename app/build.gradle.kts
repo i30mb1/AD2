@@ -10,8 +10,8 @@ plugins {
 play {
     serviceAccountCredentials.set(rootProject.file("play-service-account.json"))
     defaultToAppBundles.set(true)
-    track.set("internal")
-    releaseStatus.set(ReleaseStatus.DRAFT)
+    track.set("production")
+    releaseStatus.set(ReleaseStatus.COMPLETED)
 }
 
 base {
@@ -66,11 +66,11 @@ android {
             isDebuggable = false
         }
         release {
-            isMinifyEnabled = true
+            optimization {
+                enable = true
+            }
             isDebuggable = false
-            isShrinkResources = true
             signingConfig = signingConfigs.getByName("release")
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
         create("qa") {
             matchingFallbacks += "release"

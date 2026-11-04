@@ -1,0 +1,55 @@
+{
+  "domain": "Data Safety and Privacy",
+  "findings": [
+    {
+      "psl_constant": "PERFORMANCE_DIAGNOSTICS",
+      "policy_id": "data_safety_section",
+      "issue_summary": "Data Safety Compliant (Local-Only)",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\AD2AppInformation.kt",
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\di\\ApplicationModule.kt",
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\init\\HistoricalProcessExitReasonsInitializer.kt",
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\init\\StrictModeInitializer.kt",
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\init\\CrashHandlerInitializer.kt",
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\init\\SystemInfoInitializer.kt",
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\kotlin\\n7\\ad2\\init\\DevicePerformanceInitializer.kt",
+        "D:\\AndroidProject\\AD2\\core\\logger\\app-logger\\src\\main\\kotlin\\n7\\ad2\\app\\logger\\internal\\LoggerImpl.kt",
+        "D:\\AndroidProject\\AD2\\feature\\drawer\\src\\main\\kotlin\\n7\\ad2\\drawer\\internal\\DrawerFragment.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\kotlin\\n7.ad2\\camera\\internal\\CameraFragment.kt",
+        "D:\\AndroidProject\\AD2\\feature\\games\\xo\\ui\\src\\main\\kotlin\\n7.ad2\\xo\\internal\\XoViewModel.kt",
+        "D:\\AndroidProject\\AD2\\feature\\settings\\src\\main\\res\\values\\strings.xml"
+      ],
+      "evidence": "No off-device sink found for any of the three sources. AD2AppInformation.kt:8: the 'Debug' match is BuildConfig.DEBUG, a build flag, not diagnostics; line 18 only builds an unused string from Build.MANUFACTURER and Build.MODEL. ApplicationModule.kt:57: the 'StrictMode' match only registers StrictModeInitializer, whose body is behind if (false) (StrictModeInitializer.kt:13) and would only use penaltyLog. HistoricalProcessExitReasonsInitializer.kt:25-31: reads the last exit record through ActivityManager; the ANR trace is read and discarded (line 30, stackTrace?.length has no effect) and only reason and description go to logger.log (line 31). The logger is not a telemetry path: ApplicationModule.kt:48 provides LoggerImpl, and LoggerImpl.kt:14-23 keeps entries in an in-memory MutableSharedFlow (replay 100) and drops the params map. Its only production consumers of getLogFlow are DrawerFragment.kt:231 (on-screen log list), CameraFragment.kt:100-101 (Log.d to local logcat) and XoViewModel.kt:44-46 (on-screen UI state). No getLogsFlow consumer exists in production code. Build files (*.kts, *.toml, *.gradle) contain no Firebase, Crashlytics, AppMetrica, Sentry, Mixpanel, Amplitude, AppsFlyer, Bugsnag or Datadog dependency. Not inspected: the internals of androidx core-performance-play-services (libs.versions.toml:138), used by DevicePerformanceInitializer.kt:12-13; the app code only reads mediaPerformanceClass and passes it to the same local logger. Step 2 (disclosure search) skipped because is_transferred is false. Case 1.",
+      "recommendation": "No Data safety declaration is needed for performance diagnostics while the logger stays local, which matches the form's 'no data collected' answer. Any future crash or telemetry SDK, or a remote logger behind Logger, would require updating the form first. Optional hygiene: (1) SystemInfoInitializer.kt:14,20 puts ANDROID_ID into the log panel and, through CameraFragment.kt:101, into logcat; it stays on the device, but a persistent device identifier in logs would become a declarable identifier the moment logs are ever uploaded, so remove it. (2) Remove the dead code found here, per the project rule on unused code: the unused string at AD2AppInformation.kt:18, the if (false) block in StrictModeInitializer.kt:13 and the discarded trace read in HistoricalProcessExitReasonsInitializer.kt:29-30. (3) feature/settings strings.xml:26 (license_text16, 'Consent to Use of Data') says the provider may collect technical data about the device. It is used only by fragment_license.xml, and no code references that layout, so users never see it and it is not a disclosure; delete it, or reword it if the license screen ever returns, because it contradicts the no-collection declaration.",
+      "is_transferred": false,
+      "user_initiated": false,
+      "is_third_party": false,
+      "prominent_disclosure_status": "EXEMPT",
+      "purpose": "Local functionality only",
+      "linked_to_user": false
+    },
+    {
+      "psl_constant": "NAME",
+      "policy_id": "data_safety_section",
+      "issue_summary": "Data Safety Compliant (Local-Only)",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\app\\src\\main\\res\\layout\\activity_item_full.xml",
+        "D:\\AndroidProject\\AD2\\feature\\item-page\\src\\main\\kotlin\\n7\\ad2\\itempage\\internal\\domain\\usecase\\GetItemInfoUseCase.kt",
+        "D:\\AndroidProject\\AD2\\feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\data\\remote\\model\\StreamGQL.kt",
+        "D:\\AndroidProject\\AD2\\feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\domain\\ConvertStreamToVOStreamUseCase.kt",
+        "D:\\AndroidProject\\AD2\\feature\\games\\leaderboard\\impl\\src\\main\\kotlin\\n7\\ad2\\games\\leaderboard\\LocalPlayerStore.kt",
+        "D:\\AndroidProject\\AD2\\feature\\games\\leaderboard\\impl\\src\\main\\kotlin\\n7\\ad2\\games\\leaderboard\\LeaderboardSync.kt"
+      ],
+      "evidence": "All three sources are false positives: none refers to the name of the app user. activity_item_full.xml:63: 'full_name' is the view id tv_activity_item_full_name, a text view for a Dota item name (tools:text 'Bracer'); no code references this layout. GetItemInfoUseCase.kt:77: fullName is a game item ability name read from bundled JSON assets (readItem, lines 100-105), with no network call in this file. StreamGQL.kt:97-98: display_name is a field of a response model describing a public Twitch broadcaster. It is received, not sent, and the displayed name comes from stream.userName (ConvertStreamToVOStreamUseCase.kt:22). The app has no user-entered name in these paths. Related check on the multiplayer player name: LocalPlayerStore.kt:15 sets it to Build.MODEL (device model, not a personal name), and it reaches other players through LeaderboardSync.kt:53, so it is not NAME data either. Step 2 (disclosure search) skipped because is_transferred is false. Case 1.",
+      "recommendation": "No Data safety declaration is needed for NAME. If a user-editable nickname is ever added to the games, re-evaluate it, because the player name is sent to the other players in a room. activity_item_full.xml has no references and can be deleted per the project rule on unused code. The random player id from LocalPlayerStore.kt:14 is outside this data type; the identifier audit should assess it.",
+      "is_transferred": false,
+      "user_initiated": false,
+      "is_third_party": false,
+      "prominent_disclosure_status": "EXEMPT",
+      "purpose": "Local functionality only",
+      "linked_to_user": false
+    }
+  ]
+}

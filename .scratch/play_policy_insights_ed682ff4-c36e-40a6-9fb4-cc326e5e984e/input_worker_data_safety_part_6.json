@@ -1,0 +1,241 @@
+{
+    "APP_DIR": "D:\\AndroidProject\\AD2",
+    "APP_NAME": "app_name",
+    "GOAL_NAME": "data_safety_part_6",
+    "PACKAGE_NAME": "AD2",
+    "REPO_ROOT": "C:\\Users\\eug79\\.claude\\skills\\play-policy-insights",
+    "TARGET_SDK": null,
+    "TEMP_DIR": "D:\\AndroidProject\\AD2\\.scratch\\play_policy_insights_ed682ff4-c36e-40a6-9fb4-cc326e5e984e",
+    "data_sources": {
+        "EMAILS": {
+            "description": "A user\u2019s emails including the email subject line, sender, recipients, and the content of the email.",
+            "findings": [
+                "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\ImageRepository.kt (Pattern: imap)",
+                "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\HeroParser.kt (Pattern: imap)",
+                "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\wiki\\WikiJson.kt (Pattern: imap)"
+            ]
+        },
+        "PHOTOS": {
+            "description": "A user\u2019s photos.",
+            "findings": [
+                "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\ImageUtils.kt (Pattern: image/*)",
+                "feature\\camera\\domain\\api\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\FaceDetector.kt (Pattern: CAMERA)",
+                "feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\CameraSettingsImpl.kt (Pattern: CAMERA)"
+            ]
+        }
+    },
+    "disclosure": [
+        "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\ImageUtils.kt (Pattern: Accept)",
+        "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\WikiConnection.kt (Pattern: Accept)",
+        "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\HeroParser.kt (Pattern: collect)",
+        "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\valve\\ValveApi.kt (Pattern: Accept)",
+        "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\valve\\ValvePatchNotes.kt (Pattern: collect)",
+        "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\wiki\\WikiHeroParser.kt (Pattern: collect)",
+        "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\items\\ValveItemParser.kt (Pattern: Accept)",
+        "core\\ui\\src\\main\\kotlin\\n7\\ad2\\core\\ui\\DialogError.kt (Pattern: AlertDialog)",
+        "core\\ui\\src\\main\\kotlin\\n7\\ad2\\core\\ui\\performance\\ChartsOwner.kt (Pattern: collect)",
+        "core\\ui\\src\\main\\res\\values\\styles.xml (Pattern: AlertDialog)",
+        "core\\ui\\src\\main\\res\\values\\themes.xml (Pattern: AlertDialog)",
+        "feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\StateMachine.kt (Pattern: Dialog)",
+        "feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\streamer\\StreamerCameraX.kt (Pattern: share)",
+        "feature\\camera\\ui\\src\\main\\kotlin\\n7.ad2\\camera\\internal\\CameraFragment.kt (Pattern: collect)",
+        "feature\\drawer\\src\\main\\kotlin\\n7\\ad2\\drawer\\internal\\DrawerFragment.kt (Pattern: collect)",
+        "feature\\drawer\\src\\main\\kotlin\\n7\\ad2\\drawer\\internal\\DrawerViewModel.kt (Pattern: collect)",
+        "feature\\games\\leaderboard\\impl\\src\\main\\kotlin\\n7\\ad2\\games\\leaderboard\\LeaderboardSync.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\GamesFragment.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\GamesViewModel.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\compose\\GameScreen.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\invoker\\InvokerFragment.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\invoker\\InvokerViewModel.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\mid\\MidFragment.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\mid\\MidViewModel.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\show\\ShowFragment.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\show\\ShowRules.kt (Pattern: share)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\show\\ShowViewModel.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\show\\compose\\DailyEnd.kt (Pattern: share)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\show\\compose\\ShowScreen.kt (Pattern: share)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\xo\\XoFragment.kt (Pattern: Accept)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\xo\\XoRules.kt (Pattern: Accept)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\xo\\XoViewModel.kt (Pattern: Accept)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\games\\xo\\compose\\XoScreen.kt (Pattern: Accept)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\party\\GameChannel.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\party\\Party.kt (Pattern: collect)",
+        "feature\\games\\mix\\ui\\src\\main\\res\\values-ru\\strings.xml (Pattern: share)",
+        "feature\\games\\mix\\ui\\src\\main\\res\\values\\strings.xml (Pattern: Accept)",
+        "feature\\games\\room\\impl\\src\\main\\kotlin\\n7\\ad2\\games\\room\\internal\\GuestRoom.kt (Pattern: collect)",
+        "feature\\games\\room\\impl\\src\\main\\kotlin\\n7\\ad2\\games\\room\\internal\\HostRoom.kt (Pattern: collect)",
+        "feature\\games\\xo\\cli-test\\src\\main\\kotlin\\n7\\ad2\\xo\\cli\\controller\\WebSocketClientController.kt (Pattern: Accept)",
+        "feature\\games\\xo\\cli-test\\src\\main\\kotlin\\n7\\ad2\\xo\\cli\\controller\\WebSocketServerController.kt (Pattern: Accept)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\ServerLog.kt (Pattern: Accept)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\ServerWithWebsocket.kt (Pattern: Accept)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\WebSocketHandshake.kt (Pattern: Accept)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\HttpServerController.kt (Pattern: collect)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\SocketClientController.kt (Pattern: collect)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\SocketServerController.kt (Pattern: collect)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\WebsocketClientController.kt (Pattern: collect)",
+        "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\WebsocketServerController.kt (Pattern: collect)",
+        "feature\\games\\xo\\ui\\src\\main\\kotlin\\n7.ad2\\xo\\internal\\XoFragment.kt (Pattern: collect)",
+        "feature\\hero-page\\ui\\src\\main\\kotlin\\n7\\ad2\\hero\\page\\internal\\guides\\HeroGuideScreen.kt (Pattern: collect)",
+        "feature\\hero-page\\ui\\src\\main\\kotlin\\n7\\ad2\\hero\\page\\internal\\info\\HeroInfoScreen.kt (Pattern: collect)",
+        "feature\\hero-page\\ui\\src\\main\\kotlin\\n7\\ad2\\hero\\page\\internal\\pager\\HeroPageScreen.kt (Pattern: collect)",
+        "feature\\hero-page\\ui\\src\\main\\kotlin\\n7\\ad2\\hero\\page\\internal\\responses\\ResponseRingtoneSetter.kt (Pattern: collect)",
+        "feature\\hero-page\\ui\\src\\main\\kotlin\\n7\\ad2\\hero\\page\\internal\\responses\\ResponsesFragment.kt (Pattern: Dialog)",
+        "feature\\hero-page\\ui\\src\\main\\kotlin\\n7\\ad2\\hero\\page\\internal\\responses\\ResponsesScreen.kt (Pattern: collect)",
+        "feature\\heroes\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\heroes\\domain\\internal\\usecase\\GetGuideForHeroUseCaseImpl.kt (Pattern: Accept)",
+        "feature\\heroes\\ui\\src\\main\\kotlin\\n7\\ad2\\feature\\heroes\\ui\\internal\\HeroesFragment.kt (Pattern: collect)",
+        "feature\\item-page\\src\\main\\kotlin\\n7\\ad2\\itempage\\internal\\ItemInfoFragment.kt (Pattern: collect)",
+        "feature\\items\\ui\\src\\main\\kotlin\\n7\\ad2\\items\\internal\\ItemsFragment.kt (Pattern: collect)",
+        "feature\\news\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\items\\domain\\internal\\usecase\\GetArticleUseCaseImpl.kt (Pattern: Accept)",
+        "feature\\news\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\items\\domain\\internal\\usecase\\GetNewsUseCaseImpl.kt (Pattern: Accept)",
+        "feature\\news\\ui\\src\\main\\kotlin\\n7\\ad2\\news\\ui\\internal\\screen\\article\\compose\\ArticleScreen.kt (Pattern: collect)",
+        "feature\\news\\ui\\src\\main\\kotlin\\n7\\ad2\\news\\ui\\internal\\screen\\news\\compose\\NewsScreen.kt (Pattern: collect)",
+        "feature\\news\\ui\\src\\main\\res\\values-ru\\strings.xml (Pattern: share)",
+        "feature\\news\\ui\\src\\main\\res\\values\\strings.xml (Pattern: share)",
+        "feature\\settings\\src\\main\\res\\values\\strings.xml (Pattern: Consent)",
+        "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\StreamsFragment.kt (Pattern: collect)",
+        "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\data\\remote\\model\\StreamGQL.kt (Pattern: privacy)",
+        "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\stream\\StreamActivity.kt (Pattern: collect)",
+        "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\stream\\StreamViewModel.kt (Pattern: share)",
+        "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\stream\\compose\\FlyingChat.kt (Pattern: collect)",
+        "feature\\tournaments\\src\\main\\kotlin\\n7\\ad2\\tournaments\\internal\\TournamentsFragment.kt (Pattern: collect)",
+        "feature\\tournaments\\src\\main\\kotlin\\n7\\ad2\\tournaments\\internal\\match\\MatchFragment.kt (Pattern: collect)",
+        "macro-benchmark\\src\\main\\java\\n7\\ad2\\macrobenchmark\\BaselineProfileGenerator.kt (Pattern: collect)",
+        "macro-benchmark\\src\\main\\java\\n7\\ad2\\macrobenchmark\\StartupBaselineProfileGenerator.kt (Pattern: collect)"
+    ],
+    "exact_alarm": [
+        "core\\common-android\\src\\main\\kotlin\\n7\\ad2\\android\\RemindersManager.kt (Pattern: SCHEDULE_EXACT_ALARM)"
+    ],
+    "found_urls": [],
+    "network_transmission": {
+        "-": [
+            "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\WikiConnection.kt (Pattern: fetch)",
+            "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\valve\\ValveApi.kt (Pattern: HttpClient)",
+            "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\items\\ValveItemParser.kt (Pattern: HttpClient)",
+            "core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\items\\WikiItemParser.kt (Pattern: fetch)",
+            "core\\retrofit\\src\\main\\kotlin\\n7\\ad2\\di\\RetrofitModule.kt (Pattern: HttpClient)",
+            "feature\\drawer\\src\\main\\kotlin\\n7\\ad2\\drawer\\api\\DrawerDependencies.kt (Pattern: HttpClient)",
+            "feature\\drawer\\src\\main\\kotlin\\n7\\ad2\\drawer\\internal\\data\\remote\\SettingsApi.kt (Pattern: HttpClient)",
+            "feature\\drawer\\src\\main\\kotlin\\n7\\ad2\\drawer\\internal\\di\\DrawerModule.kt (Pattern: HttpClient)",
+            "feature\\games\\xo\\cli-test\\src\\main\\kotlin\\n7\\ad2\\xo\\cli\\Main.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\cli-test\\src\\main\\kotlin\\n7\\ad2\\xo\\cli\\controller\\HttpClientController.kt (Pattern: HttpClient)",
+            "feature\\games\\xo\\cli-test\\src\\main\\kotlin\\n7\\ad2\\xo\\cli\\controller\\Interfaces.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\cli-test\\src\\main\\kotlin\\n7\\ad2\\xo\\cli\\controller\\WebSocketClientController.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\cli-test\\src\\main\\kotlin\\n7\\ad2\\xo\\cli\\controller\\WebSocketServerController.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\ServerWithWebsocket.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\WebSocketFrames.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\WebSocketHandshake.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\HttpClientController.kt (Pattern: HttpClient)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\WebsocketClient.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\WebsocketClientController.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\WebsocketHub.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\games\\xo\\domain\\internal\\server\\controller\\WebsocketServerController.kt (Pattern: WebSocket)",
+            "feature\\games\\xo\\ui\\src\\main\\kotlin\\n7.ad2\\xo\\internal\\game\\GameLogic.kt (Pattern: HttpClient)",
+            "feature\\heroes\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\heroes\\domain\\internal\\usecase\\GetGuideForHeroUseCaseImpl.kt (Pattern: fetch)",
+            "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\api\\StreamsDependencies.kt (Pattern: HttpClient)",
+            "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\api\\StreamsProvider.kt (Pattern: HttpClient)",
+            "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\chat\\TwitchChat.kt (Pattern: WebSocket)",
+            "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\data\\remote\\retrofit\\TwitchApi.kt (Pattern: HttpClient)",
+            "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\data\\remote\\retrofit\\TwitchGQLApi.kt (Pattern: HttpClient)",
+            "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\data\\remote\\retrofit\\TwitchHLSApi.kt (Pattern: HttpClient)",
+            "feature\\streams\\src\\main\\kotlin\\n7\\ad2\\streams\\internal\\di\\StreamsModule.kt (Pattern: HttpClient)"
+        ]
+    },
+    "requested_permissions": {
+        "LOCATION": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "PHOTOS": [
+            "android.permission.CAMERA"
+        ],
+        "VIDEOS": [
+            "android.permission.CAMERA"
+        ],
+        "exact_alarm": [
+            "android.permission.SCHEDULE_EXACT_ALARM"
+        ]
+    },
+    "semantic_files": {
+        "AUDIO": [
+            "Recorder.kt",
+            "RecorderCameraX.kt",
+            "RecorderSingleCompletion.kt",
+            "RecorderWithLogging.kt",
+            "RecordingDelay.kt",
+            "RecordDatabase.kt",
+            "VoicePlayer.kt",
+            "FriendsRecords.kt",
+            "WifiDirectRecord.kt"
+        ],
+        "CONFIG": [
+            "locales_config.xml",
+            "network_security_config.xml"
+        ],
+        "MUSIC": [
+            "AudioExoPlayer.kt",
+            "LocalPlayerStore.kt",
+            "VoicePlayer.kt"
+        ],
+        "OTHER_APP_PERFORMANCE": [
+            "DevicePerformanceInitializer.kt",
+            "PerformanceChartsExample.kt",
+            "PerformanceExtractor.kt",
+            "ProcessorSynchronized.kt",
+            "PerformanceMapper.kt",
+            "VOPerformance.kt",
+            "LeaderboardSync.kt",
+            "StartupBenchmark.kt"
+        ],
+        "OTHER_AUDIO": [
+            "ic_fragment_single_stream_sound_off.xml",
+            "ic_fragment_single_stream_sound_on.xml",
+            "ResponseRingtoneSetter.kt"
+        ],
+        "PHOTOS": [
+            "ImagesCompressor.kt",
+            "ImageView.kt",
+            "CameraApi.kt",
+            "ImageRepository.kt",
+            "ImageUtils.kt",
+            "SelectableImageView.kt",
+            "ImageLineViewHolder.kt",
+            "item_image_line.xml",
+            "CameraActivity.kt",
+            "CameraAppComponentFactory.kt",
+            "CameraApplication.kt",
+            "CameraApplicationComponent.kt",
+            "CameraApplicationModule.kt",
+            "CameraSettings.kt",
+            "CameraState.kt",
+            "CameraLifecycle.kt",
+            "CameraProvider.kt",
+            "CameraSettingsImpl.kt",
+            "CameraStateExtensions.kt",
+            "PreviewerCameraX.kt",
+            "FaceFromPhotoExtractor.kt",
+            "ImageEditor.kt",
+            "Camera2FaceSource.kt",
+            "ProcessorCamera2.kt",
+            "RecorderCameraX.kt",
+            "StreamerCameraX.kt",
+            "CameraModule.kt",
+            "CameraDependencies.kt",
+            "CameraFragmentFactory.kt",
+            "CameraProvider.kt",
+            "CameraFragment.kt",
+            "CameraPermission.kt",
+            "CameraViewModel.kt",
+            "Camera.kt",
+            "CameraComponent.kt",
+            "CameraStateUI.kt",
+            "CameraStateUIExtension.kt",
+            "ResponseImage.kt",
+            "VOResponseImage.kt"
+        ],
+        "VIDEOS": [
+            "ic_show_video_ad.xml",
+            "RecordingDelay.kt",
+            "VideoFragment.kt"
+        ]
+    }
+}
