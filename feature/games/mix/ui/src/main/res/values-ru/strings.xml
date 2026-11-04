@@ -303,4 +303,8 @@
     <string name="show_question_in">Вопрос через %d с</string>
     <string name="show_loading_question">Загружаем вопрос…</string>
     <string name="show_loading_voice">Загружаем голос героя…</string>
+    <string name="wifi_direct_explanation_title">Игра с друзьями рядом</string>
+    <string name="wifi_direct_explanation">Чтобы найти телефоны рядом через Wi-Fi Direct, Android 12 требует разрешение на геолокацию. Приложение не читает и не хранит ваше местоположение. Без него с друзьями можно играть в одной сети Wi-Fi.</string>
+    <string name="wifi_direct_explanation_continue">Продолжить</string>
+    <string name="wifi_direct_explanation_later">Не сейчас</string>
 </resources>

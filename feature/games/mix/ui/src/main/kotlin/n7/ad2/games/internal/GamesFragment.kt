@@ -9,10 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 import n7.ad2.android.DependenciesMap
@@ -22,6 +24,7 @@ import n7.ad2.android.findDependencies
 import n7.ad2.android.getMainFragmentNavigator
 import n7.ad2.app.logger.Logger
 import n7.ad2.core.ui.content
+import n7.ad2.feature.games.mix.ui.R
 import n7.ad2.games.internal.compose.GamesScreen
 import n7.ad2.games.internal.data.GameVO
 import n7.ad2.games.internal.di.DaggerGamesComponent
@@ -64,13 +67,31 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
         if (ContextCompat.checkSelfPermission(requireContext(), wifiDirectPermissions.first()) == PackageManager.PERMISSION_GRANTED) {
             viewModel.onWifiDirectPermission(true)
         } else if (savedInstanceState == null) {
-            permissionRequest.launch(wifiDirectPermissions)
+            askWifiDirectPermission()
         }
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.openGame.collect { game -> open(gameFragment(game.gameId, game.mode)) }
             }
         }
+    }
+
+    private fun askWifiDirectPermission() {
+        val preferences = requireContext().getSharedPreferences("games_wifi_direct", Context.MODE_PRIVATE)
+        if (!wifiDirectNeedsExplanation(Build.VERSION.SDK_INT, preferences.getBoolean(KEY_EXPLAINED, false))) {
+            permissionRequest.launch(wifiDirectPermissions)
+            return
+        }
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.wifi_direct_explanation_title)
+            .setMessage(R.string.wifi_direct_explanation)
+            .setCancelable(false)
+            .setNegativeButton(R.string.wifi_direct_explanation_later) { _, _ -> viewModel.onWifiDirectPermission(false) }
+            .setPositiveButton(R.string.wifi_direct_explanation_continue) { _, _ ->
+                preferences.edit { putBoolean(KEY_EXPLAINED, true) }
+                permissionRequest.launch(wifiDirectPermissions)
+            }
+            .show()
     }
 
     // виден только список: в игре телефон не объявляется (сессия остается)
@@ -100,5 +121,9 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
         getMainFragmentNavigator?.setMainFragment(fragment) {
             addToBackStack(null)
         }
+    }
+
+    private companion object {
+        const val KEY_EXPLAINED = "explained"
     }
 }

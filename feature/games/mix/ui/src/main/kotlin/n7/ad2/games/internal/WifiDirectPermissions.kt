@@ -10,3 +10,6 @@ internal fun wifiDirectPermissions(sdkInt: Int): Array<String> = if (sdkInt >= B
 } else {
     arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
 }
+
+// до Android 13 система просит геолокацию, которая приложению не нужна: объясняем зачем, пока человек не согласился
+internal fun wifiDirectNeedsExplanation(sdkInt: Int, explained: Boolean): Boolean = sdkInt < Build.VERSION_CODES.TIRAMISU && !explained

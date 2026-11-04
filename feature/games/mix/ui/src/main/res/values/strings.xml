@@ -293,4 +293,8 @@
     <string name="show_question_in">Question in %d s</string>
     <string name="show_loading_question">Loading the question…</string>
     <string name="show_loading_voice">Loading the hero\'s voice…</string>
+    <string name="wifi_direct_explanation_title">Play with friends nearby</string>
+    <string name="wifi_direct_explanation">To find nearby phones over Wi-Fi Direct, Android 12 requires the location permission. The app does not read or store your location. Without it you can still play with friends on the same Wi-Fi network.</string>
+    <string name="wifi_direct_explanation_continue">Continue</string>
+    <string name="wifi_direct_explanation_later">Not now</string>
 </resources>
