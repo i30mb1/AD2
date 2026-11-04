@@ -1,0 +1,51 @@
+{
+  "domain": "Data Safety and Privacy",
+  "findings": [
+    {
+      "psl_constant": "EMAILS",
+      "policy_id": "data_safety_section",
+      "issue_summary": "Data Safety Compliant (Local-Only): all three EMAILS evidence hits are false positives, the pattern 'imap' matched the word 'minimap' in hero icon asset paths.",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\ImageRepository.kt",
+        "D:\\AndroidProject\\AD2\\core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\HeroParser.kt",
+        "D:\\AndroidProject\\AD2\\core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\heroes\\wiki\\WikiJson.kt",
+        "D:\\AndroidProject\\AD2\\feature\\settings\\src\\main\\kotlin\\n7\\ad2\\settings\\internal\\SettingsFragment.kt"
+      ],
+      "evidence": "ImageRepository.kt:24 (it.name.contains(\"minimap\")), HeroParser.kt:212 (\"heroes/$title/minimap.webp\") and WikiJson.kt:81 (\"heroes/${name.assetKey()}/minimap.webp\") refer to game asset file names, not to IMAP or user email. In addition core/parser is a JVM tool (convention.kotlin-jvm with a Gradle application/JavaExec entry point, run on the developer machine to generate asset JSON); no module outside core/parser depends on it, so it is not in the shipped app. No email client, mail library, GET_ACCOUNTS or AccountManager use was found in app, feature or core. The only mail-related code is SettingsFragment.kt:58-59, an ACTION_VIEW mailto: link to the developer's address with a fixed subject and body, which opens the user's own mail app on tap and reads no email content; SettingsFragment.kt:42-45 is an ACTION_SEND of fixed app strings. Neither touches a user's emails.",
+      "recommendation": "No action required. EMAILS does not need to be declared in the Data Safety form on the basis of this evidence.",
+      "is_transferred": false,
+      "user_initiated": false,
+      "is_third_party": false,
+      "prominent_disclosure_status": "EXEMPT",
+      "purpose": "Local functionality only",
+      "linked_to_user": false
+    },
+    {
+      "psl_constant": "PHOTOS",
+      "policy_id": "data_safety_section",
+      "issue_summary": "Data Safety Compliant (Local-Only): no user photo leaves the device. The parser hit is a developer tool that downloads game images, and the camera hits belong to a module the release app does not include and which has no network upload path.",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\ImageUtils.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\api\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\FaceDetector.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\CameraSettingsImpl.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\streamer\\StreamerCameraX.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\recorder\\RecorderCameraX.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\Controller.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\kotlin\\n7.ad2\\camera\\internal\\CameraFragment.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\AndroidManifest.xml",
+        "D:\\AndroidProject\\AD2\\core\\common-android\\src\\main\\kotlin\\n7\\ad2\\android\\ImagesCompressor.kt",
+        "D:\\AndroidProject\\AD2\\app\\build.gradle.kts"
+      ],
+      "evidence": "ImageUtils.kt:55 and :68 are an HTTP content-type default and an Accept header on a download of wiki/game images in the developer-only core/parser JVM tool: inbound game art, not a user's photos. FaceDetector.kt:7 (enum value CAMERA2) and CameraSettingsImpl.kt:17,19 (CameraSelector constants) are configuration with no image data. Forward trace of the camera path: StreamerCameraX.kt:85-90 turns frames into in-memory bitmaps and emits them on a local SharedFlow, Controller.kt:47-60 passes them to the on-device processor and into UI state, RecorderCameraX.kt writes a 2 second clip to context.filesDir/temp/CameraX-recording.mp4, and CameraFragment.kt:181-189 (class CameraX) writes a captured bitmap to local MediaStore. A search of feature/camera for OkHttp, Retrofit, HttpURLConnection, Ktor, sockets, upload, multipart, ACTION_SEND and Firebase Storage returned nothing. Its only network use visible in code is ONNXModelHub in ProcessorKotlinDL.kt:16-17, which loads a face-detection model (inbound) and sends no frames. Separately, app/build.gradle.kts declares no feature.camera dependency and app/src/main/AndroidManifest.xml has no CAMERA entry; across all build files the only consumer outside feature/camera is micro-benchmark, as androidTestImplementation. So the CAMERA permission in manifest_details.json comes from feature/camera/ui/src/main/AndroidManifest.xml, aggregated across modules, and should not be in the release merged manifest. The app logger has no remote sink visible here (AppMetrica was removed in commit c05f7fe9d) and the camera feature logs no image data. ImagesCompressor.kt reads a content Uri but has no callers in app, feature or core, and writes only to app-specific external files.",
+      "recommendation": "No Data Safety declaration is needed for PHOTOS. Two optional checks: (1) this conclusion rests on the Gradle dependency graph, not on a built artifact, so confirm that android.permission.CAMERA is absent from the merged manifest of the release AAB before upload. (2) Under the project rule that unused code is deleted, remove ImagesCompressor.kt, which has no callers and would write user images to external files if it were ever wired in. If the camera module is added to the app later, re-audit it: CameraPermission.kt requests CAMERA and WRITE_EXTERNAL_STORAGE, the face processing would need review under the Data Safety and sensitive-data rules, and the runtime model download would become a shipped network call.",
+      "is_transferred": false,
+      "user_initiated": false,
+      "is_third_party": false,
+      "prominent_disclosure_status": "EXEMPT",
+      "purpose": "Local functionality only",
+      "linked_to_user": false
+    }
+  ]
+}

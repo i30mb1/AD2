@@ -20,11 +20,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class FragmentManagerTest {
 
-    @get:Rule val permission: GrantPermissionRule = GrantPermissionRule.grant(
-        android.Manifest.permission.NEARBY_WIFI_DEVICES,
-        android.Manifest.permission.ACCESS_COARSE_LOCATION,
-        android.Manifest.permission.ACCESS_FINE_LOCATION,
-    )
+    @get:Rule val permission: GrantPermissionRule = GrantPermissionRule.grant(android.Manifest.permission.NEARBY_WIFI_DEVICES)
 
     private val fragment = EmptyFragment()
 

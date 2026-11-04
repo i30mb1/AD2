@@ -1,6 +1,5 @@
 package n7.ad2.games.internal
 
-import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
@@ -46,9 +45,10 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
 
     private val viewModel: GamesViewModel by viewModel { gamesViewModelFactory.create() }
 
-    // Wi-Fi Direct: с Android 13 отдельное разрешение без геолокации, раньше - точная геолокация
-    private val wifiDirectPermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) Manifest.permission.NEARBY_WIFI_DEVICES else Manifest.permission.ACCESS_FINE_LOCATION
-    private val permissionRequest = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted -> viewModel.onWifiDirectPermission(granted) }
+    private val wifiDirectPermissions = wifiDirectPermissions(Build.VERSION.SDK_INT)
+    private val permissionRequest = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { granted ->
+        viewModel.onWifiDirectPermission(granted[wifiDirectPermissions.first()] == true)
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -61,10 +61,10 @@ internal class GamesFragment @JvmOverloads constructor(override var dependencies
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (ContextCompat.checkSelfPermission(requireContext(), wifiDirectPermission) == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(requireContext(), wifiDirectPermissions.first()) == PackageManager.PERMISSION_GRANTED) {
             viewModel.onWifiDirectPermission(true)
         } else if (savedInstanceState == null) {
-            permissionRequest.launch(wifiDirectPermission)
+            permissionRequest.launch(wifiDirectPermissions)
         }
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {

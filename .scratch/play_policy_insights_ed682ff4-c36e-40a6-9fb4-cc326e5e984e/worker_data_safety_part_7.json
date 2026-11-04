@@ -1,0 +1,50 @@
+{
+  "domain": "Data Safety and Privacy",
+  "findings": [
+    {
+      "psl_constant": "FILES_AND_DOCS",
+      "policy_id": "data_safety_section",
+      "issue_summary": "Data Safety Compliant (Local-Only)",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\ImageUtils.kt",
+        "D:\\AndroidProject\\AD2\\core\\parser\\src\\main\\kotlin\\n7\\ad2\\parser\\WikiConnection.kt",
+        "D:\\AndroidProject\\AD2\\core\\parser\\build.gradle.kts",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\kotlin\\n7.ad2\\camera\\internal\\CameraPermission.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\kotlin\\n7.ad2\\camera\\internal\\CameraFragment.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\AndroidManifest.xml",
+        "D:\\AndroidProject\\AD2\\app\\build.gradle.kts"
+      ],
+      "evidence": "False positive; no user files or documents are read or sent. (1) ImageUtils.kt:68 and WikiConnection.kt:101,151 match '*/*' only because it is part of HTTP Accept header values for downloads, not a file selector. (2) core/parser is a JVM command-line tool (build.gradle.kts plugins convention.kotlin-jvm + application, run through :core:parser:runHeroes and runItems) that downloads public wiki and Valve content on the developer machine. No module depends on it, so it is not in the shipped app. (3) CameraPermission.kt:12 requests WRITE_EXTERNAL_STORAGE, but that permission is declared in no manifest, and the callback at CameraFragment.kt:103 is empty, so it grants nothing. The feature:camera modules are also absent from app/build.gradle.kts; only feature/camera/demo and micro-benchmark depend on them. The only code writing to shared storage is CameraFragment.kt:186 in class CameraX, which has no callers, and it writes locally with no network sink. Disclosure step skipped because is_transferred is false.",
+      "recommendation": "No Data Safety declaration is needed for this data type. Optional cleanup: remove WRITE_EXTERNAL_STORAGE from CameraPermission.kt and delete the unused CameraX class in CameraFragment.kt, because neither has any effect. Re-audit if feature:camera is ever added to the app module.",
+      "is_transferred": false,
+      "user_initiated": false,
+      "is_third_party": false,
+      "prominent_disclosure_status": "EXEMPT",
+      "purpose": "Local functionality only",
+      "linked_to_user": false
+    },
+    {
+      "psl_constant": "AUDIO",
+      "policy_id": "data_safety_section",
+      "issue_summary": "Data Safety Compliant (Local-Only)",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\Controller.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\recorder\\RecorderCameraX.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\domain\\impl\\src\\main\\kotlin\\n7\\ad2\\feature\\camera\\domain\\impl\\recorder\\RecorderSingleCompletion.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\kotlin\\n7.ad2\\camera\\internal\\CameraViewModel.kt",
+        "D:\\AndroidProject\\AD2\\feature\\camera\\ui\\src\\main\\AndroidManifest.xml",
+        "D:\\AndroidProject\\AD2\\app\\build.gradle.kts"
+      ],
+      "evidence": "False positive; no audio is captured. The 'record' matches refer to CameraX video recording. RecorderCameraX.kt:82-84 calls prepareRecording(...).start(...) without withAudioEnabled(), so the output has no audio track. RECORD_AUDIO is absent from every manifest and from manifest_details.json, and no withAudioEnabled, MediaRecorder or AudioRecord usage exists in the source. The 2-second clip is written to app-private storage (RecorderCameraX.kt:72-74, filesDir/temp/CameraX-recording.mp4, deleteOnExit). Its File is returned through Controller.kt:87-95 into CameraViewModel.startRecording state, and the only consumer in CameraFragment.kt:67-68 is commented out. feature/camera contains no HTTP client, upload or ACTION_SEND code. RecorderSingleCompletion.kt only guards against repeat starts. The feature:camera modules are also not dependencies of app/build.gradle.kts, so this code is not in the shipped app. Disclosure step skipped because is_transferred is false.",
+      "recommendation": "No Data Safety declaration is needed for this data type. If feature:camera is added to the app module, or recording gains audio or upload, re-run this audit and update the Data Safety form. The user's form declares no data collected.",
+      "is_transferred": false,
+      "user_initiated": false,
+      "is_third_party": false,
+      "prominent_disclosure_status": "EXEMPT",
+      "purpose": "Local functionality only",
+      "linked_to_user": false
+    }
+  ]
+}

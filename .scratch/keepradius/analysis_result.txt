@@ -1,0 +1,383 @@
+Optimization Score: 98.42%
+Obfuscation Score:  98.68%
+Shrinking Score:    98.62%
+
+{
+  "scores": {
+    "optimization": "98.42%",
+    "obfuscation": "98.68%",
+    "shrinking": "98.62%"
+  },
+  "globals": [],
+  "top_impact_rules": [
+    {
+      "id": 123,
+      "source": "-keepclassmembers public class * extends android.view.View {\n    void set*(***);\n    *** get*();\n}",
+      "origin": {
+        "file": "Android Gradle plugin 9.5.0 (extracted file: D:\\AndroidProject\\AD2\\app\\build\\intermediates\\default_proguard_files\\global\\proguard-android-optimize.txt-9.5.0)",
+        "line": 34,
+        "maven_coordinate": null,
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "AGP defaults",
+      "impact": 949,
+      "impact_pct": "0.63%",
+      "classes": 0,
+      "fields": 0,
+      "methods": 949,
+      "example_classes": [],
+      "subsumed_by": []
+    },
+    {
+      "id": 121,
+      "source": "-keepclassmembers enum * {\n    public static **[] values();\n    public static ** valueOf(java.lang.String);\n}",
+      "origin": {
+        "file": "Android Gradle plugin 9.5.0 (extracted file: D:\\AndroidProject\\AD2\\app\\build\\intermediates\\default_proguard_files\\global\\proguard-android-optimize.txt-9.5.0)",
+        "line": 45,
+        "maven_coordinate": null,
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "AGP defaults",
+      "impact": 372,
+      "impact_pct": "0.25%",
+      "classes": 0,
+      "fields": 0,
+      "methods": 372,
+      "example_classes": [],
+      "subsumed_by": []
+    },
+    {
+      "id": 73,
+      "source": "-keepclassmembernames,allowobfuscation,allowshrinking class androidx.core.view.WindowInsetsCompat$*Impl* {\r\n  <methods>;\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\29626c7d197f8645127c95c8d8465531\\transformed\\proguard.txt",
+        "line": 5,
+        "maven_coordinate": "androidx.core:core:1.19.1",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "androidx.core:core:1.19.1",
+      "impact": 130,
+      "impact_pct": "0.09%",
+      "classes": 0,
+      "fields": 0,
+      "methods": 130,
+      "example_classes": [],
+      "subsumed_by": []
+    },
+    {
+      "id": 47,
+      "source": "-keep,allowobfuscation,allowshrinking class * extends androidx.compose.ui.node.ModifierNodeElement",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\ce8d7bcaf3546f5764eefd5151dc8d16\\transformed\\proguard.txt",
+        "line": 33,
+        "maven_coordinate": "androidx.compose.ui:ui-android:1.12.1",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "androidx.compose.ui:ui-android:1.12.1",
+      "impact": 90,
+      "impact_pct": "0.06%",
+      "classes": 90,
+      "fields": 0,
+      "methods": 0,
+      "example_classes": [
+        "Landroidx/compose/animation/AnimatedContentTransitionScopeImpl$SizeModifierElement;",
+        "Landroidx/compose/animation/EnterExitTransitionElement;",
+        "Landroidx/compose/animation/SizeAnimationModifierElement;",
+        "Landroidx/compose/animation/VeilModifierElement;",
+        "Landroidx/compose/animation/ZIndexModifierElement;"
+      ],
+      "subsumed_by": []
+    },
+    {
+      "id": 118,
+      "source": "-keepclassmembers class kotlinx.coroutines.** {\r\n    volatile <fields>;\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\09ef6bf44a92d240fe89251166c5245c\\transformed\\shrink-rules\\lib\\META-INF\\proguard\\coroutines.pro",
+        "line": 7,
+        "maven_coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.11.0",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.11.0",
+      "impact": 69,
+      "impact_pct": "0.05%",
+      "classes": 0,
+      "fields": 69,
+      "methods": 0,
+      "example_classes": [],
+      "subsumed_by": []
+    },
+    {
+      "id": 38,
+      "source": "-keep public class * extends androidx.coordinatorlayout.widget.CoordinatorLayout$Behavior {\r\n    public <init>(android.content.Context, android.util.AttributeSet);\r\n    public <init>();\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\c5439c8c4e6a0e5e13caeca2c00715ce\\transformed\\proguard.txt",
+        "line": 16,
+        "maven_coordinate": "com.google.android.material:material:1.14.0",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "com.google.android.material:material:1.14.0",
+      "impact": 58,
+      "impact_pct": "0.04%",
+      "classes": 20,
+      "fields": 0,
+      "methods": 38,
+      "example_classes": [
+        "Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;",
+        "Lcom/google/android/material/appbar/AppBarLayout$Behavior;",
+        "Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;",
+        "Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;",
+        "Lcom/google/android/material/behavior/HideViewOnScrollBehavior;"
+      ],
+      "subsumed_by": []
+    },
+    {
+      "id": 82,
+      "source": "-keepclassmembers class * implements android.os.Parcelable {\n    public static final ** CREATOR;\n}",
+      "origin": {
+        "file": "Android Gradle plugin 9.5.0 (extracted file: D:\\AndroidProject\\AD2\\app\\build\\intermediates\\default_proguard_files\\global\\proguard-android-optimize.txt-9.5.0)",
+        "line": 50,
+        "maven_coordinate": null,
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "AGP defaults",
+      "impact": 58,
+      "impact_pct": "0.04%",
+      "classes": 0,
+      "fields": 58,
+      "methods": 0,
+      "example_classes": [],
+      "subsumed_by": [],
+      "identical_to": [
+        {
+          "source": "-keepclassmembers class * implements android.os.Parcelable {\r\n  public static final *** CREATOR;\r\n}",
+          "origin": {
+            "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\86e659dbb4e71229052156d7d788df4b\\transformed\\proguard.txt",
+            "line": 38,
+            "maven_coordinate": "com.google.android.gms:play-services-basement:18.4.0",
+            "provided_by_build_system": false
+          },
+          "in_app_files": false,
+          "from": "com.google.android.gms:play-services-basement:18.4.0"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "source": "-if @kotlinx.serialization.Serializable class **\r\n-keep, allowshrinking, allowoptimization, allowobfuscation, allowaccessmodification class <1>",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\37b965bcae2f4a343c44fd0a1f285803\\transformed\\shrink-rules\\lib\\META-INF\\com.android.tools\\r8\\kotlinx-serialization-r8.pro",
+        "line": 11,
+        "maven_coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+      "impact": 57,
+      "impact_pct": "0.04%",
+      "classes": 57,
+      "fields": 0,
+      "methods": 0,
+      "example_classes": [
+        "Lkotlinx/serialization/json/JsonArray;",
+        "Lkotlinx/serialization/json/JsonElement;",
+        "Lkotlinx/serialization/json/JsonNull;",
+        "Lkotlinx/serialization/json/JsonObject;",
+        "Lkotlinx/serialization/json/JsonPrimitive;"
+      ],
+      "subsumed_by": []
+    },
+    {
+      "id": 3,
+      "source": "-if @kotlinx.serialization.Serializable class ** {\r\n    static **$* *;\r\n}\r\n-keepclassmembers class <2>$<3> {\r\n    kotlinx.serialization.KSerializer serializer(...);\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\37b965bcae2f4a343c44fd0a1f285803\\transformed\\shrink-rules\\lib\\META-INF\\com.android.tools\\r8\\kotlinx-serialization-common.pro",
+        "line": 15,
+        "maven_coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+      "impact": 56,
+      "impact_pct": "0.04%",
+      "classes": 0,
+      "fields": 0,
+      "methods": 56,
+      "example_classes": [],
+      "subsumed_by": []
+    },
+    {
+      "id": 76,
+      "source": "-keepclassmembers @kotlinx.serialization.Serializable class ** {\r\n    static ** Companion;\r\n }",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\37b965bcae2f4a343c44fd0a1f285803\\transformed\\shrink-rules\\lib\\META-INF\\com.android.tools\\r8\\kotlinx-serialization-common.pro",
+        "line": 3,
+        "maven_coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+      "impact": 56,
+      "impact_pct": "0.04%",
+      "classes": 0,
+      "fields": 56,
+      "methods": 0,
+      "example_classes": [],
+      "subsumed_by": []
+    }
+  ],
+  "subsumed_rules": [
+    {
+      "id": 135,
+      "source": "-keepclassmembers,allowshrinking,allowobfuscation class androidx.compose.**.* {\r\n    static void throw*Exception(...);\r\n    static void throw*ExceptionForNullCheck(...);\r\n    # For methods returning Nothing\r\n    static java.lang.Void throw*Exception(...);\r\n    static java.lang.Void throw*ExceptionForNullCheck(...);\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\d0beb0f2a0518eed4ef7d51d62b5cf4e\\transformed\\proguard.txt",
+        "line": 18,
+        "maven_coordinate": "androidx.compose.foundation:foundation-layout-android:1.12.1",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "androidx.compose.foundation:foundation-layout-android:1.12.1",
+      "impact": 33,
+      "impact_pct": "0.02%",
+      "classes": 0,
+      "fields": 0,
+      "methods": 33,
+      "example_classes": [],
+      "subsumed_by": [
+        134
+      ],
+      "subsumed_by_rules": [
+        {
+          "source": "-keepclassmembers,allowshrinking,allowobfuscation class androidx.compose.**.* {\r\n    static void throw*Exception(...);\r\n    static void throw*ExceptionForNullCheck(...);\r\n    # For methods returning Nothing\r\n    static java.lang.Void throw*Exception(...);\r\n    static java.lang.Void throw*ExceptionForNullCheck(...);\r\n    # For functions generating error messages\r\n    static java.lang.String exceptionMessage*(...);\r\n    java.lang.String exceptionMessage*(...);\r\n}",
+          "origin": {
+            "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\ce8d7bcaf3546f5764eefd5151dc8d16\\transformed\\proguard.txt",
+            "line": 38,
+            "maven_coordinate": "androidx.compose.ui:ui-android:1.12.1",
+            "provided_by_build_system": false
+          },
+          "in_app_files": false,
+          "from": "androidx.compose.ui:ui-android:1.12.1"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "source": "-keepclassmembers,allowshrinking,allowobfuscation class androidx.compose.**.* {\r\n    static void throw*Exception(...);\r\n    # For methods returning Nothing\r\n    static java.lang.Void throw*Exception(...);\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\c0aabbf5b5114dfdbeb474cbb4a88e46\\transformed\\proguard.txt",
+        "line": 18,
+        "maven_coordinate": "androidx.compose.foundation:foundation-android:1.12.1",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "androidx.compose.foundation:foundation-android:1.12.1",
+      "impact": 28,
+      "impact_pct": "0.02%",
+      "classes": 0,
+      "fields": 0,
+      "methods": 28,
+      "example_classes": [],
+      "subsumed_by": [
+        134,
+        135
+      ],
+      "subsumed_by_rules": [
+        {
+          "source": "-keepclassmembers,allowshrinking,allowobfuscation class androidx.compose.**.* {\r\n    static void throw*Exception(...);\r\n    static void throw*ExceptionForNullCheck(...);\r\n    # For methods returning Nothing\r\n    static java.lang.Void throw*Exception(...);\r\n    static java.lang.Void throw*ExceptionForNullCheck(...);\r\n    # For functions generating error messages\r\n    static java.lang.String exceptionMessage*(...);\r\n    java.lang.String exceptionMessage*(...);\r\n}",
+          "origin": {
+            "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\ce8d7bcaf3546f5764eefd5151dc8d16\\transformed\\proguard.txt",
+            "line": 38,
+            "maven_coordinate": "androidx.compose.ui:ui-android:1.12.1",
+            "provided_by_build_system": false
+          },
+          "in_app_files": false,
+          "from": "androidx.compose.ui:ui-android:1.12.1"
+        },
+        {
+          "source": "-keepclassmembers,allowshrinking,allowobfuscation class androidx.compose.**.* {\r\n    static void throw*Exception(...);\r\n    static void throw*ExceptionForNullCheck(...);\r\n    # For methods returning Nothing\r\n    static java.lang.Void throw*Exception(...);\r\n    static java.lang.Void throw*ExceptionForNullCheck(...);\r\n}",
+          "origin": {
+            "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\d0beb0f2a0518eed4ef7d51d62b5cf4e\\transformed\\proguard.txt",
+            "line": 18,
+            "maven_coordinate": "androidx.compose.foundation:foundation-layout-android:1.12.1",
+            "provided_by_build_system": false
+          },
+          "in_app_files": false,
+          "from": "androidx.compose.foundation:foundation-layout-android:1.12.1"
+        }
+      ]
+    }
+  ],
+  "identical_rules": [
+    {
+      "id": 83,
+      "source": "-keepclassmembers class * implements android.os.Parcelable {\r\n  public static final *** CREATOR;\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\86e659dbb4e71229052156d7d788df4b\\transformed\\proguard.txt",
+        "line": 38,
+        "maven_coordinate": "com.google.android.gms:play-services-basement:18.4.0",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "com.google.android.gms:play-services-basement:18.4.0",
+      "impact": 58,
+      "impact_pct": "0.04%",
+      "classes": 0,
+      "fields": 58,
+      "methods": 0,
+      "example_classes": [],
+      "subsumed_by": [],
+      "identical_to": [
+        {
+          "source": "-keepclassmembers class * implements android.os.Parcelable {\n    public static final ** CREATOR;\n}",
+          "origin": {
+            "file": "Android Gradle plugin 9.5.0 (extracted file: D:\\AndroidProject\\AD2\\app\\build\\intermediates\\default_proguard_files\\global\\proguard-android-optimize.txt-9.5.0)",
+            "line": 50,
+            "maven_coordinate": null,
+            "provided_by_build_system": false
+          },
+          "in_app_files": false,
+          "from": "AGP defaults"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "source": "-keepclassmembers @kotlinx.serialization.Serializable class ** {\r\n    public static ** INSTANCE;\r\n    kotlinx.serialization.KSerializer serializer(...);\r\n}",
+      "origin": {
+        "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\37b965bcae2f4a343c44fd0a1f285803\\transformed\\shrink-rules\\lib\\META-INF\\com.android.tools\\r8\\kotlinx-serialization-r8.pro",
+        "line": 26,
+        "maven_coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+        "provided_by_build_system": false
+      },
+      "in_app_files": false,
+      "from": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+      "impact": 2,
+      "impact_pct": "0.00%",
+      "classes": 0,
+      "fields": 1,
+      "methods": 1,
+      "example_classes": [],
+      "subsumed_by": [],
+      "identical_to": [
+        {
+          "source": "-if @kotlinx.serialization.Serializable class ** {\r\n    public static ** INSTANCE;\r\n}\r\n-keepclassmembers class <1> {\r\n    public static <1> INSTANCE;\r\n    kotlinx.serialization.KSerializer serializer(...);\r\n}",
+          "origin": {
+            "file": "C:\\Users\\eug79\\.gradle\\caches\\9.8.2\\transforms\\37b965bcae2f4a343c44fd0a1f285803\\transformed\\shrink-rules\\lib\\META-INF\\com.android.tools\\r8\\kotlinx-serialization-common.pro",
+            "line": 23,
+            "maven_coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0",
+            "provided_by_build_system": false
+          },
+          "in_app_files": false,
+          "from": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.12.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "domain": "Permissions and APIs",
+  "findings": [
+    {
+      "policy_id": "location_access_policy",
+      "issue_summary": "ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION are declared for every Android version, although the code only needs location below Android 13.",
+      "severity": "IMPORTANT",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\feature\\games\\xo\\domain\\impl\\src\\main\\AndroidManifest.xml",
+        "D:\\AndroidProject\\AD2\\feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\GamesFragment.kt"
+      ],
+      "evidence": "AndroidManifest.xml lines 11-16 declare ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION with android:required=\"true\" and no android:maxSdkVersion. GamesFragment.kt line 50 uses NEARBY_WIFI_DEVICES on API 33+ and ACCESS_FINE_LOCATION only below it, and manifest lines 9-10 already mark NEARBY_WIFI_DEVICES as neverForLocation. So on Android 13+ the location permissions are declared but never requested or needed. A downgrade to COARSE alone is not an option, because Wi-Fi Direct needs FINE below API 33. No location API (LocationManager, FusedLocation, getLastKnownLocation, requestLocationUpdates), SSID read or IP geo-lookup was found in the source, so this is excess declared scope, not location collection.",
+      "recommendation": "Add android:maxSdkVersion=\"32\" to both location <uses-permission> entries and drop android:required=\"true\", so the permissions apply only to Android 12/12L (minSdk is 31). Check the merged release manifest afterwards to confirm no other module or library declares them without the limit."
+    },
+    {
+      "policy_id": "location_access_policy",
+      "issue_summary": "On Android 12/12L the Games screen requests location as soon as it opens, with no explanation, and requests FINE without COARSE.",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\feature\\games\\mix\\ui\\src\\main\\kotlin\\n7\\ad2\\games\\internal\\GamesFragment.kt"
+      ],
+      "evidence": "GamesFragment.kt lines 64-67 call permissionRequest.launch(wifiDirectPermission) from onViewCreated on first entry, with no dialog or rationale before it, and the mix/ui strings.xml has no permission or location explanation text. The app is a Dota 2 helper, so its purpose does not imply location. This stays a suggestion because the disclosure row of the matrix requires foreground tracking and none exists: location is only the OS gate for Wi-Fi Direct on API 31-32, and the app reads no location. Separately, line 51 uses the single-permission RequestPermission contract with FINE only. Android documentation says that for apps targeting 31+ a FINE request without COARSE can be ignored by the system and logged as an error, so the prompt may never appear and Wi-Fi Direct may stay off on these versions. This was not checked on a device. The FINE request in feature\\games\\xo\\demo AppPermission.kt belongs to a demo app and is not part of the release app.",
+      "recommendation": "On API 31-32, show a short explanation before the system prompt saying that Android needs the location permission to find nearby phones over Wi-Fi Direct and that the app does not read or store location. Trigger the request when the user starts nearby play instead of on screen open if that fits the flow. Request FINE and COARSE together with RequestMultiplePermissions, then verify on an Android 12 device or emulator."
+    },
+    {
+      "policy_id": "exact_alarm_policy",
+      "issue_summary": "SCHEDULE_EXACT_ALARM is declared for reminder code that nothing calls.",
+      "severity": "SUGGESTION",
+      "files_involved": [
+        "D:\\AndroidProject\\AD2\\core\\common-android\\src\\main\\AndroidManifest.xml",
+        "D:\\AndroidProject\\AD2\\core\\common-android\\src\\main\\kotlin\\n7\\ad2\\android\\RemindersManager.kt"
+      ],
+      "evidence": "core\\common-android AndroidManifest.xml line 4 declares SCHEDULE_EXACT_ALARM. USE_EXACT_ALARM is not declared, so the restricted permission rule in the policy matrix is not triggered. RemindersManager has no references outside its own file, so startReminder (setAlarmClock on line 37) is never called. AlarmReceiver.onReceive and BootReceiver.onReceive (lines 49-51 and 56-59) do no real work, and the app does not declare RECEIVE_BOOT_COMPLETED. The app has no alarm, timer or calendar purpose that would need exact timing.",
+      "recommendation": "Remove the SCHEDULE_EXACT_ALARM permission, the AlarmReceiver and BootReceiver manifest entries and RemindersManager.kt, in line with the project rule to delete unused code. If reminders return later, use WorkManager or inexact AlarmManager scheduling."
+    }
+  ]
+}
