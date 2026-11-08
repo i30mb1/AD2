@@ -30,8 +30,8 @@ interface HeroesDomainComponent {
 fun HeroesDomainComponent(dependencies: HeroesDomainDependencies): HeroesDomainComponent = object : HeroesDomainComponent {
 
     private val database = HeroesDatabase.getInstance(dependencies.application)
-    private val heroesDao = database.heroesDao
-    private val heroesRepository = HeroesRepositoryImpl(heroesDao, dependencies.application)
+    private val readHeroList = { dependencies.application.assets.open("heroes/list.json").bufferedReader().use { it.readText() } }
+    private val heroesRepository = HeroesRepositoryImpl(database, readHeroList)
 
     override val getHeroesUseCase = GetHeroesUseCaseImpl(heroesRepository)
 
@@ -41,9 +41,7 @@ fun HeroesDomainComponent(dependencies: HeroesDomainDependencies): HeroesDomainC
 
     override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository, dependencies.dispatcher)
 
-    override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(dependencies.dispatcher, dependencies.logger) {
-        heroNamesByKey(parseHeroList(dependencies.application.assets.open("heroes/list.json").bufferedReader().use { it.readText() }))
-    }
+    override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(dependencies.dispatcher, dependencies.logger) { heroNamesByKey(parseHeroList(readHeroList())) }
 
     override val getHeroDescriptionUseCase = GetHeroDescriptionUseCaseImpl(dependencies.application, dependencies.appInformation, dependencies.dispatcher)
 }

@@ -25,4 +25,8 @@ interface HeroesDao {
 
     @Query("UPDATE HeroesTable SET mainAttr = :attribute WHERE name = :name")
     suspend fun updateAttribute(name: String, attribute: String)
+
+    /** Keeps the first row of every hero. */
+    @Query("DELETE FROM HeroesTable WHERE rowid NOT IN (SELECT MIN(rowid) FROM HeroesTable GROUP BY name)")
+    suspend fun deleteDuplicates()
 }

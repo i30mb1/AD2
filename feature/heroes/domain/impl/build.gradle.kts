@@ -22,6 +22,8 @@ dependencies {
     ksp(libs.room.compiler)
 
     testImplementation(libs.test.junit)
+    testImplementation(libs.test.robolectric)
+    testImplementation(libs.test.core)
     testImplementation(libs.kotlinSerialization)
 
     testFixturesImplementation(libs.coroutines)
