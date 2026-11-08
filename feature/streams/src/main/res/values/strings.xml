@@ -8,9 +8,10 @@
     <string name="streams_on_air">live for %1$s</string>
     <string name="streams_chat">Chat</string>
     <string name="streams_chat_off">Off</string>
-    <string name="streams_chat_low">Low</string>
-    <string name="streams_chat_normal">Normal</string>
-    <string name="streams_chat_high">High</string>
+    <string name="streams_chat_ticker">Ticker</string>
+    <string name="streams_chat_panel">Panel</string>
+    <string name="streams_chat_waiting">Waiting for messages…</string>
+    <string name="streams_chat_newest">New messages</string>
     <string name="streams_quality">Quality</string>
     <string name="streams_quality_auto">Auto</string>
     <string name="desc_back">Back</string>

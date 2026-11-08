@@ -62,16 +62,17 @@ internal class StreamActivity : FragmentActivity() {
             AppTheme {
                 val url by viewModel.url.collectAsStateWithLifecycle()
                 val info by viewModel.info.collectAsStateWithLifecycle()
-                val chatDensity by viewModel.chatDensity.collectAsStateWithLifecycle()
+                val chatMode by viewModel.chatMode.collectAsStateWithLifecycle()
                 StreamScreen(
                     streamerName = streamerName,
                     uri = url,
                     info = info,
                     chat = viewModel.chat,
-                    chatDensity = chatDensity,
+                    chatLog = viewModel.chatLog,
+                    chatMode = chatMode,
                     isInPip = isInPip,
                     isPipAvailable = isPipAvailable,
-                    onChatDensityChanged = viewModel::setChatDensity,
+                    onChatModeChanged = viewModel::setChatMode,
                     onBackClicked = ::finish,
                     onPipClicked = ::onPipClicked,
                     onPipLayoutChanged = ::onPipLayoutChanged,

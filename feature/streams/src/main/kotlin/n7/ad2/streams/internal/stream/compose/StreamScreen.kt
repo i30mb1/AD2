@@ -8,7 +8,9 @@ import android.widget.FrameLayout
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
+import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkHorizontally
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.background
@@ -17,6 +19,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -78,6 +81,7 @@ import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.StateFlow
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.streams.R
 import n7.ad2.streams.internal.LiveBadge
@@ -86,13 +90,17 @@ import n7.ad2.streams.internal.common.rememberNowMillis
 import n7.ad2.streams.internal.common.uptimeText
 import n7.ad2.streams.internal.common.viewersText
 import n7.ad2.streams.internal.domain.vo.VOStream
-import n7.ad2.streams.internal.model.ChatDensity
+import n7.ad2.streams.internal.model.ChatLine
+import n7.ad2.streams.internal.model.ChatMode
 
 private const val CONTROLS_HIDE_MILLIS = 4_000L
 private const val HIGH_FRAME_RATE = 50f
 private val panelColor = Color(0xEB141416)
 private val segmentColor = Color(0xFF2F3136)
 private val qualityPanelWidth = 280.dp
+private const val PANEL_WIDTH_FRACTION = 0.32f
+private val panelMinWidth = 260.dp
+private val panelMaxWidth = 380.dp
 
 /** One line of the quality list, [override] is null for the automatic choice. */
 private class Quality(val label: String, val override: TrackSelectionOverride?)
@@ -103,10 +111,11 @@ internal fun StreamScreen(
     uri: String,
     info: VOStream.Simple?,
     chat: Flow<ChatMessage>,
-    chatDensity: ChatDensity,
+    chatLog: StateFlow<List<ChatLine>>,
+    chatMode: ChatMode,
     isInPip: Boolean,
     isPipAvailable: Boolean,
-    onChatDensityChanged: (ChatDensity) -> Unit,
+    onChatModeChanged: (ChatMode) -> Unit,
     onBackClicked: () -> Unit,
     onPipClicked: () -> Unit,
     onPipLayoutChanged: (Rect) -> Unit,
@@ -136,75 +145,94 @@ internal fun StreamScreen(
     }
     BackHandler(isQualityVisible) { isQualityVisible = false }
 
-    Box(
+    // the panel takes a third of the width beside the video, the video keeps its proportions in what is left
+    BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
-            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
-                areControlsVisible = !areControlsVisible
-                lastTouch = System.currentTimeMillis()
-            },
+            .background(Color.Black),
     ) {
-        VideoPlayer(player, onPipLayoutChanged)
-        if (isInPip) return@Box
-
-        FlyingChat(
-            messages = chat,
-            density = chatDensity,
-            modifier = Modifier
-                .windowInsetsPadding(WindowInsets.safeDrawing)
-                .padding(top = 8.dp),
-        )
-        AnimatedVisibility(visible = areControlsVisible, enter = fadeIn(), exit = fadeOut(), modifier = Modifier.fillMaxSize()) {
+        val panelWidth = (maxWidth * PANEL_WIDTH_FRACTION).coerceIn(panelMinWidth, panelMaxWidth)
+        Row(Modifier.fillMaxSize()) {
             Box(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .windowInsetsPadding(WindowInsets.safeDrawing),
-            ) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(R.string.desc_back),
-                    tint = Color.White,
-                    modifier = Modifier
-                        .padding(8.dp)
-                        .size(40.dp)
-                        .clip(CircleShape)
-                        .background(panelColor)
-                        .clickable(role = Role.Button, onClick = onBackClicked)
-                        .padding(8.dp),
-                )
-                ControlBar(
-                    streamerName = streamerName,
-                    info = info,
-                    chatDensity = chatDensity,
-                    // "АВТО" stands out as a word, the sizes keep their "p": 720p60
-                    qualityLabel = qualities(tracks).find { it.override == selected && selected != null }?.label ?: stringResource(R.string.streams_quality_auto).uppercase(),
-                    isPipAvailable = isPipAvailable,
-                    onChatDensityChanged = { density ->
-                        onChatDensityChanged(density)
+                    .weight(1f)
+                    .fillMaxHeight()
+                    .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
+                        areControlsVisible = !areControlsVisible
                         lastTouch = System.currentTimeMillis()
                     },
-                    onPipClicked = onPipClicked,
-                    onQualityClicked = { isQualityVisible = true },
+            ) {
+                VideoPlayer(player, onPipLayoutChanged)
+                if (isInPip) return@Box
+
+                if (chatMode == ChatMode.TICKER) {
+                    FlyingChat(
+                        messages = chat,
+                        modifier = Modifier
+                            .windowInsetsPadding(WindowInsets.safeDrawing)
+                            .padding(top = 8.dp),
+                    )
+                }
+                androidx.compose.animation.AnimatedVisibility(visible = areControlsVisible, enter = fadeIn(), exit = fadeOut(), modifier = Modifier.fillMaxSize()) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .windowInsetsPadding(WindowInsets.safeDrawing),
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(R.string.desc_back),
+                            tint = Color.White,
+                            modifier = Modifier
+                                .padding(8.dp)
+                                .size(40.dp)
+                                .clip(CircleShape)
+                                .background(panelColor)
+                                .clickable(role = Role.Button, onClick = onBackClicked)
+                                .padding(8.dp),
+                        )
+                        ControlBar(
+                            streamerName = streamerName,
+                            info = info,
+                            chatMode = chatMode,
+                            // "АВТО" stands out as a word, the sizes keep their "p": 720p60
+                            qualityLabel = qualities(tracks).find { it.override == selected && selected != null }?.label ?: stringResource(R.string.streams_quality_auto).uppercase(),
+                            isPipAvailable = isPipAvailable,
+                            onChatModeChanged = { mode ->
+                                onChatModeChanged(mode)
+                                lastTouch = System.currentTimeMillis()
+                            },
+                            onPipClicked = onPipClicked,
+                            onQualityClicked = { isQualityVisible = true },
+                            modifier = Modifier
+                                .align(Alignment.BottomCenter)
+                                .padding(horizontal = 16.dp, vertical = 12.dp),
+                        )
+                    }
+                }
+                QualityPanel(
+                    isVisible = isQualityVisible,
+                    qualities = qualities(tracks),
+                    selected = selected,
+                    onDismiss = { isQualityVisible = false },
+                    onSelected = { quality ->
+                        selected = quality.override
+                        player.trackSelectionParameters = player.trackSelectionParameters.buildUpon().apply {
+                            if (quality.override == null) clearOverridesOfType(C.TRACK_TYPE_VIDEO) else setOverrideForType(quality.override)
+                        }.build()
+                        isQualityVisible = false
+                    },
+                )
+            }
+            AnimatedVisibility(visible = chatMode == ChatMode.PANEL && !isInPip, enter = expandHorizontally(), exit = shrinkHorizontally()) {
+                ChatPanel(
+                    log = chatLog,
                     modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                        .width(panelWidth)
+                        .fillMaxHeight(),
                 )
             }
         }
-        QualityPanel(
-            isVisible = isQualityVisible,
-            qualities = qualities(tracks),
-            selected = selected,
-            onDismiss = { isQualityVisible = false },
-            onSelected = { quality ->
-                selected = quality.override
-                player.trackSelectionParameters = player.trackSelectionParameters.buildUpon().apply {
-                    if (quality.override == null) clearOverridesOfType(C.TRACK_TYPE_VIDEO) else setOverrideForType(quality.override)
-                }.build()
-                isQualityVisible = false
-            },
-        )
     }
 }
 
@@ -212,10 +240,10 @@ internal fun StreamScreen(
 private fun ControlBar(
     streamerName: String,
     info: VOStream.Simple?,
-    chatDensity: ChatDensity,
+    chatMode: ChatMode,
     qualityLabel: String,
     isPipAvailable: Boolean,
-    onChatDensityChanged: (ChatDensity) -> Unit,
+    onChatModeChanged: (ChatMode) -> Unit,
     onPipClicked: () -> Unit,
     onQualityClicked: () -> Unit,
     modifier: Modifier = Modifier,
@@ -253,7 +281,7 @@ private fun ControlBar(
         }
         Spacer(Modifier.weight(1f))
         Text(text = stringResource(R.string.streams_chat), style = AppTheme.style.body, color = AppTheme.color.textSecondaryColor)
-        DensitySwitch(chatDensity, onChatDensityChanged)
+        ChatModeSwitch(chatMode, onChatModeChanged)
         if (isPipAvailable) {
             Icon(
                 imageVector = ImageVector.vectorResource(R.drawable.pip),
@@ -281,7 +309,7 @@ private fun ControlBar(
 }
 
 @Composable
-private fun DensitySwitch(selected: ChatDensity, onSelected: (ChatDensity) -> Unit) {
+private fun ChatModeSwitch(selected: ChatMode, onSelected: (ChatMode) -> Unit) {
     Row(
         modifier = Modifier
             .clip(CircleShape)
@@ -289,14 +317,13 @@ private fun DensitySwitch(selected: ChatDensity, onSelected: (ChatDensity) -> Un
             .padding(2.dp),
         horizontalArrangement = Arrangement.spacedBy(2.dp),
     ) {
-        ChatDensity.entries.forEach { density ->
-            val label = when (density) {
-                ChatDensity.OFF -> R.string.streams_chat_off
-                ChatDensity.LOW -> R.string.streams_chat_low
-                ChatDensity.NORMAL -> R.string.streams_chat_normal
-                ChatDensity.HIGH -> R.string.streams_chat_high
+        ChatMode.entries.forEach { mode ->
+            val label = when (mode) {
+                ChatMode.TICKER -> R.string.streams_chat_ticker
+                ChatMode.PANEL -> R.string.streams_chat_panel
+                ChatMode.OFF -> R.string.streams_chat_off
             }
-            val isSelected = density == selected
+            val isSelected = mode == selected
             Text(
                 text = stringResource(label),
                 fontSize = 11.sp,
@@ -305,7 +332,7 @@ private fun DensitySwitch(selected: ChatDensity, onSelected: (ChatDensity) -> Un
                 modifier = Modifier
                     .clip(CircleShape)
                     .background(if (isSelected) AppTheme.color.primary else Color.Transparent)
-                    .clickable(role = Role.Tab) { onSelected(density) }
+                    .clickable(role = Role.Tab) { onSelected(mode) }
                     .padding(horizontal = 10.dp, vertical = 5.dp),
             )
         }

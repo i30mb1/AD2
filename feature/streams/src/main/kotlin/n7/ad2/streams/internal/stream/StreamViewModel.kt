@@ -22,7 +22,9 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.retryWhen
+import kotlinx.coroutines.flow.runningFold
 import kotlinx.coroutines.flow.shareIn
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import n7.ad2.android.AD2ErrorMessage
@@ -33,10 +35,15 @@ import n7.ad2.streams.internal.chat.TwitchChat
 import n7.ad2.streams.internal.data.remote.StreamRepository
 import n7.ad2.streams.internal.domain.ConvertStreamToVOStreamUseCase
 import n7.ad2.streams.internal.domain.vo.VOStream
-import n7.ad2.streams.internal.model.ChatDensity
+import n7.ad2.streams.internal.model.ChatLine
+import n7.ad2.streams.internal.model.ChatMode
+import n7.ad2.streams.internal.model.append
 import n7.ad2.streams.internal.stream.usecase.GetStreamUrlsUseCase
 
 private const val PREFERENCES = "streams"
+private const val KEY_CHAT_MODE = "chat_mode"
+
+/** Older versions kept a density of the flying chat, see [ChatMode.of]. */
 private const val KEY_CHAT_DENSITY = "chat_density"
 private const val INFO_REFRESH_MILLIS = 60_000L
 private const val CHAT_RETRY_MAX_MILLIS = 30_000L
@@ -67,8 +74,8 @@ internal class StreamViewModel @AssistedInject constructor(
     private val _info = MutableStateFlow<VOStream.Simple?>(null)
     val info: StateFlow<VOStream.Simple?> = _info.asStateFlow()
 
-    private val _chatDensity = MutableStateFlow(readChatDensity())
-    val chatDensity: StateFlow<ChatDensity> = _chatDensity.asStateFlow()
+    private val _chatMode = MutableStateFlow(ChatMode.of(preferences.getString(KEY_CHAT_MODE, null) ?: preferences.getString(KEY_CHAT_DENSITY, null)))
+    val chatMode: StateFlow<ChatMode> = _chatMode.asStateFlow()
 
     /** Messages of the channel's chat, the connection is restored with a growing pause when it drops. */
     @OptIn(ExperimentalCoroutinesApi::class)
@@ -83,6 +90,11 @@ internal class StreamViewModel @AssistedInject constructor(
         }
         .flowOn(dispatchers.IO)
         .shareIn(viewModelScope, SharingStarted.WhileSubscribed(CHAT_SUBSCRIPTION_TIMEOUT_MILLIS))
+
+    /** The last messages for the chat panel. */
+    val chatLog: StateFlow<List<ChatLine>> = chat
+        .runningFold(emptyList<ChatLine>()) { lines, message -> lines.append(message) }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(CHAT_SUBSCRIPTION_TIMEOUT_MILLIS), emptyList())
 
     fun load(streamerName: String) {
         channel.value = streamerName
@@ -102,10 +114,11 @@ internal class StreamViewModel @AssistedInject constructor(
         }
     }
 
-    fun setChatDensity(density: ChatDensity) {
-        _chatDensity.value = density
-        preferences.edit { putString(KEY_CHAT_DENSITY, density.name) }
+    fun setChatMode(mode: ChatMode) {
+        _chatMode.value = mode
+        preferences.edit {
+            putString(KEY_CHAT_MODE, mode.name)
+            remove(KEY_CHAT_DENSITY)
+        }
     }
-
-    private fun readChatDensity(): ChatDensity = ChatDensity.entries.find { it.name == preferences.getString(KEY_CHAT_DENSITY, null) } ?: ChatDensity.NORMAL
 }

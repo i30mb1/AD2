@@ -8,9 +8,10 @@
     <string name="streams_on_air">в эфире %1$s</string>
     <string name="streams_chat">Чат</string>
     <string name="streams_chat_off">Выкл</string>
-    <string name="streams_chat_low">Мало</string>
-    <string name="streams_chat_normal">Норм</string>
-    <string name="streams_chat_high">Много</string>
+    <string name="streams_chat_ticker">Строка</string>
+    <string name="streams_chat_panel">Панель</string>
+    <string name="streams_chat_waiting">Ждём сообщений…</string>
+    <string name="streams_chat_newest">К новым</string>
     <string name="streams_quality">Качество</string>
     <string name="streams_quality_auto">Авто</string>
     <string name="desc_back">Назад</string>

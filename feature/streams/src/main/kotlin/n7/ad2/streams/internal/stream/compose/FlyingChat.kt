@@ -24,22 +24,12 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.flow.Flow
 import n7.ad2.streams.internal.chat.ChatMessage
-import n7.ad2.streams.internal.model.ChatDensity
 
-private const val NANOS_IN_SECOND = 1_000_000_000f
 private const val MAX_TEXT_LENGTH = 80
-private const val MAX_WAITING = 30
-
-/** A message waits this long for a free row, an older one is no longer about what is on the screen. */
-private const val MAX_WAIT_NANOS = 4_000_000_000L
-
-/** A message crosses the whole screen in this time, the long ones a bit slower since all rows move at one speed. */
-private const val SCREEN_CROSS_SECONDS = 8f
 private const val MIN_READABLE_LUMINANCE = 0.35f
 private val laneHeight = 30.dp
 private val gap = 48.dp
@@ -49,60 +39,33 @@ private val textStyle = TextStyle(
     shadow = Shadow(color = Color.Black, blurRadius = 6f),
 )
 
-private class Waiting(val message: ChatMessage, val receivedNanos: Long)
-
-private class Flying(val layout: TextLayoutResult, val lane: Int, val startNanos: Long)
-
-/**
- * Chat messages flying from right to left over the top of the video, like on Niconico.
- * Every row takes the next message only when the previous one has fully entered the screen, so the messages never overlap;
- * when the chat is faster than the rows, the oldest messages are dropped.
- */
+/** Chat messages flying from right to left over the top of the video, which row and how fast is decided by [Ticker]. */
 @Composable
-internal fun FlyingChat(messages: Flow<ChatMessage>, density: ChatDensity, modifier: Modifier = Modifier) {
-    if (density == ChatDensity.OFF) return
+internal fun FlyingChat(messages: Flow<ChatMessage>, modifier: Modifier = Modifier) {
     val textMeasurer = rememberTextMeasurer()
-    val waiting = remember { ArrayDeque<Waiting>() }
-    val flying = remember { mutableStateListOf<Flying>() }
+    val flying = remember { mutableStateListOf<TickerRun<TextLayoutResult>>() }
     var frameNanos by remember { mutableLongStateOf(0L) }
     val gapPx = with(LocalDensity.current) { gap.toPx() }
     val laneHeightPx = with(LocalDensity.current) { laneHeight.toPx() }
 
-    LaunchedEffect(messages) {
-        messages.collect { message ->
-            waiting.addLast(Waiting(message, System.nanoTime()))
-            if (waiting.size > MAX_WAITING) waiting.removeFirst()
-        }
-    }
-
     BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
         val widthPx = constraints.maxWidth.toFloat()
-        val speed = widthPx / SCREEN_CROSS_SECONDS
-        fun x(item: Flying, now: Long): Float = widthPx - speed * (now - item.startNanos) / NANOS_IN_SECOND
+        val ticker = remember(widthPx, gapPx) { Ticker<TextLayoutResult>(widthPx, gapPx) }
 
-        LaunchedEffect(density, widthPx) {
-            flying.removeAll { it.lane >= density.lanes }
+        LaunchedEffect(ticker, messages) {
+            messages.collect { message ->
+                val text = if (message.text.length > MAX_TEXT_LENGTH) message.text.take(MAX_TEXT_LENGTH - 1) + "…" else message.text
+                val layout = textMeasurer.measure(text = text, style = textStyle.copy(color = readableColor(message.color)), maxLines = 1)
+                ticker.offer(layout, System.nanoTime())
+            }
+        }
+        LaunchedEffect(ticker) {
+            flying.clear()
             while (true) {
                 withFrameNanos { now ->
                     frameNanos = now
-                    flying.removeAll { x(it, now) + it.layout.size.width < 0 }
-                    val nowSystem = System.nanoTime()
-                    while (waiting.isNotEmpty() && nowSystem - waiting.first().receivedNanos > MAX_WAIT_NANOS) waiting.removeFirst()
-                    for (lane in 0 until density.lanes) {
-                        if (waiting.isEmpty()) break
-                        val last = flying.lastOrNull { it.lane == lane }
-                        val isFree = last == null || x(last, now) + last.layout.size.width + gapPx <= widthPx
-                        if (isFree) {
-                            val message = waiting.removeFirst().message
-                            val layout = textMeasurer.measure(
-                                text = message.text.take(MAX_TEXT_LENGTH),
-                                style = textStyle.copy(color = readableColor(message.color)),
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                            flying.add(Flying(layout, lane, now))
-                        }
-                    }
+                    flying.removeAll { it.x(widthPx, now) + it.width < 0 }
+                    flying += ticker.start(now) { layout -> layout.size.width.toFloat() }
                 }
             }
         }
@@ -110,19 +73,19 @@ internal fun FlyingChat(messages: Flow<ChatMessage>, density: ChatDensity, modif
         Canvas(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(laneHeight * density.lanes),
+                .height(laneHeight * Ticker.MAX_LANES),
         ) {
             val now = frameNanos
-            flying.forEach { item ->
-                val y = item.lane * laneHeightPx + (laneHeightPx - item.layout.size.height) / 2
-                drawText(item.layout, topLeft = Offset(x(item, now), y))
+            flying.forEach { run ->
+                val y = run.lane * laneHeightPx + (laneHeightPx - run.message.size.height) / 2
+                drawText(run.message, topLeft = Offset(run.x(widthPx, now), y))
             }
         }
     }
 }
 
 /** Twitch lets people pick any color for their name, a dark blue would be lost on the video. */
-private fun readableColor(argb: Int?): Color {
+internal fun readableColor(argb: Int?): Color {
     val color = argb?.let(::Color) ?: return Color.White
     return if (color.luminance() < MIN_READABLE_LUMINANCE) lerp(color, Color.White, 0.5f) else color
 }
