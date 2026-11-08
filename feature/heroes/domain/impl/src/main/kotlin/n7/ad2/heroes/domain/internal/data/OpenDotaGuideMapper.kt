@@ -40,14 +40,17 @@ internal object OpenDotaGuideMapper {
     /** Bundled hero assets are keyed by the lower-cased display name, e.g. "Anti-Mage" -> "anti-mage". */
     fun assetKey(localizedName: String): String = localizedName.lowercase().replace(" ", "_")
 
-    fun matches(stat: OpenDotaHeroStat, heroName: String): Boolean {
+    /** [heroNames] are the app's names by the hero key, the names of OpenDota are only a fallback. */
+    fun matches(stat: OpenDotaHeroStat, heroName: String, heroNames: Map<String, String> = emptyMap()): Boolean {
         val target = normalize(heroName)
+        heroNames[stat.name]?.let { appName -> return normalize(appName) == target }
         return normalize(stat.localizedName) == target ||
             normalize(stat.name.removePrefix("npc_dota_hero_")) == target
     }
 
     private fun normalize(value: String): String = value.lowercase().filter(Char::isLetterOrDigit)
 
+    /** [heroNames] are the app's names by the hero key, matchups show them with the app's pictures. */
     fun toGuide(
         heroName: String,
         stats: List<OpenDotaHeroStat>,
@@ -56,9 +59,10 @@ internal object OpenDotaGuideMapper {
         itemIds: Map<String, String>,
         durations: List<OpenDotaDuration>,
         upgradeSequences: List<List<String>>,
+        heroNames: Map<String, String> = emptyMap(),
     ): Guide? {
-        val self = stats.firstOrNull { matches(it, heroName) } ?: return null
-        val idToName = stats.associate { it.id to it.localizedName }
+        val self = stats.firstOrNull { matches(it, heroName, heroNames) } ?: return null
+        val idToName = stats.associate { it.id to (heroNames[it.name] ?: it.localizedName) }
 
         val counters = matchups
             .filter { idToName.containsKey(it.heroId) }
@@ -84,7 +88,7 @@ internal object OpenDotaGuideMapper {
         }
 
         return Guide(
-            heroName = self.localizedName,
+            heroName = idToName.getValue(self.id),
             heroWinrate = "${round1(percent(self.totalWin, self.totalPick))}%",
             heroPopularity = formatPicks(self.totalPick),
             proPicks = self.proPick,

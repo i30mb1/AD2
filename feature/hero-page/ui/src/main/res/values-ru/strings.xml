@@ -83,7 +83,7 @@
     <string name="ability_mana">Мана</string>
     <string name="ability_health_cost">Цена здоровьем</string>
     <string name="ability_gold_cost">Цена золотом</string>
-    <string name="ability_cast_range">Дальность</string>
+    <string name="ability_cast_range">Дальность применения</string>
     <string name="ability_cast_point">Время применения</string>
     <string name="ability_channel_time">Поддержание</string>
     <string name="ability_duration">Длительность</string>
@@ -102,6 +102,8 @@
     <string name="response_download">Скачать</string>
     <string name="response_downloading">Скачивается…</string>
     <string name="response_downloaded">Скачано</string>
+    <string name="response_arcana">Голос арканы или персоны</string>
+    <string name="responses_empty">В вики пока нет реплик этого героя на этом языке</string>
     <string name="response_download_hint">Сохранить mp3 на телефон</string>
     <string name="response_set_as">Установить как</string>
     <string name="response_target_call">Звонок</string>

@@ -51,6 +51,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.delay
@@ -140,7 +141,17 @@ internal fun ResponsesScreen(
         when (val s = state) {
             ResponsesViewModel.State.Loading -> Unit
             is ResponsesViewModel.State.Error -> ErrorScreen(error = s.error)
-            is ResponsesViewModel.State.Data -> Column(Modifier.fillMaxSize()) {
+            // the language switch in the banner stays, the other wiki may have the lines
+            is ResponsesViewModel.State.Data -> if (groups.isEmpty()) {
+                Box(Modifier.fillMaxSize().padding(24.dp), contentAlignment = Alignment.Center) {
+                    Text(
+                        text = stringResource(R.string.responses_empty),
+                        style = AppTheme.style.H5,
+                        color = AppTheme.color.textSecondaryColor,
+                        textAlign = TextAlign.Center,
+                    )
+                }
+            } else Column(Modifier.fillMaxSize()) {
                 Categories(groups = groups, listState = listState)
                 ResponsesList(
                     groups = groups,

@@ -31,6 +31,8 @@ import java.net.URL
 internal class GetGuideForHeroUseCaseImpl(
     private val dispatcher: DispatchersProvider,
     private val logger: Logger,
+    /** The app's name of every hero by its key, see [OpenDotaGuideMapper.matches]. */
+    private val heroNames: suspend () -> Map<String, String>,
 ) : GetGuideForHeroUseCase {
 
     private val json = Json { ignoreUnknownKeys = true }
@@ -51,7 +53,8 @@ internal class GetGuideForHeroUseCaseImpl(
 
     private suspend fun fetchGuide(name: String): Guide? = coroutineScope {
         val stats = json.decodeFromString<List<OpenDotaHeroStat>>(httpGet("$BASE/heroStats"))
-        val self = stats.firstOrNull { OpenDotaGuideMapper.matches(it, name) } ?: return@coroutineScope null
+        val names = optional(emptyMap()) { heroNames() }
+        val self = stats.firstOrNull { OpenDotaGuideMapper.matches(it, name, names) } ?: return@coroutineScope null
 
         val matchups = async { optional(emptyList()) { json.decodeFromString<List<OpenDotaMatchup>>(httpGet("$BASE/heroes/${self.id}/matchups")) } }
         val itemPopularity = async { optional(null) { json.decodeFromString<OpenDotaItemPopularity>(httpGet("$BASE/heroes/${self.id}/itemPopularity")) } }
@@ -67,6 +70,7 @@ internal class GetGuideForHeroUseCaseImpl(
             itemIds = itemIds.await(),
             durations = durations.await(),
             upgradeSequences = upgrades.await(),
+            heroNames = names,
         )
     }
 

@@ -26,6 +26,8 @@ dependencies {
 
     testImplementation(libs.test.junit.kotlin)
     testImplementation(libs.test.robolectric)
+    testImplementation(libs.composeUITest)
+    testImplementation(libs.composeUITestManifest)
     testImplementation(libs.test.fragment)
     testImplementation(libs.test.runner)
     testImplementation(libs.test.espresso)

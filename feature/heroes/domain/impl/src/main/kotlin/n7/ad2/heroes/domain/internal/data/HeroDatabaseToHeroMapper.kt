@@ -7,7 +7,7 @@ internal object HeroDatabaseToHeroMapper : (HeroDatabase) -> Hero {
 
     override operator fun invoke(from: HeroDatabase) = Hero(
         from.name,
-        "file:///android_asset/heroes/${from.name.lowercase().replace(" ", "_")}/full.png",
+        "file:///android_asset/heroes/${from.name.lowercase().replace(" ", "_")}/full.webp",
         from.viewedByUser,
         from.mainAttr,
     )

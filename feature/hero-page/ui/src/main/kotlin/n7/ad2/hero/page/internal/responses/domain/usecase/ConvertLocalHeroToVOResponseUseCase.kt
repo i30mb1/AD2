@@ -33,17 +33,10 @@ class ConvertLocalHeroToVOResponseUseCase @Inject constructor(private val dispat
                     }
                 }
 
-                val icons = response.icons.mapTo(mutableListOf()) { iconPath ->
-                    val iconHeroName = iconPath.substringBeforeLast("/").substringAfter("/")
-                    val url = "file:///android_asset/heroes/$iconHeroName/minimap.webp"
-                    VOResponseImage(iconHeroName, url)
-                }
-                if (response.isArcane) {
-                    val arcaneItem = VOResponseImage("Arcane", "file:///android_asset/heroes/$heroName/arcane.webp")
-                    icons.add(0, arcaneItem)
-                }
+                // heroes/sven/minimap.webp or items/blink_dagger/full.webp, core/parser keeps only the ones the app has
+                val icons = response.icons.map { path -> VOResponseImage(path.substringBeforeLast("/").substringAfterLast("/"), "file:///android_asset/$path") }
 
-                result.add(VOResponse.Body(heroName, response.title, icons, titleForSavedFile, savedInMemory, audioUrl))
+                result.add(VOResponse.Body(heroName, response.title, icons, titleForSavedFile, savedInMemory, audioUrl, response.isArcane))
             }
         }
 

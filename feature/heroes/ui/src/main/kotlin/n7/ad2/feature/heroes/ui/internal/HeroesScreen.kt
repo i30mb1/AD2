@@ -46,6 +46,7 @@ import n7.ad2.core.ui.compose.view.ScrollToTopFab
 import n7.ad2.core.ui.compose.view.SearchField
 import n7.ad2.feature.heroes.ui.R
 import n7.ad2.feature.heroes.ui.internal.domain.vo.VOHero
+import n7.ad2.heroes.domain.model.HeroAttribute
 
 private const val SPAN_COUNT = 3
 private const val JUMP_INDEX = 30
@@ -85,8 +86,8 @@ internal fun HeroesScreen(
             }
             heroes.forEachIndexed { index, hero ->
                 when (hero) {
-                    is VOHero.Header -> item(key = "header_${hero.data.title}", span = { GridItemSpan(maxLineSpan) }, contentType = "header") {
-                        GridHeader(hero.data.title)
+                    is VOHero.Header -> item(key = "header_${hero.attribute}", span = { GridItemSpan(maxLineSpan) }, contentType = "header") {
+                        GridHeader(stringResource(hero.attribute.title))
                     }
                     is VOHero.Body -> item(key = "${index}_${hero.name}", contentType = "hero") {
                         HeroCard(hero, onHeroClick)
@@ -112,6 +113,14 @@ internal fun HeroesScreen(
         onDispose { drawerPercentListener?.removeDrawerPercentListener(listener) }
     }
 }
+
+private val HeroAttribute.title: Int
+    get() = when (this) {
+        HeroAttribute.STRENGTH -> R.string.heroes_strength
+        HeroAttribute.AGILITY -> R.string.heroes_agility
+        HeroAttribute.INTELLIGENCE -> R.string.heroes_intelligence
+        HeroAttribute.UNIVERSAL -> R.string.heroes_universal
+    }
 
 @Composable
 private fun HeroCard(hero: VOHero.Body, onHeroClick: (hero: VOHero.Body) -> Unit, modifier: Modifier = Modifier) {

@@ -82,6 +82,39 @@ class OpenDotaGuideMapperTest {
         upgradeSequences = sequences,
     )
 
+    // heroStats of OpenDota still say "Outworld Devourer" and "Ring Master": the guide of Outworld Destroyer was not found
+    // and Ringmaster had no picture among the matchups. The game's key of a hero is the same everywhere.
+    @Test
+    fun `heroes are found, named and pictured as in the app`() {
+        val stats = json.decodeFromString<List<OpenDotaHeroStat>>(
+            """
+            [
+              {"id":76,"name":"npc_dota_hero_obsidian_destroyer","localized_name":"Outworld Devourer","1_pick":100,"1_win":50},
+              {"id":131,"name":"npc_dota_hero_ringmaster","localized_name":"Ring Master"}
+            ]
+            """.trimIndent(),
+        )
+        val heroNames = mapOf("npc_dota_hero_obsidian_destroyer" to "Outworld Destroyer", "npc_dota_hero_ringmaster" to "Ringmaster")
+
+        val guide = OpenDotaGuideMapper.toGuide(
+            heroName = "Outworld Destroyer",
+            stats = stats,
+            matchups = json.decodeFromString<List<OpenDotaMatchup>>("""[{"hero_id":131,"games_played":200,"wins":150}]"""),
+            itemPopularity = null,
+            itemIds = emptyMap(),
+            durations = emptyList(),
+            upgradeSequences = emptyList(),
+            heroNames = heroNames,
+        )
+
+        assertNotNull(guide)
+        assertEquals("Outworld Destroyer", guide!!.heroName)
+        val ringmaster = guide.easyToWinHeroList.single()
+        assertEquals("Ringmaster", ringmaster.heroName)
+        assertEquals("file:///android_asset/heroes/ringmaster/full.webp", ringmaster.avatarUrl)
+        assertTrue(OpenDotaGuideMapper.matches(stats.first(), "Outworld Destroyer", heroNames))
+    }
+
     @Test
     fun `maps winrate from skill-bracket totals`() {
         val guide = buildGuide("abaddon")!!

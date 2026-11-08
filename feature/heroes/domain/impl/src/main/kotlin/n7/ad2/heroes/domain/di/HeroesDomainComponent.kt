@@ -1,6 +1,8 @@
 package n7.ad2.heroes.domain.di
 
 import n7.ad2.heroes.domain.internal.data.HeroesRepositoryImpl
+import n7.ad2.heroes.domain.internal.data.heroNamesByKey
+import n7.ad2.heroes.domain.internal.data.parseHeroList
 import n7.ad2.heroes.domain.internal.data.db.HeroesDatabase
 import n7.ad2.heroes.domain.internal.usecase.GetGuideForHeroUseCaseImpl
 import n7.ad2.heroes.domain.internal.usecase.GetHeroByNameUseCaseImpl
@@ -29,7 +31,7 @@ fun HeroesDomainComponent(dependencies: HeroesDomainDependencies): HeroesDomainC
 
     private val database = HeroesDatabase.getInstance(dependencies.application)
     private val heroesDao = database.heroesDao
-    private val heroesRepository = HeroesRepositoryImpl(heroesDao)
+    private val heroesRepository = HeroesRepositoryImpl(heroesDao, dependencies.application)
 
     override val getHeroesUseCase = GetHeroesUseCaseImpl(heroesRepository)
 
@@ -39,7 +41,9 @@ fun HeroesDomainComponent(dependencies: HeroesDomainDependencies): HeroesDomainC
 
     override val updateStateViewedForHeroUseCase = UpdateStateViewedForHeroUseCaseImpl(heroesRepository, dependencies.dispatcher)
 
-    override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(dependencies.dispatcher, dependencies.logger)
+    override val getGuideForHeroUseCase = GetGuideForHeroUseCaseImpl(dependencies.dispatcher, dependencies.logger) {
+        heroNamesByKey(parseHeroList(dependencies.application.assets.open("heroes/list.json").bufferedReader().use { it.readText() }))
+    }
 
     override val getHeroDescriptionUseCase = GetHeroDescriptionUseCaseImpl(dependencies.application, dependencies.appInformation, dependencies.dispatcher)
 }

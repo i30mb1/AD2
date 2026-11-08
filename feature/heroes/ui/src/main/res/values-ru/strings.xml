@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="search_hero">Поиск героя</string>
+    <string name="heroes_strength">Сила</string>
+    <string name="heroes_agility">Ловкость</string>
+    <string name="heroes_intelligence">Интеллект</string>
+    <string name="heroes_universal">Универсальные</string>
 </resources>

@@ -109,6 +109,8 @@
     <string name="response_download">Download</string>
     <string name="response_downloading">Downloading…</string>
     <string name="response_downloaded">Downloaded</string>
+    <string name="response_arcana">Arcana or persona voice</string>
+    <string name="responses_empty">The wiki has no voice lines of this hero in this language yet</string>
     <string name="response_download_hint">Save the mp3 on the phone</string>
     <string name="response_set_as">Set as</string>
     <string name="response_target_call">Call</string>

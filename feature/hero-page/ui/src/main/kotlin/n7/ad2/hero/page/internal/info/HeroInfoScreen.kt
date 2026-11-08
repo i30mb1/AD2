@@ -30,6 +30,7 @@ import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -119,7 +120,7 @@ internal fun HeroInfoScreen(viewModel: HeroInfoViewModel) {
  */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-private fun HeroInfoContent(info: VOHeroInfo, guide: VOGuide?) {
+internal fun HeroInfoContent(info: VOHeroInfo, guide: VOGuide?) {
     val rows = info.rows(hasMatchups = guide.hasMatchups())
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(ModalBottomSheetValue.Hidden, skipHalfExpanded = true)
@@ -144,11 +145,13 @@ private fun HeroInfoContent(info: VOHeroInfo, guide: VOGuide?) {
         sheetBackgroundColor = AppTheme.color.surface,
         scrimColor = Color.Black.copy(alpha = 0.6f),
         sheetContent = {
+            // the rows share one sheet, each of them opens it from its title
+            val sheetScroll = key(openedRowName) { rememberScrollState() }
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .fillMaxHeight(0.85f)
-                    .verticalScroll(rememberScrollState())
+                    .verticalScroll(sheetScroll)
                     .padding(top = 16.dp, bottom = bottomInset + 16.dp),
             ) {
                 if (openedRow != null) {

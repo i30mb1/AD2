@@ -20,6 +20,7 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Pause
@@ -35,6 +36,8 @@ import androidx.compose.ui.unit.dp
 import n7.ad2.core.ui.compose.AppTheme
 import n7.ad2.feature.hero.page.ui.R
 import n7.ad2.hero.page.internal.responses.domain.vo.VOResponse
+
+private val arcanaColor = Color(0xFFD8AF54)
 
 /** Play button, the line itself with a progress bar while it plays, and the "more" button for download / ringtone. */
 @OptIn(ExperimentalFoundationApi::class)
@@ -77,6 +80,17 @@ internal fun ResponseBodyItem(
                     backgroundColor = AppTheme.color.surface,
                 )
             }
+        }
+        if (item.isArcane) {
+            // the same line in the voice of an arcana or persona, right under the usual one
+            Icon(
+                imageVector = Icons.Default.AutoAwesome,
+                contentDescription = stringResource(R.string.response_arcana),
+                tint = arcanaColor,
+                modifier = Modifier
+                    .padding(start = 8.dp)
+                    .size(18.dp),
+            )
         }
         if (item.icons.isNotEmpty()) {
             Row(

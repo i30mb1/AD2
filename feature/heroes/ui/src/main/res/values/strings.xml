@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
-    <string name="desc_dota_hero" translatable="false">dota hero</string>
     <string name="search_hero">Search hero</string>
+    <string name="heroes_strength">Strength</string>
+    <string name="heroes_agility">Agility</string>
+    <string name="heroes_intelligence">Intelligence</string>
+    <string name="heroes_universal">Universal</string>
 </resources>
