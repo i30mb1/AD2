@@ -18,6 +18,9 @@ internal object ValveApi {
     private const val BASE_URL = "https://www.dota2.com/datafeed"
     private const val ABILITY_IMAGE_URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/%s.png"
     private const val INNATE_IMAGE_URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/innate_icon.png"
+    private const val HERO_IMAGE_URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/%s.png"
+    private const val HERO_ICON_URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/icons/%s.png"
+    private const val HERO_KEY_PREFIX = "npc_dota_hero_"
     const val INNATE_IMAGE_NAME = "innate_icon"
 
     private val client = HttpClient.newBuilder()
@@ -25,8 +28,20 @@ internal object ValveApi {
         .followRedirects(HttpClient.Redirect.NORMAL)
         .build()
 
-    internal class HeroListItem(val id: Long, val name: String) {
+    /** [key] is the game's name, e.g. npc_dota_hero_kez, [attribute] is the primary attribute, 0 strength … 3 universal. */
+    internal class HeroListItem(val id: Long, val name: String, val key: String, val attribute: Int) {
         val folderName: String = name.replace(" ", "_").lowercase()
+    }
+
+    fun heroArtUrl(hero: HeroListItem): String = HERO_IMAGE_URL.format(hero.key.removePrefix(HERO_KEY_PREFIX))
+
+    fun heroIconUrl(hero: HeroListItem): String = HERO_ICON_URL.format(hero.key.removePrefix(HERO_KEY_PREFIX))
+
+    /** A hero new to the app gets the pictures every hero folder has: `full.webp` for lists and pages, `minimap.webp` for small icons. */
+    fun saveHeroImages(hero: HeroListItem) {
+        val folder = File(assetsDatabase, "heroes/${hero.folderName}")
+        saveImage(heroArtUrl(hero), File(folder, "full.webp"))
+        saveImage(heroIconUrl(hero), File(folder, "minimap.webp"))
     }
 
     private val LocaleHeroes.language: String
@@ -38,7 +53,7 @@ internal object ValveApi {
     fun heroList(): List<HeroListItem> {
         val heroes = getJson("$BASE_URL/herolist?language=english").path("result", "data", "heroes") as JSONArray
         return heroes.filterIsInstance<JSONObject>()
-            .map { HeroListItem((it["id"] as Number).toLong(), it["name_english_loc"] as String) }
+            .map { HeroListItem((it["id"] as Number).toLong(), it["name_english_loc"] as String, it["name"] as String, (it["primary_attr"] as Number).toInt()) }
             .sortedBy { it.name }
     }
 
@@ -47,10 +62,12 @@ internal object ValveApi {
         return heroes.firstOrNull() as? JSONObject ?: error("no data for hero $id")
     }
 
-    fun saveAbilityImage(abilityKey: String) = saveImage(ABILITY_IMAGE_URL.format(abilityKey), abilityKey)
+    fun saveAbilityImage(abilityKey: String) = saveImage(ABILITY_IMAGE_URL.format(abilityKey), abilityImage(abilityKey))
 
     /** Innate abilities without an own icon use this one, as the game does. */
-    fun saveInnateImage() = saveImage(INNATE_IMAGE_URL, INNATE_IMAGE_NAME)
+    fun saveInnateImage() = saveImage(INNATE_IMAGE_URL, abilityImage(INNATE_IMAGE_NAME))
+
+    private fun abilityImage(name: String) = File(assetsDatabase, "images/abilities/$name.webp")
 
     class Patch(val name: String, val timestamp: Long)
 
@@ -68,16 +85,15 @@ internal object ValveApi {
         getJson("$BASE_URL/patchnotes?version=$patch&language=${locale.language}")
     }
 
-    /** Downloads the icon once and stores it as webp (ffmpeg) to keep the assets small, png otherwise. */
-    private fun saveImage(url: String, name: String) {
-        val directory = File(assetsDatabase, "images/abilities").apply { mkdirs() }
-        val webp = File(directory, "$name.webp")
+    /** Downloads the picture once and stores it as [webp] (ffmpeg) to keep the assets small, png data otherwise. */
+    private fun saveImage(url: String, webp: File) {
         if (webp.exists() && webp.length() > 0) return
+        webp.parentFile.mkdirs()
 
         val request = HttpRequest.newBuilder(URI(url)).timeout(Duration.ofSeconds(30)).build()
         val response = client.send(request, HttpResponse.BodyHandlers.ofByteArray())
         if (response.statusCode() != 200) error("HTTP ${response.statusCode()}")
-        val png = File(directory, "$name.png").apply { writeBytes(response.body()) }
+        val png = File(webp.parentFile, webp.nameWithoutExtension + ".png").apply { writeBytes(response.body()) }
 
         val converted = try {
             val process = ProcessBuilder("ffmpeg", "-y", "-loglevel", "error", "-i", png.path, "-c:v", "libwebp", "-quality", "90", webp.path)
@@ -93,7 +109,7 @@ internal object ValveApi {
         } else {
             webp.delete()
             png.renameTo(webp) // Android decodes by content, not by extension
-            println("  [image] ffmpeg is not available, $name stored as png data")
+            println("  [image] ffmpeg is not available, ${webp.name} stored as png data")
         }
     }
 

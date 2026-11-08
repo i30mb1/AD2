@@ -96,6 +96,54 @@ class WikiHeroParserTest {
     }
 
     @Test
+    fun `recommended items have no empty or repeated entries and never take a file link for the item`() {
+        val html = """
+            <h2><span class="mw-headline">Recommended Items</span></h2>
+            <p><b>Starting items:</b></p>
+            <ul>
+            <li></li>
+            <li><a href="/wiki/Iron_Branch" title="Iron Branch"><img alt="Iron Branch"></a> <a href="/wiki/Iron_Branch" title="Iron Branch">Iron Branch</a> is cheap.</li>
+            <li><a href="/wiki/Iron_Branch" title="Iron Branch"><img alt="Iron Branch"></a> <a href="/wiki/Iron_Branch" title="Iron Branch">Iron Branch</a> is cheap.</li>
+            <li><a href="/wiki/File:Ultimate_Scepter_icon.png" title="File:Ultimate Scepter icon.png"><img alt=""></a>
+            <a href="/wiki/Aghanim%27s_Scepter" title="Aghanim's Scepter">Aghanim's Scepter</a> adds damage.</li>
+            </ul>
+            <h2><span class="mw-headline">Abilities</span></h2>
+        """.trimIndent()
+        val items = WikiHeroParser.parseHeroPage(Jsoup.parse(html)).recommendedItems.single()
+        assertEquals("Starting items", items.title)
+        assertEquals(
+            listOf(WikiHeroParser.Block("Iron Branch", listOf("Iron Branch is cheap.")), WikiHeroParser.Block("Aghanim's Scepter", listOf("Aghanim's Scepter adds damage."))),
+            items.blocks,
+        )
+    }
+
+    // the EN wiki has a vandal's "Regular Stick" for Magic Stick ("provides nothing"), and both wikis still advise items removed from the game
+    @Test
+    fun `recommended items keep only items the game has`() {
+        val assets = java.nio.file.Files.createTempDirectory("assets").toFile().apply {
+            File(this, "items/tango").mkdirs()
+            File(this, "items/tango/full.webp").writeText("webp")
+        }
+        val section = WikiHeroParser.Section(
+            title = "Starting items",
+            level = 3,
+            blocks = listOf(
+                WikiHeroParser.Block("Regular Stick", listOf("Regular Stick provides nothing.")),
+                WikiHeroParser.Block("Tango (не свой)", listOf("Tango from an ally.")),
+                WikiHeroParser.Block("Stout Shield", listOf("Stout Shield blocks damage.")),
+                WikiHeroParser.Block(null, listOf("Buy what the team lacks.")),
+            ),
+        )
+        val page = WikiHeroParser.HeroPage(recommendedItems = listOf(section), abilityNotes = emptyMap())
+
+        val json = WikiJson.build(WikiJson.Pages(page, counters = emptyList(), guide = null), assets)
+
+        val entries = ((json["recommendedItems"] as org.json.simple.JSONArray).single() as org.json.simple.JSONObject)["entries"] as org.json.simple.JSONArray
+        assertEquals(listOf("Tango (не свой)", null), entries.map { (it as org.json.simple.JSONObject)["name"] })
+        assertEquals("items/tango/full.webp", (entries.first() as org.json.simple.JSONObject)["icon"])
+    }
+
+    @Test
     fun `guide playstyle and tips`() {
         val en = WikiHeroParser.parseGuide(doc("wiki_antimage_guide_en.html"))
         assertTrue(en.playstyle!!.startsWith("Anti-Mage is one of the most mobile carries"))

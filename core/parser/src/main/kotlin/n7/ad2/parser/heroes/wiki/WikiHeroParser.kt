@@ -1,5 +1,7 @@
 package n7.ad2.parser.heroes.wiki
 
+import n7.ad2.parser.cleanWikiText
+import n7.ad2.parser.wikiText
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 
@@ -77,6 +79,7 @@ internal object WikiHeroParser {
 
     // ===== recommended items =====
 
+    /** An item named twice in a phase (three Iron Branches with the same line) is one entry, a bullet with nothing is none. */
     private fun parseRecommendedItems(heading: Element, doc: Document): List<Section> {
         val result = mutableListOf<Section>()
         var title: String? = null
@@ -92,14 +95,18 @@ internal object WikiHeroParser {
                     title = element.text().trim().removeSuffix(":").trim()
                 }
                 element.tagName() == "li" && element.isTopLevelItem() -> {
-                    val item = element.select("a[title]").firstOrNull()?.attr("title")
-                    blocks += Block(item, listOf(element.cleanText()).filter { it.isNotEmpty() })
+                    // an icon without its item page links to the picture: "File:Ultimate Scepter icon.png"
+                    val item = element.select("a[title]").map { it.attr("title") }.firstOrNull { title -> filePrefixes.none(title::startsWith) }
+                    val block = Block(item, listOf(element.cleanText()).filter { it.isNotEmpty() })
+                    if ((block.entity != null || block.lines.isNotEmpty()) && block !in blocks) blocks += block
                 }
             }
         }
         flush()
         return result
     }
+
+    private val filePrefixes = listOf("File:", "Файл:")
 
     // ===== ability notes =====
 
@@ -206,12 +213,18 @@ internal object WikiHeroParser {
                 element.parents().any { it.tagName() == "table" } -> Unit
                 element.tagName() == "li" && element.isTopLevelItem() -> element.cleanText().takeIf { it.isNotEmpty() }?.let { lines += it }
                 element.tagName() == "p" && element.parents().none { it.tagName() == "li" } ->
-                    element.cleanText().takeIf { it.length > 1 }?.let { lines += it }
+                    element.cleanText().takeIf { it.length > 1 }?.let { text ->
+                        // the wiki breaks a paragraph around an icon it failed to draw, the rest goes on the line it belongs to
+                        val previous = lines.lastOrNull()
+                        if (previous != null && previous.last() !in sentenceEnds) lines[lines.lastIndex] = "$previous $text".cleanWikiText() else lines += text
+                    }
             }
         }
         flush()
         return blocks
     }
+
+    private val sentenceEnds = setOf('.', '!', '?', ':', '…', '»', '"')
 
     private fun Element.isTopLevelItem(): Boolean = parents().none { it.tagName() == "li" }
 
@@ -223,14 +236,7 @@ internal object WikiHeroParser {
         val copy = clone()
         copy.select("ul, ol, .ext-audiobutton, audio, sup.reference, .noprint img, style, script, .error, .scribunto-error").remove()
         copy.children().filter { it.isBadge() }.forEach { it.remove() }
-        val text = copy.text()
-            .replace("Link ▶️", "")
-            .replace(Regex("""\s+"""), " ")
-            .replace(Regex("""\(\s*[/+*]?\s*\)"""), "")
-            .replace(Regex("""\s+([.,:;!?)])"""), "$1")
-            .replace("( ", "(")
-            .replace(Regex("""\s{2,}"""), " ")
-            .trim()
+        val text = copy.wikiText()
         return if (wikiErrors.containsMatchIn(text)) "" else text
     }
 

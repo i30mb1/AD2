@@ -17,13 +17,19 @@ internal object WikiJson {
         val guide: WikiHeroParser.Guide?,
     )
 
-    fun build(pages: Pages): JSONObject = JSONObject().apply {
-        pages.hero?.recommendedItems?.takeIf { it.isNotEmpty() }?.let { sections ->
-            put("recommendedItems", sectionsJson(sections, entityIcon = ::itemIcon))
-        }
+    /**
+     * [assets] is the assets folder of the app. Recommended items keep only the items the game has: the wikis still
+     * advise removed ones (Stout Shield, Ring of Aquila) and the EN one has a vandal's "Regular Stick" for Magic Stick.
+     */
+    fun build(pages: Pages, assets: File = File(assetsDatabase)): JSONObject = JSONObject().apply {
+        pages.hero?.recommendedItems
+            ?.map { section -> section.copy(blocks = section.blocks.filter { block -> block.entity == null || itemIcon(block.entity, assets) != null }) }
+            ?.filter { it.blocks.isNotEmpty() }
+            ?.takeIf { it.isNotEmpty() }
+            ?.let { sections -> put("recommendedItems", sectionsJson(sections, entityIcon = { itemIcon(it, assets) })) }
         // the RU counters pages are stubs without heroes, their general notes are still worth showing
         pages.counters.takeIf { it.isNotEmpty() }?.let { sections ->
-            put("counters", sectionsJson(sections, entityIcon = { heroIcon(it) ?: itemIcon(it) }))
+            put("counters", sectionsJson(sections, entityIcon = { heroIcon(it, assets) ?: itemIcon(it, assets) }))
         }
         guideJson(pages.guide)?.let { put("guide", it) }
     }
@@ -78,7 +84,9 @@ internal object WikiJson {
 
     private fun String.assetKey() = lowercase().replace(" ", "_")
 
-    private fun heroIcon(name: String): String? = "heroes/${name.assetKey()}/minimap.webp".takeIf { File(assetsDatabase, it).exists() }
+    private fun heroIcon(name: String, assets: File): String? = "heroes/${name.assetKey()}/minimap.webp".takeIf { File(assets, it).exists() }
 
-    private fun itemIcon(name: String): String? = "items/${name.assetKey()}/full.webp".takeIf { File(assetsDatabase, it).exists() }
+    /** "Tango (не свой)" is a Tango from an ally. */
+    private fun itemIcon(name: String, assets: File): String? =
+        "items/${name.substringBefore(" (").assetKey()}/full.webp".takeIf { File(assets, it).exists() }
 }

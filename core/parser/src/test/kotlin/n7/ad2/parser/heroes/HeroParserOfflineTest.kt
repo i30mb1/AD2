@@ -2,6 +2,7 @@ package n7.ad2.parser.heroes
 
 import java.io.File
 import n7.ad2.parser.heroes.valve.ValveHeroParser
+import n7.ad2.parser.heroes.valve.ValvePatchNotes
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
@@ -112,6 +113,31 @@ class HeroParserOfflineTest {
         assertTrue(mist, mist.contains("40%"))
         assertFalse(mist, mist.contains("%%"))
         assertFalse(mist, Regex("%[a-z_]+%").containsMatchIn(mist))
+    }
+
+    // Earth Spirit's Enchant Remnant has "< br>" in the datafeed, many texts have two spaces after a sentence
+    @Test
+    fun `line breaks with a space inside and double spaces of the datafeed`() {
+        val hero = rawAbaddon()
+        val coil = (hero["abilities"] as JSONArray).filterIsInstance<JSONObject>().first { it["name_loc"] == "Mist Coil" }
+        coil["desc_loc"] = "Releases a coil.  Damages an enemy. < br>\nCan be cast on allies.<br/>Costs health."
+
+        assertEquals("Releases a coil. Damages an enemy.\n\nCan be cast on allies.\nCosts health.", ability("Mist Coil", parse(hero))["description"])
+    }
+
+    // the RU patch notes of 7.41 have "в радиусе %friendly_hero_distance%" where the EN ones have the number
+    @Test
+    fun `values in patch notes are filled from the hero's abilities`() {
+        val values = ValveHeroParser.values(rawAbaddon())
+        assertEquals("95/170/245/320", values["damage_heal"])
+        val note = JSONObject().apply {
+            put("note", "Урон увеличен до %damage_per_second%, радиус — %unknown_value%")
+            put("indent_level", 1L)
+        }
+
+        val notes = ValvePatchNotes.notes(JSONArray().apply { add(note) }, mapOf("damage_per_second" to "40/50/60/70"))
+
+        assertEquals("Урон увеличен до 40/50/60/70, радиус — %unknown_value%", (notes.single() as JSONObject)["text"])
     }
 
     @Test

@@ -13,9 +13,9 @@ internal object ValvePatchNotes {
 
     /**
      * Latest patches that changed the hero, newest first.
-     * [abilityNames] maps the datafeed ability id to its localized name.
+     * [abilityNames] maps the datafeed ability id to its localized name, [values] are the hero's ability values.
      */
-    fun collect(heroId: Long, abilityNames: Map<Long, String>, locale: LocaleHeroes): JSONArray {
+    fun collect(heroId: Long, abilityNames: Map<Long, String>, values: Map<String, String>, locale: LocaleHeroes): JSONArray {
         val result = JSONArray()
         for (patch in ValveApi.patches.take(PATCHES_TO_SEARCH)) {
             if (result.size >= PATCHES_TO_SHOW) break
@@ -28,11 +28,11 @@ internal object ValvePatchNotes {
                 null
             } ?: continue
 
-            val heroNotes = notes(hero["hero_notes"])
-            val talentNotes = notes(hero["talent_notes"])
+            val heroNotes = notes(hero["hero_notes"], values)
+            val talentNotes = notes(hero["talent_notes"], values)
             val abilities = (hero["abilities"] as? JSONArray).orEmpty().mapNotNull { ability ->
                 val id = (ability["ability_id"] as? Number)?.toLong() ?: return@mapNotNull null
-                val abilityNotes = notes(ability["ability_notes"])
+                val abilityNotes = notes(ability["ability_notes"], values)
                 if (abilityNotes.isEmpty()) return@mapNotNull null
                 JSONObject().apply {
                     put("name", abilityNames[id] ?: return@mapNotNull null)
@@ -54,9 +54,14 @@ internal object ValvePatchNotes {
         return result
     }
 
-    private fun notes(value: Any?): JSONArray = JSONArray().apply {
+    /** [values] fill `%name%` the notes of some languages keep instead of a number, see [ValveHeroParser.values]. */
+    internal fun notes(value: Any?, values: Map<String, String> = emptyMap()): JSONArray = JSONArray().apply {
         (value as? JSONArray).orEmpty().forEach { note ->
-            val text = (note["note"] as? String)?.cleanText()?.takeIf { it.isNotEmpty() } ?: return@forEach
+            val text = (note["note"] as? String)
+                ?.replace(valueToken) { match -> values[match.groupValues[1]] ?: match.value }
+                ?.cleanText()
+                ?.takeIf { it.isNotEmpty() }
+                ?: return@forEach
             add(
                 JSONObject().apply {
                     put("text", text)
@@ -65,6 +70,8 @@ internal object ValvePatchNotes {
             )
         }
     }
+
+    private val valueToken = Regex("""%([A-Za-z_][A-Za-z0-9_]*)%""")
 
     @Suppress("UNCHECKED_CAST")
     private fun JSONArray?.orEmpty(): List<JSONObject> = (this as List<Any?>?)?.filterIsInstance<JSONObject>() ?: emptyList()

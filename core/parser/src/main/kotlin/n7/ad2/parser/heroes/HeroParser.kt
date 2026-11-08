@@ -13,6 +13,7 @@ import n7.ad2.parser.heroes.valve.ValvePatchNotes
 import n7.ad2.parser.heroes.wiki.WikiHeroParser
 import n7.ad2.parser.heroes.wiki.WikiJson
 import n7.ad2.parser.saveFile
+import n7.ad2.parser.wikiText
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.jsoup.nodes.Document
@@ -60,10 +61,7 @@ internal fun parseTrivia(doc: Document): List<String> {
             list.children().filter { it.tagName() == "li" && it.select(".error, .scribunto-error").isEmpty() }.forEach { item ->
                 val copy = item.clone()
                 copy.select(".ext-audiobutton, audio, sup.reference, .noprint, ul").remove()
-                val text = copy.text()
-                    .replace("Link ▶️", "")
-                    .replace(Regex("""\s+"""), " ")
-                    .trim()
+                val text = copy.wikiText()
                 if (text.isNotEmpty()) result.add(text)
             }
         }
@@ -81,12 +79,12 @@ fun main() {
     val existingFolders = File(assetsDatabaseHeroes).listFiles()?.filter { it.isDirectory }?.map { it.name }?.toSet() ?: emptySet()
     val (known, unknown) = heroes.partition { it.folderName in existingFolders }
     println("Found ${heroes.size} heroes in the datafeed, ${known.size} of them exist in the app")
-    if (unknown.isNotEmpty()) println("⚠️  Not in the app yet (no folder in assets): ${unknown.joinToString { it.name }}")
+    if (unknown.isNotEmpty()) println("➕ New in the app (pictures from the Valve CDN): ${unknown.joinToString { it.name }}")
 
     val heroesToProcess = when {
-        ONLY_HEROES.isNotEmpty() -> known.filter { it.name.lowercase() in ONLY_HEROES || it.folderName in ONLY_HEROES }
+        ONLY_HEROES.isNotEmpty() -> heroes.filter { it.name.lowercase() in ONLY_HEROES || it.folderName in ONLY_HEROES }
         TEST_MODE -> known.take(TEST_HERO_LIMIT).also { println("⚠️  RUNNING IN TEST MODE - Only parsing first $TEST_HERO_LIMIT heroes") }
-        else -> known
+        else -> heroes
     }
 
     ValveApi.saveInnateImage()
@@ -96,17 +94,31 @@ fun main() {
     heroesToProcess.forEachIndexed { index, hero ->
         println("Processing ${index + 1}/${heroesToProcess.size}: ${hero.name}")
         try {
+            ValveApi.saveHeroImages(hero)
             val data = LocaleHeroes.entries.associateWith { locale -> ValveApi.heroData(hero.id, locale) }
             // icons first, the description refers to the files that really exist
             loadAbilityImages(data.getValue(LocaleHeroes.EN))
             data.forEach { (locale, heroData) -> loadHero(hero, locale, heroData, loadWiki(hero, locale)) }
-            if (PARSE_RESPONSES) LocaleHeroes.entries.forEach { locale -> loadResponses(hero, locale) }
+            // a new hero has no voice lines yet, the wiki of a language may have none at all
+            LocaleHeroes.entries
+                .filter { locale -> PARSE_RESPONSES || !File(assetsDatabaseHeroes, "${hero.folderName}/${locale.folder}/responses.json").exists() }
+                .forEach { locale ->
+                    try {
+                        loadResponses(hero, locale)
+                    } catch (e: Exception) {
+                        println("  WARNING: responses (${locale.folder}): ${e.message}")
+                    }
+                }
             successCount++
         } catch (e: Exception) {
             errors += "${hero.name}: ${e.message}"
             println("  ERROR ${hero.name}: ${e.message}")
         }
     }
+
+    // the heroes screen lists only heroes whose page has data
+    val listed = heroes.filter { File(assetsDatabaseHeroes, "${it.folderName}/${LocaleHeroes.EN.folder}/description.json").exists() }
+    println(if (HeroList.save(listed)) "✓ heroes/list.json: ${listed.size} heroes" else "- heroes/list.json: no changes")
 
     println("\n=== Parsing Complete ===")
     println("Successfully parsed: $successCount heroes")
@@ -162,7 +174,7 @@ private fun loadHero(hero: ValveApi.HeroListItem, locale: LocaleHeroes, data: JS
 
     val abilityNames = ValveHeroParser.abilityNamesById(data)
     result["changes"] = try {
-        ValvePatchNotes.collect(hero.id, abilityNames, locale)
+        ValvePatchNotes.collect(hero.id, abilityNames, ValveHeroParser.values(data), locale)
     } catch (e: Exception) {
         println("  WARNING: patch notes (${locale.folder}): ${e.message}")
         JSONArray()
@@ -173,68 +185,64 @@ private fun loadHero(hero: ValveApi.HeroListItem, locale: LocaleHeroes, data: JS
     println(if (isSaved) "  ✓ ${locale.folder}: saved" else "  - ${locale.folder}: no changes")
 }
 
+/** A page without a single line with a sound gives no file: the app tells there are no voice lines instead of empty categories. */
 private fun loadResponses(hero: ValveApi.HeroListItem, locale: LocaleHeroes) {
-    val root = connectToWiki(locale.soundUrl.format(hero.name))
-    val allResponsesWithCategories = JSONArray()
+    val categories = parseResponses(connectToWiki(locale.soundUrl.format(hero.name)))
+    if (categories.isEmpty()) {
+        println("  - responses ${locale.folder}: the wiki has no lines with a sound")
+        return
+    }
+    File("$assetsDatabaseHeroes/${hero.folderName}/${locale.folder}/responses.json").writeText(categories.toString(), Charsets.UTF_8)
+    println("  ✓ responses ${locale.folder} saved")
+}
 
-    val children = root.getElementsByClass("mw-parser-output").firstOrNull()?.children() ?: return
-    var category = JSONObject()
-    var responses = JSONArray()
-    var response: JSONObject
-
+/**
+ * Voice lines of a "Responses" ("Реплики") page by category. A line without a sound file ("File not found") is left
+ * out, so is a category without lines. A line with an arcana or persona voice has a second sound, it becomes one more
+ * line with the same text marked `isArcane`; the same text twice is not an arcana, heroes repeat their grunts.
+ * Heroes and items a line is about keep their icon if the app has it.
+ */
+internal fun parseResponses(root: Document, assets: File = File(assetsDatabase)): JSONArray {
+    val result = JSONArray()
+    val children = root.getElementsByClass("mw-parser-output").firstOrNull()?.children() ?: return result
+    var category: String? = null
+    var lines = JSONArray()
+    fun flush() {
+        if (category != null && lines.isNotEmpty()) result.add(JSONObject().apply {
+            put("category", category)
+            put("responses", lines)
+        })
+        lines = JSONArray()
+    }
     for (child in children) {
-        if (child.tag().toString() == "h2") {
-            if (category.size != 0) allResponsesWithCategories.add(category)
-            category = JSONObject()
-            responses = JSONArray()
-            category["category"] = if (child.children().size > 1) child.child(1).text().trim() else child.child(0).text().trim()
-        }
-        if (child.tag().toString() == "ul") {
-            child.children().forEach node@{ node ->
-                response = JSONObject()
-                val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
-                val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
-                response["audio_url"] = audioUrl.attr("href").toString()
-                response["title"] = node.let { innerNode ->
-                    innerNode.getElementsByTag("span").forEach { span -> span.remove() }
-                    innerNode.text()
-                }
-                if (node.getElementsByTag("img").size > 0) {
-                    response["icons"] = JSONArray().apply {
-                        node.getElementsByTag("span").forEach { span -> span.remove() }
-                        node.getElementsByTag("a").forEach { image ->
-                            val regex = Regex(" \\(.+?\\)")
-                            val title = image.attr("title")
-                            add(
-                                if (regex.containsMatchIn(title)) {
-                                    "items/" + title.replace(regex, "") + "/full.webp"
-                                } else {
-                                    "heroes/$title/minimap.webp"
-                                },
-                            )
-                        }
-                    }
-                }
-                val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title", "-")
-                if (previousTitle == response["title"]) response["isArcane"] = true
-                responses.add(response)
-
-                if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
-                    val oldCopy = response
-                    response = JSONObject()
-                    if (oldCopy.containsKey("icons")) response["icons"] = oldCopy["icons"]
-                    response["audioUrl"] = audioUrl2
-                    response["title"] = oldCopy["title"]
-                    response["isArcane"] = true
-                    responses.add(response)
-                }
+        when (child.tagName()) {
+            "h2" -> {
+                flush()
+                category = (child.selectFirst(".mw-headline") ?: child).text().trim()
             }
-            category["responses"] = responses
+            "ul" -> child.children().filter { it.tagName() == "li" }.forEach { item ->
+                val sounds = item.select("audio a[href]").map { it.attr("href") }.filter { it.isNotEmpty() && !it.startsWith("/") }
+                val sound = sounds.firstOrNull() ?: return@forEach
+                val icons = item.select("span[typeof=mw:File] a[title]").mapNotNull { responseIcon(it.attr("title"), assets) }.distinct()
+                val copy = item.clone().apply { select("span, ul").remove() }
+                val title = copy.text().trim().takeIf { it.isNotEmpty() } ?: return@forEach
+                fun line(url: String, isArcane: Boolean) = JSONObject().apply {
+                    put("audio_url", url)
+                    put("title", title)
+                    if (icons.isNotEmpty()) put("icons", JSONArray().apply { addAll(icons) })
+                    if (isArcane) put("isArcane", true)
+                }
+                lines.add(line(sound, isArcane = false))
+                sounds.getOrNull(1)?.let { arcana -> lines.add(line(arcana, isArcane = true)) }
+            }
         }
     }
-    allResponsesWithCategories.add(category)
+    flush()
+    return result
+}
 
-    File("$assetsDatabaseHeroes/${hero.folderName}/${locale.folder}/responses.json")
-        .writeText(allResponsesWithCategories.toString(), Charsets.UTF_8)
-    println("  ✓ responses ${locale.folder} saved")
+/** "Sven" → heroes/sven/minimap.webp, "Blink Dagger" → items/blink_dagger/full.webp, null when the app has neither. */
+private fun responseIcon(title: String, assets: File): String? {
+    val key = title.lowercase().replace(" ", "_")
+    return listOf("heroes/$key/minimap.webp", "items/$key/full.webp").firstOrNull { File(assets, it).exists() }
 }

@@ -41,7 +41,7 @@ internal object ValveHeroParser {
         val abilities = hero.array("abilities").objects()
         val talents = hero.array("talents").objects()
         val hasFacets = hero.array("facets").isNotEmpty()
-        val primaryAttribute = attributes.getOrElse(hero.long("primary_attr").toInt()) { "universal" }
+        val primaryAttribute = attribute(hero.long("primary_attr"))
         val intelligence = hero.double("int_base")
         // the datafeed already adds the primary attribute to the damage of strength, agility and intelligence heroes, not of universal ones
         val universalDamage = if (primaryAttribute == "universal") {
@@ -101,6 +101,16 @@ internal object ValveHeroParser {
             put("facets", hero.array("facets").objects().map { facet -> parseFacet(facet) }.toJsonArray())
         }
     }
+
+    /** The datafeed numbers attributes 0 strength, 1 agility, 2 intelligence, 3 universal. */
+    fun attribute(index: Long): String = attributes.getOrElse(index.toInt()) { "universal" }
+
+    /** Every ability value of the hero by its name, the first ability having it wins: `damage_heal` → "95/170/245/320". */
+    fun values(hero: JSONObject): Map<String, String> = hero.array("abilities").objects()
+        .flatMap { ability -> ability.array("special_values").objects() }
+        .mapNotNull { value -> value.array("values_float").formatLevels(value.bool("is_percentage"))?.let { value.string("name") to it } }
+        .distinctBy { (name, _) -> name }
+        .toMap()
 
     fun abilityKeys(hero: JSONObject): List<String> = hero.array("abilities").objects().map { it.string("name") }
 
@@ -268,13 +278,15 @@ internal object ValveHeroParser {
     private const val MISSING = "\u0000"
 
     /**
-     * Keeps only `<b>` and `<font color>` which the app renders, line breaks become `\n`.
+     * Keeps only `<b>` and `<font color>` which the app renders, line breaks become `\n` (Earth Spirit has a `< br>`).
+     * The datafeed often puts two spaces after a sentence, on a phone they read as a gap.
      */
     internal fun String.cleanText(): String = this
         .replace("\r", "")
-        .replace(Regex("""<br\s*/?>""", RegexOption.IGNORE_CASE), "\n")
+        .replace(Regex("""<\s*br\s*/?\s*>""", RegexOption.IGNORE_CASE), "\n")
         .replace(Regex("""</?(?!b>|/b>|font\b|/font>)[a-zA-Z][^>]*>"""), "")
         .replace("&nbsp;", " ")
+        .replace(Regex("""[ \t]{2,}"""), " ")
         .replace(Regex("""[ \t]+\n"""), "\n")
         .replace(Regex("""\n{3,}"""), "\n\n")
         .trim()

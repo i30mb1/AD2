@@ -1,6 +1,7 @@
 package n7.ad2.parser.items
 
 import n7.ad2.parser.fetchWithApi
+import n7.ad2.parser.wikiText
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 
@@ -73,13 +74,7 @@ internal object WikiItemParser {
     private fun Element.cleanText(): String {
         val copy = clone()
         copy.select("ul, ol, .ext-audiobutton, audio, sup.reference, style, script, .error, .scribunto-error").remove()
-        val text = copy.text()
-            .replace("Link ▶️", "")
-            .replace(Regex("""\[\d+]"""), "")
-            .replace(Regex("""\s+"""), " ")
-            .replace(Regex("""\s+([.,:;!?)])"""), "$1")
-            .replace("( ", "(")
-            .trim()
+        val text = copy.wikiText()
         return if (wikiErrors.containsMatchIn(text)) "" else text
     }
 
