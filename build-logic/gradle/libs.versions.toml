@@ -5,14 +5,14 @@ coroutines = "1.11.0"
 dagger = "2.60.1"
 workManager = "2.12.0"
 lifecycle = "2.11.0"
-androidGradlePlugin = "9.5.0"
-lint = "32.5.0" # androidGradlePlugin + 23
+androidGradlePlugin = "9.5.1"
+lint = "32.5.1" # androidGradlePlugin + 23
 kotlin = "2.4.21"
-ksp = "2.3.12" # with 2.3.13 build/generated/ksp/release disappears and compileReleaseKotlin can't find the Dagger components
+ksp = "2.3.14" # with 2.3.13 build/generated/ksp/release disappears and compileReleaseKotlin can't find the Dagger components
 compose = "1.12.1"
 media3 = "1.11.1"
 detekt = "1.23.8"
-spotless = "8.10.4"
+spotless = "8.11.0"
 cameraX = "1.6.2"
 kotlinDL = "0.5.2"
 benchmark = "1.6.0-alpha01"
@@ -88,7 +88,7 @@ kspGradlePlugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gr
 
 kotlin-reflection = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-Serialization-Plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
-kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.12.0"
+kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.13.0"
 kover = "org.jetbrains.kotlinx:kover-gradle-plugin:0.9.11"
 composeViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 composeCoil = "io.coil-kt:coil-compose:2.7.0"
@@ -123,7 +123,7 @@ paging3 = "androidx.paging:paging-runtime:3.5.3"
 material = "com.google.android.material:material:1.14.0"
 constraintLayout = "androidx.constraintlayout:constraintlayout:2.2.2"
 coil = "io.coil-kt:coil:2.7.0"
-jsoup = "org.jsoup:jsoup:1.23.2" # Jsoup для разбора html
+jsoup = "org.jsoup:jsoup:1.24.1" # Jsoup для разбора html
 jspecify = "org.jspecify:jspecify:1.0.1"
 playCoreKtx = "com.google.android.play:app-update-ktx:2.1.0" # auto update + rateMe
 playReview = "com.google.android.play:review-ktx:2.0.2"
@@ -150,11 +150,11 @@ test-truth = "androidx.test.ext:truth:1.7.0"
 test-truth-jvm = "com.google.truth:truth:1.4.5"
 test-core-tesing = "androidx.arch.core:core-testing:2.2.0"
 test-fragment = { module = "androidx.fragment:fragment-testing", version.ref = "fragment" }
-test-mockk = "io.mockk:mockk-android:1.14.11"
-test-robolectric = "org.robolectric:robolectric:4.17"
+test-mockk = "io.mockk:mockk-android:1.14.12"
+test-robolectric = "org.robolectric:robolectric:4.18.1"
 test-espresso = "androidx.test.espresso:espresso-core:3.7.0"
 test-espresso-intents = "androidx.test.espresso:espresso-intents:3.7.0"
-test-uiautomator = "androidx.test.uiautomator:uiautomator:2.4.0"
+test-uiautomator = "androidx.test.uiautomator:uiautomator:2.4.1"
 
 benchmarkMacro = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "benchmark" }
 benchmarkJunit = { module = "androidx.benchmark:benchmark-junit4", version.ref = "benchmark" }

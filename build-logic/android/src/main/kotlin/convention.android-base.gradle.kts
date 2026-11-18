@@ -70,6 +70,8 @@ dependencies {
 }
 
 tasks.withType<Test> {
+    // Robolectric 4.18 runs Android 36 and needs Java 21 for that, the code itself stays on 17
+    javaLauncher.set(project.extensions.getByType<JavaToolchainService>().launcherFor { languageVersion.set(JavaLanguageVersion.of(21)) })
     testLogging.events("passed", "skipped", "failed", "standardOut", "standardError")
     systemProperty("junit.platform.output.capture.stdout", "true")
     systemProperty("junit.platform.output.capture.stderr", "true")
