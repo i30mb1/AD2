@@ -21,11 +21,6 @@
         <!--цвет меню текста-->
         <item name="android:actionMenuTextColor">@color/gray_100</item>
 
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:enforceNavigationBarContrast">false</item>
-        <item name="android:enforceStatusBarContrast">false</item>
-
         <item name="android:windowActivityTransitions">true</item>
 
         <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
